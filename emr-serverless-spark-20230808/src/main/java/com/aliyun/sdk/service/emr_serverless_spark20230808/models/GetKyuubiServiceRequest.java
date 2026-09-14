@@ -73,7 +73,10 @@ public class GetKyuubiServiceRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-cea2c314a****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -82,7 +85,10 @@ public class GetKyuubiServiceRequest extends Request {
         }
 
         /**
-         * kyuubiServiceId.
+         * <p>The Kyuubi service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-415ddee******f1d1eac0388b86</p>
          */
         public Builder kyuubiServiceId(String kyuubiServiceId) {
             this.putPathParameter("kyuubiServiceId", kyuubiServiceId);

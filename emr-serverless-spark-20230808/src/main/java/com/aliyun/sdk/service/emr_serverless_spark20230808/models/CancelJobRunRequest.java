@@ -93,7 +93,7 @@ public class CancelJobRunRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>w-1234abcd</p>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -106,7 +106,7 @@ public class CancelJobRunRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>jr-231231</p>
+         * <p>jr-f09a8fda2396****</p>
          */
         public Builder jobRunId(String jobRunId) {
             this.putPathParameter("jobRunId", jobRunId);

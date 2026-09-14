@@ -213,7 +213,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -222,7 +225,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * kyuubiServiceId.
+         * <p>The Kyuubi service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-c7141f10c3f549fc9f8b8ae562b8****</p>
          */
         public Builder kyuubiServiceId(String kyuubiServiceId) {
             this.putPathParameter("kyuubiServiceId", kyuubiServiceId);
@@ -231,7 +237,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * computeInstance.
+         * <p>The specifications of the Kyuubi service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2c8g</p>
          */
         public Builder computeInstance(String computeInstance) {
             this.putBodyParameter("computeInstance", computeInstance);
@@ -240,7 +249,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * kyuubiConfigs.
+         * <p>The Kyuubi service configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder kyuubiConfigs(String kyuubiConfigs) {
             this.putBodyParameter("kyuubiConfigs", kyuubiConfigs);
@@ -249,7 +261,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * kyuubiReleaseVersion.
+         * <p>The Kyuubi service engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.9.2-0.0.2</p>
          */
         public Builder kyuubiReleaseVersion(String kyuubiReleaseVersion) {
             this.putBodyParameter("kyuubiReleaseVersion", kyuubiReleaseVersion);
@@ -258,7 +273,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_serverless_spark</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -267,7 +285,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * publicEndpointEnabled.
+         * <p>Specifies whether to enable public network access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publicEndpointEnabled(Boolean publicEndpointEnabled) {
             this.putBodyParameter("publicEndpointEnabled", publicEndpointEnabled);
@@ -276,7 +297,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * queue.
+         * <p>The queue in which the Kyuubi service runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
          */
         public Builder queue(String queue) {
             this.putBodyParameter("queue", queue);
@@ -285,7 +309,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * releaseVersion.
+         * <p>The version of the Spark engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putBodyParameter("releaseVersion", releaseVersion);
@@ -294,7 +321,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * replica.
+         * <p>The number of replicas for high availability (HA).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder replica(Integer replica) {
             this.putBodyParameter("replica", replica);
@@ -303,7 +333,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * restart.
+         * <p>Specifies whether to restart the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder restart(Boolean restart) {
             this.putBodyParameter("restart", restart);
@@ -312,7 +345,10 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * sparkConfigs.
+         * <p>The Spark configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder sparkConfigs(String sparkConfigs) {
             this.putBodyParameter("sparkConfigs", sparkConfigs);

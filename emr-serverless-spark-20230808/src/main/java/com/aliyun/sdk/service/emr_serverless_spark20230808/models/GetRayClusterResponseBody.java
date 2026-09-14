@@ -405,7 +405,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * clusterId.
+         * <p>The Ray cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-k7nm8ahl5te4tg91</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -413,7 +416,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750327083303</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -421,7 +427,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * creator.
+         * <p>The UID of the user who created the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202077646755523991</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -429,7 +438,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * creatorName.
+         * <p>The nickname of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder creatorName(String creatorName) {
             this.creatorName = creatorName;
@@ -437,7 +449,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * dashboardUrl.
+         * <p>The URL of the Ray cluster dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx">https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx</a></p>
          */
         public Builder dashboardUrl(String dashboardUrl) {
             this.dashboardUrl = dashboardUrl;
@@ -445,7 +460,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ray Cluster for dev.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -453,7 +471,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * displayReleaseVersion.
+         * <p>The Ray DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
          */
         public Builder displayReleaseVersion(String displayReleaseVersion) {
             this.displayReleaseVersion = displayReleaseVersion;
@@ -461,7 +482,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * extraParam.
+         * <p>The extra parameters in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extraParam(String extraParam) {
             this.extraParam = extraParam;
@@ -469,7 +493,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * grpcEndpoint.
+         * <p>The gRPC endpoint (internal network). The domain name in this endpoint can also be used to submit Ray jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com:80</p>
          */
         public Builder grpcEndpoint(String grpcEndpoint) {
             this.grpcEndpoint = grpcEndpoint;
@@ -477,7 +504,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * headSpec.
+         * <p>The parameters of the Ray cluster head node.</p>
          */
         public Builder headSpec(HeadSpec headSpec) {
             this.headSpec = headSpec;
@@ -485,7 +512,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The Ray cluster node IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-k7nm8ahl5te4tg93-xxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -493,7 +523,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * instances.
+         * <p>The Ray cluster node IDs.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -501,7 +531,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * jobUrl.
+         * <p>The public URL for submitting Ray Jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://emr-spark-ray-gateway-cn-hangzhou.aliyuncs.com">https://emr-spark-ray-gateway-cn-hangzhou.aliyuncs.com</a></p>
          */
         public Builder jobUrl(String jobUrl) {
             this.jobUrl = jobUrl;
@@ -509,7 +542,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * jobUrlInner.
+         * <p>The internal network URL for submitting Ray jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com">http://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com</a></p>
          */
         public Builder jobUrlInner(String jobUrlInner) {
             this.jobUrlInner = jobUrlInner;
@@ -517,7 +553,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message returned when the status is Error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -525,7 +564,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * modified.
+         * <p>Indicates whether the configuration has been modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder modified(Boolean modified) {
             this.modified = modified;
@@ -533,7 +575,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * modifiedTime.
+         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1754274541693</p>
          */
         public Builder modifiedTime(Long modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -541,7 +586,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * modifier.
+         * <p>The UID of the user who last modified the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202077646755523991</p>
          */
         public Builder modifier(String modifier) {
             this.modifier = modifier;
@@ -549,7 +597,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * modifierName.
+         * <p>The nickname of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder modifierName(String modifierName) {
             this.modifierName = modifierName;
@@ -557,7 +608,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The Ray cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myRayCluster</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -565,7 +619,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * networkServiceName.
+         * <p>The network connectivity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkServiceName(String networkServiceName) {
             this.networkServiceName = networkServiceName;
@@ -573,7 +630,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -581,7 +641,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The start time. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750327083303</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -589,7 +652,17 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The session status. Valid values:</p>
+         * <ul>
+         * <li>Starting: Starting.</li>
+         * <li>Running: Running.</li>
+         * <li>Stopping: Stopping.</li>
+         * <li>Stopped: Stopped.</li>
+         * <li>Error: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -597,7 +670,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * submitToken.
+         * <p>The authentication token for submitting Ray Jobs. Include this token in the request header as &quot;ray-token&quot;: &quot;token&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d06484d3b424f7fa4ab7082a4076da2</p>
          */
         public Builder submitToken(String submitToken) {
             this.submitToken = submitToken;
@@ -605,7 +681,10 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The Alibaba Cloud account ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789012</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -613,7 +692,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * volumeIds.
+         * <p>The list of managed file IDs.</p>
          */
         public Builder volumeIds(java.util.List<String> volumeIds) {
             this.volumeIds = volumeIds;
@@ -621,7 +700,7 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * workerSpec.
+         * <p>The Ray cluster worker node information.</p>
          */
         public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
             this.workerSpec = workerSpec;
@@ -640,12 +719,129 @@ public class GetRayClusterResponseBody extends TeaModel {
      *
      * <p>GetRayClusterResponseBody</p>
      */
+    public static class GftConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("redisPassword")
+        private String redisPassword;
+
+        @com.aliyun.core.annotation.NameInMap("redisUrl")
+        private String redisUrl;
+
+        @com.aliyun.core.annotation.NameInMap("redisUsername")
+        private String redisUsername;
+
+        private GftConfig(Builder builder) {
+            this.redisPassword = builder.redisPassword;
+            this.redisUrl = builder.redisUrl;
+            this.redisUsername = builder.redisUsername;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GftConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return redisPassword
+         */
+        public String getRedisPassword() {
+            return this.redisPassword;
+        }
+
+        /**
+         * @return redisUrl
+         */
+        public String getRedisUrl() {
+            return this.redisUrl;
+        }
+
+        /**
+         * @return redisUsername
+         */
+        public String getRedisUsername() {
+            return this.redisUsername;
+        }
+
+        public static final class Builder {
+            private String redisPassword; 
+            private String redisUrl; 
+            private String redisUsername; 
+
+            private Builder() {
+            } 
+
+            private Builder(GftConfig model) {
+                this.redisPassword = model.redisPassword;
+                this.redisUrl = model.redisUrl;
+                this.redisUsername = model.redisUsername;
+            } 
+
+            /**
+             * <p>The Redis password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
+             */
+            public Builder redisPassword(String redisPassword) {
+                this.redisPassword = redisPassword;
+                return this;
+            }
+
+            /**
+             * <p>The Redis URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.4.5.6:6789</p>
+             */
+            public Builder redisUrl(String redisUrl) {
+                this.redisUrl = redisUrl;
+                return this;
+            }
+
+            /**
+             * <p>The Redis username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder redisUsername(String redisUsername) {
+                this.redisUsername = redisUsername;
+                return this;
+            }
+
+            public GftConfig build() {
+                return new GftConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRayClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRayClusterResponseBody</p>
+     */
     public static class HeadSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
         @com.aliyun.core.annotation.NameInMap("enableAutoScaling")
         private Boolean enableAutoScaling;
+
+        @com.aliyun.core.annotation.NameInMap("env")
+        private String env;
+
+        @com.aliyun.core.annotation.NameInMap("gftConfig")
+        private GftConfig gftConfig;
+
+        @com.aliyun.core.annotation.NameInMap("gftEnabled")
+        private Boolean gftEnabled;
 
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
@@ -659,16 +855,24 @@ public class GetRayClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("queueName")
         private String queueName;
 
+        @com.aliyun.core.annotation.NameInMap("rayStartParams")
+        private String rayStartParams;
+
         @com.aliyun.core.annotation.NameInMap("replica")
         private Integer replica;
 
         private HeadSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.enableAutoScaling = builder.enableAutoScaling;
+            this.env = builder.env;
+            this.gftConfig = builder.gftConfig;
+            this.gftEnabled = builder.gftEnabled;
             this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
             this.memory = builder.memory;
             this.queueName = builder.queueName;
+            this.rayStartParams = builder.rayStartParams;
             this.replica = builder.replica;
         }
 
@@ -688,10 +892,38 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        /**
          * @return enableAutoScaling
          */
         public Boolean getEnableAutoScaling() {
             return this.enableAutoScaling;
+        }
+
+        /**
+         * @return env
+         */
+        public String getEnv() {
+            return this.env;
+        }
+
+        /**
+         * @return gftConfig
+         */
+        public GftConfig getGftConfig() {
+            return this.gftConfig;
+        }
+
+        /**
+         * @return gftEnabled
+         */
+        public Boolean getGftEnabled() {
+            return this.gftEnabled;
         }
 
         /**
@@ -723,6 +955,13 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return rayStartParams
+         */
+        public String getRayStartParams() {
+            return this.rayStartParams;
+        }
+
+        /**
          * @return replica
          */
         public Integer getReplica() {
@@ -731,11 +970,16 @@ public class GetRayClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cpu; 
+            private String displayReleaseVersion; 
             private Boolean enableAutoScaling; 
+            private String env; 
+            private GftConfig gftConfig; 
+            private Boolean gftEnabled; 
             private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
             private String memory; 
             private String queueName; 
+            private String rayStartParams; 
             private Integer replica; 
 
             private Builder() {
@@ -743,16 +987,24 @@ public class GetRayClusterResponseBody extends TeaModel {
 
             private Builder(HeadSpec model) {
                 this.cpu = model.cpu;
+                this.displayReleaseVersion = model.displayReleaseVersion;
                 this.enableAutoScaling = model.enableAutoScaling;
+                this.env = model.env;
+                this.gftConfig = model.gftConfig;
+                this.gftEnabled = model.gftEnabled;
                 this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
                 this.memory = model.memory;
                 this.queueName = model.queueName;
+                this.rayStartParams = model.rayStartParams;
                 this.replica = model.replica;
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -760,7 +1012,21 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * enableAutoScaling.
+             * <p>The Ray DPI engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether automatic scaling is enabled for worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
@@ -768,7 +1034,37 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * gpuSpec.
+             * <p>The environment variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MY_ENV=123456</p>
+             */
+            public Builder env(String env) {
+                this.env = env;
+                return this;
+            }
+
+            /**
+             * <p>The GCS Fault Tolerance configuration.</p>
+             */
+            public Builder gftConfig(GftConfig gftConfig) {
+                this.gftConfig = gftConfig;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether GCS Fault Tolerance is enabled.</p>
+             */
+            public Builder gftEnabled(Boolean gftEnabled) {
+                this.gftEnabled = gftEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The GPU instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -776,7 +1072,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * idleTimeoutSeconds.
+             * <p>The idle timeout period of worker nodes after automatic scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder idleTimeoutSeconds(Integer idleTimeoutSeconds) {
                 this.idleTimeoutSeconds = idleTimeoutSeconds;
@@ -784,7 +1083,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory size. Unit: Gi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -792,7 +1094,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -800,7 +1105,21 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The Ray startup parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--num-cpus=0</p>
+             */
+            public Builder rayStartParams(String rayStartParams) {
+                this.rayStartParams = rayStartParams;
+                return this;
+            }
+
+            /**
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -984,7 +1303,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * containerExitCode.
+             * <p>The exit code of the primary container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>137</p>
              */
             public Builder containerExitCode(Integer containerExitCode) {
                 this.containerExitCode = containerExitCode;
@@ -992,7 +1314,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * containerState.
+             * <p>The status of the primary container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder containerState(String containerState) {
                 this.containerState = containerState;
@@ -1000,7 +1325,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * containerStateMessage.
+             * <p>The primary container status message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ContainerExit</p>
              */
             public Builder containerStateMessage(String containerStateMessage) {
                 this.containerStateMessage = containerStateMessage;
@@ -1008,7 +1336,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * containerStateReason.
+             * <p>The primary container information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder containerStateReason(String containerStateReason) {
                 this.containerStateReason = containerStateReason;
@@ -1016,7 +1347,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735870116167</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1024,7 +1358,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-uiulpgow9xljim10-head-7cgta</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1032,7 +1369,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The node pod status message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1040,7 +1380,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * phase.
+             * <p>The node pod status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -1048,7 +1391,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * reason.
+             * <p>The node information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OOMKilled</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1056,7 +1402,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1762946698000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -1064,7 +1413,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Head</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1088,6 +1440,12 @@ public class GetRayClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
+        @com.aliyun.core.annotation.NameInMap("env")
+        private String env;
+
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
 
@@ -1106,6 +1464,9 @@ public class GetRayClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("queueName")
         private String queueName;
 
+        @com.aliyun.core.annotation.NameInMap("rayStartParams")
+        private String rayStartParams;
+
         @com.aliyun.core.annotation.NameInMap("replica")
         private Integer replica;
 
@@ -1114,12 +1475,15 @@ public class GetRayClusterResponseBody extends TeaModel {
 
         private WorkerSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
+            this.env = builder.env;
             this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
             this.memory = builder.memory;
             this.minReplica = builder.minReplica;
             this.queueName = builder.queueName;
+            this.rayStartParams = builder.rayStartParams;
             this.replica = builder.replica;
             this.workerType = builder.workerType;
         }
@@ -1137,6 +1501,20 @@ public class GetRayClusterResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        /**
+         * @return env
+         */
+        public String getEnv() {
+            return this.env;
         }
 
         /**
@@ -1182,6 +1560,13 @@ public class GetRayClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return rayStartParams
+         */
+        public String getRayStartParams() {
+            return this.rayStartParams;
+        }
+
+        /**
          * @return replica
          */
         public Integer getReplica() {
@@ -1197,12 +1582,15 @@ public class GetRayClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cpu; 
+            private String displayReleaseVersion; 
+            private String env; 
             private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
             private String memory; 
             private Integer minReplica; 
             private String queueName; 
+            private String rayStartParams; 
             private Integer replica; 
             private String workerType; 
 
@@ -1211,18 +1599,24 @@ public class GetRayClusterResponseBody extends TeaModel {
 
             private Builder(WorkerSpec model) {
                 this.cpu = model.cpu;
+                this.displayReleaseVersion = model.displayReleaseVersion;
+                this.env = model.env;
                 this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
                 this.memory = model.memory;
                 this.minReplica = model.minReplica;
                 this.queueName = model.queueName;
+                this.rayStartParams = model.rayStartParams;
                 this.replica = model.replica;
                 this.workerType = model.workerType;
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -1230,7 +1624,32 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * gpuSpec.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * <p>The Ray environment variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MY_ENV=12456</p>
+             */
+            public Builder env(String env) {
+                this.env = env;
+                return this;
+            }
+
+            /**
+             * <p>The GPU instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -1238,7 +1657,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The name of the worker node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WorkerGroup1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1246,7 +1668,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * maxReplica.
+             * <p>The maximum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -1254,7 +1679,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory size. Unit: Gi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -1262,7 +1690,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * minReplica.
+             * <p>The minimum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minReplica(Integer minReplica) {
                 this.minReplica = minReplica;
@@ -1270,7 +1701,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -1278,7 +1712,21 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The Ray startup parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--num-cpus=0</p>
+             */
+            public Builder rayStartParams(String rayStartParams) {
+                this.rayStartParams = rayStartParams;
+                return this;
+            }
+
+            /**
+             * <p>The number of worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -1286,7 +1734,10 @@ public class GetRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * workerType.
+             * <p>The type of the worker node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;

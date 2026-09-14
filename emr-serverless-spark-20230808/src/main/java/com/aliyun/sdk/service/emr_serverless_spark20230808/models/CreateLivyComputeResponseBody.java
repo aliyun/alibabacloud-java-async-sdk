@@ -93,7 +93,10 @@ public class CreateLivyComputeResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code of the request. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. For more information, see the message parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class CreateLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +179,10 @@ public class CreateLivyComputeResponseBody extends TeaModel {
             } 
 
             /**
-             * livyComputeId.
+             * <p>The ID of the Livy Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lc-i8xogcdfa4fk3yn1</p>
              */
             public Builder livyComputeId(String livyComputeId) {
                 this.livyComputeId = livyComputeId;

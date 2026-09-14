@@ -93,7 +93,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. For more information about the error, see the message parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>484D9DDA-300D-525E-AF7A-0CCCA5C64A7A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,16 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether the token automatically expires.</p>
+             * <ul>
+             * <li><p>true: Yes.</p>
+             * </li>
+             * <li><p>false: No.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -191,7 +209,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * expireDays.
+             * <p>The expiration period, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder expireDays(Integer expireDays) {
                 this.expireDays = expireDays;
@@ -336,7 +357,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * autoExpireConfiguration.
+             * <p>The information about token expiration.</p>
              */
             public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
                 this.autoExpireConfiguration = autoExpireConfiguration;
@@ -344,7 +365,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the token was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -352,7 +376,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The name of the user who created the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -360,7 +387,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * expireTime.
+             * <p>The time when the token expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749457994000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -368,7 +398,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * lastUsedTime.
+             * <p>The time when the token was last used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456098000</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -376,7 +409,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -384,7 +420,10 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * token.
+             * <p>The content of the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d25561157a635bb</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -392,7 +431,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Token ID。</p>
+             * <p>The ID of the token.</p>
              * 
              * <strong>example:</strong>
              * <p>lctk-xxxxxxxxxx</p>

@@ -35,6 +35,10 @@ public class StartProcessInstanceRequest extends Request {
     private String email;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("expectedParallelismNumber")
+    private Integer expectedParallelismNumber;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("interval")
     private String interval;
 
@@ -57,6 +61,10 @@ public class StartProcessInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("runMode")
+    private String runMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("runtimeQueue")
     private String runtimeQueue;
 
@@ -74,11 +82,13 @@ public class StartProcessInstanceRequest extends Request {
         this.action = builder.action;
         this.comments = builder.comments;
         this.email = builder.email;
+        this.expectedParallelismNumber = builder.expectedParallelismNumber;
         this.interval = builder.interval;
         this.isProd = builder.isProd;
         this.processDefinitionCode = builder.processDefinitionCode;
         this.productNamespace = builder.productNamespace;
         this.regionId = builder.regionId;
+        this.runMode = builder.runMode;
         this.runtimeQueue = builder.runtimeQueue;
         this.versionHashCode = builder.versionHashCode;
         this.versionNumber = builder.versionNumber;
@@ -126,6 +136,13 @@ public class StartProcessInstanceRequest extends Request {
     }
 
     /**
+     * @return expectedParallelismNumber
+     */
+    public Integer getExpectedParallelismNumber() {
+        return this.expectedParallelismNumber;
+    }
+
+    /**
      * @return interval
      */
     public String getInterval() {
@@ -161,6 +178,13 @@ public class StartProcessInstanceRequest extends Request {
     }
 
     /**
+     * @return runMode
+     */
+    public String getRunMode() {
+        return this.runMode;
+    }
+
+    /**
      * @return runtimeQueue
      */
     public String getRuntimeQueue() {
@@ -186,11 +210,13 @@ public class StartProcessInstanceRequest extends Request {
         private String action; 
         private String comments; 
         private String email; 
+        private Integer expectedParallelismNumber; 
         private String interval; 
         private Boolean isProd; 
         private Long processDefinitionCode; 
         private String productNamespace; 
         private String regionId; 
+        private String runMode; 
         private String runtimeQueue; 
         private String versionHashCode; 
         private Integer versionNumber; 
@@ -205,11 +231,13 @@ public class StartProcessInstanceRequest extends Request {
             this.action = request.action;
             this.comments = request.comments;
             this.email = request.email;
+            this.expectedParallelismNumber = request.expectedParallelismNumber;
             this.interval = request.interval;
             this.isProd = request.isProd;
             this.processDefinitionCode = request.processDefinitionCode;
             this.productNamespace = request.productNamespace;
             this.regionId = request.regionId;
+            this.runMode = request.runMode;
             this.runtimeQueue = request.runtimeQueue;
             this.versionHashCode = request.versionHashCode;
             this.versionNumber = request.versionNumber;
@@ -256,6 +284,18 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
+         * <p>The expected concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder expectedParallelismNumber(Integer expectedParallelismNumber) {
+            this.putQueryParameter("expectedParallelismNumber", expectedParallelismNumber);
+            this.expectedParallelismNumber = expectedParallelismNumber;
+            return this;
+        }
+
+        /**
          * interval.
          */
         public Builder interval(String interval) {
@@ -265,7 +305,7 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to run the workflow in the production environment.</p>
+         * <p>Specifies whether the workflow runs in the production environment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -277,7 +317,7 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * <p>The workflow ID.</p>
+         * <p>The workflow definition ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +330,7 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +355,19 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * <p>The queue on which the workflow runs.</p>
+         * <p>The execution policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUN_MODE_PARALLEL</p>
+         */
+        public Builder runMode(String runMode) {
+            this.putQueryParameter("runMode", runMode);
+            this.runMode = runMode;
+            return this;
+        }
+
+        /**
+         * <p>The runtime queue.</p>
          * 
          * <strong>example:</strong>
          * <p>root_queue</p>
@@ -327,7 +379,7 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * <p>The hash code of the version.</p>
+         * <p>The version hash code.</p>
          * 
          * <strong>example:</strong>
          * <p>dh*********</p>
@@ -339,7 +391,7 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * <p>The version number of the workflow.</p>
+         * <p>The workflow definition version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

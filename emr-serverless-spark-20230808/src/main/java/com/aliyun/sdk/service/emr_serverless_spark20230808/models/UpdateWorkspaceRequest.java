@@ -185,7 +185,10 @@ public class UpdateWorkspaceRequest extends Request {
         } 
 
         /**
-         * cu.
+         * <p>The upper limit of workspace resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder cu(Integer cu) {
             this.putBodyParameter("cu", cu);
@@ -194,7 +197,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * gpu.
+         * <p>The number of GPU cards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder gpu(Integer gpu) {
             this.putBodyParameter("gpu", gpu);
@@ -203,7 +209,7 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * gpuSpec.
+         * <p>The GPU instance type.</p>
          */
         public Builder gpuSpec(java.util.List<String> gpuSpec) {
             this.putBodyParameter("gpuSpec", gpuSpec);
@@ -230,7 +236,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwpi66knkxny</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -239,7 +248,7 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * subscription.
+         * <p>The information for converting from pay-as-you-go to subscription.</p>
          */
         public Builder subscription(Subscription subscription) {
             this.putBodyParameter("subscription", subscription);
@@ -248,7 +257,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-975bcfda9625****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("workspaceId", workspaceId);
@@ -257,7 +269,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * workspaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putBodyParameter("workspaceName", workspaceName);
@@ -266,7 +281,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -579,7 +597,10 @@ public class UpdateWorkspaceRequest extends Request {
             } 
 
             /**
-             * autoRenew.
+             * <p>Specifies whether to enable auto-renewal. This parameter is required for the pre-paid billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(String autoRenew) {
                 this.autoRenew = autoRenew;
@@ -587,7 +608,10 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * autoRenewPeriod.
+             * <p>The auto-renewal duration. This parameter is required for the pre-paid billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoRenewPeriod(String autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -595,7 +619,10 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * autoRenewPeriodUnit.
+             * <p>The auto-renewal period unit. This parameter is required for the pre-paid billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MONTH</p>
              */
             public Builder autoRenewPeriodUnit(String autoRenewPeriodUnit) {
                 this.autoRenewPeriodUnit = autoRenewPeriodUnit;
@@ -603,7 +630,10 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * clientToken.
+             * <p>The idempotency token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-token-asxkxxxxxxx</p>
              */
             public Builder clientToken(String clientToken) {
                 this.clientToken = clientToken;
@@ -611,7 +641,10 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * duration.
+             * <p>The number of subscription periods. This parameter is required for the pre-paid billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1799</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -619,7 +652,10 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * paymentDurationUnit.
+             * <p>The subscription period unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MONTH</p>
              */
             public Builder paymentDurationUnit(String paymentDurationUnit) {
                 this.paymentDurationUnit = paymentDurationUnit;
@@ -627,7 +663,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * queue.
+             * <p>The list of running queues to be converted.</p>
              */
             public Builder queue(java.util.List<String> queue) {
                 this.queue = queue;

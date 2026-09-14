@@ -535,7 +535,10 @@ public class GetRayJobResponseBody extends TeaModel {
         } 
 
         /**
-         * activeDeadlineSeconds.
+         * <p>The timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder activeDeadlineSeconds(Integer activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
@@ -543,7 +546,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * backoffLimit.
+         * <p>The number of failure retries. Currently fixed at 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder backoffLimit(Integer backoffLimit) {
             this.backoffLimit = backoffLimit;
@@ -551,7 +557,16 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * clusterState.
+         * <p>The status of the corresponding Ray cluster. Valid values:</p>
+         * <ul>
+         * <li>Deleted: Deleted.</li>
+         * <li>Submitted: Submitted but creation has not started.</li>
+         * <li>Pending: Being created.</li>
+         * <li>Running: Running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder clusterState(String clusterState) {
             this.clusterState = clusterState;
@@ -559,7 +574,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * creatorName.
+         * <p>The nickname of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder creatorName(String creatorName) {
             this.creatorName = creatorName;
@@ -567,7 +585,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * cuHours.
+         * <p>The consumed CU resources. This value is returned 10 minutes after the cluster is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1899</p>
          */
         public Builder cuHours(Double cuHours) {
             this.cuHours = cuHours;
@@ -575,7 +596,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * dashboardUrl.
+         * <p>The dashboard URL of the Ray cluster. When the Ray cluster is in the Running state, this is the Runtime UI. After the cluster enters the Deleted state, this is the History UI. History UI is supported only in err-1.2.0 and later versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx">https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx</a></p>
          */
         public Builder dashboardUrl(String dashboardUrl) {
             this.dashboardUrl = dashboardUrl;
@@ -583,7 +607,7 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * dashboardUrlExtra.
+         * <p>The extra dashboard UI URLs. This field is currently empty.</p>
          */
         public Builder dashboardUrlExtra(java.util.List<String> dashboardUrlExtra) {
             this.dashboardUrlExtra = dashboardUrlExtra;
@@ -591,7 +615,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * displayReleaseVersion.
+         * <p>The Ray DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>err-1.2.0 (Ray 2.55.1, Python 3.12)</p>
          */
         public Builder displayReleaseVersion(String displayReleaseVersion) {
             this.displayReleaseVersion = displayReleaseVersion;
@@ -599,7 +626,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * duration.
+         * <p>The task duration, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2459764</p>
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -607,7 +637,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>The task end time. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1762949372000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -615,7 +648,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * entrypoint.
+         * <p>The startup command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python main.py</p>
          */
         public Builder entrypoint(String entrypoint) {
             this.entrypoint = entrypoint;
@@ -623,7 +659,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * entrypointMemory.
+         * <p>The memory size requested by the entrypoint task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4Gi</p>
          */
         public Builder entrypointMemory(String entrypointMemory) {
             this.entrypointMemory = entrypointMemory;
@@ -631,7 +670,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * entrypointNumCpus.
+         * <p>The number of CPUs requested by the entrypoint task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder entrypointNumCpus(String entrypointNumCpus) {
             this.entrypointNumCpus = entrypointNumCpus;
@@ -639,7 +681,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * entrypointNumGpus.
+         * <p>The number of GPUs requested by the entrypoint task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder entrypointNumGpus(String entrypointNumGpus) {
             this.entrypointNumGpus = entrypointNumGpus;
@@ -647,7 +692,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * entrypointResources.
+         * <p>The custom resource request JSON string for the entrypoint task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fpu&quot;: 1}</p>
          */
         public Builder entrypointResources(String entrypointResources) {
             this.entrypointResources = entrypointResources;
@@ -655,7 +703,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * extraParam.
+         * <p>The extra parameters in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userDefinedFiles&quot;: &quot;oss://mybucket/artifact/config.json,oss://mybucket/artifact/config2.json&quot;, &quot;userRequirementsFile&quot;: &quot;oss://mybucket/requirements.txt&quot;}</p>
          */
         public Builder extraParam(String extraParam) {
             this.extraParam = extraParam;
@@ -663,7 +714,7 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * guHours.
+         * <p>The consumed GPU hours. This field is currently empty.</p>
          */
         public Builder guHours(GuHours guHours) {
             this.guHours = guHours;
@@ -671,7 +722,7 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * headSpec.
+         * <p>The parameters of the Ray cluster head node.</p>
          */
         public Builder headSpec(HeadSpec headSpec) {
             this.headSpec = headSpec;
@@ -679,7 +730,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * logBucketName.
+         * <p>The name of the bucket that stores logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-ray-cn-hangzhou</p>
          */
         public Builder logBucketName(String logBucketName) {
             this.logBucketName = logBucketName;
@@ -687,7 +741,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * logPath.
+         * <p>The path where logs are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-xxxxxxx/ray/logs/xxxxxx/</p>
          */
         public Builder logPath(String logPath) {
             this.logPath = logPath;
@@ -695,7 +752,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The execution information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Job finished successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -703,7 +763,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * metadataJson.
+         * <p>The task metadata JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;owner&quot;: &quot;alice&quot;}</p>
          */
         public Builder metadataJson(String metadataJson) {
             this.metadataJson = metadataJson;
@@ -711,7 +774,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the Ray cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myRayCluster</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -719,7 +785,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * networkServiceName.
+         * <p>The network connectivity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkServiceName(String networkServiceName) {
             this.networkServiceName = networkServiceName;
@@ -727,7 +796,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -735,7 +807,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * runtimeEnvJson.
+         * <p>The Ray runtime environment JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pip&quot;:[&quot;requests==2.26.0&quot;,&quot;pendulum==2.1.2&quot;],&quot;env_vars&quot;:{&quot;KEY&quot;:&quot;VALUE&quot;}}</p>
          */
         public Builder runtimeEnvJson(String runtimeEnvJson) {
             this.runtimeEnvJson = runtimeEnvJson;
@@ -743,7 +818,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * shutdownAfterJobFinishes.
+         * <p>Specifies whether to automatically destroy the temporary cluster after the task is completed. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder shutdownAfterJobFinishes(Boolean shutdownAfterJobFinishes) {
             this.shutdownAfterJobFinishes = shutdownAfterJobFinishes;
@@ -751,7 +829,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The start time. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750327083303</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -759,7 +840,20 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Submitted: The task is submitted.</li>
+         * <li>Pending: The cluster is being created.</li>
+         * <li>Running: The task is running.</li>
+         * <li>Succeeded: The task succeeded.</li>
+         * <li>Failed: The task failed.</li>
+         * <li>Cancelling: The task is being canceled.</li>
+         * <li>Cancelled: The task is canceled.</li>
+         * <li>Timeout: The task timed out and was canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -767,7 +861,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * submissionId.
+         * <p>The ID of the Ray Job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rj-xxxxxxxxxx</p>
          */
         public Builder submissionId(String submissionId) {
             this.submissionId = submissionId;
@@ -775,7 +872,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * submissionMode.
+         * <p>The job submission mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPMode</p>
          */
         public Builder submissionMode(String submissionMode) {
             this.submissionMode = submissionMode;
@@ -783,7 +883,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * submitTime.
+         * <p>The task submission time. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750327082303</p>
          */
         public Builder submitTime(Long submitTime) {
             this.submitTime = submitTime;
@@ -791,7 +894,7 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
@@ -799,7 +902,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * taskBizId.
+         * <p>The ID of the data development node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TSK-682e0112f6f24d9f9305b92174846985</p>
          */
         public Builder taskBizId(String taskBizId) {
             this.taskBizId = taskBizId;
@@ -807,7 +913,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * ttlSecondsAfterFinished.
+         * <p>The number of seconds to wait before destroying the cluster. This parameter takes effect only when shutdownAfterJobFinishes is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
@@ -815,7 +924,7 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * volumeIds.
+         * <p>The list of managed file IDs.</p>
          */
         public Builder volumeIds(java.util.List<String> volumeIds) {
             this.volumeIds = volumeIds;
@@ -823,7 +932,7 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * workerSpecs.
+         * <p>The Ray cluster worker node information.</p>
          */
         public Builder workerSpecs(java.util.List<WorkerSpecs> workerSpecs) {
             this.workerSpecs = workerSpecs;
@@ -831,7 +940,10 @@ public class GetRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * workingDir.
+         * <p>The URL of the task code working directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket/hello.zip</p>
          */
         public Builder workingDir(String workingDir) {
             this.workingDir = workingDir;
@@ -897,7 +1009,10 @@ public class GetRayJobResponseBody extends TeaModel {
             } 
 
             /**
-             * gpuHours.
+             * <p>The consumed GPU hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.6</p>
              */
             public Builder gpuHours(Double gpuHours) {
                 this.gpuHours = gpuHours;
@@ -905,7 +1020,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * gpuSpec.
+             * <p>The GPU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -929,6 +1047,9 @@ public class GetRayJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
         @com.aliyun.core.annotation.NameInMap("enableAutoScaling")
         private Boolean enableAutoScaling;
 
@@ -949,6 +1070,7 @@ public class GetRayJobResponseBody extends TeaModel {
 
         private HeadSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.enableAutoScaling = builder.enableAutoScaling;
             this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
@@ -970,6 +1092,13 @@ public class GetRayJobResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
         }
 
         /**
@@ -1016,6 +1145,7 @@ public class GetRayJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cpu; 
+            private String displayReleaseVersion; 
             private Boolean enableAutoScaling; 
             private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
@@ -1028,6 +1158,7 @@ public class GetRayJobResponseBody extends TeaModel {
 
             private Builder(HeadSpec model) {
                 this.cpu = model.cpu;
+                this.displayReleaseVersion = model.displayReleaseVersion;
                 this.enableAutoScaling = model.enableAutoScaling;
                 this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
@@ -1037,7 +1168,10 @@ public class GetRayJobResponseBody extends TeaModel {
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -1045,7 +1179,21 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * enableAutoScaling.
+             * <p>The Ray DPI engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether automatic scaling is enabled for worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
@@ -1053,7 +1201,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * gpuSpec.
+             * <p>The GPU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -1061,7 +1212,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * idleTimeoutSeconds.
+             * <p>The idle timeout for worker nodes when automatic scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder idleTimeoutSeconds(Integer idleTimeoutSeconds) {
                 this.idleTimeoutSeconds = idleTimeoutSeconds;
@@ -1069,7 +1223,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -1077,7 +1234,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -1085,7 +1245,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -1108,6 +1271,9 @@ public class GetRayJobResponseBody extends TeaModel {
     public static class WorkerSpecs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
+
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
 
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
@@ -1132,6 +1298,7 @@ public class GetRayJobResponseBody extends TeaModel {
 
         private WorkerSpecs(Builder builder) {
             this.cpu = builder.cpu;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
@@ -1154,6 +1321,13 @@ public class GetRayJobResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
         }
 
         /**
@@ -1207,6 +1381,7 @@ public class GetRayJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cpu; 
+            private String displayReleaseVersion; 
             private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
@@ -1220,6 +1395,7 @@ public class GetRayJobResponseBody extends TeaModel {
 
             private Builder(WorkerSpecs model) {
                 this.cpu = model.cpu;
+                this.displayReleaseVersion = model.displayReleaseVersion;
                 this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
@@ -1230,7 +1406,10 @@ public class GetRayJobResponseBody extends TeaModel {
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -1238,7 +1417,21 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * gpuSpec.
+             * <p>The DPI engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * <p>The GPU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -1246,7 +1439,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The worker node group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WorkerGroup1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1254,7 +1450,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * maxReplica.
+             * <p>The maximum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -1262,7 +1461,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -1270,7 +1472,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * minReplica.
+             * <p>The minimum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minReplica(Integer minReplica) {
                 this.minReplica = minReplica;
@@ -1278,7 +1483,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -1286,7 +1494,10 @@ public class GetRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;

@@ -101,7 +101,10 @@ public class GetRayLogRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-790b443d72394bfc</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -110,7 +113,10 @@ public class GetRayLogRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The ID of the Ray job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rj-xxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -119,7 +125,10 @@ public class GetRayLogRequest extends Request {
         }
 
         /**
-         * bucketName.
+         * <p>The bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mybucket</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("bucketName", bucketName);
@@ -128,7 +137,10 @@ public class GetRayLogRequest extends Request {
         }
 
         /**
-         * path.
+         * <p>The log file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/w-xxxxxxx/ray/logs/rj-xxxxxxxxxx_default/xxxx/rj-xxxx_driver.log</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("path", path);

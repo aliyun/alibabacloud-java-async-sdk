@@ -345,7 +345,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The workflow ID.</p>
+         * <p>The workflow definition ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,7 +358,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The email address to receive alerts.</p>
+         * <p>The email address for alerts.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -370,7 +370,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The description of the workflow.</p>
+         * <p>The workflow description.</p>
          * 
          * <strong>example:</strong>
          * <p>ods batch workflow</p>
@@ -405,7 +405,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The name of the workflow.</p>
+         * <p>The workflow name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -455,7 +455,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The status of the workflow.</p>
+         * <p>The release state of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
@@ -491,7 +491,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The execution user.</p>
+         * <p>The user to run the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>113***************</p>
@@ -503,7 +503,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The scheduling settings.</p>
+         * <p>The scheduling configuration.</p>
          */
         public Builder schedule(Schedule schedule) {
             String scheduleShrink = shrink(schedule, "schedule", "json");
@@ -523,7 +523,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The descriptions of all nodes in the workflow.</p>
+         * <p>A JSON array of task definitions. This array contains the descriptive information for all tasks in the workflow.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskDefinitionJson(java.util.List<TaskDefinitionJson> taskDefinitionJson) {
@@ -534,7 +534,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The node parallelism.</p>
+         * <p>The degree of concurrent execution for workflow nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -546,7 +546,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The dependencies of all nodes in the workflow. preTaskCode specifies the ID of an upstream node, and postTaskCode specifies the ID of a downstream node. The ID of each node is unique. If a node does not have an upstream node, set preTaskCode to 0.</p>
+         * <p>A JSON array that defines the dependencies between tasks in the workflow. \<code>preTaskCode\\</code> specifies the upstream task ID, and \<code>postTaskCode\\</code> specifies the downstream task ID. Each task must have a unique ID. For a task node without an upstream task, add a dependency and set \<code>preTaskCode\\</code> to 0.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskRelationJson(java.util.List<TaskRelationJson> taskRelationJson) {
@@ -557,7 +557,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The default timeout period of the workflow.</p>
+         * <p>The default timeout period for the workflow execution.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -771,7 +771,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The CRON expression that is used for scheduling.</p>
+             * <p>The cron expression for scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 0 * * ?</p>
@@ -782,7 +782,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The end time of the scheduling.</p>
+             * <p>The end time of the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-23 16:13:27</p>
@@ -793,7 +793,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The start time of the scheduling.</p>
+             * <p>The start time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-23 16:13:27</p>
@@ -804,7 +804,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The ID of the time zone.</p>
+             * <p>The time zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -991,7 +991,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The key of the SparkConf object.</p>
+             * <p>The key of the Spark configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>spark.dynamicAllocation.enabled</p>
@@ -1002,7 +1002,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The value of the SparkConf object.</p>
+             * <p>The value of the Spark configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1257,7 +1257,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The displayed version of the Spark engine.</p>
+             * <p>The display version of the Spark engine.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -1279,7 +1279,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable Fusion engine for acceleration.</p>
+             * <p>Specifies whether to enable the Fusion engine for acceleration.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1298,7 +1298,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The name of the queue on which the job runs.</p>
+             * <p>The name of the queue on which the task runs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1310,7 +1310,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the Spark jobs.</p>
+             * <p>The Spark task configurations.</p>
              */
             public Builder sparkConf(java.util.List<SparkConf> sparkConf) {
                 this.sparkConf = sparkConf;
@@ -1318,7 +1318,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The number of driver cores of the Spark job.</p>
+             * <p>The number of cores for the Spark driver.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1329,7 +1329,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The size of driver memory of the Spark job.</p>
+             * <p>The memory size of the Spark driver.</p>
              * 
              * <strong>example:</strong>
              * <p>4g</p>
@@ -1340,7 +1340,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The number of executor cores of the Spark job.</p>
+             * <p>The number of cores for each Spark executor.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1351,7 +1351,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The size of executor memory of the Spark job.</p>
+             * <p>The memory size of each Spark executor.</p>
              * 
              * <strong>example:</strong>
              * <p>4g</p>
@@ -1362,7 +1362,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The level of the Spark log.</p>
+             * <p>The Spark log level.</p>
              * 
              * <strong>example:</strong>
              * <p>INFO</p>
@@ -1373,7 +1373,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The path where the operational logs of the Spark job are stored.</p>
+             * <p>The path to store Spark task logs.</p>
              */
             public Builder sparkLogPath(String sparkLogPath) {
                 this.sparkLogPath = sparkLogPath;
@@ -1381,7 +1381,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The version of the Spark engine.</p>
+             * <p>The Spark engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -1392,7 +1392,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The ID of the data development job.</p>
+             * <p>The ID of the Data Development task.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1404,7 +1404,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The type of the Spark job.</p>
+             * <p>The Spark job type.</p>
              * 
              * <strong>example:</strong>
              * <p>SQL</p>
@@ -1607,7 +1607,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The email address to receive alerts.</p>
+             * <p>The email address for alerts.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -1618,7 +1618,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The task definition ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1630,7 +1630,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The node description.</p>
+             * <p>The description of the task definition.</p>
              * 
              * <strong>example:</strong>
              * <p>ods transform task</p>
@@ -1641,7 +1641,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to send alerts when the node fails.</p>
+             * <p>Specifies whether to enable alerts when the task fails.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1652,7 +1652,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The number of retries when the node fails.</p>
+             * <p>The number of times to retry the task if it fails.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1663,7 +1663,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The name of the job.</p>
+             * <p>The task name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1675,7 +1675,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to send alerts when the node is started.</p>
+             * <p>Specifies whether to enable alerts when the task starts.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1686,7 +1686,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The tags of the job.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
@@ -1694,7 +1694,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The job parameters.</p>
+             * <p>The parameters for the task definition.</p>
              * <p>This parameter is required.</p>
              */
             public Builder taskParams(TaskParams taskParams) {
@@ -1703,7 +1703,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The type of the node.</p>
+             * <p>The type of the workflow node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1715,7 +1715,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The default timeout period of the node.</p>
+             * <p>The default timeout period for the task execution.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1829,7 +1829,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The name of the node topology. You can enter a workflow name.</p>
+             * <p>The name of the task topology. You can use the workflow name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1841,7 +1841,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The ID of the downstream node.</p>
+             * <p>The downstream task ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1853,7 +1853,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The version of the downstream node.</p>
+             * <p>The downstream task version.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1865,7 +1865,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The ID of the upstream node.</p>
+             * <p>The upstream task ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1877,7 +1877,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The version of the upstream node.</p>
+             * <p>The upstream task version.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -93,7 +93,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 1000000 indicates success. Any other value indicates failure. You can view the specific error description in the message field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +257,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -256,7 +268,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * createdby.
+             * <p>The creator of the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder createdby(String createdby) {
                 this.createdby = createdby;
@@ -264,7 +279,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * expireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456994000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -272,7 +290,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * lastUsedTime.
+             * <p>The last used time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456098000</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -280,7 +301,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The token name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +312,10 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * token.
+             * <p>The token content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5d37843fb6f1e8</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -353,7 +380,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * tokens.
+             * <p>The list of tokens.</p>
              */
             public Builder tokens(java.util.List<Tokens> tokens) {
                 this.tokens = tokens;

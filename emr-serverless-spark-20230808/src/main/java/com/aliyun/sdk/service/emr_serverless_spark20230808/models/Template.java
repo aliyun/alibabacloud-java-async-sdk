@@ -294,7 +294,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Creator UID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150978934701****</p>
          */
         public Builder creator(Long creator) {
             this.creator = creator;
@@ -302,7 +306,10 @@ public class Template extends TeaModel {
         }
 
         /**
-         * displaySparkVersion.
+         * <p>Spark engine display version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.1.1</p>
          */
         public Builder displaySparkVersion(String displaySparkVersion) {
             this.displaySparkVersion = displaySparkVersion;
@@ -310,7 +317,10 @@ public class Template extends TeaModel {
         }
 
         /**
-         * fusion.
+         * <p>Whether to enable the fusion switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fusion(Boolean fusion) {
             this.fusion = fusion;
@@ -318,7 +328,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Creation time.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-10T02:02:41.000+00:00</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -326,7 +340,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Last modified time.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-10T02:02:41.000+00:00</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -342,7 +360,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Last modifier UID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150978934701****</p>
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
@@ -358,7 +380,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * sparkConf.
+         * <p>Spark Conf</p>
          */
         public Builder sparkConf(java.util.List<SparkConf> sparkConf) {
             this.sparkConf = sparkConf;
@@ -366,7 +388,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Spark Driver cores.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sparkDriverCores(Integer sparkDriverCores) {
             this.sparkDriverCores = sparkDriverCores;
@@ -374,7 +400,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Spark Driver memory.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1073741824</p>
          */
         public Builder sparkDriverMemory(Long sparkDriverMemory) {
             this.sparkDriverMemory = sparkDriverMemory;
@@ -382,7 +412,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Spark Executor cores.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sparkExecutorCores(Integer sparkExecutorCores) {
             this.sparkExecutorCores = sparkExecutorCores;
@@ -390,7 +424,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Spark Executor memory.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1073741824</p>
          */
         public Builder sparkExecutorMemory(Long sparkExecutorMemory) {
             this.sparkExecutorMemory = sparkExecutorMemory;
@@ -398,7 +436,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Spark log level.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder sparkLogLevel(String sparkLogLevel) {
             this.sparkLogLevel = sparkLogLevel;
@@ -406,7 +448,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Spark log path.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://your_bucket/path/to/your/log</p>
          */
         public Builder sparkLogPath(String sparkLogPath) {
             this.sparkLogPath = sparkLogPath;
@@ -414,7 +460,11 @@ public class Template extends TeaModel {
         }
 
         /**
+         * <p>Spark internal release version.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.1.1</p>
          */
         public Builder sparkVersion(String sparkVersion) {
             this.sparkVersion = sparkVersion;
@@ -422,7 +472,10 @@ public class Template extends TeaModel {
         }
 
         /**
-         * templateType.
+         * <p>Template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TASK</p>
          */
         public Builder templateType(String templateType) {
             this.templateType = templateType;

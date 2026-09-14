@@ -102,7 +102,7 @@ public class ListMembersRequest extends Request {
         } 
 
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * <p>一次获取的最大记录数。</p>
+         * <p>The maximum number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -127,7 +127,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+         * <p>The token that marks the start of the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,10 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

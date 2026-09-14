@@ -67,7 +67,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The interactive query ID.</p>
+             * <p>The ID of the interactive query.</p>
              * 
              * <strong>example:</strong>
              * <p>st-1231dfafadfa***</p>

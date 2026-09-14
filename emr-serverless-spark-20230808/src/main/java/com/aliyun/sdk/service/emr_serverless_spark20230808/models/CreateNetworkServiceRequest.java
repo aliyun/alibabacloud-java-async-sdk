@@ -157,7 +157,10 @@ public class CreateNetworkServiceRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -166,7 +169,10 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A token to ensure the idempotency of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acaf8f54-d40e-4c33-a900-f6c1b345cb47</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -175,7 +181,10 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the network service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -184,7 +193,10 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * securityGroupId.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>securityGroupId</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("securityGroupId", securityGroupId);
@@ -193,7 +205,10 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the network service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -202,7 +217,7 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * <p>VPC id。</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1g14f566kbk8jex****</p>
@@ -214,7 +229,7 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * vswitchIds.
+         * <p>A list of vSwitch IDs.</p>
          */
         public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitchIds", vswitchIds);
@@ -223,7 +238,10 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

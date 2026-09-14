@@ -67,10 +67,10 @@ public class StartJobRunResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The job run ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>jr-54321</p>
+         * <p>jr-f09a8fda2396****</p>
          */
         public Builder jobRunId(String jobRunId) {
             this.jobRunId = jobRunId;

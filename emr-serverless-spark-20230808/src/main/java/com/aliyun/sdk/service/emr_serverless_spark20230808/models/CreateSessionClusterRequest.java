@@ -253,7 +253,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The Spark configurations.</p>
+         * <p>The Spark application configurations.</p>
          */
         public Builder applicationConfigs(java.util.List<ApplicationConfigs> applicationConfigs) {
             this.putBodyParameter("applicationConfigs", applicationConfigs);
@@ -262,10 +262,12 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic startup.</p>
+         * <p>The automatic startup configuration.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Yes.</p>
+         * </li>
+         * <li><p>false: No.</p>
+         * </li>
          * </ul>
          */
         public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
@@ -275,7 +277,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The automatic termination configuration.</p>
+         * <p>The automatic stop configuration.</p>
          */
         public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
             this.putBodyParameter("autoStopConfiguration", autoStopConfiguration);
@@ -293,7 +295,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The version of the Spark engine.</p>
+         * <p>The version that is displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.3.1</p>
@@ -305,7 +307,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Python environment. This parameter takes effect only for notebook sessions.</p>
+         * <p>The ID of the Python environment. This parameter applies only to Notebook sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cpv569tlhtgndjl86t40</p>
@@ -317,7 +319,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Fusion engine for acceleration.</p>
+         * <p>Specifies whether to enable the Fusion engine for acceleration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -329,10 +331,12 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The session type.</p>
+         * <p>The type of the session. Valid values:</p>
          * <ul>
-         * <li>SQL</li>
-         * <li>NOTEBOOK</li>
+         * <li><p>SQL: an SQL session.</p>
+         * </li>
+         * <li><p>NOTEBOOK: a Notebook session.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,7 +349,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>spark_job_name</p>
@@ -378,7 +382,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The version number of Spark.</p>
+         * <p>The version of the Spark engine.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.3.1</p>
@@ -485,7 +489,7 @@ public class CreateSessionClusterRequest extends Request {
             }
 
             /**
-             * <p>The key of SparkConf.</p>
+             * <p>The key of a Spark configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>spark.app.name</p>
@@ -496,7 +500,7 @@ public class CreateSessionClusterRequest extends Request {
             }
 
             /**
-             * <p>The value of SparkConf.</p>
+             * <p>The value of a Spark configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -555,8 +559,10 @@ public class CreateSessionClusterRequest extends Request {
             /**
              * <p>Specifies whether to enable automatic startup.</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: Enables automatic startup.</p>
+             * </li>
+             * <li><p>false: Disables automatic startup.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -627,10 +633,12 @@ public class CreateSessionClusterRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable automatic termination.</p>
+             * <p>Specifies whether to enable automatic stop.</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: Enables automatic stop.</p>
+             * </li>
+             * <li><p>false: Disables automatic stop.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -642,7 +650,7 @@ public class CreateSessionClusterRequest extends Request {
             }
 
             /**
-             * <p>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</p>
+             * <p>The idle timeout period of the session. The session is automatically stopped after it is idle for the specified period. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>

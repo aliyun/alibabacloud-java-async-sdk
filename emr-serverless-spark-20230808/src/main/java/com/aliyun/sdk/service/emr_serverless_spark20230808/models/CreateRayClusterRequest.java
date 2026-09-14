@@ -171,7 +171,10 @@ public class CreateRayClusterRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -180,7 +183,10 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ray Cluster for dev.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -189,7 +195,10 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * displayReleaseVersion.
+         * <p>The Ray DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
          */
         public Builder displayReleaseVersion(String displayReleaseVersion) {
             this.putBodyParameter("displayReleaseVersion", displayReleaseVersion);
@@ -198,7 +207,10 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * extraParam.
+         * <p>The extra parameters. The value must be in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extraParam(String extraParam) {
             this.putBodyParameter("extraParam", extraParam);
@@ -207,7 +219,7 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * headSpec.
+         * <p>The parameters of the Ray cluster head node.</p>
          */
         public Builder headSpec(HeadSpec headSpec) {
             this.putBodyParameter("headSpec", headSpec);
@@ -216,7 +228,10 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the Ray cluster. The name must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRayCluster</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -225,7 +240,10 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * networkServiceName.
+         * <p>The network connectivity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkServiceName(String networkServiceName) {
             this.putBodyParameter("networkServiceName", networkServiceName);
@@ -234,7 +252,7 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * volumeIds.
+         * <p>The list of managed directory IDs to mount.</p>
          */
         public Builder volumeIds(java.util.List<String> volumeIds) {
             this.putBodyParameter("volumeIds", volumeIds);
@@ -243,7 +261,7 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * workerSpec.
+         * <p>The parameters of the Ray cluster worker nodes. A maximum of 50 groups are supported.</p>
          */
         public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
             this.putBodyParameter("workerSpec", workerSpec);
@@ -264,12 +282,129 @@ public class CreateRayClusterRequest extends Request {
      *
      * <p>CreateRayClusterRequest</p>
      */
+    public static class GftConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("redisPassword")
+        private String redisPassword;
+
+        @com.aliyun.core.annotation.NameInMap("redisUrl")
+        private String redisUrl;
+
+        @com.aliyun.core.annotation.NameInMap("redisUsername")
+        private String redisUsername;
+
+        private GftConfig(Builder builder) {
+            this.redisPassword = builder.redisPassword;
+            this.redisUrl = builder.redisUrl;
+            this.redisUsername = builder.redisUsername;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GftConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return redisPassword
+         */
+        public String getRedisPassword() {
+            return this.redisPassword;
+        }
+
+        /**
+         * @return redisUrl
+         */
+        public String getRedisUrl() {
+            return this.redisUrl;
+        }
+
+        /**
+         * @return redisUsername
+         */
+        public String getRedisUsername() {
+            return this.redisUsername;
+        }
+
+        public static final class Builder {
+            private String redisPassword; 
+            private String redisUrl; 
+            private String redisUsername; 
+
+            private Builder() {
+            } 
+
+            private Builder(GftConfig model) {
+                this.redisPassword = model.redisPassword;
+                this.redisUrl = model.redisUrl;
+                this.redisUsername = model.redisUsername;
+            } 
+
+            /**
+             * <p>The Redis password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redispasswd</p>
+             */
+            public Builder redisPassword(String redisPassword) {
+                this.redisPassword = redisPassword;
+                return this;
+            }
+
+            /**
+             * <p>The Redis URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.12.3.4:6379</p>
+             */
+            public Builder redisUrl(String redisUrl) {
+                this.redisUrl = redisUrl;
+                return this;
+            }
+
+            /**
+             * <p>The Redis username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder redisUsername(String redisUsername) {
+                this.redisUsername = redisUsername;
+                return this;
+            }
+
+            public GftConfig build() {
+                return new GftConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRayClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRayClusterRequest</p>
+     */
     public static class HeadSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
         @com.aliyun.core.annotation.NameInMap("enableAutoScaling")
         private Boolean enableAutoScaling;
+
+        @com.aliyun.core.annotation.NameInMap("env")
+        private String env;
+
+        @com.aliyun.core.annotation.NameInMap("gftConfig")
+        private GftConfig gftConfig;
+
+        @com.aliyun.core.annotation.NameInMap("gftEnabled")
+        private Boolean gftEnabled;
 
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
@@ -283,13 +418,21 @@ public class CreateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("queueName")
         private String queueName;
 
+        @com.aliyun.core.annotation.NameInMap("rayStartParams")
+        private String rayStartParams;
+
         private HeadSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.enableAutoScaling = builder.enableAutoScaling;
+            this.env = builder.env;
+            this.gftConfig = builder.gftConfig;
+            this.gftEnabled = builder.gftEnabled;
             this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
             this.memory = builder.memory;
             this.queueName = builder.queueName;
+            this.rayStartParams = builder.rayStartParams;
         }
 
         public static Builder builder() {
@@ -308,10 +451,38 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        /**
          * @return enableAutoScaling
          */
         public Boolean getEnableAutoScaling() {
             return this.enableAutoScaling;
+        }
+
+        /**
+         * @return env
+         */
+        public String getEnv() {
+            return this.env;
+        }
+
+        /**
+         * @return gftConfig
+         */
+        public GftConfig getGftConfig() {
+            return this.gftConfig;
+        }
+
+        /**
+         * @return gftEnabled
+         */
+        public Boolean getGftEnabled() {
+            return this.gftEnabled;
         }
 
         /**
@@ -342,28 +513,48 @@ public class CreateRayClusterRequest extends Request {
             return this.queueName;
         }
 
+        /**
+         * @return rayStartParams
+         */
+        public String getRayStartParams() {
+            return this.rayStartParams;
+        }
+
         public static final class Builder {
             private String cpu; 
+            private String displayReleaseVersion; 
             private Boolean enableAutoScaling; 
+            private String env; 
+            private GftConfig gftConfig; 
+            private Boolean gftEnabled; 
             private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
             private String memory; 
             private String queueName; 
+            private String rayStartParams; 
 
             private Builder() {
             } 
 
             private Builder(HeadSpec model) {
                 this.cpu = model.cpu;
+                this.displayReleaseVersion = model.displayReleaseVersion;
                 this.enableAutoScaling = model.enableAutoScaling;
+                this.env = model.env;
+                this.gftConfig = model.gftConfig;
+                this.gftEnabled = model.gftEnabled;
                 this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
                 this.memory = model.memory;
                 this.queueName = model.queueName;
+                this.rayStartParams = model.rayStartParams;
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -371,7 +562,21 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * enableAutoScaling.
+             * <p>The Ray DPI engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable automatic scaling for workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
@@ -379,7 +584,37 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * gpuSpec.
+             * <p>The environment variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MY_ENV=hello\nMY_ENV2=hello2</p>
+             */
+            public Builder env(String env) {
+                this.env = env;
+                return this;
+            }
+
+            /**
+             * <p>The GCS Fault Tolerance configuration.</p>
+             */
+            public Builder gftConfig(GftConfig gftConfig) {
+                this.gftConfig = gftConfig;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable GCS Fault Tolerance.</p>
+             */
+            public Builder gftEnabled(Boolean gftEnabled) {
+                this.gftEnabled = gftEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The GPU model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -387,7 +622,10 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * idleTimeoutSeconds.
+             * <p>The idle timeout period of workers after automatic scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder idleTimeoutSeconds(Integer idleTimeoutSeconds) {
                 this.idleTimeoutSeconds = idleTimeoutSeconds;
@@ -395,7 +633,10 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * memory.
+             * <p>The memory size. Unit: Gi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -403,10 +644,24 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
+                return this;
+            }
+
+            /**
+             * <p>The Ray node startup parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--num-cpus=0 --num-gpus=0</p>
+             */
+            public Builder rayStartParams(String rayStartParams) {
+                this.rayStartParams = rayStartParams;
                 return this;
             }
 
@@ -427,6 +682,12 @@ public class CreateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
+        @com.aliyun.core.annotation.NameInMap("env")
+        private String env;
+
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
 
@@ -445,6 +706,9 @@ public class CreateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("queueName")
         private String queueName;
 
+        @com.aliyun.core.annotation.NameInMap("rayStartParams")
+        private String rayStartParams;
+
         @com.aliyun.core.annotation.NameInMap("replica")
         private Integer replica;
 
@@ -453,12 +717,15 @@ public class CreateRayClusterRequest extends Request {
 
         private WorkerSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
+            this.env = builder.env;
             this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
             this.memory = builder.memory;
             this.minReplica = builder.minReplica;
             this.queueName = builder.queueName;
+            this.rayStartParams = builder.rayStartParams;
             this.replica = builder.replica;
             this.workerType = builder.workerType;
         }
@@ -476,6 +743,20 @@ public class CreateRayClusterRequest extends Request {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        /**
+         * @return env
+         */
+        public String getEnv() {
+            return this.env;
         }
 
         /**
@@ -521,6 +802,13 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
+         * @return rayStartParams
+         */
+        public String getRayStartParams() {
+            return this.rayStartParams;
+        }
+
+        /**
          * @return replica
          */
         public Integer getReplica() {
@@ -536,12 +824,15 @@ public class CreateRayClusterRequest extends Request {
 
         public static final class Builder {
             private String cpu; 
+            private String displayReleaseVersion; 
+            private String env; 
             private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
             private String memory; 
             private Integer minReplica; 
             private String queueName; 
+            private String rayStartParams; 
             private Integer replica; 
             private String workerType; 
 
@@ -550,18 +841,24 @@ public class CreateRayClusterRequest extends Request {
 
             private Builder(WorkerSpec model) {
                 this.cpu = model.cpu;
+                this.displayReleaseVersion = model.displayReleaseVersion;
+                this.env = model.env;
                 this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
                 this.memory = model.memory;
                 this.minReplica = model.minReplica;
                 this.queueName = model.queueName;
+                this.rayStartParams = model.rayStartParams;
                 this.replica = model.replica;
                 this.workerType = model.workerType;
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -569,7 +866,32 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * gpuSpec.
+             * <p>The engine version. If this parameter is not specified, the value is the same as that of the head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * <p>The environment variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MY_ENV=hello\nMY_ENV2=hello2</p>
+             */
+            public Builder env(String env) {
+                this.env = env;
+                return this;
+            }
+
+            /**
+             * <p>The GPU model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -577,7 +899,10 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * groupName.
+             * <p>The worker group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WorkerGroup1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -585,7 +910,10 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * maxReplica.
+             * <p>The maximum number of workers after automatic scaling is enabled. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -593,7 +921,10 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * memory.
+             * <p>The memory size. Unit: Gi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -601,7 +932,10 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * minReplica.
+             * <p>The minimum number of workers after automatic scaling is enabled. Minimum value: 1. The value must be less than or equal to maxReplica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minReplica(Integer minReplica) {
                 this.minReplica = minReplica;
@@ -609,7 +943,10 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -617,7 +954,21 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * replica.
+             * <p>The Ray node startup parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--num-cpus=0 --num-gpus=0</p>
+             */
+            public Builder rayStartParams(String rayStartParams) {
+                this.rayStartParams = rayStartParams;
+                return this;
+            }
+
+            /**
+             * <p>The number of workers. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -625,7 +976,10 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * workerType.
+             * <p>The worker type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;

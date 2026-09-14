@@ -80,7 +80,7 @@ public class ListRayJobResponseBody extends TeaModel {
         } 
 
         /**
-         * rayJobs.
+         * <p>The list of Ray Jobs.</p>
          */
         public Builder rayJobs(java.util.List<RayJobs> rayJobs) {
             this.rayJobs = rayJobs;
@@ -88,7 +88,10 @@ public class ListRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -292,7 +298,16 @@ public class ListRayJobResponseBody extends TeaModel {
             } 
 
             /**
-             * clusterState.
+             * <p>The status of the corresponding Ray cluster. Valid values:</p>
+             * <ul>
+             * <li>Deleted: deleted.</li>
+             * <li>Submitted: submitted but not yet being created.</li>
+             * <li>Pending: being created.</li>
+             * <li>Running: running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder clusterState(String clusterState) {
                 this.clusterState = clusterState;
@@ -300,7 +315,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * creatorName.
+             * <p>The nickname of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -308,7 +326,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * cuHours.
+             * <p>The number of compute units (CUs) consumed during the job execution cycle. This value is an estimate. The actual value is subject to the bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder cuHours(Double cuHours) {
                 this.cuHours = cuHours;
@@ -316,7 +337,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * dashboardUrl.
+             * <p>The URL of the Ray cluster dashboard. When the Ray cluster is in the Running state, the URL points to the Runtime UI. After the cluster is in the Deleted state, the URL points to the History UI. The History UI is supported only in err-1.2.0 and later versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://emr-ray-gateway.aliyuncs.com?token=xxxxxxxxx">https://emr-ray-gateway.aliyuncs.com?token=xxxxxxxxx</a></p>
              */
             public Builder dashboardUrl(String dashboardUrl) {
                 this.dashboardUrl = dashboardUrl;
@@ -324,7 +348,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * duration.
+             * <p>The execution duration of the job. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3564</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -332,7 +359,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The time when the job ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1776945509000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -340,7 +370,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the Ray Job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRayJob</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -348,7 +381,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * resourceQueue.
+             * <p>The Ray DPI engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>err-1.2.0 (Ray 2.55.1, Python 3.12)</p>
              */
             public Builder resourceQueue(String resourceQueue) {
                 this.resourceQueue = resourceQueue;
@@ -356,7 +392,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The time when the job was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1776945499000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -364,7 +403,20 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Submitted: submitted.</li>
+             * <li>Pending: the cluster is being created.</li>
+             * <li>Running: the job is running.</li>
+             * <li>Succeeded: the job succeeded.</li>
+             * <li>Failed: the job failed.</li>
+             * <li>Cancelling: the job is being canceled.</li>
+             * <li>Cancelled: the job is canceled.</li>
+             * <li>Timeout: the job timed out and was canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -372,7 +424,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * submissionId.
+             * <p>The ID of the Ray Job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rj-uiulpgow9xljimm1</p>
              */
             public Builder submissionId(String submissionId) {
                 this.submissionId = submissionId;
@@ -380,7 +435,10 @@ public class ListRayJobResponseBody extends TeaModel {
             }
 
             /**
-             * submitTime.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1776945399000</p>
              */
             public Builder submitTime(Long submitTime) {
                 this.submitTime = submitTime;

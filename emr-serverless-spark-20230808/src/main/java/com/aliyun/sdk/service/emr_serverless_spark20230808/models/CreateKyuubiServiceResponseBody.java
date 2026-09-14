@@ -67,7 +67,7 @@ public class CreateKyuubiServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateKyuubiServiceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,7 @@ public class CreateKyuubiServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Kyuubi Service ID。</p>
+             * <p>The Kyuubi service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>kb-f99935b350fb4****7ef700b8b4197a3</p>

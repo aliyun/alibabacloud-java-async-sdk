@@ -132,7 +132,10 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Long> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         }
 
         /**
-         * failed.
+         * <p>Indicates whether the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder failed(Boolean failed) {
             this.failed = failed;
@@ -156,7 +162,10 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         }
 
         /**
-         * msg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No permission for resource action</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -172,7 +184,10 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

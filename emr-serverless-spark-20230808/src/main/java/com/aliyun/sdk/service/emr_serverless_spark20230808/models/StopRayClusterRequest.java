@@ -87,7 +87,10 @@ public class StopRayClusterRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -96,7 +99,10 @@ public class StopRayClusterRequest extends Request {
         }
 
         /**
-         * clusterId.
+         * <p>The Ray cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-k7nm8ahl5te4tg91</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);
@@ -105,7 +111,10 @@ public class StopRayClusterRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The ID of the Ray cluster instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-k7nm8ahl5te4tg91-ey7blpbg</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);

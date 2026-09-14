@@ -106,7 +106,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of records returned per request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The versions.</p>
+         * <p>The list of versions.</p>
          */
         public Builder releaseVersions(java.util.List<ReleaseVersions> releaseVersions) {
             this.releaseVersions = releaseVersions;
@@ -147,7 +147,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -188,6 +188,9 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("iaasType")
         private String iaasType;
 
+        @com.aliyun.core.annotation.NameInMap("isCustom")
+        private Boolean isCustom;
+
         @com.aliyun.core.annotation.NameInMap("releaseVersion")
         private String releaseVersion;
 
@@ -207,6 +210,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             this.fusion = builder.fusion;
             this.gmtCreate = builder.gmtCreate;
             this.iaasType = builder.iaasType;
+            this.isCustom = builder.isCustom;
             this.releaseVersion = builder.releaseVersion;
             this.scalaVersion = builder.scalaVersion;
             this.state = builder.state;
@@ -264,6 +268,13 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isCustom
+         */
+        public Boolean getIsCustom() {
+            return this.isCustom;
+        }
+
+        /**
          * @return releaseVersion
          */
         public String getReleaseVersion() {
@@ -298,6 +309,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             private Boolean fusion; 
             private Long gmtCreate; 
             private String iaasType; 
+            private Boolean isCustom; 
             private String releaseVersion; 
             private String scalaVersion; 
             private String state; 
@@ -313,6 +325,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
                 this.fusion = model.fusion;
                 this.gmtCreate = model.gmtCreate;
                 this.iaasType = model.iaasType;
+                this.isCustom = model.isCustom;
                 this.releaseVersion = model.releaseVersion;
                 this.scalaVersion = model.scalaVersion;
                 this.state = model.state;
@@ -320,7 +333,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version number of open source Spark.</p>
+             * <p>The community Spark version number.</p>
              * 
              * <strong>example:</strong>
              * <p>Spark 3.3.1</p>
@@ -331,7 +344,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU architectures.</p>
+             * <p>The list of CPU architectures.</p>
              */
             public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
@@ -350,7 +363,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+             * <p>Indicates whether Fusion engine acceleration is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -372,13 +385,21 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the Infrastructure as a Service (IaaS) layer.</p>
+             * <p>The IaaS layer type.</p>
              * 
              * <strong>example:</strong>
              * <p>ASI</p>
              */
             public Builder iaasType(String iaasType) {
                 this.iaasType = iaasType;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the version is a custom image.</p>
+             */
+            public Builder isCustom(Boolean isCustom) {
+                this.isCustom = isCustom;
                 return this;
             }
 
@@ -394,7 +415,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of Scala.</p>
+             * <p>The Scala version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.12</p>
@@ -405,7 +426,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the version.</p>
+             * <p>The version status.</p>
              * 
              * <strong>example:</strong>
              * <p>ONLINE</p>
@@ -416,7 +437,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the version.</p>
+             * <p>The version type.</p>
              * 
              * <strong>example:</strong>
              * <p>stable</p>

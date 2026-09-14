@@ -93,7 +93,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. Check the message parameter for the error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,16 @@ public class GetLivyComputeResponseBody extends TeaModel {
             } 
 
             /**
-             * enable.
+             * <p>Indicates whether to automatically start the gateway after it is created.</p>
+             * <ul>
+             * <li><p>true: Yes.</p>
+             * </li>
+             * <li><p>false: No.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -191,7 +209,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * idleTimeoutMinutes.
+             * <p>The number of minutes after which the Livy Gateway is automatically stopped if it is idle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder idleTimeoutMinutes(Long idleTimeoutMinutes) {
                 this.idleTimeoutMinutes = idleTimeoutMinutes;
@@ -518,7 +539,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             } 
 
             /**
-             * authType.
+             * <p>The authentication method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Token</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -526,7 +550,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * autoStopConfiguration.
+             * <p>The auto-stop configuration.</p>
              */
             public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
                 this.autoStopConfiguration = autoStopConfiguration;
@@ -534,7 +558,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * computeId.
+             * <p>The ID of the Livy Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lc-xxxxxxxxxxxxx</p>
              */
             public Builder computeId(String computeId) {
                 this.computeId = computeId;
@@ -542,7 +569,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * cpuLimit.
+             * <p>The number of CPU cores for the Livy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuLimit(String cpuLimit) {
                 this.cpuLimit = cpuLimit;
@@ -550,7 +580,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -558,7 +591,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * displayReleaseVersion.
+             * <p>The version number of the Spark engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</p>
              */
             public Builder displayReleaseVersion(String displayReleaseVersion) {
                 this.displayReleaseVersion = displayReleaseVersion;
@@ -566,7 +602,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * enablePublic.
+             * <p>The status of the public endpoint switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enablePublic(Boolean enablePublic) {
                 this.enablePublic = enablePublic;
@@ -574,7 +613,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -582,7 +624,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * endpointInner.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
              */
             public Builder endpointInner(String endpointInner) {
                 this.endpointInner = endpointInner;
@@ -590,7 +635,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>The ID of the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ev-cq31c7tlhtgm9nrrlj4g</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -598,7 +646,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * fusion.
+             * <p>Indicates whether the fusion switch is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fusion(Boolean fusion) {
                 this.fusion = fusion;
@@ -606,7 +657,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -614,7 +668,25 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * livyServerConf.
+             * <p>The Livy Gateway configuration in JSON format. The following files are supported:</p>
+             * <ul>
+             * <li><p>sparkDefaultsConf</p>
+             * </li>
+             * <li><p>sparkBlackListConf</p>
+             * </li>
+             * <li><p>livyConf</p>
+             * </li>
+             * <li><p>livyClientConf</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;sparkDefaultsConf&quot;: &quot;spark.driver.cores     1\nspark.driver.memory    4g\nspark.executor.cores   1\nspark.executor.memory  4g\n&quot;,
+             *   &quot;sparkBlackListConf&quot;: &quot;spark.driver.cores\nspark.driver.memory&quot;,
+             *   &quot;livyConf&quot;: &quot;livy.server.session.timeout  1h\n&quot;,
+             *   &quot;livyClientConf&quot;: &quot;livy.rsc.sql.num-rows  1000\n&quot;
+             * }</p>
              */
             public Builder livyServerConf(String livyServerConf) {
                 this.livyServerConf = livyServerConf;
@@ -622,7 +694,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * livyVersion.
+             * <p>The Livy version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8.0</p>
              */
             public Builder livyVersion(String livyVersion) {
                 this.livyVersion = livyVersion;
@@ -630,7 +705,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * memoryLimit.
+             * <p>The memory size of the Livy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4Gi</p>
              */
             public Builder memoryLimit(String memoryLimit) {
                 this.memoryLimit = memoryLimit;
@@ -638,7 +716,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -646,7 +727,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * networkName.
+             * <p>The name of the network connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder networkName(String networkName) {
                 this.networkName = networkName;
@@ -654,7 +738,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -662,7 +749,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * ramUserId.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder ramUserId(String ramUserId) {
                 this.ramUserId = ramUserId;
@@ -670,7 +760,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * releaseVersion.
+             * <p>The version number of the Spark engine. This parameter is deprecated. Use displayReleaseVersion instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -678,7 +771,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -686,7 +782,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The running status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;

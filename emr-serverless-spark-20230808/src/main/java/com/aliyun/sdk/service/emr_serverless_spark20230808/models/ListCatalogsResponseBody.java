@@ -106,7 +106,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         } 
 
         /**
-         * catalogs.
+         * <p>The data catalogs.</p>
          */
         public Builder catalogs(java.util.List<Catalogs> catalogs) {
             this.catalogs = catalogs;
@@ -114,7 +114,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>一次获取的最大记录数。</p>
+         * <p>The maximum number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>下一页TOKEN。</p>
+         * <p>The token to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -147,7 +147,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>记录总数。</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -328,7 +328,7 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>regionId。</p>
+             * <p>The ID of the data catalog.</p>
              * 
              * <strong>example:</strong>
              * <p>15097**********</p>
@@ -339,7 +339,10 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * catalogProvider.
+             * <p>The provider of the data catalog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HMS</p>
              */
             public Builder catalogProvider(String catalogProvider) {
                 this.catalogProvider = catalogProvider;
@@ -347,7 +350,10 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * catalogType.
+             * <p>Indicates whether this is the default data catalog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default_catalog</p>
              */
             public Builder catalogType(String catalogType) {
                 this.catalogType = catalogType;
@@ -355,7 +361,7 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * environments.
+             * <p>The environment types.</p>
              */
             public Builder environments(java.util.List<String> environments) {
                 this.environments = environments;
@@ -363,7 +369,7 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * extras.
+             * <p>Extra information.</p>
              */
             public Builder extras(java.util.Map<String, String> extras) {
                 this.extras = extras;
@@ -371,7 +377,10 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1760604889</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -379,7 +388,10 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>The time when the resource was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1760604889</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -387,7 +399,10 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceOwnerId.
+             * <p>The ID of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15097**********</p>
              */
             public Builder resourceOwnerId(String resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -395,7 +410,7 @@ public class ListCatalogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作空间id。</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>w-d2d82aa09155****</p>

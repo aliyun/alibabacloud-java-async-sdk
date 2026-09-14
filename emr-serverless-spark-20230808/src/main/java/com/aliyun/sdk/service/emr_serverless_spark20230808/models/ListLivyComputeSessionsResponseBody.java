@@ -80,7 +80,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FAA8EEC-3026-5D15-8733-4E2A3DD970A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * sessions.
+         * <p>The list of sessions.</p>
          */
         public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
@@ -96,7 +99,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -305,7 +311,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * computeId.
+             * <p>The ID of the Livy Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lc-xxxxxx</p>
              */
             public Builder computeId(String computeId) {
                 this.computeId = computeId;
@@ -313,7 +322,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the session was created. This is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768213240000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -321,7 +333,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * cuHours.
+             * <p>The number of compute units (CUs) consumed during the task execution. This is an estimated value. The actual value is subject to the bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>322.5</p>
              */
             public Builder cuHours(Double cuHours) {
                 this.cuHours = cuHours;
@@ -329,7 +344,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The time when the session ended. This is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768213240000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -337,7 +355,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * info.
+             * <p>The runtime information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -345,7 +366,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * mbSeconds.
+             * <p>The total amount of memory in MB allocated to the task multiplied by the number of seconds the task has been running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1098888</p>
              */
             public Builder mbSeconds(Long mbSeconds) {
                 this.mbSeconds = mbSeconds;
@@ -353,7 +377,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The session name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_session</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -361,7 +388,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * queue.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -369,7 +399,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>The ID of the Livy Gateway session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>livy-xxxxxx</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -377,7 +410,15 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * sparkConf.
+             * <p>The Spark job configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;proxyUser&quot;: &quot;test&quot;,
+             *     &quot;conf&quot;: {
+             *         &quot;spark.driver.cores&quot;: 1
+             *     }
+             * }</p>
              */
             public Builder sparkConf(String sparkConf) {
                 this.sparkConf = sparkConf;
@@ -385,7 +426,22 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The session state.</p>
+             * <ul>
+             * <li><p>starting: The session is starting.</p>
+             * </li>
+             * <li><p>running: The session is running.</p>
+             * </li>
+             * <li><p>terminating: The session is being terminated.</p>
+             * </li>
+             * <li><p>terminated: The session is terminated.</p>
+             * </li>
+             * <li><p>error: The session failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -393,7 +449,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * vcoreSeconds.
+             * <p>The total number of vCores allocated to the task multiplied by the number of seconds the task has been running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>343</p>
              */
             public Builder vcoreSeconds(Long vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;
@@ -401,7 +460,10 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * webUI.
+             * <p>The web UI URL of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://emr-spark-ui-cn-hangzhou.data.aliyun.com">http://emr-spark-ui-cn-hangzhou.data.aliyun.com</a></p>
              */
             public Builder webUI(String webUI) {
                 this.webUI = webUI;

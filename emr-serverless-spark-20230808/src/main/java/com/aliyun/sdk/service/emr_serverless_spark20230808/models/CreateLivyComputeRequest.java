@@ -283,7 +283,10 @@ public class CreateLivyComputeRequest extends Request {
         } 
 
         /**
-         * workspaceBizId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-8adde60aa809701f</p>
          */
         public Builder workspaceBizId(String workspaceBizId) {
             this.putPathParameter("workspaceBizId", workspaceBizId);
@@ -292,7 +295,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * authType.
+         * <p>The authentication method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Token</p>
          */
         public Builder authType(String authType) {
             this.putBodyParameter("authType", authType);
@@ -301,7 +307,7 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * autoStartConfiguration.
+         * <p>The automatic startup configuration.</p>
          */
         public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
             this.putBodyParameter("autoStartConfiguration", autoStartConfiguration);
@@ -310,7 +316,7 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * autoStopConfiguration.
+         * <p>The automatic stop configuration.</p>
          */
         public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
             this.putBodyParameter("autoStopConfiguration", autoStopConfiguration);
@@ -319,7 +325,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * cpuLimit.
+         * <p>The number of CPU cores for the Livy server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpuLimit(String cpuLimit) {
             this.putBodyParameter("cpuLimit", cpuLimit);
@@ -328,7 +337,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * displayReleaseVersion.
+         * <p>The version number of the Spark engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</p>
          */
         public Builder displayReleaseVersion(String displayReleaseVersion) {
             this.putBodyParameter("displayReleaseVersion", displayReleaseVersion);
@@ -337,7 +349,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * enablePublic.
+         * <p>Specifies whether to enable the public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enablePublic(Boolean enablePublic) {
             this.putBodyParameter("enablePublic", enablePublic);
@@ -346,7 +361,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>The ID of the runtime environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ev-ctfq0fem1hkhgv4hapng</p>
          */
         public Builder environmentId(String environmentId) {
             this.putBodyParameter("environmentId", environmentId);
@@ -355,7 +373,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * fusion.
+         * <p>Specifies whether to enable acceleration with the Fusion engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fusion(Boolean fusion) {
             this.putBodyParameter("fusion", fusion);
@@ -364,7 +385,25 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * livyServerConf.
+         * <p>The configuration of the Livy Gateway. This parameter is in JSON format and supports the following files:</p>
+         * <ul>
+         * <li><p>sparkDefaultsConf</p>
+         * </li>
+         * <li><p>sparkBlackListConf</p>
+         * </li>
+         * <li><p>livyConf</p>
+         * </li>
+         * <li><p>livyClientConf</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;sparkDefaultsConf&quot;: &quot;spark.driver.cores     1\nspark.driver.memory    4g\nspark.executor.cores   1\nspark.executor.memory  4g\n&quot;,
+         *   &quot;sparkBlackListConf&quot;: &quot;spark.driver.cores\nspark.driver.memory&quot;,
+         *   &quot;livyConf&quot;: &quot;livy.server.session.timeout  1h\n&quot;,
+         *   &quot;livyClientConf&quot;: &quot;livy.rsc.sql.num-rows  1000\n&quot;
+         * }</p>
          */
         public Builder livyServerConf(String livyServerConf) {
             this.putBodyParameter("livyServerConf", livyServerConf);
@@ -373,7 +412,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * livyVersion.
+         * <p>The Livy version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8.0</p>
          */
         public Builder livyVersion(String livyVersion) {
             this.putBodyParameter("livyVersion", livyVersion);
@@ -382,7 +424,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * memoryLimit.
+         * <p>The memory size of the Livy server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4Gi</p>
          */
         public Builder memoryLimit(String memoryLimit) {
             this.putBodyParameter("memoryLimit", memoryLimit);
@@ -391,7 +436,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the Livy Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGateway</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -400,7 +448,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * networkName.
+         * <p>The name of the network connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder networkName(String networkName) {
             this.putBodyParameter("networkName", networkName);
@@ -409,7 +460,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * queueName.
+         * <p>The name of the submission queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root_queue</p>
          */
         public Builder queueName(String queueName) {
             this.putBodyParameter("queueName", queueName);
@@ -418,7 +472,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * releaseVersion.
+         * <p>The version number of the Spark engine. This parameter is deprecated. Use displayReleaseVersion instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putBodyParameter("releaseVersion", releaseVersion);
@@ -427,7 +484,10 @@ public class CreateLivyComputeRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -482,7 +542,16 @@ public class CreateLivyComputeRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether to automatically start the Livy Gateway after it is created.</p>
+             * <ul>
+             * <li><p>true: Yes.</p>
+             * </li>
+             * <li><p>false: No.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -549,7 +618,16 @@ public class CreateLivyComputeRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether to automatically stop the Livy Gateway.</p>
+             * <ul>
+             * <li><p>true: Yes.</p>
+             * </li>
+             * <li><p>false: No.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -557,7 +635,10 @@ public class CreateLivyComputeRequest extends Request {
             }
 
             /**
-             * idleTimeoutMinutes.
+             * <p>The number of minutes after which the Livy Gateway is automatically stopped if it is idle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder idleTimeoutMinutes(Long idleTimeoutMinutes) {
                 this.idleTimeoutMinutes = idleTimeoutMinutes;

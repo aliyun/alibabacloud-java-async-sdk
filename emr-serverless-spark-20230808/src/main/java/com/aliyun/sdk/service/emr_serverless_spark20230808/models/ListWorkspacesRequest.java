@@ -143,7 +143,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of records to retrieve in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -167,7 +167,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that marks the current read position.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,7 +200,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The state of the workspace.</p>
+         * <p>The workspace status.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>

@@ -93,7 +93,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 1000000 indicates that the request is successful. For other values, see the message parameter for error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +283,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             } 
 
             /**
-             * computeId.
+             * <p>The ID of the Livy Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lc-xxxxxxxxxxxx</p>
              */
             public Builder computeId(String computeId) {
                 this.computeId = computeId;
@@ -282,7 +294,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -290,7 +305,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -298,7 +316,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * endpointInner.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
              */
             public Builder endpointInner(String endpointInner) {
                 this.endpointInner = endpointInner;
@@ -306,7 +327,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -314,7 +338,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,7 +349,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -330,7 +360,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The time when the resource was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -338,7 +371,10 @@ public class ListLivyComputeResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The running status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -392,7 +428,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
             } 
 
             /**
-             * livyComputes.
+             * <p>A list of Livy Gateways.</p>
              */
             public Builder livyComputes(java.util.List<LivyComputes> livyComputes) {
                 this.livyComputes = livyComputes;

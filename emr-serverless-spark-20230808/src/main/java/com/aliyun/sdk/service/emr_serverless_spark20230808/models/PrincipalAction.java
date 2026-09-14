@@ -67,7 +67,10 @@ public class PrincipalAction extends TeaModel {
         } 
 
         /**
-         * actionArn.
+         * <p>The ARN of the behavior.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:emr::workspaceId:action/create_queue</p>
          */
         public Builder actionArn(String actionArn) {
             this.actionArn = actionArn;
@@ -75,7 +78,10 @@ public class PrincipalAction extends TeaModel {
         }
 
         /**
-         * principalArn.
+         * <p>The ARN of the principal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:emr::workspaceId:user/23759369154162****</p>
          */
         public Builder principalArn(String principalArn) {
             this.principalArn = principalArn;

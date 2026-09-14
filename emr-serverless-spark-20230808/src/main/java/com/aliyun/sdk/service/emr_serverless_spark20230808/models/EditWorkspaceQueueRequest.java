@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class EditWorkspaceQueueRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
+    private String description;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("environments")
     private java.util.List<String> environments;
 
@@ -47,6 +51,7 @@ public class EditWorkspaceQueueRequest extends Request {
 
     private EditWorkspaceQueueRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
         this.environments = builder.environments;
         this.gpuSpec = builder.gpuSpec;
         this.instanceId = builder.instanceId;
@@ -67,6 +72,13 @@ public class EditWorkspaceQueueRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -119,6 +131,7 @@ public class EditWorkspaceQueueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EditWorkspaceQueueRequest, Builder> {
+        private String description; 
         private java.util.List<String> environments; 
         private java.util.List<String> gpuSpec; 
         private String instanceId; 
@@ -133,6 +146,7 @@ public class EditWorkspaceQueueRequest extends Request {
 
         private Builder(EditWorkspaceQueueRequest request) {
             super(request);
+            this.description = request.description;
             this.environments = request.environments;
             this.gpuSpec = request.gpuSpec;
             this.instanceId = request.instanceId;
@@ -143,7 +157,19 @@ public class EditWorkspaceQueueRequest extends Request {
         } 
 
         /**
-         * environments.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test queue</p>
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The environment type of the queue.</p>
          */
         public Builder environments(java.util.List<String> environments) {
             this.putBodyParameter("environments", environments);
@@ -152,7 +178,7 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * gpuSpec.
+         * <p>The list of GPU models.</p>
          */
         public Builder gpuSpec(java.util.List<String> gpuSpec) {
             this.putBodyParameter("gpuSpec", gpuSpec);
@@ -170,7 +196,7 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * resourceSpec.
+         * <p>The resource quota.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             this.putBodyParameter("resourceSpec", resourceSpec);
@@ -179,7 +205,10 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-975bcfda9625****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("workspaceId", workspaceId);
@@ -188,7 +217,10 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * workspaceQueueName.
+         * <p>The name of the workspace queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
          */
         public Builder workspaceQueueName(String workspaceQueueName) {
             this.putBodyParameter("workspaceQueueName", workspaceQueueName);
@@ -197,7 +229,10 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -292,7 +327,10 @@ public class EditWorkspaceQueueRequest extends Request {
             } 
 
             /**
-             * cu.
+             * <p>The resource upper limit of the workspace queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder cu(Long cu) {
                 this.cu = cu;
@@ -300,7 +338,10 @@ public class EditWorkspaceQueueRequest extends Request {
             }
 
             /**
-             * gpu.
+             * <p>The number of GPU cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -308,7 +349,7 @@ public class EditWorkspaceQueueRequest extends Request {
             }
 
             /**
-             * gpuMachineNum.
+             * <p>The number of GPU machines.</p>
              */
             public Builder gpuMachineNum(Integer gpuMachineNum) {
                 this.gpuMachineNum = gpuMachineNum;
@@ -316,7 +357,10 @@ public class EditWorkspaceQueueRequest extends Request {
             }
 
             /**
-             * maxCu.
+             * <p>The maximum number of CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder maxCu(Long maxCu) {
                 this.maxCu = maxCu;

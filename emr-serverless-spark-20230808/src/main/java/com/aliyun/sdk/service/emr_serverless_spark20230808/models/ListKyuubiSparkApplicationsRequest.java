@@ -253,7 +253,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Kyuubi service.</p>
+         * <p>The Kyuubi service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kb-c7141f10c3f549fc9f8b8ae562b8****</p>
@@ -265,7 +265,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application that is submitted by using a Kyuubi gateway.</p>
+         * <p>The ID of the Spark application submitted by Kyuubi, used for searching.</p>
          * 
          * <strong>example:</strong>
          * <p>spark-339f844005b6404c95f9f7c7a13b****</p>
@@ -277,7 +277,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The name of the Spark application that is submitted by using a Kyuubi gateway.</p>
+         * <p>The name of the Spark application submitted by Kyuubi, used for searching.</p>
          * 
          * <strong>example:</strong>
          * <p>kyuubi-connection-spark-sql-anonymous-fa9a5e73-b4b1-474a-b****</p>
@@ -308,7 +308,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of records to return.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -329,7 +329,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -369,7 +369,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The range of start time.</p>
+         * <p>The time range when the task started.</p>
          */
         public Builder startTime(StartTime startTime) {
             String startTimeShrink = shrink(startTime, "startTime", "json");
@@ -455,7 +455,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             }
 
             /**
-             * <p>The range of start time.</p>
+             * <p>The time range when the task started.</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -522,7 +522,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             } 
 
             /**
-             * <p>The end of the start time range.</p>
+             * <p>The end of the time range.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -533,7 +533,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             }
 
             /**
-             * <p>The beginning of the start time range.</p>
+             * <p>The start of the time range.</p>
              * 
              * <strong>example:</strong>
              * <p>1709740800000</p>

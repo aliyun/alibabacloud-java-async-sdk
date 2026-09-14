@@ -106,7 +106,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         } 
 
         /**
-         * exexutors.
+         * <p>The list of executors.</p>
          */
         public Builder exexutors(java.util.List<Exexutors> exexutors) {
             this.exexutors = exexutors;
@@ -114,7 +114,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -141,7 +147,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -454,7 +463,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * activeTasks.
+             * <p>The total number of active tasks that the executor is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder activeTasks(Long activeTasks) {
                 this.activeTasks = activeTasks;
@@ -462,7 +474,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * addTime.
+             * <p>The time when the executor was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1760601***</p>
              */
             public Builder addTime(Long addTime) {
                 this.addTime = addTime;
@@ -470,7 +485,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * completedTasks.
+             * <p>The total number of completed tasks that the executor has run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder completedTasks(Long completedTasks) {
                 this.completedTasks = completedTasks;
@@ -478,7 +496,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * diskUsed.
+             * <p>The disk usage of the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder diskUsed(Long diskUsed) {
                 this.diskUsed = diskUsed;
@@ -486,7 +507,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * executorId.
+             * <p>The job executor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executorId(String executorId) {
                 this.executorId = executorId;
@@ -494,7 +518,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * executorType.
+             * <p>The executor type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>driver</p>
              */
             public Builder executorType(String executorType) {
                 this.executorType = executorType;
@@ -502,7 +529,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * failedTasks.
+             * <p>The total number of failed tasks that the executor has run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder failedTasks(Long failedTasks) {
                 this.failedTasks = failedTasks;
@@ -510,7 +540,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * hostPort.
+             * <p>The address of the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21.10.x.x:1201x</p>
              */
             public Builder hostPort(String hostPort) {
                 this.hostPort = hostPort;
@@ -518,7 +551,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * jobRunId.
+             * <p>The job run ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jr-1fe145df8ade366a</p>
              */
             public Builder jobRunId(String jobRunId) {
                 this.jobRunId = jobRunId;
@@ -526,7 +562,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * maxMemory.
+             * <p>The maximum memory of the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4294967296</p>
              */
             public Builder maxMemory(Long maxMemory) {
                 this.maxMemory = maxMemory;
@@ -534,7 +573,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * memoryUsed.
+             * <p>The memory usage of the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder memoryUsed(Long memoryUsed) {
                 this.memoryUsed = memoryUsed;
@@ -542,7 +584,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * rddBlocks.
+             * <p>The number of Resilient Distributed Dataset (RDD) blocks managed by the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rddBlocks(Long rddBlocks) {
                 this.rddBlocks = rddBlocks;
@@ -550,7 +595,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The running status of the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -558,7 +606,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCores.
+             * <p>The total number of cores for the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCores(Long totalCores) {
                 this.totalCores = totalCores;
@@ -566,7 +617,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * totalDuration.
+             * <p>The total runtime of the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder totalDuration(Long totalDuration) {
                 this.totalDuration = totalDuration;
@@ -574,7 +628,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * totalGCTime.
+             * <p>The total garbage collection (GC) time of the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalGCTime(Long totalGCTime) {
                 this.totalGCTime = totalGCTime;
@@ -582,7 +639,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * totalInputBytes.
+             * <p>The number of bytes of input data for the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder totalInputBytes(Long totalInputBytes) {
                 this.totalInputBytes = totalInputBytes;
@@ -590,7 +650,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * totalShuffleRead.
+             * <p>The number of bytes read during the shuffle phase by the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder totalShuffleRead(Long totalShuffleRead) {
                 this.totalShuffleRead = totalShuffleRead;
@@ -598,7 +661,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * totalShuffleWrite.
+             * <p>The number of bytes written during the shuffle phase by the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder totalShuffleWrite(Long totalShuffleWrite) {
                 this.totalShuffleWrite = totalShuffleWrite;
@@ -606,7 +672,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * totalTasks.
+             * <p>The total number of tasks that the executor has run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder totalTasks(Long totalTasks) {
                 this.totalTasks = totalTasks;
@@ -614,7 +683,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-78faee4da118f02e</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

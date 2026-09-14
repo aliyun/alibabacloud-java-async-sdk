@@ -185,7 +185,10 @@ public class CreateKyuubiServiceRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -194,7 +197,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * computeInstance.
+         * <p>The specifications of the Kyuubi service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2c8g</p>
          */
         public Builder computeInstance(String computeInstance) {
             this.putBodyParameter("computeInstance", computeInstance);
@@ -203,7 +209,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * kyuubiConfigs.
+         * <p>The Kyuubi service configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;key\&quot;:\&quot;kyuubi.engine.share.level\&quot;,\&quot;value\&quot;:\&quot;USER\&quot;}]</p>
          */
         public Builder kyuubiConfigs(String kyuubiConfigs) {
             this.putBodyParameter("kyuubiConfigs", kyuubiConfigs);
@@ -212,7 +221,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * kyuubiReleaseVersion.
+         * <p>The Kyuubi service database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.9.2-0.0.2</p>
          */
         public Builder kyuubiReleaseVersion(String kyuubiReleaseVersion) {
             this.putBodyParameter("kyuubiReleaseVersion", kyuubiReleaseVersion);
@@ -221,7 +233,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The Kyuubi service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_serverless_spark</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -230,7 +245,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * publicEndpointEnabled.
+         * <p>Specifies whether to enable public network access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publicEndpointEnabled(Boolean publicEndpointEnabled) {
             this.putBodyParameter("publicEndpointEnabled", publicEndpointEnabled);
@@ -239,7 +257,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * queue.
+         * <p>The queue where the Kyuubi service runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
          */
         public Builder queue(String queue) {
             this.putBodyParameter("queue", queue);
@@ -248,7 +269,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * releaseVersion.
+         * <p>The Spark database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putBodyParameter("releaseVersion", releaseVersion);
@@ -257,7 +281,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * replica.
+         * <p>The number of replicas for high availability (HA).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder replica(Integer replica) {
             this.putBodyParameter("replica", replica);
@@ -266,7 +293,10 @@ public class CreateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * sparkConfigs.
+         * <p>The Spark configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;key\&quot;:\&quot;spark.app.name\&quot;,\&quot;value\&quot;:\&quot;test\&quot;}]</p>
          */
         public Builder sparkConfigs(String sparkConfigs) {
             this.putBodyParameter("sparkConfigs", sparkConfigs);

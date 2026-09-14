@@ -73,7 +73,10 @@ public class StartCacheClusterRequest extends Request {
         } 
 
         /**
-         * cacheClusterId.
+         * <p>Cache cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spc-xxxxxxxx</p>
          */
         public Builder cacheClusterId(String cacheClusterId) {
             this.putPathParameter("cacheClusterId", cacheClusterId);
@@ -82,7 +85,10 @@ public class StartCacheClusterRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

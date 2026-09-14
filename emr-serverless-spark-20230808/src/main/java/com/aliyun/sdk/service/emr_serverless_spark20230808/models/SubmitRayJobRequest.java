@@ -26,6 +26,10 @@ public class SubmitRayJobRequest extends Request {
     private Integer activeDeadlineSeconds;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
     private String displayReleaseVersion;
 
@@ -105,6 +109,7 @@ public class SubmitRayJobRequest extends Request {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.activeDeadlineSeconds = builder.activeDeadlineSeconds;
+        this.clusterId = builder.clusterId;
         this.displayReleaseVersion = builder.displayReleaseVersion;
         this.entrypoint = builder.entrypoint;
         this.entrypointMemory = builder.entrypointMemory;
@@ -151,6 +156,13 @@ public class SubmitRayJobRequest extends Request {
      */
     public Integer getActiveDeadlineSeconds() {
         return this.activeDeadlineSeconds;
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -289,6 +301,7 @@ public class SubmitRayJobRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitRayJobRequest, Builder> {
         private String workspaceId; 
         private Integer activeDeadlineSeconds; 
+        private String clusterId; 
         private String displayReleaseVersion; 
         private String entrypoint; 
         private String entrypointMemory; 
@@ -317,6 +330,7 @@ public class SubmitRayJobRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.activeDeadlineSeconds = request.activeDeadlineSeconds;
+            this.clusterId = request.clusterId;
             this.displayReleaseVersion = request.displayReleaseVersion;
             this.entrypoint = request.entrypoint;
             this.entrypointMemory = request.entrypointMemory;
@@ -339,7 +353,10 @@ public class SubmitRayJobRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -348,7 +365,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * activeDeadlineSeconds.
+         * <p>The timeout period of the job, which includes the cluster creation time and job runtime. The job is canceled if this period is exceeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder activeDeadlineSeconds(Integer activeDeadlineSeconds) {
             this.putBodyParameter("activeDeadlineSeconds", activeDeadlineSeconds);
@@ -357,7 +377,22 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * displayReleaseVersion.
+         * <p>The ID of an existing Ray cluster to which the job is submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-xxxxxxxxx</p>
+         */
+        public Builder clusterId(String clusterId) {
+            this.putBodyParameter("clusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * <p>The Ray DPI engine version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>err-1.2.0 (Ray 2.55.1, Python 3.12)</p>
          */
         public Builder displayReleaseVersion(String displayReleaseVersion) {
             this.putBodyParameter("displayReleaseVersion", displayReleaseVersion);
@@ -366,7 +401,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * entrypoint.
+         * <p>The startup command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python -c &quot;print(\&quot;hello ray job\&quot;)&quot;</p>
          */
         public Builder entrypoint(String entrypoint) {
             this.putBodyParameter("entrypoint", entrypoint);
@@ -375,7 +413,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * entrypointMemory.
+         * <p>The memory size requested by the entrypoint task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4Gi</p>
          */
         public Builder entrypointMemory(String entrypointMemory) {
             this.putBodyParameter("entrypointMemory", entrypointMemory);
@@ -384,7 +425,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * entrypointNumCpus.
+         * <p>The number of CPUs requested by the entrypoint task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder entrypointNumCpus(String entrypointNumCpus) {
             this.putBodyParameter("entrypointNumCpus", entrypointNumCpus);
@@ -393,7 +437,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * entrypointNumGpus.
+         * <p>The number of GPUs requested by the entrypoint task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder entrypointNumGpus(String entrypointNumGpus) {
             this.putBodyParameter("entrypointNumGpus", entrypointNumGpus);
@@ -402,7 +449,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * entrypointResources.
+         * <p>The custom resource request JSON string for the entrypoint task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fpu&quot;: 1}</p>
          */
         public Builder entrypointResources(String entrypointResources) {
             this.putBodyParameter("entrypointResources", entrypointResources);
@@ -411,7 +461,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * extraParam.
+         * <p>The extra parameters in a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userDefinedFiles&quot;: &quot;oss://mybucket/artifact/config.json,oss://mybucket/artifact/config2.json&quot;, &quot;userRequirementsFile&quot;: &quot;oss://mybucket/requirements.txt&quot;}</p>
          */
         public Builder extraParam(String extraParam) {
             this.putBodyParameter("extraParam", extraParam);
@@ -420,7 +473,7 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * headSpec.
+         * <p>The Ray cluster head node parameters.</p>
          */
         public Builder headSpec(HeadSpec headSpec) {
             this.putBodyParameter("headSpec", headSpec);
@@ -429,7 +482,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * metadataJson.
+         * <p>The job metadata JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;resourceName&quot;: &quot;test&quot;}</p>
          */
         public Builder metadataJson(String metadataJson) {
             this.putBodyParameter("metadataJson", metadataJson);
@@ -438,7 +494,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-job</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -447,7 +506,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * networkServiceName.
+         * <p>The network connectivity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkServiceName(String networkServiceName) {
             this.putBodyParameter("networkServiceName", networkServiceName);
@@ -456,7 +518,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * runtimeEnvJson.
+         * <p>The Ray runtime environment JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pip&quot;:[&quot;requests==2.26.0&quot;,&quot;pendulum==2.1.2&quot;],&quot;env_vars&quot;:{&quot;KEY&quot;:&quot;VALUE&quot;}}</p>
          */
         public Builder runtimeEnvJson(String runtimeEnvJson) {
             this.putBodyParameter("runtimeEnvJson", runtimeEnvJson);
@@ -465,7 +530,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * shutdownAfterJobFinishes.
+         * <p>Specifies whether to automatically destroy the temporary cluster after the job finishes. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder shutdownAfterJobFinishes(Boolean shutdownAfterJobFinishes) {
             this.putBodyParameter("shutdownAfterJobFinishes", shutdownAfterJobFinishes);
@@ -474,7 +542,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * submissionMode.
+         * <p>The job submission mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPMode</p>
          */
         public Builder submissionMode(String submissionMode) {
             this.putBodyParameter("submissionMode", submissionMode);
@@ -483,7 +554,7 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -492,7 +563,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * ttlSecondsAfterFinished.
+         * <p>The number of seconds to wait before destroying the cluster. This parameter takes effect only when shutdownAfterJobFinishes is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
             this.putBodyParameter("ttlSecondsAfterFinished", ttlSecondsAfterFinished);
@@ -501,7 +575,7 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * volumeIds.
+         * <p>The list of mounted volume IDs.</p>
          */
         public Builder volumeIds(java.util.List<String> volumeIds) {
             this.putBodyParameter("volumeIds", volumeIds);
@@ -510,7 +584,7 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * workerSpec.
+         * <p>The parameters of the worker nodes in the Ray cluster.</p>
          */
         public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
             this.putBodyParameter("workerSpec", workerSpec);
@@ -519,7 +593,10 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * workingDir.
+         * <p>The URL of the job code working directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket/rayjob.zip</p>
          */
         public Builder workingDir(String workingDir) {
             this.putBodyParameter("workingDir", workingDir);
@@ -544,6 +621,9 @@ public class SubmitRayJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
         @com.aliyun.core.annotation.NameInMap("enableAutoScaling")
         private Boolean enableAutoScaling;
 
@@ -561,6 +641,7 @@ public class SubmitRayJobRequest extends Request {
 
         private HeadSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.enableAutoScaling = builder.enableAutoScaling;
             this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
@@ -581,6 +662,13 @@ public class SubmitRayJobRequest extends Request {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
         }
 
         /**
@@ -620,6 +708,7 @@ public class SubmitRayJobRequest extends Request {
 
         public static final class Builder {
             private String cpu; 
+            private String displayReleaseVersion; 
             private Boolean enableAutoScaling; 
             private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
@@ -631,6 +720,7 @@ public class SubmitRayJobRequest extends Request {
 
             private Builder(HeadSpec model) {
                 this.cpu = model.cpu;
+                this.displayReleaseVersion = model.displayReleaseVersion;
                 this.enableAutoScaling = model.enableAutoScaling;
                 this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
@@ -639,7 +729,10 @@ public class SubmitRayJobRequest extends Request {
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -647,7 +740,21 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * enableAutoScaling.
+             * <p>The Ray DPI engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable automatic scaling for workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
@@ -655,7 +762,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * gpuSpec.
+             * <p>The GPU instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -663,7 +773,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * idleTimeoutSeconds.
+             * <p>The worker idle timeout period after automatic scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder idleTimeoutSeconds(Integer idleTimeoutSeconds) {
                 this.idleTimeoutSeconds = idleTimeoutSeconds;
@@ -671,7 +784,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * memory.
+             * <p>The memory size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -679,7 +795,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -746,7 +865,10 @@ public class SubmitRayJobRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jobname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -754,7 +876,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -777,6 +902,9 @@ public class SubmitRayJobRequest extends Request {
     public static class WorkerSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
+
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
 
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
@@ -804,6 +932,7 @@ public class SubmitRayJobRequest extends Request {
 
         private WorkerSpec(Builder builder) {
             this.cpu = builder.cpu;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
@@ -827,6 +956,13 @@ public class SubmitRayJobRequest extends Request {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
         }
 
         /**
@@ -887,6 +1023,7 @@ public class SubmitRayJobRequest extends Request {
 
         public static final class Builder {
             private String cpu; 
+            private String displayReleaseVersion; 
             private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
@@ -901,6 +1038,7 @@ public class SubmitRayJobRequest extends Request {
 
             private Builder(WorkerSpec model) {
                 this.cpu = model.cpu;
+                this.displayReleaseVersion = model.displayReleaseVersion;
                 this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
@@ -912,7 +1050,10 @@ public class SubmitRayJobRequest extends Request {
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -920,7 +1061,21 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * gpuSpec.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * <p>The GPU instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn6i-c4g1.xlarge</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -928,7 +1083,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * groupName.
+             * <p>The worker group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WorkerGroup1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -936,7 +1094,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * maxReplica.
+             * <p>The maximum number of workers after automatic scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -944,7 +1105,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * memory.
+             * <p>The memory size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -952,7 +1116,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * minReplica.
+             * <p>The minimum number of workers after automatic scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minReplica(Integer minReplica) {
                 this.minReplica = minReplica;
@@ -960,7 +1127,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -968,7 +1138,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * replica.
+             * <p>The number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -976,7 +1149,10 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * workerType.
+             * <p>The worker type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;

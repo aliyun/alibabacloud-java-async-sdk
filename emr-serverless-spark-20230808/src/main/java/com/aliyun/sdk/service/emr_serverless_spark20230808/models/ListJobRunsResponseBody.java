@@ -127,7 +127,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Spark jobs.</p>
+         * <p>The list of Spark jobs.</p>
          */
         public Builder jobRuns(java.util.List<JobRuns> jobRuns) {
             this.jobRuns = jobRuns;
@@ -135,7 +135,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of records returned in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -146,10 +146,10 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token.</p>
+         * <p>The position from which the data was read.</p>
          * 
          * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -168,7 +168,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records that match the request conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -224,7 +224,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The SparkConf objects.</p>
+             * <p>The list of Spark configurations.</p>
              */
             public Builder configurations(java.util.List<Configuration> configurations) {
                 this.configurations = configurations;
@@ -305,7 +305,7 @@ public class ListJobRunsResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>success</p>
+             * <p>connection refused</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -645,10 +645,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code type of the job. Valid values:</p>
+             * <p>The job code type. Valid values:</p>
              * <p>SQL</p>
              * <p>JAR</p>
-             * <p>PYTHON</p>
+             * <p>PYTHON.</p>
              * 
              * <strong>example:</strong>
              * <p>SQL</p>
@@ -659,7 +659,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced configurations of Spark.</p>
+             * <p>The Spark advanced configurations. This parameter is not returned by the List operation.</p>
              */
             public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
                 this.configurationOverrides = configurationOverrides;
@@ -667,10 +667,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who created the job.</p>
+             * <p>The UID of the user who created the job.</p>
              * 
              * <strong>example:</strong>
-             * <p>1509789347011222</p>
+             * <p>150978934701****</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -678,7 +678,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs consumed during a specified cycle of a task. The value is an estimated value. Refer to your Alibaba Cloud bill for the actual number of consumed CUs.</p>
+             * <p>The number of compute units (CUs) consumed during the job run cycle. This value is an estimate. The actual value is subject to the bill.</p>
              * 
              * <strong>example:</strong>
              * <p>2.059</p>
@@ -689,7 +689,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of Spark on which the jobs run.</p>
+             * <p>The version of the Spark DPI engine used to run the job.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</p>
@@ -700,7 +700,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the job.</p>
+             * <p>The job end time.</p>
              * 
              * <strong>example:</strong>
              * <p>1684119314000</p>
@@ -711,7 +711,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of the job.</p>
+             * <p>The execution timeout period, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -722,7 +722,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+             * <p>Indicates whether the Fusion engine acceleration is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -733,7 +733,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about Spark Driver.</p>
+             * <p>The Spark Driver information. This parameter is not returned by the List operation.</p>
              */
             public Builder jobDriver(JobDriver jobDriver) {
                 this.jobDriver = jobDriver;
@@ -752,7 +752,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path where the operational logs are stored.</p>
+             * <p>The path of the run log.</p>
              */
             public Builder log(RunLog log) {
                 this.log = log;
@@ -760,7 +760,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of memory allocated to the job multiplied by the running duration (seconds).</p>
+             * <p>The total amount of allocated memory multiplied by the number of seconds the job has been running.</p>
              * 
              * <strong>example:</strong>
              * <p>33030784</p>
@@ -790,10 +790,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of Spark on which the jobs run.</p>
+             * <p>The version of the Spark DPI engine used to run the job.</p>
              * 
              * <strong>example:</strong>
-             * <p>esr-native-3.4.0</p>
+             * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12, Native Runtime)</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -809,7 +809,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job state.</p>
+             * <p>The job states.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -820,7 +820,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason of the job status change.</p>
+             * <p>The reason for the state change.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -828,7 +828,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was submitted.</p>
+             * <p>The job submission time.</p>
              * 
              * <strong>example:</strong>
              * <p>1684119314000</p>
@@ -839,7 +839,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the job.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
@@ -847,7 +847,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of CPU cores allocated to the job multiplied by the running duration (seconds).</p>
+             * <p>The total number of allocated vcores multiplied by the number of seconds the job has been running.</p>
              * 
              * <strong>example:</strong>
              * <p>8236</p>
@@ -858,7 +858,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The web UI of the job.</p>
+             * <p>The job Web UI.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://spark-ui">http://spark-ui</a></p>
@@ -872,7 +872,7 @@ public class ListJobRunsResponseBody extends TeaModel {
              * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>w-1234abcd</p>
+             * <p>w-d2d82aa09155****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

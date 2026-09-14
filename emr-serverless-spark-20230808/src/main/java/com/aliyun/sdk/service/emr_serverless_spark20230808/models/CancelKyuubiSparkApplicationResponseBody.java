@@ -67,7 +67,7 @@ public class CancelKyuubiSparkApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * body.
+         * <p>The returned data.</p>
          */
         public Builder body(CancelKyuubiSparkApplicationResponseBodyBody body) {
             this.body = body;
@@ -75,7 +75,10 @@ public class CancelKyuubiSparkApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class CancelKyuubiSparkApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * applicationId.
+             * <p>The ID of the Spark application submitted by Kyuubi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark-339f844005b6404c95f9f7c7a13b****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -149,7 +155,13 @@ public class CancelKyuubiSparkApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>Indicates whether the request was successful.</p>
+             * <ul>
+             * <li><p>true: The request was successful.</p>
+             * </li>
+             * <li><p>false: The request failed.</p>
+             * </li>
+             * </ul>
              */
             public Builder success(Boolean success) {
                 this.success = success;

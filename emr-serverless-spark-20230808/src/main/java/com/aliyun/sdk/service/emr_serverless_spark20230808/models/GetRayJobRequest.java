@@ -73,7 +73,10 @@ public class GetRayJobRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -82,7 +85,10 @@ public class GetRayJobRequest extends Request {
         }
 
         /**
-         * submissionId.
+         * <p>The ID of the Ray Job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rj-xxxxxxxxxx</p>
          */
         public Builder submissionId(String submissionId) {
             this.putPathParameter("submissionId", submissionId);

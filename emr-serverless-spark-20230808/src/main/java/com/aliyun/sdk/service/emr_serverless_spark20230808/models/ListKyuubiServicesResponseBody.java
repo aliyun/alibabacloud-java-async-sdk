@@ -67,7 +67,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,6 +143,9 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
+        @com.aliyun.core.annotation.NameInMap("webUi")
+        private String webUi;
+
         private KyuubiServices(Builder builder) {
             this.computeInstance = builder.computeInstance;
             this.createTime = builder.createTime;
@@ -156,6 +162,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             this.sparkConfigs = builder.sparkConfigs;
             this.startTime = builder.startTime;
             this.state = builder.state;
+            this.webUi = builder.webUi;
         }
 
         public static Builder builder() {
@@ -271,6 +278,13 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             return this.state;
         }
 
+        /**
+         * @return webUi
+         */
+        public String getWebUi() {
+            return this.webUi;
+        }
+
         public static final class Builder {
             private String computeInstance; 
             private String createTime; 
@@ -287,6 +301,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             private String sparkConfigs; 
             private String startTime; 
             private String state; 
+            private String webUi; 
 
             private Builder() {
             } 
@@ -307,10 +322,14 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
                 this.sparkConfigs = model.sparkConfigs;
                 this.startTime = model.startTime;
                 this.state = model.state;
+                this.webUi = model.webUi;
             } 
 
             /**
-             * computeInstance.
+             * <p>The KyuubiServer instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4C16G</p>
              */
             public Builder computeInstance(String computeInstance) {
                 this.computeInstance = computeInstance;
@@ -318,7 +337,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-11T08:21:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -326,7 +348,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * creator.
+             * <p>The UID of the user who created the KyuubiServer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>103*******</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -334,7 +359,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * innerEndpoint.
+             * <p>The internal network endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kyuubi-cn-hangzhou-internal.spark.emr.aliyuncs.com</p>
              */
             public Builder innerEndpoint(String innerEndpoint) {
                 this.innerEndpoint = innerEndpoint;
@@ -342,7 +370,11 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * kyuubiConfigs.
+             * <p>The KyuubiServer configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kyuubi.conf.key=value1
+             * kyuubi.conf.key1=value2</p>
              */
             public Builder kyuubiConfigs(String kyuubiConfigs) {
                 this.kyuubiConfigs = kyuubiConfigs;
@@ -350,7 +382,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * kyuubiReleaseVersion.
+             * <p>The KyuubiServer version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.9.2-0.0.1</p>
              */
             public Builder kyuubiReleaseVersion(String kyuubiReleaseVersion) {
                 this.kyuubiReleaseVersion = kyuubiReleaseVersion;
@@ -369,7 +404,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The KyuubiServer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -377,7 +415,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * publicEndpoint.
+             * <p>The public domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-kyuubi-gateway-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder publicEndpoint(String publicEndpoint) {
                 this.publicEndpoint = publicEndpoint;
@@ -385,7 +426,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * queue.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_queue</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -393,7 +437,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * releaseVersion.
+             * <p>The Spark DPI engine database engine version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-4.2.0 (Spark 3.5.2, Scala 2.12)</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -401,7 +448,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of KyuubiServer replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -409,7 +459,11 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * sparkConfigs.
+             * <p>The default configurations for Spark applications started by KyuubiServer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark.conf.key=value1
+             * spark.conf.key1=value2</p>
              */
             public Builder sparkConfigs(String sparkConfigs) {
                 this.sparkConfigs = sparkConfigs;
@@ -417,7 +471,10 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The most recent start time of KyuubiServer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-23 09:22:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -425,10 +482,24 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The KyuubiServer status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * <p>The WebUI of the Kyuubi Gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://pre-1-emr-spark-kyuubi-gateway-cn-hangzhou.data.aliyun.com/ui/?token=NkVTWG1LSWRYSExiZ1VrTTQreVZ0aFhmYW1BWEJHTW8vN3VEY0MrZzVrQUdXWWY1Rm41Zi9mUkNMRzhPL3o1dDJNbXkrd3cvUmRqck9OMmFlQ21JL002bFhQK1lSa29hZ2tvT0hhNVk3WU9tWHhINFAxL3BscURkUUpFd2E2QTdCUWpDSkVvcERUUlhhaGhlOXdxdWFYaEpwSU9STXVRaGJ6ZUg0d0dDeWhIVVRsRW9ucStZbkt0U3BrbmdsNys1N3ZNRU1qaTZ2aktvN1M1K1d0YU5TemkwRmwvNkdCOHR2LzVWZWNLNkJPND">http://pre-1-emr-spark-kyuubi-gateway-cn-hangzhou.data.aliyun.com/ui/?token=NkVTWG1LSWRYSExiZ1VrTTQreVZ0aFhmYW1BWEJHTW8vN3VEY0MrZzVrQUdXWWY1Rm41Zi9mUkNMRzhPL3o1dDJNbXkrd3cvUmRqck9OMmFlQ21JL002bFhQK1lSa29hZ2tvT0hhNVk3WU9tWHhINFAxL3BscURkUUpFd2E2QTdCUWpDSkVvcERUUlhhaGhlOXdxdWFYaEpwSU9STXVRaGJ6ZUg0d0dDeWhIVVRsRW9ucStZbkt0U3BrbmdsNys1N3ZNRU1qaTZ2aktvN1M1K1d0YU5TemkwRmwvNkdCOHR2LzVWZWNLNkJPND</a></p>
+             */
+            public Builder webUi(String webUi) {
+                this.webUi = webUi;
                 return this;
             }
 
@@ -479,7 +550,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * kyuubiServices.
+             * <p>The list of KyuubiServer instances.</p>
              */
             public Builder kyuubiServices(java.util.List<KyuubiServices> kyuubiServices) {
                 this.kyuubiServices = kyuubiServices;

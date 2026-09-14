@@ -21,9 +21,14 @@ public class ListKyuubiServicesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("token")
+    private String token;
+
     private ListKyuubiServicesRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.token = builder.token;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class ListKyuubiServicesRequest extends Request {
         return this.workspaceId;
     }
 
+    /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
     public static final class Builder extends Request.Builder<ListKyuubiServicesRequest, Builder> {
         private String workspaceId; 
+        private String token; 
 
         private Builder() {
             super();
@@ -56,14 +69,30 @@ public class ListKyuubiServicesRequest extends Request {
         private Builder(ListKyuubiServicesRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.token = request.token;
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * <p>The token of the Kyuubi Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6w3s2e7y7t9fxnvtai9sv1uebw8b7bvc</p>
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("token", token);
+            this.token = token;
             return this;
         }
 

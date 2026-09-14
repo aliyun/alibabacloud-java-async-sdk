@@ -143,7 +143,10 @@ public class RefreshLivyComputeTokenRequest extends Request {
         } 
 
         /**
-         * workspaceBizId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-8adde60aa809701f</p>
          */
         public Builder workspaceBizId(String workspaceBizId) {
             this.putPathParameter("workspaceBizId", workspaceBizId);
@@ -152,7 +155,10 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * livyComputeId.
+         * <p>The ID of the Livy Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lc-i8xogcdfa4fk3yn1</p>
          */
         public Builder livyComputeId(String livyComputeId) {
             this.putPathParameter("livyComputeId", livyComputeId);
@@ -161,7 +167,7 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lctk-xxxxxxxx</p>
@@ -173,7 +179,7 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * autoExpireConfiguration.
+         * <p>The information about token expiration.</p>
          */
         public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
             this.putBodyParameter("autoExpireConfiguration", autoExpireConfiguration);
@@ -182,7 +188,10 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -191,7 +200,10 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * token.
+         * <p>The token must be 16 or more characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe86812667f04v343</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("token", token);
@@ -200,7 +212,10 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -268,7 +283,16 @@ public class RefreshLivyComputeTokenRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether the token automatically expires.</p>
+             * <ul>
+             * <li><p>true: The token automatically expires.</p>
+             * </li>
+             * <li><p>false: The token does not automatically expire.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -276,7 +300,10 @@ public class RefreshLivyComputeTokenRequest extends Request {
             }
 
             /**
-             * expireDays.
+             * <p>The expiration period in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder expireDays(Integer expireDays) {
                 this.expireDays = expireDays;

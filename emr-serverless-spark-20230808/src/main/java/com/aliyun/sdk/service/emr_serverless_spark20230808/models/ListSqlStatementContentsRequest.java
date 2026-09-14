@@ -101,7 +101,10 @@ public class ListSqlStatementContentsRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-72704d9fb0******</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -110,7 +113,10 @@ public class ListSqlStatementContentsRequest extends Request {
         }
 
         /**
-         * fileName.
+         * <p>The full path of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://oss-<strong><strong>.cn-hangzhou.oss-dls.aliyuncs.com/w-86a9a4da</strong>*<strong>a1/spark/logs/jr-b737b</strong></strong>6164d/driver/st-afde7******bb3f</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);
@@ -119,7 +125,10 @@ public class ListSqlStatementContentsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return for a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -128,7 +137,10 @@ public class ListSqlStatementContentsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token that specifies the position from which to start reading the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

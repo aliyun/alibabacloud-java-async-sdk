@@ -67,7 +67,7 @@ public class GetCacheClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * cacheClusters.
+         * <p>The list of Cache clusters.</p>
          */
         public Builder cacheClusters(CacheCluster cacheClusters) {
             this.cacheClusters = cacheClusters;

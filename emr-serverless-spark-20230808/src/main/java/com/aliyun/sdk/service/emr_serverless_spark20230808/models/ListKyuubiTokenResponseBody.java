@@ -67,7 +67,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * accountNames.
+             * <p>The names of authorized RAM users.</p>
              */
             public Builder accountNames(java.util.List<String> accountNames) {
                 this.accountNames = accountNames;
@@ -253,7 +256,10 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755496031000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -261,7 +267,10 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The creator\&quot;s name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -269,7 +278,10 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * expireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787033891000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -277,7 +289,10 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * lastUsedTime.
+             * <p>The last used time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1760366232121</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -285,7 +300,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * memberArns.
+             * <p>The ARNs of authorized users.</p>
              */
             public Builder memberArns(java.util.List<String> memberArns) {
                 this.memberArns = memberArns;
@@ -293,7 +308,10 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The token name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_serverless_spark</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +327,10 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * token.
+             * <p>The masked token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dxj**********wfg</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -317,10 +338,10 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Token ID。</p>
+             * <p>The token ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>f14c1347-dcfd-4082-b101-77aa96b5de36</p>
+             * <p>tk-zpi0*****hdv4y</p>
              */
             public Builder tokenId(String tokenId) {
                 this.tokenId = tokenId;
@@ -374,7 +395,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * tokens.
+             * <p>A list of tokens.</p>
              */
             public Builder tokens(java.util.List<Tokens> tokens) {
                 this.tokens = tokens;

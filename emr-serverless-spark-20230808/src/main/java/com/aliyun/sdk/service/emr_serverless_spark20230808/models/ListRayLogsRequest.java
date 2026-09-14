@@ -143,7 +143,10 @@ public class ListRayLogsRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -152,7 +155,10 @@ public class ListRayLogsRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The ID of the Ray job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rj-311d343123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -161,7 +167,10 @@ public class ListRayLogsRequest extends Request {
         }
 
         /**
-         * bucketName.
+         * <p>The bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mybucket</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("bucketName", bucketName);
@@ -170,7 +179,10 @@ public class ListRayLogsRequest extends Request {
         }
 
         /**
-         * delimiter.
+         * <p>The character used to group object names. All objects whose names contain the specified prefix and between which the delimiter character appears for the first time are grouped as a set of elements (CommonPrefixes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder delimiter(String delimiter) {
             this.putQueryParameter("delimiter", delimiter);
@@ -179,7 +191,10 @@ public class ListRayLogsRequest extends Request {
         }
 
         /**
-         * marker.
+         * <p>The marker after which the returned objects are listed in alphabetical order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1.txt</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("marker", marker);
@@ -188,7 +203,12 @@ public class ListRayLogsRequest extends Request {
         }
 
         /**
-         * maxKeys.
+         * <p>The maximum number of objects to return. If the listing cannot be completed in a single request due to the max-keys setting, a NextMarker element is included in the response as the marker for the next listing request.</p>
+         * <p>Valid values: greater than 0 and less than 1000.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxKeys(Long maxKeys) {
             this.putQueryParameter("maxKeys", maxKeys);
@@ -197,7 +217,10 @@ public class ListRayLogsRequest extends Request {
         }
 
         /**
-         * prefix.
+         * <p>The prefix that the keys of the returned files must start with.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/w-xxxxxxx/ray/logs/rj-xxxxxxxxxx_default/</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);

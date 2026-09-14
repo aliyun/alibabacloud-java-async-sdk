@@ -67,7 +67,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CE06D75-E6A2-505D-9B4B-31DEE3D98A04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -323,7 +326,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * computeInstance.
+             * <p>The specifications of the Kyuubi service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2c8g</p>
              */
             public Builder computeInstance(String computeInstance) {
                 this.computeInstance = computeInstance;
@@ -331,7 +337,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The timestamp when the service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -339,7 +348,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * creator.
+             * <p>The UID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150978934701****</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -347,7 +359,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * innerEndpoint.
+             * <p>The internal same-region endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kyuubi-cn-beijing-internal.spark.emr.aliyuncs.com</p>
              */
             public Builder innerEndpoint(String innerEndpoint) {
                 this.innerEndpoint = innerEndpoint;
@@ -355,7 +370,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * kyuubiConfigs.
+             * <p>The configuration of the Kyuubi service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder kyuubiConfigs(String kyuubiConfigs) {
                 this.kyuubiConfigs = kyuubiConfigs;
@@ -363,7 +381,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * kyuubiReleaseVersion.
+             * <p>The Kyuubi service engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.9.2-0.0.2</p>
              */
             public Builder kyuubiReleaseVersion(String kyuubiReleaseVersion) {
                 this.kyuubiReleaseVersion = kyuubiReleaseVersion;
@@ -371,7 +392,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Kyuubi Service ID。</p>
+             * <p>The ID of the Kyuubi service.</p>
              * 
              * <strong>example:</strong>
              * <p>kb-4e209b04588***95f04ad3538ae4</p>
@@ -382,7 +403,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the Kyuubi service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_serverless_spark</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +414,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * publicEndpoint.
+             * <p>The public domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-kyuubi-gateway-cn-beijing.aliyuncs.com</p>
              */
             public Builder publicEndpoint(String publicEndpoint) {
                 this.publicEndpoint = publicEndpoint;
@@ -398,7 +425,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * publicEndpointEnabled.
+             * <p>Indicates whether public network access is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder publicEndpointEnabled(Boolean publicEndpointEnabled) {
                 this.publicEndpointEnabled = publicEndpointEnabled;
@@ -406,7 +436,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * queue.
+             * <p>The name of the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_queue</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -414,7 +447,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * releaseVersion.
+             * <p>The Spark engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -422,7 +458,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of high-availability (HA) replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -430,7 +469,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * sparkConfigs.
+             * <p>The Spark configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder sparkConfigs(String sparkConfigs) {
                 this.sparkConfigs = sparkConfigs;
@@ -438,7 +480,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The timestamp when the service was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -446,7 +491,10 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The state of the Kyuubi service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder state(String state) {
                 this.state = state;

@@ -398,6 +398,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
 
     /**
+     * @param request the request parameters of QueryApmGrafanaData  QueryApmGrafanaDataRequest
+     * @return QueryApmGrafanaDataResponse
+     */
+    CompletableFuture<QueryApmGrafanaDataResponse> queryApmGrafanaData(QueryApmGrafanaDataRequest request);
+
+    /**
      * @param request the request parameters of RefreshLivyComputeToken  RefreshLivyComputeTokenRequest
      * @return RefreshLivyComputeTokenResponse
      */

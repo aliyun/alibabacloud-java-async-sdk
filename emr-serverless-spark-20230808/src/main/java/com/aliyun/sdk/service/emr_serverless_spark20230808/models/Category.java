@@ -152,7 +152,11 @@ public class Category extends TeaModel {
         } 
 
         /**
+         * <p>The folder ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d8********</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -160,7 +164,11 @@ public class Category extends TeaModel {
         }
 
         /**
+         * <p>The ID of the user who creates the folder.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150978934701****</p>
          */
         public Builder creator(Long creator) {
             this.creator = creator;
@@ -168,7 +176,11 @@ public class Category extends TeaModel {
         }
 
         /**
+         * <p>The time when the folder was created.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-10T02:02:41.000+00:00</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -176,7 +188,11 @@ public class Category extends TeaModel {
         }
 
         /**
+         * <p>The time when the folder was last updated.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-10T02:02:41.000+00:00</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -184,7 +200,11 @@ public class Category extends TeaModel {
         }
 
         /**
+         * <p>The ID of the user who last modifies the folder.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150978934701****</p>
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
@@ -192,7 +212,11 @@ public class Category extends TeaModel {
         }
 
         /**
+         * <p>The name of the folder.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -200,7 +224,10 @@ public class Category extends TeaModel {
         }
 
         /**
-         * parentBizId.
+         * <p>The parent folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d6********</p>
          */
         public Builder parentBizId(String parentBizId) {
             this.parentBizId = parentBizId;
@@ -208,7 +235,11 @@ public class Category extends TeaModel {
         }
 
         /**
+         * <p>The type of the folder.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TASK</p>
          */
         public Builder type(String type) {
             this.type = type;

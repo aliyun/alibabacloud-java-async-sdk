@@ -171,7 +171,10 @@ public class UpdateKyuubiTokenRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -180,7 +183,10 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * kyuubiServiceId.
+         * <p>The Kyuubi service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-c7141f10c3f549fc9f8b8ae562b8****</p>
          */
         public Builder kyuubiServiceId(String kyuubiServiceId) {
             this.putPathParameter("kyuubiServiceId", kyuubiServiceId);
@@ -189,7 +195,7 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tk-zpi0*****hdv4y</p>
@@ -201,7 +207,7 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * autoExpireConfiguration.
+         * <p>The auto-expiration settings.</p>
          */
         public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
             this.putBodyParameter("autoExpireConfiguration", autoExpireConfiguration);
@@ -210,7 +216,7 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * memberArns.
+         * <p>The ARNs of authorized users.</p>
          */
         public Builder memberArns(java.util.List<String> memberArns) {
             this.putBodyParameter("memberArns", memberArns);
@@ -219,7 +225,10 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The token name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_serverless_spark</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -237,7 +246,10 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * token.
+         * <p>The token. It must be 32 characters long and contain only lowercase letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rjy7ejhej9gkzjjuun49jnx2xk8if2cu</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("token", token);
@@ -246,7 +258,10 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -314,7 +329,10 @@ public class UpdateKyuubiTokenRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether to enable automatic expiration for the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -322,7 +340,10 @@ public class UpdateKyuubiTokenRequest extends Request {
             }
 
             /**
-             * expireDays.
+             * <p>The expiration period, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365</p>
              */
             public Builder expireDays(Integer expireDays) {
                 this.expireDays = expireDays;

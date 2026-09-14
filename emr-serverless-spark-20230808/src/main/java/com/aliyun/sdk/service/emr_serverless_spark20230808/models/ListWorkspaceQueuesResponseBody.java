@@ -106,7 +106,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of records returned per request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -255,7 +255,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of a behavior.</p>
+             * <p>The action ARN.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:emr::workspaceId:action/create_queue</p>
@@ -266,7 +266,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
+             * <p>The permission name.</p>
              * 
              * <strong>example:</strong>
              * <p>view</p>
@@ -277,7 +277,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dependencies of the operation.</p>
+             * <p>The list of action dependencies.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;view&quot;]</p>
@@ -288,10 +288,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the operation.</p>
+             * <p>The action description.</p>
              * 
              * <strong>example:</strong>
-             * <p>文件目录遍历、文件浏览</p>
+             * <p>Directory traversal and file browsing</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -302,7 +302,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
              * <p>The display name of the permission.</p>
              * 
              * <strong>example:</strong>
-             * <p>文件目录遍历、文件浏览</p>
+             * <p>File directory traversal, file browsing</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -331,6 +331,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
+
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
 
         @com.aliyun.core.annotation.NameInMap("environments")
         private java.util.List<String> environments;
@@ -387,6 +390,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             this.allowActions = builder.allowActions;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
+            this.description = builder.description;
             this.environments = builder.environments;
             this.gpuMachineNum = builder.gpuMachineNum;
             this.gpuSpec = builder.gpuSpec;
@@ -433,6 +437,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -558,6 +569,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private java.util.List<AllowActions> allowActions; 
             private Long createTime; 
             private String creator; 
+            private String description; 
             private java.util.List<String> environments; 
             private Integer gpuMachineNum; 
             private java.util.List<String> gpuSpec; 
@@ -583,6 +595,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
                 this.allowActions = model.allowActions;
                 this.createTime = model.createTime;
                 this.creator = model.creator;
+                this.description = model.description;
                 this.environments = model.environments;
                 this.gpuMachineNum = model.gpuMachineNum;
                 this.gpuSpec = model.gpuSpec;
@@ -603,7 +616,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operations allowed for the queue.</p>
+             * <p>The list of allowed actions on the queue.</p>
              */
             public Builder allowActions(java.util.List<AllowActions> allowActions) {
                 this.allowActions = allowActions;
@@ -622,7 +635,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who created the queue.</p>
+             * <p>The UID of the user who created the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>237109</p>
@@ -633,7 +646,18 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment types of the queue.</p>
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test queue</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The list of queue environment types.</p>
              */
             public Builder environments(java.util.List<String> environments) {
                 this.environments = environments;
@@ -649,7 +673,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * gpuSpec.
+             * <p>The list of GPU models.</p>
              */
             public Builder gpuSpec(java.util.List<String> gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -665,7 +689,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum capacity of resources that can be used in the queue.</p>
+             * <p>The maximum resource capacity of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
@@ -676,7 +700,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum capacity of resources that can be used in the queue.</p>
+             * <p>The minimum resource capacity of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
@@ -687,10 +711,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The billing type. Valid values:</p>
              * <ul>
-             * <li>PayAsYouGo</li>
-             * <li>Pre</li>
+             * <li>PayAsYouGo: pay-as-you-go.</li>
+             * <li>Pre: subscription.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -702,7 +726,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * preheat.
+             * <p>Indicates whether resource prefetch is enabled.</p>
              */
             public Builder preheat(Boolean preheat) {
                 this.preheat = preheat;
@@ -721,7 +745,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * queueCategory.
+             * <p>The queue category, CPU or GPU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder queueCategory(String queueCategory) {
                 this.queueCategory = queueCategory;
@@ -729,7 +756,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the queue.</p>
+             * <p>The queue name.</p>
              * 
              * <strong>example:</strong>
              * <p>dev_queue</p>
@@ -751,7 +778,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the queue.</p>
+             * <p>The queue status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -762,14 +789,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the queue. Valid values:</p>
+             * <p>The queue type. Valid values:</p>
              * <ul>
-             * <li>instance</li>
-             * <li>instanceChildren</li>
+             * <li>instance: single task type</li>
+             * <li>instanceChildren: parent task type</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>instance, instanceChildren</p>
+             * <p>instance</p>
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -788,7 +815,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of resources that are used in the queue.</p>
+             * <p>The used resource capacity of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>

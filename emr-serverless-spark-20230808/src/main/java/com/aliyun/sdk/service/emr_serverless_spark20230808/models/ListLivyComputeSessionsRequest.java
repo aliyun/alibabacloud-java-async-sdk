@@ -115,7 +115,10 @@ public class ListLivyComputeSessionsRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d80f373d3ace824f</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -124,7 +127,10 @@ public class ListLivyComputeSessionsRequest extends Request {
         }
 
         /**
-         * livyComputeId.
+         * <p>The ID of the Livy Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lc-zm4dzdiubu73w2yx</p>
          */
         public Builder livyComputeId(String livyComputeId) {
             this.putPathParameter("livyComputeId", livyComputeId);
@@ -133,7 +139,10 @@ public class ListLivyComputeSessionsRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The page number. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -142,7 +151,10 @@ public class ListLivyComputeSessionsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -151,7 +163,10 @@ public class ListLivyComputeSessionsRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

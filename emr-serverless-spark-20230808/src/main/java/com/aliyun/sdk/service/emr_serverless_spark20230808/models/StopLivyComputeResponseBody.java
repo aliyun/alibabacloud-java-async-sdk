@@ -80,7 +80,10 @@ public class StopLivyComputeResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 1000000 indicates that the request is successful. Other values indicate that the request failed. For more information about an error, see the message parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class StopLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class StopLivyComputeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>484D9DDA-300D-525E-AF7A-0CCCA5C64A7A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

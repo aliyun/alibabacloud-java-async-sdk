@@ -132,7 +132,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The code that is returned by the backend server.</p>
+         * <p>The API return code.</p>
          * 
          * <strong>example:</strong>
          * <p>1400009</p>
@@ -173,7 +173,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the returned code.</p>
+         * <p>A detailed message for the return code.</p>
          * 
          * <strong>example:</strong>
          * <p>No permission for resource action</p>
@@ -184,7 +184,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -264,7 +264,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The workflow ID.</p>
+             * <p>The ID of the workflow definition.</p>
              * 
              * <strong>example:</strong>
              * <p>160************</p>
@@ -275,7 +275,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the workflow.</p>
+             * <p>The serial number of the workflow definition.</p>
              * 
              * <strong>example:</strong>
              * <p>12342</p>

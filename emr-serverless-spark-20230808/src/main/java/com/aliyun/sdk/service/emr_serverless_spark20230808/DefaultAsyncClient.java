@@ -30,23 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "emr-serverless-spark";
         this.version = "2023-08-08";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-shenzhen", "emr-serverless-spark.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "emr-serverless-spark.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "emr-serverless-spark.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "emr-serverless-spark.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "emr-serverless-spark.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "emr-serverless-spark.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "emr-serverless-spark.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "emr-serverless-spark.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "emr-serverless-spark.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "emr-serverless-spark.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "emr-serverless-spark.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-west-1", "emr-serverless-spark.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "emr-serverless-spark.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "emr-serverless-spark.eu-central-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "emr-serverless-spark.na-south-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -1184,6 +1168,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListWorkspacesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryApmGrafanaData  QueryApmGrafanaDataRequest
+     * @return QueryApmGrafanaDataResponse
+     */
+    @Override
+    public CompletableFuture<QueryApmGrafanaDataResponse> queryApmGrafanaData(QueryApmGrafanaDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryApmGrafanaData").setMethod(HttpMethod.POST).setPathRegex("/api/v1/apm/action/queryApmGrafanaData").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryApmGrafanaDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryApmGrafanaDataResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

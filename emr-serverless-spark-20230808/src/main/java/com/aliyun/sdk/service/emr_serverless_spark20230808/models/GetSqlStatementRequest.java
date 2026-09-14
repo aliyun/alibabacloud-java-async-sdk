@@ -99,7 +99,7 @@ public class GetSqlStatementRequest extends Request {
         }
 
         /**
-         * <p>The interactive query ID.</p>
+         * <p>The statement ID.</p>
          * 
          * <strong>example:</strong>
          * <p>st-2dadfhajk11cv****</p>

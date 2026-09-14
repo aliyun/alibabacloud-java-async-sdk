@@ -73,7 +73,10 @@ public class DeleteRayClusterRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-26ca1703f6d11</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -82,7 +85,10 @@ public class DeleteRayClusterRequest extends Request {
         }
 
         /**
-         * clusterId.
+         * <p>The Ray cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-k7nm8ahl5te4tg91</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);

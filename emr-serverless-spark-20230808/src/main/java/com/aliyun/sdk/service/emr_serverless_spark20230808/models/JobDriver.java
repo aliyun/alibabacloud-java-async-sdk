@@ -54,7 +54,7 @@ public class JobDriver extends TeaModel {
         } 
 
         /**
-         * sparkSubmit.
+         * <p>The configurations of SparkSubmit.</p>
          */
         public Builder sparkSubmit(SparkSubmit sparkSubmit) {
             this.sparkSubmit = sparkSubmit;
@@ -133,7 +133,10 @@ public class JobDriver extends TeaModel {
             } 
 
             /**
-             * entryPoint.
+             * <p>The main program of Spark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/entrypoint.jar</p>
              */
             public Builder entryPoint(String entryPoint) {
                 this.entryPoint = entryPoint;
@@ -141,7 +144,7 @@ public class JobDriver extends TeaModel {
             }
 
             /**
-             * entryPointArguments.
+             * <p>The parameters related to the main program of Spark.</p>
              */
             public Builder entryPointArguments(java.util.List<String> entryPointArguments) {
                 this.entryPointArguments = entryPointArguments;
@@ -149,7 +152,10 @@ public class JobDriver extends TeaModel {
             }
 
             /**
-             * sparkSubmitParameters.
+             * <p>The command-line parameter of SparkSubmit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--conf spark.app.name=test</p>
              */
             public Builder sparkSubmitParameters(String sparkSubmitParameters) {
                 this.sparkSubmitParameters = sparkSubmitParameters;

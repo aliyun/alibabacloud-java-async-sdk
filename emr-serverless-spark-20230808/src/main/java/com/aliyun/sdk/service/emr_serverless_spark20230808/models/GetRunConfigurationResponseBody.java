@@ -67,7 +67,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -78,7 +78,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * runConfiguration.
+         * <p>The run configuration.</p>
          */
         public Builder runConfiguration(RunConfiguration runConfiguration) {
             this.runConfiguration = runConfiguration;
@@ -157,7 +157,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用配置文件名。 应用配置文件名。 <code>spark-defaults.conf</code></p>
+             * <p>The name of the application configuration file.</p>
              * 
              * <strong>example:</strong>
              * <p>spark-defaults.conf</p>
@@ -168,7 +168,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>配置项键。 配置项键。 <code>dfs.namenode.checkpoint.period</code></p>
+             * <p>The key of the configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>spark.driver.cores</p>
@@ -179,7 +179,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>配置项值。 配置项值。 <code>3600s</code></p>
+             * <p>The value of the configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -249,7 +249,10 @@ public class GetRunConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * LogLevel.
+             * <p>The log level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder logLevel(String logLevel) {
                 this.logLevel = logLevel;
@@ -257,7 +260,10 @@ public class GetRunConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * LogPath.
+             * <p>The log path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test</p>
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -337,7 +343,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用配置项</p>
+             * <p>The list of Spark configuration parameters.</p>
              */
             public Builder applicationConfigs(java.util.List<ApplicationConfigs> applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
@@ -345,7 +351,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * logConfig.
+             * <p>The log configuration.</p>
              */
             public Builder logConfig(LogConfig logConfig) {
                 this.logConfig = logConfig;
@@ -353,7 +359,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行配置。</p>
+             * <p>The list of runtime parameters.</p>
              */
             public Builder runtimeConfigs(java.util.List<Tag> runtimeConfigs) {
                 this.runtimeConfigs = runtimeConfigs;

@@ -90,7 +90,7 @@ public class ListWorkspaceQueuesRequest extends Request {
          * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>w-26ca1703f6d71e6e</p>
+         * <p>w-26ca1703f6d7****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -100,11 +100,6 @@ public class ListWorkspaceQueuesRequest extends Request {
 
         /**
          * <p>The environment type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>dev</li>
-         * <li>production</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>production</p>

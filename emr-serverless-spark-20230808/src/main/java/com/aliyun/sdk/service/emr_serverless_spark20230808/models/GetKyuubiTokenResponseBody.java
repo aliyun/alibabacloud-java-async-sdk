@@ -67,7 +67,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * enable.
+             * <p>Indicates whether the token automatically expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -149,7 +155,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * expireDays.
+             * <p>The expiration period, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365</p>
              */
             public Builder expireDays(Integer expireDays) {
                 this.expireDays = expireDays;
@@ -320,7 +329,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * autoExpireConfiguration.
+             * <p>The automatic expiration configuration.</p>
              */
             public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
                 this.autoExpireConfiguration = autoExpireConfiguration;
@@ -328,7 +337,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456094000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -336,7 +348,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The creator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -344,7 +359,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * expireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753932319390</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -352,7 +370,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * lastUsedTime.
+             * <p>The last used time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749456098000</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -360,7 +381,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * memberArns.
+             * <p>The Alibaba Cloud Resource Names (ARNs) of the authorized users.</p>
              */
             public Builder memberArns(java.util.List<String> memberArns) {
                 this.memberArns = memberArns;
@@ -368,7 +389,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The token name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_serverless_spark</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -384,7 +408,10 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * token.
+             * <p>The masked token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dxj**********wfg</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -392,7 +419,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Token ID。</p>
+             * <p>The token ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tk-zpi0*****hdv4y</p>

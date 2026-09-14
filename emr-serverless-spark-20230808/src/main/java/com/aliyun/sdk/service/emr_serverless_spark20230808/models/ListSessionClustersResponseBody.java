@@ -106,7 +106,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of entries returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token.</p>
+         * <p>The token that marks the start of the next page of results.</p>
          * 
          * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -139,7 +139,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sessions.</p>
+         * <p>A list of sessions.</p>
          */
         public Builder sessionClusters(java.util.List<SessionClusters> sessionClusters) {
             this.sessionClusters = sessionClusters;
@@ -147,7 +147,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the query criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -229,7 +229,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the configuration file.</p>
+             * <p>The configuration file name.</p>
              * 
              * <strong>example:</strong>
              * <p>spark-default.conf</p>
@@ -240,7 +240,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the configuration.</p>
+             * <p>The configuration key.</p>
              * 
              * <strong>example:</strong>
              * <p>spark.app.name</p>
@@ -308,7 +308,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether automatic startup is enabled.</p>
+             * <p>Indicates whether auto-start is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -378,7 +378,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether automatic termination is enabled.</p>
+             * <p>Indicates whether auto-stop is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -389,7 +389,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</p>
+             * <p>The number of minutes of inactivity before the session is automatically stopped.</p>
              * 
              * <strong>example:</strong>
              * <p>45</p>
@@ -459,7 +459,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status change code.</p>
+             * <p>The state change code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -470,7 +470,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status change message.</p>
+             * <p>The state change message.</p>
              * 
              * <strong>example:</strong>
              * <p>ok</p>
@@ -826,7 +826,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The session configurations, which are equivalent to the configurations of the Spark job.</p>
+             * <p>The session configurations. These are equivalent to the configurations of the underlying Spark job.</p>
              */
             public Builder applicationConfigs(java.util.List<ApplicationConfigs> applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
@@ -834,7 +834,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic startup configurations.</p>
+             * <p>The auto-start configuration.</p>
              */
             public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
                 this.autoStartConfiguration = autoStartConfiguration;
@@ -842,7 +842,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of automatic termination.</p>
+             * <p>The auto-stop configuration.</p>
              */
             public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
                 this.autoStopConfiguration = autoStopConfiguration;
@@ -858,7 +858,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Spark engine.</p>
+             * <p>The version displayed in the console.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -880,7 +880,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint of the Thrift server.</p>
+             * <p>The internal same-region endpoint of the Thrift server.</p>
              * 
              * <strong>example:</strong>
              * <p>emr-spark-gateway-cn-hangzhou-internal.data.aliyuncs.com</p>
@@ -891,7 +891,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the job that is associated with the session.</p>
+             * <p>The ID of the developer job that is attached to the session.</p>
              * 
              * <strong>example:</strong>
              * <p>TSK-xxxxxxxxx</p>
@@ -902,7 +902,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional metadata of the session.</p>
+             * <p>The extra metadata of the session.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;extraInfoKey&quot;:&quot;extraInfoValue&quot;}</p>
@@ -913,7 +913,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+             * <p>Indicates whether acceleration by the Fusion engine is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -924,7 +924,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the session was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1732267598000</p>
@@ -936,12 +936,6 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
             /**
              * <p>The session type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>NOTEBOOK</li>
-             * <li>THRIFT</li>
-             * <li>SQL</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>SQL</p>
@@ -952,7 +946,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the session.</p>
+             * <p>The session name.</p>
              * 
              * <strong>example:</strong>
              * <p>adhoc_query</p>
@@ -971,7 +965,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the queue that is used to run the session.</p>
+             * <p>The name of the queue in which the session runs.</p>
              * 
              * <strong>example:</strong>
              * <p>dev_queue</p>
@@ -982,10 +976,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of EMR Serverless Spark.</p>
+             * <p>The Serverless Spark version.</p>
              * 
              * <strong>example:</strong>
-             * <p>esr-2.1</p>
+             * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -1004,7 +998,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The time when the session was started.</p>
              * 
              * <strong>example:</strong>
              * <p>1732267598000</p>
@@ -1015,13 +1009,18 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the session.</p>
+             * <p>The session state.</p>
              * <ul>
-             * <li>Starting</li>
-             * <li>Running</li>
-             * <li>Stopping</li>
-             * <li>Stopped</li>
-             * <li>Error</li>
+             * <li><p>Starting: The session is starting.</p>
+             * </li>
+             * <li><p>Running: The session is running.</p>
+             * </li>
+             * <li><p>Stopping: The session is stopping.</p>
+             * </li>
+             * <li><p>Stopped: The session is stopped.</p>
+             * </li>
+             * <li><p>Error: The session has failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1033,7 +1032,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the most recent status change of the session.</p>
+             * <p>The details of the last state change of the session.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -1063,7 +1062,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Spark UI of the session.</p>
+             * <p>The URL of the Spark UI for the session.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://spark-ui-xxxx">http://spark-ui-xxxx</a></p>

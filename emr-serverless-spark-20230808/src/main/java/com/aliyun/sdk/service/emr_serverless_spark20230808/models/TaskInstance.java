@@ -145,7 +145,10 @@ public class TaskInstance extends TeaModel {
         } 
 
         /**
-         * bizId.
+         * <p>The ID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d8********</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -153,7 +156,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * creator.
+         * <p>The ID of the user who creates the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150978934701****</p>
          */
         public Builder creator(Long creator) {
             this.creator = creator;
@@ -161,7 +167,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * fenixRunId.
+         * <p>The job run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-93d98d2f7061****</p>
          */
         public Builder fenixRunId(String fenixRunId) {
             this.fenixRunId = fenixRunId;
@@ -169,7 +178,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * gmtCreated.
+         * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-05T02:03:19Z</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -177,7 +189,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * taskBizId.
+         * <p>The ID of the data development job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TSK-d87******************</p>
          */
         public Builder taskBizId(String taskBizId) {
             this.taskBizId = taskBizId;
@@ -185,7 +200,7 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * taskInfo.
+         * <p>The details of the job.</p>
          */
         public Builder taskInfo(Task taskInfo) {
             this.taskInfo = taskInfo;
@@ -193,7 +208,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * taskStatus.
+         * <p>The job run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -201,7 +219,10 @@ public class TaskInstance extends TeaModel {
         }
 
         /**
-         * workspaceBizId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09151****</p>
          */
         public Builder workspaceBizId(String workspaceBizId) {
             this.workspaceBizId = workspaceBizId;

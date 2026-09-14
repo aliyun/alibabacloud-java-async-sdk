@@ -169,7 +169,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * <p>The SQL code. You can specify one or more SQL statements.</p>
+         * <p>The SQL code. This parameter accepts one or more SQL statements for execution.</p>
          * 
          * <strong>example:</strong>
          * <p>SHOW TABLES</p>
@@ -181,7 +181,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * <p>The default Data Lake Formation (DLF) catalog ID.</p>
+         * <p>The ID of the default DLF Catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>default_catalog</p>
@@ -205,7 +205,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Valid values: 1 to 10000.</p>
+         * <p>The limit value. The value must be between 1 and 10000, inclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -217,7 +217,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * <p>The SQL session ID. You can create an SQL session in the workspace created in EMR Serverless Spark.</p>
+         * <p>The ID of the SQL session. The session must be created in the Session Manager module of the EMR Serverless Spark workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>sc-dfahdfjafhajd****</p>

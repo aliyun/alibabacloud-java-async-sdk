@@ -87,7 +87,10 @@ public class StartLivyComputeRequest extends Request {
         } 
 
         /**
-         * workspaceBizId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-8adde60aa809701f</p>
          */
         public Builder workspaceBizId(String workspaceBizId) {
             this.putPathParameter("workspaceBizId", workspaceBizId);
@@ -96,7 +99,10 @@ public class StartLivyComputeRequest extends Request {
         }
 
         /**
-         * livyComputeId.
+         * <p>The ID of the Livy gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lc-i8xogcdfa4fk3yn1</p>
          */
         public Builder livyComputeId(String livyComputeId) {
             this.putPathParameter("livyComputeId", livyComputeId);
@@ -105,7 +111,10 @@ public class StartLivyComputeRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

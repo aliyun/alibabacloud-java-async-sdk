@@ -302,7 +302,7 @@ public class ListJobRunsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>w-1234abcd</p>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -311,7 +311,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * applicationConfigs.
+         * <p>The Spark configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;key\&quot;:\&quot;spark.app.name\&quot;,\&quot;value\&quot;:\&quot;test\&quot;}]</p>
          */
         public Builder applicationConfigs(String applicationConfigs) {
             this.putQueryParameter("applicationConfigs", applicationConfigs);
@@ -320,10 +323,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user who created the job.</p>
+         * <p>The UID of the user who created the job.</p>
          * 
          * <strong>example:</strong>
-         * <p>1509789347011222</p>
+         * <p>150976534701****</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("creator", creator);
@@ -332,7 +335,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The range of end time.</p>
+         * <p>The end time range of the job.</p>
          */
         public Builder endTime(EndTime endTime) {
             String endTimeShrink = shrink(endTime, "endTime", "json");
@@ -351,7 +354,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * isWorkflow.
+         * <p>Specifies whether the job is a workflow job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isWorkflow(String isWorkflow) {
             this.putQueryParameter("isWorkflow", isWorkflow);
@@ -360,7 +366,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The job run ID.</p>
+         * <p>The job ID of the streaming job deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>jd-b6d003f1930f****</p>
@@ -384,7 +390,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of records to retrieve in a single request. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -396,7 +402,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The minimum running duration of the job. Unit: ms.</p>
+         * <p>The minimum execution duration of the job, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60000</p>
@@ -420,7 +426,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+         * <p>The pagination token that marks the position from which to start reading.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -444,7 +450,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource queue on which the Spark jobs run.</p>
+         * <p>The name of the resource queue on which the Spark job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -456,7 +462,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * runtimeConfigs.
+         * <p>The runtime configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;key\&quot;:\&quot;mainClass\&quot;,\&quot;value\&quot;:\&quot;yourClass\&quot;}]</p>
          */
         public Builder runtimeConfigs(String runtimeConfigs) {
             this.putQueryParameter("runtimeConfigs", runtimeConfigs);
@@ -465,7 +474,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The range of start time.</p>
+         * <p>The start time range of the job.</p>
          */
         public Builder startTime(StartTime startTime) {
             String startTimeShrink = shrink(startTime, "startTime", "json");
@@ -488,7 +497,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * <p>The tags of the job.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -719,7 +728,7 @@ public class ListJobRunsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>tag_key</p>
@@ -730,7 +739,7 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>

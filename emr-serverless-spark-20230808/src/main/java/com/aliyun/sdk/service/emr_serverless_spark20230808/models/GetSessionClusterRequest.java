@@ -99,7 +99,7 @@ public class GetSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The session ID.</p>
+         * <p>The name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-demo-job</p>

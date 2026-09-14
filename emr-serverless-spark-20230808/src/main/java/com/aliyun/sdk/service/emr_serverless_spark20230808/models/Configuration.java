@@ -80,7 +80,10 @@ public class Configuration extends TeaModel {
         } 
 
         /**
-         * configFileName.
+         * <p>The name of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common.conf</p>
          */
         public Builder configFileName(String configFileName) {
             this.configFileName = configFileName;
@@ -88,7 +91,10 @@ public class Configuration extends TeaModel {
         }
 
         /**
-         * configItemKey.
+         * <p>The name of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive.metastore.type</p>
          */
         public Builder configItemKey(String configItemKey) {
             this.configItemKey = configItemKey;
@@ -96,7 +102,10 @@ public class Configuration extends TeaModel {
         }
 
         /**
-         * configItemValue.
+         * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_RDS</p>
          */
         public Builder configItemValue(String configItemValue) {
             this.configItemValue = configItemValue;

@@ -145,6 +145,7 @@ public class ListJobExecutorsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The job run ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,10 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * executorType.
+         * <p>The executor type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>driver</p>
          */
         public Builder executorType(String executorType) {
             this.putQueryParameter("executorType", executorType);
@@ -178,7 +183,10 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -187,7 +195,10 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -196,7 +207,10 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -205,7 +219,10 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The executor status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dead</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

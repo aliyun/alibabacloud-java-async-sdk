@@ -87,7 +87,10 @@ public class ListKyuubiTokenRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -96,7 +99,10 @@ public class ListKyuubiTokenRequest extends Request {
         }
 
         /**
-         * kyuubiServiceId.
+         * <p>The Kyuubi service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-c7141f10c3f549fc9f8b8ae562b8****</p>
          */
         public Builder kyuubiServiceId(String kyuubiServiceId) {
             this.putPathParameter("kyuubiServiceId", kyuubiServiceId);
@@ -105,7 +111,10 @@ public class ListKyuubiTokenRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

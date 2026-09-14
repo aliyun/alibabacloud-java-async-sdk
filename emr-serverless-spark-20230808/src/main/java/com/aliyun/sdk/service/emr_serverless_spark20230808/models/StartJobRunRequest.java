@@ -246,7 +246,7 @@ public class StartJobRunRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>w-123213123131</p>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -255,10 +255,10 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The idempotence token.</p>
          * 
          * <strong>example:</strong>
-         * <p>8e6aae2810c8f67229ca70bb31cd6028</p>
+         * <p>8e6aae2810c8f67229ca70bb31cd****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -267,11 +267,14 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The code type of the job. Valid values:</p>
+         * <p>The job type. Valid values:</p>
          * <ul>
-         * <li>SQL</li>
-         * <li>JAR</li>
-         * <li>PYTHON</li>
+         * <li><p>SQL</p>
+         * </li>
+         * <li><p>JAR</p>
+         * </li>
+         * <li><p>PYTHON</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,7 +287,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The advanced configurations of Spark.</p>
+         * <p>The advanced Spark configurations.</p>
          */
         public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
             this.putBodyParameter("configurationOverrides", configurationOverrides);
@@ -293,7 +296,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The version of the Spark engine.</p>
+         * <p>The version that is displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.3.1</p>
@@ -305,7 +308,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of the job.</p>
+         * <p>The timeout period for the job.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -317,7 +320,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Fusion engine for acceleration.</p>
+         * <p>Specifies whether to enable the Fusion engine for acceleration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -329,7 +332,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The information about Spark Driver.</p>
+         * <p>The information about the Spark driver.</p>
          */
         public Builder jobDriver(JobDriver jobDriver) {
             this.putBodyParameter("jobDriver", jobDriver);
@@ -350,7 +353,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>spark_job_name</p>
@@ -362,7 +365,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The version number of Spark.</p>
+         * <p>The version of the Spark engine.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.3.1</p>
@@ -374,7 +377,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource queue on which the Spark job runs.</p>
+         * <p>The resource queue on which the Spark job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -386,7 +389,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The tags of the job.</p>
+         * <p>The list of job tags.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
@@ -479,10 +482,10 @@ public class StartJobRunRequest extends Request {
             } 
 
             /**
-             * <p>The configuration file of SparkConf.</p>
+             * <p>The configuration file to which the Spark configuration belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>spark-default.conf</p>
+             * <p>spark-defaults.conf</p>
              */
             public Builder configFileName(String configFileName) {
                 this.configFileName = configFileName;
@@ -490,7 +493,7 @@ public class StartJobRunRequest extends Request {
             }
 
             /**
-             * <p>The key of SparkConf.</p>
+             * <p>The key of the Spark configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>spark.app.name</p>
@@ -501,7 +504,7 @@ public class StartJobRunRequest extends Request {
             }
 
             /**
-             * <p>The value of SparkConf.</p>
+             * <p>The value of the Spark configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>test_app</p>
@@ -558,7 +561,7 @@ public class StartJobRunRequest extends Request {
             } 
 
             /**
-             * <p>The SparkConf objects.</p>
+             * <p>The list of Spark configurations.</p>
              */
             public Builder configurations(java.util.List<Configurations> configurations) {
                 this.configurations = configurations;

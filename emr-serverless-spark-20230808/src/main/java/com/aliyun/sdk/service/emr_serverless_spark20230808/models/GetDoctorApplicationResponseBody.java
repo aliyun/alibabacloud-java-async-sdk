@@ -108,6 +108,9 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
 
             /**
              * <p>The diagnostics list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal.</p>
              */
             public Builder suggestions(java.util.List<String> suggestions) {
                 this.suggestions = suggestions;

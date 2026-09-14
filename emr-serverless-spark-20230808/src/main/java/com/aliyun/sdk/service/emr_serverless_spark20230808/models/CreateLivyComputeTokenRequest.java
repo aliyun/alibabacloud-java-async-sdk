@@ -129,7 +129,10 @@ public class CreateLivyComputeTokenRequest extends Request {
         } 
 
         /**
-         * workspaceBizId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-8adde60aa809701f</p>
          */
         public Builder workspaceBizId(String workspaceBizId) {
             this.putPathParameter("workspaceBizId", workspaceBizId);
@@ -138,7 +141,10 @@ public class CreateLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * livyComputeId.
+         * <p>The ID of the Livy Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lc-zm4dzdiubu73w2yx</p>
          */
         public Builder livyComputeId(String livyComputeId) {
             this.putPathParameter("livyComputeId", livyComputeId);
@@ -147,7 +153,7 @@ public class CreateLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * autoExpireConfiguration.
+         * <p>The token expiration information struct.</p>
          */
         public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
             this.putBodyParameter("autoExpireConfiguration", autoExpireConfiguration);
@@ -156,7 +162,10 @@ public class CreateLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The token name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytoken</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -165,7 +174,10 @@ public class CreateLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * token.
+         * <p>The token content. The length must be 16 or more characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gs3fy75w4o7hqe5s</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("token", token);
@@ -174,7 +186,10 @@ public class CreateLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -242,7 +257,16 @@ public class CreateLivyComputeTokenRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether the token automatically expires.</p>
+             * <ul>
+             * <li><p>true: Yes.</p>
+             * </li>
+             * <li><p>false: No.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -250,7 +274,10 @@ public class CreateLivyComputeTokenRequest extends Request {
             }
 
             /**
-             * expireDays.
+             * <p>The expiration period in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder expireDays(Integer expireDays) {
                 this.expireDays = expireDays;

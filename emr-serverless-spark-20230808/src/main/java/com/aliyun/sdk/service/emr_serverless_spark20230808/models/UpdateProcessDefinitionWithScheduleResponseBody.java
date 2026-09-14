@@ -132,7 +132,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The code that is returned by the backend server.</p>
+         * <p>The return code from the backend API.</p>
          * 
          * <strong>example:</strong>
          * <p>1400009</p>
@@ -143,7 +143,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request failed.</p>
+         * <p>The number of failed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -173,7 +173,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the returned code.</p>
+         * <p>The detailed description that corresponds to the return code.</p>
          * 
          * <strong>example:</strong>
          * <p>No permission for resource action</p>
@@ -485,7 +485,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The email address to receive alerts.</p>
+             * <p>The email address for alerts.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -507,7 +507,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflow ID.</p>
+             * <p>The workflow definition ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12***********</p>
@@ -518,7 +518,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workflow was created.</p>
+             * <p>The time when the workflow definition was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-05T02:03:19Z</p>
@@ -529,7 +529,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CRON expression that is used for scheduling.</p>
+             * <p>The cron expression for scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 0 * * ?</p>
@@ -540,7 +540,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node description.</p>
+             * <p>The description of the workflow definition.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -551,7 +551,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the end time range.</p>
+             * <p>The end time of the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -573,7 +573,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the workflow.</p>
+             * <p>The workflow definition number.</p>
              * 
              * <strong>example:</strong>
              * <p>123223</p>
@@ -584,7 +584,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workflow.</p>
+             * <p>The name of the workflow definition.</p>
              * 
              * <strong>example:</strong>
              * <p>ods_batch_workflow</p>
@@ -606,7 +606,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the workflow.</p>
+             * <p>The release state of the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>ONLINE</p>
@@ -617,7 +617,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the scheduling.</p>
+             * <p>The start time of the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -628,7 +628,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the time zone.</p>
+             * <p>The time zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -639,7 +639,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workflow was updated.</p>
+             * <p>The time when the workflow definition was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-05T06:24:27Z</p>
@@ -650,7 +650,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user that is used to initiate a scheduling.</p>
+             * <p>The ID of the user who scheduled the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>113*********</p>
@@ -661,7 +661,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user that is used to initiate a scheduling.</p>
+             * <p>The name of the user who scheduled the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>w-********</p>

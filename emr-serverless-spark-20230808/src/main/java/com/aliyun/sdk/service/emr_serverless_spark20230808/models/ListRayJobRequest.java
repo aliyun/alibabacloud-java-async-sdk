@@ -143,7 +143,10 @@ public class ListRayJobRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -152,7 +155,10 @@ public class ListRayJobRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the Ray Job (exact match).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myrayjob</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -161,7 +167,10 @@ public class ListRayJobRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -170,7 +179,10 @@ public class ListRayJobRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -179,7 +191,10 @@ public class ListRayJobRequest extends Request {
         }
 
         /**
-         * submissionId.
+         * <p>The submission ID of the Ray Job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rj-xxxxxxxxxxx</p>
          */
         public Builder submissionId(String submissionId) {
             this.putQueryParameter("submissionId", submissionId);
@@ -188,7 +203,7 @@ public class ListRayJobRequest extends Request {
         }
 
         /**
-         * submitTime.
+         * <p>The submit time range.</p>
          */
         public Builder submitTime(SubmitTime submitTime) {
             String submitTimeShrink = shrink(submitTime, "submitTime", "json");
@@ -198,7 +213,10 @@ public class ListRayJobRequest extends Request {
         }
 
         /**
-         * taskBizId.
+         * <p>The data development node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TSK-db8b870d901e443ba0aebba40c923e02</p>
          */
         public Builder taskBizId(String taskBizId) {
             this.putQueryParameter("taskBizId", taskBizId);
@@ -266,7 +284,10 @@ public class ListRayJobRequest extends Request {
             } 
 
             /**
-             * endTime.
+             * <p>The end of the submit time range. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1780018822000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -274,7 +295,10 @@ public class ListRayJobRequest extends Request {
             }
 
             /**
-             * startTime.
+             * <p>The start of the submit time range. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1780017822000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

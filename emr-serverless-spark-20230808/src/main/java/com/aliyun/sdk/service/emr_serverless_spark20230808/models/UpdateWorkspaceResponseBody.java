@@ -80,7 +80,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>979071171373334529</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -152,7 +155,10 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * orderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1005565802416783361</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

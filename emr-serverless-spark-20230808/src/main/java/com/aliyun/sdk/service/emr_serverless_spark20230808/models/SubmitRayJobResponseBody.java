@@ -67,7 +67,10 @@ public class SubmitRayJobResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

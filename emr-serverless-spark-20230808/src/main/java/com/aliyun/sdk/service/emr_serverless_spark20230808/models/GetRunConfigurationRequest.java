@@ -89,7 +89,7 @@ public class GetRunConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class GetRunConfigurationRequest extends Request {
         }
 
         /**
-         * <p>任务实例ID。</p>
+         * <p>The job instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,10 @@ public class GetRunConfigurationRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

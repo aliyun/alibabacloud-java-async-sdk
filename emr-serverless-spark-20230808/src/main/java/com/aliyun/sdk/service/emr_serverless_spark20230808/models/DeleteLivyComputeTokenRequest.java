@@ -101,7 +101,10 @@ public class DeleteLivyComputeTokenRequest extends Request {
         } 
 
         /**
-         * workspaceBizId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-8adde60aa809701f</p>
          */
         public Builder workspaceBizId(String workspaceBizId) {
             this.putPathParameter("workspaceBizId", workspaceBizId);
@@ -110,7 +113,10 @@ public class DeleteLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * livyComputeId.
+         * <p>The ID of the Livy Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lc-zm4dzdiubu73w2yx</p>
          */
         public Builder livyComputeId(String livyComputeId) {
             this.putPathParameter("livyComputeId", livyComputeId);
@@ -119,7 +125,7 @@ public class DeleteLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lctk-xxxxxxxxxx</p>
@@ -131,7 +137,10 @@ public class DeleteLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

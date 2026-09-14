@@ -146,6 +146,7 @@ public class ListExecutorLogsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +159,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the job run.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +172,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the job executor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +185,10 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * logType.
+         * <p>The type of log. Only logs of this type are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log4j</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("logType", logType);
@@ -191,7 +197,10 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -200,7 +209,10 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. This is the <code>nextToken</code> from a previously truncated response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -209,7 +221,10 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

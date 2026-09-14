@@ -101,7 +101,10 @@ public class CancelKyuubiSparkApplicationRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -110,7 +113,10 @@ public class CancelKyuubiSparkApplicationRequest extends Request {
         }
 
         /**
-         * kyuubiServiceId.
+         * <p>The Kyuubi service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-c7141f10c3f549fc9f8b8ae562b8****</p>
          */
         public Builder kyuubiServiceId(String kyuubiServiceId) {
             this.putPathParameter("kyuubiServiceId", kyuubiServiceId);
@@ -119,7 +125,10 @@ public class CancelKyuubiSparkApplicationRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The ID of the Spark application submitted by Kyuubi.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark-339f844005b6404c95f9f7c7a13b****</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -128,7 +137,10 @@ public class CancelKyuubiSparkApplicationRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

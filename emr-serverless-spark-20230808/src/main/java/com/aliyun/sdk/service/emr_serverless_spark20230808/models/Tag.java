@@ -67,7 +67,7 @@ public class Tag extends TeaModel {
         } 
 
         /**
-         * <p>标签key值。</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>workflowId</p>
@@ -78,7 +78,7 @@ public class Tag extends TeaModel {
         }
 
         /**
-         * <p>标签key值。</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>wf-123test</p>

@@ -93,7 +93,10 @@ public class GetRayLogResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. You can view the specific error description in the message parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetRayLogResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetRayLogResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +179,10 @@ public class GetRayLogResponseBody extends TeaModel {
             } 
 
             /**
-             * accessUrl.
+             * <p>The file download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://mybucket.cn-hangzhou.com/xxxxxx">https://mybucket.cn-hangzhou.com/xxxxxx</a></p>
              */
             public Builder accessUrl(String accessUrl) {
                 this.accessUrl = accessUrl;

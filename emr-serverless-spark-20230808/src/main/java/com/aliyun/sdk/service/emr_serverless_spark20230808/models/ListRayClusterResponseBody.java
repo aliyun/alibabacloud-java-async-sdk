@@ -67,7 +67,7 @@ public class ListRayClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * rayClusters.
+         * <p>The list of Ray clusters.</p>
          */
         public Builder rayClusters(java.util.List<RayClusters> rayClusters) {
             this.rayClusters = rayClusters;
@@ -75,7 +75,10 @@ public class ListRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -214,7 +220,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * enableAutoScaling.
+             * <p>Indicates whether automatic scaling is enabled for worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutoScaling(Boolean enableAutoScaling) {
                 this.enableAutoScaling = enableAutoScaling;
@@ -230,7 +239,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * idleTimeoutSeconds.
+             * <p>The idle timeout period for worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder idleTimeoutSeconds(Integer idleTimeoutSeconds) {
                 this.idleTimeoutSeconds = idleTimeoutSeconds;
@@ -238,7 +250,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory size. Unit: Gi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -246,7 +261,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -254,7 +272,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -412,7 +433,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -428,7 +452,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The name of the worker group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Group1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -436,7 +463,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * maxReplica.
+             * <p>The maximum number of worker nodes after automatic scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReplica(Integer maxReplica) {
                 this.maxReplica = maxReplica;
@@ -444,7 +474,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory size. Unit: Gi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8Gi</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -452,7 +485,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * minReplica.
+             * <p>The minimum number of worker nodes after automatic scaling is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minReplica(Integer minReplica) {
                 this.minReplica = minReplica;
@@ -460,7 +496,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * queueName.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root_queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -468,7 +507,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -476,7 +518,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * workerType.
+             * <p>The worker type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;
@@ -790,7 +835,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * clusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-uiulpgow9xljimm1</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -798,7 +846,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723722279800</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -806,7 +857,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * creator.
+             * <p>The UID of the user who created the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202077646755123991</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -814,7 +868,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * creatorName.
+             * <p>The nickname of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -822,7 +879,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * dashboardUrl.
+             * <p>The URL of the Ray cluster dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://emr-spark-ray-gateway-cn-hangzhou.aliyuncs.com?token=xxxxxxxxx">https://emr-spark-ray-gateway-cn-hangzhou.aliyuncs.com?token=xxxxxxxxx</a></p>
              */
             public Builder dashboardUrl(String dashboardUrl) {
                 this.dashboardUrl = dashboardUrl;
@@ -830,7 +890,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ray Cluster for dev.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -838,7 +901,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * displayReleaseVersion.
+             * <p>The Ray engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
              */
             public Builder displayReleaseVersion(String displayReleaseVersion) {
                 this.displayReleaseVersion = displayReleaseVersion;
@@ -846,7 +912,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * grpcEndpoint.
+             * <p>The gRPC endpoint for the internal network. The domain name can also be used to submit Ray jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray://emr-spark-ray-gateway-cn-hanghzou-internal.emr.aliyuncs.com:80</p>
              */
             public Builder grpcEndpoint(String grpcEndpoint) {
                 this.grpcEndpoint = grpcEndpoint;
@@ -854,7 +923,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * headSpec.
+             * <p>The information about the head node of the Ray cluster.</p>
              */
             public Builder headSpec(HeadSpec headSpec) {
                 this.headSpec = headSpec;
@@ -862,7 +931,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The ID of the Ray cluster instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ray-uiulpgow9xljimm1-xxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -870,7 +942,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -878,7 +953,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * modified.
+             * <p>Indicates whether the configuration has been modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder modified(Boolean modified) {
                 this.modified = modified;
@@ -886,7 +964,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * modifiedTime.
+             * <p>The time when the cluster was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723722279800</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -894,7 +975,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * modifier.
+             * <p>The UID of the user who last updated the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202077646755123991</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -902,7 +986,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * modifierName.
+             * <p>The nickname of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder modifierName(String modifierName) {
                 this.modifierName = modifierName;
@@ -910,7 +997,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the Ray cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRayCluster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -918,7 +1008,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * networkServiceName.
+             * <p>The name of the network connectivity service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkServiceName(String networkServiceName) {
                 this.networkServiceName = networkServiceName;
@@ -926,7 +1019,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The startup time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723722279800</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -934,7 +1030,22 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The cluster state.</p>
+             * <ul>
+             * <li><p>Starting: The cluster is starting.</p>
+             * </li>
+             * <li><p>Running: The cluster is running.</p>
+             * </li>
+             * <li><p>Stopping: The cluster is stopping.</p>
+             * </li>
+             * <li><p>Stopped: The cluster is stopped.</p>
+             * </li>
+             * <li><p>Error: The cluster has failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -942,7 +1053,10 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -950,7 +1064,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * workerSpec.
+             * <p>The information about the worker nodes of the Ray cluster.</p>
              */
             public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
                 this.workerSpec = workerSpec;

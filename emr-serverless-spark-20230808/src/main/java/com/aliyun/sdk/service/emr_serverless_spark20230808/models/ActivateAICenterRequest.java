@@ -59,7 +59,10 @@ public class ActivateAICenterRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);

@@ -119,7 +119,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>一次获取的最大记录数。</p>
+         * <p>The maximum number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -130,7 +130,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         }
 
         /**
-         * networkServices.
+         * <p>A list of network connections.</p>
          */
         public Builder networkServices(java.util.List<NetworkServices> networkServices) {
             this.networkServices = networkServices;
@@ -138,7 +138,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>下一页TOKEN。</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         }
 
         /**
-         * queues.
+         * <p>This parameter is deprecated.</p>
          */
         public Builder queues(java.util.List<Queues> queues) {
             this.queues = queues;
@@ -157,7 +157,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18C7775A-7995-128A-A10C-9116EA87****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,7 +168,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>记录总数。</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -234,7 +237,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * code.
+             * <p>The status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -242,7 +248,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The message that provides details about the state change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>message</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -387,7 +396,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the network connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -395,7 +407,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * networkServiceId.
+             * <p>The ID of the network connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-d7a1d02045fb****</p>
              */
             public Builder networkServiceId(String networkServiceId) {
                 this.networkServiceId = networkServiceId;
@@ -403,7 +418,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The state of the network connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -411,7 +429,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * stateChangeReason.
+             * <p>The reason for the state change.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -419,7 +437,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the network connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NetworkService</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -427,7 +448,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC id。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1vt6r7o1w4tw7j6****</p>
@@ -438,7 +459,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchIds.
+             * <p>The list of vSwitch IDs.</p>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -446,7 +467,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-d2d82aa09155****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -513,7 +537,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * code.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -521,7 +548,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>message</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -666,7 +696,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -674,7 +707,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * networkServiceId.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-d7a1d02045fb****</p>
              */
             public Builder networkServiceId(String networkServiceId) {
                 this.networkServiceId = networkServiceId;
@@ -682,7 +718,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -690,7 +729,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * stateChangeReason.
+             * <p>This parameter is deprecated.</p>
              */
             public Builder stateChangeReason(QueuesStateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -698,7 +737,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NetworkService</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -706,10 +748,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC id。</p>
+             * <p>This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-bp1vt6r7o1w4tw7j6****</p>
+             * <p>vpc-uf6k2anfa9nzbm4cj****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -717,7 +759,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchIds.
+             * <p>This parameter is deprecated.</p>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -725,7 +767,10 @@ public class ListNetworkServicesResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-d2d82aa09155****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

@@ -93,7 +93,10 @@ public class ListRayLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code. The value 1000000 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListRayLogsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListRayLogsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -225,7 +231,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * isDir.
+             * <p>Indicates whether the entry is a directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -233,7 +242,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1.txt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -241,7 +253,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/w-xxxxxxx/ray/logs/rj-xxxxxxxxxx_default/test1.txt</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -249,7 +264,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>535345</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -257,7 +275,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * timeModified.
+             * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17344656363434</p>
              */
             public Builder timeModified(Long timeModified) {
                 this.timeModified = timeModified;
@@ -402,7 +423,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * bucketName.
+             * <p>The OSS bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mybucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -410,7 +434,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * delimiter.
+             * <p>The character used to group object names. All objects whose names contain the specified prefix and between which the delimiter character appears for the first time are grouped as a set of elements (CommonPrefixes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder delimiter(String delimiter) {
                 this.delimiter = delimiter;
@@ -418,7 +445,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * isTruncated.
+             * <p>Indicates whether the results returned in the request are truncated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTruncated(Boolean isTruncated) {
                 this.isTruncated = isTruncated;
@@ -426,7 +456,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * marker.
+             * <p>The marker after which the returned objects are listed in alphabetical order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1.txt</p>
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -434,7 +467,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * maxKeys.
+             * <p>The maximum number of objects to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxKeys(Long maxKeys) {
                 this.maxKeys = maxKeys;
@@ -442,7 +478,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * nextMarker.
+             * <p>The marker from which the next listing of files starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2.txt</p>
              */
             public Builder nextMarker(String nextMarker) {
                 this.nextMarker = nextMarker;
@@ -450,7 +489,7 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * objectList.
+             * <p>The list of object metadata.</p>
              */
             public Builder objectList(java.util.List<ObjectList> objectList) {
                 this.objectList = objectList;
@@ -458,7 +497,10 @@ public class ListRayLogsResponseBody extends TeaModel {
             }
 
             /**
-             * prefix.
+             * <p>The prefix that the keys of the returned files must start with.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/w-xxxxxxx/ray/logs/rj-xxxxxxxxxx_default/</p>
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;

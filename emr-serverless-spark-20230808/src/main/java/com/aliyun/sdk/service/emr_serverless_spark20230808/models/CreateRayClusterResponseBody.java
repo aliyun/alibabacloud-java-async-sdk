@@ -67,7 +67,10 @@ public class CreateRayClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * clusterId.
+         * <p>The Ray cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-k7nm8ahl5te4tg91</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -75,7 +78,10 @@ public class CreateRayClusterResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

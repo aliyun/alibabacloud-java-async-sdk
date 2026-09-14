@@ -67,7 +67,10 @@ public class GetAICenterStateResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,18 @@ public class GetAICenterStateResponseBody extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The state of the AI center. Valid values:</p>
+         * <ul>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>inactive</p>
+         * </li>
+         * <li><p>activating</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder state(String state) {
             this.state = state;

@@ -141,12 +141,7 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * <p>The type of the version.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>stable</li>
-         * <li>Beta</li>
-         * </ul>
+         * <p>The version type.</p>
          * 
          * <strong>example:</strong>
          * <p>stable</p>
@@ -158,7 +153,7 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * <p>The version of EMR Serverless Spark.</p>
+         * <p>The Serverless Spark version.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-2.1 (Spark 3.3.1, Scala 2.12, Java Runtime)</p>
@@ -170,12 +165,7 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * <p>The status of the version.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ONLINE</li>
-         * <li>OFFLINE</li>
-         * </ul>
+         * <p>The version status.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>

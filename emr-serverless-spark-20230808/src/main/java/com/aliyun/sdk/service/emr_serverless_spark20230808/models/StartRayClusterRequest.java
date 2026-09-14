@@ -87,7 +87,10 @@ public class StartRayClusterRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-d2d82aa09155</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -96,7 +99,10 @@ public class StartRayClusterRequest extends Request {
         }
 
         /**
-         * clusterId.
+         * <p>The Ray cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ray-uiulagow9xljimm0</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);
@@ -105,7 +111,10 @@ public class StartRayClusterRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The token used to ensure idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c533e141-bf99-4236-8b6b-30e133db113c</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

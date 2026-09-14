@@ -93,7 +93,10 @@ public class RunLog extends TeaModel {
         } 
 
         /**
-         * driverStartup.
+         * <p>The path of the startup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/startup</p>
          */
         public Builder driverStartup(String driverStartup) {
             this.driverStartup = driverStartup;
@@ -101,7 +104,10 @@ public class RunLog extends TeaModel {
         }
 
         /**
-         * driverStdError.
+         * <p>The path of the stderr file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/stderr</p>
          */
         public Builder driverStdError(String driverStdError) {
             this.driverStdError = driverStdError;
@@ -109,7 +115,10 @@ public class RunLog extends TeaModel {
         }
 
         /**
-         * driverStdOut.
+         * <p>The path of the stdout file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/stdout</p>
          */
         public Builder driverStdOut(String driverStdOut) {
             this.driverStdOut = driverStdOut;
@@ -117,7 +126,10 @@ public class RunLog extends TeaModel {
         }
 
         /**
-         * driverSyslog.
+         * <p>The path of the syslog file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/syslog</p>
          */
         public Builder driverSyslog(String driverSyslog) {
             this.driverSyslog = driverSyslog;

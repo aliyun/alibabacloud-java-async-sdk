@@ -93,7 +93,7 @@ public class GetJobRunRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>w-1234abcd</p>
+         * <p>w-d2d82aa09151****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -102,11 +102,11 @@ public class GetJobRunRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The job run ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>jr-231231</p>
+         * <p>jr-93d98d2f7061****</p>
          */
         public Builder jobRunId(String jobRunId) {
             this.putPathParameter("jobRunId", jobRunId);
