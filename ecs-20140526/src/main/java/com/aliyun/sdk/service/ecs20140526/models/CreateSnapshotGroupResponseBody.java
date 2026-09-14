@@ -78,7 +78,7 @@ public class CreateSnapshotGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the snapshot-consistent group.</p>
+         * <p>The ID of the snapshot consistency group.</p>
          * 
          * <strong>example:</strong>
          * <p>ssg-j6ciyh3k52qp7ovm****</p>

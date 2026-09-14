@@ -109,7 +109,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
          * <p>The number of instances to which the key pair failed to be attached.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         public Builder failCount(String failCount) {
             this.failCount = failCount;
@@ -131,7 +131,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3*****83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

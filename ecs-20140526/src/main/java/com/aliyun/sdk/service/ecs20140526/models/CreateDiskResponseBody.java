@@ -80,7 +80,7 @@ public class CreateDiskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The disk ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp131n0q38u3a4zi****</p>
@@ -91,9 +91,9 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The generated order ID.</p>
          * <blockquote>
-         * <p>An order ID is returned only when you create a subscription disk.</p>
+         * <p>An order ID is returned only when a subscription disk is created.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
