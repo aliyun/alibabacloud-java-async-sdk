@@ -80,7 +80,7 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The submit result of the batch table ownership transfer task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +99,10 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +181,10 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
             } 
 
             /**
-             * BatchId.
+             * <p>The batch transfer task ID. You can use this ID to call GetBatchChangeTableOwnerStatus to query the task progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>524257_xxxxx</p>
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
@@ -186,7 +192,10 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The initial status of the task after submission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUBMITTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -194,7 +203,10 @@ public class SubmitBatchChangeTableOwnerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of tables submitted in this batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

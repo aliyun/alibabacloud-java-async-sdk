@@ -210,7 +210,10 @@ public class Dataset extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The description of the dataset. The length cannot exceed 1024 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试数据集</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -218,7 +221,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736756055000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -226,7 +232,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * CreatorId.
+         * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210484359</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -234,7 +243,19 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>The data type. Valid values:</p>
+         * <ul>
+         * <li>COMMON</li>
+         * <li>PIC</li>
+         * <li>TEXT</li>
+         * <li>TABLE</li>
+         * <li>VIDEO</li>
+         * <li>AUDIO</li>
+         * <li>INDEX</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -242,7 +263,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks-dataset:1gxxxqjx155usz3hrv</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -250,7 +274,7 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>Dataset tags. Supported only for PAI datasets.</p>
          */
         public Builder labels(java.util.List<DatasetLabel> labels) {
             this.labels = labels;
@@ -258,7 +282,7 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * LatestVersion.
+         * <p>The latest dataset version object.</p>
          */
         public Builder latestVersion(DatasetVersion latestVersion) {
             this.latestVersion = latestVersion;
@@ -266,7 +290,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736756055000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -274,7 +301,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The dataset name. It must be a non-empty string and cannot exceed 128 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_dataset</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -282,7 +312,14 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * Origin.
+         * <p>The source of the dataset. Currently supported sources:</p>
+         * <ul>
+         * <li>DataWorks</li>
+         * <li>PAI</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DataWorks</p>
          */
         public Builder origin(String origin) {
             this.origin = origin;
@@ -290,7 +327,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder projectId(Long projectId) {
             this.projectId = projectId;
@@ -298,7 +338,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * Readme.
+         * <p>Instructions for using the dataset. Markdown rich text is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <h2>introduction</h2>
          */
         public Builder readme(String readme) {
             this.readme = readme;
@@ -306,7 +349,19 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li>OSS: Object Storage Service</li>
+         * <li>NAS: General-purpose NAS file systems</li>
+         * <li>EXTREM_NAS: Extreme NAS file systems</li>
+         * <li>DLF_LANCE: Data Lake Formation</li>
+         * <li>CPFS: Cloud Paralleled File System</li>
+         * <li>BMCPFS: CPFS for Lingjun</li>
+         * <li>MAXCOMPUTE: MaxCompute table</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder storageType(String storageType) {
             this.storageType = storageType;

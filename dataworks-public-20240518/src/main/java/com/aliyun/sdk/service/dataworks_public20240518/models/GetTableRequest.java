@@ -111,33 +111,31 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * <p>The ID. You can refer to the response of the ListTables operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">concepts related to metadata entities.</a></p>
-         * <p>The format: <code>${EntityType}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Table name}</code>. Use empty strings as placeholders for levels that do not exist.</p>
+         * <p>The ID of the table. You can obtain this value from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+         * <p>The format is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}:${TableName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
          * <blockquote>
-         * <p> For the MaxCompute and DLF types, use an empty string as the placeholder for the instance ID.</p>
+         * <p>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID.</p>
          * </blockquote>
          * <blockquote>
-         * <p> The catalog identifier of the StarRocks is the catalog name, and the catalog identifier of the DLF type is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</p>
+         * <p>For StarRocks, the data catalog identifier is the catalog name. For DLF, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</p>
          * </blockquote>
          * <blockquote>
-         * <p> For MaxCompute, the database name refers to the MaxCompute project name. If the project has schema enabled, you must specify the schema name. Otherwise, use an empty string as the placeholder for the schema name.</p>
+         * <p>For MaxCompute, the database name is the MaxCompute project name. Projects with the three-layer model enabled require a schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</p>
          * </blockquote>
-         * <p>Examples of common ID formats</p>
+         * <p>The following are ID format examples for common types:</p>
          * <p><code>maxcompute-table:::project_name:[schema_name]:table_name</code></p>
          * <p><code>dlf-table::catalog_id:database_name::table_name</code></p>
          * <p><code>hms-table:instance_id::database_name::table_name</code></p>
          * <p><code>holo-table:instance_id::database_name:schema_name:table_name</code></p>
          * <p><code>mysql-table:(instance_id|encoded_jdbc_url)::database_name::table_name</code></p>
          * <blockquote>
-         * <p><br><code>instance_id</code>: The instance ID, required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string, which is required when the data source is registered via a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For the MaxCompute type, this is required only if the project has enabled schema. Otherwise, use an empty string as a placeholder.<br><code>table_name</code>: The table name.</p>
+         * <p>Where<br><code>instance_id</code>: The instance ID. Required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. Required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For MaxCompute, this is required only when the three-layer model is enabled for the project. Otherwise, use an empty string as a placeholder.<br><code>table_name</code>: The table name.</p>
          * </blockquote>
+         * <p>Recommended procedure for obtaining this parameter: First, call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that include a data catalog level, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then, call ListDatabases to obtain the database ID. If necessary, call ListSchemas to obtain the schema ID. Finally, call ListTables to obtain the target table ID, and use the returned table ID as the Id for this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-table:123456XXX::test_project::test_tbl
-         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-         * hms-table:c-abc123xxx::test_db::test_tbl
-         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl</p>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -146,7 +144,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include metadata. Default: false.</p>
+         * <p>Specifies whether to include business metadata. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -158,7 +156,7 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * IncludeExtendedProperties.
+         * <p>Specifies whether to return extended properties. Set this parameter to <code>true</code> to return extended properties, or <code>false</code> to not return them.</p>
          */
         public Builder includeExtendedProperties(Boolean includeExtendedProperties) {
             this.putQueryParameter("IncludeExtendedProperties", includeExtendedProperties);

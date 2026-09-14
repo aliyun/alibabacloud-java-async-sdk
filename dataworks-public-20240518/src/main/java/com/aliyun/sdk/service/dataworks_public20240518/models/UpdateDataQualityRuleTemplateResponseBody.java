@@ -70,7 +70,7 @@ public class UpdateDataQualityRuleTemplateResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>691CA452-D37A-4ED0-9441</p>
+         * <p>691CA452-D37A-4ED0-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UpdateDataQualityRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the update was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

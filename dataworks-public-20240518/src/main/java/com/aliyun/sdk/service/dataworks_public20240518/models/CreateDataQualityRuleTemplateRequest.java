@@ -154,7 +154,7 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The check settings for sample data.</p>
+         * <p>The sample verification settings.</p>
          */
         public Builder checkingConfig(CheckingConfig checkingConfig) {
             String checkingConfigShrink = shrink(checkingConfig, "CheckingConfig", "json");
@@ -164,7 +164,7 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+         * <p>The directory path where the custom template is stored. Levels are separated by forward slashes (/). Each level name can be up to 1024 characters in length and cannot contain whitespace characters or forward slashes.</p>
          * 
          * <strong>example:</strong>
          * <p>/ods/order_data</p>
@@ -176,7 +176,7 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
+         * <p>The name of the rule template. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 512 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The sampling settings.</p>
+         * <p>The settings required for sample collection.</p>
          */
         public Builder samplingConfig(SamplingConfig samplingConfig) {
             String samplingConfigShrink = shrink(samplingConfig, "SamplingConfig", "json");
@@ -212,10 +212,10 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The applicable scope of the template. Valid values:</p>
+         * <p>The visibility scope of the template. Valid values:</p>
          * <ul>
-         * <li>Tenant: The template is available in all workspaces in the current tenant.</li>
-         * <li>Project: The template is available only in the current workspace.</li>
+         * <li>Tenant: available to the entire tenant.</li>
+         * <li>Project: available only in the current project.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +287,7 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
+             * <p>An expression that specifies how to query reference samples. Some threshold types require querying reference samples and then aggregating their values to derive the threshold for comparison.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -390,23 +390,23 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The metrics used for sampling. Valid values:</p>
+             * <p>The name of the sampling metric. Valid values:</p>
              * <ul>
-             * <li>Count: the number of rows in the table.</li>
-             * <li>Min: the minimum value of the field.</li>
-             * <li>Max: the maximum value of the field.</li>
-             * <li>Avg: the average value of the field.</li>
-             * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
-             * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
-             * <li>DuplicatedCount: the number of duplicated values of the field.</li>
-             * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
+             * <li>Count: the number of table rows.</li>
+             * <li>Min: the minimum value of a field.</li>
+             * <li>Max: the maximum value of a field.</li>
+             * <li>Avg: the average value of a field.</li>
+             * <li>DistinctCount: the number of distinct values in a field.</li>
+             * <li>DistinctPercent: the ratio of distinct values to the total number of rows.</li>
+             * <li>DuplicatedCount: the number of duplicate values in a field.</li>
+             * <li>DuplicatedPercent: the ratio of duplicate values to the total number of rows.</li>
              * <li>TableSize: the table size.</li>
-             * <li>NullValueCount: the number of rows in which the field value is null.</li>
-             * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
-             * <li>GroupCount: the field value and the number of rows for each field value.</li>
-             * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
-             * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
-             * <li>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</li>
+             * <li>NullValueCount: the number of rows where the field value is null.</li>
+             * <li>NullValuePercent: the ratio of rows where the field value is null.</li>
+             * <li>GroupCount: the count of rows for each value after aggregation by field value.</li>
+             * <li>CountNotIn: the number of rows that do not match the enumerated values.</li>
+             * <li>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</li>
+             * <li>UserDefinedSql: sample collection through a custom SQL statement.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
             }
 
             /**
-             * <p>The parameters required for sampling.</p>
+             * <p>The parameters required for sample collection.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -429,7 +429,7 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
             }
 
             /**
-             * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
+             * <p>The runtime parameter setting statements to execute before the sampling statement. The value can be up to 1000 characters in length. Currently, only MaxCompute is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>SET odps.sql.udf.timeout=600s; 

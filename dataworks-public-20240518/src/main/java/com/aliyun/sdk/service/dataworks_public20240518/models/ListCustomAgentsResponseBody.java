@@ -67,7 +67,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The paging information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatorId.
+             * <p>The ID of the user who created the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -227,7 +233,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>A description of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析助手</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -235,7 +244,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我的助手</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -243,6 +255,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the agent was created, provided in milliseconds since the Unix epoch.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -254,6 +267,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the agent was last modified, provided in milliseconds since the Unix epoch.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -265,7 +279,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p>The ID of the user who last modified the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -273,7 +290,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -281,7 +301,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>The visibility level of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -374,7 +397,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Agents.
+             * <p>The list of custom agents.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -382,7 +405,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries returned in this response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -390,7 +416,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token to retrieve the next page of results. This parameter is empty when there are no more results to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -398,7 +427,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries that meet the filter criteria.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

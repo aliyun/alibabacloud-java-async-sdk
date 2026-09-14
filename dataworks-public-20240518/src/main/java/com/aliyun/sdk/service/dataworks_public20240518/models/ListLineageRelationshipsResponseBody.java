@@ -88,7 +88,7 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Used for locating and troubleshooting issues.</p>
+         * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
@@ -224,7 +224,7 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>

@@ -83,7 +83,7 @@ public class GetTaskInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The unique identifier of the task instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

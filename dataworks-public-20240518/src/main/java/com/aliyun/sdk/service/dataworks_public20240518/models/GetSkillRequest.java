@@ -83,6 +83,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
+         * <p>The unique name of the Skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

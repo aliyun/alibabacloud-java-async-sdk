@@ -250,7 +250,16 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The accessibility:</p>
+         * <ul>
+         * <li><p>Public: Visible to all members.</p>
+         * </li>
+         * <li><p>Private: Visible only to the creator.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -259,7 +268,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The image name, used for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -268,7 +280,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Official.
+         * <p>Specifies whether the image is an official image.</p>
          */
         public Builder official(Boolean official) {
             this.putQueryParameter("Official", official);
@@ -277,7 +289,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -286,7 +301,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -295,7 +313,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ProjectIds.
+         * <p>The list of workspace IDs.</p>
          */
         public Builder projectIds(java.util.List<Long> projectIds) {
             String projectIdsShrink = shrink(projectIds, "ProjectIds", "json");
@@ -305,7 +323,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ProviderTypes.
+         * <p>The list of image provider types.</p>
          */
         public Builder providerTypes(java.util.List<String> providerTypes) {
             String providerTypesShrink = shrink(providerTypes, "ProviderTypes", "json");
@@ -315,7 +333,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * SearchAll.
+         * <p>Specifies whether to search all images.</p>
          */
         public Builder searchAll(Boolean searchAll) {
             this.putQueryParameter("SearchAll", searchAll);
@@ -324,7 +342,17 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The list of sort fields. You can sort by scheduled time, start time, and other fields. The format is &quot;SortField+SortOrder(Desc/Asc)&quot;, where Asc is the default and can be omitted. Valid values of sort fields:</p>
+         * <ul>
+         * <li><p>CreateTime (Desc/Asc): The creation time.</p>
+         * </li>
+         * <li><p>Name (Desc/Asc): The image name.
+         * Default value: CreateTime Asc.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreatedTime Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -333,7 +361,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Stages.
+         * <p>The list of image publish stages to query.</p>
          */
         public Builder stages(java.util.List<String> stages) {
             String stagesShrink = shrink(stages, "Stages", "json");
@@ -343,7 +371,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The list of image statuses to query.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");
@@ -353,7 +381,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * SupportedModules.
+         * <p>The list of supported modules.</p>
          */
         public Builder supportedModules(java.util.List<String> supportedModules) {
             String supportedModulesShrink = shrink(supportedModules, "SupportedModules", "json");
@@ -363,7 +391,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * SupportedTaskTypes.
+         * <p>The list of supported task types.</p>
          */
         public Builder supportedTaskTypes(java.util.List<String> supportedTaskTypes) {
             String supportedTaskTypesShrink = shrink(supportedTaskTypes, "SupportedTaskTypes", "json");

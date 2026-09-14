@@ -98,7 +98,7 @@ public class DissociateProjectFromResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace from which you want to disassociate the resource group.</p>
+         * <p>The ID of the workspace to disassociate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DissociateProjectFromResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The unique identifier of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -126,7 +126,7 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</p>
+         * <p>The ID of the file. You can call <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> to query the file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * <p>The file version whose information you want to query.</p>
+         * <p>The version of the file to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace page and query the workspace ID.</p>
+         * <p>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000011</p>
@@ -164,8 +164,8 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the DataWorks workspace. You can view the identifier in the upper part of the DataStudio page. You can also select another identifier to switch to another workspace.</p>
-         * <p>You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed at the top of the DataStudio page for switching workspaces.</p>
+         * <p>You must set either this parameter or ProjectId to determine the DataWorks workspace for this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project</p>

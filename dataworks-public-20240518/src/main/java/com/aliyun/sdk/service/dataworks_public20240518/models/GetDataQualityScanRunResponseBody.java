@@ -262,10 +262,14 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
             /**
              * <p>The final comparison result status.</p>
              * <ul>
-             * <li>Pass</li>
-             * <li>Error</li>
-             * <li>Warn</li>
-             * <li>Fail</li>
+             * <li><p>Pass</p>
+             * </li>
+             * <li><p>Error</p>
+             * </li>
+             * <li><p>Warn</p>
+             * </li>
+             * <li><p>Fail</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -426,11 +430,16 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
             /**
              * <p>The validation result status.</p>
              * <ul>
-             * <li>Pass</li>
-             * <li>Running</li>
-             * <li>Error</li>
-             * <li>Warn</li>
-             * <li>Fail</li>
+             * <li><p>Pass</p>
+             * </li>
+             * <li><p>Running</p>
+             * </li>
+             * <li><p>Error</p>
+             * </li>
+             * <li><p>Warn</p>
+             * </li>
+             * <li><p>Fail</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -516,9 +525,12 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
             /**
              * <p>The type of the compute engine. Only EMR compute engines support these settings.</p>
              * <ul>
-             * <li>Hive</li>
-             * <li>Spark</li>
-             * <li>Kyuubi</li>
+             * <li><p>Hive</p>
+             * </li>
+             * <li><p>Spark</p>
+             * </li>
+             * <li><p>Kyuubi</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -626,8 +638,10 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
             /**
              * <p>The workspace environment to which the compute engine belongs.</p>
              * <ul>
-             * <li>Prod</li>
-             * <li>Dev</li>
+             * <li><p>Prod</p>
+             * </li>
+             * <li><p>Dev</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -719,11 +733,11 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
             /**
              * <p>The hook trigger condition. Currently, only one type of expression syntax is supported:</p>
              * <ul>
-             * <li>Specify combinations of severity levels and validation statuses for multiple rules, such as <code>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</code>. This means the hook is triggered if any executed rule has Fail with Normal severity, Error with High severity, or Warn with High severity. In the conditional expression, the severity value matches that in the Spec code, and the status value matches that in DataQualityResult.</li>
+             * <li>Specify combinations of severity levels and validation statuses for multiple rules, such as <code>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</code>. This means the hook is triggered if any executed rule has Fail with Normal severity, Error with High severity, or Warn with High severity. In the conditional expression, the severity value matches that in the Spec code, and the status value matches that in DataQualityResult.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>results.any { r -&gt; r.status == &quot;fail&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
+             * <p>results.any { r -&gt; r.status == \&quot;fail\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -1000,8 +1014,10 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
             /**
              * <p>The trigger method of the data quality monitor.</p>
              * <ul>
-             * <li>ByManual</li>
-             * <li>BySchedule</li>
+             * <li><p>ByManual</p>
+             * </li>
+             * <li><p>BySchedule</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1599,11 +1615,16 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
             /**
              * <p>The current running status.</p>
              * <ul>
-             * <li>Pass</li>
-             * <li>Running</li>
-             * <li>Error</li>
-             * <li>Warn</li>
-             * <li>Fail</li>
+             * <li><p>Pass</p>
+             * </li>
+             * <li><p>Running</p>
+             * </li>
+             * <li><p>Error</p>
+             * </li>
+             * <li><p>Warn</p>
+             * </li>
+             * <li><p>Fail</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

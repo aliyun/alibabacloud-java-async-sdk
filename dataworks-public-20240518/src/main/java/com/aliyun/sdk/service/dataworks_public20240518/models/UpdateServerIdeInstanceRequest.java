@@ -195,7 +195,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>凭证配置，用于设置 RAM 角色，支持默认角色链或自定义角色。</p>
+         * <p>The credential injection configuration for the instance. After this feature is enabled, you can use the default RAM role chain or specify a custom RAM role.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -205,7 +205,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>计算资源规格，单位 CU（计算单元）。</p>
+         * <p>The number of CUs used by the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -217,7 +217,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>挂载的数据集列表。</p>
+         * <p>The list of datasets mounted to the instance.</p>
          */
         public Builder datasets(java.util.List<Datasets> datasets) {
             String datasetsShrink = shrink(datasets, "Datasets", "json");
@@ -227,7 +227,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>镜像 ID（DataWorks 官方镜像或自定义镜像 ID），与 ImageUrl 二选一。</p>
+         * <p>The image ID. You can call ListServerIdeImages to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>System_serveride_notebook_20240822</p>
@@ -239,7 +239,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>镜像地址（自定义镜像完整 URL），与 ImageId 二选一。</p>
+         * <p>The image URL. This parameter is required when you use a non-DataWorks official image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/example/serveride:latest</p>
@@ -251,7 +251,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>个人开发环境实例 ID。</p>
+         * <p>The personal development environment instance ID. You can call ListServerIdeInstances to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>实例名称。</p>
+         * <p>The name of the personal development environment instance.</p>
          * 
          * <strong>example:</strong>
          * <p>notebook_dev</p>
@@ -276,7 +276,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>DataWorks 工作空间（项目）ID。</p>
+         * <p>The DataWorks workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -288,7 +288,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>用户专有网络（VPC）配置。</p>
+         * <p>The VPC configuration used by the instance.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             String userVpcShrink = shrink(userVpc, "UserVpc", "json");
@@ -357,7 +357,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             } 
 
             /**
-             * <p>用户 ID。</p>
+             * <p>The account ID of the delegated user.</p>
              * 
              * <strong>example:</strong>
              * <p>20933221576142****</p>
@@ -368,7 +368,12 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>用户类型。</p>
+             * <p>The user type. Valid values:</p>
+             * <ul>
+             * <li>customer: Alibaba Cloud account.</li>
+             * <li>sub: RAM user.</li>
+             * <li>AssumedRoleUser: RAM role.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>sub</p>
@@ -477,7 +482,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             } 
 
             /**
-             * <p>角色被代入的目标主体。</p>
+             * <p>The Alibaba Cloud account ID of the principal that assumes the role.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789012****</p>
@@ -488,7 +493,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>角色绑定的权限策略。</p>
+             * <p>The policy used to further restrict the role permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -499,7 +504,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>角色 ARN，格式如 acs:ram::<accountId>:role/<roleName>。</p>
+             * <p>The ARN of the RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::123456789012****:role/DataWorksRole</p>
@@ -510,7 +515,11 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>角色类型。</p>
+             * <p>The role assumption type. Valid values:</p>
+             * <ul>
+             * <li>service: assumed by a service.</li>
+             * <li>user: assumed by a user.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -521,7 +530,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>代入角色所使用的用户信息。</p>
+             * <p>The information of the delegated user.</p>
              */
             public Builder userInfo(UserInfo userInfo) {
                 this.userInfo = userInfo;
@@ -601,7 +610,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             } 
 
             /**
-             * <p>凭证配置项键。</p>
+             * <p>The identifier key of the credential configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -612,7 +621,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>角色列表。</p>
+             * <p>The list of roles in the credential configuration.</p>
              */
             public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
@@ -620,7 +629,11 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>凭证类型。</p>
+             * <p>The credential configuration type. Valid values:</p>
+             * <ul>
+             * <li>Role: single role assumption.</li>
+             * <li>RoleChain: role chain assumption.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RoleChain</p>
@@ -703,7 +716,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             } 
 
             /**
-             * <p>阿里云环境角色标识。</p>
+             * <p>The environment variable role key.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -714,7 +727,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>凭证配置项列表。</p>
+             * <p>The list of credential configurations.</p>
              */
             public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
@@ -722,7 +735,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>是否启用凭证配置。</p>
+             * <p>Specifies whether to enable credential injection.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -841,7 +854,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             } 
 
             /**
-             * <p>扩展挂载选项。</p>
+             * <p>The custom mount properties of the dataset. The content is passed as mount options.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fs.oss.download.thread.concurrency&quot;:&quot;10&quot;}</p>
@@ -852,7 +865,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>数据集标识。</p>
+             * <p>The dataset identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>d-vsqjvs****rp5l206u</p>
@@ -863,7 +876,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>挂载到实例内的路径。</p>
+             * <p>The mount path of the dataset in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/data</p>
@@ -874,7 +887,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>是否只读挂载。</p>
+             * <p>Specifies whether to mount the dataset in read-only mode.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -882,7 +895,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>数据集资源 URI。</p>
+             * <p>The storage service directory URI for direct mounting.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://example-bucket/data/</p>
@@ -893,7 +906,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>数据集版本。</p>
+             * <p>The dataset version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1054,7 +1067,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             } 
 
             /**
-             * <p>访问类型列表（如内网 INTRANET、公网 INTERNET）。</p>
+             * <p>The list of access types.</p>
              */
             public Builder accessType(java.util.List<String> accessType) {
                 this.accessType = accessType;
@@ -1062,7 +1075,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>端口转发对应的容器名称。</p>
+             * <p>The name of the target container.</p>
              * 
              * <strong>example:</strong>
              * <p>dsw-notebook</p>
@@ -1073,7 +1086,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>弹性公网 IP（EIP）实例 ID。</p>
+             * <p>The instance ID of the public EIP.</p>
              * 
              * <strong>example:</strong>
              * <p>eip-bp1****</p>
@@ -1084,7 +1097,10 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>是否启用该端口转发规则。</p>
+             * <p>Specifies whether to enable the port forwarding configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1092,7 +1108,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>对外暴露的端口。</p>
+             * <p>The mapped public port.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -1103,7 +1119,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>容器内部被转发的端口。</p>
+             * <p>The target port in the instance container.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -1114,7 +1130,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>端口转发规则名称。</p>
+             * <p>The name of the port forwarding configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>ssh</p>
@@ -1125,7 +1141,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>NAT 网关 ID。</p>
+             * <p>The NAT gateway ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ngw-bp1****</p>
@@ -1136,7 +1152,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>SSH 公钥。</p>
+             * <p>The public key used for SSH access.</p>
              * 
              * <strong>example:</strong>
              * <p>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQ****</p>
@@ -1232,7 +1248,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             } 
 
             /**
-             * <p>端口转发配置列表。</p>
+             * <p>The list of port forwarding configurations.</p>
              */
             public Builder forwardInfos(java.util.List<ForwardInfos> forwardInfos) {
                 this.forwardInfos = forwardInfos;
@@ -1240,7 +1256,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>安全组 ID。</p>
+             * <p>The security group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp1****</p>
@@ -1251,7 +1267,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>交换机（vSwitch）ID。</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1****</p>
@@ -1262,7 +1278,7 @@ public class UpdateServerIdeInstanceRequest extends Request {
             }
 
             /**
-             * <p>专有网络 VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1****</p>

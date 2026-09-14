@@ -80,7 +80,7 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The job details returned by the executor. Used to determine the run status and view the actual runtime configuration.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -305,7 +308,7 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AdvanceSettings.
+             * <p>The advanced runtime settings returned by the executor.</p>
              */
             public Builder advanceSettings(java.util.Map<String, ?> advanceSettings) {
                 this.advanceSettings = advanceSettings;
@@ -313,7 +316,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CodeParameters.
+             * <p>The code parameter information returned by the executor. Used to troubleshoot the runtime configuration of this run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--limit 100</p>
              */
             public Builder codeParameters(String codeParameters) {
                 this.codeParameters = codeParameters;
@@ -321,7 +327,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentSqlIndex.
+             * <p>The index of the SQL fragment currently being processed by the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentSqlIndex(Integer currentSqlIndex) {
                 this.currentSqlIndex = currentSqlIndex;
@@ -329,7 +338,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerName.
+             * <p>The customer identifier of the executor job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>meta_semantic</p>
              */
             public Builder customerName(String customerName) {
                 this.customerName = customerName;
@@ -337,7 +349,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Datasource.
+             * <p>The data source identifier used by the executor job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute</p>
              */
             public Builder datasource(String datasource) {
                 this.datasource = datasource;
@@ -345,7 +360,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The runtime environment identifier returned by the executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -353,7 +371,7 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecTypes.
+             * <p>The list of execution type codes returned by the executor.</p>
              */
             public Builder execTypes(java.util.List<Integer> execTypes) {
                 this.execTypes = execTypes;
@@ -361,7 +379,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutorJobId.
+             * <p>The executor job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-job-demo</p>
              */
             public Builder executorJobId(String executorJobId) {
                 this.executorJobId = executorJobId;
@@ -369,7 +390,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The node type code of the executor. Semantic jobs use Shell node code 6.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder fileType(Integer fileType) {
                 this.fileType = fileType;
@@ -377,7 +401,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID associated with the executor job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -385,7 +412,10 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group that actually executed the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-demo</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -393,7 +423,7 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceUrls.
+             * <p>The list of resource URLs associated with the executor job.</p>
              */
             public Builder resourceUrls(java.util.List<java.util.Map<String, ?>> resourceUrls) {
                 this.resourceUrls = resourceUrls;
@@ -401,7 +431,7 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Statuses.
+             * <p>The list of status codes returned by the executor. Used to determine the current or final status of the job.</p>
              */
             public Builder statuses(java.util.List<Integer> statuses) {
                 this.statuses = statuses;

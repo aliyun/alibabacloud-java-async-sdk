@@ -109,7 +109,7 @@ public class StartWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of workflow instances.</p>
+         * <p>The list of workflow instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List<Long> ids) {

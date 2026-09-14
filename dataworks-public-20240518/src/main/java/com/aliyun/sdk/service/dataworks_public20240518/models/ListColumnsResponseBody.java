@@ -194,7 +194,7 @@ public class ListColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The columns in the table.</p>
+             * <p>The column list.</p>
              */
             public Builder columns(java.util.List<Column> columns) {
                 this.columns = columns;
@@ -213,7 +213,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -224,7 +224,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

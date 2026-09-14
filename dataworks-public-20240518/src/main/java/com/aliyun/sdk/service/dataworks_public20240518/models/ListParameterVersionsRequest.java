@@ -125,6 +125,7 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
+         * <p>The parameter ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,10 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Specifies the page number of the results to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -146,7 +150,10 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Specifies the number of entries to return per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -155,7 +162,13 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Specifies the sort criterion in the format \<sort field> \<sort order>. You can omit Asc for ascending order. The only valid value for the sort field is:</p>
+         * <ul>
+         * <li>Version (Desc/Asc)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Version Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);

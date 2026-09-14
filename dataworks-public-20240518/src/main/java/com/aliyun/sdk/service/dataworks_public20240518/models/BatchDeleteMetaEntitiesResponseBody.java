@@ -91,7 +91,7 @@ public class BatchDeleteMetaEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of entity deletion results, which returns the success status and failure reason for each entity.</p>
          */
         public Builder results(java.util.List<MetaEntityWriteResult> results) {
             this.results = results;
@@ -99,7 +99,10 @@ public class BatchDeleteMetaEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. When some entities fail, this field still returns true. Check Results[].Success and Results[].ErrorMessage for individual results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

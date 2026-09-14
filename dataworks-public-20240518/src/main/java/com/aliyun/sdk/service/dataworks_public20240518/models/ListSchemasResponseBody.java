@@ -194,7 +194,10 @@ public class ListSchemasResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -221,7 +224,10 @@ public class ListSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

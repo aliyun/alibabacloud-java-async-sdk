@@ -67,7 +67,7 @@ public class GetParameterResponseBody extends TeaModel {
         } 
 
         /**
-         * Parameter.
+         * <p>The details of the parameter.</p>
          */
         public Builder parameter(Parameter parameter) {
             this.parameter = parameter;
@@ -75,7 +75,10 @@ public class GetParameterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,16 @@ public class GetParameterResponseBody extends TeaModel {
             } 
 
             /**
-             * EnvType.
+             * <p>The project environment. Valid values:</p>
+             * <ul>
+             * <li><p><code>Prod</code>: production.</p>
+             * </li>
+             * <li><p><code>Dev</code>: development.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -149,7 +161,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value123</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -359,7 +374,10 @@ public class GetParameterResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the parameter was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640000000000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -367,7 +385,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The creator of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -375,7 +396,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test parameter.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -383,7 +407,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -391,7 +418,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the parameter was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640000000000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -399,7 +429,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The modifier of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -407,7 +440,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace.para</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -415,7 +451,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -423,7 +462,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -431,7 +473,7 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The value configurations of the parameter.</p>
              */
             public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
@@ -439,7 +481,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The scope of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Project</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -447,7 +492,18 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the parameter. Valid values:</p>
+             * <ul>
+             * <li><p><code>PlainConstant</code>: a constant in plaintext.</p>
+             * </li>
+             * <li><p><code>SecretConstant</code>: a constant in ciphertext.</p>
+             * </li>
+             * <li><p><code>Variable</code>: a variable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PlainConstant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -455,7 +511,10 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

@@ -67,7 +67,10 @@ public class DatasetLabel extends TeaModel {
         } 
 
         /**
-         * Key.
+         * <p>Dataset label keys</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -75,7 +78,10 @@ public class DatasetLabel extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>Dataset label values</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         public Builder value(String value) {
             this.value = value;

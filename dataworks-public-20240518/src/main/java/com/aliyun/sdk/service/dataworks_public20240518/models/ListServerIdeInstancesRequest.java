@@ -194,7 +194,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>关键字，按实例名称等模糊匹配。</p>
+         * <p>The keyword for fuzzy match by instance ID or instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>notebook_dev</p>
@@ -206,7 +206,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>本次请求的最大结果数，默认为 10，最大值为 100。</p>
+         * <p>The maximum number of records to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -218,7 +218,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>翻页标记，首次查询不传，后续查询传上一次返回的 NextToken。</p>
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESG****</p>
@@ -230,7 +230,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>页码，从 1 开始。</p>
+         * <p>The page number. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,7 +242,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>每页条数。</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -254,7 +254,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>DataWorks 工作空间（项目）ID。</p>
+         * <p>The DataWorks workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -266,7 +266,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>关联用户 ID，按归属用户过滤。</p>
+         * <p>The account ID of the user who owns the instance. Used to filter instances by owner.</p>
          * 
          * <strong>example:</strong>
          * <p>20933221576142****</p>
@@ -278,7 +278,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>资源组标识，支持资源组 ID 或资源组 Identifier 字符串。</p>
+         * <p>The DataWorks resource group identifier. You can specify a numeric resource group ID or a full identifier in the format of Serverless_res_group_{tenantId}_{resgId}.</p>
          * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_123456789012345_9876543210****</p>
@@ -290,7 +290,11 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>实例子类型。</p>
+         * <p>The instance subtype. Valid values:</p>
+         * <ul>
+         * <li>PERSONAL_DEV: personal development environment.</li>
+         * <li>DATA_AGENT: Data Agent.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PERSONAL_DEV</p>

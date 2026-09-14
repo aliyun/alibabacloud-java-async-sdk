@@ -86,6 +86,7 @@ public class GetBatchChangeTableOwnerStatusRequest extends Request {
         }
 
         /**
+         * <p>The batch transfer task ID returned by SubmitBatchChangeTableOwner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

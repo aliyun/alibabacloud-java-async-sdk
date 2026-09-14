@@ -112,6 +112,7 @@ public class ApplyResourceAccessPermissionRequest extends Request {
         }
 
         /**
+         * <p>The list of resource permission request entries.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applyContents(java.util.List<ApplyContents> applyContents) {
@@ -122,7 +123,10 @@ public class ApplyResourceAccessPermissionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency token. Used to prevent duplicate operations caused by multiple calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABFUOEUOTRTRJKE</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -131,7 +135,11 @@ public class ApplyResourceAccessPermissionRequest extends Request {
         }
 
         /**
+         * <p>The reason for the request.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business development needs</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("Reason", reason);
@@ -201,6 +209,15 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The principal ID. The ID has different meanings depending on the principal type:</p>
+             * <ul>
+             * <li><p>RamUser: DataWorks UserId</p>
+             * </li>
+             * <li><p>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;</p>
+             * </li>
+             * <li><p>DlfRole: DlfNext role name</p>
+             * </li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -212,6 +229,12 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
+             * <p>The principal type. Valid values:</p>
+             * <ul>
+             * <li>RamRole</li>
+             * <li>RamUser</li>
+             * <li>DlfRole</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -296,6 +319,9 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The resource type.</p>
+             * <p><strong>Note</strong>: The resource types that can be requested are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -307,7 +333,11 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
-             * DefVersion.
+             * <p>The resource parsing version, constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+             * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder defVersion(String defVersion) {
                 this.defVersion = defVersion;
@@ -315,7 +345,9 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
-             * MetaData.
+             * <p>The resource metadata declaration.</p>
+             * <p><strong>Note</strong>: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;
@@ -423,6 +455,9 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The list of requested access types.</p>
+             * <p><strong>Note</strong>: Different resource levels support different access types. All access types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
              * <p>This parameter is required.</p>
              */
             public Builder accessTypes(java.util.List<String> accessTypes) {
@@ -431,7 +466,12 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
-             * AuthMethod.
+             * <p>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying an authorization method: ranger or starrocksManager.</p>
+             * <p><strong>Note</strong>: Different resources support different authorization methods. All authorization methods are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>ranger</p>
              */
             public Builder authMethod(String authMethod) {
                 this.authMethod = authMethod;
@@ -439,7 +479,10 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The permission expiration time, in millisecond-level timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1785835708000</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -447,6 +490,9 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
+             * <p>The grantee description.</p>
+             * <p><strong>Note</strong>: The supported principal types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
              * <p>This parameter is required.</p>
              */
             public Builder grantee(Grantee grantee) {
@@ -455,7 +501,7 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
-             * Resource.
+             * <p>The resource description.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;

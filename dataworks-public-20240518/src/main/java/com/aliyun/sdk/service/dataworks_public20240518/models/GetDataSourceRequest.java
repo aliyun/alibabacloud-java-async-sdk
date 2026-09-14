@@ -83,7 +83,7 @@ public class GetDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The data source ID, which is the unique identifier of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

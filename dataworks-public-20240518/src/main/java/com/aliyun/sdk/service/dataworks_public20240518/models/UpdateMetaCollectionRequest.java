@@ -135,7 +135,10 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Updated collection description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new comment</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -148,7 +151,7 @@ public class UpdateMetaCollectionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>as78d756asd</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -157,7 +160,10 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Updated collection name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

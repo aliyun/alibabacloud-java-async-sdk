@@ -78,7 +78,7 @@ public class DeleteDataQualityRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the deletion was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

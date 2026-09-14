@@ -111,7 +111,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>
+         * <p>The client unique code of the workflow, which is used to implement asynchronous operations and idempotence. If you do not specify this parameter during creation, the system automatically generates one. This code is uniquely bound to the resource ID. If you specify this parameter during update or deletion, it must be the same as the client unique code specified during creation.</p>
          * 
          * <strong>example:</strong>
          * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -123,10 +123,10 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
+         * <p>The project environment. Valid values:</p>
          * <ul>
-         * <li>Prod: production environment</li>
-         * <li>Dev: development environment</li>
+         * <li>Prod: production</li>
+         * <li>Dev: development</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The workflow ID.</p>
+         * <p>The unique identifier of the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

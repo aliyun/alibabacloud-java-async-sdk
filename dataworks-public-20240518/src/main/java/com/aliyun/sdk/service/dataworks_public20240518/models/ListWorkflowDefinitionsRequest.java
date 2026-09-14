@@ -170,8 +170,10 @@ public class ListWorkflowDefinitionsRequest extends Request {
          * <p>Filter condition: The type of the workflow. The default value is CycleWorkflow.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>CycleWorkflow</li>
-         * <li>ManualWorkflow</li>
+         * <li><p>CycleWorkflow</p>
+         * </li>
+         * <li><p>ManualWorkflow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,8 +227,10 @@ public class ListWorkflowDefinitionsRequest extends Request {
          * <p>Filter condition: The type of the workflow. The default value is CycleWorkflow.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>CycleWorkflow</li>
-         * <li>ManualWorkflow</li>
+         * <li><p>CycleWorkflow</p>
+         * </li>
+         * <li><p>ManualWorkflow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

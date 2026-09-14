@@ -239,7 +239,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The workflow ID. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the workflow ID by name.</p>
+         * <p>The ID of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the ID of the workflow by name.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -251,11 +251,11 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The change type. Valid values:</p>
+         * <p>The change type. Valid values: </p>
          * <ul>
-         * <li>0: addition</li>
-         * <li>1: update</li>
-         * <li>2: deletion</li>
+         * <li>0: added.</li>
+         * <li>1: updated.</li>
+         * <li>2: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The start date for committing. Specify the date in the yyyy-MM-dd format.</p>
+         * <p>The start date for the commit, in the format yyyy-MM-dd.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01</p>
@@ -280,7 +280,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The end date (included) for committing. Specify the date in the yyyy-MM-dd format.</p>
+         * <p>The end date for the commit (inclusive), in the format yyyy-MM-dd.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-31</p>
@@ -292,7 +292,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user who commits the file.</p>
+         * <p>The user ID of the committer.</p>
          * 
          * <strong>example:</strong>
          * <p>2003****</p>
@@ -304,7 +304,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the files to be queried.</p>
+         * <p>The list of file IDs to query.</p>
          */
         public Builder fileIds(java.util.List<String> fileIds) {
             String fileIdsShrink = shrink(fileIds, "FileIds", "json");
@@ -326,8 +326,9 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The type of the code for the file.</p>
-         * <p>The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</p>
+         * <p>The code type of the file.</p>
+         * <p>Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.
+         * You can also call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the code type of a file.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -363,7 +364,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -376,7 +377,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * <p>The solution ID.</p>
+         * <p>The Solutions ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8065</p>

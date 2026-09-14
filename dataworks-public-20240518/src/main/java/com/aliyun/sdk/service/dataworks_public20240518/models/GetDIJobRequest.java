@@ -125,7 +125,7 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
+         * <p>This field is deprecated. Use the <code>Id</code> field instead.</p>
          * 
          * <strong>example:</strong>
          * <p>11588</p>
@@ -137,7 +137,7 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task.</p>
+         * <p>The ID of the DI job.</p>
          * 
          * <strong>example:</strong>
          * <p>11588</p>
@@ -149,8 +149,7 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+         * <p>The DataWorks workspace ID. You can call the <code>ListProjects</code> operation to obtain the workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -162,7 +161,7 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return detailed configuration information, including TransformationRules, TableMappings, and JobSettings. Valid values: true and false. Default value: true.</p>
+         * <p>Specifies whether to return the detailed configuration, including <code>TransformationRules</code>, <code>TableMappings</code>, and <code>JobSettings</code>. This configuration is returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

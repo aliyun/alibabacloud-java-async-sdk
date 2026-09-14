@@ -211,7 +211,9 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
-         * AccessTypes.
+         * <p>Filter by requested permissions.</p>
+         * <p>Note: Different resource levels support different application permission types, all constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
          */
         public Builder accessTypes(java.util.List<String> accessTypes) {
             String accessTypesShrink = shrink(accessTypes, "AccessTypes", "json");
@@ -221,6 +223,9 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
+         * <p>Filter by resource type.</p>
+         * <p>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +238,10 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Application time end (millisecond timestamp)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1779724799999</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -242,7 +250,9 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
-         * Grantee.
+         * <p>Filter by authorization principal.</p>
+         * <p>Note: The authorization principal types supported by the system are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
          */
         public Builder grantee(Grantee grantee) {
             String granteeShrink = shrink(grantee, "Grantee", "json");
@@ -252,7 +262,10 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Pagination cursor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJpZCI6MTIzfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -261,7 +274,10 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size (default 10, maximum 200)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -270,7 +286,8 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>Filter by resource with exact/generalized matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
          */
         public Builder resource(Resource resource) {
             String resourceShrink = shrink(resource, "Resource", "json");
@@ -280,6 +297,9 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
+         * <p>Filter by minimum permission resource type.</p>
+         * <p>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +313,10 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Application time start (millisecond timestamp)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1771948800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -302,7 +325,19 @@ public class ListMyRelatedApprovalsRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>Filter by approval status. Enum values:</p>
+         * <ul>
+         * <li>WaitApproval: Pending approval</li>
+         * <li>Confirmed: Pending authorization</li>
+         * <li>RejectApproval: Approval rejected</li>
+         * <li>AuthorizeSucceed: Authorization succeeded</li>
+         * <li>AuthorizeFailed: Authorization failed</li>
+         * <li>Deleted: Deleted</li>
+         * <li>Canceled: Withdrawn</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WAIT_APPROVAL</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");
@@ -371,7 +406,19 @@ public class ListMyRelatedApprovalsRequest extends Request {
             } 
 
             /**
-             * PrincipalId.
+             * <p>Authorization principal ID:</p>
+             * <ul>
+             * <li><code>RamUser</code>: Dataworks UserId</li>
+             * <li><code>RamRole</code>: Dataworks UserId prefixed with &quot;ROLE_&quot;</li>
+             * <li><code>DataworksTenantMember</code>: Dataworks UserId</li>
+             * <li><code>DataworksTenantRole</code>: Dataworks tenant roleCode</li>
+             * <li><code>DataworksProjectRole</code>: Dataworks workspace roleCode</li>
+             * <li><code>DataworksProjectMember</code>: Dataworks UserId</li>
+             * <li><code>DlfRole</code>: DlfNext role name</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ROLE_3133343434</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -379,7 +426,19 @@ public class ListMyRelatedApprovalsRequest extends Request {
             }
 
             /**
-             * PrincipalType.
+             * <p>Authorization principal type:</p>
+             * <ul>
+             * <li><code>RamRole</code></li>
+             * <li><code>RamUser</code></li>
+             * <li><code>DataworksTenantMember</code></li>
+             * <li><code>DataworksTenantRole</code></li>
+             * <li><code>DataworksProjectMember</code></li>
+             * <li><code>DataworksProjectRole</code></li>
+             * <li><code>DlfRole</code></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RamRole</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -459,7 +518,9 @@ public class ListMyRelatedApprovalsRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>Resource type.</p>
+             * <p>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
              * 
              * <strong>example:</strong>
              * <p>MaxCompute</p>
@@ -470,7 +531,11 @@ public class ListMyRelatedApprovalsRequest extends Request {
             }
 
             /**
-             * DefVersion.
+             * <p>The resource parsing version is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+             * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder defVersion(String defVersion) {
                 this.defVersion = defVersion;
@@ -478,7 +543,9 @@ public class ListMyRelatedApprovalsRequest extends Request {
             }
 
             /**
-             * MetaData.
+             * <p>Resource metadata.</p>
+             * <p>Note: The metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to validLeaf layer.</p>
+             * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;

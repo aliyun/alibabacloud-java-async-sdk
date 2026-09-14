@@ -160,9 +160,12 @@ public class GetDataQualityScanResponseBody extends TeaModel {
              * <p>The type of the compute engine. Only EMR compute engines support these settings.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Hive: Hive SQL</li>
-             * <li>Spark: Spark SQL</li>
-             * <li>Kyuubi</li>
+             * <li><p>Hive: Hive SQL</p>
+             * </li>
+             * <li><p>Spark: Spark SQL</p>
+             * </li>
+             * <li><p>Kyuubi</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -271,8 +274,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
              * <p>The workspace environment to which the compute engine belongs.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Prod: production environment .</li>
-             * <li>Dev: development environment.</li>
+             * <li><p>Prod: production environment .</p>
+             * </li>
+             * <li><p>Dev: development environment.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -364,11 +369,11 @@ public class GetDataQualityScanResponseBody extends TeaModel {
             /**
              * <p>The Hook trigger condition. The hook will run if the condition is met. Currently, only one type of expression syntax is supported:</p>
              * <ul>
-             * <li>You can specify multiple combinations of rule severity levels and validation statuses using an expression such as <code>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</code>. This expression means the condition is met if any executed rule has a result of Fail with severity Normal, Error with severity High, or Warn with severity High. In the condition expression, the values of severity and status are predefined enums. The values of severity must match those defined in the Spec, and the values of status must match those in DataQualityResult.</li>
+             * <li>You can specify multiple combinations of rule severity levels and validation statuses using an expression such as <code>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</code>. This expression means the condition is met if any executed rule has a result of Fail with severity Normal, Error with severity High, or Warn with severity High. In the condition expression, the values of severity and status are predefined enums. The values of severity must match those defined in the Spec, and the values of status must match those in DataQualityResult.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>results.any { r -&gt; r.status == &quot;Fail&quot; &amp;&amp; r.rule.severity == &quot;Normal&quot; || r.status == &quot;Error&quot; &amp;&amp; r.rule.severity == &quot;High&quot; || r.status == &quot;Warn&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
+             * <p>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -647,8 +652,10 @@ public class GetDataQualityScanResponseBody extends TeaModel {
              * <p>The trigger mode of the monitoring task.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>ByManual: Manual trigger. This is the default setting.</li>
-             * <li>BySchedule: Triggered by a scheduled task instance.</li>
+             * <li><p>ByManual: Manual trigger. This is the default setting.</p>
+             * </li>
+             * <li><p>BySchedule: Triggered by a scheduled task instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -166,7 +166,7 @@ public class UpdateDataQualityTemplateRequest extends Request {
          * <p>{
          *     &quot;assertion&quot;: &quot;anomaly detection fro id_not_null_cnt&quot;,
          *     &quot;id_not_null_cnt&quot;: {
-         *         &quot;query&quot;: &quot;SELECT COUNT(*) AS cnt FROM ${tableName} WHERE dt = &quot;$[yyyymmdd-1]&quot;;&quot;
+         *         &quot;query&quot;: &quot;SELECT COUNT(*) AS cnt FROM ${tableName} WHERE dt = \&quot;$[yyyymmdd-1]\&quot;;&quot;
          *     },
          *     &quot;identity&quot;: &quot;819cf1f8-29be-4f94-a9d0-c5c06c0c3d2a&quot;
          * }</p>

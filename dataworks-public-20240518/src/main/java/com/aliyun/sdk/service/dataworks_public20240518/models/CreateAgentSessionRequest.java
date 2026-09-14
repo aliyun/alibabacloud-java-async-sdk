@@ -87,7 +87,10 @@ public class CreateAgentSessionRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The request ID passed by the caller. The value is returned as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4758330557805415712</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class CreateAgentSessionRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class CreateAgentSessionRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The business parameters.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -161,7 +167,15 @@ public class CreateAgentSessionRequest extends Request {
             } 
 
             /**
-             * AgentName.
+             * <p>The name of the agent bound to the session. This parameter is required.</p>
+             * <ul>
+             * <li>dataworks_data_agent: DataWorks built-in agent — Data Agent, which provides intelligent data development AI capabilities covering the entire workflow of data integration, development, O&amp;M, governance, and analytics.</li>
+             * <li>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI, which uses natural language processing and intelligent analytics technologies to automate the entire analysis workflow from requirement parsing, data extraction, and automatic code generation to visualization report output through conversational interaction.</li>
+             * <li>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service, which is a DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks_data_agent</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -215,7 +229,10 @@ public class CreateAgentSessionRequest extends Request {
             } 
 
             /**
-             * SessionTagCode.
+             * <p>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user to call OpenAPI operations but your calling system has its own account system, you can pass the account ID of your calling system as this tag to filter the session list by account ID. The value can be up to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbi</p>
              */
             public Builder sessionTagCode(String sessionTagCode) {
                 this.sessionTagCode = sessionTagCode;
@@ -282,7 +299,10 @@ public class CreateAgentSessionRequest extends Request {
             } 
 
             /**
-             * SessionSource.
+             * <p>The session source identifier for retrieval by source. For example, if an agent is used on both page A and page B, and you want page A to display only sessions created from page A, you can filter based on this parameter. The value can be up to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openapi_sdk</p>
              */
             public Builder sessionSource(String sessionSource) {
                 this.sessionSource = sessionSource;
@@ -290,7 +310,7 @@ public class CreateAgentSessionRequest extends Request {
             }
 
             /**
-             * SessionTags.
+             * <p>The list of session tags. You can use session tags for search and filtering.</p>
              */
             public Builder sessionTags(java.util.List<SessionTags> sessionTags) {
                 this.sessionTags = sessionTags;
@@ -383,7 +403,14 @@ public class CreateAgentSessionRequest extends Request {
             } 
 
             /**
-             * ExecutionLane.
+             * <p>The exec mode. Valid values:</p>
+             * <ul>
+             * <li>chat: conversation mode only. Suitable for simple Q&amp;A scenarios. Advantages: fast response and low token consumption. Disadvantages: cannot handle complex problems.</li>
+             * <li>cli: sandbox mode. Suitable for complex data analytics, data processing, and code writing scenarios. Advantages: can handle complex problems with the model autonomously performing analysis and problem resolution. Disadvantages: slower processing speed and higher token consumption compared to chat mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>chat，cli</p>
              */
             public Builder executionLane(String executionLane) {
                 this.executionLane = executionLane;
@@ -391,7 +418,13 @@ public class CreateAgentSessionRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The authorization mode for script execution. OpenAPI currently supports only the yolo mode. Valid values:</p>
+             * <ul>
+             * <li>yolo: automatic authorization. No human intervention is required, and the model can process tasks automatically.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>yolo</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -399,7 +432,10 @@ public class CreateAgentSessionRequest extends Request {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group used for initialization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_123123123_564657857</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -407,7 +443,10 @@ public class CreateAgentSessionRequest extends Request {
             }
 
             /**
-             * Skills.
+             * <p>The names of custom skills to load. Separate multiple names with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skill-name-1,skill-name2,skill-name-3</p>
              */
             public Builder skills(String skills) {
                 this.skills = skills;
@@ -487,7 +526,7 @@ public class CreateAgentSessionRequest extends Request {
             } 
 
             /**
-             * Agent.
+             * <p>The agent configuration for the session. Valid values are the results returned by the ListAgents operation.</p>
              */
             public Builder agent(Agent agent) {
                 this.agent = agent;
@@ -495,7 +534,7 @@ public class CreateAgentSessionRequest extends Request {
             }
 
             /**
-             * Config.
+             * <p>The session parameter settings, such as filtering parameter settings based on session source and session tags.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -503,7 +542,7 @@ public class CreateAgentSessionRequest extends Request {
             }
 
             /**
-             * InitialConfigOptions.
+             * <p>The advanced parameter settings for the agent execution environment.</p>
              */
             public Builder initialConfigOptions(InitialConfigOptions initialConfigOptions) {
                 this.initialConfigOptions = initialConfigOptions;
@@ -557,7 +596,7 @@ public class CreateAgentSessionRequest extends Request {
             } 
 
             /**
-             * Meta.
+             * <p>The extended metadata that carries agent binding, session source, tags, and other information.</p>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;

@@ -67,7 +67,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * ProcessInstance.
+         * <p>Details of the approval process instance.</p>
          */
         public Builder processInstance(ProcessInstance processInstance) {
             this.processInstance = processInstance;
@@ -75,7 +75,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17****903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,36 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p>The type of the approver for the node. Valid values:</p>
+             * <ul>
+             * <li><p><code>DataWorksProjectRole</code>: A workspace role</p>
+             * </li>
+             * <li><p><code>DataWorksProjectMember</code>: A workspace member</p>
+             * </li>
+             * <li><p><code>TableAdministrator</code>: A table administrator</p>
+             * </li>
+             * <li><p><code>TableOrProjectAdministrator</code>: A table or workspace administrator</p>
+             * </li>
+             * <li><p><code>AliyunResourceOwner</code>: An Alibaba Cloud account</p>
+             * </li>
+             * <li><p><code>MaxComputeRole</code>: A MaxCompute role</p>
+             * </li>
+             * <li><p><code>DLFAdmin</code>: A DlfLegacy administrator</p>
+             * </li>
+             * <li><p><code>DLFNextAdmin</code>: A DLFNext administrator</p>
+             * </li>
+             * <li><p><code>TenantRole</code>: A tenant role</p>
+             * </li>
+             * <li><p><code>EmrAdministrator</code>: An Emr administrator</p>
+             * </li>
+             * <li><p><code>LindormAdministrator</code>: A Lindorm administrator</p>
+             * </li>
+             * <li><p><code>AliyunRamUser</code>: A RAM user</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DataWorksProjectRole</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -188,7 +220,20 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Assignees.
+             * <p>The specified approvers.</p>
+             * <p>The contents of this parameter depend on the <code>AccountType</code> value:</p>
+             * <ul>
+             * <li><p>If <code>AccountType</code> is <code>DataWorksProjectMember</code>, this parameter contains the user IDs of workspace members.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>DataWorksProjectRole</code>, this parameter contains the codes of workspace roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>MaxComputeRole</code>, this parameter contains the MaxCompute roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>TenantRole</code>, this parameter contains the codes of tenant roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>AliyunRamUser</code>, this parameter contains the user IDs of RAM users.</p>
+             * </li>
+             * </ul>
              */
             public Builder assignees(java.util.List<String> assignees) {
                 this.assignees = assignees;
@@ -196,7 +241,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionProperties.
+             * <p>The extended description of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder extensionProperties(String extensionProperties) {
                 this.extensionProperties = extensionProperties;
@@ -204,7 +252,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7a809b6a-2a62-4c6c-9c23-c2a145e3877d</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -212,7 +263,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +346,20 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Channel.
+             * <p>The notification channel. Valid values:</p>
+             * <ul>
+             * <li><p><code>Mail</code></p>
+             * </li>
+             * <li><p><code>Sms</code></p>
+             * </li>
+             * <li><p><code>DingRobot</code></p>
+             * </li>
+             * <li><p><code>Weixin</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Mail</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -300,7 +367,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>Additional information in JSON format. For example, <code>{&quot;atAll&quot;:&quot;true&quot;}</code> indicates whether to @all members.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -308,7 +378,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Receiver.
+             * <p>If <code>Channel</code> is set to <code>DingRobot</code> or <code>Weixin</code>, the value of this parameter must be the webhook URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dingtalk">https://dingtalk</a></p>
              */
             public Builder receiver(String receiver) {
                 this.receiver = receiver;
@@ -388,7 +461,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Expression.
+             * <p>The expression of the rule condition. Format: <code>((#type==\\&quot;typeValue\\&quot;))</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;))</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -396,7 +472,16 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The rule scope. Valid values:</p>
+             * <ul>
+             * <li><p><code>Deployment</code>: Determines whether the policy applies when a request is submitted.</p>
+             * </li>
+             * <li><p><code>Running</code>: Determines whether to skip approval while the process instance runs. This value is supported only for MaxCompute approval policies.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployment</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -404,7 +489,22 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the rule condition. Valid values:</p>
+             * <ul>
+             * <li><p><code>odpsProject</code>: Applies to a specific MaxCompute project.</p>
+             * </li>
+             * <li><p><code>hologresInstanceId</code>: Applies to a specific Hologres instance.</p>
+             * </li>
+             * <li><p><code>sensibleLevel</code>: Applies to a specific security level.</p>
+             * </li>
+             * <li><p><code>tableGuid</code>: Applies to a specific table.</p>
+             * </li>
+             * <li><p><code>projectId</code>: Applies to a specific workspace.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>odpsProject</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -562,7 +662,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalNodes.
+             * <p>The approval nodes.</p>
              */
             public Builder approvalNodes(java.util.List<ApprovalNodes> approvalNodes) {
                 this.approvalNodes = approvalNodes;
@@ -570,7 +670,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the approval policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>流程定义描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -578,7 +681,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the policy is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -586,7 +692,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The approval policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323861511451222099</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -594,7 +703,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the approval policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_GENERATE_DEFAULT</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -602,7 +714,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationServices.
+             * <p>The notification services.</p>
              */
             public Builder notificationServices(java.util.List<NotificationServices> notificationServices) {
                 this.notificationServices = notificationServices;
@@ -610,7 +722,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleConditions.
+             * <p>The rules that determine when the approval policy takes effect.</p>
              */
             public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
@@ -618,7 +730,22 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The subtype of the approval policy. Valid values:</p>
+             * <ul>
+             * <li><p><code>Table</code></p>
+             * </li>
+             * <li><p><code>Column</code></p>
+             * </li>
+             * <li><p><code>Database</code></p>
+             * </li>
+             * <li><p><code>Schema</code></p>
+             * </li>
+             * <li><p><code>Default</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -626,7 +753,34 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the approval policy. Valid values:</p>
+             * <ul>
+             * <li><p><code>MaxCompute</code></p>
+             * </li>
+             * <li><p><code>DataService</code></p>
+             * </li>
+             * <li><p><code>DlfV1</code> (Custom creation is not supported)</p>
+             * </li>
+             * <li><p><code>Extension</code></p>
+             * </li>
+             * <li><p><code>Hologres</code></p>
+             * </li>
+             * <li><p><code>Emr</code> (Custom creation is not supported)</p>
+             * </li>
+             * <li><p><code>DataAssetGovernance</code> (Custom creation is not supported)</p>
+             * </li>
+             * <li><p><code>Lindorm</code> (Custom creation is not supported)</p>
+             * </li>
+             * <li><p><code>StarRocks</code> (Custom creation is not supported)</p>
+             * </li>
+             * <li><p><code>DlfNext</code> (Custom creation is not supported)</p>
+             * </li>
+             * <li><p><code>DataWorks</code> (Custom creation is not supported)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -719,7 +873,36 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p>The type of the approver for the node. Valid values:</p>
+             * <ul>
+             * <li><p><code>DataWorksProjectRole</code>: A workspace role</p>
+             * </li>
+             * <li><p><code>DataWorksProjectMember</code>: A workspace member</p>
+             * </li>
+             * <li><p><code>TableAdministrator</code>: A table administrator</p>
+             * </li>
+             * <li><p><code>TableOrProjectAdministrator</code>: A table or workspace administrator</p>
+             * </li>
+             * <li><p><code>AliyunResourceOwner</code>: An Alibaba Cloud account</p>
+             * </li>
+             * <li><p><code>MaxComputeRole</code>: A MaxCompute role</p>
+             * </li>
+             * <li><p><code>DLFAdmin</code>: A DlfLegacy administrator</p>
+             * </li>
+             * <li><p><code>DLFNextAdmin</code>: A DLFNext administrator</p>
+             * </li>
+             * <li><p><code>TenantRole</code>: A tenant role</p>
+             * </li>
+             * <li><p><code>EmrAdministrator</code>: An Emr administrator</p>
+             * </li>
+             * <li><p><code>LindormAdministrator</code>: A Lindorm administrator</p>
+             * </li>
+             * <li><p><code>AliyunRamUser</code>: A RAM user</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DataWorksProjectRole</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -727,7 +910,20 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Assignees.
+             * <p>The specified approvers.</p>
+             * <p>The contents of this parameter depend on the <code>AccountType</code> value:</p>
+             * <ul>
+             * <li><p>If <code>AccountType</code> is <code>DataWorksProjectMember</code>, this parameter contains the user IDs of workspace members.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>DataWorksProjectRole</code>, this parameter contains the codes of workspace roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>MaxComputeRole</code>, this parameter contains the MaxCompute roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>TenantRole</code>, this parameter contains the codes of tenant roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>AliyunRamUser</code>, this parameter contains the user IDs of RAM users.</p>
+             * </li>
+             * </ul>
              */
             public Builder assignees(java.util.List<String> assignees) {
                 this.assignees = assignees;
@@ -735,7 +931,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7a809b6a-2a62-4c6c-9c23-c2a145e3877d</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -743,7 +942,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -810,7 +1012,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * MemberName.
+             * <p>The name of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder memberName(String memberName) {
                 this.memberName = memberName;
@@ -818,7 +1023,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUserId.
+             * <p>The user ID of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>207947397776614297</p>
              */
             public Builder memberUserId(String memberUserId) {
                 this.memberUserId = memberUserId;
@@ -989,7 +1197,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalComment.
+             * <p>The approval comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>同意</p>
              */
             public Builder approvalComment(String approvalComment) {
                 this.approvalComment = approvalComment;
@@ -997,7 +1208,16 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalDecision.
+             * <p>The approval decision. Valid values:</p>
+             * <ul>
+             * <li><p><code>Agree</code></p>
+             * </li>
+             * <li><p><code>Deny</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deny</p>
              */
             public Builder approvalDecision(String approvalDecision) {
                 this.approvalDecision = approvalDecision;
@@ -1005,7 +1225,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalNode.
+             * <p>The approval node from the corresponding approval policy.</p>
              */
             public Builder approvalNode(ApprovalNode approvalNode) {
                 this.approvalNode = approvalNode;
@@ -1013,7 +1233,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Assignee.
+             * <p>The user ID of the actual approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>207947399706614297</p>
              */
             public Builder assignee(String assignee) {
                 this.assignee = assignee;
@@ -1021,7 +1244,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AssigneeName.
+             * <p>The name of the actual approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder assigneeName(String assigneeName) {
                 this.assigneeName = assigneeName;
@@ -1029,7 +1255,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * <p>The time when the task was completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715590800000</p>
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -1037,7 +1266,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715587200000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1045,7 +1277,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The approval task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_001</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1053,7 +1288,18 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><p><code>Completed</code>: The task is complete.</p>
+             * </li>
+             * <li><p><code>Pending</code>: The task is pending.</p>
+             * </li>
+             * <li><p><code>Aborted</code>: The task is aborted.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Aborted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1061,7 +1307,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCandidates.
+             * <p>The candidate approvers for the task.</p>
              */
             public Builder taskCandidates(java.util.List<TaskCandidates> taskCandidates) {
                 this.taskCandidates = taskCandidates;
@@ -1232,7 +1478,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Applicator.
+             * <p>The user ID of the applicant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107558004253538</p>
              */
             public Builder applicator(String applicator) {
                 this.applicator = applicator;
@@ -1240,7 +1489,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicatorName.
+             * <p>The username of the applicant\&quot;s Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_account</p>
              */
             public Builder applicatorName(String applicatorName) {
                 this.applicatorName = applicatorName;
@@ -1248,7 +1500,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalProcessDefinition.
+             * <p>The approval policy applied to this process instance.</p>
              */
             public Builder approvalProcessDefinition(ApprovalProcessDefinition approvalProcessDefinition) {
                 this.approvalProcessDefinition = approvalProcessDefinition;
@@ -1256,7 +1508,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalTasks.
+             * <p>The approval tasks.</p>
              */
             public Builder approvalTasks(java.util.List<ApprovalTasks> approvalTasks) {
                 this.approvalTasks = approvalTasks;
@@ -1264,7 +1516,11 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AuthErrorMessage.
+             * <p>The authorization failure message.</p>
+             * <p><strong>Note</strong>: This parameter is returned only if the authorization fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S-400007:ODPS acl auth failed. odps table acl auth failed</p>
              */
             public Builder authErrorMessage(String authErrorMessage) {
                 this.authErrorMessage = authErrorMessage;
@@ -1272,7 +1528,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The process instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>332066440109224007</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1280,7 +1539,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务需要</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1288,7 +1550,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the approval process started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-25 10:20:18 CST</p>
              */
             public Builder startTime(Object startTime) {
                 this.startTime = startTime;
@@ -1296,7 +1561,18 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the process instance. Valid values:</p>
+             * <ul>
+             * <li><p><code>Completed</code>: The request is approved.</p>
+             * </li>
+             * <li><p><code>Running</code>: The request is in the approval process.</p>
+             * </li>
+             * <li><p><code>Aborted</code>: The request is withdrawn.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1304,7 +1580,10 @@ public class GetProcessInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The name of the process instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute表权限申请</p>
              */
             public Builder title(String title) {
                 this.title = title;

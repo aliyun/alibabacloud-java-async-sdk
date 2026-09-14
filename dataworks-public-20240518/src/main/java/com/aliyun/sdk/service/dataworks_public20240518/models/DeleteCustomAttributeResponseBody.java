@@ -91,7 +91,10 @@ public class DeleteCustomAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of the deletion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -99,7 +102,10 @@ public class DeleteCustomAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

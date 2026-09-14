@@ -245,7 +245,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
              * <p>The ID of the entity. Currently, only the Table type is supported. If the entity is deleted, this field is empty.</p>
              * 
              * <strong>example:</strong>
-             * <p>dlf-table:123456789:test_catalog:test_database::test_table</p>
+             * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -278,7 +278,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
              * <p>The entity type.</p>
              * 
              * <strong>example:</strong>
-             * <p>dlf-table</p>
+             * <p>maxcompute-table</p>
              */
             public Builder type(String type) {
                 this.type = type;

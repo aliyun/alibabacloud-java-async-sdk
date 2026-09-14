@@ -175,6 +175,9 @@ public class UpdateComputeResourceRequest extends Request {
 
         /**
          * <p>The description of the computing resource. The maximum length is 3000 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Level description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

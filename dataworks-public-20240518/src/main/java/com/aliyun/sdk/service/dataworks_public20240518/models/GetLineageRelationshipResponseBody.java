@@ -67,7 +67,7 @@ public class GetLineageRelationshipResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The lineage structure.</p>
+         * <p>The lineage relationship struct.</p>
          */
         public Builder lineageRelationship(LineageRelationship lineageRelationship) {
             this.lineageRelationship = lineageRelationship;

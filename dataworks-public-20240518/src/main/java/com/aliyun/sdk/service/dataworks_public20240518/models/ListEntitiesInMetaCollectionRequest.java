@@ -221,7 +221,7 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>as78d756asd</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -232,8 +232,10 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>Asc (default): ascending order.</li>
-         * <li>Desc</li>
+         * <li><p>Asc (default): ascending order.</p>
+         * </li>
+         * <li><p>Desc</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,8 +274,10 @@ public class ListEntitiesInMetaCollectionRequest extends Request {
         /**
          * <p>The sort field. Valid values:</p>
          * <ul>
-         * <li>Name (default)</li>
-         * <li>CreateTime</li>
+         * <li><p>Name (default)</p>
+         * </li>
+         * <li><p>CreateTime</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

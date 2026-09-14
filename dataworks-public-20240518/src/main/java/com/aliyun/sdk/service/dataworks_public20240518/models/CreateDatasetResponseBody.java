@@ -102,7 +102,7 @@ public class CreateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the creation was successful.</p>
+         * <p>Indicates whether the dataset is created.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

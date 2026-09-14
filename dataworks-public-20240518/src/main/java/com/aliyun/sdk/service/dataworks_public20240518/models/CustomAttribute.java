@@ -171,7 +171,10 @@ public class CustomAttribute extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>Description of the custom attribute. It must be fewer than 256 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -179,7 +182,10 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Creation time as a millisecond UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750817692000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -187,7 +193,10 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * DisplayEnabled.
+         * <p>Indicates whether this attribute is displayed on the page. Default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder displayEnabled(Boolean displayEnabled) {
             this.displayEnabled = displayEnabled;
@@ -195,7 +204,10 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>Display name for the custom attribute. It must be fewer than 128 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>业务负责人</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -203,7 +215,17 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * EntityTypes.
+         * <p>List of applicable entity types. Supports exact entity types and wildcard patterns such as <code>*-table</code> and <code>*-column</code>, for example:</p>
+         * <ul>
+         * <li><p>dataworks-project</p>
+         * </li>
+         * <li><p>dataworks-dataset</p>
+         * </li>
+         * <li><p>maxcompute-table</p>
+         * </li>
+         * <li><p>maxcompute-column</p>
+         * </li>
+         * </ul>
          */
         public Builder entityTypes(java.util.List<String> entityTypes) {
             this.entityTypes = entityTypes;
@@ -211,7 +233,10 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Custom attribute ID. It must match the regular expression ^custom-attribute:[A-Za-z][A-Za-z0-9_]{0,98}$. The part after <code>custom-attribute:</code> must be fewer than 100 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-attribute:biz_owner</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -219,7 +244,10 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>Modification time as a millisecond UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1763380628000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -227,7 +255,10 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * SearchFilterEnabled.
+         * <p>Indicates whether this attribute can be used as a filter on the search page (only affects search in Data Map). Only ENUM attributes can be set to true. Default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder searchFilterEnabled(Boolean searchFilterEnabled) {
             this.searchFilterEnabled = searchFilterEnabled;
@@ -235,7 +266,10 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Custom attribute type. Supported types are ENUM, TEXT, and HYPERLINK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -243,7 +277,7 @@ public class CustomAttribute extends TeaModel {
         }
 
         /**
-         * ValueEnums.
+         * <p>Enumeration values. Required when Type is ENUM. Not supported for TEXT or HYPERLINK types.</p>
          */
         public Builder valueEnums(java.util.List<String> valueEnums) {
             this.valueEnums = valueEnums;

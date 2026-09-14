@@ -124,7 +124,7 @@ public class CreateDataQualityScanRunRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data quality monitor.</p>
+         * <p>The ID of the data quality monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>20000001</p>
@@ -158,7 +158,7 @@ public class CreateDataQualityScanRunRequest extends Request {
         }
 
         /**
-         * <p>The scheduling resource group used when running the data quality monitor. This resource group uses the same data structure as in the scheduling API.</p>
+         * <p>The schedule resource group used when the data quality monitoring task runs. This shares the same data structure as the scheduling API.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
             String runtimeResourceShrink = shrink(runtimeResource, "RuntimeResource", "json");
@@ -227,10 +227,14 @@ public class CreateDataQualityScanRunRequest extends Request {
             } 
 
             /**
-             * <p>The parameter name.</p>
+             * <p>The parameter name. Currently supported parameter:</p>
+             * <ul>
+             * <li>triggerTime</li>
+             * </ul>
+             * <p>Other scheduling parameters are not supported.</p>
              * 
              * <strong>example:</strong>
-             * <p>regiondt</p>
+             * <p>triggerTime</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,10 +242,13 @@ public class CreateDataQualityScanRunRequest extends Request {
             }
 
             /**
-             * <p>The parameter value. You can use a scheduling time expression.</p>
+             * <p>The parameter value:</p>
+             * <ul>
+             * <li>If the parameter name is triggerTime, the value must be the timestamp of the scheduling time.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>cn-shanghai$[yyyy-mm-dd-1]</p>
+             * <p>1775812636</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -321,7 +328,7 @@ public class CreateDataQualityScanRunRequest extends Request {
             } 
 
             /**
-             * <p>The Compute Resources (CUs) reserved for running the data quality monitor in the resource group.</p>
+             * <p>The CU configuration reserved for the resource group when running the data quality monitoring task.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -343,7 +350,7 @@ public class CreateDataQualityScanRunRequest extends Request {
             }
 
             /**
-             * <p>The image settings used when running the data quality monitor in the resource group.</p>
+             * <p>The image settings used when running the data quality monitoring task on the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>i-xxxxxx</p>

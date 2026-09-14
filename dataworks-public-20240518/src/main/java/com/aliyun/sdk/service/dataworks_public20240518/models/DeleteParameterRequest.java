@@ -83,6 +83,7 @@ public class DeleteParameterRequest extends Request {
         }
 
         /**
+         * <p>The ID of the parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -83,6 +83,7 @@ public class GetMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The name of the MCP Server to retrieve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

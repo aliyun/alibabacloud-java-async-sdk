@@ -119,7 +119,10 @@ public class RunCrawlerResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the metadata crawler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -127,7 +130,10 @@ public class RunCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +141,7 @@ public class RunCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * RunAccepted.
+         * <p>Indicates whether the run request was accepted. A value of true indicates that the request was accepted, but does not indicate that the collection task is complete.</p>
          */
         public Builder runAccepted(Boolean runAccepted) {
             this.runAccepted = runAccepted;
@@ -143,7 +149,10 @@ public class RunCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * RunStatus.
+         * <p>The initial run status after submission. The value is WAITING when the run request is successfully accepted. To query the final status, call ListCrawlerRuns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAITING</p>
          */
         public Builder runStatus(String runStatus) {
             this.runStatus = runStatus;
@@ -151,7 +160,7 @@ public class RunCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +168,10 @@ public class RunCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInstanceId.
+         * <p>The associated DataWorks task instance ID. This field may be empty. To query the final run record, call ListCrawlerRuns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder taskInstanceId(Long taskInstanceId) {
             this.taskInstanceId = taskInstanceId;

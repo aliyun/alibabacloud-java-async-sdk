@@ -185,6 +185,9 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
+         * <p>Filters by resource type.</p>
+         * <p>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +200,7 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the application period (millisecond timestamp).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +213,10 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination cursor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJpZCI6MTIzfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -218,7 +225,10 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -227,7 +237,8 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>Filters by resource with exact or wildcard matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
          */
         public Builder resource(Resource resource) {
             String resourceShrink = shrink(resource, "Resource", "json");
@@ -237,6 +248,9 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
+         * <p>Filters by minimum permission resource type.</p>
+         * <p>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceType(java.util.List<String> resourceType) {
@@ -247,6 +261,7 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the application period (millisecond timestamp).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +274,19 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>Filters by approval status. Valid values:</p>
+         * <ul>
+         * <li>WaitApproval: pending approval.</li>
+         * <li>Confirmed: pending authorization.</li>
+         * <li>RejectApproval: approval rejected.</li>
+         * <li>AuthorizeSucceed: authorization succeeded.</li>
+         * <li>AuthorizeFailed: authorization failed.</li>
+         * <li>Deleted: deleted.</li>
+         * <li>Canceled: withdrawn.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Deleted</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");
@@ -341,7 +368,9 @@ public class ListMyApplicationsRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The resource type.</p>
+             * <p>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
              * 
              * <strong>example:</strong>
              * <p>MaxCompute</p>
@@ -352,7 +381,11 @@ public class ListMyApplicationsRequest extends Request {
             }
 
             /**
-             * DefVersion.
+             * <p>The resource parsing version, which is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+             * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder defVersion(String defVersion) {
                 this.defVersion = defVersion;
@@ -360,7 +393,9 @@ public class ListMyApplicationsRequest extends Request {
             }
 
             /**
-             * MetaData.
+             * <p>The resource metadata.</p>
+             * <p>Note: The metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declarations from level 0 to the validLeaf level.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;

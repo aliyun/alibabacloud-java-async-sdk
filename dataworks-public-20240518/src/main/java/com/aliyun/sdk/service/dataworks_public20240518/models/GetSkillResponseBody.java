@@ -67,7 +67,10 @@ public class GetSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique ID for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Skill.
+         * <p>The returned Skill object.</p>
          */
         public Builder skill(Skill skill) {
             this.skill = skill;
@@ -141,7 +144,7 @@ public class GetSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * ProjectIds.
+             * <p><strong>A list of project IDs that can access the Skill.</strong></p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -149,7 +152,7 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * UserIds.
+             * <p>A list of user IDs that can access the Skill.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -320,7 +323,10 @@ public class GetSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * Body.
+             * <p><strong>The content of the SKILL.md file.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>把大象装冰箱需要3步，把冰箱门打开，把大象放进去，把冰箱门关上。</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -328,7 +334,10 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * BundleUrl.
+             * <p>A temporary download link for <code>bundle.zip</code>, which does not require authentication and will expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/xxx.zip?Expires=...&Signature=">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/xxx.zip?Expires=...&amp;Signature=</a>...</p>
              */
             public Builder bundleUrl(String bundleUrl) {
                 this.bundleUrl = bundleUrl;
@@ -336,7 +345,10 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The ID of the user who created the Skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -344,7 +356,10 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p><strong>The Skill description.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析技能</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -352,6 +367,7 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time the Skill was created, provided as a UNIX timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -363,6 +379,7 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time the Skill was last modified, provided as a UNIX timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -374,7 +391,10 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p>The ID of the user who last modified the Skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -382,7 +402,10 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p><strong>The name of the Skill.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-skill</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +413,10 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p><strong>The visibility level.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -398,7 +424,7 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * VisibilityScope.
+             * <p><strong>The visibility scope.</strong></p>
              */
             public Builder visibilityScope(VisibilityScope visibilityScope) {
                 this.visibilityScope = visibilityScope;

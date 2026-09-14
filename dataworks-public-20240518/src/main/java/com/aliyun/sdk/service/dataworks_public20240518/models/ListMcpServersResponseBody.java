@@ -67,7 +67,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The paging information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListMcpServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomHeaders.
+             * <p>The custom headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder customHeaders(java.util.Map<String, ?> customHeaders) {
                 this.customHeaders = customHeaders;
@@ -162,7 +168,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Transport.
+             * <p>The transport protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSE</p>
              */
             public Builder transport(String transport) {
                 this.transport = transport;
@@ -170,7 +179,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The service address of the MCP Server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -302,7 +314,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The connection configuration of the MCP Server.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -310,7 +322,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>805298765622151</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -318,6 +333,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time, as a millisecond timestamp.****</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -329,6 +345,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The last modified time, as a millisecond timestamp.****</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -340,7 +357,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p>The ID of the user who last modified the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -348,7 +368,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the MCP Server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-mcp-server</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +379,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>The visibility level.****</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -449,7 +475,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of results returned on the current page.****</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -457,7 +486,7 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * McpServers.
+             * <p>A list of MCP Server objects.</p>
              */
             public Builder mcpServers(java.util.List<McpServers> mcpServers) {
                 this.mcpServers = mcpServers;
@@ -465,7 +494,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page of results. A null value indicates that all results have been returned.****</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -473,7 +505,10 @@ public class ListMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count of entries that match the filter criteria.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

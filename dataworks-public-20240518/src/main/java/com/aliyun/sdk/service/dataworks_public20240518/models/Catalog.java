@@ -132,7 +132,10 @@ public class Catalog extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -140,7 +143,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1722073854000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -148,7 +154,11 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlf-catalog:123456XXX:test_catalog
+         * starrocks-catalog:c-abc123xxx:default_catalog</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -156,7 +166,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1722073854000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -164,7 +177,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default_catalog</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -172,7 +188,11 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * ParentMetaEntityId.
+         * <p>The ID of the parent entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlf
+         * starrocks:c-abc123xxx</p>
          */
         public Builder parentMetaEntityId(String parentMetaEntityId) {
             this.parentMetaEntityId = parentMetaEntityId;
@@ -180,7 +200,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal</p>
          */
         public Builder type(String type) {
             this.type = type;

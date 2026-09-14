@@ -196,9 +196,12 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             /**
              * <p>The creation status. Valid values:</p>
              * <ul>
-             * <li>Creating</li>
-             * <li>Created</li>
-             * <li>CreateFailure</li>
+             * <li><p>Creating</p>
+             * </li>
+             * <li><p>Created</p>
+             * </li>
+             * <li><p>CreateFailure</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             }
 
             /**
-             * UnifiedWorkflowInstanceIds.
+             * <p>Unified workflow instance ID. For all task instances triggered under the same data timestamp in a single trigger, the value of this field is identical. This field is returned after successful creation.</p>
              */
             public Builder unifiedWorkflowInstanceIds(java.util.List<Long> unifiedWorkflowInstanceIds) {
                 this.unifiedWorkflowInstanceIds = unifiedWorkflowInstanceIds;

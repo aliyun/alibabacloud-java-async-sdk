@@ -67,7 +67,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Paged query results of data quality rule templates.</p>
+         * <p>The paging query result of data quality rule templates.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -75,7 +75,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The API request ID, which is generated as a UUID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc14115***159376359</p>
@@ -233,7 +233,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator of the data quality rule template.</p>
+             * <p>The user who created the data quality rule template.</p>
              * 
              * <strong>example:</strong>
              * <p>7892346529452</p>
@@ -255,7 +255,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data quality rule template was updated.</p>
+             * <p>The time when the data quality rule template was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1729816478147</p>
@@ -266,7 +266,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last updater of the data quality rule template.</p>
+             * <p>The user who last updated the data quality rule template.</p>
              * 
              * <strong>example:</strong>
              * <p>205250754596036836</p>
@@ -299,13 +299,13 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specific configurations of the data quality rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</p>
+             * <p>The specific configuration of the data quality rule template. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{
              *     &quot;assertion&quot;: &quot;anomaly detection fro id_not_null_cnt&quot;,
              *     &quot;id_not_null_cnt&quot;: {
-             *         &quot;query&quot;: &quot;SELECT COUNT(*) AS cnt FROM ${tableName} WHERE dt = &quot;$[yyyymmdd-1]&quot;;&quot;
+             *         &quot;query&quot;: &quot;SELECT COUNT(*) AS cnt FROM ${tableName} WHERE dt = \&quot;$[yyyymmdd-1]\&quot;;&quot;
              *     },
              *     &quot;identity&quot;: &quot;819cf1f8-29be-4f94-a9d0-c5c06c0c3d2a&quot;
              * }</p>
@@ -420,7 +420,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of pages.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -431,7 +431,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

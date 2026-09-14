@@ -125,7 +125,12 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The connection configuration of the MCP Server.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder config(Config config) {
             String configShrink = shrink(config, "Config", "json");
@@ -135,6 +140,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only <code>a-z</code>, <code>0-9</code>, <code>_</code>, and <code>-</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +153,10 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>The visibility level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TENANT</p>
          */
         public Builder visibility(String visibility) {
             this.putBodyParameter("Visibility", visibility);
@@ -156,7 +165,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * VisibilityScope.
+         * <p>The visibility scope. The corresponding field is used based on the Visibility value.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -238,7 +247,10 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * CustomHeaders.
+             * <p>The custom request headers (key-value pairs). Reserved headers cannot be overwritten.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder customHeaders(java.util.Map<String, ?> customHeaders) {
                 this.customHeaders = customHeaders;
@@ -246,7 +258,10 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * Transport.
+             * <p>The transport protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSE</p>
              */
             public Builder transport(String transport) {
                 this.transport = transport;
@@ -254,7 +269,10 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The service URL of the MCP Server. The URL must start with <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -321,7 +339,7 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * ProjectIds.
+             * <p>The list of project IDs that are visible. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -329,7 +347,7 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of user IDs that are visible. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

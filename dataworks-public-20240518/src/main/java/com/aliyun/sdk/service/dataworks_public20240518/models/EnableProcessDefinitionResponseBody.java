@@ -54,7 +54,10 @@ public class EnableProcessDefinitionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p><strong>request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17***903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

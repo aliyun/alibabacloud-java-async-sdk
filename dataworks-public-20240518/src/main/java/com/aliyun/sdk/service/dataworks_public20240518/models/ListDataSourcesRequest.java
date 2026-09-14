@@ -197,8 +197,10 @@ public class ListDataSourcesRequest extends Request {
         /**
          * <p>The environment in which the data sources are used. Valid values:</p>
          * <ul>
-         * <li>Dev: development environment</li>
-         * <li>Prod: production environment</li>
+         * <li><p>Dev: development environment</p>
+         * </li>
+         * <li><p>Prod: production environment</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,13 +227,15 @@ public class ListDataSourcesRequest extends Request {
         /**
          * <p>The order in which you want to sort the data sources. Valid values:</p>
          * <ul>
-         * <li>Desc: descending order</li>
-         * <li>Asc: ascending order</li>
+         * <li><p>Desc: descending order</p>
+         * </li>
+         * <li><p>Asc: ascending order</p>
+         * </li>
          * </ul>
          * <p>Default value: Desc</p>
          * 
          * <strong>example:</strong>
-         * <p>Asc</p>
+         * <p>Desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -280,14 +284,17 @@ public class ListDataSourcesRequest extends Request {
         /**
          * <p>The field that you want to use to sort the data sources. Valid values:</p>
          * <ul>
-         * <li>CreateTime</li>
-         * <li>Id</li>
-         * <li>Name</li>
+         * <li><p>CreateTime</p>
+         * </li>
+         * <li><p>Id</p>
+         * </li>
+         * <li><p>Name</p>
+         * </li>
          * </ul>
          * <p>Default value: CreateTime</p>
          * 
          * <strong>example:</strong>
-         * <p>Id</p>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -298,8 +305,10 @@ public class ListDataSourcesRequest extends Request {
         /**
          * <p>The tag of the data source. This parameter specifies a filter condition.</p>
          * <ul>
-         * <li>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <code>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</code>.</li>
-         * <li>If you do not configure this parameter, tag-based filtering is not performed. You can specify up to 10 tags.</li>
+         * <li><p>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <code>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</code>.</p>
+         * </li>
+         * <li><p>If you do not configure this parameter, tag-based filtering is not performed. You can specify up to 10 tags.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

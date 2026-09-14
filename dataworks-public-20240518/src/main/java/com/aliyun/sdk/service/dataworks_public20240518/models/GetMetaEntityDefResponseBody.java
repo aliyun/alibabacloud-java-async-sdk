@@ -80,7 +80,7 @@ public class GetMetaEntityDefResponseBody extends TeaModel {
         } 
 
         /**
-         * MetaEntityDef.
+         * <p>The custom entity definition.</p>
          */
         public Builder metaEntityDef(MetaEntityDef metaEntityDef) {
             this.metaEntityDef = metaEntityDef;
@@ -88,7 +88,7 @@ public class GetMetaEntityDefResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C636A747-7E4E-594D-94CD-2B4F8A9A9A63</p>
@@ -99,7 +99,10 @@ public class GetMetaEntityDefResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

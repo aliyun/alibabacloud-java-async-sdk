@@ -67,7 +67,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * JsonRpcResponse.
+         * <p>The JSON-RPC response.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -131,7 +131,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionId.
+             * <p>The ID of the created session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_0f12abc34</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -211,7 +214,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The request ID passed by the caller. The value is returned as-is.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -219,7 +225,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Jsonrpc.
+             * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder jsonrpc(String jsonrpc) {
                 this.jsonrpc = jsonrpc;
@@ -227,7 +236,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The business data. The value is null if an error occurs.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

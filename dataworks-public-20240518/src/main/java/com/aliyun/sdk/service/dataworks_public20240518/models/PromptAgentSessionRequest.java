@@ -87,7 +87,10 @@ public class PromptAgentSessionRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID passed by the requester. The value is returned as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1021418411</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class PromptAgentSessionRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class PromptAgentSessionRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The business parameters.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -161,7 +167,13 @@ public class PromptAgentSessionRequest extends Request {
             } 
 
             /**
-             * Context.
+             * <p>A Map type. In custom Agent scenarios, some placeholder parameters can be replaced through this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *    &quot;key1&quot;: &quot;value1&quot;,
+             *    &quot;key2&quot;: &quot;value2&quot;
+             * }</p>
              */
             public Builder context(Object context) {
                 this.context = context;
@@ -215,7 +227,10 @@ public class PromptAgentSessionRequest extends Request {
             } 
 
             /**
-             * Hide.
+             * <p>Specifies whether to hide this prompt from the user. For example, in a chat dialog box, the user asks a question such as &quot;Sales amount in the last 7 days&quot;. Before calling the OpenAPI, the calling system retrieves some business domain knowledge through RAG that needs to be added to the Agent context but should not be displayed to the user. In this case, set this value to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true or false</p>
              */
             public Builder hide(Boolean hide) {
                 this.hide = hide;
@@ -373,7 +388,10 @@ public class PromptAgentSessionRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The file description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective when Type=resource_link. Example: SalesOrderDetails.csv.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -381,7 +399,7 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * Meta.
+             * <p>The DataWorks extended prompt meta information.</p>
              */
             public Builder meta(PromptMeta meta) {
                 this.meta = meta;
@@ -389,7 +407,10 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * MimeType.
+             * <p>The MIME type of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective when Type=resource_link. Example: text/csv.</p>
              */
             public Builder mimeType(String mimeType) {
                 this.mimeType = mimeType;
@@ -397,7 +418,10 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective when Type=resource_link. Example: xxx.csv.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -405,7 +429,10 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The size of the file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective when Type=resource_link. Example: 1231231</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -413,7 +440,10 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p><strong>The text content.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective when Type=text. Example: Sales amount in the last 7 days.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -421,7 +451,10 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>The title of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective when Type=resource_link. Example: SalesOrderDetails.csv.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -429,7 +462,10 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p><strong>The content block type.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Currently supported: text, resource_link.</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -437,7 +473,10 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * Uri.
+             * <p>The URI of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective when Type=resource_link. Example: oss://${bucket}/${ossKey}</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -517,7 +556,10 @@ public class PromptAgentSessionRequest extends Request {
             } 
 
             /**
-             * Meta.
+             * <p>The extended meta information.</p>
+             * <blockquote>
+             * <p>Notice: If the Agent bound to the specified session is named dataworks_ai_assistant_agent (AI Assistant Service), provide the instance ID of the AI Assistant Service in the Context.agent.instanceId field of the extended meta information.</p>
+             * </blockquote>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;
@@ -525,7 +567,7 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * Prompt.
+             * <p>The array of user message content blocks. For more information, visit: <a href="https://agentclientprotocol.com/protocol/content">https://agentclientprotocol.com/protocol/content</a>.</p>
              */
             public Builder prompt(java.util.List<Prompt> prompt) {
                 this.prompt = prompt;
@@ -533,7 +575,10 @@ public class PromptAgentSessionRequest extends Request {
             }
 
             /**
-             * SessionId.
+             * <p>The target session ID. If the session does not exist, an SSE error frame is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_0f12abc34</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

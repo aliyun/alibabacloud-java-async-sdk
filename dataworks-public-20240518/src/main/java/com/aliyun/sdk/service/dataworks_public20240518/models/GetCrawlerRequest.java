@@ -83,6 +83,7 @@ public class GetCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The metadata crawler ID. You can call ListCrawlers to query this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

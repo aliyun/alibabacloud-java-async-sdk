@@ -145,7 +145,10 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Error.
+         * <p>The error object of the SSE frame. This field is present when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;: 400, &quot;errorCode&quot;: &quot;0x50000000001&quot;, &quot;message&quot;: &quot;not exist session&quot;, &quot;data&quot;: null}</p>
          */
         public Builder error(Object error) {
             this.error = error;
@@ -153,7 +156,10 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The client-generated request ID, returned from the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676303114031776</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -161,7 +167,10 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. The value is <code>2.0</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.jsonrpc = jsonrpc;
@@ -169,7 +178,10 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Method.
+         * <p>The method of the SSE frame.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session/update</p>
          */
         public Builder method(String method) {
             this.method = method;
@@ -177,7 +189,10 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The parameters of the SSE frame.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sessionId&quot;:&quot;af4f5ef8-e8f5-481c-ad1f-94886c6c0aed&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;hello world&quot;}}}</p>
          */
         public Builder params(Object params) {
             this.params = params;
@@ -185,7 +200,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique request ID generated for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>0D41C608-0C60-5EB0-B986-1460909CF642</p>
@@ -196,7 +211,10 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result object of the SSE frame. This field is present when the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;stopReason&quot;:&quot;end_turn&quot;}</p>
          */
         public Builder result(Object result) {
             this.result = result;
@@ -204,7 +222,10 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1769479322828</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;

@@ -80,7 +80,10 @@ public class CreateMetaEntityDefResponseBody extends TeaModel {
         } 
 
         /**
-         * EntityType.
+         * <p>The entity type after creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_entity-biz_api</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -88,7 +91,7 @@ public class CreateMetaEntityDefResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0A04C673-BEFA-5803-94E5-89E2D9F8C567</p>
@@ -99,7 +102,10 @@ public class CreateMetaEntityDefResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -67,7 +67,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination details.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -352,11 +352,11 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The change type, which is an integer. Valid values:</p>
+             * <p>The change type. Valid values: </p>
              * <ul>
-             * <li>0: addition</li>
-             * <li>1: update</li>
-             * <li>2: deletion</li>
+             * <li>0: added.</li>
+             * <li>1: updated.</li>
+             * <li>2: deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,7 +368,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The comment for committing.</p>
+             * <p>The comment provided at the time of commit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test commit</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -376,7 +379,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time for committing.</p>
+             * <p>The commit time.</p>
+             * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>, for example, <code>2025-04-10 15:55:47</code>. This example does not include a time zone identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-04-10 15:55:47</p>
@@ -387,7 +391,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account used by the user who committed the file.</p>
+             * <p>The Alibaba Cloud account ID of the committer.</p>
              * 
              * <strong>example:</strong>
              * <p>446***</p>
@@ -398,7 +402,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Alibaba Cloud account used by the user who committed the file.</p>
+             * <p>The Alibaba Cloud account name of the committer.</p>
              * 
              * <strong>example:</strong>
              * <p>user***</p>
@@ -409,7 +413,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file ID.</p>
+             * <p>The ID of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>520246913</p>
@@ -420,7 +424,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file of the current version.</p>
+             * <p>The name of the file that generated this file version.</p>
              * 
              * <strong>example:</strong>
              * <p>bak_part_basc_person_relation_all_da</p>
@@ -431,7 +435,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file type. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+             * <p>The file type. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>13</p>
@@ -442,7 +446,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file version.</p>
+             * <p>The version number of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>34</p>
@@ -453,7 +457,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID.</p>
+             * <p>The unique identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>650433503</p>
@@ -464,7 +468,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the version is a version in the production environment of the scheduling system.</p>
+             * <p>Indicates whether this version is the same as the current production version in scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -475,7 +479,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling property configurations of the node that corresponds to the file, which is a JSON string.</p>
+             * <p>The scheduling property configuration of the scheduling node to which this file belongs, stored as a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -505,8 +509,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
              *     &quot;dependentTypeList&quot;: [0],
              *     &quot;lastModifyUser&quot;: &quot;1107550004250000&quot;,
              *     &quot;dependentDataNode&quot;: &quot;&quot;,
-             *     &quot;input&quot;: &quot;[{&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;str&quot;:&quot;root_input&quot;,&quot;parseType&quot;:1}]&quot;,
-             *     &quot;output&quot;: &quot;[{&quot;str&quot;:&quot;project_root.526586287_out&quot;,&quot;parseType&quot;:2},{&quot;str&quot;:&quot;project_root.new&quot;,&quot;parseType&quot;:1}]&quot;,
+             *     &quot;input&quot;: &quot;[{\&quot;regionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;str\&quot;:\&quot;root_input\&quot;,\&quot;parseType\&quot;:1}]&quot;,
+             *     &quot;output&quot;: &quot;[{\&quot;str\&quot;:\&quot;project_root.526586287_out\&quot;,\&quot;parseType\&quot;:2},{\&quot;str\&quot;:\&quot;project_root.new\&quot;,\&quot;parseType\&quot;:1}]&quot;,
              *     &quot;inputList&quot;: [{
              *         &quot;regionId&quot;: &quot;cn-hangzhou&quot;,
              *         &quot;str&quot;: &quot;root_input&quot;,
@@ -521,7 +525,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
              *     }],
              *     &quot;isAutoParse&quot;: 1,
              *     &quot;startRightNow&quot;: false,
-             *     &quot;extConfig&quot;: &quot;{&quot;openCustomCron&quot;:false,&quot;formCron&quot;:&quot;&quot;}&quot;,
+             *     &quot;extConfig&quot;: &quot;{\&quot;openCustomCron\&quot;:false,\&quot;formCron\&quot;:\&quot;\&quot;}&quot;,
              *     &quot;inputContextList&quot;: [],
              *     &quot;outputContextList&quot;: []
              * }</p>
@@ -532,7 +536,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the auto triggered node that corresponds to the file.</p>
+             * <p>The node ID in scheduling that corresponds to this file.</p>
              * 
              * <strong>example:</strong>
              * <p>700005008419</p>
@@ -554,7 +558,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The test status in the development environment.</p>
+             * <p>The testing status in the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not tested</p>
              */
             public Builder smokeTestStatus(String smokeTestStatus) {
                 this.smokeTestStatus = smokeTestStatus;
@@ -562,22 +569,22 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the code file of the current version. Valid values:</p>
+             * <p>The status of the code file for this version. Valid values: </p>
              * <ul>
-             * <li>2: Commit check in progress.</li>
-             * <li>3: Commit check passed.</li>
-             * <li>4: Commit check failed.</li>
-             * <li>10: Committing.</li>
-             * <li>11: Committed.</li>
-             * <li>20: Approved.</li>
-             * <li>21: Rejected.</li>
-             * <li>22: Warning detected during checking.</li>
-             * <li>23: Under code review.</li>
-             * <li>24: Code review rejected.</li>
-             * <li>80: Deployment package created.</li>
-             * <li>100: Deploying.</li>
-             * <li>101: Deployed to the production environment.</li>
-             * <li>200: Cancelled.</li>
+             * <li>2: commit check in progress.</li>
+             * <li>3: commit check succeeded.</li>
+             * <li>4: commit check rejected.</li>
+             * <li>10: committing. </li>
+             * <li>11: committed to the scheduling development environment. </li>
+             * <li>20: review approved.</li>
+             * <li>21: review failed.</li>
+             * <li>22: check has warnings.</li>
+             * <li>23: code review in progress.</li>
+             * <li>24: code review rejected.</li>
+             * <li>80: deployment package created. </li>
+             * <li>100: deploying. </li>
+             * <li>101: deployed to production. </li>
+             * <li>200: canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -600,14 +607,14 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The module to which the file belongs. Valid values:</p>
+             * <p>The functional module to which the file belongs. Valid values:</p>
              * <ul>
-             * <li>NORMAL: The file is used for DataStudio.</li>
-             * <li>MANUAL: The file is used for a manually triggered node.</li>
-             * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
-             * <li>SKIP: The file is used for a dry-run node in DataStudio.</li>
-             * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
-             * <li>COMPONENT: The file is used for a script template.</li>
+             * <li>NORMAL: data development.</li>
+             * <li>MANUAL: manual task.</li>
+             * <li>MANUAL_BIZ: manual workflow.</li>
+             * <li>SKIP: dry-run scheduling in data development.</li>
+             * <li>ADHOCQUERY: ad hoc query.</li>
+             * <li>COMPONENT: component management.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -704,7 +711,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of files pending deployment.</p>
+             * <p>The list of file versions pending deployment.</p>
              */
             public Builder deploymentPackageFiles(java.util.List<DeploymentPackageFiles> deploymentPackageFiles) {
                 this.deploymentPackageFiles = deploymentPackageFiles;
@@ -712,7 +719,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number. Pages start from page 1.</p>
+             * <p>The page number, starting from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -723,7 +730,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page. Default value: 10.</p>
+             * <p>The page size. Default value: 10.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -734,7 +741,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

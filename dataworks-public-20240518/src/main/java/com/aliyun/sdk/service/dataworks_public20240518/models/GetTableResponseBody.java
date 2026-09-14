@@ -91,7 +91,7 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,7 +102,7 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detailed information about the table.</p>
+         * <p>The details of the table.</p>
          */
         public Builder table(Table table) {
             this.table = table;

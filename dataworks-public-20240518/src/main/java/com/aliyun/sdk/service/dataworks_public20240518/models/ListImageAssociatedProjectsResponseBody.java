@@ -80,7 +80,7 @@ public class ListImageAssociatedProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>An array of project IDs for the associated workspaces.</p>
          */
         public Builder data(java.util.List<Long> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class ListImageAssociatedProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListImageAssociatedProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

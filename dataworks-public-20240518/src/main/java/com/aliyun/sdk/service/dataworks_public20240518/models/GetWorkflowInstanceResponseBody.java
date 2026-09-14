@@ -481,8 +481,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             /**
              * <p>The environment of the workspace. Valid values:</p>
              * <ul>
-             * <li>Prod</li>
-             * <li>Dev</li>
+             * <li><p>Prod</p>
+             * </li>
+             * <li><p>Dev</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -584,14 +586,22 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             /**
              * <p>The status of the workflow instance. Valid values:</p>
              * <ul>
-             * <li>NotRun: The instance is not run.</li>
-             * <li>Running: The instance is running.</li>
-             * <li>WaitTime: The instance is waiting for the scheduling time to arrive.</li>
-             * <li>CheckingCondition: Branch conditions are being checked for the instance.</li>
-             * <li>WaitResource: The instance is waiting for resources.</li>
-             * <li>Failure: The instance fails to be run.</li>
-             * <li>Success: The instance is successfully run.</li>
-             * <li>Checking: Data quality is being checked for the instance.</li>
+             * <li><p>NotRun: The instance is not run.</p>
+             * </li>
+             * <li><p>Running: The instance is running.</p>
+             * </li>
+             * <li><p>WaitTime: The instance is waiting for the scheduling time to arrive.</p>
+             * </li>
+             * <li><p>CheckingCondition: Branch conditions are being checked for the instance.</p>
+             * </li>
+             * <li><p>WaitResource: The instance is waiting for resources.</p>
+             * </li>
+             * <li><p>Failure: The instance fails to be run.</p>
+             * </li>
+             * <li><p>Success: The instance is successfully run.</p>
+             * </li>
+             * <li><p>Checking: Data quality is being checked for the instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -613,12 +623,18 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             /**
              * <p>The type of the workflow instance. Valid values:</p>
              * <ul>
-             * <li>Normal: Scheduled execution</li>
-             * <li>Manual: Manually triggered node</li>
-             * <li>SmokeTest: Testing</li>
-             * <li>SupplementData: Data backfill</li>
-             * <li>ManualWorkflow: Manually triggered workflow</li>
-             * <li>TriggerWorkflow: Triggered Workflow</li>
+             * <li><p>Normal: Scheduled execution</p>
+             * </li>
+             * <li><p>Manual: Manually triggered node</p>
+             * </li>
+             * <li><p>SmokeTest: Testing</p>
+             * </li>
+             * <li><p>SupplementData: Data backfill</p>
+             * </li>
+             * <li><p>ManualWorkflow: Manually triggered workflow</p>
+             * </li>
+             * <li><p>TriggerWorkflow: Triggered Workflow</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -630,7 +646,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnifiedWorkflowInstanceId.
+             * <p>The unified pipeline instance ID. For all pipeline instances triggered under the same data timestamp in a single trigger, this field value is identical.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder unifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
                 this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
@@ -650,6 +669,12 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The workflow parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>周期工作流：
+             * key1=value1 key2=value2
+             * 手动业务流程：
+             * {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
              */
             public Builder workflowParameters(String workflowParameters) {
                 this.workflowParameters = workflowParameters;

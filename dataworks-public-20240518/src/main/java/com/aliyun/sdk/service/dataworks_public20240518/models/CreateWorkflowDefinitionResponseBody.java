@@ -67,9 +67,9 @@ public class CreateWorkflowDefinitionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier of the workflow.</p>
+         * <p>The unique identifier of the DataStudio workflow.</p>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -81,10 +81,10 @@ public class CreateWorkflowDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>0EF298E5-0940-5AC7-9CB0-65025070XXXX</p>
+         * <p>0EF298E5-0940-5AC7-9CB0-6502507****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

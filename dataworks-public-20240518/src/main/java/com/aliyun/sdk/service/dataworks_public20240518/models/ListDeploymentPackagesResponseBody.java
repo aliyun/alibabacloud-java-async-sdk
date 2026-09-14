@@ -75,7 +75,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>952795279527ab****</p>
@@ -233,7 +233,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the deployment package creator.</p>
+             * <p>The Alibaba Cloud user ID of the deployment package creator.</p>
              * 
              * <strong>example:</strong>
              * <p>2003****</p>
@@ -244,7 +244,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>When the deployment package fails to execute, this parameter is used to record the error message.</p>
+             * <p>The error message recorded when the deployment package fails to be executed.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -266,7 +266,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the deployment package executor.</p>
+             * <p>The Alibaba Cloud user ID of the deployment package executor.</p>
              * 
              * <strong>example:</strong>
              * <p>2003****</p>
@@ -277,7 +277,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the deployment package. You can use this ID to call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to get the deployment package details.</p>
+             * <p>The ID of the deployment package. You can use this ID to call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to obtain the details of the deployment package.</p>
              * 
              * <strong>example:</strong>
              * <p>11111</p>
@@ -299,12 +299,12 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the deployment package. Valid values:</p>
+             * <p>The current status of the deployment package. Valid values:</p>
              * <ul>
-             * <li>0: It is ready.</li>
-             * <li>1: It was successfully deployed.</li>
-             * <li>2: It failed to be deployed.</li>
-             * <li>6: It was rejected.</li>
+             * <li>0: The deployment package is ready.</li>
+             * <li>1: The deployment package is published.</li>
+             * <li>2: The deployment package failed to be published.</li>
+             * <li>6: The deployment package is rejected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -401,7 +401,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned list of deployment packages.</p>
+             * <p>The list of deployment packages.</p>
              */
             public Builder deployments(java.util.List<Deployments> deployments) {
                 this.deployments = deployments;
@@ -420,7 +420,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -431,7 +431,7 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records that meet the conditions.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

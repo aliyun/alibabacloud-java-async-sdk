@@ -80,7 +80,7 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +217,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * Duration.
+             * <p>The run duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -222,7 +228,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * <p>The end time, in millisecond-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239065403</p>
              */
             public Builder finishedTime(Long finishedTime) {
                 this.finishedTime = finishedTime;
@@ -230,7 +239,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             }
 
             /**
-             * StartedTime.
+             * <p>The start time, in millisecond-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder startedTime(Long startedTime) {
                 this.startedTime = startedTime;
@@ -238,7 +250,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The run status. Valid values: WAITING, RUNNING, SUCCESS, ERROR, SHUTDOWN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -246,7 +261,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskInstanceId.
+             * <p>The DataWorks task instance ID associated with this run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder taskInstanceId(Long taskInstanceId) {
                 this.taskInstanceId = taskInstanceId;
@@ -254,7 +272,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTableCount.
+             * <p>The total number of tables involved in this run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder totalTableCount(Long totalTableCount) {
                 this.totalTableCount = totalTableCount;
@@ -347,7 +368,7 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * CrawlerRuns.
+             * <p>The list of metadata crawler run records.</p>
              */
             public Builder crawlerRuns(java.util.List<CrawlerRuns> crawlerRuns) {
                 this.crawlerRuns = crawlerRuns;
@@ -355,7 +376,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -363,7 +387,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -371,7 +398,10 @@ public class ListCrawlerRunsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records that meet the query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

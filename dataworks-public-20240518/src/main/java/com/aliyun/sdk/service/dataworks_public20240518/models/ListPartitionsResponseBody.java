@@ -80,7 +80,7 @@ public class ListPartitionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Pagination information.</p>
+         * <p>The pagination result.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -99,7 +99,7 @@ public class ListPartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +216,7 @@ public class ListPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of table partitions.</p>
+             * <p>The partition list of the table.</p>
              */
             public Builder partitionList(java.util.List<Partition> partitionList) {
                 this.partitionList = partitionList;
@@ -224,7 +224,7 @@ public class ListPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

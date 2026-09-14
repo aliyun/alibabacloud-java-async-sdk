@@ -110,7 +110,10 @@ public class FindBestMatchSecurityStrategyRequest extends Request {
         }
 
         /**
-         * ControlModule.
+         * <p>Control module, used to match the security policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataQuery</p>
          */
         public Builder controlModule(String controlModule) {
             this.putQueryParameter("ControlModule", controlModule);
@@ -119,7 +122,10 @@ public class FindBestMatchSecurityStrategyRequest extends Request {
         }
 
         /**
-         * ControlSubModule.
+         * <p>Control sub-module, used to match the security policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCatalog</p>
          */
         public Builder controlSubModule(String controlSubModule) {
             this.putQueryParameter("ControlSubModule", controlSubModule);
@@ -128,7 +134,10 @@ public class FindBestMatchSecurityStrategyRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p><strong>Workspace ID</strong>, used to precisely match workspace-level policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

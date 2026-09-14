@@ -141,6 +141,13 @@ public class ApproveProcessInstanceRequest extends Request {
         }
 
         /**
+         * <p>The approval action. Valid values:</p>
+         * <ul>
+         * <li><p>Agree: approves the request.</p>
+         * </li>
+         * <li><p>Deny: rejects the request.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +160,11 @@ public class ApproveProcessInstanceRequest extends Request {
         }
 
         /**
+         * <p>The approval comment.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Approve authorization</p>
          */
         public Builder approvalComment(String approvalComment) {
             this.putBodyParameter("ApprovalComment", approvalComment);
@@ -162,7 +173,10 @@ public class ApproveProcessInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency token. We recommend that you use a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -171,7 +185,10 @@ public class ApproveProcessInstanceRequest extends Request {
         }
 
         /**
-         * NewExpiration.
+         * <p>The modified authorization expiration time. The value is a millisecond-level timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782541464000</p>
          */
         public Builder newExpiration(Long newExpiration) {
             this.putBodyParameter("NewExpiration", newExpiration);
@@ -180,6 +197,7 @@ public class ApproveProcessInstanceRequest extends Request {
         }
 
         /**
+         * <p>The flow instance ID. Both new and legacy Security Center approval orders are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

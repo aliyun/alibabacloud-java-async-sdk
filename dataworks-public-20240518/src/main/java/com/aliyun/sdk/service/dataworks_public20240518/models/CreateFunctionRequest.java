@@ -98,7 +98,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to view the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * <p>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
+         * <p>The FlowSpec information that describes the UDF function. For more information about the specifications, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class CreateFunctionRequest extends Request {
          *       {
          *         &quot;name&quot;: &quot;function name&quot;,
          *         &quot;script&quot;: {
-         *           &quot;content&quot;: &quot;{&quot;name&quot;: &quot;function name&quot;, &quot;datasource&quot;: {&quot;type&quot;: &quot;ODPS&quot;, &quot;name&quot;: &quot;ODPS_first&quot;}, &quot;runtimeResource&quot;: {&quot;resourceGroup&quot;: &quot;s_res_group_xx_xxxx&quot;}}&quot;,
+         *           &quot;content&quot;: &quot;{\&quot;name\&quot;: \&quot;function name\&quot;, \&quot;datasource\&quot;: {\&quot;type\&quot;: \&quot;ODPS\&quot;, \&quot;name\&quot;: \&quot;ODPS_first\&quot;}, \&quot;runtimeResource\&quot;: {\&quot;resourceGroup\&quot;: \&quot;s_res_group_xx_xxxx\&quot;}}&quot;,
          *           &quot;path&quot;: &quot;XXX/OpenAPI/function/function name&quot;,
          *           &quot;runtime&quot;: {
          *             &quot;command&quot;: &quot;ODPS_FUNCTION&quot;

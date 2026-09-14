@@ -167,7 +167,10 @@ public class ListCustomAttributesRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The description of the custom attribute. The value is fuzzy matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -176,7 +179,10 @@ public class ListCustomAttributesRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the custom attribute. The value is matched by plain text containment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Owner</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -185,7 +191,10 @@ public class ListCustomAttributesRequest extends Request {
         }
 
         /**
-         * EntityTypes.
+         * <p>The entity types to which the custom attribute applies. Separate multiple entity types with commas, such as <code>*-table,*-column</code>. Specific entity types (such as hms-table and emr-table) and wildcard types <code>*-table</code> and <code>*-column</code> are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table</p>
          */
         public Builder entityTypes(String entityTypes) {
             this.putQueryParameter("EntityTypes", entityTypes);
@@ -194,7 +203,10 @@ public class ListCustomAttributesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values: Asc and Desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -203,7 +215,10 @@ public class ListCustomAttributesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,7 +227,10 @@ public class ListCustomAttributesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -221,7 +239,10 @@ public class ListCustomAttributesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Valid values: CreateTime and ModifyTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

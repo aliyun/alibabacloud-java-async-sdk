@@ -153,7 +153,10 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * CustomHeaders.
+         * <p>The new custom request headers (key-value pairs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder customHeaders(java.util.Map<String, ?> customHeaders) {
             String customHeadersShrink = shrink(customHeaders, "CustomHeaders", "json");
@@ -163,6 +166,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The name of the MCP Server to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +179,10 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * Transport.
+         * <p>The new transport protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSE</p>
          */
         public Builder transport(String transport) {
             this.putBodyParameter("Transport", transport);
@@ -184,7 +191,10 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>The new service URL. The URL must start with <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);
@@ -193,7 +203,10 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>The new visibility level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TENANT</p>
          */
         public Builder visibility(String visibility) {
             this.putBodyParameter("Visibility", visibility);
@@ -202,7 +215,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * VisibilityScope.
+         * <p>The new visibility scope. Provide the corresponding field based on the Visibility setting.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -271,7 +284,7 @@ public class UpdateMcpServerRequest extends Request {
             } 
 
             /**
-             * ProjectIds.
+             * <p>The list of visible project IDs. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -279,7 +292,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

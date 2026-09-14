@@ -54,7 +54,10 @@ public class UpdateProjectRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>037DFCE4-ABA5-51D7-9F2D-CCF709252DAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

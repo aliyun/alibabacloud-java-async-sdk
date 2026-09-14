@@ -98,7 +98,7 @@ public class GetCertificateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the certificate file.</p>
+         * <p>The unique ID of the certificate file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetCertificateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the certificate file belongs.</p>
+         * <p>The ID of the project to which the certificate file belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

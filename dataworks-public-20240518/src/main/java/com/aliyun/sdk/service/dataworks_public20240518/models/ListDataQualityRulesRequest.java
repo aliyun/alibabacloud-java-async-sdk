@@ -153,7 +153,7 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data quality monitoring task that is associated with the rule.</p>
+         * <p>The ID of the associated quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -165,7 +165,7 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule. Fuzzy match is supported.</p>
+         * <p>The rule name for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>unit_test</p>
@@ -177,7 +177,7 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number for paging. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +213,7 @@ public class ListDataQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the table that is limited by the rule in Data Map.</p>
+         * <p>The unique identifier of the table that the rule applies to in DataWorks Data Map.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>

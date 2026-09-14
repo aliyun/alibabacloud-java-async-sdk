@@ -194,8 +194,10 @@ public class ListDatabasesRequest extends Request {
         /**
          * <p>The sort order. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc: ascending.</li>
-         * <li>Desc: descending.</li>
+         * <li><p>Asc: ascending.</p>
+         * </li>
+         * <li><p>Desc: descending.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,27 +237,34 @@ public class ListDatabasesRequest extends Request {
          * <p>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
          * <p>You can refer to the ListCrawlerTypes operation for the parent entity type.</p>
          * <ul>
-         * <li>If the parent entity is a catalog, the format of <code>ParentMetaEntityId</code> follows the response of the ListCatalogs API.</li>
-         * <li>If the parent entity is a metadata crawler, the format of <code>ParentMetaEntityId</code> is <code>${CrawlerType}:${Instance ID or encoded URL}</code>.</li>
+         * <li><p>If the parent entity is a catalog, the format of <code>ParentMetaEntityId</code> follows the response of the ListCatalogs API.</p>
+         * </li>
+         * <li><p>If the parent entity is a metadata crawler, the format of <code>ParentMetaEntityId</code> is <code>${CrawlerType}:${Instance ID or encoded URL}</code>.</p>
+         * </li>
          * </ul>
          * <p>ParentMetaEntityId format examples</p>
          * <ul>
-         * <li><code>dlf-catalog::catalog_id</code></li>
-         * <li><code>holo:instance_id</code></li>
-         * <li><code>mysql:(instance_id|encoded_jdbc_url)</code></li>
+         * <li><p><code>dlf-catalog::catalog_id</code></p>
+         * </li>
+         * <li><p><code>holo:instance_id</code></p>
+         * </li>
+         * <li><p><code>mysql:(instance_id|encoded_jdbc_url)</code></p>
+         * </li>
          * </ul>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><code>catalog_id</code>: The ID of the DLF catalog.</li>
-         * <li><code>instance_id</code>: The instance ID. Required when the data source is registered in instance mode.</li>
-         * <li><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. Required when the data source is registered by connection string.</li>
+         * <li><p><code>catalog_id</code>: The ID of the DLF catalog.</p>
+         * </li>
+         * <li><p><code>instance_id</code>: The instance ID. Required when the data source is registered in instance mode.</p>
+         * </li>
+         * <li><p><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. Required when the data source is registered by connection string.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>mysql:rm-abc123xxx
-         * dlf-catalog:123456XXX:test_catalog</p>
+         * <p>holo:instance_id</p>
          */
         public Builder parentMetaEntityId(String parentMetaEntityId) {
             this.putQueryParameter("ParentMetaEntityId", parentMetaEntityId);
@@ -266,9 +275,12 @@ public class ListDatabasesRequest extends Request {
         /**
          * <p>The sort field. Default value: CreateTime. Valid values:</p>
          * <ul>
-         * <li>CreateTime</li>
-         * <li>ModifyTime</li>
-         * <li>Name</li>
+         * <li><p>CreateTime</p>
+         * </li>
+         * <li><p>ModifyTime</p>
+         * </li>
+         * <li><p>Name</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

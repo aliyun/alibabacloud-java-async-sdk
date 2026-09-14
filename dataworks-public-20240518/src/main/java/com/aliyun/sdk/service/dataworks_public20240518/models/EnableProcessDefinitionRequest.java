@@ -96,7 +96,10 @@ public class EnableProcessDefinitionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence token. A UUID is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -105,7 +108,10 @@ public class EnableProcessDefinitionRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p><strong>process definition ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>f0d6d578-a305-40ac-ba1e-0a09f64cbc69</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);

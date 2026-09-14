@@ -78,7 +78,7 @@ public class UpdateDataQualityAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the alert rule was updated.</p>
+         * <p>Indicates whether the alert rule is updated.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

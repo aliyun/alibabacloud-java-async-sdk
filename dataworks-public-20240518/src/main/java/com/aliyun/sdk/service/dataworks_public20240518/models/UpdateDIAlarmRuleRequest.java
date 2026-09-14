@@ -222,7 +222,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
          * <p>The description of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the alert rule.</p>
+         * <p>Alert rule description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -257,11 +257,16 @@ public class UpdateDIAlarmRuleRequest extends Request {
         /**
          * <p>The metric type in the alert rule. Valid values:</p>
          * <ul>
-         * <li>Heartbeat</li>
-         * <li>FailoverCount</li>
-         * <li>Delay</li>
-         * <li>DdlReport</li>
-         * <li>ResourceUtilization</li>
+         * <li><p>Heartbeat</p>
+         * </li>
+         * <li><p>FailoverCount</p>
+         * </li>
+         * <li><p>Delay</p>
+         * </li>
+         * <li><p>DdlReport</p>
+         * </li>
+         * <li><p>ResourceUtilization</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -367,10 +372,14 @@ public class UpdateDIAlarmRuleRequest extends Request {
             /**
              * <p>The alert notification method. Valid values:</p>
              * <ul>
-             * <li>Mail</li>
-             * <li>Phone</li>
-             * <li>Sms</li>
-             * <li>Ding</li>
+             * <li><p>Mail</p>
+             * </li>
+             * <li><p>Phone</p>
+             * </li>
+             * <li><p>Sms</p>
+             * </li>
+             * <li><p>Ding</p>
+             * </li>
              * </ul>
              */
             public Builder channels(java.util.List<String> channels) {
@@ -381,8 +390,10 @@ public class UpdateDIAlarmRuleRequest extends Request {
             /**
              * <p>The severity level. Valid values:</p>
              * <ul>
-             * <li>Warning</li>
-             * <li>Critical</li>
+             * <li><p>Warning</p>
+             * </li>
+             * <li><p>Critical</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -466,8 +477,10 @@ public class UpdateDIAlarmRuleRequest extends Request {
             /**
              * <p>The recipient.</p>
              * <ul>
-             * <li>If the ReceiverType parameter is set to AliyunUid, set this parameter to the Alibaba Cloud account ID of a user.</li>
-             * <li>If the ReceiverType parameter is set to DingToken, set this parameter to the token of a DingTalk chatbot.</li>
+             * <li><p>If the ReceiverType parameter is set to AliyunUid, set this parameter to the Alibaba Cloud account ID of a user.</p>
+             * </li>
+             * <li><p>If the ReceiverType parameter is set to DingToken, set this parameter to the token of a DingTalk chatbot.</p>
+             * </li>
              * </ul>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
@@ -728,8 +741,10 @@ public class UpdateDIAlarmRuleRequest extends Request {
             /**
              * <p>The severity level. Valid values:</p>
              * <ul>
-             * <li>Warning</li>
-             * <li>Critical</li>
+             * <li><p>Warning</p>
+             * </li>
+             * <li><p>Critical</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -743,9 +758,12 @@ public class UpdateDIAlarmRuleRequest extends Request {
             /**
              * <p>The alert threshold.</p>
              * <ul>
-             * <li>If the alert rule is for task status, you do not need to specify a threshold.</li>
-             * <li>If the alert rule is for failovers, you must specify the number of failovers.</li>
-             * <li>If the alert rule is for latency, you must specify the latency duration, in seconds.</li>
+             * <li><p>If the alert rule is for task status, you do not need to specify a threshold.</p>
+             * </li>
+             * <li><p>If the alert rule is for failovers, you must specify the number of failovers.</p>
+             * </li>
+             * <li><p>If the alert rule is for latency, you must specify the latency duration, in seconds.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

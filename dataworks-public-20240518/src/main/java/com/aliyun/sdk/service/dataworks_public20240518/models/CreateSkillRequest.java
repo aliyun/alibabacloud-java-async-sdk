@@ -181,7 +181,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * BundleUrl.
+         * <p>The <strong>downloadable URL (HTTP/HTTPS) of the bundle.zip file</strong>. This parameter is mutually exclusive with SkillMdOverride.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></p>
          */
         public Builder bundleUrl(String bundleUrl) {
             this.putBodyParameter("BundleUrl", bundleUrl);
@@ -190,7 +193,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The <strong>Skill description</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据分析技能</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -199,7 +205,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * Extra.
+         * <p>The extension metadata in key-value pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;appId&quot;:&quot;APP_CWJMV36CT9SAFW1QEHX7&quot;}</p>
          */
         public Builder extra(java.util.Map<String, ?> extra) {
             String extraShrink = shrink(extra, "Extra", "json");
@@ -209,6 +218,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
+         * <p>The <strong>Skill name</strong>, which must be unique within the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +231,12 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * SkillMdOverride.
+         * <p>The SKILL.md body content. This parameter is mutually exclusive with BundleUrl. If no bundle is provided, use this field to create a lightweight Skill that contains only a SKILL.md file.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder skillMdOverride(String skillMdOverride) {
             this.putBodyParameter("SkillMdOverride", skillMdOverride);
@@ -230,7 +245,10 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * VersionNote.
+         * <p>The <strong>version note</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>初版</p>
          */
         public Builder versionNote(String versionNote) {
             this.putBodyParameter("VersionNote", versionNote);
@@ -239,7 +257,15 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>The <strong>visibility level</strong>. Valid values:</p>
+         * <ul>
+         * <li>TENANT: Visible within the account.</li>
+         * <li>PROJECT: Visible to specified projects.</li>
+         * <li>USER: Visible to specified users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TENANT</p>
          */
         public Builder visibility(String visibility) {
             this.putBodyParameter("Visibility", visibility);
@@ -248,7 +274,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * VisibilityScope.
+         * <p>The visibility scope. The corresponding field is determined by the Visibility parameter.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -317,7 +343,7 @@ public class CreateSkillRequest extends Request {
             } 
 
             /**
-             * ProjectIds.
+             * <p>The list of visible project IDs. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -325,7 +351,7 @@ public class CreateSkillRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

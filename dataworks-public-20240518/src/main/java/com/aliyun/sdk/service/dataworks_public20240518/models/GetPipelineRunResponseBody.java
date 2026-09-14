@@ -67,7 +67,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the process.</p>
+         * <p>The information about the deployment process.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.pipeline = pipeline;
@@ -75,7 +75,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>08468352-032C-5262-AEDC-68C9FA05XXXX</p>
@@ -222,7 +222,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the stage.</p>
+             * <p>The code of the deployment stage.</p>
              * 
              * <strong>example:</strong>
              * <p>DEV_CHECK</p>
@@ -244,7 +244,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the stage.</p>
+             * <p>The detailed information about the stage.</p>
              */
             public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
@@ -252,7 +252,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned for the stage.</p>
+             * <p>The exception message of the deployment stage.</p>
              * 
              * <strong>example:</strong>
              * <p>Exception information XXX</p>
@@ -274,15 +274,15 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the stage.</p>
+             * <p>The status of the deployment stage.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Init</li>
-             * <li>Running</li>
-             * <li>Success</li>
-             * <li>Fail</li>
-             * <li>Termination</li>
-             * <li>Cancel</li>
+             * <li>Init: Initialization.</li>
+             * <li>Running: Running.</li>
+             * <li>Success: Succeeded.</li>
+             * <li>Fail: Failed.</li>
+             * <li>Termination: Terminated.</li>
+             * <li>Cancel: Canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -294,7 +294,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step number of the stage.</p>
+             * <p>The step number of the deployment stage.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -305,14 +305,14 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the stage.</p>
+             * <p>The type of the deployment stage.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Deploy</li>
-             * <li>Check</li>
-             * <li>Offline</li>
-             * <li>Build</li>
-             * <li>Delete</li>
+             * <li>Deploy: deploy operation</li>
+             * <li>Check: check operation</li>
+             * <li>Offline: offline operation</li>
+             * <li>Build: build operation</li>
+             * <li>Delete: delete operation</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -474,7 +474,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the process was created. This value is a UNIX timestamp.</p>
+             * <p>The timestamp when the deployment package was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1724984066000</p>
@@ -485,7 +485,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator of the process.</p>
+             * <p>The creator of the deployment process.</p>
              * 
              * <strong>example:</strong>
              * <p>137946317766XXXX</p>
@@ -496,10 +496,10 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the stage.</p>
+             * <p>The description of the deployment process.</p>
              * 
              * <strong>example:</strong>
-             * <p>Phase description</p>
+             * <p>Deployment process description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -507,7 +507,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process ID.</p>
+             * <p>The ID of the deployment process.</p>
              * 
              * <strong>example:</strong>
              * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
@@ -518,7 +518,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the process fails.</p>
+             * <p>The error message returned when the deployment fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Error message</p>
@@ -529,7 +529,8 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the process was modified. This value is a UNIX timestamp.</p>
+             * <p>The modification time.</p>
+             * <p>The value is a 13-digit number, such as <code>1724984066000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1724984066000</p>
@@ -540,7 +541,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID.</p>
+             * <p>The ID of the DataWorks workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>56160</p>
@@ -551,7 +552,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about stages in the process.</p>
+             * <p>The stage details.</p>
              */
             public Builder stages(java.util.List<Stages> stages) {
                 this.stages = stages;
@@ -559,15 +560,15 @@ public class GetPipelineRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the process.</p>
+             * <p>The status of the deployment process.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Init</li>
-             * <li>Running</li>
-             * <li>Success</li>
-             * <li>Fail</li>
-             * <li>Termination</li>
-             * <li>Cancel</li>
+             * <li>Init: Initialization.</li>
+             * <li>Running: Running.</li>
+             * <li>Success: Succeeded.</li>
+             * <li>Fail: Failed.</li>
+             * <li>Termination: Terminated.</li>
+             * <li>Cancel: Canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

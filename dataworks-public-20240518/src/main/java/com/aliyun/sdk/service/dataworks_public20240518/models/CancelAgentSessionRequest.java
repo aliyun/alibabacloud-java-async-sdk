@@ -87,7 +87,10 @@ public class CancelAgentSessionRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID passed in by the requester, returned as-is in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676303114031776</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class CancelAgentSessionRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class CancelAgentSessionRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The business parameters of the request.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -161,7 +167,10 @@ public class CancelAgentSessionRequest extends Request {
             } 
 
             /**
-             * SessionId.
+             * <p>The ID of the session to cancel. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_0f12abc34</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

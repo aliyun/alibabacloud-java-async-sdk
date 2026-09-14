@@ -185,7 +185,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The idempotency parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ABFUOEUOTRTRJKE</p>
@@ -197,7 +197,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task with which the alert rule is associated.</p>
+         * <p>The task ID associated with the alert rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class CreateDIAlarmRuleRequest extends Request {
          * <p>The description of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the alert rule.</p>
+         * <p>Alert description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -234,13 +234,13 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>The metric type in the alert rule. Valid values:</p>
+         * <p>The alert metric type. Valid values:</p>
          * <ul>
-         * <li>Heartbeat</li>
-         * <li>FailoverCount</li>
-         * <li>Delay</li>
-         * <li>DdlReport</li>
-         * <li>ResourceUtilization</li>
+         * <li>Heartbeat: task status alert.</li>
+         * <li>FailoverCount: failover count alert.</li>
+         * <li>Delay: task latency alert.</li>
+         * <li>DdlReport: DDL notification.</li>
+         * <li>ResourceUtilization: resource group utilization.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -278,7 +278,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>The conditions that can trigger the alert rule.</p>
+         * <p>The list of alert trigger conditions. Multiple conditions are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder triggerConditions(java.util.List<TriggerConditions> triggerConditions) {
@@ -348,12 +348,12 @@ public class CreateDIAlarmRuleRequest extends Request {
             } 
 
             /**
-             * <p>The alert notification method. Valid values:</p>
+             * <p>The notification channel. Valid values:</p>
              * <ul>
-             * <li>Mail</li>
-             * <li>Phone</li>
-             * <li>Sms</li>
-             * <li>Ding</li>
+             * <li>Mail: email.</li>
+             * <li>Phone: phone call.</li>
+             * <li>Sms: text message.</li>
+             * <li>Ding: DingTalk.</li>
              * </ul>
              */
             public Builder channels(java.util.List<String> channels) {
@@ -436,7 +436,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             } 
 
             /**
-             * <p>The recipient type. Valid values: AliyunUid, DingToken, FeishuToken, and WebHookUrl.</p>
+             * <p>The receiver type. Valid values: AliyunUid, DingToken, FeishuToken, and WebHookUrl.</p>
              * 
              * <strong>example:</strong>
              * <p>DingToken</p>
@@ -447,10 +447,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * <p>The recipient.</p>
+             * <p>The receiver values.</p>
              * <ul>
-             * <li>If the ReceiverType parameter is set to AliyunUid, set this parameter to the Alibaba Cloud account ID of a user.</li>
-             * <li>If the ReceiverType parameter is set to DingToken, set this parameter to the token of a DingTalk chatbot.</li>
+             * <li>If the receiver type is AliyunUid, the value is the Alibaba Cloud account ID.</li>
+             * <li>If the receiver type is DingToken, the value is the DingTalk token.</li>
              * </ul>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
@@ -545,7 +545,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is deprecated and replaced by the MuteInterval parameter.</p>
+             * <p><strong>[Deprecated]</strong> Use the MuteInterval parameter instead.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -556,7 +556,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+             * <p>The alert mute interval. Unit: minutes. Default value: 5.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -567,7 +567,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * <p>The alert notification methods.</p>
+             * <p>The alert notification channels.</p>
              */
             public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -575,7 +575,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * <p>The settings of alert notification recipients.</p>
+             * <p>The alert notification receivers.</p>
              */
             public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -682,7 +682,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is deprecated and replaced by the DdlTypes parameter.</p>
+             * <p><strong>[Deprecated]</strong> Use the DdlTypes parameter instead.</p>
              */
             public Builder ddlReportTags(java.util.List<String> ddlReportTags) {
                 this.ddlReportTags = ddlReportTags;
@@ -690,7 +690,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * <p>The types of DDL operations for which the alert rule takes effect.</p>
+             * <p>The list of DDL types that take effect. This parameter takes effect only when the metric type is DDL notification.</p>
              */
             public Builder ddlTypes(java.util.List<String> ddlTypes) {
                 this.ddlTypes = ddlTypes;
@@ -698,7 +698,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * <p>The time interval for alert calculation. Unit: minutes.</p>
+             * <p>The time window for alert calculation. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -726,9 +726,9 @@ public class CreateDIAlarmRuleRequest extends Request {
             /**
              * <p>The alert threshold.</p>
              * <ul>
-             * <li>If the alert rule is for task status, you do not need to specify a threshold.</li>
-             * <li>If the alert rule is for failovers, you must specify the number of failovers.</li>
-             * <li>If the alert rule is for latency, you must specify the latency duration, in seconds.</li>
+             * <li>Task status alert: no threshold is required.</li>
+             * <li>Failover count alert: the threshold is the number of failovers.</li>
+             * <li>Task latency alert: the threshold is the latency duration. Unit: seconds.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class GetColumnResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The columns in the table.</p>
+         * <p>The column list.</p>
          */
         public Builder column(Column column) {
             this.column = column;
@@ -99,7 +99,7 @@ public class GetColumnResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

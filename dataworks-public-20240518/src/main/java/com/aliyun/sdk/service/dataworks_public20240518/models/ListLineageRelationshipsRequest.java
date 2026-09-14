@@ -183,16 +183,11 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * <p>The destination entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</p>
+         * <p>The destination entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-table:123456XXX::test_project::test_tbl
-         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-         * hms-table:c-abc123xxx::test_db::test_tbl
-         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-         * custom-api:api123
-         * custom-table:table456</p>
+         * <p>dlf-table::catalog_id:database_name::table_name</p>
          */
         public Builder dstEntityId(String dstEntityId) {
             this.putQueryParameter("DstEntityId", dstEntityId);
@@ -201,7 +196,7 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * <p>The destination entity name. Supports fuzzy matching.</p>
+         * <p>The destination entity name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>dstName</p>
@@ -213,10 +208,10 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * <p>The order in which schemas are sorted. Default value: Asc. Valid values:</p>
+         * <p>The sort order. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc: ascending.</li>
-         * <li>Desc: descending.</li>
+         * <li>Asc: ascending order.</li>
+         * <li>Desc: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,7 +236,7 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The page size. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -265,16 +260,12 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * <p>The source entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</p>
+         * <p>The source entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
+         * <p>To obtain a table or field entity ID, first call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that contain a data catalog level, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then call ListDatabases to obtain the database ID. If necessary, call ListSchemas to obtain the schema ID. Finally, call ListTables or ListColumns to obtain the table or field ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-table:123456XXX::test_project::test_tbl
-         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-         * hms-table:c-abc123xxx::test_db::test_tbl
-         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-         * custom-api:api123
-         * custom-table:table456</p>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder srcEntityId(String srcEntityId) {
             this.putQueryParameter("SrcEntityId", srcEntityId);
@@ -283,7 +274,7 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
-         * <p>The source entity name. Supports fuzzy matching.</p>
+         * <p>The source entity name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>srcName</p>

@@ -127,11 +127,11 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data quality monitoring task.</p>
+         * <p>The ID of the data quality check task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>200001</p>
+         * <p>2000011</p>
          */
         public Builder dataQualityEvaluationTaskId(Long dataQualityEvaluationTaskId) {
             this.putBodyParameter("DataQualityEvaluationTaskId", dataQualityEvaluationTaskId);
@@ -140,9 +140,9 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
-         * <p>Data quality verification execution parameters in JSON format. The available keys are as follows:</p>
+         * <p>The execution parameters of the data quality check in JSON format. The following keys are available:</p>
          * <ul>
-         * <li>triggerTime: the millisecond timestamp of the trigger time. The baseline time of the $[yyyymmdd] expression in the data range of data quality monitoring. Required.</li>
+         * <li>triggerTime: the timestamp in milliseconds of the trigger time. This value is used as the base time for the $[yyyymmdd] expression in the data range of the data quality monitoring task. This key is required.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -156,8 +156,8 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-         * <p>This parameter is used to determine the DataWorks workspaces used for this API call.</p>
+         * <p>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Storage Management page to obtain the ID.</p>
+         * <p>This parameter specifies the DataWorks workspace for this API invoke operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
-         * <p>Resource Group information, which must be filled in when running non-MaxCompute data quality verification.</p>
+         * <p>The resource group information. This parameter is required when running data quality checks on non-MaxCompute data.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
             String runtimeResourceShrink = shrink(runtimeResource, "RuntimeResource", "json");
@@ -239,7 +239,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The task runs to configure CU consumption. If Serverless resource groups are used, you must specify this parameter.</p>
+             * <p>The CU consumption configured for the task. This parameter is required if you use a serverless resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -250,7 +250,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the scheduling resource group configured for running the task.</p>
+             * <p>The identifier of the schedule resource group configured for the task.</p>
              * 
              * <strong>example:</strong>
              * <p>63900680</p>

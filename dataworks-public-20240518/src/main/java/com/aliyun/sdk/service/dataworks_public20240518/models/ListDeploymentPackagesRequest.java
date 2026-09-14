@@ -232,7 +232,7 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the deployment package creator.</p>
+         * <p>The Alibaba Cloud account UID of the deployment package creator.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425****</p>
@@ -244,7 +244,7 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The maximum millisecond timestamp for when the deployment package was created.</p>
+         * <p>The maximum timestamp in milliseconds for the creation time of the deployment package.</p>
          * 
          * <strong>example:</strong>
          * <p>1593877765000</p>
@@ -256,7 +256,7 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The maximum millisecond timestamp for when the deployment package started executing.</p>
+         * <p>The maximum timestamp in milliseconds for the execution start time of the deployment package.</p>
          * 
          * <strong>example:</strong>
          * <p>1593877765000</p>
@@ -268,7 +268,7 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the deployment package executor.</p>
+         * <p>The Alibaba Cloud account UID of the deployment package executor.</p>
          * 
          * <strong>example:</strong>
          * <p>2003****</p>
@@ -280,7 +280,7 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The keyword in the deployment package name. DataWorks supports fuzzy matching, meaning you can enter a keyword to query for deployment packages that contain it.</p>
+         * <p>The keyword in the deployment package name. DataWorks supports fuzzy match. You can enter a keyword to query deployment packages whose names contain the keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -304,7 +304,7 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -316,7 +316,7 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the workspace configuration page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the workspace configuration page to obtain the workspace ID. You must specify either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace for this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>10003</p>
@@ -328,7 +328,7 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces. Either this parameter or ProjectId must be specified to determine which DataWorks workspace this API call operates on.</p>
+         * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page. You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project</p>
@@ -340,12 +340,12 @@ public class ListDeploymentPackagesRequest extends Request {
         }
 
         /**
-         * <p>The status of the deployment package. Valid values:</p>
+         * <p>The current status of the deployment package. Valid values:</p>
          * <ul>
-         * <li>0: It is ready.</li>
-         * <li>1: It was successfully deployed.</li>
-         * <li>2: It failed to be deployed.</li>
-         * <li>6: It was rejected.</li>
+         * <li>0: The deployment package is ready.</li>
+         * <li>1: The deployment package is published.</li>
+         * <li>2: The deployment package failed to be published.</li>
+         * <li>6: The deployment package is rejected.</li>
          * </ul>
          * 
          * <strong>example:</strong>

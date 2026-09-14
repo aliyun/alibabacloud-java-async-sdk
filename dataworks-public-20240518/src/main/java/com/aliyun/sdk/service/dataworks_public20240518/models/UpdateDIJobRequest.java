@@ -209,7 +209,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
+         * <p>This parameter is deprecated. Use the <code>Id</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>11588</p>
@@ -221,7 +221,10 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the synchronization job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DI Job Demo</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -230,7 +233,191 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * FileSpec.
+         * <p>The job configuration in script mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;resourceSettings&quot;: {
+         *         &quot;realtimeResourceSettings&quot;: {
+         *             &quot;requestedCu&quot;: 2,
+         *             &quot;resourceGroupIdentifier&quot;: &quot;Serverless_res_group_123_456&quot;
+         *         },
+         *         &quot;offlineResourceSettings&quot;: {
+         *             &quot;requestedCu&quot;: 2,
+         *             &quot;resourceGroupIdentifier&quot;: &quot;Serverless_res_group_123_456&quot;
+         *         }
+         *     },
+         *     &quot;tableMappings&quot;: [
+         *         {
+         *             &quot;sourceObjectSelectionRules&quot;: [
+         *                 {
+         *                     &quot;expression&quot;: &quot;autotest_hologres&quot;,
+         *                     &quot;action&quot;: &quot;Include&quot;,
+         *                     &quot;expressionType&quot;: &quot;Exact&quot;,
+         *                     &quot;objectType&quot;: &quot;Datasource&quot;
+         *                 },
+         *                 {
+         *                     &quot;expression&quot;: &quot;auto_holo_2661647&quot;,
+         *                     &quot;action&quot;: &quot;Include&quot;,
+         *                     &quot;expressionType&quot;: &quot;Exact&quot;,
+         *                     &quot;objectType&quot;: &quot;Table&quot;
+         *                 },
+         *                 {
+         *                     &quot;expression&quot;: &quot;public&quot;,
+         *                     &quot;action&quot;: &quot;Include&quot;,
+         *                     &quot;expressionType&quot;: &quot;Exact&quot;,
+         *                     &quot;objectType&quot;: &quot;Schema&quot;
+         *                 }
+         *             ],
+         *             &quot;transformationRules&quot;: [
+         *                 {
+         *                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+         *                     &quot;ruleActionType&quot;: &quot;SourceSchema&quot;,
+         *                     &quot;ruleName&quot;: &quot;SourceSchema_Table_BStf8aXPSCJjOWGe&quot;
+         *                 },
+         *                 {
+         *                     &quot;ruleTargetType&quot;: &quot;Schema&quot;,
+         *                     &quot;ruleActionType&quot;: &quot;Rename&quot;,
+         *                     &quot;ruleName&quot;: &quot;Rename_Schema_3qWNOIsljtInvKJy&quot;
+         *                 },
+         *                 {
+         *                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+         *                     &quot;ruleActionType&quot;: &quot;Rename&quot;,
+         *                     &quot;ruleName&quot;: &quot;Rename_Table_o3PVQq1aIKDGoVVW&quot;
+         *                 },
+         *                 {
+         *                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+         *                     &quot;ruleActionType&quot;: &quot;DefineDstTableSettings&quot;,
+         *                     &quot;ruleName&quot;: &quot;DefineDstTableSettings_Table_BhJltOmOCIc81fzi&quot;
+         *                 },
+         *                 {
+         *                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+         *                     &quot;ruleActionType&quot;: &quot;ColumnMapping&quot;,
+         *                     &quot;ruleName&quot;: &quot;ColumnMapping_Table_nP4hJPX1wh2W3fpo&quot;
+         *                 }
+         *             ]
+         *         }
+         *     ],
+         *     &quot;sourceDataSourceSettings&quot;: [
+         *         {
+         *             &quot;dataSourceProperties&quot;: {
+         *                 &quot;timeZone&quot;: &quot;Asia/Shanghai&quot;
+         *             },
+         *             &quot;dataSourceName&quot;: &quot;autotest_hologres&quot;
+         *         }
+         *     ],
+         *     &quot;jobSettings&quot;: {
+         *         &quot;runtimeSettings&quot;: [</p>
+         * <pre><code>    ],
+         *     &quot;ddlHandlingSettings&quot;: [
+         * 
+         *     ],
+         *     &quot;columnDataTypeSettings&quot;: [
+         * 
+         *     ],
+         *     &quot;cycleScheduleSettings&quot;: {
+         * 
+         *     },
+         *     &quot;channelSettings&quot;: {
+         *         &quot;destinationChannelSettings&quot;: {
+         *             &quot;conflictMode&quot;: &quot;replace&quot;,
+         *             &quot;dynamicColumnAction&quot;: &quot;replay&quot;,
+         *             &quot;writeMode&quot;: &quot;replay&quot;
+         *         },
+         *         &quot;sourceChannelSettings&quot;: {
+         * 
+         *         }
+         *     }
+         * },
+         * &quot;destinationDataSourceType&quot;: &quot;Hologres&quot;,
+         * &quot;transformationRules&quot;: [
+         *     {
+         *         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+         *         &quot;ruleName&quot;: &quot;SourceSchema_Table_BStf8aXPSCJjOWGe&quot;,
+         *         &quot;ruleActionType&quot;: &quot;SourceSchema&quot;,
+         *         &quot;ruleExpression&quot;: {
+         *             &quot;columns&quot;: [
+         *                 {
+         *                     &quot;name&quot;: &quot;id&quot;,
+         *                     &quot;category&quot;: &quot;normal&quot;,
+         *                     &quot;type&quot;: &quot;BIGINT&quot;
+         *                 },
+         *                 {
+         *                     &quot;name&quot;: &quot;decimal&quot;,
+         *                     &quot;category&quot;: &quot;normal&quot;,
+         *                     &quot;type&quot;: &quot;DECIMAL&quot;
+         *                 }
+         *             ]
+         *         }
+         *     },
+         *     {
+         *         &quot;ruleTargetType&quot;: &quot;Schema&quot;,
+         *         &quot;ruleName&quot;: &quot;Rename_Schema_3qWNOIsljtInvKJy&quot;,
+         *         &quot;ruleActionType&quot;: &quot;Rename&quot;,
+         *         &quot;ruleExpression&quot;: {
+         *             &quot;expression&quot;: &quot;public&quot;
+         *         }
+         *     },
+         *     {
+         *         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+         *         &quot;ruleName&quot;: &quot;Rename_Table_o3PVQq1aIKDGoVVW&quot;,
+         *         &quot;ruleActionType&quot;: &quot;Rename&quot;,
+         *         &quot;ruleExpression&quot;: {
+         *             &quot;expression&quot;: &quot;auto_holo_2661647_dst&quot;
+         *         }
+         *     },
+         *     {
+         *         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+         *         &quot;ruleName&quot;: &quot;DefineDstTableSettings_Table_BhJltOmOCIc81fzi&quot;,
+         *         &quot;ruleActionType&quot;: &quot;DefineDstTableSettings&quot;,
+         *         &quot;ruleExpression&quot;: {
+         *             &quot;ddlString&quot;: &quot;BEGIN;
+         * </code></pre>
+         * <p>CREATE TABLE IF NOT EXISTS public.auto_holo_2661647_dst (
+         *    id          BIGINT PRIMARY KEY,
+         *    &quot;decimal&quot;   DECIMAL(38,18)
+         * );
+         * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;time_to_live_in_seconds\&quot;, \&quot;3153600000\&quot;);
+         * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;orientation\&quot;, \&quot;column\&quot;);
+         * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;binlog.level\&quot;, \&quot;replica\&quot;);
+         * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;binlog.ttl\&quot;, \&quot;2592000\&quot;);
+         * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;bitmap_columns\&quot;, \&quot;&quot;text&quot;,&quot;char&quot;,&quot;varchar&quot;\&quot;);
+         * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;dictionary_encoding_columns\&quot;, \&quot;&quot;text&quot;:auto,&quot;bytea&quot;:auto,&quot;char&quot;:auto,&quot;varchar&quot;:auto\&quot;);
+         * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;distribution_key\&quot;, \&quot;&quot;id&quot;\&quot;);
+         * COMMIT;
+         * &quot;,
+         *                 &quot;ddlType&quot;: &quot;STRUCT&quot;
+         *             }
+         *         },
+         *         {
+         *             &quot;ruleTargetType&quot;: &quot;Table&quot;,
+         *             &quot;ruleName&quot;: &quot;ColumnMapping_Table_nP4hJPX1wh2W3fpo&quot;,
+         *             &quot;ruleActionType&quot;: &quot;ColumnMapping&quot;,
+         *             &quot;ruleExpression&quot;: {
+         *                 &quot;columnMapping&quot;: [
+         *                     {
+         *                         &quot;sourceColName&quot;: &quot;id&quot;,
+         *                         &quot;dstColName&quot;: &quot;id&quot;
+         *                     },
+         *                     {
+         *                         &quot;sourceColName&quot;: &quot;decimal&quot;,
+         *                         &quot;dstColName&quot;: &quot;decimal&quot;
+         *                     }
+         *                 ]
+         *             }
+         *         }
+         *     ],
+         *     &quot;migrationType&quot;: &quot;FullAndRealtimeIncremental&quot;,
+         *     &quot;destinationDataSourceSettings&quot;: [
+         *         {
+         *             &quot;dataSourceProperties&quot;: {</p>
+         * <pre><code>        },
+         *         &quot;dataSourceName&quot;: &quot;autotest_hologres&quot;
+         *     }
+         * ],
+         * &quot;sourceDataSourceType&quot;: &quot;Hologres&quot;
+         * </code></pre>
+         * <p>}</p>
          */
         public Builder fileSpec(String fileSpec) {
             this.putBodyParameter("FileSpec", fileSpec);
@@ -239,7 +426,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task.</p>
+         * <p>The ID of the synchronization job.</p>
          * 
          * <strong>example:</strong>
          * <p>11588</p>
@@ -251,7 +438,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * JobSettings.
+         * <p>The settings for the synchronization job. This includes DDL handling settings, data type mappings for columns between the source and destination, and runtime parameters.</p>
          */
         public Builder jobSettings(JobSettings jobSettings) {
             String jobSettingsShrink = shrink(jobSettings, "JobSettings", "json");
@@ -261,7 +448,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * <p>The task owner.</p>
+         * <p>The owner of the synchronization job.</p>
          * 
          * <strong>example:</strong>
          * <p>95279527</p>
@@ -273,7 +460,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the ID.</p>
+         * <p>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to get the workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -285,7 +472,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * ResourceSettings.
+         * <p>The resource settings.</p>
          */
         public Builder resourceSettings(ResourceSettings resourceSettings) {
             String resourceSettingsShrink = shrink(resourceSettings, "ResourceSettings", "json");
@@ -295,7 +482,10 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * TableMappings.
+         * <p>A list of object transformation mappings. Each mapping specifies a set of selection rules for source objects and a list of transformation rules that apply to the selected objects.</p>
+         * <blockquote>
+         * <p>[ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</p>
+         * </blockquote>
          */
         public Builder tableMappings(java.util.List<TableMappings> tableMappings) {
             String tableMappingsShrink = shrink(tableMappings, "TableMappings", "json");
@@ -305,7 +495,10 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * TransformationRules.
+         * <p>A list of transformation rule definitions.</p>
+         * <blockquote>
+         * <p>[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</p>
+         * </blockquote>
          */
         public Builder transformationRules(java.util.List<TransformationRules> transformationRules) {
             String transformationRulesShrink = shrink(transformationRules, "TransformationRules", "json");
@@ -374,7 +567,10 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * DestinationDataType.
+             * <p>The destination data type. Examples: <code>bigint</code>, <code>boolean</code>, <code>string</code>, <code>text</code>, <code>datetime</code>, <code>timestamp</code>, <code>decimal</code>, and <code>binary</code>. The supported data types depend on the destination data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder destinationDataType(String destinationDataType) {
                 this.destinationDataType = destinationDataType;
@@ -382,7 +578,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * SourceDataType.
+             * <p>The source data type. Examples: <code>bigint</code>, <code>boolean</code>, <code>string</code>, <code>text</code>, <code>datetime</code>, <code>timestamp</code>, <code>decimal</code>, and <code>binary</code>. The supported data types depend on the source data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder sourceDataType(String sourceDataType) {
                 this.sourceDataType = sourceDataType;
@@ -436,7 +635,10 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * ScheduleParameters.
+             * <p>The scheduling parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bizdate=$bizdate</p>
              */
             public Builder scheduleParameters(String scheduleParameters) {
                 this.scheduleParameters = scheduleParameters;
@@ -503,7 +705,18 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * Action.
+             * <p>The handling action. Valid values:</p>
+             * <ul>
+             * <li><p><code>Ignore</code>: Ignores the DDL message.</p>
+             * </li>
+             * <li><p><code>Critical</code>: Reports an error and terminates the synchronization job.</p>
+             * </li>
+             * <li><p><code>Normal</code>: Processes the DDL message normally.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Critical</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -511,7 +724,26 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The DDL type. Valid values:</p>
+             * <ul>
+             * <li><p><code>RenameColumn</code></p>
+             * </li>
+             * <li><p><code>ModifyColumn</code></p>
+             * </li>
+             * <li><p><code>CreateTable</code></p>
+             * </li>
+             * <li><p><code>TruncateTable</code></p>
+             * </li>
+             * <li><p><code>DropTable</code></p>
+             * </li>
+             * <li><p><code>DropColumn</code></p>
+             * </li>
+             * <li><p><code>AddColumn</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AddColumn</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -578,7 +810,28 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the setting. Valid values:</p>
+             * <ul>
+             * <li><p><code>src.offline.datasource.max.connection</code>: The maximum number of concurrent connections to the source for an offline synchronization job.</p>
+             * </li>
+             * <li><p><code>dst.offline.truncate</code>: Specifies whether to truncate the destination table before an offline synchronization job.</p>
+             * </li>
+             * <li><p><code>runtime.offline.speed.limit.enable</code>: Specifies whether to enable speed limiting for an offline synchronization job.</p>
+             * </li>
+             * <li><p><code>runtime.offline.concurrent</code>: The concurrency level for an offline synchronization job.</p>
+             * </li>
+             * <li><p><code>runtime.enable.auto.create.schema</code>: Specifies whether to automatically create a schema at the destination.</p>
+             * </li>
+             * <li><p><code>runtime.realtime.concurrent</code>: The concurrency level for a real-time synchronization job.</p>
+             * </li>
+             * <li><p><code>runtime.realtime.failover.minute.dataxcdc</code>: The number of minutes to wait before a failover retry.</p>
+             * </li>
+             * <li><p><code>runtime.realtime.failover.times.dataxcdc</code>: The number of failover retries.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>src.offline.datasource.max.connection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -586,7 +839,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -692,7 +948,47 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * ChannelSettings.
+             * <p>The job settings for specific data synchronization channels. You can apply special configurations to certain channels. Currently, <code>Holo2Holo</code> (synchronization from Hologres to Hologres) and <code>Holo2Kafka</code> (synchronization from Hologres to Kafka) are supported.</p>
+             * <ol>
+             * <li><code>Holo2Kafka</code></li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}}</code>
+             * <code>kafkaClientProperties</code>: The Kafka producer parameters used when writing to Kafka.</p>
+             * </li>
+             * <li><p><code>keyColumns</code>: The columns whose values are written to the key of a Kafka message.</p>
+             * </li>
+             * <li><p><code>writeMode</code>: The format for writing data to Kafka. Valid values: <code>json</code> and <code>canal</code>.</p>
+             * </li>
+             * </ul>
+             * <ol start="2">
+             * <li><code>Holo2Holo</code></li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</code></p>
+             * </li>
+             * <li><p><code>conflictMode</code>: The conflict handling policy for writing data to Hologres. Valid values: <code>replace</code> (overwrite) and <code>ignore</code> (ignore).</p>
+             * </li>
+             * <li><p><code>writeMode</code>: The method for writing data to Hologres. Valid values: <code>replay</code> and <code>insert</code>.</p>
+             * </li>
+             * <li><p><code>dynamicColumnAction</code>: The action for handling dynamic columns when writing data to Hologres. Valid values: <code>replay</code>, <code>insert</code>, and <code>ignore</code>.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;structInfo&quot;: &quot;MANAGED&quot;,
+             *       &quot;storageType&quot;: &quot;TEXTFILE&quot;,
+             *       &quot;writeMode&quot;: &quot;APPEND&quot;,
+             *       &quot;partitionColumns&quot;: [
+             *             {
+             *                   &quot;columnName&quot;: &quot;pt&quot;,
+             *                   &quot;columnType&quot;: &quot;STRING&quot;,
+             *                   &quot;comment&quot;: &quot;&quot;
+             *             }
+             *       ],
+             *       &quot;fieldDelimiter&quot;: &quot;&quot;
+             * }</p>
              */
             public Builder channelSettings(String channelSettings) {
                 this.channelSettings = channelSettings;
@@ -700,7 +996,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ColumnDataTypeSettings.
+             * <p>An array of column data type mappings.</p>
+             * <blockquote>
+             * <p>[&quot;ColumnDataTypeSettings&quot;:[ { &quot;SourceDataType&quot;:&quot;Bigint&quot;, &quot;DestinationDataType&quot;:&quot;Text&quot; } ]</p>
+             * </blockquote>
              */
             public Builder columnDataTypeSettings(java.util.List<ColumnDataTypeSettings> columnDataTypeSettings) {
                 this.columnDataTypeSettings = columnDataTypeSettings;
@@ -708,7 +1007,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * CycleScheduleSettings.
+             * <p>The settings for periodic scheduling.</p>
              */
             public Builder cycleScheduleSettings(CycleScheduleSettings cycleScheduleSettings) {
                 this.cycleScheduleSettings = cycleScheduleSettings;
@@ -716,7 +1015,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * DdlHandlingSettings.
+             * <p>An array of DDL handling settings.</p>
+             * <blockquote>
+             * <p>[&quot;DDLHandlingSettings&quot;:[ { &quot;Type&quot;:&quot;Insert&quot;, &quot;Action&quot;:&quot;Normal&quot; } ]</p>
+             * </blockquote>
              */
             public Builder ddlHandlingSettings(java.util.List<DdlHandlingSettings> ddlHandlingSettings) {
                 this.ddlHandlingSettings = ddlHandlingSettings;
@@ -724,7 +1026,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuntimeSettings.
+             * <p>The runtime settings.</p>
              */
             public Builder runtimeSettings(java.util.List<RuntimeSettings> runtimeSettings) {
                 this.runtimeSettings = runtimeSettings;
@@ -791,7 +1093,10 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * RequestedCu.
+             * <p>The number of CUs for the Data Integration resource group used by the offline synchronization job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder requestedCu(Double requestedCu) {
                 this.requestedCu = requestedCu;
@@ -799,7 +1104,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ResourceGroupIdentifier.
+             * <p>The name of the Data Integration resource group used by the offline synchronization job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_111_222</p>
              */
             public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
                 this.resourceGroupIdentifier = resourceGroupIdentifier;
@@ -866,7 +1174,10 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * RequestedCu.
+             * <p>The number of CUs for the Data Integration resource group used by the real-time synchronization job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder requestedCu(Double requestedCu) {
                 this.requestedCu = requestedCu;
@@ -874,7 +1185,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ResourceGroupIdentifier.
+             * <p>The name of the Data Integration resource group used by the real-time synchronization job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_111_222</p>
              */
             public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
                 this.resourceGroupIdentifier = resourceGroupIdentifier;
@@ -941,7 +1255,10 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * RequestedCu.
+             * <p>The number of CUs for the scheduling resource group used by the offline synchronization job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder requestedCu(Double requestedCu) {
                 this.requestedCu = requestedCu;
@@ -949,7 +1266,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ResourceGroupIdentifier.
+             * <p>The name of the scheduling resource group used by the offline synchronization job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_222_333</p>
              */
             public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
                 this.resourceGroupIdentifier = resourceGroupIdentifier;
@@ -1029,7 +1349,7 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * OfflineResourceSettings.
+             * <p>The resource settings for the offline synchronization job.</p>
              */
             public Builder offlineResourceSettings(OfflineResourceSettings offlineResourceSettings) {
                 this.offlineResourceSettings = offlineResourceSettings;
@@ -1037,7 +1357,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RealtimeResourceSettings.
+             * <p>The resource settings for the real-time synchronization job.</p>
              */
             public Builder realtimeResourceSettings(RealtimeResourceSettings realtimeResourceSettings) {
                 this.realtimeResourceSettings = realtimeResourceSettings;
@@ -1045,7 +1365,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ScheduleResourceSettings.
+             * <p>The scheduling resource settings.</p>
              */
             public Builder scheduleResourceSettings(ScheduleResourceSettings scheduleResourceSettings) {
                 this.scheduleResourceSettings = scheduleResourceSettings;
@@ -1138,7 +1458,10 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * Action.
+             * <p>The selection action. Valid values: <code>Include</code> and <code>Exclude</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Include</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1146,7 +1469,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * Expression.
+             * <p>The expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_table_1</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -1154,7 +1480,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ExpressionType.
+             * <p>The type of the expression. Valid values: <code>Exact</code> and <code>Regex</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exact</p>
              */
             public Builder expressionType(String expressionType) {
                 this.expressionType = expressionType;
@@ -1162,7 +1491,18 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ObjectType.
+             * <p>The object type. Valid values:</p>
+             * <ul>
+             * <li><p><code>Table</code> (table)</p>
+             * </li>
+             * <li><p><code>Schema</code> (schema)</p>
+             * </li>
+             * <li><p><code>Database</code> (database)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -1242,7 +1582,20 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * RuleActionType.
+             * <p>The type of the action. Valid values:</p>
+             * <ul>
+             * <li><p><code>DefinePrimaryKey</code>: Defines a primary key.</p>
+             * </li>
+             * <li><p><code>Rename</code>: Renames an object.</p>
+             * </li>
+             * <li><p><code>AddColumn</code>: Adds a column.</p>
+             * </li>
+             * <li><p><code>HandleDml</code>: Handles DML operations.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Rename</p>
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
@@ -1250,7 +1603,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the transformation rule. The name must be unique for a specific combination of <code>RuleActionType</code> and <code>RuleTargetType</code> and can be up to 50 characters long.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rename_rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1258,7 +1614,18 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleTargetType.
+             * <p>The type of the target object. Valid values:</p>
+             * <ul>
+             * <li><p><code>Table</code> (table)</p>
+             * </li>
+             * <li><p><code>Schema</code> (schema)</p>
+             * </li>
+             * <li><p><code>Database</code> (database)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder ruleTargetType(String ruleTargetType) {
                 this.ruleTargetType = ruleTargetType;
@@ -1325,7 +1692,7 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * SourceObjectSelectionRules.
+             * <p>The rules for selecting source objects. Each rule can select a different type of source object to synchronize, such as a source database or table.</p>
              */
             public Builder sourceObjectSelectionRules(java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules) {
                 this.sourceObjectSelectionRules = sourceObjectSelectionRules;
@@ -1333,7 +1700,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * TransformationRules.
+             * <p>The transformation rules for the source objects.</p>
              */
             public Builder transformationRules(java.util.List<TableMappingsTransformationRules> transformationRules) {
                 this.transformationRules = transformationRules;
@@ -1426,7 +1793,26 @@ public class UpdateDIJobRequest extends Request {
             } 
 
             /**
-             * RuleActionType.
+             * <p>The type of the action. Valid values:</p>
+             * <ul>
+             * <li><p><code>DefinePrimaryKey</code>: Defines a primary key.</p>
+             * </li>
+             * <li><p><code>Rename</code>: Renames an object.</p>
+             * </li>
+             * <li><p><code>AddColumn</code>: Adds a column.</p>
+             * </li>
+             * <li><p><code>HandleDml</code>: Handles DML operations.</p>
+             * </li>
+             * <li><p><code>DefineIncrementalCondition</code>: Defines an incremental condition.</p>
+             * </li>
+             * <li><p><code>DefineCycleScheduleSettings</code>: Defines periodic scheduling settings.</p>
+             * </li>
+             * <li><p><code>DefinePartitionKey</code>: Defines a partition key.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Rename</p>
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
@@ -1434,7 +1820,89 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleExpression.
+             * <p>The rule expression, specified as a JSON string.</p>
+             * <ol>
+             * <li>Rename rule (<code>Rename</code>)</li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;}</code></p>
+             * </li>
+             * <li><p><code>expression</code>: The expression for the rename transformation rule. The expression supports variables, including <code>${srcDatasourceName}</code> (source data source name), <code>${srcDatabaseName}</code> (source database name), and <code>${srcTableName}</code> (source table name).</p>
+             * </li>
+             * </ul>
+             * <ol start="2">
+             * <li>Add column rule (<code>AddColumn</code>)</li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</code></p>
+             * </li>
+             * <li><p>If this rule is not specified, no columns are added.</p>
+             * </li>
+             * <li><p><code>columnName</code>: The name of the column to add.</p>
+             * </li>
+             * <li><p><code>columnValueType</code>: The value type of the added column. Valid values: <code>Constant</code> and <code>Variable</code>.</p>
+             * </li>
+             * <li><p><code>columnValue</code>: The value of the added column. If <code>columnValueType</code> is <code>Constant</code>, the value is a custom constant of the string type. If <code>columnValueType</code> is <code>Variable</code>, the value is a built-in variable. Valid built-in variables: <code>EXECUTE_TIME</code> (execution time, Long type), <code>DB_NAME_SRC</code> (source database name, String type), <code>DATASOURCE_NAME_SRC</code> (source data source name, String type), <code>TABLE_NAME_SRC</code> (source table name, String type), <code>DB_NAME_DEST</code> (destination database name, String type), <code>DATASOURCE_NAME_DEST</code> (destination data source name, String type), <code>TABLE_NAME_DEST</code> (destination table name, String type), and <code>DB_NAME_SRC_TRANSED</code> (transformed database name, String type).</p>
+             * </li>
+             * </ul>
+             * <ol start="3">
+             * <li>Define primary key rule (<code>DefinePrimaryKey</code>)</li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</code></p>
+             * </li>
+             * <li><p>If this rule is not specified, the primary key of the source is used by default.</p>
+             * </li>
+             * <li><p>Data Integration does not modify the structure of an existing destination table. If a specified primary key column does not exist in the table, the synchronization job fails.</p>
+             * </li>
+             * <li><p>When a destination table is automatically created, Data Integration includes the defined primary key columns in the structure. If a specified primary key column is not in the destination column set, the synchronization job fails.</p>
+             * </li>
+             * </ul>
+             * <ol start="4">
+             * <li>DML handling rule (<code>HandleDml</code>)</li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</code></p>
+             * </li>
+             * <li><p>If this rule is not specified, the default action for <code>Insert</code>, <code>Update</code>, and <code>Delete</code> operations is <code>Normal</code>.</p>
+             * </li>
+             * <li><p><code>dmlType</code>: The DML operation type. Valid values: <code>Insert</code>, <code>Update</code>, and <code>Delete</code>.</p>
+             * </li>
+             * <li><p><code>dmlAction</code>: The DML handling policy. Valid values: <code>Normal</code> (process the operation), <code>Ignore</code> (ignore the operation), <code>Filter</code> (conditionally process the operation, used when <code>dmlType</code> is <code>Update</code> or <code>Delete</code>), and <code>LogicalDelete</code> (perform a logical delete).</p>
+             * </li>
+             * <li><p><code>filterCondition</code>: The DML filter condition, used when <code>dmlAction</code> is <code>Filter</code>.</p>
+             * </li>
+             * </ul>
+             * <ol start="5">
+             * <li>Incremental condition rule (<code>DefineIncrementalCondition</code>)</li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;where&quot;:&quot;id &gt; 0&quot;}</code></p>
+             * </li>
+             * <li><p>The <code>WHERE</code> clause for the incremental condition.</p>
+             * </li>
+             * </ul>
+             * <ol start="6">
+             * <li>Periodic scheduling rule (<code>DefineCycleScheduleSettings</code>)</li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;cronExpress&quot;:&quot; * * * * * *&quot;, &quot;cycleType&quot;:&quot;1&quot;}</code></p>
+             * </li>
+             * <li><p>Specifies the scheduling parameters for a periodic job.</p>
+             * </li>
+             * </ul>
+             * <ol start="7">
+             * <li>Define partition key rule (<code>DefinePartitionKey</code>)</li>
+             * </ol>
+             * <ul>
+             * <li><p>Example: <code>{&quot;columns&quot;:[&quot;id&quot;]}</code></p>
+             * </li>
+             * <li><p>Specifies the partition key.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}</p>
              */
             public Builder ruleExpression(String ruleExpression) {
                 this.ruleExpression = ruleExpression;
@@ -1442,7 +1910,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the transformation rule. The name must be unique for a specific combination of <code>RuleActionType</code> and <code>RuleTargetType</code> and can be up to 50 characters long.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rename_rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1450,7 +1921,18 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleTargetType.
+             * <p>The type of the target object. Valid values:</p>
+             * <ul>
+             * <li><p><code>Table</code> (table)</p>
+             * </li>
+             * <li><p><code>Schema</code> (schema)</p>
+             * </li>
+             * <li><p><code>Database</code> (database)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder ruleTargetType(String ruleTargetType) {
                 this.ruleTargetType = ruleTargetType;

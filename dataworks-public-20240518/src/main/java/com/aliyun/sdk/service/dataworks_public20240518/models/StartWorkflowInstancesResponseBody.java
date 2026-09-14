@@ -67,7 +67,7 @@ public class StartWorkflowInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>22C97E95-F023-56B5-8852-B1A77A17****</p>
@@ -78,7 +78,7 @@ public class StartWorkflowInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the batch operation, which is in the MAP structure. The workflow instance ID serves as a key, and the result serves as a value.</p>
+         * <p>The result information of the batch operation. The structure is a map in which the key is the workflow instance ID and the value is the result information.</p>
          */
         public Builder successInfo(java.util.Map<String, SuccessInfoValue> successInfo) {
             this.successInfo = successInfo;

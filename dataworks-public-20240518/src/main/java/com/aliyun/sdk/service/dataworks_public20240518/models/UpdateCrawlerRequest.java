@@ -153,7 +153,7 @@ public class UpdateCrawlerRequest extends Request {
         }
 
         /**
-         * EnableAiComment.
+         * <p>Specifies whether to enable AI metadata description. This parameter is supported only when SupportAiComment returned by GetCrawlerTypeCapabilities is set to true. If this parameter is not specified, the existing value remains unchanged.</p>
          */
         public Builder enableAiComment(Boolean enableAiComment) {
             this.putBodyParameter("EnableAiComment", enableAiComment);
@@ -162,6 +162,7 @@ public class UpdateCrawlerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the metadata crawler. You can call ListCrawlers to query crawler IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +175,7 @@ public class UpdateCrawlerRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The extension configurations for the crawler type. Only the specified configuration items are updated. Unspecified configuration items remain unchanged. The supported keys and values are determined by the SupportedOptionKeys returned by GetCrawlerTypeCapabilities.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             String optionsShrink = shrink(options, "Options", "json");
@@ -184,7 +185,10 @@ public class UpdateCrawlerRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the Serverless 2.0 resource group used to run the collection task. Whether this parameter is supported and whether it is required depend on the capabilities returned by GetCrawlerTypeCapabilities. If this parameter is not specified, the existing value remains unchanged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Serverless_res_group_1234567890123456_1234567890</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -193,7 +197,7 @@ public class UpdateCrawlerRequest extends Request {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling configuration. If this parameter is specified, the scheduling method is updated. If this parameter is not specified, the existing value remains unchanged.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -203,7 +207,7 @@ public class UpdateCrawlerRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The collection scope configuration. If this parameter is specified, the collection scope is updated. If this parameter is not specified, the existing value remains unchanged.</p>
          */
         public Builder scope(Scope scope) {
             String scopeShrink = shrink(scope, "Scope", "json");
@@ -273,7 +277,10 @@ public class UpdateCrawlerRequest extends Request {
             } 
 
             /**
-             * CronExpress.
+             * <p>The six-field cron expression for periodic scheduling. This parameter is required when Type is set to NORMAL. The seconds field must be 0, and the scheduling frequency cannot exceed once per hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 2 ? * *</p>
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -281,6 +288,7 @@ public class UpdateCrawlerRequest extends Request {
             }
 
             /**
+             * <p>The scheduling type. MANUAL indicates manual execution. NORMAL indicates periodic scheduling. Data sources in the development environment support only MANUAL. Whether NORMAL is available depends on the SupportSchedule value returned by GetCrawlerTypeCapabilities.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -365,7 +373,10 @@ public class UpdateCrawlerRequest extends Request {
             } 
 
             /**
-             * ExcludeRegex.
+             * <p>The regular expression used to exclude objects from the collection scope. This parameter is supported only when SupportExcludeRegex returned by GetCrawlerTypeCapabilities is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^tmp_.*</p>
              */
             public Builder excludeRegex(String excludeRegex) {
                 this.excludeRegex = excludeRegex;
@@ -373,7 +384,7 @@ public class UpdateCrawlerRequest extends Request {
             }
 
             /**
-             * Items.
+             * <p>The list of database names. This parameter is supported only when Unit is set to DATABASE. A maximum of 1,000 entries are allowed. Names cannot be empty or duplicate.</p>
              */
             public Builder items(java.util.List<String> items) {
                 this.items = items;
@@ -381,6 +392,7 @@ public class UpdateCrawlerRequest extends Request {
             }
 
             /**
+             * <p>The collection scope granularity. Valid values are determined by the SupportedScopeUnits returned by GetCrawlerTypeCapabilities.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

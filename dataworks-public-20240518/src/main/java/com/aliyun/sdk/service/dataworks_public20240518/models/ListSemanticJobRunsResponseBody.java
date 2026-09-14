@@ -80,7 +80,7 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The paginated run record results. Use the JobRunId to download the results of a specific run, and use the ExecutorJobId to query details, retrieve logs, or stop a run.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +204,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * ExecutorJobId.
+             * <p>The executor job ID. Pass this value as the ExecutorJobId parameter to GetSemanticJobDetail, GetSemanticJobLog, or KillSemanticJob.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-job-demo</p>
              */
             public Builder executorJobId(String executorJobId) {
                 this.executorJobId = executorJobId;
@@ -209,7 +215,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the run record was created. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700000000000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -217,7 +226,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the job to which this run belongs. You can use this value to rerun the job, query run records, or download results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic-job-demo</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -225,7 +237,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * JobRunId.
+             * <p>The semantic job run ID. Pass this value as the JobRunId parameter to DownloadSemanticResults to download the results of this run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01H00000000000000000000000</p>
              */
             public Builder jobRunId(String jobRunId) {
                 this.jobRunId = jobRunId;
@@ -233,7 +248,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user who submitted this run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-demo</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -326,7 +344,7 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * JobRuns.
+             * <p>The list of run records.</p>
              */
             public Builder jobRuns(java.util.List<JobRuns> jobRuns) {
                 this.jobRuns = jobRuns;
@@ -334,7 +352,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number of the returned page, starting from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -342,7 +363,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page in the current response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -350,7 +374,10 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of run records that match the current job criteria.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

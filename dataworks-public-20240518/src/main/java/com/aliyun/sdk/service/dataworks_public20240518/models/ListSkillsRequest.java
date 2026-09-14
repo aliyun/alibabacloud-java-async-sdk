@@ -124,7 +124,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +136,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page of results. Omit this for the first request. For subsequent requests, set this to the <code>NextToken</code> from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -142,7 +148,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * Q.
+         * <p>The search keyword for a fuzzy match on Skill names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analysis</p>
          */
         public Builder q(String q) {
             this.putBodyParameter("Q", q);
@@ -151,7 +160,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>Filters the results by visibility level. You can specify multiple values.</p>
          */
         public Builder visibility(java.util.List<String> visibility) {
             String visibilityShrink = shrink(visibility, "Visibility", "json");

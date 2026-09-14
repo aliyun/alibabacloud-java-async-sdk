@@ -67,7 +67,7 @@ public class CreateDataQualityEvaluationTaskInstanceResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The ID of the data quality monitoring instance.</p>
+         * <p>The data quality monitoring instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>22130</p>

@@ -126,7 +126,7 @@ public class UpdateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The description of the tag.</p>
+         * <p>The label description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a description.</p>
@@ -138,7 +138,7 @@ public class UpdateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The tag key.</p>
+         * <p>The label key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class UpdateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The tag administrators.</p>
+         * <p>The list of label administrators.</p>
          */
         public Builder managers(java.util.List<String> managers) {
             String managersShrink = shrink(managers, "Managers", "json");
@@ -161,7 +161,7 @@ public class UpdateDataAssetTagRequest extends Request {
         }
 
         /**
-         * <p>The tag values.</p>
+         * <p>The list of label values.</p>
          */
         public Builder values(java.util.List<String> values) {
             String valuesShrink = shrink(values, "Values", "json");

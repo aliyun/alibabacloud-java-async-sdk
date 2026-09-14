@@ -116,7 +116,7 @@ public class UpdateWorkflowDefinitionRequest extends Request {
         /**
          * <p>The unique identifier of the Data Studio workflow.</p>
          * <blockquote>
-         * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -145,7 +145,7 @@ public class UpdateWorkflowDefinitionRequest extends Request {
         /**
          * <p>The unique identifier of the Data Studio workflow.</p>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -154,9 +154,6 @@ public class UpdateWorkflowDefinitionRequest extends Request {
          *     &quot;kind&quot;: &quot;CycleWorkflow&quot;,
          *     &quot;version&quot;: &quot;1.1.0&quot;,
          *     &quot;spec&quot;: {
-         *         &quot;name&quot;: &quot;OpenAPI Test Workflow Demo&quot;,
-         *         &quot;type&quot;: &quot;CycleWorkflow&quot;,
-         *         &quot;id&quot;: &quot;652567824470354XXXX&quot;,
          *         &quot;workflows&quot;: [
          *             {
          *                 &quot;id&quot;: &quot;652567824470354XXXX&quot;,
@@ -182,8 +179,7 @@ public class UpdateWorkflowDefinitionRequest extends Request {
          *                     &quot;rerunInterval&quot;: 180000,
          *                     &quot;failureStrategy&quot;: &quot;Break&quot;
          *                 },
-         *                 &quot;name&quot;: &quot;OpenAPI Test Workflow Demo&quot;,
-         *                 &quot;inputs&quot;: {},
+         *                 &quot;name&quot;: &quot;OpenAPI_Test_Workflow_Demo&quot;,
          *                 &quot;outputs&quot;: {
          *                     &quot;nodeOutputs&quot;: [
          *                         {
@@ -193,7 +189,6 @@ public class UpdateWorkflowDefinitionRequest extends Request {
          *                         }
          *                     ]
          *                 },
-         *                 &quot;nodes&quot;: [],
          *                 &quot;dependencies&quot;: []
          *             }
          *         ]

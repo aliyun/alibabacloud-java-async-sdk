@@ -128,11 +128,11 @@ public class CreateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The alert condition of the data quality monitoring rule.</p>
+         * <p>The alert condition of the data quality monitoring alert rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>results.any { r -&gt; r.status == &quot;fail&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
+         * <p>results.any { r -&gt; r.status == \&quot;fail\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
          */
         public Builder condition(String condition) {
             this.putBodyParameter("Condition", condition);
@@ -165,7 +165,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The monitored target of the data quality monitoring rule.</p>
+         * <p>The monitored target of the data quality monitoring alert rule.</p>
          * <p>This parameter is required.</p>
          */
         public Builder target(Target target) {
@@ -249,7 +249,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>Additional configurations required for the alert recipients. When ReceiverType is DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
+             * <p>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to @ all members.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;atAll&quot;:true}</p>
@@ -260,7 +260,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of alert recipients.</p>
+             * <p>The object type of the alerting accept object.</p>
              * <ul>
              * <li>AliUid</li>
              * <li>WebhookUrl</li>
@@ -282,7 +282,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The value of alert recipients.</p>
+             * <p>The values of the alert recipients.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -351,7 +351,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of alert channels. You can set both <code>Email</code> and <code>Sms</code> at the same time. In other cases, only one channel can be set.</p>
+             * <p>The list of channels. You can set both <code>Email</code> and <code>Sms</code> at the same time. In other cases, only one channel can be set.</p>
              * <p>This parameter is required.</p>
              */
             public Builder channels(java.util.List<String> channels) {
@@ -430,7 +430,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of monitored target IDs. Currently, only one ID can be set.</p>
+             * <p>The list of monitored target IDs. Currently, only one ID can be specified.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ids(java.util.List<Long> ids) {
@@ -439,7 +439,7 @@ public class CreateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of the monitored target. Only DataQualityScan is supported.</p>
+             * <p>The type of the monitored object. Only DataQualityScan is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

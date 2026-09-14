@@ -127,7 +127,10 @@ public class UpdateProjectRoleRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -136,6 +139,7 @@ public class UpdateProjectRoleRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the custom role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +152,7 @@ public class UpdateProjectRoleRequest extends Request {
         }
 
         /**
+         * <p>The list of DataWorks module permissions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder modulePermissions(java.util.List<ModulePermissions> modulePermissions) {
@@ -158,6 +163,8 @@ public class UpdateProjectRoleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Storage Management page to obtain the ID.</p>
+         * <p>This parameter specifies the DataWorks workspace for this API invocation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +236,30 @@ public class UpdateProjectRoleRequest extends Request {
             } 
 
             /**
-             * ModuleId.
+             * <p>The DataWorks module ID. Valid values:</p>
+             * <ul>
+             * <li>2: HoloStudio</li>
+             * <li>3: StreamStudio</li>
+             * <li>4: Deploy Management</li>
+             * <li>6: Data Protection Umbrella</li>
+             * <li>7: Data Map</li>
+             * <li>8: DataService Studio</li>
+             * <li>9: Data Integration</li>
+             * <li>10: Data Modeling (DataBlau DDM)</li>
+             * <li>11: DataStudio</li>
+             * <li>12: Data Quality</li>
+             * <li>13: Data Governance Center</li>
+             * <li>14: Operation Center</li>
+             * <li>15: Resource Optimization</li>
+             * <li>16: Migration Assistant</li>
+             * <li>17: Data Analytics</li>
+             * <li>18: Approval Center</li>
+             * <li>19: Security Center</li>
+             * <li>20: Intelligent Data Modeling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder moduleId(Long moduleId) {
                 this.moduleId = moduleId;
@@ -237,7 +267,15 @@ public class UpdateProjectRoleRequest extends Request {
             }
 
             /**
-             * PermissionType.
+             * <p>The permission type. Valid values:</p>
+             * <ul>
+             * <li>Write: Edit.</li>
+             * <li>Read: Read-only.</li>
+             * <li>NotSet: Not controlled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Write</p>
              */
             public Builder permissionType(String permissionType) {
                 this.permissionType = permissionType;

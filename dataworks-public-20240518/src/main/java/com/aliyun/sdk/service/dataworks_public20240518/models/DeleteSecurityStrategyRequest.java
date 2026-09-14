@@ -83,7 +83,11 @@ public class DeleteSecurityStrategyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the security strategy.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

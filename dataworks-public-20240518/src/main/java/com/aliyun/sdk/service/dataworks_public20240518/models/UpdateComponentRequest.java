@@ -152,7 +152,7 @@ public class UpdateComponentRequest extends Request {
          *             {
          *                 &quot;id&quot;: &quot;568780096083*******&quot;,
          *                 &quot;script&quot;: {
-         *                     &quot;content&quot;: &quot;select &quot;@@{para1}&quot;, &quot;@@{para2}&quot;&quot;
+         *                     &quot;content&quot;: &quot;select \&quot;@@{para1}\&quot;, \&quot;@@{para2}\&quot;&quot;
          *                 }
          *             }
          *         ]

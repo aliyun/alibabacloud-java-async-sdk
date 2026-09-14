@@ -80,7 +80,10 @@ public class BuildImageResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result of the API request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +91,10 @@ public class BuildImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class BuildImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +171,10 @@ public class BuildImageResponseBody extends TeaModel {
             } 
 
             /**
-             * ProcessId.
+             * <p>The image build execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -170,7 +182,10 @@ public class BuildImageResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the build was triggered successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

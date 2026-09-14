@@ -98,6 +98,7 @@ public class RollbackImageRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class RollbackImageRequest extends Request {
         }
 
         /**
+         * <p>The image version to roll back to.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

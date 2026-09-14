@@ -184,7 +184,7 @@ public class Table extends TeaModel {
         } 
 
         /**
-         * BusinessMetadata.
+         * <p>The business metadata related to DataWorks, including usage instructions, tags, categories, upstream production nodes, and extended information.</p>
          */
         public Builder businessMetadata(BusinessMetadata businessMetadata) {
             this.businessMetadata = businessMetadata;
@@ -192,7 +192,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * Comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试表</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -200,7 +203,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time, in millisecond-level timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736852168000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -208,7 +214,29 @@ public class Table extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+         * <p>The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}:${PatternName}:${TableName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
+         * <blockquote>
+         * <p>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name. Projects with the three-layer model enabled require a schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</p>
+         * </blockquote>
+         * <p>The following examples show the ID formats for common types:</p>
+         * <p><code>maxcompute-table:::project_name:[schema_name]:table_name</code></p>
+         * <p><code>dlf-table::catalog_id:database_name::table_name</code></p>
+         * <p><code>hms-table:instance_id::database_name::table_name</code></p>
+         * <p><code>holo-table:instance_id::database_name:schema_name:table_name</code></p>
+         * <p><code>mysql-table:(instance_id|encoded_jdbc_url)::database_name::table_name</code></p>
+         * <blockquote>
+         * <p>Where<br><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For the maxcompute type, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.<br><code>table_name</code>: The table name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table:123456XXX::test_project::test_tbl
+         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
+         * hms-table:c-abc123xxx::test_db::test_tbl
+         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -216,7 +244,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time, in millisecond-level timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736852168000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -224,7 +255,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tbl</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -232,7 +266,36 @@ public class Table extends TeaModel {
         }
 
         /**
-         * ParentMetaEntityId.
+         * <p>The parent-level metadata entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+         * <ul>
+         * <li><p>For types that support schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle, where the maxcompute type requires the Layer 3 model to be enabled for the project</code>), ParentMetaEntityId is the database pattern to which the table belongs. The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}:${PatternName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
+         * </li>
+         * <li><p>For other types, ParentMetaEntityId is the database to which the table belongs. The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</p>
+         * </blockquote>
+         * <p>The following examples show the ParentMetaEntityId formats for common types:</p>
+         * <p><code>maxcompute-project:::project_name</code></p>
+         * <p><code>maxcompute-schema:::project_name:schema_name</code> (only when the three-layer model is enabled for the project)</p>
+         * <p><code>dlf-database::catalog_id:database_name</code></p>
+         * <p><code>hms-database:instance_id::database_name</code></p>
+         * <p><code>holo-schema:instance_id::database_name:schema_name</code></p>
+         * <p><code>mysql-database:(instance_id|encoded_jdbc_url)::database_name</code></p>
+         * <blockquote>
+         * <p>Where<br><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-schema:123456XXX::test_project_with_schema:default
+         * maxcompute-project:123456XXX::test_project_without_schema
+         * dlf-database:123456XXX:test_catalog:test_db
+         * hms-database:c-abc123xxx::test_db
+         * holo-schema:h-abc123xxx::test_db:test_schema</p>
          */
         public Builder parentMetaEntityId(String parentMetaEntityId) {
             this.parentMetaEntityId = parentMetaEntityId;
@@ -240,7 +303,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * PartitionKeys.
+         * <p>The list of partition keys. This is empty for non-partitioned tables.</p>
          */
         public Builder partitionKeys(java.util.List<String> partitionKeys) {
             this.partitionKeys = partitionKeys;
@@ -256,7 +319,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * TableType.
+         * <p>The table type. The valid values depend on the metadata collector type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -264,7 +330,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * TechnicalMetadata.
+         * <p>The technical metadata.</p>
          */
         public Builder technicalMetadata(TechnicalMetadata technicalMetadata) {
             this.technicalMetadata = technicalMetadata;
@@ -343,7 +409,10 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CATEGORY.456</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -351,7 +420,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试类目</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,7 +431,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent category ID. This parameter can be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CATEGORY.123</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -465,7 +540,14 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * EnvType.
+             * <p>The environment type. Valid values:</p>
+             * <ul>
+             * <li>Prod: Production environment.</li>
+             * <li>Dev: Development environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -473,7 +555,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * FavorCount.
+             * <p>The favorite count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder favorCount(Long favorCount) {
                 this.favorCount = favorCount;
@@ -481,7 +566,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -489,7 +577,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * ReadCount.
+             * <p>The read count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder readCount(Long readCount) {
                 this.readCount = readCount;
@@ -497,7 +588,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * ViewCount.
+             * <p>The view count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder viewCount(Long viewCount) {
                 this.viewCount = viewCount;
@@ -564,7 +658,10 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. This parameter cannot be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -572,7 +669,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value. This parameter can be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -639,7 +739,10 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -647,7 +750,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -766,7 +872,7 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * Categories.
+             * <p>The list of categories.</p>
              */
             public Builder categories(java.util.List<java.util.List<Categories>> categories) {
                 this.categories = categories;
@@ -774,7 +880,7 @@ public class Table extends TeaModel {
             }
 
             /**
-             * CustomAttributes.
+             * <p>The custom attribute values, where key is the custom attribute identifier and value is the list of attribute values.</p>
              */
             public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
                 this.customAttributes = customAttributes;
@@ -782,7 +888,7 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The extension information. Currently only supported for MaxCompute type.</p>
              */
             public Builder extension(Extension extension) {
                 this.extension = extension;
@@ -790,7 +896,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Readme.
+             * <p>The usage instructions.</p>
+             * 
+             * <strong>example:</strong>
+             * <h2>使用说明</h2>
              */
             public Builder readme(String readme) {
                 this.readme = readme;
@@ -798,7 +907,7 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -806,7 +915,7 @@ public class Table extends TeaModel {
             }
 
             /**
-             * UpstreamTasks.
+             * <p>The list of upstream nodes.</p>
              */
             public Builder upstreamTasks(java.util.List<UpstreamTasks> upstreamTasks) {
                 this.upstreamTasks = upstreamTasks;
@@ -938,7 +1047,10 @@ public class Table extends TeaModel {
             } 
 
             /**
-             * Compressed.
+             * <p>Indicates whether the table is compressed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder compressed(Boolean compressed) {
                 this.compressed = compressed;
@@ -946,7 +1058,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * InputFormat.
+             * <p>The input format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
              */
             public Builder inputFormat(String inputFormat) {
                 this.inputFormat = inputFormat;
@@ -954,7 +1069,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The storage location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/test_tbl</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -962,7 +1080,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * OutputFormat.
+             * <p>The output format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat</p>
              */
             public Builder outputFormat(String outputFormat) {
                 this.outputFormat = outputFormat;
@@ -970,7 +1091,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -978,7 +1102,7 @@ public class Table extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The parameter information.</p>
              */
             public Builder parameters(java.util.Map<String, String> parameters) {
                 this.parameters = parameters;
@@ -986,7 +1110,10 @@ public class Table extends TeaModel {
             }
 
             /**
-             * SerializationLibrary.
+             * <p>The class used by SerDe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe</p>
              */
             public Builder serializationLibrary(String serializationLibrary) {
                 this.serializationLibrary = serializationLibrary;

@@ -70,7 +70,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
          * <p>The request ID. You can troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>12123960-CB2C-5086-868E-C6C1D024XXXX</p>
+         * <p>12123960-CB2C-5086-868E-C6C1D024****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

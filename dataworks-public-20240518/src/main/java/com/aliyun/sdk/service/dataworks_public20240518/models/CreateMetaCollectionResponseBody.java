@@ -70,7 +70,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
          * <p>The collection ID returned after a successful creation.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>4as3dasf654a</p>
          */
         public Builder id(String id) {
             this.id = id;

@@ -181,7 +181,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * BundleUrl.
+         * <p>The downloadable URL (HTTP/HTTPS) of the bundle.zip file. Mutually exclusive with SkillMdOverride. If provided, the bundle is replaced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></p>
          */
         public Builder bundleUrl(String bundleUrl) {
             this.putBodyParameter("BundleUrl", bundleUrl);
@@ -190,7 +193,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The Skill description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data analytics skill</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -199,7 +205,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * ExpectedVersion.
+         * <p>The expected version number for optimistic locking. If not specified, the update is based on the current highest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder expectedVersion(Integer expectedVersion) {
             this.putBodyParameter("ExpectedVersion", expectedVersion);
@@ -208,7 +217,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * Extra.
+         * <p>The extended metadata (key-value pairs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;appId\&quot;:\&quot;APP_Q2SDWKIGFWNZTR68K1GQ\&quot;}</p>
          */
         public Builder extra(java.util.Map<String, ?> extra) {
             String extraShrink = shrink(extra, "Extra", "json");
@@ -218,6 +230,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
+         * <p>The name of the Skill to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +243,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * SkillMdOverride.
+         * <p>The SKILL.md body content. Mutually exclusive with BundleUrl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Putting an elephant in a refrigerator takes three steps: open the refrigerator door, put the elephant in, and close the refrigerator door</p>
          */
         public Builder skillMdOverride(String skillMdOverride) {
             this.putBodyParameter("SkillMdOverride", skillMdOverride);
@@ -239,7 +255,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * VersionNote.
+         * <p>The version note.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Revision note</p>
          */
         public Builder versionNote(String versionNote) {
             this.putBodyParameter("VersionNote", versionNote);
@@ -248,7 +267,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * VisibilityScope.
+         * <p>The visibility scope. The corresponding field is used based on the visibility level.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -317,7 +336,7 @@ public class UpdateSkillRequest extends Request {
             } 
 
             /**
-             * ProjectIds.
+             * <p>The list of visible project IDs.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -325,7 +344,7 @@ public class UpdateSkillRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of visible user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

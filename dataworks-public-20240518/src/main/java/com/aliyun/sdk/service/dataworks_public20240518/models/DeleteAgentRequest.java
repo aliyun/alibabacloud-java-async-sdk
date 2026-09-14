@@ -83,6 +83,7 @@ public class DeleteAgentRequest extends Request {
         }
 
         /**
+         * <p>The name of the Agent to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

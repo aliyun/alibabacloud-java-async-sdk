@@ -132,7 +132,10 @@ public class Schema extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -140,7 +143,10 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time (millisecond-level timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736852168000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -148,7 +154,10 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-schema:123456::test_project:default</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -156,7 +165,10 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The update time (millisecond-level timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736852168000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -164,7 +176,10 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -172,7 +187,10 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * ParentMetaEntityId.
+         * <p>The parent metadata entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-project:123456::test_project</p>
          */
         public Builder parentMetaEntityId(String parentMetaEntityId) {
             this.parentMetaEntityId = parentMetaEntityId;
@@ -180,7 +198,10 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGED</p>
          */
         public Builder type(String type) {
             this.type = type;

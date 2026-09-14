@@ -87,7 +87,7 @@ public class DeleteMetaCollectionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>as78d756asd</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

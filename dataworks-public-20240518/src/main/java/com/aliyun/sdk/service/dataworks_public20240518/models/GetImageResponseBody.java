@@ -80,7 +80,7 @@ public class GetImageResponseBody extends TeaModel {
         } 
 
         /**
-         * Image.
+         * <p>The image details.</p>
          */
         public Builder image(Image image) {
             this.image = image;
@@ -88,7 +88,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +168,10 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The script content. If the content contains package names, separate them with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>requests</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -170,7 +179,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The script type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Python3</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -237,7 +249,10 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * BuildType.
+             * <p>The build type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PackageInstallation</p>
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
@@ -245,7 +260,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * PackageInstallationScripts.
+             * <p>The list of pre-installation scripts.</p>
              */
             public Builder packageInstallationScripts(java.util.List<PackageInstallationScripts> packageInstallationScripts) {
                 this.packageInstallationScripts = packageInstallationScripts;
@@ -312,7 +327,13 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Module.
+             * <p>The supported module. Valid values:</p>
+             * <ul>
+             * <li>Scheduler: scheduling.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -320,7 +341,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypes.
+             * <p>The list of supported task types.</p>
              */
             public Builder taskTypes(java.util.List<String> taskTypes) {
                 this.taskTypes = taskTypes;
@@ -712,7 +733,14 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             /**
-             * Accessibility.
+             * <p>The image visibility. Valid values:</p>
+             * <ul>
+             * <li>Public: visible to all users.</li>
+             * <li>Private: visible only to the creator.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder accessibility(String accessibility) {
                 this.accessibility = accessibility;
@@ -720,7 +748,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * AcrAssociatedVpcId.
+             * <p>The VPC ID associated with the ACR instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder acrAssociatedVpcId(String acrAssociatedVpcId) {
                 this.acrAssociatedVpcId = acrAssociatedVpcId;
@@ -739,7 +770,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * AcrInstanceId.
+             * <p>The ACR instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-xxx</p>
              */
             public Builder acrInstanceId(String acrInstanceId) {
                 this.acrInstanceId = acrInstanceId;
@@ -747,7 +781,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * BuildConfig.
+             * <p>The image build configuration.</p>
              */
             public Builder buildConfig(BuildConfig buildConfig) {
                 this.buildConfig = buildConfig;
@@ -755,7 +789,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time, represented as a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -763,7 +800,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -771,7 +811,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The image description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test image created by xxx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -779,7 +822,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSyncMaxCompute.
+             * <p>Indicates whether synchronization with MaxCompute is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSyncMaxCompute(Boolean enableSyncMaxCompute) {
                 this.enableSyncMaxCompute = enableSyncMaxCompute;
@@ -787,7 +833,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom_image_xxxx_xxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -795,7 +844,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageTag.
+             * <p>The image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -803,7 +855,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUri.
+             * <p>The image URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-hangzhou.aliyuncs.com/xxx/xxx:tag</p>
              */
             public Builder imageUri(String imageUri) {
                 this.imageUri = imageUri;
@@ -811,7 +866,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVpcUri.
+             * <p>The image VPC URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/xxx/xxx:tag</p>
              */
             public Builder imageVpcUri(String imageVpcUri) {
                 this.imageVpcUri = imageVpcUri;
@@ -819,7 +877,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the image is the default image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -827,7 +888,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * <p>The last modification time, represented as a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -835,7 +899,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -843,7 +910,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks_image</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -851,7 +921,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -859,7 +932,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Official.
+             * <p>Indicates whether the image is an official image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder official(Boolean official) {
                 this.official = official;
@@ -867,7 +943,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderImageId.
+             * <p>The image ID from the image provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acr_image_id</p>
              */
             public Builder providerImageId(String providerImageId) {
                 this.providerImageId = providerImageId;
@@ -875,7 +954,14 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderType.
+             * <p>The image reference data type. Valid values:</p>
+             * <ul>
+             * <li>ACR: ACR image repository.</li>
+             * <li>DataWorks: DataWorks official image.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACR</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;
@@ -883,7 +969,25 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStage.
+             * <p>The publish status. Valid values:</p>
+             * <ul>
+             * <li>Untest: not tested.</li>
+             * <li>Testing: being tested.</li>
+             * <li>TestFailed: test failed.</li>
+             * <li>Unpublished: not published.</li>
+             * <li>Publishing: being published.</li>
+             * <li>Published: published.</li>
+             * <li>PublishFailed: publish failed.</li>
+             * <li>Building: being built.</li>
+             * <li>BuildSuccess: build succeeded.</li>
+             * <li>BuildFailed: build failed.</li>
+             * <li>Accelerating: being accelerated.</li>
+             * <li>AccelerateSuccess: acceleration succeeded.</li>
+             * <li>AccelerateFailed: acceleration failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Published</p>
              */
             public Builder publishStage(String publishStage) {
                 this.publishStage = publishStage;
@@ -891,7 +995,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * RepositoryName.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>repo_name</p>
              */
             public Builder repositoryName(String repositoryName) {
                 this.repositoryName = repositoryName;
@@ -899,7 +1006,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The image size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1GB</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -907,7 +1017,16 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The image status. Valid values:</p>
+             * <ul>
+             * <li>Disabled: disabled.</li>
+             * <li>Expired: expired.</li>
+             * <li>Available: active.</li>
+             * <li>ReadOnly: read-only.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -915,7 +1034,7 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Supported.
+             * <p>The supported modules and task types.</p>
              */
             public Builder supported(Supported supported) {
                 this.supported = supported;
@@ -923,7 +1042,10 @@ public class GetImageResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;

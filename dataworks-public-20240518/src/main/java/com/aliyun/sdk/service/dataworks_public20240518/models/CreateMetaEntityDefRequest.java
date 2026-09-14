@@ -140,7 +140,10 @@ public class CreateMetaEntityDefRequest extends Request {
         }
 
         /**
-         * AttributeDefs.
+         * <p>The attribute definition list for custom entities. This parameter cannot be specified when extend is set to TABLE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder attributeDefs(java.util.List<MetaEntityAttributeDef> attributeDefs) {
             String attributeDefsShrink = shrink(attributeDefs, "AttributeDefs", "json");
@@ -150,7 +153,10 @@ public class CreateMetaEntityDefRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -159,6 +165,7 @@ public class CreateMetaEntityDefRequest extends Request {
         }
 
         /**
+         * <p>The display name, up to 32 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +178,14 @@ public class CreateMetaEntityDefRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>The extension mode. Valid values:</p>
+         * <ul>
+         * <li>NONE: default value. Indicates a custom entity with freely defined attributes.</li>
+         * <li>TABLE: indicates an extended table type. This type integrates in the same way as existing table types in DataWorks Data Map. You do not need to provide attribute definitions and can create corresponding Database/Table objects.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         public Builder extend(String extend) {
             this.putBodyParameter("Extend", extend);
@@ -180,6 +194,7 @@ public class CreateMetaEntityDefRequest extends Request {
         }
 
         /**
+         * <p>The name of the type definition. Custom types must match <code>^[a-z0-9][a-z0-9_]*$</code>. Extended table types must match <code>^[a-z0-9][a-z0-9_]*-table$</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

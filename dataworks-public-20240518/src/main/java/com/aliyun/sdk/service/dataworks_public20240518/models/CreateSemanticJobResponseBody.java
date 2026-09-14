@@ -80,7 +80,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The saved semantic job definition. Use Data.Name to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -292,7 +295,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Creator.
+             * <p>The job creator identifier, equivalent to UserId, used to display creation ownership.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-demo</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -300,7 +306,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the job definition, expressed as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700000000000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -308,7 +317,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time of the job definition, expressed as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700000000000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -316,7 +328,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The internal unique ID of the job definition, which identifies the job created by this call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -324,7 +339,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The saved job name. Use this value for subsequent operations such as running, deleting, querying run records, and downloading results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic-job-demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -332,7 +350,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID to which the job belongs. Use this value as the ProjectId for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -340,7 +361,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceFileIds.
+             * <p>The list of associated uploaded file IDs. For singleTableFile, the single file in this list is read at runtime.</p>
              */
             public Builder referenceFileIds(java.util.List<String> referenceFileIds) {
                 this.referenceFileIds = referenceFileIds;
@@ -348,7 +369,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceFileUris.
+             * <p>The list of associated external reference file URIs. For singleTableFile, the single file in this list is read at runtime.</p>
              */
             public Builder referenceFileUris(java.util.List<String> referenceFileUris) {
                 this.referenceFileUris = referenceFileUris;
@@ -356,7 +377,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group that is used when running this job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-demo</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -364,7 +388,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The saved input datasource config, corresponding to the Source in the creation request. The data scope to be analyzed is determined based on this configuration at runtime.</p>
              */
             public Builder source(java.util.Map<String, ?> source) {
                 this.source = source;
@@ -372,7 +396,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The saved Source.type data source type, used to quickly identify the job input type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -380,7 +407,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The identifier of the user who created the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-demo</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

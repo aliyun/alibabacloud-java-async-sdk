@@ -67,10 +67,10 @@ public class UpdateDataAssetTagResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>0bc1ec92159376</p>
+         * <p>0bc1ec921****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

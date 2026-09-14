@@ -83,7 +83,7 @@ public class GetDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The code for the template.</p>
+         * <p>The code of the rule template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

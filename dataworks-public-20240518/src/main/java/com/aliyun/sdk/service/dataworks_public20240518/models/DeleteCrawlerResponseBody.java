@@ -80,7 +80,10 @@ public class DeleteCrawlerResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the deleted metadata crawler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -88,7 +91,10 @@ public class DeleteCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class DeleteCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

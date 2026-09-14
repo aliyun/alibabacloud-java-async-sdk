@@ -93,7 +93,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>本次请求返回的最大结果数。</p>
+         * <p>The maximum number of records returned in this response.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -104,7 +104,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>翻页标记，当还有更多数据时返回此值，下次请求传入即可获取后续数据。</p>
+         * <p>The pagination token for the next page. An empty value indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESG****</p>
@@ -115,7 +115,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页信息。</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -123,7 +123,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID，用于问题定位与链路追踪。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
@@ -218,7 +218,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>镜像 ID。</p>
+             * <p>The image ID used by the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>System_serveride_notebook_20240822</p>
@@ -229,7 +229,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像名称。</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>serveride_notebook</p>
@@ -240,7 +240,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像地址（镜像完整 URL）。</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-hangzhou.aliyuncs.com/example/serveride:latest</p>
@@ -251,7 +251,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像状态。</p>
+             * <p>The image status.</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -347,7 +347,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>镜像列表。</p>
+             * <p>The list of images available for personal development environments.</p>
              */
             public Builder images(java.util.List<Images> images) {
                 this.images = images;
@@ -355,7 +355,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前页码。</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -366,7 +366,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>每页条数。</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -377,7 +377,7 @@ public class ListServerIdeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>符合条件的总条数。</p>
+             * <p>The total number of records that match the filter conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

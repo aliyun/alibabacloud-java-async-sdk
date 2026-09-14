@@ -67,7 +67,10 @@ public class UpdateParameterResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateParameterResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The new version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder version(Integer version) {
             this.version = version;

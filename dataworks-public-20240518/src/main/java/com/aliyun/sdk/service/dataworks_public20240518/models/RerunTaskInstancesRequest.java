@@ -110,7 +110,7 @@ public class RerunTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>Remarks.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a comment</p>
@@ -122,7 +122,7 @@ public class RerunTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID list of the task instance.</p>
+         * <p>The list of node instance IDs.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -132,7 +132,10 @@ public class RerunTaskInstancesRequest extends Request {
         }
 
         /**
-         * UseLatestConfig.
+         * <p>Specifies whether to rerun instances with the latest configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useLatestConfig(Boolean useLatestConfig) {
             this.putBodyParameter("UseLatestConfig", useLatestConfig);

@@ -98,6 +98,7 @@ public class RollbackParameterRequest extends Request {
         }
 
         /**
+         * <p>The parameter ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class RollbackParameterRequest extends Request {
         }
 
         /**
+         * <p>The rollback version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

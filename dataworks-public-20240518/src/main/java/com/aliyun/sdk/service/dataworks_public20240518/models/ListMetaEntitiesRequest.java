@@ -199,7 +199,10 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
-         * AttributeFilters.
+         * <p>The entity attribute filter conditions. Multiple filter conditions have an AND relationship. Multiple values within the same filter condition have an OR relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder attributeFilters(java.util.List<AttributeFilters> attributeFilters) {
             String attributeFiltersShrink = shrink(attributeFilters, "AttributeFilters", "json");
@@ -209,7 +212,10 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The comment filter. Performs token matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -218,7 +224,10 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
-         * CustomAttributeFilters.
+         * <p>The custom attribute filter conditions. Multiple filter conditions have an AND relationship. Multiple values within the same filter condition have an OR relationship. Only ENUM custom attributes are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder customAttributeFilters(java.util.List<CustomAttributeFilters> customAttributeFilters) {
             String customAttributeFiltersShrink = shrink(customAttributeFilters, "CustomAttributeFilters", "json");
@@ -228,6 +237,7 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The entity type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +250,10 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -249,7 +262,10 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The entity name filter. Performs keyword-contains matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xm_create_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -258,7 +274,10 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAaUpAxoCTD/+sbOf3f+uxvnYyILMeAjoTFQSX64R12GN</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -267,7 +286,10 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -276,7 +298,10 @@ public class ListMetaEntitiesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
@@ -345,6 +370,7 @@ public class ListMetaEntitiesRequest extends Request {
             } 
 
             /**
+             * <p>The filter attribute key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -356,7 +382,7 @@ public class ListMetaEntitiesRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of filter attribute values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -424,6 +450,7 @@ public class ListMetaEntitiesRequest extends Request {
             } 
 
             /**
+             * <p>The filter attribute key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -435,7 +462,7 @@ public class ListMetaEntitiesRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of filter attribute values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;

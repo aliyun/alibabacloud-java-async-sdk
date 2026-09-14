@@ -106,7 +106,10 @@ public class LineageRelationship extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743040581000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -114,7 +117,7 @@ public class LineageRelationship extends TeaModel {
         }
 
         /**
-         * DstEntity.
+         * <p>The destination entity.</p>
          */
         public Builder dstEntity(LineageEntity dstEntity) {
             this.dstEntity = dstEntity;
@@ -122,7 +125,10 @@ public class LineageRelationship extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.p.table:custom-table.xxx:custom-sql.123</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -130,7 +136,7 @@ public class LineageRelationship extends TeaModel {
         }
 
         /**
-         * SrcEntity.
+         * <p>The source entity.</p>
          */
         public Builder srcEntity(LineageEntity srcEntity) {
             this.srcEntity = srcEntity;
@@ -138,7 +144,7 @@ public class LineageRelationship extends TeaModel {
         }
 
         /**
-         * Task.
+         * <p>The node.</p>
          */
         public Builder task(LineageTask task) {
             this.task = task;

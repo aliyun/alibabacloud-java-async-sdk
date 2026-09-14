@@ -119,7 +119,10 @@ public class Partition extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time, in millisecond-level timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700192563000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -127,7 +130,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * DataSize.
+         * <p>The storage size of the partition, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096</p>
          */
         public Builder dataSize(Long dataSize) {
             this.dataSize = dataSize;
@@ -135,7 +141,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time, in millisecond-level timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700192563000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -143,7 +152,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=20250101</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -151,7 +163,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * RecordCount.
+         * <p>The number of records in the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         public Builder recordCount(Long recordCount) {
             this.recordCount = recordCount;
@@ -159,7 +174,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * TableId.
+         * <p>The resource ID of the data table to which the partition belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table:accountId::project::table</p>
          */
         public Builder tableId(String tableId) {
             this.tableId = tableId;

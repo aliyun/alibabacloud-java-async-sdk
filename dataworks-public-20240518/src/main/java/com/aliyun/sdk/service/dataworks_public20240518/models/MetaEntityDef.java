@@ -145,7 +145,7 @@ public class MetaEntityDef extends TeaModel {
         } 
 
         /**
-         * AttributeDefs.
+         * <p>A list of entity attribute definition objects.</p>
          */
         public Builder attributeDefs(java.util.List<MetaEntityAttributeDef> attributeDefs) {
             this.attributeDefs = attributeDefs;
@@ -153,7 +153,10 @@ public class MetaEntityDef extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the definition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1780553640613</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -161,7 +164,10 @@ public class MetaEntityDef extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -169,7 +175,10 @@ public class MetaEntityDef extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>业务API</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -177,7 +186,10 @@ public class MetaEntityDef extends TeaModel {
         }
 
         /**
-         * EntityType.
+         * <p>The entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_entity-biz_api</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -185,7 +197,10 @@ public class MetaEntityDef extends TeaModel {
         }
 
         /**
-         * Extend.
+         * <p>The extension mode. Valid values: NONE and TABLE. NONE indicates a custom type. TABLE indicates that the type extends a table type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder extend(String extend) {
             this.extend = extend;
@@ -193,7 +208,10 @@ public class MetaEntityDef extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The time when the definition was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1780553640613</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -201,7 +219,10 @@ public class MetaEntityDef extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the type definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>biz_api</p>
          */
         public Builder name(String name) {
             this.name = name;

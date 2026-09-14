@@ -83,6 +83,7 @@ public class GetMetaEntityRequest extends Request {
         }
 
         /**
+         * <p>The entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

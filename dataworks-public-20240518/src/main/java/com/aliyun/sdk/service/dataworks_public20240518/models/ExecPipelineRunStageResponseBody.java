@@ -67,7 +67,7 @@ public class ExecPipelineRunStageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
@@ -78,13 +78,12 @@ public class ExecPipelineRunStageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * <p>**</p>
-         * <p><strong>Note:</strong> The value of this parameter indicates only whether the stage is triggered but does not indicate whether the execution of the stage is successful.</p>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.<blockquote>
+         * <p>Notice: This only indicates whether the stage is triggered, not the execution result of the publish stage.</p>
+         * </blockquote>
          * </li>
          * </ul>
          * 

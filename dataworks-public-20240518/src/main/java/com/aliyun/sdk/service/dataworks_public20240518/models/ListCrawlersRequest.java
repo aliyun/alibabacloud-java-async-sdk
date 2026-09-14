@@ -181,7 +181,7 @@ public class ListCrawlersRequest extends Request {
         }
 
         /**
-         * DataSourceIds.
+         * <p>The list of data source IDs. Up to 10 IDs are supported.</p>
          */
         public Builder dataSourceIds(java.util.List<Long> dataSourceIds) {
             String dataSourceIdsShrink = shrink(dataSourceIds, "DataSourceIds", "simple");
@@ -191,7 +191,10 @@ public class ListCrawlersRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The DataWorks environment type. Dev indicates the development environment. Prod indicates the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -200,7 +203,10 @@ public class ListCrawlersRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The metadata crawler name. Supports fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_crawler</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -209,7 +215,10 @@ public class ListCrawlersRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The DataWorks user ID of the crawler owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -218,7 +227,10 @@ public class ListCrawlersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Starts from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -227,7 +239,10 @@ public class ListCrawlersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -236,7 +251,10 @@ public class ListCrawlersRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -245,7 +263,10 @@ public class ListCrawlersRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The crawler type. Call GetCrawlerTypeCapabilities to query the valid values supported in the current region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>starrocks</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

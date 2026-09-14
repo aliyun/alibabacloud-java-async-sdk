@@ -83,19 +83,20 @@ public class GetCatalogRequest extends Request {
         }
 
         /**
-         * <p>The catalog entity ID. Currently supports dlf and starrocks types. You can refer to the results returned by the ListCatalogs operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+         * <p>The ID of the data catalog entity. Currently, DLF and StarRocks types are supported. You can obtain the ID from the response of the ListCatalogs operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
          * <ul>
-         * <li>For the DLF type, the format is <code>dlf-catalog::catalog_id</code>.</li>
-         * <li>For the StarRocks type, the format is <code>starrocks-catalog:(instance_id|encoded_jdbc_url):catalog_name</code>.</li>
+         * <li><p>For the DLF type, the format is <code>dlf-catalog::catalog_id</code>.</p>
+         * </li>
+         * <li><p>For the StarRocks type, the format is <code>starrocks-catalog:(instance_id|encoded_jdbc_url):catalog_name</code>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p><br><code>catalog_id</code>: The ID of the DLF catalog.<br><code>instance_id</code>: The instance ID, required if the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. Required if the data source is registered in connection string mode.<br><code>catalog_name</code>: The name of the StarRocks catalog.</p>
+         * <p>Where<br><code>catalog_id</code>: the ID of the DLF catalog.<br><code>instance_id</code>: the instance ID, which is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: the URL-encoded JDBC connection string, which is required when the data source is registered in connection string mode.<br><code>catalog_name</code>: the name of the StarRocks catalog.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dlf-catalog:123456XXX:test_catalog
-         * starrocks-catalog:c-abc123xxx:default_catalog</p>
+         * <p>dlf-catalog::catalog_id</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

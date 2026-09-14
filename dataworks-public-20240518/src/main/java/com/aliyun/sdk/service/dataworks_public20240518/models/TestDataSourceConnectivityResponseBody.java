@@ -193,6 +193,9 @@ public class TestDataSourceConnectivityResponseBody extends TeaModel {
 
             /**
              * <p>The name of the step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Validate input parameters</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -284,6 +287,9 @@ public class TestDataSourceConnectivityResponseBody extends TeaModel {
 
             /**
              * <p>The error message returned if the connectivity test fails. No such a message is returned if the connectivity test is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>连接数据库失败</p>
              */
             public Builder connectMessage(String connectMessage) {
                 this.connectMessage = connectMessage;

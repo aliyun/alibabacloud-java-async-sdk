@@ -209,7 +209,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * DstEntityId.
+         * <p>The destination entity ID. You can use the table or column ID returned by the ListTables or ListColumns operation, or a custom entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlf-table::catalog_id:database_name::table_name</p>
          */
         public Builder dstEntityId(String dstEntityId) {
             this.putQueryParameter("DstEntityId", dstEntityId);
@@ -218,7 +221,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * DstEntityName.
+         * <p>The destination entity name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dstName1</p>
          */
         public Builder dstEntityName(String dstEntityName) {
             this.putQueryParameter("DstEntityName", dstEntityName);
@@ -227,7 +233,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * NeedAttachRelationship.
+         * <p>Specifies whether to return lineage relationship information. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needAttachRelationship(Boolean needAttachRelationship) {
             this.putQueryParameter("NeedAttachRelationship", needAttachRelationship);
@@ -236,7 +245,14 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort direction. Default value: Asc. Valid values:</p>
+         * <ul>
+         * <li>Asc: ascending order.</li>
+         * <li>Desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -245,7 +261,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,7 +273,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,7 +294,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Default value: Name, which sorts by lineage entity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -281,7 +306,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * SrcEntityId.
+         * <p>The source entity ID. You can use the table or column ID returned by the ListTables or ListColumns operation, or a custom entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder srcEntityId(String srcEntityId) {
             this.putQueryParameter("SrcEntityId", srcEntityId);
@@ -290,7 +318,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * SrcEntityName.
+         * <p>The source entity name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>srcName1</p>
          */
         public Builder srcEntityName(String srcEntityName) {
             this.putQueryParameter("SrcEntityName", srcEntityName);

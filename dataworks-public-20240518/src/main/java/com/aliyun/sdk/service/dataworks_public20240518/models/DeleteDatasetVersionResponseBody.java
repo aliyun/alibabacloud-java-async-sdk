@@ -78,7 +78,7 @@ public class DeleteDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the deletion succeeded.</p>
+         * <p>Indicates whether the dataset version is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

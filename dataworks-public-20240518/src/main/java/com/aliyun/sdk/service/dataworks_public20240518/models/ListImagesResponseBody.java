@@ -80,7 +80,7 @@ public class ListImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +168,10 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The script content. If the content specifies package names, separate them with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>requests</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -170,7 +179,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The script type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Python3</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -237,7 +249,10 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * BuildType.
+             * <p>The build type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PackageInstallation</p>
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
@@ -245,7 +260,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageInstallationScripts.
+             * <p>The list of pre-installation scripts.</p>
              */
             public Builder packageInstallationScripts(java.util.List<PackageInstallationScripts> packageInstallationScripts) {
                 this.packageInstallationScripts = packageInstallationScripts;
@@ -312,7 +327,13 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Module.
+             * <p>The supported module:</p>
+             * <ul>
+             * <li>Scheduler: Scheduling.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -320,7 +341,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypes.
+             * <p>The list of supported task types.</p>
              */
             public Builder taskTypes(java.util.List<String> taskTypes) {
                 this.taskTypes = taskTypes;
@@ -712,7 +733,16 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Accessibility.
+             * <p>The accessibility:</p>
+             * <ul>
+             * <li><p>Public: Visible to all members.</p>
+             * </li>
+             * <li><p>Private: Visible only to the creator.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder accessibility(String accessibility) {
                 this.accessibility = accessibility;
@@ -720,7 +750,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * AcrAssociatedVpcId.
+             * <p>The VPC ID associated with the ACR instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder acrAssociatedVpcId(String acrAssociatedVpcId) {
                 this.acrAssociatedVpcId = acrAssociatedVpcId;
@@ -739,7 +772,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * AcrInstanceId.
+             * <p>The ACR instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-xxx</p>
              */
             public Builder acrInstanceId(String acrInstanceId) {
                 this.acrInstanceId = acrInstanceId;
@@ -747,7 +783,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * BuildConfig.
+             * <p>The image build configuration.</p>
              */
             public Builder buildConfig(BuildConfig buildConfig) {
                 this.buildConfig = buildConfig;
@@ -755,7 +791,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time, represented as a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -763,7 +802,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -771,7 +813,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The image description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test image created by xxx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -779,7 +824,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSyncMaxCompute.
+             * <p>Indicates whether synchronization with MaxCompute is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSyncMaxCompute(Boolean enableSyncMaxCompute) {
                 this.enableSyncMaxCompute = enableSyncMaxCompute;
@@ -787,7 +835,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom_image_xxxx_xxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -795,7 +846,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageTag.
+             * <p>The image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -803,7 +857,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUri.
+             * <p>The image URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-hangzhou.aliyuncs.com/xxx/xxx:tag</p>
              */
             public Builder imageUri(String imageUri) {
                 this.imageUri = imageUri;
@@ -811,7 +868,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVpcUri.
+             * <p>The image VPC URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/xxx/xxx:tag</p>
              */
             public Builder imageVpcUri(String imageVpcUri) {
                 this.imageVpcUri = imageVpcUri;
@@ -819,7 +879,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the image is the default image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -827,7 +890,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * <p>The last modification time, represented as a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -835,7 +901,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -843,7 +912,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks_image</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -851,7 +923,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -859,7 +934,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Official.
+             * <p>Indicates whether the image is an official image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder official(Boolean official) {
                 this.official = official;
@@ -867,7 +945,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderImageId.
+             * <p>The image ID assigned by the provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acr_image_id</p>
              */
             public Builder providerImageId(String providerImageId) {
                 this.providerImageId = providerImageId;
@@ -875,7 +956,16 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderType.
+             * <p>The image provider type:</p>
+             * <ul>
+             * <li><p>ACR: ACR image repository.</p>
+             * </li>
+             * <li><p>DataWorks: DataWorks official image.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACR</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;
@@ -883,7 +973,38 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStage.
+             * <p>The publish stage:</p>
+             * <ul>
+             * <li><p>Untest: Not tested.</p>
+             * </li>
+             * <li><p>Testing: Being tested.</p>
+             * </li>
+             * <li><p>TestFailed: Test failed.</p>
+             * </li>
+             * <li><p>Unpublished: Not published.</p>
+             * </li>
+             * <li><p>Publishing: Being published.</p>
+             * </li>
+             * <li><p>Published: Published.</p>
+             * </li>
+             * <li><p>PublishFailed: Publish failed.</p>
+             * </li>
+             * <li><p>Building: Being built.</p>
+             * </li>
+             * <li><p>BuildSuccess: Build succeeded.</p>
+             * </li>
+             * <li><p>BuildFailed: Build failed.</p>
+             * </li>
+             * <li><p>Accelerating: Being accelerated.</p>
+             * </li>
+             * <li><p>AccelerateSuccess: Acceleration succeeded.</p>
+             * </li>
+             * <li><p>AccelerateFailed: Acceleration failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Published</p>
              */
             public Builder publishStage(String publishStage) {
                 this.publishStage = publishStage;
@@ -891,7 +1012,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RepositoryName.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>repo_name</p>
              */
             public Builder repositoryName(String repositoryName) {
                 this.repositoryName = repositoryName;
@@ -899,7 +1023,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The image size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1GB</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -907,7 +1034,20 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The image status:</p>
+             * <ul>
+             * <li><p>Disabled: The image is disabled.</p>
+             * </li>
+             * <li><p>Expired: The image has expired.</p>
+             * </li>
+             * <li><p>Available: The image is available.</p>
+             * </li>
+             * <li><p>ReadOnly: The image is read-only.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -915,7 +1055,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Supported.
+             * <p>The supported modules and task types.</p>
              */
             public Builder supported(Supported supported) {
                 this.supported = supported;
@@ -923,7 +1063,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1016,7 +1159,7 @@ public class ListImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageList.
+             * <p>The list of image details.</p>
              */
             public Builder imageList(java.util.List<ImageList> imageList) {
                 this.imageList = imageList;
@@ -1024,7 +1167,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1032,7 +1178,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1040,7 +1189,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

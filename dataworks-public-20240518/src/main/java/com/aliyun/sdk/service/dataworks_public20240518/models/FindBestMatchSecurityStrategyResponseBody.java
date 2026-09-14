@@ -67,7 +67,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>API request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17***903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -297,7 +300,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * BasicEditionDefaultValue.
+             * <p><strong>Basic Edition default value</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder basicEditionDefaultValue(Object basicEditionDefaultValue) {
                 this.basicEditionDefaultValue = basicEditionDefaultValue;
@@ -305,7 +311,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * BasicEditionIntervalValue.
+             * <p>Basic Edition valid value range [min, max].</p>
              */
             public Builder basicEditionIntervalValue(java.util.List<Integer> basicEditionIntervalValue) {
                 this.basicEditionIntervalValue = basicEditionIntervalValue;
@@ -313,7 +319,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Controller.
+             * <p>Controller identifier. For values, see the controller list of each Schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>viewCount</p>
              */
             public Builder controller(String controller) {
                 this.controller = controller;
@@ -321,7 +330,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControllerValueType.
+             * <p><strong>Value type (Boolean/Integer/Long/String)</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Integer</p>
              */
             public Builder controllerValueType(String controllerValueType) {
                 this.controllerValueType = controllerValueType;
@@ -329,7 +341,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询结果-单次展示记录值上限</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -337,7 +352,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameEn.
+             * <p><strong>English display name</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query Results - Single Display Record Limit</p>
              */
             public Builder displayNameEn(String displayNameEn) {
                 this.displayNameEn = displayNameEn;
@@ -345,7 +363,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p><strong>Whether this controller is enabled</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -353,7 +374,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * EnterpriseEditionDefaultValue.
+             * <p>Enterprise Edition default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500000</p>
              */
             public Builder enterpriseEditionDefaultValue(Object enterpriseEditionDefaultValue) {
                 this.enterpriseEditionDefaultValue = enterpriseEditionDefaultValue;
@@ -361,7 +385,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * EnterpriseEditionIntervalValue.
+             * <p>Enterprise Edition valid value range [min, max].</p>
              */
             public Builder enterpriseEditionIntervalValue(java.util.List<Integer> enterpriseEditionIntervalValue) {
                 this.enterpriseEditionIntervalValue = enterpriseEditionIntervalValue;
@@ -369,7 +393,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ProfessionalEditionDefaultValue.
+             * <p>Professional Edition default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000</p>
              */
             public Builder professionalEditionDefaultValue(Object professionalEditionDefaultValue) {
                 this.professionalEditionDefaultValue = professionalEditionDefaultValue;
@@ -377,7 +404,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ProfessionalEditionIntervalValue.
+             * <p>Professional Edition valid value range [min, max].</p>
              */
             public Builder professionalEditionIntervalValue(java.util.List<Integer> professionalEditionIntervalValue) {
                 this.professionalEditionIntervalValue = professionalEditionIntervalValue;
@@ -385,7 +412,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StandardEditionDefaultValue.
+             * <p><strong>Standard Edition default value</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder standardEditionDefaultValue(Object standardEditionDefaultValue) {
                 this.standardEditionDefaultValue = standardEditionDefaultValue;
@@ -393,7 +423,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StandardEditionIntervalValue.
+             * <p>Standard Edition valid value range [min, max].</p>
              */
             public Builder standardEditionIntervalValue(java.util.List<Integer> standardEditionIntervalValue) {
                 this.standardEditionIntervalValue = standardEditionIntervalValue;
@@ -401,7 +431,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * UserConfigValue.
+             * <p><strong>User-configured value. The type depends on ControllerValueType.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder userConfigValue(Object userConfigValue) {
                 this.userConfigValue = userConfigValue;
@@ -559,7 +592,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * ControlDwScope.
+             * <p><strong>Control scope</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tenant</p>
              */
             public Builder controlDwScope(String controlDwScope) {
                 this.controlDwScope = controlDwScope;
@@ -567,7 +603,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlModule.
+             * <p><strong>Control module</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQuery</p>
              */
             public Builder controlModule(String controlModule) {
                 this.controlModule = controlModule;
@@ -575,7 +614,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlSubModule.
+             * <p><strong>Control sub-module</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyCatalog</p>
              */
             public Builder controlSubModule(String controlSubModule) {
                 this.controlSubModule = controlSubModule;
@@ -583,7 +625,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Controllers.
+             * <p>Controller list.</p>
+             * <p>Note: Valid controllers depend on the selected Schema. Refer to the Controller definition and the controller list of each Schema.</p>
              */
             public Builder controllers(java.util.List<Controllers> controllers) {
                 this.controllers = controllers;
@@ -591,7 +634,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p><strong>Display name</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -599,7 +645,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameEn.
+             * <p><strong>English display name</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Query</p>
              */
             public Builder displayNameEn(String displayNameEn) {
                 this.displayNameEn = displayNameEn;
@@ -607,7 +656,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p><strong>Schema name</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQuerySecurityStrategySchema</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -615,7 +667,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPolicyDisplayName.
+             * <p>System policy display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default system generate data query policy</p>
              */
             public Builder systemPolicyDisplayName(String systemPolicyDisplayName) {
                 this.systemPolicyDisplayName = systemPolicyDisplayName;
@@ -623,7 +678,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPolicyName.
+             * <p>System policy name (when not empty, the system automatically creates a default policy).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_GENERATE_DEFAULT_DATA_QUERY</p>
              */
             public Builder systemPolicyName(String systemPolicyName) {
                 this.systemPolicyName = systemPolicyName;
@@ -859,7 +917,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p><strong>Policy content</strong>. Refer to the StrategyContent definition.</p>
              */
             public Builder content(Content content) {
                 this.content = content;
@@ -867,7 +925,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlDwScope.
+             * <p><strong>Control scope</strong> (Workspace/Tenant).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tenant</p>
              */
             public Builder controlDwScope(String controlDwScope) {
                 this.controlDwScope = controlDwScope;
@@ -875,7 +936,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlModule.
+             * <p><strong>Control module</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQuery</p>
              */
             public Builder controlModule(String controlModule) {
                 this.controlModule = controlModule;
@@ -883,7 +947,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlSubModule.
+             * <p><strong>Control sub-module</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyCatalog</p>
              */
             public Builder controlSubModule(String controlSubModule) {
                 this.controlSubModule = controlSubModule;
@@ -891,7 +958,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-25T20:46:19</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -899,7 +969,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203322746501002787</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -907,7 +980,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p><strong>Policy description</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>控制数据分析模块的查询结果安全行为</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -915,7 +991,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p><strong>Whether enabled</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -923,7 +1002,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p><strong>Policy ID</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -931,7 +1013,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p><strong>Policy name</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认数据分析策略</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -939,7 +1024,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * OriginPolicyId.
+             * <p>System default policy source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder originPolicyId(Long originPolicyId) {
                 this.originPolicyId = originPolicyId;
@@ -947,7 +1035,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p><strong>Schema template name</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQuerySecurityStrategySchema</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -955,7 +1046,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-25T20:46:19</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -963,7 +1057,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Updater.
+             * <p>Last updater user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>207947397706614297</p>
              */
             public Builder updater(String updater) {
                 this.updater = updater;
@@ -971,7 +1068,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Workspaces.
+             * <p><strong>Associated workspace ID list</strong></p>
              */
             public Builder workspaces(java.util.List<Long> workspaces) {
                 this.workspaces = workspaces;
@@ -1051,7 +1148,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * Edition.
+             * <p>Purchased DataWorks edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder edition(String edition) {
                 this.edition = edition;
@@ -1059,7 +1159,10 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * EditionDisplayName.
+             * <p>Purchased DataWorks edition name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标准版</p>
              */
             public Builder editionDisplayName(String editionDisplayName) {
                 this.editionDisplayName = editionDisplayName;
@@ -1067,7 +1170,7 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityStrategy.
+             * <p>Security policy.</p>
              */
             public Builder securityStrategy(SecurityStrategy securityStrategy) {
                 this.securityStrategy = securityStrategy;

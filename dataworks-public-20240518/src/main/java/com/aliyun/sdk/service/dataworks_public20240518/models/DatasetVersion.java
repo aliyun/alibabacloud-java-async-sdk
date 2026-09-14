@@ -197,7 +197,10 @@ public class DatasetVersion extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The dataset version description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>初始版本</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -205,7 +208,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Creation time (milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736756055000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -213,7 +219,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * CreatorId.
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17815XXX61016173</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -221,7 +230,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * DatasetId.
+         * <p>The corresponding dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks-datasetVersion:0gfxxxjx155usz3hrv</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -229,7 +241,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The dataset version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks-datasetVersion:0gfxxxjx155usz3hrv:1</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -237,7 +252,15 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * ImportInfo.
+         * <p>The storage import configuration for the dataset; required configuration varies by storage type.</p>
+         * <p><strong>NAS</strong></p>
+         * <p>Refer to the return values from the file storage API DescribeFileSystems.</p>
+         * <pre><code class="language-JSON">{
+         * &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+         * &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The file system storage type.
+         * &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
+         * }
+         * </code></pre>
          */
         public Builder importInfo(java.util.Map<String, String> importInfo) {
             this.importInfo = importInfo;
@@ -245,7 +268,7 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The PAI dataset label.</p>
          */
         public Builder labels(java.util.List<DatasetLabel> labels) {
             this.labels = labels;
@@ -253,7 +276,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>Modification time (milliseconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736756055000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -261,7 +287,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * MountPath.
+         * <p>The mount path. Defaults to /mnt/data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/data</p>
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;
@@ -269,7 +298,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * StorageType.
+         * <p>Storage type (read-only); consistent with the corresponding property of the parent dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder storageType(String storageType) {
             this.storageType = storageType;
@@ -277,7 +309,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-oss-bucket/test_dir/</p>
          */
         public Builder url(String url) {
             this.url = url;
@@ -285,7 +320,10 @@ public class DatasetVersion extends TeaModel {
         }
 
         /**
-         * VersionNumber.
+         * <p>The dataset version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionNumber(Integer versionNumber) {
             this.versionNumber = versionNumber;

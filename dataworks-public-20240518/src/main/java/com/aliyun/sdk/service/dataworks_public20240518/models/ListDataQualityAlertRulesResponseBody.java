@@ -170,14 +170,22 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
             /**
              * <p>The type of alert recipients.</p>
              * <ul>
-             * <li>ShiftSchedule</li>
-             * <li>WebhookUrl</li>
-             * <li>FeishuUrl</li>
-             * <li>TaskOwner</li>
-             * <li>WeixinUrl</li>
-             * <li>DingdingUrl</li>
-             * <li>DataQualityScanOwner</li>
-             * <li>AliUid</li>
+             * <li><p>ShiftSchedule</p>
+             * </li>
+             * <li><p>WebhookUrl</p>
+             * </li>
+             * <li><p>FeishuUrl</p>
+             * </li>
+             * <li><p>TaskOwner</p>
+             * </li>
+             * <li><p>WeixinUrl</p>
+             * </li>
+             * <li><p>DingdingUrl</p>
+             * </li>
+             * <li><p>DataQualityScanOwner</p>
+             * </li>
+             * <li><p>AliUid</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -451,7 +459,7 @@ public class ListDataQualityAlertRulesResponseBody extends TeaModel {
              * <p>The alert conditions.</p>
              * 
              * <strong>example:</strong>
-             * <p>results.any { r -&gt; r.status == &quot;fail&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
+             * <p>results.any { r -&gt; r.status == \&quot;fail\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;

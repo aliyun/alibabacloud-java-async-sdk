@@ -67,7 +67,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         } 
 
         /**
-         * ProcessDefinition.
+         * <p>Process definition</p>
          */
         public Builder processDefinition(ProcessDefinition processDefinition) {
             this.processDefinition = processDefinition;
@@ -75,7 +75,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>API request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17***903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,36 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p><strong>Node approver type</strong>:</p>
+             * <ul>
+             * <li><p>DataWorksProjectRole project role</p>
+             * </li>
+             * <li><p>DataWorksProjectMember project member</p>
+             * </li>
+             * <li><p>TableAdministrator table administrator</p>
+             * </li>
+             * <li><p>TableOrProjectAdministrator Table or project administrator</p>
+             * </li>
+             * <li><p>AliyunResourceOwner Alibaba Cloud account</p>
+             * </li>
+             * <li><p>MaxComputeRole MC Administrator</p>
+             * </li>
+             * <li><p>DLFAdmin and DlfLegacy administrator</p>
+             * </li>
+             * <li><p>DLFNext Administrator</p>
+             * </li>
+             * <li><p>TenantRole tenant role</p>
+             * </li>
+             * <li><p>EmrAdministrator Emr administrator</p>
+             * </li>
+             * <li><p>LindormAdministrator Lindorm Administrator</p>
+             * </li>
+             * <li><p>AliyunRamUser RAM user</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TableOrProjectAdministrator</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -188,7 +220,19 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Assignees.
+             * <p><strong><code>AccountType</code> has different semantics for different types</strong>:</p>
+             * <ul>
+             * <li><p>DataWorksProjectMember specifies the project member\&quot;s UserId.</p>
+             * </li>
+             * <li><p>DataWorksProjectRole specifies the code of the project role.</p>
+             * </li>
+             * <li><p>MaxComputeRole specifies the MaxCompute role.</p>
+             * </li>
+             * <li><p>TenantRole specifies the tenant role code.</p>
+             * </li>
+             * <li><p>AliyunRamUser specifies the RAM user ID.</p>
+             * </li>
+             * </ul>
              */
             public Builder assignees(java.util.List<String> assignees) {
                 this.assignees = assignees;
@@ -196,7 +240,13 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionProperties.
+             * <p>When <code>AccountType </code>is set to different types, you must provide different additional declarations:</p>
+             * <ul>
+             * <li><p>DataWorksProjectMember: The key is projectId, and the value is the UserIds of project members, separated by commas.</p>
+             * </li>
+             * <li><p>MaxComputeRole: The key is a MaxCompute project and the value is a role name in MaxCompute. Multiple role names are separated by a comma.</p>
+             * </li>
+             * </ul>
              */
             public Builder extensionProperties(java.util.Map<String, ?> extensionProperties) {
                 this.extensionProperties = extensionProperties;
@@ -204,7 +254,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7a809b6a-2a62-4c6c-9c23-c2a145e3877d</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -212,7 +265,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p><strong>Node Name</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +348,20 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             } 
 
             /**
-             * Channel.
+             * <p>Notification channel, an enumeration:</p>
+             * <ul>
+             * <li><p>Mail</p>
+             * </li>
+             * <li><p>Sms</p>
+             * </li>
+             * <li><p>DingRobot</p>
+             * </li>
+             * <li><p>Weixin</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DingRobot</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -300,7 +369,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>Additional information in JSON format, such as <code>{&quot;atAll&quot;:&quot;true&quot;}</code> to specify whether to @all members.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -308,7 +380,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Receiver.
+             * <p>You must specify WebhookUrl when Channel is DingRobot or Weixin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dingtalk.com">https://dingtalk.com</a></p>
              */
             public Builder receiver(String receiver) {
                 this.receiver = receiver;
@@ -388,7 +463,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             } 
 
             /**
-             * Expression.
+             * <p>A conditional expression is in the format <code>((#type==\\&quot;typeValue\\&quot;))</code>, such as <code>((#odpsProject==\\&quot;PX_BEIJING_TEST\\&quot;))</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;))</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -396,7 +474,16 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>rule effective stage:</p>
+             * <ul>
+             * <li><p><code>Deployment</code> determines whether an application matches this approval policy upon submission.</p>
+             * </li>
+             * <li><p><code>Running</code> is used to determine whether an approval process is approval-free. This feature is supported only for the MaxCompute type.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployment</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -404,7 +491,22 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The condition type. This is an enumeration:</p>
+             * <ul>
+             * <li><p><code>odpsProject</code>,</p>
+             * </li>
+             * <li><p><code>hologresInstanceId</code></p>
+             * </li>
+             * <li><p><code>sensibleLevel</code>,</p>
+             * </li>
+             * <li><p><code>tableGuid</code>,</p>
+             * </li>
+             * <li><p><code>projectId</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>odpsProject</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -575,7 +677,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalNodes.
+             * <p>Approval node list</p>
              */
             public Builder approvalNodes(java.util.List<ApprovalNodes> approvalNodes) {
                 this.approvalNodes = approvalNodes;
@@ -583,7 +685,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>订单业务数据审批流程</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -591,7 +696,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Enable</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -599,7 +707,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Process definition ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>210001039767</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -607,7 +718,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * IsSystem.
+             * <p>System Default Policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isSystem(Boolean isSystem) {
                 this.isSystem = isSystem;
@@ -615,7 +729,10 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Process definition name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute 表审批</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -623,7 +740,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationServices.
+             * <p>Notification Service Statement</p>
              */
             public Builder notificationServices(java.util.List<NotificationServices> notificationServices) {
                 this.notificationServices = notificationServices;
@@ -631,7 +748,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleConditions.
+             * <p>List of rule conditions</p>
              */
             public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
@@ -639,7 +756,22 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>Subtype:</p>
+             * <ul>
+             * <li><p>Table</p>
+             * </li>
+             * <li><p>Column</p>
+             * </li>
+             * <li><p>Database</p>
+             * </li>
+             * <li><p>Schema</p>
+             * </li>
+             * <li><p>Default</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -647,7 +779,34 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Process definition type. Valid values:</p>
+             * <ul>
+             * <li><p>MaxCompute</p>
+             * </li>
+             * <li><p>DataService</p>
+             * </li>
+             * <li><p>Extension</p>
+             * </li>
+             * <li><p>Hologres</p>
+             * </li>
+             * <li><p>DlfV1 (Custom creation not supported).</p>
+             * </li>
+             * <li><p>EMR (Custom creation not supported).</p>
+             * </li>
+             * <li><p>DataAssetGovernance (Custom creation not supported).</p>
+             * </li>
+             * <li><p>Lindorm (Custom creation not supported).</p>
+             * </li>
+             * <li><p>StarRocks (Custom creation not supported).</p>
+             * </li>
+             * <li><p>DlfNext (Custom creation not supported).</p>
+             * </li>
+             * <li><p>DataWorks (Custom creation not supported).</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -67,7 +67,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The process instance and associated application content.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used for locating logs and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34267E2E-0335-1A60-A1F0-ADA530890CBA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,18 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * PrincipalId.
+             * <p>The grantee principal ID. The ID has different meanings depending on the principal type:</p>
+             * <ul>
+             * <li><p>RamUser: DataWorks UserId.</p>
+             * </li>
+             * <li><p>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;.</p>
+             * </li>
+             * <li><p>DlfRole: DlfNext role name.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ROLE_3133343434</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -149,7 +163,15 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * <p>The grantee principal type. Valid values:</p>
+             * <ul>
+             * <li>RamUser</li>
+             * <li>RamRole</li>
+             * <li>DlfRole</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RamRole</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -229,7 +251,12 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * DefSchema.
+             * <p>The resource type.</p>
+             * <p>Note: The resource types supported for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -237,7 +264,11 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * DefVersion.
+             * <p>The resource parsing version, which is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder defVersion(String defVersion) {
                 this.defVersion = defVersion;
@@ -245,7 +276,12 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>The resource metadata declaration.</p>
+             * <p>Note: The metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{\&quot;schema\&quot;:\&quot;default\&quot;,\&quot;threeTierModel\&quot;:false,\&quot;workspace\&quot;:\&quot;449656\&quot;,\&quot;project\&quot;:\&quot;sync_destination\&quot;,\&quot;table\&quot;:\&quot;order_table\&quot;,\&quot;tenant\&quot;:\&quot;524997424564736\&quot;}&quot;</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -468,7 +504,9 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessTypes.
+             * <p>The list of requested permissions.</p>
+             * <p>Note: Different levels of resources support different permission application types, all constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
              */
             public Builder accessTypes(java.util.List<String> accessTypes) {
                 this.accessTypes = accessTypes;
@@ -476,7 +514,12 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthMethod.
+             * <p>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying the authorization method: ranger or starrocksManager.</p>
+             * <p>Note: Different resources support different authorization methods, all constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>ranger</p>
              */
             public Builder authMethod(String authMethod) {
                 this.authMethod = authMethod;
@@ -484,7 +527,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773972024000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -492,7 +538,12 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * DefSchema.
+             * <p>The resource type.</p>
+             * <p>Note: The resource types supported for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -500,7 +551,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The permission expiration date, as a millisecond timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1785835708000</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -508,7 +562,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * FinalAccessTypes.
+             * <p>The list of resource operation permissions that are finally approved.</p>
              */
             public Builder finalAccessTypes(java.util.List<String> finalAccessTypes) {
                 this.finalAccessTypes = finalAccessTypes;
@@ -516,7 +570,9 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * Grantee.
+             * <p>The grantee description.</p>
+             * <p>Note: The grantee principal types supported by the system are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
              */
             public Builder grantee(Grantee grantee) {
                 this.grantee = grantee;
@@ -524,7 +580,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique identifier of the application content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y9H7AKFmjhWzLYdZNDZA5</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -532,7 +591,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessInstanceId.
+             * <p>The approval process instance ID of the submitted application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>777799223</p>
              */
             public Builder processInstanceId(String processInstanceId) {
                 this.processInstanceId = processInstanceId;
@@ -540,7 +602,8 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The resource declaration. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -548,7 +611,12 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The minimum-permission resource type.</p>
+             * <p>Note: The minimum-permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -556,7 +624,19 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The approval status. Valid values:</p>
+             * <ul>
+             * <li>WaitApproval: Pending approval.</li>
+             * <li>Confirmed: Pending authorization.</li>
+             * <li>RejectApproval: Approval rejected.</li>
+             * <li>AuthorizeSucceed: Authorization succeeded.</li>
+             * <li>AuthorizeFailed: Authorization failed.</li>
+             * <li>Deleted: Deleted.</li>
+             * <li>Canceled: Canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deleted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -564,7 +644,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69973837489</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -572,7 +655,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773972024000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -691,7 +777,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationTime.
+             * <p>The time when the application was submitted, as a millisecond timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1779675618000</p>
              */
             public Builder applicationTime(Long applicationTime) {
                 this.applicationTime = applicationTime;
@@ -699,7 +788,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * Contents.
+             * <p>The list of application contents.</p>
              */
             public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
@@ -707,7 +796,12 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * DefSchema.
+             * <p>The resource type.</p>
+             * <p>Note: The resource types supported for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -715,7 +809,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessInstanceId.
+             * <p>The process instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>332066440109224007</p>
              */
             public Builder processInstanceId(String processInstanceId) {
                 this.processInstanceId = processInstanceId;
@@ -723,7 +820,10 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The application reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务需要</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -731,7 +831,19 @@ public class GetApplicationContentsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The approval status. Valid values:</p>
+             * <ul>
+             * <li>WaitApproval: Pending approval.</li>
+             * <li>Confirmed: Pending authorization.</li>
+             * <li>RejectApproval: Approval rejected.</li>
+             * <li>AuthorizeSucceed: Authorization succeeded.</li>
+             * <li>AuthorizeFailed: Authorization failed.</li>
+             * <li>Deleted: Deleted.</li>
+             * <li>Canceled: Canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WaitApproval</p>
              */
             public Builder status(String status) {
                 this.status = status;

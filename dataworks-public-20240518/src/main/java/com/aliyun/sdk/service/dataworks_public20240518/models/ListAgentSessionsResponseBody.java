@@ -67,7 +67,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * JsonRpcResponse.
+         * <p>The JSON-RPC response.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -131,7 +131,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionTagCode.
+             * <p>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user to call OpenAPI but the calling system has its own account system, you can filter the session list based on an account ID. In this case, set this parameter to the account ID of the calling system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_123456</p>
              */
             public Builder sessionTagCode(String sessionTagCode) {
                 this.sessionTagCode = sessionTagCode;
@@ -211,7 +214,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionSource.
+             * <p>The session source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openapi_sdk</p>
              */
             public Builder sessionSource(String sessionSource) {
                 this.sessionSource = sessionSource;
@@ -219,7 +225,15 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatus.
+             * <p>The session connection status.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>NORMAL: Stateless session</li>
+             * <li>INIT: Initialization state</li>
+             * <li>RUNNING: Running</li>
+             * <li>RELEASED: Released state</li>
+             * </ul>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -227,7 +241,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionTagList.
+             * <p>The list of session tags.</p>
              */
             public Builder sessionTagList(java.util.List<SessionTagList> sessionTagList) {
                 this.sessionTagList = sessionTagList;
@@ -346,7 +360,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Meta.
+             * <p>The extended session information from DataWorks, which is not part of the ACP standard protocol.</p>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;
@@ -354,7 +368,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCreatedAt.
+             * <p>The time when the session was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder sessionCreatedAt(Long sessionCreatedAt) {
                 this.sessionCreatedAt = sessionCreatedAt;
@@ -362,7 +379,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionDescription.
+             * <p>The session description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sales trend analysis</p>
              */
             public Builder sessionDescription(String sessionDescription) {
                 this.sessionDescription = sessionDescription;
@@ -370,7 +390,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The unique ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_0f12abc34</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -378,7 +401,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionTitle.
+             * <p>The session title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sales analysis for the last 30 days</p>
              */
             public Builder sessionTitle(String sessionTitle) {
                 this.sessionTitle = sessionTitle;
@@ -386,7 +412,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionUpdatedAt.
+             * <p>The time when the session was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder sessionUpdatedAt(Long sessionUpdatedAt) {
                 this.sessionUpdatedAt = sessionUpdatedAt;
@@ -479,7 +508,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentSessions.
+             * <p>The session list.</p>
              */
             public Builder agentSessions(java.util.List<AgentSessions> agentSessions) {
                 this.agentSessions = agentSessions;
@@ -487,7 +516,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The actual number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -495,7 +527,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page. Set this parameter to 1 for the first page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -503,7 +538,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of matched sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -583,7 +621,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID passed in by the requester. The value is returned as-is.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29d9a29c-a284-48c1-9eaa-4a42c7c616d5</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -591,7 +632,10 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * Jsonrpc.
+             * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder jsonrpc(String jsonrpc) {
                 this.jsonrpc = jsonrpc;
@@ -599,7 +643,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The paginated result set of the session query.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

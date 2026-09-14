@@ -67,7 +67,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -222,7 +222,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The snapshot comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snapshot comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -230,7 +233,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The snapshot creation time, in millisecond UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782370983000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -238,7 +244,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The employee ID of the submitter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>209508679263509059</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -246,7 +255,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8b723a9e8bd443af920b77e39aeb4f63</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -254,7 +266,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1389623</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -262,7 +277,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectId.
+             * <p>The unique ID of the object to which the snapshot belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8467231038932407294</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -270,7 +288,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The snapshot type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Saved</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +299,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -371,7 +395,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -379,7 +406,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -387,7 +417,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The list of snapshots.</p>
              */
             public Builder snapshots(java.util.List<Snapshots> snapshots) {
                 this.snapshots = snapshots;
@@ -395,7 +425,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

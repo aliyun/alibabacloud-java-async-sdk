@@ -67,7 +67,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,16 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * EnvType.
+             * <p>The environment type. Valid values:</p>
+             * <ul>
+             * <li><p><code>Prod</code>: production environment</p>
+             * </li>
+             * <li><p><code>Dev</code>: development environment</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -149,7 +161,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value123</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -359,7 +374,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640000000000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -367,7 +385,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -375,7 +396,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test parameter.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -383,7 +407,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The parameter ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -391,7 +418,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640000000000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -399,7 +429,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -407,7 +440,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace.para</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -415,7 +451,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -423,7 +462,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -431,7 +473,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The environment-specific configurations of the parameter value.</p>
              */
             public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
@@ -439,7 +481,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The scope of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Project</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -447,7 +492,18 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the parameter. Valid values:</p>
+             * <ul>
+             * <li><p><code>PlainConstant</code>: a plaintext constant.</p>
+             * </li>
+             * <li><p><code>SecretConstant</code>: a secret constant.</p>
+             * </li>
+             * <li><p><code>Variable</code>: a variable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PlainConstant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -455,7 +511,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -548,7 +607,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -556,7 +618,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -564,7 +629,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterVersion.
+             * <p>The list of parameter versions.</p>
              */
             public Builder parameterVersion(java.util.List<ParameterVersion> parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -572,7 +637,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

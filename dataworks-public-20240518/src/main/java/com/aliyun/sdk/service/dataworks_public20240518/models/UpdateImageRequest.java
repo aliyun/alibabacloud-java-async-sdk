@@ -237,7 +237,14 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The image visibility. Valid values:</p>
+         * <ul>
+         * <li>Public: visible to all users.</li>
+         * <li>Private: visible only to the creator.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -246,7 +253,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * AcrAssociatedVpcId.
+         * <p>The VPC ID associated with the ACR instance. This parameter is required when referencing an ACR image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
          */
         public Builder acrAssociatedVpcId(String acrAssociatedVpcId) {
             this.putQueryParameter("AcrAssociatedVpcId", acrAssociatedVpcId);
@@ -255,7 +265,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * AcrInstanceId.
+         * <p>The Container Registry (ACR) instance ID. This parameter is required when referencing an ACR image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acr_instance_id</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.putQueryParameter("AcrInstanceId", acrInstanceId);
@@ -264,7 +277,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * BuildConfig.
+         * <p>The image build configuration.</p>
          */
         public Builder buildConfig(BuildConfig buildConfig) {
             String buildConfigShrink = shrink(buildConfig, "BuildConfig", "json");
@@ -274,7 +287,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The image description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create by xxxx</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -283,6 +299,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +312,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * ImageUri.
+         * <p>The image URI. This parameter is required when referencing an ACR image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-beijing.cr.aliyuncs.com/namespace/image:0.1.0</p>
          */
         public Builder imageUri(String imageUri) {
             this.putQueryParameter("ImageUri", imageUri);
@@ -304,7 +324,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_image_001</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -313,7 +336,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The image namespace. Set this parameter to DataWorks Default when referencing a DataWorks official image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace_name</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -322,7 +348,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * ProviderImageId.
+         * <p>The provider image ID. This parameter is required when referencing a DataWorks official image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System_shell_20251201</p>
          */
         public Builder providerImageId(String providerImageId) {
             this.putBodyParameter("ProviderImageId", providerImageId);
@@ -331,7 +360,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * RepositoryName.
+         * <p>The image repository name. Set this parameter to DataWorks Default when referencing a DataWorks official image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo_name</p>
          */
         public Builder repositoryName(String repositoryName) {
             this.putQueryParameter("RepositoryName", repositoryName);
@@ -340,7 +372,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * Supported.
+         * <p>The image sub-purpose.</p>
          */
         public Builder supported(Supported supported) {
             String supportedShrink = shrink(supported, "Supported", "json");
@@ -409,7 +441,10 @@ public class UpdateImageRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The script content. If the content consists of package names, separate them with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>requests</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -417,7 +452,10 @@ public class UpdateImageRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The script type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Python3</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -484,7 +522,10 @@ public class UpdateImageRequest extends Request {
             } 
 
             /**
-             * BuildType.
+             * <p>The build type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PackageInstallation</p>
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
@@ -492,7 +533,7 @@ public class UpdateImageRequest extends Request {
             }
 
             /**
-             * PackageInstallationScripts.
+             * <p>The list of pre-installation scripts.</p>
              */
             public Builder packageInstallationScripts(java.util.List<PackageInstallationScripts> packageInstallationScripts) {
                 this.packageInstallationScripts = packageInstallationScripts;
@@ -559,7 +600,13 @@ public class UpdateImageRequest extends Request {
             } 
 
             /**
-             * Module.
+             * <p>The image sub-module. Valid values:</p>
+             * <ul>
+             * <li>Scheduler: data development.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -567,7 +614,7 @@ public class UpdateImageRequest extends Request {
             }
 
             /**
-             * TaskTypes.
+             * <p>The list of node types supported by the image.</p>
              */
             public Builder taskTypes(java.util.List<String> taskTypes) {
                 this.taskTypes = taskTypes;

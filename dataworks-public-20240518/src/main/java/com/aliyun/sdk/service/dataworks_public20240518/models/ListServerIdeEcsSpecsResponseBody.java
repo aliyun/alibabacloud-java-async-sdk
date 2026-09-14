@@ -93,7 +93,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>可选的 ECS 规格列表。</p>
+         * <p>The list of available ECS instance types for personal development environments.</p>
          */
         public Builder ecsSpecs(java.util.List<EcsSpecs> ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
@@ -101,7 +101,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求返回的最大结果数。</p>
+         * <p>The maximum number of records returned in this response.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -112,7 +112,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>翻页标记，当还有更多数据时返回此值，下次请求传入即可获取后续数据。</p>
+         * <p>The pagination token for the next page. An empty value indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESG****</p>
@@ -123,7 +123,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID，用于问题定位与链路追踪。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
@@ -283,7 +283,11 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>机器类型（CPU / GPU）。</p>
+             * <p>The accelerator type. Valid values:</p>
+             * <ul>
+             * <li>CPU: uses only CPU.</li>
+             * <li>GPU: uses GPU acceleration.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CPU</p>
@@ -294,7 +298,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CPU 核数。</p>
+             * <p>The number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -305,7 +309,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>该规格对应的 CU（计算单元）数。</p>
+             * <p>The number of compute units (CUs) consumed by this instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -316,7 +320,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU 卡数。</p>
+             * <p>The number of GPU cards.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -327,7 +331,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>单卡 GPU 显存大小（GiB）。</p>
+             * <p>The GPU memory size.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -338,7 +342,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU 类型。</p>
+             * <p>The GPU model.</p>
              * 
              * <strong>example:</strong>
              * <p>V100</p>
@@ -349,7 +353,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ECS 实例规格类型。</p>
+             * <p>The ECS instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g6.xlarge</p>
@@ -360,7 +364,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>该规格当前是否可用（有库存可售卖）。</p>
+             * <p>Indicates whether the instance type is available.</p>
              */
             public Builder isAvailable(Boolean isAvailable) {
                 this.isAvailable = isAvailable;
@@ -368,7 +372,7 @@ public class ListServerIdeEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内存大小（GiB）。</p>
+             * <p>The memory size, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>

@@ -67,7 +67,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
         } 
 
         /**
-         * McpServer.
+         * <p>The registered MCP Server.</p>
          */
         public Builder mcpServer(McpServer mcpServer) {
             this.mcpServer = mcpServer;
@@ -75,7 +75,10 @@ public class CreateMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valueA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,6 +144,8 @@ public class CreateMcpServerResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The time when the MCP Server was created.</p>
+             * <p>The value is a 13-digit number, such as <code>1780555634000</code>.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -152,7 +157,10 @@ public class CreateMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the MCP Server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-mcp-server</p>
              */
             public Builder name(String name) {
                 this.name = name;

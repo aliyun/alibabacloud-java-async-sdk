@@ -112,7 +112,11 @@ public class ImportWorkflowDefinitionRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to call this operation in validation mode. If this parameter is set to true, only the legality of the input workflow spec is validated. The same preprocessing and validation logic as the actual import is reused (with identical rules), but no data is persisted and no write operations are performed. The validation result is returned through an asynchronous task. If validation fails, the asynchronous task fails, and the error details include the error code, error message, and a JSONPath that locates the specific node (such as $.spec.workflows[0].nodes[1]).</p>
+         * <p>Default value: false. In this case, the workflow is imported normally.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -121,8 +125,8 @@ public class ImportWorkflowDefinitionRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+         * <p>This parameter specifies the DataWorks workspace used for this API invoke.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,15 +139,15 @@ public class ImportWorkflowDefinitionRequest extends Request {
         }
 
         /**
-         * <p>The FlowSpec information for this workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
+         * <p>The FlowSpec information that describes the workflow. For the specification details, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
          * <blockquote>
          * <p>How to quickly obtain a FlowSpec template?</p>
-         * </blockquote>
          * <ul>
-         * <li>Open a workflow in Data Studio, then click &quot;Show Spec&quot; in the top-right corner to retrieve the FlowSpec description for the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</li>
+         * <li>Open a workflow in DataStudio, and then click &quot;Show Spec&quot; in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</li>
          * </ul>
+         * </blockquote>
          * <blockquote>
-         * <p>This interface supports creating both the workflow and its internal nodes simultaneously. Therefore, please pay close attention to the ID specified in the FlowSpec. If the provided ID already exists, the operation will be treated as an update. A create operation is performed only if the ID is omitted or does not exist.</p>
+         * <p>Notice: This operation supports creating a workflow and its internal nodes at the same time. Pay attention to the IDs specified in the FlowSpec. If a specified ID already exists, the operation becomes an update. Only when no ID is specified or the ID does not exist does the operation become a create.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -124,7 +124,10 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on a single page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +136,10 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Omit this parameter for the first request. For subsequent requests, use the <code>NextToken</code> value from the previous response to retrieve the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -142,7 +148,10 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * Q.
+         * <p>The search keyword for a fuzzy match by agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analysis</p>
          */
         public Builder q(String q) {
             this.putBodyParameter("Q", q);
@@ -151,7 +160,12 @@ public class ListCustomAgentsRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>Filters the results by visibility level. You can specify multiple levels.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder visibility(java.util.List<String> visibility) {
             String visibilityShrink = shrink(visibility, "Visibility", "json");

@@ -80,7 +80,10 @@ public class CreateImageResponseBody extends TeaModel {
         } 
 
         /**
-         * ImageId.
+         * <p>The ID of the created image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom_image_xxxx_xxxx</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -88,7 +91,10 @@ public class CreateImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used for locating logs and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreateImageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

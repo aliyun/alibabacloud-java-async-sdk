@@ -67,7 +67,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paged query result of quality evaluation nodes.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,10 +75,10 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The API request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>691CA452-D37A-4ED0-9441</p>
+         * <p>691CA452-D37A-4ED0-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +144,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The trigger configuration of the callback event.</p>
+             * <p>The cause that triggers the hook.</p>
              * 
              * <strong>example:</strong>
              * <p>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</p>
@@ -155,9 +155,9 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the callback event. Valid values:</p>
+             * <p>The type of the follow-up action. Valid values:</p>
              * <ul>
-             * <li>BlockTaskInstance. The value indicates that an auto triggered node is blocked.</li>
+             * <li>BlockTaskInstance: Blocks the execution of a DataWorks node instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert notification methods.</p>
+             * <p>The alert channel.</p>
              */
             public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
@@ -295,7 +295,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The extended information in the JSON format. For example, the DingTalk chatbot can remind all members in a DingTalk group by using the at sign (@).</p>
+             * <p>The extension information in JSON format. For example, DingTalk chatbots support mentioning all members.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
@@ -308,11 +308,11 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             /**
              * <p>The type of the alert recipient. Valid values:</p>
              * <ul>
-             * <li>AliUid: Alibaba Cloud account ID</li>
-             * <li>WebhookUrl: URL of a custom webhook</li>
-             * <li>DingdingUrl: DingTalk chatbot URL</li>
-             * <li>FeishuUrl: Lark chatbot URL</li>
-             * <li>WeixinUrl: WeCom chatbot URL</li>
+             * <li>AliUid: Alibaba Cloud account UID.</li>
+             * <li>WebhookUrl: custom webhook URL.</li>
+             * <li>DingdingUrl: DingTalk chatbot URL.</li>
+             * <li>FeishuUrl: Lark chatbot URL.</li>
+             * <li>WeixinUrl: WeCom chatbot URL.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -324,7 +324,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert recipients.</p>
+             * <p>The specific values of the alert recipients.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -391,7 +391,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert notification methods.</p>
+             * <p>The alert channel configurations.</p>
              */
             public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -399,7 +399,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert recipients.</p>
+             * <p>The alert recipient configurations.</p>
              */
             public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -466,7 +466,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The trigger condition of the alert notification.</p>
+             * <p>The cause that triggers the notification.</p>
              * 
              * <strong>example:</strong>
              * <p>${severity} == &quot;High&quot;</p>
@@ -477,7 +477,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations for the alert notification.</p>
+             * <p>The alert settings.</p>
              */
             public Builder notifications(java.util.List<Notifications> notifications) {
                 this.notifications = notifications;
@@ -570,7 +570,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the database to which the table belongs. Valid values:</p>
+             * <p>The database type of the table dataset. Valid values:</p>
              * <ul>
              * <li>maxcompute</li>
              * <li>emr</li>
@@ -590,7 +590,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the partitioned table.</p>
+             * <p>The partition settings of the partitioned table.</p>
              * 
              * <strong>example:</strong>
              * <p>ds=$[yyyymmdd-1]</p>
@@ -601,7 +601,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the table in Data Map.</p>
+             * <p>The unique ID of the table in DataWorks Data Map.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.unit_test.tb_unit_test</p>
@@ -612,7 +612,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the monitored object. Valid values:</p>
+             * <p>The monitored object type. Valid values:</p>
              * <ul>
              * <li>Table</li>
              * </ul>
@@ -685,7 +685,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the auto triggered nodes of which the instances are successfully run. This parameter takes effect only if the Type parameter is set to ByScheduledTaskInstance.</p>
+             * <p>This parameter takes effect when type is set to ByScheduledTaskInstance. Specifies the scheduled node IDs whose successful instance execution can trigger the task.</p>
              */
             public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
@@ -693,9 +693,9 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger condition of the task. Valid values:</p>
+             * <p>The type of event that triggers the quality evaluation task. Valid values:</p>
              * <ul>
-             * <li>ByScheduledTaskInstance. The value indicates that the task is triggered when the instance of an auto triggered node is successfully run.</li>
+             * <li>ByScheduledTaskInstance: Triggered when a scheduled node instance runs successfully.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -878,7 +878,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the data quality monitoring task. The description can be up to 65,535 characters in length.</p>
+             * <p>The description of the data quality evaluation task. The description can be up to 65,535 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>This is a daily run data quality evaluation plan</p>
@@ -889,7 +889,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback configurations of the task during the instance lifecycle. Blocking an auto triggered node is a type of callback event. Only this type is supported.</p>
+             * <p>The callback settings during the epoch of data quality evaluation task instances. Currently, only one hook that blocks a scheduling node instance is supported.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -897,7 +897,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data quality monitoring task.</p>
+             * <p>The ID of the data quality evaluation task.</p>
              * 
              * <strong>example:</strong>
              * <p>10001</p>
@@ -908,7 +908,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
+             * <p>The name of the data quality evaluation task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>Data quality verification task</p>
@@ -919,7 +919,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations for alert notifications.</p>
+             * <p>The alert configuration.</p>
              */
             public Builder notifications(DataQualityEvaluationTasksNotifications notifications) {
                 this.notifications = notifications;
@@ -938,10 +938,10 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field can be set to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL. The value default indicates the YARN queue for E-MapReduce (EMR) tasks.</p>
+             * <p>The runtime settings for data sources. Currently, only specifying the EMR YARN queue and the SQL engine for collecting EMR tables is supported. Valid SQL engine values: SPARK_SQL, KYUUBI, PRESTO_SQL, and HIVE_SQL.</p>
              * 
              * <strong>example:</strong>
-             * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK-SQL&quot; }</p>
+             * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>
              */
             public Builder runtimeConf(String runtimeConf) {
                 this.runtimeConf = runtimeConf;
@@ -949,7 +949,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitored object of the task.</p>
+             * <p>The monitored object of the data quality evaluation task.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -957,7 +957,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger configuration of the task.</p>
+             * <p>The trigger configuration of the data quality evaluation task.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -1050,7 +1050,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data quality monitoring tasks.</p>
+             * <p>The quality evaluation tasks.</p>
              */
             public Builder dataQualityEvaluationTasks(java.util.List<DataQualityEvaluationTasks> dataQualityEvaluationTasks) {
                 this.dataQualityEvaluationTasks = dataQualityEvaluationTasks;
@@ -1069,7 +1069,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1080,7 +1080,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>131</p>

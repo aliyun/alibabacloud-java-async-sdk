@@ -139,7 +139,10 @@ public class UpdateMetaEntityDefRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -148,7 +151,10 @@ public class UpdateMetaEntityDefRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The new display name, up to 32 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business API</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -157,6 +163,7 @@ public class UpdateMetaEntityDefRequest extends Request {
         }
 
         /**
+         * <p>The entity type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +176,10 @@ public class UpdateMetaEntityDefRequest extends Request {
         }
 
         /**
-         * NewAttributeDefs.
+         * <p>The new attribute definitions. New attributes must be optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder newAttributeDefs(java.util.List<MetaEntityAttributeDef> newAttributeDefs) {
             String newAttributeDefsShrink = shrink(newAttributeDefs, "NewAttributeDefs", "json");
@@ -179,7 +189,10 @@ public class UpdateMetaEntityDefRequest extends Request {
         }
 
         /**
-         * UpdateAttributeDefs.
+         * <p>Updates to existing attribute definitions. Only modifying the display name, description, and appending enum values to ENUM types are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder updateAttributeDefs(java.util.List<MetaEntityAttributeDef> updateAttributeDefs) {
             String updateAttributeDefsShrink = shrink(updateAttributeDefs, "UpdateAttributeDefs", "json");

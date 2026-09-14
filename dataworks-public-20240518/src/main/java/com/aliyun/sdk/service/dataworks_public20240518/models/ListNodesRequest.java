@@ -183,10 +183,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</p>
-         * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
-         * </blockquote>
+         * <p>Leave this parameter empty if not specified. The filter condition: within the specified container. Specify the container ID. This parameter is not related to the resource group (ResourceGroupId).</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
@@ -198,7 +195,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The name of the node. Fuzzy search is supported.</p>
+         * <p>The node name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -210,7 +207,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the data to retrieve, used for pagination.</p>
+         * <p>The page number for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,7 +219,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the data to retrieve, used for pagination.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -234,7 +231,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,10 +244,15 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</p>
-         * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
-         * </blockquote>
+         * <p>Filter condition: scheduling type. Valid values:</p>
+         * <ul>
+         * <li><p>Normal: The node is executed normally.</p>
+         * </li>
+         * <li><p>Pause: The node status is set to paused, and downstream nodes that depend on the current node are blocked from execution.</p>
+         * </li>
+         * <li><p>Skip: The node status is set to dry run. The system directly returns a success result (with an execution duration of 0 seconds), does not block downstream node execution, and does not consume resources.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -262,11 +264,14 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The rerun property, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. Valid values:</p>
+         * <p>The rerun property. If not specified, this parameter is left empty. Valid values:</p>
          * <ul>
-         * <li>Allowed: The nodes can be rerun regardless of whether they are successfully run or fail to run.</li>
-         * <li>FailureAllowed: The nodes can be rerun only after they fail to run.</li>
-         * <li>Denied: The nodes cannot be rerun regardless of whether they are successfully run or fail to run.</li>
+         * <li><p>Allowed: The node can be rerun regardless of whether it runs successfully or fails.</p>
+         * </li>
+         * <li><p>FailureAllowed: The node can be rerun only after a failed run, not after a successful run.</p>
+         * </li>
+         * <li><p>Denied: The node cannot be rerun regardless of whether it runs successfully or fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,15 +284,18 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The location of the nodes in the left-side navigation pane of the Data Studio page, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. Valid values:</p>
+         * <p>The scene in which the node resides. Leave this parameter empty if not specified. This parameter corresponds to the partition of the left-side navigation pane in DataStudio. Valid values:</p>
          * <ul>
-         * <li>DataworksProject</li>
-         * <li>DataworksManualWorkflow</li>
-         * <li>DataworksManualTask</li>
+         * <li><p>DataworksProject: project folder.</p>
+         * </li>
+         * <li><p>DataworksManualWorkflow: manual workflow.</p>
+         * </li>
+         * <li><p>DataworksManualTask: manual node.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>DATAWORKS_PROJECT</p>
+         * <p>DataworksProject</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);

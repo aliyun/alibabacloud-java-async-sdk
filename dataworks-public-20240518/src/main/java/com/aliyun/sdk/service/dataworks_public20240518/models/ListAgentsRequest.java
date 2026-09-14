@@ -87,7 +87,10 @@ public class ListAgentsRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID passed in by the requester. The value is returned as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4as3dasf654a</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The specific parameter content for this request.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -187,7 +193,10 @@ public class ListAgentsRequest extends Request {
             } 
 
             /**
-             * AgentName.
+             * <p>The exact agent name to filter by. If not specified, all agents are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat_cli_chatbi</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -195,7 +204,10 @@ public class ListAgentsRequest extends Request {
             }
 
             /**
-             * MaxResults.
+             * <p>The number of entries per page. Default value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -203,7 +215,10 @@ public class ListAgentsRequest extends Request {
             }
 
             /**
-             * NextToken.
+             * <p>The pagination token that conforms to the Alibaba Cloud OpenAPI specification. Leave this parameter empty for the first page. For subsequent pages, pass the nextToken value returned from the previous page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

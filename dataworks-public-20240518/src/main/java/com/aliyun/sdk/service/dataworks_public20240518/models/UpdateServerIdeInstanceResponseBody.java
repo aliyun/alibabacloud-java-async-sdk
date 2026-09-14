@@ -67,7 +67,7 @@ public class UpdateServerIdeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>个人开发环境实例 ID。</p>
+         * <p>The personal development environment instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>699573</p>
@@ -78,7 +78,7 @@ public class UpdateServerIdeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID，用于问题定位与链路追踪。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>

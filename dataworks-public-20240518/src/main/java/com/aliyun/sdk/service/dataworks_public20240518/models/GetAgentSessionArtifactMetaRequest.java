@@ -87,7 +87,10 @@ public class GetAgentSessionArtifactMetaRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>A client-provided ID that is echoed in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900335678024</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class GetAgentSessionArtifactMetaRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. The value is <code>2.0</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class GetAgentSessionArtifactMetaRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The container for business parameters.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -174,7 +180,10 @@ public class GetAgentSessionArtifactMetaRequest extends Request {
             } 
 
             /**
-             * ArtifactPath.
+             * <p>The path of the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mock/mock_report.md</p>
              */
             public Builder artifactPath(String artifactPath) {
                 this.artifactPath = artifactPath;
@@ -182,7 +191,10 @@ public class GetAgentSessionArtifactMetaRequest extends Request {
             }
 
             /**
-             * SessionId.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_0f12abc34</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

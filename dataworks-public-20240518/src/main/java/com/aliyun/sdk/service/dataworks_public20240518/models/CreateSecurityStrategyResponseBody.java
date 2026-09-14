@@ -67,7 +67,10 @@ public class CreateSecurityStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The security strategy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class CreateSecurityStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17****903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

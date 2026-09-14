@@ -115,7 +115,10 @@ public class SubmitBatchChangeTableOwnerRequest extends Request {
         }
 
         /**
-         * EnableCrossTenant.
+         * <p>Specifies whether to allow transferring ownership to an owner in a different tenant. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCrossTenant(Boolean enableCrossTenant) {
             this.putBodyParameter("EnableCrossTenant", enableCrossTenant);
@@ -124,6 +127,7 @@ public class SubmitBatchChangeTableOwnerRequest extends Request {
         }
 
         /**
+         * <p>The target owner after the transfer. Use the Alibaba Cloud UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,6 +140,7 @@ public class SubmitBatchChangeTableOwnerRequest extends Request {
         }
 
         /**
+         * <p>The list of MaxCompute table metadata entity IDs to transfer. A maximum of 100 tables are allowed per request. Duplicate values are not allowed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tableMetaEntityIds(java.util.List<String> tableMetaEntityIds) {

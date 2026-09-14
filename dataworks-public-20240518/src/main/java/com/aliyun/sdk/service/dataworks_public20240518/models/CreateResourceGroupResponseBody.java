@@ -80,7 +80,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID, which is used for locating logs and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -91,7 +91,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the order that is used to create the serverless resource group.</p>
+         * <p>The order information of the created common resource group.</p>
          */
         public Builder resourceGroupOrder(ResourceGroupOrder resourceGroupOrder) {
             this.resourceGroupOrder = resourceGroupOrder;
@@ -181,7 +181,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the serverless resource group.</p>
+             * <p>The unique identifier of the created common resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
@@ -192,7 +192,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order that is used to create the serverless resource group.</p>
+             * <p>The order ID of the created common resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>2391982058XXXXX</p>
@@ -203,7 +203,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the order that is used to create the serverless resource group.</p>
+             * <p>The order instance ID of the created common resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>

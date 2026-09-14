@@ -83,6 +83,7 @@ public class GetProcessDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the process definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

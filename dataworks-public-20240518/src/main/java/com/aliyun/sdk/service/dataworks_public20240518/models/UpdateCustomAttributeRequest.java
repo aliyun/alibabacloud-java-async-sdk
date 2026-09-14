@@ -167,7 +167,10 @@ public class UpdateCustomAttributeRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The new description for the custom attribute. It must be 256 characters or less.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -176,7 +179,10 @@ public class UpdateCustomAttributeRequest extends Request {
         }
 
         /**
-         * DisplayEnabled.
+         * <p>Whether to display the custom attribute in the UI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder displayEnabled(Boolean displayEnabled) {
             this.putBodyParameter("DisplayEnabled", displayEnabled);
@@ -185,7 +191,10 @@ public class UpdateCustomAttributeRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The new display name for the custom attribute. It must be 128 characters or less.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>业务负责人</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -194,7 +203,17 @@ public class UpdateCustomAttributeRequest extends Request {
         }
 
         /**
-         * EntityTypes.
+         * <p>The applicable entity types. This parameter supports specific types and wildcard formats, such as <code>*-table</code> and <code>*-column</code>. For example:</p>
+         * <ul>
+         * <li><p><code>dataworks-project</code>: A DataWorks workspace</p>
+         * </li>
+         * <li><p><code>dataworks-dataset</code>: A DataWorks dataset</p>
+         * </li>
+         * <li><p><code>maxcompute-table</code>: A MaxCompute table</p>
+         * </li>
+         * <li><p><code>*-column</code>: All column types</p>
+         * </li>
+         * </ul>
          */
         public Builder entityTypes(java.util.List<String> entityTypes) {
             String entityTypesShrink = shrink(entityTypes, "EntityTypes", "simple");
@@ -204,6 +223,7 @@ public class UpdateCustomAttributeRequest extends Request {
         }
 
         /**
+         * <p>The custom attribute ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +236,10 @@ public class UpdateCustomAttributeRequest extends Request {
         }
 
         /**
-         * SearchFilterEnabled.
+         * <p>Whether the custom attribute can be used as a filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder searchFilterEnabled(Boolean searchFilterEnabled) {
             this.putBodyParameter("SearchFilterEnabled", searchFilterEnabled);
@@ -225,7 +248,7 @@ public class UpdateCustomAttributeRequest extends Request {
         }
 
         /**
-         * ValueEnums.
+         * <p>The enumerated values. This applies only to custom attributes of the <code>enum</code> type. You can only append new values during an update.</p>
          */
         public Builder valueEnums(java.util.List<String> valueEnums) {
             String valueEnumsShrink = shrink(valueEnums, "ValueEnums", "simple");

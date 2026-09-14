@@ -78,7 +78,7 @@ public class GetSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Snapshot.
+         * <p>The snapshot.</p>
          */
         public Builder snapshot(Snapshot snapshot) {
             this.snapshot = snapshot;
@@ -157,7 +157,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The node script content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT 1</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -176,7 +179,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * StageCode.
+             * <p>The stage code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder stageCode(String stageCode) {
                 this.stageCode = stageCode;
@@ -347,7 +353,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The submit comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snapshot comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -355,7 +364,7 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The structured snapshot content. This parameter is mutually exclusive with ContentUrl.</p>
              */
             public Builder content(Content content) {
                 this.content = content;
@@ -363,7 +372,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * ContentUrl.
+             * <p>The OSS pre-signed download URL. This parameter is mutually exclusive with Content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss.example.com/presigned">https://oss.example.com/presigned</a></p>
              */
             public Builder contentUrl(String contentUrl) {
                 this.contentUrl = contentUrl;
@@ -371,7 +383,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The snapshot creation time in millisecond timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782370983000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -379,7 +394,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The employee ID of the submitter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>209508679263509059</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -387,7 +405,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8b723a9e8bd443af920b77e39aeb4f63</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -395,7 +416,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1389623</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -403,7 +427,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectId.
+             * <p>The unique ID of the object to which the snapshot belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8467231038932407294</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -411,7 +438,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The snapshot type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Saved</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -419,7 +449,10 @@ public class GetSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

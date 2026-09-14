@@ -154,7 +154,10 @@ public class UpdateSecurityStrategyRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token to ensure request idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -163,6 +166,7 @@ public class UpdateSecurityStrategyRequest extends Request {
         }
 
         /**
+         * <p>The policy content, which is constrained by the <code>SecurityStrategySchema</code>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder content(Content content) {
@@ -173,7 +177,10 @@ public class UpdateSecurityStrategyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p><strong>The policy description.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>控制数据分析模块的查询结果安全行为</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -182,6 +189,7 @@ public class UpdateSecurityStrategyRequest extends Request {
         }
 
         /**
+         * <p><strong>The policy ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +202,10 @@ public class UpdateSecurityStrategyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p><strong>The policy name.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认数据分析策略</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -203,7 +214,7 @@ public class UpdateSecurityStrategyRequest extends Request {
         }
 
         /**
-         * Workspaces.
+         * <p><strong>A list of associated workspace IDs.</strong></p>
          */
         public Builder workspaces(java.util.List<Long> workspaces) {
             String workspacesShrink = shrink(workspaces, "Workspaces", "json");
@@ -428,7 +439,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             } 
 
             /**
-             * BasicEditionDefaultValue.
+             * <p>The default value for the Basic edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder basicEditionDefaultValue(Object basicEditionDefaultValue) {
                 this.basicEditionDefaultValue = basicEditionDefaultValue;
@@ -436,7 +450,7 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * BasicEditionIntervalValue.
+             * <p>The value range for the Basic edition, specified as <code>[min, max]</code>.</p>
              */
             public Builder basicEditionIntervalValue(java.util.List<Integer> basicEditionIntervalValue) {
                 this.basicEditionIntervalValue = basicEditionIntervalValue;
@@ -444,7 +458,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * Controller.
+             * <p>The controller identifier. For valid values, see the list of controllers for each schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>viewCount</p>
              */
             public Builder controller(String controller) {
                 this.controller = controller;
@@ -452,7 +469,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * ControllerValueType.
+             * <p>The data type of the controller\&quot;s value. Valid values: <code>Boolean</code>, <code>Integer</code>, <code>Long</code>, and <code>String</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Integer</p>
              */
             public Builder controllerValueType(String controllerValueType) {
                 this.controllerValueType = controllerValueType;
@@ -460,7 +480,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询结果-单次展示记录值上限</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -468,7 +491,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * DisplayNameEn.
+             * <p>The English display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query Results - Single Display Record Limit</p>
              */
             public Builder displayNameEn(String displayNameEn) {
                 this.displayNameEn = displayNameEn;
@@ -476,7 +502,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the controller is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -484,7 +513,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * EnterpriseEditionDefaultValue.
+             * <p>The default value for the Enterprise edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder enterpriseEditionDefaultValue(Object enterpriseEditionDefaultValue) {
                 this.enterpriseEditionDefaultValue = enterpriseEditionDefaultValue;
@@ -492,7 +524,7 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * EnterpriseEditionIntervalValue.
+             * <p>The value range for the Enterprise edition, specified as <code>[min, max]</code>.</p>
              */
             public Builder enterpriseEditionIntervalValue(java.util.List<Integer> enterpriseEditionIntervalValue) {
                 this.enterpriseEditionIntervalValue = enterpriseEditionIntervalValue;
@@ -500,7 +532,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * ProfessionalEditionDefaultValue.
+             * <p>The default value for the Professional edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder professionalEditionDefaultValue(Object professionalEditionDefaultValue) {
                 this.professionalEditionDefaultValue = professionalEditionDefaultValue;
@@ -508,7 +543,7 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * ProfessionalEditionIntervalValue.
+             * <p>The value range for the Professional edition, specified as <code>[min, max]</code>.</p>
              */
             public Builder professionalEditionIntervalValue(java.util.List<Integer> professionalEditionIntervalValue) {
                 this.professionalEditionIntervalValue = professionalEditionIntervalValue;
@@ -516,7 +551,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * StandardEditionDefaultValue.
+             * <p>The default value for the Standard edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder standardEditionDefaultValue(Object standardEditionDefaultValue) {
                 this.standardEditionDefaultValue = standardEditionDefaultValue;
@@ -524,7 +562,7 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * StandardEditionIntervalValue.
+             * <p>The value range for the Standard edition, specified as <code>[min, max]</code>.</p>
              */
             public Builder standardEditionIntervalValue(java.util.List<Integer> standardEditionIntervalValue) {
                 this.standardEditionIntervalValue = standardEditionIntervalValue;
@@ -532,7 +570,10 @@ public class UpdateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * UserConfigValue.
+             * <p>The user-configured value. The type of this value is determined by the <code>ControllerValueType</code> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder userConfigValue(Object userConfigValue) {
                 this.userConfigValue = userConfigValue;
@@ -587,6 +628,8 @@ public class UpdateSecurityStrategyRequest extends Request {
             } 
 
             /**
+             * <p>A list of controllers.</p>
+             * <p>Note: The valid controllers depend on the selected schema. For more information, see the controller definition and the list of controllers for each schema.</p>
              * <p>This parameter is required.</p>
              */
             public Builder controllers(java.util.List<Controllers> controllers) {

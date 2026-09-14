@@ -222,7 +222,7 @@ public class GetFunctionResponseBody extends TeaModel {
             /**
              * <p>The unique identifier of the UDF function.</p>
              * <blockquote>
-             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class GetFunctionResponseBody extends TeaModel {
              *                 &quot;name&quot;: &quot;Function_Name&quot;,
              *                 &quot;id&quot;: &quot;580667964888595XXXX&quot;,
              *                 &quot;script&quot;: {
-             *                     &quot;content&quot;: &quot;{  &quot;uuid&quot;: &quot;580667964888595XXXX&quot;,  &quot;name&quot;: &quot;Function_Name&quot;,  &quot;datasource&quot;: {    &quot;type&quot;: &quot;odps&quot;,    &quot;name&quot;: &quot;odps_first&quot;  },  &quot;runtimeResource&quot;: {    &quot;resourceGroup&quot;: &quot;S_res_group_XXXX_XXXX&quot;,    &quot;resourceGroupId&quot;: 6591XXXX  }}&quot;,
+             *                     &quot;content&quot;: &quot;{  \&quot;uuid\&quot;: \&quot;580667964888595XXXX\&quot;,  \&quot;name\&quot;: \&quot;Function_Name\&quot;,  \&quot;datasource\&quot;: {    \&quot;type\&quot;: \&quot;odps\&quot;,    \&quot;name\&quot;: \&quot;odps_first\&quot;  },  \&quot;runtimeResource\&quot;: {    \&quot;resourceGroup\&quot;: \&quot;S_res_group_XXXX_XXXX\&quot;,    \&quot;resourceGroupId\&quot;: 6591XXXX  }}&quot;,
              *                     &quot;path&quot;: &quot;XXX/OpenAPI/Function/Function_Name&quot;,
              *                     &quot;runtime&quot;: {
              *                         &quot;command&quot;: &quot;ODPS_FUNCTION&quot;

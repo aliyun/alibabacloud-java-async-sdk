@@ -67,7 +67,7 @@ public class UpdateDataQualityRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>691CA452-D37A-4ED0-9441</p>
@@ -78,7 +78,7 @@ public class UpdateDataQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the update was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

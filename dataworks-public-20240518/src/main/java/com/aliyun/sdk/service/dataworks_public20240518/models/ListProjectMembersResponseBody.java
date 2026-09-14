@@ -67,7 +67,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paging information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * <p>The unique ID of the request, used to track logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>9FBBBB1F-DD5E-5D8E-8F50-37F77460F056</p>
@@ -179,10 +179,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the role. Valid values:</p>
+             * <p>The type of the role.</p>
              * <ul>
-             * <li>UserCustom: user-defined role</li>
-             * <li>System: system role</li>
+             * <li><p><code>UserCustom</code>: A user-defined role.</p>
+             * </li>
+             * <li><p><code>System</code>: A system role.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -292,7 +294,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the DataWorks workspace.</p>
+             * <p>The ID of the DataWorks Workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>62136</p>
@@ -303,7 +305,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The roles that are assigned to the member.</p>
+             * <p>The roles assigned to the Workspace member.</p>
              */
             public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
@@ -311,10 +313,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the member. Valid values:</p>
+             * <p>The status of the Workspace member.</p>
              * <ul>
-             * <li>Normal</li>
-             * <li>Forbidden</li>
+             * <li><p><code>Normal</code>: The member is active.</p>
+             * </li>
+             * <li><p><code>Forbidden</code>: The member is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -326,7 +330,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account used by the member.</p>
+             * <p>The ID of the DataWorks user.</p>
              * 
              * <strong>example:</strong>
              * <p>123422344899</p>
@@ -337,7 +341,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name of the DataWorks user.</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -441,7 +445,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of entries to return on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -452,7 +456,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The members in the workspace.</p>
+             * <p>The list of Workspace members.</p>
              */
             public Builder projectMembers(java.util.List<ProjectMembers> projectMembers) {
                 this.projectMembers = projectMembers;
@@ -460,7 +464,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of matching entries.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

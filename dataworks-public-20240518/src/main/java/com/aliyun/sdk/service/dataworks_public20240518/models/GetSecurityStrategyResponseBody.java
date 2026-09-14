@@ -67,7 +67,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17****903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityStrategy.
+         * <p>The security policy.</p>
          */
         public Builder securityStrategy(SecurityStrategy securityStrategy) {
             this.securityStrategy = securityStrategy;
@@ -297,7 +300,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * BasicEditionDefaultValue.
+             * <p>The default value for Basic Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder basicEditionDefaultValue(Object basicEditionDefaultValue) {
                 this.basicEditionDefaultValue = basicEditionDefaultValue;
@@ -305,7 +311,7 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * BasicEditionIntervalValue.
+             * <p>The valid value range for Basic Edition, specified as an array <code>[min, max]</code>.</p>
              */
             public Builder basicEditionIntervalValue(java.util.List<Integer> basicEditionIntervalValue) {
                 this.basicEditionIntervalValue = basicEditionIntervalValue;
@@ -313,7 +319,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Controller.
+             * <p>The identifier for the controller. For valid values, see the documentation for the relevant schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>viewCount</p>
              */
             public Builder controller(String controller) {
                 this.controller = controller;
@@ -321,7 +330,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControllerValueType.
+             * <p>The value type of the controller. Valid values are <code>Boolean</code>, <code>Integer</code>, <code>Long</code>, and <code>String</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Integer</p>
              */
             public Builder controllerValueType(String controllerValueType) {
                 this.controllerValueType = controllerValueType;
@@ -329,7 +341,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询结果-单次展示记录值上限</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -337,7 +352,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameEn.
+             * <p>The display name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query Results - Single Display Record Limit</p>
              */
             public Builder displayNameEn(String displayNameEn) {
                 this.displayNameEn = displayNameEn;
@@ -345,7 +363,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Whether the controller is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -353,7 +374,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * EnterpriseEditionDefaultValue.
+             * <p>The default value for Enterprise Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder enterpriseEditionDefaultValue(Object enterpriseEditionDefaultValue) {
                 this.enterpriseEditionDefaultValue = enterpriseEditionDefaultValue;
@@ -361,7 +385,7 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * EnterpriseEditionIntervalValue.
+             * <p>The valid value range for Enterprise Edition, specified as an array <code>[min, max]</code>.</p>
              */
             public Builder enterpriseEditionIntervalValue(java.util.List<Integer> enterpriseEditionIntervalValue) {
                 this.enterpriseEditionIntervalValue = enterpriseEditionIntervalValue;
@@ -369,7 +393,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ProfessionalEditionDefaultValue.
+             * <p>The default value for Professional Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder professionalEditionDefaultValue(Object professionalEditionDefaultValue) {
                 this.professionalEditionDefaultValue = professionalEditionDefaultValue;
@@ -377,7 +404,7 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ProfessionalEditionIntervalValue.
+             * <p>The valid value range for Professional Edition, specified as an array <code>[min, max]</code>.</p>
              */
             public Builder professionalEditionIntervalValue(java.util.List<Integer> professionalEditionIntervalValue) {
                 this.professionalEditionIntervalValue = professionalEditionIntervalValue;
@@ -385,7 +412,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StandardEditionDefaultValue.
+             * <p>The default value for Standard Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder standardEditionDefaultValue(Object standardEditionDefaultValue) {
                 this.standardEditionDefaultValue = standardEditionDefaultValue;
@@ -393,7 +423,7 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StandardEditionIntervalValue.
+             * <p>The valid value range for Standard Edition, specified as an array <code>[min, max]</code>.</p>
              */
             public Builder standardEditionIntervalValue(java.util.List<Integer> standardEditionIntervalValue) {
                 this.standardEditionIntervalValue = standardEditionIntervalValue;
@@ -401,7 +431,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * UserConfigValue.
+             * <p>The value configured by the user. The data type of this value is specified by the <code>ControllerValueType</code> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder userConfigValue(Object userConfigValue) {
                 this.userConfigValue = userConfigValue;
@@ -559,7 +592,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * ControlDwScope.
+             * <p>The scope where the policy is effective. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tenant</p>
              */
             public Builder controlDwScope(String controlDwScope) {
                 this.controlDwScope = controlDwScope;
@@ -567,7 +603,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlModule.
+             * <p>The control module. This value corresponds to <code>controlModule</code> in the associated <code>SecurityStrategySchema</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQuery</p>
              */
             public Builder controlModule(String controlModule) {
                 this.controlModule = controlModule;
@@ -575,7 +614,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlSubModule.
+             * <p>The control submodule. This value corresponds to <code>controlSubModule</code> in the associated <code>SecurityStrategySchema</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyCatalog</p>
              */
             public Builder controlSubModule(String controlSubModule) {
                 this.controlSubModule = controlSubModule;
@@ -583,7 +625,8 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Controllers.
+             * <p>A list of controllers.</p>
+             * <p><strong>Note:</strong> The available controllers depend on the selected schema. See the documentation for your schema for a list of valid controllers.</p>
              */
             public Builder controllers(java.util.List<Controllers> controllers) {
                 this.controllers = controllers;
@@ -591,7 +634,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The <code>displayName</code> field from the associated <code>SecurityStrategySchema</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -599,7 +645,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameEn.
+             * <p>The <code>displayNameEn</code> field from the associated <code>SecurityStrategySchema</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Query</p>
              */
             public Builder displayNameEn(String displayNameEn) {
                 this.displayNameEn = displayNameEn;
@@ -607,7 +656,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The <code>name</code> field from the associated <code>SecurityStrategySchema</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQuerySecurityStrategySchema</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -615,7 +667,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPolicyDisplayName.
+             * <p>The display name of the system policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default system generate data query policy</p>
              */
             public Builder systemPolicyDisplayName(String systemPolicyDisplayName) {
                 this.systemPolicyDisplayName = systemPolicyDisplayName;
@@ -623,7 +678,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPolicyName.
+             * <p>The name of the system policy. If specified, a default policy is automatically created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_GENERATE_DEFAULT_DATA_QUERY</p>
              */
             public Builder systemPolicyName(String systemPolicyName) {
                 this.systemPolicyName = systemPolicyName;
@@ -859,7 +917,7 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content of the security policy. Its structure is defined by the <code>SecurityStrategySchema</code>.</p>
              */
             public Builder content(Content content) {
                 this.content = content;
@@ -867,7 +925,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlDwScope.
+             * <p>The scope where the policy is effective. Valid values: <code>Workspace</code> or <code>Tenant</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tenant</p>
              */
             public Builder controlDwScope(String controlDwScope) {
                 this.controlDwScope = controlDwScope;
@@ -875,7 +936,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlModule.
+             * <p>The control module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQuery</p>
              */
             public Builder controlModule(String controlModule) {
                 this.controlModule = controlModule;
@@ -883,7 +947,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ControlSubModule.
+             * <p>The control submodule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyCatalog</p>
              */
             public Builder controlSubModule(String controlSubModule) {
                 this.controlSubModule = controlSubModule;
@@ -891,7 +958,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the security policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-25T20:46:19</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -899,7 +969,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203322746501002787</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -907,7 +980,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>控制数据分析模块的查询结果安全行为</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -915,7 +991,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Whether the security policy is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -923,7 +1002,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -931,7 +1013,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认数据分析策略</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -939,7 +1024,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * OriginPolicyId.
+             * <p>The source ID of the default system policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder originPolicyId(Long originPolicyId) {
                 this.originPolicyId = originPolicyId;
@@ -947,7 +1035,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the schema template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataQuerySecurityStrategySchema</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -955,7 +1046,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the security policy was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-25T20:46:19</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -963,7 +1057,10 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Updater.
+             * <p>The ID of the last updater.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203322746501002787</p>
              */
             public Builder updater(String updater) {
                 this.updater = updater;
@@ -971,7 +1068,7 @@ public class GetSecurityStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Workspaces.
+             * <p>The list of associated workspace IDs.</p>
              */
             public Builder workspaces(java.util.List<Long> workspaces) {
                 this.workspaces = workspaces;

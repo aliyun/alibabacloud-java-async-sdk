@@ -83,6 +83,7 @@ public class GetProcessInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the process instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

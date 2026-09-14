@@ -113,7 +113,7 @@ public class DetachDataQualityRulesFromEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data quality monitoring task that is associated with the rule.</p>
+         * <p>The ID of the associated data quality monitoring task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DetachDataQualityRulesFromEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the monitoring rules.</p>
+         * <p>The list of data quality rule IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dataQualityRuleIds(java.util.List<Long> dataQualityRuleIds) {
@@ -137,7 +137,7 @@ public class DetachDataQualityRulesFromEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

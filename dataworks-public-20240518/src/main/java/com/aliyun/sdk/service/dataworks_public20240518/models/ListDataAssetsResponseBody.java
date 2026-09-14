@@ -75,7 +75,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0bc1ec92159376</p>
@@ -157,7 +157,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetDomainId.
+             * <p>The ID of the asset domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder assetDomainId(String assetDomainId) {
                 this.assetDomainId = assetDomainId;
@@ -165,7 +168,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the asset category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate-xxxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -173,7 +179,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the asset category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AssetDomainName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +301,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the lineage-based automatic backtrack feature is enabled for the mapping.</p>
+             * <p>Indicates whether automatic lineage tracing is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -314,7 +323,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data asset ID.</p>
+             * <p>The ID of the data asset.</p>
              * 
              * <strong>example:</strong>
              * <p>7259557313</p>
@@ -336,10 +345,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The way in which the mapping between the data asset and the tag is created. Valid values:</p>
+             * <p>The source of the mapping between the data asset and the tag. Valid values:</p>
              * <ul>
-             * <li>System</li>
-             * <li>UserDefined</li>
+             * <li>System: The mapping originates from data asset governance system operations.</li>
+             * <li>UserDefined: The mapping originates from manual user-defined operations.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -486,7 +495,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetCategories.
+             * <p>The asset category information.</p>
              */
             public Builder assetCategories(java.util.List<AssetCategories> assetCategories) {
                 this.assetCategories = assetCategories;
@@ -494,7 +503,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mappings between data assets and tags.</p>
+             * <p>The list of tags associated with the data asset.</p>
              */
             public Builder dataAssetTagMappings(java.util.List<DataAssetTagMappings> dataAssetTagMappings) {
                 this.dataAssetTagMappings = dataAssetTagMappings;
@@ -502,10 +511,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+             * <p>The workspace environment to which the data asset belongs. Valid values:</p>
              * <ul>
-             * <li>Dev: development environment</li>
-             * <li>Prod: production environment</li>
+             * <li>Dev: development environment.</li>
+             * <li>Prod: production environment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -517,7 +526,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data asset ID.</p>
+             * <p>The ID of the data asset.</p>
              * 
              * <strong>example:</strong>
              * <p>7259557313</p>
@@ -539,7 +548,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID.</p>
+             * <p>The ID of the DataWorks workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>54275</p>
@@ -550,10 +559,12 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data asset. Valid values:</p>
+             * <p>The Asset Type of the data asset. Valid values:</p>
              * <ul>
-             * <li>ACS::DataWorks::Table</li>
-             * <li>ACS::DataWorks::Task</li>
+             * <li><p>ACS::DataWorks::Table: data table.</p>
+             * </li>
+             * <li><p>ACS::DataWorks::Task: scheduling node.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -650,7 +661,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data assets.</p>
+             * <p>The list of data assets.</p>
              */
             public Builder dataAssets(java.util.List<DataAssets> dataAssets) {
                 this.dataAssets = dataAssets;
@@ -680,7 +691,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

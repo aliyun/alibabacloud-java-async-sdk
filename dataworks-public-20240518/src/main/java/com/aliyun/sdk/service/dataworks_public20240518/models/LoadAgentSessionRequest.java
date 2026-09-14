@@ -87,7 +87,10 @@ public class LoadAgentSessionRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The client-generated request ID, which is returned in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4as3dasf654a</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class LoadAgentSessionRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. The value must be <code>2.0</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class LoadAgentSessionRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>Business parameters.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -174,7 +180,10 @@ public class LoadAgentSessionRequest extends Request {
             } 
 
             /**
-             * BeginLogOffset.
+             * <p>In a resumable transfer scenario, this specifies the offset from which to resume fetching the SSE output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder beginLogOffset(Long beginLogOffset) {
                 this.beginLogOffset = beginLogOffset;
@@ -182,7 +191,10 @@ public class LoadAgentSessionRequest extends Request {
             }
 
             /**
-             * IsReload.
+             * <p>Specifies whether to use resumable transfer. If the SSE stream is interrupted due to issues like an unstable network connection, you can set this parameter to <code>true</code> to re-fetch the stream data from the point of failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isReload(Boolean isReload) {
                 this.isReload = isReload;
@@ -249,7 +261,7 @@ public class LoadAgentSessionRequest extends Request {
             } 
 
             /**
-             * Meta.
+             * <p>DataWorks-specific extended parameters for ACP.</p>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;
@@ -257,7 +269,10 @@ public class LoadAgentSessionRequest extends Request {
             }
 
             /**
-             * SessionId.
+             * <p>The ID of the target session. If the session does not exist, an SSE error frame is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_0f12abc34</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

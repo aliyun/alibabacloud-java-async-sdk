@@ -83,6 +83,7 @@ public class GetApplicationContentsRequest extends Request {
         }
 
         /**
+         * <p>The approval process instance ID of the submitted application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

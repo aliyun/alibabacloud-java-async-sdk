@@ -83,11 +83,11 @@ public class GetLineageRelationshipRequest extends Request {
         }
 
         /**
-         * <p>The lineage ID. You can refer to the return result of the ListLineageRelationships operation.</p>
+         * <p>The ID of the lineage relationship. You can obtain this value from the response of the ListLineageRelationships operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</p>
+         * <p>4as3dasf654a</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

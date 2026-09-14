@@ -83,7 +83,7 @@ public class GetServerIdeInstanceRequest extends Request {
         }
 
         /**
-         * <p>个人开发环境实例 ID。</p>
+         * <p>The personal development environment instance ID. You can call ListServerIdeInstances to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

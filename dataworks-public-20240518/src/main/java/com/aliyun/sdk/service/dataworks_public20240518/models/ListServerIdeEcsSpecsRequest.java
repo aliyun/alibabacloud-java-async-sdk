@@ -125,7 +125,11 @@ public class ListServerIdeEcsSpecsRequest extends Request {
         }
 
         /**
-         * <p>机器类型（CPU / GPU）。</p>
+         * <p>The accelerator type. Valid values:</p>
+         * <ul>
+         * <li>CPU: uses only CPU.</li>
+         * <li>GPU: uses GPU acceleration.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
@@ -137,7 +141,7 @@ public class ListServerIdeEcsSpecsRequest extends Request {
         }
 
         /**
-         * <p>本次请求的最大结果数，默认为 10，最大值为 100。</p>
+         * <p>The maximum number of records to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -149,7 +153,7 @@ public class ListServerIdeEcsSpecsRequest extends Request {
         }
 
         /**
-         * <p>翻页标记，首次查询不传，后续查询传上一次返回的 NextToken。</p>
+         * <p>The pagination token used to retrieve the next page of results. You do not need to specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESG****</p>
@@ -161,7 +165,7 @@ public class ListServerIdeEcsSpecsRequest extends Request {
         }
 
         /**
-         * <p>资源组标识，支持资源组 ID 或资源组 Identifier 字符串。</p>
+         * <p>The DataWorks resource group identifier. You can specify the numeric ID of the resource group or the full identifier in the Serverless_res_group_{tenantId}_{resgId} format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ListAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * JsonRpcResponse.
+         * <p>The response object that conforms to the JSON-RPC specification.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -131,7 +131,10 @@ public class ListAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat_cli_chatbi</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -224,7 +227,7 @@ public class ListAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Agents.
+             * <p>The list of agents.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -232,7 +235,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The actual number of entries per page that takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -240,7 +246,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page. The value is null when the current page is the last page or no data is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -248,7 +257,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of matched agents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -328,7 +340,10 @@ public class ListAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID passed in by the requester. The value is returned as-is.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70623e38-a889-4192-930a-752ffdd75f48</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -336,7 +351,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Jsonrpc.
+             * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder jsonrpc(String jsonrpc) {
                 this.jsonrpc = jsonrpc;
@@ -344,7 +362,7 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The paging query result for agents.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

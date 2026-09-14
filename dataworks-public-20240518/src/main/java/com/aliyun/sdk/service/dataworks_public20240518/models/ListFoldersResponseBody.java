@@ -119,7 +119,7 @@ public class ListFoldersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of folders that meet the conditions.</p>
+         * <p>The list of folders that meet the specified conditions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The connection does not exist.</p>
@@ -160,7 +160,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Used to troubleshoot errors.</p>
+         * <p>The request ID. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-****</p>
@@ -171,10 +171,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true: success.</li>
-         * <li>false: failure.</li>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class ListFoldersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The folder ID.</p>
+             * <p>The ID of the folder.</p>
              * 
              * <strong>example:</strong>
              * <p>2735c2****</p>
@@ -255,7 +255,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The folder path.</p>
+             * <p>The path of the folder.</p>
              * 
              * <strong>example:</strong>
              * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
@@ -359,7 +359,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current page number.</p>
+             * <p>The page number of the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -370,7 +370,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records on the current page.</p>
+             * <p>The number of entries on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -381,7 +381,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records that meet the query conditions.</p>
+             * <p>The total number of entries that meet the query conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>13</p>

@@ -124,7 +124,10 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +136,10 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The next page token from a previous response. Use this token to retrieve the next page of results. Leave this parameter empty for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -142,7 +148,10 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * Q.
+         * <p>The search keyword for a fuzzy search on MCP Server names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp</p>
          */
         public Builder q(String q) {
             this.putBodyParameter("Q", q);
@@ -151,7 +160,12 @@ public class ListMcpServersRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>The visibility level for filtering the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder visibility(java.util.List<String> visibility) {
             String visibilityShrink = shrink(visibility, "Visibility", "json");

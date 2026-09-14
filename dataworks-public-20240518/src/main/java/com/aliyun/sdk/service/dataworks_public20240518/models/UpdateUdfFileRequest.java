@@ -268,7 +268,7 @@ public class UpdateUdfFileRequest extends Request {
          * <p>An example demonstrating how to call the function, corresponding to the example field in the Create Function form.</p>
          * 
          * <strong>example:</strong>
-         * <p>StringConcat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</p>
+         * <p>StringConcat(\&quot;a\&quot;, \&quot;b\&quot;, \&quot;c\&quot;)</p>
          */
         public Builder example(String example) {
             this.putBodyParameter("Example", example);
@@ -318,9 +318,12 @@ public class UpdateUdfFileRequest extends Request {
          * <p>The function parameter description, corresponding to the parameter description field in the Create Function form.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>ALL_ALLOWD</li>
-         * <li>FAILURE_ALLOWED</li>
-         * <li>ALL_DENIED</li>
+         * <li><p>ALL_ALLOWD</p>
+         * </li>
+         * <li><p>FAILURE_ALLOWED</p>
+         * </li>
+         * <li><p>ALL_DENIED</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

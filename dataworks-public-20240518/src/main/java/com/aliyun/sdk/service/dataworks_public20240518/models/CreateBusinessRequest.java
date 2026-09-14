@@ -153,6 +153,7 @@ public class CreateBusinessRequest extends Request {
         }
 
         /**
+         * <p>The name of the business process. The name must be unique within the same workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +166,10 @@ public class CreateBusinessRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the business process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -174,7 +178,10 @@ public class CreateBusinessRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The Alibaba Cloud account ID of the owner of the business process. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and hover over the profile picture in the upper-right corner of the top navigation bar to view the account ID. If this parameter is left empty, the Alibaba Cloud account ID of the caller is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000000001</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -183,7 +190,10 @@ public class CreateBusinessRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to view the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -192,7 +202,10 @@ public class CreateBusinessRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page. You must specify either this parameter or ProjectId to determine the DataWorks workspace on which the API operation is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -201,7 +214,14 @@ public class CreateBusinessRequest extends Request {
         }
 
         /**
-         * UseType.
+         * <p>The functional module to which the business process belongs. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: DataStudio.</li>
+         * <li>MANUAL_BIZ: Manual business process.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder useType(String useType) {
             this.putBodyParameter("UseType", useType);

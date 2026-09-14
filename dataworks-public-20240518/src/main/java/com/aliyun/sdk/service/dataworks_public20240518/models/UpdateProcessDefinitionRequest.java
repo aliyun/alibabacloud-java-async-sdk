@@ -167,7 +167,7 @@ public class UpdateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * ApprovalNodes.
+         * <p>A list of approval nodes. This parameter does not apply to system policies.</p>
          */
         public Builder approvalNodes(java.util.List<ApprovalNodes> approvalNodes) {
             String approvalNodesShrink = shrink(approvalNodes, "ApprovalNodes", "json");
@@ -177,7 +177,10 @@ public class UpdateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>An idempotent parameter. It ensures that retried requests do not result in duplicate operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -186,7 +189,10 @@ public class UpdateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the process definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lwt_ide_simple 项目 MaxCompute 表审批策略</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -195,6 +201,7 @@ public class UpdateProcessDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the process definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +214,10 @@ public class UpdateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the process definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute 表审批</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -216,7 +226,7 @@ public class UpdateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * NotificationServices.
+         * <p>The notification service configurations.</p>
          */
         public Builder notificationServices(java.util.List<NotificationServices> notificationServices) {
             String notificationServicesShrink = shrink(notificationServices, "NotificationServices", "json");
@@ -226,7 +236,7 @@ public class UpdateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * RuleConditions.
+         * <p>A list of rule conditions. This parameter does not apply to system policies.</p>
          */
         public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
             String ruleConditionsShrink = shrink(ruleConditions, "RuleConditions", "json");
@@ -321,7 +331,36 @@ public class UpdateProcessDefinitionRequest extends Request {
             } 
 
             /**
-             * AccountType.
+             * <p>The approver type for the node. Valid values:</p>
+             * <ul>
+             * <li><p><code>DataWorksProjectRole</code>: A workspace role.</p>
+             * </li>
+             * <li><p><code>DataWorksProjectMember</code>: A workspace member.</p>
+             * </li>
+             * <li><p><code>TableAdministrator</code>: A table administrator.</p>
+             * </li>
+             * <li><p><code>TableOrProjectAdministrator</code>: The administrator of the table or project.</p>
+             * </li>
+             * <li><p><code>AliyunResourceOwner</code>: An Alibaba Cloud account.</p>
+             * </li>
+             * <li><p><code>MaxComputeRole</code>: A MaxCompute administrator.</p>
+             * </li>
+             * <li><p><code>DLFAdmin</code>: A DlfLegacy administrator.</p>
+             * </li>
+             * <li><p><code>DLFNextAdmin</code>: A DLFNext administrator.</p>
+             * </li>
+             * <li><p><code>TenantRole</code>: A tenant role.</p>
+             * </li>
+             * <li><p><code>EmrAdministrator</code>: An EMR administrator.</p>
+             * </li>
+             * <li><p><code>LindormAdministrator</code>: A Lindorm administrator.</p>
+             * </li>
+             * <li><p><code>AliyunRamUser</code>: A RAM user.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TableOrProjectAdministrator</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -329,7 +368,22 @@ public class UpdateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * Assignees.
+             * <p>Specifies the approvers. The required value depends on the <code>AccountType</code>:</p>
+             * <ul>
+             * <li><p>If <code>AccountType</code> is <code>DataWorksProjectMember</code>, this parameter specifies the user IDs of workspace members.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>DataWorksProjectRole</code>, this parameter specifies the codes of workspace roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>MaxComputeRole</code>, this parameter specifies the MaxCompute roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>TenantRole</code>, this parameter specifies the codes of tenant roles.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>AliyunRamUser</code>, this parameter specifies the user IDs of RAM users.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DataWorksProjectMember</p>
              */
             public Builder assignees(String assignees) {
                 this.assignees = assignees;
@@ -337,7 +391,13 @@ public class UpdateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * ExtensionProperties.
+             * <p>Additional properties that are required for specific <code>AccountType</code> values:</p>
+             * <ul>
+             * <li><p>If <code>AccountType</code> is <code>DataWorksProjectMember</code>: The key is <code>projectId</code> and the value is the user ID of a workspace member. Use commas (,) to separate multiple user IDs.</p>
+             * </li>
+             * <li><p>If <code>AccountType</code> is <code>MaxComputeRole</code>: The key is the MaxCompute project name and the value is the role name in MaxCompute. Use commas (,) to separate multiple role names.</p>
+             * </li>
+             * </ul>
              */
             public Builder extensionProperties(java.util.Map<String, ?> extensionProperties) {
                 this.extensionProperties = extensionProperties;
@@ -345,7 +405,10 @@ public class UpdateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -425,7 +488,20 @@ public class UpdateProcessDefinitionRequest extends Request {
             } 
 
             /**
-             * Channel.
+             * <p>The notification channel. Valid values:</p>
+             * <ul>
+             * <li><p>Mail</p>
+             * </li>
+             * <li><p>Sms</p>
+             * </li>
+             * <li><p>DingRobot</p>
+             * </li>
+             * <li><p>Weixin</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Mail</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -433,7 +509,10 @@ public class UpdateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * Extension.
+             * <p>Additional information in JSON format. For example, use {&quot;atAll&quot;:&quot;true&quot;} to specify whether to notify all members.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -441,7 +520,10 @@ public class UpdateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * Receiver.
+             * <p>The webhook URL. This parameter is required when <code>Channel</code> is set to <code>DingRobot</code> or <code>Weixin</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dingtalk.com">https://dingtalk.com</a></p>
              */
             public Builder receiver(String receiver) {
                 this.receiver = receiver;
@@ -521,7 +603,10 @@ public class UpdateProcessDefinitionRequest extends Request {
             } 
 
             /**
-             * Expression.
+             * <p>The conditional expression. Format: ((#type==\&quot;typeValue\&quot;)). For example: ((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;)).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;))</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -529,7 +614,16 @@ public class UpdateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * Scope.
+             * <p>The phase in which the rule takes effect. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Deployment</strong>: Determines whether the approval policy applies when an application is submitted.</p>
+             * </li>
+             * <li><p><strong>Running</strong>: Determines whether to skip the approval during the approval process. This phase is supported only for MaxCompute.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployment</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -537,7 +631,22 @@ public class UpdateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the condition. Valid values:</p>
+             * <ul>
+             * <li><p><code>odpsProject</code></p>
+             * </li>
+             * <li><p><code>hologresInstanceId</code></p>
+             * </li>
+             * <li><p><code>sensibleLevel</code></p>
+             * </li>
+             * <li><p><code>tableGuid</code></p>
+             * </li>
+             * <li><p><code>projectId</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>odpsProject</p>
              */
             public Builder type(String type) {
                 this.type = type;

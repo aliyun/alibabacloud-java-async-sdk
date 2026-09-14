@@ -93,7 +93,10 @@ public class StopCrawlerResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the metadata crawler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -101,7 +104,10 @@ public class StopCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,7 @@ public class StopCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * StopAccepted.
+         * <p>Indicates whether the stop request was accepted. A value of true indicates that the request was accepted. Call ListCrawlerRuns to confirm the final run status.</p>
          */
         public Builder stopAccepted(Boolean stopAccepted) {
             this.stopAccepted = stopAccepted;
@@ -117,7 +123,7 @@ public class StopCrawlerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

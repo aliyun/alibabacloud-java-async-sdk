@@ -378,7 +378,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The data timestamp. The value of this parameter is 00:00:00 of the day before the scheduling time of the instance. The value is a UNIX timestamp. Unit: milliseconds. Example: 1743350400000.</p>
+         * <p>The business date. This is typically 00:00:00 of the day before the scheduled time of the periodic instance. The value is a millisecond-level timestamp, such as 1743350400000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -391,7 +391,17 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter. The value is in JSON format. Multiple filter conditions are combined with AND logic. Currently supported fields: <code>startedTimeStart, startedTimeEnd, finishedTimeStart, finishedTimeEnd, createTimeStart, createTimeEnd</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;startedTimeStart&quot;: &quot;1763481600000&quot;,
+         *     &quot;startedTimeEnd&quot;: &quot;1763481600000&quot;,
+         *     &quot;finishedTimeStart&quot;: &quot;1763481600000&quot;,
+         *     &quot;finishedTimeEnd&quot;: &quot;1763481600000&quot;,
+         *     &quot;createTimeStart&quot;: &quot;1763481600000&quot;,
+         *     &quot;createTimeEnd&quot;: &quot;1763481600000&quot;
+         * }</p>
          */
         public Builder filter(String filter) {
             this.putBodyParameter("Filter", filter);
@@ -400,7 +410,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. The instance may be rerun. If the instance is rerun and you configure this parameter, the system returns the historical information of the instance, including the rerun information. You can use the RunNumber parameter to distinguish each entry in the historical information.</p>
+         * <p>The instance ID. If an instance has been rerun, specifying this parameter returns the historical information including reruns. You can use RunNumber to distinguish each historical record.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -412,7 +422,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances. You can query multiple instances at a time by instance ID.</p>
+         * <p>The list of instance IDs. You can use this parameter to query multiple instances in a batch.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -422,7 +432,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The account ID of the task owner.</p>
+         * <p>The account ID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -434,7 +444,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -446,7 +456,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 500.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -458,10 +468,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
+         * <p>The project environment. Valid values:</p>
          * <ul>
-         * <li>Prod: production environment</li>
-         * <li>Dev: development environment</li>
+         * <li>Prod: production.</li>
+         * <li>Dev: development.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -474,7 +484,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -487,7 +497,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The information about the resource group. Set this parameter to the identifier of a resource group for scheduling.</p>
+         * <p>The schedule resource information. Specify the identifier of the schedule resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -499,7 +509,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <p>The sort field. Supports fields such as scheduled time and start time. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc can be omitted. Valid values:</p>
          * <ul>
          * <li><p><code>TriggerTime (Desc/Asc)</code></p>
          * </li>
@@ -510,7 +520,7 @@ public class ListTaskInstancesRequest extends Request {
          * <li><p><code>CreateTime (Desc/Asc)</code></p>
          * </li>
          * <li><p><code>Id (Desc/Asc)</code></p>
-         * <p>Default value: <code>Id Desc</code>.</p>
+         * <p>Default value: <code>Id Desc</code></p>
          * </li>
          * </ul>
          * 
@@ -524,14 +534,14 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the task instance.</p>
+         * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li><code>NotRun</code>: Not started</li>
-         * <li><code>Running</code></li>
-         * <li><code>Failure</code></li>
-         * <li><code>Success</code></li>
-         * <li><code>WaitTime</code>: Awaiting scheduled time</li>
-         * <li><code>WaitResource</code>: Awaiting resources</li>
+         * <li><code>NotRun</code>: not run.</li>
+         * <li><code>Running</code>: running.</li>
+         * <li><code>Failure</code>: failed.</li>
+         * <li><code>Success</code>: succeeded.</li>
+         * <li><code>WaitTime</code>: waiting for the scheduled time.</li>
+         * <li><code>WaitResource</code>: waiting for resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -544,7 +554,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task for which the instance is generated.</p>
+         * <p>The ID of the corresponding node.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -556,7 +566,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the tasks. You can query multiple instances at a time by task ID.</p>
+         * <p>The list of node IDs. You can use this parameter to query instances of multiple nodes in a batch.</p>
          */
         public Builder taskIds(java.util.List<Long> taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");
@@ -566,7 +576,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the task. Fuzzy match is supported.</p>
+         * <p>The name of the corresponding node. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -578,7 +588,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the task for which the instance is generated.</p>
+         * <p>The node type. For the TaskType values of each node, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_SQL</p>
@@ -590,11 +600,11 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
+         * <p>The run mode at the time of triggering. This parameter takes effect only when TriggerType is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li>Pause: paused.</li>
+         * <li>Skip: dry run.</li>
+         * <li>Normal: normal run.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -609,8 +619,8 @@ public class ListTaskInstancesRequest extends Request {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li>Scheduler: triggered by periodic scheduling.</li>
+         * <li>Manual: manually triggered.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -623,7 +633,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * UnifiedWorkflowInstanceId.
+         * <p>The unified workflow instance ID. All instances within the same business date under a single trigger share the same value for this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder unifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
             this.putBodyParameter("UnifiedWorkflowInstanceId", unifiedWorkflowInstanceId);
@@ -644,7 +657,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The workflow instance ID.</p>
+         * <p>The ID of the workflow instance to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -656,14 +669,14 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the workflow instance. Valid values:</p>
+         * <p>The type of the workflow instance to which the instance belongs. Valid values:</p>
          * <ul>
-         * <li>SmokeTest: Testing</li>
-         * <li>Manual: Manually triggered node</li>
-         * <li>SupplementData: Data backfill</li>
-         * <li>ManualWorkflow: Manually triggered workflow</li>
-         * <li>Normal: Scheduled execution</li>
-         * <li>TriggerWorkflow: Triggered Workflow</li>
+         * <li>SmokeTest: test.</li>
+         * <li>Manual: manual node.</li>
+         * <li>SupplementData: data backfill.</li>
+         * <li>ManualWorkflow: manual workflow.</li>
+         * <li>Normal: periodic scheduling.</li>
+         * <li>TriggerWorkflow: trigger-based workflow.</li>
          * </ul>
          * 
          * <strong>example:</strong>

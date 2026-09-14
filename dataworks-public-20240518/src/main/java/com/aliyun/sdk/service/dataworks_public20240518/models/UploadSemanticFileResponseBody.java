@@ -80,7 +80,7 @@ public class UploadSemanticFileResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The attachment upload slot information. PUT the file to Data.UploadUrl before Data.ExpiresAt, then use Data.FileId to create a single-file semantic task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class UploadSemanticFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class UploadSemanticFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +178,10 @@ public class UploadSemanticFileResponseBody extends TeaModel {
             } 
 
             /**
-             * ExpiresAt.
+             * <p>The expiration time of UploadUrl, expressed as a Unix timestamp in milliseconds. After this time, call UploadSemanticFile again to request a new URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700001800000</p>
              */
             public Builder expiresAt(Long expiresAt) {
                 this.expiresAt = expiresAt;
@@ -183,7 +189,10 @@ public class UploadSemanticFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The unique identifier of the attachment. After completing the PUT upload to UploadUrl, pass this value to the ReferenceFileIds parameter of CreateSemanticJob.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FID1</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -191,7 +200,10 @@ public class UploadSemanticFileResponseBody extends TeaModel {
             }
 
             /**
-             * UploadUrl.
+             * <p>The temporary OSS PUT upload URL. Valid for 30 minutes. Only the specified object can be uploaded. Use the ContentType from the request when performing the PUT request. Do not log or distribute the full URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/temporary-upload-url">https://example.com/temporary-upload-url</a></p>
              */
             public Builder uploadUrl(String uploadUrl) {
                 this.uploadUrl = uploadUrl;

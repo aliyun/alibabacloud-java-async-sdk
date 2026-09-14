@@ -80,7 +80,7 @@ public class CreateCustomAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5A1E9EBB-FEA6-5BBB-B7BE-BFC0FB3F8C71</p>
@@ -91,7 +91,10 @@ public class CreateCustomAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The creation result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -99,7 +102,10 @@ public class CreateCustomAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

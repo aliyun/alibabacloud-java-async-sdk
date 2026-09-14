@@ -80,7 +80,7 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The collection of result files for the specified job run. Multiple items are returned if a single run generates multiple files.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +178,10 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * DownloadUrl.
+             * <p>The temporary pre-signed download URL of the result file. Download the file promptly by using an HTTP GET request. Do not log, share, or treat the full URL as a long-term address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/temporary-download-url">https://example.com/temporary-download-url</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -183,7 +189,10 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The job name to which the artifact belongs. This value is the same as the JobName in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic-job-demo</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -191,7 +200,10 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * JobRunId.
+             * <p>The run ID to which the artifact belongs. You can compare this value with Data.JobRunId in the RunSemanticJob response or JobRunId in the ListSemanticJobRuns response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01H00000000000000000000000</p>
              */
             public Builder jobRunId(String jobRunId) {
                 this.jobRunId = jobRunId;
@@ -245,7 +257,7 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * Results.
+             * <p>The list of result files. Each item contains the associated job name, run ID, and a short-lived download URL.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;

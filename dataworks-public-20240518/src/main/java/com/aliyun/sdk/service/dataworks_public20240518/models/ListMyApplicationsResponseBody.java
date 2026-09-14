@@ -67,7 +67,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data part of the paginated result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17****903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,19 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * PrincipalId.
+             * <p>The principal ID for authorization:</p>
+             * <ul>
+             * <li>RamUser: DataWorks UserId.</li>
+             * <li>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;.</li>
+             * <li>DataworksTenantMember: DataWorks UserId.</li>
+             * <li>DataworksTenantRole: DataWorks tenant roleCode.</li>
+             * <li>DataworksProjectRole: DataWorks workspace roleCode.</li>
+             * <li>DataworksProjectMember: DataWorks UserId.</li>
+             * <li>DlfRole: DlfNext role name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ROLE_3133343434</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -149,7 +164,19 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * <p>The principal type for authorization:</p>
+             * <ul>
+             * <li>RamRole</li>
+             * <li>RamUser</li>
+             * <li>DataworksTenantMember</li>
+             * <li>DataworksTenantRole</li>
+             * <li>DataworksProjectMember</li>
+             * <li>DataworksProjectRole</li>
+             * <li>DlfRole</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RamRole</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -229,7 +256,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * DefSchema.
+             * <p><strong>The ResourceSchema.name on which the resource parsing depends.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -237,7 +267,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * DefVersion.
+             * <p><strong>The ResourceSchema.version on which the resource parsing depends.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder defVersion(String defVersion) {
                 this.defVersion = defVersion;
@@ -245,7 +278,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p><strong>The resource metadata, whose content is constrained by ResourceSchema.</strong></p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;
@@ -468,7 +501,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessTypes.
+             * <p>The resource operation permissions requested in the application.</p>
              */
             public Builder accessTypes(java.util.List<String> accessTypes) {
                 this.accessTypes = accessTypes;
@@ -476,7 +509,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthMethod.
+             * <p>The authorization method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder authMethod(String authMethod) {
                 this.authMethod = authMethod;
@@ -484,7 +520,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-29 15:04:52</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -492,7 +531,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * DefSchema.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAXCOMPUTE</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -500,7 +542,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The permission expiration date (millisecond timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782354014507</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -508,7 +553,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * FinalAccessTypes.
+             * <p>The resource operation permissions that were finally approved.</p>
              */
             public Builder finalAccessTypes(java.util.List<String> finalAccessTypes) {
                 this.finalAccessTypes = finalAccessTypes;
@@ -516,7 +561,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Grantee.
+             * <p><strong>The authorization target.</strong></p>
              */
             public Builder grantee(Grantee grantee) {
                 this.grantee = grantee;
@@ -524,7 +569,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key of the application content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a8aa620037bb410ea13837f9b4d053d8</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -532,7 +580,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessInstanceId.
+             * <p>The approval process instance ID of the initiated application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>777799223</p>
              */
             public Builder processInstanceId(String processInstanceId) {
                 this.processInstanceId = processInstanceId;
@@ -540,7 +591,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p><strong>The resource declaration.</strong></p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -548,7 +599,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The minimum permission resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -556,7 +610,19 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The approval status. Valid values:</p>
+             * <ul>
+             * <li>WaitApproval: pending approval.</li>
+             * <li>Confirmed: pending authorization.</li>
+             * <li>RejectApproval: approval rejected.</li>
+             * <li>AuthorizeSucceed: authorization succeeded.</li>
+             * <li>AuthorizeFailed: authorization failed.</li>
+             * <li>Deleted: deleted.</li>
+             * <li>Canceled: withdrawn.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deleted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -564,7 +630,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69973837489</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -572,7 +641,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-08 23:58:59</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -691,7 +763,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationTime.
+             * <p>The time when the application was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1779695088000</p>
              */
             public Builder applicationTime(Long applicationTime) {
                 this.applicationTime = applicationTime;
@@ -699,7 +774,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Contents.
+             * <p>The application content.</p>
              */
             public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
@@ -707,7 +782,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * DefSchema.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -715,7 +793,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessInstanceId.
+             * <p>The process instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>176906667488145</p>
              */
             public Builder processInstanceId(String processInstanceId) {
                 this.processInstanceId = processInstanceId;
@@ -723,7 +804,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务需要</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -731,7 +815,19 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The approval status. Valid values:</p>
+             * <ul>
+             * <li>WaitApproval: pending approval.</li>
+             * <li>Confirmed: pending authorization.</li>
+             * <li>RejectApproval: approval rejected.</li>
+             * <li>AuthorizeSucceed: authorization succeeded.</li>
+             * <li>AuthorizeFailed: authorization failed.</li>
+             * <li>Deleted: deleted.</li>
+             * <li>Canceled: withdrawn.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deleted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -824,7 +920,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The list of application order details.</p>
              */
             public Builder data(java.util.List<DataData> data) {
                 this.data = data;
@@ -832,7 +928,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * HasMore.
+             * <p>Indicates whether more data is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -840,7 +939,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The pagination cursor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJpZCI6NDU2fQ==</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -848,7 +950,10 @@ public class ListMyApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

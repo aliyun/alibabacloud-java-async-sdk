@@ -83,6 +83,7 @@ public class DeleteSkillRequest extends Request {
         }
 
         /**
+         * <p>The name of the Skill to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -112,11 +112,11 @@ public class AddEntityIntoMetaCollectionRequest extends Request {
         }
 
         /**
-         * <p>The entity ID. Currently, only table entities are supported. You can call the ListTables operation to obtain the ID.</p>
+         * <p>The ID of the entity. Currently, only the table type is supported. You can obtain the ID from the response of the ListTables operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-table</p>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -125,11 +125,11 @@ public class AddEntityIntoMetaCollectionRequest extends Request {
         }
 
         /**
-         * <p>The collection ID. You can refer to the return result of the ListMetaCollections operation.</p>
+         * <p>The ID of the collection object. You can obtain the ID from the response of the ListMetaCollections operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>as78d756asd</p>
          */
         public Builder metaCollectionId(String metaCollectionId) {
             this.putQueryParameter("MetaCollectionId", metaCollectionId);
@@ -138,7 +138,7 @@ public class AddEntityIntoMetaCollectionRequest extends Request {
         }
 
         /**
-         * <p>Remarks added when adding the entity to a collection. This parameter is currently valid only for album collections.</p>
+         * <p>The remarks when adding the entity to the collection. Currently, this parameter takes effect only for the album type.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

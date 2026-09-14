@@ -125,7 +125,10 @@ public class ListSecurityStrategiesRequest extends Request {
         }
 
         /**
-         * ControlModule.
+         * <p><strong>The control module.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataQuery</p>
          */
         public Builder controlModule(String controlModule) {
             this.putBodyParameter("ControlModule", controlModule);
@@ -134,7 +137,10 @@ public class ListSecurityStrategiesRequest extends Request {
         }
 
         /**
-         * ControlSubModule.
+         * <p><strong>The control submodule.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCatalog</p>
          */
         public Builder controlSubModule(String controlSubModule) {
             this.putBodyParameter("ControlSubModule", controlSubModule);
@@ -143,7 +149,10 @@ public class ListSecurityStrategiesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Starts from 1. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -152,7 +161,10 @@ public class ListSecurityStrategiesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

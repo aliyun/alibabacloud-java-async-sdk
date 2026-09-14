@@ -67,7 +67,7 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * JsonRpcResponse.
+         * <p>The JSON-RPC response object.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -75,7 +75,10 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. You can use it to trace the request in logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE70C54F-A3BD-5C19-88EF-2A7D3451C449</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * ArtifactContent.
+             * <p>The content of the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is md content</p>
              */
             public Builder artifactContent(String artifactContent) {
                 this.artifactContent = artifactContent;
@@ -162,7 +168,10 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactName.
+             * <p>The name of the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mock_report.md</p>
              */
             public Builder artifactName(String artifactName) {
                 this.artifactName = artifactName;
@@ -170,7 +179,10 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactPath.
+             * <p>The path of the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mock/mock_report.md</p>
              */
             public Builder artifactPath(String artifactPath) {
                 this.artifactPath = artifactPath;
@@ -250,7 +262,10 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID from the original request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300010555</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -258,7 +273,10 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Jsonrpc.
+             * <p>The JSON-RPC version. The value is <code>2.0</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder jsonrpc(String jsonrpc) {
                 this.jsonrpc = jsonrpc;
@@ -266,7 +284,7 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Contains the metadata and content of the artifact.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

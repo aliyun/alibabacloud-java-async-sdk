@@ -87,7 +87,10 @@ public class ListAgentSessionArtifactsRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID passed in by the requester. The value is returned as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class ListAgentSessionArtifactsRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class ListAgentSessionArtifactsRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The business parameters.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -200,7 +206,10 @@ public class ListAgentSessionArtifactsRequest extends Request {
             } 
 
             /**
-             * MaxResults.
+             * <p>The number of entries per page. Default value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -208,7 +217,10 @@ public class ListAgentSessionArtifactsRequest extends Request {
             }
 
             /**
-             * NextToken.
+             * <p>The OSS continuation token for the next page. Do not specify this parameter for the first page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESExFsbyH...</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -216,7 +228,10 @@ public class ListAgentSessionArtifactsRequest extends Request {
             }
 
             /**
-             * RequestId.
+             * <p>The request code used to filter results. Only artifacts produced by the specified request are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>req_20260421_001</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -224,7 +239,10 @@ public class ListAgentSessionArtifactsRequest extends Request {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID. If this parameter is not specified, the error <code>sessionCode</code> is required is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_0f12abc34</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

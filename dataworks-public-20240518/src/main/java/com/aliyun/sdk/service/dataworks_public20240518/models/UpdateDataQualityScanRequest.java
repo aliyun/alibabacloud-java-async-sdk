@@ -222,7 +222,7 @@ public class UpdateDataQualityScanRequest extends Request {
         }
 
         /**
-         * <p>The compute engine used during execution. If it&quot;s not specified, the data source connection defined in the Spec will be used.</p>
+         * <p>The compute engine used during execution. If it\&quot;s not specified, the data source connection defined in the Spec will be used.</p>
          */
         public Builder computeResource(ComputeResource computeResource) {
             String computeResourceShrink = shrink(computeResource, "ComputeResource", "json");
@@ -443,9 +443,12 @@ public class UpdateDataQualityScanRequest extends Request {
             /**
              * <p>The engine type. These settings are only supported for the EMR compute engine.This setting? Valid values:</p>
              * <ul>
-             * <li>Hive: Hive SQL</li>
-             * <li>Spark: Spark SQL</li>
-             * <li>Kyuubi</li>
+             * <li><p>Hive: Hive SQL</p>
+             * </li>
+             * <li><p>Spark: Spark SQL</p>
+             * </li>
+             * <li><p>Kyuubi</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -553,8 +556,10 @@ public class UpdateDataQualityScanRequest extends Request {
             /**
              * <p>Workspace environment of the compute engine. Valid values:</p>
              * <ul>
-             * <li>Prod</li>
-             * <li>Dev</li>
+             * <li><p>Prod</p>
+             * </li>
+             * <li><p>Dev</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -645,10 +650,10 @@ public class UpdateDataQualityScanRequest extends Request {
 
             /**
              * <p>The hook trigger condition. When this condition is met, the hook is triggered. Valid expression format:</p>
-             * <p>Specifies multiple combinations of rule severity levels and rule validation statuses, such as <code>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</code>. This means the hook is triggered if any executed rule has Fail with Normal severity, Error with High severity, or Warn with High severity. The severity values must match those defined in the Spec. The status values must match those in DataQualityResult.</p>
+             * <p>Specifies multiple combinations of rule severity levels and rule validation statuses, such as <code>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</code>. This means the hook is triggered if any executed rule has Fail with Normal severity, Error with High severity, or Warn with High severity. The severity values must match those defined in the Spec. The status values must match those in DataQualityResult.</p>
              * 
              * <strong>example:</strong>
-             * <p>results.any { r -&gt; r.status == &quot;Fail&quot; &amp;&amp; r.rule.severity == &quot;Normal&quot; || r.status == &quot;Error&quot; &amp;&amp; r.rule.severity == &quot;High&quot; || r.status == &quot;Warn&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
+             * <p>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -925,8 +930,10 @@ public class UpdateDataQualityScanRequest extends Request {
             /**
              * <p>The trigger mode of the data quality monitor. Valid values:</p>
              * <ul>
-             * <li>ByManual: Manually triggered. Default setting.</li>
-             * <li>BySchedule: Triggered by a scheduled task instance.</li>
+             * <li><p>ByManual: Manually triggered. Default setting.</p>
+             * </li>
+             * <li><p>BySchedule: Triggered by a scheduled task instance.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

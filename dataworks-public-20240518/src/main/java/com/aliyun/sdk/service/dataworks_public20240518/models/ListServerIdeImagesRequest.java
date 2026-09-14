@@ -152,7 +152,7 @@ public class ListServerIdeImagesRequest extends Request {
         }
 
         /**
-         * <p>镜像标签过滤，多个标签以英文逗号分隔。</p>
+         * <p>The image label filter condition. Separate multiple Key=Value conditions with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>system.chipType=GPU,system.official=true</p>
@@ -164,7 +164,7 @@ public class ListServerIdeImagesRequest extends Request {
         }
 
         /**
-         * <p>本次请求的最大结果数，默认为 10，最大值为 100。</p>
+         * <p>The maximum number of records to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -176,7 +176,7 @@ public class ListServerIdeImagesRequest extends Request {
         }
 
         /**
-         * <p>镜像名称（模糊匹配）。</p>
+         * <p>The image name filter condition. Supports fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>tensorflow_2.9</p>
@@ -188,7 +188,7 @@ public class ListServerIdeImagesRequest extends Request {
         }
 
         /**
-         * <p>翻页标记，首次查询不传，后续查询传上一次返回的 NextToken。</p>
+         * <p>The pagination token used to continue a query. You do not need to specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESG****</p>
@@ -200,7 +200,7 @@ public class ListServerIdeImagesRequest extends Request {
         }
 
         /**
-         * <p>页码，从 1 开始。</p>
+         * <p>The page number. The value starts from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,7 +212,7 @@ public class ListServerIdeImagesRequest extends Request {
         }
 
         /**
-         * <p>每页条数。</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

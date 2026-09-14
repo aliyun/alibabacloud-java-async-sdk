@@ -54,7 +54,7 @@ public class UpdateProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * <p>The Request ID. Use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>

@@ -80,7 +80,7 @@ public class ListImageTestResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListImageTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,7 +230,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>img_123456</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -235,7 +241,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The test result message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test finished</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -243,7 +252,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateTime.
+             * <p>The operation time, represented as a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder operateTime(Long operateTime) {
                 this.operateTime = operateTime;
@@ -251,7 +263,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111111-1111-1111-1111-111111111111</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -259,7 +274,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStage.
+             * <p>The publish stage of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNPUBLISHED</p>
              */
             public Builder publishStage(String publishStage) {
                 this.publishStage = publishStage;
@@ -267,7 +285,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder resourceGroupId(Long resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -275,7 +296,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the test process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -368,7 +392,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -376,7 +403,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -384,7 +414,7 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TestResultList.
+             * <p>The list of image test results.</p>
              */
             public Builder testResultList(java.util.List<TestResultList> testResultList) {
                 this.testResultList = testResultList;
@@ -392,7 +422,10 @@ public class ListImageTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

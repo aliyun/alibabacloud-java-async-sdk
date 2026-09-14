@@ -80,7 +80,10 @@ public class GetImageTestResultResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class GetImageTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -96,7 +102,7 @@ public class GetImageTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * TestResult.
+         * <p>The details of the image test result.</p>
          */
         public Builder testResult(TestResult testResult) {
             this.testResult = testResult;
@@ -227,7 +233,10 @@ public class GetImageTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom_image_xxxx_xxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -235,7 +244,10 @@ public class GetImageTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The test result message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test finished</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -243,7 +255,10 @@ public class GetImageTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * OperateTime.
+             * <p>The operation time, represented as a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder operateTime(Long operateTime) {
                 this.operateTime = operateTime;
@@ -251,7 +266,10 @@ public class GetImageTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -259,7 +277,25 @@ public class GetImageTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStage.
+             * <p>The image publish status. Valid values:</p>
+             * <ul>
+             * <li>Untest: Not tested.</li>
+             * <li>Testing: Testing in progress.</li>
+             * <li>TestFailed: Test failed.</li>
+             * <li>Unpublished: Not published.</li>
+             * <li>Publishing: Publishing in progress.</li>
+             * <li>Published: Published.</li>
+             * <li>PublishFailed: Publish failed.</li>
+             * <li>Building: Building in progress.</li>
+             * <li>BuildSuccess: Build succeeded.</li>
+             * <li>BuildFailed: Build failed.</li>
+             * <li>Accelerating: Acceleration in progress.</li>
+             * <li>AccelerateSuccess: Acceleration succeeded.</li>
+             * <li>AccelerateFailed: Acceleration failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Unpublished</p>
              */
             public Builder publishStage(String publishStage) {
                 this.publishStage = publishStage;
@@ -267,7 +303,10 @@ public class GetImageTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_****</p>
              */
             public Builder resourceGroupId(Long resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -275,7 +314,16 @@ public class GetImageTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The test process status. Valid values:</p>
+             * <ul>
+             * <li>running: Running.</li>
+             * <li>completed: Completed.</li>
+             * <li>failed: Failed.</li>
+             * <li>cancelled: Cancelled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder status(String status) {
                 this.status = status;

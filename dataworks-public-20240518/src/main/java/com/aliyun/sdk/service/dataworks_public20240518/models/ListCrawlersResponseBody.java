@@ -80,7 +80,7 @@ public class ListCrawlersResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,10 @@ public class ListCrawlersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListCrawlersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +165,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             } 
 
             /**
-             * CronExpress.
+             * <p>The cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 2 ? * *</p>
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -170,7 +176,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The schedule type. Valid values: MANUAL, NORMAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -406,7 +415,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time, expressed as a millisecond-precision UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -414,7 +426,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -422,7 +437,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The DataWorks environment type. Valid values: Dev, Prod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -430,7 +448,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The crawler ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -438,7 +459,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * LastRunStatus.
+             * <p>The most recent run status. Valid values: WAITING, RUNNING, SUCCESS, ERROR, SHUTDOWN. This field may be empty if the crawler has not run yet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder lastRunStatus(String lastRunStatus) {
                 this.lastRunStatus = lastRunStatus;
@@ -446,7 +470,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * MetaEntityId.
+             * <p>The meta entity ID associated with the crawler. You can use this ID to connect to metadata query APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>starrocks:example-instance</p>
              */
             public Builder metaEntityId(String metaEntityId) {
                 this.metaEntityId = metaEntityId;
@@ -454,7 +481,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time, expressed as a millisecond-precision UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -462,7 +492,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The crawler name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example_crawler</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -470,7 +503,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The DataWorks user ID of the crawler owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -478,7 +514,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -486,7 +525,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the Serverless 2.0 resource group used to run the crawl task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_1234567890123456_1234567890</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -494,7 +536,7 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleConfig.
+             * <p>The schedule configuration.</p>
              */
             public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
                 this.scheduleConfig = scheduleConfig;
@@ -502,7 +544,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The crawler status. The value is VALID when the crawler configuration is valid and the associated data source exists. Otherwise, the value is INVALID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VALID</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -510,7 +555,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The DataWorks scheduling node ID associated with the crawler. You can use this ID to call GetTask to query the node definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -518,7 +566,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The crawler type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>starrocks</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -611,7 +662,7 @@ public class ListCrawlersResponseBody extends TeaModel {
             } 
 
             /**
-             * Crawlers.
+             * <p>The list of metadata crawlers.</p>
              */
             public Builder crawlers(java.util.List<Crawlers> crawlers) {
                 this.crawlers = crawlers;
@@ -619,7 +670,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -627,7 +681,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -635,7 +692,10 @@ public class ListCrawlersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records that match the query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

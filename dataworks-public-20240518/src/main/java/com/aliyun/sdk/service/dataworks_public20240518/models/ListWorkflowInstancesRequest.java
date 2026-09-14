@@ -266,7 +266,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The data timestamp. The value of this parameter is 00:00:00 of the day before the scheduling time of the instance. The value is a UNIX timestamp. Unit: milliseconds. Example: 1743350400000.</p>
+         * <p>The business date. This is typically 00:00:00 of the day before the scheduled time of the periodic instance. The value is a millisecond-level timestamp, such as 1743350400000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +279,14 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The project environment. Valid values:</p>
+         * <ul>
+         * <li>Prod: production</li>
+         * <li>Dev: development</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -288,7 +295,12 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter. The value is in JSON format. Multiple filter conditions have an AND relationship. Currently supported fields: <code>status, executionDate</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{<br>    &quot;status&quot;: &quot;Success&quot;,
+         *     &quot;executionDate&quot;: &quot;1763481600000&quot;
+         * }</p>
          */
         public Builder filter(String filter) {
             this.putBodyParameter("Filter", filter);
@@ -297,7 +309,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the workflow instances. You can query multiple instances at a time by instance ID.</p>
+         * <p>The list of workflow instance IDs. You can use this parameter to query information about multiple workflow instances in a batch.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -307,7 +319,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance name. Fuzzy match is supported.</p>
+         * <p>The name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>WorkflowInstance1</p>
@@ -319,7 +331,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The account ID of the workflow instance owner.</p>
+         * <p>The account ID of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -331,7 +343,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -355,7 +367,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -368,7 +380,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <p>The list of sort fields. Sorting by scheduled time, start time, and other fields is supported. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc is the default if omitted. Valid values for the sort field:</p>
          * <ul>
          * <li>TriggerTime (Desc/Asc)</li>
          * <li>StartedTime (Desc/Asc)</li>
@@ -388,7 +400,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags. Results are returned if any one of the specified tags matches.</p>
          */
         public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -400,12 +412,12 @@ public class ListWorkflowInstancesRequest extends Request {
         /**
          * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
-         * <li>Normal: Scheduled execution</li>
-         * <li>Manual: Manually triggered node</li>
-         * <li>SmokeTest: Smoke test</li>
-         * <li>SupplementData: Data backfill</li>
-         * <li>ManualWorkflow: Manually triggered workflow</li>
-         * <li>TriggerWorkflow: Triggered Workflow</li>
+         * <li>Normal: periodic scheduling</li>
+         * <li>Manual: manual task</li>
+         * <li>SmokeTest: test</li>
+         * <li>SupplementData: data backfill</li>
+         * <li>ManualWorkflow: manual workflow</li>
+         * <li>TriggerWorkflow: trigger-based workflow</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -418,7 +430,10 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * UnifiedWorkflowInstanceId.
+         * <p>The unified workflow instance ID. All workflow instances within the same business date under a specific trigger share the same value for this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder unifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
             this.putBodyParameter("UnifiedWorkflowInstanceId", unifiedWorkflowInstanceId);

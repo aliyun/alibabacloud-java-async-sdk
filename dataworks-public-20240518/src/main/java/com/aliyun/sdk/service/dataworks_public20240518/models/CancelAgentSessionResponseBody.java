@@ -67,7 +67,7 @@ public class CancelAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * JsonRpcResponse.
+         * <p>The JSON-RPC response.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -131,7 +131,10 @@ public class CancelAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>session-d5d549fe4c2c4180a9814fb74190f502</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -211,7 +214,10 @@ public class CancelAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID passed in by the requester, returned as-is in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7675839888324361477</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -219,7 +225,10 @@ public class CancelAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Jsonrpc.
+             * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder jsonrpc(String jsonrpc) {
                 this.jsonrpc = jsonrpc;
@@ -227,7 +236,7 @@ public class CancelAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The result object of the session cancellation.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

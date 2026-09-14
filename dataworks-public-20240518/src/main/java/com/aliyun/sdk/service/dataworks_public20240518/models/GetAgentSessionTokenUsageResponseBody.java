@@ -67,7 +67,7 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * JsonRpcResponse.
+         * <p>The JSON-RPC result.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -75,7 +75,7 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B313938A-4475-599B-98EB-A0875019FD5B</p>
@@ -183,7 +183,10 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * CachedTokens.
+             * <p>The cumulative number of cache-hit tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000</p>
              */
             public Builder cachedTokens(Long cachedTokens) {
                 this.cachedTokens = cachedTokens;
@@ -191,7 +194,10 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
             }
 
             /**
-             * CompletionTokens.
+             * <p><strong>Cumulative number of completion tokens generated.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder completionTokens(Long completionTokens) {
                 this.completionTokens = completionTokens;
@@ -199,7 +205,10 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
             }
 
             /**
-             * PromptTokens.
+             * <p><strong>Cumulative number of prompt tokens consumed.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder promptTokens(Long promptTokens) {
                 this.promptTokens = promptTokens;
@@ -207,7 +216,10 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ThoughtsTokens.
+             * <p>Cumulative number of tokens used for thoughts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder thoughtsTokens(Long thoughtsTokens) {
                 this.thoughtsTokens = thoughtsTokens;
@@ -215,7 +227,10 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>The cumulative number of all tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder totalTokens(Long totalTokens) {
                 this.totalTokens = totalTokens;
@@ -295,7 +310,10 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID provided by the requester, which is echoed in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8212598228302533855</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -303,7 +321,10 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Jsonrpc.
+             * <p>The JSON-RPC version. The value is always 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder jsonrpc(String jsonrpc) {
                 this.jsonrpc = jsonrpc;
@@ -311,7 +332,7 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Token usage result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

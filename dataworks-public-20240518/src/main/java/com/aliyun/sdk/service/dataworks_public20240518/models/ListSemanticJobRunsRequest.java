@@ -111,6 +111,7 @@ public class ListSemanticJobRunsRequest extends Request {
         }
 
         /**
+         * <p>The job name. Use the Data.Name value from the CreateSemanticJob response or the Name value from a ListSemanticJobs list item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +124,10 @@ public class ListSemanticJobRunsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1. If this parameter is not specified or set to a value less than or equal to 0, page 1 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -132,7 +136,10 @@ public class ListSemanticJobRunsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of run records to return per page. If this parameter is not specified or set to a value less than or equal to 0, the default value 50 is used. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

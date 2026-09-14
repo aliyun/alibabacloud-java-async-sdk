@@ -145,7 +145,10 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Error.
+         * <p>The SSE frame error message. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;: 400, &quot;errorCode&quot;: &quot;0x50000000001&quot;, &quot;message&quot;: &quot;not exist session&quot;, &quot;data&quot;: null}</p>
          */
         public Builder error(Object error) {
             this.error = error;
@@ -153,7 +156,10 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID passed by the requester. The value is returned as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>631478864897630XXXX</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -161,7 +167,10 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.jsonrpc = jsonrpc;
@@ -169,7 +178,10 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Method.
+         * <p>The SSE method. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session/update</p>
          */
         public Builder method(String method) {
             this.method = method;
@@ -177,7 +189,10 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The SSE params. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sessionId&quot;:&quot;af4f5ef8-e8f5-481c-ad1f-94886c6c0aed&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;hello world&quot;}}}</p>
          */
         public Builder params(Object params) {
             this.params = params;
@@ -196,7 +211,10 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The SSE frame result set. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;stopReason&quot;:&quot;end_turn&quot;}</p>
          */
         public Builder result(Object result) {
             this.result = result;
@@ -204,7 +222,10 @@ public class PromptAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1747447032</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;

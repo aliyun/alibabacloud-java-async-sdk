@@ -78,10 +78,10 @@ public class AttachDataQualityRulesToEvaluationTaskResponseBody extends TeaModel
         }
 
         /**
-         * <p>The value of the association is as follows:</p>
+         * <p>Indicates whether the association is successful. Valid values:</p>
          * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: the call failed.</li>
+         * <li>true: The call succeeded.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -146,6 +146,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The namespace (project space projectId or personal space baseId).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +159,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +172,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -179,7 +184,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,6 +196,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The snapshot type. Multiple values are supported. Valid values: Saved, Deployed, and UnDeployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

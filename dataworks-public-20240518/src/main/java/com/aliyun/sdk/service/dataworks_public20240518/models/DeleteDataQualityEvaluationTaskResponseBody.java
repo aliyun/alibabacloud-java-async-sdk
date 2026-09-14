@@ -78,10 +78,10 @@ public class DeleteDataQualityEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the deletion is successful.</p>
+         * <p>Indicates whether the deletion was successful. Valid values:</p>
          * <ul>
-         * <li>true: Successful</li>
-         * <li>false: Failed</li>
+         * <li>true: successful</li>
+         * <li>false: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>

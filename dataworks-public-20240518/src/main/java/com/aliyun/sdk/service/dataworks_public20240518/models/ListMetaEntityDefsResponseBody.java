@@ -80,7 +80,7 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The paging information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,7 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ADFASDFASDFA-ADFASDF-ASDFADSDF-AFFADS</p>
@@ -99,7 +99,10 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +194,7 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
             } 
 
             /**
-             * MetaEntityDefs.
+             * <p>The list of custom entity definitions.</p>
              */
             public Builder metaEntityDefs(java.util.List<MetaEntityDef> metaEntityDefs) {
                 this.metaEntityDefs = metaEntityDefs;
@@ -199,7 +202,10 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -207,7 +213,10 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -215,7 +224,10 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

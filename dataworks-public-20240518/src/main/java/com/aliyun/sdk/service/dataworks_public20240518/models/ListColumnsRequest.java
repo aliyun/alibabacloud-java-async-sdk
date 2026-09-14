@@ -194,7 +194,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * IncludeExtendedProperties.
+         * <p>Specifies whether to return extended properties. Set this parameter to <code>true</code> to return extended properties or <code>false</code> to not return them.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeExtendedProperties(Boolean includeExtendedProperties) {
             this.putQueryParameter("IncludeExtendedProperties", includeExtendedProperties);
@@ -215,10 +218,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Default value: Asc. Valid values:</p>
+         * <p>The sort direction. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc</li>
-         * <li>Desc</li>
+         * <li>Asc: ascending order.</li>
+         * <li>Desc: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,7 +246,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The page size. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -257,8 +260,8 @@ public class ListColumnsRequest extends Request {
         /**
          * <p>The sort field. Default value: Position. Valid values:</p>
          * <ul>
-         * <li>Name</li>
-         * <li>Position</li>
+         * <li>Name: name.</li>
+         * <li>Position: position.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,11 +274,11 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The table ID. You can refer to the return result of the ListTables operation. and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+         * <p>The table ID. You can obtain the ID from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-column:11075xxxx::test_project:test_schema:test_table</p>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);

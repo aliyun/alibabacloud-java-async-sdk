@@ -91,7 +91,7 @@ public class BatchCreateMetaEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of entity creation results. Each entry indicates whether the creation is successful and the failure reason.</p>
          */
         public Builder results(java.util.List<MetaEntityWriteResult> results) {
             this.results = results;
@@ -99,7 +99,10 @@ public class BatchCreateMetaEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. If some entities fail, the value is still true. Check Results[].Success and Results[].ErrorMessage for individual results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -101,7 +101,7 @@ public class ListDataSourceSharedRulesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>135123</p>
          */
         public Builder dataSourceId(Long dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -113,7 +113,7 @@ public class ListDataSourceSharedRulesRequest extends Request {
          * <p>The ID of the workspace to which the data source is shared. You cannot share the data source to the workspace with which the data source is associated.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>106565</p>
          */
         public Builder targetProjectId(Long targetProjectId) {
             this.putQueryParameter("TargetProjectId", targetProjectId);

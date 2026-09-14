@@ -155,7 +155,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The name of the file resource. Supports fuzzy search.</p>
+         * <p>The name of the file resource. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -167,7 +167,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page.</p>
+         * <p>The ID of the owner, which is the account UID of the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the account UID in the security management section of account management.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -179,7 +179,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the data to retrieve, used for pagination.</p>
+         * <p>The page number of the request, used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the data to retrieve, used for pagination.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -203,8 +203,8 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</p>
+         * <p>This parameter specifies the DataWorks workspace for this API call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type. This parameter specifies a filter condition.</p>
+         * <p>The filter condition: resource file type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Python</li>
@@ -227,7 +227,7 @@ public class ListResourcesRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>python</p>
+         * <p>Python</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

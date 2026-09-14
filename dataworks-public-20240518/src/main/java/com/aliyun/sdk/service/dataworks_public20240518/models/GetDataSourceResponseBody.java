@@ -67,7 +67,7 @@ public class GetDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the data source.</p>
+         * <p>The data source details.</p>
          */
         public Builder dataSource(DataSource dataSource) {
             this.dataSource = dataSource;
@@ -75,7 +75,7 @@ public class GetDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
@@ -274,12 +274,12 @@ public class GetDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
+             * <p>The connection configuration of the data source, including the endpoint, access identity, and environment context. The data source environment type (envType) is a member property of this object. Valid values:</p>
              * <ul>
-             * <li>Dev: development environment</li>
-             * <li>Prod: production environment</li>
+             * <li>Dev: development environment.</li>
+             * <li>Prod: production environment.</li>
              * </ul>
-             * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</p>
+             * <p>Different types of data sources have different property specifications under different configuration modes (ConnectionPropertiesMode). For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection properties (ConnectionProperties)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -298,11 +298,11 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</p>
+             * <p>The category in which the data source is added. Different types have different subtypes with different parameter constraints. Examples:</p>
              * <ul>
-             * <li>InstanceMode: instance mode</li>
-             * <li>UrlMode: connection string mode</li>
-             * <li>CdhMode: CDH cluster mode</li>
+             * <li>InstanceMode: instance mode.</li>
+             * <li>UrlMode: connection string mode.</li>
+             * <li>CdhMode: CDH mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -314,7 +314,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data source was added. This value is a UNIX timestamp.</p>
+             * <p>The time when the data source was created (timestamp).</p>
              * 
              * <strong>example:</strong>
              * <p>1698286929333</p>
@@ -325,7 +325,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who adds the data source.</p>
+             * <p>The ID of the user who created the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>1107550004253538</p>
@@ -347,7 +347,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>16738</p>
@@ -358,7 +358,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data source was last modified. This value is a UNIX timestamp.</p>
+             * <p>The time when the data source was last modified (timestamp).</p>
              * 
              * <strong>example:</strong>
              * <p>1698286929333</p>
@@ -369,7 +369,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who modifies the data source.</p>
+             * <p>The ID of the user who last modified the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>1107550004253538</p>
@@ -391,7 +391,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace with which the data source is associated.</p>
+             * <p>The ID of the workspace to which the data source belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>52660</p>
@@ -402,7 +402,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the <code>${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}</code> format.</p>
+             * <p>The business unique key of the data source. For example, the format for a Hologres data source is <code>${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1107550004253538:cn-beijing:holo:hgprecn-cn-x0r3oun4k001:testdb</p>

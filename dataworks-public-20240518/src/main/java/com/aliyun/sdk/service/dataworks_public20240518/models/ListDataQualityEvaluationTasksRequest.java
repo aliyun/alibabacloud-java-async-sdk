@@ -139,7 +139,7 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * <p>The name of the data quality monitoring task. Fuzzy match is supported.</p>
+         * <p>The name used for fuzzy matching of data quality evaluation task names.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -151,7 +151,7 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number for paging. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +163,7 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The page size for paging. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -187,7 +187,7 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the table in Data Map.</p>
+         * <p>The unique ID of the table in DataWorks Data Map.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>

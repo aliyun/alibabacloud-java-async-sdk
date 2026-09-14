@@ -279,7 +279,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
              * <p>The collection ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>category.123</p>
+             * <p>as78d756asd</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -312,7 +312,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
              * <p>The parent collection ID. This parameter can be empty.</p>
              * 
              * <strong>example:</strong>
-             * <p>category.12</p>
+             * <p>4as3dasf654a</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -322,9 +322,12 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             /**
              * <p>The collection type. Valid values:</p>
              * <ul>
-             * <li>Category</li>
-             * <li>Album</li>
-             * <li>AlbumCategory: Album subcategory.</li>
+             * <li><p>Category</p>
+             * </li>
+             * <li><p>Album</p>
+             * </li>
+             * <li><p>AlbumCategory: Album subcategory.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

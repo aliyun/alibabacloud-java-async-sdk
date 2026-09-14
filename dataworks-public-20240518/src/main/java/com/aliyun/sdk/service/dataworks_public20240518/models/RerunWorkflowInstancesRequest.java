@@ -322,8 +322,10 @@ public class RerunWorkflowInstancesRequest extends Request {
          * <p>The status used for matching manual workflow instances.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Success</li>
-         * <li>Failure</li>
+         * <li><p>Success</p>
+         * </li>
+         * <li><p>Failure</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

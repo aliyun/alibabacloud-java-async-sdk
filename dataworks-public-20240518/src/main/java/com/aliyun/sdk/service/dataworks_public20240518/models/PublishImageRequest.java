@@ -97,6 +97,7 @@ public class PublishImageRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class PublishImageRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * <p>The image publish execution ID, which is used as an idempotence identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
          */
         public Builder processId(String processId) {
             this.putBodyParameter("ProcessId", processId);

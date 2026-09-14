@@ -138,10 +138,10 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The alert condition of the data quality monitoring rule.</p>
+         * <p>The alert condition of the data quality monitoring alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>results.any { r -&gt; r.status == &quot;fail&quot; &amp;&amp; r.rule.severity == &quot;High&quot; }</p>
+         * <p>results.any { r -&gt; r.status == \&quot;fail\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
          */
         public Builder condition(String condition) {
             this.putBodyParameter("Condition", condition);
@@ -150,7 +150,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert rule.</p>
+         * <p>The alert rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>105412</p>
@@ -162,7 +162,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>Alert notification configurations.</p>
+         * <p>The alert notification configuration.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -184,7 +184,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The monitored target of the data quality monitoring rule.</p>
+         * <p>The monitoring target of the data quality monitoring alert rule.</p>
          */
         public Builder target(Target target) {
             String targetShrink = shrink(target, "Target", "json");
@@ -267,7 +267,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>Additional configurations required for the alert recipients. When ReceiverType is DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
+             * <p>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to @ all members.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;atAll&quot;:true}</p>
@@ -278,7 +278,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of alert recipients.</p>
+             * <p>The alerting accept object type. Valid values:</p>
              * <ul>
              * <li>AliUid</li>
              * <li>WebhookUrl</li>
@@ -300,7 +300,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The value of alert recipients.</p>
+             * <p>The values of the alert recipients.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -368,7 +368,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of alert channels. You can set both Email and Sms at the same time. In other cases, only one channel can be set.</p>
+             * <p>The list of notification channels. You can set both Email and Sms at the same time. In other cases, only one channel can be specified.</p>
              * <p>This parameter is required.</p>
              */
             public Builder channels(java.util.List<String> channels) {
@@ -444,7 +444,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of monitored target IDs. Currently, only one ID can be set.</p>
+             * <p>The list of monitoring target IDs. Currently, only one ID can be specified.</p>
              */
             public Builder ids(java.util.List<Long> ids) {
                 this.ids = ids;
@@ -452,7 +452,7 @@ public class UpdateDataQualityAlertRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of the monitored target. Only DataQualityScan is supported.</p>
+             * <p>The type of the monitored object. Only DataQualityScan is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>DataQualityScan</p>

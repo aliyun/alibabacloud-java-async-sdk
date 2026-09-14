@@ -80,7 +80,7 @@ public class RunSemanticJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The run information for this submission. A successful submission does not mean that the semantic model output has been generated. Use the detail operation to confirm the status before downloading results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class RunSemanticJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class RunSemanticJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +217,10 @@ public class RunSemanticJobResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentSqlIndex.
+             * <p>The current SQL fragment index returned by the executor in the submission response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentSqlIndex(Integer currentSqlIndex) {
                 this.currentSqlIndex = currentSqlIndex;
@@ -222,7 +228,10 @@ public class RunSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The runtime environment identifier returned by the executor in the submission response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -230,7 +239,7 @@ public class RunSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExecTypes.
+             * <p>The list of execution type codes returned by the executor in the submission response.</p>
              */
             public Builder execTypes(java.util.List<Integer> execTypes) {
                 this.execTypes = execTypes;
@@ -238,7 +247,10 @@ public class RunSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutorJobId.
+             * <p>The executor task identifier. Pass this value to the ExecutorJobId parameter of GetSemanticJobDetail, GetSemanticJobLog, or KillSemanticJob.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-job-demo</p>
              */
             public Builder executorJobId(String executorJobId) {
                 this.executorJobId = executorJobId;
@@ -246,7 +258,10 @@ public class RunSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobRunId.
+             * <p>The unique identifier of this run. Pass this value to the JobRunId parameter of DownloadSemanticResults to obtain the output of this run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01H00000000000000000000000</p>
              */
             public Builder jobRunId(String jobRunId) {
                 this.jobRunId = jobRunId;
@@ -254,7 +269,7 @@ public class RunSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * Statuses.
+             * <p>The list of status codes returned by the executor in the submission response. The status at the submission stage does not indicate that the results are complete.</p>
              */
             public Builder statuses(java.util.List<Integer> statuses) {
                 this.statuses = statuses;

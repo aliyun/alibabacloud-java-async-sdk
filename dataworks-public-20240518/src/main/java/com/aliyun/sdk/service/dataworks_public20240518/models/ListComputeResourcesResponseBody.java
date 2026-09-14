@@ -238,7 +238,7 @@ public class ListComputeResourcesResponseBody extends TeaModel {
              * <p>The category of the added compute resource. Different types have different subtypes with corresponding parameter constraints. Examples: InstanceMode: The instance mode. UrlMode: The connection string mode.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\n    &quot;clusterIdentifier&quot;: &quot;c-da123456&quot;,\n    &quot;database&quot;: &quot;testdb&quot;,\n    &quot;loginMode&quot;:&quot;Anonymous&quot;,\n    &quot;defaultFS&quot;:&quot;127.0.0.1&quot;,\n    &quot;envType&quot;: &quot;Prod&quot;\n}</p>
+             * <p>{\n    \&quot;clusterIdentifier\&quot;: \&quot;c-da123456\&quot;,\n    \&quot;database\&quot;: \&quot;testdb\&quot;,\n    \&quot;loginMode\&quot;:\&quot;Anonymous\&quot;,\n    \&quot;defaultFS\&quot;:\&quot;127.0.0.1\&quot;,\n    \&quot;envType\&quot;: \&quot;Prod\&quot;\n}</p>
              */
             public Builder connectionProperties(Object connectionProperties) {
                 this.connectionProperties = connectionProperties;
@@ -248,8 +248,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             /**
              * <p>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</p>
              * <ul>
-             * <li>Dev</li>
-             * <li>Prod Different types of computing resources have different attribute specifications under different configuration modes (ConnectionPropertiesMode).</li>
+             * <li><p>Dev</p>
+             * </li>
+             * <li><p>Prod Different types of computing resources have different attribute specifications under different configuration modes (ConnectionPropertiesMode).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

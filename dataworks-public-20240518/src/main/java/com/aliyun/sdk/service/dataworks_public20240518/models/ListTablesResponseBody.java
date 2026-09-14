@@ -205,7 +205,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -224,7 +224,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

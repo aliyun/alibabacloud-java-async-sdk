@@ -128,7 +128,7 @@ public class UpdateResourceGroupRequest extends Request {
          * <p>The ID of the new Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aek2kqofrgXXXXX</p>
+         * <p>rg-aek2kqofrg****</p>
          */
         public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
             this.putBodyParameter("AliyunResourceGroupId", aliyunResourceGroupId);

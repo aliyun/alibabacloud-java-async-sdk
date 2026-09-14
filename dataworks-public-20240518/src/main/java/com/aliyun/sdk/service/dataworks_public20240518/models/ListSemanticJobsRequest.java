@@ -96,7 +96,10 @@ public class ListSemanticJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1. If this parameter is not specified or is set to a value less than or equal to 0, page 1 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -105,7 +108,10 @@ public class ListSemanticJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of job definitions per page. If this parameter is not specified or is set to a value less than or equal to 0, the default value 50 is used. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

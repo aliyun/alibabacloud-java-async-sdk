@@ -114,7 +114,10 @@ public class UpdateTableBusinessMetadataRequest extends Request {
         }
 
         /**
-         * CustomAttributes.
+         * <p>The custom attribute values. The key is the custom attribute identifier, and the value contains at most one element. An empty list indicates that the attribute value is deleted. Passing this parameter without Readme prevents the usage description from being cleared. An empty object indicates that custom attributes are not updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</p>
          */
         public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
             String customAttributesShrink = shrink(customAttributes, "CustomAttributes", "json");
@@ -124,14 +127,11 @@ public class UpdateTableBusinessMetadataRequest extends Request {
         }
 
         /**
-         * <p>The table ID. You can refer to the format of the table ID returned by the ListTables operation.</p>
+         * <p>The ID of the table. For the format, refer to the response of the ListTables operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-table:123456XXX::test_project::test_tbl
-         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-         * hms-table:c-abc123xxx::test_db::test_tbl
-         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl</p>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -140,7 +140,7 @@ public class UpdateTableBusinessMetadataRequest extends Request {
         }
 
         /**
-         * <p>The usage notes. The rich text format is supported.</p>
+         * <p>The usage description. Rich text format is supported.</p>
          * 
          * <strong>example:</strong>
          * <h2>introduction</h2>

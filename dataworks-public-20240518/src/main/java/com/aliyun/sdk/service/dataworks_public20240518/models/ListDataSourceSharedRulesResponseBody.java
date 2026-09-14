@@ -249,7 +249,7 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
              * <p>The ID of the user who creates the rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>1107550****</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -260,7 +260,7 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
              * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>265133</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -270,8 +270,10 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
             /**
              * <p>The environment to which the target data source belongs. The values are as follows:</p>
              * <ul>
-             * <li>Dev: the development environment.</li>
-             * <li>Prod: the production environment.</li>
+             * <li><p>Dev: the development environment.</p>
+             * </li>
+             * <li><p>Prod: the production environment.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -286,7 +288,7 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
              * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>101412</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -308,7 +310,7 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
              * <p>The user in the workspace to which the data source is shared. If the data source is shared to the entire workspace, this parameter is left empty.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>1107550004253538</p>
              */
             public Builder sharedUser(String sharedUser) {
                 this.sharedUser = sharedUser;
@@ -319,7 +321,7 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
              * <p>The ID of the workspace with which the data source is associated.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>106560</p>
              */
             public Builder sourceProjectId(Long sourceProjectId) {
                 this.sourceProjectId = sourceProjectId;
@@ -330,7 +332,7 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
              * <p>The ID of the workspace to which the data source is shared.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>106561</p>
              */
             public Builder targetProjectId(Long targetProjectId) {
                 this.targetProjectId = targetProjectId;

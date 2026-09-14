@@ -54,7 +54,7 @@ public class CreateProjectMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>2B2F0B26-9253-5780-B6DB-F1A886D44D6F</p>

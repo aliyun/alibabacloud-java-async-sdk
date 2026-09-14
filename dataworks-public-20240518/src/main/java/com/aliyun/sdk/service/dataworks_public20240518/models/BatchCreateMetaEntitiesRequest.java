@@ -83,6 +83,7 @@ public class BatchCreateMetaEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The list of entities. A maximum of five entities are supported. All entities in the same batch must have the same entityType.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +197,7 @@ public class BatchCreateMetaEntitiesRequest extends Request {
             } 
 
             /**
-             * Attributes.
+             * <p>The entity attributes. Complex values must be serialized as JSON strings.</p>
              */
             public Builder attributes(java.util.Map<String, String> attributes) {
                 this.attributes = attributes;
@@ -204,7 +205,10 @@ public class BatchCreateMetaEntitiesRequest extends Request {
             }
 
             /**
-             * Comment.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -212,7 +216,8 @@ public class BatchCreateMetaEntitiesRequest extends Request {
             }
 
             /**
-             * CustomAttributes.
+             * <p>The custom attribute values. The key is the custom attribute identifier, and the value currently supports only a single value.
+             * <notice>The custom attributes used here must be created in advance by calling the CreateCustomAttribute operation. For example, after you call the API to create a custom attribute with the ID <code>custom-attribute:owner_name</code>, you can configure {\&quot;owner_name\&quot;: [\&quot;Bob\&quot;]} here to complete the custom attribute configuration.</notice></p>
              */
             public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
                 this.customAttributes = customAttributes;
@@ -220,6 +225,11 @@ public class BatchCreateMetaEntitiesRequest extends Request {
             }
 
             /**
+             * <p>The entity type. All entities in the same batch must have the same type. The following types are supported:</p>
+             * <ul>
+             * <li>Custom entity types, such as custom_entity-biz_api.</li>
+             * <li>Extension table types. If the metadata entity type custom_dw-table is registered, you can create objects of the corresponding database type custom_dw-database and table type custom_dw-table.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -231,6 +241,7 @@ public class BatchCreateMetaEntitiesRequest extends Request {
             }
 
             /**
+             * <p>The entity name. The name can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with a letter and can be up to 64 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

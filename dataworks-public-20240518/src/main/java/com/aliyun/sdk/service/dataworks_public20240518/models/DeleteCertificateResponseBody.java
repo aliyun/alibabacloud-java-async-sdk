@@ -67,7 +67,7 @@ public class DeleteCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>D9A61DC0-B922-421B-B706</p>
@@ -78,7 +78,7 @@ public class DeleteCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the certificate file was deleted successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

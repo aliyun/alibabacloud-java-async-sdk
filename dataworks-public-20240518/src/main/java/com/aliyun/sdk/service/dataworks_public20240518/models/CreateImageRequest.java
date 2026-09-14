@@ -270,7 +270,14 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The image visibility. Valid values:</p>
+         * <ul>
+         * <li>Public: visible to all users.</li>
+         * <li>Private: visible only to the creator.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -279,7 +286,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * AcrAssociatedVpcId.
+         * <p>The VPC ID associated with the ACR instance. This parameter is required when referencing an ACR image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
          */
         public Builder acrAssociatedVpcId(String acrAssociatedVpcId) {
             this.putBodyParameter("AcrAssociatedVpcId", acrAssociatedVpcId);
@@ -288,7 +298,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * AcrInstanceId.
+         * <p>The ACR instance ID. This parameter is required when referencing an ACR image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acr_instance_id</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.putBodyParameter("AcrInstanceId", acrInstanceId);
@@ -297,7 +310,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * BuildConfig.
+         * <p>The image build configuration.</p>
          */
         public Builder buildConfig(BuildConfig buildConfig) {
             String buildConfigShrink = shrink(buildConfig, "BuildConfig", "json");
@@ -307,6 +320,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
+         * <p>The client idempotency token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +333,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The image description, up to 128 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create by xxxx</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -328,7 +345,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * EnableSyncMaxCompute.
+         * <p>Specifies whether to synchronize the image to MaxCompute. Specify this parameter when referencing an ACR image. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableSyncMaxCompute(Boolean enableSyncMaxCompute) {
             this.putBodyParameter("EnableSyncMaxCompute", enableSyncMaxCompute);
@@ -337,7 +357,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * ImageUri.
+         * <p>The image URI. This parameter is required when referencing an ACR image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-beijing.cr.aliyuncs.com/namespace/image:0.1.0</p>
          */
         public Builder imageUri(String imageUri) {
             this.putBodyParameter("ImageUri", imageUri);
@@ -346,6 +369,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
+         * <p>The image name, which can contain lowercase letters, digits, and underscores (_), up to 128 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,6 +382,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
+         * <p>The image namespace. Set this parameter to DataWorks Default when referencing a DataWorks official image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -370,7 +395,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * ProviderImageId.
+         * <p>The image ID from the image provider. This parameter is required when referencing a DataWorks official image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System_shell_20251201</p>
          */
         public Builder providerImageId(String providerImageId) {
             this.putBodyParameter("ProviderImageId", providerImageId);
@@ -379,6 +407,11 @@ public class CreateImageRequest extends Request {
         }
 
         /**
+         * <p>The image reference data type. Valid values:</p>
+         * <ul>
+         * <li>ACR: ACR image repository.</li>
+         * <li>DataWorks: DataWorks official image.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -391,6 +424,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
+         * <p>The image repository name. Set this parameter to DataWorks Default when referencing a DataWorks official image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -403,6 +437,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
+         * <p>The image sub-purpose.</p>
          * <p>This parameter is required.</p>
          */
         public Builder supported(Supported supported) {
@@ -472,7 +507,10 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The script content. If the content consists of package names, separate them with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>requests</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -480,7 +518,10 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The script type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Python3</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -547,7 +588,10 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * BuildType.
+             * <p>The build type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PackageInstallation</p>
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
@@ -555,7 +599,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * PackageInstallationScripts.
+             * <p>The list of pre-installation scripts.</p>
              */
             public Builder packageInstallationScripts(java.util.List<PackageInstallationScripts> packageInstallationScripts) {
                 this.packageInstallationScripts = packageInstallationScripts;
@@ -622,7 +666,13 @@ public class CreateImageRequest extends Request {
             } 
 
             /**
-             * Module.
+             * <p>The image sub-module. Valid values:</p>
+             * <ul>
+             * <li>Scheduler: DataStudio.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -630,7 +680,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * TaskTypes.
+             * <p>The list of supported node types.</p>
              */
             public Builder taskTypes(java.util.List<String> taskTypes) {
                 this.taskTypes = taskTypes;

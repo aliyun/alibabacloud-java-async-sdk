@@ -67,7 +67,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the created data source. This is the unique identifier of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>22130</p>
@@ -78,10 +78,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>B62EC203-B39E-5DC1-B5B8-EB3C61707009</p>
+         * <p>B62EC203-B39E-5DC1-B5B8-EB3C6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

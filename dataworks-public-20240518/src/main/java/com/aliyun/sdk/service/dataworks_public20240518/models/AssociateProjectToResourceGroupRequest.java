@@ -98,7 +98,7 @@ public class AssociateProjectToResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace with which you want to associate the resource group.</p>
+         * <p>The ID of the workspace to associate with the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class AssociateProjectToResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The unique identifier of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

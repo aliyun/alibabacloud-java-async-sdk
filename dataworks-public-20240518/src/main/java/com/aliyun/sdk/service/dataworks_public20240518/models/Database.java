@@ -132,7 +132,10 @@ public class Database extends TeaModel {
         } 
 
         /**
-         * Comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -140,7 +143,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time (millisecond-level timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736852168000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -148,7 +154,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>holo-database:h-xxxx::test_db</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -156,7 +165,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * LocationUri.
+         * <p>The storage location URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test_db</p>
          */
         public Builder locationUri(String locationUri) {
             this.locationUri = locationUri;
@@ -164,7 +176,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The update time (millisecond-level timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736852168000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -172,7 +187,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -180,7 +198,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * ParentMetaEntityId.
+         * <p>The parent metadata entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>holo:h-xxxx</p>
          */
         public Builder parentMetaEntityId(String parentMetaEntityId) {
             this.parentMetaEntityId = parentMetaEntityId;

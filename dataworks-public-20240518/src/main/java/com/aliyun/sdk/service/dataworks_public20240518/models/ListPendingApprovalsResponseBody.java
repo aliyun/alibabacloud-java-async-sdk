@@ -67,7 +67,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Paginated results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>API request ID, generated as UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17****903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,20 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             } 
 
             /**
-             * PrincipalId.
+             * <p>Principal ID.</p>
+             * <p>Note: The semantics of the ID vary depending on the principalType:</p>
+             * <ul>
+             * <li>RamUser: DataWorks UserId</li>
+             * <li>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;</li>
+             * <li>DataworksTenantMember: DataWorks UserId</li>
+             * <li>DataworksTenantRole: DataWorks tenant roleCode</li>
+             * <li>DataworksProjectRole: DataWorks workspace roleCode</li>
+             * <li>DataworksProjectMember: DataWorks UserId</li>
+             * <li>DlfRole: DlfNext role name</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>213463068144525171</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -149,7 +165,19 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * <p>Principal type. Enumeration:</p>
+             * <ul>
+             * <li>RamRole</li>
+             * <li>RamUser</li>
+             * <li>DataworksTenantMember</li>
+             * <li>DataworksTenantRole</li>
+             * <li>DataworksProjectMember</li>
+             * <li>DataworksProjectRole</li>
+             * <li>DlfRole</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -229,7 +257,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             } 
 
             /**
-             * DefSchema.
+             * <p>ResourceSchema.name that the resource parsing depends on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -237,7 +268,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * DefVersion.
+             * <p>ResourceSchema.version that the resource parsing depends on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder defVersion(String defVersion) {
                 this.defVersion = defVersion;
@@ -245,7 +279,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaData.
+             * <p>Resource metadata. The data content is constrained by ResourceSchema.</p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;
@@ -468,7 +502,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessTypes.
+             * <p>Resource operation permissions requested in the application.</p>
              */
             public Builder accessTypes(java.util.List<String> accessTypes) {
                 this.accessTypes = accessTypes;
@@ -476,7 +510,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthMethod.
+             * <p>Authorization method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder authMethod(String authMethod) {
                 this.authMethod = authMethod;
@@ -484,7 +521,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-11 10:13:21</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -492,7 +532,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * DefSchema.
+             * <p>Resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -500,7 +543,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>Permission expiration date, millisecond timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782354014507</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -508,7 +554,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * FinalAccessTypes.
+             * <p>Resource operation permissions finally approved.</p>
              */
             public Builder finalAccessTypes(java.util.List<String> finalAccessTypes) {
                 this.finalAccessTypes = finalAccessTypes;
@@ -516,7 +562,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * Grantee.
+             * <p>Authorization principal description.</p>
              */
             public Builder grantee(Grantee grantee) {
                 this.grantee = grantee;
@@ -524,7 +570,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Unique identifier of the request content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>210001918826</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -532,7 +581,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessInstanceId.
+             * <p><strong>Process instance ID.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>176906667488145</p>
              */
             public Builder processInstanceId(String processInstanceId) {
                 this.processInstanceId = processInstanceId;
@@ -540,7 +592,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>Resource declaration.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -548,7 +600,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>Minimum permission resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -556,7 +611,19 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Approval status. Enumeration:</p>
+             * <ul>
+             * <li>WaitApproval: Pending approval</li>
+             * <li>Confirmed: Pending authorization</li>
+             * <li>RejectApproval: Approval rejected</li>
+             * <li>AuthorizeSucceed: Authorization succeeded</li>
+             * <li>AuthorizeFailed: Authorization failed</li>
+             * <li>Deleted: Deleted</li>
+             * <li>Canceled: Canceled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deleted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -564,7 +631,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>Tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69973837489</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -572,7 +642,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-06 19:13:05</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -691,7 +764,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationTime.
+             * <p>Time when the request was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>申请时间</p>
              */
             public Builder applicationTime(Long applicationTime) {
                 this.applicationTime = applicationTime;
@@ -699,7 +775,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * Contents.
+             * <p>Request content.</p>
              */
             public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
@@ -707,7 +783,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * DefSchema.
+             * <p>Resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder defSchema(String defSchema) {
                 this.defSchema = defSchema;
@@ -715,7 +794,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessInstanceId.
+             * <p>Process instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>176906667488145</p>
              */
             public Builder processInstanceId(String processInstanceId) {
                 this.processInstanceId = processInstanceId;
@@ -723,7 +805,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>Reason for the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务需要</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -731,7 +816,19 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Approval status. Enumeration:</p>
+             * <ul>
+             * <li>WaitApproval: Pending approval</li>
+             * <li>Confirmed: Pending authorization</li>
+             * <li>RejectApproval: Approval rejected</li>
+             * <li>AuthorizeSucceed: Authorization succeeded</li>
+             * <li>AuthorizeFailed: Authorization failed</li>
+             * <li>Deleted: Deleted</li>
+             * <li>Canceled: Canceled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Deleted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -824,7 +921,7 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>Data list in the paginated results.</p>
              */
             public Builder data(java.util.List<DataData> data) {
                 this.data = data;
@@ -832,7 +929,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * HasMore.
+             * <p>Whether more data is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -840,7 +940,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>Cursor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJpZCI6MTIzfQ==</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -848,7 +951,10 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size (default: 10, maximum: 200).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

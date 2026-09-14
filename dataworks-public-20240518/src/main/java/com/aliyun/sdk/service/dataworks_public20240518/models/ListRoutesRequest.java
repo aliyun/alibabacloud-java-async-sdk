@@ -139,7 +139,7 @@ public class ListRoutesRequest extends Request {
         }
 
         /**
-         * <p>The network ID.</p>
+         * <p>The ID of the network resource.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -175,7 +175,7 @@ public class ListRoutesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The unique identifier of the general quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,11 +188,11 @@ public class ListRoutesRequest extends Request {
         }
 
         /**
-         * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <p>The list of sort fields. Fields such as scheduled time and start time are supported. The format is &quot;sort field + sort order (Desc/Asc)&quot; (Asc is the default if omitted). Valid values:</p>
          * <ul>
-         * <li>Id (Desc/Asc): the route ID</li>
-         * <li>DestinationCidr (Desc/Asc): the destination CIDR block of the route</li>
-         * <li>CreateTime (Desc/Asc): the time when the route is created</li>
+         * <li>Id (Desc/Asc): route ID</li>
+         * <li>DestinationCidr (Desc/Asc): destination CIDR</li>
+         * <li>CreateTime (Desc/Asc): creation time</li>
          * </ul>
          * <p>Default value: CreateTime Asc.</p>
          * 

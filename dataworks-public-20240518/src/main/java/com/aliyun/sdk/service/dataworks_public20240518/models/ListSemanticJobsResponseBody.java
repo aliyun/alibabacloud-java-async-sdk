@@ -80,7 +80,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The paginated result of job definitions. Use the Name field of a list item to run, delete, query run records, or download results. Use the ProjectId field to query run details, logs, or stop a run.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -292,7 +295,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Creator.
+             * <p>The user identifier of the semantic job creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-demo</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -300,7 +306,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time, expressed as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700000000000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -308,7 +317,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time, expressed as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700000000000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -316,7 +328,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The internal unique ID of the job definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -324,7 +339,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The job name. Used for RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic-job-demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -332,7 +350,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID to which the job belongs. Used for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -340,7 +361,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceFileIds.
+             * <p>The list of uploaded file IDs associated with the job.</p>
              */
             public Builder referenceFileIds(java.util.List<String> referenceFileIds) {
                 this.referenceFileIds = referenceFileIds;
@@ -348,7 +369,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceFileUris.
+             * <p>The list of external reference file URIs associated with the job.</p>
              */
             public Builder referenceFileUris(java.util.List<String> referenceFileUris) {
                 this.referenceFileUris = referenceFileUris;
@@ -356,7 +377,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group identifier used when running this job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-demo</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -364,7 +388,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The input datasource config saved with the node. This configuration determines the analysis scope at runtime.</p>
              */
             public Builder source(java.util.Map<String, ?> source) {
                 this.source = source;
@@ -372,7 +396,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The Source.type data source type saved with the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -380,7 +407,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user identifier of the semantic job creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-demo</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -473,7 +503,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number returned, starting from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -481,7 +514,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of job definitions per page returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -489,7 +525,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SemanticJobs.
+             * <p>The list of job definitions.</p>
              */
             public Builder semanticJobs(java.util.List<SemanticJobs> semanticJobs) {
                 this.semanticJobs = semanticJobs;
@@ -497,7 +533,10 @@ public class ListSemanticJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of job definitions that meet the conditions in the current tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

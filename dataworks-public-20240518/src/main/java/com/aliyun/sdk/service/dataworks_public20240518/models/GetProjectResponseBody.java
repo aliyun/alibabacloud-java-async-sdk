@@ -67,7 +67,7 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the workspace.</p>
+         * <p>The details of the workspace.</p>
          */
         public Builder project(Project project) {
             this.project = project;
@@ -75,10 +75,10 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
+         * <p>22C97E95-F023-56B5-8852-B1A77A1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -374,8 +374,10 @@ public class GetProjectResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the development environment is enabled. Valid values:</p>
              * <ul>
-             * <li>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</li>
-             * <li>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</li>
+             * <li><p>true: The development environment is enabled for the workspace, which supports isolation between the development and production environments.</p>
+             * </li>
+             * <li><p>false: Only the production environment is used.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -387,10 +389,12 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Develop role is disabled. Valid values:</p>
+             * <p>Indicates whether the development role is disabled. Valid values:</p>
              * <ul>
-             * <li>false</li>
-             * <li>true</li>
+             * <li><p>false: The development role is enabled.</p>
+             * </li>
+             * <li><p>true: The development role is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -424,7 +428,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
              * <p>sora_finance</p>
@@ -435,7 +439,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the workspace belongs.</p>
+             * <p>The user ID of the workspace owner, which is the Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>207947397706614299</p>
@@ -446,10 +450,12 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether scheduling of PAI tasks is enabled. Valid values:</p>
+             * <p>Indicates whether PAI task scheduling is enabled. Valid values:</p>
              * <ul>
-             * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
-             * <li>false: Scheduling of PAI tasks is disabled.</li>
+             * <li><p>true: You can create Machine Learning Platform for AI (PAI) nodes in the DataWorks workspace and run them on a periodic schedule based on the node configurations.</p>
+             * </li>
+             * <li><p>false: PAI task scheduling is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -461,17 +467,17 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the workspace. Valid values:</p>
+             * <p>The workspace status. Valid values:</p>
              * <ul>
-             * <li>Available</li>
-             * <li>Initializing</li>
-             * <li>InitFailed</li>
-             * <li>Forbidden</li>
-             * <li>Deleting</li>
-             * <li>DeleteFailed</li>
-             * <li>Frozen</li>
-             * <li>Updating</li>
-             * <li>UpdateFailed</li>
+             * <li>Available: The workspace is running normally.</li>
+             * <li>Initializing: The workspace is being initialized.</li>
+             * <li>InitFailed: The workspace failed to be initialized.</li>
+             * <li>Forbidden: The workspace is manually disabled.</li>
+             * <li>Deleting: The workspace is being deleted.</li>
+             * <li>DeleteFailed: The workspace failed to be deleted.</li>
+             * <li>Frozen: The workspace is frozen due to overdue payment.</li>
+             * <li>Updating: The workspace is being updated.</li>
+             * <li>UpdateFailed: The workspace failed to be updated.</li>
              * </ul>
              * 
              * <strong>example:</strong>

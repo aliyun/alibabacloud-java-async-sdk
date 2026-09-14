@@ -67,7 +67,7 @@ public class ListSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatorId.
+             * <p><strong>The creator ID.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -201,7 +207,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p><strong>The Skill description.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析技能</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -209,6 +218,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -220,7 +230,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p><strong>The modifier ID.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -228,7 +241,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p><strong>The Skill name.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-skill</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -236,7 +252,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p><strong>The visibility level.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -329,7 +348,10 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of results returned in this response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -337,7 +359,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page of results. This parameter is null or empty if all results have been returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -345,7 +370,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Skills.
+             * <p>The list of Skills.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -353,7 +378,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of results that match the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

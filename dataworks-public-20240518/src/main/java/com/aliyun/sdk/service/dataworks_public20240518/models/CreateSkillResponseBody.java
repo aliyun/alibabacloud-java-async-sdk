@@ -67,7 +67,10 @@ public class CreateSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,9 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Skill.
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder skill(Skill skill) {
             this.skill = skill;
@@ -141,7 +146,7 @@ public class CreateSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * ProjectIds.
+             * <p>The list of visible project IDs.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -149,7 +154,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * UserIds.
+             * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -307,7 +312,12 @@ public class CreateSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * Body.
+             * <p>The SKILL.md body content.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -315,7 +325,10 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -323,7 +336,10 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The Skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析技能</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -331,6 +347,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time, in millisecond-level UNIX timestamp.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -342,7 +359,11 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The last modification time, in millisecond-level UNIX timestamp.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678901</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -350,7 +371,10 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p>The ID of the user who last modified the Skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -358,7 +382,10 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The Skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-skill</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -366,7 +393,10 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>The visibility level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -374,7 +404,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * VisibilityScope.
+             * <p>The visibility scope.</p>
              */
             public Builder visibilityScope(VisibilityScope visibilityScope) {
                 this.visibilityScope = visibilityScope;

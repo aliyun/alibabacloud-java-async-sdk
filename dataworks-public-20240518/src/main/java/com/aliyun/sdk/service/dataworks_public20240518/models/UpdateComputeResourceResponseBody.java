@@ -78,7 +78,16 @@ public class UpdateComputeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the computing resource was modified successfully:</p>
+         * <ul>
+         * <li><p>true: Yes</p>
+         * </li>
+         * <li><p>false: No</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -127,16 +127,16 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * <p>Specify this parameter if you want to create the node inside a container. This parameter represents the unique identifier of the container, which can be a workflow or a container node.</p>
+         * <p>The unique identifier of a container in which you want to create the node. The container can be a workflow or a container node. Specify this parameter when you need to create the node inside a container.</p>
          * <blockquote>
-         * <p> If this parameter is specified, the path field defined in FlowSpec is ignored.</p>
+         * <p>Notice: If this parameter is specified, the path field defined in FlowSpec becomes invalid.</p>
          * </blockquote>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when you upgrade across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
+         * <p>23451286945488XXXX</p>
          */
         public Builder containerId(String containerId) {
             this.putBodyParameter("ContainerId", containerId);
@@ -145,8 +145,8 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
+         * <p>This parameter specifies the DataWorks workspace for this API call operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,13 +159,13 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * <p>Specify this parameter if you want to create the node inside a container. This parameter represents the unique identifier of the container, which can be a workflow or a container node.</p>
-         * <blockquote>
-         * <p> If this parameter is specified, the path field defined in FlowSpec is ignored.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
-         * </blockquote>
+         * <p>The scenario in which the node is created. This parameter determines whether the node is created in the manual node area or the data development area. DATAWORKS_MANUAL_WORKFLOW can be used only when ContainerId is specified and the container is a manual workflow.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DATAWORKS_PROJECT: project directory.</li>
+         * <li>DATAWORKS_MANUAL_WORKFLOW: manual workflow.</li>
+         * <li>DATAWORKS_MANUAL_TASK: manual task.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,95 +178,82 @@ public class CreateNodeRequest extends Request {
         }
 
         /**
-         * <p>The FlowSpec information that describes the node. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
+         * <p>The FlowSpec information that describes the node. For more information about the specification, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
          * <blockquote>
-         * <p> How do I quickly obtain a FlowSpec template?</p>
-         * </blockquote>
+         * <p>How to quickly obtain a FlowSpec template?</p>
          * <ul>
-         * <li>Go to Data Studio, open a node, click Version on the right side, find the latest version, and then click Scheduling Settings to obtain the FlowSpec description of the current node. You can use the FlowSpec description in the version to quickly build a template that meets your requirements.</li>
+         * <li>In DataStudio, open a node, click Versions on the right side, view the latest version, and then view the scheduling configuration. This provides the FlowSpec description for the current node. You can use the FlowSpec description in the version to quickly build a template that meets your requirements.</li>
          * </ul>
+         * </blockquote>
          * <blockquote>
-         * <p> How do I configure the node content?</p>
-         * </blockquote>
+         * <p>How to specify the node content?</p>
          * <ul>
-         * <li>Enter the code for the node in the $.spec.nodes[].script.content field.</li>
+         * <li>Specify the node content in the $.spec.nodes[*].script.content field.</li>
          * </ul>
+         * </blockquote>
          * <blockquote>
-         * <p> How do I configure a batch synchronization node?</p>
-         * </blockquote>
+         * <p>How to configure the content of a batch synchronization node?</p>
          * <ul>
-         * <li>Write the script by referring to Step 4 in <a href="https://help.aliyun.com/zh/dataworks/user-guide/configure-a-batch-synchronization-node-by-using-the-code-editor">Configure an offline sync task in the code editor</a>, and then enter the script content in the $.spec.nodes[*].script.content field. Alternatively, you can create a batch synchronization node in the console and view its version information to obtain the script content.</li>
+         * <li>Write a script by following Step 4 in <a href="https://www.alibabacloud.com/help/en/dataworks/user-guide/configure-a-batch-synchronization-node-by-using-the-code-editor">Configure a batch synchronization node by using the code editor</a>, and specify the content in the $.spec.nodes[*].script.content field. Alternatively, create a batch synchronization node on the page and obtain the script content by viewing the version.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *   &quot;version&quot;: &quot;1.1.0&quot;,
-         *   &quot;kind&quot;: &quot;Node&quot;,
-         *   &quot;spec&quot;: {
-         *     &quot;nodes&quot;: [
-         *       {
-         *         &quot;id&quot;: &quot;860438872620113XXXX&quot;,
-         *         &quot;recurrence&quot;: &quot;Normal&quot;,
-         *         &quot;timeout&quot;: 0,
-         *         &quot;instanceMode&quot;: &quot;T+1&quot;,
-         *         &quot;rerunMode&quot;: &quot;Allowed&quot;,
-         *         &quot;rerunTimes&quot;: 3,
-         *         &quot;rerunInterval&quot;: 180000,
-         *         &quot;datasource&quot;: {
-         *           &quot;name&quot;: &quot;ODPS_test&quot;,
-         *           &quot;type&quot;: &quot;ODPS&quot;
-         *         },
-         *         &quot;script&quot;: {
-         *           &quot;path&quot;: &quot;XX/OpenAPI test/odpsSQL test&quot;,
-         *           &quot;runtime&quot;: {
-         *             &quot;command&quot;: &quot;ODPS_SQL&quot;
-         *           },
-         *           &quot;content&quot;: &quot;select now();&quot;
-         *         },
-         *         &quot;trigger&quot;: {
-         *           &quot;type&quot;: &quot;Scheduler&quot;,
-         *           &quot;cron&quot;: &quot;00 00 00 * * ?&quot;,
-         *           &quot;startTime&quot;: &quot;1970-01-01 00:00:00&quot;,
-         *           &quot;endTime&quot;: &quot;9999-01-01 00:00:00&quot;,
-         *           &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
-         *           &quot;delaySeconds&quot;: 0
-         *         },
-         *         &quot;runtimeResource&quot;: {
-         *           &quot;resourceGroup&quot;: &quot;S_res_group_XXXX_XXXX&quot;
-         *         },
-         *         &quot;name&quot;: &quot;odpsSQL test&quot;,
-         *         &quot;inputs&quot;: {
-         *           &quot;nodeOutputs&quot;: [
+         *     &quot;version&quot;: &quot;1.1.0&quot;,
+         *     &quot;kind&quot;: &quot;Node&quot;,
+         *     &quot;spec&quot;: {
+         *         &quot;nodes&quot;: [
          *             {
-         *               &quot;data&quot;: &quot;lwttest_standard_root&quot;,
-         *               &quot;artifactType&quot;: &quot;NodeOutput&quot;
+         *                 &quot;recurrence&quot;: &quot;Normal&quot;,
+         *                 &quot;timeout&quot;: 0,
+         *                 &quot;instanceMode&quot;: &quot;T+1&quot;,
+         *                 &quot;rerunMode&quot;: &quot;Allowed&quot;,
+         *                 &quot;rerunTimes&quot;: 3,
+         *                 &quot;rerunInterval&quot;: 180000,
+         *                 &quot;datasource&quot;: {
+         *                     &quot;name&quot;: &quot;odps_test&quot;
+         *                 },
+         *                 &quot;script&quot;: {
+         *                     &quot;path&quot;: &quot;XX/OpenAPI_Test/odpsSQL_Test&quot;,
+         *                     &quot;runtime&quot;: {
+         *                         &quot;command&quot;: &quot;ODPS_SQL&quot;
+         *                     },
+         *                     &quot;content&quot;: &quot;select now();&quot;
+         *                 },
+         *                 &quot;trigger&quot;: {
+         *                     &quot;type&quot;: &quot;Scheduler&quot;,
+         *                     &quot;cron&quot;: &quot;00 00 00 * * ?&quot;,
+         *                     &quot;startTime&quot;: &quot;1970-01-01 00:00:00&quot;,
+         *                     &quot;endTime&quot;: &quot;9999-01-01 00:00:00&quot;,
+         *                     &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+         *                     &quot;delaySeconds&quot;: 0
+         *                 },
+         *                 &quot;runtimeResource&quot;: {
+         *                     &quot;resourceGroup&quot;: &quot;S_res_group_XXXX_XXXX&quot;
+         *                 },
+         *                 &quot;name&quot;: &quot;odpsSQL_Test&quot;,
+         *                 &quot;inputs&quot;: {
+         *                     &quot;nodeOutputs&quot;: [
+         *                         {
+         *                             &quot;data&quot;: &quot;project_root&quot;,
+         *                             &quot;artifactType&quot;: &quot;NodeOutput&quot;
+         *                         }
+         *                     ]
+         *                 },
+         *                 &quot;outputs&quot;: {
+         *                     &quot;nodeOutputs&quot;: [
+         *                         {
+         *                             &quot;data&quot;: &quot;output_data&quot;,
+         *                             &quot;artifactType&quot;: &quot;NodeOutput&quot;,
+         *                             &quot;refTableName&quot;: &quot;odpsSQL_Test&quot;
+         *                         }
+         *                     ]
+         *                 }
          *             }
-         *           ]
-         *         },
-         *         &quot;outputs&quot;: {
-         *           &quot;nodeOutputs&quot;: [
-         *             {
-         *               &quot;data&quot;: &quot;output_data&quot;,
-         *               &quot;artifactType&quot;: &quot;NodeOutput&quot;,
-         *               &quot;refTableName&quot;: &quot;odpsSQL test&quot;
-         *             }
-         *           ]
-         *         }
-         *       }
-         *     ],
-         *     &quot;flow&quot;: [
-         *       {
-         *         &quot;nodeId&quot;: &quot;860438872620113XXXX&quot;,
-         *         &quot;depends&quot;: [
-         *           {
-         *             &quot;type&quot;: &quot;Normal&quot;,
-         *             &quot;output&quot;: &quot;project_root&quot;
-         *           }
          *         ]
-         *       }
-         *     ]
-         *   }
+         *     }
          * }</p>
          */
         public Builder spec(String spec) {

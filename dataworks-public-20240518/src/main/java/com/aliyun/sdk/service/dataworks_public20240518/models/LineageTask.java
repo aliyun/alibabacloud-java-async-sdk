@@ -80,7 +80,7 @@ public class LineageTask extends TeaModel {
         } 
 
         /**
-         * Attributes.
+         * <p>The task attributes.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
@@ -88,7 +88,10 @@ public class LineageTask extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -96,7 +99,10 @@ public class LineageTask extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-sql</p>
          */
         public Builder type(String type) {
             this.type = type;

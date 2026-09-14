@@ -341,7 +341,7 @@ public class GetComponentResponseBody extends TeaModel {
              *                 &quot;script&quot;: {
              *                     &quot;language&quot;: &quot;odps-sql&quot;,
              *                     &quot;path&quot;: &quot;test11&quot;,
-             *                     &quot;content&quot;: &quot;select &quot;@@{bizdate}&quot;, &quot;@@{my_input_table}&quot;&quot;,
+             *                     &quot;content&quot;: &quot;select \&quot;@@{bizdate}\&quot;, \&quot;@@{my_input_table}\&quot;&quot;,
              *                     &quot;runtime&quot;: {
              *                         &quot;command&quot;: &quot;SQL_COMPONENT&quot;
              *                     }

@@ -199,7 +199,10 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client-generated token that ensures request idempotency, preventing duplicate operations if you retry the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABFUOEUOTRTRJKE</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -208,6 +211,7 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
+         * <p>The content of the strategy. This value is constrained by the <code>SecurityStrategySchema</code>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder content(Content content) {
@@ -218,6 +222,7 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
+         * <p><strong>The control scope. Valid values: Workspace and Tenant.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +235,7 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
+         * <p><strong>Control module</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +248,10 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
-         * ControlSubModule.
+         * <p><strong>Control submodule</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCatalog</p>
          */
         public Builder controlSubModule(String controlSubModule) {
             this.putBodyParameter("ControlSubModule", controlSubModule);
@@ -251,7 +260,10 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p><strong>Strategy description</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>控制数据分析模块的查询结果安全行为</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -260,7 +272,11 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
+         * <p><strong>Strategy name</strong></p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认数据分析策略</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -269,6 +285,7 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
+         * <p><strong>Schema template name</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,7 +298,7 @@ public class CreateSecurityStrategyRequest extends Request {
         }
 
         /**
-         * Workspaces.
+         * <p>A list of associated workspace IDs.</p>
          */
         public Builder workspaces(java.util.List<Long> workspaces) {
             String workspacesShrink = shrink(workspaces, "Workspaces", "json");
@@ -506,7 +523,10 @@ public class CreateSecurityStrategyRequest extends Request {
             } 
 
             /**
-             * BasicEditionDefaultValue.
+             * <p>The default value for Basic Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder basicEditionDefaultValue(Object basicEditionDefaultValue) {
                 this.basicEditionDefaultValue = basicEditionDefaultValue;
@@ -514,7 +534,7 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * BasicEditionIntervalValue.
+             * <p>The valid value interval for Basic Edition, in the format <code>[min, max]</code>.</p>
              */
             public Builder basicEditionIntervalValue(java.util.List<Integer> basicEditionIntervalValue) {
                 this.basicEditionIntervalValue = basicEditionIntervalValue;
@@ -522,7 +542,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * Controller.
+             * <p>The controller identifier. For valid values, see the list of controllers for each schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>viewCount</p>
              */
             public Builder controller(String controller) {
                 this.controller = controller;
@@ -530,7 +553,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * ControllerValueType.
+             * <p>The value type. Valid values: <code>Boolean</code>, <code>Integer</code>, <code>Long</code>, and <code>String</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Integer</p>
              */
             public Builder controllerValueType(String controllerValueType) {
                 this.controllerValueType = controllerValueType;
@@ -538,7 +564,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询结果-单次展示记录值上限</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -546,7 +575,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * DisplayNameEn.
+             * <p>The English display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query Results - Single Display Record Limit</p>
              */
             public Builder displayNameEn(String displayNameEn) {
                 this.displayNameEn = displayNameEn;
@@ -554,7 +586,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable this controller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -562,7 +597,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * EnterpriseEditionDefaultValue.
+             * <p>The default value for Enterprise Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500000</p>
              */
             public Builder enterpriseEditionDefaultValue(Object enterpriseEditionDefaultValue) {
                 this.enterpriseEditionDefaultValue = enterpriseEditionDefaultValue;
@@ -570,7 +608,7 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * EnterpriseEditionIntervalValue.
+             * <p>The valid value interval for Enterprise Edition, in the format <code>[min, max]</code>.</p>
              */
             public Builder enterpriseEditionIntervalValue(java.util.List<Integer> enterpriseEditionIntervalValue) {
                 this.enterpriseEditionIntervalValue = enterpriseEditionIntervalValue;
@@ -578,7 +616,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * ProfessionalEditionDefaultValue.
+             * <p>The default value for Professional Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000</p>
              */
             public Builder professionalEditionDefaultValue(Object professionalEditionDefaultValue) {
                 this.professionalEditionDefaultValue = professionalEditionDefaultValue;
@@ -586,7 +627,7 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * ProfessionalEditionIntervalValue.
+             * <p>The valid value interval for Professional Edition, in the format <code>[min, max]</code>.</p>
              */
             public Builder professionalEditionIntervalValue(java.util.List<Integer> professionalEditionIntervalValue) {
                 this.professionalEditionIntervalValue = professionalEditionIntervalValue;
@@ -594,7 +635,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * StandardEditionDefaultValue.
+             * <p>The default value for Standard Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder standardEditionDefaultValue(Object standardEditionDefaultValue) {
                 this.standardEditionDefaultValue = standardEditionDefaultValue;
@@ -602,7 +646,7 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * StandardEditionIntervalValue.
+             * <p>The valid value interval for Standard Edition, in the format <code>[min, max]</code>.</p>
              */
             public Builder standardEditionIntervalValue(java.util.List<Integer> standardEditionIntervalValue) {
                 this.standardEditionIntervalValue = standardEditionIntervalValue;
@@ -610,7 +654,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * UserConfigValue.
+             * <p>The user-configured value. The type of this value depends on the <code>ControllerValueType</code> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder userConfigValue(Object userConfigValue) {
                 this.userConfigValue = userConfigValue;
@@ -770,7 +817,7 @@ public class CreateSecurityStrategyRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The control scope. This corresponds to the <code>controlDwScope</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
              * 
              * <strong>example:</strong>
              * <p>Tenant</p>
@@ -781,6 +828,7 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
+             * <p>The control module. This corresponds to the <code>controlModule</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -792,7 +840,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * ControlSubModule.
+             * <p>The control submodule. This corresponds to the <code>controlSubModule</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyCatalog</p>
              */
             public Builder controlSubModule(String controlSubModule) {
                 this.controlSubModule = controlSubModule;
@@ -800,7 +851,8 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * Controllers.
+             * <p>A list of controllers.</p>
+             * <p><strong>Note:</strong> Valid controllers depend on the selected schema. For more information, see the controller definitions and the list of controllers for each schema.</p>
              */
             public Builder controllers(java.util.List<Controllers> controllers) {
                 this.controllers = controllers;
@@ -808,7 +860,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The <code>displayName</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -816,7 +871,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * DisplayNameEn.
+             * <p>The <code>displayNameEn</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Analysis</p>
              */
             public Builder displayNameEn(String displayNameEn) {
                 this.displayNameEn = displayNameEn;
@@ -824,6 +882,7 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
+             * <p>The <code>name</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -835,7 +894,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * SystemPolicyDisplayName.
+             * <p>The <code>systemPolicyDisplayName</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default system generate data query policy</p>
              */
             public Builder systemPolicyDisplayName(String systemPolicyDisplayName) {
                 this.systemPolicyDisplayName = systemPolicyDisplayName;
@@ -843,7 +905,10 @@ public class CreateSecurityStrategyRequest extends Request {
             }
 
             /**
-             * SystemPolicyName.
+             * <p>The <code>systemPolicyName</code> property of the <code>SecurityStrategySchema</code> associated with the current strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_GENERATE_DEFAULT_DATA_QUERY</p>
              */
             public Builder systemPolicyName(String systemPolicyName) {
                 this.systemPolicyName = systemPolicyName;

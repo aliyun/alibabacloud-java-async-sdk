@@ -75,7 +75,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>61649187-0BCF-5E75-8D4B-64FDBEBBB447</p>
@@ -279,7 +279,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the role in the DataWorks workspace.</p>
+             * <p>The code of the workspace role.</p>
              * 
              * <strong>example:</strong>
              * <p>role_project_guest</p>
@@ -298,7 +298,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the role.</p>
+             * <p>The name of the workspace role.</p>
              * 
              * <strong>example:</strong>
              * <p>Visitors</p>
@@ -309,7 +309,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID.</p>
+             * <p>The ID of the DataWorks workspace.</p>
+             * <p>Note: For system-defined roles, this parameter returns -1.</p>
              * 
              * <strong>example:</strong>
              * <p>21229</p>
@@ -320,7 +321,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the role in the DataWorks workspace.</p>
+             * <p>The type of the workspace role.</p>
              * 
              * <strong>example:</strong>
              * <p>System</p>
@@ -416,7 +417,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The returned page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -438,7 +439,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The roles in the DataWorks workspace.</p>
+             * <p>A list of workspace roles.</p>
              */
             public Builder projectRoles(java.util.List<ProjectRoles> projectRoles) {
                 this.projectRoles = projectRoles;
@@ -446,7 +447,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of matching entries.</p>
              * 
              * <strong>example:</strong>
              * <p>42</p>

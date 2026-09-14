@@ -83,6 +83,7 @@ public class BatchDeleteMetaEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The list of entity IDs to delete. A maximum of 10 IDs are supported. All entities in the same batch must be of the same entityType.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List<String> ids) {

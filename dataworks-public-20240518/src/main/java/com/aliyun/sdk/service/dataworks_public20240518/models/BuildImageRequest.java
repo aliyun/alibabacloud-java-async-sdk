@@ -126,7 +126,10 @@ public class BuildImageRequest extends Request {
         }
 
         /**
-         * Cu.
+         * <p>The number of compute units (CUs) used for the build.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder cu(Double cu) {
             this.putBodyParameter("Cu", cu);
@@ -135,6 +138,7 @@ public class BuildImageRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +151,10 @@ public class BuildImageRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * <p>The image build execution ID, which is used as an idempotence identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
          */
         public Builder processId(String processId) {
             this.putBodyParameter("ProcessId", processId);
@@ -156,6 +163,7 @@ public class BuildImageRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the general-purpose resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

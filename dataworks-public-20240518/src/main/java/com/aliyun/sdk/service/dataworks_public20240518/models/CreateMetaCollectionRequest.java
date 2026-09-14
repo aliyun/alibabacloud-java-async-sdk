@@ -154,7 +154,7 @@ public class CreateMetaCollectionRequest extends Request {
          * <p>The parent collection ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>as78d756asd</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -165,9 +165,12 @@ public class CreateMetaCollectionRequest extends Request {
         /**
          * <p>The collection name.</p>
          * <ul>
-         * <li>Category</li>
-         * <li>Album</li>
-         * <li>AlbumCategory: Album subcategory.</li>
+         * <li><p>Category</p>
+         * </li>
+         * <li><p>Album</p>
+         * </li>
+         * <li><p>AlbumCategory: Album subcategory.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -119,7 +119,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of file versions.</p>
+         * <p>The version list of the file.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -171,10 +171,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call succeeded. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +387,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The change type for this file version. Valid values: CREATE, UPDATE, and DELETE.</p>
+             * <p>The change type of this file version. Valid values: CREATE, UPDATE, and DELETE.</p>
              * 
              * <strong>example:</strong>
              * <p>UPDATE</p>
@@ -409,7 +409,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp (in milliseconds) when the file version was created.</p>
+             * <p>The timestamp in milliseconds when the file version was generated.</p>
              * 
              * <strong>example:</strong>
              * <p>1593881265000</p>
@@ -420,7 +420,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the user who created this file version.</p>
+             * <p>The Alibaba Cloud user ID that generated this file version.</p>
              * 
              * <strong>example:</strong>
              * <p>73842342****</p>
@@ -431,7 +431,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file code for this version.</p>
+             * <p>The file code that generated this file version.</p>
              * 
              * <strong>example:</strong>
              * <p>SHOW TABLES;</p>
@@ -442,7 +442,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file name for this file version.</p>
+             * <p>The file name that generated this file version.</p>
              * 
              * <strong>example:</strong>
              * <p>ods_user_info_d</p>
@@ -453,7 +453,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text information for this file version.</p>
+             * <p>The basic text information that generated this file version.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</p>
@@ -464,7 +464,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file version.</p>
+             * <p>The version of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -477,8 +477,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether this file version is the latest version in the production environment.</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The version is the latest version.</li>
+             * <li>false: The version is not the latest version.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -490,7 +490,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling configuration for this file version.</p>
+             * <p>The scheduling configuration that generated this file version.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</p>
@@ -501,7 +501,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling task ID associated with this file version.</p>
+             * <p>The ID of the scheduling node associated with the file version.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -523,7 +523,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The functional module to which the file belongs. Valid values: NORMAL (Data Studio), MANUAL (manual task), MANUAL_BIZ (manual workflow), SKIP (dry-run scheduling in Data Studio), ADHOCQUERY (ad hoc query), and COMPONENT (component management).</p>
+             * <p>The functional module to which the file belongs. Valid values: NORMAL (DataStudio), MANUAL (manual node), MANUAL_BIZ (manual workflow), SKIP (dry-run scheduling in DataStudio), ADHOCQUERY (ad hoc query), and COMPONENT (component management).</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -627,7 +627,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current page number.</p>
+             * <p>The page number of the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -638,7 +638,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries on the current page.</p>
+             * <p>The size of the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -649,7 +649,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries that meet the query conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>13</p>

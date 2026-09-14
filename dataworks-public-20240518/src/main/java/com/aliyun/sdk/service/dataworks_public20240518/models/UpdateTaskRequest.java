@@ -335,7 +335,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The unique code of the client. This code uniquely identifies a task. This parameter is used to create a task asynchronously and implement the idempotence of the task. If you do not specify this parameter when you create the task, the system automatically generates a unique code. The unique code is uniquely associated with the task ID. If you specify this parameter when you update or delete the task, the value of this parameter must be the unique code that is used to create the task.</p>
+         * <p>The client unique code of the node, used to uniquely identify a node. This code is used to implement asynchronous operations and idempotence. If not specified during creation, the system automatically generates one, and the code is uniquely bound to the resource ID. When updating or deleting a resource, if this parameter is specified, it must be consistent with the client unique code used during creation.</p>
          * 
          * <strong>example:</strong>
          * <p>Task_0bc5213917368545132902xxxxxxxx</p>
@@ -347,7 +347,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The information about the associated data source.</p>
+         * <p>The associated data source information.</p>
          */
         public Builder dataSource(DataSource dataSource) {
             String dataSourceShrink = shrink(dataSource, "DataSource", "json");
@@ -367,7 +367,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The description of the task.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -379,10 +379,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The project environment.</p>
+         * <p>The project environment. Valid values:</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li>Prod: production.</li>
+         * <li>Dev: development.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -395,7 +395,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -418,10 +418,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The instance generation mode.</p>
+         * <p>The instance generation mode. Valid values:</p>
          * <ul>
-         * <li>T+1: the next day</li>
-         * <li>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</li>
+         * <li>T+1: The instance is generated the next day.</li>
+         * <li>Immediately: The instance is generated immediately. Note: Only periodic instances whose scheduled time is at least ten minutes after the node publish time are generated normally. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>
@@ -456,7 +456,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The account ID of the task owner.</p>
+         * <p>The account ID of the node owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -468,10 +468,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</p>
+         * <p>The retry time interval, in milliseconds. The value cannot exceed 1800000.</p>
          * 
          * <strong>example:</strong>
-         * <p>60</p>
+         * <p>60000</p>
          */
         public Builder rerunInterval(Integer rerunInterval) {
             this.putBodyParameter("RerunInterval", rerunInterval);
@@ -480,11 +480,11 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The rerun mode. Valid values:</p>
+         * <p>Specifies whether the node can be rerun. Valid values:</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun.</li>
-         * <li>FailureAllowed: The task can be rerun only after it fails.</li>
-         * <li>AllAllowed: The task can always be rerun.</li>
+         * <li>AllDenied: The node cannot be rerun regardless of whether it succeeds or fails.</li>
+         * <li>FailureAllowed: The node can be rerun only when it fails.</li>
+         * <li>AllAllowed: The node can be rerun regardless of whether it succeeds or fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -497,7 +497,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+         * <p>The number of retries. This parameter takes effect when the node is configured to allow reruns.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -509,7 +509,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>Runtime environment configurations, such as resource group information.</p>
+         * <p>The environment configuration, such as resource group information.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
             String runtimeResourceShrink = shrink(runtimeResource, "RuntimeResource", "json");
@@ -519,7 +519,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The run script information.</p>
+         * <p>The script information.</p>
          */
         public Builder script(Script script) {
             String scriptShrink = shrink(script, "Script", "json");
@@ -529,7 +529,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of node tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -539,7 +539,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>Task execution timeout in seconds. Must be greater than 3600.</p>
+         * <p>The node execution timeout period, in seconds. The value must be greater than 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -551,7 +551,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * <p>The triggering method.</p>
+         * <p>The node trigger method.</p>
          */
         public Builder trigger(Trigger trigger) {
             String triggerShrink = shrink(trigger, "Trigger", "json");
@@ -607,7 +607,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The name of the data source.</p>
+             * <p>The data source name.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_test</p>
@@ -693,10 +693,10 @@ public class UpdateTaskRequest extends Request {
             /**
              * <p>The dependency type. Valid values:</p>
              * <ul>
-             * <li>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</li>
-             * <li>CrossCycleDependsOnSelf: Depends on itself across cycles.</li>
-             * <li>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</li>
-             * <li>Normal: Depends on nodes in the same cycle.</li>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes.</li>
+             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on self.</li>
+             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes.</li>
+             * <li>Normal: same-cycle dependency.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -709,7 +709,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The output identifier of the upstream task. (This parameter is returned only if <code>Normal</code> is set and the node input is configured.)</p>
+             * <p>The output identifier of the upstream node. This field is returned when the dependency type is same-cycle dependency and input content is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -720,7 +720,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The ID of the upstream task. (This parameter is returned only if <code>Normal</code> or <code>CrossCycleDependsOnOtherNode</code> is set and the node input is not configured.)</p>
+             * <p>The ID of the upstream node. This field is returned when the dependency type is cross-cycle dependency on other nodes, or same-cycle dependency without input content configured. It is not returned in other cases.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -804,7 +804,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The name of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -817,8 +817,8 @@ public class UpdateTaskRequest extends Request {
             /**
              * <p>The type. Valid values:</p>
              * <ul>
-             * <li>Constant: constant value.</li>
-             * <li>PassThrough: node output.</li>
+             * <li>Constant: constant.</li>
+             * <li>PassThrough: parameter node output.</li>
              * <li>System: variable.</li>
              * <li>NodeOutput: script output.</li>
              * </ul>
@@ -833,7 +833,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the variable.</p>
+             * <p>The variable value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -890,7 +890,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The variables.</p>
+             * <p>The list of variable definitions.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -944,7 +944,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The identifier of the output.</p>
+             * <p>The output identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -1028,7 +1028,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The name of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -1041,8 +1041,8 @@ public class UpdateTaskRequest extends Request {
             /**
              * <p>The type. Valid values:</p>
              * <ul>
-             * <li>Constant: constant value.</li>
-             * <li>PassThrough: node output.</li>
+             * <li>Constant: constant.</li>
+             * <li>PassThrough: parameter node output.</li>
              * <li>System: variable.</li>
              * <li>NodeOutput: script output.</li>
              * </ul>
@@ -1057,7 +1057,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the variable.</p>
+             * <p>The variable value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -1127,7 +1127,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The task outputs.</p>
+             * <p>The list of node output definitions.</p>
              */
             public Builder taskOutputs(java.util.List<TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
@@ -1135,7 +1135,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The variables.</p>
+             * <p>The list of variable definitions.</p>
              */
             public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
@@ -1215,7 +1215,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The default number of compute units (CUs) configured for task running.</p>
+             * <p>The CU consumption configured for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -1226,7 +1226,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The image ID used in the task runtime configuration.</p>
+             * <p>The image ID configured for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>i-xxxxxx</p>
@@ -1237,7 +1237,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the scheduling resource group used in the task runtime configuration.</p>
+             * <p>The identifier of the schedule resource group configured for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -1319,7 +1319,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The script parameter list.</p>
+             * <p>The list of script parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>para1=$bizdate</p>
@@ -1390,7 +1390,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The key of a tag.</p>
+             * <p>The tag key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1402,7 +1402,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of a tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -1524,7 +1524,7 @@ public class UpdateTaskRequest extends Request {
             } 
 
             /**
-             * <p>The Cron expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * <p>The cron expression. This parameter takes effect when Type is set to Scheduler.</p>
              * 
              * <strong>example:</strong>
              * <p>00 00 00 * * ?</p>
@@ -1535,10 +1535,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>Cycle type. This parameter takes effect only when Type is set to Scheduler and the cron expression specifies hourly scheduling. Default value: Daily</p>
+             * <p>The epoch type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies timed scheduling at a specific hour. Default value: Daily. Valid values:</p>
              * <ul>
-             * <li>Daily: Schedules jobs on a daily basis.</li>
-             * <li>NotDaily: Schedules jobs on an hourly basis.</li>
+             * <li>Daily: daily scheduling.</li>
+             * <li>NotDaily: hourly scheduling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1550,7 +1550,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The expiration time of periodic triggering. Takes effect only when type is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
+             * <p>The expiration time of the periodic trigger. This parameter takes effect when Type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>9999-01-01 00:00:00</p>
@@ -1561,11 +1561,11 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
+             * <p>The run mode when triggered. This parameter takes effect when Type is set to Scheduler. Valid values:</p>
              * <ul>
-             * <li>Pause</li>
-             * <li>Skip</li>
-             * <li>Normal</li>
+             * <li>Pause: paused.</li>
+             * <li>Skip: dry run.</li>
+             * <li>Normal: normal run.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1577,7 +1577,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The time when periodic triggering takes effect. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
+             * <p>The effective period of the epoch trigger. This parameter takes effect when Type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1970-01-01 00:00:00</p>
@@ -1588,10 +1588,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * <p>The triggering type. Valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: periodically triggered</li>
-             * <li>Manual</li>
+             * <li>Scheduler: periodic scheduling trigger.</li>
+             * <li>Manual: manual trigger.</li>
              * </ul>
              * 
              * <strong>example:</strong>

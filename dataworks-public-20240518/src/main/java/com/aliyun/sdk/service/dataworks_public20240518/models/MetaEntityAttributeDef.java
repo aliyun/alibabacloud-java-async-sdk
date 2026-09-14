@@ -145,7 +145,7 @@ public class MetaEntityAttributeDef extends TeaModel {
         } 
 
         /**
-         * AllowedValues.
+         * <p>Enumeration values. Required when Type is ENUM.</p>
          */
         public Builder allowedValues(java.util.List<String> allowedValues) {
             this.allowedValues = allowedValues;
@@ -153,7 +153,10 @@ public class MetaEntityAttributeDef extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Attribute description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>层级描述</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -161,7 +164,10 @@ public class MetaEntityAttributeDef extends TeaModel {
         }
 
         /**
-         * DisplayEnabled.
+         * <p>Indicates whether the attribute appears on the product page. Default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder displayEnabled(Boolean displayEnabled) {
             this.displayEnabled = displayEnabled;
@@ -169,7 +175,10 @@ public class MetaEntityAttributeDef extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>Display name. It can be up to 32 characters long.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API编码</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -177,7 +186,10 @@ public class MetaEntityAttributeDef extends TeaModel {
         }
 
         /**
-         * IsOptional.
+         * <p>Indicates whether the value is optional. Default is true.&gt;Notice:  Validation occurs when creating an entity. If this value is false and no value is provided during creation, validation fails and an error is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isOptional(Boolean isOptional) {
             this.isOptional = isOptional;
@@ -185,7 +197,10 @@ public class MetaEntityAttributeDef extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Attribute identifier. It can contain letters, digits, and underscores. It must start with a letter or digit and be up to 64 characters long.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiCode</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -193,7 +208,11 @@ public class MetaEntityAttributeDef extends TeaModel {
         }
 
         /**
-         * SearchFilterEnabled.
+         * <p>Indicates whether the attribute can be used as a filter on the search page. Default is false.</p>
+         * <p>Only attributes of type STRING, DATE, ENUM, ARRAY, INT, or BOOLEAN support this setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder searchFilterEnabled(Boolean searchFilterEnabled) {
             this.searchFilterEnabled = searchFilterEnabled;
@@ -201,7 +220,10 @@ public class MetaEntityAttributeDef extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Attribute type. Supported types include STRING, TEXT, INT, FLOAT, BOOLEAN, DATE, ARRAY, ENUM, and JSON.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder type(String type) {
             this.type = type;

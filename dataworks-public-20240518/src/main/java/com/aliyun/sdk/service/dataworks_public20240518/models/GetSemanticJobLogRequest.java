@@ -98,6 +98,7 @@ public class GetSemanticJobLogRequest extends Request {
         }
 
         /**
+         * <p>The executor job ID. Use the Data.ExecutorJobId from the RunSemanticJob response or the ExecutorJobId from a ListSemanticJobRuns record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetSemanticJobLogRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DataWorks workspace to which the task belongs. Use the ProjectId from the CreateSemanticJob response or a ListSemanticJobs list item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

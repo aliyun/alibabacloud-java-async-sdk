@@ -154,7 +154,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The partition name.</p>
+         * <p>The partition name. Fuzzy match is supported. This parameter is valid only for MaxCompute tables.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20250101</p>
@@ -166,10 +166,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Default: Asc. Valid values:</p>
+         * <p>The sort direction. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc: Ascending order.</li>
-         * <li>Desc: Descending order.</li>
+         * <li>Asc: ascending order.</li>
+         * <li>Desc: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -194,7 +194,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -206,13 +206,13 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The sort field. Default value: CreateTime. Valid values:</p>
+         * <p>The field by which to sort the results. Default value: CreateTime. Valid values:</p>
          * <ul>
-         * <li>CreateTime: Creation time. Supported only for MaxCompute tables.</li>
-         * <li>ModifyTime: Modification time. Supported only for MaxCompute tables.</li>
-         * <li>Name: Name. Used for HMS-type tables.</li>
-         * <li>RecordCount: Record count. Supported only for MaxCompute tables.</li>
-         * <li>DataSize: Storage size. Supported only for MaxCompute tables.</li>
+         * <li>CreateTime: the creation time. Only MaxCompute tables are supported.</li>
+         * <li>ModifyTime: the modification time. Only MaxCompute tables are supported.</li>
+         * <li>Name: the name. This is the sort method used for HMS tables.</li>
+         * <li>RecordCount: the number of records. Only MaxCompute tables are supported.</li>
+         * <li>DataSize: the storage size. Only MaxCompute tables are supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,11 +225,11 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data table.You can refer to the ListTables API response and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+         * <p>The ID of the table. You can obtain this value from the response of the <a href="https://help.aliyun.com/document_detail/2880092.html">ListTables</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-column:11075xxxx::test_project:test_schema:test_table</p>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);

@@ -114,7 +114,10 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
         }
 
         /**
-         * CustomAttributes.
+         * <p>The custom attributes of the column, specified as key-value pairs. The key is the attribute identifier, and the value is an array that can contain at most one element. An empty array deletes the attribute\&quot;s value. To avoid overwriting the column\&quot;s business description, omit the <code>Description</code> parameter from the request. An empty object (<code>{}</code>) indicates that no custom attributes are updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</p>
          */
         public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
             String customAttributesShrink = shrink(customAttributes, "CustomAttributes", "json");
@@ -124,7 +127,7 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
         }
 
         /**
-         * <p>The field business description.</p>
+         * <p>The business description of the column.</p>
          * 
          * <strong>example:</strong>
          * <p>test description</p>
@@ -136,11 +139,11 @@ public class UpdateColumnBusinessMetadataRequest extends Request {
         }
 
         /**
-         * <p>The field ID. You can refer to the response from the ListColumns operation. You can also refer to the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+         * <p>The ID of the column. You can obtain this ID from the response of the <code>ListColumns</code> operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata Entity Concepts</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-column:11075xxxx::test_project:test_schema:test_table:test_column</p>
+         * <p>maxcompute-column:::project_name:[schema_name]:table_name:column_name</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);

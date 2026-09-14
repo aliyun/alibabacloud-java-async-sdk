@@ -167,7 +167,10 @@ public class ListMetaEntityDefsRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description. Matched by fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -176,7 +179,10 @@ public class ListMetaEntityDefsRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the type definition. Matched by plain text containment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CustomReport</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -185,7 +191,14 @@ public class ListMetaEntityDefsRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>The extension mode filter. Valid values:</p>
+         * <ul>
+         * <li>NONE: custom entity only.</li>
+         * <li>TABLE: extension table entity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         public Builder extend(String extend) {
             this.putBodyParameter("Extend", extend);
@@ -194,7 +207,14 @@ public class ListMetaEntityDefsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort direction. Valid values:</p>
+         * <ul>
+         * <li>Asc: ascending order.</li>
+         * <li>Desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -203,7 +223,10 @@ public class ListMetaEntityDefsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -212,7 +235,10 @@ public class ListMetaEntityDefsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -221,7 +247,15 @@ public class ListMetaEntityDefsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the results. Valid values:</p>
+         * <ul>
+         * <li>Name: sorted by name.</li>
+         * <li>CreateTime: sorted by creation time.</li>
+         * <li>ModifyTime: sorted by modification time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);

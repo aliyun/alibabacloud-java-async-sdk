@@ -80,7 +80,7 @@ public class GetSemanticJobLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of log segments returned by the executor. The current POP contract does not expose sqlIndex or offset externally. Log segments are returned based on the default behavior of the operation.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class GetSemanticJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class GetSemanticJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +165,10 @@ public class GetSemanticJobLogResponseBody extends TeaModel {
             } 
 
             /**
-             * LogContent.
+             * <p>The raw log text returned in this response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>semantic job started</p>
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
@@ -170,7 +176,7 @@ public class GetSemanticJobLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogEnd.
+             * <p>Indicates whether the current log segment has been read to the end. A value of true indicates that no more content follows this segment.</p>
              */
             public Builder logEnd(Boolean logEnd) {
                 this.logEnd = logEnd;

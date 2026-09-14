@@ -83,6 +83,7 @@ public class DeleteMcpServerRequest extends Request {
         }
 
         /**
+         * <p>The name of the MCP Server to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

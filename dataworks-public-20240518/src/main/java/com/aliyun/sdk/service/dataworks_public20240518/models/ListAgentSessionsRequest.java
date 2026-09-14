@@ -87,7 +87,10 @@ public class ListAgentSessionsRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID passed in by the requester. The value is returned as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676303114031776</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -96,7 +99,10 @@ public class ListAgentSessionsRequest extends Request {
         }
 
         /**
-         * Jsonrpc.
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder jsonrpc(String jsonrpc) {
             this.putBodyParameter("Jsonrpc", jsonrpc);
@@ -105,7 +111,7 @@ public class ListAgentSessionsRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The business parameters.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -239,7 +245,10 @@ public class ListAgentSessionsRequest extends Request {
             } 
 
             /**
-             * AgentName.
+             * <p><strong>Agent name</strong> for exact filtering. At least one of this parameter and <code>SessionSourceList</code> must be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chat_cli_chatbi</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -247,7 +256,10 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * MaxResults.
+             * <p>The number of entries per page. Default value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -255,7 +267,10 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page. Set this parameter to 1 for the first page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -263,7 +278,10 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID for exact matching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_0f12abc34</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -271,7 +289,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * SessionSourceList.
+             * <p><strong>Session source list</strong> for filtering. At least one of this parameter and <code>AgentName</code> must be specified.</p>
              */
             public Builder sessionSourceList(java.util.List<String> sessionSourceList) {
                 this.sessionSourceList = sessionSourceList;
@@ -279,7 +297,10 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * SessionTitle.
+             * <p>The session title for fuzzy match filtering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sales in the last 30 days</p>
              */
             public Builder sessionTitle(String sessionTitle) {
                 this.sessionTitle = sessionTitle;
@@ -287,7 +308,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * TagList.
+             * <p>The list of session tag codes for filtering.</p>
              */
             public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;

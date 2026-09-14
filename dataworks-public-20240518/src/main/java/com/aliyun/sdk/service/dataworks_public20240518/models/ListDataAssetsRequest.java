@@ -210,7 +210,10 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * AssetDomainId.
+         * <p>The ID of the asset domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder assetDomainId(Long assetDomainId) {
             this.putQueryParameter("AssetDomainId", assetDomainId);
@@ -219,7 +222,10 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * CategoryUuid.
+         * <p>The ID of the asset category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate-xxxxxxxx</p>
          */
         public Builder categoryUuid(String categoryUuid) {
             this.putQueryParameter("CategoryUuid", categoryUuid);
@@ -228,7 +234,7 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The data asset IDs.</p>
+         * <p>The list of unique data asset IDs.</p>
          */
         public Builder dataAssetIds(java.util.List<String> dataAssetIds) {
             String dataAssetIdsShrink = shrink(dataAssetIds, "DataAssetIds", "json");
@@ -238,10 +244,12 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The type of the data asset. Valid values:</p>
+         * <p>The Asset Type of the data asset. Valid values:</p>
          * <ul>
-         * <li>ACS::DataWorks::Table</li>
-         * <li>ACS::DataWorks::Task</li>
+         * <li><p>ACS::DataWorks::Table: data table.</p>
+         * </li>
+         * <li><p>ACS::DataWorks::Task: scheduling node.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,10 +262,10 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+         * <p>The workspace environment to which the data asset belongs. Valid values:</p>
          * <ul>
-         * <li>Dev: development environment</li>
-         * <li>Prod: production environment</li>
+         * <li>Dev: development environment.</li>
+         * <li>Prod: production environment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +278,10 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the asset. Fuzzy search by name is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AssetDomainName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -279,7 +290,7 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -303,7 +314,7 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -315,10 +326,10 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to data assets. This parameter specifies a filter condition.</p>
+         * <p>The list of tags associated with data assets. Tags are used as query filters:</p>
          * <ul>
-         * <li>You can specify multiple tags, which are in the logical OR relation. For example, you can query the data assets that contain one of the following tags: <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code>.</li>
-         * <li>If you do not configure this parameter, tag-based filtering is not performed.</li>
+         * <li>Multiple values have an OR relationship. For example, <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code> queries data assets that contain any one of the specified tags.</li>
+         * <li>If this parameter is not specified or is left empty, no tag-based filtering is applied.</li>
          * </ul>
          */
         public Builder tags(java.util.List<Tags> tags) {
@@ -388,8 +399,8 @@ public class ListDataAssetsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, and the following characters: <code>-@#*&lt;&gt;|[]()+=&amp;%$!~</code>. It cannot start with <code>dw:</code>.</p>
+             * <p>The custom tag key specified by the user.</p>
+             * <p>The tag key can be up to 64 characters in length, cannot start with <code>dw:</code>, and supports only letters, digits, and the following special characters: <code>-@#*&lt;&gt;|[]()+=&amp;%$!~</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>

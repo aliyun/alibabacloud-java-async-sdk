@@ -67,7 +67,7 @@ public class UpdateMetaEntityDefResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E08F38AB-3BA0-5047-8E9E-9AA4839263EA</p>
@@ -78,7 +78,10 @@ public class UpdateMetaEntityDefResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

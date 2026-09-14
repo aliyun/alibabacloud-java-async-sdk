@@ -115,7 +115,7 @@ public class GetPartitionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-column:11075xxxx::test_project:test_schema:test_table</p>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);

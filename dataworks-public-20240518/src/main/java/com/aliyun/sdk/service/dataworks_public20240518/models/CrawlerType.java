@@ -80,7 +80,10 @@ public class CrawlerType extends TeaModel {
         } 
 
         /**
-         * DisplayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data Lake Formation</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -88,7 +91,7 @@ public class CrawlerType extends TeaModel {
         }
 
         /**
-         * SupportedEntityTypes.
+         * <p>The list of supported entity types. The entity types have a top-down hierarchical relationship based on their declaration order.</p>
          */
         public Builder supportedEntityTypes(java.util.List<SupportedEntityTypes> supportedEntityTypes) {
             this.supportedEntityTypes = supportedEntityTypes;
@@ -96,7 +99,10 @@ public class CrawlerType extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlf</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -188,7 +194,10 @@ public class CrawlerType extends TeaModel {
             } 
 
             /**
-             * Optional.
+             * <p>Indicates whether the entity type is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>For example, for the maxcompute-schema type, whether the schema level is optional (whether the three-layer model is enabled)</p>
              */
             public Builder optional(Boolean optional) {
                 this.optional = optional;
@@ -196,7 +205,10 @@ public class CrawlerType extends TeaModel {
             }
 
             /**
-             * ParentSubType.
+             * <p>The entity subtype of the parent level. The value is null if no parent level exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder parentSubType(String parentSubType) {
                 this.parentSubType = parentSubType;
@@ -204,7 +216,10 @@ public class CrawlerType extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The entity subtype identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -212,7 +227,10 @@ public class CrawlerType extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The entity type identifier, which is related to the crawler type. The format is (CrawlerType)-{SubType}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlf-table</p>
              */
             public Builder type(String type) {
                 this.type = type;

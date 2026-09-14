@@ -208,7 +208,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Alibaba Cloud Resource Group ID</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2kqofrgXXXXX</p>
@@ -220,7 +220,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Alibaba Cloud tag list</p>
+         * <p>The list of Alibaba Cloud tags.</p>
          */
         public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
             String aliyunResourceTagsShrink = shrink(aliyunResourceTags, "AliyunResourceTags", "json");
@@ -230,7 +230,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of a resource group, which is used for fuzzy match.</p>
+         * <p>The name of the resource group. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Resource</p>
@@ -254,7 +254,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -266,10 +266,12 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The billing method of resource groups. Valid values:</p>
+         * <p>The billing method of the resource group. Valid values include:</p>
          * <ul>
-         * <li>PrePaid</li>
-         * <li>PostPaid</li>
+         * <li><p><code>PrePaid</code>: subscription.</p>
+         * </li>
+         * <li><p><code>PostPaid</code>: pay-as-you-go.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +284,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -294,7 +296,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The types of resource groups to query. If you do not configure this parameter, only serverless resource groups are returned by default.</p>
+         * <p>The types of the resource groups to query. <strong>If this parameter is not specified, general-purpose resource groups are queried by default.</strong></p>
          */
         public Builder resourceGroupTypes(java.util.List<String> resourceGroupTypes) {
             String resourceGroupTypesShrink = shrink(resourceGroupTypes, "ResourceGroupTypes", "json");
@@ -304,18 +306,26 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The list of fields used for sorting. Fields such as TriggerTime and StartedTime are supported. You must configure this parameter in the Sorting field + Sort by (Desc/Asc). By default, results are sorted in ascending order. Valid values:</p>
+         * <p>The sorting criterion for the results. The format is <code>FieldName SortOrder</code>. <code>SortOrder</code> can be <code>Asc</code> (ascending) or <code>Desc</code> (descending). If you do not specify <code>SortOrder</code>, the default is <code>Asc</code>. The following fields are supported:</p>
          * <ul>
-         * <li>Id (Desc/Asc): the resource group ID</li>
-         * <li>Name (Desc/Asc): the name of the resource group</li>
-         * <li>Remark (Desc/Asc): the remarks of the resource group</li>
-         * <li>Type (Desc/Asc): the type of the resource group</li>
-         * <li>Status (Desc/Asc): the status of the resource group</li>
-         * <li>Spec (Desc/Asc): the specifications of the resource group</li>
-         * <li>CreateUser (Desc/Asc): the creator of the resource group</li>
-         * <li>CreateTime (Desc/Asc): the time when the resource group is created</li>
+         * <li><p><code>Id</code>: Resource group ID</p>
+         * </li>
+         * <li><p><code>Name</code>: Resource group name</p>
+         * </li>
+         * <li><p><code>Remark</code>: Resource group remarks</p>
+         * </li>
+         * <li><p><code>Type</code>: Resource group type</p>
+         * </li>
+         * <li><p><code>Status</code>: Resource group status</p>
+         * </li>
+         * <li><p><code>Spec</code>: Resource group specifications</p>
+         * </li>
+         * <li><p><code>CreateUser</code>: The user who created the resource group</p>
+         * </li>
+         * <li><p><code>CreateTime</code>: The time when the resource group was created</p>
+         * </li>
          * </ul>
-         * <p>Default value: CreateTime Asc</p>
+         * <p>Default value: <code>CreateTime Asc</code></p>
          * 
          * <strong>example:</strong>
          * <p>CreateTime Asc</p>
@@ -327,7 +337,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The statuses of resource groups.</p>
+         * <p>The statuses of the resource groups to query.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");
@@ -396,7 +406,7 @@ public class ListResourceGroupsRequest extends Request {
             } 
 
             /**
-             * <p>Tag Key</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -407,7 +417,7 @@ public class ListResourceGroupsRequest extends Request {
             }
 
             /**
-             * <p>Tag Value</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>

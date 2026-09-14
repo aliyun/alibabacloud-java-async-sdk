@@ -67,7 +67,7 @@ public class UpdateTableBusinessMetadataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7C352CB7-CD88-XXXXXXX</p>

@@ -254,7 +254,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>
+         * <p>The client unique code of the workflow, used for asynchronous operations and idempotence. If not specified during creation, the system automatically generates one, and the code is uniquely bound to the resource ID. If this parameter is specified during update or deletion, it must be consistent with the client unique code used during creation.</p>
          * 
          * <strong>example:</strong>
          * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -288,10 +288,10 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The project environment.</p>
+         * <p>The project environment. Valid values:</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li>Prod: production</li>
+         * <li>Dev: development</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,10 +317,10 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The instance generation mode.</p>
+         * <p>The instance generation mode. Valid values:</p>
          * <ul>
-         * <li>T+1: the next day</li>
-         * <li>Immediately Note: Periodic instances will only be generated normally if the workflow&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</li>
+         * <li>T+1: Instances are generated the next day.</li>
+         * <li>Immediately: Instances are generated immediately. Periodic instances are generated only if the scheduled time of the workflow is at least 10 minutes after the workflow is published. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish workflows during this period, but instances are not regenerated after submission.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The name of the workflow.</p>
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -369,7 +369,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The parameters.</p>
+         * <p>The parameter list.</p>
          * 
          * <strong>example:</strong>
          * <p>para1=$bizdate para2=$[yyyymmdd]</p>
@@ -381,7 +381,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of workflow tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -391,7 +391,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>Details about tasks.</p>
+         * <p>The node list.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             String tasksShrink = shrink(tasks, "Tasks", "json");
@@ -401,7 +401,7 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The trigger method.</p>
+         * <p>The trigger configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder trigger(Trigger trigger) {
@@ -487,10 +487,10 @@ public class UpdateWorkflowRequest extends Request {
             /**
              * <p>The dependency type. Valid values:</p>
              * <ul>
-             * <li>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</li>
-             * <li>CrossCycleDependsOnSelf: Depends on itself across cycles.</li>
-             * <li>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</li>
-             * <li>Normal: Depends on nodes in the same cycle.</li>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes</li>
+             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
+             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
+             * <li>Normal: same-cycle dependency</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -503,7 +503,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The output identifier of the upstream task. (This parameter is returned only if <code>Normal</code> is set and the node input is configured.)</p>
+             * <p>The output identifier of the upstream node. This field is returned when the dependency type is <code>same-cycle dependency</code> and input content is specified.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -514,7 +514,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The ID of the upstream task. (This parameter is returned only if <code>Normal</code> or <code>CrossCycleDependsOnOtherNode</code> is set and the node input is not configured.)</p>
+             * <p>The ID of the upstream node. This field is returned when the dependency type is <code>cross-cycle dependency on other nodes</code> or <code>same-cycle dependency</code> without input content specified. It is not returned in other cases.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -571,7 +571,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The identifier of the output.</p>
+             * <p>The output identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -628,7 +628,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The task outputs.</p>
+             * <p>The list of workflow node output definitions.</p>
              */
             public Builder taskOutputs(java.util.List<TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
@@ -851,10 +851,10 @@ public class UpdateWorkflowRequest extends Request {
             /**
              * <p>The dependency type. Valid values:</p>
              * <ul>
-             * <li>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</li>
-             * <li>CrossCycleDependsOnSelf: Depends on itself across cycles.</li>
-             * <li>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</li>
-             * <li>Normal: Depends on nodes in the same cycle.</li>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes</li>
+             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
+             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
+             * <li>Normal: same-cycle dependency</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -867,7 +867,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The output identifier of the upstream task. (This parameter is returned only if <code>Normal</code> is set and the node input is configured.)</p>
+             * <p>The output identifier of the upstream node. This field is returned when the dependency type is <code>same-cycle dependency</code> and input content is specified.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -878,7 +878,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The ID of the upstream task. (This parameter is returned only if <code>Normal</code> or <code>CrossCycleDependsOnOtherNode</code> is set and the node input is not configured.)</p>
+             * <p>The ID of the upstream node. This field is returned when the dependency type is <code>cross-cycle dependency on other nodes</code> or <code>same-cycle dependency</code> without input content specified. It is not returned in other cases.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -962,7 +962,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The name of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -975,10 +975,10 @@ public class UpdateWorkflowRequest extends Request {
             /**
              * <p>The type. Valid values:</p>
              * <ul>
-             * <li>Constant: constant value.</li>
-             * <li>PassThrough: node output.</li>
-             * <li>System: variable.</li>
-             * <li>NodeOutput: script output.</li>
+             * <li>Constant: constant</li>
+             * <li>PassThrough: output of a parameter node</li>
+             * <li>System: variable</li>
+             * <li>NodeOutput: script output</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -991,7 +991,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The value of the variable.</p>
+             * <p>The variable value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -1048,7 +1048,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The variables. By default, the settings of all input variables are deleted if this parameter is set to null or not specified.</p>
+             * <p>The list of variable definitions. If this field is not specified or is an empty array, all Inputs.Variables configurations are deleted by default.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -1102,7 +1102,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The identifier of the output.</p>
+             * <p>The output identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -1186,7 +1186,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The name of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -1199,10 +1199,10 @@ public class UpdateWorkflowRequest extends Request {
             /**
              * <p>The type. Valid values:</p>
              * <ul>
-             * <li>Constant: constant value.</li>
-             * <li>PassThrough: node output.</li>
-             * <li>System: variable.</li>
-             * <li>NodeOutput: script output.</li>
+             * <li>Constant: constant</li>
+             * <li>PassThrough: output of a parameter node</li>
+             * <li>System: variable</li>
+             * <li>NodeOutput: script output</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1215,7 +1215,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The value of the variable.</p>
+             * <p>The variable value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -1285,7 +1285,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The task outputs. By default, all task output information is deleted if this parameter is set to null or not specified.</p>
+             * <p>The list of node output definitions. If this field is not specified or is an empty array, all TaskOutputs configurations are deleted by default.</p>
              */
             public Builder taskOutputs(java.util.List<OutputsTaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
@@ -1293,7 +1293,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The variables. Note: The settings of all output variables are deleted if this parameter is set to null or not specified.</p>
+             * <p>The list of variable definitions. If this field is not specified or is an empty array, all Outputs.Variables configurations are deleted by default.</p>
              */
             public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
@@ -1374,7 +1374,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The default number of compute units (CUs) configured for task running.</p>
+             * <p>The CU consumption configured for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -1385,7 +1385,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The image ID used in the task runtime configuration.</p>
+             * <p>The image ID configured for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>i-xxxxxx</p>
@@ -1396,7 +1396,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the scheduling resource group used in the task runtime configuration.</p>
+             * <p>The identifier of the schedule resource group configured for the node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1478,7 +1478,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The script parameter list.</p>
+             * <p>The list of script parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>para1=$bizdate</p>
@@ -1549,7 +1549,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The key of a tag.</p>
+             * <p>The tag key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1561,7 +1561,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The value of a tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -1632,11 +1632,11 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
+             * <p>The run mode when triggered. This parameter takes effect only when type is set to Scheduler. Valid values:</p>
              * <ul>
-             * <li>Pause</li>
-             * <li>Skip</li>
-             * <li>Normal</li>
+             * <li>Pause: paused</li>
+             * <li>Skip: dry run</li>
+             * <li>Normal: normal execution</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1651,8 +1651,8 @@ public class UpdateWorkflowRequest extends Request {
             /**
              * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: periodically triggered</li>
-             * <li>Manual</li>
+             * <li>Scheduler: triggered by a scheduling cycle</li>
+             * <li>Manual: manually triggered</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1974,7 +1974,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The client-side unique token for the task, used to ensure asynchronous processing and idempotency. If not specified during creation, the system will automatically generate one. This token is uniquely associated with the resource ID. If provided when updating or deleting resources, this parameter must match the client token used during creation.</p>
+             * <p>The client unique code of the node, used for asynchronous operations and idempotence. If not specified during creation, the system automatically generates one, and the code is uniquely bound to the resource ID. If this parameter is specified during update or deletion, it must be consistent with the client unique code used during creation.</p>
              * 
              * <strong>example:</strong>
              * <p>Task_0bc5213917368545132902xxxxxxxx</p>
@@ -1985,7 +1985,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The information about the associated data source.</p>
+             * <p>The associated data source information.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -1993,7 +1993,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The dependency information. Note: If this parameter is left empty or set to an empty array, all dependency configurations will be deleted.</p>
+             * <p>The dependency information. If this field is not specified or is an empty array, all Dependencies configurations are deleted by default.</p>
              */
             public Builder dependencies(java.util.List<TasksDependencies> dependencies) {
                 this.dependencies = dependencies;
@@ -2001,7 +2001,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The description of the task.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -2012,10 +2012,10 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The project environment.</p>
+             * <p>The project environment. Valid values:</p>
              * <ul>
-             * <li>Prod</li>
-             * <li>Dev</li>
+             * <li>Prod: production</li>
+             * <li>Dev: development</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2027,7 +2027,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The ID of the task. Specifying this field triggers a full update for the corresponding task. If left unspecified, a new task will be created.</p>
+             * <p>The node ID. If this field is specified, the corresponding node is fully updated. If this field is not specified, a new node is created.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -2038,7 +2038,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The input information. By default, all input information is deleted if this parameter is set to null.</p>
+             * <p>The input information. If this field is empty, all Inputs configurations are deleted by default.</p>
              */
             public Builder inputs(Inputs inputs) {
                 this.inputs = inputs;
@@ -2046,7 +2046,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The name of the task.</p>
+             * <p>The name of the node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2058,7 +2058,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The output information. By default, all output information is deleted if this parameter is set to null.</p>
+             * <p>The output information. If this field is empty, all Outputs configurations are deleted by default.</p>
              */
             public Builder outputs(TasksOutputs outputs) {
                 this.outputs = outputs;
@@ -2078,7 +2078,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The retry interval in seconds.</p>
+             * <p>The retry time interval, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -2089,11 +2089,11 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>Configuration for whether the task can be rerun.</p>
+             * <p>Specifies whether the node can be rerun. Valid values:</p>
              * <ul>
-             * <li>AllDenied: The task cannot be rerun.</li>
-             * <li>FailureAllowed: The task can be rerun only after it fails.</li>
-             * <li>AllAllowed: The task can always be rerun.</li>
+             * <li>AllDenied: cannot be rerun regardless of success or failure</li>
+             * <li>FailureAllowed: can be rerun only upon failure</li>
+             * <li>AllAllowed: can be rerun regardless of success or failure</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -2106,7 +2106,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The number of retry attempts. Takes effect when the task is configured to allow reruns.</p>
+             * <p>The number of retries. This parameter takes effect only when the node is configured to allow reruns.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -2117,7 +2117,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>Runtime environment configurations, such as resource group information.</p>
+             * <p>The runtime environment configuration, such as resource group information.</p>
              * <p>This parameter is required.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
@@ -2126,7 +2126,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The run script information.</p>
+             * <p>The script information.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -2134,7 +2134,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The list of task tags. Note: If this field is unspecified or set to an empty array, all existing Tag configurations will be deleted by default.</p>
+             * <p>The list of node tags. If this field is not specified or is an empty array, all Tags configurations are deleted by default.</p>
              */
             public Builder tags(java.util.List<TasksTags> tags) {
                 this.tags = tags;
@@ -2142,7 +2142,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The task execution timeout in seconds.</p>
+             * <p>The timeout period for node execution, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -2153,7 +2153,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The trigger method.</p>
+             * <p>The trigger configuration of the node.</p>
              * <p>This parameter is required.</p>
              */
             public Builder trigger(TasksTrigger trigger) {
@@ -2162,7 +2162,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The type of the task.</p>
+             * <p>The node type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2260,7 +2260,7 @@ public class UpdateWorkflowRequest extends Request {
             } 
 
             /**
-             * <p>The Cron expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * <p>The cron expression. This parameter takes effect only when type is set to Scheduler.</p>
              * 
              * <strong>example:</strong>
              * <p>00 00 00 * * ?</p>
@@ -2271,7 +2271,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The expiration time of periodic triggering. Takes effect only when type is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
+             * <p>The time when the periodic trigger expires. This parameter takes effect only when type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>9999-01-01 00:00:00</p>
@@ -2282,7 +2282,7 @@ public class UpdateWorkflowRequest extends Request {
             }
 
             /**
-             * <p>The time when periodic triggering takes effect. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
+             * <p>The effective period of the epoch trigger. This parameter takes effect only when type is set to Scheduler. Format: <code>yyyy-mm-dd hh:mm:ss</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1970-01-01 00:00:00</p>
@@ -2295,8 +2295,8 @@ public class UpdateWorkflowRequest extends Request {
             /**
              * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: periodically triggered</li>
-             * <li>Manual</li>
+             * <li>Scheduler: triggered by a scheduling cycle</li>
+             * <li>Manual: manually triggered</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

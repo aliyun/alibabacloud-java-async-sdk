@@ -86,6 +86,7 @@ public class GetSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the snapshot.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

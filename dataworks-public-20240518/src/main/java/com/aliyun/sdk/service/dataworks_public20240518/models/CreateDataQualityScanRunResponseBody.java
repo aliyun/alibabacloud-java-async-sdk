@@ -67,7 +67,7 @@ public class CreateDataQualityScanRunResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The RunId that was successfully triggered.</p>
+         * <p>The run ID of the successfully triggered task.</p>
          * 
          * <strong>example:</strong>
          * <p>248840</p>

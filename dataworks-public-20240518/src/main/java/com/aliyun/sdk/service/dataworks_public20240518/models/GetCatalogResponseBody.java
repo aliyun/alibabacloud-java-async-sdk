@@ -80,7 +80,7 @@ public class GetCatalogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Catalog information.</p>
+         * <p>The data catalog information.</p>
          */
         public Builder catalog(Catalog catalog) {
             this.catalog = catalog;

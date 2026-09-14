@@ -199,7 +199,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The comment. Supports fuzzy matching.</p>
+         * <p>The comment. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a comment</p>
@@ -211,7 +211,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * IncludeExtendedProperties.
+         * <p>Specifies whether to return extended properties. Set this parameter to <code>true</code> to return extended properties or <code>false</code> to not return them.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeExtendedProperties(Boolean includeExtendedProperties) {
             this.putQueryParameter("IncludeExtendedProperties", includeExtendedProperties);
@@ -220,7 +223,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The name. Supports fuzzy matching.</p>
+         * <p>The name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -232,10 +235,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The order in which the tables are sorted. Default value: Asc. Valid values:</p>
+         * <p>The sort order. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc</li>
-         * <li>Desc</li>
+         * <li>Asc: ascending order</li>
+         * <li>Desc: descending order</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +263,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The page size. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -272,55 +275,50 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The parent metadata entity ID. You can refer to the responses of the ListDatabases or ListSchemas operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Description of concepts related to metadata entities.</a></p>
+         * <p>The ID of the parent-level metadata entity. You can obtain this value from the response of the ListDatabases or ListSchemas operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
          * <ul>
-         * <li>The parent metadata entity is a database: The format of <code>ParentMetaEntityId</code> is <code>${EntityType}:${Instance ID or encoded URL}:${Catalog Identifier}:${Database Name}</code>. Use an empty string (`&quot;&quot;`) as a placeholder for any non-existent level.</li>
-         * <li>The parent metadata entity is a database schema: The format of <code>ParentMetaEntityId</code> is <code>${EntityType}:${Instance ID or encoded URL}:${Catalog Identifier}:${Database Name}:${Schema Name}</code>. Use an empty string (`&quot;&quot;`) as a placeholder for any non-existent level.</li>
+         * <li><p>The value can be the database to which the table belongs. The format of <code>ParentMetaEntityId</code> is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
+         * </li>
+         * <li><p>The value can also be the database schema to which the table belongs. The format of <code>ParentMetaEntityId</code> is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The schema level in <code>ParentMetaEntityId</code> is supported only for database services, such as <code>MaxCompute (with schema enabled), Hologres, PostgreSQL, SQL Server, HybridDB for PostgreSQL, and Oracle</code>.</p>
-         * </li>
-         * <li><p>For the MaxCompute and DLF types, use an empty string as the placeholder for the instance ID. For MaxCompute, the database name is the same as the project name.</p>
-         * </li>
-         * <li><p>For StarRocks, the catalog identifier is the catalog name. For DLF, it is the catalog ID. Other types do not support the catalog level and you can use an empty string as a placeholder.</p>
-         * </li>
+         * <li>You can set <code>ParentMetaEntityId</code> to a database schema only when the database type supports schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</code>, where the three-layer model must be enabled for the maxcompute type). Otherwise, you can set it only to a database.</li>
+         * <li>For the maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</li>
+         * <li>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, and you can use an empty string as a placeholder.</li>
          * </ul>
-         * <p>Examples of common ParentMetaEntityId formats</p>
+         * </blockquote>
+         * <p>The following examples show the format of ParentMetaEntityId for common types:</p>
          * <ul>
-         * <li><code>maxcompute-project:::project_name</code></li>
-         * <li><code>maxcompute-schema:::project_name:schema_name</code> (for MaxCompute projects with schema enabled)</li>
-         * <li><code>dlf-database::catalog_id:database_name</code></li>
-         * <li><code>hms-database:instance_id::database_name</code></li>
-         * <li><code>holo-schema:instance_id::database_name:schema_name</code></li>
-         * <li><code>mysql-database:(instance_id|encoded_jdbc_url)::database_name</code></li>
+         * <li><p><code>maxcompute-project:::project_name</code></p>
+         * </li>
+         * <li><p><code>maxcompute-schema:::project_name:schema_name</code> (only when the three-layer model is enabled for the project)</p>
+         * </li>
+         * <li><p><code>dlf-database::catalog_id:database_name</code></p>
+         * </li>
+         * <li><p><code>hms-database:instance_id::database_name</code></p>
+         * </li>
+         * <li><p><code>holo-schema:instance_id::database_name:schema_name</code></p>
+         * </li>
+         * <li><p><code>mysql-database:(instance_id|encoded_jdbc_url)::database_name</code></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
+         * <p>Where:  </p>
          * <ul>
-         * <li><p><code>instance_id</code>: The instance ID, which is required when the data source is registered in instance mode.</p>
-         * </li>
-         * <li><p><code>encoded_jdbc_url</code>: The URLEncoded JDBC connection string, which is requiredwhen the data source is registered using a connection string.</p>
-         * </li>
-         * <li><p><code>catalog_id</code>: The DLF catalog ID.</p>
-         * </li>
-         * <li><p><code>project_name</code>: The MaxCompute project name.</p>
-         * </li>
-         * <li><p><code>database_name</code>: The database name.</p>
-         * </li>
-         * <li><p><code>schema_name</code>: The schema name.</p>
-         * </li>
+         * <li><code>instance_id</code>: The instance ID. This value is required when the data source is registered in instance mode.</li>
+         * <li><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This value is required when the data source is registered by using a connection string.</li>
+         * <li><code>catalog_id</code>: The DLF catalog ID.</li>
+         * <li><code>project_name</code>: The MaxCompute project name.</li>
+         * <li><code>database_name</code>: The database name.</li>
+         * <li><code>schema_name</code>: The schema name.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-schema:123456XXX::test_project_with_schema:default
-         * maxcompute-project:123456XXX::test_project_without_schema
-         * dlf-database:123456XXX:test_catalog:test_db
-         * hms-database:c-abc123xxx::test_db
-         * holo-schema:h-abc123xxx::test_db:test_schema
-         * mysql-database:jdbc%3Amysql%3A%2F%2F127.0.0.1%3A3306%2Ftest_db::test_db</p>
+         * <p>maxcompute-project:::project_name</p>
          */
         public Builder parentMetaEntityId(String parentMetaEntityId) {
             this.putQueryParameter("ParentMetaEntityId", parentMetaEntityId);
@@ -329,12 +327,12 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The sort field. Default value: CreateTime. Valid values:</p>
+         * <p>The field by which to sort the results. Default value: CreateTime. Valid values:</p>
          * <ul>
-         * <li>CreateTime</li>
-         * <li>ModifyTime</li>
-         * <li>Name</li>
-         * <li>TableType</li>
+         * <li>CreateTime: creation time</li>
+         * <li>ModifyTime: modification time</li>
+         * <li>Name: name</li>
+         * <li>TableType: table type</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,7 +345,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The list of table types to query. If it&quot;s left empty, all types will be queried.</p>
+         * <p>The list of table types to query. If this parameter is left empty, all types are queried.</p>
          */
         public Builder tableTypes(java.util.List<String> tableTypes) {
             String tableTypesShrink = shrink(tableTypes, "TableTypes", "simple");

@@ -153,7 +153,7 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. Use the Id parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -177,7 +177,7 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -201,10 +201,10 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * <p>The type of the node. This parameter is applicable only to the tasks that are run on serverless resource groups. Valid values:</p>
+         * <p>The node type. This parameter is applicable only to tasks that run on resource group 2.0. Valid values:</p>
          * <ul>
-         * <li><strong>MASTER</strong>: the master node, which is used to query the logs of JobManagers.</li>
-         * <li><strong>WORKER</strong>: the worker node, which is used to query the logs of TaskManagers.</li>
+         * <li><strong>MASTER</strong>: retrieves the JobManager logs.</li>
+         * <li><strong>WORKER</strong>: retrieves the TaskManager logs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * <p>The page number of the pagination query. The value is a positive integer greater than or equal to 1.</p>
+         * <p>The page number for paging. The value must be a positive integer greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

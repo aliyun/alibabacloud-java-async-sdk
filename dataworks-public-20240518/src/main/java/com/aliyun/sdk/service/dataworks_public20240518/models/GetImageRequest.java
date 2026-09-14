@@ -97,6 +97,7 @@ public class GetImageRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * ImageVersion.
+         * <p>The image version. If this parameter is not specified, the latest version is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder imageVersion(String imageVersion) {
             this.putQueryParameter("ImageVersion", imageVersion);

@@ -223,7 +223,12 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * CallableAgents.
+         * <p>The list of child Agents that can be called by this Agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder callableAgents(java.util.List<CallableAgents> callableAgents) {
             String callableAgentsShrink = shrink(callableAgents, "CallableAgents", "json");
@@ -233,7 +238,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the Agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data analytics assistant</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -242,7 +250,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the Agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyAssistant</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -251,7 +262,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Metadata.
+         * <p>The extended metadata (key-value pairs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             String metadataShrink = shrink(metadata, "Metadata", "json");
@@ -261,7 +275,12 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *           &quot;modelName&quot;: &quot;dataworks-public-bailian/qwen-max&quot;
+         *         }</p>
          */
         public Builder model(java.util.Map<String, ?> model) {
             String modelShrink = shrink(model, "Model", "json");
@@ -271,6 +290,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
+         * <p>The Agent name, which must be unique within the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +303,12 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Skills.
+         * <p>The list of skills.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder skills(java.util.List<Skills> skills) {
             String skillsShrink = shrink(skills, "Skills", "json");
@@ -293,7 +318,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * SystemPrompt.
+         * <p>The system prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are a data analytics assistant.</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putBodyParameter("SystemPrompt", systemPrompt);
@@ -302,7 +330,12 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Tools.
+         * <p>The list of tools.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder tools(java.util.List<Tools> tools) {
             String toolsShrink = shrink(tools, "Tools", "json");
@@ -312,7 +345,13 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * <p>The visibility level.<br>
+         * <code>TENANT</code>: Visible within the account.<br>
+         * <code>PROJECT</code>: Visible to a specified project.<br>
+         * <code>USER</code>: Visible to specified users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TENANT</p>
          */
         public Builder visibility(String visibility) {
             this.putBodyParameter("Visibility", visibility);
@@ -321,7 +360,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * VisibilityScope.
+         * <p>The visibility scope. The corresponding field is determined by the Visibility parameter.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -377,10 +416,10 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The Agent name.</p>
              * 
              * <strong>example:</strong>
-             * <p>my-agent</p>
+             * <p>agent-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -434,10 +473,10 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
-             * <p>my-agent</p>
+             * <p>skill-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -491,10 +530,10 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The McpServer name.</p>
              * 
              * <strong>example:</strong>
-             * <p>my-agent</p>
+             * <p>server-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -561,7 +600,7 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * ProjectIds.
+             * <p>The list of project IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -569,7 +608,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of user IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

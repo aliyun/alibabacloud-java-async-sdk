@@ -70,7 +70,7 @@ public class DeleteDataAssetTagResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>0bc1411515937635973****</p>
+         * <p>0bc141151593763597*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

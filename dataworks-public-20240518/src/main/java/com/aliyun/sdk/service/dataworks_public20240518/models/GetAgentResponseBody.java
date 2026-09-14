@@ -67,7 +67,7 @@ public class GetAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Agent.
+         * <p>The agent details.</p>
          */
         public Builder agent(Agent agent) {
             this.agent = agent;
@@ -75,7 +75,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The sub-agent display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>子助手</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -175,7 +181,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The sub-agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sub-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -183,7 +192,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The sub-agent source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -191,7 +203,12 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The sub-agent version.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -310,7 +327,10 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>Additional configuration for the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder config(java.util.Map<String, ?> config) {
                 this.config = config;
@@ -318,7 +338,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTokens.
+             * <p>The maximum number of tokens to generate in one response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder maxTokens(Integer maxTokens) {
                 this.maxTokens = maxTokens;
@@ -326,7 +349,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-max</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -334,7 +360,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Stream.
+             * <p>Indicates whether streaming output is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder stream(Boolean stream) {
                 this.stream = stream;
@@ -342,7 +371,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Temperature.
+             * <p>The temperature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder temperature(Double temperature) {
                 this.temperature = temperature;
@@ -350,7 +382,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * TopP.
+             * <p>The top-p.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder topP(Double topP) {
                 this.topP = topP;
@@ -417,7 +452,10 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-skill</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -425,7 +463,12 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The skill version.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -518,7 +561,10 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * BuiltinName.
+             * <p><strong>The name of the built-in tool. This parameter applies only when <code>Kind</code> is set to <code>builtin</code>.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>builtin_sql</p>
              */
             public Builder builtinName(String builtinName) {
                 this.builtinName = builtinName;
@@ -526,7 +572,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * <p><strong>The tool type.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>builtin</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -534,7 +583,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * McpItems.
+             * <p><strong>The selected MCP tool items. This parameter applies only when <code>Kind</code> is set to <code>mcp</code>.</strong></p>
              */
             public Builder mcpItems(java.util.List<String> mcpItems) {
                 this.mcpItems = mcpItems;
@@ -542,7 +591,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * McpServerName.
+             * <p><strong>The name of the associated MCP server. This parameter applies only when <code>Kind</code> is set to <code>mcp</code>.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>server-name</p>
              */
             public Builder mcpServerName(String mcpServerName) {
                 this.mcpServerName = mcpServerName;
@@ -609,7 +661,7 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * ProjectIds.
+             * <p>A list of project IDs that can view the agent.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -617,7 +669,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * UserIds.
+             * <p>A list of user IDs that can view the agent.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -866,7 +918,7 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * CallableAgents.
+             * <p>A list of callable sub-agents.</p>
              */
             public Builder callableAgents(java.util.List<CallableAgents> callableAgents) {
                 this.callableAgents = callableAgents;
@@ -874,7 +926,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -882,7 +937,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p><strong>The description.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析助手</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -890,7 +948,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p><strong>The display name.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>我的助手</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -898,7 +959,11 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time, as a Unix timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1780555634000</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -906,6 +971,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The last modification time, as a Unix timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -917,7 +983,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p><strong>Additional metadata.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -925,7 +994,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p><strong>The model configuration.</strong></p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -933,7 +1002,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p>The ID of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -941,7 +1013,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p><strong>The agent name.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -949,7 +1024,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * RequiredRuntime.
+             * <p>The runtime dependencies.</p>
              */
             public Builder requiredRuntime(java.util.List<String> requiredRuntime) {
                 this.requiredRuntime = requiredRuntime;
@@ -957,7 +1032,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Skills.
+             * <p>A list of skills.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -965,7 +1040,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPrompt.
+             * <p><strong>The system prompt.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>你是一个数据分析助手。</p>
              */
             public Builder systemPrompt(String systemPrompt) {
                 this.systemPrompt = systemPrompt;
@@ -973,7 +1051,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Tools.
+             * <p><strong>A list of tools.</strong></p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
@@ -981,7 +1059,10 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p><strong>The visibility level.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -989,7 +1070,7 @@ public class GetAgentResponseBody extends TeaModel {
             }
 
             /**
-             * VisibilityScope.
+             * <p>The visibility scope.</p>
              */
             public Builder visibilityScope(VisibilityScope visibilityScope) {
                 this.visibilityScope = visibilityScope;

@@ -75,7 +75,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>2197B9C4-39CE-55EA-8EEA-FDBAE52DXXXX</p>
@@ -144,7 +144,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the data source.</p>
+             * <p>The data source name.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_first</p>
@@ -155,7 +155,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>odps</p>
@@ -225,7 +225,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output of the node.</p>
+             * <p>The node outputs.</p>
              * 
              * <strong>example:</strong>
              * <p>623731286945488XXXX</p>
@@ -236,7 +236,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RefTableName.
+             * <p>The target data table that identifies the node output. This field provides a semantic name that helps users quickly identify the output content. It is used only for display and annotation purposes and has no actual logical constraints.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testProject.testTableName</p>
              */
             public Builder refTableName(String refTableName) {
                 this.refTableName = refTableName;
@@ -347,7 +350,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output of the node.</p>
+             * <p>The node outputs.</p>
              * 
              * <strong>example:</strong>
              * <p>623731286945488XXXX</p>
@@ -495,7 +498,7 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * <p>The variable ID.</p>
              * <blockquote>
-             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -507,7 +510,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>input</p>
@@ -526,7 +529,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope of the variable. Valid values:</p>
+             * <p>The scope of the input variable. Valid values:</p>
              * <ul>
              * <li>WorkSpace</li>
              * <li>NodeParameter</li>
@@ -543,7 +546,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the variable. Valid values:</p>
+             * <p>The type. Valid values:</p>
              * <ul>
              * <li>NoKvVariableExpression</li>
              * <li>Constant</li>
@@ -644,7 +647,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node output list.</p>
+             * <p>The list of node outputs.</p>
              */
             public Builder nodeOutputs(java.util.List<NodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
@@ -652,7 +655,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table list.</p>
+             * <p>The list of tables.</p>
              */
             public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
@@ -660,7 +663,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variable list.</p>
+             * <p>The list of variables.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -727,7 +730,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output of the node.</p>
+             * <p>The node outputs.</p>
              * 
              * <strong>example:</strong>
              * <p>860438872620113XXXX</p>
@@ -738,7 +741,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RefTableName.
+             * <p>The target data table that identifies the node output. This field provides a semantic name that helps users quickly identify the output content. It is used only for display and annotation purposes and has no actual logical constraints.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testProject.testTableName</p>
              */
             public Builder refTableName(String refTableName) {
                 this.refTableName = refTableName;
@@ -849,7 +855,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output of the node.</p>
+             * <p>The node outputs.</p>
              * 
              * <strong>example:</strong>
              * <p>860438872620113XXXX</p>
@@ -997,7 +1003,7 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * <p>The variable ID.</p>
              * <blockquote>
-             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1009,7 +1015,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>output</p>
@@ -1028,7 +1034,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variable scope. Valid values:</p>
+             * <p>The scope of the variable. Valid values:</p>
              * <ul>
              * <li>NodeParameter</li>
              * <li>NodeContext</li>
@@ -1146,7 +1152,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node output list.</p>
+             * <p>The list of node outputs.</p>
              */
             public Builder nodeOutputs(java.util.List<OutputsNodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
@@ -1154,7 +1160,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table list.</p>
+             * <p>The list of tables.</p>
              */
             public Builder tables(java.util.List<OutputsTables> tables) {
                 this.tables = tables;
@@ -1162,7 +1168,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variable list.</p>
+             * <p>The list of variables.</p>
              */
             public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
@@ -1229,7 +1235,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The identifier of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</p>
+             * <p>The identifier of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to obtain the resource group identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_XXXX</p>
@@ -1243,7 +1249,7 @@ public class ListNodesResponseBody extends TeaModel {
              * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>S_resgrop_xxx</p>
+             * <p>123456XXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1297,7 +1303,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The command used to distinguish node types.</p>
+             * <p>The command, which is used to distinguish node types.</p>
              * 
              * <strong>example:</strong>
              * <p>ODPS_SQL</p>
@@ -1380,9 +1386,9 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the script.</p>
+             * <p>The script ID.</p>
              * <blockquote>
-             * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1511,11 +1517,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance generation mode. Valid values:</p>
-             * <ul>
-             * <li>T+1</li>
-             * <li>Immediately</li>
-             * </ul>
+             * <p>The mode for generating instances.</p>
              * 
              * <strong>example:</strong>
              * <p>T+1</p>
@@ -1526,7 +1528,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerun interval. Unit: milliseconds.</p>
+             * <p>The retry time interval, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>180000</p>
@@ -1537,12 +1539,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerun mode. Valid values:</p>
-             * <ul>
-             * <li>Allowed</li>
-             * <li>Denied</li>
-             * <li>FailureAllowed</li>
-             * </ul>
+             * <p>The mode that specifies whether reruns are allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>Allowed</p>
@@ -1553,7 +1550,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of reruns.</p>
+             * <p>The number of retries.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1564,7 +1561,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Timeout.</p>
+             * <p>The timeout period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1778,7 +1775,8 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the validity period of the trigger.</p>
+             * <p>The end time of the trigger validity period.</p>
+             * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>. For example, <code>9999-01-01 00:00:00</code>. This example does not include a time zone identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>9999-01-01 00:00:00</p>
@@ -1791,7 +1789,7 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * <p>The trigger ID.</p>
              * <blockquote>
-             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1804,6 +1802,7 @@ public class ListNodesResponseBody extends TeaModel {
 
             /**
              * <p>The start time of the validity period of the trigger.</p>
+             * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>. Example: <code>1970-01-01 00:00:00</code>. This example does not include a time zone identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>1970-01-01 00:00:00</p>
@@ -1828,9 +1827,9 @@ public class ListNodesResponseBody extends TeaModel {
              * <p>The trigger type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Scheduler: Periodic scheduling</li>
-             * <li>Manual: Manual trigger</li>
-             * <li>Streaming: Streaming task</li>
+             * <li>Scheduler: timed scheduling.</li>
+             * <li>Manual: manual trigger.</li>
+             * <li>Steaming: streaming task.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2096,7 +2095,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the node in Data Studio was created.</p>
+             * <p>The timestamp when the data development node was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1722910655000</p>
@@ -2115,7 +2114,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the node.</p>
+             * <p>The node description.</p>
              * 
              * <strong>example:</strong>
              * <p>Node description</p>
@@ -2126,9 +2125,9 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the Data Studio node.</p>
+             * <p>The unique identifier of the data development node.</p>
              * <blockquote>
-             * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * <p>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <strong>This change does not affect normal SDK usage, and the parameter is still returned in the type defined in the SDK</strong>. Only when upgrading across SDK version 8.0.0, the type change may cause project compilation failures, and you must manually correct the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2140,7 +2139,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node input.</p>
+             * <p>The node inputs.</p>
              */
             public Builder inputs(Inputs inputs) {
                 this.inputs = inputs;
@@ -2148,7 +2147,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the node in DataStudio was last modified.</p>
+             * <p>The timestamp when the data development node was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1722910655000</p>
@@ -2159,7 +2158,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node.</p>
+             * <p>The node name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -2170,7 +2169,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output of the node.</p>
+             * <p>The node outputs.</p>
              */
             public Builder outputs(Outputs outputs) {
                 this.outputs = outputs;
@@ -2178,7 +2177,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of nodes in Data Studio.</p>
+             * <p>The owner of the data development node.</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>
@@ -2189,7 +2188,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+             * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to view the ID.</p>
              * 
              * <strong>example:</strong>
              * <p>33233</p>
@@ -2201,12 +2200,6 @@ public class ListNodesResponseBody extends TeaModel {
 
             /**
              * <p>The scheduling type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Normal: The node is scheduled as expected.</li>
-             * <li>Pause: The node is paused, and the running of its descendant nodes is blocked.</li>
-             * <li>Skip: The node is dry run. The system does not actually run the node but directly prompts that the node is successfully run. The running duration of the node is 0 seconds. In addition, the node does not occupy resources or block the running of its descendant nodes.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -2217,7 +2210,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the resource group.</p>
+             * <p>The resource group information.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -2233,7 +2226,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling policy.</p>
+             * <p>The scheduling strategy.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;
@@ -2241,7 +2234,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag information (not in use).</p>
+             * <p>The tag information. Not currently in use.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -2249,7 +2242,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduling task.</p>
+             * <p>The scheduling task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>88888888888</p>
@@ -2353,7 +2346,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of nodes in Data Studio.</p>
+             * <p>The list of data development nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -2361,7 +2354,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2372,7 +2365,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2383,7 +2376,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>42</p>

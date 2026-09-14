@@ -67,7 +67,10 @@ public class CreateProjectRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The unique identifier of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base_role_dte</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -75,7 +78,10 @@ public class CreateProjectRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B313938A-4475-599B-98EB-A0875019FD5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

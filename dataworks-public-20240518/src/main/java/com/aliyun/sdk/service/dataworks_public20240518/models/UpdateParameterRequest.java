@@ -125,7 +125,10 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test parameter.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -134,6 +137,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
+         * <p>The parameter ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,10 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The owner\&quot;s account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -155,7 +162,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * Properties.
+         * <p>The parameter value configuration. This parameter is required for the production environment. If you specify the same environment multiple times, only the first configuration is used.</p>
          */
         public Builder properties(java.util.List<Properties> properties) {
             String propertiesShrink = shrink(properties, "Properties", "json");
@@ -224,7 +231,16 @@ public class UpdateParameterRequest extends Request {
             } 
 
             /**
-             * EnvType.
+             * <p>The project environment.</p>
+             * <ul>
+             * <li><p><code>Prod</code>: the production environment</p>
+             * </li>
+             * <li><p><code>Dev</code>: the development environment</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -232,7 +248,10 @@ public class UpdateParameterRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value123</p>
              */
             public Builder value(String value) {
                 this.value = value;

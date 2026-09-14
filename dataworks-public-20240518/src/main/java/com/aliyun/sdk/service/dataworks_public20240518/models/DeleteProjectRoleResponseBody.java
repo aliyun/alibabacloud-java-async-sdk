@@ -54,7 +54,10 @@ public class DeleteProjectRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BCD2252-F184-55A8-9675-337C43BE0CD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

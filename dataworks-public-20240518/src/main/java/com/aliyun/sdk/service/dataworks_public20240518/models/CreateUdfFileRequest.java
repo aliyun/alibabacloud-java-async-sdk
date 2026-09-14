@@ -282,8 +282,10 @@ public class CreateUdfFileRequest extends Request {
         /**
          * <p>Specifies whether to automatically create the directory if the specified path (FileFolderPath) does not exist. Valid values:</p>
          * <ul>
-         * <li>true: Automatically creates the directory if it does not exist.</li>
-         * <li>false: The call fails if the directory does not exist.</li>
+         * <li><p>true: Automatically creates the directory if it does not exist.</p>
+         * </li>
+         * <li><p>false: The call fails if the directory does not exist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -299,7 +301,7 @@ public class CreateUdfFileRequest extends Request {
          * <p>An example demonstrating how to call the function, corresponding to the example field in the Create Function form.</p>
          * 
          * <strong>example:</strong>
-         * <p>StringConcat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</p>
+         * <p>StringConcat(\&quot;a\&quot;, \&quot;b\&quot;, \&quot;c\&quot;)</p>
          */
         public Builder example(String example) {
             this.putBodyParameter("Example", example);

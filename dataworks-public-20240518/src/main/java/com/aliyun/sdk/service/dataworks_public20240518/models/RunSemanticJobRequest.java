@@ -83,6 +83,7 @@ public class RunSemanticJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the job to run. Use the Data.Name value from the CreateSemanticJob response or the Name value from a ListSemanticJobs list item. The Source, ResourceGroupId, and reference files of the job are determined by the definition saved at creation time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

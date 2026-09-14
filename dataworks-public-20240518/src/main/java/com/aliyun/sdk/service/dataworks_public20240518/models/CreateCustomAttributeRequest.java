@@ -184,7 +184,10 @@ public class CreateCustomAttributeRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The description of the custom attribute. The value must be less than 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -193,7 +196,10 @@ public class CreateCustomAttributeRequest extends Request {
         }
 
         /**
-         * DisplayEnabled.
+         * <p>Specifies whether to display the attribute on the details page. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder displayEnabled(Boolean displayEnabled) {
             this.putBodyParameter("DisplayEnabled", displayEnabled);
@@ -202,10 +208,11 @@ public class CreateCustomAttributeRequest extends Request {
         }
 
         /**
+         * <p>The display name of the custom attribute. The value must be less than 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务负责人</p>
+         * <p>BusinessOwner</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -214,6 +221,13 @@ public class CreateCustomAttributeRequest extends Request {
         }
 
         /**
+         * <p>The list of applicable entity types. Exact entity types and wildcard patterns such as <code>*-table</code> and <code>*-column</code> are supported. Examples:</p>
+         * <ul>
+         * <li>dataworks-project: workspace</li>
+         * <li>dataworks-dataset: DataWorks dataset</li>
+         * <li>maxcompute-table: MaxCompute table</li>
+         * <li>*-column: all column types</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder entityTypes(java.util.List<String> entityTypes) {
@@ -224,6 +238,7 @@ public class CreateCustomAttributeRequest extends Request {
         }
 
         /**
+         * <p>The custom attribute ID. The value must match <code>^custom-attribute:[A-Za-z][A-Za-z0-9_]{0,98}$</code>. The part after custom-attribute: must be less than 100 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +251,10 @@ public class CreateCustomAttributeRequest extends Request {
         }
 
         /**
-         * SearchFilterEnabled.
+         * <p>Specifies whether the attribute can be used as a filter condition on the DataWorks Data Map search page. Default value: false. Currently, only the ENUM type supports setting this value to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder searchFilterEnabled(Boolean searchFilterEnabled) {
             this.putBodyParameter("SearchFilterEnabled", searchFilterEnabled);
@@ -245,6 +263,7 @@ public class CreateCustomAttributeRequest extends Request {
         }
 
         /**
+         * <p>The type of the custom attribute. Valid values: ENUM, TEXT, and HYPERLINK.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +276,7 @@ public class CreateCustomAttributeRequest extends Request {
         }
 
         /**
-         * ValueEnums.
+         * <p>The enumeration values. This parameter is required when type is set to ENUM. This parameter is not supported for TEXT or HYPERLINK types.</p>
          */
         public Builder valueEnums(java.util.List<String> valueEnums) {
             String valueEnumsShrink = shrink(valueEnums, "ValueEnums", "simple");

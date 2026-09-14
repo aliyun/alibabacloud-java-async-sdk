@@ -70,7 +70,7 @@ public class UpdateRouteResponseBody extends TeaModel {
          * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

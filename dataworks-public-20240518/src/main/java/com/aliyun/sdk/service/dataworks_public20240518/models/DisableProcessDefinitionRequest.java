@@ -96,7 +96,10 @@ public class DisableProcessDefinitionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>An idempotence token used to make the request idempotent. A universally unique identifier (UUID) is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -105,7 +108,10 @@ public class DisableProcessDefinitionRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The process definition ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11792</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);

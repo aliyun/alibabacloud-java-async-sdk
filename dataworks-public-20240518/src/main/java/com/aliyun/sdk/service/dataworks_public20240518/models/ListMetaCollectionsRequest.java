@@ -209,7 +209,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The administrator ID. Valid only for album types. Default: The current user ID.</p>
+         * <p>The ID of the collection administrator. This parameter is valid only for the album type. Default value: the current user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -221,7 +221,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The creator user ID. Valid only for album types. Default: The current user ID.</p>
+         * <p>The user ID of the creator. This parameter is valid only for the album type. Default value: the current user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -233,7 +233,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The collection description. Supports fuzzy matching.</p>
+         * <p>The collection description. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test collection</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -242,10 +245,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The collection name. Supports fuzzy matching.</p>
+         * <p>The collection name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Data Asset Subject Domain</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -254,9 +257,9 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values:</p>
+         * <p>The sort direction. Valid values:</p>
          * <ul>
-         * <li>Asc (default): Ascending order</li>
+         * <li>Asc (default)</li>
          * <li>Desc</li>
          * </ul>
          * 
@@ -270,7 +273,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -282,7 +285,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+         * <p>The page size. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -294,10 +297,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent collection.</p>
+         * <p>The ID of the parent node collection object.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>as78d756asd</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -309,10 +312,10 @@ public class ListMetaCollectionsRequest extends Request {
          * <p>The sort field. Valid values:</p>
          * <ul>
          * <li>Id (default)</li>
-         * <li>Name</li>
-         * <li>CreateUser: Creator ID</li>
-         * <li>CreateTime: Creation time</li>
-         * <li>ModifyTime: Modification time</li>
+         * <li>Name: name.</li>
+         * <li>CreateUser: creator ID.</li>
+         * <li>CreateTime: creation time.</li>
+         * <li>ModifyTime: modification time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,9 +330,9 @@ public class ListMetaCollectionsRequest extends Request {
         /**
          * <p>The collection type. Valid values:</p>
          * <ul>
-         * <li>Category</li>
-         * <li>Album</li>
-         * <li>AlbumCategory: Album subcategory</li>
+         * <li>Category: category.</li>
+         * <li>Album: data album.</li>
+         * <li>AlbumCategory: album subcategory.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

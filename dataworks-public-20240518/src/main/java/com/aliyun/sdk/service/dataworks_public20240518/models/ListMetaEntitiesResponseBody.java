@@ -80,7 +80,7 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,7 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ADFASDFASDFA-ADFASDF-ASDFADSDF-AFFADS</p>
@@ -99,7 +99,10 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +194,10 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of results per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -199,7 +205,7 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * MetaEntities.
+             * <p>The list of custom entities.</p>
              */
             public Builder metaEntities(java.util.List<MetaEntity> metaEntities) {
                 this.metaEntities = metaEntities;
@@ -207,7 +213,10 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The pagination token for the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAdEdsXbwG2ZlbWCzN4wTTg6NmTbhyvglcoMCJsiEdngaTov15YaMyduvjIHYeTOIcEeXqCevM1qffZkwCkUTUYc=</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -215,7 +224,10 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

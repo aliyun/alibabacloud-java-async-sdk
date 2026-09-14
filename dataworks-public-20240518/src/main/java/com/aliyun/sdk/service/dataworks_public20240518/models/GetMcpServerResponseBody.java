@@ -67,7 +67,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         } 
 
         /**
-         * McpServer.
+         * <p>The MCP Server configuration.</p>
          */
         public Builder mcpServer(McpServer mcpServer) {
             this.mcpServer = mcpServer;
@@ -75,7 +75,10 @@ public class GetMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomHeaders.
+             * <p>The custom headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder customHeaders(java.util.Map<String, ?> customHeaders) {
                 this.customHeaders = customHeaders;
@@ -162,7 +168,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Transport.
+             * <p>The transport protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSE</p>
              */
             public Builder transport(String transport) {
                 this.transport = transport;
@@ -170,7 +179,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The service address of the MCP Server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -302,7 +314,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The connection configuration for the MCP Server.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -310,7 +322,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -318,6 +333,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time, provided as a timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -329,6 +345,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The modification time, provided as a timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -340,7 +357,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p>The modifier ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -348,7 +368,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The MCP Server name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-mcp-server</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +379,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>The visibility level. Valid values: TENANT (visible within the account), PROJECT (visible to specified projects), and USER (visible to specified users).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

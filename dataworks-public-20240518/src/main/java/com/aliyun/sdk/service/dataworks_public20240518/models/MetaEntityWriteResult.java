@@ -106,7 +106,10 @@ public class MetaEntityWriteResult extends TeaModel {
         } 
 
         /**
-         * EntityType.
+         * <p>The entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_entity-demo</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -114,7 +117,10 @@ public class MetaEntityWriteResult extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message if the operation fails for the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class MetaEntityWriteResult extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_entity-demo:entity_01</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -130,7 +139,10 @@ public class MetaEntityWriteResult extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The entity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entity_01</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +150,10 @@ public class MetaEntityWriteResult extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation succeeded for the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

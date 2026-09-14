@@ -67,7 +67,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
         } 
 
         /**
-         * JsonRpcResponse.
+         * <p>The JSON-RPC response.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -157,7 +157,10 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             } 
 
             /**
-             * ArtifactName.
+             * <p>The name of the model artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mock_report.md</p>
              */
             public Builder artifactName(String artifactName) {
                 this.artifactName = artifactName;
@@ -165,7 +168,10 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactPath.
+             * <p>The path of the model artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mock/mock_report.md</p>
              */
             public Builder artifactPath(String artifactPath) {
                 this.artifactPath = artifactPath;
@@ -173,7 +179,10 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactType.
+             * <p>The type of the model artifact, typically a file extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>md</p>
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -253,7 +262,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             } 
 
             /**
-             * Artifacts.
+             * <p>The list of model artifacts.</p>
              */
             public Builder artifacts(java.util.List<Artifacts> artifacts) {
                 this.artifacts = artifacts;
@@ -261,7 +270,10 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The actual number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -269,7 +281,10 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page. The value is null for the last page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESExFsbyH...</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -349,7 +364,10 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID passed in by the requester. The value is returned as-is.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28477817</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -357,7 +375,10 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Jsonrpc.
+             * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder jsonrpc(String jsonrpc) {
                 this.jsonrpc = jsonrpc;
@@ -365,7 +386,7 @@ public class ListAgentSessionArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The pagination information of model artifacts.</p>
              */
             public Builder result(Result result) {
                 this.result = result;

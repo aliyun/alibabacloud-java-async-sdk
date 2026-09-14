@@ -80,7 +80,7 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</p>
@@ -91,7 +91,7 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of the update operation.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,7 +99,10 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -165,7 +168,10 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_entity-customer_api:api_001</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -173,7 +179,10 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the update was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

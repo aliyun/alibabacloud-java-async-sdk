@@ -194,7 +194,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>A list of parameter IDs.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -204,7 +204,7 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Names.
+         * <p>A list of parameter names.</p>
          */
         public Builder names(java.util.List<String> names) {
             String namesShrink = shrink(names, "Names", "json");
@@ -214,7 +214,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The account ID of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -223,7 +226,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -232,7 +238,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -241,7 +250,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The workspace ID. Call the ListProjects operation to get the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -250,7 +262,10 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The scope of the parameter. The default value is Project. Other values are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("Scope", scope);
@@ -259,7 +274,18 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort the parameters by. Specify the value in the &quot;FieldName SortOrder&quot; format. The Asc sort order is optional. Supported values are:</p>
+         * <ul>
+         * <li><p>ModifyTime (Desc/Asc)</p>
+         * </li>
+         * <li><p>CreateTime (Desc/Asc)</p>
+         * </li>
+         * <li><p>Name (Desc/Asc)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ModifyTime Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
@@ -268,7 +294,18 @@ public class ListParametersRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the parameter. Valid values:</p>
+         * <ul>
+         * <li><p>PlainConstant: A plaintext constant.</p>
+         * </li>
+         * <li><p>SecretConstant: A secret constant.</p>
+         * </li>
+         * <li><p>Variable: A variable.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PlainConstant</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

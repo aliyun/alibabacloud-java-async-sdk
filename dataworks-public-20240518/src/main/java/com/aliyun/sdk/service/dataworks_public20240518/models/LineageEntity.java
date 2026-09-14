@@ -80,7 +80,10 @@ public class LineageEntity extends TeaModel {
         } 
 
         /**
-         * Attributes.
+         * <p>The other properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
@@ -88,7 +91,10 @@ public class LineageEntity extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table:123456::test_project::test_tbl</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -96,7 +102,10 @@ public class LineageEntity extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tbl</p>
          */
         public Builder name(String name) {
             this.name = name;

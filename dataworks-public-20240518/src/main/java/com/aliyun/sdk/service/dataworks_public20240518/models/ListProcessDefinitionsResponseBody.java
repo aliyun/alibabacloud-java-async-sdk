@@ -67,7 +67,7 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc5df3a17***903790e8e8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the process definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lwt_ide_simple 项目 MaxCompute 表审批策略</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,7 +246,10 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the process definition is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -248,7 +257,10 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the process definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10354346</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -256,7 +268,10 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsSystem.
+             * <p>Indicates whether this is a default system policy. System policies have restricted update capabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isSystem(Boolean isSystem) {
                 this.isSystem = isSystem;
@@ -264,7 +279,10 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the process definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute 表审批</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -272,7 +290,10 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -280,7 +301,13 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Scopes.
+             * <p>The phases in which the rule is effective. Valid values:</p>
+             * <ul>
+             * <li><p><code>Deployment</code>: The policy is checked when an application is submitted.</p>
+             * </li>
+             * <li><p><code>Running</code>: The policy is checked during process execution to determine if approval can be skipped. (Supported only for the MaxCompute type)</p>
+             * </li>
+             * </ul>
              */
             public Builder scopes(java.util.List<String> scopes) {
                 this.scopes = scopes;
@@ -288,7 +315,22 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The subtype. Valid values:</p>
+             * <ul>
+             * <li><p>Table</p>
+             * </li>
+             * <li><p>Column</p>
+             * </li>
+             * <li><p>Database</p>
+             * </li>
+             * <li><p>Schema</p>
+             * </li>
+             * <li><p>Default</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -296,7 +338,34 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the process definition. Valid values:</p>
+             * <ul>
+             * <li><p>MaxCompute</p>
+             * </li>
+             * <li><p>DataService</p>
+             * </li>
+             * <li><p>Extension</p>
+             * </li>
+             * <li><p>Hologres</p>
+             * </li>
+             * <li><p>DlfV1 (You cannot create custom definitions for this type.)</p>
+             * </li>
+             * <li><p>EMR (You cannot create custom definitions for this type.)</p>
+             * </li>
+             * <li><p>DataAssetGovernance (You cannot create custom definitions for this type.)</p>
+             * </li>
+             * <li><p>Lindorm (You cannot create custom definitions for this type.)</p>
+             * </li>
+             * <li><p>StarRocks (You cannot create custom definitions for this type.)</p>
+             * </li>
+             * <li><p>DlfNext (You cannot create custom definitions for this type.)</p>
+             * </li>
+             * <li><p>DataWorks (You cannot create custom definitions for this type.)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -363,7 +432,7 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * ProcessDefinitions.
+             * <p>A list of process definitions. For more information, see the <code>ProcessDefinition</code> object.</p>
              */
             public Builder processDefinitions(java.util.List<ProcessDefinitions> processDefinitions) {
                 this.processDefinitions = processDefinitions;
@@ -371,7 +440,10 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

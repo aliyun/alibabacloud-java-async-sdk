@@ -140,10 +140,12 @@ public class CreateDataSourceSharedRuleRequest extends Request {
         }
 
         /**
-         * <p>Share data sources to the target project environment, including</p>
+         * <p>The environment of the target workspace to which the data source is shared. Valid values:</p>
          * <ul>
-         * <li>Dev (Development Environment)</li>
-         * <li>Prod (production environment)</li>
+         * <li><p>Dev: development environment</p>
+         * </li>
+         * <li><p>Prod: production environment</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -160,7 +162,7 @@ public class CreateDataSourceSharedRuleRequest extends Request {
          * <p>The user with which you want to share the data source. If you do not configure this parameter, the data source is shared to an entire workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>1107550004253538</p>
+         * <p>110755000****</p>
          */
         public Builder sharedUser(String sharedUser) {
             this.putQueryParameter("SharedUser", sharedUser);

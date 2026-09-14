@@ -83,6 +83,7 @@ public class GetAgentRequest extends Request {
         }
 
         /**
+         * <p>The name of the skill to retrieve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

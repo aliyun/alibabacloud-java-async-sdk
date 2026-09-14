@@ -93,7 +93,7 @@ public class IdentifyCredential extends TeaModel {
         } 
 
         /**
-         * DataSource.
+         * <p>The data source.</p>
          */
         public Builder dataSource(DataSource dataSource) {
             this.dataSource = dataSource;
@@ -101,7 +101,10 @@ public class IdentifyCredential extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -109,7 +112,10 @@ public class IdentifyCredential extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user UID. If the <code>UserType</code> is <code>Role</code>, you must prefix this value with <code>ROLE_</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROLE_300888674340307309</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -117,7 +123,18 @@ public class IdentifyCredential extends TeaModel {
         }
 
         /**
-         * UserType.
+         * <p>The user type. Supported values are:</p>
+         * <ul>
+         * <li><p>primary account: <code>PrimaryAccount</code></p>
+         * </li>
+         * <li><p>subaccount: <code>SubAccount</code></p>
+         * </li>
+         * <li><p>role: <code>Role</code></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>primaryAccount</p>
          */
         public Builder userType(String userType) {
             this.userType = userType;
@@ -235,7 +252,10 @@ public class IdentifyCredential extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The data source instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>710007423244</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -243,7 +263,10 @@ public class IdentifyCredential extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The data source instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2zez82ho69yex7s7g</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -251,7 +274,10 @@ public class IdentifyCredential extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The data source password.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -259,7 +285,16 @@ public class IdentifyCredential extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The user role for the data source. Valid values are:</p>
+             * <ul>
+             * <li><p><code>Admin</code></p>
+             * </li>
+             * <li><p><code>RegularUser</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -267,7 +302,18 @@ public class IdentifyCredential extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The data source type. Supported values are:</p>
+             * <ul>
+             * <li><p><code>hive</code></p>
+             * </li>
+             * <li><p><code>lindorm_for_engine</code></p>
+             * </li>
+             * <li><p><code>starrocks</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hologres</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -275,7 +321,10 @@ public class IdentifyCredential extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The data source user name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tom</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

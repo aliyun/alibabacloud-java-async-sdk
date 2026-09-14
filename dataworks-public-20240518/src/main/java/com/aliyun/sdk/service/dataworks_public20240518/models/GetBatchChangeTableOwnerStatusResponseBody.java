@@ -80,7 +80,7 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The execution status of the batch table owner transfer task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,6 +89,9 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01A017D3-207E-582C-A683-BE991E54051D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +181,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when the table transfer fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Forbidden: You are not a member of this project</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -183,7 +192,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The transfer status of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -191,7 +203,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TableMetaEntityId.
+             * <p>The metadata entity ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute-table:123:project_a::table_1</p>
              */
             public Builder tableMetaEntityId(String tableMetaEntityId) {
                 this.tableMetaEntityId = tableMetaEntityId;
@@ -323,7 +338,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * BatchId.
+             * <p>The batch transfer task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>524257_openapi-req-abc123</p>
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
@@ -331,7 +349,7 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * <p>The transfer result details for each table.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -339,7 +357,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCount.
+             * <p>The number of tables that failed to transfer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failedCount(Integer failedCount) {
                 this.failedCount = failedCount;
@@ -347,7 +368,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OngoingCount.
+             * <p>The number of tables that are still being processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder ongoingCount(Integer ongoingCount) {
                 this.ongoingCount = ongoingCount;
@@ -355,7 +379,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The overall status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -363,7 +390,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of tables that were successfully transferred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -371,7 +401,10 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of tables in the batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

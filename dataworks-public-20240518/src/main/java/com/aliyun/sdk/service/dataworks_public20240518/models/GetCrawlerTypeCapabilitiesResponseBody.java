@@ -80,7 +80,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * CrawlerTypes.
+         * <p>The list of crawler types and capabilities supported in the current region.</p>
          */
         public Builder crawlerTypes(java.util.List<CrawlerTypes> crawlerTypes) {
             this.crawlerTypes = crawlerTypes;
@@ -88,7 +88,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +191,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * Optional.
+             * <p>Indicates whether the metadata entity level is optional.</p>
              */
             public Builder optional(Boolean optional) {
                 this.optional = optional;
@@ -196,7 +199,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentSubType.
+             * <p>The parent-level metadata entity subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder parentSubType(String parentSubType) {
                 this.parentSubType = parentSubType;
@@ -204,7 +210,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The metadata entity subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -212,7 +221,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The metadata entity type identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>holo</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -318,7 +330,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowedValues.
+             * <p>The list of allowed values for the extension configuration item.</p>
              */
             public Builder allowedValues(java.util.List<String> allowedValues) {
                 this.allowedValues = allowedValues;
@@ -326,7 +338,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value of the extension configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -334,7 +349,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The name of the extension configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CollectRecyclebin</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -342,7 +360,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the extension configuration item is required.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -350,7 +368,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * ValueType.
+             * <p>The value type of the extension configuration item, such as BOOLEAN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BOOLEAN</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -534,7 +555,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultScopeUnit.
+             * <p>The default collection scope granularity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATABASE</p>
              */
             public Builder defaultScopeUnit(String defaultScopeUnit) {
                 this.defaultScopeUnit = defaultScopeUnit;
@@ -542,7 +566,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hologres</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -550,7 +577,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * RequireResourceGroup.
+             * <p>Indicates whether a resource group must be specified when creating this type of crawler.</p>
              */
             public Builder requireResourceGroup(Boolean requireResourceGroup) {
                 this.requireResourceGroup = requireResourceGroup;
@@ -558,7 +585,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAiComment.
+             * <p>Indicates whether AI metadata description is supported.</p>
              */
             public Builder supportAiComment(Boolean supportAiComment) {
                 this.supportAiComment = supportAiComment;
@@ -566,7 +593,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportExcludeRegex.
+             * <p>Indicates whether schema or table exclusion regular expressions are supported.</p>
              */
             public Builder supportExcludeRegex(Boolean supportExcludeRegex) {
                 this.supportExcludeRegex = supportExcludeRegex;
@@ -574,7 +601,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportSchedule.
+             * <p>Indicates whether periodic scheduling is supported.</p>
              */
             public Builder supportSchedule(Boolean supportSchedule) {
                 this.supportSchedule = supportSchedule;
@@ -582,7 +609,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedDatasourceTypes.
+             * <p>The list of supported data source types.</p>
              */
             public Builder supportedDatasourceTypes(java.util.List<String> supportedDatasourceTypes) {
                 this.supportedDatasourceTypes = supportedDatasourceTypes;
@@ -590,7 +617,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedEntityTypes.
+             * <p>The metadata entity levels that the crawler type supports for collection.</p>
              */
             public Builder supportedEntityTypes(java.util.List<SupportedEntityTypes> supportedEntityTypes) {
                 this.supportedEntityTypes = supportedEntityTypes;
@@ -598,7 +625,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedOptionKeys.
+             * <p>The supported crawler extension configuration items.</p>
              */
             public Builder supportedOptionKeys(java.util.List<SupportedOptionKeys> supportedOptionKeys) {
                 this.supportedOptionKeys = supportedOptionKeys;
@@ -606,7 +633,7 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedScopeUnits.
+             * <p>The list of supported collection scope granularities.</p>
              */
             public Builder supportedScopeUnits(java.util.List<String> supportedScopeUnits) {
                 this.supportedScopeUnits = supportedScopeUnits;
@@ -614,7 +641,10 @@ public class GetCrawlerTypeCapabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The crawler type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>holo</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -80,7 +80,7 @@ public class GetCustomAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * CustomAttribute.
+         * <p>The custom attribute definition.</p>
          */
         public Builder customAttribute(CustomAttribute customAttribute) {
             this.customAttribute = customAttribute;
@@ -88,7 +88,7 @@ public class GetCustomAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BA51C9E6-0CBC-5BB9-92BD-0C4FE66E1717</p>
@@ -99,7 +99,10 @@ public class GetCustomAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

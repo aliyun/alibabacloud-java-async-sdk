@@ -93,7 +93,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>本次请求返回的最大结果数。</p>
+         * <p>The maximum number of records returned in this response.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -104,7 +104,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>翻页标记，当还有更多数据时返回此值，下次请求传入即可获取后续数据。</p>
+         * <p>The pagination token for the next page. An empty value indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESG****</p>
@@ -115,7 +115,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页信息。</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -123,7 +123,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID，用于问题定位与链路追踪。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
@@ -218,7 +218,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>访问密钥 ID（AccessKey ID）。</p>
+             * <p>The temporary AccessKey ID used for credential injection.</p>
              * 
              * <strong>example:</strong>
              * <p>STS.N*********7</p>
@@ -229,7 +229,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户 ID。</p>
+             * <p>The account ID of the delegated user.</p>
              * 
              * <strong>example:</strong>
              * <p>20933221576142****</p>
@@ -240,7 +240,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>安全令牌（STS Token）。</p>
+             * <p>The temporary security token used for credential injection.</p>
              * 
              * <strong>example:</strong>
              * <p>DFE32G*******</p>
@@ -251,7 +251,12 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户类型。</p>
+             * <p>The user type. Valid values:</p>
+             * <ul>
+             * <li>customer: Alibaba Cloud account.</li>
+             * <li>sub: RAM user.</li>
+             * <li>AssumedRoleUser: RAM role.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>sub</p>
@@ -360,7 +365,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>角色被代入的目标主体。</p>
+             * <p>The Alibaba Cloud account ID of the entity that owns the role to be assumed.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789012****</p>
@@ -371,7 +376,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色绑定的权限策略。</p>
+             * <p>The policy used to further restrict the permissions of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -382,7 +387,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色 ARN，格式如 acs:ram::<accountId>:role/<roleName>。</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::123456789012****:role/DataWorksRole</p>
@@ -393,7 +398,11 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色类型。</p>
+             * <p>The role assumption type. Valid values:</p>
+             * <ul>
+             * <li>service: assumed by a service.</li>
+             * <li>user: assumed by a user.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>service</p>
@@ -404,7 +413,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代入角色所使用的用户信息。</p>
+             * <p>The information about the delegated user.</p>
              */
             public Builder userInfo(UserInfo userInfo) {
                 this.userInfo = userInfo;
@@ -484,7 +493,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>凭证配置项键。</p>
+             * <p>The identifier key of the credential configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -495,7 +504,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色列表。</p>
+             * <p>The list of roles in the credential configuration.</p>
              */
             public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
@@ -503,7 +512,11 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>凭证类型。</p>
+             * <p>The credential configuration type. Valid values:</p>
+             * <ul>
+             * <li>Role: single role assumption.</li>
+             * <li>RoleChain: role chain assumption.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RoleChain</p>
@@ -586,7 +599,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>阿里云环境角色标识。</p>
+             * <p>The environment variable role key.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -597,7 +610,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>凭证配置项列表。</p>
+             * <p>The list of credential configurations.</p>
              */
             public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
@@ -605,7 +618,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否启用凭证配置。</p>
+             * <p>Indicates whether credential injection is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -724,7 +737,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>扩展挂载选项。</p>
+             * <p>The custom mount properties of the dataset. The content is passed as mount options.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fs.oss.download.thread.concurrency&quot;:&quot;10&quot;}</p>
@@ -735,7 +748,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据集标识。</p>
+             * <p>The dataset identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>d-vsqjvs****rp5l206u</p>
@@ -746,7 +759,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>挂载到实例内的路径。</p>
+             * <p>The mount path of the dataset in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/data</p>
@@ -757,7 +770,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否只读挂载。</p>
+             * <p>Indicates whether the dataset is mounted in read-only mode.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -765,7 +778,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据集资源 URI。</p>
+             * <p>The URI of the storage service directory for direct mounting.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://example-bucket/data/</p>
@@ -776,7 +789,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据集版本。</p>
+             * <p>The dataset version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -937,7 +950,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>访问类型列表（如内网 INTRANET、公网 INTERNET）。</p>
+             * <p>The list of access types.</p>
              */
             public Builder accessType(java.util.List<String> accessType) {
                 this.accessType = accessType;
@@ -945,7 +958,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>端口转发对应的容器名称。</p>
+             * <p>The name of the target container.</p>
              * 
              * <strong>example:</strong>
              * <p>dsw-notebook</p>
@@ -956,7 +969,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>弹性公网 IP（EIP）实例 ID。</p>
+             * <p>The instance ID of the elastic IP address (EIP).</p>
              * 
              * <strong>example:</strong>
              * <p>eip-bp1****</p>
@@ -967,7 +980,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否启用该端口转发规则。</p>
+             * <p>Indicates whether the port forwarding configuration is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -975,7 +988,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对外暴露的端口。</p>
+             * <p>The mapped public port.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -986,7 +999,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>容器内部被转发的端口。</p>
+             * <p>The target port in the instance container.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -997,7 +1010,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>端口转发规则名称。</p>
+             * <p>The name of the port forwarding configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>ssh</p>
@@ -1008,7 +1021,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>NAT 网关 ID。</p>
+             * <p>The NAT gateway ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ngw-bp1****</p>
@@ -1019,7 +1032,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SSH 公钥。</p>
+             * <p>The public key used for SSH access.</p>
              * 
              * <strong>example:</strong>
              * <p>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQ****</p>
@@ -1115,7 +1128,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>端口转发配置列表。</p>
+             * <p>The list of port forwarding configurations.</p>
              */
             public Builder forwardInfos(java.util.List<ForwardInfos> forwardInfos) {
                 this.forwardInfos = forwardInfos;
@@ -1123,7 +1136,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>安全组 ID。</p>
+             * <p>The security group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp1****</p>
@@ -1134,7 +1147,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>交换机（vSwitch）ID。</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1****</p>
@@ -1145,7 +1158,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专有网络 VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1****</p>
@@ -1423,7 +1436,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>创建时间（Unix 毫秒时间戳）。</p>
+             * <p>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1756000000000</p>
@@ -1434,7 +1447,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>凭证配置，用于设置 RAM 角色，支持默认角色链或自定义角色。</p>
+             * <p>The credential injection configuration of the instance. After this feature is enabled, you can use the default RAM role chain or specify a custom RAM role.</p>
              */
             public Builder credentialConfig(CredentialConfig credentialConfig) {
                 this.credentialConfig = credentialConfig;
@@ -1442,7 +1455,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>计算资源规格，单位 CU（计算单元）。</p>
+             * <p>The number of CUs used by the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1453,7 +1466,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>挂载的数据集列表。</p>
+             * <p>The list of datasets mounted to the instance.</p>
              */
             public Builder datasets(java.util.List<Datasets> datasets) {
                 this.datasets = datasets;
@@ -1461,7 +1474,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>失败原因，实例异常时的错误信息。</p>
+             * <p>The reason why the instance entered the failed state.</p>
              * 
              * <strong>example:</strong>
              * <p>ImagePullBackOff</p>
@@ -1472,7 +1485,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像 ID（DataWorks 官方镜像或自定义镜像 ID），与 ImageUrl 二选一。</p>
+             * <p>The ID of the image used by the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>System_serveride_notebook_20240822</p>
@@ -1483,7 +1496,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像名称。</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>serveride_notebook</p>
@@ -1494,7 +1507,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像地址（自定义镜像完整 URL），与 ImageId 二选一。</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-hangzhou.aliyuncs.com/example/serveride:latest</p>
@@ -1505,7 +1518,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>个人开发环境实例 ID。</p>
+             * <p>The personal development environment instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>699573</p>
@@ -1516,7 +1529,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例名称。</p>
+             * <p>The personal development environment instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>notebook_dev</p>
@@ -1527,7 +1540,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例归属人用户 ID。</p>
+             * <p>The account ID of the user who owns the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>20933221576142****</p>
@@ -1538,7 +1551,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DataWorks 工作空间（项目）ID。</p>
+             * <p>The DataWorks workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -1549,7 +1562,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作空间（项目）名称。</p>
+             * <p>The DataWorks workspace name.</p>
              * 
              * <strong>example:</strong>
              * <p>example_project</p>
@@ -1560,7 +1573,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源组 ID。</p>
+             * <p>The internal numeric ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>9876543210</p>
@@ -1571,7 +1584,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源组名称。</p>
+             * <p>The resource group name.</p>
              * 
              * <strong>example:</strong>
              * <p>serverless_group</p>
@@ -1582,7 +1595,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例状态，如 Running / Stopped / Creating / Stopping 等。</p>
+             * <p>The instance status. Valid values: Creating, Starting, Running, Stopping, Stopped, Updating, Deleting, DELETED, Failed, Arrearage, Saving, SaveFailed, and Saved.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -1593,7 +1606,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间（Unix 毫秒时间戳）。</p>
+             * <p>The time when the instance was last updated. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1756003600000</p>
@@ -1604,7 +1617,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户专有网络（VPC）配置。</p>
+             * <p>The VPC configuration used by the instance.</p>
              */
             public Builder userVpc(UserVpc userVpc) {
                 this.userVpc = userVpc;
@@ -1697,7 +1710,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>个人开发环境实例列表。</p>
+             * <p>The list of personal development environment instances.</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
@@ -1705,7 +1718,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前页码。</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1716,7 +1729,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>每页条数。</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1727,7 +1740,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>符合条件的总条数。</p>
+             * <p>The total number of records that match the filter conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
