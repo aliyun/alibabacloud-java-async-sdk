@@ -106,7 +106,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         } 
 
         /**
-         * evaluators.
+         * <p>The list of evaluator summaries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;trace_task_completion&quot;,&quot;type&quot;:&quot;AGENT&quot;,&quot;latestVersion&quot;:&quot;1.0.0&quot;}]</p>
          */
         public Builder evaluators(java.util.List<Evaluators> evaluators) {
             this.evaluators = evaluators;
@@ -114,7 +117,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page used in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +128,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJsYXN0SWQiOjEzM30=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of evaluators that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -308,7 +323,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             } 
 
             /**
-             * annotations.
+             * <p>The list of annotations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;__en&quot;]</p>
              */
             public Builder annotations(java.util.List<String> annotations) {
                 this.annotations = annotations;
@@ -316,7 +334,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -324,7 +345,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The evaluator description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>判断 Agent 是否完成用户任务</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,7 +356,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>链路任务完成度</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -340,7 +367,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersion.
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -348,7 +378,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * metricName.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_task_completion</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -356,7 +389,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The evaluator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace_task_completion</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -364,7 +400,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * properties.
+             * <p>The evaluator properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;agentEvaluatorMode&quot;:&quot;raw_prompt&quot;}</p>
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
@@ -372,7 +411,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The evaluator type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AGENT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -380,7 +422,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816600</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;

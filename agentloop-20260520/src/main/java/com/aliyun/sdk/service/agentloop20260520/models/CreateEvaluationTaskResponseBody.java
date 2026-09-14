@@ -80,7 +80,10 @@ public class CreateEvaluationTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class CreateEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The evaluation task status. After creation, the status is typically <code>Pending</code>. After asynchronous orchestration, the status may change to <code>Running</code> or <code>Scheduling</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -96,7 +102,10 @@ public class CreateEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * taskId.
+         * <p>The evaluation task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

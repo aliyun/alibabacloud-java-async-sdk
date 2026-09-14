@@ -75,6 +75,7 @@ public class DeleteContextStoreRequest extends Request {
         } 
 
         /**
+         * <p>The AgentSpace name, which is 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteContextStoreRequest extends Request {
         }
 
         /**
+         * <p>The name of the context store to delete, which is 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

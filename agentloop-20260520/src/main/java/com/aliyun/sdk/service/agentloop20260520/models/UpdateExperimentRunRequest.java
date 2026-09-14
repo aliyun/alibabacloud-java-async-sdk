@@ -185,7 +185,10 @@ public class UpdateExperimentRunRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>al-playground-cn-hongkong</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -194,7 +197,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * recordId.
+         * <p>The experiment record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5397261-6e6d-4e45-bf52-feb8686f7524</p>
          */
         public Builder recordId(String recordId) {
             this.putPathParameter("recordId", recordId);
@@ -203,7 +209,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * completedAt.
+         * <p>The experiment completion time. A millisecond-level UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1784719989371</p>
          */
         public Builder completedAt(Long completedAt) {
             this.putBodyParameter("completedAt", completedAt);
@@ -212,7 +221,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * completedTasks.
+         * <p>The number of completed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder completedTasks(Integer completedTasks) {
             this.putBodyParameter("completedTasks", completedTasks);
@@ -221,7 +233,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * executedAt.
+         * <p>The experiment execution time. A millisecond-level UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1784719439255</p>
          */
         public Builder executedAt(Long executedAt) {
             this.putBodyParameter("executedAt", executedAt);
@@ -230,7 +245,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * failedTasks.
+         * <p>The number of failed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedTasks(Integer failedTasks) {
             this.putBodyParameter("failedTasks", failedTasks);
@@ -239,7 +257,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * recordName.
+         * <p>The experiment record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rca_benchmark_eval_experiment 2026/07/22 19:23:59</p>
          */
         public Builder recordName(String recordName) {
             this.putBodyParameter("recordName", recordName);
@@ -248,7 +269,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The experiment record status. Set to cancelled to cancel execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -257,7 +281,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * totalTasks.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalTasks(Integer totalTasks) {
             this.putBodyParameter("totalTasks", totalTasks);
@@ -266,7 +293,10 @@ public class UpdateExperimentRunRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

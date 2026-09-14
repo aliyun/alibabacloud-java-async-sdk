@@ -171,7 +171,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace to which the context store belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.agentSpace = agentSpace;
@@ -179,7 +182,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * config.
+         * <p>The configuration of the context store.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -187,7 +190,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * contextStoreName.
+         * <p>The context store name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.contextStoreName = contextStoreName;
@@ -195,7 +201,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * contextType.
+         * <p>The type of the context store, such as experience or memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experience</p>
          */
         public Builder contextType(String contextType) {
             this.contextType = contextType;
@@ -203,6 +212,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The time when the context store was created, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +224,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的上下文库</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -222,7 +235,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -230,7 +246,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +257,15 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the context store. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE</li>
+         * <li>INITIALIZING</li>
+         * <li>FAILED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -246,6 +273,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The time when the context store was last updated, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +343,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The AgentSpace where the trace data source resides. This is the same as the AgentSpace specified during creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-space</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -323,6 +354,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The start time for data backfill, in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -419,7 +451,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * metadataField.
+             * <p>The metadata field mapping. The key is the business field and the value is the storage field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;userId&quot;:&quot;user_id&quot;,&quot;sessionId&quot;:&quot;session_id&quot;}</p>
              */
             public Builder metadataField(java.util.Map<String, String> metadataField) {
                 this.metadataField = metadataField;
@@ -427,7 +462,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * miningInterval.
+             * <p>The experience mining interval. Valid values: 1h, 6h, 12h, and 1d. Default value: 1d.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1d</p>
              */
             public Builder miningInterval(String miningInterval) {
                 this.miningInterval = miningInterval;
@@ -435,7 +473,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * serviceNames.
+             * <p>The list of service names. This works together with source.agentSpace to locate the trace data source. This value cannot be changed in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;order-service&quot;,&quot;payment-service&quot;]</p>
              */
             public Builder serviceNames(java.util.List<String> serviceNames) {
                 this.serviceNames = serviceNames;
@@ -443,7 +484,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The datasource config passed in by the user. This serves only as the root identifier of the data source.</p>
              */
             public Builder source(Source source) {
                 this.source = source;

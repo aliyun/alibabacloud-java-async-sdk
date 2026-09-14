@@ -129,7 +129,10 @@ public class ListEvaluationRunsRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-agentspace</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -138,7 +141,10 @@ public class ListEvaluationRunsRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>The evaluation task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -147,7 +153,10 @@ public class ListEvaluationRunsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -156,7 +165,10 @@ public class ListEvaluationRunsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJsYXN0SWQiOjEwMX0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -165,7 +177,10 @@ public class ListEvaluationRunsRequest extends Request {
         }
 
         /**
-         * runType.
+         * <p>The run type filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backfill</p>
          */
         public Builder runType(String runType) {
             this.putQueryParameter("runType", runType);
@@ -174,7 +189,10 @@ public class ListEvaluationRunsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The run status filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

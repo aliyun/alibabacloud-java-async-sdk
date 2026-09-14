@@ -87,7 +87,10 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -96,7 +99,10 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         }
 
         /**
-         * contextStoreName.
+         * <p>The name of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.putPathParameter("contextStoreName", contextStoreName);
@@ -105,7 +111,10 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The display name of the API key to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-api-key</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

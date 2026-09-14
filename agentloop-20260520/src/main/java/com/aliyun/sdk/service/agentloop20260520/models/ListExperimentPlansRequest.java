@@ -143,7 +143,10 @@ public class ListExperimentPlansRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>al-playground-cn-hongkong</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -152,7 +155,10 @@ public class ListExperimentPlansRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The number of entries to return. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -161,7 +167,10 @@ public class ListExperimentPlansRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>Optional. Use <code>offset</code> and <code>limit</code> for pagination instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -170,7 +179,10 @@ public class ListExperimentPlansRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Optional. Use <code>offset</code> and <code>limit</code> for pagination instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJsYXN0SWQiOjEyM30=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -179,7 +191,10 @@ public class ListExperimentPlansRequest extends Request {
         }
 
         /**
-         * offset.
+         * <p>The offset. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -188,7 +203,10 @@ public class ListExperimentPlansRequest extends Request {
         }
 
         /**
-         * planName.
+         * <p>Fuzzy match by plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms_agent</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("planName", planName);
@@ -197,7 +215,10 @@ public class ListExperimentPlansRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters by exact status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

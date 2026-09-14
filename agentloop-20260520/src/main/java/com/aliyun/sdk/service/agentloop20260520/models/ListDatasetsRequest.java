@@ -116,6 +116,7 @@ public class ListDatasetsRequest extends Request {
         } 
 
         /**
+         * <p>The agent space name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * datasetName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_faq_dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("datasetName", datasetName);
@@ -147,7 +151,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -156,7 +163,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. You do not need to set this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RsfoUqpOJd5nd0F1e4OquY/7dKNGp1JMgsKtvCagmtY=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

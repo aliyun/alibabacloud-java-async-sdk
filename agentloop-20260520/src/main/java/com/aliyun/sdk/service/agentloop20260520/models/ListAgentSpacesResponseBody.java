@@ -106,7 +106,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         } 
 
         /**
-         * agentSpaces.
+         * <p>The AgentSpaces information.</p>
          */
         public Builder agentSpaces(java.util.List<AgentSpaces> agentSpaces) {
             this.agentSpaces = agentSpaces;
@@ -114,7 +114,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b5754ef15c784abc8696d82790d2985c</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E4AC775-2358-5B52-B6FB-171459D7B14B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -225,7 +237,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceId.
+             * <p>The MSE namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phoenixcloud-raw-logs</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -233,7 +248,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The MSE namespace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terraform-alicloud-modules</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -378,7 +396,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The AgentSpace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-agent-space</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -386,7 +407,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * cmsWorkspace.
+             * <p>The CMS workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cms-workspace</p>
              */
             public Builder cmsWorkspace(String cmsWorkspace) {
                 this.cmsWorkspace = cmsWorkspace;
@@ -394,6 +418,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -405,7 +430,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -413,7 +441,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * mseNamespace.
+             * <p>The MSE namespace.</p>
              */
             public Builder mseNamespace(MseNamespace mseNamespace) {
                 this.mseNamespace = mseNamespace;
@@ -421,7 +449,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -429,7 +460,10 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * slsProject.
+             * <p>The Simple Log Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-cms-1152309027070167-cn-beijing</p>
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -437,6 +471,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The update time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

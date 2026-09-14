@@ -67,7 +67,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
         }
 
         /**
-         * skill.
+         * <p>The skill details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;enable&quot;:true,&quot;currentVersion&quot;:&quot;1782816000000&quot;}</p>
          */
         public Builder skill(Skill skill) {
             this.skill = skill;
@@ -154,7 +160,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <h1>Trace Context Loader</h1>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -162,7 +171,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SKILL.md</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +182,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * remark.
+             * <p>The file remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>主技能说明</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -250,7 +265,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The time when the version was created. This value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -258,7 +276,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000000</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -266,7 +287,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * versionDescription.
+             * <p>The version description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>首次发布版本</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -437,7 +461,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The time when the skill was created. This value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -445,7 +472,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * currentVersion.
+             * <p>The current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000000</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -453,7 +483,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>读取链路上下文辅助评估</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -461,7 +494,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trace 上下文读取</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -469,7 +505,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the skill is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -477,7 +516,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * files.
+             * <p>The list of skill files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;主技能说明&quot;}]</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -485,7 +527,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersion.
+             * <p>The latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000000</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -493,7 +538,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * skillName.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace_context_loader</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -501,7 +549,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the skill was last updated. This value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816600</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;
@@ -509,7 +560,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * versions.
+             * <p>The list of skill versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;首次发布版本&quot;}]</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;

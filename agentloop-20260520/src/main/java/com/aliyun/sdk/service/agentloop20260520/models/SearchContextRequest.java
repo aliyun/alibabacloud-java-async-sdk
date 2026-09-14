@@ -160,6 +160,7 @@ public class SearchContextRequest extends Request {
         } 
 
         /**
+         * <p>The AgentSpace name. The name must be 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +173,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
+         * <p>The context store name. The name must be 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +186,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>The structured filter conditions. The key is the field name, and the value is the expected matching value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userId&quot;:&quot;alice&quot;}</p>
          */
         public Builder filter(java.util.Map<String, ?> filter) {
             this.putBodyParameter("filter", filter);
@@ -193,7 +198,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * formatted.
+         * <p>Specifies whether to apply structured formatting to the returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder formatted(Boolean formatted) {
             this.putBodyParameter("formatted", formatted);
@@ -202,7 +210,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The maximum number of returned results (similarity Top-N).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -211,6 +222,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
+         * <p>The retrieval query text. Natural language is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +235,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * retrievalOption.
+         * <p>The retrieval options that control the retrieval strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>semantic</p>
          */
         public Builder retrievalOption(String retrievalOption) {
             this.putBodyParameter("retrievalOption", retrievalOption);
@@ -232,7 +247,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * threshold.
+         * <p>The similarity threshold. Results with a similarity score lower than this value are filtered out. Valid values: 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder threshold(Double threshold) {
             this.putBodyParameter("threshold", threshold);

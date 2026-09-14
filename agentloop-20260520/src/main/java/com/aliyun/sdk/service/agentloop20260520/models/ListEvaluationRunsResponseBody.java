@@ -106,7 +106,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
         } 
 
         /**
-         * evaluationRuns.
+         * <p>The list of run summaries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;runId&quot;:&quot;eval-run-4fd47f3d7e684e15b1d3d178c6a5b81a&quot;,&quot;runType&quot;:&quot;backfill&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;totalCount&quot;:100}]</p>
          */
         public Builder evaluationRuns(java.util.List<EvaluationRuns> evaluationRuns) {
             this.evaluationRuns = evaluationRuns;
@@ -114,7 +117,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page used in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +128,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. An empty value indicates that no more pages exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJsYXN0SWQiOjEyMH0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of runs that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -334,7 +349,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The creation time, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -342,7 +360,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * dataEndTime.
+             * <p>The end time of the data window for this run, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782902400</p>
              */
             public Builder dataEndTime(Long dataEndTime) {
                 this.dataEndTime = dataEndTime;
@@ -350,7 +371,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * dataStartTime.
+             * <p>The start time of the data window for this run, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder dataStartTime(Long dataStartTime) {
                 this.dataStartTime = dataStartTime;
@@ -358,7 +382,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * failedCount.
+             * <p>The number of failed entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder failedCount(Integer failedCount) {
                 this.failedCount = failedCount;
@@ -366,7 +393,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * runId.
+             * <p>The run ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eval-run-4fd47f3d7e684e15b1d3d178c6a5b81a</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -374,7 +404,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * runName.
+             * <p>The run name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace_task_completion_eval-backfill</p>
              */
             public Builder runName(String runName) {
                 this.runName = runName;
@@ -382,7 +415,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * runType.
+             * <p>The run type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backfill</p>
              */
             public Builder runType(String runType) {
                 this.runType = runType;
@@ -390,7 +426,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The run status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -398,7 +437,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * successCount.
+             * <p>The number of successful entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -406,7 +448,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The evaluation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -414,7 +459,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of evaluation entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -422,7 +470,10 @@ public class ListEvaluationRunsResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816600</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;

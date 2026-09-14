@@ -93,7 +93,10 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Experiment plan updated successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +104,10 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * planId.
+         * <p>The ID of the experiment plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-plan-e95bff54685a4ae29ff3a834c1008a71</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -109,7 +115,10 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The update result. A value of updated indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>updated</p>
          */
         public Builder status(String status) {
             this.status = status;

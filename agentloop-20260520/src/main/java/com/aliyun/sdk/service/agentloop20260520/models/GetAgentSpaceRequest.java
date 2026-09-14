@@ -60,6 +60,7 @@ public class GetAgentSpaceRequest extends Request {
         } 
 
         /**
+         * <p>The name of the AgentSpace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

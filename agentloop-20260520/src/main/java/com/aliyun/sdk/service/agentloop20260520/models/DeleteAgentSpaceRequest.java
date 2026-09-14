@@ -102,6 +102,7 @@ public class DeleteAgentSpaceRequest extends Request {
         } 
 
         /**
+         * <p>The name of the AgentSpace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class DeleteAgentSpaceRequest extends Request {
         }
 
         /**
-         * deleteCmsWorkspace.
+         * <p>Specifies whether to delete the associated Hybrid Cloud Monitoring workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteCmsWorkspace(Boolean deleteCmsWorkspace) {
             this.putQueryParameter("deleteCmsWorkspace", deleteCmsWorkspace);
@@ -123,7 +127,10 @@ public class DeleteAgentSpaceRequest extends Request {
         }
 
         /**
-         * deleteMseNamespace.
+         * <p>Specifies whether to delete the associated MSE namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteMseNamespace(Boolean deleteMseNamespace) {
             this.putQueryParameter("deleteMseNamespace", deleteMseNamespace);
@@ -132,7 +139,10 @@ public class DeleteAgentSpaceRequest extends Request {
         }
 
         /**
-         * deleteSlsProject.
+         * <p>Specifies whether to delete the associated SLS project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteSlsProject(Boolean deleteSlsProject) {
             this.putQueryParameter("deleteSlsProject", deleteSlsProject);

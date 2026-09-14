@@ -200,7 +200,10 @@ public class CreateExperimentRunRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>al-playground-cn-hongkong</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -209,7 +212,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * completedAt.
+         * <p>The completion time, in millisecond-level UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1784721811392</p>
          */
         public Builder completedAt(Long completedAt) {
             this.putBodyParameter("completedAt", completedAt);
@@ -218,7 +224,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * completedTasks.
+         * <p>The number of completed tasks. If not specified, the default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder completedTasks(Integer completedTasks) {
             this.putBodyParameter("completedTasks", completedTasks);
@@ -227,7 +236,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * executedAt.
+         * <p>The execution time, in millisecond-level UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1784721775379</p>
          */
         public Builder executedAt(Long executedAt) {
             this.putBodyParameter("executedAt", executedAt);
@@ -236,6 +248,7 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
+         * <p>The experiment plan ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +261,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * failedTasks.
+         * <p>The number of failed tasks. If not specified, the default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedTasks(Integer failedTasks) {
             this.putBodyParameter("failedTasks", failedTasks);
@@ -257,7 +273,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * offlineExperiments.
+         * <p>The list of offline experiment configurations. Required when the plan type is offline. The number of items ranges from 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;label&quot;: &quot;experimentA&quot;, &quot;name&quot;: &quot;experimentA&quot;}]</p>
          */
         public Builder offlineExperiments(java.util.List<OfflineExperimentConfig> offlineExperiments) {
             this.putBodyParameter("offlineExperiments", offlineExperiments);
@@ -266,7 +285,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * recordName.
+         * <p>The experiment record name. If not specified, the default value is the plan name plus a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms_agent_experiment 2026/07/22 20:02:55</p>
          */
         public Builder recordName(String recordName) {
             this.putBodyParameter("recordName", recordName);
@@ -275,7 +297,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The initial status. If not specified, the default value is <code>pending</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -284,7 +309,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * totalTasks.
+         * <p>The total number of tasks. For online experiments, if not specified, the value is calculated based on the number of generated tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder totalTasks(Integer totalTasks) {
             this.putBodyParameter("totalTasks", totalTasks);
@@ -293,7 +321,10 @@ public class CreateExperimentRunRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

@@ -67,7 +67,10 @@ public class RunStrategies extends TeaModel {
         } 
 
         /**
-         * backfill.
+         * <p>The historical batch backfill policy. Backfill is enabled when the object exists and enabled is not explicitly set to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000,&quot;immediate&quot;:false}</p>
          */
         public Builder backfill(BackfillStrategy backfill) {
             this.backfill = backfill;
@@ -75,7 +78,10 @@ public class RunStrategies extends TeaModel {
         }
 
         /**
-         * continuous.
+         * <p>The continuous evaluation policy. Continuous evaluation is enabled when the object exists and enabled is not explicitly set to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}</p>
          */
         public Builder continuous(ContinuousStrategy continuous) {
             this.continuous = continuous;

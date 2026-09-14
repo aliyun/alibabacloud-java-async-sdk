@@ -73,7 +73,10 @@ public class GetExperimentRunRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>al-playground-cn-hongkong</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -82,7 +85,10 @@ public class GetExperimentRunRequest extends Request {
         }
 
         /**
-         * recordId.
+         * <p>The experiment run record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-run-f6d419b0ed3d43a7b585948a55efc07b</p>
          */
         public Builder recordId(String recordId) {
             this.putPathParameter("recordId", recordId);

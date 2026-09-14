@@ -90,6 +90,7 @@ public class DeleteEvaluatorSkillRequest extends Request {
         } 
 
         /**
+         * <p>The evaluator name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteEvaluatorSkillRequest extends Request {
         }
 
         /**
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteEvaluatorSkillRequest extends Request {
         }
 
         /**
+         * <p>The AgentSpace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

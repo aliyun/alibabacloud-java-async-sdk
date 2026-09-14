@@ -54,7 +54,10 @@ public class DeleteAgentSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0173835-9E0F-508F-8BFA-9F556E59C302</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

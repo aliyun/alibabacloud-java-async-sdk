@@ -115,7 +115,10 @@ public class PreviewPipelineRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace in which the pipeline is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -124,7 +127,10 @@ public class PreviewPipelineRequest extends Request {
         }
 
         /**
-         * fromTime.
+         * <p>The start time of the preview data window, in UNIX seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735660800</p>
          */
         public Builder fromTime(Long fromTime) {
             this.putBodyParameter("fromTime", fromTime);
@@ -133,7 +139,7 @@ public class PreviewPipelineRequest extends Request {
         }
 
         /**
-         * pipeline.
+         * <p>The pipeline configuration, which defines the node orchestration.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.putBodyParameter("pipeline", pipeline);
@@ -142,7 +148,7 @@ public class PreviewPipelineRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The pipeline data source.</p>
          */
         public Builder source(Source source) {
             this.putBodyParameter("source", source);
@@ -151,7 +157,10 @@ public class PreviewPipelineRequest extends Request {
         }
 
         /**
-         * toTime.
+         * <p>The end time of the preview data window, in UNIX seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735747200</p>
          */
         public Builder toTime(Long toTime) {
             this.putBodyParameter("toTime", toTime);
@@ -232,7 +241,10 @@ public class PreviewPipelineRequest extends Request {
             } 
 
             /**
-             * id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node-1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -240,7 +252,7 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * parameters.
+             * <p>The node parameters in key-value format. The parameters vary based on the node type.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -248,7 +260,10 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>transform</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -302,7 +317,7 @@ public class PreviewPipelineRequest extends Request {
             } 
 
             /**
-             * nodes.
+             * <p>The list of nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -369,7 +384,10 @@ public class PreviewPipelineRequest extends Request {
             } 
 
             /**
-             * dataset.
+             * <p>The name of the source dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-dataset</p>
              */
             public Builder dataset(String dataset) {
                 this.dataset = dataset;
@@ -377,7 +395,10 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * filter.
+             * <p>The filter condition for dataset data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status = \&quot;pending\&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -444,7 +465,10 @@ public class PreviewPipelineRequest extends Request {
             } 
 
             /**
-             * name.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>question</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -452,7 +476,10 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The field type. Valid values: text, long, double, and json.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -532,7 +559,10 @@ public class PreviewPipelineRequest extends Request {
             } 
 
             /**
-             * logstore.
+             * <p>The name of the SLS Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-sls-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -540,7 +570,10 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * project.
+             * <p>The name of the SLS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-sls-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -548,7 +581,12 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * query.
+             * <p>The data filtered query statement in SLS query/analysis syntax.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>| SELECT *</li>
+             * </ul>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -641,7 +679,7 @@ public class PreviewPipelineRequest extends Request {
             } 
 
             /**
-             * dataset.
+             * <p>The Dataset datasource config under the current AgentSpace.</p>
              */
             public Builder dataset(Dataset dataset) {
                 this.dataset = dataset;
@@ -649,7 +687,7 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * inputFields.
+             * <p>The input fields and field types. This parameter applies to all data source types.</p>
              */
             public Builder inputFields(java.util.List<InputFields> inputFields) {
                 this.inputFields = inputFields;
@@ -657,7 +695,7 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * logstore.
+             * <p>The SLS Logstore datasource config.</p>
              */
             public Builder logstore(Logstore logstore) {
                 this.logstore = logstore;
@@ -665,7 +703,10 @@ public class PreviewPipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The data source type. Currently, Simple Log Service (SLS) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLS</p>
              */
             public Builder type(String type) {
                 this.type = type;

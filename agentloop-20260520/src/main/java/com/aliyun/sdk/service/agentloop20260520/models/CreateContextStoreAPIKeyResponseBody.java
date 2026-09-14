@@ -80,7 +80,10 @@ public class CreateContextStoreAPIKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * apiKey.
+         * <p>The complete API key value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -88,7 +91,10 @@ public class CreateContextStoreAPIKeyResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-api-key</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -96,7 +102,10 @@ public class CreateContextStoreAPIKeyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

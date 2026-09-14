@@ -87,7 +87,10 @@ public class PausePipelineRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace where the pipeline is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -96,7 +99,10 @@ public class PausePipelineRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline to pause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putPathParameter("pipelineName", pipelineName);
@@ -105,7 +111,10 @@ public class PausePipelineRequest extends Request {
         }
 
         /**
-         * reason.
+         * <p>The reason for pausing the pipeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manual maintenance</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);

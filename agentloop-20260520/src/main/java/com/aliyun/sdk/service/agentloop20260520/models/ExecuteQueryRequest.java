@@ -203,6 +203,7 @@ public class ExecuteQueryRequest extends Request {
         } 
 
         /**
+         * <p>The agent space name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,6 +216,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
+         * <p>The dataset name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +229,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * annotationFilter.
+         * <p>The annotation filter.</p>
          */
         public Builder annotationFilter(AnnotationFilter annotationFilter) {
             this.putBodyParameter("annotationFilter", annotationFilter);
@@ -236,7 +238,10 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * from.
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1760925728</p>
          */
         public Builder from(Integer from) {
             this.putBodyParameter("from", from);
@@ -245,7 +250,10 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * length.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder length(Integer length) {
             this.putBodyParameter("length", length);
@@ -254,7 +262,10 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * maxOutputLength.
+         * <p>The maximum output length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxOutputLength(Integer maxOutputLength) {
             this.putBodyParameter("maxOutputLength", maxOutputLength);
@@ -263,7 +274,10 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * offset.
+         * <p>The pagination offset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putBodyParameter("offset", offset);
@@ -272,6 +286,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
+         * <p>The query entered by the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +299,10 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * to.
+         * <p>The end time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1760925788</p>
          */
         public Builder to(Integer to) {
             this.putBodyParameter("to", to);
@@ -293,6 +311,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
+         * <p>The statement type. Currently, only SQL is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +324,10 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -386,7 +408,10 @@ public class ExecuteQueryRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The annotation key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>answer_quality</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +419,10 @@ public class ExecuteQueryRequest extends Request {
             }
 
             /**
-             * operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -402,7 +430,10 @@ public class ExecuteQueryRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The annotation value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GOOD</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -456,7 +487,7 @@ public class ExecuteQueryRequest extends Request {
             } 
 
             /**
-             * conditions.
+             * <p>The annotation filter conditions.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;

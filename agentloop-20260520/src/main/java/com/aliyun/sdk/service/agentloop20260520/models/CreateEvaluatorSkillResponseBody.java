@@ -67,7 +67,10 @@ public class CreateEvaluatorSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateEvaluatorSkillResponseBody extends TeaModel {
         }
 
         /**
-         * skillName.
+         * <p>The name of the created skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace_context_loader</p>
          */
         public Builder skillName(String skillName) {
             this.skillName = skillName;

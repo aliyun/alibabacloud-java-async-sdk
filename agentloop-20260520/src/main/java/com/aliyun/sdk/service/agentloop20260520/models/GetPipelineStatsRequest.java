@@ -115,7 +115,10 @@ public class GetPipelineStatsRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -124,7 +127,10 @@ public class GetPipelineStatsRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putPathParameter("pipelineName", pipelineName);

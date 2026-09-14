@@ -89,6 +89,7 @@ public class GetEvaluatorRequest extends Request {
         } 
 
         /**
+         * <p>The AgentSpace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class GetEvaluatorRequest extends Request {
         }
 
         /**
+         * <p>The evaluator name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class GetEvaluatorRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The target version number. If not specified, the latest version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

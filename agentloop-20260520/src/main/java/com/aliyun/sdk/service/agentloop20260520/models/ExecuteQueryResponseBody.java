@@ -106,7 +106,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * columnTypes.
+         * <p>The result column types.</p>
          */
         public Builder columnTypes(java.util.List<String> columnTypes) {
             this.columnTypes = columnTypes;
@@ -114,7 +114,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         }
 
         /**
-         * columns.
+         * <p>The result column information.</p>
          */
         public Builder columns(java.util.List<String> columns) {
             this.columns = columns;
@@ -122,7 +122,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         }
 
         /**
-         * meta.
+         * <p>The metadata of the response.</p>
          */
         public Builder meta(Meta meta) {
             this.meta = meta;
@@ -130,7 +130,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB27D183-8F6C-5C5A-A6A3-E0508AF54F78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         }
 
         /**
-         * rows.
+         * <p>The result rows.</p>
          */
         public Builder rows(java.util.List<java.util.List<?>> rows) {
             this.rows = rows;
@@ -204,7 +207,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * truncated.
+             * <p>Indicates whether the result is truncated.</p>
              */
             public Builder truncated(Boolean truncated) {
                 this.truncated = truncated;
@@ -212,7 +215,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
             }
 
             /**
-             * truncatedColumnIndexes.
+             * <p>The truncation details of result rows.</p>
              */
             public Builder truncatedColumnIndexes(java.util.List<java.util.List<Integer>> truncatedColumnIndexes) {
                 this.truncatedColumnIndexes = truncatedColumnIndexes;
@@ -318,7 +321,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * affectedRows.
+             * <p>The number of log rows scanned or processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder affectedRows(Integer affectedRows) {
                 this.affectedRows = affectedRows;
@@ -326,7 +332,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
             }
 
             /**
-             * count.
+             * <p>The number of log rows returned by this query request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -334,7 +343,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
             }
 
             /**
-             * elapsedMillisecond.
+             * <p>The time consumed by this execution, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder elapsedMillisecond(Long elapsedMillisecond) {
                 this.elapsedMillisecond = elapsedMillisecond;
@@ -342,7 +354,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
             }
 
             /**
-             * progress.
+             * <p>Indicates whether the query result is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -350,7 +365,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
             }
 
             /**
-             * truncation.
+             * <p>The result truncation details.</p>
              */
             public Builder truncation(Truncation truncation) {
                 this.truncation = truncation;

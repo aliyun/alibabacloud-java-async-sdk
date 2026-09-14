@@ -116,6 +116,7 @@ public class ListContextStoresRequest extends Request {
         } 
 
         /**
+         * <p>The name of the AgentSpace. The name must be 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * contextStoreName.
+         * <p>Filters context stores by name. Exact match is supported. If this parameter is not specified, no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.putQueryParameter("contextStoreName", contextStoreName);
@@ -137,7 +141,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * contextType.
+         * <p>Filters context stores by type, such as experience or memory. If this parameter is not specified, no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experience</p>
          */
         public Builder contextType(String contextType) {
             this.putQueryParameter("contextType", contextType);
@@ -146,7 +153,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of context stores to return. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -155,7 +165,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg5MA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

@@ -130,6 +130,7 @@ public class ListEvaluatorsRequest extends Request {
         } 
 
         /**
+         * <p>The AgentSpace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class ListEvaluatorsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -151,7 +155,10 @@ public class ListEvaluatorsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The fuzzy match condition for the evaluator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace_task_completion</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -160,7 +167,10 @@ public class ListEvaluatorsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJsYXN0SWQiOjEyM30=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -169,7 +179,10 @@ public class ListEvaluatorsRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The evaluator source filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);
@@ -178,7 +191,10 @@ public class ListEvaluatorsRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The evaluator type filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AGENT</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

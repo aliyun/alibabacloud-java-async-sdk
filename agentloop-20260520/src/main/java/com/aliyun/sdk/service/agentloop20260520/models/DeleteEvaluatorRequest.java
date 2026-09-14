@@ -89,6 +89,7 @@ public class DeleteEvaluatorRequest extends Request {
         } 
 
         /**
+         * <p>The AgentSpace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteEvaluatorRequest extends Request {
         }
 
         /**
+         * <p>The evaluator name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteEvaluatorRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The version to delete. If this parameter is not specified, the entire evaluator is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

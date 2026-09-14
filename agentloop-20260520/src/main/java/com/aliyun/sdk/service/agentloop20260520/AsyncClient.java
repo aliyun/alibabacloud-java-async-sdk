@@ -56,6 +56,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
+     * 
      * @param request the request parameters of CreateEvaluationTask  CreateEvaluationTaskRequest
      * @return CreateEvaluationTaskResponse
      */
@@ -74,12 +78,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEvaluatorSkillResponse> createEvaluatorSkill(CreateEvaluatorSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
+     * 
      * @param request the request parameters of CreateExperimentPlan  CreateExperimentPlanRequest
      * @return CreateExperimentPlanResponse
      */
     CompletableFuture<CreateExperimentPlanResponse> createExperimentPlan(CreateExperimentPlanRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you need to pass <code>offlineExperiments</code> (1 to 5 items).</p>
+     * 
      * @param request the request parameters of CreateExperimentRun  CreateExperimentRunRequest
      * @return CreateExperimentRunResponse
      */
@@ -140,12 +150,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEvaluatorSkillResponse> deleteEvaluatorSkill(DeleteEvaluatorSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls DeleteExperimentPlan to delete a specified experiment plan. After deletion, no new executions can be initiated based on this plan. Existing experiment records can still be queried.</p>
+     * 
      * @param request the request parameters of DeleteExperimentPlan  DeleteExperimentPlanRequest
      * @return DeleteExperimentPlanResponse
      */
     CompletableFuture<DeleteExperimentPlanResponse> deleteExperimentPlan(DeleteExperimentPlanRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</p>
+     * 
      * @param request the request parameters of DeleteExperimentRun  DeleteExperimentRunRequest
      * @return DeleteExperimentRunResponse
      */
@@ -164,6 +180,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls CreateEvaluationTask to create an evaluation task in a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
+     * 
      * @param request the request parameters of ExecuteQuery  ExecuteQueryRequest
      * @return ExecuteQueryResponse
      */
@@ -218,12 +238,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEvaluatorSkillResponse> getEvaluatorSkill(GetEvaluatorSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls GetExperimentPlan to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</p>
+     * 
      * @param request the request parameters of GetExperimentPlan  GetExperimentPlanRequest
      * @return GetExperimentPlanResponse
      */
     CompletableFuture<GetExperimentPlanResponse> getExperimentPlan(GetExperimentPlanRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</p>
+     * 
      * @param request the request parameters of GetExperimentRun  GetExperimentRunRequest
      * @return GetExperimentRunResponse
      */
@@ -248,6 +274,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPipelineStatsResponse> getPipelineStats(GetPipelineStatsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Supports filtering by region.</p>
+     * 
      * @param request the request parameters of ListAgentSpaces  ListAgentSpacesRequest
      * @return ListAgentSpacesResponse
      */
@@ -296,12 +325,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEvaluatorsResponse> listEvaluators(ListEvaluatorsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <code>offset</code>/<code>limit</code>.</p>
+     * 
      * @param request the request parameters of ListExperimentPlans  ListExperimentPlansRequest
      * @return ListExperimentPlansResponse
      */
     CompletableFuture<ListExperimentPlansResponse> listExperimentPlans(ListExperimentPlansRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <code>page</code>/<code>pageSize</code> for pagination.</p>
+     * 
      * @param request the request parameters of ListExperimentRuns  ListExperimentRunsRequest
      * @return ListExperimentRunsResponse
      */
@@ -326,6 +361,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PausePipelineResponse> pausePipeline(PausePipelineRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li><strong>agentSpace</strong> must be an AgentSpace instance that has been created under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and located in the same region.</li>
+     * <li><strong>pipeline.nodes</strong> must contain at least one node of the <code>Source</code> type and cannot be empty.</li>
+     * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
+     * <li>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</li>
+     * </ul>
+     * 
      * @param request the request parameters of PreviewPipeline  PreviewPipelineRequest
      * @return PreviewPipelineResponse
      */
@@ -398,12 +443,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEvaluatorSkillResponse> updateEvaluatorSkill(UpdateEvaluatorSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</p>
+     * 
      * @param request the request parameters of UpdateExperimentPlan  UpdateExperimentPlanRequest
      * @return UpdateExperimentPlanResponse
      */
     CompletableFuture<UpdateExperimentPlanResponse> updateExperimentPlan(UpdateExperimentPlanRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</p>
+     * 
      * @param request the request parameters of UpdateExperimentRun  UpdateExperimentRunRequest
      * @return UpdateExperimentRunResponse
      */

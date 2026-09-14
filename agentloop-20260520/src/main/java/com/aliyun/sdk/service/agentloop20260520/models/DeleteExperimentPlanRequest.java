@@ -73,7 +73,10 @@ public class DeleteExperimentPlanRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>al-playground-cn-hongkong</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -82,7 +85,10 @@ public class DeleteExperimentPlanRequest extends Request {
         }
 
         /**
-         * planId.
+         * <p>The experiment plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-plan-aa1a66b074bc42aa8696c73c7dc9b718</p>
          */
         public Builder planId(String planId) {
             this.putPathParameter("planId", planId);

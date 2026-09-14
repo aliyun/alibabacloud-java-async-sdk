@@ -67,7 +67,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
         } 
 
         /**
-         * evaluator.
+         * <p>The evaluator details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;trace_task_completion&quot;,&quot;type&quot;:&quot;AGENT&quot;,&quot;currentVersion&quot;:&quot;1.0.0&quot;}</p>
          */
         public Builder evaluator(Evaluator evaluator) {
             this.evaluator = evaluator;
@@ -75,7 +78,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +160,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The time when the version was created. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -162,7 +171,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -170,7 +182,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * versionDescription.
+             * <p>The version description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>初始版本</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -393,7 +408,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The AgentSpace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-agentspace</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -401,7 +419,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * annotations.
+             * <p>The list of annotations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;__en&quot;]</p>
              */
             public Builder annotations(java.util.List<String> annotations) {
                 this.annotations = annotations;
@@ -409,7 +430,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * <p>The configuration of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;prompt&quot;:&quot;请评估任务完成度&quot;}</p>
              */
             public Builder config(java.util.Map<String, ?> config) {
                 this.config = config;
@@ -417,7 +441,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The time when the evaluator was created. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -425,7 +452,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * currentVersion.
+             * <p>The version number returned in the current response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -433,7 +463,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The evaluator description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>判断 Agent 是否完成用户任务</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -441,7 +474,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>链路任务完成度</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -449,7 +485,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersion.
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -457,7 +496,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * metricName.
+             * <p>The evaluation metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_task_completion</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -465,7 +507,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The evaluator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace_task_completion</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -473,7 +518,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * properties.
+             * <p>The evaluator properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;agentEvaluatorMode&quot;:&quot;raw_prompt&quot;}</p>
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
@@ -481,7 +529,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The evaluator type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AGENT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -489,7 +540,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the evaluator was last updated. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816600</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;
@@ -497,7 +551,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * versions.
+             * <p>The list of versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;version&quot;:&quot;1.0.0&quot;}]</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;

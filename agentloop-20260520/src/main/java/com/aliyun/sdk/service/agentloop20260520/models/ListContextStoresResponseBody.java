@@ -106,7 +106,10 @@ public class ListContextStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page that was specified in the request. This value is echoed back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. An empty string indicates that the current page is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg5MA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>The list of context stores.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -138,7 +147,10 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of context stores that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -295,7 +307,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The name of the AgentSpace to which the context store belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-space</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -303,7 +318,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * contextStoreName.
+             * <p>The name of the context store.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-context-store</p>
              */
             public Builder contextStoreName(String contextStoreName) {
                 this.contextStoreName = contextStoreName;
@@ -311,7 +329,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * contextType.
+             * <p>The type of the context store, such as experience or memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>experience</p>
              */
             public Builder contextType(String contextType) {
                 this.contextType = contextType;
@@ -319,6 +340,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the context store was created, in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -330,7 +352,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the context store.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我的上下文库</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,7 +363,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of the context store.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -346,7 +374,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * serviceNames.
+             * <p>The list of service names. This parameter has a value only for context stores of the experience type. The service names are used together with the data source AgentSpace to locate trace data sources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;order-service&quot;,&quot;payment-service&quot;]</p>
              */
             public Builder serviceNames(java.util.List<String> serviceNames) {
                 this.serviceNames = serviceNames;
@@ -354,7 +385,10 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -362,6 +396,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the context store was last updated, in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

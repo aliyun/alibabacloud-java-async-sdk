@@ -80,7 +80,10 @@ public class DeleteExperimentPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * planId.
+         * <p>The experiment plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-plan-aa1a66b074bc42aa8696c73c7dc9b718</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -88,7 +91,10 @@ public class DeleteExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class DeleteExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The deletion result. The value is deleted if the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deleted</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -41,6 +41,10 @@ public class ListPipelinesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("scheduleType")
     private String scheduleType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sinkName")
+    private String sinkName;
+
     private ListPipelinesRequest(Builder builder) {
         super(builder);
         this.agentSpace = builder.agentSpace;
@@ -49,6 +53,7 @@ public class ListPipelinesRequest extends Request {
         this.pipelineName = builder.pipelineName;
         this.scheduleStatus = builder.scheduleStatus;
         this.scheduleType = builder.scheduleType;
+        this.sinkName = builder.sinkName;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class ListPipelinesRequest extends Request {
         return this.scheduleType;
     }
 
+    /**
+     * @return sinkName
+     */
+    public String getSinkName() {
+        return this.sinkName;
+    }
+
     public static final class Builder extends Request.Builder<ListPipelinesRequest, Builder> {
         private String agentSpace; 
         private Integer maxResults; 
@@ -113,6 +125,7 @@ public class ListPipelinesRequest extends Request {
         private String pipelineName; 
         private String scheduleStatus; 
         private String scheduleType; 
+        private String sinkName; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class ListPipelinesRequest extends Request {
             this.pipelineName = request.pipelineName;
             this.scheduleStatus = request.scheduleStatus;
             this.scheduleType = request.scheduleType;
+            this.sinkName = request.sinkName;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class ListPipelinesRequest extends Request {
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("scheduleType", scheduleType);
             this.scheduleType = scheduleType;
+            return this;
+        }
+
+        /**
+         * sinkName.
+         */
+        public Builder sinkName(String sinkName) {
+            this.putQueryParameter("sinkName", sinkName);
+            this.sinkName = sinkName;
             return this;
         }
 

@@ -106,7 +106,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of entries per page used in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJuZXh0IjoiNDAifQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * skills.
+         * <p>The list of skill summaries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Trace 上下文读取&quot;,&quot;enable&quot;:true}]</p>
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.skills = skills;
@@ -138,7 +150,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of skills.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -269,7 +284,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The creation time. This field is declared as int64 in CloudSpec, but the backend currently returns the StarOps <code>createTime</code> string field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -277,7 +295,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>读取链路上下文辅助评估</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -285,7 +306,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trace 上下文读取</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -293,7 +317,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the skill is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -301,7 +328,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersion.
+             * <p>The latest version. This field is declared in CloudSpec but is not currently populated in the backend response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000000</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -309,7 +339,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * skillName.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace_context_loader</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -317,7 +350,10 @@ public class ListEvaluatorSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time. This field is declared as int64 in CloudSpec, but the backend currently returns the StarOps <code>updateTime</code> string field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816600</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;

@@ -227,7 +227,10 @@ public class UpdateExperimentPlanRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>al-playground-cn-hongkong</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -236,7 +239,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * planId.
+         * <p>The ID of the experiment plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-plan-e95bff54685a4ae29ff3a834c1008a71</p>
          */
         public Builder planId(String planId) {
             this.putPathParameter("planId", planId);
@@ -245,7 +251,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * datasetId.
+         * <p>The ID of the associated dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rca_benckmark_eval</p>
          */
         public Builder datasetId(String datasetId) {
             this.putBodyParameter("datasetId", datasetId);
@@ -254,7 +263,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * datasetProject.
+         * <p>Optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentspace-project</p>
          */
         public Builder datasetProject(String datasetProject) {
             this.putBodyParameter("datasetProject", datasetProject);
@@ -263,7 +275,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rca_benchmark_eval_experiment offline experiment</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -272,7 +287,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * evaluators.
+         * <p>The list of evaluators. Omitting this field indicates no modification. Passing an empty array clears the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</p>
          */
         public Builder evaluators(java.util.List<Evaluator> evaluators) {
             this.putBodyParameter("evaluators", evaluators);
@@ -281,7 +299,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * experimentType.
+         * <p>The experiment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
          */
         public Builder experimentType(String experimentType) {
             this.putBodyParameter("experimentType", experimentType);
@@ -290,7 +311,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * experiments.
+         * <p>The list of experiment configurations. When specified, the entire list is replaced. The number of configurations must be 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;baseline&quot;, &quot;modelName&quot;: &quot;qwen-max&quot;}]</p>
          */
         public Builder experiments(java.util.List<ExperimentConfig> experiments) {
             this.putBodyParameter("experiments", experiments);
@@ -299,7 +323,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * input.
+         * <p>Optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</p>
          */
         public Builder input(java.util.Map<String, ?> input) {
             this.putBodyParameter("input", input);
@@ -308,7 +335,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the associated data processing pipeline. This parameter is optional. If not specified, the value is not updated. If an empty character string is specified, the association is dissociated. After association, when an experiment under this plan finishes execution and writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace and calls PreviewPipeline. The pipeline-processed results are then written together.</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putBodyParameter("pipelineName", pipelineName);
@@ -317,7 +344,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * planName.
+         * <p>The name of the experiment plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rca_benchmark_eval_experiment</p>
          */
         public Builder planName(String planName) {
             this.putBodyParameter("planName", planName);
@@ -326,7 +356,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * querySql.
+         * <p>The custom query SQL clause in partial dataset mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level &gt; 2</p>
          */
         public Builder querySql(String querySql) {
             this.putBodyParameter("querySql", querySql);
@@ -335,7 +368,10 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * selectedItemIds.
+         * <p>The list of selected data item IDs in partial dataset mode. Passing an empty array clears the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder selectedItemIds(java.util.List<String> selectedItemIds) {
             this.putBodyParameter("selectedItemIds", selectedItemIds);

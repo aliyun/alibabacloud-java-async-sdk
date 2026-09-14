@@ -106,7 +106,10 @@ public class RunPipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * agentSpaceName.
+         * <p>The name of the AgentSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpaceName(String agentSpaceName) {
             this.agentSpaceName = agentSpaceName;
@@ -114,7 +117,10 @@ public class RunPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * pipelineName.
+         * <p>The pipeline name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.pipelineName = pipelineName;
@@ -122,7 +128,10 @@ public class RunPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class RunPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * runId.
+         * <p>The run ID created by this trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run-20260101-0001</p>
          */
         public Builder runId(String runId) {
             this.runId = runId;
@@ -138,7 +150,10 @@ public class RunPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The current status of the run. The status is typically Pending after the run is queued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         public Builder status(String status) {
             this.status = status;

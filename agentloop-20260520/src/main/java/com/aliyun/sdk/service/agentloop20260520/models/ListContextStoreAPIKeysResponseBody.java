@@ -106,7 +106,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page that was specified in the request. This value is echoed back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. An empty string indicates that the current page is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg5MA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>The list of API keys.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -138,7 +147,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of API keys that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -243,7 +255,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The name of the AgentSpace to which the API key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-space</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -251,7 +266,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * apiKey.
+             * <p>The full value of the API key. The plaintext value is returned only when the API key is created. In list scenarios, the value is masked based on business rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -259,7 +277,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * contextStoreName.
+             * <p>The name of the context store to which the API key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-context-store</p>
              */
             public Builder contextStoreName(String contextStoreName) {
                 this.contextStoreName = contextStoreName;
@@ -267,6 +288,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the API key was created, in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -278,7 +300,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The display name of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-api-key</p>
              */
             public Builder name(String name) {
                 this.name = name;

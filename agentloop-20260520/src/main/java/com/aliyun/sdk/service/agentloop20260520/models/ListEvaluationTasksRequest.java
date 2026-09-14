@@ -157,7 +157,10 @@ public class ListEvaluationTasksRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-agentspace</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putQueryParameter("agentSpace", agentSpace);
@@ -166,7 +169,10 @@ public class ListEvaluationTasksRequest extends Request {
         }
 
         /**
-         * channel.
+         * <p>The filter condition for the task source. If this parameter is not specified, tasks from the default source are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("channel", channel);
@@ -175,7 +181,10 @@ public class ListEvaluationTasksRequest extends Request {
         }
 
         /**
-         * dataType.
+         * <p>The data source type of the evaluation object. Set this parameter to <code>trace</code> for trace-based evaluation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("dataType", dataType);
@@ -184,7 +193,10 @@ public class ListEvaluationTasksRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -193,7 +205,10 @@ public class ListEvaluationTasksRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page, obtained from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJsYXN0SWQiOjEyMywib2Zmc2V0IjoyMH0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -202,7 +217,10 @@ public class ListEvaluationTasksRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The filter condition for the evaluation task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -211,7 +229,10 @@ public class ListEvaluationTasksRequest extends Request {
         }
 
         /**
-         * taskMode.
+         * <p>The evaluation task mode. If this parameter is not specified, the default value is <code>batch</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch</p>
          */
         public Builder taskMode(String taskMode) {
             this.putQueryParameter("taskMode", taskMode);
@@ -220,7 +241,10 @@ public class ListEvaluationTasksRequest extends Request {
         }
 
         /**
-         * taskName.
+         * <p>The fuzzy match condition for the task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace_task_completion_eval</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("taskName", taskName);

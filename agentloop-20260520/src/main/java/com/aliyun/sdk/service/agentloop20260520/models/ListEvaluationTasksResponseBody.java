@@ -106,7 +106,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * evaluationTasks.
+         * <p>The list of evaluation task summaries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;taskId&quot;:&quot;eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25&quot;,&quot;taskName&quot;:&quot;trace_task_completion_eval&quot;,&quot;taskMode&quot;:&quot;batch&quot;,&quot;dataType&quot;:&quot;trace&quot;,&quot;status&quot;:&quot;Running&quot;}]</p>
          */
         public Builder evaluationTasks(java.util.List<EvaluationTasks> evaluationTasks) {
             this.evaluationTasks = evaluationTasks;
@@ -114,7 +117,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page used in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +128,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. An empty value indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJsYXN0SWQiOjEwMSwib2Zmc2V0IjoyMH0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records. The total count is returned only on the first page. This value may be empty on subsequent pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>126</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -334,7 +349,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * config.
+             * <p>The data source and execution configuration summary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;storeName&quot;:&quot;logstore-tracing&quot;,&quot;dataScope&quot;:&quot;trace&quot;}</p>
              */
             public Builder config(java.util.Map<String, String> config) {
                 this.config = config;
@@ -342,7 +360,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -350,7 +371,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * dataType.
+             * <p>The data source type of the evaluation object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -358,7 +382,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The evaluation task description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>评估线上 Agent 链路任务完成度</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +393,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * evaluators.
+             * <p>The evaluator configuration summary, in JSON string format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;}]</p>
              */
             public Builder evaluators(String evaluators) {
                 this.evaluators = evaluators;
@@ -374,7 +404,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * runStrategyConfig.
+             * <p>The structured run strategy configuration, including the parsed backfill strategy and continuous evaluation strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;backfill&quot;:{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000},&quot;continuous&quot;:{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}}</p>
              */
             public Builder runStrategyConfig(RunStrategies runStrategyConfig) {
                 this.runStrategyConfig = runStrategyConfig;
@@ -382,7 +415,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The evaluation task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -390,7 +426,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The key-value pairs of task tags. This parameter is empty if no tags are set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;env&quot;:&quot;prod&quot;}</p>
              */
             public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
@@ -398,7 +437,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The evaluation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -406,7 +448,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * taskMode.
+             * <p>The evaluation task mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>batch</p>
              */
             public Builder taskMode(String taskMode) {
                 this.taskMode = taskMode;
@@ -414,7 +459,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * taskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace_task_completion_eval</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -422,7 +470,10 @@ public class ListEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The last update time, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782816600</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;

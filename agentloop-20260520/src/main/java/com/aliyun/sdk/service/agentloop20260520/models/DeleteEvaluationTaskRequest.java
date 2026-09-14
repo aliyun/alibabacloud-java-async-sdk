@@ -73,7 +73,10 @@ public class DeleteEvaluationTaskRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-agentspace</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -82,7 +85,10 @@ public class DeleteEvaluationTaskRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>The evaluation task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);

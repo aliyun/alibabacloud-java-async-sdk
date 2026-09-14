@@ -93,6 +93,7 @@ public class CancelPipelineRunResponseBody extends TeaModel {
         } 
 
         /**
+         * <p>The time when the cancellation was completed, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -104,7 +105,10 @@ public class CancelPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,7 +116,10 @@ public class CancelPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * runId.
+         * <p>The ID of the canceled run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run-20260101-0001</p>
          */
         public Builder runId(String runId) {
             this.runId = runId;
@@ -120,7 +127,10 @@ public class CancelPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the run after cancellation. The value is fixed to Cancelled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cancelled</p>
          */
         public Builder status(String status) {
             this.status = status;

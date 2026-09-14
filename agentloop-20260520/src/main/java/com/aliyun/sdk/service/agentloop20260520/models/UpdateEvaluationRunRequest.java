@@ -101,7 +101,10 @@ public class UpdateEvaluationRunRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-agentspace</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -110,7 +113,10 @@ public class UpdateEvaluationRunRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>The evaluation task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -119,7 +125,10 @@ public class UpdateEvaluationRunRequest extends Request {
         }
 
         /**
-         * runId.
+         * <p>The evaluation run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eval-run-4fd47f3d7e684e15b1d3d178c6a5b81a</p>
          */
         public Builder runId(String runId) {
             this.putPathParameter("runId", runId);
@@ -128,7 +137,10 @@ public class UpdateEvaluationRunRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The target status. Currently, only stop-related statuses are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminated</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);

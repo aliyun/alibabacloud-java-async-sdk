@@ -148,7 +148,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.pipelineName = pipelineName;
@@ -156,7 +159,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate the request during troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

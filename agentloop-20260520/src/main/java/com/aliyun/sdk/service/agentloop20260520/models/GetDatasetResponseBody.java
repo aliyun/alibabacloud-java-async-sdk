@@ -171,7 +171,10 @@ public class GetDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * agentSpace.
+         * <p>The agent space name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sop-agent</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.agentSpace = agentSpace;
@@ -179,6 +182,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * datasetName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_faq_dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -198,7 +205,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The dataset description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Product FAQ dataset for semantic search</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -222,7 +232,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -230,7 +243,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D17DE39E-6C62-50E3-9EB7-FDE41BB0D43D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +254,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * schema.
+         * <p>The table schema of the dataset.</p>
          */
         public Builder schema(java.util.Map<String, IndexKey> schema) {
             this.schema = schema;
@@ -246,6 +262,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

@@ -88,6 +88,11 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +105,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -109,7 +117,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dXkC1NeQkVKHWkVfOvIVEp4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

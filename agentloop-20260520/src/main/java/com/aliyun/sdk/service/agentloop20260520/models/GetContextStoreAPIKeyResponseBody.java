@@ -132,7 +132,10 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace to which the API key belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.agentSpace = agentSpace;
@@ -140,7 +143,10 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
         }
 
         /**
-         * apiKey.
+         * <p>The masked prefix of the API key (for example, sk-abcd****). For security purposes, the full plaintext is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-abcd****</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -148,7 +154,10 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
         }
 
         /**
-         * contextStoreName.
+         * <p>The name of the context store to which the API key belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.contextStoreName = contextStoreName;
@@ -156,6 +165,7 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The creation time of the API key, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +177,10 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The display name of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-api-key</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -175,7 +188,10 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -183,7 +199,10 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

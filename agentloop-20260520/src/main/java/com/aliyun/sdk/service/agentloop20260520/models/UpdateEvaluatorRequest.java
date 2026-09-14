@@ -187,6 +187,7 @@ public class UpdateEvaluatorRequest extends Request {
         } 
 
         /**
+         * <p>The AgentSpace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +200,7 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
+         * <p>The evaluator name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +213,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * annotations.
+         * <p>The list of annotation marks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;__en&quot;]</p>
          */
         public Builder annotations(java.util.List<String> annotations) {
             this.putBodyParameter("annotations", annotations);
@@ -220,7 +225,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * config.
+         * <p>The new version configuration. This parameter is typically required when <code>version</code> is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;prompt&quot;:&quot;请更严格地评估任务完成度&quot;}</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("config", config);
@@ -229,7 +237,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The evaluator description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>判断 Agent 是否完成用户任务</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -238,7 +249,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>链路任务完成度</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -247,7 +261,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * properties.
+         * <p>The evaluator properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;agentEvaluatorMode&quot;:&quot;raw_prompt&quot;}</p>
          */
         public Builder properties(java.util.Map<String, ?> properties) {
             this.putBodyParameter("properties", properties);
@@ -256,7 +273,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The new version number. If specified, a new version is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.0</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -265,7 +285,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * versionDescription.
+         * <p>The version description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>优化评分说明</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.putBodyParameter("versionDescription", versionDescription);
@@ -274,7 +297,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

@@ -103,6 +103,7 @@ public class ListEvaluatorSkillsRequest extends Request {
         } 
 
         /**
+         * <p>The evaluator name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class ListEvaluatorSkillsRequest extends Request {
         }
 
         /**
+         * <p>The AgentSpace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class ListEvaluatorSkillsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -136,7 +141,10 @@ public class ListEvaluatorSkillsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJuZXh0IjoiMjAifQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

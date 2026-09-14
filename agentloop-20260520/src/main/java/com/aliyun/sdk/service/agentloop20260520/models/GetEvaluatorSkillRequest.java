@@ -104,6 +104,7 @@ public class GetEvaluatorSkillRequest extends Request {
         } 
 
         /**
+         * <p>The evaluator name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class GetEvaluatorSkillRequest extends Request {
         }
 
         /**
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class GetEvaluatorSkillRequest extends Request {
         }
 
         /**
+         * <p>The AgentSpace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class GetEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The skill version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782816000000</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

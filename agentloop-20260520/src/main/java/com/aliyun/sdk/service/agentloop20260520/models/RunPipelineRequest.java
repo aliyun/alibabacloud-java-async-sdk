@@ -115,7 +115,10 @@ public class RunPipelineRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace where the pipeline is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -124,7 +127,10 @@ public class RunPipelineRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline to trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putPathParameter("pipelineName", pipelineName);
@@ -133,7 +139,10 @@ public class RunPipelineRequest extends Request {
         }
 
         /**
-         * fromTime.
+         * <p>The start of the data processing window, in UNIX seconds. This parameter is required for SQL Pipeline and time window-based WorkItem Source. This parameter is optional for checkpoint-based WorkItem Source types such as Dataset and Logstore Pull.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735660800</p>
          */
         public Builder fromTime(Long fromTime) {
             this.putBodyParameter("fromTime", fromTime);
@@ -142,7 +151,7 @@ public class RunPipelineRequest extends Request {
         }
 
         /**
-         * output.
+         * <p>The output control settings. SQL Pipeline supports overriding. WorkItem Pipeline uses the saved Sink configuration and must keep the default value.</p>
          */
         public Builder output(Output output) {
             this.putBodyParameter("output", output);
@@ -151,7 +160,10 @@ public class RunPipelineRequest extends Request {
         }
 
         /**
-         * toTime.
+         * <p>The end of the data processing window, in UNIX seconds. This parameter must be provided together with fromTime and must be greater than fromTime. This parameter is optional for checkpoint-based WorkItem Source types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735747200</p>
          */
         public Builder toTime(Long toTime) {
             this.putBodyParameter("toTime", toTime);
@@ -219,7 +231,10 @@ public class RunPipelineRequest extends Request {
             } 
 
             /**
-             * dataset.
+             * <p>Specifies whether to write to the target Dataset. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataset(Boolean dataset) {
                 this.dataset = dataset;
@@ -227,7 +242,10 @@ public class RunPipelineRequest extends Request {
             }
 
             /**
-             * inline.
+             * <p>Specifies whether to return inline results in the response. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder inline(Boolean inline) {
                 this.inline = inline;

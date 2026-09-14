@@ -73,7 +73,10 @@ public class DeletePipelineRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace where the pipeline to be deleted is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -82,7 +85,10 @@ public class DeletePipelineRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putPathParameter("pipelineName", pipelineName);

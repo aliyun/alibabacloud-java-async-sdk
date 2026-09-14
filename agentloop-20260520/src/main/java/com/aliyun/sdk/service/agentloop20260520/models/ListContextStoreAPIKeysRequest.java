@@ -101,7 +101,10 @@ public class ListContextStoreAPIKeysRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -110,7 +113,10 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * contextStoreName.
+         * <p>The name of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.putPathParameter("contextStoreName", contextStoreName);
@@ -119,7 +125,10 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of API keys to return. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -128,7 +137,10 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg5MA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

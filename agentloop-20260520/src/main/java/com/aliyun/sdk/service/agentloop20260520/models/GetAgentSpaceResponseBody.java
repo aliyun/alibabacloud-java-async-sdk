@@ -171,7 +171,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.agentSpace = agentSpace;
@@ -179,7 +182,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * cmsWorkspace.
+         * <p>The CloudMonitor workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cms-workspace</p>
          */
         public Builder cmsWorkspace(String cmsWorkspace) {
             this.cmsWorkspace = cmsWorkspace;
@@ -187,7 +193,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * cmsWorkspaceBindType.
+         * <p>The binding type of the CloudMonitor 2.0 workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoCreated</p>
          */
         public Builder cmsWorkspaceBindType(String cmsWorkspaceBindType) {
             this.cmsWorkspaceBindType = cmsWorkspaceBindType;
@@ -195,6 +204,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +216,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -214,7 +227,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * mseNamespace.
+         * <p>The MSE namespace.</p>
          */
         public Builder mseNamespace(MseNamespace mseNamespace) {
             this.mseNamespace = mseNamespace;
@@ -222,7 +235,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -230,7 +246,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0173835-9E0F-508F-8BFA-9F556E59C302</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +257,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * slsProject.
+         * <p>The name of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1837787111545040-cn-beijing</p>
          */
         public Builder slsProject(String slsProject) {
             this.slsProject = slsProject;
@@ -246,6 +268,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +359,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceId.
+             * <p>The ID of the MSE namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-dataware</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -344,7 +370,10 @@ public class GetAgentSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The name of the MSE namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terraform-alicloud-modules</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;

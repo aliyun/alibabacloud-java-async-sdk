@@ -101,7 +101,10 @@ public class ListAgentSpacesRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putQueryParameter("agentSpace", agentSpace);
@@ -110,7 +113,10 @@ public class ListAgentSpacesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -119,7 +125,10 @@ public class ListAgentSpacesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pEL20OGYeZQez8NdW7ve</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -128,7 +137,10 @@ public class ListAgentSpacesRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

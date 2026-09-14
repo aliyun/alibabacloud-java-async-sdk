@@ -54,7 +54,10 @@ public class DeleteExperimentRunResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019F89BE-9190-3AAA-B5A4-DBAE3BABBBEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

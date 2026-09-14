@@ -93,7 +93,10 @@ public class UpdateExperimentRunResponseBody extends TeaModel {
         } 
 
         /**
-         * message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Experiment record updated successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +104,10 @@ public class UpdateExperimentRunResponseBody extends TeaModel {
         }
 
         /**
-         * recordId.
+         * <p>The experiment record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5397261-6e6d-4e45-bf52-feb8686f7524</p>
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -109,7 +115,10 @@ public class UpdateExperimentRunResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019F89B5-1B07-3BB3-A32E-F5B007029E9C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class UpdateExperimentRunResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status after the update (the persisted value).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;

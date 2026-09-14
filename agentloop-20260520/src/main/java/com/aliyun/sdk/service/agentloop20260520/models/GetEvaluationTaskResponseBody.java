@@ -262,7 +262,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-agentspace</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.agentSpace = agentSpace;
@@ -270,7 +273,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * channel.
+         * <p>The task source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder channel(String channel) {
             this.channel = channel;
@@ -278,7 +284,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * config.
+         * <p>The data source and execution configuration. Tasks with <code>dataType=trace</code> typically contain <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields that are populated by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;project&quot;:&quot;agentspace-project&quot;,&quot;storeName&quot;:&quot;logstore-tracing&quot;,&quot;dataScope&quot;:&quot;trace&quot;}</p>
          */
         public Builder config(java.util.Map<String, String> config) {
             this.config = config;
@@ -286,7 +295,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The creation time, in seconds-level UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782816000</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -294,7 +306,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * dataFilter.
+         * <p>The evaluation data filter condition, returned by the backend as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
          */
         public Builder dataFilter(String dataFilter) {
             this.dataFilter = dataFilter;
@@ -302,7 +317,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The data source type of the evaluation object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -310,7 +328,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The evaluation task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Evaluate the task completion rate of the online Agent pipeline</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -318,7 +339,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * evaluators.
+         * <p>The list of evaluator configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;,&quot;resultName&quot;:&quot;agent_task_completion&quot;,&quot;resultType&quot;:&quot;score&quot;,&quot;variableMapping&quot;:{&quot;input&quot;:&quot;trace.input&quot;,&quot;output&quot;:&quot;trace.output&quot;,&quot;agent_trajectory&quot;:&quot;trace.agent_trajectory&quot;}}]</p>
          */
         public Builder evaluators(java.util.List<Evaluator> evaluators) {
             this.evaluators = evaluators;
@@ -326,7 +350,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region to which the task belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -334,7 +361,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -342,7 +372,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * runStrategyConfig.
+         * <p>The structured configuration of the run strategy, including the parsed backfill strategy and continuous evaluation strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;backfill&quot;:{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000},&quot;continuous&quot;:{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}}</p>
          */
         public Builder runStrategyConfig(RunStrategies runStrategyConfig) {
             this.runStrategyConfig = runStrategyConfig;
@@ -350,7 +383,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The evaluation task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -358,7 +394,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The key-value pairs of task tags. Empty if not set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;env&quot;:&quot;prod&quot;}</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
@@ -366,7 +405,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * taskId.
+         * <p>The evaluation task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -374,7 +416,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * taskMode.
+         * <p>The evaluation task mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch</p>
          */
         public Builder taskMode(String taskMode) {
             this.taskMode = taskMode;
@@ -382,7 +427,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * taskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace_task_completion_eval</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -390,7 +438,10 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The last update time, in seconds-level UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782816600</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;

@@ -171,7 +171,10 @@ public class ListExperimentRunsRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>al-playground-cn-hongkong</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -180,7 +183,10 @@ public class ListExperimentRunsRequest extends Request {
         }
 
         /**
-         * datasetId.
+         * <p>Filters results by exact dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms_customer_agent_level1</p>
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("datasetId", datasetId);
@@ -189,7 +195,10 @@ public class ListExperimentRunsRequest extends Request {
         }
 
         /**
-         * experimentName.
+         * <p>Filters results by fuzzy match on the experiment configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experimentA</p>
          */
         public Builder experimentName(String experimentName) {
             this.putQueryParameter("experimentName", experimentName);
@@ -198,7 +207,10 @@ public class ListExperimentRunsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>Optional. Use <code>page</code> and <code>pageSize</code> for pagination instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -207,7 +219,10 @@ public class ListExperimentRunsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Optional. Use <code>page</code> and <code>pageSize</code> for pagination instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJwYWdlIjoxfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -216,7 +231,10 @@ public class ListExperimentRunsRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number, starting from 0. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -225,7 +243,10 @@ public class ListExperimentRunsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -234,7 +255,10 @@ public class ListExperimentRunsRequest extends Request {
         }
 
         /**
-         * planName.
+         * <p>Filters results by fuzzy match on the experiment plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms_agent_experiment</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("planName", planName);
@@ -243,7 +267,10 @@ public class ListExperimentRunsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters results by status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>evaluating</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

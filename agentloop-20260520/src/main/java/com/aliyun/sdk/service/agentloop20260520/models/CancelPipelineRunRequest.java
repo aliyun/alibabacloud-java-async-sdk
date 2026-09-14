@@ -87,7 +87,10 @@ public class CancelPipelineRunRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -96,7 +99,10 @@ public class CancelPipelineRunRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putPathParameter("pipelineName", pipelineName);
@@ -105,7 +111,10 @@ public class CancelPipelineRunRequest extends Request {
         }
 
         /**
-         * runId.
+         * <p>The ID of the run to cancel. Only runs in the Pending state can be canceled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run-20260101-0001</p>
          */
         public Builder runId(String runId) {
             this.putPathParameter("runId", runId);

@@ -202,7 +202,10 @@ public class CreateExperimentPlanRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>al-playground-cn-hongkong</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -211,7 +214,10 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
-         * datasetId.
+         * <p>The ID of the associated dataset. If this parameter is not specified, the execution phase processes in simple mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rca_benckmark_eval</p>
          */
         public Builder datasetId(String datasetId) {
             this.putBodyParameter("datasetId", datasetId);
@@ -220,7 +226,10 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the experiment plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rca_benchmark_eval_experiment offline experiment</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -229,7 +238,10 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
-         * evaluators.
+         * <p>The list of evaluators. When configured, evaluation can be automatically triggered upon experiment completion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_correctness&quot;, &quot;name&quot;: &quot;Builtin.agent_correctness&quot;, &quot;type&quot;: &quot;AGENT&quot;, &quot;resultName&quot;: &quot;Builtin.agent_correctness&quot;, &quot;resultType&quot;: &quot;score&quot;, &quot;variableMapping&quot;: {&quot;input&quot;: &quot;experiment_input&quot;, &quot;output&quot;: &quot;experiment_output&quot;, &quot;expected_output&quot;: &quot;dataset.ground_truth_json&quot;}, &quot;filters&quot;: {&quot;query&quot;: &quot;&quot;, &quot;sample&quot;: &quot;100&quot;}, &quot;config&quot;: {&quot;variables&quot;: [], &quot;prompt&quot;: &quot;&quot;}}, {&quot;evaluatorRef&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;name&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;type&quot;: &quot;AGENT&quot;, &quot;resultName&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;resultType&quot;: &quot;score&quot;, &quot;variableMapping&quot;: {&quot;input&quot;: &quot;experiment_input&quot;, &quot;output&quot;: &quot;experiment_output&quot;, &quot;question&quot;: &quot;dataset.question&quot;, &quot;expected_output&quot;: &quot;dataset.ground_truth_json&quot;, &quot;payload_json&quot;: &quot;dataset.payload_json&quot;}, &quot;filters&quot;: {&quot;query&quot;: &quot;&quot;, &quot;sample&quot;: &quot;100&quot;}, &quot;config&quot;: {&quot;variables&quot;: [], &quot;prompt&quot;: &quot;&quot;}}]</p>
          */
         public Builder evaluators(java.util.List<Evaluator> evaluators) {
             this.putBodyParameter("evaluators", evaluators);
@@ -238,6 +250,7 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
+         * <p>The experiment type. Set this parameter to <code>OFFLINE</code> or <code>ONLINE</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +263,11 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
+         * <p>The list of experiment configurations. A maximum of five configurations are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one configuration is required.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;experimentA&quot;, &quot;modelName&quot;: &quot;qwen3.7-plus&quot;, &quot;modelProvider&quot;: &quot;dashscope&quot;, &quot;modelParameters&quot;: {&quot;temperature&quot;: 0.7, &quot;topP&quot;: 0.8, &quot;presencePenalty&quot;: 0.0, &quot;frequencyPenalty&quot;: 0.0}, &quot;promptTemplate&quot;: [{&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are an Alibaba Cloud ARMS product Q&amp;A bot&quot;}, {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;{{input}}&quot;}]}, {&quot;label&quot;: &quot;B&quot;, &quot;name&quot;: &quot;experimentB&quot;, &quot;modelName&quot;: &quot;qwen3.7-max&quot;, &quot;modelProvider&quot;: &quot;dashscope&quot;, &quot;modelParameters&quot;: {&quot;temperature&quot;: 0.7, &quot;topP&quot;: 0.8, &quot;presencePenalty&quot;: 0.0, &quot;frequencyPenalty&quot;: 0.0}, &quot;promptTemplate&quot;: [{&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are an Alibaba Cloud ARMS product Q&amp;A bot&quot;}, {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;{{input}}&quot;}]}]</p>
          */
         public Builder experiments(java.util.List<ExperimentConfig> experiments) {
             this.putBodyParameter("experiments", experiments);
@@ -259,7 +276,10 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
-         * input.
+         * <p>Optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</p>
          */
         public Builder input(java.util.Map<String, ?> input) {
             this.putBodyParameter("input", input);
@@ -268,7 +288,7 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the associated data processing pipeline (optional). After association, when the experiment execution under this plan writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace, calls PreviewPipeline, and writes the pipeline-processed results together.</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putBodyParameter("pipelineName", pipelineName);
@@ -277,6 +297,7 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
+         * <p>The experiment plan name. The name must be unique within the same AgentSpace under the same account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +310,10 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
-         * querySql.
+         * <p>The custom query SQL clause in partial dataset mode. This parameter can be used when <code>selectedItemIds</code> is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status=\&quot;OK\&quot;</p>
          */
         public Builder querySql(String querySql) {
             this.putBodyParameter("querySql", querySql);
@@ -298,7 +322,10 @@ public class CreateExperimentPlanRequest extends Request {
         }
 
         /**
-         * selectedItemIds.
+         * <p>The list of selected data item IDs in partial dataset mode. Use this parameter together with <code>datasetId</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;, &quot;019f1729-be9b-7769-a006-8e98023ad7ad&quot;]</p>
          */
         public Builder selectedItemIds(java.util.List<String> selectedItemIds) {
             this.putBodyParameter("selectedItemIds", selectedItemIds);

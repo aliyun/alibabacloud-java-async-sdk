@@ -93,7 +93,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned per request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. If no more pages are available, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ydx438PDAW1lYRJZbBn9</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * regions.
+         * <p>The region information.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -117,7 +123,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FDD8668-516C-5183-9BCF-4CAD8E3CF327</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +218,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * internetEndpoint.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentloop.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder internetEndpoint(String internetEndpoint) {
                 this.internetEndpoint = internetEndpoint;
@@ -217,7 +229,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * localName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>华东1（杭州）</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -225,7 +240,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -233,7 +251,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * vpcEndpoint.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentloop.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder vpcEndpoint(String vpcEndpoint) {
                 this.vpcEndpoint = vpcEndpoint;

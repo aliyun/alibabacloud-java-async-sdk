@@ -80,7 +80,10 @@ public class CreateEvaluatorResponseBody extends TeaModel {
         } 
 
         /**
-         * name.
+         * <p>The evaluator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace_task_completion</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -88,7 +91,10 @@ public class CreateEvaluatorResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreateEvaluatorResponseBody extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version number that is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder version(String version) {
             this.version = version;

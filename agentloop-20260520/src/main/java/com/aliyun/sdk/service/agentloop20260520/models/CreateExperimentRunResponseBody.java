@@ -93,7 +93,10 @@ public class CreateExperimentRunResponseBody extends TeaModel {
         } 
 
         /**
-         * message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Experiment created, execution started.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +104,10 @@ public class CreateExperimentRunResponseBody extends TeaModel {
         }
 
         /**
-         * recordId.
+         * <p>The experiment record ID. For online experiments, the format is typically exp-run-{uuid32}. For offline experiments, the format may also be a standard UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-run-f6d419b0ed3d43a7b585948a55efc07b</p>
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -109,7 +115,10 @@ public class CreateExperimentRunResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019F89B5-1B07-3BB3-A32E-F5B007029E9C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class CreateExperimentRunResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The experiment record status. After creation, the status is typically pending.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.status = status;

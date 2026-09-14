@@ -80,7 +80,10 @@ public class BackfillStrategy extends TeaModel {
         } 
 
         /**
-         * enabled.
+         * <p>Specifies whether the backfill policy is enabled. If this parameter is not specified or is set to true, the policy is enabled. If this parameter is set to false, the policy is disabled but the configuration is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -88,7 +91,10 @@ public class BackfillStrategy extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>The end of the backfill time range, in UNIX millisecond timestamp. Provide a complete time range when you need to manually start a backfill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782902400000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -96,7 +102,10 @@ public class BackfillStrategy extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The start of the backfill time range, in UNIX millisecond timestamp. Provide a complete time range when you need to manually start a backfill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782816000000</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;

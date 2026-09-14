@@ -106,7 +106,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page specified in the request. This value is echoed back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. An empty string indicates that the current page is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg5MA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * runs.
+         * <p>The list of pipeline runs.</p>
          */
         public Builder runs(java.util.List<Runs> runs) {
             this.runs = runs;
@@ -138,7 +147,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of pipeline runs that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -386,7 +398,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpaceName.
+             * <p>The name of the AgentSpace to which the run belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-space</p>
              */
             public Builder agentSpaceName(String agentSpaceName) {
                 this.agentSpaceName = agentSpaceName;
@@ -394,7 +409,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * attempt.
+             * <p>The current retry count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attempt(Integer attempt) {
                 this.attempt = attempt;
@@ -402,7 +420,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * errorCode.
+             * <p>The semantic error code.</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -410,7 +428,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -418,6 +436,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The finish time in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -429,7 +448,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * fromTime.
+             * <p>The start of the data window, in UNIX seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735660800</p>
              */
             public Builder fromTime(Long fromTime) {
                 this.fromTime = fromTime;
@@ -437,7 +459,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * maxAttempts.
+             * <p>The maximum number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxAttempts(Integer maxAttempts) {
                 this.maxAttempts = maxAttempts;
@@ -445,6 +470,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The next retry time in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -456,7 +482,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineName.
+             * <p>The name of the pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-pipeline</p>
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;
@@ -464,7 +493,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * runId.
+             * <p>Run Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run-20260101-0001</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -472,6 +504,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The execution start time in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -483,7 +516,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * stats.
+             * <p>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of tokens consumed).</p>
              */
             public Builder stats(java.util.Map<String, ?> stats) {
                 this.stats = stats;
@@ -491,7 +524,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The run status. Valid values: Pending, Running, Succeeded, Failed, and Cancelled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -499,7 +535,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * toTime.
+             * <p>The end of the data window, in UNIX seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735747200</p>
              */
             public Builder toTime(Long toTime) {
                 this.toTime = toTime;
@@ -507,6 +546,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The trigger time in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -518,7 +558,10 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             }
 
             /**
-             * triggerType.
+             * <p>The trigger type. Valid values: Scheduled, Manual, and RunOnce.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduled</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;

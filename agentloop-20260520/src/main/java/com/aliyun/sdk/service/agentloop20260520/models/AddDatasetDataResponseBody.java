@@ -67,7 +67,10 @@ public class AddDatasetDataResponseBody extends TeaModel {
         } 
 
         /**
-         * affectedRows.
+         * <p>The number of log rows scanned or processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder affectedRows(Integer affectedRows) {
             this.affectedRows = affectedRows;

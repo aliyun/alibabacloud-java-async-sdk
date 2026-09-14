@@ -93,7 +93,10 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Experiment plan created successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +104,10 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * planId.
+         * <p>The experiment plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-plan-e95bff54685a4ae29ff3a834c1008a71</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -109,7 +115,10 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The creation result. A value of <code>created</code> indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         public Builder status(String status) {
             this.status = status;

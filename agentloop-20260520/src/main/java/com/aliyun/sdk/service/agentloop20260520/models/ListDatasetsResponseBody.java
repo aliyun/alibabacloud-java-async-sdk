@@ -106,7 +106,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         } 
 
         /**
-         * datasets.
+         * <p>The result set.</p>
          */
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.datasets = datasets;
@@ -114,7 +114,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results specified in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,11 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results.</p>
+         * <p>If the total number of results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>umaQfI7x758Ns4TgWrj8yA3fYlnk7dJgsfhMrSViRY8=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +137,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90F52F93-8800-5A71-8737-18F34BA90166</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +148,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -282,7 +295,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The agent space name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sop-agent</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -290,6 +306,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -301,7 +318,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * datasetName.
+             * <p>The dataset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_faq_dataset</p>
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -309,7 +329,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The dataset description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product FAQ dataset for semantic search</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -333,7 +356,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -341,6 +367,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The update time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

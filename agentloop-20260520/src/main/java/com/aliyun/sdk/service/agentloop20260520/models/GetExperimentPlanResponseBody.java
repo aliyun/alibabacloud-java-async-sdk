@@ -236,7 +236,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The creation time, in millisecond-level UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782816000000</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -244,7 +247,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * datasetId.
+         * <p>The associated dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms_customer_agent_level1</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -252,7 +258,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Compare the checkout Agent baseline with the optimized version</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -260,7 +269,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * evaluators.
+         * <p>The list of evaluators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</p>
          */
         public Builder evaluators(java.util.List<Evaluator> evaluators) {
             this.evaluators = evaluators;
@@ -268,7 +280,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * experimentType.
+         * <p>The experiment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder experimentType(String experimentType) {
             this.experimentType = experimentType;
@@ -276,7 +291,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * experiments.
+         * <p>The list of experiment configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;baseline&quot;, &quot;modelName&quot;: &quot;qwen-max&quot;}]</p>
          */
         public Builder experiments(java.util.List<ExperimentConfig> experiments) {
             this.experiments = experiments;
@@ -284,7 +302,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * input.
+         * <p>Optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</p>
          */
         public Builder input(java.util.Map<String, ?> input) {
             this.input = input;
@@ -292,7 +313,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the associated data processing pipeline. This value is empty if no pipeline is associated.</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.pipelineName = pipelineName;
@@ -300,7 +321,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * planId.
+         * <p>The experiment plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-plan-0242d983f5d340fd8479cf2c19eb279e</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -308,7 +332,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * planName.
+         * <p>The experiment plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms_agent_experiment</p>
          */
         public Builder planName(String planName) {
             this.planName = planName;
@@ -316,7 +343,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * querySql.
+         * <p>The custom query SQL clause in partial dataset mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status=\&quot;OK\&quot;</p>
          */
         public Builder querySql(String querySql) {
             this.querySql = querySql;
@@ -324,7 +354,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -332,7 +365,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * selectedItemIds.
+         * <p>The list of data item IDs selected in partial dataset mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;]</p>
          */
         public Builder selectedItemIds(java.util.List<String> selectedItemIds) {
             this.selectedItemIds = selectedItemIds;
@@ -340,7 +376,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The plan status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stopped</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -348,7 +387,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The update time, in millisecond-level UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782816600000</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;

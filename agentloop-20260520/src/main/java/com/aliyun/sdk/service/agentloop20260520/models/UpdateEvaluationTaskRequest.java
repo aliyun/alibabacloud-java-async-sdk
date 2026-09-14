@@ -185,7 +185,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-agentspace</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -194,7 +197,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>The evaluation task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -203,7 +209,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * config.
+         * <p>The new task configuration. Some fields that are set during creation cannot be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dataScope&quot;:&quot;trace&quot;}</p>
          */
         public Builder config(java.util.Map<String, String> config) {
             this.putBodyParameter("config", config);
@@ -212,7 +221,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * dataFilter.
+         * <p>The filter conditions for evaluation data. JSON objects and JSON strings are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot; AND status=\&quot;OK\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:50}</p>
          */
         public Builder dataFilter(String dataFilter) {
             this.putBodyParameter("dataFilter", dataFilter);
@@ -221,7 +233,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the evaluation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Updated trace link task completion evaluation</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -230,7 +245,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * evaluators.
+         * <p>The new list of evaluator configurations. When specified, this list entirely replaces the existing evaluator list of the task, and the system re-validates evaluator uniqueness and variable mappings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;,&quot;resultName&quot;:&quot;agent_task_completion&quot;,&quot;resultType&quot;:&quot;score&quot;,&quot;variableMapping&quot;:{&quot;input&quot;:&quot;trace.input&quot;,&quot;output&quot;:&quot;trace.output&quot;,&quot;agent_trajectory&quot;:&quot;trace.agent_trajectory&quot;}}]</p>
          */
         public Builder evaluators(java.util.List<Evaluator> evaluators) {
             this.putBodyParameter("evaluators", evaluators);
@@ -239,7 +257,7 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * runStrategies.
+         * <p>The new task execution strategies. JSON objects and JSON strings are supported. If the task is in the <code>Completed</code>, <code>Terminated</code>, or <code>Failed</code> state and the new strategy enables backfill or continuous mode, the backend restores the task to the <code>Pending</code> state and triggers orchestration.</p>
          */
         public Builder runStrategies(RunStrategies runStrategies) {
             this.putBodyParameter("runStrategies", runStrategies);
@@ -248,7 +266,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The task status. Currently, the backend only allows users to manually set this to <code>Terminated</code>. Other statuses are managed by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminated</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -257,7 +278,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The key-value pairs of task tags. You do not need to specify this parameter by default. Specify this parameter only when you want to associate or filter tasks by business tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;env&quot;:&quot;prod&quot;,&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;planId&quot;:&quot;plan-20260703&quot;}</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.putBodyParameter("tags", tags);
@@ -266,7 +290,10 @@ public class UpdateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
