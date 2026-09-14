@@ -74,7 +74,7 @@ public class CreateHttpApiOperationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HTTP API to which the operations belong.</p>
+         * <p>The ID of the HTTP API to which the operation belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

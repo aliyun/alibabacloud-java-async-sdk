@@ -102,7 +102,7 @@ public class DeleteGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique request ID.</p>
+         * <p>The unique identifier of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>

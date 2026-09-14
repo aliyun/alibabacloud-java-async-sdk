@@ -299,7 +299,7 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the dashboard.</p>
+             * <p>The dashboard URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></p>

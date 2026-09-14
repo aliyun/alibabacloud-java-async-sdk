@@ -71,6 +71,9 @@ public class HttpApiDeployConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("subDomains")
     private java.util.List<SubDomains> subDomains;
 
+    @com.aliyun.core.annotation.NameInMap("systemModelTiers")
+    private java.util.List<String> systemModelTiers;
+
     private HttpApiDeployConfig(Builder builder) {
         this.autoDeploy = builder.autoDeploy;
         this.backendScene = builder.backendScene;
@@ -90,6 +93,7 @@ public class HttpApiDeployConfig extends TeaModel {
         this.routeBackend = builder.routeBackend;
         this.serviceConfigs = builder.serviceConfigs;
         this.subDomains = builder.subDomains;
+        this.systemModelTiers = builder.systemModelTiers;
     }
 
     public static Builder builder() {
@@ -230,6 +234,13 @@ public class HttpApiDeployConfig extends TeaModel {
         return this.subDomains;
     }
 
+    /**
+     * @return systemModelTiers
+     */
+    public java.util.List<String> getSystemModelTiers() {
+        return this.systemModelTiers;
+    }
+
     public static final class Builder {
         private Boolean autoDeploy; 
         private String backendScene; 
@@ -249,6 +260,7 @@ public class HttpApiDeployConfig extends TeaModel {
         private Backend routeBackend; 
         private java.util.List<ServiceConfigs> serviceConfigs; 
         private java.util.List<SubDomains> subDomains; 
+        private java.util.List<String> systemModelTiers; 
 
         private Builder() {
         } 
@@ -272,10 +284,11 @@ public class HttpApiDeployConfig extends TeaModel {
             this.routeBackend = model.routeBackend;
             this.serviceConfigs = model.serviceConfigs;
             this.subDomains = model.subDomains;
+            this.systemModelTiers = model.systemModelTiers;
         } 
 
         /**
-         * <p>Specifies whether to automatically deploy.</p>
+         * <p>Specifies whether to automatically deploy the API.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -286,7 +299,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The deployment scenario.</p>
+         * <p>The publishing scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -313,7 +326,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of custom domain name details.</p>
+         * <p>The list of custom domain name information.</p>
          */
         public Builder customDomainInfos(java.util.List<CustomDomainInfos> customDomainInfos) {
             this.customDomainInfos = customDomainInfos;
@@ -321,7 +334,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the deployment scenario is AiAutoRouter. Default value: false. If enabled, built-in Qwen candidates from the platform are merged with the user\&quot;s own candidates.</p>
+         * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the publishing scenario is AiAutoRouter. Default value: false. This field is used for backward compatibility with older clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that all are disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -340,7 +353,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of environment domain name details.</p>
+         * <p>The list of environment domain name information.</p>
          */
         public Builder envDomainInfos(java.util.List<EnvDomainInfos> envDomainInfos) {
             this.envDomainInfos = envDomainInfos;
@@ -405,7 +418,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The current online routing mode of the REST API. ordinary indicates per-Operation routing. compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</p>
+         * <p>The current online routing mode of the REST API. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>ordinary</p>
@@ -432,10 +445,21 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of subdomain contents.</p>
+         * <p>The list of subdomain content.</p>
          */
         public Builder subDomains(java.util.List<SubDomains> subDomains) {
             this.subDomains = subDomains;
+            return this;
+        }
+
+        /**
+         * <p>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, premium. An explicit empty array indicates that no system model is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;economy&quot;,&quot;standard&quot;,&quot;premium&quot;]</p>
+         */
+        public Builder systemModelTiers(java.util.List<String> systemModelTiers) {
+            this.systemModelTiers = systemModelTiers;
             return this;
         }
 
@@ -767,6 +791,9 @@ public class HttpApiDeployConfig extends TeaModel {
      * <p>HttpApiDeployConfig</p>
      */
     public static class ServiceConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("capabilityTier")
+        private String capabilityTier;
+
         @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
         private String gatewayServiceId;
 
@@ -807,6 +834,7 @@ public class HttpApiDeployConfig extends TeaModel {
         private Long weight;
 
         private ServiceConfigs(Builder builder) {
+            this.capabilityTier = builder.capabilityTier;
             this.gatewayServiceId = builder.gatewayServiceId;
             this.intentCode = builder.intentCode;
             this.match = builder.match;
@@ -828,6 +856,13 @@ public class HttpApiDeployConfig extends TeaModel {
 
         public static ServiceConfigs create() {
             return builder().build();
+        }
+
+        /**
+         * @return capabilityTier
+         */
+        public String getCapabilityTier() {
+            return this.capabilityTier;
         }
 
         /**
@@ -922,6 +957,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String capabilityTier; 
             private String gatewayServiceId; 
             private String intentCode; 
             private HttpApiBackendMatchConditions match; 
@@ -940,6 +976,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             private Builder(ServiceConfigs model) {
+                this.capabilityTier = model.capabilityTier;
                 this.gatewayServiceId = model.gatewayServiceId;
                 this.intentCode = model.intentCode;
                 this.match = model.match;
@@ -954,6 +991,17 @@ public class HttpApiDeployConfig extends TeaModel {
                 this.version = model.version;
                 this.weight = model.weight;
             } 
+
+            /**
+             * <p>The capability tier of the intelligent routing candidate. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
+             */
+            public Builder capabilityTier(String capabilityTier) {
+                this.capabilityTier = capabilityTier;
+                return this;
+            }
 
             /**
              * <p>The gateway service ID.</p>
@@ -1019,7 +1067,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * <p>The service display name.</p>
+             * <p>The display name of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>Qwen-Max-Service</p>
@@ -1030,7 +1078,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * <p>The observability metric routing configuration.</p>
+             * <p>The observability metric-based routing configuration.</p>
              */
             public Builder observabilityRouteConfig(ObservabilityRouteConfig observabilityRouteConfig) {
                 this.observabilityRouteConfig = observabilityRouteConfig;

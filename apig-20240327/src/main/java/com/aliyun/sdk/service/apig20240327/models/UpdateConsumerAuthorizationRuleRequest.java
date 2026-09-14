@@ -127,7 +127,7 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The consumer authorization rule ID used to filter the API operation list. The API operation list in the response contains only authorized API operations.</p>
+         * <p>The consumer authorization rule ID used to filter the API operation list. The response includes only the authorized API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>

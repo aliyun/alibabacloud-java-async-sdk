@@ -195,7 +195,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Invalid data structure definition</p>
+             * <p>The data structure definition is invalid</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -459,7 +459,11 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to be performed after the dry run.</p>
+             * <p>The action to be performed after the dry run. Valid values:</p>
+             * <ul>
+             * <li>Create: create.</li>
+             * <li>Update: update.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -566,7 +570,11 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to be performed after the dry run.</p>
+             * <p>The action to be performed after the dry run. Valid values:</p>
+             * <ul>
+             * <li>Create: create.</li>
+             * <li>Update: update.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -669,7 +677,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation type.</p>
+             * <p>The action type.</p>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -854,7 +862,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error messages. If the error messages are not empty, the API cannot be imported successfully.</p>
+             * <p>The error messages. If the error messages are not empty, the API cannot be imported.</p>
              */
             public Builder errorMessages(java.util.List<String> errorMessages) {
                 this.errorMessages = errorMessages;
@@ -862,7 +870,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the existing API. If this field is not empty, the import action updates the existing API.</p>
+             * <p>The information about the existing API. If this field is not empty, the import action will update this API.</p>
              */
             public Builder existHttpApiInfo(HttpApiApiInfo existHttpApiInfo) {
                 this.existHttpApiInfo = existHttpApiInfo;
@@ -886,7 +894,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of routes that failed to be imported.</p>
+             * <p>The list of routes that failed.</p>
              */
             public Builder failureRoutes(java.util.List<FailureRoutes> failureRoutes) {
                 this.failureRoutes = failureRoutes;
@@ -921,7 +929,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of routes that were successfully imported.</p>
+             * <p>The list of routes that were imported.</p>
              */
             public Builder successRoutes(java.util.List<SuccessRoutes> successRoutes) {
                 this.successRoutes = successRoutes;

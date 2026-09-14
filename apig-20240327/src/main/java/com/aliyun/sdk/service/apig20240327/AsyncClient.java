@@ -31,10 +31,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains the conflictHash value.</li>
+     * <li>The response returns a conflict preview that contains conflictHash.</li>
      * </ul>
      * </li>
-     * <li>Step 2: Submit the request after confirmation.</li>
+     * <li>Step 2: Submit the rule after confirmation.</li>
      * <li><ul>
      * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
@@ -325,7 +325,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
+     * <p>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
      * 
      * @param request the request parameters of DeleteGatewayQuotaRule  DeleteGatewayQuotaRuleRequest
      * @return DeleteGatewayQuotaRuleResponse
@@ -1102,7 +1102,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>该 API 已被 UpdateAuthorizationRule 替代，新路径为 /v1/authorization-rules/{consumerAuthorizationRuleId}</p>
+     * <p>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * @param request the request parameters of UpdateConsumerAuthorizationRule  UpdateConsumerAuthorizationRuleRequest
      * @return UpdateConsumerAuthorizationRuleResponse

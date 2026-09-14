@@ -337,7 +337,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of protocols supported by the agent. Required when type is Agent. Not required for other types.</p>
+         * <p>The list of protocols supported by the agent. Required when type is Agent. This field is not required for other types.</p>
          */
         public Builder agentProtocols(java.util.List<String> agentProtocols) {
             this.putBodyParameter("agentProtocols", agentProtocols);
@@ -346,7 +346,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of AI API protocols. Required when type is LLM, and only one protocol can be specified. Required when type is Ai, and multiple protocols can be specified. Not required for other types. Example protocol entry: OpenAI/v1.</p>
+         * <p>The list of AI API protocols. Required when type is LLM (only one protocol allowed) or Ai (multiple protocols allowed). Not required for other types. Example protocol: OpenAI/v1.</p>
          */
         public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.putBodyParameter("aiProtocols", aiProtocols);
@@ -355,7 +355,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The authentication configuration. Required when enableAuth=true.</p>
+         * <p>The authentication configuration. Required when enableAuth is set to true.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.putBodyParameter("authConfig", authConfig);
@@ -364,7 +364,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The API base path. Must start with a forward slash (/), cannot exceed 256 bytes in length, and cannot contain spaces. Required when type=Rest. Optional when type=LLM, Ai, or Agent. Default value: /</p>
+         * <p>The base path of the API. Must start with a forward slash (/), cannot exceed 256 bytes in length, and cannot contain spaces. Required when type is Rest. Optional when type is LLM, Ai, or Agent. Defaults to /.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -388,7 +388,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of deployment configurations for the HTTP API. Required when type is LLM or Ai, and only one deployment configuration can be specified. Not validated at the request level for other types.</p>
+         * <p>The list of deployment configurations for the HTTP API. Required when type is LLM or Ai (only one deployment configuration allowed). Not validated at the request level for other types.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -409,7 +409,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run without executing the operation.</p>
+         * <p>Specifies whether to preview only without executing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -433,7 +433,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for waiting for the first byte from the backend.</p>
+         * <p>The timeout period for waiting for the backend to return the first byte.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -445,7 +445,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The HTTP Ingress API configuration. Required when type is HttpIngress and cannot be nil. Not required for other types.</p>
+         * <p>The HTTP Ingress API configuration. Required when type is HttpIngress and cannot be null. Not required for other types.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
@@ -454,7 +454,17 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The AI model category. Optional when type is LLM or Ai. Not required for other types. Valid values: Text (text generation), Image (image generation), Audio (audio processing), Video (AI video generation), MultiModal (multi-modal), Embedding (text embedding), Rerank (reranking), Others (other).</p>
+         * <p>The AI model category. Optional when type is LLM or Ai. Not required for other types. Valid values:</p>
+         * <ul>
+         * <li>Text: text generation.</li>
+         * <li>Image: image generation.</li>
+         * <li>Audio: audio processing.</li>
+         * <li>Video: video generation.</li>
+         * <li>MultiModal: multimodal.</li>
+         * <li>Embedding: vector embedding.</li>
+         * <li>Rerank: reranking.</li>
+         * <li>Others: others.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Text</p>
@@ -466,7 +476,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The name of the HTTP API, used to identify the current API resource. Example: test-api.</p>
+         * <p>The name of the HTTP API, used to identify the current API resource. For example, test-api.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -512,7 +522,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The conflict merge strategy for import.</p>
+         * <p>The conflict resolution strategy for imports.</p>
          * 
          * <strong>example:</strong>
          * <p>ExistFirst</p>
@@ -524,7 +534,15 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The HTTP API type. Valid values: Http (standard HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), Agent (Agent proxy API).</p>
+         * <p>The HTTP API type. Valid values:</p>
+         * <ul>
+         * <li>Http: a standard HTTP API.</li>
+         * <li>Rest: a RESTful API.</li>
+         * <li>WebSocket: a WebSocket API.</li>
+         * <li>HttpIngress: an HTTP API accessed through Ingress.</li>
+         * <li>LLM: a large language model API.</li>
+         * <li>Agent: an Agent proxy API.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -680,7 +698,7 @@ public class CreateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The Ingress Class to listen on.</p>
+             * <p>The Ingress class to listen on.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -691,7 +709,7 @@ public class CreateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to update the address in the Ingress Status.</p>
+             * <p>Specifies whether to update the address in the Ingress status.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

@@ -283,7 +283,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The plugin mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
+             * <p>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, Operation.</p>
              * 
              * <strong>example:</strong>
              * <p>GatewayRoute</p>
@@ -294,7 +294,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the plugin mount is enabled.</p>
+             * <p>Specifies whether the plug-in is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -321,7 +321,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin mount ID.</p>
+             * <p>The plug-in mount ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-d0j9t5em1hkncrlo51mg</p>
@@ -332,7 +332,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin type information.</p>
+             * <p>The plug-in type information.</p>
              */
             public Builder pluginClassInfo(PluginClassInfo pluginClassInfo) {
                 this.pluginClassInfo = pluginClassInfo;
@@ -340,7 +340,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Base64-encoded content of the original plugin configuration.</p>
+             * <p>The Base64-encoded content of the original plug-in configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>bGltaXRfYnlfaGVhZGVyOiB4LWFwaS1rZXkKbGltaXRfa2V5czoKLSBrZXk6IGV4YW1wbGUta2V5LWEKICBxdWVyeV9wZXJfc2Vjb25kOiAxMAotIGtleTogZXhhbXBsZS1rZXktYgogIHF1ZXJ5X3Blcl9zZWNvbmQ6IDEK</p>
@@ -351,7 +351,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin ID.</p>
+             * <p>The plug-in ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-cvu6r4um1hko3b3ti0a0</p>
@@ -485,7 +485,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

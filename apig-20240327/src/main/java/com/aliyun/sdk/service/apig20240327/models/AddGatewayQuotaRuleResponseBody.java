@@ -115,7 +115,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -260,12 +260,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The period type of the existing conflicting rule on the consumer subject. Valid values:</p>
-             * <ul>
-             * <li>day: The existing conflicting rule has a daily period.</li>
-             * <li>week: The existing conflicting rule has a weekly period.</li>
-             * <li>month: The existing conflicting rule has a monthly period.</li>
-             * </ul>
+             * <p>The period type of the existing conflicting rule on the consumer subject. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month respectively.</p>
              * 
              * <strong>example:</strong>
              * <p>week</p>
@@ -276,11 +271,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the existing conflicting rule on the consumer subject. Valid values:</p>
-             * <ul>
-             * <li>calendar: The existing conflicting rule uses a calendar period.</li>
-             * <li>epoch: The existing conflicting rule uses a custom period.</li>
-             * </ul>
+             * <p>The type of the existing conflicting rule on the consumer subject. A value of calendar indicates that the existing conflicting rule uses a calendar period. A value of epoch indicates that the existing conflicting rule uses a custom period.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>
@@ -291,7 +282,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conflicting consumer ID. You can use subjectId instead.</p>
+             * <p>The conflicting consumer ID. Use subjectId instead.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-xxxxxx</p>
@@ -302,7 +293,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conflicting consumer name. You can use subjectName instead.</p>
+             * <p>The conflicting consumer name. Use subjectName instead.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-a</p>
@@ -418,7 +409,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The conflict snapshot hash.</p>
+             * <p>The conflict hash.</p>
              * 
              * <strong>example:</strong>
              * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
