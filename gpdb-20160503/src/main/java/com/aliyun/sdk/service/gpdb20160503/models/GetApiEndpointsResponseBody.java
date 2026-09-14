@@ -106,7 +106,7 @@ public class GetApiEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of parameters.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class GetApiEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records to return in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class GetApiEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query during paging. Use this token to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -141,7 +147,10 @@ public class GetApiEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -220,7 +229,10 @@ public class GetApiEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * Endpoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://api-longmemory-cn-beijing.opentrust.net/">https://api-longmemory-cn-beijing.opentrust.net/</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -228,7 +240,10 @@ public class GetApiEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -236,7 +251,14 @@ public class GetApiEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type. Valid values:</p>
+             * <ul>
+             * <li><strong>memory</strong></li>
+             * <li><strong>drama</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;

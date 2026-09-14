@@ -159,7 +159,10 @@ public class CreateSaasServiceRequest extends Request {
         } 
 
         /**
-         * Cu.
+         * <p>The compute resources of the SaaS service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cu(Integer cu) {
             this.putQueryParameter("Cu", cu);
@@ -168,7 +171,20 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you leave this parameter empty, a Free type is created by default.</li>
+         * <li>The subscription billing method offers discounts for purchases of one year or longer. Select a billing method as needed.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -177,7 +193,17 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The unit of the duration for which you want to purchase the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: month.</li>
+         * <li><strong>Year</strong>: year.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required when you create a subscription instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -186,7 +212,10 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
-         * Plan.
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deprecated</p>
          */
         public Builder plan(String plan) {
             this.putQueryParameter("Plan", plan);
@@ -195,7 +224,10 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -204,6 +236,11 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><strong>memroy</strong></li>
+         * <li><strong>drama</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +253,17 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The duration for which you want to purchase the resource. Valid values:</p>
+         * <ul>
+         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values are 1 to 11.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values are 1 to 3.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required when you create a subscription instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -225,6 +272,7 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
+         * <p>The workspace of the SaaS service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

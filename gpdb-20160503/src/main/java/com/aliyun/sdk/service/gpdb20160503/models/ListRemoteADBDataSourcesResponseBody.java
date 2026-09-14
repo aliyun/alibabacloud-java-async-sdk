@@ -80,7 +80,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returns the successfully added data sharing service data.</p>
+         * DataSourceItems.
          */
         public Builder dataSourceItems(DataSourceItems dataSourceItems) {
             this.dataSourceItems = dataSourceItems;
@@ -285,10 +285,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data source name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>db1_gptest1_to_db2_gp-test2</p>
+             * DataSourceName.
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -296,10 +293,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -307,10 +301,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -318,10 +309,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Local database name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>db1</p>
+             * LocalDatabase.
              */
             public Builder localDatabase(String localDatabase) {
                 this.localDatabase = localDatabase;
@@ -329,10 +317,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Local instance name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-test1</p>
+             * LocalInstanceName.
              */
             public Builder localInstanceName(String localInstanceName) {
                 this.localInstanceName = localInstanceName;
@@ -340,10 +325,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Manager user name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>admin</p>
+             * ManagerUserName.
              */
             public Builder managerUserName(String managerUserName) {
                 this.managerUserName = managerUserName;
@@ -351,13 +333,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
-             * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to view available region IDs.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -365,10 +341,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Remote database name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>db2</p>
+             * RemoteDatabase.
              */
             public Builder remoteDatabase(String remoteDatabase) {
                 this.remoteDatabase = remoteDatabase;
@@ -376,10 +349,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Remote instance name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-test2</p>
+             * RemoteInstanceName.
              */
             public Builder remoteInstanceName(String remoteInstanceName) {
                 this.remoteInstanceName = remoteInstanceName;
@@ -387,10 +357,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data source status</p>
-             * 
-             * <strong>example:</strong>
-             * <p>creating</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -398,10 +365,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>user1</p>
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

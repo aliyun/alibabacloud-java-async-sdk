@@ -466,7 +466,7 @@ public class CreateStreamingJobRequest extends Request {
         /**
          * <p>FallbackOffset, fallback offset</p>
          * <ul>
-         * <li>The FallbackOffset parameter defines the behavior when the consumer does not request a specific offset or the requested offset exceeds the current Kafka cluster&quot;s recorded offset information. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</li>
+         * <li>The FallbackOffset parameter defines the behavior when the consumer does not request a specific offset or the requested offset exceeds the current Kafka cluster\&quot;s recorded offset information. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -482,7 +482,7 @@ public class CreateStreamingJobRequest extends Request {
          * <p>Kafka group name</p>
          * 
          * <strong>example:</strong>
-         * <p>group_name.</p>
+         * <p>group_name。</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -511,7 +511,7 @@ public class CreateStreamingJobRequest extends Request {
          *         TYPE: int
          *       FORMAT: delimited
          *       DELIMITED_OPTION:
-         *         DELIMITER: &quot;|&quot;
+         *         DELIMITER: \&quot;|\&quot;
          *     VALUE:
          *       COLUMNS:
          *       - TYPE: integer
@@ -548,7 +548,7 @@ public class CreateStreamingJobRequest extends Request {
          *         NAME: l_comment
          *       FORMAT: delimited
          *       DELIMITED_OPTION:
-         *         DELIMITER: &quot;|&quot;
+         *         DELIMITER: \&quot;|\&quot;
          *     ERROR_LIMIT: 10
          *   OUTPUT:
          *     SCHEMA: adbpgss_test

@@ -145,7 +145,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried vector collections.</p>
+         * Collections.
          */
         public Builder collections(Collections collections) {
             this.collections = collections;

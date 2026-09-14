@@ -135,7 +135,7 @@ public class DescribeDBVersionInfosRequest extends Request {
          * <p>The minor version number that does not include the prefix.</p>
          * 
          * <strong>example:</strong>
-         * <p>6.3.10.20</p>
+         * <p>6.3.10.20。</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);

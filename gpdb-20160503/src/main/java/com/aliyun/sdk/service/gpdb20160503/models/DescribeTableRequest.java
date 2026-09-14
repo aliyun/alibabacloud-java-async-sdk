@@ -164,7 +164,7 @@ public class DescribeTableRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The name of the schema to which the table belongs.</p>
+         * <p>The name of the schema that contains the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,9 +225,9 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.</p>
+         * <p>The access credential. Created by calling the CreateSecret operation.</p>
          * <blockquote>
-         * <p> To call the DescribeTable operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.</p>
+         * <p>When you access this operation by using a RAM user, you must have the UseSecret or GetSecretValue permission on this SecretArn.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -241,7 +241,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,10 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both this parameter and DBInstanceId are specified, this parameter takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-ws-*****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

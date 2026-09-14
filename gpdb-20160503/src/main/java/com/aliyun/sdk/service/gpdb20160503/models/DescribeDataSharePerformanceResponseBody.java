@@ -106,7 +106,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -117,7 +117,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query.</p>
+         * <p>The end of the queried time range.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-03T15:10Z</p>
@@ -128,7 +128,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of data sharing performance metrics.</p>
+         * <p>The list of performance metrics.</p>
          */
         public Builder performanceKeys(java.util.List<PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -136,7 +136,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BBE00C04-A3E8-4114-881D-0480A72CB92E</p>
@@ -147,7 +147,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query.</p>
+         * <p>The start of the queried time range.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-03T15:00Z</p>
@@ -203,7 +203,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of the performance metric at a point in time.</p>
+             * <p>An array that contains the timestamp and the corresponding metric value.</p>
              */
             public Builder point(java.util.List<String> point) {
                 this.point = point;
@@ -281,7 +281,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>One or more values of the performance metric.</p>
+             * <p>The data points of the time series.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -372,7 +372,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the performance metric.</p>
+             * <p>The details of the time series data for the metric.</p>
              */
             public Builder series(java.util.List<Series> series) {
                 this.series = series;

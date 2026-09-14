@@ -237,7 +237,7 @@ public class CreateDBInstancePlanRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>2023-04-17T23:00Z</p>
+         * <p>2023-04-17T23:00:00Z</p>
          */
         public Builder planEndDate(String planEndDate) {
             this.putQueryParameter("PlanEndDate", planEndDate);
@@ -287,7 +287,7 @@ public class CreateDBInstancePlanRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>2022-04-17T23:00Z</p>
+         * <p>2022-04-17T23:00:00Z</p>
          */
         public Builder planStartDate(String planStartDate) {
             this.putQueryParameter("PlanStartDate", planStartDate);

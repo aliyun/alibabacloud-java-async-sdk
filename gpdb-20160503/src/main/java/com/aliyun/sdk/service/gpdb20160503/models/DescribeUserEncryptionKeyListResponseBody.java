@@ -134,7 +134,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
              * <p>The ID of the KMS key.</p>
              * 
              * <strong>example:</strong>
-             * <p>0b8b1825-fd99-418f-875e-e4dec1dd8715</p>
+             * <p>0b8b1825-fd99-418f-875e-e4dec1dd****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;

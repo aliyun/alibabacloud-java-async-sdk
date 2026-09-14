@@ -93,7 +93,10 @@ public class CheckSaasServiceVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * CanUpgrade.
+         * <p>Indicates whether the service can be upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canUpgrade(Boolean canUpgrade) {
             this.canUpgrade = canUpgrade;
@@ -101,7 +104,10 @@ public class CheckSaasServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class CheckSaasServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class CheckSaasServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agdb-xxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;

@@ -347,7 +347,7 @@ public class DescribeSQLLogsV2Request extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>1</p>
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);
@@ -421,7 +421,7 @@ public class DescribeSQLLogsV2Request extends Request {
          * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -433,7 +433,7 @@ public class DescribeSQLLogsV2Request extends Request {
          * <p>The number of the page to return. The maximum value is 200.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -473,7 +473,7 @@ public class DescribeSQLLogsV2Request extends Request {
          * <p>The ID of the resource group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
+         * <p>null</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

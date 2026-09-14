@@ -96,7 +96,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-xxxxxxxxxx</p>
+         * <p>gp-0xin9q82c33xc****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

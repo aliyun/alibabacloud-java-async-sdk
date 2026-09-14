@@ -89,6 +89,7 @@ public class ResetBranchRequest extends Request {
         } 
 
         /**
+         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class ResetBranchRequest extends Request {
         }
 
         /**
+         * <p>The Supabase project ID that corresponds to the main branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class ResetBranchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. This parameter is required when you create a main branch. When you create a child branch, the region is inherited from the main branch by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

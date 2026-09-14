@@ -90,6 +90,10 @@ public class DeleteAIServiceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including the instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +106,7 @@ public class DeleteAIServiceRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +119,7 @@ public class DeleteAIServiceRequest extends Request {
         }
 
         /**
+         * <p>The service type. Currently, only drama is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

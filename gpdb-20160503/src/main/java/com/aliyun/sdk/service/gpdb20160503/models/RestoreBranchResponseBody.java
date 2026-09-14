@@ -67,7 +67,10 @@ public class RestoreBranchResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchId.
+         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-xxxx</p>
          */
         public Builder branchId(String branchId) {
             this.branchId = branchId;
@@ -75,7 +78,10 @@ public class RestoreBranchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -94,7 +94,7 @@ public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
          * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>50578361067****</p>
+         * <p>22719089834****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSupabaseProjectResponseBody</p>
  */
 public class GetSupabaseProjectResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AppliedIdleTimeHours")
+    private String appliedIdleTimeHours;
+
     @com.aliyun.core.annotation.NameInMap("AutoScale")
     private String autoScale;
 
@@ -99,6 +102,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     private String zoneId;
 
     private GetSupabaseProjectResponseBody(Builder builder) {
+        this.appliedIdleTimeHours = builder.appliedIdleTimeHours;
         this.autoScale = builder.autoScale;
         this.createTime = builder.createTime;
         this.DBSecurityIpList = builder.DBSecurityIpList;
@@ -138,6 +142,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appliedIdleTimeHours
+     */
+    public String getAppliedIdleTimeHours() {
+        return this.appliedIdleTimeHours;
     }
 
     /**
@@ -330,6 +341,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String appliedIdleTimeHours; 
         private String autoScale; 
         private String createTime; 
         private String DBSecurityIpList; 
@@ -362,6 +374,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         } 
 
         private Builder(GetSupabaseProjectResponseBody model) {
+            this.appliedIdleTimeHours = model.appliedIdleTimeHours;
             this.autoScale = model.autoScale;
             this.createTime = model.createTime;
             this.DBSecurityIpList = model.DBSecurityIpList;
@@ -392,7 +405,22 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * AutoScale.
+         * AppliedIdleTimeHours.
+         */
+        public Builder appliedIdleTimeHours(String appliedIdleTimeHours) {
+            this.appliedIdleTimeHours = appliedIdleTimeHours;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether <strong>auto start and stop</strong> is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</li>
+         * <li>false: Disabled. After this feature is disabled, the auto start and stop feature of Supabase is turned off.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoScale(String autoScale) {
             this.autoScale = autoScale;
@@ -411,7 +439,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * DBSecurityIpList.
+         * <p>The database whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1,100.64.XX.XX/10</p>
          */
         public Builder DBSecurityIpList(String DBSecurityIpList) {
             this.DBSecurityIpList = DBSecurityIpList;
@@ -419,7 +450,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Supabase Dashboard password (Not Used)</p>
+         * <p>The Supabase Dashboard password. This parameter is not in use.</p>
          * 
          * <strong>example:</strong>
          * <p>xxpassword</p>
@@ -430,7 +461,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Supabase Dashboard user name (Not Used)</p>
+         * <p>The Supabase Dashboard username. This parameter is not in use.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -441,7 +472,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Enterprise SSD (ESSD) performance level of the cluster. Valid values:</p>
+         * <p>The performance level of the cloud disk. Valid values:</p>
          * <ul>
          * <li>PL0</li>
          * <li>PL1</li>
@@ -456,7 +487,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>postgres</p>
@@ -467,7 +498,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -478,7 +509,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Eni.
+         * <p>The elastic network interface (ENI) ID. The network interface controller (NIC) ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-xxxxxx</p>
          */
         public Builder eni(String eni) {
             this.eni = eni;
@@ -486,7 +520,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceVersion.
+         * <p>The current instance version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.0.3</p>
          */
         public Builder instanceVersion(String instanceVersion) {
             this.instanceVersion = instanceVersion;
@@ -494,7 +531,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Lightweight.
+         * <p>Indicates whether the project is a lightweight edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lightweight(String lightweight) {
             this.lightweight = lightweight;
@@ -502,7 +542,16 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing type. Valid values:</p>
+         * <ul>
+         * <li><p>POSTPAY: pay-as-you-go.</p>
+         * </li>
+         * <li><p>PREPAY: subscription.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -510,7 +559,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private (VPC) connection URL for the Supabase Dashboard.</p>
+         * <p>The internal network connection string of the Supabase Dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.11</p>
@@ -521,7 +570,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectDescription.
+         * <p>The detailed description of the Supabase project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for-test-project</p>
          */
         public Builder projectDescription(String projectDescription) {
             this.projectDescription = projectDescription;
@@ -540,7 +592,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the Supabase project.</p>
+         * <p>The Supabase project name.</p>
          * 
          * <strong>example:</strong>
          * <p>supabase_project</p>
@@ -551,7 +603,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The performance level of the Supabase instance.</p>
+         * <p>The Supabase instance specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>1C1G</p>
@@ -562,7 +614,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public connection URL for the Supabase Dashboard.</p>
+         * <p>The public network connection string of the Supabase Dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>10.154.11.10</p>
@@ -573,9 +625,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -587,7 +639,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
@@ -598,7 +650,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A comma-separated list of IP addresses and CIDR blocks allowed to connect.</p>
+         * <p>The list of IP addresses in the IP whitelist group, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -609,7 +661,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the Supabase instance.</p>
+         * <p>The Supabase instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -620,7 +672,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage capacity of the instance. Unit: GB.</p>
+         * <p>The storage size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -631,7 +683,16 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_essd_pl0</strong></li>
+         * <li><strong>cloud_essd_pl1</strong></li>
+         * <li><strong>cloud_essd_pl2</strong></li>
+         * <li><strong>cloud_essd_pl3</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd_pl0</p>
          */
         public Builder storageType(String storageType) {
             this.storageType = storageType;
@@ -639,7 +700,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vSwitch ID of the instance. This parameter must be specified when VPCId is specified.</p>
+         * <p>The vSwitch ID. This parameter is required if a VPC ID is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1cpq8mr64paltkb****</p>
@@ -652,13 +713,11 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         /**
          * <p>The VPC ID.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query the available VPC IDs.</p>
-         * </li>
-         * <li><p>This parameter is required.</p>
-         * </li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query available VPC IDs.</li>
+         * <li>This parameter is required.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp*******************</p>
@@ -671,7 +730,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         /**
          * <p>The zone ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list and zone list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available zone IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

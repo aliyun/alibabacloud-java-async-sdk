@@ -184,7 +184,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-03-01T00:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -192,7 +195,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dramatest</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -200,7 +206,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateApiDevUrl.
+         * <p>The internal endpoint for API debugging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1/api-docs</p>
          */
         public Builder privateApiDevUrl(String privateApiDevUrl) {
             this.privateApiDevUrl = privateApiDevUrl;
@@ -208,7 +217,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateWorkbenchUrl.
+         * <p>The internal endpoint of the workbench.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder privateWorkbenchUrl(String privateWorkbenchUrl) {
             this.privateWorkbenchUrl = privateWorkbenchUrl;
@@ -216,7 +228,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PublicApiDevUrl.
+         * <p>The public endpoint for API debugging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.8.8.8/api-docs</p>
          */
         public Builder publicApiDevUrl(String publicApiDevUrl) {
             this.publicApiDevUrl = publicApiDevUrl;
@@ -224,7 +239,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PublicWorkbenchUrl.
+         * <p>The public endpoint of the workbench.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.8.8.8</p>
          */
         public Builder publicWorkbenchUrl(String publicWorkbenchUrl) {
             this.publicWorkbenchUrl = publicWorkbenchUrl;
@@ -232,7 +250,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -240,7 +261,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIpList.
+         * <p>The IP addresses in the IP address whitelist group, separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder securityIpList(String securityIpList) {
             this.securityIpList = securityIpList;
@@ -248,7 +272,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceAccount.
+         * <p>The service account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dramauser</p>
          */
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = serviceAccount;
@@ -256,7 +283,10 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drama-123456</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -264,7 +294,14 @@ public class DescribeAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The service status. Valid values:</p>
+         * <ul>
+         * <li>deploying: being deployed.</li>
+         * <li>active: running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;

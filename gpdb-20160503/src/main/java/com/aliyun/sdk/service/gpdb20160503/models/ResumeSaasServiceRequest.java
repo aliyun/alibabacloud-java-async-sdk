@@ -74,7 +74,10 @@ public class ResumeSaasServiceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID of the SaaS service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -83,6 +86,7 @@ public class ResumeSaasServiceRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

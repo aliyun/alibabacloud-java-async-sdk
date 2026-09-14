@@ -146,7 +146,7 @@ public class ListNamespacesResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-xxxxxxxxx</p>
+         * <p>gp-bp152460513z****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -165,7 +165,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried namespaces.</p>
+         * Namespaces.
          */
         public Builder namespaces(Namespaces namespaces) {
             this.namespaces = namespaces;

@@ -67,7 +67,10 @@ public class CreateAIServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateAIServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drama-123456</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;

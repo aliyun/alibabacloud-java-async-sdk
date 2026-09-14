@@ -218,7 +218,7 @@ public class ExecuteStatementRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * <p>The configuration parameters.</p>
+         * <p>The list of configuration parameters.</p>
          */
         public Builder parameters(java.util.List<?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -263,7 +263,10 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * RagWorkspaceCollection.
+         * <p>The vector dataset parameters.</p>
+         * <blockquote>
+         * <p>If WorkspaceId is not empty, this parameter is required.</p>
+         * </blockquote>
          */
         public Builder ragWorkspaceCollection(RagWorkspaceCollection ragWorkspaceCollection) {
             String ragWorkspaceCollectionShrink = shrink(ragWorkspaceCollection, "RagWorkspaceCollection", "json");
@@ -286,10 +289,10 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * <p>The execution type. Valid values:</p>
+         * <p>The run type. Valid values:</p>
          * <ul>
-         * <li>synchronous</li>
-         * <li>asynchronous (not supported)</li>
+         * <li>synchronous: synchronous execution.</li>
+         * <li>asynchronous: asynchronous execution. Currently not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -302,9 +305,9 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.</p>
+         * <p>The access credential. Created by calling the CreateSecret operation.</p>
          * <blockquote>
-         * <p> To call the ExecuteStatement operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.</p>
+         * <p>When you access this operation by using a RAM user, you must have the UseSecret or GetSecretValue permission on this SecretArn.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -318,7 +321,7 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * <p>The SQL statements that you want to execute.</p>
+         * <p>The SQL statement to execute.</p>
          * 
          * <strong>example:</strong>
          * <p>select * from table1</p>
@@ -330,7 +333,7 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * <p>The SQL statements.</p>
+         * <p>The list of multiple SQL statements.</p>
          */
         public Builder sqls(java.util.List<String> sqls) {
             String sqlsShrink = shrink(sqls, "Sqls", "json");
@@ -340,7 +343,7 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * <p>The name of the set of SQL statements that you want to execute. This parameter takes effect when the RunType parameter is set to asynchronous.</p>
+         * <p>The name of the execution statement. This parameter takes effect only when RunType is set to asynchronous.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -352,7 +355,10 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both this parameter and DBInstanceId are specified, this parameter takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-ws-*****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -420,7 +426,13 @@ public class ExecuteStatementRequest extends Request {
             } 
 
             /**
-             * Collection.
+             * <p>The collection name.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query the list.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>mycollection</p>
              */
             public Builder collection(String collection) {
                 this.collection = collection;
@@ -428,7 +440,13 @@ public class ExecuteStatementRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>mynamespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

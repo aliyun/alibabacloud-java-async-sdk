@@ -139,7 +139,7 @@ public class ListSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried schemas.</p>
+         * Schemas.
          */
         public Builder schemas(Schemas schemas) {
             this.schemas = schemas;
@@ -207,7 +207,7 @@ public class ListSchemasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried schemas.</p>
+             * Schemas.
              */
             public Builder schemas(java.util.List<String> schemas) {
                 this.schemas = schemas;

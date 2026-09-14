@@ -139,7 +139,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried access credentials.</p>
+         * Secrets.
          */
         public Builder secrets(Secrets secrets) {
             this.secrets = secrets;
@@ -285,10 +285,7 @@ public class ListSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1033***</p>
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -296,10 +293,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-bp14****</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -307,10 +301,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the access credential.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test description</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,10 +309,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -329,10 +317,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
+             * SecretArn.
              */
             public Builder secretArn(String secretArn) {
                 this.secretArn = secretArn;
@@ -340,10 +325,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the access credential.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testsecret</p>
+             * SecretName.
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -351,10 +333,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testacc</p>
+             * Username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -408,7 +387,7 @@ public class ListSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried access credentials.</p>
+             * Secrets.
              */
             public Builder secrets(java.util.List<SecretsSecrets> secrets) {
                 this.secrets = secrets;

@@ -106,7 +106,7 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKeys.
+         * <p>The list of API keys.</p>
          */
         public Builder apiKeys(java.util.List<ApiKeys> apiKeys) {
             this.apiKeys = apiKeys;
@@ -114,7 +114,10 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -241,7 +253,10 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-01T00:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -249,7 +264,10 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-apikey</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -257,7 +275,10 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxx">https://xxxx</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;

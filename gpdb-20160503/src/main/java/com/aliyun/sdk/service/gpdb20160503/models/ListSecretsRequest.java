@@ -139,7 +139,10 @@ public class ListSecretsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace composed of multiple database instances. This parameter and the DBInstanceId parameter cannot both be empty. If both are specified, this parameter takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-ws-*****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

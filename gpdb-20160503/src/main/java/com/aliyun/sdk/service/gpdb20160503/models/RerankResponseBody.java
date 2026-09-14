@@ -128,7 +128,7 @@ public class RerankResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rerank results.</p>
+         * Results.
          */
         public Builder results(Results results) {
             this.results = results;
@@ -233,10 +233,7 @@ public class RerankResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Re-ordered document information.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ADBPG is the OLAP database of Alibaba Cloud.</p>
+             * Document.
              */
             public Builder document(String document) {
                 this.document = document;
@@ -244,10 +241,7 @@ public class RerankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Index of this document in the request parameter Documents, starting from 0.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -255,10 +249,7 @@ public class RerankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rerank similarity score.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2.31412</p>
+             * RelevanceScore.
              */
             public Builder relevanceScore(Float relevanceScore) {
                 this.relevanceScore = relevanceScore;
@@ -312,7 +303,7 @@ public class RerankResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Rerank results.</p>
+             * Results.
              */
             public Builder results(java.util.List<ResultsResults> results) {
                 this.results = results;

@@ -158,7 +158,10 @@ public class GetSaasServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Cu.
+         * <p>The compute resource of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cu(String cu) {
             this.cu = cu;
@@ -166,7 +169,20 @@ public class GetSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing type. Valid values:</p>
+         * <ul>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * <li><strong>PREPAY</strong>: subscription</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If this parameter is not specified, the default value is pay-as-you-go.</li>
+         * <li>In subscription billing mode, a discount is available when you purchase a duration of one year or longer. Select a billing type as needed.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -174,7 +190,10 @@ public class GetSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID where the service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -182,7 +201,10 @@ public class GetSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +212,10 @@ public class GetSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -198,7 +223,10 @@ public class GetSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agdb-xxxxx</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -206,7 +234,14 @@ public class GetSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceType.
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><strong>drama</strong></li>
+         * <li><strong>memroy</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>drama</p>
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -214,7 +249,14 @@ public class GetSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The service status. Valid values:</p>
+         * <ul>
+         * <li><strong>creating</strong>: Being created.</li>
+         * <li><strong>active</strong>: Running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>creating</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -222,7 +264,10 @@ public class GetSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID where the service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-*****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

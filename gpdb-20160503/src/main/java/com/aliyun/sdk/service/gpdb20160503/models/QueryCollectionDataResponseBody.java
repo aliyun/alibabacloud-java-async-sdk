@@ -106,7 +106,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Data list.</p>
+         * <p>The matched results.</p>
          */
         public Builder matches(Matches matches) {
             this.matches = matches;
@@ -114,7 +114,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detailed information when the request fails.</p>
+         * <p>Details about the error, returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1234</p>
@@ -125,7 +125,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -136,10 +136,12 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status, with the following values:</p>
+         * <p>The status of the request. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>: Success.</li>
-         * <li><strong>fail</strong>: Failure.</li>
+         * <li><p><strong>success</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>fail</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +153,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Only returned when the Offset is not 0, this value represents the total number of hits for the search criteria.</p>
+         * <p>The total number of hits for the search. This parameter is returned only when the Offset parameter in the request is not 0.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -509,10 +511,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique ID of the vector data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doca-1234</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -520,7 +519,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Metadata.</p>
+             * Metadata.
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -536,10 +535,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The similarity score of this data, which is related to the algorithm <code>(l2/ip/cosine)</code> specified when creating the index.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.12345</p>
+             * Score.
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -555,7 +551,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of vector data.</p>
+             * Values.
              */
             public Builder values(MatchValues values) {
                 this.values = values;

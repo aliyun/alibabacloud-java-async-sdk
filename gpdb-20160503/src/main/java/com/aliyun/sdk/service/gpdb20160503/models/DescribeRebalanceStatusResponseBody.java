@@ -70,7 +70,7 @@ public class DescribeRebalanceStatusResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>7F5B5023-94EA-5D5D-AB72-B7B356BA****</p>
+         * <p>9C6122AD-2FCC-50B3-873A-37B68775****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +81,7 @@ public class DescribeRebalanceStatusResponseBody extends TeaModel {
          * <p>The rebalance status of the instance. Valid values: Balanced and Imbalanced.</p>
          * 
          * <strong>example:</strong>
-         * <p>Init</p>
+         * <p>Balanced</p>
          */
         public Builder status(String status) {
             this.status = status;

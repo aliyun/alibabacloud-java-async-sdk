@@ -119,7 +119,10 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QEDGOTAJOG</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -138,7 +141,10 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-01T00:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -146,7 +152,10 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-apikey</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -154,7 +163,10 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxx">https://xxxx</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -162,7 +174,10 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -359,7 +359,19 @@ public class CreateCollectionRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * <p>The vector index algorithm.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p><code>hnswflat</code>: (Default) An HNSW index without quantization compression.</p>
+         * </li>
+         * <li><p><code>novam</code>: A graph index without quantization compression. This algorithm is suitable for high-performance scenarios, such as real-time recommendations.</p>
+         * </li>
+         * <li><p><code>novad</code>: A partitioned index with <code>rabitq</code> quantization. This algorithm is suitable for large-scale, low-cost retrieval scenarios.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hnswflat</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -368,9 +380,9 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The name of the collection that you want to create.</p>
+         * <p>The name of the collection to create.</p>
          * <blockquote>
-         * <p> The name must comply with the naming conventions of PostgreSQL objects.</p>
+         * <p>The name must comply with PostgreSQL object naming conventions.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -386,11 +398,11 @@ public class CreateCollectionRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>gp-xxxxxxxxx</p>
+         * <p>gp-bp152460513z****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -399,9 +411,9 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The number of vector dimensions.</p>
+         * <p>The vector dimension.</p>
          * <blockquote>
-         * <p> If you specify this parameter, an index is created. When you call the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> operation, make sure that the length of the Rows.Vector parameter is the same as the value of this parameter. If you do not specify this parameter, you can call the <a href="https://help.aliyun.com/document_detail/2401499.html">CreateVectorIndex</a> operation to create an index.</p>
+         * <p>If you specify this parameter, a vector index is created. In subsequent calls to the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> operation, the length of <code>Rows.Vector</code> must match this dimension. If you do not specify this parameter, you must call the <a href="https://help.aliyun.com/document_detail/2401499.html">CreateVectorIndex</a> operation to create an index later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -414,15 +426,18 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</p>
-         * <blockquote>
-         * </blockquote>
+         * <p>Specifies whether to use <code>mmap</code> to build the HNSW index. The default value is 0. We recommend setting this to 1 if your data does not require deletion and you need high-performance data ingestion.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><p>0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.</p>
+         * <li><p><code>0</code>: (Default) Builds the index by using segmented page storage. This mode can use the <code>shared_buffer</code> in PostgreSQL for caching and supports <code>DELETE</code> and <code>UPDATE</code> operations.</p>
          * </li>
-         * <li><p>1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.</p>
+         * <li><p><code>1</code>: Builds the index by using <code>mmap</code>. This mode does not support <code>DELETE</code> or <code>UPDATE</code> operations.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>The <code>ExternalStorage</code> parameter is available only for AnalyticDB for PostgreSQL v6.0 instances and is not supported in v7.0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -434,7 +449,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The fields used for full-text search. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</p>
+         * <p>The fields to use for full-text search. Use commas (<code>,</code>) to separate multiple field names. These fields must be keys defined in the <code>Metadata</code> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>title,content</p>
@@ -446,7 +461,19 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * HnswEfConstruction.
+         * <p>The size of the candidate set for HNSW index construction. The value must be greater than or equal to <code>2 * HnswM</code>.</p>
+         * <blockquote>
+         * <p>Value range:</p>
+         * <ul>
+         * <li><p>For AnalyticDB for PostgreSQL V6.0 instances: 40 to 4000.</p>
+         * </li>
+         * <li><p>For AnalyticDB for PostgreSQL V7.0 instances: 4 to 1000. The default value is 64.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder hnswEfConstruction(String hnswEfConstruction) {
             this.putQueryParameter("HnswEfConstruction", hnswEfConstruction);
@@ -455,14 +482,29 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</p>
+         * <p>The maximum number of neighbors for the HNSW algorithm. You do not typically need to set this parameter, as the system automatically determines a value based on the vector dimension.</p>
          * <blockquote>
-         * <p> We recommend that you configure this parameter based on the value of the Dimension parameter.</p>
+         * <p>Value range:</p>
+         * <ul>
+         * <li><p>For AnalyticDB for PostgreSQL V6.0 instances: 1 to 1000.</p>
+         * </li>
+         * <li><p>For AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. The default value is 16.</p>
+         * </li>
+         * </ul>
          * </blockquote>
-         * <p>*If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.</p>
-         * <p>*If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.</p>
-         * <p>*If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.</p>
-         * <p>*If you set Dimension to a value greater than 1024, set the value of HnswM to 128.</p>
+         * <blockquote>
+         * <p>We recommend that you set this parameter based on the vector dimension:</p>
+         * <ul>
+         * <li><p>16 for dimensions less than or equal to 384.</p>
+         * </li>
+         * <li><p>32 for dimensions greater than 384 and less than or equal to 768.</p>
+         * </li>
+         * <li><p>64 for dimensions greater than 768 and less than or equal to 1024.</p>
+         * </li>
+         * <li><p>128 for dimensions greater than 1024.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -474,9 +516,9 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>Name of the management account with rds_superuser permissions.</p>
+         * <p>The name of the management account that has the <code>rds_superuser</code> privilege.</p>
          * <blockquote>
-         * <p>You can create an account through the console -&gt; Account Management, or by using the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> API.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation to create an account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -490,7 +532,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The password of the manager account.</p>
+         * <p>The password of the management account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -503,18 +545,20 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
+         * <p>A JSON string that defines the metadata schema as a map. The keys are field names, and the values are their corresponding data types.</p>
          * <blockquote>
-         * <p> Supported data types:</p>
-         * </blockquote>
+         * <p>Supported data types</p>
          * <ul>
-         * <li><p>For information about the supported data types, see <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-postgresql/developer-reference/data-types-1/">Data types</a>.</p>
+         * <li><p>For a list of supported data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</p>
          * </li>
-         * <li><p>The money data type is not supported.</p>
+         * <li><p>The <code>money</code> data type is not supported.</p>
          * </li>
          * </ul>
-         * <p>**</p>
-         * <p><strong>Warning</strong> Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Warning: </p>
+         * </blockquote>
+         * <p>The field names <code>id</code>, <code>vector</code>, <code>to_tsvector</code>, and <code>source</code> are reserved and cannot be used.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -527,7 +571,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The scalar index fields. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</p>
+         * <p>The scalar index fields. Separate multiple fields with commas (<code>,</code>). The fields must be keys that are defined in <code>Metadata</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>
@@ -539,11 +583,14 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to create vector indexes. Valid values:</p>
+         * <p>The distance metric used to build the vector index. Valid values:</p>
          * <ul>
-         * <li>l2: Euclidean distance.</li>
-         * <li>ip: inner product distance.</li>
-         * <li>cosine: cosine similarity.</li>
+         * <li><p><code>l2</code>: Euclidean distance.</p>
+         * </li>
+         * <li><p><code>ip</code>: dot product.</p>
+         * </li>
+         * <li><p><code>cosine</code>: cosine similarity.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -556,9 +603,9 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace or the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list existing namespaces.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -580,7 +627,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The analyzer that is used for full-text search.</p>
+         * <p>The parser for full-text search. The default is <code>zh_cn</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>zh_cn</p>
@@ -592,14 +639,16 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the product quantization (PQ) feature for index acceleration. We recommend that you enable this feature for more than 500,000 rows of data. Valid values:</p>
+         * <p>Specifies whether to enable Product Quantization (PQ) for index acceleration. This is recommended for datasets with more than 500,000 entries. Valid values:</p>
          * <ul>
-         * <li>0: no.</li>
-         * <li>1 (default): yes.</li>
+         * <li><p><code>0</code>: Disabled.</p>
+         * </li>
+         * <li><p><code>1</code>: (Default) Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         public Builder pqEnable(Integer pqEnable) {
             this.putQueryParameter("PqEnable", pqEnable);
@@ -608,7 +657,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region where the instance is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -621,7 +670,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * SparseVectorIndexConfig.
+         * <p>The configuration for the sparse vector index. If specified, a sparse vector index is created.</p>
          */
         public Builder sparseVectorIndexConfig(SparseVectorIndexConfig sparseVectorIndexConfig) {
             String sparseVectorIndexConfigShrink = shrink(sparseVectorIndexConfig, "SparseVectorIndexConfig", "json");
@@ -631,7 +680,10 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * SupportSparse.
+         * <p>Specifies whether to enable support for sparse vectors. The default value is <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportSparse(Boolean supportSparse) {
             this.putQueryParameter("SupportSparse", supportSparse);
@@ -640,7 +692,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * VectorIndexConfig.
+         * <p>The configuration for the dense vector index.</p>
          */
         public Builder vectorIndexConfig(VectorIndexConfig vectorIndexConfig) {
             String vectorIndexConfigShrink = shrink(vectorIndexConfig, "VectorIndexConfig", "json");
@@ -650,7 +702,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
+         * <p>The ID of the workspace, which contains multiple database instances. You must specify either <code>WorkspaceId</code> or <code>DBInstanceId</code>. If both are specified, <code>WorkspaceId</code> takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-ws-*****</p>
@@ -734,7 +786,17 @@ public class CreateCollectionRequest extends Request {
             } 
 
             /**
-             * Algorithm.
+             * <p>The vector index algorithm.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p><code>hnswflat</code>: (Default) An HNSW index without quantization compression.</p>
+             * </li>
+             * <li><p><code>novam</code>: A graph index without quantization compression. This algorithm is suitable for high-performance scenarios, such as real-time recommendations.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hnswflat</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -742,7 +804,13 @@ public class CreateCollectionRequest extends Request {
             }
 
             /**
-             * HnswEfConstruction.
+             * <p>The size of the candidate set for HNSW index construction. The value must be an integer from 4 to 1,000. The default is 64.</p>
+             * <blockquote>
+             * <p>This parameter is required only for AnalyticDB for PostgreSQL V7.0 instances, and its value must be greater than or equal to <code>2 * HnswM</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder hnswEfConstruction(Integer hnswEfConstruction) {
                 this.hnswEfConstruction = hnswEfConstruction;
@@ -750,14 +818,29 @@ public class CreateCollectionRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</p>
+             * <p>The maximum number of neighbors for the HNSW algorithm. You do not typically need to set this parameter, as the system automatically determines a value based on the vector dimension.</p>
              * <blockquote>
-             * <p> We recommend that you configure this parameter based on the value of the Dimension parameter.</p>
+             * <p>Value range:</p>
+             * <ul>
+             * <li><p>For AnalyticDB for PostgreSQL V6.0 instances: 1 to 1000.</p>
+             * </li>
+             * <li><p>For AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. The default value is 16.</p>
+             * </li>
+             * </ul>
              * </blockquote>
-             * <p>*If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.</p>
-             * <p>*If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.</p>
-             * <p>*If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.</p>
-             * <p>*If you set Dimension to a value greater than 1024, set the value of HnswM to 128.</p>
+             * <blockquote>
+             * <p>We recommend that you set this parameter based on the vector dimension:</p>
+             * <ul>
+             * <li><p>16 for dimensions less than or equal to 384.</p>
+             * </li>
+             * <li><p>32 for dimensions greater than 384 and less than or equal to 768.</p>
+             * </li>
+             * <li><p>64 for dimensions greater than 768 and less than or equal to 1024.</p>
+             * </li>
+             * <li><p>128 for dimensions greater than 1024.</p>
+             * </li>
+             * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>64</p>
@@ -827,7 +910,10 @@ public class CreateCollectionRequest extends Request {
             } 
 
             /**
-             * Nlist.
+             * <p>The number of lists (partitions) for a <code>novad</code> index. The value must be an integer from 2 to 1,073,741,824. The default is 256.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder nlist(Integer nlist) {
                 this.nlist = nlist;
@@ -835,7 +921,10 @@ public class CreateCollectionRequest extends Request {
             }
 
             /**
-             * RabitqBits.
+             * <p>The number of bits for <code>rabitq</code> compression. The value must be an integer from 1 to 8. The default is 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rabitqBits(Integer rabitqBits) {
                 this.rabitqBits = rabitqBits;

@@ -74,7 +74,7 @@ public class ListAINodePoolsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListAINodePoolsRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>Region ID。</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -79,7 +79,7 @@ public class ModifySQLCollectorPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-xxxxxxxx</p>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

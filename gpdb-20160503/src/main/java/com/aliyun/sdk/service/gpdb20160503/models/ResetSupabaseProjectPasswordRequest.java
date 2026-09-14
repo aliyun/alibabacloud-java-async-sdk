@@ -23,6 +23,10 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
     private String accountPassword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DashboardPassword")
+    private String dashboardPassword;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
@@ -34,6 +38,7 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
     private ResetSupabaseProjectPasswordRequest(Builder builder) {
         super(builder);
         this.accountPassword = builder.accountPassword;
+        this.dashboardPassword = builder.dashboardPassword;
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
@@ -59,6 +64,13 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
     }
 
     /**
+     * @return dashboardPassword
+     */
+    public String getDashboardPassword() {
+        return this.dashboardPassword;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -74,6 +86,7 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetSupabaseProjectPasswordRequest, Builder> {
         private String accountPassword; 
+        private String dashboardPassword; 
         private String projectId; 
         private String regionId; 
 
@@ -84,6 +97,7 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
         private Builder(ResetSupabaseProjectPasswordRequest request) {
             super(request);
             this.accountPassword = request.accountPassword;
+            this.dashboardPassword = request.dashboardPassword;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
@@ -92,7 +106,7 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
          * <p>The password of the database account.</p>
          * <ul>
          * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * <li>The following special characters are supported: <code>!@#$%^&amp;*()_+-=</code></li>
          * <li>The password must be 8 to 32 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -107,7 +121,16 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
         }
 
         /**
-         * <p>Supabase Instance ID</p>
+         * DashboardPassword.
+         */
+        public Builder dashboardPassword(String dashboardPassword) {
+            this.putQueryParameter("DashboardPassword", dashboardPassword);
+            this.dashboardPassword = dashboardPassword;
+            return this;
+        }
+
+        /**
+         * <p>The Supabase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

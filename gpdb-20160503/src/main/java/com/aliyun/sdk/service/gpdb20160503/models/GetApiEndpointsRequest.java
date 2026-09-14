@@ -87,7 +87,10 @@ public class GetApiEndpointsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records to return in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -96,7 +99,10 @@ public class GetApiEndpointsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -105,7 +111,10 @@ public class GetApiEndpointsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

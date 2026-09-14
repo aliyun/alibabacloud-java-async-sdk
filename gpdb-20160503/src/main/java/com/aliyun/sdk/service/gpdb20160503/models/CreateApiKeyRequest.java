@@ -117,7 +117,10 @@ public class CreateApiKeyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test secret</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -126,6 +129,7 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The name of the API key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +154,7 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * ServiceIds.
+         * <p>The list of service IDs to authorize.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
             String serviceIdsShrink = shrink(serviceIds, "ServiceIds", "json");
@@ -157,6 +164,7 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

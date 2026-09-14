@@ -88,7 +88,10 @@ public class ModifySaasServiceDeletionProtectionRequest extends Request {
         } 
 
         /**
-         * DeletionProtection.
+         * <p>Specifies whether to enable deletion protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -97,7 +100,10 @@ public class ModifySaasServiceDeletionProtectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -106,6 +112,7 @@ public class ModifySaasServiceDeletionProtectionRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

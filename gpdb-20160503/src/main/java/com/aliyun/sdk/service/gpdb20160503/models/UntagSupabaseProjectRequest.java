@@ -115,7 +115,15 @@ public class UntagSupabaseProjectRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Specifies whether to unbind all tags from the instance. This parameter takes effect only when TagKey.N is not specified in the request. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -124,7 +132,10 @@ public class UntagSupabaseProjectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +144,7 @@ public class UntagSupabaseProjectRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The instance ID. Valid values of N: 1 to 50.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -142,7 +153,14 @@ public class UntagSupabaseProjectRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><code>instance</code>: reserved mode instance.</li>
+         * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic mode instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -151,7 +169,7 @@ public class UntagSupabaseProjectRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The tag key of the resource. Valid values of N: 1 to 20.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

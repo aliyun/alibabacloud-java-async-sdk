@@ -154,7 +154,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried tables.</p>
+         * Tables.
          */
         public Builder tables(Tables tables) {
             this.tables = tables;
@@ -207,7 +207,7 @@ public class ListTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried tables.</p>
+             * Tables.
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;

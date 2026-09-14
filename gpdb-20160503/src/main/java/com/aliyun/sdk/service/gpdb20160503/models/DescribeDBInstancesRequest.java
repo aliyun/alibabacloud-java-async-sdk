@@ -242,7 +242,7 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The edition of the instance. Separate multiple values with commas (,).</p>
+         * <p>The instance edition. You can specify multiple editions. Separate multiple editions with a comma (,).</p>
          */
         public Builder DBInstanceCategories(java.util.List<String> DBInstanceCategories) {
             String DBInstanceCategoriesShrink = shrink(DBInstanceCategories, "DBInstanceCategories", "simple");
@@ -252,7 +252,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -264,7 +264,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. Separate multiple values with commas (,).</p>
+         * <p>The instance IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -276,7 +276,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The resource type of the instance. Separate multiple values with commas (,).</p>
+         * <p>The resource type of the instance. You can specify multiple resource types. Separate multiple resource types with a comma (,).</p>
          */
         public Builder DBInstanceModes(java.util.List<String> DBInstanceModes) {
             String DBInstanceModesShrink = shrink(DBInstanceModes, "DBInstanceModes", "simple");
@@ -296,7 +296,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p>This parameter is deprecated. Do not specify this parameter.</p>
          */
         public Builder instanceDeployTypes(java.util.List<String> instanceDeployTypes) {
             String instanceDeployTypesShrink = shrink(instanceDeployTypes, "InstanceDeployTypes", "simple");
@@ -306,13 +306,15 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The network type of the instance. Valid values:</p>
+         * <p>The instance network type. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
-         * <li><strong>Classic</strong>: classic network.</li>
+         * <li><p><strong>VPC</strong>: VPC</p>
+         * </li>
+         * <li><p><strong>Classic</strong>: classic network</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, instances of all network types are returned.</p>
+         * <p>If you omit this parameter, the operation returns instances of all network types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -334,7 +336,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,11 +348,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values:</p>
+         * <p>The number of entries to return on each page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong></li>
-         * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
          * </ul>
          * <p>Default value: <strong>30</strong>.</p>
          * 
@@ -364,9 +369,9 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -392,7 +397,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -401,7 +406,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID. You can use this parameter to filter instances that reside in the specified VPC.</p>
+         * <p>The VPC ID. You can specify this parameter to query instances in a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-t4nqyp3tc5mx7vy6****</p>
@@ -472,7 +477,7 @@ public class DescribeDBInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>test-key</p>
@@ -483,7 +488,7 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>test-value</p>

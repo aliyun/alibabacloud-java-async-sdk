@@ -222,7 +222,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Instance ID. N&quot;s value range: 1~50</p>
+         * <p>Instance ID. N\&quot;s value range: 1~50</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -267,7 +267,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Resource tag key. N&quot;s value range: 1~20</p>
+         * <p>Resource tag key. N\&quot;s value range: 1~20</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

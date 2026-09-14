@@ -363,7 +363,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Address and hostname of the Hadoop cluster&quot;s source node in the /etc/hosts file.</p>
+         * <p>Address and hostname of the Hadoop cluster\&quot;s source node in the /etc/hosts file.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.220.128 master-1-1.c-xxx.cn-shanghai.emr.aliyuncs.com

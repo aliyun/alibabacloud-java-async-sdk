@@ -145,9 +145,9 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of tokens that are used during vectorization.</p>
+         * <p>The number of tokens used during vectorization.</p>
          * <blockquote>
-         * <p> A token is the minimum unit for segmenting text. A token can be a word, phrase, punctuation, or character.</p>
+         * <p>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the entity.</p>
+         * Entities.
          */
         public Builder entities(Entities entities) {
             this.entities = entities;
@@ -167,7 +167,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A single data record.</p>
+         * Matches.
          */
         public Builder matches(Matches matches) {
             this.matches = matches;
@@ -175,7 +175,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned information.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -186,7 +186,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the relationship edge.</p>
+         * Relations.
          */
         public Builder relations(Relations relations) {
             this.relations = relations;
@@ -194,7 +194,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -205,10 +205,10 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The API execution status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>.</li>
-         * <li><strong>fail</strong>.</li>
+         * <li><strong>success</strong>: The execution is successful.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of tokens that are consumed by this query.</p>
+         * <p>The resource usage of this query.</p>
          */
         public Builder usage(Usage usage) {
             this.usage = usage;
@@ -325,10 +325,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The entity description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>A former advisor at DeepMind.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -336,10 +333,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the entity.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Dr. Wang</p>
+             * Entity.
              */
             public Builder entity(String entity) {
                 this.entity = entity;
@@ -347,10 +341,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>my_doc.txt</p>
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -358,10 +349,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -369,7 +357,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity type.</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -581,7 +569,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the text.</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -589,10 +577,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>my_doc.txt</p>
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -600,11 +585,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network URL of the image result. By default, the URL is valid for 2 hours.</p>
-             * <p>You can use the UrlExpiration parameter to specify a validity period.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://xxx-cn-beijing.aliyuncs.com/image/test.png">https://xxx-cn-beijing.aliyuncs.com/image/test.png</a></p>
+             * FileURL.
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -612,10 +593,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the vector data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doca-1234</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -623,10 +601,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Document loader metadata.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;page_pos&quot;: 1}</p>
+             * LoaderMetadata.
              */
             public Builder loaderMetadata(String loaderMetadata) {
                 this.loaderMetadata = loaderMetadata;
@@ -634,7 +609,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata map.</p>
+             * Metadata.
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -642,10 +617,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerank score.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6.2345</p>
+             * RerankScore.
              */
             public Builder rerankScore(Double rerankScore) {
                 this.rerankScore = rerankScore;
@@ -653,10 +625,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the retrieval results. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path retrieval.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * RetrievalSource.
              */
             public Builder retrievalSource(Integer retrievalSource) {
                 this.retrievalSource = retrievalSource;
@@ -664,10 +633,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The similarity score of the data. It is related to the algorithm (l2, ip, or cosine) that is specified when you create an index.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.12345</p>
+             * Score.
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -827,10 +793,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the relationship edge.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Dr. Wang previously served as an advisor at DeepMind.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -838,10 +801,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>my_doc.txt</p>
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -849,10 +809,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the link.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -860,7 +817,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source entity.</p>
+             * SourceEntity.
              */
             public Builder sourceEntity(String sourceEntity) {
                 this.sourceEntity = sourceEntity;
@@ -868,10 +825,7 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination entity.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Dr. Wang</p>
+             * TargetEntity.
              */
             public Builder targetEntity(String targetEntity) {
                 this.targetEntity = targetEntity;
@@ -992,9 +946,9 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries that are used during vectorization.</p>
+             * <p>The number of entries used during vectorization.</p>
              * <blockquote>
-             * <p> An entry refers to a single unit of vectorization processing. Processing one text input counts as 1 entry, while processing one image counts as 2 entries.</p>
+             * <p>An entry refers to the number of items processed during vectorization of text or images. For example, processing text once counts as 1 entry, and processing an image once counts as 2 entries.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1006,9 +960,9 @@ public class QueryKnowledgeBasesContentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens that are used for vectorization.</p>
+             * <p>The number of tokens used during vectorization.</p>
              * <blockquote>
-             * <p> A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</p>
+             * <p>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

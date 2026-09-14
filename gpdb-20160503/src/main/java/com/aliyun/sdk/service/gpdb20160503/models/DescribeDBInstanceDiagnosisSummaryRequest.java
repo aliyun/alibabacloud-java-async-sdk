@@ -167,7 +167,7 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends Request {
          * <p>Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -174,6 +174,7 @@ public class UpdateBranchRequest extends Request {
         } 
 
         /**
+         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +187,7 @@ public class UpdateBranchRequest extends Request {
         }
 
         /**
+         * <p>The branch name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +200,16 @@ public class UpdateBranchRequest extends Request {
         }
 
         /**
-         * ClearExpiresAt.
+         * <p>Specifies whether to clear the branch expiration time.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Clears ExpiresAt.</li>
+         * <li>false: Does not clear ExpiresAt.</li>
+         * </ul>
+         * <p>If this parameter is not specified, the existing expiration time remains unchanged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder clearExpiresAt(Boolean clearExpiresAt) {
             this.putQueryParameter("ClearExpiresAt", clearExpiresAt);
@@ -207,7 +218,10 @@ public class UpdateBranchRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The branch description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test branch</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -216,7 +230,10 @@ public class UpdateBranchRequest extends Request {
         }
 
         /**
-         * ExpiresAt.
+         * <p>The time when the branch automatically expires and is deleted. The value is in ISO 8601 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-08T09:11:12Z</p>
          */
         public Builder expiresAt(String expiresAt) {
             this.putQueryParameter("ExpiresAt", expiresAt);
@@ -225,6 +242,7 @@ public class UpdateBranchRequest extends Request {
         }
 
         /**
+         * <p>The Supabase project ID that corresponds to the primary branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +255,15 @@ public class UpdateBranchRequest extends Request {
         }
 
         /**
-         * Protected.
+         * <p>Specifies whether to enable branch protection.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Branch protection is enabled.</li>
+         * <li>false: Branch protection is disabled. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder _protected(Boolean _protected) {
             this.putQueryParameter("Protected", _protected);
@@ -246,7 +272,10 @@ public class UpdateBranchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region of the primary branch is inherited by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -255,7 +284,7 @@ public class UpdateBranchRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of branch tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -323,7 +352,10 @@ public class UpdateBranchRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -331,7 +363,10 @@ public class UpdateBranchRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder value(String value) {
                 this.value = value;

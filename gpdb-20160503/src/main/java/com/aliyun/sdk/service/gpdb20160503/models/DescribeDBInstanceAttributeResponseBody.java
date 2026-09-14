@@ -67,7 +67,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried instance.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -75,7 +75,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5E6EDEB8-D73E-5F2D-B948-86C8AEB05A68</p>
@@ -144,10 +144,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-key</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -155,10 +152,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-value</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1163,13 +1157,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Queries the current instance availability status, in percentage (%).</p>
-             * <blockquote>
-             * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>100.0%</p>
+             * AvailabilityValue.
              */
             public Builder availabilityValue(String availabilityValue) {
                 this.availabilityValue = availabilityValue;
@@ -1185,15 +1173,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Access mode, with the following values:</p>
-             * <ul>
-             * <li><strong>Performance</strong>: Standard access mode.</li>
-             * <li><strong>Safty</strong>: High-security access mode.</li>
-             * <li><strong>LVS</strong>: LVS link mode.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>LVS</p>
+             * ConnectionMode.
              */
             public Builder connectionMode(String connectionMode) {
                 this.connectionMode = connectionMode;
@@ -1201,10 +1181,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance connection address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-bp13ue79qk8y1****-master.gpdb.rds.aliyuncs.com</p>
+             * ConnectionString.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -1212,10 +1189,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Minor version number of the kernel.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mm.v6.3.10.1-202207141918</p>
+             * CoreVersion.
              */
             public Builder coreVersion(String coreVersion) {
                 this.coreVersion = coreVersion;
@@ -1223,10 +1197,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of CPU cores for the compute node, unit: Core.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * CpuCores.
              */
             public Builder cpuCores(Integer cpuCores) {
                 this.cpuCores = cpuCores;
@@ -1234,13 +1205,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of CPU cores per node.</p>
-             * <blockquote>
-             * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * CpuCoresPerNode.
              */
             public Builder cpuCoresPerNode(Integer cpuCoresPerNode) {
                 this.cpuCoresPerNode = cpuCoresPerNode;
@@ -1248,10 +1213,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-08-11T09:16:26Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1259,14 +1221,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance series, with the following values:</p>
-             * <ul>
-             * <li><strong>Basic</strong>: Basic Edition.</li>
-             * <li><strong>HighAvailability</strong>: High Availability Edition.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>HighAvailability</p>
+             * DBInstanceCategory.
              */
             public Builder DBInstanceCategory(String DBInstanceCategory) {
                 this.DBInstanceCategory = DBInstanceCategory;
@@ -1274,13 +1229,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance specification.</p>
-             * <blockquote>
-             * <p>This parameter is only applicable to reserved storage mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>gpdb.group.segsdx1</p>
+             * DBInstanceClass.
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -1288,16 +1237,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance family, with the following values:</p>
-             * <ul>
-             * <li><strong>s</strong>: Shared type.</li>
-             * <li><strong>x</strong>: General type.</li>
-             * <li><strong>d</strong>: Dedicated package.</li>
-             * <li><strong>h</strong>: Dedicated physical machine.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>x</p>
+             * DBInstanceClassType.
              */
             public Builder DBInstanceClassType(String DBInstanceClassType) {
                 this.DBInstanceClassType = DBInstanceClassType;
@@ -1305,10 +1245,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * DBInstanceCpuCores.
              */
             public Builder DBInstanceCpuCores(Integer DBInstanceCpuCores) {
                 this.DBInstanceCpuCores = DBInstanceCpuCores;
@@ -1316,10 +1253,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-bp13ue79qk8y1****</p>
+             * DBInstanceDescription.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -1327,13 +1261,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maximum BPS (disk throughput) of the compute group, in Mbps.</p>
-             * <blockquote>
-             * <p>This parameter is only applicable to reserved storage mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * DBInstanceDiskMBPS.
              */
             public Builder DBInstanceDiskMBPS(Long DBInstanceDiskMBPS) {
                 this.DBInstanceDiskMBPS = DBInstanceDiskMBPS;
@@ -1341,13 +1269,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of compute groups.</p>
-             * <blockquote>
-             * <p>This parameter is only applicable to reserved storage mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * DBInstanceGroupCount.
              */
             public Builder DBInstanceGroupCount(String DBInstanceGroupCount) {
                 this.DBInstanceGroupCount = DBInstanceGroupCount;
@@ -1355,10 +1277,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-bp13ue79qk8y1****</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -1366,13 +1285,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory of the compute node.</p>
-             * <blockquote>
-             * <p>The unit for storage-reserved mode is MB; for Serverless and storage-elastic modes, it is GB.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>16</p>
+             * DBInstanceMemory.
              */
             public Builder DBInstanceMemory(Long DBInstanceMemory) {
                 this.DBInstanceMemory = DBInstanceMemory;
@@ -1380,15 +1293,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance resource type, with the following values:</p>
-             * <ul>
-             * <li><strong>Serverless</strong>: Serverless mode.</li>
-             * <li><strong>StorageElastic</strong>: Storage elastic mode.</li>
-             * <li><strong>Classic</strong>: Storage reserved mode.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>StorageElastic</p>
+             * DBInstanceMode.
              */
             public Builder DBInstanceMode(String DBInstanceMode) {
                 this.DBInstanceMode = DBInstanceMode;
@@ -1396,10 +1301,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated and will not return any value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * DBInstanceNetType.
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -1407,10 +1309,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance status. For more details, see the supplementary explanation of the DBInstanceStatus parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * DBInstanceStatus.
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -1418,10 +1317,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maximum storage space of a single replica, in GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50</p>
+             * DBInstanceStorage.
              */
             public Builder DBInstanceStorage(Long DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
@@ -1429,10 +1325,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment mode.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>single</p>
+             * DeployMode.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1440,13 +1333,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Encryption key.</p>
-             * <blockquote>
-             * <p>This parameter is returned only for instances with disk encryption enabled.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0d2470df-da7b-4786-b981-************</p>
+             * EncryptionKey.
              */
             public Builder encryptionKey(String encryptionKey) {
                 this.encryptionKey = encryptionKey;
@@ -1454,16 +1341,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Encryption type, with the following value:</p>
-             * <ul>
-             * <li><strong>CloudDisk</strong>: Cloud disk encryption.</li>
-             * </ul>
-             * <blockquote>
-             * <p>This parameter is returned only for instances with cloud disk encryption.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>CloudDisk</p>
+             * EncryptionType.
              */
             public Builder encryptionType(String encryptionType) {
                 this.encryptionType = encryptionType;
@@ -1471,10 +1349,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database engine.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gpdb</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1482,10 +1357,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6.0</p>
+             * EngineVersion.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -1493,13 +1365,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance expiration time (in UTC).</p>
-             * <blockquote>
-             * <p>The expiration time for pay-as-you-go instances is <code>2999-09-08T16:00:00Z</code>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>2999-09-08T16:00:00Z</p>
+             * ExpireTime.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1515,17 +1381,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Compute group machine type, with the following values:</p>
-             * <ul>
-             * <li><strong>0</strong>: SSD</li>
-             * <li><strong>1</strong>: HDD</li>
-             * </ul>
-             * <blockquote>
-             * <p>This parameter applies only to storage-reserved mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * HostType.
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -1533,13 +1389,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Idle release waiting time. Unit: seconds.</p>
-             * <blockquote>
-             * <p>This parameter is returned only for instances in the Serverless automatic scheduling mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>600</p>
+             * IdleTime.
              */
             public Builder idleTime(Integer idleTime) {
                 this.idleTime = idleTime;
@@ -1547,14 +1397,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance network type, with the following values:</p>
-             * <ul>
-             * <li><strong>Classic</strong>: Classic network.</li>
-             * <li><strong>VPC</strong>: VPC network.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * InstanceNetworkType.
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -1570,17 +1413,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Lock mode, with the following values:</p>
-             * <ul>
-             * <li><strong>Unlock</strong>: Normal.</li>
-             * <li><strong>ManualLock</strong>: Manually triggered lock.</li>
-             * <li><strong>LockByExpiration</strong>: Automatically locked when the instance expires.</li>
-             * <li><strong>LockByRestoration</strong>: Automatically locked before the instance rolls back.</li>
-             * <li><strong>LockByDiskQuota</strong>: Automatically locked when the instance space is full.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Unlock</p>
+             * LockMode.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -1588,10 +1421,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated and will not return any value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * LockReason.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1599,10 +1429,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maintenance end time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>22:00Z</p>
+             * MaintainEndTime.
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -1610,10 +1437,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maintenance start time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18:00Z</p>
+             * MaintainStartTime.
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -1621,10 +1445,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of AI coordinator node resources of the instance. If the coordinator nodes of the instance are not AI nodes, null is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ADB.AIMedium.2</p>
+             * MasterAISpec.
              */
             public Builder masterAISpec(String masterAISpec) {
                 this.masterAISpec = masterAISpec;
@@ -1632,10 +1453,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Master resources.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * MasterCU.
              */
             public Builder masterCU(Integer masterCU) {
                 this.masterCU = masterCU;
@@ -1643,10 +1461,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of Master nodes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * MasterNodeNum.
              */
             public Builder masterNodeNum(Integer masterNodeNum) {
                 this.masterNodeNum = masterNodeNum;
@@ -1654,13 +1469,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maximum number of concurrent connections for the instance.</p>
-             * <blockquote>
-             * <p>This parameter is only applicable to reserved storage mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>500</p>
+             * MaxConnections.
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -1668,13 +1477,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory size per replica, see the <strong>MemoryUnit</strong> parameter for the unit.</p>
-             * <blockquote>
-             * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * MemoryPerNode.
              */
             public Builder memoryPerNode(Integer memoryPerNode) {
                 this.memoryPerNode = memoryPerNode;
@@ -1682,13 +1485,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory size of the compute node.</p>
-             * <blockquote>
-             * <p>The unit is MB for the storage reserved mode; GB for Serverless and storage elastic modes.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>16</p>
+             * MemorySize.
              */
             public Builder memorySize(Long memorySize) {
                 this.memorySize = memorySize;
@@ -1696,13 +1493,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory unit.</p>
-             * <blockquote>
-             * <p>This parameter is only applicable to reserved storage mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>GB</p>
+             * MemoryUnit.
              */
             public Builder memoryUnit(String memoryUnit) {
                 this.memoryUnit = memoryUnit;
@@ -1710,10 +1501,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Minor version of the kernel.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6.3.10.1-202207141918</p>
+             * MinorVersion.
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -1721,14 +1509,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Billing type, with the following values:</p>
-             * <ul>
-             * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
-             * <li><strong>Prepaid</strong>: Subscription.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Postpaid</p>
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1736,10 +1517,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance port number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5432</p>
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1747,10 +1525,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * ProdType.
              */
             public Builder prodType(String prodType) {
                 this.prodType = prodType;
@@ -1758,10 +1533,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter has been deprecated and will not return a value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * ReadDelayTime.
              */
             public Builder readDelayTime(String readDelayTime) {
                 this.readDelayTime = readDelayTime;
@@ -1769,10 +1541,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1780,10 +1549,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the resource group where the instance is located.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4p****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1791,10 +1557,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance running time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4 days 22:58:55</p>
+             * RunningTime.
              */
             public Builder runningTime(String runningTime) {
                 this.runningTime = runningTime;
@@ -1802,10 +1565,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated and will not return any value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * SecurityIPList.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -1813,10 +1573,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Performance Level (PL), currently only <strong>PL1</strong> is supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PL1</p>
+             * SegDiskPerformanceLevel.
              */
             public Builder segDiskPerformanceLevel(String segDiskPerformanceLevel) {
                 this.segDiskPerformanceLevel = segDiskPerformanceLevel;
@@ -1824,13 +1581,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of Segment nodes.</p>
-             * <blockquote>
-             * <p>This parameter applies only to instances in the storage elastic mode and Serverless manual scheduling mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * SegNodeNum.
              */
             public Builder segNodeNum(Integer segNodeNum) {
                 this.segNodeNum = segNodeNum;
@@ -1838,10 +1589,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of AI compute node resources of the instance. If the compute nodes of the instance are not AI nodes, null is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ADB.AIMedium.2</p>
+             * SegmentAISpec.
              */
             public Builder segmentAISpec(String segmentAISpec) {
                 this.segmentAISpec = segmentAISpec;
@@ -1849,13 +1597,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of compute groups.</p>
-             * <blockquote>
-             * <p>This parameter applies only to storage-reserved mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * SegmentCounts.
              */
             public Builder segmentCounts(Integer segmentCounts) {
                 this.segmentCounts = segmentCounts;
@@ -1863,17 +1605,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode of the Serverless instance, with the following values:</p>
-             * <ul>
-             * <li><strong>Manual</strong>: Manual scheduling.</li>
-             * <li><strong>Auto</strong>: Automatic scheduling.</li>
-             * </ul>
-             * <blockquote>
-             * <p>This parameter is returned only for Serverless mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>Auto</p>
+             * ServerlessMode.
              */
             public Builder serverlessMode(String serverlessMode) {
                 this.serverlessMode = serverlessMode;
@@ -1881,13 +1613,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Compute resource threshold. Unit: ACU.</p>
-             * <blockquote>
-             * <p>This parameter is returned only for instances in the Serverless automatic scheduling mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>32</p>
+             * ServerlessResource.
              */
             public Builder serverlessResource(Integer serverlessResource) {
                 this.serverlessResource = serverlessResource;
@@ -1895,10 +1621,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secondary zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-i</p>
+             * StandbyZoneId.
              */
             public Builder standbyZoneId(String standbyZoneId) {
                 this.standbyZoneId = standbyZoneId;
@@ -1906,10 +1629,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance started running.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-08-11T09:26:43Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1917,13 +1637,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Storage size per replica, see the <strong>StorageUnit</strong> parameter for units.</p>
-             * <blockquote>
-             * <p>This parameter applies only to storage-reserved mode instances.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * StoragePerNode.
              */
             public Builder storagePerNode(Integer storagePerNode) {
                 this.storagePerNode = storagePerNode;
@@ -1931,10 +1645,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Storage space size, unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50</p>
+             * StorageSize.
              */
             public Builder storageSize(Long storageSize) {
                 this.storageSize = storageSize;
@@ -1942,17 +1653,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Storage type, with the following values:</p>
-             * <ul>
-             * <li><strong>cloud_essd</strong>: ESSD cloud disk.</li>
-             * <li><strong>cloud_efficiency</strong>: Efficient cloud disk.</li>
-             * </ul>
-             * <blockquote>
-             * <p>This parameter is only applicable to instances in the storage elastic mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_essd</p>
+             * StorageType.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1960,18 +1661,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Storage unit, with the following values:</p>
-             * <ul>
-             * <li><strong>GB SSD</strong></li>
-             * <li><strong>TB SSD</strong></li>
-             * <li><strong>GB HDD</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>GB SSD</p>
+             * StorageUnit.
              */
             public Builder storageUnit(String storageUnit) {
                 this.storageUnit = storageUnit;
@@ -1979,14 +1669,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether backup recovery is supported, with the following values:</p>
-             * <ul>
-             * <li><strong>true</strong>: Backup recovery is supported.</li>
-             * <li><strong>false</strong>: Backup recovery is not supported.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * SupportRestore.
              */
             public Builder supportRestore(Boolean supportRestore) {
                 this.supportRestore = supportRestore;
@@ -1994,7 +1677,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tag key-value pairs.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -2002,10 +1685,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>vSwitch ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp1cpq8mr64paltkb****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2013,14 +1693,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether vector engine optimization is enabled. The values are as follows:</p>
-             * <ul>
-             * <li><strong>enabled</strong>: Indicates that vector engine optimization is enabled.</li>
-             * <li><strong>disabled</strong>: Indicates that vector engine optimization is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>enabled</p>
+             * VectorConfigurationStatus.
              */
             public Builder vectorConfigurationStatus(String vectorConfigurationStatus) {
                 this.vectorConfigurationStatus = vectorConfigurationStatus;
@@ -2028,10 +1701,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp19ame5m1r3oejns****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2039,10 +1709,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-j</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

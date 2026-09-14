@@ -115,7 +115,10 @@ public class ListSupabaseProjectTagsRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -136,7 +139,10 @@ public class ListSupabaseProjectTagsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You must specify at least one of ResourceId and Tag.</p>
+         * </blockquote>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -145,7 +151,10 @@ public class ListSupabaseProjectTagsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Set the value to instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -154,7 +163,10 @@ public class ListSupabaseProjectTagsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
+         * <blockquote>
+         * <p>You must specify at least one of ResourceId and Tag.</p>
+         * </blockquote>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -222,7 +234,17 @@ public class ListSupabaseProjectTagsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key must be 1 to 64 characters in length.</p>
+             * <p>Tag.N is used to exactly match Supabase instances that have the specified tags bound. A tag is a key-value pair.</p>
+             * <p>Valid values of N: 1 to 20.</p>
+             * <ul>
+             * <li>If you specify only Tag.N.Key, all instances associated with the specified tag key are returned.</li>
+             * <li>If you specify only Tag.N.Value, the error message <code>InvalidParameter.TagValue</code> is returned.</li>
+             * <li>If you specify multiple tag key-value pairs at the same time, only instances that match all the specified tag key-value pairs are returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -230,7 +252,11 @@ public class ListSupabaseProjectTagsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value must be 1 to 128 characters in length.</p>
+             * <p>Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

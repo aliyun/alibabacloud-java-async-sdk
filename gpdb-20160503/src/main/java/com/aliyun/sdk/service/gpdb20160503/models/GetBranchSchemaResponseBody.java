@@ -67,7 +67,10 @@ public class GetBranchSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class GetBranchSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Sql.
+         * <p>The schema SQL content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE public.example(id int);</p>
          */
         public Builder sql(String sql) {
             this.sql = sql;

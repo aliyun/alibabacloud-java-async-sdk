@@ -189,8 +189,11 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         } 
 
         /**
-         * <p>The text content for retrieval.</p>
+         * <p>The text content used for retrieval.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>What is ADBPG?</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -199,9 +202,9 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -215,7 +218,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
-         * <p>The method used to merge multiple knowledge bases. Default value: RRF. Valid values:</p>
+         * <p>The method used to merge results from multiple knowledge bases. Default value: RRF. Valid values:</p>
          * <ul>
          * <li>RRF</li>
          * <li>Weight</li>
@@ -231,7 +234,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the merge method for each SourceCollection.</p>
+         * <p>The parameters for the merge method of each SourceCollection.</p>
          */
         public Builder mergeMethodArgs(MergeMethodArgs mergeMethodArgs) {
             String mergeMethodArgsShrink = shrink(mergeMethodArgs, "MergeMethodArgs", "json");
@@ -250,7 +253,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,15 +266,13 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
-         * <p>The rerank factor. If you specify this parameter, the vector retrieval results are reranked once more. Valid values: 1&lt;RerankFactor&lt;=5.</p>
+         * <p>The reranking factor. If this parameter is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If the document is segmented into sparse parts, reranking is inefficient.</p>
-         * </li>
-         * <li><p>We recommend that the number of reranked results (the ceiling of TopK × RerankFactor) not exceed 50.</p>
-         * </li>
+         * <li>Reranking is slow when document chunks are sparse.</li>
+         * <li>The recommended reranking count (TopK × Factor, rounded up) should not exceed 50.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -283,7 +284,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
-         * RerankModel.
+         * <p>The reranking model parameters for performing an additional reranking on the overall results after multi-channel merging.</p>
          */
         public Builder rerankModel(RerankModel rerankModel) {
             String rerankModelShrink = shrink(rerankModel, "RerankModel", "json");
@@ -293,7 +294,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
-         * <p>The information about collections to retrieve from.</p>
+         * <p>The information about the multiple collections to retrieve.</p>
          * <p>This parameter is required.</p>
          */
         public Builder sourceCollection(java.util.List<SourceCollection> sourceCollection) {
@@ -304,7 +305,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
         }
 
         /**
-         * <p>Set the number of top results to be returned after merging results from multiple path retrieval.</p>
+         * <p>The number of top results to return after multi-channel recall merging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -362,7 +363,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             } 
 
             /**
-             * <p>The smoothing constant k in the formula to calculate the score: 1/(k + rank_i). The k constant must be a positive integer greater than 1.</p>
+             * <p>The k constant in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -419,7 +420,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             } 
 
             /**
-             * <p>An array of weights for each SourceCollection.</p>
+             * <p>The weight array for each SourceCollection.</p>
              */
             public Builder weights(java.util.List<Double> weights) {
                 this.weights = weights;
@@ -486,7 +487,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             } 
 
             /**
-             * <p>The parameter that can be configured when the MergeMethod parameter is set to RRF.</p>
+             * <p>The configurable parameters when MergeMethod is set to RRF.</p>
              */
             public Builder rrf(Rrf rrf) {
                 this.rrf = rrf;
@@ -494,7 +495,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The parameter that you can configure when you set the MergeMethod parameter to Weight.</p>
+             * <p>The configurable parameters when MergeMethod is set to Weight.</p>
              */
             public Builder weight(Weight weight) {
                 this.weight = weight;
@@ -561,7 +562,10 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             } 
 
             /**
-             * Instruct.
+             * <p>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Specifies a custom ranking task type description that guides the model to adopt different ranking strategies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Given a web search query, retrieve relevant passages that answer the query</p>
              */
             public Builder instruct(String instruct) {
                 this.instruct = instruct;
@@ -569,7 +573,10 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The reranking model name. Valid values: qwen3-rerank, gte-rerank-v2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-rerank</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -623,7 +630,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             } 
 
             /**
-             * <p>Returns the top number of entities and relationship edges. Default value: 60.</p>
+             * <p>The number of top entities and relationship edges to return. Default value: 60.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -706,7 +713,10 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             } 
 
             /**
-             * Instruct.
+             * <p>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Specifies a custom ranking task type description that guides the model to adopt different ranking strategies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Given a web search query, retrieve relevant passages that answer the query</p>
              */
             public Builder instruct(String instruct) {
                 this.instruct = instruct;
@@ -714,7 +724,10 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The reranking model name. Valid values: qwen3-rerank, gte-rerank-v2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-rerank</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -932,15 +945,15 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             } 
 
             /**
-             * <p>The filter condition that is used to query data. Specify this parameter in a format that is the same as the WHERE clause. The parameter is an expression that returns a Boolean value of TRUE or FALSE. The condition can be a simple comparison using operators such as equal (=), not equal (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal (&gt;=), or less than or equal (&lt;=). It can also be a more complex expression combining multiple conditions with logical operators (AND, OR, NOT), or use keywords such as IN, BETWEEN, and LIKE.</p>
+             * <p>The filter conditions for the data to query, in SQL WHERE clause format. This is an expression that returns a Boolean value (true or false). Conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), or less than or equal to (&lt;=). Conditions can also be more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions using the IN, BETWEEN, and LIKE keywords.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li>For the syntax, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</li>
+             * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>id = &quot;llm-52tvykqt6u67iw73_j6ovptwjk7_file_6ce3da1f7e69495d9f491f2180c86973_11967297&quot;</p>
+             * <p>id = \&quot;llm-52tvykqt6u67iw73_j6ovptwjk7_file_6ce3da1f7e69495d9f491f2180c86973_11967297\&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -948,7 +961,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>Whether to enable knowledge graph enhancement. Default value: false.</p>
+             * <p>Specifies whether to enable knowledge graph enhancement. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -959,7 +972,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>Returns the top number of entities and relationship edges. Default value: 60.</p>
+             * <p>The number of top entities and relationship edges to return. Default value: 60.</p>
              */
             public Builder graphSearchArgs(GraphSearchArgs graphSearchArgs) {
                 this.graphSearchArgs = graphSearchArgs;
@@ -967,12 +980,12 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The dual-path retrieval algorithm. This parameter is empty by default, which specifies that scores of vector retrieval and full-text retrieval are directly compared and sorted together.</p>
+             * <p>The multi-channel recall algorithm. Default value: empty (scores from dense vectors and full-text retrieval are directly compared and sorted).</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>RRF: The reciprocal rank fusion (RRF) algorithm uses a constant k to control the fusion effect. For more information, see the description of the HybridSearchArgs parameter.</li>
-             * <li>Weight: This algorithm uses the alpha parameter to specify the proportion of the vector search score and the full-text search score and then sorts by weight. For more information, see the description of the HybridSearchArgs parameter.</li>
-             * <li>Cascaded: This algorithm performs first full-text retrieval and then vector retrieval.</li>
+             * <li>RRF: Reciprocal rank fusion. A parameter k controls the fusion effect. For more information, see the HybridSearchArgs configuration.</li>
+             * <li>Weight: Weighted ranking. Parameters control the score weights of vector retrieval and full-text retrieval results before sorting. For more information, see the HybridSearchArgs configuration.</li>
+             * <li>Cascaded: Full-text retrieval is performed first, followed by vector retrieval on the full-text retrieval results.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -984,27 +997,49 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The parameters of the dual-path retrieval algorithm. RRF and Weight are supported at this time:</p>
+             * <p>The algorithm parameters for multi-channel recall. RRF and Weight are supported. HybridPathsSetting specifies the recall paths: dense vectors (dense), sparse vectors (sparse), and full-text retrieval (fulltext). If this value is empty, dense vectors (dense) and full-text retrieval (fulltext) are used by default.</p>
              * <ul>
-             * <li>RRF: Specifies the smoothing constant k in the formula to calculate the score: <code>1/(k + rank_i)</code>. The k constant must be a positive integer greater than 1. The format:</li>
+             * <li>RRF: The k constant in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
              * </ul>
-             * <!---->
-             * 
-             * <pre><code>{ 
-             *    &quot;RRF&quot;: {
+             * <pre><code>{
+             *   &quot;HybridPathsSetting&quot;: {
+             *     &quot;paths&quot;: &quot;dense,fulltext&quot;
+             *   },
+             *   &quot;RRF&quot;: {
              *     &quot;k&quot;: 60
-             *    }
+             *   }
              * }
              * </code></pre>
              * <ul>
-             * <li>Weight: The score is computed as <code>alpha * vector_score + (1 - alpha) * text_score</code>. The parameter alpha controls the weighting between vector search and full-text search scores, with a valid range of [0, 1]. 0 specifies only full-text search score. 1 specifies only vector search score.</li>
+             * <li>Weight: <ul>
+             * <li>Dual-path recall (without specifying HybridPathsSetting, only specifying alpha):<ul>
+             * <li>Formula: alpha * dense_score + (1-alpha) * fulltext_score. The alpha parameter specifies the score weight between dense vectors and full-text retrieval. Valid values: 0 to 1, where 0 indicates full-text retrieval only and 1 indicates dense vectors only:</li>
              * </ul>
-             * <!---->
-             * 
+             * </li>
+             * </ul>
+             * </li>
+             * </ul>
              * <pre><code>{ 
              *    &quot;Weight&quot;: {
              *     &quot;alpha&quot;: 0.5
              *    }
+             * }
+             * </code></pre>
+             * <ul>
+             * <li>Three-path recall pattern:<ul>
+             * <li>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. The dense, sparse, and fulltext parameters represent the weights for dense vectors, sparse vectors, and full-text retrieval respectively. Valid values: greater than or equal to 0. The system automatically applies normalization to the weights to 0 to 1 (normalized_x = x / (dense + sparse + fulltext)).</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <pre><code>{
+             *   &quot;HybridPathsSetting&quot;: {
+             *      &quot;paths&quot;: &quot;dense,sparse,fulltext&quot;
+             *    },
+             *   &quot;Weight&quot;: {
+             *     &quot;dense&quot;: 0.5,
+             *     &quot;sparse&quot;: 0.3,
+             *     &quot;fulltext&quot;: 0.2
+             *   }
              * }
              * </code></pre>
              */
@@ -1014,11 +1049,11 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The method that is used to create vector indexes. Valid values:</p>
+             * <p>The method used to build the vector index. Valid values:</p>
              * <ul>
              * <li>l2: Euclidean distance.</li>
-             * <li>ip: Inner product distance.</li>
-             * <li>cosine: Cosine similarity.</li>
+             * <li>ip: inner product distance.</li>
+             * <li>cosine: cosine similarity.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1030,7 +1065,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>Offset for pagination.</p>
+             * <p>The offset for paged query. Used for paging through results.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1041,9 +1076,11 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The fields by which to sort the results. This parameter is empty by default.</p>
-             * <p>The field must be either a metadata field or a default field in the table (e.g., id). Supported formats include:</p>
-             * <p>Single field, such as chunk_id. Multiple fields that are separated by commas (,), such as block_id,chunk_id. Descending order is supported, such as block_id DESC,chunk_id DESC.</p>
+             * <p>The field used for sorting. Default value: empty.</p>
+             * <p>The field must belong to metadata or a default field in the table, such as id. Supported formats:</p>
+             * <p>A single field, such as chunk_id.
+             * Multiple fields separated by commas, such as block_id, chunk_id.
+             * Descending order, such as block_id DESC, chunk_id DESC.</p>
              * 
              * <strong>example:</strong>
              * <p>file_id,sort_num</p>
@@ -1054,15 +1091,13 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The retrieval window. If you specify this parameter, the context of the retrieved result is added in the output. Format: List&lt;A, B&gt;. Valid values: -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</p>
+             * <p>The recall window. If this value is not empty, additional context is returned for the retrieval results. The format is a two-element array: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>We recommend that you specify this parameter if the source document is segmented into large numbers of pieces, which may result in loss of contextual information during retrieval.</p>
-             * </li>
-             * <li><p>Perform re-ranking before windowing.</p>
-             * </li>
+             * <li>Use this parameter when document chunks are too granular and retrieval may lose context information.</li>
+             * <li>Reranking takes priority over windowing. Reranking is performed first, followed by windowing.</li>
              * </ul>
+             * </blockquote>
              */
             public Builder recallWindow(java.util.List<Long> recallWindow) {
                 this.recallWindow = recallWindow;
@@ -1070,15 +1105,13 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The rerank factor. If you specify this parameter, the vector retrieval results are reranked once more. Valid values: 1&lt;RerankFactor&lt;=5.</p>
+             * <p>The reranking factor. If this parameter is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>If the document is segmented into sparse parts, reranking is inefficient.</p>
-             * </li>
-             * <li><p>We recommend that the number of reranked results (the ceiling of TopK × RerankFactor) not exceed 50.</p>
-             * </li>
+             * <li>Reranking is slow when document chunks are sparse.</li>
+             * <li>The recommended reranking count (TopK × Factor, rounded up) should not exceed 50.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>
@@ -1089,7 +1122,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * RerankModel.
+             * <p>The reranking model parameters.</p>
              */
             public Builder rerankModel(QueryParamsRerankModel rerankModel) {
                 this.rerankModel = rerankModel;
@@ -1097,7 +1130,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The number of top results.</p>
+             * <p>The number of top results to return.</p>
              * 
              * <strong>example:</strong>
              * <p>776</p>
@@ -1108,7 +1141,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use full-text retrieval (dual-path retrieval). The default value is false, which means only vector retrieval is used.</p>
+             * <p>Specifies whether to use full-text retrieval (dual-path recall). Default value: false, which indicates that only vector retrieval is used.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1206,9 +1239,9 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the document collection.</p>
+             * <p>The document collection name.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+             * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view existing document collections.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -1223,7 +1256,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             /**
              * <p>The namespace.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+             * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and view the list by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1235,9 +1268,9 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The password of the namespace.</p>
+             * <p>The password for the namespace.</p>
              * <blockquote>
-             * <p> The value of this parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+             * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -1250,7 +1283,7 @@ public class QueryKnowledgeBasesContentRequest extends Request {
             }
 
             /**
-             * <p>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause.</p>
+             * <p>The filter conditions for the data to query, in SQL WHERE clause format.</p>
              */
             public Builder queryParams(QueryParams queryParams) {
                 this.queryParams = queryParams;

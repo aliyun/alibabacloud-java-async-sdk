@@ -106,7 +106,7 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The username for accessing the project&quot;s dashboard.</p>
+         * <p>The username for accessing the project\&quot;s dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>xxpassword</p>

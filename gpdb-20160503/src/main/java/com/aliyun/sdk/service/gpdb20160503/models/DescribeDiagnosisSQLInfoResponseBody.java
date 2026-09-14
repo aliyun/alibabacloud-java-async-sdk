@@ -257,7 +257,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
          * <p>The information about the operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;children&quot;:********&quot;startTime&quot;:1660719602199}</p>
+         * <p>{\&quot;children\&quot;:********\&quot;startTime\&quot;:1660719602199}</p>
          */
         public Builder queryPlan(String queryPlan) {
             this.queryPlan = queryPlan;
@@ -301,7 +301,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
          * <p>The sequence of metrics.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;costSort&quot;:******:&quot;Seq Scan-9&quot;,&quot;value&quot;:0.0}]}</p>
+         * <p>{\&quot;costSort\&quot;:******:\&quot;Seq Scan-9\&quot;,\&quot;value\&quot;:0.0}]}</p>
          */
         public Builder sortedMetrics(String sortedMetrics) {
             this.sortedMetrics = sortedMetrics;

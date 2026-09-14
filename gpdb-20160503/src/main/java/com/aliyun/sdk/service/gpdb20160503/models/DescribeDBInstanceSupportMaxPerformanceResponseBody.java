@@ -91,7 +91,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * <p>The queried performance metric.</p>
+         * Performances.
          */
         public Builder performances(Performances performances) {
             this.performances = performances;
@@ -194,10 +194,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The performance bottleneck type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs or disk</p>
+             * Bottleneck.
              */
             public Builder bottleneck(String bottleneck) {
                 this.bottleneck = bottleneck;
@@ -205,10 +202,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * <p>The name of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>adbpg_status,adbpg_disk_status,adbpg_connection_status,adbgp_segment_disk_usage_percent_max,adbpg_master_disk_usage_percent_max,adbpg_disk_usage_percent</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -216,10 +210,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * <p>The unit of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>%</p>
+             * Unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -227,10 +218,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * <p>The value of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

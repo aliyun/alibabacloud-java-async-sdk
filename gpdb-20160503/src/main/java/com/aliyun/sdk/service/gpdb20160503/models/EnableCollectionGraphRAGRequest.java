@@ -258,6 +258,9 @@ public class EnableCollectionGraphRAGRequest extends Request {
          * <p>If the knowledge graph construction is enabled, this parameter is required.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Location</p>
          */
         public Builder entityTypes(java.util.List<String> entityTypes) {
             String entityTypesShrink = shrink(entityTypes, "EntityTypes", "json");
@@ -400,6 +403,9 @@ public class EnableCollectionGraphRAGRequest extends Request {
          * <p>If the knowledge graph construction is enabled, this parameter is required.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Occurred</p>
          */
         public Builder relationshipTypes(java.util.List<String> relationshipTypes) {
             String relationshipTypesShrink = shrink(relationshipTypes, "RelationshipTypes", "json");

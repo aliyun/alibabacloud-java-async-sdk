@@ -160,6 +160,7 @@ public class RestoreBranchRequest extends Request {
         } 
 
         /**
+         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,10 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client idempotency token that ensures the idempotence of retry requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426614174000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -181,7 +185,10 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * PreserveUnderName.
+         * <p>The backup branch name. If specified, automatic creation of a backup branch is performed before recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backup-main</p>
          */
         public Builder preserveUnderName(String preserveUnderName) {
             this.putQueryParameter("PreserveUnderName", preserveUnderName);
@@ -190,6 +197,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
+         * <p>The Supabase project ID associated with the primary branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +210,10 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region is inherited from the primary branch by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,6 +222,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
+         * <p>The ID of the source branch from which to recover.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +235,10 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * SourceBranchLsn.
+         * <p>The LSN of the source branch to recover to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/3522648</p>
          */
         public Builder sourceBranchLsn(String sourceBranchLsn) {
             this.putQueryParameter("SourceBranchLsn", sourceBranchLsn);
@@ -232,7 +247,10 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * SourceBranchTimestamp.
+         * <p>The point in time of the source branch to recover to. The value must be within the recoverable time window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-08T09:11:12Z</p>
          */
         public Builder sourceBranchTimestamp(String sourceBranchTimestamp) {
             this.putQueryParameter("SourceBranchTimestamp", sourceBranchTimestamp);

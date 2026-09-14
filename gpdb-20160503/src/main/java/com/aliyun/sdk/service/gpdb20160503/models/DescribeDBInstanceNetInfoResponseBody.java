@@ -80,7 +80,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The connection information of the instance.</p>
+         * DBInstanceNetInfos.
          */
         public Builder DBInstanceNetInfos(DBInstanceNetInfos DBInstanceNetInfos) {
             this.DBInstanceNetInfos = DBInstanceNetInfos;
@@ -95,7 +95,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Classic</p>
+         * <p>VPC</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
@@ -250,10 +250,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the endpoint.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Intranet</p>
+             * AddressType.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -261,10 +258,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint that is used to connect to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-xxxxxxx.gpdb.rds.aliyuncs.com</p>
+             * ConnectionString.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -272,10 +266,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>127.0.0.1</p>
+             * IPAddress.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -283,14 +274,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the IP address.</p>
-             * <ul>
-             * <li>Valid values for instances in the classic network: Inner and Public.</li>
-             * <li>Valid values for instances in a virtual private cloud (VPC): Private and Public.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Inner</p>
+             * IPType.
              */
             public Builder IPType(String IPType) {
                 this.IPType = IPType;
@@ -298,10 +282,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3432</p>
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -309,10 +290,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-xxxxxxx</p>
+             * VPCId.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -320,10 +298,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID. Multiple IDs are separated by commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-xxxxxxxx</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -331,10 +306,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance that is deployed in a VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-xxxxxxx</p>
+             * VpcInstanceId.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

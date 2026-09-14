@@ -80,7 +80,10 @@ public class ModifySaasServiceDeletionProtectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +91,10 @@ public class ModifySaasServiceDeletionProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class ModifySaasServiceDeletionProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agdb-xxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;

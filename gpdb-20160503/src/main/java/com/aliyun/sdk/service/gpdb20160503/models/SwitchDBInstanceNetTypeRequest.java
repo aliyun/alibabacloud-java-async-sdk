@@ -98,7 +98,7 @@ public class SwitchDBInstanceNetTypeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test1234</p>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -114,7 +114,7 @@ public class SwitchDBInstanceNetTypeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -127,7 +127,7 @@ public class SwitchDBInstanceNetTypeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>3306</p>
+         * <p>5432</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

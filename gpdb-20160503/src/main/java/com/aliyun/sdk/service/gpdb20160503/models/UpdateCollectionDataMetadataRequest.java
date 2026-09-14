@@ -223,7 +223,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
          * <p>Filter condition for the data to be updated, in SQL WHERE format. This field cannot be empty at the same time as the Ids field.</p>
          * 
          * <strong>example:</strong>
-         * <p>business_value = &quot;chat_file_1&quot;</p>
+         * <p>business_value = \&quot;chat_file_1\&quot;</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);

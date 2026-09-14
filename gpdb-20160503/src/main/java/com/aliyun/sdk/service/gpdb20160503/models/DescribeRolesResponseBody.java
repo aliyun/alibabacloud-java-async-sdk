@@ -78,7 +78,7 @@ public class DescribeRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The roles.</p>
+         * RoleList.
          */
         public Builder roleList(RoleList roleList) {
             this.roleList = roleList;

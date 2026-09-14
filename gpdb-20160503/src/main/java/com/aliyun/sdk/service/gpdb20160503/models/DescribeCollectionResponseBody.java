@@ -213,7 +213,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-xxxxxxxxx</p>
+         * <p>gp-bp152460513z****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -246,7 +246,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Successful</p>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

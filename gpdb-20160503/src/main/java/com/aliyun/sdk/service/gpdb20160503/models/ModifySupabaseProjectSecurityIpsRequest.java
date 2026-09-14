@@ -117,7 +117,7 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>The Supabase project ID.</p>
+         * <p>The Supabase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,9 +130,9 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> to view available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -145,10 +145,12 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>A comma-separated list of IP addresses and CIDR blocks to set as the whitelist. You can specify up to 1,000 entries. Supported formats:</p>
+         * <p>The list of IP addresses for the whitelist. Up to 1,000 IP addresses are supported. Separate multiple IP addresses with commas. The following formats are supported:</p>
          * <ul>
-         * <li>Single IP: 10.23.12.24</li>
-         * <li>CIDR Block: 10.23.12.0/24 (the prefix<code>/24</code> indicates the length must be between 1 and 32)``</li>
+         * <li><p>10.23.12.24 (IP address)</p>
+         * </li>
+         * <li><p>10.23.12.24/24 (A CIDR block, where <code>/24</code> indicates the prefix length. The prefix length must be an integer in the range <code>[1,32]</code>.)</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -162,7 +164,7 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         }
 
         /**
-         * UpdateDb.
+         * <p>Specifies whether to modify the whitelist for database port 5432. The default value is true.</p>
          */
         public Builder updateDb(Boolean updateDb) {
             this.putQueryParameter("UpdateDb", updateDb);
@@ -171,7 +173,7 @@ public class ModifySupabaseProjectSecurityIpsRequest extends Request {
         }
 
         /**
-         * UpdateWeb.
+         * <p>Specifies whether to modify the whitelist for HTTP port 80 and HTTPS port 443. The default value is true.</p>
          */
         public Builder updateWeb(Boolean updateWeb) {
             this.putQueryParameter("UpdateWeb", updateWeb);

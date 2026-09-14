@@ -67,31 +67,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "gpdb.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "gpdb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "gpdb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "gpdb.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "gpdb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "gpdb.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "gpdb.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "gpdb.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "gpdb.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "gpdb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "gpdb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("us-east-1", "gpdb.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "gpdb.eu-west-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "gpdb.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "gpdb.eu-central-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "gpdb.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "gpdb.me-central-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "gpdb.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "gpdb.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "gpdb.cn-north-2-gov-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "gpdb.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -234,12 +210,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</p>
+     * <p>This API allows users to interact with a large model through specified knowledge base collections to obtain answers based on knowledge base content. It supports configuring various parameters to customize requests, including but not limited to database instance ID, knowledge retrieval parameters, model inference parameters, etc. Additionally, it provides a default system prompt template and allows users to customize system prompts.</p>
      * <ul>
-     * <li><strong>DBInstanceId</strong>: Required. This parameter specifies the ID of the database instance.</li>
-     * <li><strong>KnowledgeParams</strong>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</li>
-     * <li><strong>ModelParams</strong>: required. It contains parameters related to model inference, such as the message list and the name of the model.</li>
-     * <li><strong>PromptTemplate</strong>: optional. It is used to customize the system prompt template.</li>
+     * <li><strong>DBInstanceId</strong>: Required. Specifies the database instance ID.</li>
+     * <li><strong>KnowledgeParams</strong>: Optional. Contains parameters related to knowledge retrieval, such as retrieval content, merge strategies, etc.</li>
+     * <li><strong>ModelParams</strong>: Required. Contains parameters related to model inference, such as message list, model name, etc.</li>
+     * <li><strong>PromptTemplate</strong>: Optional. Used to customize the system prompt template.</li>
      * </ul>
      * 
      * @param request the request parameters of ChatWithKnowledgeBase  ChatWithKnowledgeBaseRequest
@@ -261,12 +237,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</p>
+     * <p>This API allows you to interact with a large language model by using specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. A default system prompt template is provided, and you can also customize the system prompt.</p>
      * <ul>
-     * <li>DBInstanceId: required. This parameter specifies the ID of the database instance.</li>
-     * <li>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</li>
-     * <li>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</li>
-     * <li>PromptTemplate: optional. It is used to customize a system prompt template.</li>
+     * <li>DBInstanceId: Required. Specifies the database instance ID.</li>
+     * <li>KnowledgeParams: Optional. Contains knowledge retrieval parameters such as retrieval content and merge strategy.</li>
+     * <li>ModelParams: Required. Contains model inference parameters such as the message list and model name.</li>
+     * <li>PromptTemplate: Optional. Specifies a custom system prompt template.</li>
      * </ul>
      * 
      * @param request the request parameters of ChatWithKnowledgeBaseStream  ChatWithKnowledgeBaseStreamRequest
@@ -351,6 +327,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Checks the available update versions for a SaaS service.</p>
+     * 
      * @param request the request parameters of CheckSaasServiceVersion  CheckSaasServiceVersionRequest
      * @return CheckSaasServiceVersionResponse
      */
@@ -449,6 +428,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an API key.</p>
+     * 
      * @param request the request parameters of CreateApiKey  CreateApiKeyRequest
      * @return CreateApiKeyResponse
      */
@@ -485,6 +467,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits the region, network, storage, and other resource configurations from the primary branch.</p>
+     * 
      * @param request the request parameters of CreateBranch  CreateBranchRequest
      * @return CreateBranchResponse
      */
@@ -522,7 +507,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before using this interface, please make sure you have fully understood the <a href="https://help.aliyun.com/document_detail/35406.html">billing method</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of the AnalyticDB for PostgreSQL product.</p>
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -748,7 +733,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * @param request the request parameters of CreateModelService  CreateModelServiceRequest
      * @return CreateModelServiceResponse
@@ -804,6 +789,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * 
      * @param request the request parameters of CreateSaasService  CreateSaasServiceRequest
      * @return CreateSaasServiceResponse
      */
@@ -883,6 +871,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a snapshot for a Supabase project based on a specified point in time or Log Sequence Number (LSN). You must specify either SnapshotTimestamp or Lsn. ClientToken is used to ensure idempotence of the request.</p>
+     * 
      * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
      * @return CreateSnapshotResponse
      */
@@ -956,7 +947,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to create a Supabase project.</p>
+     * <p>Creates a Supabase project in a specified region and zone. This operation supports the Free, pay-as-you-go, and subscription billing methods. You can specify the network, specifications, storage, access IP address whitelist, DPI engine version, and auto start/stop configurations.</p>
      * 
      * @param request the request parameters of CreateSupabaseProject  CreateSupabaseProjectRequest
      * @return CreateSupabaseProjectResponse
@@ -994,6 +985,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a context service workspace.</p>
+     * 
      * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
      */
@@ -1072,6 +1066,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an API key.</p>
+     * 
      * @param request the request parameters of DeleteApiKey  DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
      */
@@ -1108,6 +1105,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified Supabase branch. The default branch or a branch that still has child branches cannot be deleted.</p>
+     * 
      * @param request the request parameters of DeleteBranch  DeleteBranchRequest
      * @return DeleteBranchResponse
      */
@@ -1484,6 +1484,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a SaaS service.</p>
+     * 
      * @param request the request parameters of DeleteSaasService  DeleteSaasServiceRequest
      * @return DeleteSaasServiceResponse
      */
@@ -1520,6 +1523,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a snapshot from a specified Supabase project by ProjectId and Lsn.</p>
+     * 
      * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
      * @return DeleteSnapshotResponse
      */
@@ -1631,6 +1637,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a context service workspace.</p>
+     * 
      * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
      * @return DeleteWorkspaceResponse
      */
@@ -1651,8 +1660,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Before you deploy the private RAG service, create an initial account.</li>
-     * <li>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</li>
+     * <li>部署私有RAG服务前，请先创建初始账号。</li>
+     * <li>私有RAG服务支持向量接口，调用时请配置CA证书。</li>
      * </ol>
      * 
      * @param request the request parameters of DeployPrivateRAGService  DeployPrivateRAGServiceRequest
@@ -1733,7 +1742,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.</p>
+     * <p>Before creating an AnalyticDB for PostgreSQL instance, you can use this operation to query the available instance offerings in a specified availability zone.</p>
      * 
      * @param request the request parameters of DescribeAvailableResources  DescribeAvailableResourcesRequest
      * @return DescribeAvailableResourcesResponse
@@ -1794,6 +1803,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the details of a specified Supabase branch and returns the basic attributes, parent branch information, protection status, and connection information of the branch.</p>
+     * 
      * @param request the request parameters of DescribeBranch  DescribeBranchRequest
      * @return DescribeBranchResponse
      */
@@ -1873,7 +1885,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can query monitoring information only within the last 30 days.</p>
+     * <p>Monitoring information can only be queried for the last 30 days.</p>
      * 
      * @param request the request parameters of DescribeDBClusterPerformance  DescribeDBClusterPerformanceRequest
      * @return DescribeDBClusterPerformanceResponse
@@ -1894,11 +1906,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Usage Instructions</h2>
-     * <p>This interface is generally used to view information such as the specifications, network type, and instance status of AnalyticDB for PostgreSQL instances.</p>
-     * <h2>QPS Limitation</h2>
-     * <p>The default single-user QPS limit for this interface is 1000 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please use it reasonably.
-     * &lt;props=&quot;china&quot;&gt;The QPS in this document is only a default reference value. For accurate information, please refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API Rate Quota List</a>.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about an AnalyticDB for PostgreSQL instance, such as the instance specifications, network type, and instance status.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default QPS limit for a single user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.
+     * &lt;props=&quot;china&quot;&gt;The QPS limit in this topic is a default reference value. For accurate information, refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -2149,10 +2161,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
-     * <p>You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h2>Usage</h2>
+     * <p>This API retrieves details for AnalyticDB for PostgreSQL instances in a specified region, such as instance type, network type, and instance status.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default QPS limit for this API is 1,000 requests per second per user. Calls exceeding this limit are throttled, which can impact your business. Plan your API calls accordingly.
+     * &lt;props=&quot;china&quot;&gt;
+     * The QPS limit specified in this document is for reference only. For the latest rate limits, see the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate quota list</a>.</p>
      * 
      * @param request the request parameters of DescribeDBInstances  DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -2305,9 +2319,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Only serverless instances support the data sharing feature.</p>
      * 
      * @param request the request parameters of DescribeDataSharePerformance  DescribeDataSharePerformanceRequest
      * @return DescribeDataSharePerformanceResponse
@@ -2455,8 +2467,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-     * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</p>
+     * <p>To view download records, you must first call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information.
+     * This feature is available only for storage-elastic instances that run kernel minor version V6.3.10.1 or later. For more information about how to view and update the kernel minor version, see <a href="https://help.aliyun.com/document_detail/277424.html">View the kernel minor version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Upgrade the kernel version</a>.</p>
      * 
      * @param request the request parameters of DescribeDownloadRecords  DescribeDownloadRecordsRequest
      * @return DescribeDownloadRecordsResponse
@@ -2716,10 +2728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This interface is used to view the details of a model service.</p>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</p>
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a model service.</p>
+     * <h2>Rate limit</h2>
+     * <p>The maximum number of queries per second (QPS) per user for this operation is 1,000. If the number of calls exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as needed.</p>
      * 
      * @param request the request parameters of DescribeModelService  DescribeModelServiceRequest
      * @return DescribeModelServiceResponse
@@ -2881,9 +2893,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.</p>
-     * <h2>Limit</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Before you create an AnalyticDB for PostgreSQL instance, call this operation to query the available regions and zones.</p>
      * 
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -2922,7 +2932,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not available for instances in reserved storage mode.</p>
+     * <p>This API does not support instances of the storage-reserved type.</p>
      * 
      * @param request the request parameters of DescribeSQLLogCount  DescribeSQLLogCountRequest
      * @return DescribeSQLLogCountResponse
@@ -3363,6 +3373,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries API access endpoints.</p>
+     * 
      * @param request the request parameters of GetApiEndpoints  GetApiEndpointsRequest
      * @return GetApiEndpointsResponse
      */
@@ -3381,6 +3394,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of an API key.</p>
+     * 
      * @param request the request parameters of GetApiKey  GetApiKeyRequest
      * @return GetApiKeyResponse
      */
@@ -3399,6 +3415,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the schema SQL content of a specified database in a specified branch. The system databases postgres, template0, and template1 are not supported.</p>
+     * 
      * @param request the request parameters of GetBranchSchema  GetBranchSchemaRequest
      * @return GetBranchSchemaResponse
      */
@@ -3435,6 +3454,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a model service.</p>
+     * 
      * @param request the request parameters of GetSaasService  GetSaasServiceRequest
      * @return GetSaasServiceResponse
      */
@@ -3471,6 +3493,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about all model services.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default single-user QPS limit for this operation is 1,000 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * 
      * @param request the request parameters of GetServiceAccessInfo  GetServiceAccessInfoRequest
      * @return GetServiceAccessInfoResponse
      */
@@ -3508,7 +3536,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This interface is used to query the details of a Supabase instance.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * @param request the request parameters of GetSupabaseProject  GetSupabaseProjectRequest
      * @return GetSupabaseProjectResponse
@@ -3529,7 +3557,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query a list of API keys for a Supabase project.</p>
+     * <p>This operation queries the API keys and JWT secrets for a Supabase instance.</p>
      * 
      * @param request the request parameters of GetSupabaseProjectApiKeys  GetSupabaseProjectApiKeysRequest
      * @return GetSupabaseProjectApiKeysResponse
@@ -3571,13 +3599,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
+     * <p>This operation is related to UploadDocumentAsync. You can call UploadDocumentAsync to create an upload task and obtain a job ID, and then call this operation to view the execution information of the job.</p>
      * <blockquote>
-     * <p>Suggestions</p>
-     * </blockquote>
+     * <p>Usage notes</p>
      * <ul>
-     * <li>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</li>
+     * <li>Estimate the timeout based on the document complexity and the number of vector entries after chunking. The timeout generally does not exceed 2 hours.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of GetUploadDocumentJob  GetUploadDocumentJobRequest
      * @return GetUploadDocumentJobResponse
@@ -3621,6 +3649,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about a specified workspace.</p>
+     * 
      * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
      * @return GetWorkspaceResponse
      */
@@ -3639,6 +3671,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of an API key.</p>
+     * 
      * @param request the request parameters of GrantApiKey  GrantApiKeyRequest
      * @return GrantApiKeyResponse
      */
@@ -3712,7 +3747,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation queries a list of AI nodes.</p>
+     * <ul>
+     * <li>This operation is used to query the list of AI nodes.</li>
+     * </ul>
      * 
      * @param request the request parameters of ListAINodePools  ListAINodePoolsRequest
      * @return ListAINodePoolsResponse
@@ -3750,6 +3787,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a list of API keys.</p>
+     * 
      * @param request the request parameters of ListApiKeys  ListApiKeysRequest
      * @return ListApiKeysResponse
      */
@@ -3786,6 +3826,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation performs a paging query of all branches under a specified Supabase project. You can filter results by parent branch, keyword, and sorting conditions.</p>
+     * 
      * @param request the request parameters of ListBranches  ListBranchesRequest
      * @return ListBranchesResponse
      */
@@ -4098,6 +4141,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>This operation is used to query information about all SaaS services.</p>
+     * 
      * @param request the request parameters of ListSaasService  ListSaasServiceRequest
      * @return ListSaasServiceResponse
      */
@@ -4224,6 +4271,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation queries the tag list of Supabase instances.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListSupabaseProjectTags  ListSupabaseProjectTagsRequest
      * @return ListSupabaseProjectTagsResponse
      */
@@ -4243,7 +4295,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to query Supabase instances.</p>
+     * <ul>
+     * <li>Lists Supabase instances.</li>
+     * </ul>
      * 
      * @param request the request parameters of ListSupabaseProjects  ListSupabaseProjectsRequest
      * @return ListSupabaseProjectsResponse
@@ -4320,6 +4374,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation is used to view information about all workspaces.</p>
+     * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
      */
@@ -4750,6 +4808,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the deletion protection setting for a SaaS service.</p>
+     * 
      * @param request the request parameters of ModifySaasServiceDeletionProtection  ModifySaasServiceDeletionProtectionRequest
      * @return ModifySaasServiceDeletionProtectionResponse
      */
@@ -4845,6 +4906,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Only ADBPG Supabase instances are supported.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifySupabaseAutoScalePolicy  ModifySupabaseAutoScalePolicyRequest
      * @return ModifySupabaseAutoScalePolicyResponse
      */
@@ -4863,6 +4929,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.。</p>
+     * 
      * @param request the request parameters of ModifySupabaseProjectDescription  ModifySupabaseProjectDescriptionRequest
      * @return ModifySupabaseProjectDescriptionResponse
      */
@@ -4881,6 +4950,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.</p>
+     * 
      * @param request the request parameters of ModifySupabaseProjectResource  ModifySupabaseProjectResourceRequest
      * @return ModifySupabaseProjectResourceResponse
      */
@@ -4900,7 +4972,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</p>
+     * <p>Before you use a Supabase instance, you must add the client\&quot;s IP address or IP address segment to the instance\&quot;s whitelist.</p>
      * 
      * @param request the request parameters of ModifySupabaseProjectSecurityIps  ModifySupabaseProjectSecurityIpsRequest
      * @return ModifySupabaseProjectSecurityIpsResponse
@@ -4983,6 +5055,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a model service.</p>
+     * 
      * @param request the request parameters of PauseSaasService  PauseSaasServiceRequest
      * @return PauseSaasServiceResponse
      */
@@ -5001,6 +5076,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pauses a Supabase instance.</p>
+     * 
      * @param request the request parameters of PauseSupabaseProject  PauseSupabaseProjectRequest
      * @return PauseSupabaseProjectResponse
      */
@@ -5127,6 +5205,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resets a child branch to the latest data of its parent branch. The main branch, branches without a parent branch, branches with child branches, and protected branches cannot be reset.</p>
+     * 
      * @param request the request parameters of ResetBranch  ResetBranchRequest
      * @return ResetBranchResponse
      */
@@ -5164,7 +5245,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Call this API to reset the password of the Supabase database.</p>
+     * <p>Resets the password of a Supabase database.</p>
      * 
      * @param request the request parameters of ResetSupabaseProjectPassword  ResetSupabaseProjectPasswordRequest
      * @return ResetSupabaseProjectPasswordResponse
@@ -5207,6 +5288,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Restarts a specified Supabase project. After a successful call, a request ID is returned, and the restart process is executed asynchronously in the backend.</p>
+     * 
      * @param request the request parameters of RestartSupabaseProject  RestartSupabaseProjectRequest
      * @return RestartSupabaseProjectResponse
      */
@@ -5225,6 +5309,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Recovers a target branch to a specified point in time or LSN of the source branch. Before recovery, you can specify a backup branch name to preserve the original target branch.</p>
+     * 
      * @param request the request parameters of RestoreBranch  RestoreBranchRequest
      * @return RestoreBranchResponse
      */
@@ -5243,6 +5330,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Restores to a target branch based on a snapshot LSN. You can specify the restored branch name and the target branch. FinalizeRestore controls whether to complete the restoration immediately.</p>
+     * 
      * @param request the request parameters of RestoreSnapshot  RestoreSnapshotRequest
      * @return RestoreSnapshotResponse
      */
@@ -5306,6 +5396,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a model service.</p>
+     * 
      * @param request the request parameters of ResumeSaasService  ResumeSaasServiceRequest
      * @return ResumeSaasServiceResponse
      */
@@ -5324,6 +5417,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a Supabase instance.</p>
+     * 
      * @param request the request parameters of ResumeSupabaseProject  ResumeSupabaseProjectRequest
      * @return ResumeSupabaseProjectResponse
      */
@@ -5342,6 +5438,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Revokes the access permissions of an API key to SaaS services.</p>
+     * 
      * @param request the request parameters of RevokeApiKey  RevokeApiKeyRequest
      * @return RevokeApiKeyResponse
      */
@@ -5360,6 +5459,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sets a specified branch as the default branch for a Supabase project.</p>
+     * 
      * @param request the request parameters of SetAsDefaultBranch  SetAsDefaultBranchRequest
      * @return SetAsDefaultBranchResponse
      */
@@ -5402,9 +5504,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <p>Only Serverless instances support the data sharing feature.</p>
      * 
      * @param request the request parameters of SetDataShareInstance  SetDataShareInstanceRequest
      * @return SetDataShareInstanceResponse
@@ -5463,6 +5563,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a Supabase instance.</p>
+     * 
      * @param request the request parameters of TagSupabaseProject  TagSupabaseProjectRequest
      * @return TagSupabaseProjectResponse
      */
@@ -5558,6 +5661,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a Supabase instance.</p>
+     * 
      * @param request the request parameters of UntagSupabaseProject  UntagSupabaseProjectRequest
      * @return UntagSupabaseProjectResponse
      */
@@ -5576,6 +5682,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation modifies the branch name, description, tags, protection status, and automatic deletion time upon expiration.</p>
+     * 
      * @param request the request parameters of UpdateBranch  UpdateBranchRequest
      * @return UpdateBranchResponse
      */
@@ -5635,6 +5744,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the SaaS service version.</p>
+     * 
      * @param request the request parameters of UpdateSaasServiceVersion  UpdateSaasServiceVersionRequest
      * @return UpdateSaasServiceVersionResponse
      */
@@ -5654,8 +5766,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not available for instances in reserved storage mode.
-     * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</p>
+     * <p>This operation does not support instances in storage reservation mode.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * @param request the request parameters of UpgradeDBInstance  UpgradeDBInstanceRequest
      * @return UpgradeDBInstanceResponse
@@ -5732,6 +5844,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * <strong>SDK于2023-11-8日升级，从最大512KB数据请求量升级到10MB。</strong>
+     * 请使用最新版SDK或不低于此版本：</p>
+     * </blockquote>
+     * <ul>
+     * <li>Java：1.2.1 </li>
+     * <li>Go：v3.3.1 </li>
+     * <li>Python：3.3.1</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpsertCollectionData  UpsertCollectionDataRequest
      * @return UpsertCollectionDataResponse
      */

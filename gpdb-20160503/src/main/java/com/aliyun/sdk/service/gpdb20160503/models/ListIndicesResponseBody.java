@@ -93,7 +93,7 @@ public class ListIndicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried indexes.</p>
+         * Indices.
          */
         public Builder indices(Indices indices) {
             this.indices = indices;
@@ -222,10 +222,7 @@ public class ListIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the collection.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testcollection</p>
+             * Collection.
              */
             public Builder collection(String collection) {
                 this.collection = collection;
@@ -233,10 +230,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The definition of the index.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CREATE INDEX testindex ON mynamespace. testcollection</p>
+             * IndexDef.
              */
             public Builder indexDef(String indexDef) {
                 this.indexDef = indexDef;
@@ -244,10 +238,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the index.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testindex</p>
+             * IndexName.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -255,10 +246,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the pod belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mynamespace</p>
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -312,7 +300,7 @@ public class ListIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried indexes.</p>
+             * Indices.
              */
             public Builder indices(java.util.List<IndicesIndices> indices) {
                 this.indices = indices;

@@ -117,7 +117,10 @@ public class RevokeApiKeyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,6 +129,7 @@ public class RevokeApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The list of service IDs to be authorized.</p>
          * <p>This parameter is required.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
@@ -136,6 +140,7 @@ public class RevokeApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,8 +106,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>This parameter is deprecated and will not return a value.</p>
-         * <p>You can use the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> interface to view the connection address of the instance.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</p>
@@ -118,7 +118,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -129,7 +129,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Order ID.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>111111111111</p>
@@ -140,8 +140,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is deprecated and will not return a value.</p>
-         * <p>You can use the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> interface to view the port number of the instance.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the port number of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3432</p>
@@ -152,7 +152,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5414A4E5-4C36-4461-95FC-************</p>

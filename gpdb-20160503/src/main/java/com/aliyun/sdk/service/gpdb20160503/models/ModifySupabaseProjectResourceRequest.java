@@ -117,6 +117,7 @@ public class ModifySupabaseProjectResourceRequest extends Request {
         } 
 
         /**
+         * <p>The specification change type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class ModifySupabaseProjectResourceRequest extends Request {
         }
 
         /**
+         * <p>The Supabase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class ModifySupabaseProjectResourceRequest extends Request {
         }
 
         /**
-         * ProjectSpec.
+         * <p>The specifications of the Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C4G</p>
          */
         public Builder projectSpec(String projectSpec) {
             this.putQueryParameter("ProjectSpec", projectSpec);
@@ -150,7 +155,10 @@ public class ModifySupabaseProjectResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -159,7 +167,10 @@ public class ModifySupabaseProjectResourceRequest extends Request {
         }
 
         /**
-         * StorageSize.
+         * <p>The storage size, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder storageSize(Long storageSize) {
             this.putQueryParameter("StorageSize", storageSize);

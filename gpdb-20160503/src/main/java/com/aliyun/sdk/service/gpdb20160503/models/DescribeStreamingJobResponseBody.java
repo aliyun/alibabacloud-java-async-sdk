@@ -500,7 +500,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         /**
          * <p>Fallback offset, which is the fallback position</p>
          * <ul>
-         * <li>The FallbackOffset parameter defines the behavior when the consumer has not requested a specific offset to consume or the requested offset exceeds the current record&quot;s offset information in the Kafka cluster. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</li>
+         * <li>The FallbackOffset parameter defines the behavior when the consumer has not requested a specific offset to consume or the requested offset exceeds the current record\&quot;s offset information in the Kafka cluster. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -543,7 +543,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
          *         TYPE: int
          *       FORMAT: delimited
          *       DELIMITED_OPTION:
-         *         DELIMITER: &quot;|&quot;
+         *         DELIMITER: \&quot;|\&quot;
          *     VALUE:
          *       COLUMNS:
          *       - TYPE: integer
@@ -580,7 +580,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
          *         NAME: l_comment
          *       FORMAT: delimited
          *       DELIMITED_OPTION:
-         *         DELIMITER: &quot;|&quot;
+         *         DELIMITER: \&quot;|\&quot;
          *     ERROR_LIMIT: 10
          *   OUTPUT:
          *     SCHEMA: adbpgss_test

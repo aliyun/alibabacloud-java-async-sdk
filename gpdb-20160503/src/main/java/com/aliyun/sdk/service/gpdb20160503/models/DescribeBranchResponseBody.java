@@ -67,7 +67,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         } 
 
         /**
-         * Branch.
+         * <p>The branch information. Each element represents a Supabase branch.</p>
          */
         public Builder branch(Branch branch) {
             this.branch = branch;
@@ -75,7 +75,10 @@ public class DescribeBranchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -149,7 +155,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -424,7 +433,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             } 
 
             /**
-             * BranchId.
+             * <p>The branch ID, which uniquely identifies a Supabase branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>br-xxxx</p>
              */
             public Builder branchId(String branchId) {
                 this.branchId = branchId;
@@ -432,7 +444,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * BranchName.
+             * <p>The branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -440,7 +455,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeEndpoint.
+             * <p>The connection information of the compute node associated with the branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postgresql://user:password@host:5432/db</p>
              */
             public Builder computeEndpoint(String computeEndpoint) {
                 this.computeEndpoint = computeEndpoint;
@@ -448,7 +466,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the branch was created, in ISO 8601 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-08T09:11:12Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -456,7 +477,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The branch description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test branch</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -464,7 +488,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiresAt.
+             * <p>The time when the branch expires and is automatically deleted, in ISO 8601 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-08T09:11:12Z</p>
              */
             public Builder expiresAt(String expiresAt) {
                 this.expiresAt = expiresAt;
@@ -472,7 +499,15 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * InitSource.
+             * <p>The initialization source of the branch.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ParentData: Copies the schema and data from the parent branch. This is the default value.</li>
+             * <li>SchemaOnly: Copies only the schema structure.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ParentData</p>
              */
             public Builder initSource(String initSource) {
                 this.initSource = initSource;
@@ -480,7 +515,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether this is the default branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -488,7 +526,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * ParentBranchId.
+             * <p>The parent branch ID, which specifies the parent branch of a new branch or a query condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>br-main</p>
              */
             public Builder parentBranchId(String parentBranchId) {
                 this.parentBranchId = parentBranchId;
@@ -496,7 +537,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * ParentBranchName.
+             * <p>The parent branch name. This value is empty or displayed as - for the primary branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder parentBranchName(String parentBranchName) {
                 this.parentBranchName = parentBranchName;
@@ -504,7 +548,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * ParentLSN.
+             * <p>The LSN of the parent branch at the time this branch was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/3522648</p>
              */
             public Builder parentLSN(String parentLSN) {
                 this.parentLSN = parentLSN;
@@ -512,7 +559,15 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTimestamp.
+             * <p>The data synchronization point in time selected from the parent branch when this branch was created, in ISO 8601 UTC format.</p>
+             * <p>Description:</p>
+             * <ul>
+             * <li>For child branches, this value indicates the point in time of the parent branch selected during creation.</li>
+             * <li>If no parent branch exists, the value 1970-01-01T00:00:00.000Z is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-08T09:11:12Z</p>
              */
             public Builder parentTimestamp(String parentTimestamp) {
                 this.parentTimestamp = parentTimestamp;
@@ -520,7 +575,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The Supabase project ID that corresponds to the primary branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spb-xxxx</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -528,7 +586,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * Protected.
+             * <p>Indicates whether branch protection is enabled. A value of true indicates that branch protection is enabled. A value of false indicates that branch protection is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder _protected(Boolean _protected) {
                 this._protected = _protected;
@@ -536,7 +597,15 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Supabase: Supabase service.</li>
+             * <li>Memory: Memory service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Supabase</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -544,7 +613,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * SpbProjectId.
+             * <p>The Supabase project ID that corresponds to the current branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spb-xxxx</p>
              */
             public Builder spbProjectId(String spbProjectId) {
                 this.spbProjectId = spbProjectId;
@@ -552,7 +624,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The branch status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -560,7 +635,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of branch tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

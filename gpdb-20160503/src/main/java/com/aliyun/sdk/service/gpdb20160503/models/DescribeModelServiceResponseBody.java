@@ -249,7 +249,10 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Model parameters.</p>
+         * <p>The model parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not yet available.</p>
          */
         public Builder modelParams(java.util.Map<String, ?> modelParams) {
             this.modelParams = modelParams;
@@ -268,7 +271,7 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal endpoint.</p>
+         * <p>The internal network connection string.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ms-xxxxxxx.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx.xxxx.rds.aliyuncs.com</a></p>
@@ -279,7 +282,7 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public network connection string.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com</a></p>
@@ -290,7 +293,7 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -301,7 +304,7 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A comma-separated list of IP addresses and CIDR blocks allowed to connect.</p>
+         * <p>The list of IP addresses in the IP whitelist, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -312,7 +315,7 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the model service.</p>
+         * <p>The model service status.</p>
          * 
          * <strong>example:</strong>
          * <ul>

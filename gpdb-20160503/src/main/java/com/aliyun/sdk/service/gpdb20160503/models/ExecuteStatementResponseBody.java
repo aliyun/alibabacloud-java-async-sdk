@@ -158,7 +158,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the SQL statements were created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-04T10:08:47+0800</p>
@@ -180,7 +180,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results of the synchronous call.</p>
+         * <p>The result returned for synchronous calls.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -188,7 +188,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>adbtest</p>
@@ -199,7 +199,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the job for asynchronously executing the SQL statements.</p>
+         * <p>The task ID for asynchronous SQL execution.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3</p>
@@ -210,7 +210,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -232,7 +232,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ARN of the access credential for the created Data API account.</p>
+         * <p>The access credential.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
@@ -243,10 +243,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution is successful.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -491,7 +491,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The metadata of the columns.</p>
+             * ColumnMetadata.
              */
             public Builder columnMetadata(ColumnMetadata columnMetadata) {
                 this.columnMetadata = columnMetadata;
@@ -499,7 +499,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rows of data.</p>
+             * Records.
              */
             public Builder records(DataRecords records) {
                 this.records = records;
@@ -507,7 +507,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of rows.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

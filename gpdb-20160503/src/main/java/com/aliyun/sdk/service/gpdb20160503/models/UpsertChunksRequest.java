@@ -419,7 +419,7 @@ public class UpsertChunksRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Cloud-native data warehouse AnalyticDB PostgreSQL Edition provides a simple, fast, and cost-effective PB-level cloud data warehouse solution.</p>
+             * <p>AnalyticDB for PostgreSQL provides a simple, fast, and cost-effective PB-level cloud data warehousing solution.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -430,7 +430,7 @@ public class UpsertChunksRequest extends Request {
              * <p>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause.</p>
              * 
              * <strong>example:</strong>
-             * <p>title = &quot;seagull&quot;</p>
+             * <p>title = \&quot;seagull\&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;

@@ -93,7 +93,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchId.
+         * <p>The branch ID to which the snapshot belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-xxxx</p>
          */
         public Builder branchId(String branchId) {
             this.branchId = branchId;
@@ -101,7 +104,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Lsn.
+         * <p>The LSN for the snapshot. You must specify either this parameter or SnapshotTimestamp. If this parameter is specified, the snapshot is created based on the specified LSN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/3522648</p>
          */
         public Builder lsn(String lsn) {
             this.lsn = lsn;
@@ -109,7 +115,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The actual point in time corresponding to the created snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-08T09:11:12Z</p>
          */
         public Builder timestamp(String timestamp) {
             this.timestamp = timestamp;

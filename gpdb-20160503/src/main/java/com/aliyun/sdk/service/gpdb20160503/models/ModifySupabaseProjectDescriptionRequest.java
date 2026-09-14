@@ -87,7 +87,10 @@ public class ModifySupabaseProjectDescriptionRequest extends Request {
         } 
 
         /**
-         * ProjectDescription.
+         * <p>The detailed description of the Supabase project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for-test-project</p>
          */
         public Builder projectDescription(String projectDescription) {
             this.putQueryParameter("ProjectDescription", projectDescription);
@@ -96,7 +99,10 @@ public class ModifySupabaseProjectDescriptionRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The Supabase instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbp-twmoe9bakow</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -105,7 +111,10 @@ public class ModifySupabaseProjectDescriptionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

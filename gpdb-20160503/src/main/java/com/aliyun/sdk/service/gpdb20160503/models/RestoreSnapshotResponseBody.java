@@ -80,7 +80,10 @@ public class RestoreSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchId.
+         * <p>The ID of the restored branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-restore</p>
          */
         public Builder branchId(String branchId) {
             this.branchId = branchId;
@@ -88,7 +91,10 @@ public class RestoreSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The Supabase project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spb-xxxx</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -96,7 +102,10 @@ public class RestoreSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried database accounts.</p>
+         * Accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -183,10 +183,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testuser</p>
+             * AccountDescription.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -194,10 +191,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testuser</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -205,15 +199,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the account.</p>
-             * <ul>
-             * <li><strong>0</strong>: The account is being created.</li>
-             * <li><strong>1</strong>: The account is in use.</li>
-             * <li><strong>3</strong>: The account is being deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AccountStatus.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -221,10 +207,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database account. Valid values: Super and Normal. Super indicates a privileged account and Normal indicates a standard account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Super</p>
+             * AccountType.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -232,10 +215,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-bp***************</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

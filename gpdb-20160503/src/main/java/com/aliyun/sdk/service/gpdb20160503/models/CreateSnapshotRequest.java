@@ -116,7 +116,10 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The idempotence token. Ensures that repeated requests do not result in duplicate operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -125,7 +128,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Lsn.
+         * <p>The LSN for the snapshot. You must specify either this parameter or SnapshotTimestamp. If this parameter is specified, the snapshot is created based on the specified LSN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/3522648</p>
          */
         public Builder lsn(String lsn) {
             this.putQueryParameter("Lsn", lsn);
@@ -134,6 +140,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The Supabase project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +153,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. Specifies the region in which to perform the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -155,7 +165,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotTimestamp.
+         * <p>The point in time for the snapshot. You must specify either this parameter or Lsn. If this parameter is specified, the snapshot is created based on the specified point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-08T09:11:12Z</p>
          */
         public Builder snapshotTimestamp(String snapshotTimestamp) {
             this.putQueryParameter("SnapshotTimestamp", snapshotTimestamp);

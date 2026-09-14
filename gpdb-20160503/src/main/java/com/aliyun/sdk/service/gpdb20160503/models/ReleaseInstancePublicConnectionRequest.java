@@ -96,7 +96,7 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Intranet</p>
+         * <p>primary</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);

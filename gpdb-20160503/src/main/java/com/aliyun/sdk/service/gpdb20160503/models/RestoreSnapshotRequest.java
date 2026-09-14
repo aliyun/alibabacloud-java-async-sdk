@@ -145,7 +145,10 @@ public class RestoreSnapshotRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -154,7 +157,10 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
-         * FinalizeRestore.
+         * <p>Specifies whether to complete the restoration immediately. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder finalizeRestore(Boolean finalizeRestore) {
             this.putQueryParameter("FinalizeRestore", finalizeRestore);
@@ -163,6 +169,7 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The Supabase project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +182,10 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. Specifies the region in which to query or perform the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -184,7 +194,10 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
-         * RestoredBranchName.
+         * <p>The name of the restored branch. If not specified, the backend generates a name automatically.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>restore_preview</p>
          */
         public Builder restoredBranchName(String restoredBranchName) {
             this.putQueryParameter("RestoredBranchName", restoredBranchName);
@@ -193,6 +206,7 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The snapshot LSN used for restoration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +219,10 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
-         * TargetBranchId.
+         * <p>The target branch ID. If not specified, the backend selects the target branch based on the restoration process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-main</p>
          */
         public Builder targetBranchId(String targetBranchId) {
             this.putQueryParameter("TargetBranchId", targetBranchId);

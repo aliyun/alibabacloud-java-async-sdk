@@ -171,7 +171,10 @@ public class ListBranchesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records to return in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -180,7 +183,10 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The cursor for paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -189,7 +195,10 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +207,18 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>10</li>
+         * <li>20</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +227,10 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * ParentBranchId.
+         * <p>The parent branch ID. Specifies the parent branch for a new branch or as a query filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-main</p>
          */
         public Builder parentBranchId(String parentBranchId) {
             this.putQueryParameter("ParentBranchId", parentBranchId);
@@ -216,7 +239,10 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region is inherited from the primary branch by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +251,10 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * Search.
+         * <p>The search keyword. Supports fuzzy search by branch ID or branch name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("Search", search);
@@ -234,7 +263,17 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>BranchName: sorts by branch name.</li>
+         * <li>CreateTime: sorts by creation time.</li>
+         * <li>LastRunTime: sorts by last run time.</li>
+         * </ul>
+         * <p>Default value: CreateTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -243,7 +282,16 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort direction.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Asc: ascending order.</li>
+         * <li>Desc: descending order.</li>
+         * </ul>
+         * <p>Default value: Desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);

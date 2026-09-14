@@ -107,7 +107,7 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
          * <p>The error message returned if the operation fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;error message&quot;</p>
+         * <p>\&quot;error message\&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;

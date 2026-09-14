@@ -67,7 +67,7 @@ public class ListSupportModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of supported model names.</p>
+         * ModelNames.
          */
         public Builder modelNames(ModelNames modelNames) {
             this.modelNames = modelNames;

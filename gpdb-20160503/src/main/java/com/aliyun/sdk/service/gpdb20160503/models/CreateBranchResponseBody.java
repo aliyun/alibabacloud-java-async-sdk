@@ -80,7 +80,10 @@ public class CreateBranchResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchId.
+         * <p>The branch ID, which uniquely identifies a Supabase branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-xxxx</p>
          */
         public Builder branchId(String branchId) {
             this.branchId = branchId;
@@ -88,7 +91,10 @@ public class CreateBranchResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the Supabase project that corresponds to the primary branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spb-xxxx</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -96,7 +102,10 @@ public class CreateBranchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

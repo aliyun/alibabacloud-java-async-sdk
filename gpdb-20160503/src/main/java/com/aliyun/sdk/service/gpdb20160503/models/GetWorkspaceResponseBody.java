@@ -119,7 +119,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Apikeys.
+         * <p>The list of workspace API keys.</p>
          */
         public Builder apikeys(java.util.List<Apikeys> apikeys) {
             this.apikeys = apikeys;
@@ -127,7 +127,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-01T00:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -135,7 +138,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +149,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Services.
+         * <p>The list of service details.</p>
          */
         public Builder services(java.util.List<Services> services) {
             this.services = services;
@@ -151,7 +157,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-*****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -159,7 +168,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-first-workspace</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
@@ -225,7 +237,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * ServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agdb-xxxxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -233,7 +248,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type. Valid values:</p>
+             * <ul>
+             * <li>memory</li>
+             * <li>drama</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -352,7 +374,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthServices.
+             * <p>The service ID.</p>
              */
             public Builder authServices(java.util.List<AuthServices> authServices) {
                 this.authServices = authServices;
@@ -360,7 +382,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sat Mar 14 14:44:27 GMT+08:00 2026</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -368,7 +393,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my test key</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -376,7 +404,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * <p>The ID of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxxxxx</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -384,7 +415,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The name of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my test key</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -392,7 +426,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPrefix.
+             * <p>The prefix of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-1235*****</p>
              */
             public Builder keyPrefix(String keyPrefix) {
                 this.keyPrefix = keyPrefix;
@@ -537,7 +574,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-01T00:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -545,7 +585,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The compute resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -553,7 +596,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-21T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -561,7 +607,20 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing type. Valid values:</p>
+             * <ul>
+             * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+             * <li><strong>PREPAY</strong>: subscription.</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>If this parameter is not specified, the default value is pay-as-you-go.</li>
+             * <li>In subscription billing mode, a discount is available when you purchase a duration of one year or longer. Select a billing type as needed.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -569,7 +628,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agdb-xxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -577,7 +639,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agdb-xxx</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -585,7 +650,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type. Valid values:</p>
+             * <ul>
+             * <li><strong>memory</strong></li>
+             * <li><strong>drama</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -593,7 +665,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The service status. Valid values:</p>
+             * <ul>
+             * <li>creating: being created.</li>
+             * <li>active: running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -147,7 +147,7 @@ public class DescribeDBInstanceDataSkewRequest extends Request {
          * <p>order by condition</p>
          * 
          * <strong>example:</strong>
-         * <p>{Field: TableSkew, Type: Desc}</p>
+         * <p>{Field: TableSize, Type: Desc}</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -177,7 +177,7 @@ public class DescribeDBInstanceDataSkewRequest extends Request {
          * <p>Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

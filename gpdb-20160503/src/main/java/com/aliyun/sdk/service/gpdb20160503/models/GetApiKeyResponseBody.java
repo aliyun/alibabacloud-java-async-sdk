@@ -145,7 +145,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The content of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxxxxxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -153,7 +156,7 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * AuthServices.
+         * <p>The service IDs.</p>
          */
         public Builder authServices(java.util.List<AuthServices> authServices) {
             this.authServices = authServices;
@@ -161,7 +164,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -169,7 +175,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test api key</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -177,7 +186,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyId.
+         * <p>The ID of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxxxxxx</p>
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -185,7 +197,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyName.
+         * <p>The name of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test api key</p>
          */
         public Builder keyName(String keyName) {
             this.keyName = keyName;
@@ -193,7 +208,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPrefix.
+         * <p>The prefix of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-1235*****</p>
          */
         public Builder keyPrefix(String keyPrefix) {
             this.keyPrefix = keyPrefix;
@@ -201,7 +219,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7565770E-7C45-462D-BA4A-8A5396****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -267,7 +288,10 @@ public class GetApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * ServiceId.
+             * <p>The service IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agdb-2ze8x9278c9iizl</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -275,7 +299,14 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type. Valid values:</p>
+             * <ul>
+             * <li><strong>drama</strong></li>
+             * <li><strong>memroy</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;

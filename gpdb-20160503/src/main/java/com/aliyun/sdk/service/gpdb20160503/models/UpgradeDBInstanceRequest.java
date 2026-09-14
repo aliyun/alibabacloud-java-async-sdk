@@ -270,7 +270,13 @@ public class UpgradeDBInstanceRequest extends Request {
         } 
 
         /**
-         * CacheStorageSize.
+         * <p>The Serverless cache storage capacity. Unit: GB.</p>
+         * <blockquote>
+         * <p>This parameter is required only for Serverless Pro instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder cacheStorageSize(String cacheStorageSize) {
             this.putQueryParameter("CacheStorageSize", cacheStorageSize);
@@ -279,7 +285,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -291,7 +297,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -305,7 +311,7 @@ public class UpgradeDBInstanceRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -319,9 +325,9 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specifications of each compute node. For information about the supported specifications, see <a href="https://help.aliyun.com/document_detail/35406.html">Instance specifications</a>.</p>
+         * <p>The specifications of segment nodes. For information about supported node specifications, see <a href="https://help.aliyun.com/document_detail/35406.html">Instance specifications</a>.</p>
          * <blockquote>
-         * <p>This parameter is available only for instances in elastic storage mode.</p>
+         * <p>This parameter is supported only for elastic storage mode instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -334,10 +340,10 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>null</p>
          */
         public Builder masterNodeNum(String masterNodeNum) {
             this.putQueryParameter("MasterNodeNum", masterNodeNum);
@@ -355,7 +361,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -367,9 +373,9 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -382,7 +388,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -394,11 +400,11 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The performance level of Enterprise SSDs (ESSDs). Valid values:</p>
+         * <p>The performance level (PL) of the cloud disk. Valid values:</p>
          * <ul>
-         * <li><strong>pl0</strong></li>
-         * <li><strong>pl1</strong></li>
-         * <li><strong>pl2</strong></li>
+         * <li><strong>pl0</strong>: PL0.</li>
+         * <li><strong>pl1</strong>: PL1.</li>
+         * <li><strong>pl2</strong>: PL2.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -411,11 +417,11 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of compute nodes. The number of compute nodes varies based on the instance resource type and edition.</p>
+         * <p>The number of segment nodes. The supported number of nodes varies based on the instance resource type and instance edition:</p>
          * <ul>
-         * <li>Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments.</li>
-         * <li>Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments.</li>
-         * <li>Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments.</li>
+         * <li>Elastic storage mode, High-availability Edition: Valid values: 4 to 512. The value must be a multiple of 4.</li>
+         * <li>Elastic storage mode, &lt;props=&quot;china&quot;&gt;Basic Edition (formerly High-performance Edition)&lt;props=&quot;intl&quot;&gt;High-performance Edition: Valid values: 2 to 512. The value must be a multiple of 2.</li>
+         * <li>Serverless manual scheduling mode: Valid values: 2 to 512. The value must be a multiple of 2.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,7 +434,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The disk storage type of the instance after the change. The disk storage type can be changed only to ESSD. Set the value to <strong>cloud_essd</strong>.</p>
+         * <p>The cloud disk storage type after the change. Currently, only ESSD cloud disks are supported. Set the value to <strong>cloud_essd</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -440,7 +446,26 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * ServerlessResource.
+         * <ul>
+         * <li><p>Serverless instances:
+         * The compute resource threshold. Valid values: 8 to 32. The value must be a multiple of 8. Unit: ACU. Default value: 32.</p>
+         * </li>
+         * <li><p>Serverless Pro instances: The reserved compute resources. Valid values: 16 to 1024. Unit: ACU. Default value: 16. The step size varies based on the value range:</p>
+         * <ul>
+         * <li>16 to 32: step size of 4.</li>
+         * <li>32 to 64: step size of 8.</li>
+         * <li>64 to 128: step size of 16.</li>
+         * <li>128 to 256: step size of 32.</li>
+         * <li>Greater than 256: step size of 64.<blockquote>
+         * <p>This parameter is required only for Serverless automatic scheduling mode and Serverless Pro instances.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder serverlessResource(String serverlessResource) {
             this.putQueryParameter("ServerlessResource", serverlessResource);
@@ -449,9 +474,9 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.</p>
+         * <p>The storage capacity of segment nodes. Unit: GB. Valid values: 50 to &lt;props=&quot;china&quot;&gt;8000&lt;props=&quot;intl&quot;&gt;6000. The value must be a multiple of 50.</p>
          * <blockquote>
-         * <p> This parameter is available only for instances in elastic storage mode.</p>
+         * <p>This parameter is supported only for elastic storage mode instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -464,24 +489,22 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance configuration change. Valid values:</p>
+         * <p>The type of the specification change. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): changes the number of compute nodes.</li>
-         * <li><strong>1</strong>: changes the specifications and storage capacity of each compute node.</li>
-         * <li><strong>2</strong>: changes the number of coordinator nodes.</li>
-         * <li><strong>3</strong>: changes the disk storage type and ESSD performance level of the instance.</li>
+         * <li><strong>0</strong> (default): Changes the number of segment nodes. SegNodeNum is required. Other parameters do not take effect.</li>
+         * <li><strong>1</strong>: Changes the segment node specifications and instance storage capacity. InstanceSpec is required. StorageSize is optional and must be greater than or equal to the current instance storage capacity.</li>
+         * <li><strong>2</strong>: Changes the number of master nodes. MasterNodeNum is required. Other parameters do not take effect.</li>
+         * <li><strong>3</strong>: Changes the cloud disk storage type and performance level (PL). SegDiskPerformanceLevel and SegStorageType are required. Other parameters do not take effect.</li>
          * </ul>
          * <blockquote>
+         * <ul>
+         * <li>Different instance resource types support different Upgrade/Downgrade operations for compute nodes. For more information, see <a href="https://help.aliyun.com/document_detail/50956.html">Precautions</a>.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>The supported changes to compute node configurations vary based on the instance resource type. For more information, see the &quot;Usage notes&quot; section of the <a href="https://help.aliyun.com/document_detail/50956.html">Change compute node configurations</a> topic.</p>
-         * </li>
-         * <li><p>After you specify a change type, only the corresponding parameters take effect. For example, if you set <strong>UpgradeType</strong> to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.</p>
-         * </li>
-         * <li><p>The number of coordinator nodes can be changed only on the China site (aliyun.com).</p>
-         * </li>
-         * <li><p>The disk storage type can be changed only from ultra disks to ESSDs.</p>
-         * </li>
+         * <li>After you select a specification change type, only the corresponding parameters take effect. Other parameters do not take effect. For example, if <strong>UpgradeType</strong> is set to 0 and you specify both the number of segment nodes and the number of master nodes, only the number of segment nodes is changed.</li>
+         * <li>Changing the number of master nodes is supported only on the China site (aliyun.com).</li>
+         * <li>You can change the cloud disk storage type only from standard SSD to ESSD cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -23,6 +23,10 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
     private Boolean autoScale;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeHours")
+    private String idleTimeHours;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
@@ -34,6 +38,7 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
     private ModifySupabaseAutoScalePolicyRequest(Builder builder) {
         super(builder);
         this.autoScale = builder.autoScale;
+        this.idleTimeHours = builder.idleTimeHours;
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
@@ -59,6 +64,13 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
     }
 
     /**
+     * @return idleTimeHours
+     */
+    public String getIdleTimeHours() {
+        return this.idleTimeHours;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -74,6 +86,7 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySupabaseAutoScalePolicyRequest, Builder> {
         private Boolean autoScale; 
+        private String idleTimeHours; 
         private String projectId; 
         private String regionId; 
 
@@ -84,11 +97,17 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
         private Builder(ModifySupabaseAutoScalePolicyRequest request) {
             super(request);
             this.autoScale = request.autoScale;
+            this.idleTimeHours = request.idleTimeHours;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
         /**
+         * <p>Specifies whether to enable <strong>automatic start and stop</strong>. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</li>
+         * <li>false: Disabled. After this feature is disabled, the automatic start and stop feature of Supabase is turned off.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +120,16 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
         }
 
         /**
+         * IdleTimeHours.
+         */
+        public Builder idleTimeHours(String idleTimeHours) {
+            this.putQueryParameter("IdleTimeHours", idleTimeHours);
+            this.idleTimeHours = idleTimeHours;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Supabase project. You can obtain the workspace ID from the Supabase page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +142,10 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

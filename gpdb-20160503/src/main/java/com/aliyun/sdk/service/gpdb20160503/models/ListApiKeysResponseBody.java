@@ -106,7 +106,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of API keys.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records to return in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -204,7 +216,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * ServiceId.
+             * <p>The service IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agdb-xxxxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -212,7 +227,15 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>memory</li>
+             * <li>drama</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -331,7 +354,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthServices.
+             * <p>The service IDs.</p>
              */
             public Builder authServices(java.util.List<AuthServices> authServices) {
                 this.authServices = authServices;
@@ -339,7 +362,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-09T04:54:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -347,7 +373,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first api key</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -355,7 +384,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * <p>The ID of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxxxxxxx</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -363,7 +395,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The name of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first api key</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -371,7 +406,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPrefix.
+             * <p>The prefix of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-12345****</p>
              */
             public Builder keyPrefix(String keyPrefix) {
                 this.keyPrefix = keyPrefix;

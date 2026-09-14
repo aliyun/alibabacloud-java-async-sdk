@@ -116,7 +116,10 @@ public class ListApiKeysRequest extends Request {
         } 
 
         /**
-         * KeyName.
+         * <p>The name of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my api</p>
          */
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
@@ -125,7 +128,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records to return in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -134,7 +140,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -143,7 +152,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,6 +164,7 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

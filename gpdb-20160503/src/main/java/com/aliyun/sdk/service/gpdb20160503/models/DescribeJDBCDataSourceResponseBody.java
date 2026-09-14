@@ -273,7 +273,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
          * <p>The type of the data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>MySQL</p>
+         * <p>mysql</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -295,7 +295,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
          * <p>The JDBC connection string.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>jdbc:mysql://rm-xxx.mysql.rds.aliyuncs.com:3306/testadmin</p>
          */
         public Builder JDBCConnectionString(String JDBCConnectionString) {
             this.JDBCConnectionString = JDBCConnectionString;
@@ -306,7 +306,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
          * <p>The password of the database account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>testpasswd</p>
          */
         public Builder JDBCPassword(String JDBCPassword) {
             this.JDBCPassword = JDBCPassword;
@@ -317,7 +317,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
          * <p>The name of the database account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>testuser</p>
          */
         public Builder JDBCUserName(String JDBCUserName) {
             this.JDBCUserName = JDBCUserName;
@@ -328,7 +328,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
          * <p>The time when the data source was last modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-08-27T02:01:10Z</p>
+         * <p>2024-09-04T02:27:55Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;

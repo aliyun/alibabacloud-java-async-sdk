@@ -106,7 +106,7 @@ public class ListSaasServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of instance details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -256,7 +268,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentId.
+             * <p>The component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0644c5aa-5306-478b-ac39-bb4660cdc9f7</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -264,7 +279,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentType.
+             * <p>The type of the subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gamestudio</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -272,7 +290,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-09T04:54:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -280,7 +301,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The compute resource of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -288,7 +312,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * <p>The release protection status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -296,7 +323,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The service status. Valid values:</p>
+             * <ul>
+             * <li>active: Running.</li>
+             * <li>creating: Being created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,7 +514,7 @@ public class ListSaasServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * Components.
+             * <p>The list of service subcomponents.</p>
              */
             public Builder components(java.util.List<Components> components) {
                 this.components = components;
@@ -488,7 +522,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-09T04:54:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -496,7 +533,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The compute resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -504,7 +544,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * <p>Indicates whether the release protection feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -512,7 +559,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-15T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -520,7 +570,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing type. Valid values:</p>
+             * <ul>
+             * <li><strong>POSTPAY</strong>: Pay-as-you-go.</li>
+             * <li><strong>PREPAY</strong>: Subscription.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -528,7 +585,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Plan.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>deprecated</p>
              */
             public Builder plan(String plan) {
                 this.plan = plan;
@@ -536,7 +596,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agdb-xxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -544,7 +607,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agdb-xxxx</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -552,7 +618,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type. Valid values:</p>
+             * <ul>
+             * <li><strong>memory</strong></li>
+             * <li><strong>drama</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>memory</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -560,7 +633,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The service status. Valid values:</p>
+             * <ul>
+             * <li>active: Running.</li>
+             * <li>creating: Being created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

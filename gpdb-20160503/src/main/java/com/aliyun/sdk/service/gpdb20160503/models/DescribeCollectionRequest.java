@@ -168,7 +168,7 @@ public class DescribeCollectionRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>gp-xxxxxxxxx</p>
+         * <p>gp-bp152460513z****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

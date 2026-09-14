@@ -130,7 +130,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried documents.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -244,10 +244,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the document.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>music.txt</p>
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -255,10 +252,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the document.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://oss.xxx/music.txt">http://oss.xxx/music.txt</a></p>
+             * Source.
              */
             public Builder source(String source) {
                 this.source = source;

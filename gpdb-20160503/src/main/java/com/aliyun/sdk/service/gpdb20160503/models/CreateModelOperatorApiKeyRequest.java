@@ -60,6 +60,7 @@ public class CreateModelOperatorApiKeyRequest extends Request {
         } 
 
         /**
+         * <p>The description. Spaces are not allowed, and the value cannot exceed 256 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

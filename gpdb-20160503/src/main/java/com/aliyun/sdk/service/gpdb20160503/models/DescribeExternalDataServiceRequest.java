@@ -93,7 +93,7 @@ public class DescribeExternalDataServiceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-bp10g78o9807yv9h3</p>
+         * <p>gp-xxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

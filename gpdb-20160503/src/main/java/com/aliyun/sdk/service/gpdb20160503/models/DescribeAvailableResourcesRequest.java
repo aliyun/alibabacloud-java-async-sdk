@@ -91,8 +91,10 @@ public class DescribeAvailableResourcesRequest extends Request {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +109,7 @@ public class DescribeAvailableResourcesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to query available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -121,9 +123,9 @@ public class DescribeAvailableResourcesRequest extends Request {
         }
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The availability zone ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to query available zone IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

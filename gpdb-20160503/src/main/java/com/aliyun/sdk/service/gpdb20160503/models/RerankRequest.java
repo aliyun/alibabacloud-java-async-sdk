@@ -204,6 +204,9 @@ public class RerankRequest extends Request {
 
         /**
          * <p>List of documents to be re-ordered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADBPG is an Alibaba Cloud OLAP database.</p>
          */
         public Builder documents(java.util.List<String> documents) {
             String documentsShrink = shrink(documents, "Documents", "json");

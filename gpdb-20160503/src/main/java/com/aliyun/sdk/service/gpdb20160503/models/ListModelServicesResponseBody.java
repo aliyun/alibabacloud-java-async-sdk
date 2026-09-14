@@ -386,6 +386,9 @@ public class ListModelServicesResponseBody extends TeaModel {
 
             /**
              * <p>Model service parameters (not available).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not yet available.</p>
              */
             public Builder modelParams(java.util.Map<String, String> modelParams) {
                 this.modelParams = modelParams;

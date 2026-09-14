@@ -106,7 +106,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried databases.</p>
+         * Databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -207,7 +207,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried databases.</p>
+             * Databases.
              */
             public Builder databases(java.util.List<String> databases) {
                 this.databases = databases;

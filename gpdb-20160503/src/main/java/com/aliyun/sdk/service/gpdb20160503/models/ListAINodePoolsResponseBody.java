@@ -67,7 +67,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the AI node resource pool.</p>
+         * <p>The details of the AI node resource pools.</p>
          */
         public Builder AINodePoolInfos(java.util.List<AINodePoolInfos> AINodePoolInfos) {
             this.AINodePoolInfos = AINodePoolInfos;
@@ -222,7 +222,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The binding type of the AI node.</p>
+             * <p>The type of the object to which the AI node is bound.</p>
              * 
              * <strong>example:</strong>
              * <p>model_serving</p>
@@ -233,11 +233,14 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the AI node.</p>
+             * <p>The status of the AI node. Valid values:</p>
              * <ul>
-             * <li>unbound: The node is not bound.</li>
-             * <li>bound: The node is bound.</li>
+             * <li>unbound: The AI node is not bound.</li>
+             * <li>bound: The AI node is bound.</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>bound</p>
              */
             public Builder bindStatus(String bindStatus) {
                 this.bindStatus = bindStatus;
@@ -245,7 +248,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the AI node was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-09T02:07:15Z</p>
@@ -278,7 +281,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AI node specifications. The list of supported specifications is shown below.</p>
+             * <p>The node specifications of the AI node. The following specifications are supported:</p>
              * <pre><code>ADB.AIMedium.1
              * ADB.AILarge.1
              * ADB.AIStandard.2
@@ -317,7 +320,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The time when the AI node was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-16T02:04:42Z</p>
@@ -328,7 +331,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -408,7 +414,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AI node details.</p>
+             * <p>The detailed information about the AI nodes.</p>
              */
             public Builder AINodeInfos(java.util.List<AINodeInfos> AINodeInfos) {
                 this.AINodeInfos = AINodeInfos;

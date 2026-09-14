@@ -305,15 +305,16 @@ public class CreateSupabaseProjectRequest extends Request {
 
         /**
          * <p>The password of the initial account.</p>
+         * <p>Password rules:</p>
          * <ul>
-         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
          * <li>The password must be 8 to 32 characters in length.</li>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Supported special characters include !@#$%^&amp;*()_+-=.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Pw123456</p>
+         * <p>TestPassword123!</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -322,7 +323,10 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * AutoScale.
+         * <p>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoScale(Boolean autoScale) {
             this.putQueryParameter("AutoScale", autoScale);
@@ -331,10 +335,10 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
+         * <p>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</p>
          * 
          * <strong>example:</strong>
-         * <p>0c593ea1-3bea-11e9-b96b-88888888****</p>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -343,10 +347,13 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The performance level of Enterprise SSDs (ESSDs). Default value: PL0. Valid values:</p>
+         * <p>The performance level (PL) of the cloud disk. If this parameter is not specified, the default value PL0 is used.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>PL0</li>
          * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -359,7 +366,15 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The DPI engine version. If this parameter is not specified, the default value PG15 is used. PG17 and later versions support the data sandbox (branch) feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PG15: PostgreSQL 15.</li>
+         * <li>PG17: PostgreSQL 17, which supports the data sandbox feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PG15</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -377,7 +392,16 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing type. If this parameter is not specified, the default value Free is used.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Free: Free tier.</li>
+         * <li>Postpaid: Pay-as-you-go.</li>
+         * <li>Prepaid: Subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Free</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -386,7 +410,15 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The unit of the subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value Month is used.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month: month.</li>
+         * <li>Year: year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -395,16 +427,17 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The name of the Supabase project. The name must meet the following requirements:</p>
+         * <p>The name of the Supabase project.</p>
+         * <p>Naming rules:</p>
          * <ul>
          * <li>The name must be 1 to 128 characters in length.</li>
-         * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name can contain letters, digits, hyphens (-), and underscores (_).</li>
          * <li>The name must start with a letter or an underscore (_).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>saas_iot_x86_modbustcp_lqt01</p>
+         * <p>supabase_demo</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -413,11 +446,11 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the Supabase project. Default value: 1C1G.</p>
+         * <p>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1C1G</p>
+         * <p>2C4G</p>
          */
         public Builder projectSpec(String projectSpec) {
             this.putQueryParameter("ProjectSpec", projectSpec);
@@ -426,7 +459,7 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. Specifies the region in which to create the project.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -438,12 +471,11 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelist.</p>
-         * <p>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after you create a project.</p>
+         * <p>The IP address whitelist. Separate multiple IP addresses or CIDR blocks with commas (,). If this parameter is not specified, the default value 0.0.0.0/0 is used.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>127.0.0.1</p>
+         * <p>0.0.0.0/0</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -452,10 +484,10 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The storage size. Unit: GB. Default value: 1.</p>
+         * <p>The storage size, in GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>50</p>
          */
         public Builder storageSize(Long storageSize) {
             this.putQueryParameter("StorageSize", storageSize);
@@ -473,7 +505,10 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -482,19 +517,11 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p><strong>This parameter</strong> must be specified.</p>
-         * </li>
-         * <li><p>The zone where the <strong>vSwitch</strong> resides must be the same as the zone that is specified by <strong>ZoneId</strong>.</p>
-         * </li>
-         * </ul>
+         * <p>The vSwitch ID. This parameter is required. The zone of the vSwitch must be the same as the value of ZoneId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp1cpq8mr64paltkb****</p>
+         * <p>vsw-bp1234567890</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -503,19 +530,11 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query the available VPC IDs.</p>
-         * </li>
-         * <li><p>This parameter must be specified.</p>
-         * </li>
-         * </ul>
+         * <p>The ID of the virtual private cloud (VPC). This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-bp*******************</p>
+         * <p>vpc-bp1234567890</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -524,14 +543,11 @@ public class CreateSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The zone ID.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent zone list.</p>
-         * </blockquote>
+         * <p>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as this parameter value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

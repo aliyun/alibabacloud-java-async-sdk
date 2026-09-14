@@ -80,7 +80,10 @@ public class ModifySupabaseProjectResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -88,7 +91,10 @@ public class ModifySupabaseProjectResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The Supabase instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbp-tyarplz****</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -96,7 +102,10 @@ public class ModifySupabaseProjectResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

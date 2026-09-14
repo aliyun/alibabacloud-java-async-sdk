@@ -106,7 +106,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -117,7 +117,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried document collections.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -136,7 +136,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -147,10 +147,12 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The creation status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><p><strong>success</strong>: The operation succeeded.</p>
+         * </li>
+         * <li><p><strong>fail</strong>: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,10 +313,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the document collection.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>document</p>
+             * CollectionName.
              */
             public Builder collectionName(String collectionName) {
                 this.collectionName = collectionName;
@@ -322,10 +321,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vector dimensions.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1536</p>
+             * Dimension.
              */
             public Builder dimension(Integer dimension) {
                 this.dimension = dimension;
@@ -333,10 +329,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vector algorithm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>text-embeddding-v1</p>
+             * EmbeddingModel.
              */
             public Builder embeddingModel(String embeddingModel) {
                 this.embeddingModel = embeddingModel;
@@ -344,10 +337,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fields that are used for full-text search. Multiple fields are separated by commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>title</p>
+             * FullTextRetrievalFields.
              */
             public Builder fullTextRetrievalFields(String fullTextRetrievalFields) {
                 this.fullTextRetrievalFields = fullTextRetrievalFields;
@@ -355,10 +345,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;page&quot;: &quot;int&quot;, &quot;title&quot;: &quot;text&quot;}</p>
+             * Metadata.
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -366,10 +353,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vector similarity algorithm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cosine</p>
+             * Metrics.
              */
             public Builder metrics(String metrics) {
                 this.metrics = metrics;
@@ -377,10 +361,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The analyzer that is used for full-text search.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zh_cn</p>
+             * Parser.
              */
             public Builder parser(String parser) {
                 this.parser = parser;

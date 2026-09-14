@@ -117,7 +117,7 @@ public class DescribeDataSharePerformanceRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The end of the time range to query. The time must be later than the start time, in UTC, and in the <em>&#x79;**\</em>\<em>\</em>\***&#x64;*&#x54;<em>HH:mm</em>Z format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-03T15:10Z</p>
@@ -129,10 +129,12 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the performance metric. Separate multiple values with commas (,). Valid values:</p>
+         * <p>The name of the performance metric. To specify multiple metrics, separate the metric names with a comma (,). Valid values:</p>
          * <ul>
-         * <li><strong>adbpg_datashare_topic_count</strong>: the number of shared topics.</li>
-         * <li><strong>adbpg_datashare_data_size_mb</strong>: the amount of data shared.</li>
+         * <li><p><strong>adbpg_datashare_topic_count</strong>: the number of shared topics.</p>
+         * </li>
+         * <li><p><strong>adbpg_datashare_data_size_mb</strong>: the size of shared data in MB.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -146,9 +148,9 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -162,10 +164,10 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
+         * <p>null</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -174,7 +176,7 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start of the time range to query. The time must be in UTC and in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-03T15:00Z</p>

@@ -117,7 +117,10 @@ public class ListSaasServiceRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -126,7 +129,10 @@ public class ListSaasServiceRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The paging token for the next query. When you perform a paging query, the next query begins from the specified token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -135,7 +141,10 @@ public class ListSaasServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,6 +170,7 @@ public class ListSaasServiceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

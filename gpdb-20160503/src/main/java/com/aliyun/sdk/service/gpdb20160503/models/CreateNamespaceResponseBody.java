@@ -83,7 +83,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Successful</p>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

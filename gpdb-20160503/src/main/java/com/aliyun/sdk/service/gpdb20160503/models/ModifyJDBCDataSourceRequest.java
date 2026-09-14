@@ -212,7 +212,7 @@ public class ModifyJDBCDataSourceRequest extends Request {
          * <p>The JDBC connection string.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>jdbc:mysql://rm-xxx.mysql.rds.aliyuncs.com:3306/testadmin</p>
          */
         public Builder JDBCConnectionString(String JDBCConnectionString) {
             this.putQueryParameter("JDBCConnectionString", JDBCConnectionString);
@@ -224,7 +224,7 @@ public class ModifyJDBCDataSourceRequest extends Request {
          * <p>The password of the database account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>testpasswd</p>
          */
         public Builder JDBCPassword(String JDBCPassword) {
             this.putQueryParameter("JDBCPassword", JDBCPassword);
@@ -236,7 +236,7 @@ public class ModifyJDBCDataSourceRequest extends Request {
          * <p>The name of the database account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>testuser</p>
          */
         public Builder JDBCUserName(String JDBCUserName) {
             this.putQueryParameter("JDBCUserName", JDBCUserName);

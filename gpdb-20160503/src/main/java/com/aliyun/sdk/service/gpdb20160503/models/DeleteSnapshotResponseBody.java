@@ -54,7 +54,10 @@ public class DeleteSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

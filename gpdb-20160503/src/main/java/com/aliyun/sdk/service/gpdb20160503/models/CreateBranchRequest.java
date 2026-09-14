@@ -216,6 +216,7 @@ public class CreateBranchRequest extends Request {
         } 
 
         /**
+         * <p>The branch name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +229,10 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client idempotency token. This token ensures the idempotence of retry requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426614174000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -237,7 +241,10 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test branch</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,7 +253,10 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * ExpiresAt.
+         * <p>The time when the branch automatically expires and is deleted. The value is in the ISO 8601 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-08T09:11:12Z</p>
          */
         public Builder expiresAt(String expiresAt) {
             this.putQueryParameter("ExpiresAt", expiresAt);
@@ -255,7 +265,15 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * InitSource.
+         * <p>The initialization source of the branch.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ParentData: copies the schema and data from the parent branch. This is the default value.</li>
+         * <li>SchemaOnly: copies only the schema structure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ParentData</p>
          */
         public Builder initSource(String initSource) {
             this.putQueryParameter("InitSource", initSource);
@@ -264,6 +282,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
+         * <p>The ID of the parent branch. This parameter specifies the parent branch for the new branch or query condition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +295,10 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * ParentLsn.
+         * <p>The log sequence number (LSN) selected when creating a branch from the parent branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/3522648</p>
          */
         public Builder parentLsn(String parentLsn) {
             this.putQueryParameter("ParentLsn", parentLsn);
@@ -285,7 +307,11 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * ParentTimestamp.
+         * <p>The point in time for data synchronization when creating a branch from the parent branch. The value is in the ISO 8601 UTC format.</p>
+         * <p>Default value: the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-08T09:11:12Z</p>
          */
         public Builder parentTimestamp(String parentTimestamp) {
             this.putQueryParameter("ParentTimestamp", parentTimestamp);
@@ -294,6 +320,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Supabase project that corresponds to the primary branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +333,15 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * Protected.
+         * <p>Specifies whether to enable branch protection.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Enables branch protection.</li>
+         * <li>false: Disables branch protection. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder _protected(Boolean _protected) {
             this.putQueryParameter("Protected", _protected);
@@ -315,7 +350,10 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. This parameter is required when you create a primary branch. When you create a child branch, the region is inherited from the primary branch by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -324,7 +362,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of branch tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -392,7 +430,10 @@ public class CreateBranchRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -400,7 +441,10 @@ public class CreateBranchRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -80,7 +80,10 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The associated order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>278880417310796</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -88,10 +91,10 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Supabase project ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>sbp-180****</p>
+         * <p>spb-xxxx</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -102,7 +105,7 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

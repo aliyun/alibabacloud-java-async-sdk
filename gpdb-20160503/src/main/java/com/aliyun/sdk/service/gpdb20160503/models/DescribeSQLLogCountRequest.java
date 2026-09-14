@@ -294,7 +294,7 @@ public class DescribeSQLLogCountRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>1</p>
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);

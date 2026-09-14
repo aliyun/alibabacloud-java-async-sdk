@@ -67,7 +67,10 @@ public class DescribeDBVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25C11EE5-B7E8-481A-A07C-BD619971A570</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class DescribeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * VersionSuggestion.
+         * <p>The recommended upgrade version in the format of &quot;major version,minor version&quot; (separated by a comma). The first value is the target version for major engine version upgrade, and the second value is the target version for minor engine version update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mm.v7.4.2.7-202608031659,mm.v7.3.2.12-202608071438</p>
          */
         public Builder versionSuggestion(String versionSuggestion) {
             this.versionSuggestion = versionSuggestion;

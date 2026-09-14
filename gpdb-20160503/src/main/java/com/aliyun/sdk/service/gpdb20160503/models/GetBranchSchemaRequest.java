@@ -104,6 +104,7 @@ public class GetBranchSchemaRequest extends Request {
         } 
 
         /**
+         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class GetBranchSchemaRequest extends Request {
         }
 
         /**
+         * <p>The database name. The system databases postgres, template0, and template1 do not support schema queries.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class GetBranchSchemaRequest extends Request {
         }
 
         /**
+         * <p>The Supabase project ID that corresponds to the primary branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class GetBranchSchemaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region of the primary branch is inherited by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -88,9 +88,9 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> interface to view the instance IDs of all AnalyticDB for PostgreSQL instances in the target region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -113,7 +113,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated and should not be passed.</p>
+         * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

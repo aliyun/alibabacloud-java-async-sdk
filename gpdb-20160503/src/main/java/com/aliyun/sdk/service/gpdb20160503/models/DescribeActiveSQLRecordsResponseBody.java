@@ -83,7 +83,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-bp***************</p>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -332,7 +332,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
              * <p>The execution duration of the query. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>60s</p>
+             * <p>60</p>
              */
             public Builder queryDuration(String queryDuration) {
                 this.queryDuration = queryDuration;

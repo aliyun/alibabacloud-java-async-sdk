@@ -134,6 +134,7 @@ public class DeleteChunksRequest extends Request {
         } 
 
         /**
+         * <p>A list of chunk IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder chunkIds(java.util.List<String> chunkIds) {
@@ -144,6 +145,10 @@ public class DeleteChunksRequest extends Request {
         }
 
         /**
+         * <p>The name of the document collection.</p>
+         * <blockquote>
+         * <p>You create this document collection by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. To view existing document collections, call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +161,10 @@ public class DeleteChunksRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view details for all AnalyticDB for PostgreSQL instances in a specific region, including their instance IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +177,13 @@ public class DeleteChunksRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The name of the namespace. The default value is public.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view a list of namespaces.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -177,6 +192,10 @@ public class DeleteChunksRequest extends Request {
         }
 
         /**
+         * <p>The password for the namespace.</p>
+         * <blockquote>
+         * <p>This password is set when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +208,7 @@ public class DeleteChunksRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

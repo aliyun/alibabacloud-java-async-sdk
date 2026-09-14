@@ -122,7 +122,7 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
          * <p>This parameter is no longer used.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-bp67acfmxazb4p****</p>
+         * <p>null</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

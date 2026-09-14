@@ -150,7 +150,7 @@ public class GetUploadDocumentJobRequest extends Request {
         /**
          * <p>The name of the document collection.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * <p>A document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view existing document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -164,9 +164,9 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance for which vector engine optimization is enabled.</p>
+         * <p>The ID of the instance that has the vector engine optimization feature enabled.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -180,7 +180,7 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the document upload job. You can call the <code>UploadDocumentAsync</code> operation to obtain the job ID.</p>
+         * <p>The ID of the document upload task, which is obtained from the UploadDocumentAsync operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,9 +193,9 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace for tenant isolation. Default value: public.</p>
+         * <p>The namespace, which is used for tenant isolation. Default value: public.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can create a namespace by calling <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> and view the list of namespaces by calling <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class GetUploadDocumentJobRequest extends Request {
         /**
          * <p>The password of the namespace.</p>
          * <blockquote>
-         * <p>The value of this parameter is specified when you call the CreateNamespace operation.</p>
+         * <p>This value is specified by the CreateNamespace operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -233,7 +233,7 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

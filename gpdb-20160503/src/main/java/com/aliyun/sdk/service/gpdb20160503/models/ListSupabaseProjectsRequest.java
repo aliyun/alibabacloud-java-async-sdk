@@ -171,7 +171,7 @@ public class ListSupabaseProjectsRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of instances to return per page. Default value: 10.</p>
+         * <p>The maximum number of entries to return. The default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -183,7 +183,7 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * <p>A pagination token returned from a previous call. Use it to retrieve the next page of results.</p>
+         * <p>The pagination token to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -195,7 +195,10 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +207,10 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,9 +219,9 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The ID of the region.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation get a list of available region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available regions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

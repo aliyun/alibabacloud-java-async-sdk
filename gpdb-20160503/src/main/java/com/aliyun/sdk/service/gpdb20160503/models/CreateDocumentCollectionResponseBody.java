@@ -80,7 +80,7 @@ public class CreateDocumentCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -102,10 +102,10 @@ public class CreateDocumentCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The API execution status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The operation was successful.</li>
+         * <li><strong>fail</strong>: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

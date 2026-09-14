@@ -101,7 +101,10 @@ public class TagSupabaseProjectRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -110,7 +113,7 @@ public class TagSupabaseProjectRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The Nth instance. Valid values of N: 1 to 50.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -119,7 +122,10 @@ public class TagSupabaseProjectRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Set the value to <code>instance</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -128,7 +134,7 @@ public class TagSupabaseProjectRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The Nth tag. Valid values of N: 1 to 20.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -196,7 +202,10 @@ public class TagSupabaseProjectRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. This parameter cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -204,7 +213,10 @@ public class TagSupabaseProjectRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. This parameter can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

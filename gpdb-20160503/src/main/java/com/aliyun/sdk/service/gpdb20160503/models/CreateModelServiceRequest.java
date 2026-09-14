@@ -202,7 +202,7 @@ public class CreateModelServiceRequest extends Request {
         } 
 
         /**
-         * <p>A list of AI nodes for model deployment.</p>
+         * <p>The list of AI nodes used for model deployment.</p>
          * <p>This parameter is required.</p>
          */
         public Builder aiNodes(java.util.List<String> aiNodes) {
@@ -213,7 +213,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How do I ensure the idempotence?</a></p>
+         * <p>The idempotency check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -225,9 +225,9 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -253,7 +253,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * EnablePublicConnection.
+         * <p>Specifies whether to enable public network access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enablePublicConnection(Boolean enablePublicConnection) {
             this.putQueryParameter("EnablePublicConnection", enablePublicConnection);
@@ -262,7 +265,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * <p>The inference engine. Only vllm is supported.</p>
+         * <p>The inference engine. Currently, only vllm is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>vllm</p>
@@ -274,7 +277,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * <p>The name of the model.</p>
+         * <p>The model name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -287,7 +290,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * <p>Model parameters (to be supported).</p>
+         * <p>The model parameters. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not yet available.</p>
          */
         public Builder modelParams(java.util.Map<String, ?> modelParams) {
             String modelParamsShrink = shrink(modelParams, "ModelParams", "json");
@@ -309,7 +315,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For more information about how to get the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -321,8 +327,8 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelist.</p>
-         * <p>127.0.0.1 indicates that access from any external IP address is prohibited. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after the instance is created.</p>
+         * <p>The IP whitelist.</p>
+         * <p>The value 127.0.0.1 indicates that no external IP addresses are allowed to access the instance. After the instance is created, you can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>

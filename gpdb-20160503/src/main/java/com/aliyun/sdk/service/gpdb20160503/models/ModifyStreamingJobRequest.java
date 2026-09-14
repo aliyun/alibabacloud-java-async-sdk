@@ -474,7 +474,7 @@ public class ModifyStreamingJobRequest extends Request {
          *         TYPE: int
          *       FORMAT: delimited
          *       DELIMITED_OPTION:
-         *         DELIMITER: &quot;|&quot;
+         *         DELIMITER: \&quot;|\&quot;
          *     VALUE:
          *       COLUMNS:
          *       - TYPE: integer
@@ -511,7 +511,7 @@ public class ModifyStreamingJobRequest extends Request {
          *         NAME: l_comment
          *       FORMAT: delimited
          *       DELIMITED_OPTION:
-         *         DELIMITER: &quot;|&quot;
+         *         DELIMITER: \&quot;|\&quot;
          *     ERROR_LIMIT: 10
          *   OUTPUT:
          *     SCHEMA: adbpgss_test

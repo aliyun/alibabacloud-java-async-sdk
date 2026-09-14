@@ -104,6 +104,7 @@ public class GrantApiKeyRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the API key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,10 @@ public class GrantApiKeyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,6 +129,7 @@ public class GrantApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The list of service IDs to authorize.</p>
          * <p>This parameter is required.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
@@ -135,6 +140,7 @@ public class GrantApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

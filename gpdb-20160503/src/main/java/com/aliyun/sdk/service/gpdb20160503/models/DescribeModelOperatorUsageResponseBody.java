@@ -106,7 +106,10 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the query. The time is in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-02T00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -114,7 +117,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Keys.
+         * <p>The list of metric values.</p>
          */
         public Builder keys(java.util.List<Keys> keys) {
             this.keys = keys;
@@ -122,7 +125,10 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Period.
+         * <p>The actual bucket size used, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.period = period;
@@ -130,7 +136,10 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. The time is in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-01T00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -191,7 +203,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * Point.
+             * <p>The specific metric information, consisting of a timestamp and a metric value.</p>
              */
             public Builder point(java.util.List<String> point) {
                 this.point = point;
@@ -284,7 +296,10 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKeyId.
+             * <p>The API key ID. This value is returned only when GroupBy contains api_key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder apiKeyId(Integer apiKeyId) {
                 this.apiKeyId = apiKeyId;
@@ -292,7 +307,10 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model name when GroupBy contains model. The api_key_id string when GroupBy contains only api_key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.6-plus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +318,10 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The normalized GroupBy value: model, api_key, or model,api_key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -308,7 +329,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The list of metric values. Each value corresponds to a collection time point.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -388,7 +409,10 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>request_count</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -396,7 +420,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Series.
+             * <p>The collection of metric values.</p>
              */
             public Builder series(java.util.List<Series> series) {
                 this.series = series;
@@ -404,7 +428,15 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit. Valid values:</p>
+             * <ul>
+             * <li>requests</li>
+             * <li>tokens</li>
+             * <li>%</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>requests</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

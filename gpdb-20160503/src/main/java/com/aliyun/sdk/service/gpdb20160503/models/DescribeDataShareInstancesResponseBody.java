@@ -106,13 +106,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The state of data sharing. Valid values:</p>
-         * <ul>
-         * <li><strong>opening</strong></li>
-         * <li><strong>opened</strong></li>
-         * <li><strong>closing</strong></li>
-         * <li><strong>closed</strong></li>
-         * </ul>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -274,10 +268,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-bp***************</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -285,15 +276,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Serverless</strong>: Serverless mode</li>
-             * <li><strong>StorageElasic</strong>: elastic storage mode</li>
-             * <li><strong>Classic</strong>: reserved storage mode</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Serverless</p>
+             * DBInstanceMode.
              */
             public Builder DBInstanceMode(String DBInstanceMode) {
                 this.DBInstanceMode = DBInstanceMode;
@@ -301,16 +284,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of data sharing. Valid values:</p>
-             * <ul>
-             * <li><strong>opening</strong>: Data sharing is being enabled.</li>
-             * <li><strong>opened</strong>: Data sharing is enabled.</li>
-             * <li><strong>closing</strong>: Data sharing is being disabled.</li>
-             * <li><strong>closed</strong>: Data sharing is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>opened</p>
+             * DataShareStatus.
              */
             public Builder dataShareStatus(String dataShareStatus) {
                 this.dataShareStatus = dataShareStatus;
@@ -318,10 +292,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>gp-bp***************</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -329,10 +300,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -340,10 +308,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-j</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
