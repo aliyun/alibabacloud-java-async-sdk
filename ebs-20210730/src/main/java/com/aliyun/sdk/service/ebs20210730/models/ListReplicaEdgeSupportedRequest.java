@@ -103,6 +103,7 @@ public class ListReplicaEdgeSupportedRequest extends Request {
         } 
 
         /**
+         * <p>The zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,11 @@ public class ListReplicaEdgeSupportedRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page. Valid values: 1 to 500. This parameter is not enabled.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -124,7 +129,10 @@ public class ListReplicaEdgeSupportedRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to start the next query. Set this parameter to the value of NextToken that was returned by the last call. Do not set this parameter for the first call. If you set NextToken, PageSize and PageNumber are ignored. TotalCount is also invalid in the response. This parameter is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9c****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -133,6 +141,7 @@ public class ListReplicaEdgeSupportedRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

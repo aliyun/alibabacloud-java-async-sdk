@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the regions.</p>
+         * <p>The collection of region and zone information.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -75,7 +75,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17EE62D8-064E-5404-8B0D-72122478****</p>
@@ -157,7 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the zone.</p>
+             * <p>The zone name.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou Zone H</p>
@@ -168,7 +168,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of resource list.</p>
+             * <p>The list of resource types.</p>
              */
             public Builder resourceTypes(java.util.List<String> resourceTypes) {
                 this.resourceTypes = resourceTypes;
@@ -176,7 +176,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>
@@ -272,7 +272,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
              * <p>China (Hangzhou)</p>
@@ -294,7 +294,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -305,7 +305,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the zones.</p>
+             * <p>The collection of zone information.</p>
              */
             public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;

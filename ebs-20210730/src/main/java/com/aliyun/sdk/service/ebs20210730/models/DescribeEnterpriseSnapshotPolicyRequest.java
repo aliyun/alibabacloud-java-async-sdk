@@ -186,10 +186,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>123e4567-e89b-12d3-a456-42665544****</p>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -198,7 +198,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The IDs of disks.</p>
+         * <p>The list of cloud disk IDs.</p>
          */
         public Builder diskIds(java.util.List<String> diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -207,7 +207,9 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of entries to return in this call. You can use this parameter together with NextToken.</p>
+         * <p>Valid values: 1 to 500.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -219,10 +221,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.</p>
+         * <p>The pagination token (Token). Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters do not take effect, and the TotalCount value in the response is invalid.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -231,7 +233,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -243,7 +245,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paging query. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -255,7 +257,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The IDs of enterprise-level snapshot policies.</p>
+         * <p>The list of snapshot policy IDs.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
@@ -264,7 +266,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,10 +279,10 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>rg-acfmvs****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -289,7 +291,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The tags of the enterprise-level snapshot policies. Valid values of N: 1 to 20.</p>
+         * <p>The tag key-value pairs. Valid values of N: 1 to 20.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -359,7 +361,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the enterprise-level snapshot policy.</p>
+             * <p>The tag key of the resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -371,7 +373,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the enterprise-level snapshot policy.</p>
+             * <p>The tag value of the resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

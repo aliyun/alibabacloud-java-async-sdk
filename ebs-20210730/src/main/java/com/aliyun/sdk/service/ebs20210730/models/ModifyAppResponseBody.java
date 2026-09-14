@@ -158,7 +158,10 @@ public class ModifyAppResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -166,7 +169,10 @@ public class ModifyAppResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +180,10 @@ public class ModifyAppResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -182,7 +191,12 @@ public class ModifyAppResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not in use. Ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -190,7 +204,10 @@ public class ModifyAppResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -198,7 +215,10 @@ public class ModifyAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +226,10 @@ public class ModifyAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +237,10 @@ public class ModifyAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +248,10 @@ public class ModifyAppResponseBody extends TeaModel {
         }
 
         /**
-         * UserCode.
+         * <p>The user code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder userCode(String userCode) {
             this.userCode = userCode;

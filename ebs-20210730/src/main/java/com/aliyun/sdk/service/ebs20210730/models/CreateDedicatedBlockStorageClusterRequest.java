@@ -191,7 +191,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the zone in which to create the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID of the dedicated block storage cluster. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the zone list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,9 +204,9 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * <p>The capacity of the dedicated block storage cluster. Valid values: 61440 to 2334720. Unit: GiB. 2,334,720 GiB is equal to 2,280 TiB. The capacity increases in a minimum increment of 12,288 GiB.</p>
+         * <p>The capacity of the dedicated block storage cluster. Valid values: 61440 to 2334720 GiB (2280 TiB). Minimum increment: 12288 GiB.</p>
          * <blockquote>
-         * <p> If the capacity of a dedicated block storage cluster is less than 576 TiB, the maximum throughput per TiB cannot exceed 52 MB/s. If the capacity of a dedicated block storage cluster is greater than 576 TiB, the maximum throughput per TiB cannot exceed 26 MB/s.</p>
+         * <p>When the capacity of the dedicated block storage cluster is less than 576 TiB, the maximum throughput per TiB does not exceed 52 MB/s. When the capacity of the dedicated block storage cluster is greater than 576 TiB, the maximum throughput per TiB does not exceed 26 MB/s.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -245,7 +245,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the dedicated block storage cluster. Valid values: 6, 7, 8, 9, 10, 11, 12, 24, and 36.</p>
+         * <p>The subscription duration of the instance. Valid values: 6, 7, 8, 9, 10, 11, 12, 24, and 36.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -257,7 +257,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration specified by <code>Period</code>. Set the value to Month.</p>
+         * <p>The unit of the subscription duration specified by the <code>Period</code> parameter. Only Month is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -269,7 +269,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which to create the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the dedicated block storage cluster. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to assign the dedicated block storage cluster.</p>
+         * <p>The ID of the resource group to which the dedicated block storage cluster belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmvs*******</p>
@@ -294,7 +294,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the dedicated block storage cluster. You can specify up to 20 tags.</p>
+         * <p>The list of tags. A maximum of 20 tags can be specified.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -303,13 +303,13 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * <p>The type of the dedicated block storage cluster. Valid values:</p>
+         * <p>The performance type of the dedicated block storage cluster. Valid values:</p>
          * <ul>
-         * <li>Standard: basic dedicated block storage cluster. Enterprise SSDs (ESSDs) at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.</li>
-         * <li>Premium: performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.</li>
+         * <li>Standard: basic. You can create PL0 ESSDs in this type of dedicated block storage cluster.</li>
+         * <li>Premium: performance. You can create PL1 ESSDs in this type of dedicated block storage cluster.</li>
          * </ul>
          * <p>Default value: Premium.</p>
-         * <p>For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>For more information about standard SSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -383,7 +383,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the dedicated block storage cluster.</p>
+             * <p>The tag key of the dedicated block storage cluster.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -395,7 +395,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the dedicated block storage cluster.</p>
+             * <p>The tag value of the dedicated block storage cluster.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

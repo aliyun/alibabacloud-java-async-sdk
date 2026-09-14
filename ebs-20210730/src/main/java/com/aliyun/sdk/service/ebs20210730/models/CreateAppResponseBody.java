@@ -184,7 +184,10 @@ public class CreateAppResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * AppId.
+         * <p>The app ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-bd5e3533</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -200,7 +206,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The app name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestApp_g5t</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -216,7 +228,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -224,7 +239,12 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -232,7 +252,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The error code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -240,7 +263,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -248,7 +274,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E604ABBF-FD0F-5080-BE2B-BCF674A9E941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +285,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the app was created successfully. Valid values: true: The app was created successfully. false: The app failed to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +296,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * UserCode.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder userCode(String userCode) {
             this.userCode = userCode;

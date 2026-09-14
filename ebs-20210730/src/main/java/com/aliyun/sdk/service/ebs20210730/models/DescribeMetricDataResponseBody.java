@@ -93,7 +93,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Collection of monitoring data for the cloud disk.</p>
+         * <p>A collection of monitoring data for the disk.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -101,7 +101,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11B55F58-D3A4-4A9B-9596-342420D0****</p>
@@ -112,7 +112,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of data points queried.</p>
+         * <p>The total number of data entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -123,7 +123,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of warning messages.</p>
+         * <p>A list of warning messages.</p>
          */
         public Builder warnings(java.util.List<String> warnings) {
             this.warnings = warnings;
@@ -189,7 +189,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of monitoring data, consisting of a series of consecutive second-level timestamps and the corresponding metric values at those times.</p>
+             * <p>A list of monitoring data. The list contains a series of consecutive second-level timestamps and the corresponding metric values.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;1699258861&quot;: 1,&quot;1699259461&quot;: 0}</p>
@@ -200,7 +200,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Labels.</p>
+             * <p>The labels.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;DiskId&quot;: &quot;d-1234&quot;}</p>

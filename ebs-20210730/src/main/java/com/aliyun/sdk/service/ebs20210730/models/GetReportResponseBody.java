@@ -67,7 +67,7 @@ public class GetReportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Data Details.</p>
+         * <p>The data details.</p>
          */
         public Builder datas(java.util.List<Datas> datas) {
             this.datas = datas;
@@ -75,7 +75,7 @@ public class GetReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>
@@ -144,7 +144,7 @@ public class GetReportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data Points.</p>
+             * <p>The data points.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -164,7 +164,7 @@ public class GetReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data Labels.</p>
+             * <p>The data labels.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -236,7 +236,7 @@ public class GetReportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data.</p>
+             * <p>The data.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -244,7 +244,7 @@ public class GetReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data Title.</p>
+             * <p>The data title.</p>
              * 
              * <strong>example:</strong>
              * <p>disk_count_percent_by_category</p>

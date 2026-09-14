@@ -186,8 +186,8 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).</p>
-         * <p>This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried. You can specify up to the IDs of 100 replication pair-consistent groups.</p>
+         * <p>The IDs of the replication pair-consistent groups. You can specify one or more group IDs. Separate multiple IDs with a comma (,).</p>
+         * <p>If you do not specify this parameter, all replication pair-consistent groups in the current region are queried. You can specify up to 100 group IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -199,7 +199,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. You can use this parameter together with NextToken.</p>
+         * <p>The maximum number of entries to return on a single page. You can use this parameter with NextToken.</p>
          * <p>Valid values: 1 to 500.</p>
          * <p>Default value: 10.</p>
          * 
@@ -213,7 +213,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of the replication pair-consistent group. You can perform a fuzzy search.</p>
+         * <p>The name of the replication group. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-name***</p>
@@ -225,7 +225,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.</p>
+         * <p>The query token. Set this parameter to the NextToken value returned from the previous call to this operation. You do not need to set this parameter for the first call. If you set NextToken, the PageSize and PageNumber parameters are ignored, and the TotalCount in the response is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -237,7 +237,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -249,7 +249,8 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * <p>The number of entries per page.
+         * Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -261,7 +262,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the replication pair-consistent group belongs.</p>
+         * <p>The region ID of the replication pair-consistent group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,14 +287,16 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * <p>The type of the site from which the information of replication pair-consistent groups is retrieved. This parameter is used for scenarios where data is replicated across zones in replication pairs.</p>
+         * <p>The site to query. This parameter is used when replication pairs are deployed across zones.</p>
          * <ul>
-         * <li><p>If this parameter is not specified, information such as the status of replication pair-consistent groups at the primary site is queried and returned.</p>
+         * <li><p>If you do not specify this parameter, the records and status information of replication pairs at the production site are returned.</p>
          * </li>
-         * <li><p>Otherwise, information such as the state of replication pairs at the site specified by the Site parameter is queried and returned. Valid values:</p>
+         * <li><p>If you specify this parameter, only the records and status information of replication pairs at the specified site are returned. Valid values:</p>
          * <ul>
-         * <li>production: primary site</li>
-         * <li>backup: secondary site</li>
+         * <li><p>production: The production site.</p>
+         * </li>
+         * <li><p>backup: The disaster recovery site.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -308,7 +311,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</p>
+         * <p>The tags. The list can contain up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -376,7 +379,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the replication pair-consistent group.</p>
+             * <p>The key of the tag of the replication pair-consistent group.</p>
              * 
              * <strong>example:</strong>
              * <p>tag-key</p>
@@ -387,7 +390,7 @@ public class DescribeDiskReplicaGroupsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the replication pair-consistent group.</p>
+             * <p>The value of the tag of the replication pair-consistent group.</p>
              * 
              * <strong>example:</strong>
              * <p>tag-value</p>

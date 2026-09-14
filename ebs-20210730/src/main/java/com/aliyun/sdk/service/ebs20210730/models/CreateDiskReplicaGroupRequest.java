@@ -218,13 +218,13 @@ public class CreateDiskReplicaGroupRequest extends Request {
         } 
 
         /**
-         * <p>The bandwidth value. Unit: Mbit/s.</p>
+         * <p>The bandwidth in Kbps.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>10240</p>
+         * <p>5</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -233,7 +233,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The \<code>ClientToken\\</code> parameter value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -257,7 +257,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the secondary site.</p>
+         * <p>The ID of the region where the disaster recovery site is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the secondary site.</p>
+         * <p>The ID of the zone where the disaster recovery site is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,17 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable replication time control. By default, this parameter is disabled.</p>
+         * <p>Specifies whether to enable replication time control (RTC). Valid values:</p>
+         * <ul>
+         * <li><p>false: Disable RTC.</p>
+         * </li>
+         * <li><p>true: Enable RTC.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p>If you set this parameter to true, RTC is enabled for the replication pair-consistent group. RTC is also enabled for all asynchronous replication pairs that are added to the group.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -295,7 +305,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>myreplicagrouptest</p>
@@ -307,7 +317,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>The RPO of the replication pair-consistent group. Unit: seconds. Valid value: 900.</p>
+         * <p>The recovery point objective (RPO) of the replication pair-consistent group, in seconds. The only supported value is 900.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -319,7 +329,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which to create the replication pair-consistent group. The primary site is deployed in the specified region.</p>
+         * <p>The ID of the region where the replication pair-consistent group resides. This is the same as the region of the production site.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,7 +354,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the primary site.</p>
+         * <p>The ID of the zone where the production site is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +367,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * <p>The tags. Up to 20 tags are supported.</p>
+         * <p>The tags to add to the resource. You can add up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -425,7 +435,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N of the replication pair-consistent group.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>tag-key</p>
@@ -436,7 +446,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N of the replication pair-consistent group.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>tag-value</p>

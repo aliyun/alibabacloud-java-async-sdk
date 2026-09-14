@@ -93,7 +93,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The pagination token returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f07b150eadfa1d7a</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +104,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * Reports.
+         * <p>The list of diagnostic reports.</p>
          */
         public Builder reports(java.util.List<Reports> reports) {
             this.reports = reports;
@@ -109,7 +112,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAA478A0-BEE6-1D42-BEB6-A9CFEAD6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -235,7 +244,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The event description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +255,24 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The issue name. Valid values:</p>
+             * <ul>
+             * <li>NoSnapshot: data protection</li>
+             * <li>BurstIOTriggered: I/O burst</li>
+             * <li>CostOptimizationNeeded: cost optimization</li>
+             * <li>DiskSpecNotMatchedWithInstance: instance and cloud disk specification mismatch</li>
+             * <li>DiskIONo4kAligned: non-4K-aligned read/write</li>
+             * <li>DiskIOHang: IOHang occurred on the cloud disk</li>
+             * <li>InstanceIOPSExceedInstanceMaxLimit: instance IOPS reached the upper limit</li>
+             * <li>InstanceBPSExceedInstanceMaxLimit: instance BPS reached the upper limit</li>
+             * <li>DiskIOPSExceedInstanceMaxLimit: cloud disk IOPS reached the instance upper limit</li>
+             * <li>DiskBPSExceedInstanceMaxLimit: cloud disk BPS reached the instance upper limit</li>
+             * <li>DiskIOPSExceedDiskMaxLimit: cloud disk IOPS reached the cloud disk upper limit</li>
+             * <li>DiskBPSExceedDiskMaxLimit: cloud disk BPS reached the cloud disk upper limit</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DiskIOPSExceedDiskMaxLimit</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -251,7 +280,17 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendAction.
+             * <p>The recommended action after the event occurs. Valid values:</p>
+             * <ul>
+             * <li>ModifyDiskSpec: change cloud disk specifications</li>
+             * <li>CreateSnapshot: create a snapshot</li>
+             * <li>ResizeDisk: expand the cloud disk</li>
+             * <li>AdjustProvision: adjust provisioned performance</li>
+             * <li>ModifyInstanceSpec: change instance specifications</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ResizeDisk</p>
              */
             public Builder recommendAction(String recommendAction) {
                 this.recommendAction = recommendAction;
@@ -259,7 +298,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendParams.
+             * <p>The parameters for the recommended action after the event occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder recommendParams(String recommendParams) {
                 this.recommendParams = recommendParams;
@@ -267,7 +309,15 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The severity level of the diagnosed issue. The severity levels in ascending order are:</p>
+             * <ul>
+             * <li>Info: Associated information that may be related to an anomaly.</li>
+             * <li>Warn: Associated information that may cause an anomaly.</li>
+             * <li>Critical: A critical anomaly exists.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Warn</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -275,7 +325,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start timestamp of the event, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755756214000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -485,7 +538,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196380451****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -493,7 +549,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the diagnostic report was created, in Unix/POSIX timestamp (seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727239294</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -501,7 +560,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseEndTime.
+             * <p>The end timestamp of the resource diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727239294</p>
              */
             public Builder diagnoseEndTime(Long diagnoseEndTime) {
                 this.diagnoseEndTime = diagnoseEndTime;
@@ -509,7 +571,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseStartTime.
+             * <p>The start timestamp of the resource diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727229294</p>
              */
             public Builder diagnoseStartTime(Long diagnoseStartTime) {
                 this.diagnoseStartTime = diagnoseStartTime;
@@ -517,7 +582,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseType.
+             * <p>The type of diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Performance</p>
              */
             public Builder diagnoseType(String diagnoseType) {
                 this.diagnoseType = diagnoseType;
@@ -525,7 +593,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * Events.
+             * <p>The list of diagnosed issues.</p>
              */
             public Builder events(java.util.List<Events> events) {
                 this.events = events;
@@ -533,7 +601,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * <p>The time when the diagnostic report was completed, in Unix/POSIX timestamp (seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727239295</p>
              */
             public Builder finishedTime(Long finishedTime) {
                 this.finishedTime = finishedTime;
@@ -541,7 +612,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -549,7 +623,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The diagnostic report ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>report-sag8d****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -557,7 +634,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-wz95ycu****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -565,7 +645,13 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>Disk</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disk</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -573,7 +659,15 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The severity level of the diagnosis. The severity levels in ascending order are:</p>
+             * <ul>
+             * <li>Info: Associated information that may be related to an anomaly.</li>
+             * <li>Warn: Associated information that may cause an anomaly.</li>
+             * <li>Critical: A critical anomaly exists.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Warn</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -581,7 +675,17 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the diagnostic report. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Success</li>
+             * <li>TimeOut</li>
+             * <li>Fail</li>
+             * </ul>
+             * <p>The Severity and Events fields are valid only when Status is set to Success.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

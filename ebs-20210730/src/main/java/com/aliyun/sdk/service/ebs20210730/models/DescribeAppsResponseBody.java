@@ -171,7 +171,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -179,7 +182,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * AppInfos.
+         * <p>The application information.</p>
          */
         public Builder appInfos(java.util.List<AppInfos> appInfos) {
             this.appInfos = appInfos;
@@ -187,7 +190,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -195,7 +201,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -203,7 +212,12 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the %s variable in the ErrMessage error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -211,7 +225,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -219,7 +236,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -227,7 +247,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1C00637-AC84-5EFD-89B5-D5CE39F0F2B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +258,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +269,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * UserCode.
+         * <p>The user error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder userCode(String userCode) {
             this.userCode = userCode;
@@ -309,7 +338,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ebs</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -317,7 +349,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -514,7 +549,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-bd5e3533</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -522,7 +560,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name. This parameter takes effect only when ReportType is set to present.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -530,7 +571,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppTags.
+             * <p>The tags contained in the user application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder appTags(java.util.List<AppTags> appTags) {
                 this.appTags = appTags;
@@ -538,7 +582,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Default.
+             * <p>The default time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _default(Boolean _default) {
                 this._default = _default;
@@ -546,7 +593,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The event description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This app is used to collect cloud disk usage statistics across the network</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -554,7 +604,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * EventBridgeSendEnabled.
+             * <p>Indicates whether delivery to EventBridge is enabled.</p>
              */
             public Builder eventBridgeSendEnabled(Boolean eventBridgeSendEnabled) {
                 this.eventBridgeSendEnabled = eventBridgeSendEnabled;
@@ -562,7 +612,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-14T02:11:32Z</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -570,7 +623,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorSendEnabled.
+             * <p>Indicates whether delivery to CloudMonitor is enabled.</p>
              */
             public Builder monitorSendEnabled(Boolean monitorSendEnabled) {
                 this.monitorSendEnabled = monitorSendEnabled;
@@ -578,7 +631,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportSendEnabled.
+             * <p>Indicates whether report sending is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder reportSendEnabled(Boolean reportSendEnabled) {
                 this.reportSendEnabled = reportSendEnabled;
@@ -586,7 +642,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsSendEnabled.
+             * <p>Indicates whether delivery to Simple Log Service (SLS) is enabled.</p>
              */
             public Builder slsSendEnabled(Boolean slsSendEnabled) {
                 this.slsSendEnabled = slsSendEnabled;
@@ -594,7 +650,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribePeriod.
+             * <p>The report subscription period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weekly</p>
              */
             public Builder subscribePeriod(String subscribePeriod) {
                 this.subscribePeriod = subscribePeriod;
@@ -602,7 +661,14 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeStatus.
+             * <p>The subscription status. Valid values:</p>
+             * <ul>
+             * <li>Subscribe: subscribed.</li>
+             * <li>UnSubscribe: not subscribed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Subscribe</p>
              */
             public Builder subscribeStatus(String subscribeStatus) {
                 this.subscribeStatus = subscribeStatus;

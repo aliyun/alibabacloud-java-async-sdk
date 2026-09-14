@@ -93,7 +93,12 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 500.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +106,10 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to start the next query. If NextToken is empty, no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9c****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +117,10 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17EE62D8-064E-5404-8B0D-72122478****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +128,7 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
         }
 
         /**
-         * SupportedRegions.
+         * <p>The set of region information.</p>
          */
         public Builder supportedRegions(java.util.List<SupportedRegions> supportedRegions) {
             this.supportedRegions = supportedRegions;
@@ -183,7 +194,10 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
             } 
 
             /**
-             * SupportRtc.
+             * <p>Indicates whether replication time control is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder supportRtc(Boolean supportRtc) {
                 this.supportRtc = supportRtc;
@@ -191,7 +205,10 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -258,7 +275,10 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -266,7 +286,7 @@ public class ListReplicaEdgeSupportedResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * <p>The set of zone information.</p>
              */
             public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;

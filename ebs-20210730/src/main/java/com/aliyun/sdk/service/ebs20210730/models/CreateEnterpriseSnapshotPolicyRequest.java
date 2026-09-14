@@ -232,7 +232,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. Generate a parameter value from your client that is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -244,7 +244,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>Snapshot replication destination information.</p>
+         * <p>The snapshot replication information.</p>
          */
         public Builder crossRegionCopyInfo(CrossRegionCopyInfo crossRegionCopyInfo) {
             String crossRegionCopyInfoShrink = shrink(crossRegionCopyInfo, "CrossRegionCopyInfo", "json");
@@ -254,7 +254,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the policy.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -266,7 +266,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The Policy Name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +279,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</p>
+         * <p>The region ID. You can call DescribeRegions to query the regions that support asynchronous replication.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to assign the snapshot policy.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -304,7 +304,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The snapshot retention rule.</p>
+         * <p>The retention rule.</p>
          * <p>This parameter is required.</p>
          */
         public Builder retainRule(RetainRule retainRule) {
@@ -315,7 +315,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The rule for scheduling.</p>
+         * <p>The schedule rule.</p>
          * <p>This parameter is required.</p>
          */
         public Builder schedule(Schedule schedule) {
@@ -326,7 +326,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The special snapshot retention rules.</p>
+         * <p>The special retention rules.</p>
          */
         public Builder specialRetainRules(SpecialRetainRules specialRetainRules) {
             String specialRetainRulesShrink = shrink(specialRetainRules, "SpecialRetainRules", "json");
@@ -336,12 +336,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The status of the policy. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p>ENABLED: Enable snapshot policy execution.</p>
-         * </li>
-         * <li><p>DISABLED: Disable snapshot policy execution.</p>
-         * </li>
+         * <li>DISABLED</li>
+         * <li>ENABLED</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,7 +352,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>Advanced snapshot features.</p>
+         * <p>The advanced snapshot feature.</p>
          */
         public Builder storageRule(StorageRule storageRule) {
             String storageRuleShrink = shrink(storageRule, "StorageRule", "json");
@@ -364,7 +362,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag key-value pairs. Valid values of n: 1 to 20.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -373,7 +371,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>Binding target type, valid value:</p>
+         * <p>The type. Valid values:</p>
          * <ul>
          * <li>DISK</li>
          * </ul>
@@ -448,7 +446,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The region ID of the destination. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+             * <p>The ID of the destination region for snapshot replication. You can invoke <a href="https://help.aliyun.com/document_detail/354206.html">DescribeDiskReplicaPairs</a> to query the region information of existing asynchronous replication relationships.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -459,7 +457,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>Number of days to retain the destination snapshot. The range of values is greater than 1.</p>
+             * <p>The number of days to retain snapshots in the destination region. The value must be greater than 1.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -529,12 +527,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Whether cross-region replication is enabled. The range of values:</p>
+             * <p>Specifies whether to enable cross-region replication. Valid values:</p>
              * <ul>
-             * <li><p>true</p>
-             * </li>
-             * <li><p>false</p>
-             * </li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -546,7 +542,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>The list of destination regions.</p>
+             * <p>The destination region information.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
@@ -626,7 +622,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Maximum number of retained snapshots.</p>
+             * <p>The number of snapshots to retain. Valid values: 1 to 256.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -637,7 +633,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>The time interval , valid value greater than 1.</p>
+             * <p>The time interval of the retention rule. The unit is specified by the TimeUnit parameter. The value must be greater than 1.</p>
              * 
              * <strong>example:</strong>
              * <p>14</p>
@@ -648,12 +644,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>The unit of time, valid values:</p>
+             * <p>The unit of the retention time. Valid values:</p>
              * <ul>
-             * <li><p>DAYS</p>
-             * </li>
-             * <li><p>WEEKS</p>
-             * </li>
+             * <li>DAYS</li>
+             * <li>WEEKS</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -712,8 +706,8 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.</p>
-             * <p>For example, you can use 0 0 4 1/1 * ? to specify 04:00:00 (UTC+8) on the first day of each month.</p>
+             * <p>The cycle and time at which the policy is executed. Specify the value in a cron expression.</p>
+             * <p>For example, <code>0 0 4 1/1 * ?</code> specifies that the snapshot operation is performed at 4:00 AM every day, starting from the first day of each month.</p>
              * <p>This parameter is required.</p>
              */
             public Builder cronExpression(String cronExpression) {
@@ -794,7 +788,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The periodic unit for specially retained snapshots. If configured to WEEKS, it provides special retention for the first snapshot of each week. The retention period is determined by TimeUnit and TimeInterval. The range of values are:</p>
+             * <p>The period unit for specially retained snapshots. For example, if this parameter is set to WEEKS, the first snapshot of each week is specially retained. The retention duration is determined by TimeUnit and TimeInterval. Valid values:</p>
              * <ul>
              * <li>WEEKS</li>
              * <li>MONTHS</li>
@@ -810,7 +804,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>Retention Time Value. The range of values is greater than 1.</p>
+             * <p>The time interval of the retention rule. The unit is specified by the TimeUnit parameter. The value must be greater than 1.</p>
              * 
              * <strong>example:</strong>
              * <p>14</p>
@@ -821,12 +815,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>Retention time unit for special snapshots. The range of values:</p>
+             * <p>The unit of the retention time for special snapshots. Valid values:</p>
              * <ul>
-             * <li><p>DAYS</p>
-             * </li>
-             * <li><p>WEEKS</p>
-             * </li>
+             * <li>DAYS</li>
+             * <li>WEEKS</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -897,10 +889,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Indicates whether the special retention is enabled.</p>
+             * <p>Specifies whether to enable special retention. Valid values:</p>
              * <ul>
-             * <li>true: enable</li>
-             * <li>false: disable</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -912,7 +904,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>The special retention rules.</p>
+             * <p>The list of special retention rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -966,12 +958,10 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Whether to enable the rapid availability of snapshots. The range of values:</p>
+             * <p>Specifies whether to enable instant access for snapshots. Valid values:</p>
              * <ul>
-             * <li><p>true</p>
-             * </li>
-             * <li><p>false</p>
-             * </li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1044,7 +1034,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key of the resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1056,9 +1046,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+             * <p>The tag value of the resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

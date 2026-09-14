@@ -93,7 +93,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -115,7 +115,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The events.</p>
+         * <p>The list of events.</p>
          */
         public Builder resourceEvents(java.util.List<ResourceEvents> resourceEvents) {
             this.resourceEvents = resourceEvents;
@@ -123,7 +123,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries returned for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -322,10 +322,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the event.</p>
+             * <p>The event description.</p>
              * 
              * <strong>example:</strong>
-             * <p>need snapshot</p>
+             * <p>You can purchase 4296 provisioned IOPS for cost optimization. Based on your usage over the past 7 days, costs are estimated to decrease by 16%</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -333,7 +333,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+             * <p>The end time of the event. This value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1679538083000</p>
@@ -344,7 +344,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the event. Valid values:</p>
+             * <p>The event level. Valid values:</p>
              * <ol>
              * <li>INFO</li>
              * <li>WARN</li>
@@ -360,20 +360,20 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the event. Valid values:</p>
+             * <p>The event name. Valid values:</p>
              * <ul>
-             * <li>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</li>
-             * <li>BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.</li>
-             * <li>CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.</li>
-             * <li>DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.</li>
-             * <li>DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.</li>
-             * <li>DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.</li>
-             * <li>InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.</li>
-             * <li>InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.</li>
-             * <li>DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.</li>
-             * <li>DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.</li>
-             * <li>DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.</li>
-             * <li>DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.</li>
+             * <li>NoSnapshot: data protection</li>
+             * <li>BurstIOTriggered: burst I/O</li>
+             * <li>CostOptimizationNeeded: cost optimization</li>
+             * <li>DiskSpecNotMatchedWithInstance: instance and disk specification mismatch</li>
+             * <li>DiskIONo4kAligned: non-4K aligned read/write</li>
+             * <li>DiskIOHang: disk IOHang occurred</li>
+             * <li>InstanceIOPSExceedInstanceMaxLimit: instance IOPS reached the upper limit</li>
+             * <li>InstanceBPSExceedInstanceMaxLimit: instance BPS reached the upper limit</li>
+             * <li>DiskIOPSExceedInstanceMaxLimit: disk IOPS reached the instance upper limit</li>
+             * <li>DiskBPSExceedInstanceMaxLimit: disk BPS reached the instance upper limit</li>
+             * <li>DiskIOPSExceedDiskMaxLimit: disk IOPS reached the disk upper limit</li>
+             * <li>DiskBPSExceedDiskMaxLimit: disk BPS reached the disk upper limit</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -385,7 +385,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the event. Valid values:</p>
+             * <p>The event type. Valid values:</p>
              * <ol>
              * <li>Notification</li>
              * <li>SystemException</li>
@@ -401,14 +401,14 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Extra attributes of event, possible fields are:</p>
+             * <p>The additional properties. Possible fields:</p>
              * <ul>
-             * <li>EcsInstanceId: ECS instance ID where the cloud disk is mounted;</li>
-             * <li>Adapter: cloud disk mount point.</li>
+             * <li>EcsInstanceId: the ID of the ECS instance to which the cloud disk is attached.</li>
+             * <li>Adapter: the mount point of the cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;EcsInstanceId&quot;:&quot;i-uf6dkn9qpcw6y94g7ag7&quot;,&quot;Adapter&quot;:&quot;hda&quot;}</p>
+             * <p>{\&quot;EcsInstanceId\&quot;:\&quot;i-uf6dkn9qpcw6y94g7ag7\&quot;,\&quot;Adapter\&quot;:\&quot;hda\&quot;}</p>
              */
             public Builder extraAttributes(String extraAttributes) {
                 this.extraAttributes = extraAttributes;
@@ -416,13 +416,13 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended action after the event occurred. Valid values:</p>
+             * <p>The recommended action after the event occurs. Valid values:</p>
              * <ul>
-             * <li>ModifyDiskSpec</li>
-             * <li>CreateSnapshot</li>
-             * <li>ResizeDisk</li>
-             * <li>AdjustProvision</li>
-             * <li>ModifyInstanceSpec</li>
+             * <li>ModifyDiskSpec: change disk specifications</li>
+             * <li>CreateSnapshot: create a snapshot</li>
+             * <li>ResizeDisk: expand disk capacity</li>
+             * <li>AdjustProvision: adjust provisioned performance</li>
+             * <li>ModifyInstanceSpec: change instance specifications</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codes of the parameters for the recommended action after the event occurred.</p>
+             * <p>The parameters for the recommended action after the event occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>4296</p>
@@ -445,7 +445,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-bp67acfmxazb4p****</p>
@@ -456,7 +456,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>disk</p>
@@ -467,7 +467,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+             * <p>The start time of the event. This value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1684204822000</p>
@@ -478,14 +478,14 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the event. Valid values:</p>
+             * <p>The event status. Valid values:</p>
              * <ol>
-             * <li>WillExecute</li>
-             * <li>Executing</li>
-             * <li>Executed</li>
-             * <li>Ignore</li>
-             * <li>Expired</li>
-             * <li>Deleted</li>
+             * <li>WillExecute: pending</li>
+             * <li>Executing: processing</li>
+             * <li>Executed: processed</li>
+             * <li>Ignore: ignored</li>
+             * <li>Expired: expired</li>
+             * <li>Deleted: deleted</li>
              * </ol>
              * 
              * <strong>example:</strong>

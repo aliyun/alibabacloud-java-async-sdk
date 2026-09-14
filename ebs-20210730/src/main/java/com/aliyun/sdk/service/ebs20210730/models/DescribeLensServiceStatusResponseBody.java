@@ -78,11 +78,14 @@ public class DescribeLensServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of CloudLens for EBS. Valid values:</p>
+         * <p>The status of EBS Lens. Valid values:</p>
          * <ul>
-         * <li>Applying</li>
-         * <li>UnAvailable</li>
-         * <li>Available</li>
+         * <li><p>Applying: The service is being applied for.</p>
+         * </li>
+         * <li><p>UnAvailable: The service is unavailable.</p>
+         * </li>
+         * <li><p>Available: The service is available.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
