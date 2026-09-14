@@ -115,7 +115,7 @@ public class DescribeEventCountByThreatLevelRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>The end time of the query, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1577808000000</p>
@@ -127,10 +127,10 @@ public class DescribeEventCountByThreatLevelRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the threat analysis data management center resides. Select the management center based on the region of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class DescribeEventCountByThreatLevelRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member in the resource directory.</p>
+         * <p>The ID of the member account in the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -155,10 +155,10 @@ public class DescribeEventCountByThreatLevelRequest extends Request {
         }
 
         /**
-         * <p>The type of the view.</p>
+         * <p>The view type. Valid values:</p>
          * <ul>
-         * <li>0: view of the current Alibaba Cloud account.</li>
-         * <li>1: view of all accounts for the enterprise.</li>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DescribeEventCountByThreatLevelRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>The start time of the query, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1577808000000</p>

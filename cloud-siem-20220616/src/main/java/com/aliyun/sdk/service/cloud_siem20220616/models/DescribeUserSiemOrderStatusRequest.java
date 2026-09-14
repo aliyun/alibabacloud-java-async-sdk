@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeAggregateFunctionRequest} extends {@link RequestModel}
+ * {@link DescribeUserSiemOrderStatusRequest} extends {@link RequestModel}
  *
- * <p>DescribeAggregateFunctionRequest</p>
+ * <p>DescribeUserSiemOrderStatusRequest</p>
  */
-public class DescribeAggregateFunctionRequest extends Request {
+public class DescribeUserSiemOrderStatusRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -29,7 +29,7 @@ public class DescribeAggregateFunctionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
-    private DescribeAggregateFunctionRequest(Builder builder) {
+    private DescribeUserSiemOrderStatusRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
@@ -40,7 +40,7 @@ public class DescribeAggregateFunctionRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeAggregateFunctionRequest create() {
+    public static DescribeUserSiemOrderStatusRequest create() {
         return builder().build();
     }
 
@@ -70,7 +70,7 @@ public class DescribeAggregateFunctionRequest extends Request {
         return this.roleType;
     }
 
-    public static final class Builder extends Request.Builder<DescribeAggregateFunctionRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeUserSiemOrderStatusRequest, Builder> {
         private String regionId; 
         private Long roleFor; 
         private Integer roleType; 
@@ -79,7 +79,7 @@ public class DescribeAggregateFunctionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAggregateFunctionRequest request) {
+        private Builder(DescribeUserSiemOrderStatusRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
@@ -87,12 +87,10 @@ public class DescribeAggregateFunctionRequest extends Request {
         } 
 
         /**
-         * <p>The region where the data management center of Threat Analysis is located. Select a region based on the location of your assets. Valid values:</p>
+         * <p>The region of the data management center for threat detection and response. Select the data management center based on the region where your assets reside. Valid values:</p>
          * <ul>
-         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</p>
-         * </li>
-         * <li><p>ap-southeast-1: Your assets are in a region outside the Chinese mainland.</p>
-         * </li>
+         * <li>cn-hangzhou: assets in the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: assets in regions outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,10 +103,10 @@ public class DescribeAggregateFunctionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member. An administrator can switch to the perspective of the member.</p>
+         * <p>The user ID that the administrator uses to switch to another member\&quot;s perspective.</p>
          * 
          * <strong>example:</strong>
-         * <p>113091674488****</p>
+         * <p>1234567890***</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -117,16 +115,14 @@ public class DescribeAggregateFunctionRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type. Valid values:</p>
          * <ul>
-         * <li><p>0: The view of the current Alibaba Cloud account.</p>
-         * </li>
-         * <li><p>1: The view of all accounts in the enterprise.</p>
-         * </li>
+         * <li>0: the current Alibaba Cloud account view.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>0</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -135,8 +131,8 @@ public class DescribeAggregateFunctionRequest extends Request {
         }
 
         @Override
-        public DescribeAggregateFunctionRequest build() {
-            return new DescribeAggregateFunctionRequest(this);
+        public DescribeUserSiemOrderStatusRequest build() {
+            return new DescribeUserSiemOrderStatusRequest(this);
         } 
 
     } 

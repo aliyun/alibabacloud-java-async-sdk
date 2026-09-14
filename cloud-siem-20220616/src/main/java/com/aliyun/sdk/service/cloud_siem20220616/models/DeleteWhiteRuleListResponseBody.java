@@ -106,7 +106,7 @@ public class DeleteWhiteRuleListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,8 +152,10 @@ public class DeleteWhiteRuleListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

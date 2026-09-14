@@ -87,10 +87,12 @@ public class GetCapacityRequest extends Request {
         } 
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>Region where the Data Management Center for threat analysis is located. Choose a region based on where your assets are located.</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Select this if your assets are in the Chinese mainland or Hong Kong (China).</p>
+         * </li>
+         * <li><p>ap-southeast-1: Select this if your assets are outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +105,7 @@ public class GetCapacityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>User ID of the member whose view the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -115,10 +117,12 @@ public class GetCapacityRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>View type.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: View for the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: View for all accounts under your enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

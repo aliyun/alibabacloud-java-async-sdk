@@ -59,10 +59,12 @@ public class DescribeAuthRequest extends Request {
         } 
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region of the threat analysis center. Select a region based on where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Select this value if your assets are deployed in the Chinese mainland or the China (Hong Kong) region.</p>
+         * </li>
+         * <li><p>ap-southeast-1: Select this value if your assets are deployed in regions outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

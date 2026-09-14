@@ -436,7 +436,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The current page number, which must be greater than or equal to 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,11 +449,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The status of the policy. Valid values:</p>
-         * <ul>
-         * <li>0: invalid</li>
-         * <li>1: valid</li>
-         * </ul>
+         * <p>The policy status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -465,7 +461,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>The query end time, in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -478,7 +474,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The feature value of the entity. Fuzzy match is supported.</p>
+         * <p>The entity characteristic value, which can be used for fuzzy match on response entities.</p>
          * 
          * <strong>example:</strong>
          * <p>test22.php</p>
@@ -490,12 +486,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The entity type of the playbook. Valid values:</p>
-         * <ul>
-         * <li>ip</li>
-         * <li>process</li>
-         * <li>file</li>
-         * </ul>
+         * <p>The entity type. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -535,7 +526,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49670d3bbf7aa9556a2fff3dbaa9****</p>
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -562,11 +556,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values:</p>
-         * <ul>
-         * <li>desc: descending order.</li>
-         * <li>asc: ascending order.</li>
-         * </ul>
+         * <p>The sort direction. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -578,11 +568,11 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The sort field. Valid values:</p>
+         * <p>The field used to sort results. Valid values:</p>
          * <ul>
-         * <li>GmtModified: sorts the policies by update time.</li>
-         * <li>GmtCreate: sorts the policies by creation time.</li>
-         * <li>FinishTime: sorts the policies by end time.</li>
+         * <li>GmtModified: sorts results by update time.</li>
+         * <li>GmtCreate: sorts results by creation time.</li>
+         * <li>FinishTime: sorts results by policy end time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -595,7 +585,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The number of entries per page, with a maximum of 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -608,7 +598,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+         * <p>The unique identifier name of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>WafBlockIP</p>
@@ -620,12 +610,12 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The type of the playbook. Valid values:</p>
+         * <p>The playbook type. Valid values:</p>
          * <ul>
-         * <li>system: user-triggered playbook</li>
+         * <li>system: manual handling</li>
          * <li>custom: event-triggered playbook</li>
          * <li>custom_alert: alert-triggered playbook</li>
-         * <li>soar-manual: user-run playbook</li>
+         * <li>soar-manual: manually run playbook</li>
          * <li>soar-mdr: MDR-run playbook</li>
          * </ul>
          * 
@@ -639,7 +629,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the playbook.</p>
+         * <p>The playbook UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>system_aliyun_clb_process_book</p>
@@ -660,11 +650,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
-         * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
-         * </ul>
+         * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Specify the management center based on the region of your assets. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -685,7 +671,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The Alibaba Cloud account ID of the member to which the administrator switches the view.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -697,11 +683,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
-         * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
-         * </ul>
+         * <p>The view type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -713,10 +695,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SOAR handling policy.</p>
+         * <p>The SOAR response policy ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>a50a49b7-6044-4593-ab15-2b46567caadd</p>
+         * <p>a50a49b7-6044-4593-ab15-2b46567c****</p>
          */
         public Builder sophonTaskId(String sophonTaskId) {
             this.putBodyParameter("SophonTaskId", sophonTaskId);
@@ -725,7 +707,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>The query start time, in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -738,7 +720,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The response policy status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

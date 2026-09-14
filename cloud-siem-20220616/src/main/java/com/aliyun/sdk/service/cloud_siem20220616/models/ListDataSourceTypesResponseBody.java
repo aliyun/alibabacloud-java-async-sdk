@@ -75,7 +75,7 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -144,7 +144,7 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the third-party cloud service.</p>
+             * <p>The code of the multicloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>hcloud</p>
@@ -157,9 +157,12 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
             /**
              * <p>The type of the data source. Valid values:</p>
              * <ul>
-             * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
-             * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
-             * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+             * <li><p>obs: Huawei Cloud OBS.</p>
+             * </li>
+             * <li><p>wafApi: Tencent Cloud WAF download API.</p>
+             * </li>
+             * <li><p>ckafka: Tencent Cloud CKafka.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

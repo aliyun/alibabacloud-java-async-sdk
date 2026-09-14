@@ -106,7 +106,7 @@ public class PostEventDisposeAndWhiteruleListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class PostEventDisposeAndWhiteruleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -128,7 +128,7 @@ public class PostEventDisposeAndWhiteruleListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,8 @@ public class PostEventDisposeAndWhiteruleListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: successful</li>
+         * <li>false: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>

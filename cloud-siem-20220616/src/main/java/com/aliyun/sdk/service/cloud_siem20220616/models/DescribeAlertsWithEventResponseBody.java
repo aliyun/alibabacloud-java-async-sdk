@@ -106,7 +106,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The request status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The request return value.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -128,7 +128,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The request return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,8 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The current page number.</p>
+             * <p>The current page number of the list.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -247,7 +247,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of records returned per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -258,7 +258,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -341,7 +341,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attribute key.</p>
+             * <p>The key of the alert detail attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>suspicious.wbd.wb.trojanpath</p>
@@ -352,7 +352,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the key.</p>
+             * <p>The name of the alert detail.</p>
              * 
              * <strong>example:</strong>
              * <p>Trojan Path</p>
@@ -363,7 +363,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the key.</p>
+             * <p>The value of the alert detail.</p>
              * 
              * <strong>example:</strong>
              * <p>/root/test33.php</p>
@@ -927,7 +927,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the alert.</p>
+             * <p>The alert description.</p>
              * 
              * <strong>example:</strong>
              * <p>The detection model found a suspicious Webshell file on your server, which may be a backdoor file implanted to maintain permissions after the attacker successfully invaded the website.</p>
@@ -938,7 +938,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal code of the alert description.</p>
+             * <p>The Medusa code of the alert description.</p>
              * 
              * <strong>example:</strong>
              * <p>security_event_config.event_name.webshell</p>
@@ -949,7 +949,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert description in English.</p>
+             * <p>The English description of the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>The detection model found a suspicious Webshell file on your server, which may be a backdoor file implanted to maintain permissions after the attacker successfully invaded the website.</p>
@@ -960,7 +960,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the alert.</p>
+             * <p>The alert details.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;main_user_id&quot;: &quot;165295629792****&quot;;&quot;log_uuid_count&quot;: &quot;99&quot;;&quot;attack_ip&quot;: &quot;21.92.<em>.</em>&quot;}</p>
@@ -971,7 +971,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The displayed details of the alert.</p>
+             * <p>The alert details.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun</p>
@@ -982,11 +982,11 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level. Valid values:</p>
+             * <p>The threat level. Valid values:</p>
              * <ul>
-             * <li>serious: high.</li>
-             * <li>suspicious: medium.</li>
-             * <li>remind: low.</li>
+             * <li>serious: High.</li>
+             * <li>suspicious: Medium.</li>
+             * <li>remind: Low.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -998,7 +998,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert.</p>
+             * <p>The alert name.</p>
              * 
              * <strong>example:</strong>
              * <p>Try SNMP weak password</p>
@@ -1009,7 +1009,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal code of the alert name.</p>
+             * <p>The Medusa code of the alert name.</p>
              * 
              * <strong>example:</strong>
              * <p>security_event_config.event_name.webshell</p>
@@ -1020,7 +1020,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert name in English.</p>
+             * <p>The alert name.</p>
              * 
              * <strong>example:</strong>
              * <p>Try SNMP weak password</p>
@@ -1031,7 +1031,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the alert.</p>
+             * <p>The source product of the alert associated with the incident.</p>
              * 
              * <strong>example:</strong>
              * <p>sas</p>
@@ -1042,7 +1042,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-module of the alert source.</p>
+             * <p>The submodule of the source product of the alert associated with the incident.</p>
              * 
              * <strong>example:</strong>
              * <p>waf</p>
@@ -1053,7 +1053,10 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * AlertStatus.
+             * <p>The alert status. Valid values: 0: Pending. 1: Handled. 2: Being handled. 3: Whitelisted, false positive, or rejected. 999: Unknown.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alertStatus(String alertStatus) {
                 this.alertStatus = alertStatus;
@@ -1061,7 +1064,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the alert.</p>
+             * <p>The alert title.</p>
              * 
              * <strong>example:</strong>
              * <p>Scan-Try SNMP weak password</p>
@@ -1072,7 +1075,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert title in English.</p>
+             * <p>The English title of the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>Scan-Try SNMP weak password</p>
@@ -1083,7 +1086,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the alert.</p>
+             * <p>The alert type.</p>
              * 
              * <strong>example:</strong>
              * <p>Scan</p>
@@ -1094,7 +1097,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal code of the alert type.</p>
+             * <p>The Medusa code of the alert type.</p>
              * 
              * <strong>example:</strong>
              * <p>security_event_config.event_name.webshellName</p>
@@ -1105,7 +1108,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert type in English.</p>
+             * <p>The English alert type.</p>
              * 
              * <strong>example:</strong>
              * <p>Scan</p>
@@ -1127,7 +1130,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the asset.</p>
+             * <p>The asset list.</p>
              * 
              * <strong>example:</strong>
              * <p>[
@@ -1149,7 +1152,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the ATT&amp;CK technique.</p>
+             * <p>The ATT&amp;CK attack technique tags.</p>
              * 
              * <strong>example:</strong>
              * <p>T1595.002 Vulnerability Scanning</p>
@@ -1160,7 +1163,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the cloud service provider. Valid values:</p>
+             * <p>The cloud code. Valid values:</p>
              * <ul>
              * <li>aliyun: Alibaba Cloud.</li>
              * <li>qcloud: Tencent Cloud.</li>
@@ -1176,7 +1179,10 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleId.
+             * <p>The detection rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-48zs4tk7qfd4rjd9****</p>
              */
             public Builder detectionRuleId(String detectionRuleId) {
                 this.detectionRuleId = detectionRuleId;
@@ -1184,7 +1190,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert was closed.</p>
+             * <p>The time when the alert ended.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-06 16:37:29</p>
@@ -1195,7 +1201,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the entity.</p>
+             * <p>The entity details.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;entity_user_id&quot;:&quot;198921674491****&quot;,&quot;entity_account_id&quot;:&quot;N/A&quot;,&quot;entity_uuid&quot;:&quot;6245f979d5dd9ef8dd19bdc72228****&quot;,&quot;entity_type&quot;:&quot;host&quot;,&quot;entity_name&quot;:&quot;zhh-test-20240409&quot;,&quot;is_comprised&quot;:&quot;1&quot;,&quot;os_type&quot;:&quot;linux&quot;,&quot;entity_id&quot;:&quot;a88f44dd-b8d4-4ded-831c-77a4835****&quot;,&quot;host_uuid&quot;:&quot;a88f44dd-b8d4-4ded-831c-77a4835****&quot;,&quot;host_name&quot;:&quot;zhh-test-2024****&quot;}]</p>
@@ -1206,7 +1212,10 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendContent.
+             * <p>The extended information of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;main_user_id&quot;: &quot;165295629792****&quot;;&quot;log_uuid_count&quot;: &quot;99****&quot;}</p>
              */
             public Builder extendContent(String extendContent) {
                 this.extendContent = extendContent;
@@ -1214,7 +1223,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert was received.</p>
+             * <p>The time when the alert was stored.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-06 16:37:29</p>
@@ -1247,7 +1256,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the event.</p>
+             * <p>The globally unique UUID of the incident.</p>
              * 
              * <strong>example:</strong>
              * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -1258,7 +1267,10 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * InvestigationReport.
+             * <p>The alert investigation report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;agent_attack_confidence&quot;: 90, &quot;agent_judgement_category&quot;: &quot;false_positive&quot;, &quot;reason&quot;: &quot;The command line contains \&quot;mediacenter\&quot; which is a normal startup behavior of Lark (Feishu) client, and the process path is in the standard user installation directory.&quot;, &quot;start_time&quot;: 1774929064, &quot;end_time&quot;: 1774929071}</p>
              */
             public Builder investigationReport(String investigationReport) {
                 this.investigationReport = investigationReport;
@@ -1266,10 +1278,10 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an attack is defended against. Valid values:</p>
+             * <p>Indicates whether the threat has been defended against. Valid values:</p>
              * <ul>
-             * <li>0: detected.</li>
-             * <li>1: blocked.</li>
+             * <li>0: Detected.</li>
+             * <li>1: Blocked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1281,7 +1293,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert was recorded.</p>
+             * <p>The time when the alert was logged.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-06 16:37:29</p>
@@ -1303,7 +1315,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is associated with the alert in SIEM.</p>
+             * <p>The ID of the SIEM primary account associated with the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>127608589417****</p>
@@ -1314,7 +1326,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert was triggered.</p>
+             * <p>The time when the alert occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-06 16:37:29</p>
@@ -1325,7 +1337,10 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -1333,7 +1348,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the alert was first generated.</p>
+             * <p>The time when the alert first occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-06 16:37:29</p>
@@ -1344,7 +1359,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account within which the alert is generated.</p>
+             * <p>The Alibaba Cloud account ID that generated the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>176555323***</p>
@@ -1355,7 +1370,10 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserName.
+             * <p>The Alibaba Cloud account ID that generated the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>176555323***</p>
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;
@@ -1363,7 +1381,15 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * <p>The cloud code. Valid values:</p>
+             * <ul>
+             * <li>aliyun: Alibaba Cloud.</li>
+             * <li>qcloud: Tencent Cloud.</li>
+             * <li>hcloud: Huawei Cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;

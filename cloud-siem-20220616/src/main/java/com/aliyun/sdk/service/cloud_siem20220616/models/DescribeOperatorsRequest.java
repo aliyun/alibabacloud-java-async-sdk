@@ -101,10 +101,12 @@ public class DescribeOperatorsRequest extends Request {
         } 
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region of the Data Management center for threat analysis. Select a region based on your asset location. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Assets in the Chinese mainland and China (Hong Kong).</p>
+         * </li>
+         * <li><p>ap-southeast-1: Assets outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +119,7 @@ public class DescribeOperatorsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The user ID of the member. An administrator can use this parameter to switch to the perspective of this member.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -129,10 +131,12 @@ public class DescribeOperatorsRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: The view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: The view of all accounts that are managed by your enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,10 +149,12 @@ public class DescribeOperatorsRequest extends Request {
         }
 
         /**
-         * <p>The type of the scenario in which the operator is used. Valid values:</p>
+         * <p>The scenario for the operator. Valid values:</p>
          * <ul>
-         * <li>If you do not specify this parameter, the default scenario is used.</li>
-         * <li>AGGREGATE: AGGREGATE scenario.</li>
+         * <li><p>If you leave this parameter empty, the default scenario is used.</p>
+         * </li>
+         * <li><p>AGGREGATE: The aggregate function scenario.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -222,7 +222,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunImportedCount.
+             * <p>The number of automatically connected Alibaba Cloud products.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder aliyunImportedCount(Integer aliyunImportedCount) {
                 this.aliyunImportedCount = aliyunImportedCount;
@@ -230,7 +233,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of Alibaba Cloud services.</p>
+             * <p>The number of Alibaba Cloud products.</p>
              * 
              * <strong>example:</strong>
              * <p>19</p>
@@ -241,7 +244,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * HcloudImportedCount.
+             * <p>The number of automatically connected Huawei Cloud products.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hcloudImportedCount(Integer hcloudImportedCount) {
                 this.hcloudImportedCount = hcloudImportedCount;
@@ -249,7 +255,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of Huawei Cloud services.</p>
+             * <p>The number of Huawei Cloud products.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -260,7 +266,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * IdcImportedCount.
+             * <p>The number of automatically connected IDC products.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder idcImportedCount(Integer idcImportedCount) {
                 this.idcImportedCount = idcImportedCount;
@@ -268,7 +277,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * IdcProdCount.
+             * <p>The number of IDC products.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder idcProdCount(Integer idcProdCount) {
                 this.idcProdCount = idcProdCount;
@@ -276,7 +288,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * QcloudImportedCount.
+             * <p>The number of automatically connected Tencent Cloud products.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder qcloudImportedCount(Integer qcloudImportedCount) {
                 this.qcloudImportedCount = qcloudImportedCount;
@@ -284,7 +299,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of Tencent Cloud services.</p>
+             * <p>The number of Tencent Cloud products.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

@@ -106,7 +106,10 @@ public class GetEntitiyStatResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetEntitiyStatResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetEntitiyStatResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetEntitiyStatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class GetEntitiyStatResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +270,10 @@ public class GetEntitiyStatResponseBody extends TeaModel {
             }
 
             /**
-             * EntityNum.
+             * <p>The number of entities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder entityNum(Integer entityNum) {
                 this.entityNum = entityNum;
@@ -259,7 +281,10 @@ public class GetEntitiyStatResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The entity type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -267,7 +292,10 @@ public class GetEntitiyStatResponseBody extends TeaModel {
             }
 
             /**
-             * EntityUuid.
+             * <p>The entity UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5cde2118666ffda40783ebd7cec9a60a</p>
              */
             public Builder entityUuid(String entityUuid) {
                 this.entityUuid = entityUuid;

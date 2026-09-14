@@ -106,7 +106,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +251,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the entity attribute field that can be added to the whitelist.</p>
+             * <p>The display name of the entity property field that can be whitelisted.</p>
              * 
              * <strong>example:</strong>
              * <p>host uuid</p>
@@ -260,7 +262,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity attribute field that can be added to the whitelist.</p>
+             * <p>The field of the entity property that can be whitelisted.</p>
              * 
              * <strong>example:</strong>
              * <p>host_uuid</p>
@@ -271,7 +273,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The right operand that is displayed by default in the whitelist rule.</p>
+             * <p>The default right operand displayed for the whitelisting rule.</p>
              * 
              * <strong>example:</strong>
              * <p>441862da-a539-4cc0-a00d-47395582****</p>
@@ -282,7 +284,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported right operands of the whitelist rule.</p>
+             * <p>The available right operands for the whitelisting rule.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;441862da-a539-4cc0-a00d-473955826881&quot;]</p>
@@ -417,7 +419,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert name. The display name of the alert name varies based on the language of the system, such as Chinese and English.</p>
+             * <p>The display name of the alert. The value varies based on the language settings.</p>
              * 
              * <strong>example:</strong>
              * <p>login_common_ip</p>
@@ -428,7 +430,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert name.</p>
+             * <p>The identifier of the alert name.</p>
              * 
              * <strong>example:</strong>
              * <p>login_common_ip</p>
@@ -439,7 +441,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert title. The display name of the alert title varies based on the language of the system, such as Chinese and English.</p>
+             * <p>The display title of the alert. The value varies based on the language settings.</p>
              * 
              * <strong>example:</strong>
              * <p>Unusual Logon-login_common_ip</p>
@@ -450,7 +452,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert title.</p>
+             * <p>The identifier of the alert title.</p>
              * 
              * <strong>example:</strong>
              * <p>Unusual Logon-login_common_ip</p>
@@ -461,7 +463,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert type. The display name of the alert type varies based on the language of the system, such as Chinese and English.</p>
+             * <p>The display name of the alert type. The value varies based on the language settings.</p>
              * 
              * <strong>example:</strong>
              * <p>Unusual Logon</p>
@@ -472,7 +474,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert type.</p>
+             * <p>The identifier of the alert type.</p>
              * 
              * <strong>example:</strong>
              * <p>Unusual Logon</p>
@@ -483,7 +485,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The objects that can be added to the whitelist.</p>
+             * <p>The objects to be whitelisted.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;Type&quot;: &quot;host_uuid&quot;,&quot;Value&quot;: &quot;441862da-a539-4cc0-a00d-473955826881&quot;,&quot;Values&quot;: [&quot;441862da-a539-4cc0-a00d-473955826881&quot;],&quot;Name&quot;: &quot;${aliyun.siem.entity.host_uuid}&quot;}]</p>

@@ -104,10 +104,12 @@ public class ListProjectLogStoresRequest extends Request {
         } 
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region of the Data Management center for threat analysis. Specify the region based on where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Assets are in the Chinese mainland or China (Hong Kong).</p>
+         * </li>
+         * <li><p>ap-southeast-1: Assets are in regions outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +122,7 @@ public class ListProjectLogStoresRequest extends Request {
         }
 
         /**
-         * <p>The log code.</p>
+         * <p>The code of the log to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +135,7 @@ public class ListProjectLogStoresRequest extends Request {
         }
 
         /**
-         * <p>The code of the cloud service.</p>
+         * <p>The code of the product to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +148,7 @@ public class ListProjectLogStoresRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,8 +152,10 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +251,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the attribute for the entity.</p>
+             * <p>The display name of the field of the entity that can be added to the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>HOST UUID</p>
@@ -260,7 +262,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute of the entity.</p>
+             * <p>The field of the entity that can be added to the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>host_uuid</p>
@@ -271,7 +273,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The right operand that is displayed by default in the whitelist rule.</p>
+             * <p>The default right operand that is displayed for the whitelist rule.</p>
              * 
              * <strong>example:</strong>
              * <p>441862da-a539-4cc0-a00d-47395582****</p>
@@ -282,7 +284,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The right operands supported by the whitelist rule.</p>
+             * <p>The available right operands for the whitelist rule.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;441862da-a539-4cc0-a00d-473955826881&quot;]</p>
@@ -417,7 +419,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the alert. The value varies based on the display language (Chinese or English) of the Security Center console.</p>
+             * <p>The display name of the alert. The value varies based on the language of the environment.</p>
              * 
              * <strong>example:</strong>
              * <p>login_common_ip</p>
@@ -439,7 +441,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the alert notification. The value varies based on the display language (Chinese or English) of the Security Center console.</p>
+             * <p>The display title of the alert. The value varies based on the language of the environment.</p>
              * 
              * <strong>example:</strong>
              * <p>unusual login-login_common_ip</p>
@@ -461,7 +463,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the alert. The value varies based on the display language (Chinese or English) of the Security Center console.</p>
+             * <p>The display name of the alert type. The value varies based on the language of the environment.</p>
              * 
              * <strong>example:</strong>
              * <p>unusual login</p>
@@ -483,7 +485,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the entities for which you need to add the alert to the whitelist.</p>
+             * <p>The objects that can be added to the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;Type&quot;: &quot;host_uuid&quot;,&quot;Value&quot;: &quot;441862da-a539-4cc0-a00d-473955826881&quot;,&quot;Values&quot;: [&quot;441862da-a539-4cc0-a00d-473955826881&quot;],&quot;Name&quot;: &quot;${aliyun.siem.entity.host_uuid}&quot;}]</p>

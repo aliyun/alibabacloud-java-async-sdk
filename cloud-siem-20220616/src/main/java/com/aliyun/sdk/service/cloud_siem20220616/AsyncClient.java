@@ -308,6 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserBuyStatusResponse> describeUserBuyStatus(DescribeUserBuyStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribeUserSiemOrderStatus  DescribeUserSiemOrderStatusRequest
+     * @return DescribeUserSiemOrderStatusResponse
+     */
+    CompletableFuture<DescribeUserSiemOrderStatusResponse> describeUserSiemOrderStatus(DescribeUserSiemOrderStatusRequest request);
+
+    /**
      * @param request the request parameters of DescribeWafScope  DescribeWafScopeRequest
      * @return DescribeWafScopeResponse
      */
@@ -338,12 +344,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCapacityResponse> getCapacity(GetCapacityRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * 
      * @param request the request parameters of GetDataStorage  GetDataStorageRequest
      * @return GetDataStorageResponse
      */
     CompletableFuture<GetDataStorageResponse> getDataStorage(GetDataStorageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * 
      * @param request the request parameters of GetEntitiyStat  GetEntitiyStatRequest
      * @return GetEntitiyStatResponse
      */

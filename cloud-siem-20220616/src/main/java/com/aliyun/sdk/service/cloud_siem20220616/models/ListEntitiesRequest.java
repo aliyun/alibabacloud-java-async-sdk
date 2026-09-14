@@ -230,6 +230,7 @@ public class ListEntitiesRequest extends Request {
         } 
 
         /**
+         * <p>The current page number, which must be greater than or equal to 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +243,10 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * EntityName.
+         * <p>The entity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host1****</p>
          */
         public Builder entityName(String entityName) {
             this.putBodyParameter("EntityName", entityName);
@@ -251,7 +255,10 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>The entity type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder entityType(String entityType) {
             this.putBodyParameter("EntityType", entityType);
@@ -260,7 +267,10 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * EntityUuid.
+         * <p>The entity UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder entityUuid(String entityUuid) {
             this.putBodyParameter("EntityUuid", entityUuid);
@@ -269,7 +279,10 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * EntityUuids.
+         * <p>The list of entity UUIDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****,6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder entityUuids(String entityUuids) {
             this.putBodyParameter("EntityUuids", entityUuids);
@@ -278,6 +291,7 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The incident ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +304,10 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * IsMalwareEntity.
+         * <p>Specifies whether the entity is malicious. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isMalwareEntity(String isMalwareEntity) {
             this.putBodyParameter("IsMalwareEntity", isMalwareEntity);
@@ -299,7 +316,10 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * MalwareType.
+         * <p>The malware entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun.siem.sas.alert_tag.miner_software</p>
          */
         public Builder malwareType(String malwareType) {
             this.putBodyParameter("MalwareType", malwareType);
@@ -308,6 +328,7 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page, up to a maximum of 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +341,14 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of threat analysis is located. Select the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -329,7 +357,10 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -338,7 +369,10 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -347,7 +381,11 @@ public class ListEntitiesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The entity tags. The value is a JSON array string:</p>
+         * <p><code>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);

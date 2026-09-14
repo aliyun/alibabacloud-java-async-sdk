@@ -106,7 +106,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,7 +355,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>同类聚合规则数。</p>
+             * <p>The number of rules for intra-class aggregation.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -364,7 +366,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自定义规则数。</p>
+             * <p>The number of custom rules.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -375,7 +377,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专家规则数。</p>
+             * <p>The number of expert rules.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -386,7 +388,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>图计算规则数。</p>
+             * <p>The number of graph computing rules.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -397,7 +399,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that are used to identify high-risk threats.</p>
+             * <p>The number of high-risk rules.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -408,7 +410,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rules.</p>
+             * <p>The number of rules in use.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -419,7 +421,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that are used to identify low-risk threats.</p>
+             * <p>The number of low-risk rules.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -430,7 +432,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules that are used to identify medium-risk threats.</p>
+             * <p>The number of medium-risk rules.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -441,7 +443,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>预定义规则数。</p>
+             * <p>The number of predefined rules.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -452,7 +454,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>告警透传规则数。</p>
+             * <p>The number of alert pass-through rules.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -463,7 +465,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总规则数。</p>
+             * <p>The total number of rules.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -474,7 +476,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>不产生事件规则数。</p>
+             * <p>The number of rules that do not generate events.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

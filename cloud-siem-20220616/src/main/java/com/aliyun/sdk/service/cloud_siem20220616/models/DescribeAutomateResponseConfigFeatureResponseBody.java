@@ -106,7 +106,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -150,10 +150,12 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request is successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +225,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The enumerated value of the right operand.</p>
+             * <p>The enumeration value of the right operand.</p>
              * 
              * <strong>example:</strong>
              * <p>serious</p>
@@ -234,7 +236,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The internal code of the enumerated value.</p>
+             * <p>The Medusa code for the enumeration value of the right operand.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun.siem.automate.feature.alert_level.serious</p>
@@ -382,10 +384,12 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>Indicates whether the right operand is required. Valid values:</p>
+             * <p>Indicates whether a right operand is required. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: A right operand is required.</p>
+             * </li>
+             * <li><p>false: A right operand is not required.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -397,7 +401,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The position of the operator in the operator list.</p>
+             * <p>The position of the operator in the list of operators.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -441,7 +445,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The name of the operator.</p>
+             * <p>The display name of the operator.</p>
              * 
              * <strong>example:</strong>
              * <p>&lt;=</p>
@@ -452,7 +456,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The data types that are supported by the operator. The data types are separated by commas (,).</p>
+             * <p>The data types that the operator supports. Multiple data types are separated by commas.</p>
              * 
              * <strong>example:</strong>
              * <p>varchar</p>
@@ -463,7 +467,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. By default, this parameter is empty.</p>
+             * <p>The scenarios that the operator supports. Multiple scenarios are separated by commas, such as aggregation. By default, this parameter is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>[AGGREGATE]</p>
@@ -559,7 +563,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The data type of the condition field in the automated response rule.</p>
+             * <p>The data type of the condition field for the automated response rule.</p>
              * 
              * <strong>example:</strong>
              * <p>varchar</p>
@@ -570,7 +574,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The name of the condition field in the automated response rule.</p>
+             * <p>The name of the condition field for the automated response rule.</p>
              * 
              * <strong>example:</strong>
              * <p>alert_desc</p>
@@ -581,7 +585,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The enumerated values of the right operand for the field.</p>
+             * <p>The enumeration of the right operand that corresponds to the field.</p>
              */
             public Builder rightValueEnums(java.util.List<RightValueEnums> rightValueEnums) {
                 this.rightValueEnums = rightValueEnums;
@@ -589,7 +593,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The operators that are supported for the condition field.</p>
+             * <p>The operators that the field supports.</p>
              */
             public Builder supportOperators(java.util.List<SupportOperators> supportOperators) {
                 this.supportOperators = supportOperators;

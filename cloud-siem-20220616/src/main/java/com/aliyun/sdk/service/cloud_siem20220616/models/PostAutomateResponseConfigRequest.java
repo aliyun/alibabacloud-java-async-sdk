@@ -185,7 +185,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         } 
 
         /**
-         * <p>The action configuration of the automated response rule. The value is in the JSON format.</p>
+         * <p>The configuration of the action that is specified in the automated response rule. The value is a JSON array.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -203,11 +203,14 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the handling action. Multiple types are separated by commas (,). Valid values:</p>
+         * <p>The type of the action. Separate multiple values with commas. Valid values:</p>
          * <ul>
-         * <li><strong>doPlaybook</strong>: runs the playbook.</li>
-         * <li><strong>changeEventStatus</strong>: changes the event status.</li>
-         * <li><strong>changeThreatLevel</strong>: changes the threat level of the event.</li>
+         * <li><p><strong>doPlaybook</strong>: runs a playbook</p>
+         * </li>
+         * <li><p><strong>changeEventStatus</strong>: changes the status of the event</p>
+         * </li>
+         * <li><p><strong>changeThreatLevel</strong>: changes the threat level of the event</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,10 +223,12 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the automated response rule. Valid values:</p>
+         * <p>The type of the automated response. Valid values:</p>
          * <ul>
-         * <li><strong>event</strong></li>
-         * <li><strong>alert</strong></li>
+         * <li><p><strong>event</strong>: event</p>
+         * </li>
+         * <li><p><strong>alert</strong>: alert</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +253,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the automated response rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -260,10 +265,12 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * <p>The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the Data Management center of Threat Analysis is located. Select a region based on the location of your assets. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Your assets reside in regions in China.</li>
-         * <li><strong>ap-southeast-1</strong>: Your assets reside in regions outside China.</li>
+         * <li><p><strong>cn-hangzhou</strong>: your assets are in the Chinese mainland or China (Hong Kong).</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: your assets are outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +283,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The ID of the user that the administrator uses to switch the view. This parameter is used when an administrator switches to the perspective of a member.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -288,10 +295,12 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: the view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: the view of all accounts that are managed by the administrator.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +313,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the automated response rule.</p>
          * 
          * <strong>example:</strong>
          * <p>cfw kill quara book</p>

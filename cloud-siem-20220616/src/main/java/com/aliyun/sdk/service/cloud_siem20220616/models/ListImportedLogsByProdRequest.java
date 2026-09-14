@@ -117,11 +117,14 @@ public class ListImportedLogsByProdRequest extends Request {
         } 
 
         /**
-         * <p>The code of the cloud service provider. Valid values:</p>
+         * <p>The multicloud code. Valid values:</p>
          * <ul>
-         * <li>qcloud: Tencent Cloud.</li>
-         * <li>aliyun: Alibaba Cloud.</li>
-         * <li>hcloud: Huawei Cloud.</li>
+         * <li><p>qcloud: Tencent Cloud.</p>
+         * </li>
+         * <li><p>aliyun: Alibaba Cloud.</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -135,7 +138,7 @@ public class ListImportedLogsByProdRequest extends Request {
         }
 
         /**
-         * <p>The code of the cloud service.</p>
+         * <p>The code of the product.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,10 +151,12 @@ public class ListImportedLogsByProdRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the Data Management hub of threat analysis is deployed. Select the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+         * </li>
+         * <li><p>ap-southeast-1: Your assets are outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +169,7 @@ public class ListImportedLogsByProdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The user ID that the administrator uses to switch to the perspective of a member.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -176,10 +181,12 @@ public class ListImportedLogsByProdRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: The view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: The view of all accounts within the enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

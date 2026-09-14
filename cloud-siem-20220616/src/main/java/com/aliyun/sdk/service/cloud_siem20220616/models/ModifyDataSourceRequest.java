@@ -160,7 +160,7 @@ public class ModifyDataSourceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxxxxx</p>
@@ -174,9 +174,12 @@ public class ModifyDataSourceRequest extends Request {
         /**
          * <p>The code of the cloud service provider. Valid values:</p>
          * <ul>
-         * <li>qcloud: Tencent Cloud</li>
-         * <li>aliyun: Alibaba Cloud</li>
-         * <li>hcloud: Huawei Cloud</li>
+         * <li><p>qcloud: Tencent Cloud.</p>
+         * </li>
+         * <li><p>aliyun: Alibaba Cloud.</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -190,7 +193,7 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters. You can call the <a href="https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854&activeTabKey=api%7CDescribeDataSourceInstance">DescribeDataSourceInstance</a> operation to query the IDs of data sources.</p>
+         * <p>The ID of the data source. The ID is an MD5 hash that is calculated based on the values of other parameters. You can call the <a href="https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854%5C&activeTabKey=api%7CDescribeDataSourceInstance">DescribeDataSourceInstance</a> operation to obtain the data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +218,7 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the data source in the JSON string format.</p>
+         * <p>The parameters of the data source, in a JSON array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;paraCode&quot;:&quot;region_code&quot;,&quot;paraValue&quot;:&quot;ap-guangzhou&quot;}]</p>
@@ -227,7 +230,7 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The remarks on the data source.</p>
+         * <p>The description of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_alert_log</p>
@@ -241,9 +244,12 @@ public class ModifyDataSourceRequest extends Request {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
-         * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
-         * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+         * <li><p>ckafka: Tencent Cloud CKafka.</p>
+         * </li>
+         * <li><p>obs: Huawei Cloud Object Storage Service (OBS).</p>
+         * </li>
+         * <li><p>wafApi: the API used to download attack logs from Tencent Cloud Web Application Firewall (WAF).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -257,10 +263,12 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the Data Management center of the threat analysis feature is located. Select a region based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+         * </li>
+         * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -116,7 +116,7 @@ public class PostEventWhiteruleListRequest extends Request {
         } 
 
         /**
-         * <p>The UUID of the event.</p>
+         * <p>The globally unique ID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -128,10 +128,12 @@ public class PostEventWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the threat analysis feature is deployed. Select the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: For assets in the Chinese mainland or China (Hong Kong).</p>
+         * </li>
+         * <li><p>ap-southeast-1: For assets in regions outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +146,7 @@ public class PostEventWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The ID of a member account. An administrator can use this parameter to switch to the perspective of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -156,10 +158,12 @@ public class PostEventWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The account scope to which the rule applies. Valid values:</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: The current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: All accounts within the enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +176,7 @@ public class PostEventWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The alert whitelist rule. The value is a JSON object.</p>
+         * <p>The alert whitelisting rule, which is a JSON object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

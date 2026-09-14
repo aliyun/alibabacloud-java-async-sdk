@@ -67,10 +67,12 @@ public class SetStorageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the settings are saved. Valid values:</p>
+         * <p>Indicates whether the settings were saved. Valid values:</p>
          * <ul>
-         * <li>true:</li>
-         * <li>false:</li>
+         * <li><p>true: The settings were saved.</p>
+         * </li>
+         * <li><p>false: The settings failed to be saved.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

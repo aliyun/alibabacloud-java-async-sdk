@@ -101,10 +101,12 @@ public class DescribeAutomateResponseConfigFeatureRequest extends Request {
         } 
 
         /**
-         * <p>The type of the automated response rule. Valid values:</p>
+         * <p>The type of automated response. Valid values:</p>
          * <ul>
-         * <li>event</li>
-         * <li>alert</li>
+         * <li><p>event: event</p>
+         * </li>
+         * <li><p>alert: alert</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,10 +119,12 @@ public class DescribeAutomateResponseConfigFeatureRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the Data Management center of threat analysis is deployed. Select a region based on the location of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Assets in the Chinese mainland and Hong Kong (China).</p>
+         * </li>
+         * <li><p>ap-southeast-1: Assets outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +137,7 @@ public class DescribeAutomateResponseConfigFeatureRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The user ID of the member. An administrator can use this parameter to switch to the perspective of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -145,10 +149,12 @@ public class DescribeAutomateResponseConfigFeatureRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The type of view. Valid values:</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: the view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: the view of all accounts that are managed by the administrator account.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

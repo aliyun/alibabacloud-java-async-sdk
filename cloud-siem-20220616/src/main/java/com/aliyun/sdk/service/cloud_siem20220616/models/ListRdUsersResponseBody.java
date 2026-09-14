@@ -196,7 +196,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the account can be used to view the logs and alerts within the account.</p>
+             * <p>Indicates whether the account is delegated to view its own resources.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -207,10 +207,12 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the account is added to the threat analysis feature for centralized management. Valid values:</p>
+             * <p>Indicates whether the account is managed by the multi-account control feature of Threat Analysis. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: The account is managed.</p>
+             * </li>
+             * <li><p>false: The account is not managed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -222,7 +224,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account was added to the threat analysis feature.</p>
+             * <p>The time when the account was added.</p>
              * 
              * <strong>example:</strong>
              * <p>2013-10-01 00:00:00</p>
@@ -233,7 +235,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * <p>The ID of the Alibaba Cloud account that purchased Threat Analysis.</p>
              * 
              * <strong>example:</strong>
              * <p>123XXXXXXXXX</p>
@@ -244,7 +246,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is used to perform operations supported by the threat analysis feature.</p>
+             * <p>The ID of the member Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>123XXXXXXXX</p>
@@ -255,7 +257,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+             * <p>The name of the member Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>sas_account_xxx</p>

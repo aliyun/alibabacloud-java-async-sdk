@@ -67,10 +67,12 @@ public class EnableServiceForCloudSiemResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:</p>
+         * <p>The return value. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The service is enabled.</p>
+         * </li>
+         * <li><p>false: The service failed to be enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

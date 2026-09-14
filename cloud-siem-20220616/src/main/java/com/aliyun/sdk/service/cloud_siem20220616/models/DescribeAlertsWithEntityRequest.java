@@ -201,7 +201,7 @@ public class DescribeAlertsWithEntityRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The number of the page to return. The value must be greater than or equal to 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,10 @@ public class DescribeAlertsWithEntityRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. The unit is milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -235,7 +238,10 @@ public class DescribeAlertsWithEntityRequest extends Request {
         }
 
         /**
-         * EntityUuid.
+         * <p>The ID of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder entityUuid(String entityUuid) {
             this.putBodyParameter("EntityUuid", entityUuid);
@@ -244,7 +250,7 @@ public class DescribeAlertsWithEntityRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the event.</p>
+         * <p>The globally unique ID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -256,7 +262,7 @@ public class DescribeAlertsWithEntityRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The number of entries to return on each page. The maximum value is 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,10 +275,12 @@ public class DescribeAlertsWithEntityRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region of the data management center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: your assets are in the Chinese mainland and China (Hong Kong).</p>
+         * </li>
+         * <li><p>ap-southeast-1: your assets are outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +293,7 @@ public class DescribeAlertsWithEntityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The user ID of the member to which the administrator switches.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -299,8 +307,10 @@ public class DescribeAlertsWithEntityRequest extends Request {
         /**
          * <p>The type of the view. Valid values:</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: the view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: the view of all accounts that are managed by your enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,7 +323,7 @@ public class DescribeAlertsWithEntityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SOAR handing policy.</p>
+         * <p>The ID of the Security Orchestration, Automation, and Response (SOAR) handling policy.</p>
          * 
          * <strong>example:</strong>
          * <p>577bbf90-a770-44a7-8154-586aa2d318fa</p>
@@ -325,7 +335,10 @@ public class DescribeAlertsWithEntityRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. The unit is milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

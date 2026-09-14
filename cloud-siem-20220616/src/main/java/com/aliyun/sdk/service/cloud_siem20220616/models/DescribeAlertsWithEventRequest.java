@@ -313,7 +313,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         } 
 
         /**
-         * AlertName.
+         * <p>The alert name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Try SNMP weak password</p>
          */
         public Builder alertName(String alertName) {
             this.putBodyParameter("AlertName", alertName);
@@ -322,7 +325,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The title of the alert.</p>
+         * <p>The alert title.</p>
          * 
          * <strong>example:</strong>
          * <p>Scan-Try SNMP weak password</p>
@@ -334,7 +337,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * AlertType.
+         * <p>The alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scan</p>
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -343,7 +349,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * AssetId.
+         * <p>The asset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09414e9ebaa9c19b84d851abb91d****</p>
          */
         public Builder assetId(String assetId) {
             this.putBodyParameter("AssetId", assetId);
@@ -352,7 +361,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * AssetName.
+         * <p>The asset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hostname-****</p>
          */
         public Builder assetName(String assetName) {
             this.putBodyParameter("AssetName", assetName);
@@ -361,7 +373,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The current page number. The value must be greater than or equal to 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -374,7 +386,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -383,7 +398,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>The entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21034e803f492b926cea9e5beab4****</p>
          */
         public Builder entityId(String entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -392,7 +410,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * EntityName.
+         * <p>The entity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>launch-advisor-*****</p>
          */
         public Builder entityName(String entityName) {
             this.putBodyParameter("EntityName", entityName);
@@ -401,7 +422,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The incident ID.</p>
          * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -413,7 +434,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether an attack is defended. Valid values:</p>
+         * <p>Specifies whether the alert has been defended. Valid values:</p>
          * <ul>
          * <li>0: detected</li>
          * <li>1: blocked</li>
@@ -429,11 +450,11 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The risk levels. The value is a JSON array. Valid values:</p>
+         * <p>The threat level in JSON array format. Valid values:</p>
          * <ul>
-         * <li>serious: high</li>
-         * <li>suspicious: medium</li>
-         * <li>remind: low</li>
+         * <li>serious: High.</li>
+         * <li>suspicious: Medium.</li>
+         * <li>remind: Low.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -459,9 +480,9 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>cn-hangzhou: Your assets reside in Chinese mainland or China (Hong Kong).</li>
          * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
          * </ul>
          * 
@@ -475,7 +496,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member in the resource directory.</p>
+         * <p>The member account ID of the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -487,10 +508,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The type of the view.</p>
+         * <p>The view type. Valid values:</p>
          * <ul>
-         * <li>0: view of the current Alibaba Cloud account.</li>
-         * <li>1: view of all accounts for the enterprise.</li>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -503,7 +524,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The data source of the alert.</p>
+         * <p>The alert data source.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -515,7 +536,10 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -524,7 +548,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account within which the alert is generated.</p>
+         * <p>The ID of the account associated with the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>176555323***</p>

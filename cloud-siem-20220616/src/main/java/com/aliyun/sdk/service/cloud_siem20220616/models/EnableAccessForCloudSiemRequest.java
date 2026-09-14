@@ -115,11 +115,7 @@ public class EnableAccessForCloudSiemRequest extends Request {
         } 
 
         /**
-         * <p>Whether import the log of SAS alert, the log of WAF alert, the log of CFW alert or not. Valid values:</p>
-         * <ul>
-         * <li>0: not imported automatically</li>
-         * <li>1: imported automatically</li>
-         * </ul>
+         * <p>Specifies whether to automatically integrate alert logs from Security Center, Web Application Firewall (WAF), and Cloud Firewall. By default, the logs are automatically integrated.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -131,7 +127,7 @@ public class EnableAccessForCloudSiemRequest extends Request {
         }
 
         /**
-         * <p>幂等令牌。</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -143,10 +139,10 @@ public class EnableAccessForCloudSiemRequest extends Request {
         }
 
         /**
-         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <p>The region where the threat detection and response data management center resides. Select the management center based on the region of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li>cn-hangzhou: assets in the Chinese mainland and Hong Kong (China).</li>
+         * <li>ap-southeast-1: assets outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +155,7 @@ public class EnableAccessForCloudSiemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The ID of the member account to which the administrator switches the view.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -171,10 +167,10 @@ public class EnableAccessForCloudSiemRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
          * </ul>
          * 
          * <strong>example:</strong>

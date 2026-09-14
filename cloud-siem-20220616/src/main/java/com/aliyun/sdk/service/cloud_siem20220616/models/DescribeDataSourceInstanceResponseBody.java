@@ -75,7 +75,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -144,7 +144,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the parameter.</p>
+             * <p>The parameter code.</p>
              * 
              * <strong>example:</strong>
              * <p>region_code</p>
@@ -155,7 +155,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
+             * <p>The parameter value.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-guangzhou</p>
@@ -251,7 +251,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cloud account.</p>
+             * <p>The ID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>123xxxxxxx</p>
@@ -262,11 +262,14 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the cloud service provider. Valid values:</p>
+             * <p>The code for the multicloud environment. Valid values:</p>
              * <ul>
-             * <li>qcloud: Tencent Cloud</li>
-             * <li>aliyun: Alibaba Cloud</li>
-             * <li>hcloud: Huawei Cloud</li>
+             * <li><p>qcloud: Tencent Cloud.</p>
+             * </li>
+             * <li><p>aliyun: Alibaba Cloud.</p>
+             * </li>
+             * <li><p>hcloud: Huawei Cloud.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -278,7 +281,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+             * <p>The ID of the data source. The threat analysis service generates the ID by calculating the MD5 hash of specific parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
@@ -289,7 +292,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of the data source.</p>
+             * <p>The list of detailed parameters for the data source.</p>
              */
             public Builder dataSourceInstanceParams(java.util.List<DataSourceInstanceParams> dataSourceInstanceParams) {
                 this.dataSourceInstanceParams = dataSourceInstanceParams;

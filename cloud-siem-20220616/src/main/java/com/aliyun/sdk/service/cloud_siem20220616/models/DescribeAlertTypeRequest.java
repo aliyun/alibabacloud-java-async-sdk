@@ -101,10 +101,10 @@ public class DescribeAlertTypeRequest extends Request {
         } 
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region of the data management center for threat analysis. Specify the management center region based on the region where your assets reside. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li>cn-hangzhou: assets in the Chinese mainland and Hong Kong (China).</li>
+         * <li>ap-southeast-1: assets outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DescribeAlertTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The user ID that the administrator switches to for viewing as another member.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -129,10 +129,10 @@ public class DescribeAlertTypeRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,10 +145,10 @@ public class DescribeAlertTypeRequest extends Request {
         }
 
         /**
-         * <p>The type of rule. Valid values:</p>
+         * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li>predefine: the defined rule by system</li>
-         * <li>customize: the customed rule by user</li>
+         * <li>predefine: predefined.</li>
+         * <li>customize: custom.</li>
          * </ul>
          * 
          * <strong>example:</strong>

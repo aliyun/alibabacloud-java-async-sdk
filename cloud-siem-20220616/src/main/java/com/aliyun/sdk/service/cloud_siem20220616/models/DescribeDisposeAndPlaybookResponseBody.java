@@ -106,7 +106,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -128,7 +128,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -151,10 +151,6 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -258,7 +254,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -471,7 +467,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             } 
 
             /**
-             * Available.
+             * <p>Indicates whether the playbook is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder available(String available) {
                 this.available = available;
@@ -528,7 +527,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The opcode of the playbook, which corresponds to the opcode of the playbook recommended for entity handling.</p>
+             * <p>The playbook opcode, which corresponds to the recommended playbook opcode for entity disposition.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -539,11 +538,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether quick event handling is selected by default. Valid values:</p>
-             * <ul>
-             * <li>2: Quick event handling is selected.</li>
-             * <li>1: Quick event handling is displayed but not selected.</li>
-             * </ul>
+             * <p>Specifies whether the playbook is selected by default for one-click incident disposition. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -554,7 +549,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The playbook parameters and the corresponding properties.</p>
+             * <p>The parameter list of the playbook and the corresponding parameter properties.</p>
              */
             public Builder paramConfig(java.util.List<?> paramConfig) {
                 this.paramConfig = paramConfig;
@@ -573,7 +568,15 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * UnAvailableCode.
+             * <p>The code that indicates why the playbook is unavailable.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PARAM_INVALID: The input parameters are invalid.</li>
+             * <li>NO_INGESTION: The corresponding product is not connected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PARAM_INVALID</p>
              */
             public Builder unAvailableCode(String unAvailableCode) {
                 this.unAvailableCode = unAvailableCode;
@@ -581,7 +584,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The playbook UUID, which is the unique identifier of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kill_process_isolate_file</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -589,11 +595,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the playbook is intended for Web Application Firewall (WAF). Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Indicates whether the playbook is a WAF playbook. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -767,7 +769,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of alerts that are associated with the entity.</p>
+             * <p>The number of alerts associated with the entity.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -778,10 +780,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object for handling.</p>
+             * <p>The disposition object.</p>
              * 
              * <strong>example:</strong>
-             * <p>192.168.1.1</p>
+             * <p>192.168.<em>.</em></p>
              */
             public Builder dispose(String dispose) {
                 this.dispose = dispose;
@@ -789,10 +791,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity ID</p>
+             * <p>The entity ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>12345</p>
+             * <p>12345****</p>
              */
             public Builder entityId(Long entityId) {
                 this.entityId = entityId;
@@ -803,7 +805,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
              * <p>The entity information.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;file_path&quot;: &quot;c:/www/leixi.jsp&quot;,&quot;file_hash&quot;: &quot;aa0ca926ad948cd820e0a3d9a18c09d0&quot;,&quot;host_uuid&quot;: &quot;efed2cf7-0b77-45d9-a97b-d2cf246bcbb3&quot;,&quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.webshell}&quot;,&quot;host_name&quot;: &quot;launch-advisor-20230531&quot;}</p>
+             * <p>{&quot;file_path&quot;: &quot;c:/www/leixi.jsp&quot;,&quot;file_hash&quot;: &quot;aa0ca926ad948cd820e0a3d9a18c****&quot;,&quot;host_uuid&quot;: &quot;efed2cf7-0b77-45d9-a97b-d2cf246b****&quot;,&quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.webshell}&quot;,&quot;host_name&quot;: &quot;launch-advisor-2023****&quot;}</p>
              */
             public Builder entityInfo(java.util.Map<String, ?> entityInfo) {
                 this.entityInfo = entityInfo;
@@ -811,7 +813,18 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The entity type. Valid values:</p>
+             * <ul>
+             * <li>ip: IP address</li>
+             * <li>domain: domain name</li>
+             * <li>url: URL</li>
+             * <li>process: process</li>
+             * <li>file: file</li>
+             * <li>host: host</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -827,7 +840,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key-value pairs each of which consists of opcode and oplevel.</p>
+             * <p>The key-value pairs of opcode and oplevel.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -838,7 +851,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The codes of the playbooks that are recommended for entity handling.</p>
+             * <p>The recommended playbook opcodes for entity disposition.</p>
              * 
              * <strong>example:</strong>
              * <p>[1,3]</p>
@@ -849,7 +862,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The playbooks that can handle the entity.</p>
+             * <p>The list of playbooks that can dispose of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;Security Center - Cloud Server Security&quot;,&quot;code&quot;:&quot;1&quot;}]</p>
              */
             public Builder playbookList(java.util.List<PlaybookList> playbookList) {
                 this.playbookList = playbookList;
@@ -857,7 +873,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the users who can handle objects.</p>
+             * <p>The disposition scope, which is the list of user IDs that can perform the disposition.</p>
              * 
              * <strong>example:</strong>
              * <p>176618589410****</p>
@@ -940,7 +956,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             } 
 
             /**
-             * Available.
+             * <p>Indicates whether the playbook is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;

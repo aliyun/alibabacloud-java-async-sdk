@@ -241,7 +241,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         } 
 
         /**
-         * <p>幂等令牌。</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -253,7 +253,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * DisposeStrategyIds.
+         * <p>The list of handling policy IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12,13,14</p>
          */
         public Builder disposeStrategyIds(String disposeStrategyIds) {
             this.putBodyParameter("DisposeStrategyIds", disposeStrategyIds);
@@ -262,7 +265,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The configuration of event handling. The value is a JSON object.</p>
+         * <p>The incident handling configuration as a JSON object.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -298,7 +301,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the event.</p>
+         * <p>The globally unique UUID of the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -310,7 +313,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The account UID of the incident owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890xxxxxx</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -319,7 +325,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the alert recipient. The value is a JSON object.</p>
+         * <p>The alert recipient configuration as a JSON object.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -335,10 +341,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li>cn-hangzhou: Your assets reside in regions in the Chinese mainland or China (Hong Kong).</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,7 +357,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The remarks of the event.</p>
+         * <p>The remarks for the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>dealed</p>
@@ -363,7 +369,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * ResponseSource.
+         * <p>The source of the handling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder responseSource(String responseSource) {
             this.putBodyParameter("ResponseSource", responseSource);
@@ -372,7 +381,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The ID of the user for whom the administrator switches to a member view.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -384,10 +393,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type. Valid values:</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li>0: the China account view.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,11 +409,11 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * <p>The status of the event. Valid values:</p>
+         * <p>The incident status. Valid values:</p>
          * <ul>
-         * <li>0: unhandled</li>
-         * <li>1: handing</li>
-         * <li>5: handling failed</li>
+         * <li>0: unhandled  </li>
+         * <li>1: handling </li>
+         * <li>5: handling failed </li>
          * <li>10: handled</li>
          * </ul>
          * 
@@ -418,7 +427,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * SyncAlertStatus.
+         * <p>Specifies whether to restore associated handled alerts to unhandled status when reopening the incident.</p>
          */
         public Builder syncAlertStatus(Boolean syncAlertStatus) {
             this.putBodyParameter("SyncAlertStatus", syncAlertStatus);
@@ -427,7 +436,15 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * ThreatLevel.
+         * <p>The threat level. Valid values:</p>
+         * <ul>
+         * <li>serious: high</li>
+         * <li>suspicious: medium</li>
+         * <li>remind: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>remind</p>
          */
         public Builder threatLevel(String threatLevel) {
             this.putBodyParameter("ThreatLevel", threatLevel);

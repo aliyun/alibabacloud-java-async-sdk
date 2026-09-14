@@ -228,7 +228,10 @@ public class GetEntitiyStatRequest extends Request {
         } 
 
         /**
-         * AssetName.
+         * <p>The asset ID associated with the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder assetName(String assetName) {
             this.putBodyParameter("AssetName", assetName);
@@ -237,7 +240,10 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * AssetUuid.
+         * <p>The asset ID associated with the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder assetUuid(String assetUuid) {
             this.putBodyParameter("AssetUuid", assetUuid);
@@ -246,7 +252,10 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * EntityName.
+         * <p>The asset ID associated with the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder entityName(String entityName) {
             this.putBodyParameter("EntityName", entityName);
@@ -255,7 +264,10 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>The asset ID associated with the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder entityType(String entityType) {
             this.putBodyParameter("EntityType", entityType);
@@ -264,7 +276,10 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * EntityUuid.
+         * <p>The asset ID associated with the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder entityUuid(String entityUuid) {
             this.putBodyParameter("EntityUuid", entityUuid);
@@ -282,6 +297,7 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
+         * <p>The incident ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,7 +310,10 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * IsAsset.
+         * <p>The asset ID associated with the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder isAsset(String isAsset) {
             this.putBodyParameter("IsAsset", isAsset);
@@ -303,7 +322,14 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * IsMalwareEntity.
+         * <p>The sort order of the incident list. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder isMalwareEntity(String isMalwareEntity) {
             this.putBodyParameter("IsMalwareEntity", isMalwareEntity);
@@ -312,7 +338,14 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat detection and response data management center resides. Select the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets belong to the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: The assets belong to regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -321,7 +354,10 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637941677243702</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -330,7 +366,16 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type. Valid values:</p>
+         * <ul>
+         * <li>0: single-account logon.</li>
+         * <li>1: global view.</li>
+         * <li>2: switched view.</li>
+         * <li>3: partial view.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -339,7 +384,10 @@ public class GetEntitiyStatRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The entity tags. The value is a JSON array string in the following format: \&quot;[{\&quot;tagKey1\&quot;:\&quot;tagValue1\&quot;},{\&quot;tagKey2\&quot;:\&quot;tagValue2\&quot;}]\&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys:agent:dispose</p>
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);

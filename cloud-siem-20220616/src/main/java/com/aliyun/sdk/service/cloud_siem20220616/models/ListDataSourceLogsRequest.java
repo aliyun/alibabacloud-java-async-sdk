@@ -104,7 +104,7 @@ public class ListDataSourceLogsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,11 +117,14 @@ public class ListDataSourceLogsRequest extends Request {
         }
 
         /**
-         * <p>The code that is used for multi-cloud environments. Valid values:</p>
+         * <p>The code for the cloud service provider. Valid values:</p>
          * <ul>
-         * <li>qcloud: Tencent Cloud</li>
-         * <li>aliyun: Alibaba Cloud</li>
-         * <li>hcloud: Huawei Cloud</li>
+         * <li><p>qcloud: Tencent Cloud.</p>
+         * </li>
+         * <li><p>aliyun: Alibaba Cloud.</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -135,7 +138,7 @@ public class ListDataSourceLogsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</p>
+         * <p>The ID of the data source. This ID is an MD5 hash value that is calculated by threat analysis based on specific parameters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,10 +151,12 @@ public class ListDataSourceLogsRequest extends Request {
         }
 
         /**
-         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <p>The region where the Data Management hub of threat analysis is deployed. Select a region based on the location of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</p>
+         * </li>
+         * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

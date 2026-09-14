@@ -115,10 +115,12 @@ public class DeleteWhiteRuleListRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region of the data management center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: The assets are in the Chinese mainland or China (Hong Kong).</p>
+         * </li>
+         * <li><p>ap-southeast-1: The assets are in a region outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +133,7 @@ public class DeleteWhiteRuleListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The user ID of a member. An administrator can switch to the perspective of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -143,10 +145,12 @@ public class DeleteWhiteRuleListRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: The view for the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: The view for all accounts in the enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

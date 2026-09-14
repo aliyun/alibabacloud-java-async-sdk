@@ -106,7 +106,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The request status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The request return value.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -128,7 +128,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The request return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -151,10 +151,6 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -575,7 +571,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The current page number.</p>
+             * <p>The current page number of the list.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -586,7 +582,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of records returned per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -597,7 +593,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -961,7 +957,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the alert.</p>
+             * <p>The alert UUID.</p>
              * 
              * <strong>example:</strong>
              * <p>sas_71e24437d2797ce8fc59692905a4****</p>
@@ -972,7 +968,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is associated with the policy in SIEM.</p>
+             * <p>The SIEM primary account ID associated with the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>127608589417****</p>
@@ -983,11 +979,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the policy. Valid values:</p>
-             * <ul>
-             * <li>0: invalid</li>
-             * <li>1: valid</li>
-             * </ul>
+             * <p>The policy status. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -998,7 +990,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the entity. The value is a JSON array.</p>
+             * <p>The entity details in JSON array format.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;ip&quot;:&quot;1.1.1.1&quot;}]</p>
@@ -1009,7 +1001,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the entity.</p>
+             * <p>The entity ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -1020,12 +1012,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the entity. Valid values:</p>
-             * <ul>
-             * <li>ip</li>
-             * <li>process</li>
-             * <li>file</li>
-             * </ul>
+             * <p>The entity type. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -1044,7 +1031,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The summary information about the failed task.</p>
+             * <p>The failure summary of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>DisposalEntity failed which description is Aegis Quarantine File , return_info failed which description is Check Aegis Process Result , [ERROR DETAIL] *******.php:file not found</p>
@@ -1055,7 +1042,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the task.</p>
+             * <p>The finish time of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-08-10 21:34:07</p>
@@ -1077,7 +1064,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-06 16:37:29</p>
@@ -1088,7 +1075,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy.</p>
+             * <p>The policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -1099,7 +1086,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the event.</p>
+             * <p>The incident name.</p>
              * 
              * <strong>example:</strong>
              * <p>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</p>
@@ -1110,7 +1097,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the event.</p>
+             * <p>The globally unique UUID of the incident.</p>
              * 
              * <strong>example:</strong>
              * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -1121,7 +1108,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+             * <p>The unique identifier name of the playbook.</p>
              * 
              * <strong>example:</strong>
              * <p>WafBlockIP</p>
@@ -1132,12 +1119,12 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the playbook. Valid values:</p>
+             * <p>The playbook type. Valid values:</p>
              * <ul>
-             * <li>system: user-triggered playbook</li>
+             * <li>system: manual handling</li>
              * <li>custom: event-triggered playbook</li>
              * <li>custom_alert: alert-triggered playbook</li>
-             * <li>soar-manual: user-run playbook</li>
+             * <li>soar-manual: manually run playbook</li>
              * <li>soar-mdr: MDR-run playbook</li>
              * </ul>
              * 
@@ -1150,7 +1137,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the playbook.</p>
+             * <p>The playbook UUID.</p>
              * 
              * <strong>example:</strong>
              * <p>system_aliyun_clb_process_book</p>
@@ -1161,7 +1148,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope of the policy.</p>
+             * <p>The disposition scope.</p>
              * 
              * <strong>example:</strong>
              * <p>[{ aliUid: 1766185894104675 }]</p>
@@ -1172,10 +1159,10 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SOAR handling policy.</p>
+             * <p>The SOAR response policy ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>577bbf90-a770-44a7-8154-586aa2d318fa</p>
+             * <p>577bbf90-a770-44a7-8154-586aa2d3****</p>
              */
             public Builder sophonTaskId(String sophonTaskId) {
                 this.sophonTaskId = sophonTaskId;
@@ -1183,13 +1170,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running status of the playbook. Valid values:</p>
-             * <ul>
-             * <li>200: successful</li>
-             * <li>10: deleted</li>
-             * <li>5: failed</li>
-             * <li>0: initial</li>
-             * </ul>
+             * <p>The playbook invocation status. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1200,7 +1181,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba account that is used to configure the policy.</p>
+             * <p>The Alibaba Cloud account ID that configured the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>176555323***</p>
@@ -1211,7 +1192,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters that are used to trigger the playbook. The value is in the JSON format.</p>
+             * <p>The playbook trigger parameters in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -1253,7 +1234,10 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * TaskUrl.
+             * <p>The playbook URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;playbookUuid&quot;:&quot;system_aliyun_aegis_stop_container_book&quot;,&quot;requestUuid&quot;:&quot;e8924356-448b-4301-aee9-*******&quot;}</p>
              */
             public Builder taskUrl(String taskUrl) {
                 this.taskUrl = taskUrl;

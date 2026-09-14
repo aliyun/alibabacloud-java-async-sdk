@@ -282,7 +282,7 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1577808000000</p>
@@ -306,10 +306,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The sort method. Valid values:</p>
+         * <p>The order in which you want to sort the custom rules. Valid values:</p>
          * <ul>
-         * <li>desc: descending order.</li>
-         * <li>asc: ascending order.</li>
+         * <li><p>desc: descending order</p>
+         * </li>
+         * <li><p>asc: ascending order</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,10 +324,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to sort the rules. Valid values:</p>
+         * <p>The field that you use to sort the custom rules. Valid values:</p>
          * <ul>
-         * <li>GmtModified: The rules are sorted based on the modification time.</li>
-         * <li>Id (default): The rules are sorted based on the rule ID.</li>
+         * <li><p>GmtModified: sorts the rules by modification time.</p>
+         * </li>
+         * <li><p>Id: sorts the rules by rule ID. This is the default value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,7 +342,7 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The value can be up to 100.</p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -351,10 +355,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region where the data management center of Threat Analysis is deployed. You must select the region where your assets reside. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Your assets reside in regions in China.</li>
-         * <li><strong>ap-southeast-1</strong>: Your assets reside in regions outside China.</li>
+         * <li><p><strong>cn-hangzhou</strong>: your assets are in the Chinese mainland or Hong Kong (China).</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: your assets are outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -367,7 +373,7 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination account to which you switch the view from the management account.</p>
+         * <p>The user ID that is used to switch the administrator\&quot;s view to the view of a member.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -379,14 +385,16 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type.</p>
          * <ul>
-         * <li>0: view of the current Alibaba Cloud account.</li>
-         * <li>1: view of all accounts for the enterprise.</li>
+         * <li><p>0: the view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: the view of all members in the enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -409,8 +417,10 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>predefine</strong></li>
-         * <li><strong>customize</strong></li>
+         * <li><p><strong>predefine</strong>: predefined</p>
+         * </li>
+         * <li><p><strong>customize</strong>: custom</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -423,7 +433,7 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1577808000000</p>
@@ -437,11 +447,16 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         /**
          * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The rule is in the initial state.</li>
-         * <li><strong>10</strong>: The simulation data is tested.</li>
-         * <li><strong>15</strong>: The business data is being tested.</li>
-         * <li><strong>20</strong>: The business data test is complete.</li>
-         * <li><strong>100</strong>: The rule is in effect.</li>
+         * <li><p><strong>0</strong>: initial</p>
+         * </li>
+         * <li><p><strong>10</strong>: testing with simulated data</p>
+         * </li>
+         * <li><p><strong>15</strong>: testing with business data</p>
+         * </li>
+         * <li><p><strong>20</strong>: testing with business data is complete</p>
+         * </li>
+         * <li><p><strong>100</strong>: published</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -454,11 +469,14 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * <p>The threat level. The value must be a JSON array. Valid values:</p>
+         * <p>The threat level. The value is a JSON array. Valid values:</p>
          * <ul>
-         * <li><strong>serious</strong>: high-risk.</li>
-         * <li><strong>suspicious</strong>: medium-risk.</li>
-         * <li><strong>remind</strong>: low-risk.</li>
+         * <li><p><strong>serious</strong>: high</p>
+         * </li>
+         * <li><p><strong>suspicious</strong>: medium</p>
+         * </li>
+         * <li><p><strong>remind</strong>: low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

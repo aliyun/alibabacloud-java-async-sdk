@@ -67,7 +67,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The return value of the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -222,7 +222,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display details of the Logstore.</p>
+             * <p>The detailed information about the SLS log.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai.siem-project.siem-logstore</p>
@@ -233,7 +233,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the details of added logs are returned. Valid values: true false</p>
+             * <p>Indicates whether the details of the log collection task are returned. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -244,7 +244,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the logs are added to the threat analysis feature. Valid values: true false</p>
+             * <p>Indicates whether the log is collected. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -255,7 +255,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * <p>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</p>
              * 
              * <strong>example:</strong>
              * <p>123XXXXXXXXX</p>
@@ -266,7 +266,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log code.</p>
+             * <p>The code of the log.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_siem_aegis_proc</p>
@@ -277,7 +277,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the cloud service.</p>
+             * <p>The code of the product.</p>
              * 
              * <strong>example:</strong>
              * <p>sas</p>
@@ -288,7 +288,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+             * <p>The ID of the Alibaba Cloud account for which the logs are collected.</p>
              * 
              * <strong>example:</strong>
              * <p>123XXXXXXXX</p>
@@ -299,7 +299,7 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+             * <p>The name of the Alibaba Cloud account for which the logs are collected.</p>
              * 
              * <strong>example:</strong>
              * <p>sas_account_xxx</p>

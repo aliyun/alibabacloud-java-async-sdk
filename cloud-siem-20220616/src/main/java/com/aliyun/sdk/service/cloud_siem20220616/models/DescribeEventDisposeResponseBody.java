@@ -106,7 +106,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,10 +303,12 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The channel of the contact information. Valid values:</p>
+             * <p>The channel to send the notification. Valid values:</p>
              * <ul>
-             * <li>message</li>
-             * <li>mail</li>
+             * <li><p>message: text message</p>
+             * </li>
+             * <li><p>mail: email</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -316,7 +320,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the record was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-06 16:37:29</p>
@@ -327,7 +331,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The time when the record was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-06 16:37:29</p>
@@ -338,7 +342,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the recipient who receives the event handling result.</p>
+             * <p>The record ID of the recipient for the event handling result.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -349,7 +353,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the event.</p>
+             * <p>The globally unique UUID of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -360,7 +364,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message title.</p>
+             * <p>The title of the message.</p>
              * 
              * <strong>example:</strong>
              * <p>siem event dealed message</p>
@@ -382,10 +386,12 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the message is sent. Valid values:</p>
+             * <p>The sending status of the notification. Valid values:</p>
              * <ul>
-             * <li>0: not sent</li>
-             * <li>1: sent</li>
+             * <li><p>0: not sent</p>
+             * </li>
+             * <li><p>1: sent</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -482,7 +488,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array consisting of JSON objects that are configured for event handling.</p>
+             * <p>The JSON object of the event handling configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{ playbookName: &quot;使用安全组封禁入方向IP&quot;, sophonTaskId: &quot;400442a5-4f98-45ed-97db-5ab117eb0b8f&quot;, … }</p>
@@ -493,7 +499,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSON object that is configured for an alert recipient.</p>
+             * <p>The JSON object of the alert recipient configuration.</p>
              */
             public Builder receiverInfo(ReceiverInfo receiverInfo) {
                 this.receiverInfo = receiverInfo;
@@ -501,7 +507,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the event.</p>
+             * <p>The remarks on the event.</p>
              * 
              * <strong>example:</strong>
              * <p>dealed</p>
@@ -514,10 +520,14 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             /**
              * <p>The status of the event. Valid values:</p>
              * <ul>
-             * <li>0: not handled</li>
-             * <li>1: handing</li>
-             * <li>5: handling failed</li>
-             * <li>10: handled</li>
+             * <li><p>0: unhandled</p>
+             * </li>
+             * <li><p>1: handling</p>
+             * </li>
+             * <li><p>5: failed</p>
+             * </li>
+             * <li><p>10: handled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

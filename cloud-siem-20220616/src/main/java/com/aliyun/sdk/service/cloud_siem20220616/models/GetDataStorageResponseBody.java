@@ -67,7 +67,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetDataStorageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81FB0DEA-52C1-55A0-8631-8E1B9A9D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             } 
 
             /**
-             * LogStoreName.
+             * <p>The name of the Logstore that stores normalized data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vulnerability-activity</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -149,7 +155,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreTtl.
+             * <p>The storage duration of normalized data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder logStoreTtl(Integer logStoreTtl) {
                 this.logStoreTtl = logStoreTtl;
@@ -294,7 +303,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             } 
 
             /**
-             * ActivityName.
+             * <p>The log type of the normalized log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API security risk log</p>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -302,7 +314,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category of the normalized log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security Category</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -310,7 +325,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleReferenceCount.
+             * <p>The number of times the normalized dataset is referenced in the threat analysis access center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder detectionRuleReferenceCount(Integer detectionRuleReferenceCount) {
                 this.detectionRuleReferenceCount = detectionRuleReferenceCount;
@@ -318,7 +336,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleReferenceProductIds.
+             * <p>The product IDs in the threat analysis access center.</p>
              */
             public Builder detectionRuleReferenceProductIds(java.util.List<String> detectionRuleReferenceProductIds) {
                 this.detectionRuleReferenceProductIds = detectionRuleReferenceProductIds;
@@ -329,7 +347,7 @@ public class GetDataStorageResponseBody extends TeaModel {
              * <p>JSON Array [&quot;key&quot;:&quot;product_code&quot;, &quot;value&quot;:&quot;ctdr&quot;]</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;SCHEMA&quot;:&quot;AZURE_ACTIVE_DIRECTORY_AUDIT_ACTIVITY&quot;}]</p>
+             * <p>[{\&quot;SCHEMA\&quot;:\&quot;AZURE_ACTIVE_DIRECTORY_AUDIT_ACTIVITY\&quot;}]</p>
              */
             public Builder logSearchConditions(String logSearchConditions) {
                 this.logSearchConditions = logSearchConditions;
@@ -337,7 +355,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The Logstore where threat analysis stores normalized logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>risk-activity</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -345,7 +366,14 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogViewExisted.
+             * <p>Indicates whether the normalized dataset exists. Valid values:</p>
+             * <ul>
+             * <li>true: The dataset exists.</li>
+             * <li>false: The dataset does not exist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logViewExisted(Boolean logViewExisted) {
                 this.logViewExisted = logViewExisted;
@@ -353,7 +381,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogViewName.
+             * <p>The name of the normalized dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>risk_activity</p>
              */
             public Builder logViewName(String logViewName) {
                 this.logViewName = logViewName;
@@ -524,7 +555,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             } 
 
             /**
-             * LogCode.
+             * <p>The log code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-net-block</p>
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -532,7 +566,14 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogDeliveryGroup.
+             * <p>The group to which the log belongs. Valid values:</p>
+             * <ul>
+             * <li>host: Host logs.</li>
+             * <li>security: Security logs.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder logDeliveryGroup(String logDeliveryGroup) {
                 this.logDeliveryGroup = logDeliveryGroup;
@@ -540,7 +581,14 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogDeliveryPermission.
+             * <p>Indicates whether log delivery can be toggled. Log delivery cannot be enabled if the service is not purchased. Valid values:</p>
+             * <ul>
+             * <li>allow: Allowed.</li>
+             * <li>deny: Not allowed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder logDeliveryPermission(String logDeliveryPermission) {
                 this.logDeliveryPermission = logDeliveryPermission;
@@ -548,7 +596,14 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogDeliveryStatus.
+             * <p>The log delivery status. Valid values:</p>
+             * <ul>
+             * <li>enable: Log delivery is enabled.</li>
+             * <li>disable: Log delivery is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder logDeliveryStatus(String logDeliveryStatus) {
                 this.logDeliveryStatus = logDeliveryStatus;
@@ -556,7 +611,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogDeliveryUpdateTime.
+             * <p>The time when the log delivery was last modified. The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16T15:10:29</p>
              */
             public Builder logDeliveryUpdateTime(String logDeliveryUpdateTime) {
                 this.logDeliveryUpdateTime = logDeliveryUpdateTime;
@@ -564,7 +622,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogName.
+             * <p>The log name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Process Snapshot</p>
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -575,7 +636,7 @@ public class GetDataStorageResponseBody extends TeaModel {
              * <p>JSON Array [&quot;key&quot;:&quot;product_code&quot;, &quot;value&quot;:&quot;ctdr&quot;]</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;<strong>topic</strong>&quot;:&quot;sas-net-block&quot;}]</p>
+             * <p>[{\&quot;<strong>topic</strong>\&quot;:\&quot;sas-net-block\&quot;}]</p>
              */
             public Builder logSearchConditions(String logSearchConditions) {
                 this.logSearchConditions = logSearchConditions;
@@ -583,7 +644,14 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreExisted.
+             * <p>Indicates whether the Logstore where the log resides exists. Valid values:</p>
+             * <ul>
+             * <li>true: The Logstore exists.</li>
+             * <li>false: The Logstore does not exist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logStoreExisted(Boolean logStoreExisted) {
                 this.logStoreExisted = logStoreExisted;
@@ -591,7 +659,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The name of the Logstore where the log resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-security-log</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -599,7 +670,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreTtl.
+             * <p>The storage duration of the Logstore where the log resides. Logs are stored for at least 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder logStoreTtl(Integer logStoreTtl) {
                 this.logStoreTtl = logStoreTtl;
@@ -770,7 +844,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             } 
 
             /**
-             * ColdStorageUsedCapacity.
+             * <p>The cold storage capacity used by user logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder coldStorageUsedCapacity(Double coldStorageUsedCapacity) {
                 this.coldStorageUsedCapacity = coldStorageUsedCapacity;
@@ -778,7 +855,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * DataStorageRegionId.
+             * <p>The storage region of user-side logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder dataStorageRegionId(String dataStorageRegionId) {
                 this.dataStorageRegionId = dataStorageRegionId;
@@ -786,7 +866,14 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * DataStorageRegionPermission.
+             * <p>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact the product manager to reset the region. The region can be reset only once. Valid values:</p>
+             * <ul>
+             * <li>allow: The storage region can be modified.</li>
+             * <li>deny: The storage region cannot be modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder dataStorageRegionPermission(String dataStorageRegionPermission) {
                 this.dataStorageRegionPermission = dataStorageRegionPermission;
@@ -794,7 +881,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * DataStorageTotalCapacity.
+             * <p>The storage capacity purchased in the prepaid scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dataStorageTotalCapacity(Long dataStorageTotalCapacity) {
                 this.dataStorageTotalCapacity = dataStorageTotalCapacity;
@@ -802,7 +892,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * DataStorageUsedCapacity.
+             * <p>The storage capacity used in user log management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder dataStorageUsedCapacity(Double dataStorageUsedCapacity) {
                 this.dataStorageUsedCapacity = dataStorageUsedCapacity;
@@ -810,7 +903,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * DataStorageUsedCapacityDetail.
+             * <p>The storage usage details for log management users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;purchasedHotStorageCapacity\&quot;:1000,\&quot;usedHotStorageCapacity\&quot;:4.2,\&quot;usedHotStorageCapacityDetail\&quot;:{\&quot;ap-southeast-1\&quot;:4.2,\&quot;cn-shenzhen\&quot;:0.0,\&quot;cn-shanghai\&quot;:0.0}}</p>
              */
             public Builder dataStorageUsedCapacityDetail(String dataStorageUsedCapacityDetail) {
                 this.dataStorageUsedCapacityDetail = dataStorageUsedCapacityDetail;
@@ -818,7 +914,10 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * LogProject.
+             * <p>The name of the Simple Log Service (SLS) project that stores user logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-cloudsiem-data-171835723111****-cn-shanghai</p>
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -826,7 +925,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationLogStores.
+             * <p>The details of Logstores for normalized data.</p>
              */
             public Builder normalizationLogStores(java.util.List<NormalizationLogStores> normalizationLogStores) {
                 this.normalizationLogStores = normalizationLogStores;
@@ -834,7 +933,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationLogViews.
+             * <p>The details of normalized datasets.</p>
              */
             public Builder normalizationLogViews(java.util.List<NormalizationLogViews> normalizationLogViews) {
                 this.normalizationLogViews = normalizationLogViews;
@@ -842,7 +941,7 @@ public class GetDataStorageResponseBody extends TeaModel {
             }
 
             /**
-             * SasLogStores.
+             * <p>The details of raw log storage for Security Center.</p>
              */
             public Builder sasLogStores(java.util.List<SasLogStores> sasLogStores) {
                 this.sasLogStores = sasLogStores;

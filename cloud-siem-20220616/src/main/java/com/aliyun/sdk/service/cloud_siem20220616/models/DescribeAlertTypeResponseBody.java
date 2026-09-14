@@ -106,7 +106,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The request status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -128,7 +128,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,8 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: successful.</li>
+         * <li>false: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the risk.</p>
+             * <p>The threat type.</p>
              * 
              * <strong>example:</strong>
              * <p>WEBSHELL</p>
@@ -299,7 +299,10 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeCategory.
+             * <p>The threat type category identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identity_access</p>
              */
             public Builder alertTypeCategory(String alertTypeCategory) {
                 this.alertTypeCategory = alertTypeCategory;
@@ -307,7 +310,10 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeCategoryMds.
+             * <p>The threat type category name in the language of the current request. Empty if no translation is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity and Access</p>
              */
             public Builder alertTypeCategoryMds(String alertTypeCategoryMds) {
                 this.alertTypeCategoryMds = alertTypeCategoryMds;
@@ -315,7 +321,10 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeCategoryOrder.
+             * <p>The display order of the threat type category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder alertTypeCategoryOrder(Integer alertTypeCategoryOrder) {
                 this.alertTypeCategoryOrder = alertTypeCategoryOrder;
@@ -323,7 +332,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal code of the risk type.</p>
+             * <p>The Medusa code of the threat type.</p>
              * 
              * <strong>example:</strong>
              * <p>siem_rule_type_process_abnormal_command</p>
@@ -334,7 +343,10 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeNameEn.
+             * <p>The English name of the threat type. Empty if no translation is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder alertTypeNameEn(String alertTypeNameEn) {
                 this.alertTypeNameEn = alertTypeNameEn;
@@ -342,7 +354,10 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeNameZh.
+             * <p>The Chinese name of the threat type. Empty if no translation is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>异常登录</p>
              */
             public Builder alertTypeNameZh(String alertTypeNameZh) {
                 this.alertTypeNameZh = alertTypeNameZh;

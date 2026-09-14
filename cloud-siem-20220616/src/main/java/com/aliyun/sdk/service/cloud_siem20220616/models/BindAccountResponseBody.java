@@ -67,7 +67,7 @@ public class BindAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The detailed information returned by the Threat Analysis service.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,7 @@ public class BindAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the cloud accounts that are added to the threat analysis feature.</p>
+             * <p>The number of account bindings that are added.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -106,7 +106,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -128,7 +128,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,8 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: successful.</li>
+         * <li>false: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             } 
 
             /**
-             * Date.
+             * <p>The date in the YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-06</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -244,7 +247,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * EventNum.
+             * <p>The total number of security events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder eventNum(Long eventNum) {
                 this.eventNum = eventNum;
@@ -252,7 +258,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * UndealEventNum.
+             * <p>The number of unhandled security events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder undealEventNum(Long undealEventNum) {
                 this.undealEventNum = undealEventNum;
@@ -397,7 +406,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             } 
 
             /**
-             * EventDailyNum.
+             * <p>The daily event statistics.</p>
              */
             public Builder eventDailyNum(java.util.List<EventDailyNum> eventDailyNum) {
                 this.eventDailyNum = eventDailyNum;
@@ -427,7 +436,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * InfoLevelEventNum.
+             * <p>The number of informational-level events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder infoLevelEventNum(Long infoLevelEventNum) {
                 this.infoLevelEventNum = infoLevelEventNum;
@@ -457,7 +469,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * SeriousLevelEventNum.
+             * <p>The number of critical-level events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder seriousLevelEventNum(Long seriousLevelEventNum) {
                 this.seriousLevelEventNum = seriousLevelEventNum;

@@ -117,7 +117,7 @@ public class DescribeDisposeStrategyPlaybookRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>The end time of the query, in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,10 +130,10 @@ public class DescribeDisposeStrategyPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</p>
+         * <p>The region where the data management center of threat detection and response is located. Select the management center based on the region of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li>cn-hangzhou: the asset belongs to the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: the asset belongs to a region outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeDisposeStrategyPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The ID of the user to which the administrator switches the view.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -158,10 +158,10 @@ public class DescribeDisposeStrategyPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type. Valid values:</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class DescribeDisposeStrategyPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>The start time of the query, in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

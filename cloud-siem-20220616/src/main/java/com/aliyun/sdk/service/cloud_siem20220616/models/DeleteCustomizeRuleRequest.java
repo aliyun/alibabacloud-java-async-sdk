@@ -101,7 +101,7 @@ public class DeleteCustomizeRuleRequest extends Request {
         } 
 
         /**
-         * <p>The region in which the service is deployed.</p>
+         * <p>The region where the product is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -113,7 +113,7 @@ public class DeleteCustomizeRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The user ID of the member. This parameter is used when an administrator switches to the perspective of a member.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -125,10 +125,12 @@ public class DeleteCustomizeRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The type of the view.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: The view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: The view of all accounts in your enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,7 @@ public class DeleteCustomizeRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The ID of the custom rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>

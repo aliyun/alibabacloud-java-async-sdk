@@ -231,9 +231,12 @@ public class ListAutomateResponseConfigsRequest extends Request {
         /**
          * <p>The type of the handling action. Valid values:</p>
          * <ul>
-         * <li>doPlaybook: runs a playbook.</li>
-         * <li>changeEventStatus: changes the status of an event.</li>
-         * <li>changeThreatLevel: changes the risk level of an event.</li>
+         * <li><p><strong>doPlaybook</strong>: executes a playbook.</p>
+         * </li>
+         * <li><p><strong>changeEventStatus</strong>: changes the status of an event.</p>
+         * </li>
+         * <li><p><strong>changeThreatLevel</strong>: changes the threat level of an event.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,10 +249,12 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The type of the automated response rule. Valid values:</p>
+         * <p>The type of the automated response. Valid values:</p>
          * <ul>
-         * <li>event</li>
-         * <li>alert</li>
+         * <li><p><strong>event</strong></p>
+         * </li>
+         * <li><p><strong>alert</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +267,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number. The value must be 1 or greater.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -287,7 +292,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The number of entries per page. The maximum value is 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +305,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the playbook.</p>
+         * <p>The unique identifier of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>system_aliyun_aegis_kill_quara_book</p>
@@ -312,10 +317,12 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <p>The region of the Data Management center. Select a region based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p><strong>cn-hangzhou</strong>: your assets are in the Chinese mainland or China (Hong Kong).</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: your assets are in a region outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +335,16 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * ResponseRuleType.
+         * <p>The type of the response rule.</p>
+         * <ul>
+         * <li><p>preset: predefined</p>
+         * </li>
+         * <li><p>custom: custom</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder responseRuleType(String responseRuleType) {
             this.putBodyParameter("ResponseRuleType", responseRuleType);
@@ -337,7 +353,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The ID of the member to which the administrator switches.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -349,10 +365,12 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The view type.</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: the view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: the view of all accounts that belong to the enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -379,8 +397,10 @@ public class ListAutomateResponseConfigsRequest extends Request {
         /**
          * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li>0: disabled</li>
-         * <li>100: enabled</li>
+         * <li><p><strong>0</strong>: disabled</p>
+         * </li>
+         * <li><p><strong>100</strong>: enabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

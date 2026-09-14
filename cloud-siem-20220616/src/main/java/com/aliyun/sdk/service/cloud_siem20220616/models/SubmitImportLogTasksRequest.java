@@ -159,14 +159,16 @@ public class SubmitImportLogTasksRequest extends Request {
         } 
 
         /**
-         * <p>The accounts that you want to add. The value is a JSON array. Valid values:</p>
+         * <p>The list of accounts for log ingestion. The value must be a JSON array. Valid values:</p>
          * <ul>
-         * <li><p>AccountId: the IDs of the accounts.</p>
+         * <li><p>AccountId: The ID of the account.</p>
          * </li>
-         * <li><p>Imported: specifies whether to add the accounts. Valid values:</p>
+         * <li><p>Imported: Specifies whether to enable or disable log ingestion for the account. Valid values:</p>
          * <ul>
-         * <li>0: no</li>
-         * <li>1: yes</li>
+         * <li><p>0: Disable ingestion.</p>
+         * </li>
+         * <li><p>1: Enable ingestion.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -181,14 +183,16 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically add the account for which the logging feature is configured. Valid values:</p>
+         * <p>Specifies whether to automatically enable log ingestion for accounts that are configured with the specified log. Valid values:</p>
          * <ul>
-         * <li>1: yes</li>
-         * <li>0: no</li>
+         * <li><p>1: Yes.</p>
+         * </li>
+         * <li><p>0: No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;cloud_siem_qcloud_cfw_alert_log&quot;]</p>
+         * <p>1</p>
          */
         public Builder autoImported(Integer autoImported) {
             this.putBodyParameter("AutoImported", autoImported);
@@ -197,12 +201,7 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The code that is used for multi-cloud environments. Valid values:</p>
-         * <ul>
-         * <li>qcloud: Tencent Cloud</li>
-         * <li>aliyun: Alibaba Cloud</li>
-         * <li>hcloud: Huawei Cloud</li>
-         * </ul>
+         * <p>The code of the cloud service provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +214,7 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The logs that you want to collect. The value is a JSON array.</p>
+         * <p>The list of logs to be ingested. The value must be a JSON array.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cloud_siem_qcloud_cfw_alert_log&quot;]</p>
@@ -227,7 +226,7 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The code of the product.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,10 +239,12 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <p>The region where the data management center for Threat Analysis is located. Select a region based on the location of your assets. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</p>
+         * </li>
+         * <li><p>ap-southeast-1: Your assets are outside China.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +257,7 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
+         * <p>The user ID of the member that the administrator wants to access.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -268,14 +269,16 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
+         * <p>The type of view. Valid values:</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
+         * <li><p>0: The view of the current Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>1: The view of all accounts within the enterprise.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

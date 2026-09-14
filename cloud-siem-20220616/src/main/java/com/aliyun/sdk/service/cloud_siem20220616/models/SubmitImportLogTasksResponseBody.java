@@ -131,7 +131,7 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of log collection tasks that are submitted.</p>
+             * <p>The number of log ingestion tasks that are successfully submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

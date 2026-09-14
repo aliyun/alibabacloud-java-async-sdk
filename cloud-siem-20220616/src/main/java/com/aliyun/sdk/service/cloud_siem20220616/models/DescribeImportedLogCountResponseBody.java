@@ -67,7 +67,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -157,7 +157,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of logs that are added.</p>
+             * <p>The number of ingested logs.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -179,7 +179,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of logs that are not added.</p>
+             * <p>The number of logs that are not ingested.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>

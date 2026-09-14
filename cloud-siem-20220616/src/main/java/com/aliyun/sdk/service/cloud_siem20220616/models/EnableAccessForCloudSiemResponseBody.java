@@ -67,7 +67,7 @@ public class EnableAccessForCloudSiemResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

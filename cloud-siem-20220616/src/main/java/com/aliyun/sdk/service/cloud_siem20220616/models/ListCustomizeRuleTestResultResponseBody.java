@@ -106,7 +106,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,10 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +262,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of entries returned per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -271,7 +273,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -282,7 +284,10 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * VerifiedCount.
+             * <p>The number of alerts that passed the verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder verifiedCount(Long verifiedCount) {
                 this.verifiedCount = verifiedCount;
@@ -534,7 +539,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
              * <p>The description of the alert.</p>
              * 
              * <strong>example:</strong>
-             * <p>The account you logged in this time is not in the legal account category defined by you. Please confirm the legality of the login behavior.</p>
+             * <p>The account you logged in this time is not in the legal account category defined by you. Please confirm the legality of the login behavior。</p>
              */
             public Builder alertDesc(String alertDesc) {
                 this.alertDesc = alertDesc;
@@ -542,7 +547,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert details in the JSON format.</p>
+             * <p>The details of the alert, in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;main_user_id&quot;: &quot;165295629792****&quot;;&quot;log_uuid_count&quot;: &quot;99&quot;;&quot;attack_ip&quot;: &quot;218.92.XX.XX&quot;}</p>
@@ -553,7 +558,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the alert.</p>
+             * <p>The source product of the alert that is associated with the event.</p>
              * 
              * <strong>example:</strong>
              * <p>sas</p>
@@ -564,7 +569,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-module of the source.</p>
+             * <p>The sub-module of the source product of the alert that is associated with the event.</p>
              * 
              * <strong>example:</strong>
              * <p>waf</p>
@@ -575,7 +580,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the ATT&amp;CK attack.</p>
+             * <p>The ATT\&amp;CK attack technique tag.</p>
              * 
              * <strong>example:</strong>
              * <p>T1595.002 Vulnerability Scanning</p>
@@ -586,7 +591,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert, which corresponds to the name of the custom rule.</p>
+             * <p>The name of the alert. This value corresponds to the name of the custom rule.</p>
              * 
              * <strong>example:</strong>
              * <p>waf_scan</p>
@@ -597,7 +602,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threat type, which indicates the alert type.</p>
+             * <p>The threat type. This parameter is equivalent to the alert type.</p>
              * 
              * <strong>example:</strong>
              * <p>WEBSHELL</p>
@@ -610,9 +615,12 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             /**
              * <p>The threat level. Valid values:</p>
              * <ul>
-             * <li>serious: high.</li>
-             * <li>suspicious: medium.</li>
-             * <li>remind: low.</li>
+             * <li><p>serious: high</p>
+             * </li>
+             * <li><p>suspicious: medium</p>
+             * </li>
+             * <li><p>remind: low</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -624,7 +632,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log source of the rule.</p>
+             * <p>The log source that corresponds to the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_siem_aegis_sas_alert</p>
@@ -638,7 +646,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
              * <p>The time when the alert was recorded.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-01-06 16:37:29</p>
+             * <p>2023-01-06 16:37:29</p>
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;
@@ -646,7 +654,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log type of the rule.</p>
+             * <p>The log type that corresponds to the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>ALERT_ACTIVITY</p>
@@ -657,7 +665,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is associated with the alert in SIEM.</p>
+             * <p>The ID of the main Alibaba Cloud account for Security Information and Event Management (SIEM) that is associated with the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>127608589417****</p>
@@ -670,8 +678,10 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             /**
              * <p>The status of the alert data. Valid values:</p>
              * <ul>
-             * <li>test: business test data.</li>
-             * <li>online: online data.</li>
+             * <li><p>test: business test</p>
+             * </li>
+             * <li><p>online: published</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -683,7 +693,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account within which the alert is generated.</p>
+             * <p>The ID of the member account that is associated with the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>176555323***</p>
@@ -705,7 +715,16 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyType.
+             * <p>The result of verifying the alert based on the alert template.</p>
+             * <ul>
+             * <li><p>true: The verification is passed.</p>
+             * </li>
+             * <li><p>false: The verification failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder verifyType(String verifyType) {
                 this.verifyType = verifyType;

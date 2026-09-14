@@ -106,7 +106,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,8 +152,10 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +288,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * CountMap.
+             * <p>The number of alerts for each severity level.</p>
              */
             public Builder countMap(java.util.Map<String, Long> countMap) {
                 this.countMap = countMap;
@@ -327,7 +329,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of connected services.</p>
+             * <p>The number of connected products.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

@@ -67,7 +67,7 @@ public class ListBindAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The result set.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -222,7 +222,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccessKey ID of the cloud account.</p>
+             * <p>The AccessKey ID of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>ABCXXXXXXXX</p>
@@ -244,10 +244,10 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the cloud account.</p>
+             * <p>The name of the account.</p>
              * 
              * <strong>example:</strong>
-             * <p>sas_account_xxx</p>
+             * <p>XXXX Company</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -255,7 +255,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID that is generated when the cloud account is added.</p>
+             * <p>The binding ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123xxxxxxx</p>
@@ -268,9 +268,12 @@ public class ListBindAccountResponseBody extends TeaModel {
             /**
              * <p>The code of the cloud service provider. Valid values:</p>
              * <ul>
-             * <li>qcloud: Tencent Cloud</li>
-             * <li>aliyun: Alibaba Cloud</li>
-             * <li>hcloud: Huawei Cloud</li>
+             * <li><p>qcloud: Tencent Cloud.</p>
+             * </li>
+             * <li><p>aliyun: Alibaba Cloud.</p>
+             * </li>
+             * <li><p>hcloud: Huawei Cloud.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -282,7 +285,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account that is used to add the cloud account.</p>
+             * <p>The user who bound the account.</p>
              * 
              * <strong>example:</strong>
              * <p>123xxxxxxx</p>
@@ -293,7 +296,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of data sources that are added to the threat analysis feature within the cloud account.</p>
+             * <p>The number of data sources that are bound to the account.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -304,7 +307,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The time when the binding was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-10 12:20:35</p>
