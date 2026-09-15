@@ -139,7 +139,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
+         * <p>704A2A61-3681-5568-92F7-2DFCC53F33D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -399,7 +399,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
              * <p>The job instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>11111111</p>
+             * <p>1042499986</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;

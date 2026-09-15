@@ -133,7 +133,7 @@ public class ExecuteWorkflowRequest extends Request {
         } 
 
         /**
-         * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+         * <p>The ID of the application group. You can find this ID on the <strong>Application Management</strong> page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class ExecuteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The dynamic parameter of the workflow instance. The value of the parameter can be up to 1,000 bytes in length.</p>
+         * <p>The dynamic parameters for the workflow instance. The value cannot exceed 1,000 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -158,7 +158,7 @@ public class ExecuteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>The ID of the namespace. You can find this ID on the <strong>Namespace</strong> page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ExecuteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * <p>This parameter is required only for specific third-party integrations.</p>
          * 
          * <strong>example:</strong>
          * <p>schedulerx</p>
@@ -183,7 +183,7 @@ public class ExecuteWorkflowRequest extends Request {
         }
 
         /**
-         * <p>The region information.</p>
+         * <p>The ID of the region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

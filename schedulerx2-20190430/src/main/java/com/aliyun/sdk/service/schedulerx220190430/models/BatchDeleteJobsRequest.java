@@ -119,7 +119,7 @@ public class BatchDeleteJobsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+         * <p>The ID of the Application. You can find this ID on the <strong>Application Management</strong> page in the Console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * <p>The job IDs. Separate multiple job IDs with commas (,).</p>
+         * <p>The IDs of the Jobs to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+         * <p>The ID of the Namespace that contains the Jobs. You can find this ID on the <strong>Namespace</strong> page in the Console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * <p>This parameter is required only for specific third-party integrations.</p>
          * 
          * <strong>example:</strong>
          * <p>Schedulerx</p>
@@ -170,7 +170,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the job belongs.</p>
+         * <p>The Region where the Jobs are located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

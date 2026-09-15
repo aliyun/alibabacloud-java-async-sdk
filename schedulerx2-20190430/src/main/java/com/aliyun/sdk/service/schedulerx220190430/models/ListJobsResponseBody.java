@@ -106,7 +106,7 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The request status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the jobs.</p>
+         * <p>The job list information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message that is returned if an error occurs.</p>
+         * <p>The error message. This parameter is returned only when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace can not find namespace: 1a72ecb1-b4cc-400a-a71b-20cdec9b****, namespaceSource:null</p>
@@ -136,7 +136,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB58B</p>
@@ -147,10 +147,12 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The call is successful.</li>
-         * <li><strong>false</strong>: The call fails.</li>
+         * <li><p><strong>true</strong>: Successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,7 +281,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile number of the user.</p>
+             * <p>The mobile phone number of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>1381111****</p>
@@ -401,10 +403,12 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the feature of generating an alert upon a failure is enabled. Valid values:</p>
+             * <p>Indicates whether the failure alert is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The feature is enabled.</li>
-             * <li><strong>false</strong>: The feature is disabled.</li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -416,7 +420,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the feature of generating an alert when no machine is available for running the job is enabled.</p>
+             * <p>Indicates whether the no-available-machine alert is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -427,7 +431,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method that is used to send an alert notification. Only Short Message Service (SMS) is supported.</p>
+             * <p>The alert notification method. Currently, only sms is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>sms</p>
@@ -449,10 +453,12 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the feature of generating an alert upon a timeout is enabled. Valid values:</p>
+             * <p>Indicates whether the timeout alert is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The feature is enabled.</li>
-             * <li><strong>false</strong>: The feature is disabled.</li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -464,10 +470,12 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the feature of stopping job triggering upon a timeout is enabled. By default, the feature is disabled.</p>
+             * <p>Specifies whether to terminate the current trigger upon timeout. This feature is disabled by default. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The feature is enabled.</li>
-             * <li><strong>false</strong>: The feature is disabled.</li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -546,7 +554,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the alerting feature and the alert threshold.</p>
+             * <p>The alert switch and threshold configurations.</p>
              */
             public Builder monitorConfig(MonitorConfig monitorConfig) {
                 this.monitorConfig = monitorConfig;
@@ -665,7 +673,7 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of threads that are triggered by a standalone job at a time. Default value: 5.</p>
+             * <p>The number of threads for a single trigger on a single machine. Default value: 5.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -676,7 +684,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of task distribution threads. Default value: 5.</p>
+             * <p>The number of subtask dispatch threads. Default value: 5.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -687,7 +695,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tasks that are pulled by a parallel job at a time. Default value: 100.</p>
+             * <p>The number of subtasks pulled per request for parallel jobs. Default value: 100.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -698,7 +706,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of task queues that can be cached. Default value: 10000.</p>
+             * <p>The upper limit of the subtask queue cache. Default value: 10000.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -709,7 +717,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval at which the system retries to run the task after a task failure.</p>
+             * <p>The retry interval for failed subtasks.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -720,7 +728,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of retries after a task failure.</p>
+             * <p>The maximum number of retries for failed subtasks.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -816,10 +824,10 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>If the TimeType parameter is set to cron, you can specify custom calendar days.</p>
+             * <p>The custom calendar that can be specified for the cron type.</p>
              * 
              * <strong>example:</strong>
-             * <p>Business days</p>
+             * <p>workday</p>
              */
             public Builder calendar(String calendar) {
                 this.calendar = calendar;
@@ -827,7 +835,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time offset if the TimeType parameter is set to cron. Unit: seconds.</p>
+             * <p>The time offset that can be specified for the cron type. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -838,12 +846,16 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time expression. Valid values:</p>
+             * <p>The time expression. The following time expression types are supported:</p>
              * <ul>
-             * <li><strong>api</strong>: indicates that no time expression is used to specify the time when to schedule the job.</li>
-             * <li><strong>fix_rate</strong>: indicates that the job is triggered at a fixed frequency. For example, a value of 30 indicates that the job is triggered every 30 seconds.</li>
-             * <li><strong>cron</strong>: indicates that a standard CRON expression is used to specify the time when to schedule the job.</li>
-             * <li><strong>second_delay</strong>: indicates that the job is triggered after a fixed delay. Valid values: 1 to 60. Unit: seconds.</li>
+             * <li><p><strong>api</strong>: No time expression.</p>
+             * </li>
+             * <li><p><strong>fix_rate</strong>: A fixed frequency value. For example, 30 indicates that the job is triggered every 30 seconds.</p>
+             * </li>
+             * <li><p><strong>cron</strong>: A standard cron expression.</p>
+             * </li>
+             * <li><p><strong>second_delay</strong>: A fixed delay in seconds before each execution (1s to 60s).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -855,12 +867,16 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method that is used to specify the time when to schedule the job. Valid values:</p>
+             * <p>The time configuration type. The following time types are supported:</p>
              * <ul>
-             * <li><strong>1</strong>: cron</li>
-             * <li><strong>3</strong>: fix_rate</li>
-             * <li><strong>4</strong>: second_delay</li>
-             * <li><strong>100</strong>: api</li>
+             * <li><p><strong>1</strong>: cron</p>
+             * </li>
+             * <li><p><strong>3</strong>: fix_rate</p>
+             * </li>
+             * <li><p><strong>4</strong>: second_delay</p>
+             * </li>
+             * <li><p><strong>100</strong>: api</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -896,6 +912,9 @@ public class ListJobsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("ExecuteMode")
         private String executeMode;
@@ -944,6 +963,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.className = builder.className;
             this.content = builder.content;
             this.description = builder.description;
+            this.endTime = builder.endTime;
             this.executeMode = builder.executeMode;
             this.jarUrl = builder.jarUrl;
             this.jobId = builder.jobId;
@@ -994,6 +1014,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         /**
@@ -1099,6 +1126,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String className; 
             private String content; 
             private String description; 
+            private Long endTime; 
             private String executeMode; 
             private String jarUrl; 
             private Long jobId; 
@@ -1122,6 +1150,7 @@ public class ListJobsResponseBody extends TeaModel {
                 this.className = model.className;
                 this.content = model.content;
                 this.description = model.description;
+                this.endTime = model.endTime;
                 this.executeMode = model.executeMode;
                 this.jarUrl = model.jarUrl;
                 this.jobId = model.jobId;
@@ -1139,7 +1168,7 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The interval at which the system retries to run the job after a job failure. Unit: seconds. Default value: 30.</p>
+             * <p>The error retry interval. Unit: seconds. Default value: 30.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1150,7 +1179,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full path of the job interface class. This parameter is returned only for a Java job.</p>
+             * <p>The full path of the job interface class. This field is returned only when the job is of the Java type.</p>
              * 
              * <strong>example:</strong>
              * <p>com.alibaba.schedulerx.test.helloworld</p>
@@ -1161,10 +1190,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The script of the job. This parameter is returned only for a Python, Shell, or Go job.</p>
+             * <p>The script code content for Python, Shell, or Go job types.</p>
              * 
              * <strong>example:</strong>
-             * <p>echo &quot;hello&quot;</p>
+             * <p>echo \&quot;hello\&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1172,7 +1201,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the job.</p>
+             * <p>The job description.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -1183,14 +1212,31 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution mode of the job. Valid values:</p>
+             * <p>The job expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1776132529000</p>
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * <p>The job execution mode. Valid values:</p>
              * <ul>
-             * <li><strong>standalone</strong>: The job runs in standalone mode.</li>
-             * <li><strong>broadcast</strong>: The job runs in broadcast mode.</li>
-             * <li><strong>parallel</strong>: The job runs in parallel computing mode.</li>
-             * <li><strong>grid</strong>: The job runs in memory grid mode.</li>
-             * <li><strong>batch</strong>: The job runs in grid computing mode.</li>
-             * <li><strong>shard</strong>: The job runs in multipart mode.</li>
+             * <li><p><strong>standalone</strong>: standalone</p>
+             * </li>
+             * <li><p><strong>broadcast</strong>: broadcast</p>
+             * </li>
+             * <li><p><strong>parallel</strong>: parallel computing</p>
+             * </li>
+             * <li><p><strong>grid</strong>: memory grid</p>
+             * </li>
+             * <li><p><strong>batch</strong>: grid computing</p>
+             * </li>
+             * <li><p><strong>shard</strong>: shard</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1202,7 +1248,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full path to which a JAR package is uploaded in Object Storage Service (OSS).</p>
+             * <p>The full path of the JAR package in OSS.</p>
              * 
              * <strong>example:</strong>
              * <p>https:doc***.oss-cn-hangzhou.aliyuncs.com/sc-****-D-0.0.2-SNAPSHOT.jar</p>
@@ -1213,7 +1259,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the job.</p>
+             * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>99341</p>
@@ -1224,7 +1270,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monitoring information of the job.</p>
+             * <p>The job monitoring information.</p>
              */
             public Builder jobMonitorInfo(JobMonitorInfo jobMonitorInfo) {
                 this.jobMonitorInfo = jobMonitorInfo;
@@ -1232,7 +1278,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the job.</p>
+             * <p>The job type.</p>
              * 
              * <strong>example:</strong>
              * <p>java</p>
@@ -1243,7 +1289,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced configurations of the job. The parameters are returned only if the value of the ExecuteMode parameter is parallel, grid, or batch.</p>
+             * <p>The advanced configurations. This parameter is applicable only to parallel computing, memory grid, and grid computing.</p>
              */
             public Builder mapTaskXAttrs(MapTaskXAttrs mapTaskXAttrs) {
                 this.mapTaskXAttrs = mapTaskXAttrs;
@@ -1251,7 +1297,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of retries after a job failure. This parameter is specified based on your business requirements. Default value: 0.</p>
+             * <p>The maximum number of error retries. Set this parameter based on your business requirements. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1262,7 +1308,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of instances that can concurrently run for the job. Default value: 1. A value of 1 indicates that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the instance is reached.</p>
+             * <p>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is skipped even if the scheduled time has arrived.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1273,7 +1319,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job.</p>
+             * <p>The job name.</p>
              * 
              * <strong>example:</strong>
              * <p>helloworld</p>
@@ -1284,7 +1330,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined parameters. These parameters can be obtained when the job is running.</p>
+             * <p>The custom parameters that can be retrieved at runtime.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1295,7 +1341,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start timestamp in milliseconds. A value of -1 indicates immediate start.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1789454134000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -1303,10 +1352,12 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the job is enabled. Valid values:</p>
+             * <p>The job status. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: The job is enabled and can be triggered.</li>
-             * <li><strong>0</strong>: The job is disabled and cannot be triggered.</li>
+             * <li><p><strong>1</strong>: Enabled. The job can be triggered normally.</p>
+             * </li>
+             * <li><p><strong>0</strong>: Disabled. The job is not triggered.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1318,7 +1369,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time configurations.</p>
+             * <p>The time configuration information.</p>
              */
             public Builder timeConfig(TimeConfig timeConfig) {
                 this.timeConfig = timeConfig;
@@ -1326,7 +1377,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended fields.</p>
+             * <p>The extended fields of the job.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;pageSize&quot;:5,&quot;queueSize&quot;:10,&quot;consumerSize&quot;:5,&quot;dispatcherSize&quot;:5,&quot;taskMaxAttempt&quot;:0,&quot;taskAttemptInterval&quot;:0,&quot;globalConsumerSize&quot;:1000,&quot;taskDispatchMode&quot;:&quot;push&quot;}</p>
@@ -1422,7 +1473,7 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The jobs and their details.</p>
+             * <p>The job list and job details.</p>
              */
             public Builder jobs(java.util.List<Jobs> jobs) {
                 this.jobs = jobs;
@@ -1430,7 +1481,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1438,10 +1492,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tasks that are pulled by a parallel job at a time. Default value: 100.</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
-             * <p>100</p>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1449,7 +1503,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>299</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -212,7 +212,7 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * EnableLog.
+         * <p>Enable logging</p>
          */
         public Builder enableLog(Boolean enableLog) {
             this.putQueryParameter("EnableLog", enableLog);
@@ -265,7 +265,10 @@ public class UpdateAppGroupRequest extends Request {
          * <p>The configuration of alert contacts. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
+         * <p>[
+         *     {&quot;name&quot;: &quot;Alice Johnson&quot;},
+         *     {&quot;name&quot;: &quot;Lee Smith&quot;}
+         * ]</p>
          */
         public Builder monitorContactsJson(String monitorContactsJson) {
             this.putQueryParameter("MonitorContactsJson", monitorContactsJson);
@@ -287,7 +290,10 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * NotificationPolicyName.
+         * <p>Notification policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-workday-notification</p>
          */
         public Builder notificationPolicyName(String notificationPolicyName) {
             this.putQueryParameter("NotificationPolicyName", notificationPolicyName);

@@ -54,6 +54,10 @@ public class UpdateJobRequest extends Request {
     private Integer dispatcherSize;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private Long endTime;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExecuteMode")
     private String executeMode;
 
@@ -190,6 +194,7 @@ public class UpdateJobRequest extends Request {
         this.dataOffset = builder.dataOffset;
         this.description = builder.description;
         this.dispatcherSize = builder.dispatcherSize;
+        this.endTime = builder.endTime;
         this.executeMode = builder.executeMode;
         this.failEnable = builder.failEnable;
         this.failTimes = builder.failTimes;
@@ -296,6 +301,13 @@ public class UpdateJobRequest extends Request {
      */
     public Integer getDispatcherSize() {
         return this.dispatcherSize;
+    }
+
+    /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -518,6 +530,7 @@ public class UpdateJobRequest extends Request {
         private Integer dataOffset; 
         private String description; 
         private Integer dispatcherSize; 
+        private Long endTime; 
         private String executeMode; 
         private Boolean failEnable; 
         private Integer failTimes; 
@@ -564,6 +577,7 @@ public class UpdateJobRequest extends Request {
             this.dataOffset = request.dataOffset;
             this.description = request.description;
             this.dispatcherSize = request.dispatcherSize;
+            this.endTime = request.endTime;
             this.executeMode = request.executeMode;
             this.failEnable = request.failEnable;
             this.failTimes = request.failTimes;
@@ -597,7 +611,7 @@ public class UpdateJobRequest extends Request {
         } 
 
         /**
-         * <p>The interval of retries after a job failure. Default value: 30. Unit: seconds.</p>
+         * <p>The retry interval on errors. Unit: seconds. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -609,10 +623,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>If you set TimeType to 1 (cron), you can specify calendar days.</p>
+         * <p>The custom calendar that can be optionally specified for the cron type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Business days</p>
+         * <p>workday</p>
          */
         public Builder calendar(String calendar) {
             this.putBodyParameter("Calendar", calendar);
@@ -621,8 +635,8 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The full path of the job interface class.</p>
-         * <p>This field is available only when you set the job type to java. In this case, you must enter a full path.</p>
+         * <p>The full path of the node interface class.</p>
+         * <p>This field is required and must contain the full path only for Java node types.</p>
          * 
          * <strong>example:</strong>
          * <p>com.alibaba.test.helloworld</p>
@@ -634,7 +648,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The number of threads that are triggered by a single worker at a time. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * <p>Advanced configuration for parallel grid tasks. The number of threads for a single trigger on a single machine. Default value: 5.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -646,7 +660,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The information about the alert contact.</p>
+         * <p>The contact information for the node.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is deprecated.</notice></p>
+         * </blockquote>
          */
         public Builder contactInfo(java.util.List<ContactInfo> contactInfo) {
             this.putBodyParameter("ContactInfo", contactInfo);
@@ -655,10 +672,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The script content. This parameter is required when you set the job type to python, shell, go, or k8s.</p>
+         * <ul>
+         * <li>If the node type is python, shell, or k8s, specify the corresponding script content.</li>
+         * <li>If the node type is golang, the content format example is {&quot;jobName&quot;:&quot;HelloWorld&quot;}.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>echo &quot;hello&quot;</p>
+         * <p>echo \&quot;hello\&quot;</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -667,7 +687,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>If you set TimeType to 1 (cron), you can specify a time offset. Unit: seconds.</p>
+         * <p>The time offset that can be optionally specified for the cron type. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2400</p>
@@ -679,7 +699,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The job description.</p>
+         * <p>The node description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -691,7 +711,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The number of task distribution threads. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * <p>Advanced configuration for parallel grid tasks. The number of subtask dispatch threads. Default value: 5.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -703,13 +723,22 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The execution mode of the job. Valid values:</p>
+         * EndTime.
+         */
+        public Builder endTime(Long endTime) {
+            this.putBodyParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>The node execution mode. The following execution modes are supported:</p>
          * <ul>
-         * <li><strong>Stand-alone operation</strong>: standalone</li>
-         * <li><strong>Broadcast run</strong>: broadcatst</li>
+         * <li><strong>Standalone</strong>: standalone</li>
+         * <li><strong>Broadcast</strong>: broadcatst</li>
          * <li><strong>Visual MapReduce</strong>: parallel</li>
          * <li><strong>MapReduce</strong>: batch</li>
-         * <li><strong>Shard run</strong>: shard</li>
+         * <li><strong>Sharding</strong>: shard</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -722,10 +751,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to turn on Failure alarm. If the switch is turned on, an alert will be generated upon a failure. Valid values:</p>
+         * <p>Specifies whether to enable the failure alert. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables the failure alert.</li>
+         * <li><strong>false</strong>: disables the failure alert.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -738,7 +767,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The number of consecutive failures. An alert will be received if the number of consecutive failures reaches the value of this parameter.</p>
+         * <p>The number of consecutive failures before an alert is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -750,7 +779,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+         * <p>The application ID. You can obtain the application ID on the Application Management page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -763,7 +792,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+         * <p>The node ID. You can obtain the node ID on the Task Management page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -776,7 +805,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of retries after a job failure. This parameter is specified based on your business requirements.</p>
+         * <p>The maximum number of retries on errors. Set this parameter based on your business requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -788,7 +817,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of concurrent instances. Default value: 1. The default value indicates that only one instance is allowed to run at a time. When an instance is running, another instance is not triggered even if the scheduled time for running the instance is reached.</p>
+         * <p>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is skipped even if the scheduled time has arrived.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -800,10 +829,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to turn on No machine alarm available. If the switch is turned on, an alert will be generated when no machine is available for running the job. Valid values:</p>
+         * <p>Specifies whether to enable the no-available-machine alert. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables the no-available-machine alert.</li>
+         * <li><strong>false</strong>: disables the no-available-machine alert.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -816,7 +845,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The job name.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>helloword</p>
@@ -828,7 +857,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -841,7 +870,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The namespace source. This parameter is required only for a special third party.</p>
+         * <p>This parameter is required only for special third-party users.</p>
          * 
          * <strong>example:</strong>
          * <p>schedulerx</p>
@@ -853,7 +882,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The number of tasks that can be pulled at a time. Default value: 100. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * <p>Advanced configuration for parallel grid tasks. The number of subtasks pulled per request. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -865,7 +894,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The user-defined parameters that you can obtain when the job is running.</p>
+         * <p>The user-defined parameters that can be obtained at runtime.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -877,7 +906,16 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The node priority. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: low</li>
+         * <li><strong>5</strong>: medium</li>
+         * <li><strong>10</strong>: high</li>
+         * <li><strong>15</strong>: very high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -886,7 +924,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of tasks that can be queued. Default value: 10000. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * <p>Advanced configuration for parallel grid tasks. The maximum cache size of the subtask queue. Default value: 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -911,7 +949,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to send alerts. Only Short Message Service (SMS) is supported.</p>
+         * <p>The alert notification method. Currently, only sms is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>sms</p>
@@ -923,7 +961,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start timestamp in milliseconds. The value must be greater than the current time. A value of -1 indicates immediate start.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1789454134000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -932,7 +973,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to turn on Successful notice. If the switch is turned on, a notice will be sent when a job succeeds.</p>
+         * <p>Specifies whether to enable the success notification.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -944,7 +985,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The interval of retries after a task failure. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * <p>Advanced configuration for parallel grid tasks. The retry interval for failed subtasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -956,7 +997,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The job mode. Valid values: push and pull. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * <p>Advanced configuration for parallel grid tasks. Specifies the push model or pull model.</p>
          * 
          * <strong>example:</strong>
          * <p>push</p>
@@ -968,7 +1009,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The number of retries after a task failure. This parameter is an advanced configuration item of the MapReduce job.</p>
+         * <p>Advanced configuration for parallel grid tasks. The number of retries for failed subtasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -980,7 +1021,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>Custom task template for the k8s task type.</p>
+         * <p>The custom task template for k8s node types.</p>
          * 
          * <strong>example:</strong>
          * <p>apiVersion: v1
@@ -1019,12 +1060,12 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The time expression. Specify the time expression based on the value of TimeType:</p>
+         * <p>The time expression. Set the time expression based on the selected time type.</p>
          * <ul>
-         * <li>If you set TimeType to <strong>1</strong> (cron), specify this parameter to a standard CRON expression.</li>
-         * <li>If you set TimeType to <strong>100</strong> (api), no time expression is required.</li>
-         * <li>If you set TimeType to <strong>3</strong> (fixed_rate), specify this parameter to a fixed frequency in seconds. For example, if you set this parameter to 30, the system triggers a job every 30 seconds.</li>
-         * <li>If you set TimeType to <strong>4</strong> (second_delay), specify this parameter to a fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</li>
+         * <li><strong>cron</strong>: specify a standard cron expression, which supports online verification.</li>
+         * <li><strong>api</strong>: no time expression is required.</li>
+         * <li><strong>fixed_rate</strong>: specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
+         * <li><strong>second_delay</strong>: specify a fixed delay in seconds before each execution (1s to 60s).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1037,12 +1078,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>The time type. Valid values:</p>
+         * <p>The time configuration type. The following configuration types are supported:</p>
          * <ul>
-         * <li><strong>1</strong>: cron</li>
-         * <li><strong>3</strong>: fix_rate</li>
-         * <li><strong>4</strong>: second_delay</li>
-         * <li><strong>100</strong>: api</li>
+         * <li><strong>cron</strong>: 1</li>
+         * <li><strong>fix_rate</strong>: 3</li>
+         * <li><strong>second_delay</strong>: 4</li>
+         * <li><strong>one_time</strong>: 5</li>
+         * <li><strong>api</strong>: 100</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1067,10 +1109,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to turn on Timeout alarm. If the switch is turned on, an alert will be generated upon a timeout. Valid values:</p>
+         * <p>Specifies whether to enable the timeout alert. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables the timeout alert.</li>
+         * <li><strong>false</strong>: disables the timeout alert.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1083,10 +1125,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to turn on Timeout termination. If the switch is turned on, the job will be terminated upon a timeout. Valid values:</p>
+         * <p>Specifies whether to enable the timeout termination for the current trigger. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables the timeout termination.</li>
+         * <li><strong>false</strong>: disables the timeout termination.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1099,7 +1141,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>Time zone.</p>
+         * <p>The time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
@@ -1111,7 +1153,9 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * <p>If you set JobType to k8s, this parameter is required. xxljob task: {&quot;resource&quot;:&quot;job&quot;} shell task: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
+         * <p>The extended attributes. This parameter is required for k8s node types.
+         * Job task: {&quot;resource&quot;:&quot;job&quot;}
+         * Shell task: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;resource&quot;:&quot;shell&quot;,&quot;fileFormat&quot;:&quot;unix&quot;,&quot;templateType&quot;:&quot;customTemplate&quot;}</p>
@@ -1208,7 +1252,7 @@ public class UpdateJobRequest extends Request {
             } 
 
             /**
-             * <p>The webhook URL of the DingTalk chatbot.<a href="https://open.dingtalk.com/document/org/application-types"></a></p>
+             * <p>The webhook URL of the DingTalk chatbot in the DingTalk group for alert contacts. References: <a href="https://open.dingtalk.com/document/org/application-types">DingTalk development documentation</a>.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**********</p>
@@ -1219,7 +1263,7 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * <p>The email address of the alert contact.</p>
+             * <p>The email address of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>test***@***.com</p>
@@ -1230,7 +1274,7 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * <p>The name of the alert contact.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>userA</p>
@@ -1241,7 +1285,7 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * <p>The mobile phone number of the alert contact.</p>
+             * <p>The mobile phone number of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>1381111****</p>

@@ -641,7 +641,7 @@ public class ReadSchedulerxDesignateDetailResponseBody extends TeaModel {
              * <p>The used disk space in MB.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.14865875</p>
+             * <p>148</p>
              */
             public Builder diskUsed(Integer diskUsed) {
                 this.diskUsed = diskUsed;

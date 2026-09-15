@@ -21,7 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>Before you call this API, add the following dependency to your POM file:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -42,7 +42,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>To call this API, add the following dependency to your POM File:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -179,6 +179,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableWorkflowResponse> disableWorkflow(DisableWorkflowRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>任务创建完成以后默认启用，所以该功能是在停用任务后使用。</p>
+     * 
      * @param request the request parameters of EnableJob  EnableJobRequest
      * @return EnableJobResponse
      */
@@ -269,7 +272,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>Before you call this operation, add the following dependency to your POM file:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -290,12 +293,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
-     *     <dependency>
-     *           <groupId>com.aliyun</groupId>
-     *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *           <version>1.0.5</version>
-     *     </dependency></p>
+     * <p>Before calling this operation, add the following dependency to the POM file:</p>
+     * <pre><code>&lt;dependency&gt;
+     *       &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *       &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *       &lt;version&gt;1.0.5&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
      * 
      * @param request the request parameters of ListJobs  ListJobsRequest
      * @return ListJobsResponse

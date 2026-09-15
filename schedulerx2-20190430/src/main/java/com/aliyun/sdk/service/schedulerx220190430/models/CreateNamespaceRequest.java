@@ -103,7 +103,7 @@ public class CreateNamespaceRequest extends Request {
         } 
 
         /**
-         * <p>The description of the namespace.</p>
+         * <p>The namespace description.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -115,7 +115,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. For example, <code>cn-hangzhou</code> specifies the China (Hangzhou) region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier (UID) of the namespace. We recommend that you use the universally unique identifier (UUID) to generate the UID.</p>
+         * <p>The namespace UID. This value must be globally unique. We recommend that you use a UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>

@@ -244,7 +244,7 @@ public class CreateRouteStrategyRequest extends Request {
          * <p>The details of the routing policy. The value is a JSON string. For more information about this parameter, see <strong>the additional information about request parameters</strong> below this table.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;percentage&quot;:20,&quot;target&quot;:&quot;[&quot;version1&quot;]&quot;,&quot;targetType&quot;:&quot;label&quot;}]</p>
+         * <p>[{&quot;percentage&quot;:20,&quot;target&quot;:&quot;[\&quot;version1\&quot;]&quot;,&quot;targetType&quot;:&quot;label&quot;}]</p>
          */
         public Builder strategyContent(String strategyContent) {
             this.putQueryParameter("StrategyContent", strategyContent);

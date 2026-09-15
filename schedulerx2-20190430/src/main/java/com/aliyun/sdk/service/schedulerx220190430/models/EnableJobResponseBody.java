@@ -118,7 +118,7 @@ public class EnableJobResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</p>
+         * <p>71BCC0E3-64B2-4B63-A870-AFB64EBC***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

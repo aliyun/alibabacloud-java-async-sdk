@@ -93,7 +93,7 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>message</p>
@@ -115,7 +115,7 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The unique Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</p>
@@ -126,10 +126,12 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether multiple jobs were deleted at a time. Valid values:</p>
+         * <p>Indicates if the operation succeeded. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Multiple jobs were deleted at a time.</li>
-         * <li><strong>false</strong>: Multiple jobs were not deleted at a time.</li>
+         * <li><p><strong>true</strong>: The operation succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

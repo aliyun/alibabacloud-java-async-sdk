@@ -134,7 +134,7 @@ public class RetryJobInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+         * <p>The application group ID. You can obtain the application group ID on the Application Management page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * <p>The job instance ID.</p>
+         * <p>The node instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class RetryJobInstanceRequest extends Request {
         }
 
         /**
-         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * <p>This parameter is required only for special third-party users.</p>
          * 
          * <strong>example:</strong>
          * <p>schedulerx</p>

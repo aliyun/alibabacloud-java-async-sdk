@@ -106,7 +106,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message that was returned only if the corresponding error occurred.</p>
+         * <p>The error message. This parameter is returned only if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>disable failed jobs=[99341]</p>
@@ -128,7 +128,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The available regions.</p>
+         * <p>A list of available regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -136,7 +136,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
@@ -147,10 +147,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request succeeded. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,10 +235,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the region, which varies based on the current language.</p>
+             * <p>The display name of the region. This value varies based on the language specified in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>China (Hangzhou)</p>
+             * <p>Hangzhou</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -244,7 +246,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the region.</p>
+             * <p>The service endpoint for the region.</p>
              * 
              * <strong>example:</strong>
              * <p>schedulerx.cn-hangzhou.aliyuncs.com</p>
@@ -255,7 +257,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

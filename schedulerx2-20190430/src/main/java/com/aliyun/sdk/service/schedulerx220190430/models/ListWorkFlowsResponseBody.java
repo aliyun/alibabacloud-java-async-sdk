@@ -391,7 +391,7 @@ public class ListWorkFlowsResponseBody extends TeaModel {
              * <p>The workflow name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test3</p>
+             * <p>Test3</p>
              */
             public Builder name(String name) {
                 this.name = name;

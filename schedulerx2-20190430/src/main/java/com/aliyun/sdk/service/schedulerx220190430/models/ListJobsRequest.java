@@ -160,7 +160,7 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+         * <p>The application ID. You can obtain the ID on the <strong>Application Management</strong> page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>helloword</p>
@@ -185,7 +185,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+         * <p>The namespace. You can obtain the namespace on the <strong>Namespace</strong> page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * <p>Required only for special third-party users.</p>
          * 
          * <strong>example:</strong>
          * <p>schedulerx</p>
@@ -210,7 +210,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -219,7 +222,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +234,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,10 +247,12 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the job. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disables the job.</li>
-         * <li><strong>1</strong>: enables the job.</li>
+         * <li><p><strong>0</strong>: disabled</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

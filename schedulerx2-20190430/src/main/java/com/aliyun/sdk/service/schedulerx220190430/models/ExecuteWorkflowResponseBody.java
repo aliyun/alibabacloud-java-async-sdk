@@ -106,7 +106,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If the request is successful, the ID of the workflow instance is returned.</p>
+         * <p>The data returned for a successful request. It contains the workflow instance ID.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message that is returned only if the corresponding error occurs.</p>
+         * <p>The error message. This parameter is returned only if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Cannot find product according to your domain.</p>
@@ -136,7 +136,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
@@ -203,7 +203,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The workflow instance ID.</p>
+             * <p>The ID of the workflow instance.</p>
              * 
              * <strong>example:</strong>
              * <p>111111</p>

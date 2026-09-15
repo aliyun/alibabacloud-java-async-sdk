@@ -93,7 +93,7 @@ public class UpdateWorkflowDagResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The Return Code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpdateWorkflowDagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message.</p>
+         * <p>The Error Message returned on failure.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +112,7 @@ public class UpdateWorkflowDagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
@@ -123,10 +123,12 @@ public class UpdateWorkflowDagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The API call succeeded.</p>
+         * </li>
+         * <li><p>false: The API call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

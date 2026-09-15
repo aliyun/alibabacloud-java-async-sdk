@@ -106,7 +106,7 @@ public class UpdateNamespaceRequest extends Request {
          * <p>The description of the namespace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Namespace reserved for testing</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,7 +131,7 @@ public class UpdateNamespaceRequest extends Request {
          * <p>The name of the namespace.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Test Namespace</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

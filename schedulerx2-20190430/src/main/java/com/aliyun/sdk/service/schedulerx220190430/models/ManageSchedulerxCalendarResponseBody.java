@@ -128,7 +128,7 @@ public class ManageSchedulerxCalendarResponseBody extends TeaModel {
          * <p>Additional information. Returned only if an error occurs.</p>
          * 
          * <strong>example:</strong>
-         * <p>calendar &quot;2025workday&quot; does not exist in year 2025</p>
+         * <p>calendar \&quot;2025workday\&quot; does not exist in year 2025</p>
          */
         public Builder message(String message) {
             this.message = message;

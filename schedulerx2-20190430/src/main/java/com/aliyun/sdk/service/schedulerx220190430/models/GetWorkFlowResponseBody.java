@@ -106,7 +106,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error codes</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data of the workflow.</p>
+         * <p>The workflow data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>workflow is not existed</p>
@@ -136,7 +136,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>45678xxx</p>
@@ -147,7 +147,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the API call.</p>
+         * <p>Indicates whether the request succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -318,7 +318,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hxm.test</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -326,7 +329,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrency.
+             * <p>The maximum number of concurrent instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxConcurrency(String maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -334,7 +340,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workflow.</p>
+             * <p>The workflow name.</p>
              * 
              * <strong>example:</strong>
              * <p>workflow_111</p>
@@ -345,7 +351,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8150f906-2a40-4420-8cc1-68d2fe4dd69c</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -353,10 +362,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the workflow.</p>
+             * <p>The workflow status.</p>
              * 
              * <strong>example:</strong>
-             * <p>Successful</p>
+             * <p>enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -364,7 +373,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time expression of the workflow.</p>
+             * <p>The time expression for the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 2 * * ?</p>
@@ -386,7 +395,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workflow.</p>
+             * <p>The workflow ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1234xxx</p>
@@ -456,7 +465,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the source job.</p>
+             * <p>The source job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -467,7 +476,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the object job.</p>
+             * <p>The target job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -550,7 +559,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the job.</p>
+             * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456xxx</p>
@@ -561,7 +570,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job.</p>
+             * <p>The job name.</p>
              * 
              * <strong>example:</strong>
              * <p>job_111</p>
@@ -572,7 +581,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job.</p>
+             * <p>The job status.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -642,7 +651,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The workflow edges.</p>
+             * <p>The list of workflow edges.</p>
              */
             public Builder edges(java.util.List<Edges> edges) {
                 this.edges = edges;
@@ -717,7 +726,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The basic information of the workflow.</p>
+             * <p>The basic information about the workflow.</p>
              */
             public Builder workFlowInfo(WorkFlowInfo workFlowInfo) {
                 this.workFlowInfo = workFlowInfo;
@@ -725,7 +734,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node information of the workflow.</p>
+             * <p>The workflow node information.</p>
              */
             public Builder workFlowNodeInfo(WorkFlowNodeInfo workFlowNodeInfo) {
                 this.workFlowNodeInfo = workFlowNodeInfo;
