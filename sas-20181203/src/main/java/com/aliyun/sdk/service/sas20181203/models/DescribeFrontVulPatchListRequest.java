@@ -104,11 +104,11 @@ public class DescribeFrontVulPatchListRequest extends Request {
         } 
 
         /**
-         * <p>The information about the Windows system vulnerability. The value is a JSON string that contains the following fields:</p>
+         * <p>The information about the Windows system vulnerability to query. The value is a JSON string that contains the following fields:</p>
          * <ul>
-         * <li><strong>name</strong>: the name of the vulnerability.</li>
-         * <li><strong>uuid</strong>: the UUID of the server on which the vulnerability is detected.</li>
-         * <li><strong>tag</strong>: the tag that is added to the vulnerability. Set this field to <strong>system</strong>, which indicates Windows system vulnerabilities.</li>
+         * <li><strong>name</strong>: the vulnerability name.</li>
+         * <li><strong>uuid</strong>: the UUID of the server that has the vulnerability.</li>
+         * <li><strong>tag</strong>: the vulnerability tag. Set this field to <strong>system</strong>, which indicates a system vulnerability.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -122,10 +122,10 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform on the vulnerability. Set the value to <strong>vul_fix</strong>, which indicates vulnerability fixing.</p>
+         * <p>The method to handle the vulnerability. Set this parameter to <strong>vul_fix</strong>, which indicates fixing the vulnerability.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Set the value to <strong>sys</strong>, which indicates Windows system vulnerabilities.</p>
+         * <p>The type of vulnerability to query. Set this parameter to <strong>sys</strong>, which indicates a Windows vulnerability.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

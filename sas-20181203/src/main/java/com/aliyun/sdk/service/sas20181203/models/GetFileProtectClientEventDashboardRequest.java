@@ -101,7 +101,10 @@ public class GetFileProtectClientEventDashboardRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -110,7 +113,10 @@ public class GetFileProtectClientEventDashboardRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end timestamp of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656038940435</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -119,7 +125,10 @@ public class GetFileProtectClientEventDashboardRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +137,10 @@ public class GetFileProtectClientEventDashboardRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start timestamp of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648438617000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -115,7 +115,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * <p>The ports that are bound to the probe.</p>
+         * <p>The list of port bindings.</p>
          */
         public Builder bindPortList(java.util.List<BindPortList> bindPortList) {
             this.putQueryParameter("BindPortList", bindPortList);
@@ -126,7 +126,8 @@ public class CreateHoneypotProbeBindRequest extends Request {
         /**
          * <p>The honeypot ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</p>
+         * <p>Call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.
+         * This parameter is required. If this parameter is not specified, the API returns InternalError (400).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,7 +140,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -157,7 +158,8 @@ public class CreateHoneypotProbeBindRequest extends Request {
         /**
          * <p>The probe ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+         * <p>Call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.
+         * This parameter is required. If this parameter is not specified, the API returns InvalidParam (400).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -170,7 +172,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses that are monitored.</p>
+         * <p>The list of listener IP addresses.</p>
          */
         public Builder serviceIpList(java.util.List<String> serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
@@ -292,8 +294,8 @@ public class CreateHoneypotProbeBindRequest extends Request {
             /**
              * <p>Specifies whether to bind the port. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The port is bound.</li>
+             * <li><strong>false</strong>: The port is not bound.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -305,7 +307,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * <p>The end port on which the probe monitors.</p>
+             * <p>The end port of the probe listener.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -316,10 +318,10 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the port is a fixed port. Valid values:</p>
+             * <p>Specifies whether the port is fixed. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The port is fixed.</li>
+             * <li><strong>false</strong>: The port is not fixed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -331,10 +333,10 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * <p>The type of the protocol. Valid values:</p>
+             * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
+             * <li><strong>tcp</strong>: TCP protocol.</li>
+             * <li><strong>udp</strong>: UDP protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -346,7 +348,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * <p>The start port on which the probe monitors.</p>
+             * <p>The start port of the probe listener.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>

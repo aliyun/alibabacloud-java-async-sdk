@@ -171,7 +171,10 @@ public class DataValue extends TeaModel {
         } 
 
         /**
-         * CveNum.
+         * <p>The number of Linux software vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cveNum(Integer cveNum) {
             this.cveNum = cveNum;
@@ -179,7 +182,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * EmgNum.
+         * <p>The number of emergency vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder emgNum(Integer emgNum) {
             this.emgNum = emgNum;
@@ -187,7 +193,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * SysNum.
+         * <p>The number of Windows system vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sysNum(Integer sysNum) {
             this.sysNum = sysNum;
@@ -195,7 +204,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * CmsNum.
+         * <p>The number of Web-CMS vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cmsNum(Integer cmsNum) {
             this.cmsNum = cmsNum;
@@ -203,7 +215,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * AppNum.
+         * <p>The number of application vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder appNum(Integer appNum) {
             this.appNum = appNum;
@@ -211,7 +226,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * ScaNum.
+         * <p>The number of software composition analysis (SCA) vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaNum(Integer scaNum) {
             this.scaNum = scaNum;
@@ -219,7 +237,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * VulAsapSum.
+         * <p>The number of high-priority vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder vulAsapSum(Integer vulAsapSum) {
             this.vulAsapSum = vulAsapSum;
@@ -227,7 +248,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * VulLaterSum.
+         * <p>The number of medium-priority vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder vulLaterSum(Integer vulLaterSum) {
             this.vulLaterSum = vulLaterSum;
@@ -235,7 +259,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * VulNntfSum.
+         * <p>The number of low-priority vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder vulNntfSum(Integer vulNntfSum) {
             this.vulNntfSum = vulNntfSum;
@@ -243,7 +270,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * SysAsapNum.
+         * <p>The number of high-priority system vulnerabilities among Linux software vulnerabilities and Windows system vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sysAsapNum(Integer sysAsapNum) {
             this.sysAsapNum = sysAsapNum;

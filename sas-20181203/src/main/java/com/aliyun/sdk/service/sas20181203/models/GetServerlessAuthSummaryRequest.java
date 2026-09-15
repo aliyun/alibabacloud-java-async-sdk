@@ -87,7 +87,7 @@ public class GetServerlessAuthSummaryRequest extends Request {
         } 
 
         /**
-         * <p>Application region ID.</p>
+         * <p>The region ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -99,10 +99,10 @@ public class GetServerlessAuthSummaryRequest extends Request {
         }
 
         /**
-         * <p>Server type: </p>
+         * <p>The server type. Valid values:</p>
          * <ul>
          * <li><strong>RunD</strong></li>
-         * <li><strong>ECI</strong></li>
+         * <li><strong>ECI</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,11 +115,11 @@ public class GetServerlessAuthSummaryRequest extends Request {
         }
 
         /**
-         * <p>Cloud product: </p>
+         * <p>The cloud service to which the resource belongs. Valid values:</p>
          * <ul>
          * <li><strong>ASK</strong></li>
          * <li><strong>SAE</strong></li>
-         * <li><strong>ACS</strong></li>
+         * <li><strong>ACS</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

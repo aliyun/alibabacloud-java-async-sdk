@@ -176,12 +176,16 @@ public class CreateFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * <p>The severity of alerts. Valid values:</p>
+         * <p>The alert notification level. Valid values:</p>
          * <ul>
-         * <li>0: does not generate alerts</li>
-         * <li>1: sends notifications</li>
-         * <li>2: suspicious</li>
-         * <li>3: high-risk</li>
+         * <li><p>0: no alert</p>
+         * </li>
+         * <li><p>1: reminder</p>
+         * </li>
+         * <li><p>2: suspicious</p>
+         * </li>
+         * <li><p>3: high-risk</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +198,7 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The operations that you want to perform on the files.</p>
+         * <p>The list of file operations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fileOps(java.util.List<String> fileOps) {
@@ -204,7 +208,7 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The paths to the files that you want to monitor. Wildcard characters are supported.</p>
+         * <p>The list of file paths to monitor. Wildcards are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder filePaths(java.util.List<String> filePaths) {
@@ -214,7 +218,7 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the operating system. Valid values:</p>
+         * <p>The operating system type. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong>: Windows</li>
          * <li><strong>linux</strong>: Linux</li>
@@ -230,7 +234,7 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The paths to the processes that you want to monitor. Wildcard characters are supported.</p>
+         * <p>The list of process paths to monitor. Wildcards are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder procPaths(java.util.List<String> procPaths) {
@@ -240,10 +244,12 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The handling method of the rule. Valid values:</p>
+         * <p>The action that the rule takes on the client. Valid values:</p>
          * <ul>
-         * <li>pass: allow</li>
-         * <li>alert</li>
+         * <li><p>pass: allow</p>
+         * </li>
+         * <li><p>alert: alert</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -270,10 +276,10 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the rule. Valid values:</p>
+         * <p>The rule status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +292,7 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The switch ID of the rule.</p>
+         * <p>The switch ID associated with the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>

@@ -129,7 +129,7 @@ public class ListImageRiskRequest extends Request {
         } 
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>e****</p>
@@ -141,9 +141,9 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the container cluster.</p>
+         * <p>The ID of the container cluster to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>container-<em><strong>:</strong></em>*</p>
@@ -180,7 +180,7 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace to which the repository belongs.</p>
+         * <p>The image namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>kube-sy****</p>
@@ -192,7 +192,7 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * <p>The maximum number of entries per page in a paging query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -228,7 +228,7 @@ public class ListFileProtectEventRequest extends Request {
         } 
 
         /**
-         * <p>The severities of alerts.</p>
+         * <p>The list of alert notification levels.</p>
          */
         public Builder alertLevels(java.util.List<Integer> alertLevels) {
             this.putQueryParameter("AlertLevels", alertLevels);
@@ -237,7 +237,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The number of the page to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -249,10 +249,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The end timestamp of the query.</p>
+         * <p>The timestamp of the end time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1683195595204</p>
+         * <p>1683257937775</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -261,10 +261,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the asset.</p>
+         * <p>The ID of the asset instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-bp1fu4aqltf1huhc****</p>
+         * <p>i-bp1g6wxdwps7s9dz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -273,7 +273,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The name of the server to query.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_cpm_****</p>
@@ -285,7 +285,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the server.</p>
+         * <p>The public IP address of the asset to query.</p>
          * 
          * <strong>example:</strong>
          * <p>120.27.XX.XX</p>
@@ -297,7 +297,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the server.</p>
+         * <p>The private IP address of the asset to query.</p>
          * 
          * <strong>example:</strong>
          * <p>172.26.XX.XX</p>
@@ -309,13 +309,13 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>Type of operation on a file. eg:</p>
+         * <p>The type of operation performed on the file. Valid values:</p>
          * <ul>
-         * <li><strong>DELETE</strong>: delete the file.</li>
-         * <li><strong>WRITE</strong>: write the file.</li>
-         * <li><strong>READ</strong>: read the file.</li>
-         * <li><strong>RENAME</strong>: rename the file.</li>
-         * <li><strong>CHOWN</strong>: set the file owner and file association group operations.</li>
+         * <li><strong>DELETE</strong>: Delete the file.</li>
+         * <li><strong>WRITE</strong>: Write to the file.</li>
+         * <li><strong>READ</strong>: Read the file.</li>
+         * <li><strong>RENAME</strong>: Rename the file.</li>
+         * <li><strong>CHOWN</strong>: Change the file owner and associated group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +328,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries to return on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -340,7 +340,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-rule-1</p>
@@ -352,10 +352,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The start timestamp of the query.</p>
+         * <p>The timestamp of the start time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1683080489594</p>
+         * <p>1656038740435</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -364,12 +364,12 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The status of the event. Valid values:</p>
+         * <p>The event status. Valid values:</p>
          * <ul>
-         * <li>0: unhandled</li>
-         * <li>1: handled</li>
-         * <li>2: added to the whitelist</li>
-         * <li>3: ignored</li>
+         * <li>0: Unhandled. </li>
+         * <li>1: Manually handled.</li>
+         * <li>2: Whitelisted.</li>
+         * <li>3: Ignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -382,13 +382,13 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the server to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID of the server.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>inet-ecs-4e876cb0-09f7-43b8-82ef-4bc7a937***</p>
+         * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

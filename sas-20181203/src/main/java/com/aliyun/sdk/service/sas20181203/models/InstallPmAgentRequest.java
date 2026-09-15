@@ -103,10 +103,10 @@ public class InstallPmAgentRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>58.35.xx.xx</p>
@@ -131,10 +131,9 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * <p>The type of the client.</p>
+         * <p>The type of the O&amp;M plugin. Valid values:</p>
          * <ul>
-         * <li><strong>aliyun_assist</strong>: Cloud Assistant client</li>
-         * <li><strong>aliyun_monitor</strong>: CloudMonitor client</li>
+         * <li><strong>aliyun_monitor</strong>: CloudMonitor agent.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -148,7 +147,7 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server. If you specify multiple UUIDs, separate the UUIDs with commas (,).</p>
+         * <p>The list of server UUIDs. Separate multiple UUIDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

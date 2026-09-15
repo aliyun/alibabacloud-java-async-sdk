@@ -80,7 +80,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>An array of process details.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -96,7 +96,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>
@@ -256,7 +256,18 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * AnalyzeResult.
+             * <p>The analysis result. Valid values:</p>
+             * <ul>
+             * <li><p><strong>black</strong>: A malicious process.</p>
+             * </li>
+             * <li><p><strong>white</strong>: A normal process.</p>
+             * </li>
+             * <li><p><strong>abnormal</strong>: An abnormal process.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder analyzeResult(String analyzeResult) {
                 this.analyzeResult = analyzeResult;
@@ -280,7 +291,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * <p>The timestamp of the first occurrence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -288,7 +302,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 hash of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5b394b54ca632fe51c4ab4a6dbaf****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -296,7 +313,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025031506350619216822625103151158982</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -304,7 +324,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessPath.
+             * <p>The process path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/tar</p>
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -312,7 +335,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remarks about the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>safe process</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -320,7 +346,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * Sha256.
+             * <p>The SHA-256 hash of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</p>
              */
             public Builder sha256(String sha256) {
                 this.sha256 = sha256;
@@ -413,7 +442,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -421,7 +453,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -429,7 +464,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries to return on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -437,7 +475,10 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

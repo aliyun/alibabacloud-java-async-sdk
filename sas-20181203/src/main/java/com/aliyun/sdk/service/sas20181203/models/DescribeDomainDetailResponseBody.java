@@ -141,7 +141,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the details about the domain asset.</p>
+         * <p>The asset information related to the domain name.</p>
          */
         public Builder domainDetailItems(java.util.List<DomainDetailItems> domainDetailItems) {
             this.domainDetailItems = domainDetailItems;
@@ -149,7 +149,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. The China value is a unique identifier that Alibaba Cloud generates for the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>3A85CFCF-05C8-451A-9E41-C0D5E96BA407</p>
@@ -160,7 +160,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the root domain that corresponds to the domain.</p>
+         * <p>The root domain name that corresponds to the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -292,13 +292,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the domain asset. Valid values:</p>
+             * <p>The Asset Type of the asset under the domain name. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: an Elastic Compute Service (ECS) instance</li>
-             * <li><strong>1</strong>: a Server Load Balancer (SLB) instance</li>
-             * <li><strong>2</strong>: a Network Address Translation (NAT) gateway</li>
-             * <li><strong>3</strong>: an ApsaraDB RDS instance</li>
-             * <li><strong>4</strong>: an ApsaraDB for MongoDB instance</li>
+             * <li><strong>0</strong>: ECS</li>
+             * <li><strong>1</strong>: load balancing</li>
+             * <li><strong>2</strong>: NAT gateway</li>
+             * <li><strong>3</strong>: RDS database</li>
+             * <li><strong>4</strong>: MongoDB database</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -354,7 +354,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance UUID of the domain asset.</p>
+             * <p>The UUID of the asset instance.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-bp1g9dohoyin9cjhn6****</p>

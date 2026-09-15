@@ -87,7 +87,10 @@ public class OperateBucketScanTaskRequest extends Request {
         } 
 
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The bucket name.</p>
+         * <blockquote>
+         * <p>Note: This parameter is required. If this parameter is not specified, the API returns the InvalidBucketName (400) error.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>iboxpublic****</p>
@@ -99,9 +102,9 @@ public class OperateBucketScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform on the bucket. Valid value:</p>
+         * <p>The operation to perform on the bucket. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: cancels the bucket check.</li>
+         * <li><strong>1</strong>: Cancel the scan task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,7 +117,14 @@ public class OperateBucketScanTaskRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The business source. Valid values:</p>
+         * <ul>
+         * <li><strong>OSS</strong>: OSS</li>
+         * <li><strong>NAS</strong>: NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

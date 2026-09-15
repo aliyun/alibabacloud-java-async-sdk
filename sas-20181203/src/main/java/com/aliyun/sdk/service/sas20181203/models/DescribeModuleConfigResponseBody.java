@@ -106,7 +106,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of configurations for the module.</p>
+         * <p>The number of module settings.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -128,7 +128,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the configurations of the module.</p>
+         * <p>The list of module settings.</p>
          */
         public Builder moduleConfigList(java.util.List<ModuleConfigList> moduleConfigList) {
             this.moduleConfigList = moduleConfigList;
@@ -136,7 +136,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. It is a unique identifier that Alibaba Cloud generates for the request. You can use it to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
@@ -149,8 +149,8 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the server.</p>
+             * <p>The ID of the server instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-uf6435dn4t59b9av****</p>
@@ -294,7 +294,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the server.</p>
+             * <p>The name of the server instance.</p>
              * 
              * <strong>example:</strong>
              * <p>inStanceName****</p>
@@ -410,7 +410,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the configuration.</p>
+             * <p>The configuration name.</p>
              * 
              * <strong>example:</strong>
              * <p>timescan</p>
@@ -421,7 +421,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the configuration items.</p>
+             * <p>The list of configuration items.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -429,7 +429,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the module.</p>
+             * <p>The module name.</p>
              * 
              * <strong>example:</strong>
              * <p>alihids</p>

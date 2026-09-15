@@ -106,7 +106,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page when paging is used in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page when paging is used in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>23AD0BD2-8771-5647-819E-6BA51E212F80</p>
@@ -139,7 +139,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the configurations of the vulnerability scan feature.</p>
+         * <p>The statistics of vulnerability configurations.</p>
          */
         public Builder targetStats(java.util.List<TargetStats> targetStats) {
             this.targetStats = targetStats;
@@ -229,10 +229,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the configurations are applied to the server. Valid values:</p>
+             * <p>The type of configuration effect. Valid values:</p>
              * <ul>
-             * <li><strong>add</strong>: yes</li>
-             * <li><strong>del</strong>: no</li>
+             * <li><strong>add</strong>: The configuration takes effect on the server.</li>
+             * <li><strong>del</strong>: The configuration does not take effect on the server.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group ID or UUID of the server to which the configurations are applied.</p>
+             * <p>The group ID or UUID of the asset on which the configuration takes effect.</p>
              * 
              * <strong>example:</strong>
              * <p>0011ea53-738c-4bff-93be-ce6a1cc9****</p>
@@ -255,10 +255,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The condition by which the configurations are applied to the server. Valid values:</p>
+             * <p>The target type. Valid values:</p>
              * <ul>
-             * <li><strong>uuid</strong>: the UUID of the server</li>
-             * <li><strong>groupId</strong>: the ID of the server group</li>
+             * <li><strong>uuid</strong>: asset.</li>
+             * <li><strong>groupId</strong>: server group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -355,7 +355,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array that consists of available servers.</p>
+             * <p>The list of target servers for the assets.</p>
              */
             public Builder targets(java.util.List<Targets> targets) {
                 this.targets = targets;
@@ -363,7 +363,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of servers.</p>
+             * <p>The total number of assets returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -374,7 +374,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of servers to which the configurations are applied.</p>
+             * <p>The number of servers on which the configuration takes effect.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -385,12 +385,12 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the vulnerability. Valid values:</p>
+             * <p>The type of vulnerability to query. Valid values:</p>
              * <ul>
-             * <li>cve: Linux software vulnerabilities</li>
-             * <li>sys: Windows system vulnerabilities</li>
-             * <li>cms: Web-CMS vulnerabilities</li>
-             * <li>emg: urgent vulnerabilities</li>
+             * <li>cve: Linux software vulnerability</li>
+             * <li>sys: Windows system vulnerability</li>
+             * <li>cms: Web-CMS vulnerability</li>
+             * <li>emg: emergency vulnerability.</li>
              * </ul>
              * 
              * <strong>example:</strong>

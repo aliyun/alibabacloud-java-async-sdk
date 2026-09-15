@@ -59,10 +59,10 @@ public class DeleteServiceTrailRequest extends Request {
         } 
 
         /**
-         * <p>The region in which your Security Center service is deployed. Valid values:</p>
+         * <p>The region of the Security Center instance. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: center.</li>
-         * <li><strong>ap-southeast-1</strong>: Singapore.</li>
+         * <li><strong>cn-hangzhou:</strong> China</li>
+         * <li><strong>ap-southeast-1:</strong> Singapore.</li>
          * </ul>
          * 
          * <strong>example:</strong>

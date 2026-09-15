@@ -59,7 +59,7 @@ public class InstallAegisForLingjunRequest extends Request {
         } 
 
         /**
-         * <p>List of unique UUIDs for Lingjun bare metal.</p>
+         * <p>The list of unique UUIDs for Lingjun bare metal servers.</p>
          */
         public Builder uuids(java.util.List<String> uuids) {
             String uuidsShrink = shrink(uuids, "Uuids", "json");

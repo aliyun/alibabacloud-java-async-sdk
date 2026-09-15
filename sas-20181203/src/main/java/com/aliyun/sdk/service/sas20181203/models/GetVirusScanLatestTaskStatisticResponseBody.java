@@ -67,7 +67,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the virus scan task.</p>
+         * <p>The custom result data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</p>
@@ -300,7 +300,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of machines on which the virus scan task is complete.</p>
+             * <p>The number of servers that completed the scan.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -311,7 +311,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the machine.</p>
+             * <p>The name of the server.</p>
              * 
              * <strong>example:</strong>
              * <p>testMahine1</p>
@@ -322,7 +322,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the virus scan task in percentage.</p>
+             * <p>The progress percentage of the scan task.</p>
              * 
              * <strong>example:</strong>
              * <p>92</p>
@@ -333,11 +333,11 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The highest risk level of the detected alerts. Valid values:</p>
+             * <p>The highest risk level of the alerts detected by the scan. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong></li>
-             * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><strong>high</strong>: high-risk.</li>
+             * <li><strong>medium</strong>: medium-risk.</li>
+             * <li><strong>low</strong>: low-risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -349,7 +349,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of safe machines that are detected.</p>
+             * <p>The number of servers on which no risks are detected.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -360,7 +360,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of machines that are scanned.</p>
+             * <p>The number of servers scanned in this virus scan.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -371,7 +371,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The paths of files that were scanned. This value is returned only when ScanType is set to user.</p>
+             * <p>The file paths specified for scanning when the scan type is user-defined.</p>
              */
             public Builder scanPath(java.util.List<String> scanPath) {
                 this.scanPath = scanPath;
@@ -379,7 +379,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the virus scan task was performed. Unit: milliseconds.</p>
+             * <p>The timestamp of the scan. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1681145862000</p>
@@ -390,10 +390,10 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the virus scan. Valid values:</p>
+             * <p>The scan type of this virus scan. Valid values:</p>
              * <ul>
-             * <li><strong>system</strong>: automatic scan.</li>
-             * <li><strong>user</strong>: custom scan.</li>
+             * <li><strong>system</strong>: automatic system scan.</li>
+             * <li><strong>user</strong>: user-defined scan.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -405,19 +405,19 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the virus scan task.</p>
-             * <p><strong>Valid values for a main task</strong>:</p>
+             * <p>The status of the scan task.</p>
+             * <p><strong>Valid values for the main task:</strong></p>
              * <ul>
-             * <li><strong>0</strong>: The main task is to be started.</li>
-             * <li><strong>10</strong>: The main task is running.</li>
-             * <li><strong>100</strong>: The main task is complete.</li>
+             * <li><strong>0</strong>: The task is pending.</li>
+             * <li><strong>10</strong>: The scan is in progress.</li>
+             * <li><strong>100</strong>: The scan is complete.</li>
              * </ul>
-             * <p><strong>Valid values for a subtask</strong>:</p>
+             * <p><strong>Valid values for the subtask:</strong></p>
              * <ul>
-             * <li><strong>0</strong>: The subtask is to be started.</li>
-             * <li><strong>20</strong>: The scan script is sent.</li>
-             * <li><strong>50</strong>: The subtask is running.</li>
-             * <li><strong>100</strong>: The subtask is complete.</li>
+             * <li><strong>0</strong>: The scan is pending.</li>
+             * <li><strong>20</strong>: The detection script is delivered.</li>
+             * <li><strong>50</strong>: The scan is running on the server.</li>
+             * <li><strong>100</strong>: The scan is complete.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -429,7 +429,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of alerts that are detected.</p>
+             * <p>The number of security alerts detected by the scan.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -440,7 +440,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of suspicious machines that are detected.</p>
+             * <p>The number of servers on which risks are detected.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -451,7 +451,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virus scan task.</p>
+             * <p>The ID of the scan task.</p>
              * 
              * <strong>example:</strong>
              * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
@@ -462,7 +462,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of machines on which the virus scan task was not complete or failed.</p>
+             * <p>The number of servers that have not completed the scan or failed the scan.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

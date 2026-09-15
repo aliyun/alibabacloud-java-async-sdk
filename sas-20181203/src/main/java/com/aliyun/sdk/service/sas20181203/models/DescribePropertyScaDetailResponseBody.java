@@ -88,7 +88,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the asset fingerprints returned.</p>
+         * <p>The details of the Asset Fingerprints list.</p>
          */
         public Builder propertys(java.util.List<Propertys> propertys) {
             this.propertys = propertys;
@@ -96,7 +96,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The China Chinese Cloud generates a unique identifier for the request, which can be used to troubleshoot and locate issues.</p>
          * 
          * <strong>example:</strong>
          * <p>F9146867-16C8-4AAB-BB4FB8C2A4</p>
@@ -204,7 +204,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page in the paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -215,7 +215,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page in the paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -226,7 +226,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of NextToken that is returned when the NextToken method is used.</p>
+             * <p>The NextToken value returned when the NextToken method is used.</p>
              * 
              * <strong>example:</strong>
              * <p>B60***</p>
@@ -237,7 +237,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * <p>The number of entries per page in the paged query. Default value: <strong>10</strong>, which indicates that 10 entries of Asset Fingerprints information are displayed per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -248,7 +248,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of Asset Fingerprints entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -689,15 +689,26 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the type of the middleware, database, or web service . Valid values:</p>
+             * <p>The display name of the middleware, database, or web service type. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
              * <ul>
-             * <li>System service</li>
-             * <li>Software library</li>
-             * <li>Container component</li>
+             * <li>系统服务</li>
+             * <li>软件库</li>
+             * <li>容器组件</li>
+             * <li>数据库</li>
+             * <li>Web容器</li>
+             * <li>Jar包</li>
+             * <li>Web框架</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <ul>
+             * <li>System Service</li>
+             * <li>Software Library</li>
+             * <li>Docker Component</li>
              * <li>Database</li>
-             * <li>Web container</li>
-             * <li>JAR package</li>
-             * <li>Web framework</li>
+             * <li>Web Container</li>
+             * <li>Jar</li>
+             * <li>Web Framework</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -720,7 +731,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path to the configuration file.</p>
+             * <p>The path of the configuration file.</p>
              * 
              * <strong>example:</strong>
              * <p>/etc/my.cnf</p>
@@ -731,7 +742,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the container.</p>
+             * <p>The container name.</p>
              * 
              * <strong>example:</strong>
              * <p>5-rce_web_1</p>
@@ -742,7 +753,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.</p>
+             * <p>The timestamp of the latest scan, which is the most recent time when Security Center collected the middleware, database, or web service information. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1597987834000</p>
@@ -753,7 +764,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-beijing.aliyuncs.com/acs/aliyun-ingress-controller****</p>
@@ -764,7 +775,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the server on which the middleware, database, or web service is run.</p>
+             * <p>The instance ID of the server on which the middleware, database, or web service is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>i-2zeclqj7ti****</p>
@@ -775,7 +786,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the server on which the middleware, database, or web service is run.</p>
+             * <p>The name of the server on which the middleware, database, or web service is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>Test01</p>
@@ -786,7 +797,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the server on which the middleware, database, or web service is run.</p>
+             * <p>The public IP address of the server on which the middleware, database, or web service is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>47.42.XX.XX</p>
@@ -797,7 +808,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the server on which the middleware, database, or web service is run.</p>
+             * <p>The private IP address of the server on which the middleware, database, or web service is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>192.210.XX.XX</p>
@@ -808,7 +819,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the server on which the middleware, database, or web service is run.</p>
+             * <p>The public IP address of the server on which the middleware, database, or web service is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>47.42.XX.XX</p>
@@ -819,7 +830,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address that the process monitors.</p>
+             * <p>The IP address on which the process listens.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.XX.XX</p>
@@ -830,7 +841,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol of the traffic on which the process listens. Valid values:</p>
+             * <p>The protocol on which the process listens. Valid values:</p>
              * <ul>
              * <li><strong>UDP</strong></li>
              * <li><strong>TCP</strong></li>
@@ -847,8 +858,8 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             /**
              * <p>The listening status of the process. Valid values:</p>
              * <ul>
-             * <li><strong>NONE</strong>: not listening</li>
-             * <li><strong>LISTEN</strong>: listening</li>
+             * <li><strong>NONE</strong>: Not listening.</li>
+             * <li><strong>LISTEN</strong>: Listening.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -882,7 +893,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PID.</p>
+             * <p>The process ID.</p>
              * 
              * <strong>example:</strong>
              * <p>756</p>
@@ -893,10 +904,10 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Kubernetes pod.</p>
+             * <p>The pod name.</p>
              * 
              * <strong>example:</strong>
-             * <p>myapp-pod</p>
+             * <p>hello-pod</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -904,7 +915,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of the middleware, database, or web service.</p>
+             * <p>The service port of the middleware, database, or web service.</p>
              * 
              * <strong>example:</strong>
              * <p>68</p>
@@ -915,7 +926,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent process.</p>
+             * <p>The parent process ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -926,7 +937,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+             * <p>The timestamp when the process started. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1596539788</p>
@@ -937,7 +948,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user who runs the process.</p>
+             * <p>The username of the user that runs the process.</p>
              * 
              * <strong>example:</strong>
              * <p>root</p>
@@ -948,7 +959,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version verification information about the middleware, database, or web service.</p>
+             * <p>The version verification information of the middleware, database, or web service.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/lib64/libssl.so.1.0.2k</p>
@@ -959,9 +970,9 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the runtime environment.</p>
+             * <p>The runtime environment version.</p>
              * <blockquote>
-             * <p> The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.</p>
+             * <p>For example, the JDK version of the Java process runtime environment.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -984,7 +995,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the server on which the middleware, database, or web service is run.</p>
+             * <p>The UUID of the server on which the middleware, database, or web service is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>uuid-02ebabe7-1c19-a****</p>

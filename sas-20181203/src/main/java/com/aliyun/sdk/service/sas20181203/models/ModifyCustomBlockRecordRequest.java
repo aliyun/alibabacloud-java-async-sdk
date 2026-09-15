@@ -119,7 +119,7 @@ public class ModifyCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * <p>The IP address that you want to specify in the policy.</p>
+         * <p>The IP address blocked for brute-force attacks prevention.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,8 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
+         * <p>The direction in which the server brute-force attacks blocking policy blocks the IP address.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><strong>in</strong>: inbound</li>
          * <li><strong>out</strong>: outbound</li>
@@ -149,7 +150,7 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the policy.</p>
+         * <p>The expiration time of the blocking record. The value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +172,7 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of servers.</p>
+         * <p>The list of servers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

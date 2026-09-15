@@ -79,7 +79,7 @@ public class DeleteHybridProxyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>IDC-代理</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -88,7 +88,7 @@ public class DeleteHybridProxyRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the proxy node that you want to remove. The value starts with inet-proxy.</p>
+         * <p>The UUID of the proxy server to delete. The value starts with inet-proxy-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

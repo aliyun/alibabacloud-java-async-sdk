@@ -74,7 +74,7 @@ public class ListAssetSelectionSelectedTargetRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the asset.</p>
+         * <p>The unique identifier of the asset selection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListAssetSelectionSelectedTargetRequest extends Request {
         }
 
         /**
-         * <p>The details of queries.</p>
+         * <p>The query list.</p>
          */
         public Builder targetList(java.util.List<String> targetList) {
             this.putQueryParameter("TargetList", targetList);

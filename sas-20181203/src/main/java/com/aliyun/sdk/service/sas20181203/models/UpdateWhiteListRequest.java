@@ -75,9 +75,9 @@ public class UpdateWhiteListRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The image repository ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain the ID.</p>
+         * <p>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -91,7 +91,7 @@ public class UpdateWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelist. Separate multiple IP addresses with commas (,).</p>
+         * <p>The whitelist. Separate multiple whitelisted addresses with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

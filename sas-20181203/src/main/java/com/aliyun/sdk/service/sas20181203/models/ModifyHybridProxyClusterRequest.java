@@ -88,7 +88,7 @@ public class ModifyHybridProxyClusterRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remarks of the proxy cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -59,7 +59,7 @@ public class DeleteMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the alert whitelist rule of sensitive files that are detected by using the agentless detection feature. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to query the IDs of alert whitelist rules.</p>
+         * <p>The ID of the whitelist rule for agentless detection of sensitive file alerts. You can call <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

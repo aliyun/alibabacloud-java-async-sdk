@@ -54,7 +54,7 @@ public class ModifyAutoDelConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3BFA659D-F44F-5703-8FD1-33AB596BEACA</p>

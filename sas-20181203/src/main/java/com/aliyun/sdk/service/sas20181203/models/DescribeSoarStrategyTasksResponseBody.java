@@ -415,7 +415,7 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             /**
              * <p>The status of the policy task. Valid values:</p>
              * <ul>
-             * <li>-1: waiting</li>
+             * <li>\-1: waiting</li>
              * <li>0: starting</li>
              * <li>1: running</li>
              * <li>2: finished</li>

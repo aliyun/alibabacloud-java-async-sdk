@@ -130,12 +130,16 @@ public class ListFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * <p>The severity of alerts. Valid values:</p>
+         * <p>The alert notification level. Valid values:</p>
          * <ul>
-         * <li>0: does not generate alerts</li>
-         * <li>1: sends notifications</li>
-         * <li>2: suspicious</li>
-         * <li>3: high-risk</li>
+         * <li><p>0: No alert.</p>
+         * </li>
+         * <li><p>1: Reminder.</p>
+         * </li>
+         * <li><p>2: Suspicious.</p>
+         * </li>
+         * <li><p>3: High-risk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +152,7 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +164,7 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -172,7 +176,7 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the operating system. Valid values:</p>
+         * <p>The operating system type. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong>: Windows</li>
          * <li><strong>linux</strong>: Linux</li>
@@ -188,10 +192,12 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * <p>The handling method of the rule. Valid values:</p>
+         * <p>The action of the rule on the client. Valid values:</p>
          * <ul>
-         * <li>pass: allow</li>
-         * <li>alert</li>
+         * <li><p>pass: allow</p>
+         * </li>
+         * <li><p>alert: alert</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

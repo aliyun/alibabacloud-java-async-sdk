@@ -228,9 +228,9 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The search conditions. The value of this parameter is in the JSON format and is case-sensitive.</p>
+         * <p>The conditions for searching assets. This parameter is in JSON format. Note that the parameter values are case-sensitive.</p>
          * <blockquote>
-         * <p> You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the <a href="https://help.aliyun.com/document_detail/149773.html">DescribeCriteria</a> operation to query the supported search conditions.</p>
+         * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -243,7 +243,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the first page to return. Default value: <strong>1</strong>, which indicates that the query results are returned starting from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,16 +255,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>Asset vendor. Multiple asset vendors should be separated by a comma (,). Values:</p>
-         * <ul>
-         * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
-         * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
-         * <li><strong>2</strong>: an asset in a data center</li>
-         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>, <strong>14</strong>, <strong>16</strong>: an asset from a third-party cloud service provider</li>
-         * <li><strong>8</strong>: a lightweight asset</li>
-         * <li><strong>9</strong>: a Serverless App Engine (SAE) instance</li>
-         * <li><strong>10</strong>: an instance in Platform for AI (PAI)</li>
-         * </ul>
+         * <p>The asset vendor. Separate multiple asset vendors with commas (,). Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3</p>
@@ -276,11 +267,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The importance of the asset. Valid values:</p>
+         * <p>The importance level of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: an important asset</li>
-         * <li><strong>1</strong>: a common asset</li>
-         * <li><strong>0</strong>: a test asset</li>
+         * <li><strong>2</strong>: Important asset.</li>
+         * <li><strong>1</strong>: General asset.</li>
+         * <li><strong>0</strong>: Test asset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,7 +284,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -309,10 +300,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The logical relationship among multiple search conditions. Valid values:</p>
+         * <p>The logical relationship between multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: The logical relationship among search conditions is <strong>OR</strong>.</li>
-         * <li><strong>AND</strong>: The logical relationship among search conditions is <strong>AND</strong>.</li>
+         * <li><strong>OR</strong>: The search conditions have an <strong>OR</strong> relationship.</li>
+         * <li><strong>AND</strong>: The search conditions have an <strong>AND</strong> relationship.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,13 +316,13 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of asset to be queried. Values:</p>
+         * <p>The type of asset to query. Valid values:</p>
          * <ul>
-         * <li><strong>ecs</strong>: Server </li>
-         * <li><strong>cloud_product</strong>: Cloud Product </li>
-         * <li><strong>eci</strong>: Elastic Container Instance </li>
-         * <li><strong>rund</strong>: RunD Container Instance </li>
-         * <li><strong>runc</strong>: RunC Container Instance</li>
+         * <li><strong>ecs</strong>: server.</li>
+         * <li><strong>cloud_product</strong>: cloud product.</li>
+         * <li><strong>eci</strong>: elastic container instance.</li>
+         * <li><strong>rund</strong>: RunD container instance.</li>
+         * <li><strong>runc</strong>: RunC container instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,7 +335,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</p>
+         * <p>The NextToken value returned when the NextToken method is used. Leave this parameter empty for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>E17B501887A2D3AA5E8360A6EFA3B***</p>
@@ -356,10 +347,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to internationalize the name of the default group. Valid values:</p>
+         * <p>Specifies whether to disable internationalization for the default group name <strong>未分组</strong>. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The system returns the Chinese name of the default group for the GroupTrace response parameter.</li>
-         * <li><strong>false</strong>: The system returns default for the GroupTrace response parameter.</li>
+         * <li><strong>true</strong>: Internationalization is disabled. If the value of the GroupTrace response parameter is the default Security Center group <strong>未分组</strong>, the value is still displayed as <strong>未分组</strong>.</li>
+         * <li><strong>false</strong>: Internationalization is enabled. If the value of the GroupTrace response parameter is the default Security Center group <strong>未分组</strong>, the value is displayed as <strong>default</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,7 +363,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The number of assets to display on each page in a paged conditional query. Default value: <strong>20</strong>, which indicates that 20 asset records are displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -384,7 +375,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the asset resides.</p>
+         * <p>The region ID of the instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -396,9 +387,9 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The ID of the Alibaba Cloud account that corresponds to the member account in the resource directory.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -411,10 +402,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</p>
+         * <p>Specifies whether to use the NextToken method to retrieve asset list data. If this parameter is set to true, TotalCount is no longer returned. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The NextToken method is used.</li>
-         * <li><strong>false</strong>: The NextToken method is not used.</li>
+         * <li><strong>true</strong>: Uses the NextToken method.</li>
+         * <li><strong>false</strong>: Does not use the NextToken method.</li>
          * </ul>
          * 
          * <strong>example:</strong>

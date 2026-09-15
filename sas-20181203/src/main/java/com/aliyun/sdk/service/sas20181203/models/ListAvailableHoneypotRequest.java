@@ -59,7 +59,7 @@ public class ListAvailableHoneypotRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the management node to which the honeypot is deployed.</p>
+         * <p>The ID of the honeypot management node.</p>
          * 
          * <strong>example:</strong>
          * <p>4341018b-8e01-43f6-b1d2-af29a2a4****</p>

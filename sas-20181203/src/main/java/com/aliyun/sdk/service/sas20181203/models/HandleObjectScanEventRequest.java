@@ -143,7 +143,14 @@ public class HandleObjectScanEventRequest extends Request {
         } 
 
         /**
-         * BatchType.
+         * <p>The type for batch handling of similar alerts. Valid values:</p>
+         * <ul>
+         * <li><strong>sha256</strong>: by file content.</li>
+         * <li><strong>eventName</strong>: by alert name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256</p>
          */
         public Builder batchType(String batchType) {
             this.putQueryParameter("BatchType", batchType);
@@ -152,7 +159,10 @@ public class HandleObjectScanEventRequest extends Request {
         }
 
         /**
-         * EventId.
+         * <p>The event ID. You must specify at least one of EventId and EventIdList to identify the target scan events to handle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81****</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -161,7 +171,7 @@ public class HandleObjectScanEventRequest extends Request {
         }
 
         /**
-         * EventIdList.
+         * <p>The list of event IDs. You must specify at least one of EventId and EventIdList to identify the target scan events to handle.</p>
          */
         public Builder eventIdList(java.util.List<Long> eventIdList) {
             this.putQueryParameter("EventIdList", eventIdList);
@@ -170,7 +180,14 @@ public class HandleObjectScanEventRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -179,7 +196,10 @@ public class HandleObjectScanEventRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -188,7 +208,7 @@ public class HandleObjectScanEventRequest extends Request {
         }
 
         /**
-         * RuleConditionList.
+         * <p>The list of whitelisting rules. This parameter takes effect only when the alert is whitelisted.</p>
          */
         public Builder ruleConditionList(java.util.List<RuleConditionList> ruleConditionList) {
             this.putQueryParameter("RuleConditionList", ruleConditionList);
@@ -197,7 +217,17 @@ public class HandleObjectScanEventRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The target status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Unhandled.</li>
+         * <li><strong>1</strong>: Manually handled.</li>
+         * <li><strong>2</strong>: Whitelisted.</li>
+         * <li><strong>3</strong>: Ignored.</li>
+         * <li><strong>4</strong>: Access denied.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -278,7 +308,16 @@ public class HandleObjectScanEventRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The whitelisting field. Valid values:</p>
+             * <ul>
+             * <li><strong>ossKey</strong>: file path.</li>
+             * <li><strong>bucketName</strong>: bucket name.</li>
+             * <li><strong>md5</strong>: file MD5.</li>
+             * <li><strong>sha256</strong>: file SHA-256.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ossKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -286,7 +325,17 @@ public class HandleObjectScanEventRequest extends Request {
             }
 
             /**
-             * Operate.
+             * <p>The operator. Valid values:</p>
+             * <ul>
+             * <li><strong>contains</strong>: contains.</li>
+             * <li><strong>not_contains</strong>: does not contain.</li>
+             * <li><strong>str_equal</strong>: equals.</li>
+             * <li><strong>str_not_equal</strong>: does not equal.</li>
+             * <li><strong>regex</strong>: regular expression.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder operate(String operate) {
                 this.operate = operate;
@@ -294,7 +343,10 @@ public class HandleObjectScanEventRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value to match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sshe</p>
              */
             public Builder value(String value) {
                 this.value = value;

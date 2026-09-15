@@ -88,7 +88,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the account information returned.</p>
+         * <p>The account information.</p>
          */
         public Builder propertyItems(java.util.List<PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -96,7 +96,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>76068BE2-F9C4-4EDD-967B-F503B8CCDD3D</p>
@@ -191,7 +191,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -202,7 +202,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page to display in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The maximum number of entries displayed on each page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -224,7 +224,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>114</p>
@@ -294,7 +294,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of servers that belong to the account.</p>
+             * <p>The number of servers associated with the account.</p>
              * 
              * <strong>example:</strong>
              * <p>384</p>
@@ -305,7 +305,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the account.</p>
+             * <p>The account name.</p>
              * 
              * <strong>example:</strong>
              * <p>adm</p>

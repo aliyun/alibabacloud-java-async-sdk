@@ -60,9 +60,9 @@ public class GetInstallCodeForUuidRequest extends Request {
         } 
 
         /**
-         * <p>The UUID of the server for which the client installation code is to be queried.</p>
+         * <p>The UUID of the server whose agent installation code you want to query.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> API to obtain this parameter.</p>
+         * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

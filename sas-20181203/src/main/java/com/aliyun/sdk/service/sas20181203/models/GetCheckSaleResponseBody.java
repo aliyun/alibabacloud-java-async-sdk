@@ -67,7 +67,7 @@ public class GetCheckSaleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The sales information about the configuration assessment quota.</p>
+         * <p>The sales information of cloud service configuration check.</p>
          */
         public Builder checkSale(CheckSale checkSale) {
             this.checkSale = checkSale;
@@ -75,7 +75,7 @@ public class GetCheckSaleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The China Cloud generates a unique identifier for the request, which can be used for troubleshooting and diagnostics.</p>
          * 
          * <strong>example:</strong>
          * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
@@ -222,7 +222,7 @@ public class GetCheckSaleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The consumed quota.</p>
+             * <p>The number of consumed authorized quotas.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -265,10 +265,10 @@ public class GetCheckSaleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user is an existing user and whether the user uses the configuration assessment feature before the feature is released for sale on July 07, 2023. Valid values:</p>
+             * <p>Indicates whether the user is an existing user who used the cloud service configuration check feature before the sales feature was released (July 7, 2023). Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: existing user</li>
-             * <li><strong>false</strong>: new user</li>
+             * <li><strong>true</strong>: The user is an existing user.</li>
+             * <li><strong>false</strong>: The user is not an existing user.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class GetCheckSaleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The purchased quota.</p>
+             * <p>The number of purchased authorized quotas.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -291,11 +291,11 @@ public class GetCheckSaleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the user. Valid values:</p>
+             * <p>The sales user type. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: a user who can use all check items.</li>
-             * <li><strong>2</strong>: an user who can only use the check items before the release of the feature on July 07, 2023. This type of users must upgrade Security Center before the users can use all check items.</li>
-             * <li><strong>3</strong>: a new user who cannot use the configuration assessment feature. This type of users must make a purchase before the users can use the feature.</li>
+             * <li><strong>1</strong>: Full-feature user. The user can use all check items.</li>
+             * <li><strong>2</strong>: Upgrade-required user. The user can use only the check items that were available before the sales feature was released (July 7, 2023).</li>
+             * <li><strong>3</strong>: Purchase-required user. The user cannot use the cloud service configuration check feature.</li>
              * </ul>
              * 
              * <strong>example:</strong>

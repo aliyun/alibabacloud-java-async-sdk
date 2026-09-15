@@ -73,10 +73,10 @@ public class DescribeWhiteListAuthorizeRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class DescribeWhiteListAuthorizeRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</p>
          * 
          * <strong>example:</strong>
          * <p>180.119.XX.XX</p>

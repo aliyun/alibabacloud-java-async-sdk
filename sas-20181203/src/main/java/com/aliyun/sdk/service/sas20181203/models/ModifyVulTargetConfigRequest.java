@@ -104,10 +104,10 @@ public class ModifyVulTargetConfigRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable vulnerability detection. Valid values:</p>
+         * <p>Specifies whether to enable or disable vulnerability detection. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: yes</li>
-         * <li><strong>off</strong>: no</li>
+         * <li><strong>on</strong>: Enable vulnerability detection.</li>
+         * <li><strong>off</strong>: Disable vulnerability detection.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,7 +121,7 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX</p>
@@ -133,12 +133,12 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The type of vulnerability detection to configure. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
          * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * <li><strong>emg</strong>: urgent vulnerability.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -152,7 +152,7 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the server to configure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

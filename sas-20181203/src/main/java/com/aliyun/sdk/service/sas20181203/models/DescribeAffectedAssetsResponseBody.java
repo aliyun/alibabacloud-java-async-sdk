@@ -80,7 +80,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the affected servers.</p>
+         * <p>The queried server asset information.</p>
          */
         public Builder assetList(java.util.List<AssetList> assetList) {
             this.assetList = assetList;
@@ -96,7 +96,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7E0618A9-D5EF-4220-9471-C42XXXXXXXX</p>
@@ -217,7 +217,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the server.</p>
+             * <p>The instance ID of the server.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -228,7 +228,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the server.</p>
+             * <p>The instance name of the server.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -261,7 +261,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of viruses detected on the server.</p>
+             * <p>The number of virus detection risks on the server.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -272,7 +272,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the server.</p>
+             * <p>The unique identifier of the server.</p>
              * 
              * <strong>example:</strong>
              * <p>947d7514-258a-4b47-9dde-9dxxxxxxxxxx</p>
@@ -368,7 +368,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page in a paginated query.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -379,7 +379,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page in a paginated query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -390,7 +390,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -401,7 +401,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

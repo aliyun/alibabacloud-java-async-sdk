@@ -203,7 +203,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -215,7 +215,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -227,7 +227,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -239,7 +239,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+         * <p>The SLS Logstore for audit logs.</p>
          * 
          * <strong>example:</strong>
          * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
@@ -251,7 +251,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service project that is used to store the audit logs.</p>
+         * <p>The Simple Log Service (SLS) project for audit logs.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-custom-huxintest1018-2</p>
@@ -263,7 +263,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the audit logs are stored.</p>
+         * <p>The region of the audit log.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -288,7 +288,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>CPU architectures are divided into ARM architecture and x86 architecture.</p>
+         * <p>The CPU architecture, which can be ARM architecture or x86 architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>arm</p>
@@ -300,7 +300,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The time at which the container ends to be added.</p>
+         * <p>The expiration time for container access. This value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -313,7 +313,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The group ID.</p>
+         * <p>The ID of the server group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,13 +326,13 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The service provider of the cloud asset. Valid values:</p>
+         * <p>The cloud asset vendor. Valid values:</p>
          * <ul>
          * <li><strong>Tencent</strong></li>
          * <li><strong>HUAWEICLOUD</strong></li>
          * <li><strong>Azure</strong></li>
-         * <li><strong>AWS</strong></li>
-         * <li><strong>Others</strong></li>
+         * <li><strong>AWS</strong> </li>
+         * <li><strong>Other cloud assets</strong></li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

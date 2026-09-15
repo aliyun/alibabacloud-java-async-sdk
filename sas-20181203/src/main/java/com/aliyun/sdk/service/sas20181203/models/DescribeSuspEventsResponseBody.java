@@ -119,7 +119,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries returned on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -130,7 +130,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -163,7 +163,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the alert events.</p>
+         * <p>The security alert information.</p>
          */
         public Builder suspEvents(java.util.List<SuspEvents> suspEvents) {
             this.suspEvents = suspEvents;
@@ -277,7 +277,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the alert event.</p>
+             * <p>The alerting event type.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -288,7 +288,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the alert event.</p>
+             * <p>The path where the alert event occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>/etc/crontab</p>
@@ -299,7 +299,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the path of the alert event.</p>
+             * <p>The path where the alert event occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>/etc/crontab</p>
@@ -382,7 +382,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The note.</p>
+             * <p>The note information.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -393,7 +393,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the note.</p>
+             * <p>The event record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -404,7 +404,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the note was created.</p>
+             * <p>The event record time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-09-26 01:51:01</p>
@@ -474,7 +474,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tactic name of ATT&amp;CK.</p>
+             * <p>The ATT&amp;CK tactic name.</p>
              * 
              * <strong>example:</strong>
              * <p>Malicious scripts-Malicious script code execution</p>
@@ -485,7 +485,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stage information about ATT&amp;CK.</p>
+             * <p>The ATT&amp;CK attack stage information.</p>
              * 
              * <strong>example:</strong>
              * <p>TA0001</p>
@@ -1283,7 +1283,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the alert event was analyzed offline.</p>
+             * <p>Indicates whether the alert is from offline analysis.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1305,7 +1305,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert.</p>
+             * <p>The display name of the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>Login with unusual location</p>
@@ -1316,7 +1316,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the alert event.</p>
+             * <p>The alerting event type.</p>
              * 
              * <strong>example:</strong>
              * <p>Unusual Logon</p>
@@ -1327,7 +1327,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the type of the alert event.</p>
+             * <p>The alerting event type.</p>
              * 
              * <strong>example:</strong>
              * <p>Unusual Logon</p>
@@ -1371,10 +1371,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether you can handle the alert event online, such as quarantining the source file of the malicious process. Valid values:</p>
+             * <p>Indicates whether the alert event can be handled online, such as quarantine. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Online handling is supported.</li>
+             * <li><strong>false</strong>: Online handling is not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1386,10 +1386,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether you can cancel marking the alert event as a false positive. Valid values:</p>
+             * <p>Indicates whether the false positive marking can be unmarked. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Can be unmarked.</li>
+             * <li><strong>false</strong>: Cannot be unmarked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1401,10 +1401,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the safeguard mode for major activities is enabled for the server. Valid values:</p>
+             * <p>Indicates whether critical event protection mode is enabled for the server. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1416,7 +1416,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the container.</p>
+             * <p>The container ID.</p>
              * 
              * <strong>example:</strong>
              * <p>container_1648601865161_14925_02_000****</p>
@@ -1427,7 +1427,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the container image.</p>
+             * <p>The container image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sha256:2e5a3b0ae5f452b3cb458789a9a7542ef40035a84318469a8528c5e444db1****</p>
@@ -1438,7 +1438,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the container image.</p>
+             * <p>The container image name.</p>
              * 
              * <strong>example:</strong>
              * <p>centos7_apache:v1.0.1</p>
@@ -1449,7 +1449,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of data. This parameter can be ignored.</p>
+             * <p>The data source. You can ignore this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>aegis_suspicious_****</p>
@@ -1460,7 +1460,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DeepAnalyzeReportUrl.
+             * <p>The download URL of the deep file analysis report.</p>
+             * <blockquote>
+             * <p>Deep file analysis is triggered only for machines that have the AgenticEDR feature enabled.</p>
+             * </blockquote>
              */
             public Builder deepAnalyzeReportUrl(String deepAnalyzeReportUrl) {
                 this.deepAnalyzeReportUrl = deepAnalyzeReportUrl;
@@ -1468,7 +1471,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The impact of the alert event.</p>
+             * <p>The description of the impact of the alert event.</p>
              * 
              * <strong>example:</strong>
              * <p>webshell</p>
@@ -1487,7 +1490,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Source of discovery (invalid field)</p>
+             * <p>The discovery source. This is an invalid field.</p>
              * 
              * <strong>example:</strong>
              * <p>linux</p>
@@ -1498,10 +1501,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert event can be detected by cloud sandbox. Valid values:</p>
+             * <p>Indicates whether cloud sandbox detection is supported. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Supported.</li>
+             * <li><strong>false</strong>: Not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1513,7 +1516,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The note information about the alert event.</p>
+             * <p>The notes of the alert event.</p>
              */
             public Builder eventNotes(java.util.List<EventNotes> eventNotes) {
                 this.eventNotes = eventNotes;
@@ -1523,18 +1526,18 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             /**
              * <p>The status of the alert event. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: pending handling</li>
-             * <li><strong>2</strong>: ignored</li>
-             * <li><strong>4</strong>: confirmed</li>
-             * <li><strong>8</strong>: marked as a false positive</li>
-             * <li><strong>16</strong>: handling</li>
-             * <li><strong>32</strong>: handled</li>
-             * <li><strong>64</strong>: expired</li>
-             * <li><strong>604</strong>: marked as a false positive by the system</li>
+             * <li><strong>1</strong>: PENDING.</li>
+             * <li><strong>2</strong>: IGNORE (ignored).</li>
+             * <li><strong>4</strong>: HANDLED (confirmed).</li>
+             * <li><strong>8</strong>: FAULT (marked as false positive).</li>
+             * <li><strong>16</strong>: DEALING (being handled).</li>
+             * <li><strong>32</strong>: DONE (handling completed).</li>
+             * <li><strong>64</strong>: EXPIRE (expired).</li>
+             * <li><strong>604</strong>: SYSTEM_FAULT (marked as false positive by the system).</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>8</p>
              */
             public Builder eventStatus(Integer eventStatus) {
                 this.eventStatus = eventStatus;
@@ -1555,8 +1558,8 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the alert event has tracing information. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Has tracing information.</li>
+             * <li><strong>false</strong>: Does not have tracing information.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1590,7 +1593,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the affected asset.</p>
+             * <p>The ID of the asset instance affected by the alert event.</p>
              * 
              * <strong>example:</strong>
              * <p>i-9dp6dwsxdl9z5u1e2f****</p>
@@ -1648,7 +1651,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              * <p>The name of the Kubernetes cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>k8s-daily</p>
+             * <p>test-daily</p>
              */
             public Builder k8sClusterName(String k8sClusterName) {
                 this.k8sClusterName = k8sClusterName;
@@ -1656,7 +1659,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the Kubernetes cluster.</p>
+             * <p>The Kubernetes namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -1700,10 +1703,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the large model analysis tag is supported. Valid values:</p>
+             * <p>Indicates whether large model analysis tagging is supported. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Supported.</li>
+             * <li><strong>false</strong>: Not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1715,7 +1718,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert event was last detected.</p>
+             * <p>The most recent time when the alert event occurred. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-09-26 01:51:01</p>
@@ -1726,7 +1729,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the alert event was last detected. Unit: milliseconds.</p>
+             * <p>The timestamp of the last occurrence, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1631699497000</p>
@@ -1737,11 +1740,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity of the alert event. Valid values:</p>
+             * <p>The severity level of the alert event. Valid values:</p>
              * <ul>
-             * <li><strong>serious</strong></li>
-             * <li><strong>suspicious</strong></li>
-             * <li><strong>remind</strong></li>
+             * <li><strong>serious</strong>: Critical.</li>
+             * <li><strong>suspicious</strong>: Suspicious.</li>
+             * <li><strong>remind</strong>: Reminder.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1755,8 +1758,8 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             /**
              * <p>The status of the malicious behavior defense rule. Valid values:</p>
              * <ul>
-             * <li><strong>open</strong></li>
-             * <li><strong>close</strong></li>
+             * <li><strong>open</strong>: Enabled.</li>
+             * <li><strong>close</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1768,7 +1771,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the alert events.</p>
+             * <p>The collection of alert event tags.</p>
              */
             public Builder markList(java.util.List<String> markList) {
                 this.markList = markList;
@@ -1776,10 +1779,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced whitelist rule.</p>
+             * <p>The advanced whitelisting rules.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;uuid&quot;:&quot;ALL&quot;,&quot;field&quot;:&quot;gmtModified&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;222&quot;}]</p>
+             * <p><strong>1.</strong>&amp;nbsp&amp;nbsppath&amp;nbsp&amp;nbspcontain&amp;nbsp&amp;nbsp232&amp;nbsp&amp;nbsp</p>
              */
             public Builder markMisRules(String markMisRules) {
                 this.markMisRules = markMisRules;
@@ -1787,7 +1790,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The complete name of the alert event.</p>
+             * <p>The full name of the alert event.</p>
              * 
              * <strong>example:</strong>
              * <p>Unusual Logon-Login with unusual location</p>
@@ -1798,7 +1801,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert event was first detected.</p>
+             * <p>The time when the alert event first occurred. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-09-26 01:51:01</p>
@@ -1809,7 +1812,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the alert event was first detected. Unit: milliseconds.</p>
+             * <p>The timestamp of the first occurrence, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1631699497000</p>
@@ -1820,7 +1823,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The handling result code of the alert event.</p>
+             * <p>The error code of the alert event operation.</p>
              * 
              * <strong>example:</strong>
              * <p>kill_and_quara.Success</p>
@@ -1831,7 +1834,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The handing result message of the alert event.</p>
+             * <p>The remarks of the alert event operation.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -1842,7 +1845,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The handling timestamp of the alert event. Unit: milliseconds.</p>
+             * <p>The timestamp of the alert event operation, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1631699497000</p>
@@ -1853,10 +1856,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of Security Center in which the alert event can be detected. Valid values:</p>
+             * <p>The product edition that supports the alert event detection. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Basic edition</li>
-             * <li><strong>1</strong>: Enterprise edition</li>
+             * <li><strong>0</strong>: Basic edition.</li>
+             * <li><strong>1</strong>: Enterprise edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1868,7 +1871,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the associated alert event.</p>
+             * <p>The IDs of the alert events associated with this alert event.</p>
              * 
              * <strong>example:</strong>
              * <p>270789</p>
@@ -1879,7 +1882,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account within which an alert is generated.</p>
+             * <p>The Alibaba Cloud account ID that generated the alert.</p>
              * 
              * <strong>example:</strong>
              * <p>196072141348****</p>
@@ -1890,7 +1893,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stage at which the attack is detected.</p>
+             * <p>The attack stages.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;[&quot;authority_maintenance&quot;]&quot;</p>
@@ -1901,11 +1904,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Supported alarm operation types: </p>
+             * <p>The operation type supported by the alert. Valid values:</p>
              * <ul>
-             * <li><strong>AI.false_positive</strong>: Suspected false positive </li>
-             * <li><strong>AI.real_attack</strong>: Real attack </li>
-             * <li><strong>AI.Insufficient_information_to_evaluate</strong>: Insufficient information to evaluate</li>
+             * <li><strong>AI.false_positive</strong>: Suspected false positive.</li>
+             * <li><strong>AI.real_attack</strong>: Real attack.</li>
+             * <li><strong>AI.Insufficient_information_to_evaluate</strong>: Unable to determine.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1917,7 +1920,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the attack stage.</p>
+             * <p>The display names of the attack stages.</p>
              */
             public Builder tacticItems(java.util.List<TacticItems> tacticItems) {
                 this.tacticItems = tacticItems;
@@ -1925,7 +1928,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique key of the alert.</p>
+             * <p>The unique key of the security alert.</p>
              * 
              * <strong>example:</strong>
              * <p>e17e****</p>
@@ -1936,7 +1939,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the associated instance.</p>
+             * <p>The unique identifier of the associated instance.</p>
              * 
              * <strong>example:</strong>
              * <p>bf6b30d3-eea8-4924-9f0a-****</p>
@@ -1947,7 +1950,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c2051775877374cccbf68af596e6****</p>

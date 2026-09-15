@@ -59,12 +59,13 @@ public class ModifyAutoDelConfigRequest extends Request {
         } 
 
         /**
-         * <p>The number of days after which a detected vulnerability is automatically deleted. Unit: days. Valid values:</p>
+         * <p>The automatic deletion time for expired vulnerabilities. Valid values:</p>
          * <ul>
          * <li>7</li>
          * <li>30</li>
          * <li>90</li>
          * </ul>
+         * <p>Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

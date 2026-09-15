@@ -59,7 +59,7 @@ public class ListClusterCnnfStatusDetailRequest extends Request {
         } 
 
         /**
-         * <p>An array that consists of the ID of the cluster.</p>
+         * <p>The list of cluster IDs.</p>
          */
         public Builder clusterIds(java.util.List<String> clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);

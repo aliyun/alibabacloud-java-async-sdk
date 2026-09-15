@@ -60,9 +60,9 @@ public class DescribeTaskErrorLogRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the image fix task.</p>
          * <blockquote>
-         * <p> You can call the DescribeImageFixTask operation to query the IDs of tasks.</p>
+         * <p>Call the <a href="~~DescribeImageFixTask~~">DescribeImageFixTask</a> operation to query image vulnerability fix tasks and obtain the BuildTaskId.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

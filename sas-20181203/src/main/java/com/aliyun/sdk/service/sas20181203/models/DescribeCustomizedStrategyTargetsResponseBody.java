@@ -67,7 +67,7 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
@@ -78,7 +78,7 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the servers to which custom policies are applied.</p>
+         * <p>The list of target information for the custom policy.</p>
          */
         public Builder startegyTargets(java.util.List<StartegyTargets> startegyTargets) {
             this.startegyTargets = startegyTargets;
@@ -172,7 +172,7 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
             /**
              * <p>The ID of the server group.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+             * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query server group IDs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
              * <p>The name of the baseline check policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>win</p>
+             * <p>白名单</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -206,9 +206,9 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the server.</p>
+             * <p>The UUID of the asset.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+             * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

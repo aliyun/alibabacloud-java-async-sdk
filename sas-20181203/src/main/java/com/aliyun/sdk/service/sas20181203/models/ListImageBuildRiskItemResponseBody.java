@@ -158,7 +158,7 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
              * <p>The type name of the risky build command.</p>
              * 
              * <strong>example:</strong>
-             * <p>itemName.</p>
+             * <p>itemName</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;

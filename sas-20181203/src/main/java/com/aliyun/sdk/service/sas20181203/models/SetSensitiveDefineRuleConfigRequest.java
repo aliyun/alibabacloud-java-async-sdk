@@ -94,7 +94,7 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;classKey&quot;: &quot;password&quot;, &quot;ruleList&quot;: [&quot;huaweicloud_ak&quot;, &quot;ak_leak&quot;]}]</p>
+         * <p>[{\&quot;classKey\&quot;: \&quot;password\&quot;, \&quot;ruleList\&quot;: [\&quot;huaweicloud_ak\&quot;, \&quot;ak_leak\&quot;]}]</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);

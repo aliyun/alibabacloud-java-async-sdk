@@ -54,7 +54,7 @@ public class ModifyConcernNecessityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F059E190-A65B-5DF8-8709-2CC7791A5B65</p>

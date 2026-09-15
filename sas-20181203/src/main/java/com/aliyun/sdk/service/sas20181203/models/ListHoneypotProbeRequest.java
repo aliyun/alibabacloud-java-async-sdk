@@ -129,7 +129,7 @@ public class ListHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The name of the probe.</p>
+         * <p>The probe name.</p>
          * 
          * <strong>example:</strong>
          * <p>probe-test</p>
@@ -153,7 +153,7 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -169,9 +169,9 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page for a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,18 +184,18 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The status of the probe. Valid values:</p>
+         * <p>The probe status. Valid values:</p>
          * <ul>
-         * <li><strong>installed</strong>: installed</li>
-         * <li><strong>install_failed</strong>: installation failed</li>
-         * <li><strong>online</strong>: online</li>
-         * <li><strong>offline</strong>: offline</li>
-         * <li><strong>unnormal</strong>: abnormal</li>
-         * <li><strong>unprobe</strong>: unauthorized</li>
-         * <li><strong>uninstalling</strong>: being uninstalled</li>
-         * <li><strong>uninstalled</strong>: uninstalled</li>
-         * <li><strong>uninstall_failed</strong>: uninstallation failed</li>
-         * <li><strong>not_exist</strong>: not installed</li>
+         * <li><strong>installed</strong>: Installation succeeded.</li>
+         * <li><strong>install_failed</strong>: Installation failed.</li>
+         * <li><strong>online</strong>: Normal.</li>
+         * <li><strong>offline</strong>: Offline.</li>
+         * <li><strong>unnormal</strong>: Service exception.</li>
+         * <li><strong>unprobe</strong>: Unauthorized.</li>
+         * <li><strong>uninstalling</strong>: Uninstalling.</li>
+         * <li><strong>uninstalled</strong>: Uninstallation succeeded.</li>
+         * <li><strong>uninstall_failed</strong>: Uninstallation failed.</li>
+         * <li><strong>not_exist</strong>: Not installed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,10 +208,10 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The type of the probe. Valid values:</p>
+         * <p>The probe type. Valid values:</p>
          * <ul>
          * <li><strong>host_probe</strong>: host probe</li>
-         * <li><strong>vpc_black_hole_probe</strong>: VPC probe</li>
+         * <li><strong>vpc_black_hole_probe</strong>: VPC blackhole probe</li>
          * </ul>
          * 
          * <strong>example:</strong>

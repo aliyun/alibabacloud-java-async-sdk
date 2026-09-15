@@ -143,7 +143,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         } 
 
         /**
-         * <p>The type of the information that you want to query. Valid values:</p>
+         * <p>The query type of the element to query. Valid values:</p>
          * <ul>
          * <li><strong>EDGE</strong>: connection information</li>
          * </ul>
@@ -158,7 +158,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The information about the destination node.</p>
+         * <p>The destination node information, which is used to filter destination nodes.</p>
          */
         public Builder dstNode(DstNode dstNode) {
             String dstNodeShrink = shrink(dstNode, "DstNode", "json");
@@ -180,7 +180,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The end time of the network connection.</p>
+         * <p>The end time of the network connectivity. Specify a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649260799999</p>
@@ -192,9 +192,9 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page in a paged query. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The information about the source node.</p>
+         * <p>The source node information, which is used to filter source nodes.</p>
          */
         public Builder srcNode(SrcNode srcNode) {
             String srcNodeShrink = shrink(srcNode, "SrcNode", "json");
@@ -217,7 +217,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * <p>The start time of the network connection.</p>
+         * <p>The start time of the network connectivity. Specify a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1666886400000</p>
@@ -351,9 +351,9 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the container cluster.</p>
+             * <p>The ID of the container cluster to query.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+             * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -376,7 +376,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * <p>The node IDs.</p>
+             * <p>The list of node IDs.</p>
              */
             public Builder nodeIds(java.util.List<String> nodeIds) {
                 this.nodeIds = nodeIds;
@@ -384,9 +384,9 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * <p>The type of the node. Valid values:</p>
+             * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>app</strong>: application, which indicates that the node type is application.</li>
+             * <li><strong>app</strong>: Application. The node type is application.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -398,7 +398,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * <p>The name of the pod.</p>
+             * <p>The pod name.</p>
              * 
              * <strong>example:</strong>
              * <p>abc-deployment-yacs-31144-39265-1384966-7f8c8cd578-h6mhb</p>
@@ -531,9 +531,9 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * <p>The ID of the container cluster.</p>
+             * <p>The ID of the container cluster to query.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+             * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -556,7 +556,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * <p>The node IDs.</p>
+             * <p>The list of node IDs.</p>
              */
             public Builder nodeIds(java.util.List<String> nodeIds) {
                 this.nodeIds = nodeIds;
@@ -564,9 +564,9 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * <p>The type of the node. Valid values:</p>
+             * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>app</strong>: application, which indicates that the node type is application.</li>
+             * <li><strong>app</strong>: Application. The node type is application.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -578,7 +578,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * <p>The name of the pod.</p>
+             * <p>The pod name.</p>
              * 
              * <strong>example:</strong>
              * <p>abc-deployment-yacs-31144-39265-1384966-7f8c8cd578-h6mhb</p>

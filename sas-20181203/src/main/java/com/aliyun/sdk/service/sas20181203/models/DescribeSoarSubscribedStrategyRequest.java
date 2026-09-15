@@ -75,7 +75,7 @@ public class DescribeSoarSubscribedStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeSoarSubscribedStrategyRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

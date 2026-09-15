@@ -87,7 +87,7 @@ public class DescribeDingTalkRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.Default value: 1.</p>
+         * <p>The page number of the current page to display in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,7 +99,7 @@ public class DescribeDingTalkRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.Default value: 20.</p>
+         * <p>The maximum number of notifications to display per page in a paged query. Default value: <strong>20</strong>, which indicates that up to 20 entries are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,10 +111,10 @@ public class DescribeDingTalkRequest extends Request {
         }
 
         /**
-         * <p>The name of the notification.</p>
+         * <p>The notification name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Vulnerability notification</p>
+         * <p>TestRuleAction</p>
          */
         public Builder ruleActionName(String ruleActionName) {
             this.putQueryParameter("RuleActionName", ruleActionName);

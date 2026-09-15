@@ -67,7 +67,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The statistics on risk items by risk level.</p>
+         * <p>The baseline check statistics grouped by risk level (high, medium, and low).</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>C2B285A3-3493-5C5F-A224-4CCE4BFC****</p>
@@ -157,7 +157,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of high-risk items.</p>
+             * <p>The number of high-risk check items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -168,7 +168,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of low-risk items.</p>
+             * <p>The number of low-risk check items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -179,7 +179,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of medium-risk items.</p>
+             * <p>The number of medium-risk check items.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

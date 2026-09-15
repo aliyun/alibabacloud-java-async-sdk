@@ -59,12 +59,12 @@ public class DescribeVulTargetStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The type of vulnerability to query. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
          * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * <li><strong>emg</strong>: emergency vulnerability.</li>
          * </ul>
          * 
          * <strong>example:</strong>

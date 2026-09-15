@@ -143,7 +143,10 @@ public class ModifyImageRegistryRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114.55.xxx.xxx</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -152,7 +155,7 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository. You can call the listImageRegistry operation to query the ID of the image repository.</p>
+         * <p>The image registry ID. Call the <a href="https://help.aliyun.com/document_detail/471986.html">ListImageRegistry</a> operation to obtain this ID.</p>
          * 
          * <strong>example:</strong>
          * <p>390103286</p>
@@ -176,7 +179,10 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -185,7 +191,10 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * RegistryHostIp.
+         * <p>The registry IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder registryHostIp(String registryHostIp) {
             this.putQueryParameter("RegistryHostIp", registryHostIp);
@@ -194,7 +203,7 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The number of images that are scanned per hour.</p>
+         * <p>The number of images to scan per hour.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

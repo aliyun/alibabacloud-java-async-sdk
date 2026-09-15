@@ -860,9 +860,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Number of agentless detections. </p>
+         * <p>The number of agentless detection licenses.</p>
          * <blockquote>
-         * <p>Agentless detection is not yet available for sale, so there&quot;s no need to pay attention to this field at the moment.</p>
+         * <p>Agentless detection is not available for purchase. You can ignore this field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -874,10 +874,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to allow pay-as-you-go purchases.</p>
+         * <p>Indicates whether pay-as-you-go purchasing is allowed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not allowed </li>
-         * <li><strong>1</strong>: Allowed</li>
+         * <li><strong>0</strong>: Not allowed.</li>
+         * <li><strong>1</strong>: Allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -889,7 +889,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Ransomware protection backup capacity, in GB.</p>
+         * <p>The anti-ransomware backup capacity, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>160</p>
@@ -900,10 +900,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Ransomware Guardian Service. Values:</p>
+         * <p>The status of the anti-ransomware managed service. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not activated</li>
-         * <li><strong>1</strong>: Activated</li>
+         * <li><strong>0</strong>: Not activated.</li>
+         * <li><strong>1</strong>: Activated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -915,10 +915,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to enable the application whitelist. Values: </p>
+         * <p>Indicates whether the application whitelist is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not enabled </li>
-         * <li><strong>2</strong>: Enabled</li>
+         * <li><strong>0</strong>: Not enabled.</li>
+         * <li><strong>2</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -930,9 +930,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of application whitelist authorizations. </p>
+         * <p>The number of application whitelist authorizations.</p>
          * <blockquote>
-         * <p>One authorization allows the application of a whitelist policy to one server. After enabling the application whitelist function, the account will have 20 authorizations by default.</p>
+         * <p>One authorization allows you to apply an application whitelist policy to one server. After the application whitelist feature is enabled, the account has 20 authorizations by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -944,7 +944,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of purchased server licenses.</p>
+         * <p>The number of purchased server authorization licenses.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -955,7 +955,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * BuySasEdr.
+         * <p>Indicates whether EDR is purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder buySasEdr(String buySasEdr) {
             this.buySasEdr = buySasEdr;
@@ -963,10 +966,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether it supports the activation of a post-paid trial package. Values: </p>
+         * <p>Indicates whether the pay-as-you-go trial plan can be activated. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not supported</li>
-         * <li><strong>1</strong>: Supported</li>
+         * <li><strong>0</strong>: Not supported.</li>
+         * <li><strong>1</strong>: Supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -978,7 +981,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Purchased cloud platform configuration check scan count. Unit: times/month.</p>
+         * <p>The number of purchased Cloud Security Posture Management (CSPM) scans, in scans per month.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -989,7 +992,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CspmInstanceCapacity.
+         * <p>The AI digital human analysis traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder cspmInstanceCapacity(Integer cspmInstanceCapacity) {
             this.cspmInstanceCapacity = cspmInstanceCapacity;
@@ -997,15 +1003,15 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Purchase the highest version of the Security Center. Values:</p>
+         * <p>The highest purchased edition of Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition </li>
-         * <li><strong>3</strong>: Enterprise Edition </li>
-         * <li><strong>5</strong>: Advanced Edition </li>
-         * <li><strong>6</strong>: Anti-Virus Edition</li>
-         * <li><strong>7</strong>: Flagship Edition </li>
-         * <li><strong>10</strong>: Purchase Additional Services Only <blockquote>
-         * <p>When purchasing a single version, it indicates the corresponding version. When purchasing multiple versions, this value represents the highest version among the purchased multi-versions of Cloud Security Center.</p>
+         * <li><strong>1</strong>: Free Edition.</li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>5</strong>: Advanced Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.</li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * <li><strong>10</strong>: Value-added services only.<blockquote>
+         * <p>If a single version is purchased, this value indicates the corresponding version. If multiple versions are purchased, this value indicates the highest version among the purchased editions of Security Center.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -1019,7 +1025,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of purchased honeypot licenses.</p>
+         * <p>The number of purchased honeypot authorization licenses.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1030,7 +1036,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HybridPaidGrayStatus.
+         * <p>The canary release module for elastic billing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CSPM_INSTANCE&quot;:1}</p>
          */
         public Builder hybridPaidGrayStatus(String hybridPaidGrayStatus) {
             this.hybridPaidGrayStatus = hybridPaidGrayStatus;
@@ -1038,7 +1047,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HybridPaidModuleSwitchMap.
+         * <p>The AI digital human analysis traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder hybridPaidModuleSwitchMap(Integer hybridPaidModuleSwitchMap) {
             this.hybridPaidModuleSwitchMap = hybridPaidModuleSwitchMap;
@@ -1046,7 +1058,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HybridPaidStatus.
+         * <p>The status of the elastic billing switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hybridPaidStatus(Integer hybridPaidStatus) {
             this.hybridPaidStatus = hybridPaidStatus;
@@ -1054,7 +1069,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HybridSwitch.
+         * <p>The AI digital human analysis traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder hybridSwitch(Integer hybridSwitch) {
             this.hybridSwitch = hybridSwitch;
@@ -1062,7 +1080,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of purchased image scanning authorizations.</p>
+         * <p>The number of purchased image scan authorization licenses.</p>
          * 
          * <strong>example:</strong>
          * <p>8954</p>
@@ -1073,10 +1091,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Instance purchase type. Values: </p>
+         * <p>The instance purchase type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Self-purchased</li>
-         * <li><strong>1</strong>: Allocated from multiple accounts</li>
+         * <li><strong>0</strong>: Self-purchased.</li>
+         * <li><strong>1</strong>: Allocated from a multi-account setup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1088,7 +1106,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the purchased Cloud Security Center instance.</p>
+         * <p>The instance ID of the purchased Security Center instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sas-vg6hafdsafs****</p>
@@ -1099,7 +1117,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>AI digital human analyzes traffic</p>
+         * <p>The AI digital human analysis traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1110,10 +1128,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether it is the new flagship version.</p>
+         * <p>Indicates whether the instance is the new Ultimate Edition. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: It is the latest version</li>
-         * <li><strong>false</strong>: It is not the latest version</li>
+         * <li><strong>true</strong>: The instance is the latest version.</li>
+         * <li><strong>false</strong>: The instance is not the latest version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1125,10 +1143,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether it is the latest multi-version.</p>
+         * <p>Indicates whether the instance is the new multi-version. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: It is the latest multi-version </li>
-         * <li><strong>false</strong>: It is not the latest multi-version</li>
+         * <li><strong>true</strong>: The instance is the latest multi-version.</li>
+         * <li><strong>false</strong>: The instance is not the latest multi-version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1140,14 +1158,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the number of existing servers exceeds the maximum authorized purchase quantity. Values: </p>
+         * <p>Indicates whether the number of existing servers exceeds the maximum number of purchased authorizations. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: Not exceeded </li>
-         * <li><strong>true</strong>: Exceeded<blockquote>
-         * <p>Notice: This parameter is deprecated, and you do not need to pay attention to it.</p>
-         * </blockquote>
-         * </li>
+         * <li><strong>false</strong>: Not exceeded.</li>
+         * <li><strong>true</strong>: Exceeded.</li>
          * </ul>
+         * <blockquote>
+         * <p>Notice: This parameter is deprecated. You can ignore it.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1158,10 +1176,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to enable pay-as-you-go. Values: </p>
+         * <p>Indicates whether pay-as-you-go billing is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: Not enabled </li>
-         * <li><strong>true</strong>: Enabled</li>
+         * <li><strong>false</strong>: Not enabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1173,10 +1191,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current Cloud Security Center version is a trial version. Values: </p>
+         * <p>Indicates whether the current Security Center edition is a trial version. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not a trial version </li>
-         * <li><strong>1</strong>: Trial version</li>
+         * <li><strong>0</strong>: Not a trial version.</li>
+         * <li><strong>1</strong>: Trial version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1188,7 +1206,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp of the last trial expiration for Cloud Security Center, in milliseconds.</p>
+         * <p>The end timestamp of the last trial of Security Center, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1603934844000</p>
@@ -1199,7 +1217,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of licenses when purchasing multiple versions.</p>
+         * <p>The total number of authorizations when multiple versions are purchased.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -1210,7 +1228,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total remaining licenses when purchasing multiple versions.</p>
+         * <p>The total number of remaining authorizations when multiple versions are purchased.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -1221,13 +1239,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>When both the annual/monthly and pay-as-you-go services for Cloud Security Center&quot;s host and container security are activated, the higher protection version of the two is selected. Values: </p>
+         * <p>The higher protection edition when both host protection and container protection are activated with subscription and pay-as-you-go billing methods in Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition</li>
-         * <li><strong>6</strong>: Anti-Virus Edition </li>
-         * <li><strong>5</strong>: Advanced Edition </li>
-         * <li><strong>3</strong>: Enterprise Edition </li>
-         * <li><strong>7</strong>: Ultimate Edition</li>
+         * <li><strong>1</strong>: Basic Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.</li>
+         * <li><strong>5</strong>: Advanced Edition.</li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1239,7 +1257,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Usage of multiple version numbers and license counts</p>
+         * <p>The multi-version number and authorization usage information.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -1250,7 +1268,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * NewPostPaidCspm.
+         * <p>The AI digital human analysis traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder newPostPaidCspm(Integer newPostPaidCspm) {
             this.newPostPaidCspm = newPostPaidCspm;
@@ -1258,10 +1279,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to enable the new version of Threat Analysis and Response service. The new version of Threat Analysis and Response service refers to the one that supports purchasing access traffic and log storage capacity. Values: </p>
+         * <p>Indicates whether the new version of Cloud Threat Detection and Response (CTDR) is enabled. The new version of CTDR supports purchasing traffic ingestion and log storage capacity. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No </li>
-         * <li><strong>1</strong>: Yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1273,7 +1294,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>AI Digital Human Management Instance</p>
+         * <p>The AI digital human managed instances.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1284,7 +1305,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Service activation timestamp, unit: milliseconds.</p>
+         * <p>The timestamp when the service was activated, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1657244824669</p>
@@ -1295,13 +1316,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>When activating the pay-as-you-go service for host and container security, it represents the highest protection version of the already bound assets. Values: </p>
+         * <p>The highest protection edition bound to assets when the pay-as-you-go host and container security service is activated. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition</li>
-         * <li><strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>6</strong>: Anti-Virus Edition </li>
-         * <li><strong>7</strong>: Flagship Edition</li>
+         * <li><strong>1</strong>: Free Edition.</li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>5</strong>: Advanced Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.</li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1313,7 +1334,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Pay-As-You-Go instance ID.</p>
+         * <p>The instance ID of the pay-as-you-go instance.</p>
          * 
          * <strong>example:</strong>
          * <p>postpay-sas-**</p>
@@ -1324,20 +1345,20 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Pay-as-you-go module switch status, in the format of JsonString, with values as follows:</p>
+         * <p>The status of pay-as-you-go module switches, in JSON string format. Valid values:</p>
          * <ul>
          * <li>Key:<ul>
-         * <li><strong>VUL</strong>: Vulnerability Repair Module </li>
-         * <li><strong>CSPM</strong>: Cloud Security Posture Management Module </li>
-         * <li><strong>AGENTLESS</strong>: Agentless Detection Module </li>
-         * <li><strong>SERVERLESS</strong>: Serverless Security Module </li>
-         * <li><strong>CTDR</strong>: Threat Analysis and Response Module </li>
-         * <li><strong>POST_HOST</strong>: Host and Container Security Module </li>
-         * <li><strong>SDK</strong>: Malicious File Detection SDK Module </li>
-         * <li><strong>RASP</strong>: Application Protection Module</li>
+         * <li><strong>VUL</strong>: Vulnerability fix module.</li>
+         * <li><strong>CSPM</strong>: Cloud Security Posture Management (CSPM) module.</li>
+         * <li><strong>AGENTLESS</strong>: Agentless detection module.</li>
+         * <li><strong>SERVERLESS</strong>: Serverless security module.</li>
+         * <li><strong>CTDR</strong>: Cloud Threat Detection and Response (CTDR) module.</li>
+         * <li><strong>POST_HOST</strong>: Host and container security module.</li>
+         * <li><strong>SDK</strong>: Malicious file detection SDK module.</li>
+         * <li><strong>RASP</strong>: Runtime application self-protection (RASP) module.</li>
          * </ul>
          * </li>
-         * <li>Value: 0 indicates off, 1 indicates on</li>
+         * <li>Value: 0 indicates disabled, and 1 indicates enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1349,7 +1370,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Pay-as-you-go activation time</p>
+         * <p>The time when pay-as-you-go billing was activated. The value is a UNIX timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1698915219000</p>
@@ -1360,10 +1381,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Pay-As-You-Go instance status. Values: </p>
+         * <p>The instance status of the pay-as-you-go instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Normal </li>
-         * <li><strong>2</strong>: Stopped due to unpaid bills</li>
+         * <li><strong>1</strong>: Normal.</li>
+         * <li><strong>2</strong>: Suspended due to overdue payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1375,7 +1396,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of purchased application protections. Unit: per month.</p>
+         * <p>The number of purchased application protection licenses, in licenses per month.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1386,9 +1407,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp of when the Cloud Security Center instance will expire, in milliseconds.</p>
+         * <p>The UNIX timestamp when the Security Center instance expires, in milliseconds.</p>
          * <blockquote>
-         * <p>If you do not renew the service within 7 days after it expires, your paid instance will be downgraded to a free version, and you will no longer be able to use the features of the paid version. Your previous Cloud Security Center configuration data and historical alert data (e.g., DDoS alerts) will become inaccessible. At this point, you can only re-enable the paid version of Cloud Security Center by repurchasing it. For more information, see <a href="https://help.aliyun.com/document_detail/42308.html">Purchasing Cloud Security Center</a>.</p>
+         * <p>If you do not complete renewal within 7 days after the instance expires, your paid edition instance is downgraded to Free Edition. You can no longer use the features of the paid edition, and your previous Security Center configuration data and historical alerting data (such as DDoS alerts) become inaccessible. In this case, you must repurchase Security Center to enable the paid edition. For more information, see <a href="https://help.aliyun.com/document_detail/42308.html">Purchase Security Center</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1400,7 +1421,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier generated by Alibaba Cloud for this request.</p>
+         * <p>The unique request ID generated by Alibaba Cloud for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>C2DC96D2-DD2E-49D9-A28E-85590475DF55</p>
@@ -1411,7 +1432,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SasEdrClientAuthCount.
+         * <p>The number of servers purchased for EDR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder sasEdrClientAuthCount(String sasEdrClientAuthCount) {
             this.sasEdrClientAuthCount = sasEdrClientAuthCount;
@@ -1419,7 +1443,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SasEdrPostPaidInstanceId.
+         * <p>The pay-as-you-go instance ID of EDR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-edr-postpaid-fadaf</p>
          */
         public Builder sasEdrPostPaidInstanceId(String sasEdrPostPaidInstanceId) {
             this.sasEdrPostPaidInstanceId = sasEdrPostPaidInstanceId;
@@ -1427,7 +1454,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SasEdrPrePaidInstanceId.
+         * <p>The subscription instance ID of EDR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-edr-sfkhakhk</p>
          */
         public Builder sasEdrPrePaidInstanceId(String sasEdrPrePaidInstanceId) {
             this.sasEdrPrePaidInstanceId = sasEdrPrePaidInstanceId;
@@ -1435,7 +1465,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ACTIVE表示生效中，EXPIRED表示已到期，RELEASED表示已释放；无预付费实例时为空</p>
+         * <p>The instance status of the EDR upfront instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASED</p>
          */
         public Builder sasEdrPrePaidInstanceStatus(String sasEdrPrePaidInstanceStatus) {
             this.sasEdrPrePaidInstanceStatus = sasEdrPrePaidInstanceStatus;
@@ -1443,7 +1476,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SasEdrVersion.
+         * <p>The purchased edition of EDR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sasEdrVersion(String sasEdrVersion) {
             this.sasEdrVersion = sasEdrVersion;
@@ -1451,10 +1487,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether log analysis has been purchased. Values: </p>
+         * <p>Indicates whether log analysis is purchased. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not purchased </li>
-         * <li><strong>1</strong>: Purchased</li>
+         * <li><strong>0</strong>: Not purchased.</li>
+         * <li><strong>1</strong>: Purchased.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1466,10 +1502,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the security dashboard has been purchased. Values: </p>
+         * <p>Indicates whether the security dashboard is purchased. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not purchased </li>
-         * <li><strong>1</strong>: Purchased</li>
+         * <li><strong>0</strong>: Not purchased.</li>
+         * <li><strong>1</strong>: Purchased.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1481,7 +1517,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SdkAiPostPaidGray.
+         * <p>The canary release status of the pay-as-you-go SDK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sdkAiPostPaidGray(Integer sdkAiPostPaidGray) {
             this.sdkAiPostPaidGray = sdkAiPostPaidGray;
@@ -1489,7 +1528,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of SDK authorizations for malicious file detection</p>
+         * <p>The number of malicious file detection SDK authorization licenses.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1500,7 +1539,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Purchased log storage capacity in GB. Range: 0 to 200000.</p>
+         * <p>The purchased log storage capacity, in GB. Valid values: 0 to 200000.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -1511,7 +1550,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Purchased threat analysis capacity. Unit: GB.</p>
+         * <p>The purchased threat analysis capacity, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -1522,7 +1561,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Purchased threat analysis and response log access traffic. Unit is GB/day.</p>
+         * <p>The purchased log ingestion traffic for Cloud Threat Detection and Response (CTDR), in GB per day.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1533,7 +1572,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前用户命中的业务试用模块；未命中时返回空数组</p>
+         * <p>The list of trial sub-modules.</p>
          */
         public Builder trialModuleList(java.util.List<TrialModuleList> trialModuleList) {
             this.trialModuleList = trialModuleList;
@@ -1541,7 +1580,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TrialVersion.
+         * <p>The trial version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trialVersion(Integer trialVersion) {
             this.trialVersion = trialVersion;
@@ -1549,10 +1591,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to enable the custom alarm function. Values:</p>
+         * <p>Indicates whether the custom alerting feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not enabled </li>
-         * <li><strong>2</strong>: Enabled</li>
+         * <li><strong>0</strong>: Not enabled.</li>
+         * <li><strong>2</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1564,15 +1606,15 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Purchased Cloud Security Center version. Values:   </p>
+         * <p>The purchased edition of Security Center. Valid values:  </p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition </li>
-         * <li><strong>3</strong>: Enterprise Edition </li>
-         * <li><strong>5</strong>: Advanced Edition </li>
-         * <li><strong>6</strong>: Anti-Virus Edition     </li>
-         * <li><strong>7</strong>: Flagship Edition   </li>
-         * <li><strong>8</strong>: Multi-Edition  </li>
-         * <li><strong>10</strong>: Value-Added Services Only</li>
+         * <li><strong>1</strong>: Free Edition. </li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>5</strong>: Advanced Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.    </li>
+         * <li><strong>7</strong>: Ultimate Edition.   </li>
+         * <li><strong>8</strong>: Multi-version.   </li>
+         * <li><strong>10</strong>: Value-added services only.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1584,7 +1626,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of authorized cores purchased.</p>
+         * <p>The number of purchased authorized cores.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1595,7 +1637,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of purchased vulnerability fixes. Unit: times/month.</p>
+         * <p>The number of purchased vulnerability fixes, in fixes per month.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1606,10 +1648,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the web tamper-proof service is enabled. Values: </p>
+         * <p>Indicates whether web tamper-proofing is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not enabled </li>
-         * <li><strong>1</strong>: Enabled</li>
+         * <li><strong>0</strong>: Not enabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1621,9 +1663,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of purchased web tamper-proof licenses. One license can enable web tamper protection for one server. Value range: 0~N.</p>
+         * <p>The number of purchased web tamper-proofing authorizations. One authorization enables web tamper-proofing protection for one server. Valid values: 0 to N.</p>
          * <blockquote>
-         * <p>N is the number of servers you have.</p>
+         * <p>N is the number of servers that you own.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1680,7 +1722,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the trial sub-module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EDR</p>
              */
             public Builder name(String name) {
                 this.name = name;

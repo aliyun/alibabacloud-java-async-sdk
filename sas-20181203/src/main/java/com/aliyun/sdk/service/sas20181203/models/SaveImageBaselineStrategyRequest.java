@@ -130,9 +130,9 @@ public class SaveImageBaselineStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The baseline check items.</p>
+         * <p>The baseline items.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> operation to query baseline check items.</p>
+         * <p>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> API to obtain the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -146,7 +146,10 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * ImageVulClean.
+         * <p>The baseline risk retention period, in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder imageVulClean(Integer imageVulClean) {
             this.putQueryParameter("ImageVulClean", imageVulClean);
@@ -155,10 +158,12 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,10 +176,12 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * <p>The data source. If this parameter is left empty, the baseline check policy for images is queried. Valid values:</p>
+         * <p>The data source. If you do not specify this parameter, the operation queries image baseline strategies by default. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: the baseline check policy for images</li>
-         * <li><strong>agentless</strong>: agentless detection</li>
+         * <li><p><strong>default</strong>: image</p>
+         * </li>
+         * <li><p><strong>agentless</strong>: agentless</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,9 +194,9 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the baseline check policy.</p>
+         * <p>The ID of the baseline check strategy.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> operation to query the IDs of baseline check policies.</p>
+         * <p>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> API to obtain the value of this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -202,7 +209,7 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * <p>The name of the baseline check policy.</p>
+         * <p>The name of the baseline check strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

@@ -90,7 +90,7 @@ public class ModifyContainerScanConfigRequest extends Request {
          * <p>The name of the container application.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;logtail-ds&quot;,&quot;alicloud-monitor-controller&quot;,&quot;storage-snapshot-manager&quot;]</p>
+         * <p>[\&quot;logtail-ds\&quot;,\&quot;alicloud-monitor-controller\&quot;,\&quot;storage-snapshot-manager\&quot;]</p>
          */
         public Builder appNames(String appNames) {
             this.putQueryParameter("AppNames", appNames);
@@ -99,9 +99,9 @@ public class ModifyContainerScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the container cluster.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ModifyContainerScanConfigRequest extends Request {
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>

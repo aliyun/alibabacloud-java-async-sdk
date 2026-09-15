@@ -255,9 +255,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the container cluster.</p>
+         * <p>The ID of the container cluster to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * <p>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -270,12 +270,12 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The name of the container field. Valid values:</p>
+         * <p>The container field. Valid values:</p>
          * <ul>
-         * <li><strong>clusterId</strong>: the ID of the cluster</li>
-         * <li><strong>image</strong>: the name of the image</li>
-         * <li><strong>imageId</strong>: the ID of the image</li>
-         * <li><strong>namespace</strong>: the namespace</li>
+         * <li><strong>clusterId</strong>: cluster ID</li>
+         * <li><strong>image</strong>: image name</li>
+         * <li><strong>imageId</strong>: image ID</li>
+         * <li><strong>namespace</strong>: namespace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,7 +300,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -312,9 +312,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the asset group.</p>
+         * <p>The group ID of the server to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+         * <p>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the group ID of the server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -327,10 +327,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -355,7 +355,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The name of the risk item.</p>
+         * <p>The name of the baseline check risk item.</p>
          * 
          * <strong>example:</strong>
          * <p>Redis</p>
@@ -369,8 +369,8 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         /**
          * <p>The status of the baseline check. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: failed</li>
-         * <li><strong>3</strong>: passed</li>
+         * <li><strong>1</strong>: failed </li>
+         * <li><strong>3</strong>: passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -398,10 +398,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
          * <p>The status of the check item. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: failed</li>
-         * <li><strong>2</strong>: verifying</li>
-         * <li><strong>3</strong>: passed</li>
-         * <li><strong>5</strong>: expired</li>
-         * <li><strong>6</strong>: ignored</li>
+         * <li><strong>2</strong>: verifying </li>
+         * <li><strong>3</strong>: passed </li>
+         * <li><strong>5</strong>: expired </li>
+         * <li><strong>6</strong>: ignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -426,9 +426,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The type of the query condition. Valid values:</p>
+         * <p>The query type. Valid values:</p>
          * <ul>
-         * <li><strong>uuid</strong>: the ID of an asset</li>
+         * <li><strong>uuid</strong>: asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,9 +441,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The level-1 type of check items.</p>
+         * <p>The level-1 type of the baseline.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the level-1 types of check items.</p>
+         * <p>Call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -458,7 +458,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         /**
          * <p>The UUID of the asset.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of assets.</p>
+         * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

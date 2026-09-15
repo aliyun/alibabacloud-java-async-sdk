@@ -87,7 +87,18 @@ public class OperateUnknownThreatDetectMachineRequest extends Request {
         } 
 
         /**
-         * OperateType.
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>restart_study</strong>: Restarts the learning process.</p>
+         * </li>
+         * <li><p><strong>increment_study</strong>: Starts incremental learning.</p>
+         * </li>
+         * <li><p><strong>change_status</strong>: Changes the status.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>restart_study</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -96,7 +107,16 @@ public class OperateUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The target status. This parameter applies only when <code>OperateType</code> is set to <code>change_status</code>. Valid values:</p>
+         * <ul>
+         * <li><p><strong>monitoring</strong>: Monitoring mode.</p>
+         * </li>
+         * <li><p><strong>blocking</strong>: Blocking mode.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>monitoring</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -105,7 +125,7 @@ public class OperateUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * <p>A list of server UUIDs.</p>
          */
         public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);

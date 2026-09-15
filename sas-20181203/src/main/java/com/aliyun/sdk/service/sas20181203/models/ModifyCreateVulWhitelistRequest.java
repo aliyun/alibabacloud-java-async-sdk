@@ -117,7 +117,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -126,7 +126,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The reason why you add the vulnerability to the whitelist.</p>
+         * <p>The reason for adding the vulnerability whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>This vulnerability is not harmful</p>
@@ -138,7 +138,10 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -147,22 +150,19 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The applicable scope of the whitelist. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The scope in which the whitelist takes effect. The value is a JSON string that contains the following fields:</p>
          * <ul>
-         * <li><p><strong>type</strong>: the type of the applicable scope. Valid values:</p>
-         * <ul>
-         * <li><strong>GroupId</strong>: the ID of a server group.</li>
-         * <li><strong>Uuid</strong>: the UUID of a server.</li>
+         * <li><strong>type</strong>: The type of the scope. Valid values:<ul>
+         * <li><strong>GroupId</strong>: server group</li>
+         * <li><strong>Uuid</strong>: host asset</li>
          * </ul>
          * </li>
-         * <li><p><strong>uuids</strong>: the UUIDs of servers. This field is of the string type.</p>
-         * </li>
-         * <li><p><strong>groupIds</strong>: the IDs of server groups. This field is of the long type.</p>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p> If you leave this parameter empty, the applicable scope is all servers. If you set the <strong>type</strong> field to <strong>GroupId</strong>, you must also specify the <strong>groupIds</strong> field. If you set the <strong>type</strong> field to <strong>Uuid</strong>, you must also specify the <strong>uuids</strong> field.</p>
+         * <li><strong>uuids</strong>: The collection of host asset UUIDs. The field type is String.</li>
+         * <li><strong>groupIds</strong>: The collection of server group IDs. The field type is Long.<blockquote>
+         * <p>If this value is empty, the whitelist applies to all hosts. If <strong>type</strong> is set to <strong>GroupId</strong>, <strong>groupIds</strong> cannot be empty. If <strong>type</strong> is set to <strong>Uuid</strong>, <strong>uuids</strong> cannot be empty.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;Uuid&quot;,&quot;uuids&quot;:[&quot;b31a708f-5fea-426e-bebe-a7b0893****&quot;,&quot;1f749687-3b5d-4e11-8140-d964673****&quot;],&quot;groupIds&quot;:[]}</p>
@@ -174,44 +174,44 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The information about the vulnerability that you want to add to the whitelist. The value is a JSON string that contains the following fields:</p>
+         * <p>The information about the vulnerability to add to the whitelist. The value is a JSON string that contains the following fields:</p>
          * <ul>
-         * <li><p><strong>Status</strong>: the status of the vulnerability.</p>
+         * <li><p><strong>Status</strong>: The vulnerability status.</p>
          * </li>
-         * <li><p><strong>GmtLast</strong>: the timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+         * <li><p><strong>GmtLast</strong>: The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
          * </li>
-         * <li><p><strong>LaterCount</strong>: the number of vulnerabilities that have the medium priority.</p>
+         * <li><p><strong>LaterCount</strong>: The number of medium-priority vulnerabilities.</p>
          * </li>
-         * <li><p><strong>AsapCount</strong>: the number of vulnerabilities that have the high priority.</p>
+         * <li><p><strong>AsapCount</strong>: The number of high-priority vulnerabilities.</p>
          * </li>
-         * <li><p><strong>Name</strong>: the name of the vulnerability.</p>
+         * <li><p><strong>Name</strong>: The vulnerability name.</p>
          * </li>
-         * <li><p><strong>Type</strong>: the type of the vulnerability. Valid values:</p>
+         * <li><p><strong>Type</strong>: The vulnerability type. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
          * <li><strong>cms</strong>: Web-CMS vulnerability</li>
          * <li><strong>app</strong>: application vulnerability</li>
-         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * <li><strong>emg</strong>: emergency vulnerability</li>
          * </ul>
          * </li>
-         * <li><p><strong>Related</strong>: the Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+         * <li><p><strong>Related</strong>: The CVE ID of the vulnerability.</p>
          * </li>
-         * <li><p><strong>HandledCount</strong>: the number of handled vulnerabilities.</p>
+         * <li><p><strong>HandledCount</strong>: The number of handled vulnerabilities.</p>
          * </li>
-         * <li><p><strong>AliasName</strong>: the alias of the vulnerability.</p>
+         * <li><p><strong>AliasName</strong>: The alias of the vulnerability.</p>
          * </li>
-         * <li><p><strong>RuleModifyTime</strong>: the time when the vulnerability was last disclosed.</p>
+         * <li><p><strong>RuleModifyTime</strong>: The time when the vulnerability was last published.</p>
          * </li>
-         * <li><p><strong>NntfCount</strong>: the number of vulnerabilities that have the low priority.</p>
+         * <li><p><strong>NntfCount</strong>: The number of low-priority vulnerabilities.</p>
          * </li>
-         * <li><p><strong>TotalFixCount</strong>: the total number of fixed vulnerabilities.</p>
+         * <li><p><strong>TotalFixCount</strong>: The total number of fixed vulnerabilities.</p>
          * </li>
-         * <li><p><strong>Tags</strong>: the tag that is added to the vulnerability.</p>
+         * <li><p><strong>Tags</strong>: The vulnerability tags.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to query the information about the vulnerability that you want to add to the whitelist.</p>
+         * <p>You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to obtain the vulnerability information to add to the whitelist.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

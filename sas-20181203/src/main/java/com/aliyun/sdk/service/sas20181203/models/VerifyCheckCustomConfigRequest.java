@@ -115,7 +115,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
         } 
 
         /**
-         * <p>Check item ID.</p>
+         * <p>The ID of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>76</p>
@@ -127,7 +127,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * <p>Custom check item to validate input parameters.</p>
+         * <p>The input parameters for custom check item validation.</p>
          */
         public Builder customCheckConfig(CustomCheckConfig customCheckConfig) {
             String customCheckConfigShrink = shrink(customCheckConfig, "CustomCheckConfig", "json");
@@ -137,7 +137,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * <p>List of custom configuration items for the check item.</p>
+         * <p>The list of custom parameter configuration items for the check item.</p>
          */
         public Builder customConfigs(java.util.List<CustomConfigs> customConfigs) {
             this.putQueryParameter("CustomConfigs", customConfigs);
@@ -146,7 +146,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * <p>Repair parameters supported by the check item&quot;s repair function.</p>
+         * <p>The repair parameters supported by the repair feature of the check item.</p>
          */
         public Builder repairConfigs(java.util.List<RepairConfigs> repairConfigs) {
             this.putQueryParameter("RepairConfigs", repairConfigs);
@@ -155,10 +155,10 @@ public class VerifyCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * <p>Situation Awareness parameter validation types: </p>
+         * <p>The validation type for Threat Detection Service parameters. Valid values:</p>
          * <ul>
-         * <li><strong>REPAIR_CONFIG</strong>: Repair and custom parameter validation (default) </li>
-         * <li><strong>CHECK_ITEM_CONFIG</strong>: Custom check item validation</li>
+         * <li><strong>REPAIR_CONFIG</strong>: repair and custom parameter validation (default).</li>
+         * <li><strong>CHECK_ITEM_CONFIG</strong>: custom check item validation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             } 
 
             /**
-             * <p>Instance ID of the asset.</p>
+             * <p>The instance ID of the asset.</p>
              * 
              * <strong>example:</strong>
              * <p>i-0jl4mjgl261cfrz5****</p>
@@ -350,7 +350,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             } 
 
             /**
-             * <p>Define rules for custom inspection items.</p>
+             * <p>The definition rule of the custom check item.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;AssociatedData&quot;:{&quot;ToDataList&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;FromPropertyPath&quot;:&quot;InstanceId&quot;}]},&quot;MatchProperty&quot;:{&quot;Operator&quot;:&quot;AND&quot;,&quot;MatchProperties&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Disk&quot;,&quot;PropertyPath&quot;:&quot;DiskId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testId&quot;}]}}</p>
@@ -361,7 +361,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>Asset instance that requires testing rules</p>
+             * <p>The asset instance on which you want to test the rule.</p>
              */
             public Builder cloudAssetInstance(CloudAssetInstance cloudAssetInstance) {
                 this.cloudAssetInstance = cloudAssetInstance;
@@ -369,7 +369,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>Asset subtype of the cloud product</p>
+             * <p>The asset subtype of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>DISK</p>
@@ -380,30 +380,30 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>Asset types of cloud products. Values:</p>
+             * <p>The asset type of the cloud service. Valid values:</p>
              * <ul>
-             * <li><strong>ECS</strong>: Elastic Compute Service </li>
-             * <li><strong>SLB</strong>: Server Load Balancer </li>
-             * <li><strong>RDS</strong>: Relational Database Service </li>
-             * <li><strong>MONGODB</strong>: MongoDB Database </li>
-             * <li><strong>KVSTORE</strong>: Redis Database </li>
-             * <li><strong>ACR</strong>: Container Registry </li>
-             * <li><strong>CSK</strong>: CSK </li>
-             * <li><strong>VPC</strong>: Virtual Private Cloud </li>
-             * <li><strong>ACTIONTRAIL</strong>: Action Trail </li>
-             * <li><strong>CDN</strong>: Content Delivery Network </li>
-             * <li><strong>CAS</strong>: Digital Certificate Management Service [formerly SSL Certificates] </li>
-             * <li><strong>RDC</strong>: DevOps </li>
-             * <li><strong>RAM</strong>: Resource Access Management </li>
-             * <li><strong>DDOS</strong>: Distributed Denial of Service </li>
-             * <li><strong>WAF</strong>: Web Application Firewall </li>
-             * <li><strong>OSS</strong>: Object Storage Service </li>
-             * <li><strong>POLARDB</strong>: POLARDB </li>
-             * <li><strong>POSTGRESQL</strong>: PostgreSQL </li>
-             * <li><strong>MSE</strong>: MSE </li>
-             * <li><strong>NAS</strong>: Network Attached Storage </li>
-             * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection </li>
-             * <li><strong>EIP</strong>: Elastic IP</li>
+             * <li><strong>ECS</strong>: server</li>
+             * <li><strong>SLB</strong>: load balancing</li>
+             * <li><strong>RDS</strong>: ApsaraDB RDS database</li>
+             * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB database</li>
+             * <li><strong>KVSTORE</strong>: ApsaraDB for Redis database</li>
+             * <li><strong>ACR</strong>: ACR</li>
+             * <li><strong>CSK</strong>: CSK</li>
+             * <li><strong>VPC</strong>: VPC</li>
+             * <li><strong>ACTIONTRAIL</strong>: ActionTrail</li>
+             * <li><strong>CDN</strong>: CDN</li>
+             * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
+             * <li><strong>RDC</strong>: Apsara Devops</li>
+             * <li><strong>RAM</strong>: RAM</li>
+             * <li><strong>DDOS</strong>: distributed deny of service</li>
+             * <li><strong>WAF</strong>: WAF</li>
+             * <li><strong>OSS</strong>: access control</li>
+             * <li><strong>POLARDB</strong>: POLARDB</li>
+             * <li><strong>POSTGRESQL</strong>: PostgreSQL</li>
+             * <li><strong>MSE</strong>: MSE</li>
+             * <li><strong>NAS</strong>: NAS</li>
+             * <li><strong>SDDP</strong>: SDDP</li>
+             * <li><strong>EIP</strong>: EIP.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -415,13 +415,13 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>Cloud asset vendor. Values: </p>
+             * <p>The cloud asset vendor. Valid values:</p>
              * <ul>
-             * <li><strong>ALIYUN</strong>: Alibaba Cloud </li>
-             * <li><strong>Tencent</strong>: Tencent Cloud </li>
-             * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud </li>
-             * <li><strong>Azure</strong>: Microsoft </li>
-             * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+             * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+             * <li><strong>Tencent</strong>: Tencent Cloud</li>
+             * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
+             * <li><strong>Azure</strong>: Microsoft Azure</li>
+             * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -505,7 +505,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             } 
 
             /**
-             * <p>Name of the custom configuration item for the check item, unique within the same check item.</p>
+             * <p>The name of the custom configuration item for the check item. The name is unique within the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>IPList</p>
@@ -516,7 +516,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>Operation type for the custom configuration item of the check item. Only pass DELETE when deleting; no need to pass for creation or update.</p>
+             * <p>The operation type of the custom configuration item for the check item. Set this parameter to DELETE only for deletion operations. You do not need to specify this parameter for creation or update operations.</p>
              * 
              * <strong>example:</strong>
              * <p>DELETE</p>
@@ -527,7 +527,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>User-configured value string for the custom configuration item of the check item.</p>
+             * <p>The user-configured value string of the custom configuration item for the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>10.12.4.XX</p>
@@ -623,7 +623,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             } 
 
             /**
-             * <p>ID of the repair process during the repair.</p>
+             * <p>The ID of the repair flow that corresponds to the repair operation.</p>
              * 
              * <strong>example:</strong>
              * <p>7fec0a3395b345c18f108ffc9fc0****</p>
@@ -634,7 +634,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>Name of the repair parameter for the check item, unique within the same check item.</p>
+             * <p>The name of the repair parameter for the check item. The name is unique within the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>IPLists</p>
@@ -645,7 +645,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>Operation type for the custom configuration item of the check item. Only pass DELETE when deleting; no need to pass for creation or update.</p>
+             * <p>The operation type of the custom configuration item for the check item. Set this parameter to DELETE only for deletion operations. You do not need to specify this parameter for creation or update operations.</p>
              * 
              * <strong>example:</strong>
              * <p>DELETE</p>
@@ -656,7 +656,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * <p>User-configured value string for the repair parameter of the check item.</p>
+             * <p>The user-configured value string of the repair configuration item for the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>172.26.49.XX</p>

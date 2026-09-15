@@ -167,7 +167,7 @@ public class ListCheckItemsResponseBody extends TeaModel {
             /**
              * <p>The type of the help information for the check item risk. Values:</p>
              * <ul>
-             * <li><strong>text</strong>：Text</li>
+             * <li><strong>text</strong>:Text</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -382,11 +382,16 @@ public class ListCheckItemsResponseBody extends TeaModel {
             /**
              * <p>The name of the associated policy category:</p>
              * <ul>
-             * <li><strong>AISPM</strong>：AI Configuration Management (AI-SPM)</li>
-             * <li><strong>KISPM</strong>：Kubernetes Configuration Management (KSPM)</li>
-             * <li><strong>IDENTITY_PERMISSION</strong>：Identity and Permission Management (CIEM)</li>
-             * <li><strong>RISK</strong>：Security Risk</li>
-             * <li><strong>COMPLIANCE</strong>：Compliance Risk</li>
+             * <li><p><strong>AISPM</strong>:AI Configuration Management (AI-SPM)</p>
+             * </li>
+             * <li><p><strong>KISPM</strong>:Kubernetes Configuration Management (KSPM)</p>
+             * </li>
+             * <li><p><strong>IDENTITY_PERMISSION</strong>:Identity and Permission Management (CIEM)</p>
+             * </li>
+             * <li><p><strong>RISK</strong>:Security Risk</p>
+             * </li>
+             * <li><p><strong>COMPLIANCE</strong>:Compliance Risk</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -459,7 +464,7 @@ public class ListCheckItemsResponseBody extends TeaModel {
             /**
              * <p>The type of the check description attribute. Values:</p>
              * <ul>
-             * <li><strong>text</strong>：Text</li>
+             * <li><strong>text</strong>:Text</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -543,7 +548,7 @@ public class ListCheckItemsResponseBody extends TeaModel {
             /**
              * <p>The type of the check item solution information. Values:</p>
              * <ul>
-             * <li><strong>text</strong>：Text</li>
+             * <li><strong>text</strong>:Text</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -832,8 +837,10 @@ public class ListCheckItemsResponseBody extends TeaModel {
             /**
              * <p>The source type of the Security Posture check item:</p>
              * <ul>
-             * <li><strong>CUSTOM</strong>: User-defined</li>
-             * <li><strong>SYSTEM</strong>: Predefined by the Security Posture platform</li>
+             * <li><p><strong>CUSTOM</strong>: User-defined</p>
+             * </li>
+             * <li><p><strong>SYSTEM</strong>: Predefined by the Security Posture platform</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -853,7 +860,7 @@ public class ListCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-type of the cloud product&quot;s asset.</p>
+             * <p>The sub-type of the cloud product\&quot;s asset.</p>
              * 
              * <strong>example:</strong>
              * <p>DISK</p>
@@ -888,9 +895,12 @@ public class ListCheckItemsResponseBody extends TeaModel {
             /**
              * <p>The risk level of the check item. Values:</p>
              * <ul>
-             * <li><strong>HIGH</strong>: High risk</li>
-             * <li><strong>MEDIUM</strong>: Medium risk</li>
-             * <li><strong>LOW</strong>: Low risk</li>
+             * <li><p><strong>HIGH</strong>: High risk</p>
+             * </li>
+             * <li><p><strong>MEDIUM</strong>: Medium risk</p>
+             * </li>
+             * <li><p><strong>LOW</strong>: Low risk</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -912,8 +922,10 @@ public class ListCheckItemsResponseBody extends TeaModel {
             /**
              * <p>The status of the check item. Values:</p>
              * <ul>
-             * <li><strong>EDIT</strong>: In editing</li>
-             * <li><strong>RELEASE</strong>: Released</li>
+             * <li><p><strong>EDIT</strong>: In editing</p>
+             * </li>
+             * <li><p><strong>RELEASE</strong>: Released</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -87,7 +87,7 @@ public class ListAutoTagRulesRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,9 +99,9 @@ public class ListAutoTagRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class ListAutoTagRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>text-001</p>

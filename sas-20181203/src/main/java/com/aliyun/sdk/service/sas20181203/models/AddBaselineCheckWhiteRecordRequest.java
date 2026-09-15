@@ -149,7 +149,7 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
          * <p>The reason why the check item is added to the whitelist.</p>
          * 
          * <strong>example:</strong>
-         * <p>AutoRun</p>
+         * <p>无效</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);

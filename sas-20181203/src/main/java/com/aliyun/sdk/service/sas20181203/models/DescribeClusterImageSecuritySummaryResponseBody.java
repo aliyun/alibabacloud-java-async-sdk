@@ -67,7 +67,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the image-related security events.</p>
+         * <p>The image security event information.</p>
          */
         public Builder clusterImageEvent(ClusterImageEvent clusterImageEvent) {
             this.clusterImageEvent = clusterImageEvent;
@@ -157,9 +157,9 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong></li>
-             * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><strong>high</strong>: High.</li>
+             * <li><strong>medium</strong>: Medium.</li>
+             * <li><strong>low</strong>: Low.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -241,11 +241,11 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert level. Valid values:</p>
+             * <p>The warning level. Valid values:</p>
              * <ul>
-             * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
-             * <li><strong>nntf</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
-             * <li><strong>later</strong>: low. You can ignore the vulnerability.</li>
+             * <li><strong>asap</strong>: High. Fix the vulnerability at the earliest opportunity.</li>
+             * <li><strong>nntf</strong>: Medium. The vulnerability can be temporarily left unfixed.</li>
+             * <li><strong>later</strong>: Low. The vulnerability can be left unfixed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -329,9 +329,9 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong></li>
-             * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><strong>high</strong>: High.</li>
+             * <li><strong>medium</strong>: Medium.</li>
+             * <li><strong>low</strong>: Low.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -402,7 +402,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of image application vulnerabilities.</p>
+             * <p>The number of application vulnerabilities.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -413,11 +413,11 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert level. Valid values:</p>
+             * <p>The warning level. Valid values:</p>
              * <ul>
-             * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
-             * <li><strong>nntf</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
-             * <li><strong>later</strong>: low. You can ignore the vulnerability.</li>
+             * <li><strong>asap</strong>: High. Fix the vulnerability at the earliest opportunity.</li>
+             * <li><strong>nntf</strong>: Medium. The vulnerability can be temporarily left unfixed.</li>
+             * <li><strong>later</strong>: Low. The vulnerability can be left unfixed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -514,7 +514,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about image baseline risks.</p>
+             * <p>The image baseline check information.</p>
              */
             public Builder imageBaseline(java.util.List<ImageBaseline> imageBaseline) {
                 this.imageBaseline = imageBaseline;
@@ -522,7 +522,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about image system vulnerabilities.</p>
+             * <p>The image system vulnerability information.</p>
              */
             public Builder imageCveVul(java.util.List<ImageCveVul> imageCveVul) {
                 this.imageCveVul = imageCveVul;
@@ -530,7 +530,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about malicious image samples.</p>
+             * <p>The image malicious sample information.</p>
              */
             public Builder imageMaliciousFile(java.util.List<ImageMaliciousFile> imageMaliciousFile) {
                 this.imageMaliciousFile = imageMaliciousFile;
@@ -538,7 +538,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about image application vulnerabilities.</p>
+             * <p>The image application vulnerability information.</p>
              */
             public Builder imageScaVul(java.util.List<ImageScaVul> imageScaVul) {
                 this.imageScaVul = imageScaVul;

@@ -73,9 +73,9 @@ public class GetInterceptionSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the cluster to query. This parameter takes effect only on the InterceptionCountInDays response parameter.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetInterceptionSummaryRequest extends Request {
         }
 
         /**
-         * ExcludeClusterTypes.
+         * <p>The list of cluster types to exclude.</p>
          */
         public Builder excludeClusterTypes(java.util.List<String> excludeClusterTypes) {
             this.putQueryParameter("ExcludeClusterTypes", excludeClusterTypes);

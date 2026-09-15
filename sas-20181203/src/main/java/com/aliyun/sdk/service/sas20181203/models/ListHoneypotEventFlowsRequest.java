@@ -129,7 +129,10 @@ public class ListHoneypotEventFlowsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -138,7 +141,15 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * <p>Specifies whether the event has been handled. Valid values:</p>
+         * <ul>
+         * <li><strong>y</strong>: Handled. </li>
+         * <li><strong>n</strong>: Unhandled. </li>
+         * <li><strong>a</strong>: All.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>n</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -147,7 +158,14 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -156,7 +174,13 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries to return per page in a paged query. Default value: 100. If the PageSize parameter is left empty, 100 entries are returned by default.</p>
+         * <blockquote>
+         * <p>Do not leave PageSize empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +189,10 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>Invalid parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -174,7 +201,13 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * SecurityEventId.
+         * <p>The ID of the alert event.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotEvents~~">ListHoneypotEvents</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>7455818</p>
          */
         public Builder securityEventId(Long securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);

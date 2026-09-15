@@ -67,7 +67,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>B869E3A0-1147-539D-9920-47580700****</p>
@@ -157,7 +157,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array consisting of instances that failed the check.</p>
+             * <p>The list of instances that failed the check.</p>
              */
             public Builder failInstances(java.util.List<String> failInstances) {
                 this.failInstances = failInstances;
@@ -165,10 +165,10 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation code of the task that checks the configurations of cloud services. Valid values:</p>
+             * <p>The operation code of the cloud service configuration check task. Valid values:</p>
              * <ul>
-             * <li><strong>Throttling</strong></li>
-             * <li><strong>ActionTrialUnauthorized</strong></li>
+             * <li><strong>Throttling</strong>: Rate limited.</li>
+             * <li><strong>ActionTrialUnauthorized</strong>: Unauthorized error.</li>
              * </ul>
              * 
              * <strong>example:</strong>

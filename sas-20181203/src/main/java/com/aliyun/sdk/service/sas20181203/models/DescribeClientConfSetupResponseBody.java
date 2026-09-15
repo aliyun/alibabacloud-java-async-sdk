@@ -67,7 +67,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configurations of the Security Center agent.</p>
+         * <p>The resource configuration information of the client.</p>
          */
         public Builder clientConf(ClientConf clientConf) {
             this.clientConf = clientConf;
@@ -75,7 +75,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>151F6EB6-D5F3-417A-AF7B-4D84975D****</p>
@@ -157,7 +157,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configurations of the usage for the Security Center agent.</p>
+             * <p>The resource configuration information used by the client.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;mem&quot;:&quot;200&quot;,&quot;cpu&quot;:&quot;10&quot;,&quot;cpu_all&quot;:&quot;0&quot;}</p>
@@ -168,7 +168,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is added to the configuration.</p>
+             * <p>The policy tag.</p>
              * 
              * <strong>example:</strong>
              * <p>machineResource</p>
@@ -179,11 +179,11 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag. Valid values:</p>
+             * <p>The policy value. Valid values:</p>
              * <ul>
              * <li>major</li>
              * <li>advanced</li>
-             * <li>basic</li>
+             * <li>basic.</li>
              * </ul>
              * 
              * <strong>example:</strong>

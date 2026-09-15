@@ -60,7 +60,7 @@ public class UpdateHybridProxyRequest extends Request {
         } 
 
         /**
-         * <p>The UUID of the Security Center agent.</p>
+         * <p>The UUID of the proxy client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -102,10 +102,10 @@ public class ListSupportAttackPathAssetRequest extends Request {
         } 
 
         /**
-         * <p>Node type, with values:</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>start</strong>: Start point.</li>
-         * <li><strong>end</strong>: End point.</li>
+         * <li><strong>start</strong>: start node.</li>
+         * <li><strong>end</strong>: end node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,9 +118,9 @@ public class ListSupportAttackPathAssetRequest extends Request {
         }
 
         /**
-         * <p>Path name.</p>
+         * <p>The path name.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path names.</p>
+         * <p>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path names.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,9 +133,9 @@ public class ListSupportAttackPathAssetRequest extends Request {
         }
 
         /**
-         * <p>Path type.</p>
+         * <p>The path type.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path types.</p>
+         * <p>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -148,11 +148,11 @@ public class ListSupportAttackPathAssetRequest extends Request {
         }
 
         /**
-         * <p>Support type, with values:</p>
+         * <p>The support type. Valid values:</p>
          * <ul>
-         * <li><strong>event</strong>: Attack path alert event.</li>
-         * <li><strong>whitelist</strong>: Attack path whitelist.</li>
-         * <li><strong>sensitive</strong>: Sensitive assets in the attack path.</li>
+         * <li><strong>event</strong>: attack path alert event.</li>
+         * <li><strong>whitelist</strong>: attack path whitelist.</li>
+         * <li><strong>sensitive</strong>: attack path sensitive asset.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

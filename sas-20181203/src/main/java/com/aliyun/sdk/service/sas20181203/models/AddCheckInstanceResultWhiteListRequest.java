@@ -144,7 +144,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the group to which the check item belongs.</p>
+         * <p>The ID of the check group to which the check item belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cQFq20UzZ49K6gRSJD1301****</p>
@@ -158,7 +158,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         /**
          * <p>The ID of the check item.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+         * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -180,7 +180,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs of the assets.</p>
+         * <p>The collection of asset instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -189,7 +189,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The asset instances.</p>
+         * <p>The collection of asset instance information.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
@@ -198,7 +198,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The description. The value of this parameter can be up to 65,535 bytes in length.</p>
+         * <p>The remarks. Maximum length: 65535 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -210,9 +210,9 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The type of the rule. Default value: <strong>WHITE</strong>. Valid value:</p>
+         * <p>The rule type. Default value: <strong>WHITE</strong>. Valid values:</p>
          * <ul>
-         * <li>WHITE: adds check items to the whitelist.</li>
+         * <li>WHITE: whitelist</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,9 +284,9 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             } 
 
             /**
-             * <p>The instance ID of the asset.</p>
+             * <p>The asset instance ID.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to query the instance IDs of assets.</p>
+             * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -298,9 +298,9 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             }
 
             /**
-             * <p>The region ID of the asset.</p>
+             * <p>The region where the asset resides.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to query the region ID of the asset.</p>
+             * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

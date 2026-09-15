@@ -145,7 +145,7 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The download URL of the security report.</p>
+         * <p>The download URL of the report.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></p>
@@ -156,7 +156,7 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the security report was exported.</p>
+         * <p>The time when the report was generated. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-10</p>
@@ -167,7 +167,7 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the export task.</p>
+         * <p>The ID of the export report task.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -178,11 +178,11 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the export task. Valid values:</p>
+         * <p>The status of the export node. Valid values:</p>
          * <ul>
-         * <li><strong>fail</strong>: The export task fails.</li>
-         * <li><strong>exporting</strong>: The export task is being executed.</li>
-         * <li><strong>success</strong>: The export task is successful.</li>
+         * <li><strong>fail</strong>: The export failed.</li>
+         * <li><strong>exporting</strong>: The export is in progress.</li>
+         * <li><strong>success</strong>: The export succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the report file that is exported.</p>
+         * <p>The name of the exported file.</p>
          * 
          * <strong>example:</strong>
          * <p>test_xxxx.html</p>
@@ -216,7 +216,7 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID, which is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>FFDFCEB3-A5EE-590A-8E70-283EBC5D****</p>
@@ -227,7 +227,7 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp when the download URL expires. Unit: seconds.</p>
+         * <p>The UNIX timestamp when the report download URL expires. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1673335497000</p>

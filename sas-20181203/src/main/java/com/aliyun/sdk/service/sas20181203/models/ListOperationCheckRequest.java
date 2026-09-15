@@ -131,9 +131,10 @@ public class ListOperationCheckRequest extends Request {
         } 
 
         /**
-         * <p>Check item ID.</p>
+         * <p>The check item ID.</p>
          * <blockquote>
-         * <p>Obtain this parameter by calling the <a href="~~ListCheckResult~~">ListCheckResult</a> interface.</p>
+         * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain this parameter.
+         * This parameter is required. If you do not specify this parameter, the API returns a 400 error.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +147,7 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
-         * <p>Timestamp (in milliseconds) of the end time of the queried task.</p>
+         * <p>The timestamp of the task end time to query. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719923175001</p>
@@ -158,7 +159,7 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
-         * <p>Language type for request and response messages, default value is zh. Values:</p>
+         * <p>The language of the request and response. Default value: zh. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -174,7 +175,7 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
-         * <p>Information about the operated instances.</p>
+         * <p>The information about the instances on which the operation is performed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder operationTaskInstances(java.util.List<OperationTaskInstances> operationTaskInstances) {
@@ -184,7 +185,7 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
-         * <p>Timestamp (in milliseconds) of the start time of the queried task.</p>
+         * <p>The timestamp of the task start time to query. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719923175000</p>
@@ -196,10 +197,10 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
-         * <p>Task type corresponding to the task:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>REPAIR</strong>: Repair task</li>
-         * <li><strong>ROLLBACK</strong>: Rollback task</li>
+         * <li><strong>REPAIR</strong>: fix task</li>
+         * <li><strong>ROLLBACK</strong>: rollback task</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -285,7 +286,7 @@ public class ListOperationCheckRequest extends Request {
             } 
 
             /**
-             * <p>Cloud asset instance ID.</p>
+             * <p>The cloud asset instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>r-bp1642ib4bg2bm****</p>
@@ -296,7 +297,7 @@ public class ListOperationCheckRequest extends Request {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -307,7 +308,7 @@ public class ListOperationCheckRequest extends Request {
             }
 
             /**
-             * <p>Asset vendor. Values:</p>
+             * <p>The asset vendor. Valid values:</p>
              * <ul>
              * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
              * </ul>

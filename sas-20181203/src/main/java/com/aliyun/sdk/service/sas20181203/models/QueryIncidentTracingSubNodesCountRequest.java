@@ -58,7 +58,7 @@ public class QueryIncidentTracingSubNodesCountRequest extends Request {
         } 
 
         /**
-         * VertexIdAndTypeList.
+         * <p>List of key-value pairs composed of node IDs and types, where key-value pairs exist in the form of arrays</p>
          */
         public Builder vertexIdAndTypeList(java.util.List<java.util.List<String>> vertexIdAndTypeList) {
             this.vertexIdAndTypeList = vertexIdAndTypeList;

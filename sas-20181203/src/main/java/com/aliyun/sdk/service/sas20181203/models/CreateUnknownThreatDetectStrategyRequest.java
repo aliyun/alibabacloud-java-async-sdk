@@ -115,7 +115,10 @@ public class CreateUnknownThreatDetectStrategyRequest extends Request {
         } 
 
         /**
-         * AssetSelectionType.
+         * <p>The asset selection identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN_THREAT_DETECT_CONFIG_****</p>
          */
         public Builder assetSelectionType(String assetSelectionType) {
             this.putQueryParameter("AssetSelectionType", assetSelectionType);
@@ -124,7 +127,10 @@ public class CreateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * DurationDaysAfterInit.
+         * <p>The number of days after the model is initially created before learning ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder durationDaysAfterInit(Integer durationDaysAfterInit) {
             this.putQueryParameter("DurationDaysAfterInit", durationDaysAfterInit);
@@ -133,7 +139,10 @@ public class CreateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * DurationDaysAfterStop.
+         * <p>The number of days after no new processes are added to the model before learning ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder durationDaysAfterStop(Integer durationDaysAfterStop) {
             this.putQueryParameter("DurationDaysAfterStop", durationDaysAfterStop);
@@ -142,7 +151,10 @@ public class CreateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategy****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -151,7 +163,14 @@ public class CreateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * StudyMode.
+         * <p>The whitelist mode. Valid values:</p>
+         * <ul>
+         * <li><strong>hash</strong>: process hash</li>
+         * <li><strong>path</strong>: process path</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         public Builder studyMode(String studyMode) {
             this.putQueryParameter("StudyMode", studyMode);

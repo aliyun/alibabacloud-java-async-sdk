@@ -159,7 +159,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         } 
 
         /**
-         * <p>The whitelist rule. For example, if you want to add a file that contains the string a to the whitelist based on the MD5 hash value, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</p>
+         * <p>The rule for adding to the whitelist. For example, to add a whitelist rule based on file MD5 where the file contains the string &quot;a&quot;, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}</p>
@@ -171,9 +171,9 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform to handle the alert events.</p>
+         * <p>The operation type for batch processing similar alert events.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to query the operations.</p>
+         * <p>Call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -187,39 +187,30 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the operation that you want to perform to handle the alert events. The value of this parameter is in the JSON format.</p>
+         * <p>The configuration of the sub-operation for alerting event handling. The value is in JSON format.</p>
          * <blockquote>
-         * <p> If you set <strong>OperationCode</strong> to <strong>kill_and_quara</strong>, <strong>block_ip</strong>, or <strong>virus_quara</strong>, you must specify OperationParams. If you set <strong>OperationCode</strong> to other values, you can leave OperationParams empty. If you set <strong>OperationCode</strong> to <strong>block_ip</strong>, the value of OperationParams must consist of the following fields:</p>
+         * <p>This parameter is required when <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, <strong>block_ip</strong>, or <strong>virus_quara</strong>. For other values of <strong>OperationCode</strong>, this parameter can be left empty.</p>
          * </blockquote>
          * <blockquote>
+         * <p>When <strong>OperationCode</strong> is set to <strong>block_ip</strong>, the following field is included:</p>
          * <ul>
-         * <li><strong>expireTime</strong>: the end time of locking. Unit: milliseconds.</li>
+         * <li><strong>expireTime</strong>: the lock expiration time. Unit: milliseconds.</li>
          * </ul>
-         * </blockquote>
-         * <blockquote>
-         * <p> If you set <strong>OperationCode</strong> to <strong>kill_and_quara</strong>, the value of OperationParams must consist of the following fields:</p>
-         * </blockquote>
-         * <blockquote>
+         * <p>When <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, the following field is included:</p>
          * <ul>
-         * <li><strong>subOperation</strong>: the method of detection and removal. Valid values:</li>
+         * <li><strong>subOperation</strong>: the scan method. Valid values:<ul>
+         * <li><strong>killAndQuaraFileByMd5andPath</strong>: terminates the process and quarantines the quarantined file.</li>
+         * <li><strong>killByMd5andPath</strong>: terminates the running process.</li>
          * </ul>
-         * </blockquote>
-         * <blockquote>
-         * <pre><code>*   **killAndQuaraFileByMd5andPath**: terminates the process and quarantines the source file of the process.
-         * *   **killByMd5andPath**: terminates the running process.
-         * </code></pre>
-         * </blockquote>
-         * <blockquote>
-         * <p> If you set <strong>OperationCode</strong> to <strong>virus_quara</strong>, the value of OperationParams consists of the following fields:</p>
-         * </blockquote>
-         * <blockquote>
+         * </li>
+         * </ul>
+         * <p>When <strong>OperationCode</strong> is set to <strong>virus_quara</strong>, the following field is included:</p>
          * <ul>
-         * <li><strong>subOperation</strong>: the method of detection and removal. Valid values:</li>
+         * <li><strong>subOperation</strong>: the scan method. Valid values:<ul>
+         * <li><strong>quaraFileByMd5andPath</strong>: quarantines the source file of the process.</li>
          * </ul>
-         * </blockquote>
-         * <blockquote>
-         * <pre><code>*   **quaraFileByMd5andPath**: quarantines the source file of the process.
-         * </code></pre>
+         * </li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -232,7 +223,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * <p>The remark of the operation.</p>
+         * <p>The remarks for the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>remark test.</p>
@@ -244,7 +235,10 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the Alibaba Cloud account of member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -262,7 +256,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -274,9 +268,9 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task that handles the alert events at a time.</p>
+         * <p>The ID of the task that batch processes all alert events of the same type.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~CreateSimilarSecurityEventsQueryTask~~">CreateSimilarSecurityEventsQueryTask</a> operation to query the IDs of tasks.</p>
+         * <p>Call the <a href="~~CreateSimilarSecurityEventsQueryTask~~">CreateSimilarSecurityEventsQueryTask</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

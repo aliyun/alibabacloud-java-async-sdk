@@ -338,7 +338,14 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * AssetType.
+         * <p>The asset type where the vulnerability is detected. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>ECS</strong>: host asset</li>
+         * <li><strong>CONTAINER</strong>: container asset</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -347,9 +354,9 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The additional type of the vulnerabilities. You need to specify this parameter when you query application vulnerabilities. If you set the Type parameter to app, you must specify this parameter. Set the value to <strong>sca</strong>.</p>
+         * <p>The additional vulnerability type when querying application vulnerabilities. This parameter is required when Type is set to app. The value is fixed as <strong>sca</strong>.</p>
          * <blockquote>
-         * <p>If this parameter is set to <strong>sca</strong>, <strong>application vulnerabilities</strong> and the <strong>vulnerabilities that are detected based on software component analysis</strong> are queried. If you do not specify this parameter, only application vulnerabilities are queried.</p>
+         * <p>If this parameter is set to <strong>sca</strong>, both application vulnerabilities (<strong>app</strong> type) and software composition analysis (<strong>sca</strong> type) vulnerabilities are queried. If this parameter is not set, only application vulnerabilities are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -362,7 +369,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The name of the container that is affected by the vulnerability.</p>
+         * <p>The name of the container affected by the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>xxljob-7b87597b99-mcskr</p>
@@ -374,9 +381,9 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The end time of the first scan.</p>
+         * <p>The end of the time range during which the first scan was performed.</p>
          * <blockquote>
-         * <p> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -389,9 +396,9 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The start time of the first scan.</p>
+         * <p>The start of the time range during which the first scan was performed.</p>
          * <blockquote>
-         * <p> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -404,7 +411,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+         * <p>The CVE ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CVE-2022-44702</p>
@@ -418,8 +425,8 @@ public class ExportVulRequest extends Request {
         /**
          * <p>Specifies whether the vulnerability is fixed. Valid values:</p>
          * <ul>
-         * <li><strong>y</strong>: The vulnerability is fixed.</li>
-         * <li><strong>n</strong>: The vulnerability is not fixed.</li>
+         * <li><strong>y</strong>: fixed</li>
+         * <li><strong>n</strong>: not fixed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,9 +439,9 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The server group ID of the server on which the vulnerabilities are detected.</p>
+         * <p>The ID of the asset group to which the server with the vulnerability belongs.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * <p>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -447,7 +454,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The name of the image that is affected by the vulnerability.</p>
+         * <p>The name of the image affected by the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>container-<em><strong>:</strong></em>*</p>
@@ -475,7 +482,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+         * <p>The priority of the vulnerability to query. Separate multiple priorities with commas (,). Valid values:</p>
          * <ul>
          * <li><strong>asap</strong>: high</li>
          * <li><strong>later</strong>: medium</li>
@@ -492,7 +499,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The path of the process that is affected by the vulnerability.</p>
+         * <p>The path of the process affected by the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>/etc/test</p>
@@ -504,12 +511,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+         * <p>Specifies whether runtime application self-protection (RASP) supports real-time protection against the vulnerability. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: no.</p>
-         * </li>
-         * <li><p><strong>1</strong>: yes.</p>
-         * </li>
+         * <li><strong>0</strong>: Not supported.</li>
+         * <li><strong>1</strong>: Supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -522,7 +527,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the resource directory account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -531,14 +539,24 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The tag that is used to search for the vulnerabilities. Valid values:</p>
+         * <p>Filters results by label. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>Restart required</li>
-         * <li>Remote exploitation</li>
-         * <li>Exploit exists</li>
+         * <li>Remote utilization</li>
+         * <li>EXP exists</li>
          * <li>Exploitable</li>
          * <li>Privilege escalation</li>
          * <li>Code execution</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li><strong>Restart required</strong></li>
+         * <li><strong>Remote utilization</strong></li>
+         * <li><strong>EXP exists</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Elevation of Privilege</strong></li>
+         * <li><strong>Code Execution</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -551,13 +569,13 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability that you want to export. Valid values:</p>
+         * <p>The type of vulnerabilities to export. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
          * <li><strong>cms</strong>: Web-CMS vulnerability</li>
          * <li><strong>app</strong>: application vulnerability</li>
-         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * <li><strong>emg</strong>: emergency vulnerability</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -571,7 +589,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server on which the vulnerabilities are detected. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the servers to query for vulnerabilities. Separate multiple UUIDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>1587bedb-fdb4-48c4-9330-****</p>
@@ -583,9 +601,9 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which the vulnerabilities are detected. Separate multiple IDs with commas (,).</p>
+         * <p>The instance IDs of the VPC-connected instances to query for vulnerabilities. Separate multiple IDs with commas (,).</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the IDs of VPCs.</p>
+         * <p>Invoke the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -598,7 +616,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * <p>漏洞组件信息列表</p>
+         * <p>The list of vulnerability component information.</p>
          */
         public Builder vulEntityList(java.util.List<VulEntityList> vulEntityList) {
             this.putQueryParameter("VulEntityList", vulEntityList);
@@ -666,7 +684,7 @@ public class ExportVulRequest extends Request {
             } 
 
             /**
-             * <p>组件名称</p>
+             * <p>The name of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>Ollama</p>
@@ -677,7 +695,7 @@ public class ExportVulRequest extends Request {
             }
 
             /**
-             * <p>组件版本</p>
+             * <p>The version of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

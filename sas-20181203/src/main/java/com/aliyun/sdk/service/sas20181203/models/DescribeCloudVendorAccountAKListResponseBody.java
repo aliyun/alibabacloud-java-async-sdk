@@ -601,7 +601,7 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
              * <p>The extended information of the module.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;product&quot;:&quot;webFirewall&quot;,&quot;remark&quot;:&quot;remark&quot;}</p>
+             * <p>{\&quot;product\&quot;:\&quot;webFirewall\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;}</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;

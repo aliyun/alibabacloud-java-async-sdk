@@ -80,7 +80,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of tasks.</p>
+         * <p>The list of task details.</p>
          */
         public Builder onceTasks(java.util.List<OnceTasks> onceTasks) {
             this.onceTasks = onceTasks;
@@ -96,7 +96,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393****</p>
@@ -360,7 +360,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>ack-jenkins-****</p>
@@ -371,7 +371,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a765ba1435e7f9446065370e9a41****</p>
@@ -393,18 +393,18 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time consumed. The value is in the JSON format. The end time of each item is displayed.</p>
+             * <p>The time consumption statistics in JSON format, showing the end time of each item. Valid values:</p>
              * <ul>
-             * <li><strong>vul</strong>: system vulnerabilities</li>
-             * <li><strong>scaVul</strong>: application vulnerabilities</li>
-             * <li><strong>scaVul</strong>: baseline</li>
-             * <li><strong>binary</strong>: binary</li>
-             * <li><strong>forbiddenPackageInfo</strong>: information about the prohibited package</li>
-             * <li><strong>identificationInfo</strong>: identity authentication</li>
-             * <li><strong>script</strong>: malicious scripts</li>
-             * <li><strong>sensitiveFile</strong>: sensitive files</li>
-             * <li><strong>sensitiveInfo</strong>: AccessKey pair leaks</li>
-             * <li><strong>webshell</strong>: website scripts</li>
+             * <li><strong>vul</strong>: system vulnerability.</li>
+             * <li><strong>scaVul</strong>: application vulnerability.</li>
+             * <li><strong>baseline</strong>: baseline.</li>
+             * <li><strong>binary</strong>: binary.</li>
+             * <li><strong>forbiddenPackageInfo</strong>: forbidden installation.</li>
+             * <li><strong>identificationInfo</strong>: identity authentication.</li>
+             * <li><strong>script</strong>: malicious script.</li>
+             * <li><strong>sensitiveFile</strong>: sensitive file.</li>
+             * <li><strong>sensitiveInfo</strong>: AccessKey detection.</li>
+             * <li><strong>webshell</strong>: web shell.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -416,7 +416,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The digest of the image.</p>
+             * <p>The image digest.</p>
              * 
              * <strong>example:</strong>
              * <p>9e0dc29d872d2e386cc5c0c92b529a84e3acfade16f5cb1d054a2ee3c99****</p>
@@ -427,7 +427,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image of the container.</p>
+             * <p>The container image.</p>
              * 
              * <strong>example:</strong>
              * <p><em><strong>s.com/sas_test/baseli</strong></em></p>
@@ -438,7 +438,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the node.</p>
+             * <p>The node instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-0xi5mxvtmfw9****</p>
@@ -449,7 +449,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The node IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>172.18.XXX.XXX</p>
@@ -460,7 +460,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node.</p>
+             * <p>The node name.</p>
              * 
              * <strong>example:</strong>
              * <p>pztest****</p>
@@ -471,7 +471,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod of the image.</p>
+             * <p>The image pod information.</p>
              * 
              * <strong>example:</strong>
              * <p>expoit-law-****</p>
@@ -482,7 +482,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the server image.</p>
+             * <p>The region where the server image is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -495,10 +495,10 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             /**
              * <p>The type of the image repository. Valid values:</p>
              * <ul>
-             * <li><strong>acr</strong></li>
-             * <li><strong>harbor</strong></li>
-             * <li><strong>quay</strong></li>
-             * <li><strong>CI/CD</strong></li>
+             * <li><strong>acr</strong>: acr.</li>
+             * <li><strong>harbor</strong>: harbor.</li>
+             * <li><strong>quay</strong>: quay.</li>
+             * <li><strong>CI/CD</strong>: CI/CD repository type.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -510,7 +510,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image repository.</p>
+             * <p>The image repository ID.</p>
              * 
              * <strong>example:</strong>
              * <p>crr-r88w2vryp8m****</p>
@@ -521,7 +521,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image repository.</p>
+             * <p>The image repository name.</p>
              * 
              * <strong>example:</strong>
              * <p>testyyy</p>
@@ -532,7 +532,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the namespace to which the image repository belongs.</p>
+             * <p>The image namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>bitn***</p>
@@ -554,7 +554,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is added to the image.</p>
+             * <p>The image tag.</p>
              * 
              * <strong>example:</strong>
              * <p>v1.20-002-a2*****</p>
@@ -806,7 +806,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the sub-task ends.</p>
+             * <p>The end time. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1670307567000</p>
@@ -817,10 +817,10 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the sub-task is complete.</p>
+             * <p>Indicates whether the task is completed. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: no</li>
-             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: Not completed.</li>
+             * <li><strong>1</strong>: Completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -832,7 +832,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the assets that are scanned.</p>
+             * <p>The number of completed records.</p>
              * 
              * <strong>example:</strong>
              * <p>67</p>
@@ -843,7 +843,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress percentage of the sub-task.</p>
+             * <p>The export progress percentage (%).</p>
              * 
              * <strong>example:</strong>
              * <p>75</p>
@@ -854,7 +854,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration of the sub-task.</p>
+             * <p>The task execution time. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1670307567000</p>
@@ -876,7 +876,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the sub-task starts.</p>
+             * <p>The start execution time. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1640102400000</p>
@@ -898,12 +898,12 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-task status. Valid values:</p>
+             * <p>The running status of the task. Valid values:</p>
              * <ul>
-             * <li><strong>INIT</strong>: The sub-task is not started.</li>
-             * <li><strong>START</strong>: The sub-task is started.</li>
-             * <li><strong>SUCCESS</strong>: The sub-task is complete.</li>
-             * <li><strong>TIMEOUT</strong>: The sub-task timed out.</li>
+             * <li><strong>INIT</strong>: Pending.</li>
+             * <li><strong>START</strong>: Started.</li>
+             * <li><strong>SUCCESS</strong>: Completed.</li>
+             * <li><strong>TIMEOUT</strong>: Timed out.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -915,7 +915,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The objective of the sub-task.</p>
+             * <p>The task target.</p>
              * 
              * <strong>example:</strong>
              * <p>238cf050a7270dd6940602e70f1e5a11eeaf4e02035f445b7f613ff5e064****</p>
@@ -926,10 +926,10 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the assets that are scanned. Valid values:</p>
+             * <p>The scan object type. Valid values:</p>
              * <ul>
-             * <li><strong>IMAGE_REPO</strong>: image repository</li>
-             * <li><strong>IMAGE</strong>: image</li>
+             * <li><strong>IMAGE_REPO</strong>: Image repository.</li>
+             * <li><strong>IMAGE</strong>: Image.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -941,7 +941,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-task ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>9fb50f2af8bb67c9fdb684194c83****</p>
@@ -952,7 +952,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the image scan.</p>
+             * <p>The image scan-related information.</p>
              */
             public Builder taskImageInfo(TaskImageInfo taskImageInfo) {
                 this.taskImageInfo = taskImageInfo;
@@ -960,7 +960,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the sub-task.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>IMAGE_SCAN</p>
@@ -971,7 +971,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the sub-task.</p>
+             * <p>The task type.</p>
              * 
              * <strong>example:</strong>
              * <p>IMAGE_SCAN</p>
@@ -982,7 +982,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records. This parameter takes effect in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1078,7 +1078,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of records on the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -1089,7 +1089,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1100,7 +1100,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The maximum number of entries per page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1111,7 +1111,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records in the query result.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>

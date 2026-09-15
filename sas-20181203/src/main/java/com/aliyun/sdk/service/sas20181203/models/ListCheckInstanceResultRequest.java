@@ -187,7 +187,7 @@ public class ListCheckInstanceResultRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the check item.</p>
+         * <p>The check item ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page in a paged query. This parameter is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,7 +212,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>i-uf64w4q6p9jti5gl****</p>
@@ -224,7 +224,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs of cloud services.</p>
+         * <p>The collection of cloud service instance IDs to query.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -233,7 +233,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>i-uf64w4q6p9jti5gl****</p>
@@ -245,7 +245,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -261,7 +261,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The maximum number of entries per page in a paged query. Maximum value: 100. This parameter is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -285,7 +285,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The types of the conditions based on which the check items are sorted.</p>
+         * <p>The list of sort types for the check item.</p>
          */
         public Builder sortTypes(java.util.List<String> sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);
@@ -294,7 +294,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The statuses of check items.</p>
+         * <p>The collection of check item statuses.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);

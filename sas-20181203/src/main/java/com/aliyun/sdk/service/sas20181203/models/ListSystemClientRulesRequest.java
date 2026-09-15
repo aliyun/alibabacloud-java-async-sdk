@@ -183,8 +183,10 @@ public class ListSystemClientRulesRequest extends Request {
         /**
          * <p>Specifies whether to query only container images. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><p><strong>0</strong>: no</p>
+         * </li>
+         * <li><p><strong>1</strong>: yes</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,8 +201,10 @@ public class ListSystemClientRulesRequest extends Request {
         /**
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,7 +233,7 @@ public class ListSystemClientRulesRequest extends Request {
          * <p>The name of the system defense rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Rule****</p>
+         * <p>规则****</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -249,9 +253,12 @@ public class ListSystemClientRulesRequest extends Request {
         /**
          * <p>The type of the OS. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: Windows</li>
-         * <li><strong>1</strong>: Linux</li>
-         * <li><strong>0</strong>: all types</li>
+         * <li><p><strong>2</strong>: Windows</p>
+         * </li>
+         * <li><p><strong>1</strong>: Linux</p>
+         * </li>
+         * <li><p><strong>0</strong>: all types</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/a</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -152,7 +155,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * <p>The total number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -219,7 +225,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The file type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>txt</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,7 +236,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * <p>The count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -294,7 +306,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +317,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * <p>The number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -421,7 +439,7 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * FilePathStats.
+             * <p>The tamper-proofing event statistics grouped by file path.</p>
              */
             public Builder filePathStats(java.util.List<FilePathStats> filePathStats) {
                 this.filePathStats = filePathStats;
@@ -429,7 +447,7 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * FileTypeStats.
+             * <p>The event statistics grouped by file type.</p>
              */
             public Builder fileTypeStats(java.util.List<FileTypeStats> fileTypeStats) {
                 this.fileTypeStats = fileTypeStats;
@@ -437,7 +455,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * OneDayFileChangeCount.
+             * <p>The number of file tamper-proofing events for today.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder oneDayFileChangeCount(Integer oneDayFileChangeCount) {
                 this.oneDayFileChangeCount = oneDayFileChangeCount;
@@ -445,7 +466,7 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessNameStats.
+             * <p>The event statistics grouped by process name.</p>
              */
             public Builder processNameStats(java.util.List<ProcessNameStats> processNameStats) {
                 this.processNameStats = processNameStats;
@@ -453,7 +474,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * RecentFileChangeCount.
+             * <p>The number of file tamper-proofing events in the last 15 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder recentFileChangeCount(Integer recentFileChangeCount) {
                 this.recentFileChangeCount = recentFileChangeCount;
@@ -461,7 +485,10 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCount.
+             * <p>The number of affected servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder serverCount(Integer serverCount) {
                 this.serverCount = serverCount;

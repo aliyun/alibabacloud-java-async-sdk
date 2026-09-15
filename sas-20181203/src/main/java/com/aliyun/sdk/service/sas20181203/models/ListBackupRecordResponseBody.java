@@ -80,7 +80,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the backup record.</p>
+         * <p>The list of backup records.</p>
          */
         public Builder backupRecordList(java.util.List<BackupRecordList> backupRecordList) {
             this.backupRecordList = backupRecordList;
@@ -96,7 +96,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
@@ -334,7 +334,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the backup task ended. Unit: milliseconds.</p>
+             * <p>The backup end time. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1699600611000</p>
@@ -367,7 +367,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the backup task started. Unit: milliseconds.</p>
+             * <p>The backup start time. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1699514211000</p>
@@ -378,11 +378,11 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup task status. Valid value:</p>
+             * <p>The backup task status. Valid values:</p>
              * <ul>
-             * <li><strong>BACKUP_COMPLETE</strong>: The backup task is successful.</li>
-             * <li><strong>BACKUP_FAILED</strong>: The backup task failed.</li>
-             * <li><strong>PARTIAL_COMPLETE</strong>: The backup task is partially successful.</li>
+             * <li><strong>BACKUP_COMPLETE</strong>: backup succeeded</li>
+             * <li><strong>BACKUP_FAILED</strong>: backup failed</li>
+             * <li><strong>PARTIAL_COMPLETE</strong>: partial backup succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -394,7 +394,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the anti-ransomware agent.</p>
+             * <p>The anti-ransomware client ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c-0002bgagelj3d2sc****</p>
@@ -416,7 +416,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message of the backup task.</p>
+             * <p>The error details of the backup task.</p>
              * 
              * <strong>example:</strong>
              * <p>FILE_CACHE_NO_SPACE</p>
@@ -427,7 +427,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the server.</p>
+             * <p>The ID of the server instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-wz9ikn44p46krnic****</p>
@@ -482,7 +482,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the backup is stored.</p>
+             * <p>The region ID of the backup service.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -493,7 +493,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the server whose data is backed up based on the anti-ransomware policy.</p>
+             * <p>The UUID of the server backed up by database anti-ransomware.</p>
              * 
              * <strong>example:</strong>
              * <p>b93cccb9-f19f-4886-97fe-47df26ba****</p>
@@ -589,7 +589,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -600,7 +600,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -611,7 +611,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The maximum number of entries per page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

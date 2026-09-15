@@ -241,12 +241,16 @@ public class DescribeExposedInstanceListRequest extends Request {
         } 
 
         /**
-         * <p>The type of the asset. Valid values:</p>
+         * <p>The asset type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: an Elastic Compute Service (ECS) instance.</li>
-         * <li><strong>3</strong>: an ApsaraDB RDS instance.</li>
-         * <li><strong>4</strong>: an ApsaraDB for MongoDB instance.</li>
-         * <li><strong>5</strong>: an ApsaraDB for Redis instance.</li>
+         * <li><p><strong>0</strong>: ECS</p>
+         * </li>
+         * <li><p><strong>3</strong>: RDS</p>
+         * </li>
+         * <li><p><strong>4</strong>: MONGODB</p>
+         * </li>
+         * <li><p><strong>5</strong>: RDS-Redis.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,10 +263,10 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the asset has Cloud Security Posture Management (CSPM) risks. Valid values:</p>
+         * <p>Specifies whether the asset that you want to query has Cloud Security Posture Management (CSPM) risks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The asset has CSPM risks.</li>
+         * <li><strong>false</strong>: The asset does not have CSPM risks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +279,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -287,7 +291,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The server component that is exposed on the Internet.</p>
+         * <p>The name of the system component exposed on the Internet that you want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>openssl</p>
@@ -299,7 +303,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>Expose component type.</p>
+         * <p>The type of the exposed component.</p>
          * 
          * <strong>example:</strong>
          * <p>system_service</p>
@@ -311,7 +315,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the server or the public endpoint of the database.</p>
+         * <p>The public IP address of the server type or the public network connection address of the database type that you want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>116.12.XX.XX</p>
@@ -323,7 +327,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The port that is exposed on the Internet.</p>
+         * <p>The exposed port that you want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -335,9 +339,9 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The ID of the server group that you want to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query server group IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -350,14 +354,14 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the asset has weak password risks. Valid values:</p>
+         * <p>Specifies whether the asset that you want to query has baseline weak password risks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The asset has baseline weak password risks.</li>
+         * <li><strong>false</strong>: The asset does not have baseline weak password risks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Unhealthy</p>
+         * <p>true</p>
          */
         public Builder healthStatus(Boolean healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -366,7 +370,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the asset.</p>
+         * <p>The instance ID of the asset that you want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1g6wxdwps7s9dz****</p>
@@ -378,7 +382,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The name of the asset.</p>
+         * <p>The name of the asset that you want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>abc_centos7.2_005</p>
@@ -390,9 +394,9 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -405,9 +409,9 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the ID.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -420,10 +424,10 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the asset has vulnerabilities. Valid values:</p>
+         * <p>Specifies whether the asset that you want to query has vulnerabilities. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The asset has vulnerabilities.</li>
+         * <li><strong>false</strong>: The asset does not have vulnerabilities.</li>
          * </ul>
          * 
          * <strong>example:</strong>

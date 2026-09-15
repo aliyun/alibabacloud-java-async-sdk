@@ -88,9 +88,9 @@ public class QueryPreCheckDatabaseRequest extends Request {
         } 
 
         /**
-         * <p>The UUID of the agent that is used to back up the data of the database.</p>
+         * <p>The unique identifier of the server database backup client.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</p>
+         * <p>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -103,9 +103,9 @@ public class QueryPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The ID of the database precheck task.</p>
+         * <p>The ID of the database pre-check task.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~StartPreCheckDatabase~~">StartPreCheckDatabase</a> operation to query the ID of the database precheck task.</p>
+         * <p>You can call the <a href="~~StartPreCheckDatabase~~">StartPreCheckDatabase</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class QueryPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the server that hosts the database.</p>
+         * <p>The region ID of the database server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

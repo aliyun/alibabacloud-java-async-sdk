@@ -143,7 +143,7 @@ public class DescribeReportExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the report was exported.</p>
+         * <p>The time when the report was generated. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-15</p>
@@ -167,10 +167,10 @@ public class DescribeReportExportResponseBody extends TeaModel {
         /**
          * <p>The status of the export task. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong>: The export task fails.</li>
-         * <li><strong>0</strong>: The export task is being initialized.</li>
-         * <li><strong>1</strong>: The export task is being executed.</li>
-         * <li><strong>2</strong>: The export task is successful.</li>
+         * <li><strong>-1</strong>: Export failed.</li>
+         * <li><strong>0</strong>: Export initialized.</li>
+         * <li><strong>1</strong>: Exporting.</li>
+         * <li><strong>2</strong>: Export succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class DescribeReportExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the report.</p>
+         * <p>The security report ID.</p>
          * 
          * <strong>example:</strong>
          * <p>377665</p>
@@ -193,7 +193,7 @@ public class DescribeReportExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
@@ -204,7 +204,7 @@ public class DescribeReportExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp when the download URL expires. Unit: milliseconds.</p>
+         * <p>The expiration timestamp of the report download URL. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1660113647000</p>

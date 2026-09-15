@@ -75,8 +75,10 @@ public class UpdateCommonSwitchConfigRequest extends Request {
         /**
          * <p>Specifies whether to turn on the switch for newly added servers. Valid values:</p>
          * <ul>
-         * <li><strong>add</strong>: yes</li>
-         * <li><strong>del</strong>: no</li>
+         * <li><p><strong>add</strong>: yes</p>
+         * </li>
+         * <li><p><strong>del</strong>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +93,7 @@ public class UpdateCommonSwitchConfigRequest extends Request {
         /**
          * <p>The type of the switch.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the type from the response parameter SwitchId.</p>
+         * <p>You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the type from the response parameter SwitchId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

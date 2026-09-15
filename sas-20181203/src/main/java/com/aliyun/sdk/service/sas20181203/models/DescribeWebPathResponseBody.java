@@ -119,7 +119,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the paths to the web directories.</p>
+         * <p>The list of web paths.</p>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
@@ -127,7 +127,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -138,7 +138,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paged query. Paging is used to display results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page in a paged query. Paging is used to display results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -160,7 +160,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The China Chinese Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</p>
          * 
          * <strong>example:</strong>
          * <p>B37C9052-A73E-4707-A024-92477028****</p>
@@ -240,7 +240,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The object.</p>
+             * <p>The target object.</p>
              * 
              * <strong>example:</strong>
              * <p>82048187-bb9b-4e19-8320-7b4ddb97****</p>
@@ -251,9 +251,9 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object type. Valid values:</p>
+             * <p>The target type. Valid values:</p>
              * <ul>
-             * <li><strong>uuid</strong></li>
+             * <li><strong>uuid</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -337,7 +337,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array consisting of the servers on which the web directories are scanned.</p>
+             * <p>The list of servers on which the web directory takes effect.</p>
              */
             public Builder targetList(java.util.List<TargetList> targetList) {
                 this.targetList = targetList;
@@ -345,7 +345,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path to the web directory.</p>
+             * <p>The web directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/root/www****</p>
@@ -356,10 +356,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path type of the web directory. Valid values:</p>
+             * <p>The type of the web path. Valid values:</p>
              * <ul>
-             * <li><strong>def</strong>: automatically identified</li>
-             * <li><strong>customize</strong>: manually added</li>
+             * <li><strong>def</strong>: automatically identified by the system.</li>
+             * <li><strong>customize</strong>: manually added.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -91,10 +91,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the tracing diagram.</p>
+         * <p>The details of the trace graph.</p>
          */
         public Builder traceInfoDetail(TraceInfoDetail traceInfoDetail) {
             this.traceInfoDetail = traceInfoDetail;
@@ -211,7 +211,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of times.</p>
+             * <p>The number of occurrences.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -222,7 +222,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ending vertex ID of the edge of the tracing diagram.</p>
+             * <p>The end vertex ID of the edge in the trace graph.</p>
              * 
              * <strong>example:</strong>
              * <p>a1d1fa39e5345dcef3f9712172cxxxxx</p>
@@ -233,7 +233,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The starting vertex ID of the edge of the tracing diagram.</p>
+             * <p>The start vertex ID of the edge in the trace graph.</p>
              * 
              * <strong>example:</strong>
              * <p>02b4bf933c8e3bb8b9465eee502xxxxx</p>
@@ -255,7 +255,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the edge of the tracing diagram.</p>
+             * <p>The type of the edge in the trace graph.</p>
              * 
              * <strong>example:</strong>
              * <p>trigger_file_alert</p>
@@ -442,7 +442,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>Deprecated</p>
@@ -475,7 +475,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;name&quot;:&quot;${logtime}&quot;,&quot;value&quot;:&quot;$!{time}&quot;}]</p>
@@ -486,7 +486,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the vertex was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-09T11:47Z</p>
@@ -497,7 +497,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the vertex was last modified.</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-09T11:47Z</p>
@@ -508,7 +508,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vertex type.</p>
+             * <p>The ID of the vertex type record.</p>
              * 
              * <strong>example:</strong>
              * <p>Alert</p>
@@ -519,7 +519,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>Deprecated</p>
@@ -554,7 +554,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>Deprecated</p>
@@ -663,10 +663,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the edge is a directional edge. Valid values:</p>
+             * <p>Indicates whether the edge is directed. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no</li>
+             * <li><strong>0</strong>: no.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -711,7 +711,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>Deprecated</p>
@@ -805,7 +805,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether one more page is returned.</p>
+             * <p>Indicates whether there is a next page.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -938,7 +938,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of times.</p>
+             * <p>The number of occurrences.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -949,7 +949,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vertex.</p>
+             * <p>The vertex ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a1d1fa39e5345dcef3f9712172xxxxxx</p>
@@ -971,7 +971,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the neighbor nodes.</p>
+             * <p>The information about neighbor nodes.</p>
              */
             public Builder neighborList(java.util.List<NeighborList> neighborList) {
                 this.neighborList = neighborList;
@@ -1086,7 +1086,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array that consists of the edges of the tracing diagram.</p>
+             * <p>The edge information in the trace graph.</p>
              */
             public Builder edgeList(java.util.List<EdgeList> edgeList) {
                 this.edgeList = edgeList;
@@ -1094,7 +1094,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the metadata configurations of the vertex type.</p>
+             * <p>The metadata configuration of vertex types.</p>
              */
             public Builder entityTypeList(java.util.List<EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
@@ -1102,7 +1102,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the metadata configurations of the edge type.</p>
+             * <p>The metadata configuration of edge types.</p>
              */
             public Builder relationTypeList(java.util.List<RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
@@ -1110,7 +1110,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of all vertexes of the tracing diagram.</p>
+             * <p>The information about all vertices in the trace graph.</p>
              */
             public Builder vertexList(java.util.List<VertexList> vertexList) {
                 this.vertexList = vertexList;

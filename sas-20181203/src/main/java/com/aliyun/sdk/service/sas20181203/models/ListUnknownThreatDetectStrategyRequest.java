@@ -117,6 +117,7 @@ public class ListUnknownThreatDetectStrategyRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class ListUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -138,7 +142,10 @@ public class ListUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategy****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,6 +154,7 @@ public class ListUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to display on each page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,14 @@ public class ListUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * StudyMode.
+         * <p>The whitelist mode. Valid values:</p>
+         * <ul>
+         * <li><strong>hash</strong>: process hash</li>
+         * <li><strong>path</strong>: process path</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         public Builder studyMode(String studyMode) {
             this.putQueryParameter("StudyMode", studyMode);

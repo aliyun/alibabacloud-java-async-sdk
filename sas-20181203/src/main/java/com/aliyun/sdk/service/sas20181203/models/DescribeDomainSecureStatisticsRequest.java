@@ -73,10 +73,10 @@ public class DescribeDomainSecureStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values: Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class DescribeDomainSecureStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>113.87.<em>.</em></p>

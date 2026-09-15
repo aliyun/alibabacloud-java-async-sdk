@@ -73,11 +73,11 @@ public class ModifyAssetImportantRequest extends Request {
         } 
 
         /**
-         * <p>The importance of the asset. Valid values:</p>
+         * <p>The importance level. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: test</li>
          * <li><strong>1</strong>: normal</li>
-         * <li><strong>2</strong>: important</li>
+         * <li><strong>2</strong>: important.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,9 +90,9 @@ public class ModifyAssetImportantRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

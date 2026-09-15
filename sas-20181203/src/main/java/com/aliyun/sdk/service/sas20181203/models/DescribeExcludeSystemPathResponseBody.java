@@ -80,7 +80,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array consisting of the directories that are excluded.</p>
+         * <p>The list of system excluded directories.</p>
          */
         public Builder excludePaths(java.util.List<ExcludePaths> excludePaths) {
             this.excludePaths = excludePaths;
@@ -96,7 +96,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>FBBEB173-1F43-505F-A876-C03ECDF6****</p>
@@ -167,8 +167,8 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             /**
              * <p>The operating system of the server. Valid values:</p>
              * <ul>
-             * <li><strong>linux</strong>: Linux</li>
-             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux.</li>
+             * <li><strong>windows</strong>: Windows.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute path to the directory.</p>
+             * <p>The absolute path of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/bin/</p>
@@ -276,7 +276,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of system excluded directories on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -287,7 +287,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page in the paged query when paging is used.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -298,7 +298,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of system excluded folders returned per page in the paged query when paging is used.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -309,7 +309,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of system excluded directories.</p>
              * 
              * <strong>example:</strong>
              * <p>55</p>

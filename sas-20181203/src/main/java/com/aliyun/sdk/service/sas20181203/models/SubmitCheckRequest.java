@@ -96,10 +96,10 @@ public class SubmitCheckRequest extends Request {
         }
 
         /**
-         * <p>The check items that are scanned. Valid values:</p>
+         * <p>The scan range. Valid values:</p>
          * <ul>
-         * <li><strong>FULL</strong>: All check items are scanned.</li>
-         * <li><strong>FULL</strong>: Only the check items that are configured are scanned.</li>
+         * <li><strong>FULL</strong>: scans all check items</li>
+         * <li><strong>POLICY</strong>: scans custom-configured check items</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +112,10 @@ public class SubmitCheckRequest extends Request {
         }
 
         /**
-         * <p>The source of task.</p>
+         * <p>The task source. Valid values:</p>
+         * <ul>
+         * <li><strong>YAO_CHI</strong>: Alibaba Cloud ApsaraDB console.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>YAO_CHI</p>

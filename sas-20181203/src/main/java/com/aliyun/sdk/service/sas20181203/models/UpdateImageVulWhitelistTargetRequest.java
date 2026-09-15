@@ -115,7 +115,7 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         } 
 
         /**
-         * <p>The whitelist ID.</p>
+         * <p>The ID of the vulnerability whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>2000083</p>
@@ -130,7 +130,7 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * <p>The reason why you add the vulnerability to the whitelist.</p>
+         * <p>The reason for adding the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>ignore</p>
@@ -157,8 +157,8 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         /**
          * <p>The source of the whitelist. Valid values:</p>
          * <ul>
-         * <li><strong>image</strong></li>
-         * <li><strong>agentless</strong></li>
+         * <li><strong>image</strong>: image</li>
+         * <li><strong>agentless</strong>: agentless.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,14 +171,14 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * <p>The vulnerability that you want to add to the whitelist. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The operation target. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><strong>type</strong>: The type of the vulnerability. The value is fixed to repo.</li>
-         * <li><strong>target</strong>: The content of the vulnerability. The value is in the format of Namespace/Image repository.</li>
+         * <li><strong>type</strong>: The target type. Set to repo.</li>
+         * <li><strong>target</strong>: The target content. Format: namespace/image repository.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;sas_test/script_0209&quot;,&quot;sas_test/script&quot;]}</p>
+         * <p>{\&quot;type\&quot;:\&quot;repo\&quot;,\&quot;target\&quot;:[\&quot;sas_test/script_0209\&quot;,\&quot;sas_test/script\&quot;]}</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);

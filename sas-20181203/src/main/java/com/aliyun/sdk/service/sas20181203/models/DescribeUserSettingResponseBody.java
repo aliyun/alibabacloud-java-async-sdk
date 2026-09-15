@@ -80,7 +80,7 @@ public class DescribeUserSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The severities of alerts. If this parameter is empty, no custom alerts are generated.</p>
+         * <p>The list of alert notification levels. If the list is empty, no alerts are generated for custom policies.</p>
          */
         public Builder alertLevels(java.util.List<String> alertLevels) {
             this.alertLevels = alertLevels;
@@ -88,7 +88,7 @@ public class DescribeUserSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of days during which you want to retain invalid alerts.</p>
+         * <p>The number of days to retain invalid alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -99,7 +99,7 @@ public class DescribeUserSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>

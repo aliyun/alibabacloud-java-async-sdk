@@ -147,9 +147,9 @@ public class ModifyInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,9 +162,9 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of images.</p>
+         * <p>The list of images.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</p>
          * </blockquote>
          */
         public Builder imageList(java.util.List<String> imageList) {
@@ -176,7 +176,7 @@ public class ModifyInterceptionTargetRequest extends Request {
         /**
          * <p>The namespace.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -190,9 +190,9 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of tags.</p>
+         * <p>The list of labels.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</p>
          * </blockquote>
          */
         public Builder tagList(java.util.List<String> tagList) {
@@ -204,7 +204,7 @@ public class ModifyInterceptionTargetRequest extends Request {
         /**
          * <p>The ID of the network object.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain the value of this parameter.</p>
+         * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -231,9 +231,9 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * <p>The object type. Valid values:</p>
+         * <p>The target type. Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE</strong></li>
+         * <li><strong>IMAGE</strong>: image.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

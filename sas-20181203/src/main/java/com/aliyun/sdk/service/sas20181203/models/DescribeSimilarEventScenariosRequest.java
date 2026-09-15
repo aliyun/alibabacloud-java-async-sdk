@@ -99,7 +99,7 @@ public class DescribeSimilarEventScenariosRequest extends Request {
         /**
          * <p>The ID of the alert event.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the ID of the alert event.</p>
+         * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -113,10 +113,10 @@ public class DescribeSimilarEventScenariosRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.2.XX.XX</p>
+         * <p>112.214.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

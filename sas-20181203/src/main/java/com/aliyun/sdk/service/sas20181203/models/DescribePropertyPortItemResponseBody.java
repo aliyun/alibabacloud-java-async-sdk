@@ -88,7 +88,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the ports returned.</p>
+         * <p>The port information.</p>
          */
         public Builder propertyItems(java.util.List<PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -96,7 +96,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
@@ -191,7 +191,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -202,7 +202,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page to display in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The maximum number of entries to display on each page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -224,7 +224,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>163</p>
@@ -307,7 +307,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of servers that use the port.</p>
+             * <p>The number of servers associated with the port.</p>
              * 
              * <strong>example:</strong>
              * <p>495</p>
@@ -318,7 +318,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the listening port.</p>
+             * <p>The listening port number.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -329,7 +329,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network protocol of the port.</p>
+             * <p>The network protocol associated with the port.</p>
              * 
              * <strong>example:</strong>
              * <p>tcp</p>

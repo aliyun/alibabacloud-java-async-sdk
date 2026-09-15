@@ -101,7 +101,7 @@ public class GetCheckCountStatisticRequest extends Request {
         } 
 
         /**
-         * <p>语言参数</p>
+         * <p>Language parameter</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -115,10 +115,14 @@ public class GetCheckCountStatisticRequest extends Request {
         /**
          * <p>The type of the statistics. Valid values:</p>
          * <ul>
-         * <li><strong>user</strong>: the top five users that are granted excessive permissions.</li>
-         * <li><strong>role</strong>: the top five roles that are granted excessive permissions.</li>
-         * <li><strong>instance</strong>: the top five cloud services on which risks are detected.</li>
-         * <li><strong>host</strong>: the top five servers on which baseline risks are detected.</li>
+         * <li><p><strong>user</strong>: the top five users that are granted excessive permissions.</p>
+         * </li>
+         * <li><p><strong>role</strong>: the top five roles that are granted excessive permissions.</p>
+         * </li>
+         * <li><p><strong>instance</strong>: the top five cloud services on which risks are detected.</p>
+         * </li>
+         * <li><p><strong>host</strong>: the top five servers on which baseline risks are detected.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

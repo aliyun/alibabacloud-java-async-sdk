@@ -119,7 +119,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The detailed information about the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -163,10 +163,10 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The handling result of an exception. Valid values:</p>
+         * <p>The result of the alert event processing. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: successful</li>
-         * <li><strong>false</strong>: failed</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time consumed for the request. Unit: seconds.</p>
+         * <p>The time consumed by the task, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -147,7 +147,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * <p>The identifier of the request source. Set the value to <strong>sas</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>The timestamp of the detection. Unit: milliseconds.</p>
+         * <p>The detection timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1670555392000</p>
@@ -172,10 +172,10 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -200,7 +200,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>The type of the vertex. Set the value to <strong>SAS_INCIDENT</strong>.</p>
+         * <p>The vertex type. Set the value to <strong>SAS_INCIDENT</strong> for security alerts.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the server to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>Vertex ID, which can be obtained from the AlarmUniqueInfo in the response of the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> interface.</p>
+         * <p>The vertex ID. You can obtain this value from the AlarmUniqueInfo parameter returned by the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

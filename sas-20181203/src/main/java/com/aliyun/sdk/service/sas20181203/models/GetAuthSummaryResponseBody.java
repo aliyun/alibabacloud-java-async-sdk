@@ -275,10 +275,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether you can purchase protection quota on demand when you purchase Security Center. Valid values:</p>
+         * <p>Indicates whether on-demand authorization purchase is allowed during initial purchase. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: Not allowed.</li>
+         * <li><strong>1</strong>: Allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,10 +290,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether you can purchase protection quota on demand after an upgrade. Valid values:</p>
+         * <p>Indicates whether upgrading to on-demand authorization purchase is allowed during an upgrade. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: Not allowed.</li>
+         * <li><strong>1</strong>: Allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,10 +305,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether all bound assets can be immediately unbound. Valid values:</p>
+         * <p>Indicates whether immediate unbinding of all bound assets is allowed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,10 +320,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether automatic binding is enabled. Valid values:</p>
+         * <p>Indicates whether new subscription assets are automatically bound when the host and container security subscription service is activated. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,16 +335,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster node need to check the machine version,  Value:</p>
+         * <p>Indicates whether cluster nodes require agent version verification. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong> : Not required</p>
-         * </li>
-         * <li><p><strong>1</strong> : Required</p>
-         * </li>
+         * <li><strong>0</strong>: Not required.</li>
+         * <li><strong>1</strong>: Required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Required</p>
+         * <p>1</p>
          */
         public Builder clusterNodeCheck(Integer clusterNodeCheck) {
             this.clusterNodeCheck = clusterNodeCheck;
@@ -352,10 +350,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the protection quota is supported for all assets. Valid values:</p>
+         * <p>Indicates whether all assets are authorized by default. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -375,10 +373,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether pre-bound assets exist. If you select assets to bind when you purchase Security Center, pre-bound assets exist. Valid values:</p>
+         * <p>Indicates whether a pre-bindingasset configuration exists. Pre-binding refers to the asset binding configuration selected in advance during purchase. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: Does not exist.</li>
+         * <li><strong>1</strong>: Exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,18 +388,18 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The most advanced edition that is used. Valid values:</p>
+         * <p>The highest purchased edition of Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Basic edition</li>
-         * <li><strong>3</strong>: Enterprise edition</li>
-         * <li><strong>5</strong>: Advanced edition</li>
-         * <li><strong>6</strong>: Anti-virus edition</li>
-         * <li><strong>7</strong>: Ultimate edition</li>
-         * <li><strong>10</strong>: Value-added Plan edition</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you purchase Security Center Multi-edition, the value indicates the most advanced edition that is used. Otherwise, the value indicates the specific edition that is purchased.</p>
+         * <li><strong>1</strong>: Free Edition.</li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>5</strong>: Premium Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.</li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * <li><strong>10</strong>: Value-added services only.<blockquote>
+         * <p>If a single edition is purchased, this value indicates the corresponding edition. If multiple editions are purchased, this value indicates the highest sub-edition.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -412,16 +410,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Binding effective status, value:</p>
+         * <p>The binding validity status. Valid values:</p>
          * <ul>
-         * <li><p><strong>NORMAL</strong> : Effective</p>
-         * </li>
-         * <li><p><strong>INVALID_NODE_VERSION</strong>: Invalid</p>
-         * </li>
+         * <li><strong>NORMAL</strong>: Valid.</li>
+         * <li><strong>INVALID_NODE_VERSION</strong>: Invalid.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Effective</p>
+         * <p>INVALID_NODE_VERSION</p>
          */
         public Builder invalidBindStatus(String invalidBindStatus) {
             this.invalidBindStatus = invalidBindStatus;
@@ -429,10 +425,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether Security Center Multi-edition is purchased. Valid values:</p>
+         * <p>Indicates whether multiple versions exist. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,7 +440,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics of the protection quota for assets.</p>
+         * <p>The asset authorization statistics information.</p>
          */
         public Builder machine(Machine machine) {
             this.machine = machine;
@@ -452,7 +448,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Activate the pay-as-you-go service protection version for hosts and container security, which is the highest protection version among all bound hosts. Values:   - <strong>1</strong>: Free Edition  - <strong>3</strong>: Enterprise Edition - <strong>5</strong>: Advanced Edition - <strong>6</strong>: Antivirus Edition     - <strong>7</strong>: Flagship Edition</p>
+         * <p>The protection edition of the host and container security pay-as-you-go service. This is the highest protection edition among all bound hosts. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Free Edition. </li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>5</strong>: Premium Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.    </li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -463,7 +466,11 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pay-as-you-go service for host and container security adds an automatic binding identifier for new hosts, with values: - <strong>0</strong>: Off - <strong>1</strong>: On</p>
+         * <p>Indicates whether automatic binding of new hosts is enabled for the host and container security pay-as-you-go service. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -474,7 +481,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version for the pay-as-you-go service of host and container security to automatically bind new assets, with values: - <strong>1</strong>: Free Edition - <strong>3</strong>: Enterprise Edition - <strong>5</strong>: Advanced Edition - <strong>6</strong>: Antivirus Edition - <strong>7</strong>: Flagship Edition</p>
+         * <p>The edition to which new assets are automatically bound for the host and container security pay-as-you-go service. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Free Edition. </li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>5</strong>: Premium Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition.    </li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -485,7 +499,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Statistics on pay-as-you-go service authorization for host and container security.</p>
+         * <p>The service authorization statistics for the host and container security pay-as-you-go service.</p>
          */
         public Builder postPaidVersionSummary(java.util.List<PostPaidVersionSummary> postPaidVersionSummary) {
             this.postPaidVersionSummary = postPaidVersionSummary;
@@ -493,7 +507,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0B48AB3C-***-B9270EF46038</p>
@@ -504,7 +518,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota consumption statistics.</p>
+         * <p>The authorization usage statistics information.</p>
          */
         public Builder versionSummary(java.util.List<VersionSummary> versionSummary) {
             this.versionSummary = versionSummary;
@@ -770,7 +784,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of cores of the assets that are bound to Security Center.</p>
+             * <p>The number of cores of assets that are bound with authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -781,7 +795,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the assets that are bound to Security Center.</p>
+             * <p>The number of bound assets.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -792,7 +806,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bind the number of cores for postpaid authorization assets.</p>
+             * <p>The number of cores of assets bound with pay-as-you-go authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -803,7 +817,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of assets bound to the postpaid authorization.</p>
+             * <p>The number of assets bound with pay-as-you-go authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -814,7 +828,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cores of the assets that are at risk.</p>
+             * <p>The number of cores of assets that have security risks.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -825,7 +839,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the assets that are at risk.</p>
+             * <p>The number of assets that have security risks.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1017,7 +1031,12 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of authorization consumed during binding, with values: - <strong>ASSET</strong>: Consumes the number of authorized devices - <strong>CORE</strong>: Consumes the number of authorized cores - <strong>ASSET_AND_CORE</strong>: Consumes both the number of authorized devices and cores.</p>
+             * <p>The type of authorization consumed during binding. Valid values:</p>
+             * <ul>
+             * <li><strong>ASSET</strong>: consumes authorized asset count.</li>
+             * <li><strong>CORE</strong>: consumes authorized core count.</li>
+             * <li><strong>ASSET_AND_CORE</strong>: consumes both authorized asset count and authorized core count.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ASSET</p>
@@ -1052,7 +1071,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Current version index, the higher the number, the newer the version, used for sorting. Values: - <strong>1</strong>: Free Edition - <strong>2</strong>: Anti-virus Edition - <strong>3</strong>: Advanced Edition - <strong>4</strong>: Enterprise Edition - <strong>5</strong>: Flagship Edition</p>
+             * <p>The index of the current edition. A larger value indicates a higher edition. This field is used for sorting. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Free Edition. </li>
+             * <li><strong>2</strong>: Anti-virus Edition.    </li>
+             * <li><strong>3</strong>: Premium Edition.</li>
+             * <li><strong>4</strong>: Enterprise Edition.</li>
+             * <li><strong>5</strong>: Ultimate Edition.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1063,7 +1089,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of authorized cores used. &gt; This parameter is valid when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * <p>The number of authorized cores that have been used.</p>
+             * <blockquote>
+             * <p>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1074,7 +1103,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of authorized devices used. &gt; This parameter is valid when AuthBindType is ASSET or ASSET_AND_CORE.</p>
+             * <p>The number of authorized assets that have been used.</p>
+             * <blockquote>
+             * <p>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1085,7 +1117,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bound host assets with postpaid versions, values:   - <strong>1</strong>: Free version  - <strong>3</strong>: Enterprise version - <strong>5</strong>: Advanced version - <strong>6</strong>: Anti-virus version     - <strong>7</strong>: Flagship version</p>
+             * <p>The pay-as-you-go edition bound to host assets. Valid values:  </p>
+             * <ul>
+             * <li><strong>1</strong>: Free Edition. </li>
+             * <li><strong>3</strong>: Enterprise Edition.</li>
+             * <li><strong>5</strong>: Premium Edition.</li>
+             * <li><strong>6</strong>: Anti-virus Edition.    </li>
+             * <li><strong>7</strong>: Ultimate Edition.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1272,11 +1311,11 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the quota that is consumed. Valid values:</p>
+             * <p>The type of authorization consumed during binding. Valid values:</p>
              * <ul>
-             * <li>ASSET: quota of servers.</li>
-             * <li>CORE: quota of server cores.</li>
-             * <li>ASSET_AND_CORE: both.</li>
+             * <li>ASSET: consumes authorized asset count.</li>
+             * <li>CORE: consumes authorized core count.</li>
+             * <li>ASSET_AND_CORE: consumes both authorized asset count and authorized core count.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1288,7 +1327,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index of the current edition. The smaller the value, the higher the edition. The index is used for sorting.</p>
+             * <p>The index of the current edition. A larger value indicates a higher edition. This field is used for sorting. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Free Edition. </li>
+             * <li><strong>2</strong>: Anti-virus Edition.    </li>
+             * <li><strong>3</strong>: Premium Edition.</li>
+             * <li><strong>4</strong>: Enterprise Edition.</li>
+             * <li><strong>5</strong>: Ultimate Edition.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1299,9 +1345,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total quota of server cores.</p>
+             * <p>The total number of authorized cores.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * <p>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1313,9 +1359,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total quota of servers in the current edition.</p>
+             * <p>The total number of authorized assets for the current edition.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * <p>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1327,9 +1373,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total quota of servers.</p>
+             * <p>The total number of authorized assets.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * <p>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1341,9 +1387,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining quota of servers.</p>
+             * <p>The number of unused authorized assets.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * <p>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1355,9 +1401,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining quota of server cores.</p>
+             * <p>The number of unused authorized cores.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * <p>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1369,9 +1415,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining quota of servers.</p>
+             * <p>The number of unused authorized assets.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * <p>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1383,9 +1429,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumed quota of server cores.</p>
+             * <p>The number of authorized cores that have been used.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * <p>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1397,9 +1443,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used quota of servers.</p>
+             * <p>The number of authorized assets that have been used.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * <p>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1411,15 +1457,15 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of purchased Security Center. Valid values:</p>
+             * <p>The purchased edition of Security Center. Valid values:  </p>
              * <ul>
-             * <li><strong>1</strong>: Basic edition</li>
-             * <li><strong>3</strong>: Enterprise edition</li>
-             * <li><strong>5</strong>: Advanced edition</li>
-             * <li><strong>6</strong>: Anti-virus edition</li>
-             * <li><strong>7</strong>: Ultimate edition</li>
-             * <li><strong>8</strong>: Multi-edition</li>
-             * <li><strong>10</strong>: Value-added Plan edition</li>
+             * <li><strong>1</strong>: Free Edition. </li>
+             * <li><strong>3</strong>: Enterprise Edition.</li>
+             * <li><strong>5</strong>: Premium Edition.</li>
+             * <li><strong>6</strong>: Anti-virus Edition.    </li>
+             * <li><strong>7</strong>: Ultimate Edition.   </li>
+             * <li><strong>8</strong>: Multi-version.   </li>
+             * <li><strong>10</strong>: Value-added services only.</li>
              * </ul>
              * 
              * <strong>example:</strong>

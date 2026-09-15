@@ -67,7 +67,7 @@ public class DescribeVendorListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</p>
          * 
          * <strong>example:</strong>
          * <p>340D7FC4-D575-1661-8ACD-CFA7BE57B795</p>
@@ -78,7 +78,7 @@ public class DescribeVendorListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the service providers.</p>
+         * <p>The list of vendors.</p>
          */
         public Builder vendorNameList(java.util.List<String> vendorNameList) {
             this.vendorNameList = vendorNameList;

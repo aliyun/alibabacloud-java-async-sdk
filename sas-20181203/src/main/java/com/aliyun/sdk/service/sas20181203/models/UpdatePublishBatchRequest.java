@@ -116,7 +116,7 @@ public class UpdatePublishBatchRequest extends Request {
          * <p>The name of the release batch.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>批次1</p>
          */
         public Builder batchName(String batchName) {
             this.putQueryParameter("BatchName", batchName);
@@ -125,7 +125,7 @@ public class UpdatePublishBatchRequest extends Request {
         }
 
         /**
-         * <p>The interval between two release batches.</p>
+         * <p>The interval between release batches.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -139,9 +139,9 @@ public class UpdatePublishBatchRequest extends Request {
         /**
          * <p>The asset selection dimension. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: instance</li>
+         * <li><strong>0</strong>: machine instance</li>
          * <li><strong>1</strong>: machine group</li>
-         * <li><strong>2</strong>: VPC-based instance ID</li>
+         * <li><strong>2</strong>: VPC-connected instance ID</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -87,10 +87,11 @@ public class GetAegisContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the defense rule against container escapes.</p>
+         * <p>The ID of the container anti-escape rule.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> operation to obtain the ID.</p>
+         * <p>You can call the <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * <p>Note: This parameter is required. If you do not specify this parameter, the API returns a parameter validation error (HTTP 400).</p>
          * 
          * <strong>example:</strong>
          * <p>1141****</p>
@@ -102,7 +103,7 @@ public class GetAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -118,10 +119,10 @@ public class GetAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the rule. Valid values:</p>
+         * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: custom rule</li>
-         * <li><strong>1</strong>: system rule</li>
+         * <li><strong>0</strong>: user-defined</li>
+         * <li><strong>1</strong>: system built-in</li>
          * </ul>
          * 
          * <strong>example:</strong>

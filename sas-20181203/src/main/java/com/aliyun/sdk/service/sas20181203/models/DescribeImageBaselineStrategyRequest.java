@@ -87,10 +87,10 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,10 +103,10 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * <p>The data source. Default value: default. Valid values:</p>
+         * <p>The data source. If this parameter is left empty, the image baseline policy is queried by default. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: queries the information about a baseline check policy for images.</li>
-         * <li><strong>agentless</strong>: queries the information about a baseline check policy for agentless detection.</li>
+         * <li><strong>default</strong>: image</li>
+         * <li><strong>agentless</strong>: agentless.</li>
          * </ul>
          * 
          * <strong>example:</strong>

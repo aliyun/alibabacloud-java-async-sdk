@@ -129,7 +129,10 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -138,7 +141,15 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * <p>The status of the alert event. Default value: <strong>a</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>a</strong>: all states</li>
+         * <li><strong>y</strong>: handled</li>
+         * <li><strong>n</strong>: unhandled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -147,7 +158,10 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * DstIp.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183.224.XX.XX</p>
          */
         public Builder dstIp(String dstIp) {
             this.putQueryParameter("DstIp", dstIp);
@@ -156,7 +170,13 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 100. If you leave this parameter empty, 100 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty. We recommend that you set the value to a value no greater than 100.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +185,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * RiskLevelList.
+         * <p>The risk levels.</p>
          */
         public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
@@ -174,7 +194,10 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185.224.XX.XX</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);

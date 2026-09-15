@@ -87,7 +87,7 @@ public class GetAttackEventDashboardRequest extends Request {
         } 
 
         /**
-         * <p>Timestamp of the end time.</p>
+         * <p>The timestamp of the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753153137284</p>
@@ -99,10 +99,10 @@ public class GetAttackEventDashboardRequest extends Request {
         }
 
         /**
-         * <p>Language type for request and response messages. Default value is <strong>zh</strong>. Values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class GetAttackEventDashboardRequest extends Request {
         }
 
         /**
-         * <p>Timestamp of the start time.</p>
+         * <p>The timestamp of the start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1752548337284</p>

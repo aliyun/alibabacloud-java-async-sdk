@@ -67,7 +67,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
         } 
 
         /**
-         * <p>The applications.</p>
+         * <p>The application list.</p>
          */
         public Builder containerWebDefenseAppList(java.util.List<ContainerWebDefenseAppList> containerWebDefenseAppList) {
             this.containerWebDefenseAppList = containerWebDefenseAppList;
@@ -75,7 +75,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
@@ -222,7 +222,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             /**
              * <p>The ID of the container cluster.</p>
              * <blockquote>
-             * <p> The IDs of clusters can be obtained by using the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation.</p>
+             * <p>Call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * <p>The time when the application was created. Unit: milliseconds.</p>
+             * <p>The creation time of the application, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1677839038000</p>
@@ -245,7 +245,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * <p>The last modification time. Unit: milliseconds.</p>
+             * <p>The most recent modification time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1667891185000</p>
@@ -256,7 +256,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The ID of the current node.</p>
              * 
              * <strong>example:</strong>
              * <p>143761</p>
@@ -267,7 +267,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * <p>The ID of the rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>403327</p>
@@ -278,7 +278,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * <p>The value of the application label.</p>
+             * <p>The application tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>app:test</p>

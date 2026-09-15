@@ -173,8 +173,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,7 +404,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>The ID of the image build risk.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * <p>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -416,7 +418,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>The name of the image build risk.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * <p>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -720,7 +722,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>The ID of the sensitive files.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * <p>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -734,7 +736,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>The name of the sensitive files.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * <p>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -963,8 +965,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>The ID of the vulnerability types. Valid values:</p>
              * <ul>
-             * <li><strong>cve</strong>: system vulnerability</li>
-             * <li><strong>app</strong>: application vulnerability</li>
+             * <li><p><strong>cve</strong>: system vulnerability</p>
+             * </li>
+             * <li><p><strong>app</strong>: application vulnerability</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -978,12 +982,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>The name of the vulnerability. Valid values:</p>
              * <ul>
-             * <li><strong>system vulnerability</strong></li>
-             * <li><strong>application vulnerability</strong></li>
+             * <li><p><strong>system vulnerability</strong></p>
+             * </li>
+             * <li><p><strong>application vulnerability</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>system vulnerability</p>
+             * <p>系统漏洞</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1323,8 +1329,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>Indicates whether all namespaces are included. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no</li>
+             * <li><p><strong>1</strong>: yes</p>
+             * </li>
+             * <li><p><strong>0</strong>: no</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1679,8 +1687,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
              * <ul>
-             * <li><strong>zh</strong>: Chinese</li>
-             * <li><strong>en</strong>: English</li>
+             * <li><p><strong>zh</strong>: Chinese</p>
+             * </li>
+             * <li><p><strong>en</strong>: English</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1694,8 +1704,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1720,9 +1732,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>The action that is performed when the rule is hit. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: trigger alerts</li>
-             * <li><strong>2</strong>: block</li>
-             * <li><strong>3</strong>: allow</li>
+             * <li><p><strong>1</strong>: trigger alerts</p>
+             * </li>
+             * <li><p><strong>2</strong>: block</p>
+             * </li>
+             * <li><p><strong>3</strong>: allow</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1777,8 +1792,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

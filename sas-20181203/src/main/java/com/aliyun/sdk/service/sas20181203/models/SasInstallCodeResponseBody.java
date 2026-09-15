@@ -70,7 +70,7 @@ public class SasInstallCodeResponseBody extends TeaModel {
          * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>B256A525-7E42-4BB9-A27C-9017FDDFF1A2</p>
+         * <p>B256A525-7E42-4BB9-A27C-9017FDDF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

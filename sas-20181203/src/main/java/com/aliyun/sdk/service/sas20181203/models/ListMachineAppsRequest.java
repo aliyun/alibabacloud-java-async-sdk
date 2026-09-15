@@ -157,7 +157,7 @@ public class ListMachineAppsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the SAE application.</p>
+         * <p>The SAE application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5b41f4bf-349f-4263-89b1-9234c034****</p>
@@ -169,7 +169,7 @@ public class ListMachineAppsRequest extends Request {
         }
 
         /**
-         * <p>The name of the SAE application.</p>
+         * <p>The SAE application name.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-commprice-shop</p>
@@ -193,13 +193,13 @@ public class ListMachineAppsRequest extends Request {
         }
 
         /**
-         * <p>The edition of Security Center. Valid values:</p>
+         * <p>The authorization version of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>6</strong>: Anti-virus.</li>
-         * <li><strong>5</strong>: Advanced.</li>
-         * <li><strong>3</strong>: Enterprise.</li>
-         * <li><strong>7</strong>: Ultimate.</li>
-         * <li><strong>10</strong>: Value-added Plan.</li>
+         * <li><strong>6</strong>: Anti-virus Edition</li>
+         * <li><strong>5</strong>: Premium Edition</li>
+         * <li><strong>3</strong>: Enterprise Edition</li>
+         * <li><strong>7</strong>: Ultimate Edition</li>
+         * <li><strong>10</strong>: value-added service Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class ListMachineAppsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,9 +224,9 @@ public class ListMachineAppsRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -240,7 +240,7 @@ public class ListMachineAppsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

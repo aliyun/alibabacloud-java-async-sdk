@@ -80,7 +80,7 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The installation verification code for you to manually install the Security Center agent.</p>
+         * <p>The installation verification code for manually installing the Security Center Agent.</p>
          * 
          * <strong>example:</strong>
          * <p>M1HH**</p>
@@ -91,9 +91,9 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The validity period of the installation verification code.</p>
+         * <p>The expiration date of the installation verification code.</p>
          * <blockquote>
-         * <p> The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.</p>
+         * <p>The installation verification code can be used only within its validity period. An expired installation verification code cannot be used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>

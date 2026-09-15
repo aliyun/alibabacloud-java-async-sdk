@@ -54,7 +54,7 @@ public class UpdateFileUploadLimitResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request, which is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8BF6F</p>

@@ -119,7 +119,7 @@ public class GetDefenceCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of handled alerts of the precise defense type in the last 15 days.</p>
+         * <p>The number of alerts handled by accurate access control in the last 15 days.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of handled alerts of the precision defense type.</p>
+         * <p>The total number of alerts handled by accurate access control.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>89AD16CC-97EE-50F3-9B12-9E28E5C8****</p>
@@ -152,10 +152,10 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of handled security alerts of Cloud Security Center.</p>
+         * <p>The number of security alerts that have been handled in Security Center.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>3</p>
          */
         public Builder suspiciousDealtCount(Integer suspiciousDealtCount) {
             this.suspiciousDealtCount = suspiciousDealtCount;
@@ -163,7 +163,7 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of handled alerts of the web tamper proofing type in the last 15 days.</p>
+         * <p>The number of alerting events handled by web tamper-proofing in the last 15 days.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -174,7 +174,7 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of handled alerts of the web tamper proofing type.</p>
+         * <p>The total number of alerting events handled by web tamper-proofing.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -73,9 +73,9 @@ public class GetClusterSuspEventStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the container cluster.</p>
+         * <p>The ID of the container cluster that you want to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetClusterSuspEventStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request source. Set the value to sas.</p>
+         * <p>The source of the request. Set this parameter to sas.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>

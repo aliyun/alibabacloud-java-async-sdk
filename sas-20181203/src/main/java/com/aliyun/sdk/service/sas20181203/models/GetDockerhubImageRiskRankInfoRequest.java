@@ -59,7 +59,7 @@ public class GetDockerhubImageRiskRankInfoRequest extends Request {
         } 
 
         /**
-         * <p>The dimension types.</p>
+         * <p>The image dimension types to query.</p>
          */
         public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);

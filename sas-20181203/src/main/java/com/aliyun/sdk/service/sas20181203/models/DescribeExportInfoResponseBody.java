@@ -158,7 +158,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of exported entries.</p>
+         * <p>The number of data entries that have been exported.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -172,9 +172,9 @@ public class DescribeExportInfoResponseBody extends TeaModel {
          * <p>The status of the export task.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>init</strong>: The task is being initialized.</li>
-         * <li><strong>exporting</strong>: The task is in progress.</li>
-         * <li><strong>success</strong>: The task is complete.</li>
+         * <li><strong>init</strong>: export initialization</li>
+         * <li><strong>exporting</strong>: export in progress</li>
+         * <li><strong>success</strong>: export successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL at which you can download the exported Excel file.</p>
+         * <p>The download URL of the exported Excel file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
@@ -219,7 +219,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that shows the task result. The value is fixed as <strong>success</strong>, which indicates that the task is complete.</p>
+         * <p>The message returned for the export result. Fixed value: <strong>success</strong>. This value indicates that the export is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -230,7 +230,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The progress percentage of the export task.</p>
+         * <p>The export progress percentage (%).</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -241,7 +241,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
@@ -252,7 +252,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the exported Excel file.</p>
+         * <p>The total number of data entries in the exported Excel file.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

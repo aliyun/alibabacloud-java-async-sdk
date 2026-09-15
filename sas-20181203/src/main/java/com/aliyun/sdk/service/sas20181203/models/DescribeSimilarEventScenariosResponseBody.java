@@ -67,7 +67,7 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>FDF7B8D9-8493-4B90-8D13-E0C1FFCE5F97</p>
@@ -78,7 +78,7 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scenarios in which alerts triggered by the same rule or rules of the same type are handled.</p>
+         * <p>The list of handling scenarios for alerts of the same type.</p>
          */
         public Builder scenarios(java.util.List<Scenarios> scenarios) {
             this.scenarios = scenarios;
@@ -131,12 +131,12 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the scenario. Valid values:</p>
+             * <p>The code of the handling scenario. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: the same alert type</li>
-             * <li><strong>same_file_content</strong>: the same file content rule.</li>
-             * <li><strong>same_ip</strong>: the same IP address rule.</li>
-             * <li><strong>same_url</strong>: the same URL rule.</li>
+             * <li><strong>default</strong>: same alerting type</li>
+             * <li><strong>same_file_content</strong>: same file content rule</li>
+             * <li><strong>same_ip</strong>: same IP rule</li>
+             * <li><strong>same_url</strong>: same URL rule.</li>
              * </ul>
              * 
              * <strong>example:</strong>

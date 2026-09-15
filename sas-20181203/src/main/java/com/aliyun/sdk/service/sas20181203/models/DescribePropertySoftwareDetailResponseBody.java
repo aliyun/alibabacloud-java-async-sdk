@@ -88,7 +88,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details list of the queried software asset&quot;s fingerprint information.</p>
+         * <p>Details list of the queried software asset\&quot;s fingerprint information.</p>
          */
         public Builder propertys(java.util.List<Propertys> propertys) {
             this.propertys = propertys;

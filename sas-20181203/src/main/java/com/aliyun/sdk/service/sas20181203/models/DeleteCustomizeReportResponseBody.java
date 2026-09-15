@@ -54,7 +54,7 @@ public class DeleteCustomizeReportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>90593A3B-85CE-5D87-A430-726D0B87****</p>

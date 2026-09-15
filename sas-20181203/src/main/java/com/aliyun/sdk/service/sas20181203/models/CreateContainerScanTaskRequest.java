@@ -87,9 +87,9 @@ public class CreateContainerScanTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster to which the container belongs.</p>
+         * <p>The ID of the container cluster.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateContainerScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the container.</p>
+         * <p>The container ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c927cf190e886696db53cda0efb57145394ccf0bf9f525353fa5c22a26e4****</p>

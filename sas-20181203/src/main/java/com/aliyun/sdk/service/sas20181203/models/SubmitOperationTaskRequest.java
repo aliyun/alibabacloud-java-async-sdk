@@ -133,7 +133,7 @@ public class SubmitOperationTaskRequest extends Request {
         /**
          * <p>The ID of the check item.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
+         * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -147,10 +147,10 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The dimension of the task that you want to submit. Valid values:</p>
+         * <p>The task dimension for the submitted operation task. Valid values:</p>
          * <ul>
-         * <li>Instance dimension: INSTANCE</li>
-         * <li>Check item dimension: CHECK_ID</li>
+         * <li>INSTANCE: instance dimension</li>
+         * <li>CHECK_ID: check item dimension</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The asset information required to submit the tasks for instances.</p>
+         * <p>The asset information required to submit instance tasks.</p>
          */
         public Builder operationTaskInstances(java.util.List<OperationTaskInstances> operationTaskInstances) {
             this.putQueryParameter("OperationTaskInstances", operationTaskInstances);
@@ -172,9 +172,9 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The key linked to cross-page selections during task submission.</p>
+         * <p>The relation key associated with cross-page selection when submitting the operation.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a> operation to query the associated key from the BusinessType field.</p>
+         * <p>Call the <a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a> operation and use the BusinessType field to obtain the relation key.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The temporary parameters required for the repair task.</p>
+         * <p>The temporary parameters required for the remediation task.</p>
          */
         public Builder repairTempParam(java.util.List<RepairTempParam> repairTempParam) {
             this.putQueryParameter("RepairTempParam", repairTempParam);
@@ -196,10 +196,10 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the task that you want to submit. Valid values:</p>
+         * <p>The task type for the submitted task. Valid values:</p>
          * <ul>
-         * <li>Repair task: REPAIR</li>
-         * <li>Rollback task: ROLLBACK</li>
+         * <li>REPAIR: remediation task</li>
+         * <li>ROLLBACK: rollback task</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -320,7 +320,7 @@ public class SubmitOperationTaskRequest extends Request {
             }
 
             /**
-             * <p>The ID of the task that you want to roll back</p>
+             * <p>The task ID to roll back when performing a rollback task.</p>
              * 
              * <strong>example:</strong>
              * <p>7d0b10e35e80c9e5ebac5f1054****</p>
@@ -331,13 +331,13 @@ public class SubmitOperationTaskRequest extends Request {
             }
 
             /**
-             * <p>The service provider of the asset. Valid values:</p>
+             * <p>The asset vendor. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
-             * <li><strong>1</strong>: an asset outside Alibaba Cloud.</li>
-             * <li><strong>2</strong>: an asset in a data center.</li>
-             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider.</li>
-             * <li><strong>8</strong>: a lightweight asset.</li>
+             * <li><strong>0</strong>: Alibaba Cloud asset</li>
+             * <li><strong>1</strong>: asset outside the cloud</li>
+             * <li><strong>2</strong>: IDC asset</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: asset from another cloud provider</li>
+             * <li><strong>8</strong>: lightweight asset</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -408,7 +408,7 @@ public class SubmitOperationTaskRequest extends Request {
             } 
 
             /**
-             * <p>The name of the temporary repair parameter.</p>
+             * <p>The name of the temporary remediation parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>IPPort</p>
@@ -419,7 +419,7 @@ public class SubmitOperationTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the temporary repair parameter.</p>
+             * <p>The value of the temporary remediation parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1XX.1XX</p>

@@ -130,10 +130,10 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language type for the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -147,9 +147,9 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * <p>The name of the vulnerability.</p>
+         * <p>The vulnerability name.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> or <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the names of vulnerabilities.</p>
+         * <p>You can call <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> or <a href="~~DescribeVulList~~">DescribeVulList</a> to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -163,9 +163,9 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory folder.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>You can invoke <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -178,14 +178,14 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The type of vulnerability to query. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
          * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-         * <li><strong>app</strong>: application vulnerabilitiy</li>
-         * <li><strong>emg</strong>: urgent vulnerability</li>
-         * <li><strong>sca</strong>: vulnerability that is detected based on software component analysis</li>
+         * <li><strong>app</strong>: application vulnerability</li>
+         * <li><strong>emg</strong>: emergency vulnerability</li>
+         * <li><strong>sca</strong>: software constituency parsing vulnerability.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

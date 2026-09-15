@@ -60,7 +60,10 @@ public class DeleteInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the network objects that you want to remove. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of the network objects.</p>
+         * <p>The list of network object IDs to delete.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

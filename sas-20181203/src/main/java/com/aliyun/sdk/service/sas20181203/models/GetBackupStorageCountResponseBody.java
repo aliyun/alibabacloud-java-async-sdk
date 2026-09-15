@@ -67,7 +67,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the anti-ransomware capacity.</p>
+         * <p>The details of the anti-ransomware storage capacity.</p>
          */
         public Builder backupStorageCount(BackupStorageCount backupStorageCount) {
             this.backupStorageCount = backupStorageCount;
@@ -75,7 +75,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>33C2CCFF-4BF8-5F88-9B5C-22F932F80E5A</p>
@@ -183,7 +183,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The anti-ransomware capacity that you purchased. Unit: bytes.</p>
+             * <p>The purchased anti-ransomware capacity. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2276332666880</p>
@@ -194,7 +194,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity that is occupied by the backup data of your servers. Unit: bytes.</p>
+             * <p>The storage capacity occupied by server backups in the backup data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>817262417803</p>
@@ -205,10 +205,10 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the anti-ransomware capacity that is used exceeds the anti-ransomware capacity that you purchased. Valid values:</p>
+             * <p>Indicates whether the anti-ransomware usage exceeds the purchased capacity. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: no</li>
-             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: not exceeded</li>
+             * <li><strong>1</strong>: exceeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity that is occupied by the backup data of your databases. Unit: bytes.</p>
+             * <p>The storage capacity occupied by database backups in the backup data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>7453049350</p>
@@ -231,7 +231,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total anti-ransomware capacity that is used. Unit: bytes.</p>
+             * <p>The total used anti-ransomware storage capacity. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>839621565853</p>

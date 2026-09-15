@@ -89,9 +89,9 @@ public class DescribeBackupMachineStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the anti-ransomware policy.</p>
+         * <p>The ID of the anti-ransomware backup policy.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * <p>Call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -105,10 +105,10 @@ public class DescribeBackupMachineStatusRequest extends Request {
         }
 
         /**
-         * <p>The version of the anti-ransomware policy. Valid values:</p>
+         * <p>The version of the mitigation policies. Valid values:</p>
          * <ul>
-         * <li><strong>1.0.0</strong></li>
-         * <li><strong>2.0.0</strong></li>
+         * <li><strong>1.0.0</strong>: The version of the mitigation policies is 1.0.0.</li>
+         * <li><strong>2.0.0</strong>: The version of the mitigation policies is 2.0.0.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,9 +121,9 @@ public class DescribeBackupMachineStatusRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the server to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeBackupPolicy~~">DescribeBackupPolicy</a> operation to query the UUIDs of servers.</p>
+         * <p>Call the <a href="~~DescribeBackupPolicy~~">DescribeBackupPolicy</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

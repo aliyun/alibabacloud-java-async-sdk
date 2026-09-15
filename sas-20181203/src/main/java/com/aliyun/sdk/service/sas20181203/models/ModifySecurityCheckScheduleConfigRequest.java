@@ -132,7 +132,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         } 
 
         /**
-         * <p>The days on which the automatic configuration check runs. You can specify multiple days. Separate multiple days with commas (,). Valid values:</p>
+         * <p>The detection cycle. You can specify multiple days. Separate multiple days with commas (,). Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Monday</li>
          * <li><strong>2</strong>: Tuesday</li>
@@ -154,13 +154,14 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         }
 
         /**
-         * <p>The time period during which the automatic configuration check ends. Valid values:</p>
+         * <p>The end time of the detection. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: 00:00 to 06:00</li>
-         * <li><strong>6</strong>: 06:00 to 12:00</li>
-         * <li><strong>12</strong>: 12:00 to 18:00</li>
-         * <li><strong>18</strong>: 18:00 to 24:00</li>
+         * <li><strong>0</strong>: The detection ends between 00:00 and 06:00.</li>
+         * <li><strong>6</strong>: The detection ends between 06:00 and 12:00.</li>
+         * <li><strong>12</strong>: The detection ends between 12:00 and 18:00.</li>
+         * <li><strong>18</strong>: The detection ends between 18:00 and 24:00.</li>
          * </ul>
+         * <p>Unit: hours. The value is an on-the-hour value from 0 to 24 of the current day.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +174,7 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -210,13 +211,14 @@ public class ModifySecurityCheckScheduleConfigRequest extends Request {
         }
 
         /**
-         * <p>The time period during which the automatic configuration check starts. Valid values:</p>
+         * <p>The start time of the detection. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: 00:00 to 06:00</li>
-         * <li><strong>6</strong>: 06:00 to 12:00</li>
-         * <li><strong>12</strong>: 12:00 to 18:00</li>
-         * <li><strong>18</strong>: 18:00 to 24:00</li>
+         * <li><strong>0</strong>: The detection starts between 00:00 and 06:00.</li>
+         * <li><strong>6</strong>: The detection starts between 06:00 and 12:00.</li>
+         * <li><strong>12</strong>: The detection starts between 12:00 and 18:00.</li>
+         * <li><strong>18</strong>: The detection starts between 18:00 and 24:00.</li>
          * </ul>
+         * <p>Unit: hours. The value is an on-the-hour value from 0 to 24 of the current day.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

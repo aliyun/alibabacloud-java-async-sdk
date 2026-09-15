@@ -180,7 +180,7 @@ public class AddImageVulWhiteListRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;sas_test/script_0209&quot;,&quot;sas_test/script&quot;]}</p>
+         * <p>{\&quot;type\&quot;:\&quot;repo\&quot;,\&quot;target\&quot;:[\&quot;sas_test/script_0209\&quot;,\&quot;sas_test/script\&quot;]}</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -213,7 +213,7 @@ public class AddImageVulWhiteListRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Type&quot;:&quot;sca&quot;,&quot;Name&quot;:&quot;imgsca:java:spring-core:AVD-2022-1124599&quot;,&quot;AliasName&quot;:&quot;Spring Framework JDK &gt;= 9 (CVE-2022-22965)&quot;}]</p>
+         * <p>[{\&quot;Type\&quot;:\&quot;sca\&quot;,\&quot;Name\&quot;:\&quot;imgsca:java:spring-core:AVD-2022-1124599\&quot;,\&quot;AliasName\&quot;:\&quot;Spring Framework JDK &gt;= 9 (CVE-2022-22965)\&quot;}]</p>
          */
         public Builder whitelist(String whitelist) {
             this.putQueryParameter("Whitelist", whitelist);

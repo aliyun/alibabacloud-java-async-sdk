@@ -59,7 +59,7 @@ public class DescribeDynamicDictRequest extends Request {
         } 
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>101.204.XX.XX</p>

@@ -171,7 +171,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         } 
 
         /**
-         * <p>The SHA-256 value of the image digest. Separate multiple SHA-256 values with commas (,).</p>
+         * <p>The SHA256 digest values of the images. Separate multiple SHA256 values with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>6a5e103187b31a94592a47a5858617f7a6c</p>
@@ -183,7 +183,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Container Registry instance in which the image repository is created. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of the Container Registry (ACR) instances. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>i-uf6j8vq9l4r5ntht****</p>
@@ -195,7 +195,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the image. Separate multiple IDs with commas (,).</p>
+         * <p>The region IDs of the images. Separate multiple region IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -207,11 +207,11 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the image repository. Separate multiple types with commas (,). Valid values:</p>
+         * <p>The types of image registries. Separate multiple types with commas (,). Valid values:</p>
          * <ul>
          * <li><strong>acr</strong></li>
          * <li><strong>harbor</strong></li>
-         * <li><strong>quay</strong></li>
+         * <li><strong>quay</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of the image registries. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>crr-vridcl4****</p>
@@ -236,7 +236,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the image repository. Separate multiple names with commas (,).</p>
+         * <p>The names of the image registries. Separate multiple names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>centos</p>
@@ -248,7 +248,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the image repository belongs. Separate multiple namespaces with commas (,).</p>
+         * <p>The namespaces of the image registries. Separate multiple namespaces with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>hanghai-namespace</p>
@@ -260,7 +260,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168..XX.XX</p>
@@ -272,7 +272,7 @@ public class PublicCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The tag that is added to the image. Separate multiple tags with commas (,).</p>
+         * <p>The tags of the images. Separate multiple tags with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>

@@ -67,7 +67,7 @@ public class AddUnknownThreatDetectProcessResponseBody extends TeaModel {
         } 
 
         /**
-         * IdList.
+         * <p>The list of process IDs.</p>
          */
         public Builder idList(java.util.List<IdList> idList) {
             this.idList = idList;
@@ -131,7 +131,10 @@ public class AddUnknownThreatDetectProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92666883</p>
              */
             public Builder id(String id) {
                 this.id = id;

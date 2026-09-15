@@ -73,7 +73,10 @@ public class ListFileProtectBindMachineRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -82,7 +85,10 @@ public class ListFileProtectBindMachineRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

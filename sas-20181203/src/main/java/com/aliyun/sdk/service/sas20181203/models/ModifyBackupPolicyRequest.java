@@ -160,7 +160,7 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the anti-ransomware policy that you want to modify.</p>
+         * <p>The ID of the anti-ransomware policy to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the anti-ransomware policy that you want to modify.</p>
+         * <p>The name of the anti-ransomware policy to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,26 +186,28 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the anti-ransomware policy that you want to modify. The value is a JSON string that contains the following fields:</p>
+         * <p>The content of the policy to modify. The value is a JSON format character string that contains the following fields:</p>
          * <ul>
-         * <li><p><strong>Source</strong>: the directory that you want to protect. If you want to protect all directories, set this field to brackets [].</p>
+         * <li><p><strong>Source</strong>: The server folder to protect. To protect all folders, set this field to [].</p>
          * </li>
-         * <li><p><strong>Include</strong>: the format of the file that you want to protect. Examples: *.jpg and *.doc.</p>
+         * <li><p><strong>Include</strong>: The file types to protect. Examples: &quot;\<em>.jpg&quot; and &quot;\</em>.doc&quot;.</p>
          * </li>
-         * <li><p><strong>Exclude</strong>: the directory that you want to exclude from the anti-ransomware policy. You can call the DescribeExcludeSystemPath operation to query all directories and then specify the directory that you want to exclude. Example: /home/user.</p>
+         * <li><p><strong>Exclude</strong>: The custom folders to exclude. For example, &quot;/home/user&quot; excludes the /home/user folder. Invoke the DescribeExcludeSystemPath operation to obtain all folders, and then add the folders that you want to exclude.</p>
          * </li>
-         * <li><p><strong>Schedule</strong>: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour.</p>
+         * <li><p><strong>Schedule</strong>: The start time and interval of the data backup node. Specify a non-hourly time during off-peak hours.</p>
          * <ul>
-         * <li>If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of three weeks.</li>
-         * <li>If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of 24 hours.</li>
+         * <li><p>Example 1: I|1583216092|P21D indicates that the execute start time is 2020-03-03 14:14:52 and the interval is 3 weeks.</p>
+         * </li>
+         * <li><p>Example 2: I|1583216092|PT24H indicates that the execute start time is 2020-03-03 14:14:52 and the interval is 24 hours.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p><strong>Retention</strong>: the period during which backup data is retained. Unit: day. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
+         * <li><p><strong>Retention</strong>: The retention period of backup data. Unit: days. 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</p>
          * </li>
-         * <li><p><strong>SpeedLimiter</strong>: the limit on the network bandwidth for data backup tasks. If you set this field to 12:15:15360|6:12:5120, the maximum bandwidth for a data backup task is 15 Mbit/s from 12:00 to 15:00 and 5 Mbit/s from 06:00 to 12:00.</p>
+         * <li><p><strong>SpeedLimiter</strong>: The network bandwidth throttling for backup. For example, 12:15:15360|6:12:5120 indicates 15 MB from 12:00 to 15:00 and 5 MB from 6:00 to 12:00.
+         * For cloud-based servers connected to the internal network, do not limit the backup network bandwidth. To remove the network bandwidth throttling, set this parameter to an empty character string (&quot;&quot;).</p>
          * </li>
          * </ul>
-         * <p>If you back up data on an Elastic Compute Service (ECS) instance that is connected over an internal network, we recommend that you leave this field empty. If this field is left empty, the bandwidth for data backup tasks is unlimited.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,8 +221,8 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the server to which the anti-ransomware policy is applied.</p>
-         * <p>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions in which the anti-ransomware feature is supported.</p>
+         * <p>The region of the server for which you want to modify the policy.</p>
+         * <p>You can invoke the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -232,7 +234,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The version of the anti-ransomware policy. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies.</p>
+         * <p>The version of the policy. You can invoke the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the version.</p>
          * <ul>
          * <li><strong>1.0.0</strong></li>
          * <li><strong>2.0.0</strong></li>
@@ -248,7 +250,16 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * SelectType.
+         * <p>The method used to select assets. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL_MACHINE</strong>: all assets<blockquote>
+         * <p>To cover all assets of the specified type, set this parameter to <strong>ALL_MACHINE</strong>. In this case, <strong>UuidList</strong> is invalid. Only one policy that covers all assets can exist for each server type.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_MACHINE</p>
          */
         public Builder selectType(String selectType) {
             this.putQueryParameter("SelectType", selectType);
@@ -257,7 +268,15 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * ServerType.
+         * <p>The server type. Valid values:</p>
+         * <ul>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud server</li>
+         * <li><strong>OUT_CLOUD</strong>: non-Alibaba Cloud server</li>
+         * <li><strong>TRIPARTITE</strong>: simple application server</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);
@@ -266,7 +285,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
+         * <p>The list of UUIDs of the servers protected by the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>

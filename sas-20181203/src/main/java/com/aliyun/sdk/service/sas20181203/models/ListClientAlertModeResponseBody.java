@@ -67,7 +67,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The data returned by the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
@@ -144,7 +144,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of returned entries.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -155,7 +155,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUIDs of the assets.</p>
+             * <p>The list of asset UUIDs.</p>
              */
             public Builder uuids(java.util.List<String> uuids) {
                 this.uuids = uuids;

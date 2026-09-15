@@ -129,7 +129,7 @@ public class ListUuidsByAppIdRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the SAE application.</p>
+         * <p>The SAE application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5b41f4bf-349f-4263-89b1-9234c034****</p>
@@ -153,7 +153,7 @@ public class ListUuidsByAppIdRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query. Paging starts from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,9 +165,9 @@ public class ListUuidsByAppIdRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -181,7 +181,7 @@ public class ListUuidsByAppIdRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query. Paging is performed based on this value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

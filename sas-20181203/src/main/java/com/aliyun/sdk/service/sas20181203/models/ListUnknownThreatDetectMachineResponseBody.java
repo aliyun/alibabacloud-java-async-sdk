@@ -80,7 +80,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -330,7 +330,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -338,7 +341,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -346,7 +352,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.42.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -378,7 +387,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessCount.
+             * <p>The number of processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder processCount(Integer processCount) {
                 this.processCount = processCount;
@@ -394,7 +406,15 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The running status of the machine. Valid values:</p>
+             * <ul>
+             * <li><strong>monitoring</strong>: Warning.</li>
+             * <li><strong>blocking</strong>: Blocking.</li>
+             * <li><strong>studying</strong>: Learning.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>studying</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -402,7 +422,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * StudyMode.
+             * <p>The whitelist mode. Valid values:</p>
+             * <ul>
+             * <li><strong>hash</strong>: process hash</li>
+             * <li><strong>path</strong>: process path</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder studyMode(String studyMode) {
                 this.studyMode = studyMode;
@@ -418,7 +445,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * StudyStartTime.
+             * <p>The timestamp when learning started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766988192</p>
              */
             public Builder studyStartTime(Long studyStartTime) {
                 this.studyStartTime = studyStartTime;
@@ -426,7 +456,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -519,7 +552,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of entries on the current page when using paging.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -527,7 +563,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The page number of the current page when using paging.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -535,7 +574,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The maximum number of entries per page when using paging.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -543,7 +585,10 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

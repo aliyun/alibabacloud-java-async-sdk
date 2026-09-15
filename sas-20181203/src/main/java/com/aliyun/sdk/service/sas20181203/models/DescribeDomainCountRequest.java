@@ -59,7 +59,7 @@ public class DescribeDomainCountRequest extends Request {
         } 
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>192.172.XX.XX</p>

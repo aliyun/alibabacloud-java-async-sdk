@@ -67,7 +67,7 @@ public class DescribeAppVulScanCycleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The scan cycle for application vulnerabilities.</p>
+         * <p>The application vulnerability scanning epoch. Valid values:</p>
          * <ul>
          * <li>1week</li>
          * <li>2weeks</li>

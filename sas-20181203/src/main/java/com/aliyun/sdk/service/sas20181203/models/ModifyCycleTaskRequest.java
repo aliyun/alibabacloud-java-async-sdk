@@ -186,9 +186,9 @@ public class ModifyCycleTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the task configuration.</p>
+         * <p>The ID of the configuration.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</p>
+         * <p>Call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -204,8 +204,8 @@ public class ModifyCycleTaskRequest extends Request {
         /**
          * <p>Specifies whether to enable the task. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enables the task.</li>
-         * <li><strong>0</strong>: disables the task.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>0</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The time when the task first started.</p>
+         * <p>The first execution time.</p>
          * 
          * <strong>example:</strong>
          * <p>1664380800000</p>
@@ -230,7 +230,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The interval at which the task is run.</p>
+         * <p>The interval period.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -242,7 +242,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The additional information.</p>
+         * <p>The extended information field.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -267,10 +267,10 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The unit of the scan interval. Valid values:</p>
+         * <p>The unit of the scan cycle. Valid values:</p>
          * <ul>
-         * <li><strong>day</strong></li>
-         * <li><strong>hour</strong></li>
+         * <li><strong>day</strong>: day.</li>
+         * <li><strong>hour</strong>: hour.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The end time of the task. The time must be a time frame.</p>
+         * <p>The task end time, in hours.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -295,7 +295,7 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The start time of the task. The start time must be a time frame.</p>
+         * <p>The task start time, in hours.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -307,40 +307,11 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the task. Valid values:</p>
+         * <p>The node name. Valid values:</p>
          * <ul>
-         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus detection task</li>
-         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>VIRUS_VUL_SCHEDULE_SCAN</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>virus detection task</p>
-         * <!-- -->
-         * </li>
-         * <li><p>IMAGE_SCAN</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>image scan task</p>
-         * <!-- -->
-         * </li>
-         * <li><p>EMG_VUL_SCHEDULE_SCAN</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>urgent vulnerability scan task</p>
-         * <!-- --></li>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
+         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,40 +324,11 @@ public class ModifyCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus detection task</li>
-         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>VIRUS_VUL_SCHEDULE_SCAN</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>virus detection task</p>
-         * <!-- -->
-         * </li>
-         * <li><p>IMAGE_SCAN</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>image scan task</p>
-         * <!-- -->
-         * </li>
-         * <li><p>EMG_VUL_SCHEDULE_SCAN</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>urgent vulnerability scan task</p>
-         * <!-- --></li>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
+         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
          * </ul>
          * 
          * <strong>example:</strong>

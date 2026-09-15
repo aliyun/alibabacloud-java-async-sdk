@@ -67,7 +67,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The members in the resource directory.</p>
+         * <p>La liste des comptes membres dans le répertoire de ressources.</p>
          */
         public Builder accounts(java.util.List<Accounts> accounts) {
             this.accounts = accounts;
@@ -75,7 +75,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>L\&quot;identifiant de la requête. Il s\&quot;agit d\&quot;un identifiant unique généré par Alibaba Cloud pour la requête. Vous pouvez l\&quot;utiliser pour le dépannage.</p>
          * 
          * <strong>example:</strong>
          * <p>B7A839E8-70AE-591D-8D9E-C5419A2240DB</p>
@@ -327,7 +327,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the member.</p>
+             * <p>L\&quot;identifiant de compte Alibaba Cloud du membre.</p>
              * 
              * <strong>example:</strong>
              * <p>180803538814****</p>
@@ -338,10 +338,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated and should be ignored.</p>
+             * <p>Ce paramètre est obsolète et ne doit plus être utilisé.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>true.</p>
              */
             public Builder buySas(Integer buySas) {
                 this.buySas = buySas;
@@ -349,14 +349,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether a yearly or monthly subscription of Cloud Security Center is purchased. Values:</p>
+             * <p>Indique si une instance Security Center en abonnement a été souscrite. Valeurs valides :</p>
              * <ul>
-             * <li><strong>true</strong>: Yes</li>
-             * <li><strong>false</strong>: No</li>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>true.</p>
              */
             public Builder buySasNew(Boolean buySasNew) {
                 this.buySasNew = buySasNew;
@@ -364,10 +364,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Subscription type. Values:</p>
+             * <p>Le mode de facturation de l\&quot;abonnement. Valeurs valides :</p>
              * <ul>
-             * <li><strong>0</strong>: Prepaid</li>
-             * <li><strong>1</strong>: Pay-As-You-Go</li>
+             * <li><strong>0</strong> : prépayé</li>
+             * <li><strong>1</strong> : paiement à l\&quot;usage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -379,7 +379,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the member.</p>
+             * <p>Le nom du compte.</p>
              * 
              * <strong>example:</strong>
              * <p>abc**</p>
@@ -390,7 +390,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the folder in the resource directory.</p>
+             * <p>L\&quot;identifiant du dossier dans le répertoire de ressources.</p>
              * 
              * <strong>example:</strong>
              * <p>fd-cE2SQP****</p>
@@ -401,10 +401,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance purchase type. Values:</p>
+             * <p>Le type d\&quot;achat de l\&quot;instance. Valeurs valides :</p>
              * <ul>
-             * <li><strong>0</strong>: Self-purchased</li>
-             * <li><strong>1</strong>: Multi-account allocation</li>
+             * <li><strong>0</strong> : achat direct</li>
+             * <li><strong>1</strong> : alloué via la gestion multi-comptes.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -416,10 +416,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the member is an administrator account of the resource directory. Valid values:</p>
+             * <p>Indique si le compte est le compte de gestion du répertoire de ressources. Valeurs valides :</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><p><strong>yes</strong></p>
+             * </li>
+             * <li><p><strong>no</strong>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -431,7 +433,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the member is marked as followed.</p>
+             * <p>Indique si le compte est marqué comme suivi.</p>
              * 
              * <strong>example:</strong>
              * <p>no</p>
@@ -442,10 +444,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the member is a delegated administrator account of Security Center. Valid values:</p>
+             * <p>Indique si le compte est un compte administrateur délégué de Security Center. Valeurs valides :</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><p><strong>yes</strong></p>
+             * </li>
+             * <li><p><strong>no</strong>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -457,10 +461,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the member is an account of the threat analysis and response feature. Valid values:</p>
+             * <p>Indique si le compte est un compte de gestion de Cloud Threat Detection and Response (CTDR). Valeurs valides :</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><p><strong>yes</strong></p>
+             * </li>
+             * <li><p><strong>no</strong>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -472,10 +478,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the member is a delegated administrator account of the threat analysis and response feature. Valid values:</p>
+             * <p>Indique si le compte est un compte administrateur délégué de Cloud Threat Detection and Response (CTDR). Valeurs valides :</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><p><strong>yes</strong></p>
+             * </li>
+             * <li><p><strong>no</strong>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -487,10 +495,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Post-paid module switch. Values:</p>
+             * <p>Le commutateur de module à paiement à l\&quot;usage. Valeurs valides :</p>
              * <ul>
-             * <li><strong>0</strong>: Off</li>
-             * <li><strong>1</strong>: On</li>
+             * <li><strong>0</strong> : désactivé</li>
+             * <li><strong>1</strong> : activé.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -502,25 +510,24 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:</p>
+             * <p>L\&quot;état des commutateurs de modules à paiement à l\&quot;usage, au format JsonString. Valeurs valides :</p>
              * <ul>
-             * <li><p>Key:</p>
-             * <ul>
-             * <li><strong>VUL</strong>: vulnerability fixing module</li>
-             * <li><strong>CSPM</strong>: cloud service configuration check module</li>
-             * <li><strong>AGENTLESS</strong>: agentless detection module</li>
-             * <li><strong>SERVERLESS</strong>: serverless asset module</li>
+             * <li>Clé :<ul>
+             * <li><strong>VUL</strong> : module de gestion des vulnérabilités</li>
+             * <li><strong>CSPM</strong> : module Cloud Security Posture Management (CSPM)</li>
+             * <li><strong>AGENTLESS</strong> : module de détection sans agent</li>
+             * <li><strong>SERVERLESS</strong> : module de ressources serverless</li>
+             * <li><strong>CTDR</strong> : module Cloud Threat Detection and Response (CTDR)</li>
+             * <li><strong>RASP</strong> : module Runtime Application Self-Protection (RASP)</li>
+             * <li><strong>SDK</strong> : module SDK de détection de fichiers malveillants</li>
+             * <li><strong>POST_HOST</strong> : module de sécurité des hôtes et des conteneurs</li>
              * </ul>
              * </li>
-             * <li><p>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</p>
-             * </li>
+             * <li>Valeur : 0 indique désactivé. 1 indique activé.</li>
              * </ul>
-             * <blockquote>
-             * <p> If you do not specify a value for a module, the original value of the module is retained.</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;VUL&quot;:0}</p>
+             * <p>{\&quot;VUL\&quot;:0}</p>
              */
             public Builder postPayModuleSwitch(String postPayModuleSwitch) {
                 this.postPayModuleSwitch = postPayModuleSwitch;
@@ -528,7 +535,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cloud Security Center Instance ID.</p>
+             * <p>L\&quot;identifiant de l\&quot;instance Security Center.</p>
              * 
              * <strong>example:</strong>
              * <p>postpay-sas-x5x3hy1ly***</p>
@@ -539,13 +546,13 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of Security Center that you use. Valid value:</p>
+             * <p>L\&quot;édition souscrite de Security Center. Valeurs valides :</p>
              * <ul>
-             * <li><strong>0</strong> or <strong>1</strong>: Basic</li>
-             * <li><strong>2</strong> or <strong>3</strong>: Enterprise</li>
-             * <li><strong>5</strong>: Advanced</li>
-             * <li><strong>6</strong>: Anti-virus</li>
-             * <li><strong>7</strong>: Ultimate</li>
+             * <li><strong>0</strong> ou <strong>1</strong> : Édition gratuite</li>
+             * <li><strong>2</strong> ou <strong>3</strong> : Édition Enterprise  </li>
+             * <li><strong>5</strong> : Édition Premium  </li>
+             * <li><strong>6</strong> : Édition Anti-virus </li>
+             * <li><strong>7</strong> : Édition Ultimate.</li>
              * </ul>
              * 
              * <strong>example:</strong>

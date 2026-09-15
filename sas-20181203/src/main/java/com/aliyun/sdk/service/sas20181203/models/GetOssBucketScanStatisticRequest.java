@@ -73,7 +73,7 @@ public class GetOssBucketScanStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The names of the buckets.</p>
+         * <p>The list of bucket names.</p>
          */
         public Builder bucketNameList(java.util.List<String> bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
@@ -84,8 +84,8 @@ public class GetOssBucketScanStatisticRequest extends Request {
         /**
          * <p>The data source. Valid values:</p>
          * <ul>
-         * <li><strong>API</strong>: API operations.</li>
-         * <li><strong>OSS</strong>: Object Storage Service (OSS) file check.</li>
+         * <li><strong>API</strong>: API-based scan.</li>
+         * <li><strong>OSS</strong>: OSS-based scan.</li>
          * </ul>
          * 
          * <strong>example:</strong>

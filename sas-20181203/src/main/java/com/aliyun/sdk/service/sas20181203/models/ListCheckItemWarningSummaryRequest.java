@@ -269,7 +269,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The name of the check item. Fuzzy match is supported.</p>
+         * <p>The fuzzy match for the check item name.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -281,11 +281,11 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The risk level. Default value: null, which indicates that check items at all risk levels are queried.Valid values:</p>
+         * <p>The risk level. Default value: null, which indicates that all levels are queried. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><strong>high</strong>: High.</li>
+         * <li><strong>medium</strong>: Medium.</li>
+         * <li><strong>low</strong>: Low.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The type of the check item.</p>
+         * <p>The check item category name.</p>
          * 
          * <strong>example:</strong>
          * <p>hc.check.type.attack_defense</p>
@@ -310,12 +310,12 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The risk status. Default value is null, meaning check items in all states are queried. Valid values:</p>
+         * <p>The risk status. Default value: null, which indicates that all statuses are queried. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: failed</li>
-         * <li><strong>3</strong>: passed</li>
-         * <li><strong>6</strong>: whitelisted</li>
-         * <li><strong>8</strong>: fixed</li>
+         * <li><strong>1</strong>: Failed.</li>
+         * <li><strong>3</strong>: Passed.</li>
+         * <li><strong>6</strong>: Whitelisted.</li>
+         * <li><strong>8</strong>: Fixed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +328,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The list of risk levels. If the CheckWarningStatus parameter is specified, only it takes effect.</p>
+         * <p>The list of risk statuses. If both this parameter and CheckWarningStatus are specified, only CheckWarningStatus takes effect.</p>
          */
         public Builder checkWarningStatusList(java.util.List<Integer> checkWarningStatusList) {
             this.putQueryParameter("CheckWarningStatusList", checkWarningStatusList);
@@ -337,7 +337,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The name of the field that is used to query containers.</p>
+         * <p>The container security query parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>clusterId</p>
@@ -349,7 +349,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The value of the field that is used to query containers.</p>
+         * <p>The container security query parameter value.</p>
          * 
          * <strong>example:</strong>
          * <p>c471f0f61b9c04f8380556e922cf1****</p>
@@ -361,7 +361,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that query results are displayed starting from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -373,9 +373,9 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the asset group.</p>
+         * <p>The ID of the asset group to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -390,8 +390,8 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         /**
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -404,9 +404,9 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page when paging. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned per page.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -419,13 +419,13 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>127608589417****</p>
+         * <p>1232428423234****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -434,7 +434,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The type of the baseline.</p>
+         * <p>The baseline category name.</p>
          * 
          * <strong>example:</strong>
          * <p>weak_password</p>
@@ -446,10 +446,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The data source. Default value: <strong>default</strong>. Valid value:</p>
+         * <p>The data source. Default value: <strong>default</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>agentless</strong>: The check items of baselines for agentless detection.</li>
-         * <li><strong>default</strong>: The check items of baselines for hosts.</li>
+         * <li><strong>agentless</strong>: agentless detection.</li>
+         * <li><strong>default</strong>: host baseline.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -462,7 +462,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>Start of time range for filtering alerts, effective only for querying historically handled alerts.</p>
+         * <p>The start time for filtering alerts. This parameter takes effect only when you query historical processed alerts. Specify a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1732793158366</p>
@@ -474,9 +474,9 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers.</p>
+         * <p>The list of server UUIDs to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of the servers.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain the UUID of a server.</p>
          * </blockquote>
          */
         public Builder uuidList(java.util.List<String> uuidList) {

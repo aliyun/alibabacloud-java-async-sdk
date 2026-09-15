@@ -59,10 +59,10 @@ public class DescribeUserSettingRequest extends Request {
         } 
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
-         * <p>58.248.87.10</p>
+         * <p>112.94.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

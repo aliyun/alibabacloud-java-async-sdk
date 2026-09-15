@@ -101,22 +101,19 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The conditions for searching assets. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><p><strong>name</strong>: the name of the search condition.</p>
-         * </li>
-         * <li><p><strong>value</strong>: the value of the search condition.</p>
-         * </li>
-         * <li><p><strong>logicalExp</strong>: the logical relation for multiple search conditions. Valid values:</p>
-         * <ul>
-         * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
-         * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+         * <li><strong>name</strong>: The search item.</li>
+         * <li><strong>value</strong>: The value of the search item.</li>
+         * <li><strong>logicalExp</strong>: The logical relationship among multiple search item values. Valid values:<ul>
+         * <li><strong>OR</strong>: The search item values are evaluated by using the OR operator.</li>
+         * <li><strong>AND</strong>: The search item values are evaluated by using the AND operator.</li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;ruleName&quot;,&quot;value&quot;:&quot;test-1818&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]</p>
+         * <p>[{\&quot;name\&quot;:\&quot;ruleName\&quot;,\&quot;value\&quot;:\&quot;test-1818\&quot;,\&quot;logicalExp\&quot;:\&quot;AND\&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -125,7 +122,7 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the current page in a paged query. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,10 +134,10 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The logical relation for multiple search conditions. Valid values:</p>
+         * <p>The logical relationship among multiple search conditions. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
-         * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+         * <li><strong>OR</strong>: The search conditions are evaluated by using the OR operator.</li>
+         * <li><strong>AND</strong>: The search conditions are evaluated by using the AND operator.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +150,7 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page in a paged query. Default value: <strong>20</strong>, which indicates that 20 entries are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

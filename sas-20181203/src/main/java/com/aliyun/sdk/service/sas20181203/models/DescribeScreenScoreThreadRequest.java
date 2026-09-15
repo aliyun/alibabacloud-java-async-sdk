@@ -103,7 +103,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end time as a timestamp. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,10 @@ public class DescribeScreenScoreThreadRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory folder.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -125,11 +128,9 @@ public class DescribeScreenScoreThreadRequest extends Request {
         }
 
         /**
-         * <p>Source of security score, default is Cloud Security Center if left empty. Enum values: </p>
-         * <ul>
-         * <li>0:Cloud Security Center. </li>
-         * <li>1:Yaochi Console.</li>
-         * </ul>
+         * <p>The source of the security score. If this parameter is left empty, the default value is Security Center. Valid values:</p>
+         * <p>0: Security Center.</p>
+         * <p>1: Alibaba Cloud ApsaraDB console.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +142,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The start time as a timestamp. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

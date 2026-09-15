@@ -73,7 +73,13 @@ public class GetCheckProcessRequest extends Request {
         } 
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -82,9 +88,9 @@ public class GetCheckProcessRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the cloud service configuration check task that you want to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~SubmitCheck~~">SubmitCheck</a> operation to query the ID.</p>
+         * <p>You can call the <a href="~~SubmitCheck~~">SubmitCheck</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

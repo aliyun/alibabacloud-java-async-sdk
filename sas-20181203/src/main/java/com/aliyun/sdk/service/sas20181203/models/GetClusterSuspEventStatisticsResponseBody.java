@@ -67,7 +67,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>ACF97412-FD09-4D1F-994F-34DF12BR****</p>
@@ -78,7 +78,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of alerts by risk level.</p>
+         * <p>The number of alerts by severity level.</p>
          */
         public Builder suspStatistics(SuspStatistics suspStatistics) {
             this.suspStatistics = suspStatistics;
@@ -157,7 +157,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of alerts whose Emergency level is Reminder.</p>
+             * <p>The number of alerts with the reminder severity level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -168,7 +168,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of alerts whose Emergency level is Urgent.</p>
+             * <p>The number of alerts with the urgent severity level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -179,7 +179,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of alerts whose Emergency level is Suspicious.</p>
+             * <p>The number of alerts with the suspicious severity level.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

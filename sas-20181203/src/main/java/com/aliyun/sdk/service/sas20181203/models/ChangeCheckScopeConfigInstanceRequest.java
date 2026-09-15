@@ -30,11 +30,16 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DeleteAssetUuids")
     private java.util.List<String> deleteAssetUuids;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectionKey")
+    private String selectionKey;
+
     private ChangeCheckScopeConfigInstanceRequest(Builder builder) {
         super(builder);
         this.addAssetUuids = builder.addAssetUuids;
         this.configId = builder.configId;
         this.deleteAssetUuids = builder.deleteAssetUuids;
+        this.selectionKey = builder.selectionKey;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         return this.deleteAssetUuids;
     }
 
+    /**
+     * @return selectionKey
+     */
+    public String getSelectionKey() {
+        return this.selectionKey;
+    }
+
     public static final class Builder extends Request.Builder<ChangeCheckScopeConfigInstanceRequest, Builder> {
         private java.util.List<String> addAssetUuids; 
         private String configId; 
         private java.util.List<String> deleteAssetUuids; 
+        private String selectionKey; 
 
         private Builder() {
             super();
@@ -85,10 +98,11 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
             this.addAssetUuids = request.addAssetUuids;
             this.configId = request.configId;
             this.deleteAssetUuids = request.deleteAssetUuids;
+            this.selectionKey = request.selectionKey;
         } 
 
         /**
-         * AddAssetUuids.
+         * <p>The list of unique IDs of cloud assets to add.</p>
          */
         public Builder addAssetUuids(java.util.List<String> addAssetUuids) {
             this.putQueryParameter("AddAssetUuids", addAssetUuids);
@@ -97,6 +111,10 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scan scope configuration.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,11 +127,23 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         }
 
         /**
-         * DeleteAssetUuids.
+         * <p>The list of unique IDs of cloud assets to delete.</p>
          */
         public Builder deleteAssetUuids(java.util.List<String> deleteAssetUuids) {
             this.putQueryParameter("DeleteAssetUuids", deleteAssetUuids);
             this.deleteAssetUuids = deleteAssetUuids;
+            return this;
+        }
+
+        /**
+         * <p>The key for cross-page select-all.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b6d1a39a-f020-4782-af2c-c4b6522*****</p>
+         */
+        public Builder selectionKey(String selectionKey) {
+            this.putQueryParameter("SelectionKey", selectionKey);
+            this.selectionKey = selectionKey;
             return this;
         }
 

@@ -265,6 +265,9 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
 
             /**
              * <p>The details about the check results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{   &quot;type&quot;: &quot;link&quot;,   &quot;value&quot;: &quot;未开启多因素认证，存在风险\n&quot;,   &quot;url&quot;: &quot;https://***.aliyun.com/#/secure\n&quot; }</p>
              */
             public Builder contentResource(java.util.Map<String, ?> contentResource) {
                 this.contentResource = contentResource;
@@ -274,10 +277,14 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             /**
              * <p>The title in the details. Valid values:</p>
              * <ul>
-             * <li><strong>bestPractice</strong>: description</li>
-             * <li><strong>influence</strong>: risk</li>
-             * <li><strong>suggestion</strong>: solution</li>
-             * <li><strong>helpResource</strong>: reference</li>
+             * <li><p><strong>bestPractice</strong>: description</p>
+             * </li>
+             * <li><p><strong>influence</strong>: risk</p>
+             * </li>
+             * <li><p><strong>suggestion</strong>: solution</p>
+             * </li>
+             * <li><p><strong>helpResource</strong>: reference</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -550,8 +557,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the risks that are detected based on the check item can be fixed. Valid values:</p>
              * <ul>
-             * <li><strong>enabled</strong>: yes</li>
-             * <li><strong>disabled</strong>: no</li>
+             * <li><p><strong>enabled</strong>: yes</p>
+             * </li>
+             * <li><p><strong>disabled</strong>: no</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -584,9 +593,12 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             /**
              * <p>The risk level of the check item. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong></li>
-             * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><p><strong>high</strong></p>
+             * </li>
+             * <li><p><strong>medium</strong></p>
+             * </li>
+             * <li><p><strong>low</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -611,8 +623,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the check item is supported by the edition of Security Center that you purchase. Valid values:</p>
              * <ul>
-             * <li><strong>enabled</strong>: yes</li>
-             * <li><strong>disable</strong>: no</li>
+             * <li><p><strong>enabled</strong>: yes</p>
+             * </li>
+             * <li><p><strong>disable</strong>: no</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -626,12 +640,18 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             /**
              * <p>The status of the check results. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong></li>
-             * <li><strong>failed</strong></li>
-             * <li><strong>running</strong></li>
-             * <li><strong>waiting</strong></li>
-             * <li><strong>ignored</strong></li>
-             * <li><strong>falsePositive</strong></li>
+             * <li><p><strong>pass</strong></p>
+             * </li>
+             * <li><p><strong>failed</strong></p>
+             * </li>
+             * <li><p><strong>running</strong></p>
+             * </li>
+             * <li><p><strong>waiting</strong></p>
+             * </li>
+             * <li><p><strong>ignored</strong></p>
+             * </li>
+             * <li><p><strong>falsePositive</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -667,12 +687,18 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             /**
              * <p>The type of the check item. Valid values:</p>
              * <ul>
-             * <li>Identity authentication and permissions</li>
-             * <li>Network access control</li>
-             * <li>Log audit</li>
-             * <li>Data security</li>
-             * <li>Monitoring and alerting</li>
-             * <li>Basic security protection</li>
+             * <li><p>Identity authentication and permissions</p>
+             * </li>
+             * <li><p>Network access control</p>
+             * </li>
+             * <li><p>Log audit</p>
+             * </li>
+             * <li><p>Data security</p>
+             * </li>
+             * <li><p>Monitoring and alerting</p>
+             * </li>
+             * <li><p>Basic security protection</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

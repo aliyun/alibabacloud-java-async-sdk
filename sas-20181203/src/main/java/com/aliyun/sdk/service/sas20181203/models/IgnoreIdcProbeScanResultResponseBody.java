@@ -54,7 +54,7 @@ public class IgnoreIdcProbeScanResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>E30282D8-AB2D-5EB1-998B-2DDFA948D49D</p>

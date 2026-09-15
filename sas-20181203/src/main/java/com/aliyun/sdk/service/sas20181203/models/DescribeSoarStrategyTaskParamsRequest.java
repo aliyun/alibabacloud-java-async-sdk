@@ -59,9 +59,9 @@ public class DescribeSoarStrategyTaskParamsRequest extends Request {
         } 
 
         /**
-         * <p>Strategy task ID.</p>
+         * <p>The ID of the policy task.</p>
          * <blockquote>
-         * <p>You can obtain this parameter by calling the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> interface.</p>
+         * <p>Call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

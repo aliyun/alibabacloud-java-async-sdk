@@ -54,7 +54,7 @@ public class DeleteAntiBruteForceRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>FBBEB173-1F43-505F-A876-C03ECDF6CE4C</p>

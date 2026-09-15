@@ -157,7 +157,7 @@ public class AddContainerDefenseRuleRequest extends Request {
         } 
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test-proc-defense</p>
@@ -169,10 +169,12 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The action that is performed when the rule is hit. Valid values:</p>
+         * <p>The action to take when the rule is matched. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: alert</li>
-         * <li><strong>2</strong>: block</li>
+         * <li><p><strong>1</strong>: Alert.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Block.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +187,7 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule. You do not need to manually specify the ID.</p>
+         * <p>The rule ID. You do not need to specify this parameter when creating a rule.</p>
          * 
          * <strong>example:</strong>
          * <p>500018</p>
@@ -197,7 +199,7 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>auto-test-rule-lt9umq</p>
@@ -209,10 +211,12 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The switch of the rule. Valid values:</p>
+         * <p>The rule switch. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: off</li>
-         * <li><strong>1</strong>: on</li>
+         * <li><p><strong>0</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,10 +231,10 @@ public class AddContainerDefenseRuleRequest extends Request {
         /**
          * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li>2: user-defined rules</li>
+         * <li>2: user rule</li>
          * </ul>
          * <blockquote>
-         * <p>Only the value 2 is supported.</p>
+         * <p>Notice: Only the value 2 is supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -243,7 +247,7 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The scope.</p>
+         * <p>The scope. This parameter is required. Specify at least one Scope entry, such as Scope.1.AllNamespace=1, which indicates that the rule applies to all namespaces. If this parameter is not specified, the API returns a 400 error.</p>
          */
         public Builder scope(java.util.List<Scope> scope) {
             this.putQueryParameter("Scope", scope);
@@ -336,8 +340,10 @@ public class AddContainerDefenseRuleRequest extends Request {
             /**
              * <p>Specifies whether to include all namespaces. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: You can use the Namespaces parameter to specify the namespaces to include.</li>
-             * <li><strong>1</strong>: All namespaces are included.</li>
+             * <li><p><strong>0</strong>: Specifies the namespaces to include by using the Namespaces parameter.</p>
+             * </li>
+             * <li><p><strong>1</strong>: Includes all namespaces.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -349,9 +355,9 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -363,7 +369,7 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The namespaces to include.</p>
+             * <p>The list of included namespaces.</p>
              */
             public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
@@ -444,10 +450,7 @@ public class AddContainerDefenseRuleRequest extends Request {
             } 
 
             /**
-             * <p>The hash values of the files that need to be added to the whitelist.</p>
-             * <blockquote>
-             * <p>This parameter is not supported.</p>
-             * </blockquote>
+             * <p>The file hash.&gt;Notice: This parameter is not supported.</p>
              */
             public Builder hash(java.util.List<String> hash) {
                 this.hash = hash;
@@ -455,7 +458,7 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The images that need to be added to the whitelist.</p>
+             * <p>The list of images to whitelist.</p>
              */
             public Builder image(java.util.List<String> image) {
                 this.image = image;
@@ -463,7 +466,7 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The paths to the files that need to be added to the whitelist.</p>
+             * <p>The list of file paths to whitelist.</p>
              */
             public Builder path(java.util.List<String> path) {
                 this.path = path;

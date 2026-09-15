@@ -186,7 +186,7 @@ public class DescribeVulListPageRequest extends Request {
          * <p>The name of the vulnerability.</p>
          * 
          * <strong>example:</strong>
-         * <p>RCE vulnerability</p>
+         * <p>远程代码执行漏洞</p>
          */
         public Builder vulNameLike(String vulNameLike) {
             this.putQueryParameter("VulNameLike", vulNameLike);
@@ -197,9 +197,12 @@ public class DescribeVulListPageRequest extends Request {
         /**
          * <p>The type of the vulnerabilities. Valid values:</p>
          * <ul>
-         * <li><strong>cve</strong>: Linux software vulnerability.</li>
-         * <li><strong>sys</strong>: Windows system vulnerability.</li>
-         * <li><strong>app</strong>: Application vulnerability that is detected by using web scanner.</li>
+         * <li><p><strong>cve</strong>: Linux software vulnerability.</p>
+         * </li>
+         * <li><p><strong>sys</strong>: Windows system vulnerability.</p>
+         * </li>
+         * <li><p><strong>app</strong>: Application vulnerability that is detected by using web scanner.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

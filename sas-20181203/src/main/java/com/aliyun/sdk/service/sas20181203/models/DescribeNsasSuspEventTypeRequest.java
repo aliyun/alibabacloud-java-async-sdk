@@ -185,9 +185,9 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         } 
 
         /**
-         * <p>The name of the container field. Valid values:</p>
+         * <p>The container field. Valid values:</p>
          * <ul>
-         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * <li><strong>clusterId</strong>: cluster ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request source. Set the value to <strong>sas</strong>, which indicates that the request is sent from Security Center.</p>
+         * <p>The source of the request. Set the value to <strong>sas</strong>, which indicates that the request is sent from Security Center.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -224,10 +224,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,10 +240,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * <p>The type of the accounts that you want to query. Default value: <strong>0</strong>. Valid values:</p>
+         * <p>The multi-account query type. Default value: <strong>0</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: the current account.</li>
-         * <li><strong>1</strong>: all accounts.</li>
+         * <li><strong>0</strong>: queries data of the current account.</li>
+         * <li><strong>1</strong>: queries data of all accounts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert type.</p>
+         * <p>The name of the security alerting Alarm Metric.</p>
          * 
          * <strong>example:</strong>
          * <p>Unusual Logon</p>
@@ -280,7 +280,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>180.212.XX.XX</p>
@@ -292,7 +292,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * <p>List of supported alarm operation types.</p>
+         * <p>The list of operation types supported by the alert.</p>
          */
         public Builder supportOperateCodeList(java.util.List<String> supportOperateCodeList) {
             this.putQueryParameter("SupportOperateCodeList", supportOperateCodeList);
@@ -301,9 +301,9 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

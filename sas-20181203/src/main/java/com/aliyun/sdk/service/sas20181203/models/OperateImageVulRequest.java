@@ -87,22 +87,22 @@ public class OperateImageVulRequest extends Request {
         } 
 
         /**
-         * <p>The information about the vulnerability. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The information about the vulnerability to be processed. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li>namespace: the namespace of the image</li>
-         * <li>repoName: the name of the Container Registry repository</li>
-         * <li>regionId: the region ID</li>
-         * <li>instanceId: the ID of the Container Registry instance</li>
-         * <li>repoId: the name of the repository</li>
-         * <li>tag: the tad added to the image</li>
-         * <li>digest: the digest of the image</li>
-         * <li>newTag: the tag added to the image after the vulnerability is fixed</li>
-         * <li>uuid: the UUID of the image</li>
-         * <li>ids: the IDs of the vulnerability primary keys</li>
+         * <li>namespace: the image namespace.</li>
+         * <li>repoName: the name of the ACR image repository.</li>
+         * <li>regionId: the region.</li>
+         * <li>instanceId: the ID of the ACR instance.</li>
+         * <li>repoId: the ID of the repository.</li>
+         * <li>tag: the original tag of the image.</li>
+         * <li>digest: the digest of the image.</li>
+         * <li>newTag: the tag of the image after the fix.</li>
+         * <li>uuid: the UUID of the image.</li>
+         * <li>ids: the list of primary key IDs of the vulnerabilities.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;namespace&quot;:&quot;cloud_oa****&quot;,&quot;repoName&quot;:&quot;hybirdc****&quot;,&quot;regionId&quot;:&quot;cn-shanghai&quot;,&quot;instanceId&quot;:&quot;cri-rv4nvbv8iju4****&quot;,&quot;repoId&quot;:&quot;crr-2q7302qrofxg****&quot;,&quot;tag&quot;:&quot;hybird-cloud-web_fix_167115945****&quot;,&quot;digest&quot;:&quot;e1a4fd25884ca2ef8840bb252c9926e4f549df9e046500dd93539b2d458c****&quot;,&quot;newTag&quot;:&quot;hybird-cloud-web_fix_167115996****&quot;,&quot;uuid&quot;:&quot;4ad91dd8c0c02de6574fa98085d0****&quot;,&quot;ids&quot;:[197540864,197540865,197540869]}]</p>
+         * <p>[{\&quot;namespace\&quot;:\&quot;cloud_oa****\&quot;,\&quot;repoName\&quot;:\&quot;hybirdc****\&quot;,\&quot;regionId\&quot;:\&quot;cn-shanghai\&quot;,\&quot;instanceId\&quot;:\&quot;cri-rv4nvbv8iju4****\&quot;,\&quot;repoId\&quot;:\&quot;crr-2q7302qrofxg****\&quot;,\&quot;tag\&quot;:\&quot;hybird-cloud-web_fix_167115945****\&quot;,\&quot;digest\&quot;:\&quot;e1a4fd25884ca2ef8840bb252c9926e4f549df9e046500dd93539b2d458c****\&quot;,\&quot;newTag\&quot;:\&quot;hybird-cloud-web_fix_167115996****\&quot;,\&quot;uuid\&quot;:\&quot;4ad91dd8c0c02de6574fa98085d0****\&quot;,\&quot;ids\&quot;:[197540864,197540865,197540869]}]</p>
          */
         public Builder info(String info) {
             this.putQueryParameter("Info", info);
@@ -111,7 +111,7 @@ public class OperateImageVulRequest extends Request {
         }
 
         /**
-         * <p>If you want to fix the vulnerability, set the value to vul_fix.</p>
+         * <p>The operation type for image vulnerability fix. Set this parameter to vul_fix.</p>
          * 
          * <strong>example:</strong>
          * <p>vul_fix</p>
@@ -123,7 +123,7 @@ public class OperateImageVulRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Set the value to cve.</p>
+         * <p>The vulnerability type. Set this parameter to cve.</p>
          * 
          * <strong>example:</strong>
          * <p>cve</p>

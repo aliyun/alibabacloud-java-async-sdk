@@ -59,9 +59,9 @@ public class DeleteMaliciousNoteRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the remarks.</p>
+         * <p>The ID of the note record.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the ID from the NoteId parameter.</p>
+         * <p>Call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain this parameter from the NoteId field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

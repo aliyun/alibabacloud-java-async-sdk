@@ -78,7 +78,7 @@ public class GenerateDynamicDictResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>00E9B912-6066-5E4E-9F24-35EA09F2****</p>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

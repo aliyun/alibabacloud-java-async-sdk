@@ -105,9 +105,9 @@ public class DescribeImageRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the image.</p>
+         * <p>The image instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of instances.</p>
+         * <p>You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -123,7 +123,7 @@ public class DescribeImageRequest extends Request {
         /**
          * <p>The region ID of the image.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of regions.</p>
+         * <p>You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -137,9 +137,9 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The image repository ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of image repositories.</p>
+         * <p>You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -153,9 +153,9 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * <p>The tag that is added to the image.</p>
+         * <p>The image tag.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query tags.</p>
+         * <p>You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

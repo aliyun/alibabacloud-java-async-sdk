@@ -119,7 +119,7 @@ public class ListClientUserDefineRulesRequest extends Request {
          * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Rule****</p>
+         * <p>规则****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

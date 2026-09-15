@@ -213,7 +213,7 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;filterParams&quot;:[{&quot;labelKey&quot;:&quot;a|b&quot;,&quot;value&quot;:&quot;{\&quot;name\&quot;:\&quot;sadsasd\&quot;,\&quot;value\&quot;:\&quot;dasdsdas\&quot;}&quot;}],&quot;LogicalExp&quot;:&quot;OR&quot;}</p>
+             * <p>{\&quot;filterParams\&quot;:[{\&quot;labelKey\&quot;:\&quot;a|b\&quot;,\&quot;value\&quot;:\&quot;{\\\&quot;name\\\&quot;:\\\&quot;sadsasd\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;dasdsdas\\\&quot;}\&quot;}],\&quot;LogicalExp\&quot;:\&quot;OR\&quot;}</p>
              */
             public Builder filterConditions(String filterConditions) {
                 this.filterConditions = filterConditions;

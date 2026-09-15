@@ -115,7 +115,7 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The IP address that you want to block by using the defense rule.</p>
+         * <p>The IP address to be blocked for brute-force attacks prevention.</p>
          * 
          * <strong>example:</strong>
          * <p>117.66.XX.XX</p>
@@ -127,7 +127,7 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>Settings for paged query. The number of records to return on each page during paging. Default value: <strong>20</strong>, which indicates that 20 records are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -160,11 +160,11 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * <p>The status of the defense rule. Valid values:</p>
+         * <p>The status of the brute-force attacks defense rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: invalid</li>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>2</strong>: failed</li>
+         * <li><strong>0</strong>: Invalid.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>2</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

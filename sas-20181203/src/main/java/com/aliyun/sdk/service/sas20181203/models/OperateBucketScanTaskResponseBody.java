@@ -54,7 +54,7 @@ public class OperateBucketScanTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0C8487EF-50C2-54BB-8634-10F8C35D****</p>

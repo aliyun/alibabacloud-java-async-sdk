@@ -67,7 +67,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the error logs.</p>
+         * <p>The list of error logs.</p>
          */
         public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
@@ -75,7 +75,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F929E952-EBFC-56C3-BD35-BF8B59024C69</p>
@@ -134,7 +134,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
              * <p>The text content of the log.</p>
              * 
              * <strong>example:</strong>
-             * <p>mv: cannot move &quot;CentOS-Base.repo&quot; to &quot;CentOS-Base.repo.backup&quot;: Permission denied</p>
+             * <p>mv: cannot move \&quot;CentOS-Base.repo\&quot; to \&quot;CentOS-Base.repo.backup\&quot;: Permission denied</p>
              */
             public Builder text(String text) {
                 this.text = text;

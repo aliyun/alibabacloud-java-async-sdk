@@ -60,7 +60,7 @@ public class ListUserVpcRequest extends Request {
         } 
 
         /**
-         * <p>Region.</p>
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

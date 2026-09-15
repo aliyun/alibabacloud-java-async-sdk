@@ -157,10 +157,10 @@ public class DescribeEmgVulItemRequest extends Request {
         } 
 
         /**
-         * <p>The check method. Valid values:</p>
+         * <p>The check type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: proof of concept (POC) verification</li>
-         * <li><strong>1</strong>: version comparison</li>
+         * <li><strong>0</strong>: POC verification</li>
+         * <li><strong>1</strong>: version comparison.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the first page to return. Default value: <strong>1</strong>, which indicates that query results are displayed starting from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,10 +185,10 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates that 10 emergency vulnerability entries are displayed per page. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -213,9 +213,9 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -228,10 +228,10 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the vulnerability poses risks.<br>If you do not specify this parameter, all vulnerabilities are queried regardless of whether the vulnerabilities pose risks. Valid values:</p>
+         * <p>The risk status of the vulnerabilities to query. If this parameter is not specified, vulnerabilities of all risk statuses are returned, including those with risks and those without risks. Valid values:</p>
          * <ul>
-         * <li><strong>y</strong>: yes</li>
-         * <li><strong>n</strong>: no</li>
+         * <li><strong>y</strong>: at risk</li>
+         * <li><strong>n</strong>: not at risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,10 +244,10 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to detect the vulnerability.<br>If you do not specify this parameter, all vulnerabilities are queried regardless of which method is used. Valid values:</p>
+         * <p>The detection method of the vulnerabilities to query. If this parameter is not specified, vulnerabilities detected by all methods are returned by default, including version detection and network scanning. Valid values:</p>
          * <ul>
-         * <li><strong>python</strong>: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</li>
-         * <li><strong>scan</strong>: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.</li>
+         * <li><strong>python</strong>: version detection (server software version detection). Detects whether your server has disclosed software vulnerabilities.</li>
+         * <li><strong>scan</strong>: network scanning (network traffic detection). Detects whether your public assets (Internet-accessible servers) have vulnerabilities.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * <p>The name of the urgent vulnerability.</p>
+         * <p>The name of the emergency vulnerability to query.</p>
          * 
          * <strong>example:</strong>
          * <p>Changjietong T + SetupAccount/Upload.aspx file Upload vulnerability (CNVD-2022-60632)</p>

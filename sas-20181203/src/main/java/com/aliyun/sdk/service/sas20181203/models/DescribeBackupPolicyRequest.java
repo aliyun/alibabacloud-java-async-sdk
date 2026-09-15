@@ -60,9 +60,9 @@ public class DescribeBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the anti-ransomware policy.</p>
+         * <p>The ID of the anti-ransomware backup policy.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * <p>You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

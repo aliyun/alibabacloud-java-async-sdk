@@ -67,7 +67,7 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned when the API call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,10 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthTotal.
+             * <p>The total number of web tamper-proofing licenses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder authTotal(String authTotal) {
                 this.authTotal = authTotal;
@@ -178,7 +181,10 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * BindCount.
+             * <p>The number of bound tamper-proofing licenses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder bindCount(Integer bindCount) {
                 this.bindCount = bindCount;
@@ -186,7 +192,10 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedDirectoriesCount.
+             * <p>The total number of web tamper-proofing rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder protectedDirectoriesCount(Integer protectedDirectoriesCount) {
                 this.protectedDirectoriesCount = protectedDirectoriesCount;
@@ -194,7 +203,10 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedInstancesCount.
+             * <p>The total number of online web tamper-proofing clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder protectedInstancesCount(Integer protectedInstancesCount) {
                 this.protectedInstancesCount = protectedInstancesCount;

@@ -74,7 +74,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -85,8 +85,8 @@ public class CreateServiceLinkedRoleRequest extends Request {
         /**
          * <p>The service-linked role. Default value: <strong>AliyunServiceRoleForSas</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>AliyunServiceRoleForSas</strong>: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.</li>
-         * <li><strong>AliyunServiceRoleForSasCspm</strong>: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.</li>
+         * <li><strong>AliyunServiceRoleForSas</strong>: the service-linked role for Security Center (SAS). Security Center uses this role to access your resources in other cloud services.</li>
+         * <li><strong>AliyunServiceRoleForSasCspm</strong>: the service-linked role for Security Center - Cloud Security Posture Management (CSPM). SAS-CSPM uses this role to access your resources in other cloud services.</li>
          * </ul>
          * 
          * <strong>example:</strong>

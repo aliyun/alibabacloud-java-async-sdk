@@ -80,7 +80,7 @@ public class SubmitCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned if the call is successful.</p>
+         * <p>The data returned when the API call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class SubmitCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CE8369A6-A843-5E1B-A613-78E6920D****</p>
@@ -99,7 +99,7 @@ public class SubmitCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the configuration assessment task.</p>
+         * <p>The ID of the task that runs the cloud service configuration check.</p>
          * 
          * <strong>example:</strong>
          * <p>5fe3f65d-4012-455d-8232-2a98a858****</p>
@@ -168,10 +168,10 @@ public class SubmitCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation code of the configuration assessment task.</p>
+             * <p>The operation code of the cloud service configuration check task.</p>
              * <ul>
-             * <li><strong>Throttling</strong>: frequency limit</li>
-             * <li><strong>AuthorizationExhaust</strong>: insufficient quota</li>
+             * <li><strong>Throttling</strong>: rate limited</li>
+             * <li><strong>AuthorizationExhaust</strong>: insufficient authorization quota</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class SubmitCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The throttling duration. Unit: seconds.</p>
+             * <p>The rate limit duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>

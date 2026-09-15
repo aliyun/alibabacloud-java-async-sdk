@@ -101,7 +101,7 @@ public class VerifyCheckResultRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the check items.</p>
+         * <p>The list of check item IDs.</p>
          */
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -110,7 +110,11 @@ public class VerifyCheckResultRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to forcibly run the specified check items. Default value: false.</p>
+         * <ul>
+         * <li>true: Forcibly runs the specified check items. Forced execution bypasses frequency and quantity limits and initiates the check directly, which may cause duplicate checks to run multiple times within a short period.</li>
+         * <li>false (default): Does not forcibly run the specified check items. This ensures that the same check item is executed only once within a short period.</li>
+         * </ul>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -119,7 +123,7 @@ public class VerifyCheckResultRequest extends Request {
         }
 
         /**
-         * <p>List of instance IDs for the check item assets.</p>
+         * <p>The list of instance IDs of the assets associated with the check items.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -128,7 +132,10 @@ public class VerifyCheckResultRequest extends Request {
         }
 
         /**
-         * <p>The source of task.</p>
+         * <p>The task source. Valid values:</p>
+         * <ul>
+         * <li><strong>YAO_CHI</strong>: ApsaraDB console.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>YAO_CHI</p>

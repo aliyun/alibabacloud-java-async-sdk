@@ -61,8 +61,8 @@ public class ListClientAlertModeRequest extends Request {
         /**
          * <p>The protection mode. Valid values:</p>
          * <ul>
-         * <li><strong>strict</strong>: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.</li>
-         * <li><strong>balance</strong>: The balanced mode. More risks can be detected with less false positives in this mode.</li>
+         * <li><strong>strict</strong>: Strict mode. This mode has a certain risk of false positives. Use this mode during critical event protection periods.</li>
+         * <li><strong>balance</strong>: Balanced mode. This mode detects more suspicious risks while reducing false positives.</li>
          * </ul>
          * 
          * <strong>example:</strong>

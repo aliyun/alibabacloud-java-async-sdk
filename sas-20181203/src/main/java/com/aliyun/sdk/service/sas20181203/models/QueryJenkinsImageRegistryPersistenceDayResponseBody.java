@@ -93,7 +93,7 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The retention period. Unit: days.</p>
+         * <p>The repository retention duration. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -104,7 +104,7 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -115,7 +115,7 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>EA4AC8B7-0C18-5BC1-9DA4-798B3BE4****</p>
@@ -126,7 +126,7 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * <p>The time consumed. Unit: seconds.</p>
+         * <p>The time consumed for the execution. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

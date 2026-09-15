@@ -87,7 +87,7 @@ public class DeleteBackupSnapshotRequest extends Request {
         } 
 
         /**
-         * <p>The regions for backup.</p>
+         * <p>The backup regions.</p>
          */
         public Builder backupRegionIdList(java.util.List<String> backupRegionIdList) {
             this.putQueryParameter("BackupRegionIdList", backupRegionIdList);
@@ -107,8 +107,8 @@ public class DeleteBackupSnapshotRequest extends Request {
         /**
          * <p>Specifies whether to retain the latest snapshot. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: retains the latest snapshot.</li>
+         * <li><strong>false</strong>: does not retain the latest snapshot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,14 +238,14 @@ public class DeleteBackupSnapshotRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the Cloud Backup client.</p>
+             * <p>The ID of the backup client.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</p>
+             * <p>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain this parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>c-000a4h33w14ka8xagb2s</p>
+             * <p>c-000a4h33w14ka8xa****</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -253,11 +253,11 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * <p>The ID of the server.</p>
+             * <p>The ID of the server instance.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>i-j6cj8vyajp1fo4atxkae</p>
+             * <p>i-j6cj8vyajp1fo4at****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -265,7 +265,7 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * <p>The region in which Security Center is deployed. Valid values:</p>
+             * <p>The region of the Security Center instance. Valid values:</p>
              * <ul>
              * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
              * <li><strong>ap-southeast-1</strong>: Singapore.</li>
@@ -282,14 +282,14 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * <p>The ID of the snapshot that you want to delete.</p>
+             * <p>The ID of the snapshot to delete.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</p>
+             * <p>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain this parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>s-000f9p6r5trm6u4dc1iq</p>
+             * <p>s-000f9p6r5trm6u4d****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -299,10 +299,10 @@ public class DeleteBackupSnapshotRequest extends Request {
             /**
              * <p>The type of the data source. Valid values:</p>
              * <ul>
-             * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files.</li>
-             * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets.</li>
-             * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems.</li>
-             * <li><strong>OTS_TABLE</strong>: Tablestore instances.</li>
+             * <li><strong>ECS_FILE</strong>: backup snapshot of ECS files.</li>
+             * <li><strong>OSS</strong>: backup snapshot of Alibaba Cloud OSS.</li>
+             * <li><strong>NAS</strong>: backup snapshot of Alibaba Cloud NAS.</li>
+             * <li><strong>OTS_TABLE</strong>: backup snapshot of Alibaba Cloud Tablestore.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -315,14 +315,14 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * <p>The ID of the backup vault that is used in the restoration task.</p>
+             * <p>The ID of the backup vault for the restoration task.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</p>
+             * <p>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain this parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>v-0004vhwcs2pmacfzrzt5</p>
+             * <p>v-0004vhwcs2pmacfz****</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

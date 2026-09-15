@@ -152,7 +152,7 @@ public class ListCheckRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Display name of the item&quot;s chapter.</p>
+             * <p>Display name of the item\&quot;s chapter.</p>
              * 
              * <strong>example:</strong>
              * <p>Access Control</p>

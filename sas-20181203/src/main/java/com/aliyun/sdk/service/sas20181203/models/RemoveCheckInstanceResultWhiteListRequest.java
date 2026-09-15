@@ -85,7 +85,7 @@ public class RemoveCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The IDs of instances. Separate multiple IDs with commas (,).</p>
+         * <p>The instance ID to query. Separate multiple instance IDs with commas (,).</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

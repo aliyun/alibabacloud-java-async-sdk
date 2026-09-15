@@ -87,9 +87,9 @@ public class GetAppNetworkRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster to which the container belongs.</p>
+         * <p>The ID of the container cluster to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,9 +102,9 @@ public class GetAppNetworkRequest extends Request {
         }
 
         /**
-         * <p>The end timestamp of the query. Unit: milliseconds.</p>
+         * <p>The timestamp of the end time. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * <p>The difference between the start timestamp and the end timestamp cannot exceed <strong>7</strong> days.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -117,9 +117,9 @@ public class GetAppNetworkRequest extends Request {
         }
 
         /**
-         * <p>The start timestamp of the query. Unit: milliseconds.</p>
+         * <p>The timestamp of the start time. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * <p>The difference between the start timestamp and the end timestamp cannot exceed <strong>7</strong> days.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

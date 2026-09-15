@@ -87,7 +87,7 @@ public class GetSecurityScoreRuleRequest extends Request {
         } 
 
         /**
-         * <p>The old or new version of the security score rule. If you set this parameter to <strong>home_security_score</strong>, the new version of the security score rule is returned. Otherwise, the old version of the security score rule is returned by default.</p>
+         * <p>Specifies whether to query the new or legacy security score rules. If the value is <strong>home_security_score</strong>, the new security score rules are queried. Otherwise, the legacy security score rules are queried by default.</p>
          * 
          * <strong>example:</strong>
          * <p>home_security_score</p>
@@ -99,10 +99,10 @@ public class GetSecurityScoreRuleRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,10 @@ public class GetSecurityScoreRuleRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

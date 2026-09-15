@@ -67,7 +67,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the application network topology.</p>
+         * <p>The application network topology information.</p>
          */
         public Builder appNetwork(AppNetwork appNetwork) {
             this.appNetwork = appNetwork;
@@ -75,7 +75,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>7D46EDB0-xxx</p>
@@ -196,7 +196,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the destination node.</p>
+             * <p>The destination node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>102</p>
@@ -207,10 +207,10 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the destination node. Valid values:</p>
+             * <p>The destination node type. Valid values:</p>
              * <ul>
-             * <li><strong>app</strong>: an application</li>
-             * <li><strong>internet</strong>: a network node in another cluster</li>
+             * <li><strong>app</strong>: application.</li>
+             * <li><strong>internet</strong>: external network node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the edge.</p>
+             * <p>The edge ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3534</p>
@@ -233,7 +233,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the destination port.</p>
+             * <p>The destination port number.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -244,7 +244,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source node.</p>
+             * <p>The source node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>101</p>
@@ -255,10 +255,10 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source node. Valid values:</p>
+             * <p>The source node type. Valid values:</p>
              * <ul>
-             * <li><strong>app</strong>: an application</li>
-             * <li><strong>internet</strong>: a network node in another cluster</li>
+             * <li><strong>app</strong>: application.</li>
+             * <li><strong>internet</strong>: external network node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -340,7 +340,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom namespace.</p>
+             * <p>The namespace name.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -462,7 +462,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of the container IDs.</p>
+             * <p>The list of container IDs.</p>
              */
             public Builder containerIds(java.util.List<String> containerIds) {
                 this.containerIds = containerIds;
@@ -470,7 +470,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1274</p>
@@ -481,7 +481,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node.</p>
+             * <p>The node name.</p>
              * 
              * <strong>example:</strong>
              * <p>console</p>
@@ -492,7 +492,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -505,11 +505,11 @@ public class GetAppNetworkResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>3</strong>: high</li>
-             * <li><strong>2</strong>: medium</li>
-             * <li><strong>1</strong>: low</li>
-             * <li><strong>0</strong>: warning</li>
-             * <li><strong>-1</strong>: unknown</li>
+             * <li><strong>3</strong>: High.</li>
+             * <li><strong>2</strong>: Medium.</li>
+             * <li><strong>1</strong>: Low.</li>
+             * <li><strong>0</strong>: Safe.</li>
+             * <li><strong>-1</strong>: Unknown.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -521,10 +521,10 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the node. Valid values:</p>
+             * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>app</strong>: an application</li>
-             * <li><strong>internet</strong>: a network node in another cluster</li>
+             * <li><strong>app</strong>: application</li>
+             * <li><strong>internet</strong>: external network node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -608,7 +608,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the topology edge.</p>
+             * <p>The topology edge information.</p>
              */
             public Builder edge(java.util.List<Edge> edge) {
                 this.edge = edge;
@@ -624,7 +624,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the application node.</p>
+             * <p>The application node information.</p>
              */
             public Builder node(java.util.List<Node> node) {
                 this.node = node;

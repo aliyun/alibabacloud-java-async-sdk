@@ -67,7 +67,7 @@ public class GetUserLangResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>23AD0BD2-8771-5647-819E-6BA51E21****</p>
@@ -78,7 +78,7 @@ public class GetUserLangResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The language settings.</p>
+         * <p>The language settings data.</p>
          */
         public Builder sasUserLang(SasUserLang sasUserLang) {
             this.sasUserLang = sasUserLang;
@@ -131,10 +131,10 @@ public class GetUserLangResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The language specified for log analysis. Valid values:</p>
+             * <p>The language configured for log analysis. Valid values:</p>
              * <ul>
              * <li>zh: Chinese</li>
-             * <li>en: English</li>
+             * <li>en: English.</li>
              * </ul>
              * 
              * <strong>example:</strong>

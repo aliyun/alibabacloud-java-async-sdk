@@ -119,7 +119,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         /**
          * <p>The ID of the management node.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -146,7 +146,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * <p>The CIDR blocks that are allowed to access the management node.</p>
+         * <p>The collection of allowed CIDR blocks.</p>
          */
         public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);

@@ -67,7 +67,7 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>79CFF74D-E967-5407-8A78-EE03B925****</p>
@@ -78,7 +78,7 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the rule types.</p>
+         * <p>The list of rule types.</p>
          */
         public Builder ruleTypes(java.util.List<String> ruleTypes) {
             this.ruleTypes = ruleTypes;

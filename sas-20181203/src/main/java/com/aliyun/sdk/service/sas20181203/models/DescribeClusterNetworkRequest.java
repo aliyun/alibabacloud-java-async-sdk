@@ -75,9 +75,9 @@ public class DescribeClusterNetworkRequest extends Request {
         } 
 
         /**
-         * <p>The end timestamp of the query. Unit: milliseconds.</p>
+         * <p>The end timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * <p>The difference between the start timestamp and end timestamp cannot exceed <strong>7</strong> days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -91,9 +91,9 @@ public class DescribeClusterNetworkRequest extends Request {
         }
 
         /**
-         * <p>The start timestamp of the query. Unit: milliseconds.</p>
+         * <p>The start timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * <p>The difference between the start timestamp and end timestamp cannot exceed <strong>7</strong> days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

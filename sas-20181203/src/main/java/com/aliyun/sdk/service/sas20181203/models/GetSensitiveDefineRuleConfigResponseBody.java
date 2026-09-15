@@ -106,7 +106,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned by the API request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -147,10 +147,10 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the query was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The keyword of the check rule.</p>
+             * <p>The rule keyword.</p>
              * 
              * <strong>example:</strong>
              * <p>huaweicloud_ak</p>
@@ -244,7 +244,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the check rule.</p>
+             * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>huaweicloud_ak</p>
@@ -255,10 +255,10 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the check rule is selected. Valid values:</p>
+             * <p>Indicates whether the rule is selected. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Selected.</li>
+             * <li><strong>false</strong>: Not selected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category keyword of the check rule.</p>
+             * <p>The classification keyword of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -353,7 +353,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category name of the check rule.</p>
+             * <p>The classification name of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -364,7 +364,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of check rules.</p>
+             * <p>The list of check item rules.</p>
              */
             public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -470,10 +470,12 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the new rule is enabled for automatic check only on agentless detection. Valid values:</p>
+             * <p>Indicates whether automatic check is enabled for new rules. This parameter takes effect only for agentless checks. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
-             * <li><strong>1</strong>: enabled.</li>
+             * <li><p><strong>0</strong>: Disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -496,7 +498,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of check rules.</p>
+             * <p>The total number of check items.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -507,7 +509,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tree of the check rules.</p>
+             * <p>The check item rule tree.</p>
              */
             public Builder ruleTree(java.util.List<RuleTree> ruleTree) {
                 this.ruleTree = ruleTree;
@@ -515,7 +517,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of selected check rules.</p>
+             * <p>The number of selected check items.</p>
              * 
              * <strong>example:</strong>
              * <p>99</p>

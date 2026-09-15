@@ -67,7 +67,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8EF3ACC2-9400-5B64-B72D-4A1D35113750</p>
@@ -78,7 +78,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the information about servers.</p>
+         * <p>The query result list.</p>
          */
         public Builder sasPmAgentList(java.util.List<SasPmAgentList> sasPmAgentList) {
             this.sasPmAgentList = sasPmAgentList;
@@ -209,7 +209,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of Cloud Assistant.</p>
+             * <p>The globally unique ID of Cloud Assistant.</p>
              * 
              * <strong>example:</strong>
              * <p>mi-hz034jn***yxhc0</p>
@@ -220,7 +220,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the CloudMonitor agent.</p>
+             * <p>The globally unique ID of CloudMonitor.</p>
              * 
              * <strong>example:</strong>
              * <p>5d5ef6be-54ff-11ed-82cf-8f01475e****</p>
@@ -231,13 +231,13 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The installation result of Cloud Assistant. Valid values:</p>
+             * <p>The installation execution result of Cloud Assistant. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: SUCCESS</li>
              * <li><strong>1</strong>: MISSING_PARAM</li>
              * <li><strong>2</strong>: UNKNOWN_SYSTEM</li>
              * <li><strong>3</strong>: DOWNLOAD_FAILED</li>
-             * <li><strong>4</strong>: INSTALL_FAILED</li>
+             * <li><strong>4</strong>: INSTALL_FAILED.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -249,12 +249,12 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of Cloud Assistant. Valid values:</p>
+             * <p>The installation status of Cloud Assistant. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: installing</li>
-             * <li><strong>1</strong>: installed</li>
-             * <li><strong>2</strong>: installation failed</li>
-             * <li><strong>3</strong>: installation timed out</li>
+             * <li><strong>0</strong>: Installing.</li>
+             * <li><strong>1</strong>: Installed.</li>
+             * <li><strong>2</strong>: Installation failed.</li>
+             * <li><strong>3</strong>: Installation timed out.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -266,10 +266,10 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The installation result of the CloudMonitor agent. Valid values:</p>
+             * <p>The installation execution result of CloudMonitor. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: failed</li>
-             * <li><strong>1</strong>: successful</li>
+             * <li><strong>0</strong>: Failed.</li>
+             * <li><strong>1</strong>: Succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -281,10 +281,10 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the CloudMonitor agent. Valid values:</p>
+             * <p>The installation status of CloudMonitor. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: installation failed</li>
-             * <li><strong>1</strong>: installed</li>
+             * <li><strong>0</strong>: Failed.</li>
+             * <li><strong>1</strong>: Succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>

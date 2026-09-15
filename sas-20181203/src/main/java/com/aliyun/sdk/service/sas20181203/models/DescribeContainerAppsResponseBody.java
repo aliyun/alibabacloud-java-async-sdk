@@ -67,7 +67,7 @@ public class DescribeContainerAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
@@ -78,7 +78,7 @@ public class DescribeContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag values.</p>
+         * <p>The list of tag values.</p>
          */
         public Builder tagValues(java.util.List<String> tagValues) {
             this.tagValues = tagValues;

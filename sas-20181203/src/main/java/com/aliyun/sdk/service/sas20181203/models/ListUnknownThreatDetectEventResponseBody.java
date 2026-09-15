@@ -80,7 +80,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data details.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -454,7 +454,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * CmdChain.
+             * <p>The process chain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;5133&quot;:&quot;pickup -l -t unix -u&quot;},{&quot;1077&quot;:&quot;/usr/libexec/postfix/master -w&quot;},{&quot;1&quot;:&quot;/usr/lib/systemd/systemd --switched-root --system --deserialize 22&quot;}]</p>
              */
             public Builder cmdChain(String cmdChain) {
                 this.cmdChain = cmdChain;
@@ -462,7 +465,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Cmdline.
+             * <p>The process command line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sbin/sshd -D</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -470,7 +476,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of occurrences.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -478,7 +487,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * <p>The timestamp of the first occurrence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -502,7 +514,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * HashKey.
+             * <p>The unique identifier of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30368144069e7567bbb10eabc2******</p>
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;
@@ -510,7 +525,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -518,7 +536,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -526,7 +547,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -534,7 +558,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.42.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -542,7 +569,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * <p>The timestamp of the most recent occurrence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -550,7 +580,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 hash of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5b394b54ca632fe51c4ab4a6dbaf****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -558,7 +591,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCmdline.
+             * <p>The parent command line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sbin/sshd -D</p>
              */
             public Builder parentCmdline(String parentCmdline) {
                 this.parentCmdline = parentCmdline;
@@ -566,7 +602,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ParentPid.
+             * <p>The parent process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder parentPid(String parentPid) {
                 this.parentPid = parentPid;
@@ -574,7 +613,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ParentProcessPath.
+             * <p>The parent process path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/tar</p>
              */
             public Builder parentProcessPath(String parentProcessPath) {
                 this.parentProcessPath = parentProcessPath;
@@ -582,7 +624,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -590,7 +635,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessPath.
+             * <p>The process path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/tar</p>
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -598,7 +646,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Sha256.
+             * <p>The SHA-256 hash of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</p>
              */
             public Builder sha256(String sha256) {
                 this.sha256 = sha256;
@@ -606,7 +657,15 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The event status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Unhandled.</li>
+             * <li><strong>2</strong>: Blocked.</li>
+             * <li><strong>3</strong>: Ignored.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -614,7 +673,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -707,7 +769,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of alerting events displayed on the current page in a paging query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -715,7 +780,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The page number of the current page in a paging query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -723,7 +791,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The maximum number of entries displayed on each page in a paging query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -731,7 +802,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

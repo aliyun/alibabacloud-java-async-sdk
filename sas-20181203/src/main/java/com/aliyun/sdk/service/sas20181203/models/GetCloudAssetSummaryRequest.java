@@ -101,7 +101,7 @@ public class GetCloudAssetSummaryRequest extends Request {
         } 
 
         /**
-         * <p>List of asset type information for cloud assets</p>
+         * <p>The list of asset type information for cloud assets.</p>
          */
         public Builder cloudAssetTypes(java.util.List<CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);
@@ -110,7 +110,14 @@ public class GetCloudAssetSummaryRequest extends Request {
         }
 
         /**
-         * IsSaleData.
+         * <p>Specifies whether to return sale-related data. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Returns sale-related data.</li>
+         * <li><strong>false</strong>: Does not return sale-related data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSaleData(Boolean isSaleData) {
             this.putQueryParameter("IsSaleData", isSaleData);
@@ -119,7 +126,10 @@ public class GetCloudAssetSummaryRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -128,7 +138,7 @@ public class GetCloudAssetSummaryRequest extends Request {
         }
 
         /**
-         * <p>List of cloud vendors to be queried.</p>
+         * <p>The list of cloud vendors to query.</p>
          */
         public Builder vendors(java.util.List<Integer> vendors) {
             this.putQueryParameter("Vendors", vendors);
@@ -209,108 +219,108 @@ public class GetCloudAssetSummaryRequest extends Request {
             } 
 
             /**
-             * <p>Subtypes of cloud products. Asset type-subtype. Values:</p>
+             * <p>The subtype of the cloud service. The asset type-subtype. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: ECS (Elastic Compute Service)<ul>
-             * <li><strong>1</strong>: Disk (Storage)</li>
-             * <li><strong>2</strong>: Security Group</li>
+             * <li><strong>0</strong>: Elastic Compute Service (ECS) server<ul>
+             * <li><strong>1</strong>: Cloud disk (storage)</li>
+             * <li><strong>2</strong>: Security group</li>
              * <li><strong>100</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>1</strong>: Load Balancer <ul>
-             * <li><strong>0</strong>: Load Balancer </li>
-             * <li><strong>1</strong>: Application Load Balancer</li>
+             * <li><strong>1</strong>: Load balancing<ul>
+             * <li><strong>0</strong>: Classic Load Balancer (CLB)</li>
+             * <li><strong>1</strong>: Application Load Balancer (ALB)</li>
              * </ul>
              * </li>
-             * <li><strong>3</strong>: ApsaraDB RDS <ul>
+             * <li><strong>3</strong>: ApsaraDB RDS database<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>4</strong>: ApsaraDB for MongoDB <ul>
+             * <li><strong>4</strong>: ApsaraDB for MongoDB database<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>5</strong>: ApsaraDB Tair (Redis Compatible) <ul>
+             * <li><strong>5</strong>: Tair (Redis® OSS-Compatible) database<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>6</strong>: Container Registry <ul>
-             * <li><strong>1</strong>: Enterprise Edition </li>
+             * <li><strong>6</strong>: Container Registry<ul>
+             * <li><strong>1</strong>: Enterprise Edition</li>
              * <li><strong>2</strong>: Personal Edition</li>
              * </ul>
              * </li>
-             * <li><strong>8</strong>: Container Service for Kubernetes <ul>
+             * <li><strong>8</strong>: Container Service for Kubernetes (ACK)<ul>
              * <li><strong>0</strong>: Cluster</li>
              * </ul>
              * </li>
-             * <li><strong>9</strong>: Virtual Private Cloud (VPC) <ul>
-             * <li><strong>0</strong>: NAT Gateway </li>
-             * <li><strong>1</strong>: EIP (Elastic IP) </li>
-             * <li><strong>2</strong>: VPN </li>
+             * <li><strong>9</strong>: Virtual Private Cloud (VPC)<ul>
+             * <li><strong>0</strong>: NAT gateway</li>
+             * <li><strong>1</strong>: EIP</li>
+             * <li><strong>2</strong>: VPN</li>
              * <li><strong>3</strong>: FLOW_LOG</li>
              * </ul>
              * </li>
-             * <li><strong>11</strong>: ActionTrail <ul>
+             * <li><strong>11</strong>: ActionTrail<ul>
              * <li><strong>0</strong>: Trail</li>
              * </ul>
              * </li>
-             * <li><strong>12</strong>: CDN <ul>
+             * <li><strong>12</strong>: CDN<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>13</strong>: Digital Certificate Management Service (formerly SSL Certificates) <ul>
+             * <li><strong>13</strong>: Certificate Management Service (formerly SSL Certificates Service)<ul>
              * <li><strong>0</strong>: Certificate</li>
              * </ul>
              * </li>
-             * <li><strong>14</strong>: DevOps <ul>
+             * <li><strong>14</strong>: Apsara Devops<ul>
              * <li><strong>0</strong>: Organization</li>
              * </ul>
              * </li>
-             * <li><strong>16</strong>: DDoS Protection <ul>
+             * <li><strong>16</strong>: Anti-DDoS<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>17</strong>: Web Application Firewall <ul>
-             * <li><strong>0</strong>: Domain</li>
+             * <li><strong>17</strong>: Web Application Firewall (WAF)<ul>
+             * <li><strong>0</strong>: Domain name</li>
              * </ul>
              * </li>
-             * <li><strong>18</strong>: Object Storage <ul>
+             * <li><strong>18</strong>: Object Storage Service (OSS)<ul>
              * <li><strong>0</strong>: Bucket</li>
              * </ul>
              * </li>
-             * <li><strong>19</strong>: PolarDB (Cloud-Native Relational Database) <ul>
+             * <li><strong>19</strong>: Cloud-native relational database PolarDB<ul>
              * <li><strong>0</strong>: Cluster</li>
              * </ul>
              * </li>
-             * <li><strong>20</strong>: ApsaraDB for PostgreSQL <ul>
+             * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL database<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>21</strong>: Microservices Engine <ul>
+             * <li><strong>21</strong>: Microservices Engine (MSE)<ul>
              * <li><strong>0</strong>: Cluster</li>
              * </ul>
              * </li>
-             * <li><strong>22</strong>: File Storage NAS <ul>
-             * <li><strong>0</strong>: File System</li>
+             * <li><strong>22</strong>: Apsara File Storage NAS<ul>
+             * <li><strong>0</strong>: File system</li>
              * </ul>
              * </li>
-             * <li><strong>23</strong>: Data Security Center <ul>
+             * <li><strong>23</strong>: Data Security Center (DSC)<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>24</strong>: Elastic Public IP <ul>
-             * <li><strong>0</strong>: Anycast Elastic Public IP</li>
+             * <li><strong>24</strong>: Elastic IP Address (EIP)<ul>
+             * <li><strong>0</strong>: Anycast EIP</li>
              * </ul>
              * </li>
-             * <li><strong>25</strong>: Cloud Identity Service - EIAM <ul>
+             * <li><strong>25</strong>: Alibaba Cloud IDaaS EIAM<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>26</strong>: PolarDB-X <ul>
+             * <li><strong>26</strong>: PolarDB-X<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
-             * <li><strong>27</strong>: Elasticsearch <ul>
+             * <li><strong>27</strong>: Elasticsearch<ul>
              * <li><strong>0</strong>: Instance</li>
              * </ul>
              * </li>
@@ -325,31 +335,31 @@ public class GetCloudAssetSummaryRequest extends Request {
             }
 
             /**
-             * <p>The type of asset. Values:</p>
+             * <p>The type of the asset. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Elastic Compute Service (ECS) </li>
-             * <li><strong>1</strong>: Load Balancer </li>
-             * <li><strong>3</strong>: ApsaraDB for RDS </li>
-             * <li><strong>4</strong>: ApsaraDB for MongoDB </li>
-             * <li><strong>5</strong>: ApsaraDB for Tair (Redis compatible) </li>
-             * <li><strong>6</strong>: Container Registry </li>
-             * <li><strong>8</strong>: Container Service for Kubernetes </li>
-             * <li><strong>9</strong>: Virtual Private Cloud (VPC) </li>
-             * <li><strong>11</strong>: ActionTrail </li>
-             * <li><strong>12</strong>: Content Delivery Network (CDN) </li>
-             * <li><strong>13</strong>: SSL Certificates (now known as Certificate Management Service) </li>
-             * <li><strong>14</strong>: DevOps </li>
-             * <li><strong>16</strong>: DDoS Protection </li>
-             * <li><strong>17</strong>: Web Application Firewall </li>
-             * <li><strong>18</strong>: Object Storage Service (OSS) </li>
-             * <li><strong>19</strong>: PolarDB </li>
-             * <li><strong>20</strong>: ApsaraDB for PostgreSQL </li>
-             * <li><strong>21</strong>: Microservices Engine </li>
-             * <li><strong>22</strong>: File Storage NAS </li>
-             * <li><strong>23</strong>: Data Security Center </li>
-             * <li><strong>24</strong>: Elastic IP Address </li>
-             * <li><strong>25</strong>: Cloud Identity Service - EIAM </li>
-             * <li><strong>26</strong>: PolarDB-X </li>
+             * <li><strong>0</strong>: Elastic Compute Service (ECS) server</li>
+             * <li><strong>1</strong>: Load balancing</li>
+             * <li><strong>3</strong>: ApsaraDB RDS database</li>
+             * <li><strong>4</strong>: ApsaraDB for MongoDB database</li>
+             * <li><strong>5</strong>: Tair (Redis® OSS-Compatible) database</li>
+             * <li><strong>6</strong>: Container Registry</li>
+             * <li><strong>8</strong>: Container Service for Kubernetes (ACK)</li>
+             * <li><strong>9</strong>: Virtual Private Cloud (VPC)</li>
+             * <li><strong>11</strong>: ActionTrail</li>
+             * <li><strong>12</strong>: CDN</li>
+             * <li><strong>13</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
+             * <li><strong>14</strong>: Apsara Devops</li>
+             * <li><strong>16</strong>: Anti-DDoS</li>
+             * <li><strong>17</strong>: Web Application Firewall (WAF)</li>
+             * <li><strong>18</strong>: Object Storage Service (OSS)</li>
+             * <li><strong>19</strong>: Cloud-native relational database PolarDB</li>
+             * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL database</li>
+             * <li><strong>21</strong>: Microservices Engine (MSE)</li>
+             * <li><strong>22</strong>: Apsara File Storage NAS</li>
+             * <li><strong>23</strong>: Data Security Center (DSC)</li>
+             * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
+             * <li><strong>25</strong>: Alibaba Cloud IDaaS EIAM</li>
+             * <li><strong>26</strong>: PolarDB-X</li>
              * <li><strong>27</strong>: Elasticsearch</li>
              * </ul>
              * 
@@ -362,13 +372,13 @@ public class GetCloudAssetSummaryRequest extends Request {
             }
 
             /**
-             * <p>Server vendor. Values:</p>
+             * <p>The server vendor. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Alibaba Cloud Asset </li>
-             * <li><strong>1</strong>: Non-cloud Asset </li>
-             * <li><strong>2</strong>: IDC Asset </li>
-             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: Other Cloud Assets </li>
-             * <li><strong>8</strong>: Lightweight Asset</li>
+             * <li><strong>0</strong>: Alibaba Cloud asset</li>
+             * <li><strong>1</strong>: Non-cloud asset</li>
+             * <li><strong>2</strong>: IDC asset</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: Other cloud asset</li>
+             * <li><strong>8</strong>: Lightweight asset</li>
              * </ul>
              * 
              * <strong>example:</strong>

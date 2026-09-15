@@ -67,7 +67,7 @@ public class GetDataTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1383B0DB-D5D6-4B0C-9E6B-75939C8E****</p>
@@ -144,7 +144,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistical values of the trend data.</p>
+             * <p>The list of statistical values for the trend data.</p>
              */
             public Builder countList(java.util.List<Long> countList) {
                 this.countList = countList;
@@ -152,14 +152,14 @@ public class GetDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the security data. Valid values:</p>
+             * <p>The type of security data. Valid values:</p>
              * <ul>
-             * <li><strong>HC_NEW</strong>: the number of new baseline risks.</li>
-             * <li><strong>HC_OPERATE</strong>: the number of handled baseline risks.</li>
-             * <li><strong>VUL_NEW</strong>: the number of new vulnerabilities.</li>
-             * <li><strong>VUL_OPERATE</strong>: the number of handled vulnerabilities.</li>
-             * <li><strong>SUSP_NEW</strong>: the number of new alerts.</li>
-             * <li><strong>SUSP_OPERATE</strong>: the number of handled alerts.</li>
+             * <li><strong>HC_NEW</strong>: number of new baseline risks</li>
+             * <li><strong>HC_OPERATE</strong>: number of handled baseline risks</li>
+             * <li><strong>VUL_NEW</strong>: number of new vulnerability risks</li>
+             * <li><strong>VUL_OPERATE</strong>: number of handled vulnerability risks</li>
+             * <li><strong>SUSP_NEW</strong>: number of new alert risks</li>
+             * <li><strong>SUSP_OPERATE</strong>: number of handled alert risks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -243,7 +243,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistical timestamps of the trend data.</p>
+             * <p>The list of statistical timestamps for the trend data.</p>
              */
             public Builder dateList(java.util.List<Integer> dateList) {
                 this.dateList = dateList;
@@ -251,7 +251,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical dates and time for the trend data.</p>
+             * <p>The list of statistical date strings for the trend data.</p>
              */
             public Builder dateStrList(java.util.List<String> dateStrList) {
                 this.dateStrList = dateStrList;
@@ -259,7 +259,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned data.</p>
+             * <p>The list of returned data.</p>
              */
             public Builder itemList(java.util.List<ItemList> itemList) {
                 this.itemList = itemList;

@@ -130,7 +130,20 @@ public class ListFileProtectClientRuleRequest extends Request {
         } 
 
         /**
-         * AlertLevel.
+         * <p>The alert notification level. Valid values:</p>
+         * <ul>
+         * <li><p>0: no alert</p>
+         * </li>
+         * <li><p>1: reminder</p>
+         * </li>
+         * <li><p>2: suspicious</p>
+         * </li>
+         * <li><p>3: high-risk.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -139,7 +152,10 @@ public class ListFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -148,7 +164,10 @@ public class ListFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,7 +176,14 @@ public class ListFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The operating system type. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -166,7 +192,18 @@ public class ListFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * RuleAction.
+         * <p>The rule action. Valid values:</p>
+         * <ul>
+         * <li><p><strong>block</strong>: blocks the request.</p>
+         * </li>
+         * <li><p><strong>monitor</strong>: monitors the request.</p>
+         * </li>
+         * <li><p><strong>pass</strong>: allows the request.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -175,7 +212,10 @@ public class ListFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tetsRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

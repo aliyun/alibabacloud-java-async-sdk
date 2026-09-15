@@ -102,7 +102,7 @@ public class DescribeUniRecoverableListRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,7 +114,7 @@ public class DescribeUniRecoverableListRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>msdb</p>
@@ -126,9 +126,9 @@ public class DescribeUniRecoverableListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page when using paging. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -141,9 +141,9 @@ public class DescribeUniRecoverableListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the anti-ransomware policy.</p>
+         * <p>The ID of the anti-ransomware backup policy for the database.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

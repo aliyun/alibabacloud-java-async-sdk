@@ -130,10 +130,10 @@ public class UpdatePostPaidBindRelRequest extends Request {
         } 
 
         /**
-         * <p>Enable automatic binding for new assets. Values:</p>
+         * <p>Specifies whether to automatically bind new assets. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Off</li>
-         * <li><strong>1</strong>: On</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,13 +146,13 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>Version to automatically bind when adding new assets. Values:</p>
+         * <p>The edition to automatically bind when new assets are added. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Basic Edition </li>
+         * <li><strong>1</strong>: Free Edition </li>
          * <li><strong>3</strong>: Enterprise Edition</li>
          * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>6</strong>: Antivirus Edition    </li>
-         * <li><strong>7</strong>: Container Edition</li>
+         * <li><strong>6</strong>: Anti-virus Edition    </li>
+         * <li><strong>7</strong>: Ultimate Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>Parameters for the binding action.</p>
+         * <p>The binding action parameter.</p>
          */
         public Builder bindAction(java.util.List<BindAction> bindAction) {
             this.putQueryParameter("BindAction", bindAction);
@@ -174,7 +174,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,7 +183,10 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The abbreviated name of the cloud service. Valid values:</p>
+         * <ul>
+         * <li><strong>sas</strong>: Security Center</li>
+         * </ul>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -192,7 +195,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>Whether to force upgrade the version.</p>
+         * <p>Specifies whether to forcibly upgrade the edition.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -289,10 +292,10 @@ public class UpdatePostPaidBindRelRequest extends Request {
             } 
 
             /**
-             * <p>Whether to bind all. Default is <strong>false</strong>. Values:</p>
+             * <p>Specifies whether to bind all servers. Default value: <strong>false</strong>. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Yes</li>
-             * <li><strong>false</strong>: No</li>
+             * <li><strong>true</strong>: Bind all servers.</li>
+             * <li><strong>false</strong>: Do not bind all servers.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -304,7 +307,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * FreeType.
+             * <p>The free quota type.</p>
              */
             public Builder freeType(String freeType) {
                 this.freeType = freeType;
@@ -312,7 +315,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * <p>List of specified server UUIDs.</p>
+             * <p>The list of server UUIDs.</p>
              */
             public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;
@@ -320,13 +323,13 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * <p>The Cloud Security Center protection version that needs to be bound. Values:  </p>
+             * <p>The protection edition of Security Center to bind. Valid values:  </p>
              * <ul>
-             * <li><strong>1</strong>: Basic Edition </li>
+             * <li><strong>1</strong>: Free Edition </li>
              * <li><strong>3</strong>: Enterprise Edition</li>
              * <li><strong>5</strong>: Advanced Edition</li>
-             * <li><strong>6</strong>: Antivirus Edition    </li>
-             * <li><strong>7</strong>: Container Edition</li>
+             * <li><strong>6</strong>: Anti-virus Edition    </li>
+             * <li><strong>7</strong>: Ultimate Edition</li>
              * </ul>
              * 
              * <strong>example:</strong>

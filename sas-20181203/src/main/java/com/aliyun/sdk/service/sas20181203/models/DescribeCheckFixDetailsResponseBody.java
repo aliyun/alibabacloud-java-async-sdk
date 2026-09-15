@@ -80,7 +80,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the parameters.</p>
+         * <p>The list of check item fix parameters.</p>
          */
         public Builder checkFixDetails(java.util.List<CheckFixDetails> checkFixDetails) {
             this.checkFixDetails = checkFixDetails;
@@ -88,7 +88,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of risk items that can be fixed.</p>
+         * <p>The number of check items that support fixing.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -99,7 +99,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0DBF1E27-98D8-5EC2-9CF3-4A2E26F6****</p>
@@ -259,7 +259,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.</p>
+             * <p>The options of the rule parameter when the parameter type is selection.</p>
              * 
              * <strong>example:</strong>
              * <p>0,1,2,3</p>
@@ -328,7 +328,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
              * <p>The type of the rule parameter. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: input</li>
-             * <li><strong>2</strong>: selection</li>
+             * <li><strong>2</strong>: selection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pwd_reuse.system_auth</p>
@@ -351,7 +351,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specified value of the rule parameter.</p>
+             * <p>The configured value of the rule parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -499,7 +499,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the risk item.</p>
+             * <p>The ID of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>58</p>
@@ -524,7 +524,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
              * <p>Indicates whether the rule is optional. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no</li>
+             * <li><strong>0</strong>: no.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -536,7 +536,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the rule parameters.</p>
+             * <p>The list of rule parameters.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -555,7 +555,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pwd_reuse.system_auth</p>
@@ -566,7 +566,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specified value of the rule parameter.</p>
+             * <p>The configured value of the rule parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -577,7 +577,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>open</p>
@@ -673,7 +673,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The detailed description of the risk item.</p>
+             * <p>The detailed description of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>Force users not to reuse recently used passwords to reduce the risk of password guessing attacks</p>
@@ -684,7 +684,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the risk item.</p>
+             * <p>The ID of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>58</p>
@@ -695,7 +695,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the risk item.</p>
+             * <p>The description of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>Ensure password reuse is limited</p>
@@ -706,7 +706,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array consisting of the rules that are supported by the risk item.</p>
+             * <p>The list of rules supported by the check item.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

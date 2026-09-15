@@ -80,7 +80,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the hosts.</p>
+         * <p>The list of servers.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -88,7 +88,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paging information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -96,7 +96,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>05AE6B16-741A-5A75-9BF0-BC747DD9****</p>
@@ -295,7 +295,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of baseline risks.</p>
+             * <p>The number of baseline risk items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -306,7 +306,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the asset.</p>
+             * <p>The ID of the asset instance.</p>
              * 
              * <strong>example:</strong>
              * <p>s-bp1g6wxdwps7s9dz****</p>
@@ -361,7 +361,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * ReportUrlHtml.
+             * <p>The URL of the latest parallel sandbox HTML report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket.oss.region.aliyuncs.com/report/html">https://bucket.oss.region.aliyuncs.com/report/html</a></p>
              */
             public Builder reportUrlHtml(String reportUrlHtml) {
                 this.reportUrlHtml = reportUrlHtml;
@@ -369,7 +372,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the detection. Unit: milliseconds.</p>
+             * <p>The timestamp of the scan. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>168257753****</p>
@@ -380,7 +383,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the asset that is detected.</p>
+             * <p>The ID of the scan target.</p>
              * 
              * <strong>example:</strong>
              * <p>30****</p>
@@ -391,7 +394,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the asset that is detected.</p>
+             * <p>The name of the scan target.</p>
              * 
              * <strong>example:</strong>
              * <p>test****</p>
@@ -496,7 +499,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number when using paging.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -507,7 +510,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The maximum number of entries per page when using paging.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

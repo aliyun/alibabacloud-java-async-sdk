@@ -119,7 +119,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page when paging.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -130,7 +130,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number when paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page when paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -152,7 +152,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>74F97EF7-B543-43FD-A4E9-18456731F9C5</p>
@@ -163,7 +163,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -174,7 +174,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of information about the whitelist of vulnerabilities.</p>
+         * <p>The list of vulnerability whitelist entries.</p>
          */
         public Builder vulWhitelists(java.util.List<VulWhitelists> vulWhitelists) {
             this.vulWhitelists = vulWhitelists;
@@ -316,7 +316,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1275</p>
@@ -338,7 +338,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the vulnerability is added to the whitelist.</p>
+             * <p>The reason for adding the vulnerability to the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>ignore</p>
@@ -349,21 +349,21 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application scope of the rule. The value is a JSON string that contains the following fields:</p>
+             * <p>The scope of the rule. The value is a JSON string that contains the following fields:</p>
              * <ul>
-             * <li><p><strong>type</strong>: the type of the assets to which the rule is applied. Valid values:</p>
+             * <li><p><strong>type</strong>: The applicable type. Valid values:</p>
              * <ul>
-             * <li><strong>Uuid</strong>: server</li>
-             * <li><strong>GroupId</strong>: server group</li>
+             * <li><strong>Uuid</strong>: host</li>
+             * <li><strong>GroupId</strong>: group</li>
              * </ul>
              * </li>
-             * <li><p><strong>groupIds</strong>: the ID of the server group</p>
+             * <li><p><strong>groupIds</strong>: The IDs of the applicable asset groups.</p>
              * </li>
-             * <li><p><strong>uuids</strong>: the UUID of the server</p>
+             * <li><p><strong>uuids</strong>: The UUIDs of the applicable assets.</p>
              * </li>
              * </ul>
              * <blockquote>
-             * <p>If this field is empty, the rule is applied to all assets.</p>
+             * <p>If this value is empty, the rule applies to all assets.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -375,7 +375,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the vulnerability.</p>
+             * <p>The vulnerability type.</p>
              * 
              * <strong>example:</strong>
              * <p>cve</p>
@@ -386,11 +386,11 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the vulnerability. The value of this parameter is in the JSON format. Valid values:</p>
+             * <p>The vulnerability information. The value is in JSON format.</p>
              * <ul>
-             * <li><strong>name</strong>: the name of the vulnerability</li>
-             * <li><strong>type</strong>: the type of the vulnerability.</li>
-             * <li><strong>aliasName</strong>: the alias of the vulnerability</li>
+             * <li><strong>name</strong>: The name of the vulnerability.</li>
+             * <li><strong>type</strong>: The type of the vulnerability.</li>
+             * <li><strong>aliasName</strong>: The alias of the vulnerability.</li>
              * </ul>
              * 
              * <strong>example:</strong>

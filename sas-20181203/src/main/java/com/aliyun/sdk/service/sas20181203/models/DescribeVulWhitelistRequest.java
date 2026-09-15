@@ -101,7 +101,7 @@ public class DescribeVulWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number when paging. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -113,10 +113,10 @@ public class DescribeVulWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DescribeVulWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * <p>The number of entries per page when paging. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +141,10 @@ public class DescribeVulWhitelistRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

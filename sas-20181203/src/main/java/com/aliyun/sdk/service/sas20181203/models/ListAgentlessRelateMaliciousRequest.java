@@ -117,7 +117,7 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>80****</p>
@@ -142,7 +142,7 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -158,7 +158,7 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,10 +171,10 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * <p>The scenarios of batch handling. Valid values:</p>
+         * <p>The scenario for batch processing. Valid values:</p>
          * <ul>
-         * <li>same_file_md5: the same MD5 hash value.</li>
-         * <li>default: the same alert type. This is the default value.</li>
+         * <li>same_file_md5: same file MD5.</li>
+         * <li>default (default value): same alerting type.</li>
          * </ul>
          * 
          * <strong>example:</strong>

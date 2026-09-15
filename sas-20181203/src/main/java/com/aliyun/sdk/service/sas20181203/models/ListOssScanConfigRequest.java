@@ -101,7 +101,7 @@ public class ListOssScanConfigRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -137,7 +137,14 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The business source. Valid values:</p>
+         * <ul>
+         * <li><strong>OSS</strong>: OSS</li>
+         * <li><strong>NAS</strong>: NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

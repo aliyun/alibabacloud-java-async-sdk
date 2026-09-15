@@ -221,7 +221,7 @@ public class DescribeCheckWarningsRequest extends Request {
          * <li><strong>hc.check.type.file_rights</strong>: file permission</li>
          * <li><strong>hc.check.type.security_audit</strong>: security audit</li>
          * <li><strong>hc.check.type.attack_defense</strong>: intrusion prevention</li>
-         * <li><strong>hc.check.type.others</strong>: others</li>
+         * <li><strong>hc.check.type.others</strong>: others.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The name of the container.</p>
+         * <p>The container name.</p>
          * 
          * <strong>example:</strong>
          * <p>/redis</p>
@@ -246,7 +246,7 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -258,10 +258,10 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The number of check items to display on each page in a paged query. Default value: <strong>20</strong>, which indicates that 20 check items are displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -286,13 +286,13 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
          * <blockquote>
-         * <p> To obtain the Alibaba Cloud account ID, call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>127608589417****</p>
+         * <p>1232428423234****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -301,9 +301,9 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the risk item. This parameter is required.</p>
+         * <p>The risk item ID. This parameter is required.</p>
          * <blockquote>
-         * <p> To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+         * <p>To query check item information for a specified risk item and a specified server, you must provide the risk item ID. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to obtain this ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -316,13 +316,13 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The status of the check item. Valid values:</p>
+         * <p>The risk detection status. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: failed</li>
          * <li><strong>2</strong>: verifying</li>
          * <li><strong>3</strong>: passed</li>
          * <li><strong>5</strong>: expired</li>
-         * <li><strong>6</strong>: ignored</li>
+         * <li><strong>6</strong>: ignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX</p>
@@ -347,9 +347,9 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server on which the baseline check is performed.</p>
+         * <p>The ID of the server on which the baseline check is performed.</p>
          * <blockquote>
-         * <p>To query specified risk items and the check items of a specified server, you must provide the ID of the server on which the baseline check is performed. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to query the IDs of servers.</p>
+         * <p>To query check item information for a specified risk item and a specified server, you must provide the ID of the server on which the baseline check is performed. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to obtain this ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

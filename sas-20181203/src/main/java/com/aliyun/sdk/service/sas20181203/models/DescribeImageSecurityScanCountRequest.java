@@ -185,7 +185,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster that you want to scan.</p>
+         * <p>The ID of the cluster for image security scanning.</p>
          * 
          * <strong>example:</strong>
          * <p>cdbbe7aa56cbf4b8f830f83718d26****</p>
@@ -197,11 +197,11 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The handling status. Valid values:</p>
+         * <p>Specifies whether the event is handled. Valid values:</p>
          * <ul>
-         * <li><strong>Y</strong>: handled.</li>
-         * <li><strong>N</strong>: unhandled.</li>
-         * <li><strong>A</strong>: all.</li>
+         * <li><strong>Y</strong>: Handled. </li>
+         * <li><strong>N</strong>: Not handled. </li>
+         * <li><strong>A</strong>: All.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The SHA-256 value of the image digest.</p>
+         * <p>The SHA256 value of the image digest.</p>
          * 
          * <strong>example:</strong>
          * <p>a7978d51f5eddf7612ab15ae46bd4b4257bf59da77c2aafc9d9d8ab41bb3****</p>
@@ -226,7 +226,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The tag of the image.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>c958b80f-prd_default-9bb0****</p>
@@ -250,7 +250,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Container Registry repository.</p>
+         * <p>The ID of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>3df5b5a1f2339eb7ebc7d474b8d4****</p>
@@ -262,9 +262,9 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Container Registry instance.</p>
+         * <p>The instance ID of the container image.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain the ID.</p>
+         * <p>Invoke the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Container Registry repository.</p>
+         * <p>The region ID of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -289,7 +289,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The assets that you want to scan.</p>
+         * <p>The scan scope.</p>
          */
         public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -298,7 +298,7 @@ public class DescribeImageSecurityScanCountRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances that you want to scan.</p>
+         * <p>The instance ID for image security scanning.</p>
          */
         public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);

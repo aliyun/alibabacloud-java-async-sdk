@@ -143,7 +143,7 @@ public class ListOperationProcessDetailRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number of the current page in a paged query. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +155,7 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>The end time of the query based on the task completion time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1731555850000</p>
@@ -167,10 +167,10 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>The start time of the query based on the task creation time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1731469330000</p>
@@ -207,7 +207,7 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * <p>The subtask status codes.</p>
+         * <p>The list of operation subtask status codes.</p>
          */
         public Builder statusCodes(java.util.List<Integer> statusCodes) {
             this.putQueryParameter("StatusCodes", statusCodes);
@@ -216,7 +216,7 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * <p>The IDs of operation tasks.</p>
+         * <p>The list of operation task IDs. You can call the ListOperationProcess operation to obtain valid values. This parameter is required. If this parameter is not specified, the API returns 400 CspmParamIllegal.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

@@ -80,7 +80,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned if the request was successful.</p>
+         * <p>The data returned when the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +99,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
@@ -259,10 +259,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether you can create more scan tasks. Valid values:</p>
+             * <p>Indicates whether more scan tasks can be created. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: More scan tasks can be created.</li>
+             * <li><strong>false</strong>: No more scan tasks can be created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the image information was collected. Unit: milliseconds.</p>
+             * <p>The timestamp when image information was collected, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1644286364150</p>
@@ -285,7 +285,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the scan task started. Unit: milliseconds.</p>
+             * <p>The timestamp when the scan task started running, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1644286364150</p>
@@ -296,7 +296,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of container applications that are scanned.</p>
+             * <p>The number of containers that have been scanned.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -307,7 +307,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the scan task in percentage.</p>
+             * <p>The progress percentage of the scan task.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -318,12 +318,13 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of the scan task. Valid values:</p>
+             * <p>The execution result of the scan task. Valid values:</p>
              * <ul>
-             * <li><strong>SUCCESS</strong>: The task is successful.</li>
-             * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The task is not supported in the region where the image is deployed.</li>
+             * <li><strong>SUCCESS</strong>: The scan task was executed successfully.</li>
+             * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The image is in a region that does not support scanning.</li>
              * </ul>
              * <blockquote>
+             * <p>For the regions that support image security scanning, refer to the table of supported regions after the response parameters table in this document.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -337,10 +338,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             /**
              * <p>The status of the scan task. Valid values:</p>
              * <ul>
-             * <li><strong>INIT</strong>: The task is being initialized.</li>
-             * <li><strong>PRE_ANALYZER</strong>: The task is being pre-processed.</li>
-             * <li><strong>SUCCESS</strong>: The task succeeds.</li>
-             * <li><strong>FAIL</strong>: The task fails.</li>
+             * <li><strong>INIT</strong>: Initializing.</li>
+             * <li><strong>PRE_ANALYZER</strong>: Pre-analyzing.</li>
+             * <li><strong>SUCCESS</strong>: Execution succeeded.</li>
+             * <li><strong>FAIL</strong>: Execution failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -363,7 +364,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of container applications that you want to scan.</p>
+             * <p>The total number of containers to scan.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

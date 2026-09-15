@@ -60,7 +60,7 @@ public class GetAgentlessTaskUsedSizeEstimateRequest extends Request {
         } 
 
         /**
-         * <p>Asset selection identifier.</p>
+         * <p>The asset selection identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

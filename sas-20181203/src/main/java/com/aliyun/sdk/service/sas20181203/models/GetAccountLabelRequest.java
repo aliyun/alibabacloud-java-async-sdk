@@ -74,7 +74,7 @@ public class GetAccountLabelRequest extends Request {
         } 
 
         /**
-         * <p>The tags.</p>
+         * <p>The labels.</p>
          * <p>This parameter is required.</p>
          */
         public Builder labelList(java.util.List<String> labelList) {
@@ -84,7 +84,7 @@ public class GetAccountLabelRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>

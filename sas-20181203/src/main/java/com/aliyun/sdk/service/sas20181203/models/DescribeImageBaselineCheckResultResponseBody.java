@@ -80,7 +80,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the check results of image baselines.</p>
+         * <p>The details of the image baseline check results.</p>
          */
         public Builder baselineResult(java.util.List<BaselineResult> baselineResult) {
             this.baselineResult = baselineResult;
@@ -88,7 +88,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paging information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -282,7 +282,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the image baseline type.</p>
+             * <p>The type key of the baseline item.</p>
              * 
              * <strong>example:</strong>
              * <p>identification</p>
@@ -304,10 +304,10 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the image baseline.</p>
+             * <p>The alias of the baseline item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Identity authentication</p>
+             * <p>身份鉴别</p>
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -315,7 +315,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the image baseline.</p>
+             * <p>The name key of the baseline item.</p>
              * 
              * <strong>example:</strong>
              * <p>identification</p>
@@ -326,11 +326,11 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity of the image baseline. Valid values:</p>
+             * <p>The risk level of the baseline. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong></li>
-             * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><strong>high</strong>: high risk</li>
+             * <li><strong>medium</strong>: medium risk</li>
+             * <li><strong>low</strong>: low risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+             * <p>The timestamp of the first scan, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1610304058366</p>
@@ -353,7 +353,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of high-risk images that are affected.</p>
+             * <p>The number of associated high-risk images.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -364,7 +364,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+             * <p>The timestamp of the most recent scan, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1610304058301</p>
@@ -375,7 +375,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of low-risk images that are affected.</p>
+             * <p>The number of associated low-risk images.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -386,7 +386,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of medium-risk images that are affected.</p>
+             * <p>The number of associated medium-risk images.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -397,10 +397,10 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the baseline risks. Valid values:</p>
+             * <p>The fix status of the baseline risk. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: unfixed</li>
-             * <li><strong>1</strong>: fixed</li>
+             * <li><strong>0</strong>: Unfixed.</li>
+             * <li><strong>1</strong>: Fixed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -497,7 +497,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page when using paging.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -508,7 +508,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page when using paging.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -519,7 +519,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The maximum number of entries per page when using paging.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

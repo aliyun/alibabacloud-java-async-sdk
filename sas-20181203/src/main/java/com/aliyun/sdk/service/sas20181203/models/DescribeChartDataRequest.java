@@ -143,9 +143,9 @@ public class DescribeChartDataRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the chart.</p>
+         * <p>The chart ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID. This parameter is required if the report version is 1.0.0.</p>
+         * <p>Call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to obtain this parameter. This parameter is required if the report version is 1.0.0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,9 +158,9 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * <p>The ID of the chart.</p>
+         * <p>The chart ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID. This parameter is required if the report version is 2.0.0.</p>
+         * <p>Call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to obtain this parameter. This parameter is required if the report version is 2.0.0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -173,10 +173,10 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,9 +189,9 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security report.</p>
+         * <p>The report ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * <p>Call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end timestamp for statistics. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683862286000</p>
@@ -225,7 +225,7 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The start timestamp for statistics. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683603086000</p>

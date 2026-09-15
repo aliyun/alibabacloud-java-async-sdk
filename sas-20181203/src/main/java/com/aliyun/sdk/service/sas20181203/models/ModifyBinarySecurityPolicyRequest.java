@@ -145,11 +145,11 @@ public class ModifyBinarySecurityPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Cluster information.</p>
+         * <p>The cluster information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Namespaces&quot;:[&quot;default&quot;],&quot;ClusterId&quot;:&quot;c9f5b93a8da8f4341b77***********&quot;},{&quot;Namespaces&quot;:[&quot;default&quot;],&quot;ClusterId&quot;:&quot;cc12429dbb8f644f690b0***********&quot;}]</p>
+         * <p>[{\&quot;Namespaces\&quot;:[\&quot;default\&quot;],\&quot;ClusterId\&quot;:\&quot;c9f5b93a8da8f4341b77***********\&quot;},{\&quot;Namespaces\&quot;:[\&quot;default\&quot;],\&quot;ClusterId\&quot;:\&quot;cc12429dbb8f644f690b0***********\&quot;}]</p>
          */
         public Builder clusters(String clusters) {
             this.putQueryParameter("Clusters", clusters);
@@ -158,7 +158,7 @@ public class ModifyBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>Policy name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-policy-04-11</p>
@@ -170,15 +170,15 @@ public class ModifyBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>Policy content. JSON format, Key values:</p>
+         * <p>The policy content in JSON format. Valid keys:</p>
          * <ul>
-         * <li><strong>policyMode</strong>: Type of policy, default is requireAttestor.</li>
-         * <li><strong>requiredAttestors</strong>: Required attestors.</li>
+         * <li><strong>policyMode</strong>: The policy type. Default value: requireAttestor.</li>
+         * <li><strong>requiredAttestors</strong>: The required attestors.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;PolicyMode&quot;:&quot;requireAttestor&quot;,&quot;RequiredAttestors&quot;:[&quot;test-xcs-04-11-hhht&quot;]}</p>
+         * <p>{\&quot;PolicyMode\&quot;:\&quot;requireAttestor\&quot;,\&quot;RequiredAttestors\&quot;:[\&quot;test-xcs-04-11-****\&quot;]}</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -187,7 +187,7 @@ public class ModifyBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>Remark.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>Remark</p>
@@ -211,7 +211,7 @@ public class ModifyBinarySecurityPolicyRequest extends Request {
          * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.2.3.4</p>
+         * <p>115.213.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -220,10 +220,10 @@ public class ModifyBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>Set to enable or disable the policy. Values:</p>
+         * <p>Settings to enable or disable the policy. Valid values:</p>
          * <ul>
-         * <li><strong>enabled</strong>: Enable the protection policy.</li>
-         * <li><strong>disabled</strong>: Disable the protection policy.</li>
+         * <li><strong>enabled</strong>: Enables the mitigation policies.</li>
+         * <li><strong>disabled</strong>: Disables the mitigation policies.</li>
          * </ul>
          * 
          * <strong>example:</strong>

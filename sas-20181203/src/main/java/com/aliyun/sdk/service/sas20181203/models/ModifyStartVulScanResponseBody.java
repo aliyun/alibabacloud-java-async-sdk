@@ -54,7 +54,7 @@ public class ModifyStartVulScanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4066CAC3-F83A-4729-9995-A5558A61B546</p>

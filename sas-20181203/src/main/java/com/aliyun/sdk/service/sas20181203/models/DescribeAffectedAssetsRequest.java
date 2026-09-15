@@ -87,7 +87,7 @@ public class DescribeAffectedAssetsRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,11 +99,11 @@ public class DescribeAffectedAssetsRequest extends Request {
         }
 
         /**
-         * <p>The severity. Separate multiple severities with commas (,). Valid values:</p>
+         * <p>The severity level. Separate multiple values with commas (,). Valid values:</p>
          * <ul>
-         * <li>serious</li>
-         * <li>suspicious</li>
-         * <li>remind</li>
+         * <li>serious: urgent</li>
+         * <li>suspicious: suspicious</li>
+         * <li>remind: reminder.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,9 +116,9 @@ public class DescribeAffectedAssetsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page in a paginated query. Default value: 20. If this parameter is left empty, 20 entries are returned.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

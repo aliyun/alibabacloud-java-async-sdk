@@ -117,9 +117,9 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -146,9 +146,9 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The type of the asset to query. Valid values:</p>
+         * <p>The Asset Type to query. Valid values:</p>
          * <ul>
-         * <li><strong>vpcInstanceId</strong>: VPC</li>
+         * <li><strong>vpcInstanceId</strong>: VPC-connected instance</li>
          * <li><strong>uuid</strong>: server</li>
          * </ul>
          * <p>This parameter is required.</p>

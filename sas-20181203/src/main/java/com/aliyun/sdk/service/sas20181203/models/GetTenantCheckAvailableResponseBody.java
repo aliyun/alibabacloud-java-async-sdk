@@ -67,7 +67,7 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>69BFFCDE-37D6-5A49-A8BC-BB03AC83****</p>
@@ -144,7 +144,7 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when you can submit a quick scan task.</p>
+             * <p>The timestamp of the next time when a one-click scan can be submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>1725530005357</p>
@@ -155,11 +155,14 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the quick scan task. Enumerated values:</p>
+             * <p>The current status of the one-click scan. Valid values:</p>
              * <ul>
-             * <li>0: You can submit a quick scan task.</li>
-             * <li>1: The current task is not complete. You cannot submit a quick scan task.</li>
-             * <li>2: The free quota for this week is exhausted. You must wait for the next free scan period.</li>
+             * <li><p>0: The one-click scan can be submitted.</p>
+             * </li>
+             * <li><p>1: The current task is not complete. The scan cannot be submitted.</p>
+             * </li>
+             * <li><p>2: The free scan quota for this week has been used. Wait until the next free scan time.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

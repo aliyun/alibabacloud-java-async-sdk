@@ -67,7 +67,7 @@ public class GetRegistryScanDayNumResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
@@ -78,7 +78,7 @@ public class GetRegistryScanDayNumResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration of the scan period.</p>
+         * <p>The scan day configuration.</p>
          */
         public Builder scanDayNumConfig(ScanDayNumConfig scanDayNumConfig) {
             this.scanDayNumConfig = scanDayNumConfig;
@@ -144,7 +144,7 @@ public class GetRegistryScanDayNumResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The selectable day options.</p>
+             * <p>The list of available day options.</p>
              * 
              * <strong>example:</strong>
              * <p>1,3,7,15,30,90,180,365</p>
@@ -155,7 +155,7 @@ public class GetRegistryScanDayNumResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scan period. Unit: days.</p>
+             * <p>The scan time range. Unit: days.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>

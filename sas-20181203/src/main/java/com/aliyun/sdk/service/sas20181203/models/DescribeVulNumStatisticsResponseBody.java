@@ -210,7 +210,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of application vulnerabilities that are detected on the asset by using the web scanner.</p>
+         * <p>The number of application vulnerability entries detected by the scanner on your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -221,7 +221,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of application vulnerabilities that are detected on the asset by using the web scanner.</p>
+         * <p>The number of application vulnerabilities detected by the scanner on your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -232,7 +232,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of Web-CMS vulnerabilities that are handled.</p>
+         * <p>The total number of handled CMS vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -243,7 +243,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of Web-CMS vulnerabilities that are detected on the asset.</p>
+         * <p>The number of Web-CMS vulnerabilities on your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -254,7 +254,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of Linux software vulnerabilities that are detected on the asset.</p>
+         * <p>The number of Linux software vulnerabilities on your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -265,7 +265,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of urgent vulnerabilities that are detected on the asset.</p>
+         * <p>The number of urgent vulnerabilities on your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -287,7 +287,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of middleware vulnerabilities that are detected on the asset.</p>
+         * <p>The number of middleware vulnerabilities on your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -298,7 +298,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of Windows system vulnerabilities that are detected on the asset.</p>
+         * <p>The number of Windows system vulnerabilities on your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -309,7 +309,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities that have the high priority.</p>
+         * <p>The number of vulnerabilities with a high fix priority.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -320,7 +320,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities that are handled.</p>
+         * <p>This field is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -331,7 +331,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities that have the medium priority.</p>
+         * <p>The number of vulnerabilities with a medium fix priority.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -342,7 +342,7 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities that have the low priority.</p>
+         * <p>The number of vulnerabilities with a low fix priority.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

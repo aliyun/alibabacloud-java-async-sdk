@@ -466,7 +466,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
              * <p>The type of the custom configuration item. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;type&quot;:&quot;NUMBER&quot;,&quot;range&quot;:[1,24]}</p>
+             * <p>{\&quot;type\&quot;:\&quot;NUMBER\&quot;,\&quot;range\&quot;:[1,24]}</p>
              */
             public Builder typeDefine(String typeDefine) {
                 this.typeDefine = typeDefine;
@@ -978,7 +978,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
              * <p>The type of the parameter. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;type&quot;:&quot;NUMBER&quot;,&quot;range&quot;:[1,24]}</p>
+             * <p>{\&quot;type\&quot;:\&quot;NUMBER\&quot;,\&quot;range\&quot;:[1,24]}</p>
              */
             public Builder typeDefine(String typeDefine) {
                 this.typeDefine = typeDefine;

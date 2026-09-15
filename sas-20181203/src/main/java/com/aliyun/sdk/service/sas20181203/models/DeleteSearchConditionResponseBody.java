@@ -54,7 +54,7 @@ public class DeleteSearchConditionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>2983C540-E51F-582A-B510-732C27CD914C</p>

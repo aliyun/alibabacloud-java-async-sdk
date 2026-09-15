@@ -67,7 +67,7 @@ public class GetAttackTypeListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The attack types.</p>
+         * <p>The list of attack types.</p>
          */
         public Builder attackTypeList(java.util.List<AttackTypeList> attackTypeList) {
             this.attackTypeList = attackTypeList;
@@ -75,7 +75,7 @@ public class GetAttackTypeListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CE500770-42D3-442E-9DDD-156E0F9F****</p>
@@ -157,7 +157,7 @@ public class GetAttackTypeListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the attack type.</p>
+             * <p>The internationalization (i18n) translation key of the attack type, such as sas.attack.type.type12. The caller must resolve this key by using internationalization resources to obtain a human-readable attack type name.</p>
              * 
              * <strong>example:</strong>
              * <p>sas.attack.type.type12</p>
@@ -170,9 +170,9 @@ public class GetAttackTypeListResponseBody extends TeaModel {
             /**
              * <p>The attack source. Valid values:</p>
              * <ul>
-             * <li><strong>cfw</strong>: Cloud Firewall</li>
-             * <li><strong>alinet</strong>: network defense plug-in</li>
-             * <li><strong>waf</strong>: Web Application Firewall (WAF)</li>
+             * <li><strong>cfw</strong>: Cloud Firewall.</li>
+             * <li><strong>alinet</strong>: Network defense plugin.</li>
+             * <li><strong>waf</strong>: Web Application Firewall (WAF).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class GetAttackTypeListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the attack type.</p>
+             * <p>The type value.</p>
              * 
              * <strong>example:</strong>
              * <p>upload</p>

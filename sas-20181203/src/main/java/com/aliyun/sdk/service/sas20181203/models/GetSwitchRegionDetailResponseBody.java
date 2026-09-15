@@ -67,7 +67,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
@@ -181,7 +181,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the migration is scheduled.</p>
+             * <p>The planned migration time. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1692858597000</p>
@@ -192,7 +192,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the server resides.</p>
+             * <p>The region where the server resides.</p>
              * 
              * <strong>example:</strong>
              * <p>us-east-1</p>
@@ -205,8 +205,8 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             /**
              * <p>The migration status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: pending</li>
-             * <li><strong>1</strong>: successful</li>
+             * <li><strong>0</strong>: waiting for migration</li>
+             * <li><strong>1</strong>: switchover succeeded</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the permissions were modified.</p>
+             * <p>The time when the authorization operation was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1692858597000</p>
@@ -364,7 +364,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the migration is approved.</p>
+             * <p>Indicates whether the migration is agreed to.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -375,7 +375,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the notification is sent.</p>
+             * <p>Indicates whether the notification has been sent.</p>
              * 
              * <strong>example:</strong>
              * <p>YES</p>
@@ -386,10 +386,16 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to notify the account.</p>
+             * <p>Indicates whether a pop-up notification needs to be displayed to the user.</p>
+             * <ul>
+             * <li><p><strong>true</strong>: A pop-up notification needs to be displayed.</p>
+             * </li>
+             * <li><p><strong>false</strong>: No pop-up notification needs to be displayed.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder needNotice(Boolean needNotice) {
                 this.needNotice = needNotice;
@@ -397,7 +403,13 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to switch.</p>
+             * <p>Indicates whether a switchover to the new console is required.</p>
+             * <ul>
+             * <li><p><strong>true</strong>: A switchover to the new console is required.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The legacy console is still in use.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -408,7 +420,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the switching to the region.</p>
+             * <p>The switchover status of the region.</p>
              */
             public Builder regionStatus(java.util.List<RegionStatus> regionStatus) {
                 this.regionStatus = regionStatus;

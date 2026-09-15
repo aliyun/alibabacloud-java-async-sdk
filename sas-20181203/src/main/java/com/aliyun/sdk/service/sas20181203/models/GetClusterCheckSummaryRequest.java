@@ -60,7 +60,7 @@ public class GetClusterCheckSummaryRequest extends Request {
         } 
 
         /**
-         * <p>ID of the queried cluster</p>
+         * <p>The ID of the cluster to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

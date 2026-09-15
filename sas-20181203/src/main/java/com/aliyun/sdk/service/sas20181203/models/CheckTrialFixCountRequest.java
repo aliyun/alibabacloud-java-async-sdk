@@ -121,7 +121,7 @@ public class CheckTrialFixCountRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;oval:com.redhat.rhsa:def:20192143&quot;,&quot;uuid&quot;:&quot;80ee3226-1f96-4da0-a3ed-55c104e2****&quot;,&quot;tag&quot;:&quot;oval&quot;}]</p>
+         * <p>[{\&quot;name\&quot;:\&quot;oval:com.redhat.rhsa:def:20192143\&quot;,\&quot;uuid\&quot;:\&quot;80ee3226-1f96-4da0-a3ed-55c104e2****\&quot;,\&quot;tag\&quot;:\&quot;oval\&quot;}]</p>
          */
         public Builder info(String info) {
             this.putQueryParameter("Info", info);

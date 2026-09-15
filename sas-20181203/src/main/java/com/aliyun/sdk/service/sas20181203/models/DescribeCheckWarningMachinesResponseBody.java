@@ -310,7 +310,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
              * <p>The instance name of the server.</p>
              * 
              * <strong>example:</strong>
-             * <p>win-oracl****</p>
+             * <p>test****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

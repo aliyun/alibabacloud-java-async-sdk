@@ -87,11 +87,11 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         } 
 
         /**
-         * <p>The type of the configuration. Valid values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: server synchronization task</li>
-         * <li><strong>1</strong>: cloud service synchronization task</li>
-         * <li><strong>2</strong>: scheduled AccessKey pair verification task</li>
+         * <li><strong>0</strong>: host refresh task</li>
+         * <li><strong>1</strong>: cloud service refresh task</li>
+         * <li><strong>2</strong>: AccessKey scheduled verification task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         }
 
         /**
-         * <p>The region where the Security Center instance is deployed.</p>
+         * <p>The region of the Security Center instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -116,7 +116,7 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.</p>
+         * <p>The ID of the AccessKey record specified when querying an AccessKey scheduled verification task.</p>
          * 
          * <strong>example:</strong>
          * <p>2295</p>

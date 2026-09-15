@@ -192,7 +192,20 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         } 
 
         /**
-         * AlertLevel.
+         * <p>The alert notification level. Valid values:</p>
+         * <ul>
+         * <li><p>0: no alert</p>
+         * </li>
+         * <li><p>1: reminder</p>
+         * </li>
+         * <li><p>2: suspicious</p>
+         * </li>
+         * <li><p>3: high-risk.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -201,7 +214,7 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * ExcludeUsers.
+         * <p>The list of users excluded from file protection.</p>
          */
         public Builder excludeUsers(java.util.List<String> excludeUsers) {
             this.putQueryParameter("ExcludeUsers", excludeUsers);
@@ -210,6 +223,7 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The list of operations performed on the file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fileOps(java.util.List<String> fileOps) {
@@ -219,6 +233,7 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The list of monitored file paths. Wildcards are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder filePaths(java.util.List<String> filePaths) {
@@ -228,7 +243,7 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * FileTypes.
+         * <p>The list of protected file types.</p>
          */
         public Builder fileTypes(java.util.List<String> fileTypes) {
             this.putQueryParameter("FileTypes", fileTypes);
@@ -237,6 +252,7 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The unique ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,6 +265,7 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The list of process listening paths. Wildcards are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder procPaths(java.util.List<String> procPaths) {
@@ -258,6 +275,15 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The action of the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>block</strong>: Block.</p>
+         * </li>
+         * <li><p><strong>monitor</strong>: Monitor.</p>
+         * </li>
+         * <li><p><strong>pass</strong>: Allow.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,6 +296,7 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,6 +309,11 @@ public class UpdateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

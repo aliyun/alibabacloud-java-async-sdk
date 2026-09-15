@@ -80,7 +80,7 @@ public class ListFileProtectBindMachineResponseBody extends TeaModel {
         } 
 
         /**
-         * List.
+         * <p>The list of servers. The UUID of each server is returned.</p>
          */
         public Builder list(java.util.List<String> list) {
             this.list = list;
@@ -88,7 +88,7 @@ public class ListFileProtectBindMachineResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The paging information for the paged query.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -165,7 +165,10 @@ public class ListFileProtectBindMachineResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of entries on the current page for a paged query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -173,7 +176,10 @@ public class ListFileProtectBindMachineResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -115,10 +115,10 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The source of the request. Default value: <strong>aqs</strong>. Valid values:</p>
+         * <p>The source of the data request. Default value: <strong>aqs</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>sas</strong>: Security Center.</li>
-         * <li><strong>aqs</strong>: Server Guard.</li>
+         * <li><strong>sas</strong>: The data request comes from Security Center.</li>
+         * <li><strong>aqs</strong>: The data request comes from Server Guard.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,9 +131,9 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the asset group that you want to query.</p>
+         * <p>The ID of the asset group to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The name or public IP address of the asset.</p>
+         * <p>The asset name or public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -158,7 +158,10 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the Alibaba Cloud account of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -167,7 +170,7 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>33.80.XXX.XXX</p>

@@ -73,10 +73,10 @@ public class DescribeMachineCanRebootRequest extends Request {
         } 
 
         /**
-         * <p>The type of the vulnerabilities. Valid values:</p>
+         * <p>The type of vulnerability that requires a restart to fix. Valid values:</p>
          * <ul>
-         * <li>cve: Linux software vulnerabilities</li>
-         * <li>sys: Windows system vulnerabilities</li>
+         * <li>cve: Linux software vulnerability</li>
+         * <li>sys: Windows system vulnerability.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class DescribeMachineCanRebootRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the server to restart.</p>
          * 
          * <strong>example:</strong>
          * <p>5b268326-273e-44fc-a0e3-9482435c****</p>

@@ -145,7 +145,7 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Base64 encoded CA certificate.</p>
+         * <p>The CA certificate in Base64 encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -156,7 +156,7 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster environment information.</p>
+         * <p>The cluster environment context.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -167,7 +167,7 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the cluster that you want to scan.</p>
+         * <p>The ID of the container cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c7c190a82d9a048be9038d352840f****</p>
@@ -178,7 +178,7 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The container image information.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-registry.cn-shanghai.cr.aliyuncs.com/default/scanner:v1</p>
@@ -189,7 +189,7 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
@@ -200,7 +200,7 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Base64 encoded webhook certificate.</p>
+         * <p>The webhook certificate in Base64 encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -211,7 +211,7 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Base64 encoded webhook private key.</p>
+         * <p>The webhook private key in Base64 encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -222,10 +222,10 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the incremental scan switch is enabled. Values:</p>
+         * <p>Indicates whether incremental scanning is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not enabled</li>
-         * <li><strong>1</strong>: Enabled</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

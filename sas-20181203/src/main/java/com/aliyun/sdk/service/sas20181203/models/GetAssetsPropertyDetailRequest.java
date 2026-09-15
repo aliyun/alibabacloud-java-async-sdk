@@ -186,11 +186,11 @@ public class GetAssetsPropertyDetailRequest extends Request {
         } 
 
         /**
-         * <p>The type of asset fingerprint to be queried, with a default value of <strong>sca</strong>. Values:</p>
+         * <p>The type of Asset Fingerprints to query. Default value: <strong>sca</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>lkm</strong>: Kernel module</li>
-         * <li><strong>autorun</strong>: Startup item</li>
-         * <li><strong>web_server</strong>: Web site</li>
+         * <li><strong>lkm</strong>: kernel module</li>
+         * <li><strong>autorun</strong>: startup item</li>
+         * <li><strong>web_server</strong>: web site.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -204,7 +204,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>Set the page number from which to start displaying the query results. The default value is <strong>1</strong>, indicating that the display starts from the first page.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,9 +216,9 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>The aggregated item name of the asset fingerprint to be queried.</p>
+         * <p>The aggregation item name of the Asset Fingerprints to query.</p>
          * <blockquote>
-         * <p>Call the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> API to obtain this parameter.</p>
+         * <p>Call the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,10 +231,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response. Values:</p>
+         * <p>The language type of the request and response messages. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,9 +247,9 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>Used to mark the current read position. Leave it empty to start from the beginning.</p>
+         * <p>The token that marks the starting position for the query. Leave this parameter empty to query from the beginning.</p>
          * <blockquote>
-         * <p>Do not fill in for the first call; the response will include the NextToken for the second call. Each subsequent call&quot;s response will contain the NextToken for the next call.</p>
+         * <p>Do not specify this parameter for the first call. The response includes the NextToken value for the next call. Each subsequent response contains the NextToken value for the following call.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -262,9 +262,9 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>Specify the maximum number of data entries per page in a paginated query. The default number of data entries per page is 20. If the PageSize parameter is empty, 20 data entries will be returned by default.</p>
+         * <p>The maximum number of entries per page for a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</p>
          * <blockquote>
-         * <p>It is recommended that the PageSize value is not empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>Server name or IP.</p>
+         * <p>The server name or IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX</p>
@@ -289,7 +289,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>A set of conditions for querying asset fingerprint details.</p>
+         * <p>The collection of search criteria for querying Asset Fingerprints details.</p>
          */
         public Builder searchCriteriaList(java.util.List<SearchCriteriaList> searchCriteriaList) {
             this.putQueryParameter("SearchCriteriaList", searchCriteriaList);
@@ -298,7 +298,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>Whether to use the NextToken method to fetch the list of vulnerabilities. If this parameter is used, TotalCount will not be returned. Values:</p>
+         * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Use the NextToken method.</li>
          * <li><strong>false</strong>: Do not use the NextToken method.</li>
@@ -314,9 +314,9 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the asset to be queried.</p>
+         * <p>The UUID of the asset to query.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> API to obtain this parameter.</p>
+         * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -388,22 +388,22 @@ public class GetAssetsPropertyDetailRequest extends Request {
             } 
 
             /**
-             * <p>The name of the condition to be queried. Values are as follows:</p>
+             * <p>The name of the search criterion. Valid values:</p>
              * <ul>
-             * <li><strong>remarkItemName</strong>: The aggregated item name of the asset fingerprint, supporting fuzzy matching</li>
+             * <li><strong>remarkItemName</strong>: the aggregation item name of Asset Fingerprints. Fuzzy match is supported.</li>
              * </ul>
              * <blockquote>
              * <ul>
              * <li><ul>
-             * <li>When <strong>Biz</strong> is <strong>web_server</strong>, <strong>remarkItemName</strong> represents the domain name as the search condition.</li>
+             * <li>When <strong>Biz</strong> is set to <strong>web_server</strong>, <strong>remarkItemName</strong> indicates the domain name.</li>
              * </ul>
              * </li>
              * <li><ul>
-             * <li>When <strong>Biz</strong> is <strong>lkm</strong>, <strong>remarkItemName</strong> represents the module name as the search condition.</li>
+             * <li>When <strong>Biz</strong> is set to <strong>lkm</strong>, <strong>remarkItemName</strong> indicates the module name.</li>
              * </ul>
              * </li>
              * <li><ul>
-             * <li>When <strong>Biz</strong> is <strong>autorun</strong>, <strong>remarkItemName</strong> represents the startup item path as the search condition.</li>
+             * <li>When <strong>Biz</strong> is set to <strong>autorun</strong>, <strong>remarkItemName</strong> indicates the startup item path.</li>
              * </ul>
              * </li>
              * </ul>
@@ -418,7 +418,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
             }
 
             /**
-             * <p>The value of the condition to be queried.</p>
+             * <p>The value of the search criterion.</p>
              * 
              * <strong>example:</strong>
              * <p>virtio</p>

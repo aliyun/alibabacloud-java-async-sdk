@@ -74,7 +74,11 @@ public class ListUnfinishedOnceTaskRequest extends Request {
         } 
 
         /**
-         * <p>The value of the object on which the task runs. If you set TaskType to IMAGE_SCAN, set this parameter to the UUID of the image that you want to scan. If you set TaskType to ASSETS_COLLECTION, set this parameter to the UUID of the server whose information you want to collect.</p>
+         * <p>The target object value. Valid values:</p>
+         * <ul>
+         * <li>If the task type is <strong>IMAGE_SCAN</strong>, the target object value is the <strong>Digest</strong> of the image.</li>
+         * <li>If the task type is <strong>ASSETS_COLLECTION</strong>, the target object value is the <strong>Uuid</strong> of the server.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
@@ -86,10 +90,10 @@ public class ListUnfinishedOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
          * <li><strong>ASSETS_COLLECTION</strong>: asset information collection task</li>
-         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan task.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

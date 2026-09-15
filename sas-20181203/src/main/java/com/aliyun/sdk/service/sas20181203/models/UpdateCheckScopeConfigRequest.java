@@ -115,7 +115,21 @@ public class UpdateCheckScopeConfigRequest extends Request {
         } 
 
         /**
-         * AutoConfig.
+         * <p>The automatic scan configuration as a JSON string. The following fields are included:</p>
+         * <ul>
+         * <li><strong>autoInclude</strong>: specifies whether to enable automatic scan. Valid values: <strong>true</strong>: enabled. <strong>false</strong>: disabled.</li>
+         * <li><strong>autoRule</strong>: the enablement configuration.</li>
+         * <li><strong>ruleOperator</strong>: the enablement configuration rule. Set the value to <strong>include</strong>.</li>
+         * <li><strong>operator</strong>: the logical operator. Set the value to <strong>or</strong>.</li>
+         * <li><strong>rule</strong>: the rule.</li>
+         * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong>: vendor. <strong>assetType</strong>: level-1 asset type. <strong>assetSubType</strong>: level-2 asset type.<blockquote>
+         * <p>For more information, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;autoInclude\&quot;:true,\&quot;autoRule\&quot;:{\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;operator\&quot;:\&quot;or\&quot;,\&quot;rule\&quot;:[{\&quot;condition\&quot;:\&quot;assetSubType\&quot;,\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;value\&quot;:[{\&quot;vendor\&quot;:\&quot;0\&quot;,\&quot;assetType\&quot;:\&quot;0\&quot;,\&quot;assetSubType\&quot;:\&quot;100\&quot;}]}]}}&quot;</p>
          */
         public Builder autoConfig(String autoConfig) {
             this.putQueryParameter("AutoConfig", autoConfig);
@@ -124,7 +138,14 @@ public class UpdateCheckScopeConfigRequest extends Request {
         }
 
         /**
-         * AutoType.
+         * <p>The automatic scan configuration type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disable automatic scan</li>
+         * <li><strong>1</strong>: automatically scan newly added cloud assets</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoType(Integer autoType) {
             this.putQueryParameter("AutoType", autoType);
@@ -133,7 +154,13 @@ public class UpdateCheckScopeConfigRequest extends Request {
         }
 
         /**
-         * ConfigId.
+         * <p>The ID of the configuration.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>00cfa8161da093089e6804ba6a33****</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -151,7 +178,14 @@ public class UpdateCheckScopeConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The scan scope configuration type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: scan by instance</li>
+         * <li><strong>3</strong>: scan all</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

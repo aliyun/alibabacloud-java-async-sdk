@@ -60,7 +60,7 @@ public class DeleteCheckItemRequest extends Request {
         } 
 
         /**
-         * <p>List of check item IDs.</p>
+         * <p>The list of check item IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder checkIds(java.util.List<Long> checkIds) {

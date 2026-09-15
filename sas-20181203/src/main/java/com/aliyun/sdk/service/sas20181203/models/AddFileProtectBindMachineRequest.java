@@ -87,7 +87,7 @@ public class AddFileProtectBindMachineRequest extends Request {
         } 
 
         /**
-         * AlertUuids.
+         * <p>The list of servers for which the alert protection level is enabled.</p>
          */
         public Builder alertUuids(java.util.List<String> alertUuids) {
             this.putQueryParameter("AlertUuids", alertUuids);
@@ -96,7 +96,7 @@ public class AddFileProtectBindMachineRequest extends Request {
         }
 
         /**
-         * BlockUuids.
+         * <p>The list of servers for which tamper-proofing is enabled.</p>
          */
         public Builder blockUuids(java.util.List<String> blockUuids) {
             this.putQueryParameter("BlockUuids", blockUuids);
@@ -105,7 +105,7 @@ public class AddFileProtectBindMachineRequest extends Request {
         }
 
         /**
-         * NoneUuids.
+         * <p>The list of servers for which file protection is disabled.</p>
          */
         public Builder noneUuids(java.util.List<String> noneUuids) {
             this.putQueryParameter("NoneUuids", noneUuids);

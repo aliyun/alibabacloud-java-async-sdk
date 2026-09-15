@@ -76,7 +76,7 @@ public class DescribeExportInfoRequest extends Request {
         /**
          * <p>The ID of the export task.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ExportRecord~~">ExportRecord</a> operation to query the IDs of export tasks.</p>
+         * <p>You can obtain this parameter by calling the <a href="~~ExportRecord~~">ExportRecord</a> operation to initiate an export.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -90,9 +90,9 @@ public class DescribeExportInfoRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The ID of the member account in the resource directory.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>You can obtain this parameter by invoking the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

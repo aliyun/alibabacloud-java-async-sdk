@@ -67,7 +67,7 @@ public class ModifyWebLockCreateConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration ID of the protected directory.</p>
+         * <p>The ID of the protected directory configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1404656</p>
@@ -78,7 +78,7 @@ public class ModifyWebLockCreateConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>D9354C1A-D709-4873-9AAE-41513327B247</p>

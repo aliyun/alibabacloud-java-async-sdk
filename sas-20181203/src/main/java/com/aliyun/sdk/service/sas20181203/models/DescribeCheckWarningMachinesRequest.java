@@ -212,7 +212,7 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the asset that you don&quot;t want to query.</p>
+         * <p>The instance ID of the asset that you don\&quot;t want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>2f64e1a0f9316c48*******</p>

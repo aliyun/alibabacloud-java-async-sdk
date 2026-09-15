@@ -104,7 +104,7 @@ public class GenerateOnceTaskRequest extends Request {
         } 
 
         /**
-         * <p>The additional information.</p>
+         * <p>A JSON string that contains additional parameters for the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The source of the scan task.</p>
+         * <p>The source that initiated the task.</p>
          * 
          * <strong>example:</strong>
          * <p>Manual</p>
@@ -129,11 +129,18 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the scan task. Valid values:</p>
+         * <p>The name of the scan task.</p>
          * <ul>
-         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a client diagnosis task</li>
-         * <li><strong>CLIENT_DEV_OPS</strong>: an O&amp;M task of Cloud Assistant</li>
-         * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -149,9 +156,26 @@ public class GenerateOnceTaskRequest extends Request {
         /**
          * <p>The type of the scan task. Valid values:</p>
          * <ul>
-         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a client diagnosis task</li>
-         * <li><strong>CLIENT_DEV_OPS</strong>: an O&amp;M task of Cloud Assistant</li>
-         * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+         * <li><p><strong>CLIENT_PROBLEM_CHECK</strong>: a client troubleshooting task</p>
+         * </li>
+         * <li><p><strong>CLIENT_DEV_OPS</strong>: a cloud DevOps task</p>
+         * </li>
+         * <li><p><strong>ASSET_SECURITY_CHECK</strong>: an asset collection task</p>
+         * </li>
+         * <li><p><strong>ASSETS_COLLECTION</strong>: an asset fingerprinting task</p>
+         * </li>
+         * <li><p><strong>IMAGE_SCAN</strong>: a container image scan task</p>
+         * </li>
+         * <li><p><strong>AI_SECURITY_CHECK</strong>: an AI asset synchronization task</p>
+         * </li>
+         * <li><p><strong>IDC_PROBE_SCAN</strong>: an IDC probe scan task</p>
+         * </li>
+         * <li><p><strong>ATTACK_SURFACE_SCAN</strong>: an attack surface scan task</p>
+         * </li>
+         * <li><p><strong>ASSET_EXPOSURE_SCAN</strong>: an asset exposure scan task</p>
+         * </li>
+         * <li><p><strong>VUL_CHECK_TASK</strong>: a vulnerability scan task</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

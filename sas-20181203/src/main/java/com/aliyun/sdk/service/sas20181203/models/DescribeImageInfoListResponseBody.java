@@ -67,7 +67,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the information about images.</p>
+         * <p>The collection of image information.</p>
          */
         public Builder imageInfos(java.util.List<ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
@@ -75,7 +75,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>BC3B0DAE-CC0E-59E9-9383-6F060F22****</p>
@@ -417,7 +417,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of alerts that are generated on the current pod, application, namespace, or cluster.</p>
+             * <p>The number of alerts detected in the current container group, application, namespace, or cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -428,10 +428,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether alerts are generated on the asset. Valid values:</p>
+             * <p>Indicates whether the asset has security alerts. Valid values:</p>
              * <ul>
-             * <li><strong>YES</strong></li>
-             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong>: The asset has security alerts.</li>
+             * <li><strong>NO</strong>: The asset does not have security alerts.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -454,7 +454,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of Container Registry.</p>
+             * <p>The list of endpoints for the image service.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-x7</p>
@@ -498,7 +498,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was updated.</p>
+             * <p>The time when the image was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1636974116000</p>
@@ -531,7 +531,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the registration.</p>
+             * <p>The registry type.</p>
              * 
              * <strong>example:</strong>
              * <p>harbor</p>
@@ -564,7 +564,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the image repository belongs.</p>
+             * <p>The namespace of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>libssh2</p>
@@ -575,10 +575,12 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image repository. Valid values:</p>
+             * <p>The repository type. Valid values:</p>
              * <ul>
-             * <li><code>PUBLIC</code></li>
-             * <li><code>PRIVATE</code></li>
+             * <li><p><code>PUBLIC</code>: public</p>
+             * </li>
+             * <li><p><code>PRIVATE</code>: private</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -590,10 +592,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image is at risk. Valid values:</p>
+             * <p>Indicates whether the image has security risks. Valid values:</p>
              * <ul>
-             * <li><strong>YES</strong></li>
-             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong>: The image has security risks.</li>
+             * <li><strong>NO</strong>: The image does not have security risks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -605,7 +607,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage label of the image.</p>
+             * <p>The business purpose tag of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>PAI</p>
@@ -616,7 +618,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image.</p>
+             * <p>The image status.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -627,7 +629,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is added to the image.</p>
+             * <p>The image tag.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -660,7 +662,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of vulnerabilities in your assets.</p>
+             * <p>The total number of vulnerabilities on your assets.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -671,10 +673,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether vulnerabilities are detected on the asset. Valid values:</p>
+             * <p>Indicates whether the instance has vulnerabilities. Valid values:</p>
              * <ul>
-             * <li><strong>YES</strong></li>
-             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong>: The instance has vulnerabilities.</li>
+             * <li><strong>NO</strong>: The instance does not have vulnerabilities.</li>
              * </ul>
              * 
              * <strong>example:</strong>

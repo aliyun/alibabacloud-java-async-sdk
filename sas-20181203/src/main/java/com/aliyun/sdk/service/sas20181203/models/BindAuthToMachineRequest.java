@@ -228,13 +228,13 @@ public class BindAuthToMachineRequest extends Request {
         } 
 
         /**
-         * <p>The edition of Security Center that is authorized to scan the asset. Valid values:</p>
+         * <p>The authorization version of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>6</strong>: Anti-virus</li>
-         * <li><strong>5</strong>: Advanced</li>
-         * <li><strong>3</strong>: Enterprise</li>
-         * <li><strong>7</strong>: Ultimate</li>
-         * <li><strong>10</strong>: Value-added Plan</li>
+         * <li><strong>6</strong>: Anti-virus Edition.</li>
+         * <li><strong>5</strong>: Premium Edition.</li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * <li><strong>10</strong>: Value-added service Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,10 +247,10 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically bind servers to Security Center. Valid values:</p>
+         * <p>Specifies whether to enable automatic binding. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: Disable automatic binding.</li>
+         * <li><strong>1</strong>: Enable automatic binding.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,9 +263,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers that you want to bind to Security Center.</p>
+         * <p>The collection of UUIDs to bind.</p>
          * <blockquote>
-         * <p> You must specify at least one of the <strong>Bind</strong> and <strong>UnBind</strong> parameters.</p>
+         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
          * </blockquote>
          */
         public Builder bind(java.util.List<String> bind) {
@@ -275,10 +275,10 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to bind all servers to Security Center. Default value: <strong>false</strong>. Valid values:</p>
+         * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: Bind all assets.</li>
+         * <li><strong>false</strong>: Do not bind all assets.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -300,9 +300,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The search conditions that are used to filter servers. The value of this parameter is in the JSON format and is case-sensitive.</p>
+         * <p>The conditions for searching assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
          * <blockquote>
-         * <p> A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+         * <p>You can search for assets by instance ID, instance name, VPC ID, region, or public IP address. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -315,13 +315,13 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to specify servers for protection when you purchase Security Center. Valid values:</p>
+         * <p>Specifies whether this is a pre-binding operation. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * <blockquote>
-         * <p> If you specify servers, the servers are automatically added to Security Center for protection after the purchase order is complete.</p>
+         * <p>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -334,10 +334,10 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The logical relationship that you want to use to evaluate multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
+         * <p>The logical relationship among multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong></li>
-         * <li><strong>AND</strong></li>
+         * <li><strong>OR</strong>: The search conditions are evaluated using a logical OR.</li>
+         * <li><strong>AND</strong>: The search conditions are evaluated using a logical AND.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,13 +350,13 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The edition of Security Center that you purchase in the order. Valid values:</p>
+         * <p>The order version associated with the pre-binding operation. Valid values:</p>
          * <ul>
-         * <li><strong>level7</strong>: Anti-virus</li>
-         * <li><strong>level3</strong>: Advanced</li>
-         * <li><strong>level2</strong>: Enterprise</li>
-         * <li><strong>level8</strong>: Ultimate</li>
-         * <li><strong>level10</strong>: Value-added Plan</li>
+         * <li><strong>level7</strong>: Anti-virus Edition.</li>
+         * <li><strong>level3</strong>: Premium Edition.</li>
+         * <li><strong>level2</strong>: Enterprise Edition.</li>
+         * <li><strong>level8</strong>: Ultimate Edition.</li>
+         * <li><strong>level10</strong>: Value-added service only.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -369,7 +369,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order in which Security Center is purchased and servers are specified for protection.</p>
+         * <p>The order ID associated with the pre-binding operation.</p>
          * 
          * <strong>example:</strong>
          * <p>233016**0482</p>
@@ -390,7 +390,13 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the member accounts (Alibaba Cloud account) in the resource directory.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>16670360956*****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -399,9 +405,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers that you want to unbind from Security Center.</p>
+         * <p>The collection of UUIDs to unbind.</p>
          * <blockquote>
-         * <p> You must specify at least one of the <strong>Bind</strong> and <strong>UnBind</strong> parameters.</p>
+         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
          * </blockquote>
          */
         public Builder unBind(java.util.List<String> unBind) {

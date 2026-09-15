@@ -67,7 +67,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The China Chinese system generates a unique identifier for the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>FAC50208-E56B-5CC8-8738-2B219D1A****</p>
@@ -287,7 +287,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration time of the purchased quota.</p>
+             * <p>The timestamp when the authorization expires.</p>
              * 
              * <strong>example:</strong>
              * <p>1714442403000</p>
@@ -298,7 +298,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of high-risk objects.</p>
+             * <p>The number of high-risk files.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -309,7 +309,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of low-risk objects.</p>
+             * <p>The number of low-risk files.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -320,7 +320,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of medium-risk objects.</p>
+             * <p>The number of medium-risk files.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -331,7 +331,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of buckets that are not checked.</p>
+             * <p>The number of buckets that have not been scanned.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -342,7 +342,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Postpaid usage count.</p>
+             * <p>The number of pay-as-you-go invocations used.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -353,7 +353,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Prepaid authorized count.</p>
+             * <p>The number of prepaid authorization times.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -364,7 +364,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Prepaid usage count.</p>
+             * <p>The number of prepaid invocations used.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -375,7 +375,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining quota.</p>
+             * <p>The remaining number of authorizations.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -386,7 +386,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of buckets in which at-risk objects exist.</p>
+             * <p>The number of buckets that contain risky files.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -397,7 +397,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of objects that are checked.</p>
+             * <p>The number of scanned files.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -419,7 +419,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of objects in the bucket.</p>
+             * <p>The total number of files in the buckets.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

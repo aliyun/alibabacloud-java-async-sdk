@@ -80,7 +80,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the release batches.</p>
+         * <p>The details of the batch release tasks.</p>
          */
         public Builder batchList(java.util.List<BatchList> batchList) {
             this.batchList = batchList;
@@ -88,7 +88,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page information.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -96,7 +96,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. The China Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</p>
@@ -267,7 +267,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval between two release batches. Unit: hours.</p>
+             * <p>The interval between the completion of the current batch and the start of the next batch. Unit: hours.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -281,7 +281,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
              * <p>The name of the release batch.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>发布批次1</p>
              */
             public Builder batchName(String batchName) {
                 this.batchName = batchName;
@@ -289,7 +289,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current batch number during a batch release.</p>
+             * <p>The number of the current batch in a phased release.</p>
              * 
              * <strong>example:</strong>
              * <p>2147483647</p>
@@ -300,7 +300,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the release batch. This parameter indicates the number of servers that are upgraded in the release batch.</p>
+             * <p>The release progress of the current batch, indicating the number of machines that have been released.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -311,7 +311,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of batches.</p>
+             * <p>The total number of batches in the release.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -322,11 +322,11 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asset selection dimension. Valid values:</p>
+             * <p>The dimension for asset selection. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: instance.</li>
-             * <li><strong>1</strong>: machine group.</li>
-             * <li><strong>2</strong>: Virtual Private Cloud (VPC) ID.</li>
+             * <li><strong>0</strong>: machine instance</li>
+             * <li><strong>1</strong>: machine group</li>
+             * <li><strong>2</strong>: VPC-connected instance ID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -338,13 +338,13 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish status of the Security Center agent. Valid values:</p>
+             * <p>The release status of the client. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: not started.</li>
-             * <li><strong>1</strong>: publishing.</li>
-             * <li><strong>2</strong>: published.</li>
-             * <li><strong>3</strong>: publish suspended.</li>
-             * <li><strong>4</strong>: forcibly upgrading.</li>
+             * <li><strong>0</strong>: not started</li>
+             * <li><strong>1</strong>: releasing</li>
+             * <li><strong>2</strong>: release completed</li>
+             * <li><strong>3</strong>: release paused</li>
+             * <li><strong>4</strong>: force upgrading.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -356,7 +356,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination version of the Security Center agent.</p>
+             * <p>The target version to upgrade to.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.9</p>
@@ -439,7 +439,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the current page when paging is used.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -450,7 +450,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The maximum number of entries per page when paging is used.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

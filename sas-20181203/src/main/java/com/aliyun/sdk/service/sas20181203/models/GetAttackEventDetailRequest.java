@@ -73,7 +73,8 @@ public class GetAttackEventDetailRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifier ID for the alert event.</p>
+         * <p>The unique ID of the alert event.</p>
+         * <p>Note: This parameter is required. If this parameter is not specified, the API returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>18825544674********</p>
@@ -85,7 +86,7 @@ public class GetAttackEventDetailRequest extends Request {
         }
 
         /**
-         * <p>The language type for requesting and receiving messages. Values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>

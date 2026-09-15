@@ -88,7 +88,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the operation tasks.</p>
+         * <p>The list of operation task information.</p>
          */
         public Builder processes(java.util.List<Processes> processes) {
             this.processes = processes;
@@ -96,7 +96,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
@@ -191,7 +191,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -202,7 +202,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the current page to display in a paged query. This parameter is used for paging.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -411,7 +411,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created. Unit: milliseconds.</p>
+             * <p>The creation time of the task. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1674388824000</p>
@@ -422,7 +422,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of completed subtasks</p>
+             * <p>The number of completed subtasks.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -433,7 +433,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of subtasks.</p>
+             * <p>The total number of subtasks.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -455,7 +455,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tasks that are complete.</p>
+             * <p>The number of completed items.</p>
              * 
              * <strong>example:</strong>
              * <p>197</p>
@@ -477,12 +477,12 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status code. Valid values:</p>
+             * <p>The check task status code. Valid values:</p>
              * <ul>
              * <li>0: not started.</li>
-             * <li>1: running.</li>
-             * <li>2: complete.</li>
-             * <li>3: times out.</li>
+             * <li>1: checking.</li>
+             * <li>2: check completed.</li>
+             * <li>3: timed out.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -505,9 +505,9 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task source. Values: </p>
+             * <p>The task source. Valid values:</p>
              * <ul>
-             * <li><strong>YAO_CHI</strong>: YaoChi.</li>
+             * <li><strong>YAO_CHI</strong>: ApsaraDB.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -522,10 +522,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
              * <p>The task type. Valid values:</p>
              * <ul>
              * <li>CHECK_ALL: full check.</li>
-             * <li>CHECK_POLICY: policy-based check for which check items are configured.</li>
+             * <li>CHECK_POLICY: check performed based on check items in the configured policy.</li>
              * <li>CHECK_SCHEDULE: scheduled check.</li>
-             * <li>CHECK_ITEM: specific check item-based check.</li>
-             * <li>CHECK_INSTANCE: specific check item-based check on specific instances.</li>
+             * <li>CHECK_ITEM: check performed based on specified check items.</li>
+             * <li>CHECK_INSTANCE: check performed based on specified check items and instances.</li>
              * </ul>
              * 
              * <strong>example:</strong>

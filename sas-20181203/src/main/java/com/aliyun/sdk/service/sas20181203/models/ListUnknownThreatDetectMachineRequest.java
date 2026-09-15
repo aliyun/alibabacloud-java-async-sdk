@@ -171,7 +171,10 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page when using paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -189,7 +192,10 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page when using paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +204,10 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The server name or IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-ecs</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -207,7 +216,16 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The running status of the machine. Valid values:</p>
+         * <ul>
+         * <li><strong>monitoring</strong>: Warning.</li>
+         * <li><strong>blocking</strong>: Blocking.</li>
+         * <li><strong>studying</strong>: Learning.</li>
+         * <li><strong>study_finish</strong>: Learning completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>studying</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -216,7 +234,14 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * StudyMode.
+         * <p>The whitelist mode. Valid values:</p>
+         * <ul>
+         * <li><strong>hash</strong>: process hash</li>
+         * <li><strong>path</strong>: process path</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         public Builder studyMode(String studyMode) {
             this.putQueryParameter("StudyMode", studyMode);
@@ -225,7 +250,10 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * StudyTimeEnd.
+         * <p>The end of the model creation time range. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1768891966346</p>
          */
         public Builder studyTimeEnd(Long studyTimeEnd) {
             this.putQueryParameter("StudyTimeEnd", studyTimeEnd);
@@ -234,7 +262,10 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * StudyTimeStart.
+         * <p>The start of the model creation time range. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1768891966344</p>
          */
         public Builder studyTimeStart(Long studyTimeStart) {
             this.putQueryParameter("StudyTimeStart", studyTimeStart);
@@ -243,7 +274,10 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d2d94e8b-bb25-4744-8004-1e08a53c****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

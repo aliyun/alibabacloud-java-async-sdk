@@ -102,7 +102,7 @@ public class DescribeLoginBaseConfigsRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,7 +114,7 @@ public class DescribeLoginBaseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>5</strong>.</p>
+         * <p>Settings for paged query. The number of logon configuration entries to display on each page during paging. Default value: <strong>5</strong>, which indicates that five logon configuration entries are displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -126,19 +126,18 @@ public class DescribeLoginBaseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The selection mode for the assets on which the policy takes effect. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><strong>Target</strong>: the UUID or group ID of the server to add or delete.</li>
+         * <li><strong>Target</strong>: the UUID of the server to add or delete, or the ID of the server group.</li>
          * </ul>
          * <blockquote>
-         * <p>If targetType is set to uuid, the value of Target is the UUID of the server. If targetType is set to groupId, the value of Target is the group ID of the server. If targetType is set to global, the value of Target is a hyphen (-).</p>
+         * <p>If the targetType parameter is set to uuid, this parameter specifies the UUID of the server. If the targetType parameter is set to groupId, this parameter specifies the ID of the server group. If the targetType parameter is set to global, this parameter is set to a hyphen (-).</p>
          * </blockquote>
          * <ul>
-         * <li><p><strong>targetType</strong>: the type of the server to which the configuration is applied. Valid values:</p>
-         * <ul>
-         * <li><strong>uuid</strong>: a server</li>
-         * <li><strong>groupId</strong>: a server group</li>
-         * <li><strong>global</strong>: all servers</li>
+         * <li><strong>targetType</strong>: the selection mode for the assets on which the policy takes effect. Valid values:<ul>
+         * <li><strong>uuid</strong>: queries by individual server.</li>
+         * <li><strong>groupId</strong>: queries by server group.</li>
+         * <li><strong>global</strong>: queries all servers.</li>
          * </ul>
          * </li>
          * </ul>
@@ -153,12 +152,12 @@ public class DescribeLoginBaseConfigsRequest extends Request {
         }
 
         /**
-         * <p>The logon type of the configuration to query. Valid values:</p>
+         * <p>The type of logon configuration to query. Valid values:</p>
          * <ul>
-         * <li><strong>login_common_location</strong>: common logon location</li>
-         * <li><strong>login_common_ip</strong>: common logon IP address</li>
-         * <li><strong>login_common_time</strong>: common logon time range</li>
-         * <li><strong>login_common_account</strong>: common logon account</li>
+         * <li><strong>login_common_location</strong>: common logon location.</li>
+         * <li><strong>login_common_ip</strong>: common logon IP address.</li>
+         * <li><strong>login_common_time</strong>: common logon time.</li>
+         * <li><strong>login_common_account</strong>: common logon account.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

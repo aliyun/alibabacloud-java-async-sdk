@@ -341,7 +341,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1232428423234****</p>
+         * <p>1082098404740323</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

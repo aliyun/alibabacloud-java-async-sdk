@@ -73,12 +73,12 @@ public class DescribeTargetRequest extends Request {
         } 
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The vulnerability type. Valid values:</p>
          * <ul>
-         * <li><strong>cms</strong>: Web CMS vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
-         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * <li><strong>emg</strong>: emergency vulnerability.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class DescribeTargetRequest extends Request {
         }
 
         /**
-         * <p>The type of the query. Set the value to vul.</p>
+         * <p>The query type. Set this parameter to vul.</p>
          * 
          * <strong>example:</strong>
          * <p>vul</p>

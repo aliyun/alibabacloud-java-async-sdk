@@ -60,7 +60,7 @@ public class DescribeHybridProxyPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The name of the proxy cluster. You can query the name of the proxy cluster in the Security Center console.</p>
+         * <p>The name of the proxy cluster. You can view the cluster name in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

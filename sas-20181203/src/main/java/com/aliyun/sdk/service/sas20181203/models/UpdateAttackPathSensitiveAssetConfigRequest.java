@@ -75,7 +75,7 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
         } 
 
         /**
-         * <p>List of cloud product assets in the attack path.</p>
+         * <p>The list of cloud service assets for attack path analysis.</p>
          * <p>This parameter is required.</p>
          */
         public Builder attackPathAssetList(java.util.List<AttackPathAssetList> attackPathAssetList) {
@@ -85,7 +85,7 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
         }
 
         /**
-         * <p>ID of the sensitive asset setting for the attack path.</p>
+         * <p>The ID of the attack path sensitive asset configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,9 +201,9 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
             } 
 
             /**
-             * <p>Subtype of the cloud product asset.</p>
+             * <p>The subtype of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud product asset.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud service asset.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -216,9 +216,9 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>Type of the cloud product asset.</p>
+             * <p>The type of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud product asset.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud service asset.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -231,9 +231,9 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>Cloud product asset instance ID.</p>
+             * <p>The instance ID of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the cloud product asset instance ID.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the instance ID of the cloud service asset.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -246,9 +246,9 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>Region ID of the cloud product asset instance.</p>
+             * <p>The region ID of the cloud service asset instance.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud product asset instance.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud service asset instance.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -261,9 +261,9 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>Vendor of the cloud product asset.</p>
+             * <p>The vendor of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud product asset.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud service asset.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 

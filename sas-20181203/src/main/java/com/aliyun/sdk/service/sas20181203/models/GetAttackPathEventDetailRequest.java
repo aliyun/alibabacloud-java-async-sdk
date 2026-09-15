@@ -87,9 +87,9 @@ public class GetAttackPathEventDetailRequest extends Request {
         } 
 
         /**
-         * <p>Event ID.</p>
+         * <p>The event ID.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListAttackPathEvent~~">ListAttackPathEvent</a> to query the event ID.</p>
+         * <p>You can call <a href="~~ListAttackPathEvent~~">ListAttackPathEvent</a> to query event IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,10 +102,10 @@ public class GetAttackPathEventDetailRequest extends Request {
         }
 
         /**
-         * <p>Data source. The default value is <strong>default</strong>. Values:</p>
+         * <p>The data source. Default value: <strong>default</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>caasm</strong>: Attack surface</li>
-         * <li><strong>default</strong>: Attack path</li>
+         * <li><strong>caasm</strong>: attack surface</li>
+         * <li><strong>default</strong>: attack path</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class GetAttackPathEventDetailRequest extends Request {
         }
 
         /**
-         * <p>The language type for request and response, default is <strong>zh</strong>. Values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>

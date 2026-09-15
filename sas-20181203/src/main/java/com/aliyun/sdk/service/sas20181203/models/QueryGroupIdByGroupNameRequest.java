@@ -74,7 +74,7 @@ public class QueryGroupIdByGroupNameRequest extends Request {
         } 
 
         /**
-         * <p>The name of the asset group.</p>
+         * <p>The name of the group to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class QueryGroupIdByGroupNameRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>10.12.XX.XX</p>

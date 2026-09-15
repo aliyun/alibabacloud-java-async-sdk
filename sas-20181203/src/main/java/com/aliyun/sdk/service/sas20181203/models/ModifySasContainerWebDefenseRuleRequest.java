@@ -88,7 +88,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * <p>The paths that are protected.</p>
+         * <p>The list of defense paths for the rule.</p>
          */
         public Builder pathConfDTOList(java.util.List<PathConfDTOList> pathConfDTOList) {
             this.putQueryParameter("PathConfDTOList", pathConfDTOList);
@@ -97,7 +97,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>wwwwwww</p>
@@ -301,7 +301,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             } 
 
             /**
-             * <p>The backup paths.</p>
+             * <p>The backup path.</p>
              * 
              * <strong>example:</strong>
              * <p>/tmp/test</p>
@@ -312,10 +312,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The prevention mode. Valid values:</p>
+             * <p>The action to perform. Valid values:</p>
              * <ul>
-             * <li><strong>block</strong></li>
-             * <li><strong>audit</strong></li>
+             * <li><strong>block</strong>: Block.</li>
+             * <li><strong>audit</strong>: Alert.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -328,7 +328,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The path that is protected.</p>
+             * <p>The defense path.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The files that are excluded.</p>
+             * <p>The excluded file.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/test</p>
@@ -351,7 +351,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The paths to the files that are excluded.</p>
+             * <p>The excluded file path.</p>
              * 
              * <strong>example:</strong>
              * <p>/test/home/qq</p>
@@ -362,7 +362,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The types of the files that are excluded.</p>
+             * <p>The excluded file type.</p>
              * 
              * <strong>example:</strong>
              * <p>php</p>
@@ -373,10 +373,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The protection mode. Valid values:</p>
+             * <p>The Defense mode. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: basic mode (whitelist)</li>
-             * <li><strong>1</strong>: complex mode (blacklist)</li>
+             * <li><strong>0</strong>: Basic pattern (whitelist). </li>
+             * <li><strong>1</strong>: Complex pattern (blacklist).</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -389,7 +389,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The files that are included.</p>
+             * <p>The included file.</p>
              * 
              * <strong>example:</strong>
              * <p>/home/admin/test</p>
@@ -400,7 +400,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of the files that are included.</p>
+             * <p>The included file type.</p>
              * 
              * <strong>example:</strong>
              * <p>jsp</p>
@@ -422,7 +422,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * <p>The processes that are added to the whitelist.</p>
+             * <p>The list of whitelisted processes.</p>
              */
             public Builder processPathList(java.util.List<String> processPathList) {
                 this.processPathList = processPathList;

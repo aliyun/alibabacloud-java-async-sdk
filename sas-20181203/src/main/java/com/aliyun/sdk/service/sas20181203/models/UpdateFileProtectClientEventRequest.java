@@ -299,7 +299,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         } 
 
         /**
-         * AlertLevels.
+         * <p>The list of alert notification levels.</p>
          */
         public Builder alertLevels(java.util.List<Integer> alertLevels) {
             this.putQueryParameter("AlertLevels", alertLevels);
@@ -308,7 +308,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The timestamp of the end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650470399999</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -317,7 +320,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * ExcludeIdList.
+         * <p>The list of excluded event IDs.</p>
          */
         public Builder excludeIdList(java.util.List<Long> excludeIdList) {
             this.putQueryParameter("ExcludeIdList", excludeIdList);
@@ -326,7 +329,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/pam****</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -335,7 +341,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * IdList.
+         * <p>The list of event IDs.</p>
          */
         public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);
@@ -344,7 +350,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the asset instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1fu4aqltf1huhc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -353,7 +362,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the asset instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -362,7 +374,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.27.XX.XX</p>
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -371,7 +386,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * IntranetIp.
+         * <p>The internal IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.26.XX.XX</p>
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -380,6 +398,12 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
+         * <p>The new status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Unhandled.</li>
+         * <li><strong>1</strong>: Handled.</li>
+         * <li><strong>2</strong>: Whitelisted.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -392,7 +416,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * Operation.
+         * <p>The type of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READ</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -401,7 +428,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * ProcPath.
+         * <p>The process path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/1111/****</p>
          */
         public Builder procPath(String procPath) {
             this.putQueryParameter("ProcPath", procPath);
@@ -410,7 +440,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
          */
         public Builder remark(java.util.List<String> remark) {
             this.putQueryParameter("Remark", remark);
@@ -419,7 +449,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tetsRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -428,6 +461,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to select all.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -440,7 +474,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649260800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -449,7 +486,15 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Unhandled.</li>
+         * <li><strong>1</strong>: Handled.</li>
+         * <li><strong>2</strong>: Whitelisted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -458,7 +503,10 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the protected server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae1527a9-2308-46ab-b10a-48ae7ff7****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

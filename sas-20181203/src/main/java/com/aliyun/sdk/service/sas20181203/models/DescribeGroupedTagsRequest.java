@@ -59,10 +59,10 @@ public class DescribeGroupedTagsRequest extends Request {
         } 
 
         /**
-         * <p>The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:</p>
+         * <p>The type of asset to query. If you do not specify an asset type, tag information for all asset types is queried. Valid values:</p>
          * <ul>
          * <li><strong>ecs</strong>: server</li>
-         * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+         * <li><strong>cloud_product</strong>: cloud product.</li>
          * </ul>
          * 
          * <strong>example:</strong>

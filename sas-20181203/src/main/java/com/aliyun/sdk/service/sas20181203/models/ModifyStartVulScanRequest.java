@@ -102,7 +102,7 @@ public class ModifyStartVulScanRequest extends Request {
         } 
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -111,7 +111,10 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -120,19 +123,19 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * <p>The types of vulnerabilities that can be detected. Valid values:</p>
+         * <p>Settings for the vulnerability types to detect by using the one-click scan feature. Valid values:</p>
          * <ul>
-         * <li><strong>cve</strong>: Linux software vulnerabilities</li>
-         * <li><strong>sys</strong>: Windows system vulnerabilities</li>
-         * <li><strong>cms</strong>: Web-CMS vulnerabilities</li>
-         * <li><strong>app</strong>: application vulnerabilities</li>
-         * <li><strong>emg</strong>: urgent vulnerabilities</li>
-         * <li><strong>image</strong>: container image vulnerabilities</li>
-         * <li><strong>sca</strong>: vulnerabilities that are detected based on software component analysis</li>
-         * </ul>
-         * <blockquote>
-         * <p>If you leave this parameter empty, all types of vulnerabilities can be detected.</p>
+         * <li><strong>cve</strong>: Linux software vulnerability.</li>
+         * <li><strong>sys</strong>: Windows system vulnerability.</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
+         * <li><strong>app</strong>: Application vulnerability detected by the web scanner.</li>
+         * <li><strong>emg</strong>: Emergency vulnerability.</li>
+         * <li><strong>image</strong>: Container image vulnerability.</li>
+         * <li><strong>sca</strong>: Application vulnerability detected by software constituency parsing.<blockquote>
+         * <p>If this parameter is left empty, all vulnerability types are detected.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>&quot;cve,sys,cms,app,emg&quot;</p>
@@ -144,10 +147,13 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of servers.</p>
+         * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;i-sdada-xxxxx&quot;,&quot;i-ifaedada-sfsasdxxx&quot;}</p>
+         * <p>1587bedb-fdb4-48c4-9330-****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -308,7 +308,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;PolicyMode&quot;:&quot;requireAttestor&quot;,&quot;RequiredAttestors&quot;:[&quot;test-xcs-04-11-hhht&quot;]}</p>
+             * <p>{\&quot;PolicyMode\&quot;:\&quot;requireAttestor\&quot;,\&quot;RequiredAttestors\&quot;:[\&quot;test-xcs-04-11-hhht\&quot;]}</p>
              */
             public Builder policy(java.util.Map<String, ?> policy) {
                 this.policy = policy;

@@ -59,9 +59,9 @@ public class DescribeImageRepoCriteriaRequest extends Request {
         } 
 
         /**
-         * <p>The value of the filter condition.</p>
+         * <p>The search value for image repositories.</p>
          * <blockquote>
-         * <p>You can perform fuzzy search based on the image ID, image tag, image instance ID, image repository name, image repository namespace, image repository ID, image repository region, image digest, and image repository type.</p>
+         * <p>This parameter supports fuzzy match for image IDs, tags, image instance IDs, repository names, repository namespaces, repository IDs, repository regions, digests, and repository types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

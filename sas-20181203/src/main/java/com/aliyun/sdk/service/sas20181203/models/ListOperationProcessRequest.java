@@ -157,7 +157,7 @@ public class ListOperationProcessRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page to display in a paged query. This parameter is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>The end time of the query based on the task completion time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1635575219000</p>
@@ -193,7 +193,7 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>The start time of the query based on the task creation time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1680919232000</p>
@@ -205,7 +205,7 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * <p>The task status codes.</p>
+         * <p>The list of task status codes.</p>
          */
         public Builder statusCodes(java.util.List<Integer> statusCodes) {
             this.putQueryParameter("StatusCodes", statusCodes);
@@ -214,7 +214,7 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * <p>The task IDs.</p>
+         * <p>The list of task IDs.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -223,7 +223,7 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * <p>List of task sources.</p>
+         * <p>The list of task sources.</p>
          */
         public Builder taskSources(java.util.List<String> taskSources) {
             this.putQueryParameter("TaskSources", taskSources);
@@ -232,13 +232,13 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * <p>The task types. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
          * <li>CHECK_ALL: full check.</li>
-         * <li>CHECK_POLICY: policy-based check for which check items are configured.</li>
+         * <li>CHECK_POLICY: check performed based on check items in the configured policy.</li>
          * <li>CHECK_SCHEDULE: scheduled check.</li>
-         * <li>CHECK_ITEM: specific check item-based check.</li>
-         * <li>CHECK_INSTANCE: specific check item-based check on specific instances.</li>
+         * <li>CHECK_ITEM: check performed based on specified check items.</li>
+         * <li>CHECK_INSTANCE: check performed based on specified check items and instances.</li>
          * </ul>
          */
         public Builder taskTypes(java.util.List<String> taskTypes) {

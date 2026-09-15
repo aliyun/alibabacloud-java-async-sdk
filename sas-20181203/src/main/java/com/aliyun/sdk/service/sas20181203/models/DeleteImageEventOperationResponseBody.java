@@ -125,7 +125,7 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -147,10 +147,10 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The primary key of the alert handling rule.</p>
+             * <p>The primary key of the alert disposal rule.</p>
              * 
              * <strong>example:</strong>
              * <p>443496</p>

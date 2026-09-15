@@ -80,7 +80,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The tasks.</p>
+         * <p>The task list.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -96,7 +96,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1A975D03-5F49-5354-B2CB-3918D5DA****</p>
@@ -121,6 +121,9 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("Extension")
+        private java.util.Map<String, String> extension;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -175,6 +178,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
 
         private List(Builder builder) {
             this.endTime = builder.endTime;
+            this.extension = builder.extension;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
@@ -207,6 +211,13 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
          */
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return extension
+         */
+        public java.util.Map<String, String> getExtension() {
+            return this.extension;
         }
 
         /**
@@ -330,6 +341,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long endTime; 
+            private java.util.Map<String, String> extension; 
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
@@ -353,6 +365,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
 
             private Builder(List model) {
                 this.endTime = model.endTime;
+                this.extension = model.extension;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
                 this.internetIp = model.internetIp;
@@ -373,13 +386,21 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end timestamp of the task. Unit: milliseconds.</p>
+             * <p>The end timestamp of the task, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1678895999999</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * <p>The extended information of the task. For image security fix subtasks, this field returns the selected vulnerability identifiers and the name of the fixed image. The keys include vulnerabilityIds and outputImageName.</p>
+             */
+            public Builder extension(java.util.Map<String, String> extension) {
+                this.extension = extension;
                 return this;
             }
 
@@ -395,7 +416,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the asset.</p>
+             * <p>The name of the asset instance.</p>
              * 
              * <strong>example:</strong>
              * <p>sql-test-0****</p>
@@ -428,7 +449,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of data detected. Unit: MB.</p>
+             * <p>The amount of data scanned, in MB.</p>
              * 
              * <strong>example:</strong>
              * <p>154.11</p>
@@ -439,7 +460,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the task.</p>
+             * <p>The task progress.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -450,10 +471,10 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution progress of the check items.</p>
+             * <p>The execution progress of the check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;{&quot;scaVul&quot;:100,&quot;binary&quot;:100,&quot;baseline&quot;:100,&quot;vul&quot;:100,&quot;webshell&quot;:100,&quot;script&quot;:100,&quot;sensitiveInfo&quot;:100}&quot;</p>
+             * <p>&quot;{\&quot;scaVul\&quot;:100,\&quot;binary\&quot;:100,\&quot;baseline\&quot;:100,\&quot;vul\&quot;:100,\&quot;webshell\&quot;:100,\&quot;script\&quot;:100,\&quot;sensitiveInfo\&quot;:100}&quot;</p>
              */
             public Builder progressByProject(String progressByProject) {
                 this.progressByProject = progressByProject;
@@ -472,13 +493,13 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the report. Valid values:</p>
+             * <p>The report status. Valid values:</p>
              * <ul>
-             * <li><strong>PREPARED</strong>: preparing</li>
-             * <li><strong>RUNNING</strong>: running</li>
-             * <li><strong>SUCCESS</strong>: succeeded</li>
-             * <li><strong>TIMEOUT</strong>: timed out</li>
-             * <li><strong>FAILED</strong>: failed</li>
+             * <li><strong>PREPARED</strong>: Preparing.</li>
+             * <li><strong>RUNNING</strong>: Running.</li>
+             * <li><strong>SUCCESS</strong>: Succeeded.</li>
+             * <li><strong>TIMEOUT</strong>: Timed out.</li>
+             * <li><strong>FAILED</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -490,7 +511,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of the detection.</p>
+             * <p>The check result.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -501,7 +522,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start timestamp of the task. Unit: milliseconds.</p>
+             * <p>The start timestamp of the task, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1672741657897</p>
@@ -512,12 +533,12 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the detection task.</p>
+             * <p>The detection status. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: The detection task is in progress.</li>
-             * <li><strong>2</strong>: The detection task is complete.</li>
-             * <li><strong>3</strong>: The detection task fails.</li>
-             * <li><strong>4</strong>: The detection task times out.</li>
+             * <li><strong>1</strong>: Detecting.</li>
+             * <li><strong>2</strong>: Completed.</li>
+             * <li><strong>3</strong>: Failed.</li>
+             * <li><strong>4</strong>: Timed out.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -529,7 +550,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the asset that is detected.</p>
+             * <p>The name of the scan target.</p>
              * 
              * <strong>example:</strong>
              * <p>hkdevt****</p>
@@ -540,7 +561,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the asset that is detected. Valid values:</p>
+             * <p>The object type. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: snapshot</li>
              * <li><strong>2</strong>: image</li>
@@ -555,7 +576,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1538****</p>
@@ -577,7 +598,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the asset.</p>
+             * <p>The UUID of the asset instance.</p>
              * 
              * <strong>example:</strong>
              * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
@@ -660,7 +681,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page in a paged query. This parameter implements paging.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -671,7 +692,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The maximum number of entries per page in a paged query. This parameter implements paging.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -682,7 +703,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>55</p>

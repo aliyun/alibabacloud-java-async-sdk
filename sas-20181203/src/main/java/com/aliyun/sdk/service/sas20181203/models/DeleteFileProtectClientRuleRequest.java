@@ -144,7 +144,20 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         } 
 
         /**
-         * AlertLevel.
+         * <p>The alert notification level. Valid values:</p>
+         * <ul>
+         * <li><p>0: No alerts.</p>
+         * </li>
+         * <li><p>1: Reminder.</p>
+         * </li>
+         * <li><p>2: Suspicious.</p>
+         * </li>
+         * <li><p>3: High-risk.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -153,7 +166,7 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * ExcludeIdList.
+         * <p>The list of excluded policy IDs.</p>
          */
         public Builder excludeIdList(java.util.List<Long> excludeIdList) {
             this.putQueryParameter("ExcludeIdList", excludeIdList);
@@ -162,7 +175,7 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * IdList.
+         * <p>The list of policy IDs.</p>
          */
         public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);
@@ -171,7 +184,14 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows.</li>
+         * <li><strong>linux</strong>: Linux.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -180,7 +200,15 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * RuleAction.
+         * <p>The action of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>monitor</strong>: Alert.</li>
+         * <li><strong>block</strong>: Block.</li>
+         * <li><strong>pass</strong>: Allow.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -189,7 +217,10 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-001</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -198,6 +229,7 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to select all.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

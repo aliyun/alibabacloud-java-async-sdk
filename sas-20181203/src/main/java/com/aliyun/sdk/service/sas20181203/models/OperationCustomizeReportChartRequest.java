@@ -75,9 +75,9 @@ public class OperationCustomizeReportChartRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the chart that is included in the report. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of report chart configurations. Separate multiple IDs with commas (,).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID.</p>
+         * <p>Call <a href="~~DescribeChartList~~">DescribeChartList</a> to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -91,9 +91,9 @@ public class OperationCustomizeReportChartRequest extends Request {
         }
 
         /**
-         * <p>The ID of the report.</p>
+         * <p>The report ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * <p>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

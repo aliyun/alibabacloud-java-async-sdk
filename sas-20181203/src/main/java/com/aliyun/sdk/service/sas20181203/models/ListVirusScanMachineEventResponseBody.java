@@ -80,7 +80,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the alert event.</p>
+         * <p>The details of the alert events.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>2DAEF40F-8E1A-550D-8793-99C61C401DD0</p>
@@ -191,9 +191,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display type of the value for ValueDisplay. Valid value:</p>
+             * <p>The display type of valueDisplay.
+             * Valid values:</p>
              * <ul>
-             * <li><strong>download_url</strong>, which indicates a download URL.</li>
+             * <li><strong>download_url</strong>: download link.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -216,11 +217,11 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format in which the details of the exception are displayed.</p>
+             * <p>The display format of the exception event details.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><strong>text</strong></li>
-             * <li><strong>html</strong></li>
+             * <li><strong>text</strong>: plain text</li>
+             * <li><strong>html</strong>: rich text</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -232,7 +233,8 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute information about the exception. The information includes the logon time or location of an alert triggered by an unusual logon, and the trojan file path or trojan type of an alert.</p>
+             * <p>The additional attribute information of the exception event.
+             * For example, the logon time or logon location for an unusual logon alert, or the trojan file path or trojan type for a trojan alert.</p>
              * 
              * <strong>example:</strong>
              * <p>getopt</p>
@@ -380,7 +382,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the exception.</p>
+             * <p>The details of the exception event.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -399,10 +401,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert event. The value indicates a subtype.</p>
+             * <p>The name (subtype) of the alert event.</p>
              * 
              * <strong>example:</strong>
-             * <p>Unusual Logon</p>
+             * <p>Malicious Software-Trojan</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -410,7 +412,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>i-wz92q7m5hsbgfhdss***</p>
@@ -443,7 +445,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the alert event was last generated. Unit: milliseconds.</p>
+             * <p>The timestamp of the last occurrence, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1682046733628</p>
@@ -456,9 +458,9 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             /**
              * <p>The risk level of the alert event. Valid values:</p>
              * <ul>
-             * <li><strong>serious</strong></li>
-             * <li><strong>suspicious</strong></li>
-             * <li><strong>remind</strong></li>
+             * <li><strong>serious</strong>: Critical.</li>
+             * <li><strong>suspicious</strong>: Suspicious.</li>
+             * <li><strong>remind</strong>: Reminder.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -542,7 +544,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -553,7 +555,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The maximum number of entries per page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -564,7 +566,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of alert events returned.</p>
              * 
              * <strong>example:</strong>
              * <p>149</p>

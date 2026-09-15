@@ -59,7 +59,14 @@ public class RefreshOssBucketScanInfoRequest extends Request {
         } 
 
         /**
-         * Source.
+         * <p>The service source. Valid values:</p>
+         * <ul>
+         * <li><strong>OSS</strong>: OSS</li>
+         * <li><strong>NAS</strong>: NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

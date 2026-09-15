@@ -271,7 +271,11 @@ public class ListObjectScanEventRequest extends Request {
         } 
 
         /**
-         * AiDetect.
+         * <p>Specifies whether the alert was detected by AI. Valid values:</p>
+         * <ul>
+         * <li>true: The alert was detected by AI.</li>
+         * <li>false: The alert was not detected by AI.</li>
+         * </ul>
          */
         public Builder aiDetect(Boolean aiDetect) {
             this.putQueryParameter("AiDetect", aiDetect);
@@ -280,10 +284,12 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>Batch operation type. Valid values:</p>
+         * <p>The batch operation type. Valid values:</p>
          * <ul>
-         * <li><strong>sha256</strong>: Same file content</li>
-         * <li><strong>eventName</strong>: Same alert type</li>
+         * <li><p><strong>sha256</strong>: same file content.</p>
+         * </li>
+         * <li><p><strong>eventName</strong>: same alerting type.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,7 +302,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>ltrbuck****</p>
@@ -308,7 +314,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,7 +327,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>Event ID.</p>
+         * <p>The event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8925****</p>
@@ -333,7 +339,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert.</p>
+         * <p>The alert name.</p>
          * 
          * <strong>example:</strong>
          * <p>WebShell</p>
@@ -345,10 +351,10 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,7 +367,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The MD5 hash value of the file.</p>
+         * <p>The MD5 hash of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>0552c44e243abdea1729d4507bce****</p>
@@ -373,7 +379,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The key of the file that is stored in an OSS bucket.</p>
+         * <p>The storage key of the file in the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
@@ -385,7 +391,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries to return on each page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -398,7 +404,12 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert that is generated for the package to which the subfile belongs.</p>
+         * <p>If the file is a sub-file within a compressed archive, <strong>ParentEventId</strong> specifies the event ID of the alert for the compressed archive itself.</p>
+         * <p>To retrieve and query alert events for sub-files within a compressed archive:</p>
+         * <ol>
+         * <li>Call this operation and check the <strong>HasSubEvent</strong> response parameter. If the value is <strong>true</strong>, the corresponding <strong>EventId</strong> is the event ID of the alert for the compressed archive itself.</li>
+         * <li>Call this operation again and pass the <strong>EventId</strong> value to <strong>ParentEventId</strong> to view the alert events for the sub-files within the compressed archive.</li>
+         * </ol>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -410,11 +421,14 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The risk level of the alert. Valid values:</p>
+         * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><p><strong>high</strong>: High risk.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: Medium risk.</p>
+         * </li>
+         * <li><p><strong>low</strong>: Low risk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -427,10 +441,10 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to detect the malicious file. Valid values:</p>
+         * <p>The data source. Valid values:</p>
          * <ul>
-         * <li><strong>API</strong>: uses API operations.</li>
-         * <li><strong>OSS</strong>: uses Object Storage Service (OSS) file check.</li>
+         * <li><strong>API</strong>: API-based detection.</li>
+         * <li><strong>OSS</strong>: OSS-based detection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -443,13 +457,13 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>Event status. The values are as follows:</p>
+         * <p>The event status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Unprocessed </li>
-         * <li><strong>1</strong>: I have processed manually </li>
-         * <li><strong>2</strong>: Whitelisted </li>
-         * <li><strong>3</strong>: Ignored </li>
-         * <li><strong>4</strong>: Access denied</li>
+         * <li>0: Unhandled. </li>
+         * <li>1: Manually handled.</li>
+         * <li>2: Whitelisted.</li>
+         * <li>3: Ignored.</li>
+         * <li>4: Access blocked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -462,7 +476,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range during which the exception is detected.</p>
+         * <p>The end time of the time range during which the anomalous event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>1683862286000</p>
@@ -474,7 +488,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range during which the exception is detected.</p>
+         * <p>The start time of the time range during which the anomalous event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>1683603086000</p>

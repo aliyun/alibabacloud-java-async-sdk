@@ -59,7 +59,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
         } 
 
         /**
-         * <p>Member instances.</p>
+         * <p>The member instances.</p>
          */
         public Builder memberInstances(java.util.List<MemberInstances> memberInstances) {
             this.putQueryParameter("MemberInstances", memberInstances);
@@ -140,7 +140,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             } 
 
             /**
-             * <p>Number of cores authorized for the member.</p>
+             * <p>The number of authorized cores assigned to the member.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -151,7 +151,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Number of authorizations allocated to the member.</p>
+             * <p>The number of authorized instances assigned to the member.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -162,15 +162,15 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Version of the Cloud Security Center for the member account. Values:  </p>
+             * <p>The Security Center edition of the member accounts. Valid values:  </p>
              * <ul>
              * <li><strong>1</strong>: Free Edition </li>
              * <li><strong>3</strong>: Enterprise Edition</li>
-             * <li><strong>5</strong>: Advanced Edition</li>
-             * <li><strong>6</strong>: Antivirus Edition    </li>
-             * <li><strong>7</strong>: Flagship Edition   </li>
-             * <li><strong>8</strong>: Multiple Versions   </li>
-             * <li><strong>10</strong>: Only Purchase Value-Added Services</li>
+             * <li><strong>5</strong>: Premium Edition</li>
+             * <li><strong>6</strong>: Anti-virus Edition    </li>
+             * <li><strong>7</strong>: Ultimate Edition   </li>
+             * <li><strong>8</strong>: multi-edition   </li>
+             * <li><strong>10</strong>: value-added services only</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -460,7 +460,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Anti-ransomware capacity allocated to the member, in GB.</p>
+             * <p>The anti-ransomware capacity assigned to the member. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -471,10 +471,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Charge type, values:</p>
+             * <p>The billing type. Valid values:</p>
              * <ul>
-             * <li><strong>PREPAID</strong>: Prepaid.</li>
-             * <li><strong>POSTPAID</strong> (default): Postpaid.</li>
+             * <li><strong>PREPAID</strong>: upfront.</li>
+             * <li><strong>POSTPAID</strong> (default): pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -486,7 +486,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Cloud platform configuration check scan count allocated to the member. Unit: times per month.</p>
+             * <p>The number of cloud platform configuration check scans assigned to the member. Unit: scans per month.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -505,7 +505,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Honeypot authorization count allocated to the member.</p>
+             * <p>The number of honeypot quotas assigned to the member.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -516,7 +516,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Image scan authorization count allocated to the member.</p>
+             * <p>The number of image scan quotas assigned to the member.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -527,7 +527,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>The Cloud Security Center instance ID purchased by the member account.</p>
+             * <p>The Security Center instance ID purchased by the member accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>sas-p0anpb26my69</p>
@@ -538,11 +538,11 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Operation type. Values:  </p>
+             * <p>The operation type. Valid values:  </p>
              * <ul>
-             * <li><strong>ADD</strong>: Add </li>
-             * <li><strong>CHANGE</strong>: Change</li>
-             * <li><strong>DEL</strong>: Delete</li>
+             * <li><strong>ADD</strong>: increase </li>
+             * <li><strong>CHANGE</strong>: update</li>
+             * <li><strong>DEL</strong>: delete</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -554,7 +554,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Application protection count allocated to the member. Unit: per month.</p>
+             * <p>The number of application protection quotas assigned to the member. Unit: quotas per month.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -565,7 +565,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Malicious file detection SDK authorization count allocated to the member.</p>
+             * <p>The number of malicious file detection SDK quotas assigned to the member.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -576,7 +576,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Log storage capacity allocated to the member, in GB.</p>
+             * <p>The log storage capacity assigned to the member. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -587,10 +587,10 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Status of the member account instance. Values: </p>
+             * <p>The instance status of the member accounts. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Valid. </li>
-             * <li><strong>2</strong>: Invalid.</li>
+             * <li><strong>1</strong>: active.</li>
+             * <li><strong>2</strong>: expired.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -602,7 +602,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Threat analysis capacity allocated to the member. Unit: GB.</p>
+             * <p>The threat analysis capacity assigned to the member. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -613,7 +613,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Threat analysis and response log access traffic allocated to the member. Unit: GB/day.</p>
+             * <p>The log ingestion traffic for threat detection and response assigned to the member. Unit: GB/day.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -624,13 +624,13 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>The version of Cloud Security Center protection to be bound. Values:  </p>
+             * <p>The Security Center edition to bind. Valid values:  </p>
              * <ul>
              * <li><strong>1</strong>: Free Edition </li>
              * <li><strong>3</strong>: Enterprise Edition</li>
              * <li><strong>5</strong>: Advanced Edition</li>
-             * <li><strong>6</strong>: Antivirus Edition    </li>
-             * <li><strong>7</strong>: Flagship Edition</li>
+             * <li><strong>6</strong>: Anti-virus Edition    </li>
+             * <li><strong>7</strong>: Ultimate Edition</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -642,7 +642,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Member account authorization usage information.</p>
+             * <p>The authorization usage information of the member accounts.</p>
              */
             public Builder versionSummary(java.util.List<VersionSummary> versionSummary) {
                 this.versionSummary = versionSummary;
@@ -650,7 +650,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             }
 
             /**
-             * <p>Web tamper-proof authorization count allocated to the member.</p>
+             * <p>The number of web tamper-proofing authorization quotas assigned to the member.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

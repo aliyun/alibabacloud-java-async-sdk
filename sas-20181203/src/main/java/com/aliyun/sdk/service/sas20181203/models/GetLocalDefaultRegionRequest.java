@@ -59,13 +59,14 @@ public class GetLocalDefaultRegionRequest extends Request {
         } 
 
         /**
-         * <p>The cloud service provider. Valid values:</p>
+         * <p>The cloud asset vendor. Valid values:</p>
          * <ul>
          * <li><strong>Tencent</strong>: Tencent Cloud.</li>
          * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
-         * <li><strong>Azure</strong>: Microsoft Azure.</li>
-         * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
+         * <li><strong>Azure</strong>: Azure.</li>
+         * <li><strong>AWS</strong>: AWS.</li>
          * </ul>
+         * <p>This parameter is required in practice. If this parameter is not specified, the API returns an HTTP 400 error (code: -101).</p>
          * 
          * <strong>example:</strong>
          * <p>Tencent</p>

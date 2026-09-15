@@ -391,8 +391,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.</p>
+     * <p>Pushes a file to the cloud for detection.</p>
+     * <h3>File upload methods</h3>
+     * <p>Two file upload methods are supported: pre-upload and download URL.
+     * If you use the pre-upload method, confirm that the file is uploaded before you invoke this operation. For more information about how to upload a file, see the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.
+     * If you use the download URL method, pass in a download URL that supports public network access by using the DownloadUrl parameter.</p>
+     * <h3>Unique file identifier</h3>
+     * <p>All file detection operations include the HashKey parameter, which specifies the unique identifier of the file to be detected and is used to query detection results.
+     * Calculate the HashKey before you call this operation. Only the MD5 or SHA-256 hash of the complete file content is supported.
+     * To calculate the MD5 or SHA-256 hash of the file content, perform the following steps:</p>
+     * <ol>
+     * <li>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available libraries include Java MessageDigest and Python hashlib.</li>
+     * <li>Encode the generated hash value as a hexadecimal string. Available libraries include Java Codec and the Python hex function. Make sure the final string is a combination of digits and lowercase letters. The MD5 hash is 32 characters long, and the SHA-256 hash is 64 characters long.
+     * The push and query operations for a single detection must use the same HashKey. Otherwise, the detection cannot be correctly pushed and the results cannot be queried.</li>
+     * </ol>
      * 
      * @param request the request parameters of CreateFileDetect  CreateFileDetectRequest
      * @return CreateFileDetectResponse
@@ -429,6 +441,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFileUploadLimitResponse> createFileUploadLimit(CreateFileUploadLimitRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation to create a honeypot instance, complete the following steps:</p>
+     * <ol>
+     * <li>If no honeypot management node exists in your account, call the CreateHoneypotNode operation to create a honeypot management node.</li>
+     * <li>Call the ListHoneypotNode operation to obtain the NodeId of the honeypot management node.</li>
+     * <li>Use the obtained NodeId to call this operation (CreateHoneypot) to create a honeypot instance.</li>
+     * </ol>
+     * 
      * @param request the request parameters of CreateHoneypot  CreateHoneypotRequest
      * @return CreateHoneypotResponse
      */
@@ -453,6 +473,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHoneypotProbeResponse> createHoneypotProbe(CreateHoneypotProbeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation to create a probe service, prepare the honeypot infrastructure: purchase a probe authorization quota, and then call the CreateHoneypotNode operation to create a honeypot management node, the CreateHoneypotProbe operation to create a honeypot probe, and the CreateHoneypot operation to create a honeypot instance. After creating these resources, you can call this operation.</p>
+     * 
      * @param request the request parameters of CreateHoneypotProbeBind  CreateHoneypotProbeBindRequest
      * @return CreateHoneypotProbeBindResponse
      */
@@ -543,12 +566,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateOrUpdateDingTalkResponse> createOrUpdateDingTalk(CreateOrUpdateDingTalkRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation to create an OSS bucket malicious file scan task, complete the following prerequisites in order:</p>
+     * <ol>
+     * <li>The OSS malicious file detection feature is activated for the Security Center instance.</li>
+     * <li>The service-linked role AliyunServiceRoleForSas is created.</li>
+     * <li>The OSS bucket to be scanned is created.</li>
+     * <li>The RefreshOssBucketScanInfo operation is called to synchronize the OSS bucket information to Security Center.
+     * After completing the preceding steps, you can call this operation to create a scan task.</li>
+     * </ol>
+     * 
      * @param request the request parameters of CreateOssBucketScanTask  CreateOssBucketScanTaskRequest
      * @return CreateOssBucketScanTaskResponse
      */
     CompletableFuture<CreateOssBucketScanTaskResponse> createOssBucketScanTask(CreateOssBucketScanTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</p>
+     * 
      * @param request the request parameters of CreateOssScanConfig  CreateOssScanConfigRequest
      * @return CreateOssScanConfigResponse
      */
@@ -556,7 +592,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</p>
      * 
      * @param request the request parameters of CreateRdDefaultSyncList  CreateRdDefaultSyncListRequest
      * @return CreateRdDefaultSyncListResponse
@@ -585,6 +621,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The <strong>ActionTrail data delivery</strong> feature requires Cloud Security Posture Management (CSPM) and security alerting to read ActionTrail data. To use this feature, enable the <strong>ActionTrail data delivery</strong> toggle in the Security Center console and authorize the service-linked role <strong>AliyunServiceRoleForSas</strong> for Security Center. After authorization, ActionTrail data is delivered to the LogStore of Security Center.
+     * For more information about the service-linked role <strong>AliyunServiceRoleForSas</strong> for Security Center, see <a href="https://help.aliyun.com/document_detail/460226.html">Service-linked role for Security Center</a>.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before calling this operation, enable the <strong>ActionTrail data delivery</strong> toggle. For more information, see <a href="https://help.aliyun.com/document_detail/197302.html">Access control</a>.</p>
+     * 
      * @param request the request parameters of CreateServiceTrail  CreateServiceTrailRequest
      * @return CreateServiceTrailResponse
      */
@@ -598,7 +640,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
      * 
      * @param request the request parameters of CreateSoarStrategyTask  CreateSoarStrategyTaskRequest
      * @return CreateSoarStrategyTaskResponse
@@ -787,7 +829,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>Default</strong> server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the <strong>Default</strong> group.</p>
+     * <p>You cannot delete the default server group provided by Security Center, which is <strong>Ungrouped</strong>. After you delete a group, the assets in the group are moved to <strong>Ungrouped</strong> by default.</p>
      * 
      * @param request the request parameters of DeleteGroup  DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -898,7 +940,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
+     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</p>
      * 
      * @param request the request parameters of DeleteMonitorAccount  DeleteMonitorAccountRequest
      * @return DeleteMonitorAccountResponse
@@ -950,7 +992,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API call. Other editions are not supported.</p>
      * 
      * @param request the request parameters of DeleteSoarStrategyTask  DeleteSoarStrategyTaskRequest
      * @return DeleteSoarStrategyTaskResponse
@@ -971,7 +1013,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Security Center provides asset importance tags and custom tags. You can call this operation to remove only the custom tag that is added to an asset.</p>
+     * <p>Asset labels are classified into asset importance labels and custom labels. When you call this operation, only custom labels bound to assets can be deleted. Asset importance labels cannot be deleted.</p>
      * 
      * @param request the request parameters of DeleteTagWithUuid  DeleteTagWithUuidRequest
      * @return DeleteTagWithUuidResponse
@@ -1052,7 +1094,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only when the agentless detection feature is purchased by using the pay-as-you-go billing method within your Alibaba Cloud account.</p>
+     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation.</p>
      * 
      * @param request the request parameters of DescribeAgentlessSensitiveFileByKey  DescribeAgentlessSensitiveFileByKeyRequest
      * @return DescribeAgentlessSensitiveFileByKeyResponse
@@ -1109,7 +1151,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAppVulScanCycleResponse> describeAppVulScanCycle(DescribeAppVulScanCycleRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @description This operation will be discontinued soon. You must call the [GetAssetDetailByUuid](~~GetAssetDetailByUuid~~) operation to query the details of the server.
+     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @description This operation is about to be deprecated. Call the [GetAssetDetailByUuid](~~GetAssetDetailByUuid~~) operation to obtain asset details.
      * 
      * @param request the request parameters of DescribeAssetDetailByUuid  DescribeAssetDetailByUuidRequest
      * @return DescribeAssetDetailByUuidResponse
@@ -1168,7 +1210,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.</p>
+     * <p>Queries servers that have the anti-ransomware client installed in a specified region.</p>
      * 
      * @param request the request parameters of DescribeBackupClients  DescribeBackupClientsRequest
      * @return DescribeBackupClientsResponse
@@ -1201,7 +1243,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you have created restoration tasks, you can call this operation to query the number of restoration tasks that are in the <strong>restored</strong> or <strong>being restored</strong> state.</p>
+     * <p>If you have created anti-ransomware restoration tasks, you can call this operation to query the number of anti-ransomware restoration tasks in the <strong>Restored</strong> and <strong>Restoring</strong> states.</p>
      * 
      * @param request the request parameters of DescribeBackupRestoreCount  DescribeBackupRestoreCountRequest
      * @return DescribeBackupRestoreCountResponse
@@ -1324,7 +1366,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can search for an asset by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</p>
      * 
      * @param request the request parameters of DescribeCloudCenterInstances  DescribeCloudCenterInstancesRequest
      * @return DescribeCloudCenterInstancesResponse
@@ -1471,6 +1513,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeContainerServiceK8sClusterKritisStatusResponse> describeContainerServiceK8sClusterKritisStatus(DescribeContainerServiceK8sClusterKritisStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation to query the namespaces of a Container Service for Kubernetes (ACK) cluster, make sure that the following prerequisites are met: An ACK cluster exists within the current account. How to obtain the ClusterId: View the cluster ID in the Container Service console, or call the DescribeClustersV1 operation of Container Service to obtain the ID of the ACK managed cluster.</p>
+     * 
      * @param request the request parameters of DescribeContainerServiceK8sClusterNamespaces  DescribeContainerServiceK8sClusterNamespacesRequest
      * @return DescribeContainerServiceK8sClusterNamespacesResponse
      */
@@ -1484,7 +1529,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only users who created a Container Registry Enterprise Edition instance can call this operation.</p>
+     * <p>Only users who have purchased Container Registry Enterprise instances can invoke this operation.</p>
      * 
      * @param request the request parameters of DescribeContainerStatistics  DescribeContainerStatisticsRequest
      * @return DescribeContainerStatisticsResponse
@@ -2017,9 +2062,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Security Center can scan for security risks and collect statistics only for <strong>Container Registry Enterprise Edition instances</strong>.</p>
+     * <p>Security Center supports scanning container images only in <strong>Enterprise instances</strong> of Container Registry for security risks and provides statistics.</p>
      * <blockquote>
-     * <p> Security Center cannot scan for security risks or collect statistics for <strong>default</strong> Container Registry instances.</p>
+     * <p>Security Center does not support scanning container images in <strong>default instances</strong> of Container Registry for security risks and does not provide statistics for <strong>default instances</strong>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeImageStatistics  DescribeImageStatisticsRequest
@@ -2029,7 +2074,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>To query the information about the recently detected image vulnerabilities, call the <a href="https://help.aliyun.com/document_detail/411723.html">PublicCreateImageScanTask</a> operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.</p>
+     * <p>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first, wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</p>
      * 
      * @param request the request parameters of DescribeImageVulList  DescribeImageVulListRequest
      * @return DescribeImageVulListResponse
@@ -2056,9 +2101,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the commands that are used to manually install the Security Center agent on the server. The return result contains the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <p>This operation queries the commands for manually installing the Security Center agent on servers. The query results include installation verification codes and server-related information. If you need to manually install the Security Center agent on a server, call this operation to obtain the manual installation commands.</p>
+     * <h3>Rate limit</h3>
+     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as needed.</p>
      * 
      * @param request the request parameters of DescribeInstallCodes  DescribeInstallCodesRequest
      * @return DescribeInstallCodesResponse
@@ -2277,7 +2322,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only users who purchase the Enterprise or Ultimate edition of Security Center can call this operation.</p>
+     * <p>Only Security Center Enterprise or Ultimate Edition users can call this operation.</p>
      * 
      * @param request the request parameters of DescribePropertyUsageTop  DescribePropertyUsageTopRequest
      * @return DescribePropertyUsageTopResponse
@@ -2351,7 +2396,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRiskCheckResultResponse> describeRiskCheckResult(DescribeRiskCheckResultRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeRiskCheckSummary is deprecated  * @description This operation is phased out. You can use the GetCheckSummary operation.
+     * @deprecated OpenAPI DescribeRiskCheckSummary is deprecated  * @description This operation is deprecated. Use the GetCheckSummary operation instead.
      * 
      * @param request the request parameters of DescribeRiskCheckSummary  DescribeRiskCheckSummaryRequest
      * @return DescribeRiskCheckSummaryResponse
@@ -2360,7 +2405,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRiskCheckSummaryResponse> describeRiskCheckSummary(DescribeRiskCheckSummaryRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeRiskItemType is deprecated  * @description This operation is phased out. You can use the ListCheckStandard operation instead.
+     * @deprecated OpenAPI DescribeRiskItemType is deprecated  * @description This operation is offline. Use the upgraded operation ListCheckStandard instead.
      * 
      * @param request the request parameters of DescribeRiskItemType  DescribeRiskItemTypeRequest
      * @return DescribeRiskItemTypeResponse
@@ -2426,7 +2471,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecureSuggestionResponse> describeSecureSuggestion(DescribeSecureSuggestionRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeSecurityCheckScheduleConfig is deprecated  * @description This operation is phased out. You can use the GetCheckConfig operation.
+     * @deprecated OpenAPI DescribeSecurityCheckScheduleConfig is deprecated  * @description This operation is deprecated. Use the GetCheckConfig operation instead.
      * 
      * @param request the request parameters of DescribeSecurityCheckScheduleConfig  DescribeSecurityCheckScheduleConfigRequest
      * @return DescribeSecurityCheckScheduleConfigResponse
@@ -2511,7 +2556,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API call. Other editions are not supported.</p>
      * 
      * @param request the request parameters of DescribeSoarStrategyTaskDetail  DescribeSoarStrategyTaskDetailRequest
      * @return DescribeSoarStrategyTaskDetailResponse
@@ -2520,7 +2565,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Flagship editions of Cloud Security Center support this API call, other versions do not support it.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
      * 
      * @param request the request parameters of DescribeSoarStrategyTaskParams  DescribeSoarStrategyTaskParamsRequest
      * @return DescribeSoarStrategyTaskParamsResponse
@@ -2529,7 +2574,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API is only supported by the Enterprise and Flagship editions of Cloud Security Center, other versions do not support it.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API call. Other editions are not supported.</p>
      * 
      * @param request the request parameters of DescribeSoarStrategyTaskResult  DescribeSoarStrategyTaskResultRequest
      * @return DescribeSoarStrategyTaskResultResponse
@@ -2547,7 +2592,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
      * 
      * @param request the request parameters of DescribeSoarSubscribedStrategy  DescribeSoarSubscribedStrategyRequest
      * @return DescribeSoarSubscribedStrategyResponse
@@ -2784,7 +2829,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.</p>
+     * <p>If you specify only the Action parameter without specifying any other request parameters, Security Center returns the list of all VPCs regardless of whether honeypot instances are created in the VPCs.</p>
      * 
      * @param request the request parameters of DescribeVpcHoneyPotList  DescribeVpcHoneyPotListRequest
      * @return DescribeVpcHoneyPotListResponse
@@ -2823,7 +2868,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.</p>
+     * <p>A download link is returned when the export task status is success.</p>
      * 
      * @param request the request parameters of DescribeVulExportInfo  DescribeVulExportInfoRequest
      * @return DescribeVulExportInfoResponse
@@ -2973,7 +3018,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * <p>The application whitelist is a China site China site public preview feature that is no longer open for new applications. Users who have already applied for or are using this feature can call this operation as expected.</p>
      * 
      * @param request the request parameters of DescribeWhiteListAuthorize  DescribeWhiteListAuthorizeRequest
      * @return DescribeWhiteListAuthorizeResponse
@@ -3009,7 +3054,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * <p>Application whitelist is a China-site public preview feature that is no longer open for new applications. Users who have already applied for or are using this feature can call this operation as usual.</p>
      * 
      * @param request the request parameters of DescribeWhiteListStrategyStatistics  DescribeWhiteListStrategyStatisticsRequest
      * @return DescribeWhiteListStrategyStatisticsResponse
@@ -3063,7 +3108,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
+     * <p>Call this operation by using the management account of the resource directory or a delegated administrator account of Security Center.</p>
      * 
      * @param request the request parameters of EnableServiceAccessResourceDirectory  EnableServiceAccessResourceDirectoryRequest
      * @return EnableServiceAccessResourceDirectoryResponse
@@ -3084,13 +3129,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation to export the following check result lists:</p>
-     * <ul>
-     * <li>The list of servers on the Host page.</li>
-     * <li>The lists of image system vulnerabilities, image application vulnerabilities, image baseline check results, and malicious image samples on the Image Security page.</li>
-     * <li>The list of attack analysis data on the Attack Awareness page.</li>
-     * <li>The list of check results for AccessKey pair leaks on the AK leak detection page.</li>
-     * </ul>
+     * <p>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the export progress and retrieve the download URL for the exported Excel file.</p>
      * 
      * @param request the request parameters of ExportRecord  ExportRecordRequest
      * @return ExportRecordResponse
@@ -3105,10 +3144,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ExportVul operation to export the following types of vulnerabilities: Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and urgent vulnerabilities.
-     * You can use this operation together with the DescribeVulExportInfo operation. After you call the ExportVul operation to create a vulnerability export task, you can call the DescribeVulExportInfo operation to query the progress of the task by specifying the ID of the task.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+     * This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
      * 
      * @param request the request parameters of ExportVul  ExportVulRequest
      * @return ExportVulResponse
@@ -3172,7 +3211,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Ultimate edition of Security Center supports this operation.</p>
+     * <p>Only users of the Ultimate edition of Security Center can call this operation.</p>
      * 
      * @param request the request parameters of GetAegisContainerPluginRule  GetAegisContainerPluginRuleRequest
      * @return GetAegisContainerPluginRuleResponse
@@ -3240,6 +3279,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAttackEventDashboardResponse> getAttackEventDashboard(GetAttackEventDashboardRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation to retrieve the details of an attack analysis event, call the ListAttackEventInfo operation to obtain a valid attack analysis event ID.</p>
+     * 
      * @param request the request parameters of GetAttackEventDetail  GetAttackEventDetailRequest
      * @return GetAttackEventDetailResponse
      */
@@ -3355,7 +3397,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase the configuration assessment feature before you can use the feature.</p>
+     * <p>The cloud platform configuration check feature requires a purchase before use.</p>
      * 
      * @param request the request parameters of GetCheckStructure  GetCheckStructureRequest
      * @return GetCheckStructureResponse
@@ -3502,7 +3544,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.</p>
+     * <p>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</p>
+     * <h3>File unique identifier</h3>
+     * <p>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</p>
+     * <h3>Query detection results</h3>
+     * <p>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</p>
      * 
      * @param request the request parameters of GetFileDetectResult  GetFileDetectResultRequest
      * @return GetFileDetectResultResponse
@@ -3787,7 +3833,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</p>
      * 
      * @param request the request parameters of GetRdTree  GetRdTreeRequest
      * @return GetRdTreeResponse
@@ -3952,7 +3998,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * @param request the request parameters of HandleSimilarMaliciousFiles  HandleSimilarMaliciousFilesRequest
      * @return HandleSimilarMaliciousFilesResponse
@@ -4005,7 +4051,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.</p>
+     * <p>Before installation, make sure that the Security Center client on your server is online and that your server can access Alibaba Cloud services over the network.</p>
      * </blockquote>
      * 
      * @param request the request parameters of InstallCloudMonitor  InstallCloudMonitorRequest
@@ -4039,7 +4085,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
+     * <p>Appelez cette opération à l\&quot;aide du compte de gestion du répertoire de ressources ou du compte administrateur délégué de Security Center.</p>
      * 
      * @param request the request parameters of ListAccountsInResourceDirectory  ListAccountsInResourceDirectoryRequest
      * @return ListAccountsInResourceDirectoryResponse
@@ -4264,7 +4310,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Get the list of cloud asset data operators.</p>
+     * <p>Gets the list of cloud asset data operators.</p>
      * 
      * @param request the request parameters of ListCloudAssetMatchOperators  ListCloudAssetMatchOperatorsRequest
      * @return ListCloudAssetMatchOperatorsResponse
@@ -4309,11 +4355,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the detection results of files only if the files are pushed to the cloud for detection and in the form of packages. You can repeatedly query the detection results of files within 5 hours because the results are retained for 5 hours. For more information about how to push a file to the cloud for detection, see the CreateFileDetect operation. For more information about how to query file detection results, see the GetFileDetectResult operation.
-     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only hexadecimal MD5 hash values of complete file content are supported. You must calculate the required MD5 hash value before you call this operation.
-     * To calculate the hexadecimal MD5 hash value for a file, you can perform the following steps:
-     * 1\. Use the MD5 algorithm to encrypt data and generate a 128-bit hash value. You can use a tool such as MessageDigest for Java and the hashlib module for Python.
-     * 2\. Convert the hash value to a hexadecimal string. You can use a tool such as Codec for Java and the hex() function for Python.</p>
+     * <p>Only files that have been submitted for detection and identified as compressed archives can be queried through this operation. Detection results are retained for 5 hours and can be queried repeatedly within that period. To submit a file for detection, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>. To retrieve the detection result of the compressed archive file itself, refer to <a href="~~GetFileDetectResult~~">GetFileDetectResult</a>.
+     * All file detection operations include the HashKey parameter, which represents the unique identifier of a file.
+     * In the malicious file detection scenario (Type is 0), only the MD5 or SHA-256 hash of the complete file content is supported. Calculate this value before calling the operation.
+     * In the Skill compressed archive detection scenario (Type is 6), obtain the value from the response of the CreateFileDetect operation.
+     * Note that the submission and query operations for a single detection must use the same HashKey. Otherwise, the detection cannot be correctly submitted or the results cannot be correctly queried.</p>
+     * <h3>Compressed archive detection workflow</h3>
+     * <p>To retrieve the detection results of files within a compressed archive, complete the following four steps in order:</p>
+     * <ol>
+     * <li>Call the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation to obtain a file upload URL.</li>
+     * <li>Upload the file to be detected to OSS.</li>
+     * <li>Call the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation to submit the file for detection, and set the Decompress parameter to true.</li>
+     * <li>Call this operation (ListCompressFileDetectResult) to query the detection results of files within the compressed archive.</li>
+     * </ol>
      * 
      * @param request the request parameters of ListCompressFileDetectResult  ListCompressFileDetectResultRequest
      * @return ListCompressFileDetectResultResponse
@@ -4514,7 +4568,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to query the access information about Kubernetes clusters.</p>
+     * <p>Lists K8s access information.</p>
      * 
      * @param request the request parameters of ListK8sAccessInfo  ListK8sAccessInfoRequest
      * @return ListK8sAccessInfoResponse
@@ -4547,7 +4601,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</p>
      * 
      * @param request the request parameters of ListMultiUserInstances  ListMultiUserInstancesRequest
      * @return ListMultiUserInstancesResponse
@@ -4568,7 +4622,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This interface is only available to users who have purchased the cloud platform configuration check authorization or enabled the pay-as-you-go service for cloud platform configuration checks.</p>
+     * <p>Only users who have purchased the cloud platform configuration check quota or enabled pay-as-you-go billing for cloud platform configuration checks can call this operation.</p>
      * 
      * @param request the request parameters of ListOperationCheck  ListOperationCheckRequest
      * @return ListOperationCheckResponse
@@ -4577,7 +4631,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can query only operation tasks.</p>
+     * <p>Currently, only check operation task queries are supported.</p>
      * 
      * @param request the request parameters of ListOperationProcess  ListOperationProcessRequest
      * @return ListOperationProcessResponse
@@ -4586,7 +4640,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can query only operation subtasks.</p>
+     * <p>Currently, only check operation subtask queries are supported. Before calling this operation, call the ListOperationProcess operation to obtain operation tasks. The TaskIds parameter of this operation can be obtained from the ListOperationProcess operation.</p>
      * 
      * @param request the request parameters of ListOperationProcessDetail  ListOperationProcessDetailRequest
      * @return ListOperationProcessDetailResponse
@@ -4838,9 +4892,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyAssetGroup operation to change the server group to which one or more servers belong. After you create a server group by calling the <a href="~~CreateOrUpdateAssetGroup~~">CreateOrUpdateAssetGroup</a> operation, you can call the ModifyAssetGroup operation to change the server group to which your servers belong.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Modifies the group of servers. You can use this operation to modify the group of one or more servers. After you create a group by calling the <a href="~~CreateOrUpdateAssetGroup~~">CreateOrUpdateAssetGroup</a> operation, you can call this operation to modify the group of servers.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Use this operation appropriately.</p>
      * 
      * @param request the request parameters of ModifyAssetGroup  ModifyAssetGroupRequest
      * @return ModifyAssetGroupResponse
@@ -4891,7 +4945,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deleted logs cannot be restored. Before you call this operation to delete all logs and free up log storage, we recommend that you export and save your logs to your computer.</p>
+     * <p>Cleared logs cannot be recovered. Before calling this operation, perform a log export and save the logs to a local device, and then call this operation to clear the logs and free up storage capacity space.</p>
      * 
      * @param request the request parameters of ModifyClearLogstoreStorage  ModifyClearLogstoreStorageRequest
      * @return ModifyClearLogstoreStorageResponse
@@ -5083,7 +5137,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Prerequisites</em>* <a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Simple Log Service</a> is activated. A service-linked role for Security Center is created, and Security Center is authorized to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role for Security Center and authorize Security Center to access cloud resources. <strong>Scenarios</strong> Before you use the log analysis feature of Security Center, you must call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to activate Simple Log Service.</p>
+     * <p><em>Before you begin</em>*
+     * Activate &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/48863.html">Simple Log Service</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Log Service</a>.
+     * Create a service-linked role and authorize Security Center to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role and authorize Security Center to access cloud resources.
+     * <strong>Common scenarios</strong>
+     * Before you use the log analysis feature of Security Center, call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to activate Simple Log Service.</p>
      * 
      * @param request the request parameters of ModifyOpenLogShipper  ModifyOpenLogShipperRequest
      * @return ModifyOpenLogShipperResponse
@@ -5104,7 +5163,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * <p>The application whitelist is a China-site public preview feature that is no longer open for new applications. Users who have already applied for or are using this feature can call this operation as expected.</p>
      * 
      * @param request the request parameters of ModifyProcessWhiteList  ModifyProcessWhiteListRequest
      * @return ModifyProcessWhiteListResponse
@@ -5142,7 +5201,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySearchConditionResponse> modifySearchCondition(ModifySearchConditionRequest request);
 
     /**
-     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.  * @description This operation is phased out. You can use the ChangeCheckConfig operation.
+     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.  * @description This operation is deprecated. Use the ChangeCheckConfig operation instead.
      * 
      * @param request the request parameters of ModifySecurityCheckScheduleConfig  ModifySecurityCheckScheduleConfigRequest
      * @return ModifySecurityCheckScheduleConfigResponse
@@ -5164,7 +5223,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API call. Other editions do not support this call.</p>
      * 
      * @param request the request parameters of ModifySoarStrategySubscribe  ModifySoarStrategySubscribeRequest
      * @return ModifySoarStrategySubscribeResponse
@@ -5240,7 +5299,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.</p>
+     * <p>After you delete a protected directory from a server, tamper-proofing no longer protects the files in the directory. The website information on your server may be maliciously tampered with. Proceed with caution.</p>
      * 
      * @param request the request parameters of ModifyWebLockDeleteConfig  ModifyWebLockDeleteConfigRequest
      * @return ModifyWebLockDeleteConfigResponse
@@ -5323,6 +5382,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateApplicationResponse> operateApplication(OperateApplicationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, the following prerequisites must be met:</p>
+     * <ol>
+     * <li>The OSS bucket has been discovered by Security Center (SAS). You can call the ListOssBucket operation to query the bucket.</li>
+     * <li>An active scan task exists for the bucket. You can call the CreateOssBucketScanTask operation to create a scan task.
+     * The complete API call chain is: PutBucket → RefreshOssBucketScanInfo → CreateOssBucketScanTask → OperateBucketScanTask. Additional implicit prerequisites, such as activating the service in the console, may also apply.</li>
+     * </ol>
+     * 
      * @param request the request parameters of OperateBucketScanTask  OperateBucketScanTaskRequest
      * @return OperateBucketScanTaskResponse
      */
@@ -5426,7 +5493,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API call is only supported by the Enterprise and Flagship editions of Cloud Security Center, other versions do not support it.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API call. Other editions are not supported.</p>
      * 
      * @param request the request parameters of ProcessSoarStrategyTask  ProcessSoarStrategyTaskRequest
      * @return ProcessSoarStrategyTaskResponse
@@ -5435,7 +5502,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call the PublicCreateImageScanTask operation, we recommend that you call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of images to scan and the quota for container image scan to be consumed by the image scan task. Make sure that the remaining quota for container image scan is sufficient. This prevents the task from being stopped due to an insufficient quota.</p>
+     * <p>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan node and the number of authorizations consumed. This ensures that sufficient authorizations are available for the image scan node and prevents the image scan node from a break due to insufficient authorizations.</p>
      * 
      * @param request the request parameters of PublicCreateImageScanTask  PublicCreateImageScanTaskRequest
      * @return PublicCreateImageScanTaskResponse
@@ -5472,9 +5539,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as <a href="~~GetSuspiciousStatistics~~">GetSuspiciousStatistics</a> and <a href="~~DeleteGroup~~">DeleteGroup</a>, you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.</p>
-     * <h3>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Queries the ID of an asset group by the group name. If you need to specify an asset group ID when you call other operations such as <a href="~~GetSuspiciousStatistics~~">GetSuspiciousStatistics</a> and <a href="~~DeleteGroup~~">DeleteGroup</a>, you can call this operation to obtain the asset group ID.</p>
+     * <h3>QPS limit</h3>
+     * <p>The queries per second (QPS) limit for a single user for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled. This may affect your business. Call this operation appropriately.</p>
      * 
      * @param request the request parameters of QueryGroupIdByGroupName  QueryGroupIdByGroupNameRequest
      * @return QueryGroupIdByGroupNameResponse
@@ -5677,7 +5744,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetSyncRefreshRegionResponse> setSyncRefreshRegion(SetSyncRefreshRegionRequest request);
 
     /**
-     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated, please use Sas::2018-12-03::SubmitCheck instead.  * @param request  the request parameters of StartBaselineSecurityCheck  StartBaselineSecurityCheckRequest
+     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated, please use Sas::2018-12-03::SubmitCheck instead.  * @description This API operation is deprecated. Use SubmitCheck instead.
+     * 
+     * @param request the request parameters of StartBaselineSecurityCheck  StartBaselineSecurityCheckRequest
      * @return StartBaselineSecurityCheckResponse
      */
     @Deprecated
@@ -5757,14 +5826,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you no longer require protection for servers that are not deployed on Alibaba Cloud, you can call this operation to unbind the servers from Security Center. After you unbind a server that is not deployed on Alibaba Cloud from Security Center, the server no longer consumes the quota of protected servers or protected server vCPUs. This way, you can install the Security Center agent on other servers to meet your business requirements.</p>
+     * <p>If you no longer need Security Center to protect your non-Alibaba Cloud servers, you can call the UnbindAegis operation to unbind the servers. After a non-Alibaba Cloud server is unbound, the server no longer consumes your Security Center quota (the number of servers or compute cores). The released quota can then be used to protect other servers.</p>
      * <blockquote>
-     * <p>You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
-     * <strong>Prerequisites</strong></p>
+     * <p>Only non-Alibaba Cloud servers require the unbinding operation. Alibaba Cloud ECS instances do not require unbinding. For ECS instances, even if you uninstall the agent, the server still appears in the asset management list in an offline state and is not removed from the list.<br><strong>Before you begin</strong></p>
      * </blockquote>
      * <ul>
-     * <li>The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the <a href="~~PauseClient~~">PauseClient</a> operation to disable the agent.</li>
-     * <li>The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see <a href="https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine">Use the client protection feature</a>.</li>
+     * <li>The agent on the non-Alibaba Cloud server that you want to unbind has been paused (the client status is disabled). You can call the <a href="~~PauseClient~~">PauseClient</a> operation to pause the agent.</li>
+     * <li>Client self-protection has been disabled on the non-Alibaba Cloud server that you want to unbind. For more information, see <a href="https://help.aliyun.com/document_detail/460802.html">Client self-protection</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of UnbindAegis  UnbindAegisRequest
@@ -6038,7 +6106,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * <p>Application whitelist is a China-site public preview feature that no longer accepts new applications. Users who have already applied for or are using this feature can call this operation as usual.</p>
      * 
      * @param request the request parameters of UpdateWhiteListStrategyStatus  UpdateWhiteListStrategyStatusRequest
      * @return UpdateWhiteListStrategyStatusResponse
@@ -6052,6 +6120,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpgradeBackupPolicyVersionResponse> upgradeBackupPolicyVersion(UpgradeBackupPolicyVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation to upgrade a honeypot management node version, ensure the following prerequisites are met:</p>
+     * <ol>
+     * <li>A honeypot management node already exists. If no node exists, call the CreateHoneypotNode operation to create one first.</li>
+     * <li>The probe quota is greater than zero (TotalProbeCount is greater than 0). The probe quota is allocated by purchasing a Security Center honeypot subscription.</li>
+     * <li>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the NodeId of the management node to be upgraded.</li>
+     * </ol>
+     * 
      * @param request the request parameters of UpgradeHoneypotNode  UpgradeHoneypotNodeRequest
      * @return UpgradeHoneypotNodeResponse
      */

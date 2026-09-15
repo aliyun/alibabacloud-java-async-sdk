@@ -283,7 +283,7 @@ public class UpdateOssScanConfigRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to match the prefixes of all objects.</p>
+         * <p>Specifies whether to match all file prefixes.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -304,7 +304,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The names of the buckets.</p>
+         * <p>The list of bucket names.</p>
          */
         public Builder bucketNameList(java.util.List<String> bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
@@ -313,7 +313,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of objects that can be extracted from a package. Valid values: 1 to 1000. If the value is reached, the decompression operation immediately finishes. The detection of extracted objects is not affected.</p>
+         * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation ends immediately. The detection of files that have already been decompressed is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -325,7 +325,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the value is reached, the decompression operation immediately finishes. The detection of extracted objects is not affected.</p>
+         * <p>The maximum number of decompression layers when multiple levels of nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation ends immediately. The detection of files that have already been decompressed is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -337,7 +337,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The decryption methods.</p>
+         * <p>The list of decryption types.</p>
          */
         public Builder decryptionList(java.util.List<String> decryptionList) {
             this.putQueryParameter("DecryptionList", decryptionList);
@@ -346,10 +346,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the bucket check policy. Valid values:</p>
+         * <p>Specifies whether to enable the policy. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enables the bucket check policy.</li>
-         * <li><strong>0</strong>: disables the bucket check policy.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -362,7 +362,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The end time of the check. Specify the time in the HH:mm:ss format.</p>
+         * <p>The scan stop time in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:01</p>
@@ -374,10 +374,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The scan policy ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>65778</p>
+         * <p>1141****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -386,7 +386,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The prefixes of the objects.</p>
+         * <p>The prefix list of files.</p>
          */
         public Builder keyPrefixList(java.util.List<String> keyPrefixList) {
             this.putQueryParameter("KeyPrefixList", keyPrefixList);
@@ -395,7 +395,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The suffixes of the objects that you want to check.</p>
+         * <p>The list of file suffixes.</p>
          */
         public Builder keySuffixList(java.util.List<String> keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
@@ -404,7 +404,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The timestamp. The objects whose last modification time is later than the specified value are detected. Unit: milliseconds.</p>
+         * <p>Specifies that only files whose last modification time is after the specified timestamp are scanned. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1724301769834</p>
@@ -416,10 +416,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The policy name.</p>
+         * <p>The scan policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>nacos****</p>
+         * <p>testStrategy</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -428,7 +428,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+         * <p>Specifies whether to enable real-time incremental detection. When this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -440,7 +440,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The time when the check is performed. The value specifies the days of the week.</p>
+         * <p>The scan days. The number indicates the day of the week.</p>
          */
         public Builder scanDayList(java.util.List<Integer> scanDayList) {
             this.putQueryParameter("ScanDayList", scanDayList);
@@ -449,7 +449,14 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The business source. Valid values:</p>
+         * <ul>
+         * <li><strong>OSS</strong>: OSS</li>
+         * <li><strong>NAS</strong>: NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -458,7 +465,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The start time of the check. Specify the time in the HH:mm:ss format.</p>
+         * <p>The scan start time in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>

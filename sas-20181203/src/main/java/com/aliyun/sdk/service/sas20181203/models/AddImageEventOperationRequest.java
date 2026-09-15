@@ -165,7 +165,7 @@ public class AddImageEventOperationRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e783e&quot;}]</p>
+         * <p>[{\&quot;condition\&quot;: \&quot;MD5\&quot;, \&quot;type\&quot;: \&quot;equals\&quot;, \&quot;value\&quot;: \&quot;0083a31cc0083a31ccf7c10367a6e783e\&quot;}]</p>
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -247,7 +247,7 @@ public class AddImageEventOperationRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
+         * <p>{\&quot;type\&quot;: \&quot;repo\&quot;, \&quot;value\&quot;: \&quot;test-aaa/shenzhen-repo-01\&quot;}</p>
          */
         public Builder scenarios(String scenarios) {
             this.putQueryParameter("Scenarios", scenarios);

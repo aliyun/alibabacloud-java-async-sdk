@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageGroupedVulListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentlessCanFix")
+    private Boolean agentlessCanFix;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AliasName")
     private String aliasName;
 
@@ -115,6 +119,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
 
     private DescribeImageGroupedVulListRequest(Builder builder) {
         super(builder);
+        this.agentlessCanFix = builder.agentlessCanFix;
         this.aliasName = builder.aliasName;
         this.clusterId = builder.clusterId;
         this.currentPage = builder.currentPage;
@@ -152,6 +157,13 @@ public class DescribeImageGroupedVulListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentlessCanFix
+     */
+    public Boolean getAgentlessCanFix() {
+        return this.agentlessCanFix;
     }
 
     /**
@@ -323,6 +335,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeImageGroupedVulListRequest, Builder> {
+        private Boolean agentlessCanFix; 
         private String aliasName; 
         private String clusterId; 
         private Integer currentPage; 
@@ -354,6 +367,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
 
         private Builder(DescribeImageGroupedVulListRequest request) {
             super(request);
+            this.agentlessCanFix = request.agentlessCanFix;
             this.aliasName = request.aliasName;
             this.clusterId = request.clusterId;
             this.currentPage = request.currentPage;
@@ -381,6 +395,15 @@ public class DescribeImageGroupedVulListRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to filter by agentless fix capability. true: queries only vulnerabilities that support agentless fix. false: queries vulnerabilities that are not marked as supporting agentless fix. If this parameter is not specified, no filtering is applied based on this condition.</p>
+         */
+        public Builder agentlessCanFix(Boolean agentlessCanFix) {
+            this.putQueryParameter("AgentlessCanFix", agentlessCanFix);
+            this.agentlessCanFix = agentlessCanFix;
+            return this;
+        }
+
+        /**
          * <p>The alias of the vulnerability.</p>
          * 
          * <strong>example:</strong>
@@ -393,9 +416,9 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the container cluster.</p>
+         * <p>The ID of the container cluster to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -408,7 +431,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return in a paginated query. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -420,7 +443,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+         * <p>The CVE ID of the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>CVE-2017-15420</p>
@@ -444,7 +467,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The SHA-256 value of the image digest.</p>
+         * <p>The SHA256 value of the image digest.</p>
          * 
          * <strong>example:</strong>
          * <p>w213412341dfsfasdfafadfasfasf</p>
@@ -480,10 +503,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the vulnerabilities in the latest images. If you do not specify this parameter, the vulnerabilities in all images are queried. Valid values:</p>
+         * <p>Specifies whether to query vulnerabilities only for the latest image. If this parameter is not set, vulnerabilities for all images are queried. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: does not query the vulnerabilities in the latest images.</li>
-         * <li><strong>1</strong>: queries the vulnerabilities in the latest images.</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,7 +519,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -524,11 +547,11 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The priority to fix the vulnerability. Valid values:</p>
+         * <p>The priority level for fixing the vulnerability. Valid values:</p>
          * <ul>
-         * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
-         * <li><strong>later</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
-         * <li><strong>nntf</strong>: low. You can ignore the vulnerability.</li>
+         * <li><strong>asap</strong>: High-priority vulnerability that must be fixed as soon as possible.</li>
+         * <li><strong>later</strong>: Medium-priority vulnerability that can be fixed later.</li>
+         * <li><strong>nntf</strong>: Low-priority vulnerability that does not need to be fixed for now.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -541,7 +564,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The number of image vulnerabilities to display on each page in a paging query. Default value: <strong>20</strong>, which indicates 20 image vulnerabilities per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -553,7 +576,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the patch that is used to fix the vulnerability.</p>
+         * <p>The ID of the vulnerability patch.</p>
          * 
          * <strong>example:</strong>
          * <p>1341512412</p>
@@ -601,7 +624,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the image repository belongs.</p>
+         * <p>The namespace of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>libssh2</p>
@@ -625,7 +648,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -634,9 +660,9 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The tag of this vulnerability. Valid values:</p>
+         * <p>The vulnerability tag. Valid values:</p>
          * <ul>
-         * <li><strong>AI</strong>: AI-related components.</li>
+         * <li><strong>AI</strong>: vulnerabilities related to AI components</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -649,7 +675,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>An array consisting of the types of the assets that you want to scan.</p>
+         * <p>The collection of scan ranges.</p>
          */
         public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -658,7 +684,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability that you want to query. Valid values:</p>
+         * <p>The type of vulnerability to query. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: image system vulnerability</li>
          * <li><strong>sca</strong>: image application vulnerability</li>
@@ -674,7 +700,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the asset. Separate multiple UUIDs with commas (,).</p>
+         * <p>The list of unique IDs of asset instances. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>uuid-13134124****</p>

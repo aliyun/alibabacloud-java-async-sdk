@@ -46,6 +46,10 @@ public class DescribeImageVulListRequest extends Request {
     private String digest;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupByAsset")
+    private Boolean groupByAsset;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
@@ -139,6 +143,7 @@ public class DescribeImageVulListRequest extends Request {
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.digest = builder.digest;
+        this.groupByAsset = builder.groupByAsset;
         this.image = builder.image;
         this.instanceId = builder.instanceId;
         this.lang = builder.lang;
@@ -222,6 +227,13 @@ public class DescribeImageVulListRequest extends Request {
      */
     public String getDigest() {
         return this.digest;
+    }
+
+    /**
+     * @return groupByAsset
+     */
+    public Boolean getGroupByAsset() {
+        return this.groupByAsset;
     }
 
     /**
@@ -379,6 +391,7 @@ public class DescribeImageVulListRequest extends Request {
         private Integer currentPage; 
         private String dealed; 
         private String digest; 
+        private Boolean groupByAsset; 
         private String image; 
         private String instanceId; 
         private String lang; 
@@ -414,6 +427,7 @@ public class DescribeImageVulListRequest extends Request {
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.digest = request.digest;
+            this.groupByAsset = request.groupByAsset;
             this.image = request.image;
             this.instanceId = request.instanceId;
             this.lang = request.lang;
@@ -438,7 +452,7 @@ public class DescribeImageVulListRequest extends Request {
         } 
 
         /**
-         * <p>The alias of the vulnerability.</p>
+         * <p>The alias of the vulnerability to query.</p>
          * 
          * <strong>example:</strong>
          * <p>High severity vulnerability that affects org.eclipse.jetty:jetty-server</p>
@@ -450,7 +464,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster to which the container belongs.</p>
+         * <p>The ID of the container cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cc20a1024011c44b6a8710d6f8b****</p>
@@ -486,7 +500,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return in the query results. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -498,10 +512,10 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+         * <p>Specifies whether the vulnerability has been handled. Valid values:</p>
          * <ul>
-         * <li><strong>y</strong>: yes</li>
-         * <li><strong>n</strong>: no</li>
+         * <li><strong>y</strong>: Handled.</li>
+         * <li><strong>n</strong>: Not handled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -514,7 +528,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The digest of the image.</p>
+         * <p>The unique identifier of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d507012</p>
@@ -526,7 +540,16 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The name of the image.</p>
+         * <p>Specifies whether to group results by image asset before pagination. If set to true, one vulnerability record is returned for each asset, and TotalCount indicates the total number of assets. If set to false or not specified, results are paginated by vulnerability record. Asset grouping is not applied when MaxId is specified.</p>
+         */
+        public Builder groupByAsset(Boolean groupByAsset) {
+            this.putQueryParameter("GroupByAsset", groupByAsset);
+            this.groupByAsset = groupByAsset;
+            return this;
+        }
+
+        /**
+         * <p>The name of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
@@ -538,7 +561,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the asset.</p>
+         * <p>The ID of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1-qeqewqw****</p>
@@ -550,7 +573,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -566,7 +589,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The name of the vulnerability.</p>
+         * <p>The name of the vulnerability to query.</p>
          * 
          * <strong>example:</strong>
          * <p>debian:10:CVE-2019-9893</p>
@@ -590,11 +613,11 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The priority to fix the vulnerability. Valid values:</p>
+         * <p>The priority level for fixing the vulnerability. Valid values:</p>
          * <ul>
-         * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
-         * <li><strong>later</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
-         * <li><strong>nntf</strong>: low. You can ignore the vulnerability.</li>
+         * <li><strong>asap</strong>: High-priority vulnerability that must be fixed as soon as possible.</li>
+         * <li><strong>later</strong>: Medium-priority vulnerability that can be fixed later.</li>
+         * <li><strong>nntf</strong>: Low-priority vulnerability that does not need to be fixed for now.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -607,7 +630,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates 10 vulnerability entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -643,7 +666,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The ID of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>qew****</p>
@@ -655,7 +678,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the image repository.</p>
+         * <p>The instance ID of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>i-qewqrqcsadf****</p>
@@ -667,7 +690,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The name of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>libssh2</p>
@@ -679,7 +702,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the image repository belongs.</p>
+         * <p>The namespace of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>libssh2</p>
@@ -691,7 +714,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the image repository.</p>
+         * <p>The region ID of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -703,7 +726,10 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -712,9 +738,9 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The tag of this vulnerability. Valid values:</p>
+         * <p>The vulnerability tag. Valid values:</p>
          * <ul>
-         * <li><strong>AI</strong>: AI-related components.</li>
+         * <li><strong>AI</strong>: vulnerabilities related to AI components</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -727,7 +753,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The types of the assets that you want to scan.</p>
+         * <p>The collection of scan ranges.</p>
          */
         public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -736,11 +762,11 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The status of the vulnerability. Valid values:</p>
+         * <p>The fix status of the vulnerability. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: unfixed</li>
-         * <li><strong>4</strong>: being fixed</li>
-         * <li><strong>7</strong>: fixed</li>
+         * <li><strong>1</strong>: Unfixed.</li>
+         * <li><strong>4</strong>: Being fixed.</li>
+         * <li><strong>7</strong>: Fixed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -753,7 +779,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The tag that is added to the image vulnerability.</p>
+         * <p>The tag of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>oval</p>
@@ -765,7 +791,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Set the value to <strong>cve</strong>, which indicates image vulnerabilities.</p>
+         * <p>The type of vulnerability to query. Set the value to <strong>cve</strong>, which indicates container image vulnerabilities.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -778,7 +804,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the assets. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of asset instances. Separate multiple UUIDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>0004a32a0305a7f6ab5ff9600d47****</p>

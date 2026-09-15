@@ -149,7 +149,7 @@ public class CreateBinarySecurityPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;ClusterId&quot;:&quot;cc12429dbb8f644f690b0623fb52b4737&quot;,&quot;Namespaces&quot;:[&quot;default&quot;]},{&quot;ClusterId&quot;:&quot;c9f5b93a8da8f4341b774d79fdbcedb3c&quot;,&quot;Namespaces&quot;:[&quot;default&quot;]}]</p>
+         * <p>[{\&quot;ClusterId\&quot;:\&quot;cc12429dbb8f644f690b0623fb52b4737\&quot;,\&quot;Namespaces\&quot;:[\&quot;default\&quot;]},{\&quot;ClusterId\&quot;:\&quot;c9f5b93a8da8f4341b774d79fdbcedb3c\&quot;,\&quot;Namespaces\&quot;:[\&quot;default\&quot;]}]</p>
          */
         public Builder clusters(String clusters) {
             this.putQueryParameter("Clusters", clusters);
@@ -178,7 +178,7 @@ public class CreateBinarySecurityPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;PolicyMode&quot;:&quot;requireAttestor&quot;,&quot;RequiredAttestors&quot;:[&quot;test-xcs-04-12-heyuan&quot;]}</p>
+         * <p>{\&quot;PolicyMode\&quot;:\&quot;requireAttestor\&quot;,\&quot;RequiredAttestors\&quot;:[\&quot;test-xcs-04-12-heyuan\&quot;]}</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);

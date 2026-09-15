@@ -106,7 +106,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The detailed information about the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -147,10 +147,10 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,7 +348,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+             * <p>The timestamp of the first scan. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1723710827000</p>
@@ -370,7 +370,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+             * <p>The timestamp of the most recent scan. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1723710827999</p>
@@ -381,7 +381,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -403,7 +403,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the image repository belongs.</p>
+             * <p>The namespace of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>namespace</p>
@@ -418,7 +418,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
              * <ul>
              * <li><strong>high</strong></li>
              * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><strong>low</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -430,11 +430,11 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the alert event. Valid values:</p>
+             * <p>The status of the alert event to query. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: unhandled.</li>
-             * <li><strong>1</strong>: ignored.</li>
-             * <li><strong>2</strong>: false positive.</li>
+             * <li><strong>0</strong>: Unhandled.</li>
+             * <li><strong>1</strong>: Ignored.</li>
+             * <li><strong>2</strong>: False positive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -540,7 +540,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number. Default value: <strong>1</strong>.</p>
+             * <p>The page number of the current page in paging query. Default value: <strong>1</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -551,9 +551,9 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+             * <p>The maximum number of entries per page in paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</p>
              * <blockquote>
-             * <p> We recommend that you do not leave this parameter empty.</p>
+             * <p>Do not leave PageSize empty.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -635,7 +635,7 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The images.</p>
+             * <p>The list of images.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;

@@ -132,7 +132,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total quota that you purchase for web tamper proofing.</p>
+         * <p>The total number of purchased tamper-proofing authorizations.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -143,7 +143,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The associated tamper proofing quota.</p>
+         * <p>The number of bound tamper-proofing authorizations.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -176,7 +176,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp generated when the quota for tamper proofing expires. Unit: millisecond.</p>
+         * <p>The timestamp when the tamper-proofing authorization expires. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1688090851000</p>
@@ -187,7 +187,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>

@@ -129,7 +129,7 @@ public class PageImageRegistryRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * <p>The maximum number of entries per page in a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -153,7 +153,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The name of the image repository. Fuzzy match is supported.</p>
+         * <p>The image repository name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>asa</p>
@@ -165,7 +165,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The types of image repositories.</p>
+         * <p>The list of image repository types to include.</p>
          */
         public Builder registryTypeInList(java.util.List<String> registryTypeInList) {
             this.putBodyParameter("RegistryTypeInList", registryTypeInList);
@@ -174,7 +174,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The types of excluded image repositories.</p>
+         * <p>The list of image repository types to exclude.</p>
          */
         public Builder registryTypeNotInList(java.util.List<String> registryTypeNotInList) {
             this.putBodyParameter("RegistryTypeNotInList", registryTypeNotInList);

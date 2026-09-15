@@ -80,7 +80,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -207,7 +207,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of container applications in the cluster.</p>
+             * <p>The total number of applications in the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -218,10 +218,10 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of the container applications.</p>
+             * <p>The container application name.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;alicloud-monitor-controller&quot;]</p>
+             * <p>[\&quot;alicloud-monitor-controller\&quot;]</p>
              */
             public Builder appNames(String appNames) {
                 this.appNames = appNames;
@@ -229,7 +229,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of selected container applications.</p>
+             * <p>The number of selected applications.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -251,7 +251,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
+             * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
              * <p>hhht-cluster-02</p>

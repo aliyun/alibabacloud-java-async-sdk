@@ -108,7 +108,7 @@ public class AddPublishBatchRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>批次1</p>
          */
         public Builder batchName(String batchName) {
             this.putQueryParameter("BatchName", batchName);

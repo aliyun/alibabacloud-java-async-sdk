@@ -199,7 +199,16 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         } 
 
         /**
-         * AnalyzeResult.
+         * <p>The analysis result. Valid values:</p>
+         * <ul>
+         * <li><p><strong>black</strong>: abnormal process</p>
+         * </li>
+         * <li><p><strong>white</strong>: normal process</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         public Builder analyzeResult(String analyzeResult) {
             this.putQueryParameter("AnalyzeResult", analyzeResult);
@@ -208,7 +217,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -217,7 +229,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * FirstTimeEnd.
+         * <p>The end of the time range for the first detection, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1768891966345</p>
          */
         public Builder firstTimeEnd(Long firstTimeEnd) {
             this.putQueryParameter("FirstTimeEnd", firstTimeEnd);
@@ -226,7 +241,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * FirstTimeStart.
+         * <p>The start of the time range for the first detection, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1768891966344</p>
          */
         public Builder firstTimeStart(Long firstTimeStart) {
             this.putQueryParameter("FirstTimeStart", firstTimeStart);
@@ -235,7 +253,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * Md5.
+         * <p>The MD5 value of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0552c44e243abdea1729d4507bce****</p>
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
@@ -244,7 +265,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +277,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/test</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -262,7 +289,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * ProcessPath.
+         * <p>The process path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/bin/rm</p>
          */
         public Builder processPath(String processPath) {
             this.putQueryParameter("ProcessPath", processPath);
@@ -271,7 +301,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The server name or IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -280,7 +313,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * Sha256.
+         * <p>The SHA-256 value of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f204693a7d2ce99d6c4434e550d985ee1c7be7cb5dd9a76094369af0d2******</p>
          */
         public Builder sha256(String sha256) {
             this.putQueryParameter("Sha256", sha256);
@@ -289,7 +325,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the server to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

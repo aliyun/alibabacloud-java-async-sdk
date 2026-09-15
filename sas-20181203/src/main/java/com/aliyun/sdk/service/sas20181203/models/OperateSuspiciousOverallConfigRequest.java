@@ -117,10 +117,10 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the feature. Valid values:</p>
+         * <p>The switch status. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: yes</li>
-         * <li><strong>off</strong>: no</li>
+         * <li><strong>on</strong>: Enable</li>
+         * <li><strong>off</strong>: Disable</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -134,7 +134,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -150,14 +150,14 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to configure assets for the feature. Default value: <strong>false</strong>. Valid values:</p>
+         * <p>Specifies whether asset configuration is required. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter takes effect only when you set <strong>Config</strong> to <strong>on</strong>.</p>
+         * <li><strong>true</strong>: Required</li>
+         * <li><strong>false</strong>: Not required<blockquote>
+         * <p>This value takes effect only when <strong>config</strong> is set to <strong>on</strong>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -169,7 +169,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>222.178.XX.XX</p>
@@ -181,14 +181,14 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the feature. Valid values:</p>
+         * <p>The switch type. Valid values:</p>
          * <ul>
-         * <li><strong>auto_breaking</strong>: Anti-Virus</li>
-         * <li><strong>ransomware_breaking</strong>: Anti-ransomware (Bait Capture)</li>
-         * <li><strong>webshell_cloud_breaking</strong>: Webshell Protection</li>
-         * <li><strong>alinet</strong>: Behavior prevention</li>
-         * <li><strong>k8s_log_analysis</strong>: K8s Threat Detection</li>
-         * <li><strong>alisecguard</strong>: Defense mode for Client Protection</li>
+         * <li><strong>auto_breaking</strong>: Anti-virus</li>
+         * <li><strong>ransomware_breaking</strong>: Anti-ransomware (bait capture)</li>
+         * <li><strong>webshell_cloud_breaking</strong>: Website backdoor connection defense</li>
+         * <li><strong>alinet</strong>: Malicious network behavior defense</li>
+         * <li><strong>k8s_log_analysis</strong>: Container K8s threat detection</li>
+         * <li><strong>alisecguard</strong>: Client self-protection defense mode</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

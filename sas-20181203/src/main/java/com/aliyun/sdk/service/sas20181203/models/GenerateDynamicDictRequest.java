@@ -104,7 +104,7 @@ public class GenerateDynamicDictRequest extends Request {
          * <p>The keyword of the dictionary.</p>
          * 
          * <strong>example:</strong>
-         * <p>keyword</p>
+         * <p>Admin</p>
          */
         public Builder argKeywords(String argKeywords) {
             this.putQueryParameter("ArgKeywords", argKeywords);

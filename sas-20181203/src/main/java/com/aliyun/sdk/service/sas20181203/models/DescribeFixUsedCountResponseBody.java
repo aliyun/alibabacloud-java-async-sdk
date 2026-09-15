@@ -93,7 +93,7 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1CE824-7F80-546D-8AF8-4A5209F9B698</p>
@@ -104,7 +104,7 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature.</p>
+         * <p>The number of vulnerability fixes used.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -115,7 +115,7 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature in China.</p>
+         * <p>The number of vulnerability fixes used in regions in the Chinese mainland.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -126,7 +126,7 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature outside China.</p>
+         * <p>The number of vulnerability fixes used in regions outside the Chinese mainland.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

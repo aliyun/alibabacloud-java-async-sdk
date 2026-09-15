@@ -117,7 +117,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * <p>The request source identifier. Set this parameter to <strong>sas</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -129,9 +129,9 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the dedicated Logstore in which logs are stored.</p>
+         * <p>The name of the dedicated Logstore where logs are stored.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of Logstores.</p>
+         * <p>You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -145,9 +145,9 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the project.</p>
+         * <p>The project name.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of projects.</p>
+         * <p>You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -160,9 +160,9 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -175,10 +175,10 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * <p>The status of the log analysis feature. Valid values:</p>
+         * <p>The status to which you want to change the log. Valid values:</p>
          * <ul>
-         * <li><strong>enabled</strong></li>
-         * <li><strong>disabled</strong></li>
+         * <li><strong>enabled</strong>: enabled</li>
+         * <li><strong>disabled</strong>: disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

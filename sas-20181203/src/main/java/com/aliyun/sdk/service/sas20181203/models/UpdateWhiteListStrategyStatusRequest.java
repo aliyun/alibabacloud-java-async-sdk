@@ -103,10 +103,10 @@ public class UpdateWhiteListStrategyStatusRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class UpdateWhiteListStrategyStatusRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</p>
          * 
          * <strong>example:</strong>
          * <p>219.143.XX.XX</p>
@@ -131,24 +131,21 @@ public class UpdateWhiteListStrategyStatusRequest extends Request {
         }
 
         /**
-         * <p>The status of the policy. Valid values:</p>
+         * <p>The policy status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: deleted</li>
-         * <li><strong>1</strong>: learning</li>
-         * <li><strong>2</strong>: paused</li>
-         * <li><strong>3</strong>: learning completed</li>
-         * <li><strong>4</strong>: enabled</li>
+         * <li><strong>0</strong>: Deleted.</li>
+         * <li><strong>1</strong>: Learning.</li>
+         * <li><strong>2</strong>: Paused.</li>
+         * <li><strong>3</strong>: Learning complete.</li>
+         * <li><strong>4</strong>: Active.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can change the status to <strong>paused</strong> only if the policy status is <strong>learning</strong>.</p>
-         * </li>
-         * <li><p>You can change the status to <strong>learning</strong> only if the policy status is <strong>paused</strong>.</p>
-         * </li>
-         * <li><p>You can change the status to <strong>enabled</strong> only if the policy status is <strong>learning completed</strong>.</p>
-         * </li>
+         * <li>Only a policy in the <strong>Learning</strong> state can be changed to the <strong>Paused</strong> state.</li>
+         * <li>Only a policy in the <strong>Paused</strong> state can be changed to the <strong>Learning</strong> state.</li>
+         * <li>Only a policy in the <strong>Learning complete</strong> state can be changed to the <strong>Active</strong> state.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,9 +158,9 @@ public class UpdateWhiteListStrategyStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</p>
+         * <p>Call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

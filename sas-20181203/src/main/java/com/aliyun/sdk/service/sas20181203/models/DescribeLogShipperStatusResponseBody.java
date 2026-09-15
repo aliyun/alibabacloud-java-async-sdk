@@ -67,7 +67,7 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status information.</p>
+         * <p>The log delivery status collection.</p>
          */
         public Builder logShipperStatus(LogShipperStatus logShipperStatus) {
             this.logShipperStatus = logShipperStatus;
@@ -75,7 +75,7 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
@@ -222,10 +222,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether Security Center is authorized to access Log Service. Valid values:</p>
+             * <p>The service authorization status of the log analysis feature. Valid values:</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><strong>yes</strong>: authorized</li>
+             * <li><strong>no</strong>: not authorized.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -237,10 +237,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the log analysis feature is purchased. Valid values:</p>
+             * <p>The purchase status of the log analysis feature. Valid values:</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><strong>yes</strong>: purchased</li>
+             * <li><strong>no</strong>: not purchased.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -252,10 +252,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the log analysis field. Valid values:</p>
+             * <p>The version of the log delivery fields for log analysis. Valid values:</p>
              * <ul>
-             * <li>SAS_V1</li>
-             * <li>SAS_V2</li>
+             * <li><strong>SAS_V1</strong></li>
+             * <li><strong>SAS_V2</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -267,10 +267,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the log analysis feature. Valid values:</p>
+             * <p>The enabling status of log analysis. Valid values:</p>
              * <ul>
              * <li><strong>yes</strong>: enabled</li>
-             * <li><strong>no</strong>: disabled</li>
+             * <li><strong>no</strong>: not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -282,10 +282,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the pay-as-you-go billing method is used. Valid values:</p>
+             * <p>The pay-as-you-go activation status of the log analysis feature. Valid values:</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><strong>yes</strong>: activated</li>
+             * <li><strong>no</strong>: not activated.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -297,10 +297,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the log analysis feature supports the pay-as-you-go billing method. Valid values:</p>
+             * <p>The pay-as-you-go support status of the log analysis feature. Valid values:</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><strong>yes</strong>: supported</li>
+             * <li><strong>no</strong>: not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -312,10 +312,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the dedicated Log Service project. Valid values:</p>
+             * <p>The status of the log project used by the log analysis feature. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: normal</li>
-             * <li><strong>Disable</strong>: disabled</li>
+             * <li><strong>Normal</strong>: Normal.</li>
+             * <li><strong>Disable</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -327,10 +327,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Log Service is activated. Valid values:</p>
+             * <p>The activation status of Simple Log Service (SLS). Valid values:</p>
              * <ul>
-             * <li><strong>yes</strong></li>
-             * <li><strong>no</strong></li>
+             * <li><strong>yes</strong>: activated</li>
+             * <li><strong>no</strong>: not activated.</li>
              * </ul>
              * 
              * <strong>example:</strong>

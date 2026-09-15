@@ -73,7 +73,10 @@ public class UpdateUnknownThreatDetectProcessRequest extends Request {
         } 
 
         /**
-         * ProcessId.
+         * <p>The process ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026011210040602108912721603151374234</p>
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -82,7 +85,10 @@ public class UpdateUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remark for the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

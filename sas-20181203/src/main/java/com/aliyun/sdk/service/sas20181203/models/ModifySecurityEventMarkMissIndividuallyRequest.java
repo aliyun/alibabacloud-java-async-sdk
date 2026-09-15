@@ -129,10 +129,10 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         } 
 
         /**
-         * <p>The alert handling rule that you want to delete.</p>
+         * <p>The alert whitelisting rule to delete.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;field&quot;:&quot;loginSourceIp&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;eventType&quot;:&quot;SIL_AI_ALERT&quot;,&quot;eventName&quot;:&quot;login_common_ip&quot;,&quot;fieldValue&quot;:&quot;10.12.XX.XX&quot;,&quot;uuids&quot;:&quot;&quot;}]</p>
+         * <p>[{\&quot;field\&quot;:\&quot;loginSourceIp\&quot;,\&quot;operate\&quot;:\&quot;contains\&quot;,\&quot;eventType\&quot;:\&quot;SIL_AI_ALERT\&quot;,\&quot;eventName\&quot;:\&quot;login_common_ip\&quot;,\&quot;fieldValue\&quot;:\&quot;10.12.XX.XX\&quot;,\&quot;uuids\&quot;:\&quot;\&quot;}]</p>
          */
         public Builder deleteMarkMissParam(String deleteMarkMissParam) {
             this.putBodyParameter("DeleteMarkMissParam", deleteMarkMissParam);
@@ -141,7 +141,7 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * <p>The source identifier of the request. Set the value to <strong>sas</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -153,10 +153,10 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * <p>The alert handling that you want to add.</p>
+         * <p>The alert whitelisting rule to add.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;field&quot;:&quot;location&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;eventType&quot;:&quot;SIL_AI_ALERT&quot;,&quot;eventName&quot;:&quot;login_common_ip&quot;,&quot;fieldValue&quot;:&quot;xx&quot;,&quot;uuids&quot;:&quot;4296ee47-bf19-4fa4-a4a6-6bxxxxxxxxx&quot;}]</p>
+         * <p>[{\&quot;field\&quot;:\&quot;location\&quot;,\&quot;operate\&quot;:\&quot;contains\&quot;,\&quot;eventType\&quot;:\&quot;SIL_AI_ALERT\&quot;,\&quot;eventName\&quot;:\&quot;login_common_ip\&quot;,\&quot;fieldValue\&quot;:\&quot;xx\&quot;,\&quot;uuids\&quot;:\&quot;4296ee47-bf19-4fa4-a4a6-6bxxxxxxxxx\&quot;}]</p>
          */
         public Builder insertMarkMissParam(String insertMarkMissParam) {
             this.putBodyParameter("InsertMarkMissParam", insertMarkMissParam);
@@ -165,7 +165,7 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -181,7 +181,10 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -190,7 +193,7 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.XX.XX</p>

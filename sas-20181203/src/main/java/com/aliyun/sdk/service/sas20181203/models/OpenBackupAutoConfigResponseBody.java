@@ -54,7 +54,7 @@ public class OpenBackupAutoConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>

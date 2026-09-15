@@ -75,7 +75,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
@@ -155,7 +155,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
+             * <p>The error status information.</p>
              * 
              * <strong>example:</strong>
              * <p>FAILED</p>
@@ -355,7 +355,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the anti-ransomware agent.</p>
+             * <p>The ID of the anti-ransomware client.</p>
              * 
              * <strong>example:</strong>
              * <p>c-000dbefaw9f7gnbw****</p>
@@ -366,14 +366,15 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the anti-ransomware agent. Valid values:</p>
+             * <p>The service status. Valid values:</p>
              * <ul>
-             * <li><strong>ONLINE</strong>: normal</li>
-             * <li><strong>CLIENT_CONNECTION_ERROR</strong>: abnormal</li>
-             * <li><strong>UNINSTALLING</strong>: being uninstalled</li>
-             * <li><strong>UNINSTALL_FAILED</strong>: failed to be uninstalled</li>
-             * <li><strong>UPGRADING</strong>: being upgraded</li>
-             * <li><strong>UPGRADE_FAILED</strong>: failed to be upgraded</li>
+             * <li><strong>ONLINE</strong>: Normal.</li>
+             * <li><strong>CLIENT_CONNECTION_ERROR</strong>: The client connection is abnormal.</li>
+             * <li><strong>UNINSTALLING</strong>: Uninstalling.</li>
+             * <li><strong>UNINSTALL_FAILED</strong>: Uninstallation failed.</li>
+             * <li><strong>UPGRADING</strong>: Upgrading.</li>
+             * <li><strong>UPGRADE_FAILED</strong>: Upgrade failed.</li>
+             * <li><strong>INSTALLING</strong>: The client is being installed. This status typically appears after the policy is bound to a server for the first time.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -385,7 +386,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the anti-ransomware agent.</p>
+             * <p>The version number of the anti-ransomware client.</p>
              * 
              * <strong>example:</strong>
              * <p>2.11.0</p>
@@ -396,7 +397,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned.</p>
+             * <p>The error code returned for an abnormal status.</p>
              * 
              * <strong>example:</strong>
              * <p>CLIENT_CONNECTION_ERROR</p>
@@ -407,7 +408,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the error information reported by the backup server.</p>
+             * <p>The list of error messages reported by the backup server.</p>
              */
             public Builder errorList(java.util.List<ErrorList> errorList) {
                 this.errorList = errorList;
@@ -415,7 +416,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the server.</p>
+             * <p>The ID of the server instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-2zeaqkb80vloxjcj****</p>
@@ -426,7 +427,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the server resides.</p>
+             * <p>The region ID of the server.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen</p>
@@ -437,7 +438,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of backup versions.</p>
+             * <p>The number of restorable versions.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -448,11 +449,11 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the anti-ransomware service. Valid values:</p>
+             * <p>The service status. Valid values:</p>
              * <ul>
-             * <li><strong>SERVICE_EXCEPTION</strong>: Service exception</li>
-             * <li><strong>RESTORING</strong>: Restoring</li>
-             * <li><strong>BACKING_UP</strong>: Backup in process</li>
+             * <li><strong>SERVICE_EXCEPTION</strong>: Service exception.</li>
+             * <li><strong>RESTORING</strong>: Restoring.</li>
+             * <li><strong>BACKING_UP</strong>: Backing up.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -464,11 +465,12 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the anti-ransomware agent. Valid values:</p>
+             * <p>The status of the anti-ransomware client. Valid values:</p>
              * <ul>
-             * <li><strong>NOT_INSTALLED</strong>: not installed</li>
-             * <li><strong>CLIENT_CONNECTION_ERROR</strong>: abnormal</li>
-             * <li><strong>ACTIVATED</strong>: normal</li>
+             * <li><strong>NOT_INSTALLED</strong>: Not installed.</li>
+             * <li><strong>CLIENT_CONNECTION_ERROR</strong>: The client status is abnormal.</li>
+             * <li><strong>ACTIVATED</strong>: Normal.</li>
+             * <li><strong>INSTALLING</strong>: The client is being installed. This status typically appears after the policy is bound to a server for the first time.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -491,7 +493,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup vault in which the backup data is stored.</p>
+             * <p>The ID of the vault where backup data is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>v-0005i2qh5fcr6seo****</p>

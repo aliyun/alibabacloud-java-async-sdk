@@ -119,7 +119,7 @@ public class CreateCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * <p>The IP address that you want to specify in the policy.</p>
+         * <p>The IP address to block. Traffic from this IP address to the server is blocked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,8 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
+         * <p>The direction of traffic to block between the custom IP address and the server.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><strong>in</strong>: inbound</li>
          * <li><strong>out</strong>: outbound</li>
@@ -149,7 +150,7 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the policy.</p>
+         * <p>The expiration time of the policy. This value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +172,7 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the asset instances. Separate multiple UUIDs with commas (,). You can call DescribeCloudCenterInstances to obtain the UUIDs of asset instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

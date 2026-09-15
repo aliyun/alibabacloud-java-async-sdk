@@ -93,10 +93,10 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of the operation. Valid values:</p>
+         * <p>The returned result. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: successful</li>
-         * <li><strong>false</strong>: failed</li>
+         * <li><strong>true</strong>: Processing succeeded.</li>
+         * <li><strong>false</strong>: Processing failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -119,7 +119,7 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>4347E985-6E64-467B-96EC-30D4EA9E****</p>
@@ -130,7 +130,7 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time consumed. Unit: seconds.</p>
+         * <p>The time consumed for the execution. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

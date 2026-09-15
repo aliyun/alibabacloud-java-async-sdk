@@ -80,7 +80,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -230,7 +230,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetSelectionType.
+             * <p>The asset selection identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNKNOWN_THREAT_DETECT_CONFIG_****</p>
              */
             public Builder assetSelectionType(String assetSelectionType) {
                 this.assetSelectionType = assetSelectionType;
@@ -238,7 +241,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DurationDaysAfterInit.
+             * <p>The number of days after the model is initially created before learning ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder durationDaysAfterInit(Integer durationDaysAfterInit) {
                 this.durationDaysAfterInit = durationDaysAfterInit;
@@ -246,7 +252,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DurationDaysAfterStop.
+             * <p>The number of days after which the model ends when no new processes are added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder durationDaysAfterStop(Integer durationDaysAfterStop) {
                 this.durationDaysAfterStop = durationDaysAfterStop;
@@ -254,7 +263,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -262,7 +274,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * MachineCount.
+             * <p>The number of servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder machineCount(Integer machineCount) {
                 this.machineCount = machineCount;
@@ -270,7 +285,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +296,14 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StudyMode.
+             * <p>The whitelist mode. Valid values:</p>
+             * <ul>
+             * <li><strong>hash</strong>: process hash</li>
+             * <li><strong>path</strong>: process path</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder studyMode(String studyMode) {
                 this.studyMode = studyMode;
@@ -371,7 +396,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of entries displayed on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -379,7 +407,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The page number of the current page in a paging query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -387,7 +418,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The maximum number of entries displayed on each page in a paging query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -395,7 +429,10 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

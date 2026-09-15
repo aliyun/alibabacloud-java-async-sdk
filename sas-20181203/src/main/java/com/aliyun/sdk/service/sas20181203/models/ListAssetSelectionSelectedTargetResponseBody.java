@@ -67,7 +67,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The data details.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1EB12F73-6828-59D2-9FBF-F3713FD55128</p>
@@ -144,7 +144,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the asset.</p>
+             * <p>The asset ID. When selecting by machine, the value is the UUID of the machine. When selecting by group, the value is the group ID. When selecting by VPC, the value is the VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30****</p>
@@ -155,7 +155,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the asset.</p>
+             * <p>The asset name.</p>
              * 
              * <strong>example:</strong>
              * <p>jen****</p>

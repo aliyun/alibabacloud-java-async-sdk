@@ -271,10 +271,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the vulnerability is fixed. Valid values:</p>
+         * <p>Specifies whether the vulnerability is handled. Valid values:</p>
          * <ul>
-         * <li><strong>y</strong>: the vulnerability is fixed.</li>
-         * <li><strong>n</strong>: the vulnerability is not fixed.</li>
+         * <li><strong>y</strong>: Handled.</li>
+         * <li><strong>n</strong>: Not handled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +287,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The name of the search field that is used to query containers.</p>
+         * <p>The name of the container search field.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace</p>
@@ -299,7 +299,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The value of the search field that is used to query containers.</p>
+         * <p>The value of the container search field.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-adad-qeqwe</p>
@@ -323,7 +323,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -339,11 +339,11 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The severity of the vulnerability. Separate multiple severities with commas (,). Valid values:</p>
+         * <p>The vulnerability level. Separate multiple levels with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><strong>high</strong>: High.</li>
+         * <li><strong>medium</strong>: Medium.</li>
+         * <li><strong>low</strong>: Low.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,11 +356,11 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The priority based on which the vulnerability is fixed. Separate multiple priorities with commas (,). Valid values:</p>
+         * <p>The priority level of the vulnerability fix. Separate multiple levels with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>asap</strong>: high</li>
-         * <li><strong>later</strong>: medium</li>
-         * <li><strong>nntf</strong>: low</li>
+         * <li><strong>asap</strong>: High.</li>
+         * <li><strong>later</strong>: Medium.</li>
+         * <li><strong>nntf</strong>: Low.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</p>
+         * <p>The asset information for the vulnerability query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>10.7.</p>
@@ -385,7 +385,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -394,7 +397,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The tags that are used to search for the vulnerability.</p>
+         * <p>The tag for querying vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>oval</p>
@@ -406,14 +409,14 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The status of the vulnerability. Separate multiple states with commas (,). Valid values:</p>
+         * <p>The fix status of the vulnerability. Separate multiple statuses with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: unfixed</li>
-         * <li><strong>2</strong>: fix failed</li>
+         * <li><strong>1</strong>: Unfixed.</li>
+         * <li><strong>2</strong>: Fix failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>1,4</p>
+         * <p>1,2</p>
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -422,7 +425,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The tag of the vulnerability.</p>
+         * <p>The vulnerability tag.</p>
          * 
          * <strong>example:</strong>
          * <p>oval</p>
@@ -434,10 +437,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The type of the query condition. Valid values:</p>
+         * <p>The query type. Valid values:</p>
          * <ul>
-         * <li><strong>containerId</strong>: the ID of the container</li>
-         * <li><strong>uuid</strong>: the ID of the asset</li>
+         * <li><strong>containerId</strong>: container ID</li>
+         * <li><strong>uuid</strong>: asset ID</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -450,7 +453,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The type of vulnerability to query. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
@@ -467,7 +470,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which the vulnerability is detected. Separate multiple IDs with commas (,).</p>
+         * <p>The instance IDs of VPC-connected instances to query for vulnerabilities. Separate multiple instance IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6ssrvbrwe37ekw****,vpc-bp1aevy8sofi8mh1q****</p>
@@ -479,9 +482,9 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the names of vulnerabilities.</p>
+         * <p>The collection of vulnerability names.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to obtain the names of vulnerabilities.</p>
+         * <p>You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */

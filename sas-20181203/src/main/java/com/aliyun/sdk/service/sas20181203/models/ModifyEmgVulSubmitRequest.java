@@ -118,7 +118,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         } 
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -127,10 +127,12 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * <p>The name of the vulnerability.</p>
+         * <p>The name of the vulnerability to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,13 +158,13 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1232428423234****</p>
+         * <p>16670360956*****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -171,10 +173,12 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to scan for urgent vulnerabilities. Valid values:</p>
+         * <p>Specifies whether to perform vulnerability detection. Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong></li>
-         * <li><strong>no</strong></li>
+         * <li><p><strong>yes</strong>: Perform vulnerability detection.</p>
+         * </li>
+         * <li><p><strong>no</strong>: Do not perform vulnerability detection.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

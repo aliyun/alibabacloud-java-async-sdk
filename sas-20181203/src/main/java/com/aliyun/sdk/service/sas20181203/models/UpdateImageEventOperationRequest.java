@@ -115,7 +115,7 @@ public class UpdateImageEventOperationRequest extends Request {
         } 
 
         /**
-         * <p>The rule conditions. Specify a value in the JSON format. You can specify the following keys:</p>
+         * <p>The rule conditions. The value is in JSON format. The following keys are supported:</p>
          * <ul>
          * <li><strong>condition</strong>: the matching condition.</li>
          * <li><strong>type</strong>: the matching type.</li>
@@ -123,7 +123,7 @@ public class UpdateImageEventOperationRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e****&quot;}]</p>
+         * <p>[{\&quot;condition\&quot;: \&quot;MD5\&quot;, \&quot;type\&quot;: \&quot;equals\&quot;, \&quot;value\&quot;: \&quot;0083a31cc0083a31ccf7c10367a6e****\&quot;}]</p>
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -132,9 +132,9 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert handling rule. </p>
+         * <p>The ID of the alert handling rule.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeImageEventOperationPage~~">DescribeImageEventOperationPage</a> operation to query the ID.</p>
+         * <p>You can call <a href="~~DescribeImageEventOperationPage~~">DescribeImageEventOperationPage</a> to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * <p>The remarks that you want to add.</p>
+         * <p>The remarks to add.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -159,14 +159,17 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * <p>The application scope of the rule. The value is in the JSON format. Valid values:</p>
+         * <p>The rule scope. The value is in JSON format. The following keys are supported:</p>
          * <ul>
-         * <li><strong>type</strong></li>
-         * <li><strong>value</strong></li>
+         * <li><strong>type</strong>: the scope type.</li>
+         * <li><strong>value</strong>: the scope value.<blockquote>
+         * <p>This parameter and Source cannot both be empty. If Source is set to agentless, this parameter does not take effect.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
+         * <p>{\&quot;type\&quot;: \&quot;repo\&quot;, \&quot;value\&quot;: \&quot;test-aaa/shenzhen-repo-01\&quot;}</p>
          */
         public Builder scenarios(String scenarios) {
             this.putQueryParameter("Scenarios", scenarios);
@@ -175,10 +178,13 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * <p>The source of the whitelist. Valid values:</p>
+         * <p>The whitelist source. Valid values:</p>
          * <ul>
          * <li><strong>image</strong>: image.</li>
-         * <li><strong>agentless</strong>: agentless detection.</li>
+         * <li><strong>agentless</strong>: agentless detection.<blockquote>
+         * <p>This parameter and Scenarios cannot both be empty. If this parameter is set to agentless, the Scenarios parameter does not take effect.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

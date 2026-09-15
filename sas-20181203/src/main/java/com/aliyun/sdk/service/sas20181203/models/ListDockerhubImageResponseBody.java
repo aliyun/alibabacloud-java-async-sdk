@@ -67,7 +67,7 @@ public class ListDockerhubImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the images.</p>
+         * <p>The list of image information.</p>
          */
         public Builder imageList(java.util.List<ImageList> imageList) {
             this.imageList = imageList;
@@ -75,7 +75,7 @@ public class ListDockerhubImageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
@@ -281,7 +281,7 @@ public class ListDockerhubImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image. Unit: bytes.</p>
+             * <p>The image size, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -292,7 +292,7 @@ public class ListDockerhubImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image repository.</p>
+             * <p>The image repository name.</p>
              * 
              * <strong>example:</strong>
              * <p>python</p>
@@ -303,7 +303,7 @@ public class ListDockerhubImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the image repository belongs.</p>
+             * <p>The image namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>python</p>
@@ -325,7 +325,7 @@ public class ListDockerhubImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the image.</p>
+             * <p>The image tag.</p>
              * 
              * <strong>example:</strong>
              * <p>3.9</p>

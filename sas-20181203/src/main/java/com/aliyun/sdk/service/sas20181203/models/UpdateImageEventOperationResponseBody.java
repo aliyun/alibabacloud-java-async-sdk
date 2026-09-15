@@ -106,7 +106,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned by the API request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -136,7 +136,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7532B7EE-7CE7-5F4D-BF04-B12447DD****</p>
@@ -147,10 +147,10 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The status of the request response. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the alert handling rule, which is the same as the value of the Id request parameter.</p>
+             * <p>The ID of the alert handling rule, which is the same as the alert handling rule ID in the request parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>67429</p>

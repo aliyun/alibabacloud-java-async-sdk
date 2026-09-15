@@ -145,10 +145,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         /**
          * <p>The ID of the check item.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> If you specify this parameter, you must also specify the Uuid parameter.</p>
+         * <p>You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.&gt;Notice: When this parameter is specified, the Uuid parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -161,12 +158,10 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert triggered by the check item.</p>
+         * <p>The alert ID of the check item.</p>
          * <blockquote>
-         * <p> To query the details of a check item, you must provide the ID of the alert that is triggered by the check item. You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to query the IDs of alerts.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> If the Uuid and CheckId parameters are not specified, this parameter is required.</p>
+         * <p>To query the details of a specified check item, provide the alert ID of the check item. You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain this ID.
+         * Notice: This parameter is required when both Uuid and CheckId are empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -179,7 +174,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>Container name.</p>
+         * <p>The container name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_container</p>
@@ -191,7 +186,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -207,13 +202,13 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1232428423234****</p>
+         * <p>16670360956*****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -234,16 +229,13 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the server to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> If you specify this parameter, you must also specify the CheckId parameter.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.&gt;Notice: When this parameter is specified, the CheckId parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>01aec2da-5b57-4f38-b221-da5a0b2f****</p>
+         * <p>06125d19-6a02-4451-9f65-2083996e****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

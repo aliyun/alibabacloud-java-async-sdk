@@ -67,7 +67,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -350,7 +350,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>node-local-dns</p>
@@ -372,7 +372,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
@@ -383,7 +383,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
+             * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
              * <p>zhhtest</p>
@@ -394,16 +394,16 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster. Valid values:</p>
+             * <p>The cluster status. Valid values:</p>
              * <ul>
-             * <li>STARTING: The cluster is being started.</li>
-             * <li>START_FAILED: The cluster fails to be started.</li>
-             * <li>BOOTSTRAPPING: The bootstrap action is being performed for the cluster.</li>
-             * <li>RUNNING: The cluster is running.</li>
-             * <li>TERMINATING: The cluster is being terminated.</li>
-             * <li>TERMINATED: The cluster is terminated.</li>
-             * <li>TERMINATED_WITH_ERRORS: The cluster is terminated due to an exception.</li>
-             * <li>TERMINATE_FAILED: The cluster fails to be terminated.</li>
+             * <li>STARTING: Starting.</li>
+             * <li>START_FAILED: Failed to start.</li>
+             * <li>BOOTSTRAPPING: Initializing bootstrap actions.</li>
+             * <li>RUNNING: Running.</li>
+             * <li>TERMINATING: Terminating.</li>
+             * <li>TERMINATED: Terminated.</li>
+             * <li>TERMINATED_WITH_ERRORS: Terminated due to an exception.</li>
+             * <li>TERMINATE_FAILED: Failed to terminate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -415,11 +415,11 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster. Valid values:</p>
+             * <p>The cluster type. Valid values:</p>
              * <ul>
              * <li><strong>Kubernetes</strong>: dedicated Kubernetes cluster.</li>
              * <li><strong>ManagedKubernetes</strong>: standard managed cluster (edge cluster).</li>
-             * <li><strong>Ask</strong>: serverless Kubernetes (ASK) cluster.</li>
+             * <li><strong>Ask</strong>: standard serverless cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -442,7 +442,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1702433618301</p>
@@ -475,7 +475,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node.</p>
+             * <p>The node name.</p>
              * 
              * <strong>example:</strong>
              * <p>shangliang-test</p>
@@ -486,7 +486,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the pod.</p>
+             * <p>The POD name.</p>
              * 
              * <strong>example:</strong>
              * <p>node-local-dns-zwsxl</p>
@@ -497,7 +497,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of pods.</p>
+             * <p>The number of PODs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -508,7 +508,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the pod.</p>
+             * <p>The IP address of the POD.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.1</p>
@@ -519,7 +519,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>

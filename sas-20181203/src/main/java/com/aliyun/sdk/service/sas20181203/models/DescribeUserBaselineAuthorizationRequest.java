@@ -87,10 +87,10 @@ public class DescribeUserBaselineAuthorizationRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language type for requests and responses. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,10 +103,7 @@ public class DescribeUserBaselineAuthorizationRequest extends Request {
         }
 
         /**
-         * <p>资产所有者ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1519712934213764</p>
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -115,7 +112,7 @@ public class DescribeUserBaselineAuthorizationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the asset owner.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.3.4</p>

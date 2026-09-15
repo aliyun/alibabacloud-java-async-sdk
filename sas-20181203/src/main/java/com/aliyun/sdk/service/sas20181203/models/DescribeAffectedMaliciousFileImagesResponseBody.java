@@ -80,7 +80,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array consisting of the images that have malicious image samples.</p>
+         * <p>The list of images in which malicious samples are detected.</p>
          */
         public Builder affectedMaliciousFileImagesResponse(java.util.List<AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse) {
             this.affectedMaliciousFileImagesResponse = affectedMaliciousFileImagesResponse;
@@ -96,7 +96,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>ACF97412-FD09-4D1F-994F-34DF12BREF20</p>
@@ -575,7 +575,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image digest.</p>
+             * <p>The digest of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>6a5e1031a5858617f7d8a179ead6****</p>
@@ -586,7 +586,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL to download the malicious image sample.</p>
+             * <p>The download URL of the malicious sample.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://aegis-metadata-file.oss-cn-shanghai.aliyuncs.com/">https://aegis-metadata-file.oss-cn-shanghai.aliyuncs.com/</a></p>
@@ -597,7 +597,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path to the image file.</p>
+             * <p>The file path of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>/d836968041f7683b5605a****</p>
@@ -619,7 +619,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text that is highlighted.</p>
+             * <p>The highlighted text.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ruleVersion&quot;:&quot;highlight_20210908&quot;,&quot;ruleId&quot;:600106,&quot;events&quot;:[[2,54]]}</p>
@@ -630,7 +630,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of alert event.</p>
+             * <p>The ID of the alert event.</p>
              * 
              * <strong>example:</strong>
              * <p>1000040</p>
@@ -663,7 +663,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECS instance.</p>
+             * <p>The name of the server instance.</p>
              * 
              * <strong>example:</strong>
              * <p>sql-test-001</p>
@@ -696,7 +696,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the last scan.</p>
+             * <p>The timestamp of the latest scan.</p>
              * 
              * <strong>example:</strong>
              * <p>1596522785000</p>
@@ -707,7 +707,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the last verification.</p>
+             * <p>The timestamp of the latest verification.</p>
              * 
              * <strong>example:</strong>
              * <p>1596522711000</p>
@@ -718,7 +718,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image layer.</p>
+             * <p>The layer of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>27213ad3447f0209dd152a5cadea****</p>
@@ -729,11 +729,11 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity of the malicious image sample. Valid values:</p>
+             * <p>The severity level of the malicious image sample. Valid values:</p>
              * <ul>
-             * <li><strong>serious</strong></li>
-             * <li><strong>suspicious</strong></li>
-             * <li><strong>remind</strong></li>
+             * <li><strong>serious</strong>: urgent</li>
+             * <li><strong>suspicious</strong>: suspicious</li>
+             * <li><strong>remind</strong>: reminder.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -745,7 +745,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MD5 hash value of the malicious image sample.</p>
+             * <p>The MD5 hash of the malicious file.</p>
              * 
              * <strong>example:</strong>
              * <p>d836968041f768300d9605a****</p>
@@ -756,7 +756,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the image repository belongs.</p>
+             * <p>The namespace of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>hanghai-namespace</p>
@@ -789,7 +789,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the container image.</p>
+             * <p>The instance ID of the container image.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-datvail3m****</p>
@@ -822,12 +822,12 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The handling status of the malicious image sample. Valid values:</p>
+             * <p>The processing status of the malicious image sample. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: unhandled</li>
              * <li><strong>1</strong>: handled</li>
              * <li><strong>2</strong>: verifying</li>
-             * <li><strong>3</strong>: added to the whitelist</li>
+             * <li><strong>3</strong>: added to whitelist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -839,7 +839,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is added to the image.</p>
+             * <p>The tag of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>0.2</p>
@@ -850,7 +850,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task object.</p>
+             * <p>The ID of the scan target.</p>
              * 
              * <strong>example:</strong>
              * <p>m-bp17m0pc0xprzbwo****</p>
@@ -861,7 +861,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task object.</p>
+             * <p>The name of the scan target.</p>
              * 
              * <strong>example:</strong>
              * <p>source-test-obj-9LaLJ</p>
@@ -872,10 +872,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object type. Valid value:</p>
+             * <p>The object type of the scan target. Valid values:</p>
              * <ul>
-             * <li><strong>ECS_IMAGE</strong></li>
-             * <li><strong>ECS_SNAPSHOT</strong></li>
+             * <li><strong>ECS_IMAGE</strong>: image.</li>
+             * <li><strong>ECS_SNAPSHOT</strong>: snapshot.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -983,7 +983,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of images that have malicious image samples returned on the current page.</p>
+             * <p>The number of images with malicious samples returned on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -994,7 +994,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+             * <p>The page number of the current page when using paging. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1005,7 +1005,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * <p>The maximum number of entries per page when using paging. Default value: <strong>20</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1016,7 +1016,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of images that have malicious image samples.</p>
+             * <p>The total number of images in which malicious samples are detected.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

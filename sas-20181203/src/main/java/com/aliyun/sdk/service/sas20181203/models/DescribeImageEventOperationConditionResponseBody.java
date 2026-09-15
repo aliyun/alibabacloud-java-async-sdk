@@ -106,7 +106,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The return code of the call.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -147,10 +147,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,10 +233,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The keyword of the condition. Valid values:</p>
+             * <p>The condition key. Valid values:</p>
              * <ul>
-             * <li><strong>MD5</strong></li>
-             * <li><strong>PATH</strong></li>
+             * <li><strong>MD5</strong>: MD5.</li>
+             * <li><strong>PATH</strong>: path.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the condition.</p>
+             * <p>The condition name.</p>
              * 
              * <strong>example:</strong>
              * <p>MD5</p>
@@ -259,7 +259,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching types.</p>
+             * <p>The match type.</p>
              */
             public Builder supportedMisType(java.util.List<String> supportedMisType) {
                 this.supportedMisType = supportedMisType;
@@ -347,9 +347,9 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation code.</p>
+             * <p>The operation code. Valid values:</p>
              * <ul>
-             * <li>Only <strong>whitelist</strong> may be returned, which indicates that the alert event is added to the whitelist.</li>
+             * <li><strong>whitelist</strong>: whitelist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -361,7 +361,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the operation.</p>
+             * <p>The operation name.</p>
              * 
              * <strong>example:</strong>
              * <p>whitelist</p>
@@ -444,9 +444,9 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert type.</p>
+             * <p>The alerting type. Valid values:</p>
              * <ul>
-             * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+             * <li><strong>sensitiveFile</strong>: sensitive file.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -458,7 +458,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operations.</p>
+             * <p>The list of operations.</p>
              */
             public Builder operations(java.util.List<Operations> operations) {
                 this.operations = operations;
@@ -466,7 +466,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application scopes of the rules.</p>
+             * <p>The rule scope.</p>
              */
             public Builder scenarios(java.util.List<String> scenarios) {
                 this.scenarios = scenarios;

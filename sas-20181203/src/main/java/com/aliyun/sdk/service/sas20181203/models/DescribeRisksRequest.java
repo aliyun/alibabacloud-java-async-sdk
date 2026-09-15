@@ -115,10 +115,10 @@ public class DescribeRisksRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:  </p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeRisksRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Default value: 20.</p>
+         * <p>The maximum number of baselines to return. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -143,9 +143,9 @@ public class DescribeRisksRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,9 +158,9 @@ public class DescribeRisksRequest extends Request {
         }
 
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the baseline IDs.</p>
+         * <p>You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to obtain the baseline ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

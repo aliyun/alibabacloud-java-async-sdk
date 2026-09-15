@@ -67,7 +67,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -204,7 +204,10 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * BlockMachineCount.
+             * <p>The number of servers under control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder blockMachineCount(Integer blockMachineCount) {
                 this.blockMachineCount = blockMachineCount;
@@ -212,7 +215,10 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MachineCount.
+             * <p>The total number of servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder machineCount(Integer machineCount) {
                 this.machineCount = machineCount;
@@ -220,7 +226,10 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorMachineCount.
+             * <p>The number of servers in warning status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder monitorMachineCount(Integer monitorMachineCount) {
                 this.monitorMachineCount = monitorMachineCount;
@@ -228,7 +237,10 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * OpenMachineCount.
+             * <p>The number of servers with the service enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder openMachineCount(Integer openMachineCount) {
                 this.openMachineCount = openMachineCount;
@@ -236,7 +248,10 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * StudyingMachineCount.
+             * <p>The number of servers in learning status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder studyingMachineCount(Integer studyingMachineCount) {
                 this.studyingMachineCount = studyingMachineCount;

@@ -159,7 +159,20 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         } 
 
         /**
-         * AlertLevel.
+         * <p>The alert notification level. Valid values:</p>
+         * <ul>
+         * <li><p>0: No alert.</p>
+         * </li>
+         * <li><p>1: Reminder.</p>
+         * </li>
+         * <li><p>2: Suspicious.</p>
+         * </li>
+         * <li><p>3: High-risk.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -168,7 +181,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * ExcludeIdList.
+         * <p>The list of excluded rule IDs.</p>
          */
         public Builder excludeIdList(java.util.List<Long> excludeIdList) {
             this.putQueryParameter("ExcludeIdList", excludeIdList);
@@ -177,7 +190,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * IdList.
+         * <p>The list of rule IDs.</p>
          */
         public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);
@@ -186,7 +199,14 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The operating system type. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows.</li>
+         * <li><strong>linux</strong>: Linux.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -195,7 +215,18 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * RuleAction.
+         * <p>The rule action. Valid values:</p>
+         * <ul>
+         * <li><p><strong>block</strong>: Block.</p>
+         * </li>
+         * <li><p><strong>monitor</strong>: Monitor.</p>
+         * </li>
+         * <li><p><strong>pass</strong>: Allow.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -204,7 +235,10 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -213,6 +247,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to select all rules.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,6 +260,11 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
+         * <p>The policy status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

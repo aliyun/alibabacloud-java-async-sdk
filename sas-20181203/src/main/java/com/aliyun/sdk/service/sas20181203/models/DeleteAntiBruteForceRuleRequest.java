@@ -60,7 +60,7 @@ public class DeleteAntiBruteForceRuleRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the defense rules against brute-force attacks to delete.</p>
+         * <p>The IDs of the brute-force attacks defense rules that you want to delete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List<Long> ids) {

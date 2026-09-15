@@ -87,9 +87,9 @@ public class SetImageBuildRiskStatusRequest extends Request {
         } 
 
         /**
-         * <p>The UUIDs of images. Separate multiple UUIDs with commas (,).</p>
+         * <p>The image UUIDs. Separate multiple UUIDs with commas (,).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the UUIDs of images.</p>
+         * <p>Call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class SetImageBuildRiskStatusRequest extends Request {
         }
 
         /**
-         * <p>The keyword of the image build command risk.</p>
+         * <p>The risk keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>risk.type</p>
@@ -114,11 +114,11 @@ public class SetImageBuildRiskStatusRequest extends Request {
         }
 
         /**
-         * <p>The status of the image build command risk. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unhandled.</li>
-         * <li><strong>1</strong>: ignored.</li>
-         * <li><strong>2</strong>: false positive.</li>
+         * <li><strong>0</strong>: Unhandled.</li>
+         * <li><strong>1</strong>: Ignored.</li>
+         * <li><strong>2</strong>: False positive.</li>
          * </ul>
          * 
          * <strong>example:</strong>

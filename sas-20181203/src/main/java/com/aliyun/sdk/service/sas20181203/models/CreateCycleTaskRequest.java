@@ -208,7 +208,10 @@ public class CreateCycleTaskRequest extends Request {
         } 
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -219,8 +222,8 @@ public class CreateCycleTaskRequest extends Request {
         /**
          * <p>Specifies whether to enable the task. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: Enable.</li>
+         * <li><strong>0</strong>: Disable.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -234,7 +237,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The first time when the task is performed.</p>
+         * <p>The time of the first execution.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +250,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The interval of the task.</p>
+         * <p>The interval period.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +263,8 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The additional information.</p>
+         * <p>The extended information field.</p>
+         * <p>Note: This parameter is actually required. If this parameter is not specified, the API returns an error. The value is a JSON-formatted string that must contain at least the targetInfo array.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -285,10 +289,10 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The unit of the scan interval. Valid values:</p>
+         * <p>The unit of the scan period. Valid values:</p>
          * <ul>
-         * <li><strong>day</strong>: days</li>
-         * <li><strong>hour</strong>: hours</li>
+         * <li><strong>day</strong>: day.</li>
+         * <li><strong>hour</strong>: hour.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -302,7 +306,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The additional source for the task.</p>
+         * <p>The source from which the task is added.</p>
          * 
          * <strong>example:</strong>
          * <p>console_batch</p>
@@ -314,7 +318,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The time when the task ends. Unit: hours.</p>
+         * <p>The task end time, in hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -327,7 +331,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The time when the task is started. Unit: hours.</p>
+         * <p>The task start time, in hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,16 +344,11 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the task. Valid values:</p>
-         * <ul>
-         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
-         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
-         * </ul>
+         * <p>The task name. This is a custom string used to identify the periodic scan task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>EMG_VUL_SCHEDULE_SCAN</p>
+         * <p>test_virus_scan</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -358,11 +357,11 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
-         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
+         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

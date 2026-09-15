@@ -119,7 +119,7 @@ public class DescribeAlarmEventDetailRequest extends Request {
         /**
          * <p>The unique identifier of the alert event.</p>
          * <blockquote>
-         * <p>To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the identifier.</p>
+         * <p>To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain this identifier.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -133,7 +133,7 @@ public class DescribeAlarmEventDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * <p>The source of the request. Set the value to <strong>sas</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeAlarmEventDetailRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -162,7 +162,10 @@ public class DescribeAlarmEventDetailRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

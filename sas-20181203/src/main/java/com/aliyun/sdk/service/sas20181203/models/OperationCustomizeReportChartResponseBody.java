@@ -54,7 +54,7 @@ public class OperationCustomizeReportChartResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>432B2D4E-C8D3-52E4-9F68-35E0C05F****</p>

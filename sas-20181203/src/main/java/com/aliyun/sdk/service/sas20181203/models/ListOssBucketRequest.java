@@ -87,7 +87,7 @@ public class ListOssBucketRequest extends Request {
         } 
 
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>iboxpublic****</p>
@@ -99,10 +99,10 @@ public class ListOssBucketRequest extends Request {
         }
 
         /**
-         * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,14 @@ public class ListOssBucketRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The business source. Valid values:</p>
+         * <ul>
+         * <li><strong>OSS</strong>: OSS</li>
+         * <li><strong>NAS</strong>: NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

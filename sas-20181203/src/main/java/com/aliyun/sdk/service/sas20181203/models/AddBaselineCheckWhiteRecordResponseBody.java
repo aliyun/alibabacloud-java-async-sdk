@@ -241,7 +241,7 @@ public class AddBaselineCheckWhiteRecordResponseBody extends TeaModel {
              * <p>The reason why the check item is added to the whitelist.</p>
              * 
              * <strong>example:</strong>
-             * <p>AutoTest</p>
+             * <p>暂时忽略</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

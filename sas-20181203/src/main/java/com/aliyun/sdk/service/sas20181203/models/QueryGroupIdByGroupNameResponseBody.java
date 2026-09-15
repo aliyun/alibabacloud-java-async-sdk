@@ -67,7 +67,7 @@ public class QueryGroupIdByGroupNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the asset group.</p>
+         * <p>The ID of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>9935302</p>
@@ -78,7 +78,7 @@ public class QueryGroupIdByGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>

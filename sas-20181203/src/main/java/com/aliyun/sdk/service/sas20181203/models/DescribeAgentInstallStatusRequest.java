@@ -88,10 +88,10 @@ public class DescribeAgentInstallStatusRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid value:</p>
+         * <p>The language type for the request and response messages. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class DescribeAgentInstallStatusRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>59.46.XXX.XXX</p>
@@ -116,9 +116,9 @@ public class DescribeAgentInstallStatusRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the servers to query. Separate multiple UUIDs with commas (,).</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUIDs of servers.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

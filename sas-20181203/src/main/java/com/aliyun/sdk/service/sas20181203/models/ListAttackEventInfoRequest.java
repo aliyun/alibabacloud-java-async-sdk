@@ -171,7 +171,7 @@ public class ListAttackEventInfoRequest extends Request {
         } 
 
         /**
-         * <p>Attacked asset. You can fill in the machine instance name, public IP, or private IP.</p>
+         * <p>The attacked asset. You can specify the instance name, public IP address, or private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>instance_**</p>
@@ -183,23 +183,23 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>Attack type. Values:</p>
+         * <p>The attack type. Valid values:</p>
          * <ul>
-         * <li>9: SQL Server brute force attack</li>
-         * <li>5: SSH brute force attack</li>
-         * <li>6: RDP brute force attack</li>
-         * <li>101: Java Struts2 attack interception</li>
-         * <li>102: Redis attack interception</li>
-         * <li>103: Chinese AntSword WebShell communication</li>
-         * <li>104: Chinese Chopper WebShell communication</li>
+         * <li>9: SQL Server brute-force attacks</li>
+         * <li>5: SSH brute-force attacks</li>
+         * <li>6: RDP brute-force attacks</li>
+         * <li>101: Java Struts2 attack blocked</li>
+         * <li>102: Redis attack blocked</li>
+         * <li>103: China Chopper (AntSword) WebShell communication</li>
+         * <li>104: China Chopper WebShell communication</li>
          * <li>133: XISE WebShell communication</li>
          * <li>161: WebShell upload</li>
          * <li>209: PHP WebShell upload</li>
          * <li>210: JSP WebShell upload</li>
          * <li>211: ASP WebShell upload</li>
-         * <li>215: Special suffix WebShell upload</li>
-         * <li>ai_webshell: Intelligent defense for WebShell upload</li>
-         * <li>java_common_rce: Java common RCE vulnerability interception</li>
+         * <li>215: Special extension WebShell upload</li>
+         * <li>ai_webshell: WebShell upload intelligent defense</li>
+         * <li>java_common_rce: Java common remote code execution (RCE) vulnerability blocked</li>
          * <li>alinet_webrce: Adaptive web attack defense</li>
          * </ul>
          * 
@@ -213,7 +213,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>Page number to display in a paginated query.</p>
+         * <p>The number of the page to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +225,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>Target port of the attack.</p>
+         * <p>The Attack Target Ports of the Attack Target.</p>
          * 
          * <strong>example:</strong>
          * <p>9085</p>
@@ -237,7 +237,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>Timestamp of the end time.</p>
+         * <p>The timestamp of the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753152532550</p>
@@ -249,7 +249,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>Set the language type for request and response messages. Default is <strong>zh</strong>. Values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -265,7 +265,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of records per page in a paginated query.</p>
+         * <p>The maximum number of entries to return on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -277,7 +277,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>Source IP of the attack.</p>
+         * <p>The Attack Source IP Addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>185.237.96.***</p>
@@ -289,7 +289,8 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>Timestamp of the start time.</p>
+         * <p>The timestamp of the start time.</p>
+         * <p>This field is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1752547732549</p>

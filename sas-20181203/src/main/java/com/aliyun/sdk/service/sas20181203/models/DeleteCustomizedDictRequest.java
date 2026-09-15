@@ -59,7 +59,7 @@ public class DeleteCustomizedDictRequest extends Request {
         } 
 
         /**
-         * <p>The source IP address.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>123.103.9.***</p>

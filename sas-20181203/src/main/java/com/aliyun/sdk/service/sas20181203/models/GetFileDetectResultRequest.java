@@ -89,7 +89,7 @@ public class GetFileDetectResultRequest extends Request {
         } 
 
         /**
-         * <p>The identifiers of files. Only MD5 hash values are supported.</p>
+         * <p>The list of file identifiers. A maximum of 100 elements can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hashKeyList(java.util.List<String> hashKeyList) {
@@ -111,16 +111,10 @@ public class GetFileDetectResultRequest extends Request {
         }
 
         /**
-         * <p>The type of the file. Valid values:</p>
+         * <p>The type of file to detect. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unknown file</li>
-         * <li><strong>1</strong>: binary file</li>
-         * <li><strong>2</strong>: webshell file</li>
-         * <li><strong>4</strong>: script file</li>
+         * <li><strong>0</strong>: malicious file detection</li>
          * </ul>
-         * <blockquote>
-         * <p>If you do not know the type of the file, set this parameter to 0.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

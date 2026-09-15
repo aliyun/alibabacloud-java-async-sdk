@@ -59,7 +59,10 @@ public class DeleteUnknownThreatDetectStrategyRequest extends Request {
         } 
 
         /**
-         * IdList.
+         * <p>The list of policy IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);

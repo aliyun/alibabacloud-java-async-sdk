@@ -275,7 +275,7 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         /**
          * <p>Used to mark the starting position for reading. Leave it blank to start from the beginning.</p>
          * <blockquote>
-         * <p>For the first call, you do not need to fill this in; the response will include the NextToken for the second call, and each subsequent call&quot;s response will contain the NextToken for the next call.</p>
+         * <p>For the first call, you do not need to fill this in; the response will include the NextToken for the second call, and each subsequent call\&quot;s response will contain the NextToken for the next call.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

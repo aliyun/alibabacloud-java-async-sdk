@@ -67,7 +67,10 @@ public class CreateFileProtectClientRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;

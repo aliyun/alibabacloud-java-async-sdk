@@ -208,7 +208,7 @@ public class ListCheckTypesRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder showChecks(Boolean showChecks) {
             this.putQueryParameter("ShowChecks", showChecks);

@@ -270,7 +270,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         } 
 
         /**
-         * <p>Application query condition.</p>
+         * <p>The application query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>**7ad7e3a</p>
@@ -282,9 +282,9 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Instance type. Values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>SERVERLESS</strong>: Serverless asset</li>
+         * <li><strong>SERVERLESS</strong>: Serverless asset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,10 +297,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Enable auto-binding. Values:</p>
+         * <p>Specifies whether to enable automatic binding. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Off</li>
-         * <li><strong>1</strong>: On</li>
+         * <li><strong>0</strong>: Disable automatic binding.</li>
+         * <li><strong>1</strong>: Enable automatic binding.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,10 +313,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Whether to bind all. Default is <strong>false</strong>. Values:</p>
+         * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes</li>
-         * <li><strong>false</strong>: No</li>
+         * <li><strong>true</strong>: Bind all assets.</li>
+         * <li><strong>false</strong>: Do not bind all assets.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,9 +329,9 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>List of application IDs to be bound.</p>
+         * <p>The list of application IDs to bind.</p>
          * <blockquote>
-         * <p>Obtained through the <a href="~~ListMachineApps~~">ListMachineApps</a> interface.</p>
+         * <p>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
          * </blockquote>
          */
         public Builder bindAppList(java.util.List<String> bindAppList) {
@@ -341,10 +341,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Type of asset to operate on. Values:</p>
+         * <p>The Asset Type. Valid values:</p>
          * <ul>
-         * <li><strong>INSTANCE</strong>: Instance</li>
-         * <li><strong>APP</strong>: Application</li>
+         * <li><strong>INSTANCE</strong>: Instance.</li>
+         * <li><strong>APP</strong>: Application.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -357,7 +357,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>List of asset UUIDs to be bound.</p>
+         * <p>The list of asset UUIDs to bind.</p>
          */
         public Builder bindUuidList(java.util.List<String> bindUuidList) {
             this.putQueryParameter("BindUuidList", bindUuidList);
@@ -366,7 +366,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -375,9 +375,9 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Set the conditions for searching assets. This parameter is in JSON format, and case sensitivity should be noted when entering parameters.</p>
+         * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to the letter case when you enter the parameter.</p>
          * <blockquote>
-         * <p>Supports searching assets using instance ID, instance name, VPC ID, region, public IP address, etc. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> interface to query supported search conditions.</p>
+         * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -390,10 +390,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Set the logical relationship between multiple search conditions. Values:</p>
+         * <p>The logical relationship among multiple search conditions. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: Indicates an <strong>or</strong> relationship between multiple conditions.</li>
-         * <li><strong>AND</strong>: Indicates an <strong>and</strong> relationship between multiple conditions.</li>
+         * <li><strong>OR</strong>: Multiple conditions are evaluated using a logical OR.</li>
+         * <li><strong>AND</strong>: Multiple conditions are evaluated using a logical AND.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -406,7 +406,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>NTM version code, used for pre-binding.</p>
+         * <p>The NTM version code for pre-binding.</p>
          * 
          * <strong>example:</strong>
          * <p>level2</p>
@@ -418,13 +418,13 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Whether it is a pre-bind operation. Values:</p>
+         * <p>Specifies whether to perform a pre-binding operation. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No</li>
-         * <li><strong>1</strong>: Yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * <blockquote>
-         * <p>After enabling pre-binding, the specified server will automatically bind the corresponding version&quot;s authorization count after the purchase is completed.</p>
+         * <p>After pre-binding is enabled, the corresponding number of authorization licenses are automatically bound to the specified servers after the purchase is completed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -437,7 +437,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Pre-bind order ID.</p>
+         * <p>The pre-binding order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>233016**0482</p>
@@ -449,7 +449,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>UID of the associated resource directory.</p>
+         * <p>The UID of the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -461,9 +461,9 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>List of application IDs to be unbound.</p>
+         * <p>The list of application IDs to unbind.</p>
          * <blockquote>
-         * <p>Obtained through the <a href="~~ListMachineApps~~">ListMachineApps</a> interface.</p>
+         * <p>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
          * </blockquote>
          */
         public Builder unBindAppList(java.util.List<String> unBindAppList) {
@@ -473,7 +473,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>List of asset UUIDs to be unbound.</p>
+         * <p>The list of asset UUIDs to unbind.</p>
          */
         public Builder unBindUuidList(java.util.List<String> unBindUuidList) {
             this.putQueryParameter("UnBindUuidList", unBindUuidList);

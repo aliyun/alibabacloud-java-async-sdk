@@ -242,7 +242,7 @@ public class HandleSecurityEventsRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{\&quot;expireTime\&quot;:1719588943551,\&quot;subOperation\&quot;:\&quot;killAndQuaraFileByMd5andPath\&quot;}</p>
          */
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
@@ -269,7 +269,7 @@ public class HandleSecurityEventsRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>16670360956*****</p>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

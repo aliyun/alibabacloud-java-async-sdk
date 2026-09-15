@@ -54,7 +54,7 @@ public class RetryAgentlessTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>

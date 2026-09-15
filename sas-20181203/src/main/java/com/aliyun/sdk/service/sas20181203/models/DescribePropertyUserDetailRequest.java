@@ -213,7 +213,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         } 
 
         /**
-         * <p>Set which page of the returned results to start displaying the query results. The default value is <strong>1</strong>, indicating that the display starts from the first page.</p>
+         * <p>The page number of the page to return in a paginated query. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +225,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>Whether the account name supports fuzzy search. To enable fuzzy search, set this parameter&quot;s value to <strong>1</strong>; other values or an empty value indicate that fuzzy search is not supported.</p>
+         * <p>Specifies whether fuzzy match is supported for account names. Set this parameter to <strong>1</strong> to enable fuzzy match. Any other value or an empty value indicates that fuzzy match is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,10 +237,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>Whether the queried account has ROOT privileges. Possible values include:</p>
+         * <p>Specifies whether the account to query has ROOT permissions. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No</li>
-         * <li><strong>1</strong>: Yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>The end timestamp for the last login retrieval. The unit is milliseconds.</p>
+         * <p>The end timestamp for querying the last logon time of the account. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1651298836000</p>
@@ -265,7 +265,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>The start timestamp for the last login retrieval. The unit is milliseconds.</p>
+         * <p>The start timestamp for querying the last logon time of the account. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>164922523600</p>
@@ -277,9 +277,9 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>Used to mark the starting position for reading. Leave it empty to start from the beginning.</p>
+         * <p>The token that marks the current position from which to start reading. Leave this parameter empty to start from the beginning.</p>
          * <blockquote>
-         * <p>For the first call, you do not need to fill in this field. The response will include the NextToken for the second call, and each subsequent call will include the NextToken for the next call.</p>
+         * <p>Do not specify this parameter for the first call. The response includes the NextToken value for the second call. Each subsequent response contains the NextToken value for the next call.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>Set the number of account asset fingerprint information items to display per page during pagination. The default value is <strong>10</strong>, indicating that 10 items of account asset fingerprint information are displayed per page.</p>
+         * <p>The number of account asset fingerprint entries per page in a paging query. Default value: <strong>10</strong>, which indicates 10 account asset fingerprint entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -304,7 +304,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>The name or IP address of the server to be queried.</p>
+         * <p>The name or IP address of the server to query.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -325,10 +325,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>Whether to use the NextToken method to fetch vulnerability list data. If this parameter is used, TotalCount will no longer be returned. Possible values:</p>
+         * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Use the NextToken method.</li>
-         * <li><strong>false</strong>: Do not use the NextToken method.</li>
+         * <li><strong>true</strong>: Uses the NextToken method.</li>
+         * <li><strong>false</strong>: Does not use the NextToken method.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -341,7 +341,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>The account name of the server to be queried.</p>
+         * <p>The account name on the server to query.</p>
          * 
          * <strong>example:</strong>
          * <p>bin</p>
@@ -353,7 +353,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server to be queried.</p>
+         * <p>The UUID of the server to query.</p>
          * 
          * <strong>example:</strong>
          * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>

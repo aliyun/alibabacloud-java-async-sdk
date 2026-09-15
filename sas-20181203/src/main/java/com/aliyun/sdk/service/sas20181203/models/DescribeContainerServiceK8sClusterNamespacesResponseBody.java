@@ -67,7 +67,7 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
         } 
 
         /**
-         * <p>The namespaces.</p>
+         * <p>The list of namespaces.</p>
          */
         public Builder k8sClusterNamespaces(java.util.List<K8sClusterNamespaces> k8sClusterNamespaces) {
             this.k8sClusterNamespaces = k8sClusterNamespaces;
@@ -75,7 +75,7 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0C8487EF-50C2-54BB-8634-10F8C35D****</p>

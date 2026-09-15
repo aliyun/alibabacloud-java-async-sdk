@@ -158,7 +158,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the file list to view.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * <p>The identifier of the request source. Set the value to <strong>sas</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -194,7 +194,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the server group to which the server belongs. The quarantined file is located on the server.</p>
+         * <p>The ID of the server group where the quarantined file is located.</p>
          * 
          * <strong>example:</strong>
          * <p>11472451</p>
@@ -206,7 +206,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -218,7 +218,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the quarantined file.</p>
+         * <p>The unique identifier of the quarantined file.</p>
          * 
          * <strong>example:</strong>
          * <p>a31337789f64d39b2219733ec99f9af7</p>
@@ -230,7 +230,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>59.82.XX.XX</p>
@@ -242,14 +242,14 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * <p>The status of the quarantined file that you want to query. Valid values:</p>
+         * <p>The status of the quarantined files to query. Valid values:  </p>
          * <ul>
-         * <li><strong>quaraFailed</strong>: The file fails to be quarantined.</li>
-         * <li><strong>quaraDone</strong>: The file is quarantined.</li>
-         * <li><strong>quaraing</strong>: The file is being quarantined.</li>
-         * <li><strong>rollbackFailed</strong>: The system fails to cancel quarantining the file.</li>
-         * <li><strong>rollbackDone</strong>: The system cancelled quarantining the file.</li>
-         * <li><strong>rollbacking</strong>: The system is cancelling quarantining the file.</li>
+         * <li><strong>quaraFailed</strong>: Quarantine failed.</li>
+         * <li><strong>quaraDone</strong>: Quarantine succeeded.</li>
+         * <li><strong>quaraing</strong>: Quarantine in progress.</li>
+         * <li><strong>rollbackFailed</strong>: Quarantine rollback failed.</li>
+         * <li><strong>rollbackDone</strong>: Quarantine rollback succeeded.</li>
+         * <li><strong>rollbacking</strong>: Quarantine rollback in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>

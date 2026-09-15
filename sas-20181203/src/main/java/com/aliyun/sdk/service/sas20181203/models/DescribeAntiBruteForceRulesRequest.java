@@ -129,7 +129,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         } 
 
         /**
-         * <p>Set which page of the returned results to start displaying the query results. The default value is <strong>1</strong>, indicating that the display starts from the first page.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,9 +141,9 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the anti-brute force rule.</p>
+         * <p>The ID of the brute-force attacks prevention rule.</p>
          * <blockquote>
-         * <p>You can obtain this parameter by calling the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> interface.</p>
+         * <p>You can invoke the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the brute force rule.</p>
+         * <p>The name of the brute-force attacks prevention rule.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -168,7 +168,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data entries displayed per page during a paginated query.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. This parameter is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

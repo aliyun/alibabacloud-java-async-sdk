@@ -270,10 +270,8 @@ public class ChangeCheckConfigRequest extends Request {
         } 
 
         /**
-         * <p>The list of check items that you want to add to the policy.</p>
-         * <blockquote>
-         * <p> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</p>
-         * </blockquote>
+         * <p>The list of check items to add to the policy.
+         * <notice> If ConfigStandardIds or ConfigRequirementIds is specified, this parameter does not take effect.</p>
          */
         public Builder addedCheck(java.util.List<AddedCheck> addedCheck) {
             this.putQueryParameter("AddedCheck", addedCheck);
@@ -282,7 +280,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token used to ensure request idempotency. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -291,9 +289,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The requirement IDs that you want to specify for the check policy.</p>
+         * <p>Configures the check policy by specifying requirement IDs.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the requirement ID. If the ConfigStandardIds parameter is configured, this parameter does not take effect.</p>
+         * <p>Call <a href="~~ListCheckResult~~">ListCheckResult</a> to obtain requirement IDs. If ConfigStandardIds is specified, this parameter does not take effect.</p>
          * </blockquote>
          */
         public Builder configRequirementIds(ConfigRequirementIds configRequirementIds) {
@@ -304,9 +302,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The standard IDs that you want to specify for the check policy.</p>
+         * <p>Configures the check policy by specifying standard IDs.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the standard ID.</p>
+         * <p>Call <a href="~~ListCheckResult~~">ListCheckResult</a> to obtain standard IDs.</p>
          * </blockquote>
          */
         public Builder configStandardIds(ConfigStandardIds configStandardIds) {
@@ -317,9 +315,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the check item. Valid value:</p>
+         * <p>The field configuration. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong>: Add all check items.</li>
+         * <li><strong>all:</strong> Adds all check items.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,7 +330,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The days in a week on which a check is performed.</p>
+         * <p>The scheduled check days.</p>
          */
         public Builder cycleDays(java.util.List<Integer> cycleDays) {
             this.putQueryParameter("CycleDays", cycleDays);
@@ -341,10 +339,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to check the new check items in the selected requirement item. Valid values:</p>
+         * <p>Specifies whether to automatically include newly added check items from the selected requirements. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true:</strong> Enabled.</li>
+         * <li><strong>false:</strong> Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -357,10 +355,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic periodical check feature. Valid values:</p>
+         * <p>Specifies whether to enable automatic scheduled checks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true:</strong> Enabled.</li>
+         * <li><strong>false:</strong> Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,12 +371,12 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The end time of the check. The value specifies a point in time in a day. The time period that is specified by the start time and end time must be one of the following time periods:</p>
+         * <p>The end hour of the check time window, expressed as an hour of the day. The start and end times must fall within one of the following time ranges. Valid values: 6, 12, 18, 24.</p>
          * <ul>
-         * <li><strong>00:00 to 06:00:</strong> If you set the StartTime parameter to 0, you must set the EndTime parameter to 6.</li>
-         * <li><strong>06:00 to 12:00</strong>: If you set the StartTime parameter to 6, you must set the EndTime parameter to 12.</li>
-         * <li><strong>12:00 to 18:00</strong>: If you set the StartTime parameter to 12, you must set the EndTime parameter to 18.</li>
-         * <li><strong>18:00 to 24:00:</strong> If you set the StartTime parameter to 18, you must set the EndTime parameter to 24.</li>
+         * <li><strong>0~6:</strong> If the start time is 0, set the end time to 6.</li>
+         * <li><strong>6~12:</strong> If the start time is 6, set the end time to 12.</li>
+         * <li><strong>12~18:</strong> If the start time is 12, set the end time to 18.</li>
+         * <li><strong>18~24:</strong> If the start time is 18, set the end time to 24.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -391,10 +389,11 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host to query.</p>
-         * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
-         * </blockquote>
+         * <p>The region of the Security Center instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> China (Hangzhou)</li>
+         * <li><strong>ap-southeast-1:</strong> Singapore</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -406,10 +405,8 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The list of the check items that you want to remove from the policy.</p>
-         * <blockquote>
-         * <p> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</p>
-         * </blockquote>
+         * <p>The list of check items to remove from the policy.
+         * <notice> If ConfigStandardIds or ConfigRequirementIds is specified, this parameter does not take effect.</p>
          */
         public Builder removedCheck(java.util.List<RemovedCheck> removedCheck) {
             this.putQueryParameter("RemovedCheck", removedCheck);
@@ -418,9 +415,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>The ID of the resource directory member accounts (Alibaba Cloud account).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>Call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -433,7 +430,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the information about the check item.</p>
+         * <p>This parameter is deprecated. You do not need to configure it.</p>
          */
         public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
@@ -442,7 +439,13 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The start time of the check. The value specifies a point in time in a day.</p>
+         * <p>The start hour of the check time window, expressed as an hour of the day. The start and end times must fall within one of the following time ranges. Valid values: 0, 6, 12, 18.</p>
+         * <ul>
+         * <li><strong>0~6:</strong> If the start time is 0, set the end time to 6.</li>
+         * <li><strong>6~12:</strong> If the start time is 6, set the end time to 12.</li>
+         * <li><strong>12~18:</strong> If the start time is 12, set the end time to 18.</li>
+         * <li><strong>18~24:</strong> If the start time is 18, set the end time to 24.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -454,10 +457,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the configuration automatically generated by the system. Valid values:</p>
+         * <p>Specifies whether to use the system-generated configuration. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true:</strong> Yes.</li>
+         * <li><strong>false:</strong> No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -470,7 +473,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The cloud service providers.</p>
+         * <p>The list of cloud vendors.</p>
          */
         public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);
@@ -540,7 +543,7 @@ public class ChangeCheckConfigRequest extends Request {
             /**
              * <p>The ID of the check item.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
+             * <p>Call <a href="~~ListCheckResult~~">ListCheckResult</a> to obtain check item IDs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -622,7 +625,7 @@ public class ChangeCheckConfigRequest extends Request {
             } 
 
             /**
-             * <p>The requirement IDs that you want to add to the policy.</p>
+             * <p>The list of requirement IDs to add to the policy.</p>
              */
             public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
@@ -630,7 +633,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * <p>The requirement IDs that you want to remove from the policy.</p>
+             * <p>The list of requirement IDs to remove from the policy.</p>
              */
             public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;
@@ -697,7 +700,7 @@ public class ChangeCheckConfigRequest extends Request {
             } 
 
             /**
-             * <p>The standard IDs that you want to add to the policy.</p>
+             * <p>The list of standard IDs to add to the policy.</p>
              */
             public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
@@ -705,7 +708,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * <p>The standard IDs that you want to remove from the policy.</p>
+             * <p>The list of standard IDs to remove from the policy.</p>
              */
             public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;
@@ -774,7 +777,7 @@ public class ChangeCheckConfigRequest extends Request {
             /**
              * <p>The ID of the check item.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
+             * <p>Call <a href="~~ListCheckResult~~">ListCheckResult</a> to obtain check item IDs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

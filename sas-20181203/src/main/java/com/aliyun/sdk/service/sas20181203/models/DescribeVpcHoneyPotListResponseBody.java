@@ -88,7 +88,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4FEC7F58-FCDA-415F-AE25-CD8BC0931DF2</p>
@@ -99,7 +99,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the honeypots.</p>
+         * <p>The information about cloud honeypot instances.</p>
          */
         public Builder vpcHoneyPotDTOList(java.util.List<VpcHoneyPotDTOList> vpcHoneyPotDTOList) {
             this.vpcHoneyPotDTOList = vpcHoneyPotDTOList;
@@ -191,7 +191,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -202,7 +202,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -224,7 +224,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -540,7 +540,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the VPC was created. Unit: milliseconds.</p>
+             * <p>The time when the VPC was created. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1607365213000</p>
@@ -551,13 +551,13 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the server on which the honeypot is deployed. Valid values:</p>
+             * <p>The status of the Elastic Compute Service (ECS) instance that corresponds to the cloud honeypot instance. Valid values:</p>
              * <ul>
-             * <li><strong>Pending</strong>: The server is being created.</li>
-             * <li><strong>Running</strong>: The server is running.</li>
-             * <li><strong>Starting</strong>: The server is being started.</li>
-             * <li><strong>Stopping</strong>: The server is being stopped.</li>
-             * <li><strong>Stopped</strong>: The server is stopped.</li>
+             * <li><strong>Pending</strong>: being created</li>
+             * <li><strong>Running</strong>: running</li>
+             * <li><strong>Starting</strong>: starting</li>
+             * <li><strong>Stopping</strong>: stopping</li>
+             * <li><strong>Stopped</strong>: stopped</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -569,7 +569,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the elastic network interface (ENI) used by the honeypot in the VPC.</p>
+             * <p>The ID of the elastic network interface (ENI) that the cloud honeypot created in the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-p0whwgg7bing8b80****</p>
@@ -580,10 +580,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cloud honeypot feature is enabled for the VPC. Valid values:</p>
+             * <p>Indicates whether the VPC has cloud honeypot enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -595,13 +595,13 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the honeypot. Valid values:</p>
+             * <p>The status of the cloud honeypot instance. Valid values:</p>
              * <ul>
-             * <li><strong>pending</strong>: The honeypot is being created.</li>
-             * <li><strong>deleting</strong>: The honeypot is being deleted.</li>
-             * <li><strong>off</strong>: The honeypot is disabled.</li>
-             * <li><strong>suspending</strong>: The honeypot is suspended.</li>
-             * <li><strong>on</strong>: The honeypot is enabled.</li>
+             * <li><strong>pending</strong>: being created</li>
+             * <li><strong>deleting</strong>: being deleted</li>
+             * <li><strong>off</strong>: disabled</li>
+             * <li><strong>suspending</strong>: being suspended</li>
+             * <li><strong>on</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -613,7 +613,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which the ENI used by the honeypot is connected.</p>
+             * <p>The ID of the vSwitch to which the ENI used by the cloud honeypot belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-p0w7gdcfvn20tvdul****</p>
@@ -624,7 +624,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The ID of the VPC in which the cloud honeypot instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-p0w223apdl49sr5zv****</p>
@@ -635,7 +635,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPC.</p>
+             * <p>The name of the VPC in which the cloud honeypot instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>abc-vpcname</p>
@@ -646,9 +646,9 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the VPC.</p>
+             * <p>The region ID of the VPC in which the cloud honeypot instance resides.</p>
              * <blockquote>
-             * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+             * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -662,8 +662,8 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             /**
              * <p>The status of the VPC. Valid values:</p>
              * <ul>
-             * <li><strong>Available</strong>: The VPC is normal and available.</li>
-             * <li><strong>Pending</strong>: The VPC is being configured.</li>
+             * <li><strong>Available</strong>: normal</li>
+             * <li><strong>Pending</strong>: being configured</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -675,7 +675,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the vSwitches in the VPC.</p>
+             * <p>The information about vSwitches in the VPC.</p>
              */
             public Builder vpcSwitchIdList(java.util.List<VpcSwitchIdList> vpcSwitchIdList) {
                 this.vpcSwitchIdList = vpcSwitchIdList;

@@ -117,7 +117,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The key of the tag that is added to the agent configuration policy.</p>
+         * <p>The client configuration tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * <p>The extended tag of the agent configuration policy.</p>
+         * <p>The extended tag.</p>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -142,7 +142,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * <p>The value of the tag that is added to the agent configuration policy.</p>
+         * <p>The client tag value. Valid values:</p>
          * <ul>
          * <li>major</li>
          * <li>advanced</li>
@@ -160,7 +160,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server that you want to query.</p>
+         * <p>The UUID of the asset to query. You must specify at least one of the Uuid and Uuids parameters. Otherwise, the API returns a 400 error. The Uuid parameter specifies a single asset.</p>
          * 
          * <strong>example:</strong>
          * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
@@ -172,7 +172,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the asset. You can specify a maximum of 500 UUIDs at a time.</p>
+         * <p>The UUIDs of asset instances. A maximum of 500 UUIDs can be specified at a time. You must specify at least one of the Uuids and Uuid parameters. Otherwise, the API returns a 400 error. The Uuids parameter specifies multiple assets in a batch.</p>
          */
         public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);

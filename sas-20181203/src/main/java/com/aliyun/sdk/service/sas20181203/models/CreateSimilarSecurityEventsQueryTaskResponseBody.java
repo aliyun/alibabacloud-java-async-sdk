@@ -67,7 +67,7 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the task that queries alert events of the same alert type.</p>
+         * <p>The response information of the task for querying similar security alerts.</p>
          */
         public Builder createSimilarSecurityEventsQueryTaskResponse(CreateSimilarSecurityEventsQueryTaskResponse createSimilarSecurityEventsQueryTaskResponse) {
             this.createSimilarSecurityEventsQueryTaskResponse = createSimilarSecurityEventsQueryTaskResponse;
@@ -75,7 +75,7 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>5861EE3E-F0B3-48B8-A5DC-A5080BFBE052</p>
@@ -144,12 +144,12 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the task. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
              * <li><strong>New</strong>: The task is created.</li>
              * <li><strong>RetrievingData</strong>: Data is being retrieved.</li>
              * <li><strong>DataRetrieved</strong>: Data is retrieved.</li>
-             * <li><strong>Processing</strong>: The task is running.</li>
+             * <li><strong>Processing</strong>: The task is being processed.</li>
              * <li><strong>Success</strong>: The task is successful.</li>
              * <li><strong>Failed</strong>: The task failed.</li>
              * <li><strong>PartialFailed</strong>: The task partially failed.</li>

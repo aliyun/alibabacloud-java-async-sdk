@@ -88,7 +88,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the anti-ransomware policy.</p>
+         * <p>The details of the mitigation policies.</p>
          */
         public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
@@ -96,7 +96,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
@@ -191,7 +191,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -202,7 +202,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page in the returned data.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page. Default value: 10.</p>
+             * <p>The number of backup policies per page in a paged query. Default value: 10, which indicates that each page contains 10 backup policies.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -224,7 +224,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of anti-ransomware policies returned.</p>
+             * <p>The total number of backup policies in the returned data.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -528,7 +528,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the servers on which the anti-ransomware agent is in an abnormal state.</p>
+             * <p>The number of errors reported by the anti-ransomware client.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -539,7 +539,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUIDs of the servers on which the anti-ransomware agent is in an <strong>abnormal</strong> state.</p>
+             * <p>The list of UUIDs of clients in the <strong>abnormal</strong> state.</p>
              */
             public Builder clientErrorUuidList(java.util.List<String> clientErrorUuidList) {
                 this.clientErrorUuidList = clientErrorUuidList;
@@ -547,10 +547,12 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the anti-ransomware agent. Valid values:</p>
+             * <p>The status of the anti-ransomware client. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong>: normal</li>
-             * <li><strong>exception</strong>: abnormal</li>
+             * <li><p><strong>running</strong>: Normal.</p>
+             * </li>
+             * <li><p><strong>exception</strong>: Abnormal.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -562,7 +564,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the servers on which the anti-ransomware agent is in a normal state.</p>
+             * <p>The number of clients in the Normal state.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -573,7 +575,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUIDs of the servers on which the anti-ransomware agent is in a <strong>normal</strong> state.</p>
+             * <p>The list of UUIDs of clients in the <strong>healthy</strong> state.</p>
              */
             public Builder healthClientUuidList(java.util.List<String> healthClientUuidList) {
                 this.healthClientUuidList = healthClientUuidList;
@@ -581,7 +583,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the anti-ransomware policy.</p>
+             * <p>The ID of the anti-ransomware mitigation policy.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -592,7 +594,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the anti-ransomware policy was last updated. Unit: milliseconds.</p>
+             * <p>The most recent time when the anti-ransomware mitigation policy status was updated, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1719488535027</p>
@@ -603,7 +605,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the anti-ransomware policy.</p>
+             * <p>The name of the anti-ransomware mitigation policy.</p>
              * 
              * <strong>example:</strong>
              * <p>SecurityStrategy-20200303</p>
@@ -614,45 +616,36 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the anti-ransomware policy. The value of this parameter is in the JSON format and contains the following fields:</p>
+             * <p>The content of the anti-ransomware mitigation policy. This parameter is in JSON format. The following fields are included:</p>
              * <ul>
-             * <li><p><strong>IsDefault</strong>: the type of the anti-ransomware policy. Valid values:</p>
-             * <ul>
+             * <li><strong>IsDefault</strong>: The type of the mitigation policy. Valid values:<ul>
              * <li><strong>1</strong>: recommended policy</li>
              * <li><strong>0</strong>: custom policy</li>
              * </ul>
              * </li>
-             * <li><p><strong>Include</strong>: the format of the files that are protected. If the value of this field is [], all formats of files are protected.</p>
-             * </li>
-             * <li><p><strong>Source</strong>: the directory that is protected. If the value of this field is [], all directories are protected.</p>
-             * </li>
-             * <li><p><strong>ExcludeSystemPath</strong>: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is <strong>true</strong>, a directory is excluded. If this field is left empty, no directories are excluded.</p>
-             * </li>
-             * <li><p><strong>Exclude</strong>: the directory that is excluded from the anti-ransomware policy. If the value of this field is [], no directories are excluded.</p>
-             * </li>
-             * <li><p><strong>Schedule</strong>: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:</p>
-             * <ul>
-             * <li>If the value of this field is I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</li>
-             * <li>If the value of this field is I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</li>
+             * <li><strong>Include</strong>: The file types to protect. If all file types are protected, this parameter is set to [].</li>
+             * <li><strong>Source</strong>: The server folders to protect. If all folders need to be protected, this parameter is set to [].</li>
+             * <li><strong>ExcludeSystemPath</strong>: Specifies whether to exclude specified folders. To exclude folders, set this parameter to <strong>true</strong>. If you do not want to exclude folders, you do not need to set this parameter.</li>
+             * <li><strong>Exclude</strong>: The specified protection folder addresses. If no specific protection folder address is set, this parameter is set to [].</li>
+             * <li><strong>Schedule</strong>: The execution time and interval of the data backup node. Specify a non-peak hour that is not on the hour. Examples:<ul>
+             * <li>Example 1: I|1583216092|P21D indicates that data backup starts at 2020-03-03 14:14:52, and the backup policy executes at an interval of 3 weeks.</li>
+             * <li>Example 2: I|1583216092|PT24H indicates that data backup starts at 2020-03-03 14:14:52, and the backup policy executes at an interval of 24 hours.</li>
              * </ul>
              * </li>
-             * <li><p><strong>Retention</strong>: the period during which backup data is retained. Unit: days. If the value of this field is 7, backup data is retained for a week. If the value of this field is 365, backup data is retained for a year. If the value of this field is -1, backup data is permanently retained.</p>
-             * </li>
-             * <li><p><strong>SpeedLimiter</strong>: the limit on the network bandwidth for data backup tasks. If the value of this field is 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.</p>
-             * </li>
-             * <li><p><strong>UseVss</strong>: indicates whether the VSS feature is enabled. The feature is available only for Windows servers. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>Retention</strong>: The retention period of backup data, in days. 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</li>
+             * <li><strong>SpeedLimiter</strong>: The backup network bandwidth throttling. For example, 0:24:30720 indicates that the backup network bandwidth throttling is 30 MB/s from 00:00 to 24:00.</li>
+             * <li><strong>UseVss</strong>: Specifies whether to enable the VSS (Windows) feature. Valid values:<ul>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: not enabled</li>
              * </ul>
              * </li>
              * </ul>
              * <blockquote>
-             * <p> The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</p>
+             * <p>The VSS (Windows) feature is available only for Windows systems. After this feature is enabled, it effectively reduces the issue of individual file backup failures caused by process occupation. Enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Exclude&quot;:[&quot;/bin/&quot;,&quot;/usr/bin/&quot;,&quot;/sbin/&quot;,&quot;/boot/&quot;,&quot;/proc/&quot;,&quot;/sys/&quot;,&quot;/srv/&quot;,&quot;/lib/&quot;,&quot;/selinux/&quot;,&quot;/usr/sbin/&quot;,&quot;/run/&quot;,&quot;/lib32/&quot;,&quot;/lib64/&quot;,&quot;/lost+found/&quot;,&quot;/var/lib/kubelet/&quot;,&quot;/var/lib/ntp/proc&quot;,&quot;/var/lib/container&quot;,&quot;Windows\&quot;,&quot;Python27\&quot;,&quot;Program Files (x86)\&quot;,&quot;Program Files\&quot;,&quot;Boot\&quot;,&quot;$RECYCLE.BIN&quot;,&quot;System Volume Information\&quot;,&quot;Users\Administrator\NTUSER.DAT*&quot;,&quot;ProgramData\&quot;,&quot;pagefile.sys&quot;,&quot;Users\Default\NTUSER.DAT*&quot;,&quot;Users\Administrator\ntuser.*&quot;],&quot;ExcludeSystemPath&quot;:true,&quot;Include&quot;:[],&quot;IsDefault&quot;:1,&quot;Retention&quot;:7,&quot;Schedule&quot;:&quot;I|1630689360|PT24H&quot;,&quot;Source&quot;:[],&quot;SpeedLimiter&quot;:&quot;&quot;,&quot;UseVss&quot;:true}</p>
+             * <p>{&quot;Exclude&quot;:[&quot;/bin/&quot;,&quot;/usr/bin/&quot;,&quot;/sbin/&quot;,&quot;/boot/&quot;,&quot;/proc/&quot;,&quot;/sys/&quot;,&quot;/srv/&quot;,&quot;/lib/&quot;,&quot;/selinux/&quot;,&quot;/usr/sbin/&quot;,&quot;/run/&quot;,&quot;/lib32/&quot;,&quot;/lib64/&quot;,&quot;/lost+found/&quot;,&quot;/var/lib/kubelet/&quot;,&quot;/var/lib/ntp/proc&quot;,&quot;/var/lib/container&quot;,&quot;Windows\\&quot;,&quot;Python27\\&quot;,&quot;Program Files (x86)\\&quot;,&quot;Program Files\\&quot;,&quot;Boot\\&quot;,&quot;$RECYCLE.BIN&quot;,&quot;System Volume Information\\&quot;,&quot;Users\\Administrator\\NTUSER.DAT*&quot;,&quot;ProgramData\\&quot;,&quot;pagefile.sys&quot;,&quot;Users\\Default\\NTUSER.DAT*&quot;,&quot;Users\\Administrator\\ntuser.*&quot;],&quot;ExcludeSystemPath&quot;:true,&quot;Include&quot;:[],&quot;IsDefault&quot;:1,&quot;Retention&quot;:7,&quot;Schedule&quot;:&quot;I|1630689360|PT24H&quot;,&quot;Source&quot;:[],&quot;SpeedLimiter&quot;:&quot;&quot;,&quot;UseVss&quot;:true}</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -660,7 +653,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region that you specified for data backup when you installed the anti-ransomware agent for the server not deployed on Alibaba Cloud.</p>
+             * <p>The region ID of the backup service selected when the anti-ransomware client is installed on a non-Alibaba Cloud server.</p>
              * 
              * <strong>example:</strong>
              * <p>ch-hangzhou</p>
@@ -671,10 +664,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the anti-ransomware policy. Valid values:</p>
+             * <p>The version of the mitigation policy. Valid values:</p>
              * <ul>
-             * <li>1.0.0</li>
-             * <li>2.0.0</li>
+             * <li>1.0.0.</li>
+             * <li>2.0.0.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -686,11 +679,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The previous status of the anti-ransomware policy. Valid values:</p>
+             * <p>The previous status of the anti-ransomware mitigation policy.</p>
              * <ul>
-             * <li><strong>enabled</strong>: The anti-ransomware policy is manually enabled.</li>
-             * <li><strong>disabled</strong>: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</li>
-             * <li><strong>closed</strong>: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</li>
+             * <li><p><strong>enabled</strong>: The policy was manually enabled.</p>
+             * </li>
+             * <li><p><strong>disabled</strong>: The policy was manually disabled. After the policy is disabled, running backup nodes are stopped.</p>
+             * </li>
+             * <li><p><strong>closed</strong>: The anti-ransomware capacity was exceeded, and the system disabled the policy.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -702,7 +698,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUIDs that are returned based on the value of the MachineRemark request parameter.</p>
+             * <p>The list of UUIDs of servers returned after the search by the MachineRemark request parameter.</p>
              */
             public Builder remarkedUuidList(java.util.List<String> remarkedUuidList) {
                 this.remarkedUuidList = remarkedUuidList;
@@ -710,7 +706,16 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * SelectType.
+             * <p>The method used to select covered assets. Valid values:</p>
+             * <ul>
+             * <li><strong>ALL_MACHINE</strong>: All assets.</li>
+             * </ul>
+             * <blockquote>
+             * <p>If the policy covers <strong>all assets</strong>, this property value is <strong>ALL_MACHINE</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL_MACHINE</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -718,11 +723,11 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the server. Valid values:</p>
+             * <p>The server type. Valid values:</p>
              * <ul>
-             * <li><strong>OUT_CLOUD</strong>: server not deployed on Alibaba Cloud</li>
-             * <li><strong>ALIYUN</strong>: Elastic Compute Service (ECS) instance</li>
-             * <li><strong>TRIPARTITE</strong>: simple application server</li>
+             * <li><strong>OUT_CLOUD</strong>: Non-Alibaba Cloud server.</li>
+             * <li><strong>ALIYUN</strong>: Alibaba Cloud server.</li>
+             * <li><strong>TRIPARTITE</strong>: Lightweight application server.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -734,7 +739,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of servers on which data backup is exceptional.</p>
+             * <p>The number of servers with data backup exceptions.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -745,7 +750,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUIDs of the servers on which data backup is exceptional.</p>
+             * <p>The list of UUIDs of servers with data backup exceptions.</p>
              */
             public Builder serviceErrorUuidList(java.util.List<String> serviceErrorUuidList) {
                 this.serviceErrorUuidList = serviceErrorUuidList;
@@ -753,11 +758,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the anti-ransomware policy. Valid values:</p>
+             * <p>The status of the anti-ransomware mitigation policy.</p>
              * <ul>
-             * <li><strong>enabled</strong>: The anti-ransomware policy is manually enabled.</li>
-             * <li><strong>disabled</strong>: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</li>
-             * <li><strong>closed</strong>: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</li>
+             * <li><p><strong>enabled</strong>: The policy is manually enabled.</p>
+             * </li>
+             * <li><p><strong>disabled</strong>: The policy is manually disabled. After the policy is disabled, running backup nodes are stopped.</p>
+             * </li>
+             * <li><p><strong>closed</strong>: The anti-ransomware capacity is exceeded, and the system disables the policy.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -769,12 +777,12 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upgrade status of the anti-ransomware policy. Valid values:</p>
+             * <p>The upgrade status of the policy. Valid values:</p>
              * <ul>
-             * <li><strong>NotUpgraded</strong></li>
-             * <li><strong>Upgrading</strong></li>
-             * <li><strong>UpgradeFailed</strong></li>
-             * <li><strong>UpgradeSuccess</strong></li>
+             * <li><strong>NotUpgraded</strong>: Not upgraded.</li>
+             * <li><strong>Upgrading</strong>: Upgrading.</li>
+             * <li><strong>UpgradeFailed</strong>: Upgrade failed.</li>
+             * <li><strong>UpgradeSuccess</strong>: Upgrade succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -786,7 +794,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
+             * <p>The list of UUIDs of servers protected by the anti-ransomware mitigation policy.</p>
              */
             public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;

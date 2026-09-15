@@ -101,9 +101,10 @@ public class ValidateHcWarningsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of check items that you want to verify. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of the check items. Separate multiple check item IDs with commas (,).</p>
          * <blockquote>
-         * <p>You can use <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> to get IDs of check items.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to obtain check item IDs.
+         * Note: You must specify at least one of RiskIds and CheckIds. Otherwise, the API returns the HcIllegalParameter error.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,11 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of the risk items to verify. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain this parameter.
+         * Note: You must specify at least one of RiskIds and CheckIds. Otherwise, the API returns the HcIllegalParameter error.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>43</p>
@@ -128,11 +133,14 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * <p>The status of the check item that you want to verify.</p>
+         * <p>The status of the check items to verify.</p>
          * <ul>
-         * <li>1: failed</li>
-         * <li>3: passed</li>
-         * <li>5: expired</li>
+         * <li><p>1: Not passed</p>
+         * </li>
+         * <li><p>3: Passed</p>
+         * </li>
+         * <li><p>5: Expired</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,13 +153,13 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the servers to verify. Separate multiple UUIDs with commas (,).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain server UUIDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>78645c8e-2e89-441b-8eb,a9622a6b-adb5-4dd3-929e,0136460a-1cb5-44e8-****</p>
+         * <p>78645c8e-2e89-441b-8eb***,a9622a6b-adb5-4dd3-929e,0136460a-1cb5-44e8-****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

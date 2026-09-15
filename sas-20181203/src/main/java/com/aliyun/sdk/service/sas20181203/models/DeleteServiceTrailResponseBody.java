@@ -54,7 +54,7 @@ public class DeleteServiceTrailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>

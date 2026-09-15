@@ -171,7 +171,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The suggestion for the management of the risk item.</p>
+         * <p>The hardening suggestion for the baseline check risk item.</p>
          * 
          * <strong>example:</strong>
          * <p>You can fix it in the following ways:↵1. To configure authentication for redis service, click the redis.conf Configure complex password in requirepass, and then restart redis.↵2. In redis configuration file redis.conf The configuration is as follows: bind 127.0.0.1, only allow local access, and then restart redis</p>
@@ -182,7 +182,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of asset details to check.</p>
+         * <p>The list of checked asset details.</p>
          */
         public Builder checkDetailAssetInfo(java.util.List<java.util.Map<String, String>> checkDetailAssetInfo) {
             this.checkDetailAssetInfo = checkDetailAssetInfo;
@@ -190,7 +190,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detection content details.</p>
+         * <p>The check content details.</p>
          */
         public Builder checkDetailColumns(java.util.List<CheckDetailColumns> checkDetailColumns) {
             this.checkDetailColumns = checkDetailColumns;
@@ -209,7 +209,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information about the risk item.</p>
+         * <p>The supplementary description of the baseline check risk item.</p>
          * 
          * <strong>example:</strong>
          * <p>The redis port is open to the outside world and there is no authentication option configured. In addition to directly obtaining all the information in the database, unauthorized users can also attack the system through unauthorized access vulnerability.</p>
@@ -233,9 +233,12 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         /**
          * <p>The risk level of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong>: The item is a high-risk item and is highlighted in red.</li>
-         * <li><strong>medium</strong>: The item is a medium-risk item and is highlighted in orange.</li>
-         * <li><strong>low</strong>: The item is a low-risk item and is highlighted in gray.</li>
+         * <li><p><strong>high</strong>: High risk, highlighted in red.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: Medium risk, highlighted in orange.</p>
+         * </li>
+         * <li><p><strong>low</strong>: Low risk, highlighted in gray.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +250,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt for the risk item.</p>
+         * <p>The check prompt for the baseline check risk item.</p>
          */
         public Builder prompt(String prompt) {
             this.prompt = prompt;
@@ -255,7 +258,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
@@ -266,19 +269,13 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the check item. Valid values:</p>
-         * <ul>
-         * <li><strong>hc_exploit</strong>: unauthorized access</li>
-         * <li><strong>hc_djbh</strong>: classified protection compliance</li>
-         * <li><strong>hc_best_secruity</strong>: best security practice</li>
-         * <li><strong>hc_container</strong>: container security</li>
-         * <li><strong>hc_custom</strong>: custom baseline</li>
-         * <li><strong>cis</strong>: Center for Internet Security (CIS) compliance</li>
-         * <li><strong>weak_password</strong>: weak password</li>
-         * </ul>
+         * <p>The type of the baseline check item.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to view all baseline types.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>hc_exploit</p>
+         * <p>Security audit</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -357,7 +354,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Key to detect content.</p>
+             * <p>The key of the check content.</p>
              * 
              * <strong>example:</strong>
              * <p>Username</p>
@@ -368,7 +365,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detection content key corresponds to the display name.</p>
+             * <p>The display name corresponding to the check content key.</p>
              * 
              * <strong>example:</strong>
              * <p>UserName</p>
@@ -379,9 +376,9 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display type. Value:</p>
+             * <p>The display type. Valid values:</p>
              * <ul>
-             * <li><strong>grid</strong>: Detection grid</li>
+             * <li><strong>grid</strong>: check grid</li>
              * <li><strong>text</strong>: text</li>
              * </ul>
              * 
@@ -479,7 +476,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Detection content list.</p>
+             * <p>The list of check content.</p>
              */
             public Builder grids(java.util.List<Grids> grids) {
                 this.grids = grids;
@@ -487,7 +484,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Key to detect content.</p>
+             * <p>The key of the check content.</p>
              * 
              * <strong>example:</strong>
              * <p>Containername</p>
@@ -498,7 +495,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detection content key corresponds to the display name.</p>
+             * <p>The display name corresponding to the check content key.</p>
              * 
              * <strong>example:</strong>
              * <p>ContainerName</p>
@@ -509,9 +506,9 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display type. Value:</p>
+             * <p>The display type. Valid values:</p>
              * <ul>
-             * <li><strong>grid</strong>: Detection grid</li>
+             * <li><strong>grid</strong>: check grid</li>
              * <li><strong>text</strong>: text</li>
              * </ul>
              * 

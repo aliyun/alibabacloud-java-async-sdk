@@ -59,7 +59,10 @@ public class GetCheckConfigRequest extends Request {
         } 
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the China account in the resource folder for member accounts.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

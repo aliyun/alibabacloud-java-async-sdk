@@ -119,7 +119,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the dedicated Logstore that is used to store full logs of Security Center. The value is fixed as <strong>sas-log</strong>.</p>
+         * <p>The name of the dedicated Logstore in which full logs of Security Center are stored. The value is fixed as <strong>sas-log</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>sas-log</p>
@@ -130,7 +130,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The purchased log storage capacity, in GB.</p>
+         * <p>The purchased log analysis storage capacity. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>12240</p>
@@ -141,7 +141,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>25EC270F-5783-4416-AD7C-1EDF063A039C</p>
@@ -152,9 +152,9 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of days during which logs can be retained. The value is fixed as <strong>180</strong>, which indicates that logs can be retained for 180 days.</p>
+         * <p>The number of days for which logs are retained. The value is fixed as <strong>180</strong>, which indicates that logs can be retained for 180 days.</p>
          * <blockquote>
-         * <p> You are not allowed to change the value of this parameter.</p>
+         * <p>Security Center does not support adjusting the log retention period.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used log storage capacity, in GB.</p>
+         * <p>The used log analysis storage capacity. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>335</p>
@@ -177,7 +177,7 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the dedicated Project that is used to store full logs of Security Center.</p>
+         * <p>The name of the dedicated Project in which full logs of Security Center are stored.</p>
          * 
          * <strong>example:</strong>
          * <p>sas-log-XXXX-cn-hangzhou</p>

@@ -89,9 +89,9 @@ public class ModifyAssetGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the new server group to which the servers belong.</p>
+         * <p>The ID of the new group to which you want to assign the servers.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the group IDs of servers.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -105,7 +105,7 @@ public class ModifyAssetGroupRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>10.12.XX.XX</p>
@@ -117,7 +117,7 @@ public class ModifyAssetGroupRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers for which you want to change the server group. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the servers whose group you want to modify. Separate multiple UUIDs with commas (,).</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
          * </blockquote>

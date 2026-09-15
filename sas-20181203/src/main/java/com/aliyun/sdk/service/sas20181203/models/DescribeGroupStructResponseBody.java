@@ -171,8 +171,8 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         /**
          * <p>The type of the server group. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: the default group</li>
-         * <li><strong>1</strong>: other groups</li>
+         * <li><strong>0</strong>: default group</li>
+         * <li><strong>1</strong>: other group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The ID of the asset group.</p>
          * 
          * <strong>example:</strong>
          * <p>958****</p>
@@ -195,7 +195,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sequence number.</p>
+         * <p>The sort order number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of child groups.</p>
+         * <p>The collection of child groups.</p>
          */
         public Builder groups(java.util.List<String> groups) {
             this.groups = groups;
@@ -236,7 +236,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of servers in the group.</p>
+         * <p>The number of servers.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -247,7 +247,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>9FBC6E47-7508-58C9-9E76-528E118C****</p>

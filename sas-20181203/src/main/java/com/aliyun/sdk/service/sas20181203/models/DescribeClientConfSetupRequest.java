@@ -75,7 +75,7 @@ public class DescribeClientConfSetupRequest extends Request {
         } 
 
         /**
-         * <p>The tag that is added to the server.</p>
+         * <p>The resource tag of the client to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,11 +88,11 @@ public class DescribeClientConfSetupRequest extends Request {
         }
 
         /**
-         * <p>The value of the tag. Valid values:</p>
+         * <p>The policy value. Valid values:</p>
          * <ul>
          * <li>major</li>
          * <li>advanced</li>
-         * <li>basic</li>
+         * <li>basic.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

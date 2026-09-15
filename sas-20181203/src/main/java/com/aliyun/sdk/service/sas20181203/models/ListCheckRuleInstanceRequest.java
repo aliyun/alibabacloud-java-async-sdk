@@ -102,7 +102,7 @@ public class ListCheckRuleInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the current page when performing a paginated query.</p>
+         * <p>The page number to return when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,7 +114,7 @@ public class ListCheckRuleInstanceRequest extends Request {
         }
 
         /**
-         * <p>Instance list.</p>
+         * <p>The list of instances.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
@@ -123,7 +123,7 @@ public class ListCheckRuleInstanceRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of items per page in a paginated query. The default value is <strong>20</strong>.</p>
+         * <p>The maximum number of entries to return per page when paging is used. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -135,9 +135,9 @@ public class ListCheckRuleInstanceRequest extends Request {
         }
 
         /**
-         * <p>Rule ID.</p>
+         * <p>The rule ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">LisCheckRule</a> interface to get this parameter.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2590599.html">LisCheckRule</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -210,9 +210,9 @@ public class ListCheckRuleInstanceRequest extends Request {
             } 
 
             /**
-             * <p>Asset instance ID.</p>
+             * <p>The instance ID of the asset.</p>
              * <blockquote>
-             * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> interface to get this parameter.</p>
+             * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -224,9 +224,9 @@ public class ListCheckRuleInstanceRequest extends Request {
             }
 
             /**
-             * <p>The region where the asset is located.</p>
+             * <p>The region where the asset resides.</p>
              * <blockquote>
-             * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> interface to get this parameter.</p>
+             * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

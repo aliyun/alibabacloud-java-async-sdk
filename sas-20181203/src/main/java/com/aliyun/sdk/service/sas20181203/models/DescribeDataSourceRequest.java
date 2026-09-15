@@ -87,7 +87,7 @@ public class DescribeDataSourceRequest extends Request {
         } 
 
         /**
-         * <p>The method that is used to send alert notifications. Set the value to DingTalk.</p>
+         * <p>The type of data source to retrieve. This parameter is currently fixed to DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>DingTalk</p>
@@ -99,10 +99,10 @@ public class DescribeDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The source IP address.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>39.155.<em>.</em></p>

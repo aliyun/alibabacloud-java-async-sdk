@@ -219,7 +219,20 @@ public class CreateFileProtectClientRuleRequest extends Request {
         } 
 
         /**
-         * AlertLevel.
+         * <p>The alert notification level. Valid values:</p>
+         * <ul>
+         * <li><p>0: No alert.</p>
+         * </li>
+         * <li><p>1: Reminder.</p>
+         * </li>
+         * <li><p>2: Suspicious.</p>
+         * </li>
+         * <li><p>3: High-risk.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -228,7 +241,10 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -237,7 +253,7 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * ExcludeUsers.
+         * <p>The list of excluded users.</p>
          */
         public Builder excludeUsers(java.util.List<String> excludeUsers) {
             this.putQueryParameter("ExcludeUsers", excludeUsers);
@@ -246,6 +262,7 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The list of operations performed on files.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fileOps(java.util.List<String> fileOps) {
@@ -255,6 +272,7 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The list of monitored file paths. Wildcards are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder filePaths(java.util.List<String> filePaths) {
@@ -264,7 +282,7 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * FileTypes.
+         * <p>The list of monitored file types.</p>
          */
         public Builder fileTypes(java.util.List<String> fileTypes) {
             this.putQueryParameter("FileTypes", fileTypes);
@@ -273,7 +291,14 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The operating system type. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows.</li>
+         * <li><strong>linux</strong>: Linux.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -282,6 +307,7 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The list of process monitoring paths. Wildcards are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder procPaths(java.util.List<String> procPaths) {
@@ -291,6 +317,12 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The action to take when the policy is hit. Valid values:</p>
+         * <ul>
+         * <li><strong>monitor</strong>: Alert.</li>
+         * <li><strong>block</strong>: Block.</li>
+         * <li><strong>pass</strong>: Allow.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +335,11 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule****</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -312,6 +348,11 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -324,7 +365,10 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * SwitchId.
+         * <p>The switch ID that corresponds to the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>
          */
         public Builder switchId(String switchId) {
             this.putQueryParameter("SwitchId", switchId);

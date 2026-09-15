@@ -67,7 +67,7 @@ public class FixCheckWarningsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the baseline risk item that has been fixed by using the Batch Repair feature.</p>
+         * <p>The ID of the batch fix task for risk items.</p>
          * 
          * <strong>example:</strong>
          * <p>52370</p>
@@ -78,7 +78,7 @@ public class FixCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>76C1D7FD-DB1E-45EA-B804-3FBD9A1DD9C0</p>

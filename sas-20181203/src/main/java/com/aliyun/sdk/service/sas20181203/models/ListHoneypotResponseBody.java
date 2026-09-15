@@ -132,7 +132,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,7 +154,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the information about the honeypots.</p>
+         * <p>The list of honeypot data.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -162,7 +162,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The detailed information about the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -181,7 +181,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>C80AFF1F-CC20-502C-A4D4-F5433E529B69</p>
@@ -192,10 +192,10 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,7 +356,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the management node.</p>
+             * <p>The name of the honeypot management node.</p>
              * 
              * <strong>example:</strong>
              * <p>0804-pre</p>
@@ -367,7 +367,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the honeypot.</p>
+             * <p>The honeypot ID.</p>
              * 
              * <strong>example:</strong>
              * <p>76c2a1c72ef259777d96d55a7834e5f5d98f85666c49f76ad9caa447d8b7****</p>
@@ -433,7 +433,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the custom configuration for the honeypot.</p>
+             * <p>The ID of the custom honeypot parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
@@ -444,7 +444,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the status information about the honeypot.</p>
+             * <p>The status of the honeypot.</p>
              */
             public Builder state(java.util.List<String> state) {
                 this.state = state;
@@ -537,7 +537,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -548,7 +548,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -559,7 +559,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The maximum number of entries to return per page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -570,7 +570,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>69</p>

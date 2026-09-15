@@ -119,9 +119,9 @@ public class CreateSoarStrategyTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to obtain the ID.</p>
+         * <p>Call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -135,7 +135,7 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy. Set the value to Automated Batch Vulnerability Fixing Policy for Multiple Servers.</p>
+         * <p>The policy name. Fixed value: Automated Batch Vulnerability Fix Policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of.the policy task.</p>
+         * <p>The name of the policy task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,24 +161,24 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the policy task. The value is a JSON array.</p>
-         * <p>Vulnerability-related parameters:</p>
+         * <p>The parameter information of the policy. A string in JSONArray format with the following items:</p>
+         * <p>Vulnerability configuration item. Valid values:</p>
          * <ul>
          * <li>name: vluList</li>
          * <li>associationProperty: sasAllVul</li>
-         * <li>value: basic vulnerability information</li>
+         * <li>value: basic information about the vulnerability</li>
          * </ul>
-         * <p>Snapshot-related parameters:</p>
+         * <p>Snapshot configuration item. Valid values:</p>
          * <ul>
          * <li>name: snapshotConfig</li>
          * <li>associationProperty: snapshotConfig</li>
-         * <li>value: retention period</li>
+         * <li>value: storage time information</li>
          * </ul>
-         * <p>Notification-related parameters:</p>
+         * <p>Notification configuration. Valid values:</p>
          * <ul>
          * <li>name: notifyConfig</li>
          * <li>associationProperty: notifyConfig</li>
-         * <li>value: email or DingTalk configuration information</li>
+         * <li>value: email or DingTalk configuration information.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -230,7 +230,7 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * <p>The timestamp when the task is scheduled to start. Unit: milliseconds.</p>
+         * <p>The planned execution timestamp of the policy task. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1586739841000</p>

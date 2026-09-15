@@ -131,7 +131,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         } 
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -158,10 +158,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert event.</p>
-         * <blockquote>
-         * <p> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</p>
-         * </blockquote>
+         * <p>The ID of the security alert.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,10 +171,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * <p>The codes of alert events that are triggered by the same rule or of the same alert type.</p>
-         * <blockquote>
-         * <p> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</p>
-         * </blockquote>
+         * <p>The code of the alerting event that has the same type or rule hits.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -189,7 +183,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX</p>

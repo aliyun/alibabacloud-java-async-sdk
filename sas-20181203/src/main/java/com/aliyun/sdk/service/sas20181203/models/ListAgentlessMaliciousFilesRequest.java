@@ -215,7 +215,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,10 +228,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+         * <p>Specifies whether the alert has been handled. Valid values:</p>
          * <ul>
-         * <li>Y: The vulnerability is handled.</li>
-         * <li>N: The vulnerability is not handled.</li>
+         * <li>Y: handled</li>
+         * <li>N: not handled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The name of the malicious file that you want to query.</p>
+         * <p>The name of the malicious file to query.</p>
          * <blockquote>
          * <p>Fuzzy match is supported.</p>
          * </blockquote>
@@ -271,10 +271,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,11 +287,11 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The severities of the malicious files. Separate multiple values with commas (,). Valid values:</p>
+         * <p>The severity levels. Separate multiple values with commas (,). Valid values:</p>
          * <ul>
-         * <li>serious</li>
-         * <li>suspicious</li>
-         * <li>remind</li>
+         * <li>serious: urgent</li>
+         * <li>suspicious: suspicious</li>
+         * <li>remind: reminder</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The MD5 hash value of the malicious file.</p>
+         * <p>The MD5 hash of the malicious file.</p>
          * 
          * <strong>example:</strong>
          * <p>d836968041f7683b5459****</p>
@@ -316,18 +316,18 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The alert type.</p>
-         * <p>Valid values when Lang is set to zh:</p>
+         * <p>The alerting type.</p>
+         * <p>If Lang is set to zh, valid values:</p>
          * <ul>
-         * <li>WebShell</li>
-         * <li>Malicious Software</li>
-         * <li>Malicious Script</li>
+         * <li>WebShell: WebShell</li>
+         * <li>恶意软件: malware</li>
+         * <li>恶意脚本: malicious script</li>
          * </ul>
-         * <p>Valid values when Lang is set to en:</p>
+         * <p>If Lang is set to en, valid values:</p>
          * <ul>
-         * <li>WebShell</li>
-         * <li>Malicious Software</li>
-         * <li>Malicious Script</li>
+         * <li>WebShell: WebShell</li>
+         * <li>Malicious Software: malware</li>
+         * <li>Malicious Script: malicious script</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries to return per page in a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -353,7 +353,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</p>
+         * <p>The asset information to query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -365,7 +365,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The source of the malicious file.</p>
+         * <p>The file sources.</p>
          */
         public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -374,7 +374,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the asset.</p>
+         * <p>The unique identifier of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>d2d94e8b-bb25-4744-8004-1e08a53c****</p>

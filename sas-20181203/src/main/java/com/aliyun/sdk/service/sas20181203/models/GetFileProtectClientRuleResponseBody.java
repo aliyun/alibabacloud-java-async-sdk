@@ -67,7 +67,7 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -274,7 +274,20 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertLevel.
+             * <p>The alert notification level. Valid values:</p>
+             * <ul>
+             * <li><p>0: no alert</p>
+             * </li>
+             * <li><p>1: reminder</p>
+             * </li>
+             * <li><p>2: suspicious</p>
+             * </li>
+             * <li><p>3: high-risk.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alertLevel(Integer alertLevel) {
                 this.alertLevel = alertLevel;
@@ -282,7 +295,7 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeUsers.
+             * <p>The list of excluded users.</p>
              */
             public Builder excludeUsers(java.util.List<String> excludeUsers) {
                 this.excludeUsers = excludeUsers;
@@ -290,7 +303,7 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FileOps.
+             * <p>The operations performed on files.</p>
              */
             public Builder fileOps(java.util.List<String> fileOps) {
                 this.fileOps = fileOps;
@@ -298,7 +311,7 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FilePaths.
+             * <p>The monitored file paths. Wildcards are supported.</p>
              */
             public Builder filePaths(java.util.List<String> filePaths) {
                 this.filePaths = filePaths;
@@ -306,7 +319,7 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FileTypes.
+             * <p>The protected file types.</p>
              */
             public Builder fileTypes(java.util.List<String> fileTypes) {
                 this.fileTypes = fileTypes;
@@ -314,7 +327,10 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3119</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -322,7 +338,14 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The operating system type. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -330,7 +353,7 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ProcPaths.
+             * <p>The process paths. Wildcards are supported.</p>
              */
             public Builder procPaths(java.util.List<String> procPaths) {
                 this.procPaths = procPaths;
@@ -338,7 +361,18 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleAction.
+             * <p>The action that the rule takes on the client. Valid values:</p>
+             * <ul>
+             * <li><p>monitor: alert</p>
+             * </li>
+             * <li><p>block: block</p>
+             * </li>
+             * <li><p>pass: allow.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder ruleAction(String ruleAction) {
                 this.ruleAction = ruleAction;
@@ -346,7 +380,10 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -354,7 +391,14 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The rule status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -362,7 +406,10 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * <p>The switch ID that corresponds to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-CONTAINER-RULE-SWITCH-TYPE_***</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

@@ -129,7 +129,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         } 
 
         /**
-         * <p>The name of the proxy cluster. You can query the name of the proxy cluster in the Security Center console.</p>
+         * <p>The name of the proxy cluster. You can view the proxy cluster name in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>office-proxy</p>
@@ -141,7 +141,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,7 +165,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the proxy node. You can call the DescribeHybridProxyList operation to query the UUID of the proxy node.</p>
+         * <p>The UUID of the proxy node. You can call the DescribeHybridProxyList operation to obtain this value.</p>
          * 
          * <strong>example:</strong>
          * <p>inet-proxy-3bb11fad-37d6-4aee-9c37-b0ad1612XXXX</p>
@@ -177,7 +177,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * <p>The description of the proxy cluster.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -189,7 +189,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server on which the Security Center agent is installed. You can query the UUID by querying asset information.</p>
+         * <p>The unique key of the Security Center agent. You can call an asset query operation to obtain the UUID of the Security Center agent installed on the server.</p>
          * 
          * <strong>example:</strong>
          * <p>80d2f7d6-31a9-4d7f-8ff4-7ecc42f89ca****</p>

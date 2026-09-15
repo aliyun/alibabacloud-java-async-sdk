@@ -80,7 +80,7 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>7532B7EE-7CE7-5F4D-BF04-B12447DD****</p>
@@ -102,7 +102,7 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The domain name-related vulnerabilities.</p>
+         * <p>The list of vulnerabilities associated with the domain name.</p>
          */
         public Builder vulList(java.util.List<VulList> vulList) {
             this.vulList = vulList;
@@ -270,7 +270,7 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the vulnerabilities that have the <strong>high</strong> priority.</p>
+             * <p>The number of high-priority vulnerabilities.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -281,7 +281,7 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+             * <p>The timestamp when the vulnerability was last detected, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1639371446000</p>
@@ -303,7 +303,7 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the vulnerabilities that have the <strong>medium</strong> priority.</p>
+             * <p>The number of medium-priority vulnerabilities.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -325,7 +325,7 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the vulnerabilities that have the <strong>low</strong> priority.</p>
+             * <p>The number of low-priority vulnerabilities.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -336,14 +336,24 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is added to the vulnerability. Valid values:</p>
+             * <p>The label of the vulnerability. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
              * <ul>
              * <li>Restart required</li>
              * <li>Remote utilization</li>
              * <li>EXP exists</li>
              * <li>Available</li>
-             * <li>Elevation of Privilege</li>
-             * <li>Code Execution</li>
+             * <li>Privilege escalation</li>
+             * <li>Code execution</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <ul>
+             * <li>Restart required</li>
+             * <li>Remote utilization</li>
+             * <li>EXP exists</li>
+             * <li>Available</li>
+             * <li>Privilege escalation</li>
+             * <li>Code execution</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -355,13 +365,13 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the vulnerability. Default value: cve. Valid values:</p>
+             * <p>The type of the vulnerability to query. Default value: cve. Valid values:</p>
              * <ul>
-             * <li><strong>cve</strong>: Linux software vulnerability.</li>
-             * <li><strong>sys</strong>: Windows system vulnerability.</li>
-             * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
-             * <li><strong>app</strong>: application vulnerability that is detected by network scanning.</li>
-             * <li><strong>sca</strong>: application vulnerability that is detected by using software component analysis.</li>
+             * <li><strong>cve</strong>: Linux software vulnerability</li>
+             * <li><strong>sys</strong>: Windows system vulnerability</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+             * <li><strong>app</strong>: application vulnerability (network scan)</li>
+             * <li><strong>sca</strong>: application vulnerability (software constituency parsing)</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class DescribeExcludeSystemPathRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number of the page to return. Default value: 1, which indicates that the first page is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeExcludeSystemPathRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries to return on each page when paging is used for a paged query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

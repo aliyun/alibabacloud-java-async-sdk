@@ -73,7 +73,10 @@ public class GetCheckScopeConfigRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * <p>The ID of the configuration. This parameter is optional. If you do not specify this parameter, a default ID is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>435f626256ebf564cf5ba966a539****</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);

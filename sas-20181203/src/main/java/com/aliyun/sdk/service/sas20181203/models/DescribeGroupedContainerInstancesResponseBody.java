@@ -80,7 +80,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the container.</p>
+         * <p>The list of container asset information returned.</p>
          */
         public Builder groupedContainerInstanceList(java.util.List<GroupedContainerInstanceList> groupedContainerInstanceList) {
             this.groupedContainerInstanceList = groupedContainerInstanceList;
@@ -96,7 +96,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
@@ -490,7 +490,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of alerts that are detected for the current pod, application, namespace, or cluster.</p>
+             * <p>The number of alerts detected in the current pod, application, namespace, or cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -501,7 +501,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-liveness-probe</p>
@@ -536,9 +536,9 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             /**
              * <p>The type of the cluster. Valid values:</p>
              * <ul>
-             * <li><strong>Kubernetes</strong>: dedicated Kubernetes cluster.</li>
-             * <li><strong>ManagedKubernetes</strong>: standard managed cluster (edge cluster).</li>
-             * <li><strong>Ask</strong>: serverless Kubernetes (ASK) cluster.</li>
+             * <li><strong>Kubernetes</strong>: dedicated Kubernetes cluster</li>
+             * <li><strong>ManagedKubernetes</strong>: standard managed cluster (edge cluster)</li>
+             * <li><strong>Ask</strong>: standard serverless cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -550,7 +550,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+             * <p>The timestamp when the cluster was created, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1600076893000</p>
@@ -561,7 +561,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster. Valid values:</p>
+             * <p>The running status of the cluster. Valid values:</p>
              * <ul>
              * <li><strong>running</strong>: The cluster is running.</li>
              * <li><strong>stopped</strong>: The cluster is stopped.</li>
@@ -579,7 +579,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of baseline risks that are detected for the current pod, application, namespace, or cluster.</p>
+             * <p>The total number of baseline checks detected in the current pod, application, namespace, or cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -590,7 +590,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the host in the container cluster.</p>
+             * <p>The host IP address of the container cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>172.114.XX.XX</p>
@@ -645,7 +645,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is added to the image repository.</p>
+             * <p>The tag of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>dev-20220512-2</p>
@@ -667,7 +667,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of pods, applications, clusters, or namespaces.</p>
+             * <p>The number of pods, applications, clusters, or namespaces returned.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -678,7 +678,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the server.</p>
+             * <p>The ID of the server instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-8vb9ul5xec4tua4q****</p>
@@ -700,7 +700,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the pod.</p>
+             * <p>The pod name.</p>
              * 
              * <strong>example:</strong>
              * <p>csi-plugin-2n****</p>
@@ -722,7 +722,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The ID of the region in which the instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -733,7 +733,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of at-risk instances.</p>
+             * <p>The number of instances that are at risk.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -746,9 +746,9 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong></li>
-             * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><strong>high</strong>: high</li>
+             * <li><strong>medium</strong>: medium</li>
+             * <li><strong>low</strong>: low.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -760,10 +760,10 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether risks were detected. Valid values:</p>
+             * <p>The risk status. Valid values:</p>
              * <ul>
-             * <li><strong>NO</strong></li>
-             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong>: No risk.</li>
+             * <li><strong>YES</strong>: At risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -775,9 +775,9 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the synchronization of cluster audit logs is enabled. Valid values:</p>
+             * <p>The log audit synchronization switch for the cluster. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>0</strong>: disabled</li>
              * <li><strong>1</strong>: enabled.</li>
              * </ul>
              * 
@@ -790,10 +790,10 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the synchronization of cluster audit logs. Valid values:</p>
+             * <p>The log audit synchronization status for the cluster. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The synchronization failed.</li>
-             * <li><strong>1</strong>: The synchronization is successful.</li>
+             * <li><strong>0</strong>: synchronization failed</li>
+             * <li><strong>1</strong>: synchronization succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -805,7 +805,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vulnerabilities that are detected for the current pod, application, namespace, or cluster.</p>
+             * <p>The number of vulnerabilities detected in the current pod, application, namespace, or cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -901,7 +901,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of container assets returned on the current page.</p>
+             * <p>The number of container assets displayed on the current page in a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -912,7 +912,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number of the current page in a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -923,7 +923,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * <p>The number of container assets displayed on each page in a paging query. Default value: <strong>20</strong>, which indicates that 20 container assets are displayed on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

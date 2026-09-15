@@ -67,7 +67,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The defense rule against container escapes.</p>
+         * <p>The list of container escape prevention rules.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>600640</p>
@@ -168,7 +168,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the rule.</p>
+             * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>test555</p>
@@ -179,7 +179,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The switch ID.</p>
+             * <p>The corresponding switch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>USER-CONTAINER-RULE-SWITCH-TYPE_xxx</p>

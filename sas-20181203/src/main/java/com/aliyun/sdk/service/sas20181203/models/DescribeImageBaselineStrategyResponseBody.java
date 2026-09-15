@@ -78,7 +78,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the baseline check policy.</p>
+         * <p>The baseline check policy information.</p>
          */
         public Builder strategy(Strategy strategy) {
             this.strategy = strategy;
@@ -157,7 +157,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the baseline type.</p>
+             * <p>The classification key of the baseline main item.</p>
              * 
              * <strong>example:</strong>
              * <p>identification</p>
@@ -168,7 +168,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the baseline check item.</p>
+             * <p>The key of the baseline subitem.</p>
              * 
              * <strong>example:</strong>
              * <p>duplicate_pwd_hash</p>
@@ -179,7 +179,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the name for the baseline.</p>
+             * <p>The name key of the baseline main item.</p>
              * 
              * <strong>example:</strong>
              * <p>identification</p>
@@ -327,7 +327,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The baseline check policy for agentless detection.</p>
+             * <p>The agentless baseline check policy.</p>
              * 
              * <strong>example:</strong>
              * <p>hc_win2008_cis_rules</p>
@@ -338,7 +338,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that contains the baselines.</p>
+             * <p>The list of baseline items.</p>
              */
             public Builder baselineItemList(java.util.List<BaselineItemList> baselineItemList) {
                 this.baselineItemList = baselineItemList;
@@ -346,7 +346,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVulClean.
+             * <p>The retention period of baseline risks. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder imageVulClean(Integer imageVulClean) {
                 this.imageVulClean = imageVulClean;
@@ -376,7 +379,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the baseline check policy.</p>
+             * <p>The Policy Name.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -400,9 +403,9 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             /**
              * <p>The type of the baseline check policy. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: the default policy</li>
-             * <li><strong>full</strong>: a policy that uses all baselines</li>
-             * <li><strong>normal</strong>: a policy that uses general baselines</li>
+             * <li><strong>default</strong>: default policy</li>
+             * <li><strong>full</strong>: full baseline item policy</li>
+             * <li><strong>normal</strong>: common baseline item policy.</li>
              * </ul>
              * 
              * <strong>example:</strong>

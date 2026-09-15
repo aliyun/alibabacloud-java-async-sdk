@@ -106,7 +106,10 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>676F80E3-4B3F-43DA-9CBB-5FF79F202AA2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +272,21 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoConfig.
+             * <p>The automatic scan configuration as a JSON string. The following fields are included:</p>
+             * <ul>
+             * <li><strong>autoInclude</strong>: specifies whether to enable automatic scan. Valid values: <strong>true</strong>: enabled. <strong>false</strong>: disabled.</li>
+             * <li><strong>autoRule</strong>: the enablement configuration.</li>
+             * <li><strong>ruleOperator</strong>: the enablement configuration rule. Set the value to <strong>include</strong>.</li>
+             * <li><strong>operator</strong>: the logical operator. Set the value to <strong>or</strong>.</li>
+             * <li><strong>rule</strong>: the rule.</li>
+             * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong>: vendor. <strong>assetType</strong>: level-1 asset type. <strong>assetSubType</strong>: level-2 asset type.<blockquote>
+             * <p>For more information, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{\&quot;autoInclude\&quot;:true,\&quot;autoRule\&quot;:{\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;operator\&quot;:\&quot;or\&quot;,\&quot;rule\&quot;:[{\&quot;condition\&quot;:\&quot;assetSubType\&quot;,\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;value\&quot;:[{\&quot;vendor\&quot;:\&quot;0\&quot;,\&quot;assetType\&quot;:\&quot;0\&quot;,\&quot;assetSubType\&quot;:\&quot;100\&quot;}]}]}}&quot;</p>
              */
             public Builder autoConfig(String autoConfig) {
                 this.autoConfig = autoConfig;
@@ -264,7 +294,14 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AutoType.
+             * <p>The automatic scan configuration type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disable automatic scan</li>
+             * <li><strong>1</strong>: automatically scan newly added cloud assets</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoType(Integer autoType) {
                 this.autoType = autoType;
@@ -272,7 +309,10 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>97a1fed216908e417407344e1505xxxx</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -280,7 +320,10 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-16 18:17:16</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -288,7 +331,10 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-09 18:56:15</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -296,7 +342,14 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The scan scope configuration type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: scan by instance</li>
+             * <li><strong>3</strong>: scan all</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

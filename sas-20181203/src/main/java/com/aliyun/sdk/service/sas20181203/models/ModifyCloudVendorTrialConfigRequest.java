@@ -126,7 +126,7 @@ public class ModifyCloudVendorTrialConfigRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;sqsRegion&quot;:&quot;us-west-2&quot;,&quot;sqsQueueName&quot;:&quot;****&quot;}</p>
+         * <p>{\&quot;sqsRegion\&quot;:\&quot;us-west-2\&quot;,\&quot;sqsQueueName\&quot;:\&quot;****\&quot;}</p>
          */
         public Builder authInfo(String authInfo) {
             this.putQueryParameter("AuthInfo", authInfo);

@@ -67,7 +67,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
@@ -78,7 +78,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the custom defense rule.</p>
+         * <p>The rule details.</p>
          */
         public Builder userDefineRuleDetail(UserDefineRuleDetail userDefineRuleDetail) {
             this.userDefineRuleDetail = userDefineRuleDetail;
@@ -378,10 +378,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action of the custom defense rule. Valid values:</p>
+             * <p>The action type. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: allow</li>
-             * <li><strong>1</strong>: block</li>
+             * <li><strong>0</strong>: added to the whitelist</li>
+             * <li><strong>1</strong>: added to the blacklist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -426,7 +426,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the custom defense rule was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>167118088****</p>
@@ -437,7 +437,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the custom defense rule was last modified.</p>
+             * <p>The most recent modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>167118088****</p>
@@ -459,7 +459,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the custom defense rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>200****</p>
@@ -470,7 +470,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hash values of processes.</p>
+             * <p>The list of process hashes.</p>
              * 
              * <strong>example:</strong>
              * <p>0c9045b5bec90f9825f1f3f64dd4****</p>
@@ -481,10 +481,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom defense rule.</p>
+             * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Rule****</p>
+             * <p>规则****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -514,7 +514,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path to the parent process.</p>
+             * <p>The parent process path.</p>
              * 
              * <strong>example:</strong>
              * <p>c:/windows/system32/i****</p>
@@ -525,11 +525,11 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operating system. Valid values:</p>
+             * <p>The operating system type. Valid values:</p>
              * <ul>
              * <li><strong>linux</strong></li>
              * <li><strong>windows</strong></li>
-             * <li><strong>all</strong></li>
+             * <li><strong>all</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -563,7 +563,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path to the process.</p>
+             * <p>The process path.</p>
              * 
              * <strong>example:</strong>
              * <p>c:/windows/system32/i****</p>
@@ -596,15 +596,15 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the custom defense rule. Valid values:</p>
+             * <p>The rule type. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Process hash</li>
-             * <li><strong>2</strong>: Command line</li>
-             * <li><strong>3</strong>: Process Network</li>
-             * <li><strong>4</strong>: File Read and Write</li>
-             * <li><strong>5</strong>: Operation on Registry</li>
-             * <li><strong>6</strong>: Dynamic-link Library Loading</li>
-             * <li><strong>7</strong>: File Renaming</li>
+             * <li><strong>1</strong>: process hash</li>
+             * <li><strong>2</strong>: command line</li>
+             * <li><strong>3</strong>: process network</li>
+             * <li><strong>4</strong>: file read/write</li>
+             * <li><strong>5</strong>: registry operation</li>
+             * <li><strong>6</strong>: dynamic-link library loading</li>
+             * <li><strong>7</strong>: file rename.</li>
              * </ul>
              * 
              * <strong>example:</strong>

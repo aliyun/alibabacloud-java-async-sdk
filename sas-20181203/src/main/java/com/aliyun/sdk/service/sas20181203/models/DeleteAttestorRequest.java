@@ -87,7 +87,7 @@ public class DeleteAttestorRequest extends Request {
         } 
 
         /**
-         * <p>The name of the witness.</p>
+         * <p>The name of the attestor.</p>
          * 
          * <strong>example:</strong>
          * <p>attestor</p>
@@ -108,7 +108,7 @@ public class DeleteAttestorRequest extends Request {
         }
 
         /**
-         * <p>The source IP address.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>221.214.XXX.XX</p>

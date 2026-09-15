@@ -241,7 +241,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
         /**
-         * <p>The risks that you want to detect by using the rule.</p>
+         * <p>The alert content details included in the policy.</p>
          */
         public Builder alarmDetail(AlarmDetail alarmDetail) {
             String alarmDetailShrink = shrink(alarmDetail, "AlarmDetail", "json");
@@ -253,7 +253,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.</p>
+         * <p>Notice: This parameter is deprecated. Use the Scopes parameter to specify the scope of clusters to which the policy applies..</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         /**
          * <p>The cluster name.</p>
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p>Notice: This parameter is deprecated..</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -281,7 +281,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The rule description.</p>
+         * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
          * <p>4566</p>
@@ -293,7 +293,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The image names.</p>
+         * <p>The list of image names included in the policy.</p>
          */
         public Builder imageName(java.util.List<String> imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -302,7 +302,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The image tags.</p>
+         * <p>The list of image tags included in the policy.</p>
          */
         public Builder label(java.util.List<String> label) {
             this.putQueryParameter("Label", label);
@@ -311,10 +311,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
+         * <p>Specifies whether the policy supports Internet malicious images. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,11 +327,11 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The action that is performed when the rule is hit. Valid values:</p>
+         * <p>The action to take when the policy is hit. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: alert</li>
-         * <li><strong>2</strong>: block</li>
-         * <li><strong>3</strong>: allow</li>
+         * <li><strong>1</strong>: Alert.</li>
+         * <li><strong>2</strong>: Block.</li>
+         * <li><strong>3</strong>: Allow.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,7 +344,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The application scope.</p>
+         * <p>The scope of the policy.</p>
          */
         public Builder scopes(java.util.List<Scopes> scopes) {
             this.putQueryParameter("Scopes", scopes);
@@ -353,9 +353,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The policy ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the ID.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -380,9 +380,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule template.</p>
+         * <p>The policy template ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -395,10 +395,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
+         * <p>Specifies whether the policy supports unscanned images. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -411,7 +411,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The whitelists.</p>
+         * <p>The whitelist.</p>
          */
         public Builder whiteList(java.util.List<String> whiteList) {
             this.putQueryParameter("WhiteList", whiteList);
@@ -479,9 +479,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the baseline check item.</p>
+             * <p>The baseline check item ID.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the ID.</p>
+             * <p>Call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -493,9 +493,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the baseline check item.</p>
+             * <p>The baseline check item name.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the name.</p>
+             * <p>Call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -566,7 +566,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The baseline check items.</p>
+             * <p>The baseline item information.</p>
              */
             public Builder item(java.util.List<Item> item) {
                 this.item = item;
@@ -574,7 +574,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -641,9 +641,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the image build risk.</p>
+             * <p>The risky image build command type ID.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * <p>Call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -655,9 +655,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the image build risk.</p>
+             * <p>The risky image build command type name.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * <p>Call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -728,7 +728,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of image build risk.</p>
+             * <p>The list of risk items.</p>
              */
             public Builder item(java.util.List<BuildRiskItem> item) {
                 this.item = item;
@@ -736,7 +736,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -803,9 +803,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the malicious sample.</p>
+             * <p>The malicious sample ID.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the ID.</p>
+             * <p>Call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -817,9 +817,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the malicious sample.</p>
+             * <p>The malicious sample name.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the name.</p>
+             * <p>Call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -890,7 +890,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The malicious samples.</p>
+             * <p>The malicious sample list.</p>
              */
             public Builder item(java.util.List<MaliciousFileItem> item) {
                 this.item = item;
@@ -898,7 +898,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -965,9 +965,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the sensitive files.</p>
+             * <p>The sensitive file type ID.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * <p>Call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -979,9 +979,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the sensitive files.</p>
+             * <p>The sensitive file type name.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * <p>Call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1052,7 +1052,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of sensitive file.</p>
+             * <p>The list of sensitive file check items.</p>
              */
             public Builder item(java.util.List<SensitiveFileItem> item) {
                 this.item = item;
@@ -1060,7 +1060,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1127,9 +1127,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the vulnerability.</p>
+             * <p>The vulnerability ID.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the ID.</p>
+             * <p>Call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1141,9 +1141,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the vulnerability.</p>
+             * <p>The vulnerability name.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the name.</p>
+             * <p>Call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1214,10 +1214,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the vulnerability types. Valid values:</p>
+             * <p>The vulnerability type ID. Valid values:</p>
              * <ul>
              * <li><strong>cve</strong>: system vulnerability</li>
-             * <li><strong>app</strong>: application vulnerability</li>
+             * <li><strong>app</strong>: application vulnerability.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1229,14 +1229,14 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the vulnerability. Valid values:</p>
+             * <p>The vulnerability type name. Valid values:</p>
              * <ul>
              * <li><strong>system vulnerability</strong></li>
              * <li><strong>application vulnerability</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>system vulnerability</p>
+             * <p>系统漏洞</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1316,7 +1316,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The vulnerabilities.</p>
+             * <p>The vulnerability list.</p>
              */
             public Builder item(java.util.List<VulItem> item) {
                 this.item = item;
@@ -1324,7 +1324,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>Risk type of vulnerability.</p>
+             * <p>The list of vulnerability types.</p>
              */
             public Builder riskClass(java.util.List<RiskClass> riskClass) {
                 this.riskClass = riskClass;
@@ -1332,7 +1332,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1438,7 +1438,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The baseline risks.</p>
+             * <p>The baseline risk information.</p>
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -1446,7 +1446,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The configuration of image build risk.</p>
+             * <p>The risky image build command information.</p>
              */
             public Builder buildRisk(BuildRisk buildRisk) {
                 this.buildRisk = buildRisk;
@@ -1454,7 +1454,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The malicious sample risks.</p>
+             * <p>The malicious sample information.</p>
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -1462,7 +1462,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The configuration of sensitive file.</p>
+             * <p>The sensitive file information.</p>
              */
             public Builder sensitiveFile(SensitiveFile sensitiveFile) {
                 this.sensitiveFile = sensitiveFile;
@@ -1470,7 +1470,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The vulnerability risks.</p>
+             * <p>The vulnerability item information.</p>
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -1563,9 +1563,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the cluster node to which the rule is applied.</p>
+             * <p>The policy instance ID in the cluster.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~GetOpaStrategyDetailNew~~">GetOpaStrategyDetailNew</a> operation to query the ID of the cluster node to which the rule is applied.</p>
+             * <p>Call the <a href="~~GetOpaStrategyDetailNew~~">GetOpaStrategyDetailNew</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1579,8 +1579,8 @@ public class UpdateOpaStrategyNewRequest extends Request {
             /**
              * <p>Specifies whether all namespaces are included. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Not all namespaces are included.</li>
-             * <li><strong>1</strong>: All namespaces are included.</li>
+             * <li><strong>0</strong>: No.</li>
+             * <li><strong>1</strong>: Yes.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1592,9 +1592,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The cluster ID.</p>
+             * <p>The ID of the container cluster.</p>
              * <blockquote>
-             * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+             * <p>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1606,9 +1606,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The namespaces.</p>
+             * <p>The list of namespaces.</p>
              * <blockquote>
-             * <p>This parameter is valid only when the AllNamespace parameter is set to 0.</p>
+             * <p>Notice: This parameter takes effect only when AllNamespace is set to 0..</p>
              * </blockquote>
              */
             public Builder namespaceList(java.util.List<String> namespaceList) {

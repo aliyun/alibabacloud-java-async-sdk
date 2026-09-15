@@ -59,7 +59,10 @@ public class GetFileProtectClientRuleRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

@@ -90,9 +90,9 @@ public class AddCloudVendorTrialConfigRequest extends Request {
         } 
 
         /**
-         * <p>The AccessKey ID.</p>
+         * <p>The unique ID of the AccessKey pair.</p>
          * <blockquote>
-         * <p> <a href="#-describecloudvendoraccountaklist--authid"></a>You can call the <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> operation to query the AccessKey ID.</p>
+         * <h2>You can call <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> to obtain the AuthId.</h2>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -106,15 +106,15 @@ public class AddCloudVendorTrialConfigRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the third-party cloud asset. Valid values:</p>
+         * <p>The multi-cloud configuration information:</p>
          * <ul>
-         * <li><em>AWS</em>: Configure the sqsQueueName and sqsRegion parameters.</li>
-         * <li><em>Tencent</em>: Configure the kafkaUserName, kafkaBootstrapServers, and kafkaTopic parameters.</li>
+         * <li><em>AWS</em>: Input parameters sqsQueueName and sqsRegion.</li>
+         * <li><em>Tencent</em>: Input parameters kafkaUserName, kafkaBootstrapServers, and kafkaTopic.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;sqsRegion&quot;:&quot;us-west-2&quot;,&quot;sqsQueueName&quot;:&quot;****&quot;}</p>
+         * <p>{\&quot;sqsRegion\&quot;:\&quot;us-west-2\&quot;,\&quot;sqsQueueName\&quot;:\&quot;****\&quot;}</p>
          */
         public Builder authInfo(String authInfo) {
             this.putQueryParameter("AuthInfo", authInfo);
@@ -123,10 +123,17 @@ public class AddCloudVendorTrialConfigRequest extends Request {
         }
 
         /**
-         * <p>The service provider of the cloud asset. Valid values:</p>
+         * <p>The cloud asset vendor. Valid values:</p>
          * <ul>
          * <li><strong>Tencent</strong>: Tencent Cloud.</li>
-         * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
+         * <li><strong>Azure</strong>: Azure.</li>
+         * <li><strong>AWS</strong>: AWS.</li>
+         * <li><strong>VOLCENGINE</strong>: Volcengine.</li>
+         * <li><strong>google</strong>: Google Cloud.</li>
+         * <li><strong>CHAITIN</strong>: Chaitin Technology.</li>
+         * <li><strong>FORTINET</strong>: Fortinet.</li>
+         * <li><strong>THREATBOOK</strong>: ThreatBook.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

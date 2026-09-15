@@ -130,11 +130,16 @@ public class GetFileDetectReportRequest extends Request {
          * <p>The field that you want to query. You can enter multiple fields and separate them with commas (,).</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>ThreatTypes</strong>: the type of the threat intelligence event</li>
-         * <li><strong>Intelligences</strong>: the threat intelligence event</li>
-         * <li><strong>ThreatLevel</strong>: the level of the threat intelligence event</li>
-         * <li><strong>Basic</strong>: the basic information about the report (the scan result)</li>
-         * <li><strong>Sandbox</strong>: the cloud sandbox check report</li>
+         * <li><p><strong>ThreatTypes</strong>: the type of the threat intelligence event</p>
+         * </li>
+         * <li><p><strong>Intelligences</strong>: the threat intelligence event</p>
+         * </li>
+         * <li><p><strong>ThreatLevel</strong>: the level of the threat intelligence event</p>
+         * </li>
+         * <li><p><strong>Basic</strong>: the basic information about the report (the scan result)</p>
+         * </li>
+         * <li><p><strong>Sandbox</strong>: the cloud sandbox check report</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,8 +166,10 @@ public class GetFileDetectReportRequest extends Request {
         /**
          * <p>The language of the content within the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,8 +184,10 @@ public class GetFileDetectReportRequest extends Request {
         /**
          * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><strong>machine</strong>: host alerts</li>
-         * <li><strong>object_scan</strong>: file detection alerts</li>
+         * <li><p><strong>machine</strong>: host alerts</p>
+         * </li>
+         * <li><p><strong>object_scan</strong>: file detection alerts</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

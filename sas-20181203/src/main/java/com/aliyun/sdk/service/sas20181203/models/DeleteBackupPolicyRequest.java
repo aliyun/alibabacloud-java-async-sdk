@@ -74,9 +74,9 @@ public class DeleteBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the anti-ransomware policy that you want to delete.</p>
+         * <p>The ID of the mitigation policies that you want to delete.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * <p>Invoke the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -90,10 +90,10 @@ public class DeleteBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The version of the anti-ransomware policy that you want to delete. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies. Valid values:</p>
+         * <p>The version of the mitigation policies that you want to delete. You can invoke the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query this parameter. Valid values:</p>
          * <ul>
-         * <li><strong>1.0.0</strong></li>
-         * <li><strong>2.0.0</strong></li>
+         * <li><strong>1.0.0</strong>: The mitigation policies version is 1.0.0.</li>
+         * <li><strong>2.0.0</strong>: The mitigation policies version is 2.0.0.</li>
          * </ul>
          * 
          * <strong>example:</strong>

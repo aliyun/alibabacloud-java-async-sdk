@@ -62,8 +62,10 @@ public class UpdatePublishGraySwitchRequest extends Request {
         /**
          * <p>Specifies whether to enable the canary release feature. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled.</li>
-         * <li><strong>0</strong>: disabled.</li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

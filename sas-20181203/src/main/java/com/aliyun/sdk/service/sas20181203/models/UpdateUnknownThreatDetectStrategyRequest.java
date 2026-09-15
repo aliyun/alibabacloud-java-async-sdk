@@ -116,7 +116,10 @@ public class UpdateUnknownThreatDetectStrategyRequest extends Request {
         } 
 
         /**
-         * DurationDaysAfterInit.
+         * <p>The number of days after the model is initially created before learning stops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder durationDaysAfterInit(Integer durationDaysAfterInit) {
             this.putQueryParameter("DurationDaysAfterInit", durationDaysAfterInit);
@@ -125,7 +128,10 @@ public class UpdateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * DurationDaysAfterStop.
+         * <p>The number of days after which the model ends if no new processes are added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder durationDaysAfterStop(Integer durationDaysAfterStop) {
             this.putQueryParameter("DurationDaysAfterStop", durationDaysAfterStop);
@@ -134,6 +140,7 @@ public class UpdateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the policy to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +153,10 @@ public class UpdateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategy****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -155,7 +165,14 @@ public class UpdateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * StudyMode.
+         * <p>The whitelist mode. Valid values:</p>
+         * <ul>
+         * <li><strong>hash</strong>: process hash</li>
+         * <li><strong>path</strong>: process path</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         public Builder studyMode(String studyMode) {
             this.putQueryParameter("StudyMode", studyMode);

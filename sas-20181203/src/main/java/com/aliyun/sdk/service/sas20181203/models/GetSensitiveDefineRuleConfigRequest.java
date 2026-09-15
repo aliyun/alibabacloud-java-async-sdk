@@ -73,9 +73,9 @@ public class GetSensitiveDefineRuleConfigRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -89,10 +89,10 @@ public class GetSensitiveDefineRuleConfigRequest extends Request {
         }
 
         /**
-         * <p>The source of the check rules. Valid values:</p>
+         * <p>The source of the sensitive file check item. Valid values:</p>
          * <ul>
-         * <li><strong>image</strong>: image.</li>
-         * <li><strong>agentless</strong>: agentless detection.</li>
+         * <li><strong>image</strong>: image</li>
+         * <li><strong>agentless</strong>: agentless.</li>
          * </ul>
          * 
          * <strong>example:</strong>

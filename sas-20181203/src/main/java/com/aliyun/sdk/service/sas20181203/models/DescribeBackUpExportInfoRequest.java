@@ -102,7 +102,7 @@ public class DescribeBackUpExportInfoRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,9 +114,9 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of archived information. Valid values:</p>
+         * <p>The type of archive data to export. Valid values:</p>
          * <ul>
-         * <li><strong>suspiciousExport</strong>: alert event</li>
+         * <li><strong>suspiciousExport</strong>: security alerts.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -130,10 +130,10 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language type for requests and responses. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -101,9 +101,9 @@ public class GetServerlessAppAuthDetailRequest extends Request {
         } 
 
         /**
-         * <p>SAE application ID.</p>
+         * <p>The SAE application ID.</p>
          * <blockquote>
-         * <p>Obtain through the <a href="~~ListMachineApps~~">ListMachineApps</a> interface.</p>
+         * <p>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain this value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetServerlessAppAuthDetailRequest extends Request {
         }
 
         /**
-         * <p>Application region ID.</p>
+         * <p>The region ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -128,7 +128,7 @@ public class GetServerlessAppAuthDetailRequest extends Request {
         }
 
         /**
-         * <p>Server type: </p>
+         * <p>The server type. Valid values:</p>
          * <ul>
          * <li><strong>RunD</strong></li>
          * <li><strong>ECI</strong></li>
@@ -144,7 +144,7 @@ public class GetServerlessAppAuthDetailRequest extends Request {
         }
 
         /**
-         * <p>Cloud product: </p>
+         * <p>The cloud service to which the application belongs. Valid values:</p>
          * <ul>
          * <li><strong>ASK</strong></li>
          * <li><strong>SAE</strong></li>

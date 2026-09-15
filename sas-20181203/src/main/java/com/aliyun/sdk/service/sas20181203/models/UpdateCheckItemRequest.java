@@ -228,7 +228,7 @@ public class UpdateCheckItemRequest extends Request {
         } 
 
         /**
-         * <p>Help information for the check item.</p>
+         * <p>The help information for the check item.</p>
          */
         public Builder assistInfo(AssistInfo assistInfo) {
             String assistInfoShrink = shrink(assistInfo, "AssistInfo", "json");
@@ -238,9 +238,9 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>ID of the custom check item to be updated.</p>
+         * <p>The ID of the custom check item to update.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListCheckItems~~">ListCheckItems</a> API to get this parameter.</p>
+         * <p>You can call the <a href="~~ListCheckItems~~">ListCheckItems</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -254,7 +254,7 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Definition rule for the custom check item.</p>
+         * <p>The definition rule of the custom check item.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AssociatedData&quot;:{&quot;ToDataList&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;FromPropertyPath&quot;:&quot;InstanceId&quot;}]},&quot;MatchProperty&quot;:{&quot;Operator&quot;:&quot;AND&quot;,&quot;MatchProperties&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Disk&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testId&quot;},{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testInstanceId&quot;}]}}</p>
@@ -266,7 +266,7 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Name of the custom check item.</p>
+         * <p>The name of the custom check item.</p>
          * 
          * <strong>example:</strong>
          * <p>testCheckItemName</p>
@@ -278,7 +278,7 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Description of the check item.</p>
+         * <p>The description of the check item.</p>
          */
         public Builder description(Description description) {
             String descriptionShrink = shrink(description, "Description", "json");
@@ -288,9 +288,9 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Sub-asset type of the cloud product.</p>
+         * <p>The asset subtype of the cloud service.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get this parameter.</p>
+         * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -303,9 +303,9 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Asset type of the cloud product.</p>
+         * <p>The asset type of the cloud service.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get this parameter.</p>
+         * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Remark information</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark.</p>
@@ -330,11 +330,11 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Risk level of the check item. Values:</p>
+         * <p>The risk level of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>HIGH</strong>: High risk</li>
-         * <li><strong>MEDIUM</strong>: Medium risk</li>
-         * <li><strong>LOW</strong>: Low risk</li>
+         * <li><strong>HIGH</strong>: High.</li>
+         * <li><strong>MEDIUM</strong>: Medium.</li>
+         * <li><strong>LOW</strong>: Low.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,7 +347,7 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Array of section IDs associated with the check item.</p>
+         * <p>The IDs of the sections associated with the check item.</p>
          */
         public Builder sectionIds(java.util.List<Long> sectionIds) {
             this.putQueryParameter("SectionIds", sectionIds);
@@ -356,7 +356,7 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Solution information for the check item.</p>
+         * <p>The solution information for the check item.</p>
          */
         public Builder solution(Solution solution) {
             String solutionShrink = shrink(solution, "Solution", "json");
@@ -366,15 +366,15 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Status of the check item. Values:</p>
+         * <p>The status of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>EDIT</strong>: In editing</li>
-         * <li><strong>RELEASE</strong>: Released</li>
+         * <li><strong>EDIT</strong>: Being edited.</li>
+         * <li><strong>RELEASE</strong>: Published.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>Changing from <strong>Released</strong> to <strong>In editing</strong> will clear all historical records</li>
-         * <li>Only the <strong>Released</strong> status allows the use of the check item for inspection.</li>
+         * <li>Changing the status from <strong>Published</strong> to <strong>Being edited</strong> purges all historical records.</li>
+         * <li>Only check items in the <strong>Published</strong> status can be used for checks.</li>
          * </ul>
          * </blockquote>
          * 
@@ -388,9 +388,9 @@ public class UpdateCheckItemRequest extends Request {
         }
 
         /**
-         * <p>Cloud asset vendor.</p>
+         * <p>The cloud asset vendor.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get the available vendors.</p>
+         * <p>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain the available vendors.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -462,9 +462,9 @@ public class UpdateCheckItemRequest extends Request {
             } 
 
             /**
-             * <p>Type of the help information for the check item risk. Values:</p>
+             * <p>The type of the help information for the check item risk. Valid values:</p>
              * <ul>
-             * <li><strong>text</strong>: Text</li>
+             * <li><strong>text</strong>: Text.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -476,7 +476,7 @@ public class UpdateCheckItemRequest extends Request {
             }
 
             /**
-             * <p>Content of the help information for the check item risk.</p>
+             * <p>The content of the help information for the check item risk.</p>
              * 
              * <strong>example:</strong>
              * <p>custom assistInfo.</p>
@@ -546,9 +546,9 @@ public class UpdateCheckItemRequest extends Request {
             } 
 
             /**
-             * <p>Type of the check item description. Values:</p>
+             * <p>The type of the check item description. Valid values:</p>
              * <ul>
-             * <li><strong>text</strong>: Text</li>
+             * <li><strong>text</strong>: Text.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -560,7 +560,7 @@ public class UpdateCheckItemRequest extends Request {
             }
 
             /**
-             * <p>Description of the check item.</p>
+             * <p>The description of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>custom description.</p>
@@ -630,9 +630,9 @@ public class UpdateCheckItemRequest extends Request {
             } 
 
             /**
-             * <p>Type of the solution information for the check item. Values:</p>
+             * <p>The type of the solution information for the check item. Valid values:</p>
              * <ul>
-             * <li><strong>text</strong>: Text</li>
+             * <li><strong>text</strong>: Text.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -644,7 +644,7 @@ public class UpdateCheckItemRequest extends Request {
             }
 
             /**
-             * <p>Content of the solution for the check item risk.</p>
+             * <p>The solution content for the check item risk.</p>
              * 
              * <strong>example:</strong>
              * <p>custom solution.</p>

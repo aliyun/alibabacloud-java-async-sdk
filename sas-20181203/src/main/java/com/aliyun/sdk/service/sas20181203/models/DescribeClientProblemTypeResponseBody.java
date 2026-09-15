@@ -119,7 +119,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -130,7 +130,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number displayed in the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * <p>The maximum number of entries per page in a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -152,7 +152,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The issue types.</p>
+         * <p>The list of diagnostic types.</p>
          */
         public Builder problemTypes(java.util.List<ProblemTypes> problemTypes) {
             this.problemTypes = problemTypes;
@@ -160,7 +160,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>D65AADFC-1D20-5A6A-8F6A-9FA53CXXXXX</p>
@@ -171,7 +171,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries in the client issue list.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -253,10 +253,10 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the issue type.</p>
+             * <p>The description of the diagnostic issue category.</p>
              * 
              * <strong>example:</strong>
-             * <p>other</p>
+             * <p>Server Guard Agent Offline</p>
              */
             public Builder problemDetail(String problemDetail) {
                 this.problemDetail = problemDetail;
@@ -264,7 +264,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the issue type.</p>
+             * <p>The ID of the diagnostic issue category.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -275,7 +275,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the issue type.</p>
+             * <p>The name of the diagnostic issue category.</p>
              * 
              * <strong>example:</strong>
              * <p>high_cpu</p>

@@ -130,8 +130,10 @@ public class StartBaselineSecurityCheckRequest extends Request {
         /**
          * <p>The language of the content within the request and response. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,8 +169,10 @@ public class StartBaselineSecurityCheckRequest extends Request {
         /**
          * <p>The type of the check task. Valid values:</p>
          * <ul>
-         * <li><strong>check</strong></li>
-         * <li><strong>verify</strong></li>
+         * <li><p><strong>check</strong></p>
+         * </li>
+         * <li><p><strong>verify</strong></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

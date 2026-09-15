@@ -145,7 +145,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The AccessKey ID that is required to access the OSS object.</p>
+         * <p>The AccessKey ID required to access the file.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAccessKeyID</p>
@@ -156,7 +156,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the OSS signature expires. This value is a UNIX timestamp.</p>
+         * <p>The expiration time of the authentication, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1719921470</p>
@@ -167,7 +167,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The OSS endpoint.</p>
+         * <p>The OSS domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com">https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -178,7 +178,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key of the OSS object.</p>
+         * <p>The OSS file key.</p>
          * 
          * <strong>example:</strong>
          * <p>HC_CUSTOMIZED_DICT/176618589410****.tmp</p>
@@ -189,7 +189,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy of the OSS bucket.</p>
+         * <p>The bucket policy of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJleHBpcmF0aW9uIjoiMjAyNC0wNy0wMlQxMTo1Nzo1MC44MzJaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsNDA5NjBdLFsiZXEiLCIka2V5IiwiSENfQ1VTVE9NSVpFRF9ESUNUXC8xNzY2MTg1ODk0MTA0Njc1LnRtc****</p>
@@ -200,7 +200,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this identifier to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>BDEDEEE7-AC25-559E-8C12-5168B139****</p>
@@ -211,7 +211,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The security token.</p>
+         * <p>The Security Token Service (STS) token.</p>
          * 
          * <strong>example:</strong>
          * <hr>

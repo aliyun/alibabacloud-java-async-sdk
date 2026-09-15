@@ -74,7 +74,7 @@ public class DescribeVulExportInfoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the vulnerability export task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

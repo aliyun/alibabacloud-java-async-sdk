@@ -157,7 +157,7 @@ public class DescribeImageListByBuildRiskRequest extends Request {
         } 
 
         /**
-         * <p>The attribute value of the condition parameter.</p>
+         * <p>The value of the condition parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -169,10 +169,10 @@ public class DescribeImageListByBuildRiskRequest extends Request {
         }
 
         /**
-         * <p>The property name of the condition parameters. Values:</p>
+         * <p>The name of the condition parameter. Valid values:</p>
          * <ul>
-         * <li><strong>RepoNamespace</strong>: Namespace.</li>
-         * <li><strong>RepoName</strong>: Repository name.</li>
+         * <li><strong>RepoNamespace</strong>: namespace.</li>
+         * <li><strong>RepoName</strong>: repository name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeImageListByBuildRiskRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page in paging query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,7 +200,7 @@ public class DescribeImageListByBuildRiskRequest extends Request {
          * <p>The language of the content within the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,9 +213,9 @@ public class DescribeImageListByBuildRiskRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page in paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class DescribeImageListByBuildRiskRequest extends Request {
         }
 
         /**
-         * <p>The key of the risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value of RiskKey.</p>
+         * <p>The key of the build risk rule. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the RiskKey.</p>
          * 
          * <strong>example:</strong>
          * <p>no_user</p>
@@ -244,7 +244,7 @@ public class DescribeImageListByBuildRiskRequest extends Request {
          * <ul>
          * <li><strong>high</strong></li>
          * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><strong>low</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,11 +257,11 @@ public class DescribeImageListByBuildRiskRequest extends Request {
         }
 
         /**
-         * <p>The status of the alert event. Valid values:</p>
+         * <p>The status of the alert event to query. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unhandled.</li>
-         * <li><strong>1</strong>: ignored.</li>
-         * <li><strong>2</strong>: false positive.</li>
+         * <li><strong>0</strong>: Unhandled.</li>
+         * <li><strong>1</strong>: Ignored.</li>
+         * <li><strong>2</strong>: False positive.</li>
          * </ul>
          * 
          * <strong>example:</strong>

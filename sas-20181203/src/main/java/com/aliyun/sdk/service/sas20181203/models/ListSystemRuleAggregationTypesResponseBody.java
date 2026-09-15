@@ -67,7 +67,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the aggregation types.</p>
+         * <p>The list of rule aggregation types.</p>
          */
         public Builder aggregationTypeList(java.util.List<AggregationTypeList> aggregationTypeList) {
             this.aggregationTypeList = aggregationTypeList;
@@ -75,7 +75,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1427F3BE-8A7E-57F9-BD4E-590B00D2****</p>
@@ -144,7 +144,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the aggregation type.</p>
+             * <p>The rule aggregation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -155,10 +155,10 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the aggregation type.</p>
+             * <p>The rule aggregation name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Remote control****</p>
+             * <p>远程控制****</p>
              */
             public Builder name(String name) {
                 this.name = name;

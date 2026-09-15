@@ -1160,7 +1160,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
              * <p>The restored content.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;/home/admin&quot;,&quot;\\servername\sharename&quot;]</p>
+             * <p>[&quot;/home/admin&quot;,&quot;\\\\servername\\sharename&quot;]</p>
              */
             public Builder source(String source) {
                 this.source = source;

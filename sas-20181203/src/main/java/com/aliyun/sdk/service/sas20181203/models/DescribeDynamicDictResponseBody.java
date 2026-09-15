@@ -132,7 +132,7 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of weak password rules that are added.</p>
+         * <p>The number of weak password rules that have been added.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +143,7 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the OSS object that contains custom weak passwords.</p>
+         * <p>The name of the weak password file in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>test_dict.plain</p>
@@ -154,7 +154,7 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the OSS object. Unit: bytes.</p>
+         * <p>The file size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -176,7 +176,7 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP address of the Object Storage Service (OSS) object.</p>
+         * <p>The OSS object URL.</p>
          * 
          * <strong>example:</strong>
          * <p>cloudtest01/661767e1-5ae3-4ec5-865f-03039436893a/sacc2*****</p>
@@ -187,7 +187,7 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
@@ -198,7 +198,7 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp when the OSS object was uploaded. Unit: milliseconds.</p>
+         * <p>The upload timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719919421</p>

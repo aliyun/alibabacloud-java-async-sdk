@@ -198,8 +198,10 @@ public class ListClusterCheckResultRequest extends Request {
         /**
          * <p>Language type for requests and responses. The default value is <strong>zh</strong>. Values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -236,8 +238,10 @@ public class ListClusterCheckResultRequest extends Request {
         /**
          * <p>Custom sorting type. Values:</p>
          * <ul>
-         * <li><strong>RISK_LEVEL</strong>: Risk level.</li>
-         * <li><strong>STATUS</strong>: Check item status.</li>
+         * <li><p><strong>RISK_LEVEL</strong>: Risk level.</p>
+         * </li>
+         * <li><p><strong>STATUS</strong>: Check item status.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

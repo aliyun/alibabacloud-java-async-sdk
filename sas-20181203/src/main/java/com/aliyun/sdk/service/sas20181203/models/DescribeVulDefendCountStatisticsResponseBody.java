@@ -80,7 +80,7 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of defended vulnerabilities.</p>
+         * <p>The number of vulnerabilities that have been defended against.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -91,7 +91,7 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of supported vulnerabilities.</p>
+         * <p>The number of vulnerabilities that can be defended against.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -102,7 +102,7 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. China Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>

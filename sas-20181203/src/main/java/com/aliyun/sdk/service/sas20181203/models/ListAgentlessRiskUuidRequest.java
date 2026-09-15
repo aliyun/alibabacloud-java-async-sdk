@@ -185,7 +185,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +197,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the asset.</p>
+         * <p>The ID of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp1g6wxdwps7s9dz****</p>
@@ -209,7 +209,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The instance name of the asset.</p>
+         * <p>The name of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_cpm_****</p>
@@ -221,7 +221,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the asset that you want to query.</p>
+         * <p>The public IP address of the asset to query.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.XX.XX</p>
@@ -233,7 +233,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the asset that you want to query.</p>
+         * <p>The private IP address of the asset to query.</p>
          * 
          * <strong>example:</strong>
          * <p>172.26.XX.XX</p>
@@ -245,7 +245,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>oracle-win-001****</p>
@@ -257,7 +257,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries to return per page when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -285,7 +285,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>The name of the detection object.</p>
+         * <p>The name of the detection target.</p>
          * 
          * <strong>example:</strong>
          * <p>source-test-obj-0****</p>
@@ -297,12 +297,12 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * <p>Specifies the type of the object being inspected. Valid values:</p>
+         * <p>The object type of the detection target. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Host Snapshot.</li>
-         * <li><strong>2</strong>: Host Image.</li>
-         * <li><strong>3</strong>: User Snapshot.</li>
-         * <li><strong>4</strong>: User Image.</li>
+         * <li><strong>1</strong>: host snapshot</li>
+         * <li><strong>2</strong>: host image</li>
+         * <li><strong>3</strong>: user snapshot</li>
+         * <li><strong>4</strong>: user custom image</li>
          * </ul>
          * 
          * <strong>example:</strong>

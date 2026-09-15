@@ -194,7 +194,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page in a paging query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -203,7 +206,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * HashKey.
+         * <p>The unique identifier of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a212417e65c26ff133cfff28f6c****</p>
          */
         public Builder hashKey(String hashKey) {
             this.putQueryParameter("HashKey", hashKey);
@@ -221,7 +227,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries to return on each page in a paging query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +239,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * ParentProcessPath.
+         * <p>The parent process path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/bin/bash</p>
          */
         public Builder parentProcessPath(String parentProcessPath) {
             this.putQueryParameter("ParentProcessPath", parentProcessPath);
@@ -239,7 +251,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * ProcessPath.
+         * <p>The process path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         public Builder processPath(String processPath) {
             this.putQueryParameter("ProcessPath", processPath);
@@ -248,7 +263,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The filter condition based on instance name or IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.167.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -257,7 +275,15 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Unhandled.</li>
+         * <li><strong>2</strong>: Blocked.</li>
+         * <li><strong>3</strong>: Ignored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -266,7 +292,10 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the server to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18b7336e-d469-473b-af83-8e5420f9****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

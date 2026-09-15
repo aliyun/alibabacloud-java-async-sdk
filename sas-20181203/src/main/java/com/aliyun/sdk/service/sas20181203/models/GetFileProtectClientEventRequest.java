@@ -59,7 +59,10 @@ public class GetFileProtectClientEventRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The unique ID of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131231</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

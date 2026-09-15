@@ -99,9 +99,9 @@ public class UpdateJenkinsImageRegistryPersistenceDayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The image repository ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to query the IDs of image repositories.</p>
+         * <p>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class UpdateJenkinsImageRegistryPersistenceDayRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>106.11.XXX.XXX</p>

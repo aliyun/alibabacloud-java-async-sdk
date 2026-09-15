@@ -60,7 +60,7 @@ public class DescribeInstanceRebootStatusRequest extends Request {
         } 
 
         /**
-         * <p>The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the servers to query for restart status. Separate multiple UUIDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

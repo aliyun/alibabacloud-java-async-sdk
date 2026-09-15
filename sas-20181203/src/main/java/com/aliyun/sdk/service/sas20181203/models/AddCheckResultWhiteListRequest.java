@@ -118,7 +118,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         /**
          * <p>The IDs of the check items.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of the check items.</p>
+         * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain this parameter.</p>
          * </blockquote>
          */
         public Builder checkIds(java.util.List<Long> checkIds) {
@@ -128,7 +128,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -137,7 +137,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>IDs of the cloud product instances that need to be whitelisted. Separate multiple IDs with a comma (,).</p>
+         * <p>The instance IDs of the cloud service instances to add to the whitelist. Separate multiple instance IDs with commas (,).</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -146,7 +146,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The description. The value of this parameter can be up to 65,535 bytes in length.</p>
+         * <p>The remarks. Maximum length: 65,535 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -158,9 +158,9 @@ public class AddCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The type of the rule. Default value: <strong>WHITE</strong>. Valid value:</p>
+         * <p>The rule type. Default value: <strong>WHITE</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>WHITE</strong>: Add check items to the whitelist.</li>
+         * <li><strong>WHITE</strong>: adds to the whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>

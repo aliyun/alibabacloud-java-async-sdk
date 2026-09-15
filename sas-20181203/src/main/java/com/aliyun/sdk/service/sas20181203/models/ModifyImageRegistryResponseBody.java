@@ -132,7 +132,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,10 +143,10 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>N/A</p>
+         * <p>The data returned. This parameter is not used.</p>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <p>无</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -165,7 +165,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -189,8 +189,10 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +204,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution duration.</p>
+         * <p>The time consumed to call the API.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

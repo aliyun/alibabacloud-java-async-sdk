@@ -99,7 +99,7 @@ public class DescribeHybridProxyListRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The number of the page to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +111,7 @@ public class DescribeHybridProxyListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

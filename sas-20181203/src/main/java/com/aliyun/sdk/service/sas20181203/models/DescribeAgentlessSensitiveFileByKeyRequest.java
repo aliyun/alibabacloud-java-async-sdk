@@ -157,7 +157,7 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the asset that is scanned. You can query the UUID on the Host or Cloud Product page. If you scan a host, set this parameter to the UUID of the scanned host. If you scan a snapshot or a custom image, set this parameter to the ID of the scanned snapshot or image.</p>
+         * <p>The UUID of the asset to scan. You can obtain this value from the Host Assets and Cloud Products page. In host security detection scenarios, this parameter specifies the UUID of the host to scan. In snapshot security detection and custom image security detection scenarios, this parameter specifies the ID of the image or snapshot to scan.</p>
          * 
          * <strong>example:</strong>
          * <p>06293273b67d19516cfcc712194f****</p>
@@ -181,7 +181,7 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the asset that is scanned. To query the instance ID, go to the Task Management page, click Details of a task, and then view the value of Check On.</p>
+         * <p>The instance ID of the asset to query. You can obtain this value from Node Management &gt; Details &gt; Detection Objects.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1fu4aqltf1huhc****</p>
@@ -193,9 +193,9 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>The name or IP address of the asset.</p>
+         * <p>The asset name or IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX</p>
@@ -220,7 +220,7 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>The types of the assets that are scanned.</p>
+         * <p>The collection of scan ranges.</p>
          */
         public Builder scanRange(java.util.List<String> scanRange) {
             String scanRangeShrink = shrink(scanRange, "ScanRange", "json");
@@ -242,9 +242,9 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>The status of the baseline risk. Valid values:</p>
+         * <p>The fix status of the baseline risk. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unfixed.</li>
+         * <li><strong>0</strong>: unfixed</li>
          * <li><strong>1</strong>: fixed.</li>
          * </ul>
          * 

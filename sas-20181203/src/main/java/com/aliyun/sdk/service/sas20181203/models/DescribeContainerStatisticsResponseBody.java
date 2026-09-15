@@ -67,7 +67,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The alert statistics of container assets.</p>
+         * <p>The detailed alert statistics of container assets.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</p>
          * 
          * <strong>example:</strong>
          * <p>21DA46CA-2DCE-4FF6-907D-D5DBBB7518C8</p>
@@ -196,7 +196,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of alerts whose risk level is <strong>Reminder</strong>.</p>
+             * <p>The number of alerts with the <strong>Reminder</strong> risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -207,7 +207,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of alerts whose risk level is <strong>Urgent</strong>.</p>
+             * <p>The number of alerts with the <strong>Urgent</strong> risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -218,7 +218,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of alerts whose risk level is <strong>Suspicious</strong>.</p>
+             * <p>The number of alerts with the <strong>Suspicious</strong> risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -229,7 +229,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of alerts that are generated in the current container cluster.</p>
+             * <p>The total number of security alerts in the container cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -240,7 +240,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of nodes in the current container cluster.</p>
+             * <p>The total number of nodes in the container cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -251,7 +251,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes on which alerts are generated in the current container cluster.</p>
+             * <p>The number of nodes that have alerts in the container cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>

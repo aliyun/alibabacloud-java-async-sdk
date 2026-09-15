@@ -101,7 +101,10 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         } 
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -110,7 +113,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         }
 
         /**
-         * <p>The task IDs.</p>
+         * <p>The list of task IDs.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -119,7 +122,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         }
 
         /**
-         * <p>The types of the vulnerabilities that are detected by the tasks.</p>
+         * <p>The list of vulnerability types for the one-click scan.</p>
          */
         public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);
@@ -128,7 +131,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the server to query.</p>
          * 
          * <strong>example:</strong>
          * <p>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</p>

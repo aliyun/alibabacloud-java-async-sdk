@@ -80,7 +80,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The proxy clusters.</p>
+         * <p>The list of clusters.</p>
          */
         public Builder clusterList(java.util.List<ClusterList> clusterList) {
             this.clusterList = clusterList;
@@ -96,7 +96,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>C1A36413-50B2-5B2F-843F-EB14C582713F</p>
@@ -269,7 +269,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the credential that is used for cluster authentication.</p>
+             * <p>The credential ID for cluster authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -280,7 +280,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the credential that is used for cluster authentication.</p>
+             * <p>The credential key for cluster authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -291,7 +291,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of servers that are connected to the proxy cluster.</p>
+             * <p>The number of Security Center clients connected to the current cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -313,7 +313,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The installation command for the node of the proxy cluster.</p>
+             * <p>The installation command for the current proxy cluster node.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -324,7 +324,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the cluster. An IP address or a domain name is specified.</p>
+             * <p>The access address of the cluster, which can be an IP address or a domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>114.115.XXX.XXX</p>
@@ -335,7 +335,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the cluster last sent a heartbeat message. Unit: milliseconds.</p>
+             * <p>The timestamp of the last heartbeat from the cluster. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1608304654000</p>
@@ -357,7 +357,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the proxy cluster.</p>
+             * <p>The remarks of the proxy cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -368,7 +368,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster.</p>
+             * <p>The running status of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>offline</p>
@@ -464,7 +464,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries on the current page.</p>
+             * <p>The number of entries displayed on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -475,7 +475,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -486,7 +486,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The maximum number of entries displayed on each page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

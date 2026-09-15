@@ -62,7 +62,7 @@ public class DeleteSasContainerWebDefenseRuleRequest extends Request {
         /**
          * <p>The rule ID.</p>
          * <blockquote>
-         * <p> You can call the ListContainerWebDefenseRule operation to query the rule ID.</p>
+         * <p>You can call the ListContainerWebDefenseRule operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

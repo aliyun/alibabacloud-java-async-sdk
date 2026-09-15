@@ -87,7 +87,7 @@ public class DescribeWebPathRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page in a paged query. Paging is used to display results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,7 +99,7 @@ public class DescribeWebPathRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries per page in a paged query. Paging is used to display results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,9 +111,9 @@ public class DescribeWebPathRequest extends Request {
         }
 
         /**
-         * <p>The type of the alert configuration. Valid values:</p>
+         * <p>The alert configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>web_path</strong></li>
+         * <li><strong>web_path</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

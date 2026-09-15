@@ -102,7 +102,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
         } 
 
         /**
-         * EventIdList.
+         * <p>The list of specified event IDs.</p>
          */
         public Builder eventIdList(java.util.List<Long> eventIdList) {
             this.putQueryParameter("EventIdList", eventIdList);
@@ -120,7 +120,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * ProcessList.
+         * <p>The list of processes.</p>
          */
         public Builder processList(java.util.List<ProcessList> processList) {
             this.putQueryParameter("ProcessList", processList);
@@ -129,7 +129,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * <p>The list of asset UUIDs for which processes are to be added.</p>
          */
         public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
@@ -223,7 +223,10 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
             } 
 
             /**
-             * Md5.
+             * <p>The MD5 hash of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e59b63ae983377f131ab20ec0d******</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -231,7 +234,10 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
             }
 
             /**
-             * ProcessPath.
+             * <p>The process path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bin/rm</p>
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -239,7 +245,10 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
             }
 
             /**
-             * Remark.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1330</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -247,7 +256,10 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
             }
 
             /**
-             * Sha256.
+             * <p>The SHA-256 hash of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f204693a7d2ce99d6c4434e550d985ee1c7be7cb5dd9a76094369af0d2******</p>
              */
             public Builder sha256(String sha256) {
                 this.sha256 = sha256;

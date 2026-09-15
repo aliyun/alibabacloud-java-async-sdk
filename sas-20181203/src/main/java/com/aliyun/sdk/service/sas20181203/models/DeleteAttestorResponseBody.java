@@ -54,7 +54,7 @@ public class DeleteAttestorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CD380235-A0B8-540D-A0D5-D6288446****</p>

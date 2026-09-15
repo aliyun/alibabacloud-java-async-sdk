@@ -60,7 +60,7 @@ public class UpdateFileUploadLimitRequest extends Request {
         } 
 
         /**
-         * <p>The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.</p>
+         * <p>The QPS throttling threshold for file uploads from the client. Valid values: 100 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

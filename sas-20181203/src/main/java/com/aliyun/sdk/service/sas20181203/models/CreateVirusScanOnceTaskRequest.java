@@ -116,7 +116,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         } 
 
         /**
-         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -125,13 +125,13 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>Additional information fields: </p>
+         * <p>The extended information field:</p>
          * <ul>
-         * <li><strong>additionType</strong>: The type of extended scan</li>
+         * <li><strong>additionType</strong>: the extended scan type</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;additionType&quot;:[&quot;SCAN_MEMORY&quot;]}</p>
+         * <p>{\&quot;additionType\&quot;:[\&quot;SCAN_MEMORY\&quot;]}</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -140,7 +140,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The information about the scan path that is required for a custom scan.</p>
+         * <p>The scan path information to be transmitted if the scan type is custom scan.</p>
          */
         public Builder scanPath(java.util.List<String> scanPath) {
             this.putQueryParameter("ScanPath", scanPath);
@@ -149,9 +149,9 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the virus scan. Valid values:</p>
+         * <p>The scan type of the virus scan. Valid values:</p>
          * <ul>
-         * <li><strong>system</strong>: system scan.</li>
+         * <li><strong>system</strong>: system scan</li>
          * <li><strong>user</strong>: custom scan.</li>
          * </ul>
          * 
@@ -165,9 +165,9 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The key that stores the asset information.</p>
+         * <p>The key that stores asset information.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</p>
+         * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

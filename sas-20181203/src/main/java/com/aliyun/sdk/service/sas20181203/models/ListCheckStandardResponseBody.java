@@ -195,7 +195,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
              * <p>The display name of the search condition.</p>
              * 
              * <strong>example:</strong>
-             * <p>RAM identity authentication</p>
+             * <p>RAM身份认证</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -327,11 +327,16 @@ public class ListCheckStandardResponseBody extends TeaModel {
             /**
              * <p>The cloud service provider that uses the standard. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Alibaba Cloud.</li>
-             * <li><strong>3</strong>: Tencent Cloud.</li>
-             * <li><strong>4</strong>: Huawei Cloud.</li>
-             * <li><strong>5</strong>: Microsoft Azure.</li>
-             * <li><strong>7</strong>: AWS.</li>
+             * <li><p><strong>0</strong>: Alibaba Cloud.</p>
+             * </li>
+             * <li><p><strong>3</strong>: Tencent Cloud.</p>
+             * </li>
+             * <li><p><strong>4</strong>: Huawei Cloud.</p>
+             * </li>
+             * <li><p><strong>5</strong>: Microsoft Azure.</p>
+             * </li>
+             * <li><p><strong>7</strong>: AWS.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,7 +370,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
              * <p>The display name of the check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Identity and permission management</p>
+             * <p>身份权限管理</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;

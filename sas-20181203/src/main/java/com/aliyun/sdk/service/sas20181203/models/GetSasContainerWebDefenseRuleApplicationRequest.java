@@ -59,9 +59,10 @@ public class GetSasContainerWebDefenseRuleApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * <blockquote>
-         * <p> You can call the ListSasContainerWebDefenseRule operation to query the IDs of rules.</p>
+         * <p>Call the ListSasContainerWebDefenseRule operation to obtain this parameter.
+         * Note: This parameter is required. If this parameter is not specified, the API returns a 400 error. Call the ListSasContainerWebDefenseRule operation to obtain valid RuleId values.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

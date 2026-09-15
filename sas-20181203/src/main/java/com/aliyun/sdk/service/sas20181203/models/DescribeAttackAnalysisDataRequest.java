@@ -162,8 +162,10 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         /**
          * <p>Specifies whether to encode the value of the <strong>client_url</strong> field in the query results by using the Base64 algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,7 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         /**
          * <p>The number of the page to return. Pages start from page <strong>1</strong>.</p>
          * <blockquote>
-         * <p> If the Type parameter is set to <strong>DETAILS</strong>, you must specify the CurrentPage parameter.</p>
+         * <p>If the Type parameter is set to <strong>DETAILS</strong>, you must specify the CurrentPage parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -193,7 +195,7 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         /**
          * <p>The condition that is used to filter attack events.</p>
          * <blockquote>
-         * <p> The following list describes the valid values of crack_type:</p>
+         * <p>The following list describes the valid values of crack_type:</p>
          * </blockquote>
          * <ul>
          * <li><p>3: brute-force attack on MySQL</p>
@@ -267,8 +269,10 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         /**
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +287,7 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         /**
          * <p>The number of entries to return on each page.</p>
          * <blockquote>
-         * <p> If the Type parameter is set to <strong>DETAILS</strong>, you must specify the PageSize parameter.</p>
+         * <p>If the Type parameter is set to <strong>DETAILS</strong>, you must specify the PageSize parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -298,7 +302,7 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         /**
          * <p>The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.</p>
          * <blockquote>
-         * <p> The start time that you specify must be within the previous 40 days.</p>
+         * <p>The start time that you specify must be within the previous 40 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -314,15 +318,21 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         /**
          * <p>The details of attack analysis. Valid values:</p>
          * <ul>
-         * <li><strong>TOTAL</strong>: number of attacks</li>
-         * <li><strong>TREND</strong>: attack trend</li>
-         * <li><strong>PIE_CHART</strong>: distribution of attacks by type</li>
-         * <li><strong>SOURCE_TOP</strong>: top 5 attack sources</li>
-         * <li><strong>CLIENT_TOP</strong>: top 5 attacked assets</li>
-         * <li><strong>DETAILS</strong>: attack details</li>
+         * <li><p><strong>TOTAL</strong>: number of attacks</p>
+         * </li>
+         * <li><p><strong>TREND</strong>: attack trend</p>
+         * </li>
+         * <li><p><strong>PIE_CHART</strong>: distribution of attacks by type</p>
+         * </li>
+         * <li><p><strong>SOURCE_TOP</strong>: top 5 attack sources</p>
+         * </li>
+         * <li><p><strong>CLIENT_TOP</strong>: top 5 attacked assets</p>
+         * </li>
+         * <li><p><strong>DETAILS</strong>: attack details</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If the Type parameter is set to <strong>DETAILS</strong>, you must specify the CurrentPage and PageSize parameters.</p>
+         * <p>If the Type parameter is set to <strong>DETAILS</strong>, you must specify the CurrentPage and PageSize parameters.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

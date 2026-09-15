@@ -87,10 +87,10 @@ public class DescribeFieldStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:</p>
+         * <p>The type of asset to query. If you do not specify an asset type, the statistics information of all asset types is queried. Valid values:</p>
          * <ul>
          * <li><strong>ecs</strong>: server</li>
-         * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+         * <li><strong>cloud_product</strong>: cloud product.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeFieldStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the asset resides.</p>
+         * <p>The ID of the region where the server resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -115,9 +115,9 @@ public class DescribeFieldStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the primary account of the Resource Directory member account.</p>
+         * <p>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</p>
          * <blockquote>
-         * <p>call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> interface to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

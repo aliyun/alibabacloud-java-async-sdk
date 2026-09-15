@@ -67,7 +67,7 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
         } 
 
         /**
-         * <p>The Kritis status of the ACK cluster.</p>
+         * <p>The Kritis status information of the ACK cluster.</p>
          */
         public Builder kritisStatus(KritisStatus kritisStatus) {
             this.kritisStatus = kritisStatus;
@@ -133,8 +133,8 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
             /**
              * <p>Indicates whether Kritis is installed. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Installed.</li>
+             * <li><strong>false</strong>: Not installed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -100,7 +100,10 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -109,7 +112,7 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         }
 
         /**
-         * <p>The IDs of alert events.</p>
+         * <p>The list of alert IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder securityEventIds(java.util.List<Long> securityEventIds) {

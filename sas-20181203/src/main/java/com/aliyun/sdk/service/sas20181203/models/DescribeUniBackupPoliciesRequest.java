@@ -87,7 +87,7 @@ public class DescribeUniBackupPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,9 +99,9 @@ public class DescribeUniBackupPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Set PageSize to a non-empty value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DescribeUniBackupPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The name of the anti-ransomware policy.</p>
+         * <p>The name of the anti-ransomware backup policy for databases.</p>
          * 
          * <strong>example:</strong>
          * <p>auto_oracle_Hpm</p>

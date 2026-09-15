@@ -115,7 +115,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10000</strong>.</p>
+         * <p>The number of assets to display per page in a paging query. Default value: <strong>10000</strong>, which indicates that up to 10,000 entries of asset information are returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -148,7 +148,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>115.238.XX.XX</p>
@@ -160,9 +160,9 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers.</p>
+         * <p>The list of server UUIDs to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUIDs of servers.</p>
          * </blockquote>
          */
         public Builder uuidList(java.util.List<String> uuidList) {

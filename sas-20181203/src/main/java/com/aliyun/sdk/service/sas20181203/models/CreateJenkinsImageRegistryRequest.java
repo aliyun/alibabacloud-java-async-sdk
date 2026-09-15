@@ -288,7 +288,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;namespace&quot;:&quot;aa&quot;,&quot;authToken&quot;:&quot;aa&quot;}]</p>
+         * <p>[{\&quot;namespace\&quot;:\&quot;aa\&quot;,\&quot;authToken\&quot;:\&quot;aa\&quot;}]</p>
          */
         public Builder extraParam(String extraParam) {
             this.putBodyParameter("ExtraParam", extraParam);

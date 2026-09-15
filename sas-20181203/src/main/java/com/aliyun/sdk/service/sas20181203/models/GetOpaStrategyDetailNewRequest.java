@@ -61,7 +61,7 @@ public class GetOpaStrategyDetailNewRequest extends Request {
         /**
          * <p>The rule ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

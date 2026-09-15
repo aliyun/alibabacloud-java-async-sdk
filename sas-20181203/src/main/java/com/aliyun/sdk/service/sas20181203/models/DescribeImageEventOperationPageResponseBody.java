@@ -106,7 +106,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -147,10 +147,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The API call was successful.</li>
+         * <li><strong>false</strong>: The API call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+             * <p>The rule conditions in JSON format. Valid keys:</p>
              * <ul>
              * <li><strong>condition</strong>: the matching condition.</li>
              * <li><strong>type</strong>: the matching type.</li>
@@ -319,7 +319,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e783e&quot;}]</p>
+             * <p>[{\&quot;condition\&quot;: \&quot;MD5\&quot;, \&quot;type\&quot;: \&quot;equals\&quot;, \&quot;value\&quot;: \&quot;0083a31cc0083a31ccf7c10367a6e783e\&quot;}]</p>
              */
             public Builder conditions(String conditions) {
                 this.conditions = conditions;
@@ -327,7 +327,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyword of the alert item.</p>
+             * <p>The keyword of the alert metric.</p>
              * 
              * <strong>example:</strong>
              * <p>PEM</p>
@@ -338,7 +338,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert item.</p>
+             * <p>The name of the alert metric.</p>
              * 
              * <strong>example:</strong>
              * <p>PEM</p>
@@ -349,9 +349,9 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert type.</p>
+             * <p>The alerting type. Valid values:</p>
              * <ul>
-             * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+             * <li><strong>sensitiveFile</strong>: sensitive file tampering.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -385,9 +385,9 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation code.</p>
+             * <p>The operation code. Valid values:</p>
              * <ul>
-             * <li>Only <strong>whitelist</strong> may be returned, which means that the alert item is added to the whitelist.</li>
+             * <li><strong>whitelist</strong>: whitelist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -399,14 +399,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+             * <p>The rule scope in JSON format. Valid keys:</p>
              * <ul>
-             * <li><strong>type</strong></li>
-             * <li><strong>value</strong></li>
+             * <li><strong>type</strong>: the scope type.</li>
+             * <li><strong>value</strong>: the scope value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
+             * <p>{\&quot;type\&quot;: \&quot;repo\&quot;, \&quot;value\&quot;: \&quot;test-aaa/shenzhen-repo-01\&quot;}</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;
@@ -414,14 +414,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the whitelist. Valid values:</p>
+             * <p>The source of the alert handling rule. Valid values:</p>
              * <ul>
-             * <li><strong>image</strong>: image.</li>
-             * <li><strong>agentless</strong>: agentless detection.</li>
+             * <li><strong>default</strong>: image</li>
+             * <li><strong>agentless</strong>: agentless.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>agentless</p>
+             * <p>default</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -501,7 +501,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The number of the page to return in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -512,7 +512,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The maximum number of entries to return on each page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -593,7 +593,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert handling rules.</p>
+             * <p>The list of alert handling rules.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -601,7 +601,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pagination information.</p>
+             * <p>The paged query parameters.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
