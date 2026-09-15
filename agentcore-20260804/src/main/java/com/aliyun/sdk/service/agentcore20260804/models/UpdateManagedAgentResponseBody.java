@@ -571,17 +571,200 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
      *
      * <p>UpdateManagedAgentResponseBody</p>
      */
+    public static class Quota extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("limitType")
+        private String limitType;
+
+        @com.aliyun.core.annotation.NameInMap("overLimit")
+        private Boolean overLimit;
+
+        @com.aliyun.core.annotation.NameInMap("periodType")
+        private String periodType;
+
+        @com.aliyun.core.annotation.NameInMap("ruleStatus")
+        private String ruleStatus;
+
+        @com.aliyun.core.annotation.NameInMap("usageLimit")
+        private Long usageLimit;
+
+        @com.aliyun.core.annotation.NameInMap("usedAmount")
+        private Long usedAmount;
+
+        private Quota(Builder builder) {
+            this.enabled = builder.enabled;
+            this.limitType = builder.limitType;
+            this.overLimit = builder.overLimit;
+            this.periodType = builder.periodType;
+            this.ruleStatus = builder.ruleStatus;
+            this.usageLimit = builder.usageLimit;
+            this.usedAmount = builder.usedAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quota create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return limitType
+         */
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        /**
+         * @return overLimit
+         */
+        public Boolean getOverLimit() {
+            return this.overLimit;
+        }
+
+        /**
+         * @return periodType
+         */
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        /**
+         * @return ruleStatus
+         */
+        public String getRuleStatus() {
+            return this.ruleStatus;
+        }
+
+        /**
+         * @return usageLimit
+         */
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+        /**
+         * @return usedAmount
+         */
+        public Long getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String limitType; 
+            private Boolean overLimit; 
+            private String periodType; 
+            private String ruleStatus; 
+            private Long usageLimit; 
+            private Long usedAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.enabled = model.enabled;
+                this.limitType = model.limitType;
+                this.overLimit = model.overLimit;
+                this.periodType = model.periodType;
+                this.ruleStatus = model.ruleStatus;
+                this.usageLimit = model.usageLimit;
+                this.usedAmount = model.usedAmount;
+            } 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * limitType.
+             */
+            public Builder limitType(String limitType) {
+                this.limitType = limitType;
+                return this;
+            }
+
+            /**
+             * overLimit.
+             */
+            public Builder overLimit(Boolean overLimit) {
+                this.overLimit = overLimit;
+                return this;
+            }
+
+            /**
+             * periodType.
+             */
+            public Builder periodType(String periodType) {
+                this.periodType = periodType;
+                return this;
+            }
+
+            /**
+             * ruleStatus.
+             */
+            public Builder ruleStatus(String ruleStatus) {
+                this.ruleStatus = ruleStatus;
+                return this;
+            }
+
+            /**
+             * usageLimit.
+             */
+            public Builder usageLimit(Long usageLimit) {
+                this.usageLimit = usageLimit;
+                return this;
+            }
+
+            /**
+             * usedAmount.
+             */
+            public Builder usedAmount(Long usedAmount) {
+                this.usedAmount = usedAmount;
+                return this;
+            }
+
+            public Quota build() {
+                return new Quota(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateManagedAgentResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modelConnectionId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String modelConnectionId;
 
         @com.aliyun.core.annotation.NameInMap("modelName")
         private String modelName;
 
+        @com.aliyun.core.annotation.NameInMap("quota")
+        private Quota quota;
+
         private Model(Builder builder) {
             this.modelConnectionId = builder.modelConnectionId;
             this.modelName = builder.modelName;
+            this.quota = builder.quota;
         }
 
         public static Builder builder() {
@@ -606,9 +789,17 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             return this.modelName;
         }
 
+        /**
+         * @return quota
+         */
+        public Quota getQuota() {
+            return this.quota;
+        }
+
         public static final class Builder {
             private String modelConnectionId; 
             private String modelName; 
+            private Quota quota; 
 
             private Builder() {
             } 
@@ -616,11 +807,11 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             private Builder(Model model) {
                 this.modelConnectionId = model.modelConnectionId;
                 this.modelName = model.modelName;
+                this.quota = model.quota;
             } 
 
             /**
              * <p>The model connection ID.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>mc-1</p>
@@ -638,6 +829,14 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * quota.
+             */
+            public Builder quota(Quota quota) {
+                this.quota = quota;
                 return this;
             }
 

@@ -541,6 +541,123 @@ public class UpdateManagedAgentRequest extends Request {
      *
      * <p>UpdateManagedAgentRequest</p>
      */
+    public static class Quota extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("limitType")
+        private String limitType;
+
+        @com.aliyun.core.annotation.NameInMap("periodType")
+        private String periodType;
+
+        @com.aliyun.core.annotation.NameInMap("usageLimit")
+        private Long usageLimit;
+
+        private Quota(Builder builder) {
+            this.enabled = builder.enabled;
+            this.limitType = builder.limitType;
+            this.periodType = builder.periodType;
+            this.usageLimit = builder.usageLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quota create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return limitType
+         */
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        /**
+         * @return periodType
+         */
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        /**
+         * @return usageLimit
+         */
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String limitType; 
+            private String periodType; 
+            private Long usageLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.enabled = model.enabled;
+                this.limitType = model.limitType;
+                this.periodType = model.periodType;
+                this.usageLimit = model.usageLimit;
+            } 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * limitType.
+             */
+            public Builder limitType(String limitType) {
+                this.limitType = limitType;
+                return this;
+            }
+
+            /**
+             * periodType.
+             */
+            public Builder periodType(String periodType) {
+                this.periodType = periodType;
+                return this;
+            }
+
+            /**
+             * usageLimit.
+             */
+            public Builder usageLimit(Long usageLimit) {
+                this.usageLimit = usageLimit;
+                return this;
+            }
+
+            public Quota build() {
+                return new Quota(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateManagedAgentRequest</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modelConnectionId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -549,9 +666,13 @@ public class UpdateManagedAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("modelName")
         private String modelName;
 
+        @com.aliyun.core.annotation.NameInMap("quota")
+        private Quota quota;
+
         private Model(Builder builder) {
             this.modelConnectionId = builder.modelConnectionId;
             this.modelName = builder.modelName;
+            this.quota = builder.quota;
         }
 
         public static Builder builder() {
@@ -576,9 +697,17 @@ public class UpdateManagedAgentRequest extends Request {
             return this.modelName;
         }
 
+        /**
+         * @return quota
+         */
+        public Quota getQuota() {
+            return this.quota;
+        }
+
         public static final class Builder {
             private String modelConnectionId; 
             private String modelName; 
+            private Quota quota; 
 
             private Builder() {
             } 
@@ -586,6 +715,7 @@ public class UpdateManagedAgentRequest extends Request {
             private Builder(Model model) {
                 this.modelConnectionId = model.modelConnectionId;
                 this.modelName = model.modelName;
+                this.quota = model.quota;
             } 
 
             /**
@@ -608,6 +738,14 @@ public class UpdateManagedAgentRequest extends Request {
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * quota.
+             */
+            public Builder quota(Quota quota) {
+                this.quota = quota;
                 return this;
             }
 

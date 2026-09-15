@@ -119,7 +119,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the operation is successful.</p>
+         * <p>The business status code. The value SUCCESS is returned if the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -149,7 +149,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>The result message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -459,7 +459,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter is optional when only one key exists, but required when multiple keys exist.</p>
+             * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
              * 
              * <strong>example:</strong>
              * <p>key-xxxx</p>
@@ -470,7 +470,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Connector Key name that is populated during queries. This parameter is not used as a binding reference during writes.</p>
+             * <p>The Connector Key name that is populated during queries. This parameter is not used as a binding criterion during writes.</p>
              * 
              * <strong>example:</strong>
              * <p>my-connector-key</p>
@@ -548,7 +548,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+             * <p>The harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -571,17 +571,221 @@ public class CreateManagedAgentResponseBody extends TeaModel {
      *
      * <p>CreateManagedAgentResponseBody</p>
      */
+    public static class Quota extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("limitType")
+        private String limitType;
+
+        @com.aliyun.core.annotation.NameInMap("overLimit")
+        private Boolean overLimit;
+
+        @com.aliyun.core.annotation.NameInMap("periodType")
+        private String periodType;
+
+        @com.aliyun.core.annotation.NameInMap("ruleStatus")
+        private String ruleStatus;
+
+        @com.aliyun.core.annotation.NameInMap("usageLimit")
+        private Long usageLimit;
+
+        @com.aliyun.core.annotation.NameInMap("usedAmount")
+        private Long usedAmount;
+
+        private Quota(Builder builder) {
+            this.enabled = builder.enabled;
+            this.limitType = builder.limitType;
+            this.overLimit = builder.overLimit;
+            this.periodType = builder.periodType;
+            this.ruleStatus = builder.ruleStatus;
+            this.usageLimit = builder.usageLimit;
+            this.usedAmount = builder.usedAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quota create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return limitType
+         */
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        /**
+         * @return overLimit
+         */
+        public Boolean getOverLimit() {
+            return this.overLimit;
+        }
+
+        /**
+         * @return periodType
+         */
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        /**
+         * @return ruleStatus
+         */
+        public String getRuleStatus() {
+            return this.ruleStatus;
+        }
+
+        /**
+         * @return usageLimit
+         */
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+        /**
+         * @return usedAmount
+         */
+        public Long getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String limitType; 
+            private Boolean overLimit; 
+            private String periodType; 
+            private String ruleStatus; 
+            private Long usageLimit; 
+            private Long usedAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.enabled = model.enabled;
+                this.limitType = model.limitType;
+                this.overLimit = model.overLimit;
+                this.periodType = model.periodType;
+                this.ruleStatus = model.ruleStatus;
+                this.usageLimit = model.usageLimit;
+                this.usedAmount = model.usedAmount;
+            } 
+
+            /**
+             * <p>Indicates whether the quota is enabled. This parameter is not returned if no quota is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>The quota limit type. Currently, only token is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token</p>
+             */
+            public Builder limitType(String limitType) {
+                this.limitType = limitType;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder overLimit(Boolean overLimit) {
+                this.overLimit = overLimit;
+                return this;
+            }
+
+            /**
+             * <p>The quota statistical period. A value of day indicates a daily period. A value of month indicates a monthly period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
+             */
+            public Builder periodType(String periodType) {
+                this.periodType = periodType;
+                return this;
+            }
+
+            /**
+             * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
+             */
+            public Builder ruleStatus(String ruleStatus) {
+                this.ruleStatus = ruleStatus;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of tokens that can be consumed within a single cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
+             */
+            public Builder usageLimit(Long usageLimit) {
+                this.usageLimit = usageLimit;
+                return this;
+            }
+
+            /**
+             * <p>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
+             */
+            public Builder usedAmount(Long usedAmount) {
+                this.usedAmount = usedAmount;
+                return this;
+            }
+
+            public Quota build() {
+                return new Quota(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modelConnectionId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String modelConnectionId;
 
         @com.aliyun.core.annotation.NameInMap("modelName")
         private String modelName;
 
+        @com.aliyun.core.annotation.NameInMap("quota")
+        private Quota quota;
+
         private Model(Builder builder) {
             this.modelConnectionId = builder.modelConnectionId;
             this.modelName = builder.modelName;
+            this.quota = builder.quota;
         }
 
         public static Builder builder() {
@@ -606,9 +810,17 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             return this.modelName;
         }
 
+        /**
+         * @return quota
+         */
+        public Quota getQuota() {
+            return this.quota;
+        }
+
         public static final class Builder {
             private String modelConnectionId; 
             private String modelName; 
+            private Quota quota; 
 
             private Builder() {
             } 
@@ -616,11 +828,11 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             private Builder(Model model) {
                 this.modelConnectionId = model.modelConnectionId;
                 this.modelName = model.modelName;
+                this.quota = model.quota;
             } 
 
             /**
              * <p>The model connection ID.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>mc-1</p>
@@ -638,6 +850,14 @@ public class CreateManagedAgentResponseBody extends TeaModel {
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * <p>The model token quota configuration and the quota usage status in the current cycle. This parameter is empty if no quota is configured.</p>
+             */
+            public Builder quota(Quota quota) {
+                this.quota = quota;
                 return this;
             }
 
@@ -916,7 +1136,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket name. This parameter is required for each mount entry as validated by the backend.</p>
+             * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -924,7 +1144,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute mount path in the container. This parameter is required for each mount entry as validated by the backend.</p>
+             * <p>The absolute mount path inside the container. This parameter is required by backend validation for each mount entry.</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -932,7 +1152,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relative object prefix in the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+             * <p>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -940,7 +1160,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to mount as read-only. Default value: false.</p>
+             * <p>Specifies whether to mount in read-only mode. Default value: false.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -995,7 +1215,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute specification.</p>
+             * <p>The compute class.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1107,7 +1327,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable auto-scaling. This parameter is required when hpa is present as validated by the backend.</p>
+             * <p>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is present.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1115,7 +1335,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of active sessions per Sandbox. This parameter is required when hpa is present as validated by the backend.</p>
+             * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is present.</p>
              */
             public Builder maxConcurrentSessionsPerSandbox(Integer maxConcurrentSessionsPerSandbox) {
                 this.maxConcurrentSessionsPerSandbox = maxConcurrentSessionsPerSandbox;
@@ -1123,7 +1343,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of Sandboxes. This parameter is required when HPA is enabled and must be no less than the minimum value.</p>
+             * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
              */
             public Builder maxSandboxCount(Integer maxSandboxCount) {
                 this.maxSandboxCount = maxSandboxCount;
@@ -1131,7 +1351,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of Sandboxes. This parameter is required when HPA is enabled.</p>
+             * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
              */
             public Builder minSandboxCount(Integer minSandboxCount) {
                 this.minSandboxCount = minSandboxCount;
@@ -1139,7 +1359,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session reclamation time after inactivity, in seconds. This parameter is required when hpa is present as validated by the backend.</p>
+             * <p>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is present.</p>
              */
             public Builder sessionTtlSeconds(Integer sessionTtlSeconds) {
                 this.sessionTtlSeconds = sessionTtlSeconds;
@@ -1207,7 +1427,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP header name used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+             * <p>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -1313,7 +1533,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Sandbox auto-scaling and session configuration.</p>
+             * <p>The sandbox auto scaling and session configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -2130,7 +2350,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</p>
+             * <p>The harness for the managed agent. Valid values: qwenpaw and qodercli.</p>
              */
             public Builder harness(Harness harness) {
                 this.harness = harness;
@@ -2198,7 +2418,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS mount list. A maximum of 10 entries are supported.</p>
+             * <p>The list of OSS mounts. A maximum of 10 entries are supported.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -2225,7 +2445,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance count of the managed agent grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), and FAILED (runtime failure). Only phases that actually occur are returned. A missing key is treated as 0. This field is a dynamic map and new keys may be added in the future. You can use FAILED &gt; 0 on the frontend to determine whether abnormal instances exist.</p>
+             * <p>The number of managed agent instances grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), and FAILED (runtime failure). Only phases that actually occur are returned. Missing keys are treated as 0. This field is a dynamic mapping, and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
              */
             public Builder sandboxPhaseCounts(java.util.Map<String, Long> sandboxPhaseCounts) {
                 this.sandboxPhaseCounts = sandboxPhaseCounts;
@@ -2241,7 +2461,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed agent status.</p>
+             * <p>The status of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -2260,7 +2480,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template configuration information.</p>
+             * <p>The template configuration.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -2268,7 +2488,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tool configurations.</p>
+             * <p>The tool configuration list.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
@@ -2276,7 +2496,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time in RFC 3339 format.</p>
+             * <p>The time when the managed agent was last updated, in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>

@@ -149,7 +149,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that indicates the result of the request.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -292,7 +292,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last active time of the external agent in RFC 3339 format.</p>
+             * <p>The time when the external agent was last active, in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -303,7 +303,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last heartbeat time of the external agent in RFC 3339 format.</p>
+             * <p>The time of the last heartbeat from the external agent, in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -348,18 +348,221 @@ public class CreateExternalAgentResponseBody extends TeaModel {
      *
      * <p>CreateExternalAgentResponseBody</p>
      */
+    public static class Quota extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("limitType")
+        private String limitType;
+
+        @com.aliyun.core.annotation.NameInMap("overLimit")
+        private Boolean overLimit;
+
+        @com.aliyun.core.annotation.NameInMap("periodType")
+        private String periodType;
+
+        @com.aliyun.core.annotation.NameInMap("ruleStatus")
+        private String ruleStatus;
+
+        @com.aliyun.core.annotation.NameInMap("usageLimit")
+        private Long usageLimit;
+
+        @com.aliyun.core.annotation.NameInMap("usedAmount")
+        private Long usedAmount;
+
+        private Quota(Builder builder) {
+            this.enabled = builder.enabled;
+            this.limitType = builder.limitType;
+            this.overLimit = builder.overLimit;
+            this.periodType = builder.periodType;
+            this.ruleStatus = builder.ruleStatus;
+            this.usageLimit = builder.usageLimit;
+            this.usedAmount = builder.usedAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quota create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return limitType
+         */
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        /**
+         * @return overLimit
+         */
+        public Boolean getOverLimit() {
+            return this.overLimit;
+        }
+
+        /**
+         * @return periodType
+         */
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        /**
+         * @return ruleStatus
+         */
+        public String getRuleStatus() {
+            return this.ruleStatus;
+        }
+
+        /**
+         * @return usageLimit
+         */
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+        /**
+         * @return usedAmount
+         */
+        public Long getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String limitType; 
+            private Boolean overLimit; 
+            private String periodType; 
+            private String ruleStatus; 
+            private Long usageLimit; 
+            private Long usedAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.enabled = model.enabled;
+                this.limitType = model.limitType;
+                this.overLimit = model.overLimit;
+                this.periodType = model.periodType;
+                this.ruleStatus = model.ruleStatus;
+                this.usageLimit = model.usageLimit;
+                this.usedAmount = model.usedAmount;
+            } 
+
+            /**
+             * <p>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>The quota limit type. Currently, only token is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token</p>
+             */
+            public Builder limitType(String limitType) {
+                this.limitType = limitType;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder overLimit(Boolean overLimit) {
+                this.overLimit = overLimit;
+                return this;
+            }
+
+            /**
+             * <p>The quota statistical period. day indicates a daily period. month indicates a monthly period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
+             */
+            public Builder periodType(String periodType) {
+                this.periodType = periodType;
+                return this;
+            }
+
+            /**
+             * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
+             */
+            public Builder ruleStatus(String ruleStatus) {
+                this.ruleStatus = ruleStatus;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of tokens that can be consumed within a single cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
+             */
+            public Builder usageLimit(Long usageLimit) {
+                this.usageLimit = usageLimit;
+                return this;
+            }
+
+            /**
+             * <p>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
+             */
+            public Builder usedAmount(Long usedAmount) {
+                this.usedAmount = usedAmount;
+                return this;
+            }
+
+            public Quota build() {
+                return new Quota(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateExternalAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateExternalAgentResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modelConnectionId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String modelConnectionId;
 
         @com.aliyun.core.annotation.NameInMap("modelName")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String modelName;
+
+        @com.aliyun.core.annotation.NameInMap("quota")
+        private Quota quota;
 
         private Model(Builder builder) {
             this.modelConnectionId = builder.modelConnectionId;
             this.modelName = builder.modelName;
+            this.quota = builder.quota;
         }
 
         public static Builder builder() {
@@ -384,9 +587,17 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             return this.modelName;
         }
 
+        /**
+         * @return quota
+         */
+        public Quota getQuota() {
+            return this.quota;
+        }
+
         public static final class Builder {
             private String modelConnectionId; 
             private String modelName; 
+            private Quota quota; 
 
             private Builder() {
             } 
@@ -394,11 +605,11 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             private Builder(Model model) {
                 this.modelConnectionId = model.modelConnectionId;
                 this.modelName = model.modelName;
+                this.quota = model.quota;
             } 
 
             /**
              * <p>The model connection ID.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>mc-1</p>
@@ -410,13 +621,20 @@ public class CreateExternalAgentResponseBody extends TeaModel {
 
             /**
              * <p>The upstream model name.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-max</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * <p>The model token quota configuration and the quota usage status in the current cycle. This field is empty if no quota is configured.</p>
+             */
+            public Builder quota(Quota quota) {
+                this.quota = quota;
                 return this;
             }
 
@@ -1136,10 +1354,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the model configuration. Valid values:</p>
+             * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be specified at the same time. Valid values:</p>
              * <ul>
-             * <li>PLATFORM: The platform parses and delivers the model configuration.</li>
-             * <li>RUNTIME: The external runtime manages the model on its own. You cannot specify model at the same time.</li>
+             * <li>PLATFORM: platform model.</li>
+             * <li>RUNTIME: runtime model.</li>
              * </ul>
              * 
              * <strong>example:</strong>

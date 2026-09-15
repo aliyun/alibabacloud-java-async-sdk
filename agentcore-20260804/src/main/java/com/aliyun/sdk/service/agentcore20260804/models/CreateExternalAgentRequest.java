@@ -111,7 +111,7 @@ public class CreateExternalAgentRequest extends Request {
         }
 
         /**
-         * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</p>
+         * <p>The reserved idempotency token. The backend does not provide idempotency guarantee in the current phase.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -135,6 +135,135 @@ public class CreateExternalAgentRequest extends Request {
      *
      * <p>CreateExternalAgentRequest</p>
      */
+    public static class Quota extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("limitType")
+        private String limitType;
+
+        @com.aliyun.core.annotation.NameInMap("periodType")
+        private String periodType;
+
+        @com.aliyun.core.annotation.NameInMap("usageLimit")
+        private Long usageLimit;
+
+        private Quota(Builder builder) {
+            this.enabled = builder.enabled;
+            this.limitType = builder.limitType;
+            this.periodType = builder.periodType;
+            this.usageLimit = builder.usageLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quota create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return limitType
+         */
+        public String getLimitType() {
+            return this.limitType;
+        }
+
+        /**
+         * @return periodType
+         */
+        public String getPeriodType() {
+            return this.periodType;
+        }
+
+        /**
+         * @return usageLimit
+         */
+        public Long getUsageLimit() {
+            return this.usageLimit;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String limitType; 
+            private String periodType; 
+            private Long usageLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.enabled = model.enabled;
+                this.limitType = model.limitType;
+                this.periodType = model.periodType;
+                this.usageLimit = model.usageLimit;
+            } 
+
+            /**
+             * <p>Specifies whether to enable token quota. Defaults to true if not specified. Set to false to disable and delete existing quota rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>The quota limit type. Required by backend validation when quota is enabled. Fixed value: token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token</p>
+             */
+            public Builder limitType(String limitType) {
+                this.limitType = limitType;
+                return this;
+            }
+
+            /**
+             * <p>The quota statistical period. Required by backend validation when quota is enabled. Valid values: day (daily) and month (monthly).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
+             */
+            public Builder periodType(String periodType) {
+                this.periodType = periodType;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of tokens that can be consumed within a single period. Required by backend validation when quota is enabled. The value must be greater than 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
+             */
+            public Builder usageLimit(Long usageLimit) {
+                this.usageLimit = usageLimit;
+                return this;
+            }
+
+            public Quota build() {
+                return new Quota(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateExternalAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateExternalAgentRequest</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modelConnectionId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -144,9 +273,13 @@ public class CreateExternalAgentRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String modelName;
 
+        @com.aliyun.core.annotation.NameInMap("quota")
+        private Quota quota;
+
         private Model(Builder builder) {
             this.modelConnectionId = builder.modelConnectionId;
             this.modelName = builder.modelName;
+            this.quota = builder.quota;
         }
 
         public static Builder builder() {
@@ -171,9 +304,17 @@ public class CreateExternalAgentRequest extends Request {
             return this.modelName;
         }
 
+        /**
+         * @return quota
+         */
+        public Quota getQuota() {
+            return this.quota;
+        }
+
         public static final class Builder {
             private String modelConnectionId; 
             private String modelName; 
+            private Quota quota; 
 
             private Builder() {
             } 
@@ -181,6 +322,7 @@ public class CreateExternalAgentRequest extends Request {
             private Builder(Model model) {
                 this.modelConnectionId = model.modelConnectionId;
                 this.modelName = model.modelName;
+                this.quota = model.quota;
             } 
 
             /**
@@ -204,6 +346,14 @@ public class CreateExternalAgentRequest extends Request {
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * <p>The model token quota configuration. If not specified, no quota is configured.</p>
+             */
+            public Builder quota(Quota quota) {
+                this.quota = quota;
                 return this;
             }
 
@@ -686,10 +836,10 @@ public class CreateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The source of the model configuration. Valid values:</p>
+             * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be specified at the same time. Valid values:</p>
              * <ul>
-             * <li>PLATFORM: The platform parses and delivers the model configuration.</li>
-             * <li>RUNTIME: The external runtime manages the model on its own. You cannot specify model at the same time.</li>
+             * <li>PLATFORM: platform model.</li>
+             * <li>RUNTIME: runtime model.</li>
              * </ul>
              * 
              * <strong>example:</strong>
