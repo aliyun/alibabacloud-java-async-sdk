@@ -1,0 +1,187 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sandbox20260820.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link VolumeMountConfig} extends {@link TeaModel}
+ *
+ * <p>VolumeMountConfig</p>
+ */
+public class VolumeMountConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("role")
+    private String role;
+
+    @com.aliyun.core.annotation.NameInMap("vpcConfig")
+    private VpcConfig vpcConfig;
+
+    private VolumeMountConfig(Builder builder) {
+        this.role = builder.role;
+        this.vpcConfig = builder.vpcConfig;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static VolumeMountConfig create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
+    }
+
+    /**
+     * @return vpcConfig
+     */
+    public VpcConfig getVpcConfig() {
+        return this.vpcConfig;
+    }
+
+    public static final class Builder {
+        private String role; 
+        private VpcConfig vpcConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(VolumeMountConfig model) {
+            this.role = model.role;
+            this.vpcConfig = model.vpcConfig;
+        } 
+
+        /**
+         * role.
+         */
+        public Builder role(String role) {
+            this.role = role;
+            return this;
+        }
+
+        /**
+         * vpcConfig.
+         */
+        public Builder vpcConfig(VpcConfig vpcConfig) {
+            this.vpcConfig = vpcConfig;
+            return this;
+        }
+
+        public VolumeMountConfig build() {
+            return new VolumeMountConfig(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link VolumeMountConfig} extends {@link TeaModel}
+     *
+     * <p>VolumeMountConfig</p>
+     */
+    public static class VpcConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private VpcConfig(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private java.util.List<String> vSwitchIds; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcConfig model) {
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * securityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * vSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * vpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public VpcConfig build() {
+                return new VpcConfig(this);
+            } 
+
+        } 
+
+    }
+}
