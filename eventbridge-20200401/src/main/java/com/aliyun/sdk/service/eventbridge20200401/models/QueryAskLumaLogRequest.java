@@ -88,7 +88,7 @@ public class QueryAskLumaLogRequest extends Request {
         } 
 
         /**
-         * <p>The cursor. Set this parameter to the messageId of the last entry on the previous page.</p>
+         * <p>The cursor for pagination. Set this parameter to the messageId of the last entry on the previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJ0cyI6MTcxN...</p>
@@ -100,7 +100,7 @@ public class QueryAskLumaLogRequest extends Request {
         }
 
         /**
-         * <p>The agent name. If this parameter is left empty, all agents are queried.</p>
+         * <p>The agent name. If this parameter is not specified, all agent call logs are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-luma-agent</p>

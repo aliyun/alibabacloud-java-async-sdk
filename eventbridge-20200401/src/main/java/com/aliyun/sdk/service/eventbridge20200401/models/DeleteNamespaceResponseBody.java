@@ -93,7 +93,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code. 200 indicates success</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -115,7 +115,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -126,7 +126,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

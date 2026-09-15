@@ -317,6 +317,69 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetGenerateAgentDataSemanticsProgressResponse> getGenerateAgentDataSemanticsProgress(GetGenerateAgentDataSemanticsProgressRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified data catalog bound to a Luma Agent. You can only query data catalogs that are already bound to the Agent. A ResourceNotFound error is returned for unbound catalogs.</p>
+     * 
+     * @param request the request parameters of GetLumaCatalog  GetLumaCatalogRequest
+     * @return GetLumaCatalogResponse
+     */
+    CompletableFuture<GetLumaCatalogResponse> getLumaCatalog(GetLumaCatalogRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the full content of a specified text chunk from a knowledge base bound to a Luma Agent.</p>
+     * 
+     * @param request the request parameters of GetLumaChunk  GetLumaChunkRequest
+     * @return GetLumaChunkResponse
+     */
+    CompletableFuture<GetLumaChunkResponse> getLumaChunk(GetLumaChunkRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified document in the knowledge base bound to a Luma Agent.</p>
+     * 
+     * @param request the request parameters of GetLumaDocument  GetLumaDocumentRequest
+     * @return GetLumaDocumentResponse
+     */
+    CompletableFuture<GetLumaDocumentResponse> getLumaDocument(GetLumaDocumentRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a temporary download URL for a specified document in the knowledge base bound to a Luma Agent. The URL is valid for one hour by default.</p>
+     * 
+     * @param request the request parameters of GetLumaDocumentDownloadUrl  GetLumaDocumentDownloadUrlRequest
+     * @return GetLumaDocumentDownloadUrlResponse
+     */
+    CompletableFuture<GetLumaDocumentDownloadUrlResponse> getLumaDocumentDownloadUrl(GetLumaDocumentDownloadUrlRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified knowledge base bound to a Luma Agent, including the vector model, chunking configuration, and retrieval configuration.</p>
+     * 
+     * @param request the request parameters of GetLumaKnowledgeBase  GetLumaKnowledgeBaseRequest
+     * @return GetLumaKnowledgeBaseResponse
+     */
+    CompletableFuture<GetLumaKnowledgeBaseResponse> getLumaKnowledgeBase(GetLumaKnowledgeBaseRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified namespace bound to a Luma Agent. Only namespaces that are already bound to the Agent can be queried.</p>
+     * 
+     * @param request the request parameters of GetLumaNamespace  GetLumaNamespaceRequest
+     * @return GetLumaNamespaceResponse
+     */
+    CompletableFuture<GetLumaNamespaceResponse> getLumaNamespace(GetLumaNamespaceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified event table bound to a Luma Agent, including column definitions and the data retention policy. Only event tables that are already bound to the Agent can be queried.</p>
+     * 
+     * @param request the request parameters of GetLumaTable  GetLumaTableRequest
+     * @return GetLumaTableResponse
+     */
+    CompletableFuture<GetLumaTableResponse> getLumaTable(GetLumaTableRequest request);
+
+    /**
      * @param request the request parameters of GetNamespace  GetNamespaceRequest
      * @return GetNamespaceResponse
      */
@@ -399,6 +462,60 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEventStreamingsResponse
      */
     CompletableFuture<ListEventStreamingsResponse> listEventStreamings(ListEventStreamingsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request the request parameters of ListLumaCatalogs  ListLumaCatalogsRequest
+     * @return ListLumaCatalogsResponse
+     */
+    CompletableFuture<ListLumaCatalogsResponse> listLumaCatalogs(ListLumaCatalogsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Lists text chunks in a knowledge base bound to a Luma Agent, with support for filtering by document, keyword, and enabled status.</p>
+     * 
+     * @param request the request parameters of ListLumaChunks  ListLumaChunksRequest
+     * @return ListLumaChunksResponse
+     */
+    CompletableFuture<ListLumaChunksResponse> listLumaChunks(ListLumaChunksRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Lists documents in a knowledge base bound to a Luma Agent, with support for filtering by file name prefix and processing status.</p>
+     * 
+     * @param request the request parameters of ListLumaDocuments  ListLumaDocumentsRequest
+     * @return ListLumaDocumentsResponse
+     */
+    CompletableFuture<ListLumaDocumentsResponse> listLumaDocuments(ListLumaDocumentsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request the request parameters of ListLumaKnowledgeBases  ListLumaKnowledgeBasesRequest
+     * @return ListLumaKnowledgeBasesResponse
+     */
+    CompletableFuture<ListLumaKnowledgeBasesResponse> listLumaKnowledgeBases(ListLumaKnowledgeBasesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request the request parameters of ListLumaNamespaces  ListLumaNamespacesRequest
+     * @return ListLumaNamespacesResponse
+     */
+    CompletableFuture<ListLumaNamespacesResponse> listLumaNamespaces(ListLumaNamespacesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * 
+     * @param request the request parameters of ListLumaTables  ListLumaTablesRequest
+     * @return ListLumaTablesResponse
+     */
+    CompletableFuture<ListLumaTablesResponse> listLumaTables(ListLumaTablesRequest request);
 
     /**
      * @param request the request parameters of ListNamespaces  ListNamespacesRequest
@@ -510,6 +627,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Executes an SQL query directly on the EventHouse associated with a Luma Agent and returns structured results. Unlike AskLuma, this operation executes the SQL provided by the caller without natural language rewriting.</p>
+     * 
+     * @param request the request parameters of QueryLumaWithSQL  QueryLumaWithSQLRequest
+     * @return QueryLumaWithSQLResponse
+     */
+    CompletableFuture<QueryLumaWithSQLResponse> queryLumaWithSQL(QueryLumaWithSQLRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>You can call this API operation to query event traces by event ID.</p>
      * 
      * @param request the request parameters of QueryTracedEventByEventId  QueryTracedEventByEventIdRequest
@@ -531,6 +657,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SaveAgentDataSemanticsResponse
      */
     CompletableFuture<SaveAgentDataSemanticsResponse> saveAgentDataSemantics(SaveAgentDataSemanticsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * 
+     * @param request the request parameters of SearchLumaKnowledgeBase  SearchLumaKnowledgeBaseRequest
+     * @return SearchLumaKnowledgeBaseResponse
+     */
+    CompletableFuture<SearchLumaKnowledgeBaseResponse> searchLumaKnowledgeBase(SearchLumaKnowledgeBaseRequest request);
 
     /**
      * <b>description</b> :

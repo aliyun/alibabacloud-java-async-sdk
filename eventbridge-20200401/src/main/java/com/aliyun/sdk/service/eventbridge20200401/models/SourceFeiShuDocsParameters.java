@@ -93,7 +93,10 @@ public class SourceFeiShuDocsParameters extends TeaModel {
         } 
 
         /**
-         * AppId.
+         * <p>The App ID of the custom Lark application. Obtain this value after creating an application on the Lark Open Platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cli_a946c046xxxx</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -101,7 +104,10 @@ public class SourceFeiShuDocsParameters extends TeaModel {
         }
 
         /**
-         * AppSecret.
+         * <p>The App Secret of the custom Lark application. Obtain this value after creating an application on the Lark Open Platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yO3hEYiSjkBVxxxx</p>
          */
         public Builder appSecret(String appSecret) {
             this.appSecret = appSecret;
@@ -109,7 +115,10 @@ public class SourceFeiShuDocsParameters extends TeaModel {
         }
 
         /**
-         * KnowledgeSpaceName.
+         * <p>The name of the Lark knowledge space. An exact match is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Product Documentation Center</p>
          */
         public Builder knowledgeSpaceName(String knowledgeSpaceName) {
             this.knowledgeSpaceName = knowledgeSpaceName;
@@ -117,7 +126,10 @@ public class SourceFeiShuDocsParameters extends TeaModel {
         }
 
         /**
-         * LoadMode.
+         * <p>The document loading mode. Valid values: block: splits the document by blocks, with each block as a separate event. single (default): treats the entire document as a single event, with metadata extension keys such as file name, modification time, and original link. Use this mode when importing into an EventHouse knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>single</p>
          */
         public Builder loadMode(String loadMode) {
             this.loadMode = loadMode;
