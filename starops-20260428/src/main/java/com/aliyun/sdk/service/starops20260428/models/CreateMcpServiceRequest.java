@@ -212,7 +212,7 @@ public class CreateMcpServiceRequest extends Request {
          * <p>The description of the MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>通过 MCP 调用日志查询工具。</p>
+         * <p>Call the log query tool through MCP</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -224,7 +224,7 @@ public class CreateMcpServiceRequest extends Request {
          * <p>The display name of the MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>日志查询</p>
+         * <p>Log Query</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -497,7 +497,7 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * headers.
+             * <p>The custom headers.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -994,7 +994,7 @@ public class CreateMcpServiceRequest extends Request {
              * <p>The description of the MCP tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询指定日志库中的日志。</p>
+             * <p>Query logs in a specified Logstore</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1005,7 +1005,7 @@ public class CreateMcpServiceRequest extends Request {
              * <p>The display name of the MCP tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>日志查询工具</p>
+             * <p>Log Query Tool</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1084,7 +1084,7 @@ public class CreateMcpServiceRequest extends Request {
              * <p>The title of the MCP tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询日志</p>
+             * <p>Query Logs</p>
              */
             public Builder title(String title) {
                 this.title = title;

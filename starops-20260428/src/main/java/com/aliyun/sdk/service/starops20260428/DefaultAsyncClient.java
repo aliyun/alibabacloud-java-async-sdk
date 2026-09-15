@@ -273,7 +273,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteDigitalEmployeeUmodelCommonSchemaRefResponse> deleteDigitalEmployeeUmodelCommonSchemaRef(DeleteDigitalEmployeeUmodelCommonSchemaRefRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDigitalEmployeeUmodelCommonSchemaRef").setMethod(HttpMethod.DELETE).setPathRegex("/digital-employee/{name}/umodel/common-schema-refs/{group}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDigitalEmployeeUmodelCommonSchemaRef").setMethod(HttpMethod.DELETE).setPathRegex("/digitalEmployee/{name}/umodel/commonSchemaRefs/{group}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDigitalEmployeeUmodelCommonSchemaRefResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -411,7 +411,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetDigitalEmployeeEntityDataResponse> getDigitalEmployeeEntityData(GetDigitalEmployeeEntityDataRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDigitalEmployeeEntityData").setMethod(HttpMethod.POST).setPathRegex("/digital-employee/{name}/entities/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDigitalEmployeeEntityData").setMethod(HttpMethod.POST).setPathRegex("/digitalEmployee/{name}/entities/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDigitalEmployeeEntityDataResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -450,7 +450,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetDigitalEmployeeUmodelResponse> getDigitalEmployeeUmodel(GetDigitalEmployeeUmodelRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDigitalEmployeeUmodel").setMethod(HttpMethod.GET).setPathRegex("/digital-employee/{name}/umodel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDigitalEmployeeUmodel").setMethod(HttpMethod.GET).setPathRegex("/digitalEmployee/{name}/umodel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDigitalEmployeeUmodelResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -693,7 +693,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpdateDigitalEmployeeUmodelResponse> updateDigitalEmployeeUmodel(UpdateDigitalEmployeeUmodelRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDigitalEmployeeUmodel").setMethod(HttpMethod.PUT).setPathRegex("/digital-employee/{name}/umodel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDigitalEmployeeUmodel").setMethod(HttpMethod.PUT).setPathRegex("/digitalEmployee/{name}/umodel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDigitalEmployeeUmodelResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -750,7 +750,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpsertDigitalEmployeeUmodelCommonSchemaRefResponse> upsertDigitalEmployeeUmodelCommonSchemaRef(UpsertDigitalEmployeeUmodelCommonSchemaRefRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpsertDigitalEmployeeUmodelCommonSchemaRef").setMethod(HttpMethod.PUT).setPathRegex("/digital-employee/{name}/umodel/common-schema-refs/{group}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpsertDigitalEmployeeUmodelCommonSchemaRef").setMethod(HttpMethod.PUT).setPathRegex("/digitalEmployee/{name}/umodel/commonSchemaRefs/{group}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpsertDigitalEmployeeUmodelCommonSchemaRefResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

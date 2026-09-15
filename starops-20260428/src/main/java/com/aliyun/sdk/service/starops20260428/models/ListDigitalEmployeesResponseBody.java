@@ -242,7 +242,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attributes of the knowledge base.</p>
+             * <p>The knowledge base attributes.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -377,6 +377,9 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attributes")
         private java.util.Map<String, String> attributes;
 
+        @com.aliyun.core.annotation.NameInMap("channel")
+        private String channel;
+
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
@@ -413,6 +416,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
         private DigitalEmployees(Builder builder) {
             this.attributes = builder.attributes;
+            this.channel = builder.channel;
             this.createTime = builder.createTime;
             this.defaultRule = builder.defaultRule;
             this.description = builder.description;
@@ -439,6 +443,13 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
          */
         public java.util.Map<String, String> getAttributes() {
             return this.attributes;
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
         }
 
         /**
@@ -520,6 +531,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.Map<String, String> attributes; 
+            private String channel; 
             private String createTime; 
             private String defaultRule; 
             private String description; 
@@ -537,6 +549,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
             private Builder(DigitalEmployees model) {
                 this.attributes = model.attributes;
+                this.channel = model.channel;
                 this.createTime = model.createTime;
                 this.defaultRule = model.defaultRule;
                 this.description = model.description;
@@ -551,13 +564,21 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attributes of the knowledge base.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * <p>The attributes.</p>
              */
             public Builder attributes(java.util.Map<String, String> attributes) {
                 this.attributes = attributes;
+                return this;
+            }
+
+            /**
+             * <p>The channel type of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
                 return this;
             }
 
@@ -667,7 +688,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

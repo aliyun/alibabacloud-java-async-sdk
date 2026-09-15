@@ -34,7 +34,7 @@ public class ConnectorCreateInput extends TeaModel {
     private java.util.Map<String, ?> configuration;
 
     @com.aliyun.core.annotation.NameInMap("connectorName")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String connectorName;
 
     @com.aliyun.core.annotation.NameInMap("description")
@@ -217,7 +217,7 @@ public class ConnectorCreateInput extends TeaModel {
         }
 
         /**
-         * <p>The list of capabilities granted to the Connector.</p>
+         * <p>The list of capabilities granted to the connector.</p>
          * <p>This parameter is required.</p>
          */
         public Builder capabilityGrants(java.util.List<java.util.Map<String, ?>> capabilityGrants) {
@@ -282,7 +282,7 @@ public class ConnectorCreateInput extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable the Connector after creation.</p>
+         * <p>Specifies whether the connector is enabled after creation.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -290,7 +290,7 @@ public class ConnectorCreateInput extends TeaModel {
         }
 
         /**
-         * <p>The execution policy of the Connector.</p>
+         * <p>The execution policy of the connector.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policy(java.util.Map<String, ?> policy) {
@@ -311,7 +311,7 @@ public class ConnectorCreateInput extends TeaModel {
         }
 
         /**
-         * <p>The runtime configuration of the Connector.</p>
+         * <p>The runtime configuration of the connector.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtime(ConnectorRuntime runtime) {

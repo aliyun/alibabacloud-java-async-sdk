@@ -30,7 +30,7 @@ public class ConnectorInfo extends TeaModel {
     private java.util.Map<String, ?> configuration;
 
     @com.aliyun.core.annotation.NameInMap("connectorName")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String connectorName;
 
     @com.aliyun.core.annotation.NameInMap("createTime")
@@ -53,7 +53,7 @@ public class ConnectorInfo extends TeaModel {
     private String etag;
 
     @com.aliyun.core.annotation.NameInMap("name")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("policy")
@@ -352,7 +352,7 @@ public class ConnectorInfo extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the Connector is enabled.</p>
+         * <p>Specifies whether the Connector is enabled.</p>
          * <p>This parameter is required.</p>
          */
         public Builder enabled(Boolean enabled) {

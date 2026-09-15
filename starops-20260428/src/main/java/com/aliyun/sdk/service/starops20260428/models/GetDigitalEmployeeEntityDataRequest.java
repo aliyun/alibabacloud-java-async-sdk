@@ -118,7 +118,7 @@ public class GetDigitalEmployeeEntityDataRequest extends Request {
         }
 
         /**
-         * <p>The UNIX timestamp. Unit: seconds.</p>
+         * <p>The UNIX timestamp, in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class GetDigitalEmployeeEntityDataRequest extends Request {
         }
 
         /**
-         * <p>The UNIX timestamp. Unit: seconds. The value must be greater than the value of from.</p>
+         * <p>The UNIX timestamp, in seconds. The value must be greater than the value of from.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

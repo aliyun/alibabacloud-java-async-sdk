@@ -93,7 +93,7 @@ public class GetDigitalEmployeeEntityDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The query result in the form of a two-dimensional array. Each cell is returned as a string.</p>
+         * <p>The query results in the form of a two-dimensional array. Each cell is returned as a string.</p>
          */
         public Builder data(java.util.List<java.util.List<String>> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class GetDigitalEmployeeEntityDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of each column in the query result.</p>
+         * <p>The name of each column in the query results.</p>
          */
         public Builder header(java.util.List<String> header) {
             this.header = header;
