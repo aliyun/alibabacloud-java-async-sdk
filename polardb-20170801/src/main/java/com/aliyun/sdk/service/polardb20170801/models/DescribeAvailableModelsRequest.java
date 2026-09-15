@@ -22,12 +22,17 @@ public class DescribeAvailableModelsRequest extends Request {
     private String kubeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelType")
+    private String modelType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DescribeAvailableModelsRequest(Builder builder) {
         super(builder);
         this.kubeType = builder.kubeType;
+        this.modelType = builder.modelType;
         this.regionId = builder.regionId;
     }
 
@@ -52,6 +57,13 @@ public class DescribeAvailableModelsRequest extends Request {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -60,6 +72,7 @@ public class DescribeAvailableModelsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAvailableModelsRequest, Builder> {
         private String kubeType; 
+        private String modelType; 
         private String regionId; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class DescribeAvailableModelsRequest extends Request {
         private Builder(DescribeAvailableModelsRequest request) {
             super(request);
             this.kubeType = request.kubeType;
+            this.modelType = request.modelType;
             this.regionId = request.regionId;
         } 
 
@@ -81,6 +95,18 @@ public class DescribeAvailableModelsRequest extends Request {
         public Builder kubeType(String kubeType) {
             this.putQueryParameter("KubeType", kubeType);
             this.kubeType = kubeType;
+            return this;
+        }
+
+        /**
+         * <p>The model type. Valid values: custom or public. If this parameter is not specified, all models are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
+        public Builder modelType(String modelType) {
+            this.putQueryParameter("ModelType", modelType);
+            this.modelType = modelType;
             return this;
         }
 

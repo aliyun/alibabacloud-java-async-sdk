@@ -26,14 +26,22 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List<Items> items;
 
+    @com.aliyun.core.annotation.NameInMap("ModelType")
+    private String modelType;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("TuneArch")
+    private String tuneArch;
 
     private DescribeAvailableModelsResponseBody(Builder builder) {
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
         this.items = builder.items;
+        this.modelType = builder.modelType;
         this.requestId = builder.requestId;
+        this.tuneArch = builder.tuneArch;
     }
 
     public static Builder builder() {
@@ -70,17 +78,33 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return tuneArch
+     */
+    public String getTuneArch() {
+        return this.tuneArch;
+    }
+
     public static final class Builder {
         private String engine; 
         private String engineVersion; 
         private java.util.List<Items> items; 
+        private String modelType; 
         private String requestId; 
+        private String tuneArch; 
 
         private Builder() {
         } 
@@ -89,7 +113,9 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             this.engine = model.engine;
             this.engineVersion = model.engineVersion;
             this.items = model.items;
+            this.modelType = model.modelType;
             this.requestId = model.requestId;
+            this.tuneArch = model.tuneArch;
         } 
 
         /**
@@ -123,6 +149,17 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The model type corresponding to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
+        public Builder modelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+
+        /**
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +167,17 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The model fine-tuning architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>swift</p>
+         */
+        public Builder tuneArch(String tuneArch) {
+            this.tuneArch = tuneArch;
             return this;
         }
 
@@ -227,6 +275,15 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
      * <p>DescribeAvailableModelsResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomModelName")
+        private String customModelName;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayModelName")
+        private String displayModelName;
+
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private String gmtModified;
+
         @com.aliyun.core.annotation.NameInMap("GpuRequired")
         private java.util.List<GpuRequired> gpuRequired;
 
@@ -242,6 +299,12 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelSeries")
         private String modelSeries;
 
+        @com.aliyun.core.annotation.NameInMap("ModelType")
+        private String modelType;
+
+        @com.aliyun.core.annotation.NameInMap("OssPath")
+        private String ossPath;
+
         @com.aliyun.core.annotation.NameInMap("SupportedGpuModels")
         private java.util.List<String> supportedGpuModels;
 
@@ -249,11 +312,16 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         private String tuneArch;
 
         private Items(Builder builder) {
+            this.customModelName = builder.customModelName;
+            this.displayModelName = builder.displayModelName;
+            this.gmtModified = builder.gmtModified;
             this.gpuRequired = builder.gpuRequired;
             this.minimumCpu = builder.minimumCpu;
             this.minimumMemory = builder.minimumMemory;
             this.modelName = builder.modelName;
             this.modelSeries = builder.modelSeries;
+            this.modelType = builder.modelType;
+            this.ossPath = builder.ossPath;
             this.supportedGpuModels = builder.supportedGpuModels;
             this.tuneArch = builder.tuneArch;
         }
@@ -264,6 +332,27 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return customModelName
+         */
+        public String getCustomModelName() {
+            return this.customModelName;
+        }
+
+        /**
+         * @return displayModelName
+         */
+        public String getDisplayModelName() {
+            return this.displayModelName;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         /**
@@ -302,6 +391,20 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelType
+         */
+        public String getModelType() {
+            return this.modelType;
+        }
+
+        /**
+         * @return ossPath
+         */
+        public String getOssPath() {
+            return this.ossPath;
+        }
+
+        /**
          * @return supportedGpuModels
          */
         public java.util.List<String> getSupportedGpuModels() {
@@ -316,11 +419,16 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String customModelName; 
+            private String displayModelName; 
+            private String gmtModified; 
             private java.util.List<GpuRequired> gpuRequired; 
             private Long minimumCpu; 
             private Long minimumMemory; 
             private String modelName; 
             private String modelSeries; 
+            private String modelType; 
+            private String ossPath; 
             private java.util.List<String> supportedGpuModels; 
             private String tuneArch; 
 
@@ -328,14 +436,52 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.customModelName = model.customModelName;
+                this.displayModelName = model.displayModelName;
+                this.gmtModified = model.gmtModified;
                 this.gpuRequired = model.gpuRequired;
                 this.minimumCpu = model.minimumCpu;
                 this.minimumMemory = model.minimumMemory;
                 this.modelName = model.modelName;
                 this.modelSeries = model.modelSeries;
+                this.modelType = model.modelType;
+                this.ossPath = model.ossPath;
                 this.supportedGpuModels = model.supportedGpuModels;
                 this.tuneArch = model.tuneArch;
             } 
+
+            /**
+             * <p>The custom model registration key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen3-32B</p>
+             */
+            public Builder customModelName(String customModelName) {
+                this.customModelName = customModelName;
+                return this;
+            }
+
+            /**
+             * <p>The display name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My Qwen3 32B</p>
+             */
+            public Builder displayModelName(String displayModelName) {
+                this.displayModelName = displayModelName;
+                return this;
+            }
+
+            /**
+             * <p>The last modified time of the registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-07 20:57:20</p>
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
+                return this;
+            }
 
             /**
              * <p>The supported GPU types.</p>
@@ -390,6 +536,28 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The model type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
+             */
+            public Builder modelType(String modelType) {
+                this.modelType = modelType;
+                return this;
+            }
+
+            /**
+             * <p>The OSS path of the custom model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/my-model-bucket/models</p>
+             */
+            public Builder ossPath(String ossPath) {
+                this.ossPath = ossPath;
+                return this;
+            }
+
+            /**
              * <p>The supported GPU models.</p>
              */
             public Builder supportedGpuModels(java.util.List<String> supportedGpuModels) {
@@ -398,7 +566,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * TuneArch.
+             * <p>The model fine-tuning architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swift</p>
              */
             public Builder tuneArch(String tuneArch) {
                 this.tuneArch = tuneArch;
