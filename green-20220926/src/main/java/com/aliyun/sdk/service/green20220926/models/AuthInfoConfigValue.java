@@ -93,7 +93,10 @@ public class AuthInfoConfigValue extends TeaModel {
         } 
 
         /**
-         * AuthToken.
+         * <p>The credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxx</p>
          */
         public Builder authToken(String authToken) {
             this.authToken = authToken;
@@ -101,7 +104,10 @@ public class AuthInfoConfigValue extends TeaModel {
         }
 
         /**
-         * PrivateDomain.
+         * <p>The private domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx">https://xxx</a></p>
          */
         public Builder privateDomain(String privateDomain) {
             this.privateDomain = privateDomain;
@@ -109,7 +115,10 @@ public class AuthInfoConfigValue extends TeaModel {
         }
 
         /**
-         * Project.
+         * <p>The project space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-xxx</p>
          */
         public Builder project(String project) {
             this.project = project;
@@ -117,7 +126,10 @@ public class AuthInfoConfigValue extends TeaModel {
         }
 
         /**
-         * PublicDomain.
+         * <p>The public domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx">https://xxx</a></p>
          */
         public Builder publicDomain(String publicDomain) {
             this.publicDomain = publicDomain;

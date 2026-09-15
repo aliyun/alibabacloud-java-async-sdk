@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateServiceConfigRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FileConfig")
     private String fileConfig;
 
@@ -63,6 +71,8 @@ public class UpdateServiceConfigRequest extends Request {
 
     private UpdateServiceConfigRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.fileConfig = builder.fileConfig;
         this.keywordFilterLibs = builder.keywordFilterLibs;
         this.keywordHitLibs = builder.keywordHitLibs;
@@ -87,6 +97,20 @@ public class UpdateServiceConfigRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -167,6 +191,8 @@ public class UpdateServiceConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateServiceConfigRequest, Builder> {
+        private String clientToken; 
+        private Boolean dryRun; 
         private String fileConfig; 
         private String keywordFilterLibs; 
         private String keywordHitLibs; 
@@ -185,6 +211,8 @@ public class UpdateServiceConfigRequest extends Request {
 
         private Builder(UpdateServiceConfigRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.fileConfig = request.fileConfig;
             this.keywordFilterLibs = request.keywordFilterLibs;
             this.keywordHitLibs = request.keywordHitLibs;
@@ -199,7 +227,31 @@ public class UpdateServiceConfigRequest extends Request {
         } 
 
         /**
-         * FileConfig.
+         * <p>The client-generated idempotency token used to prevent duplicate operations caused by network retries. The token must be unique across requests and contain only printable ASCII characters (ASCII 32-126).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400-e29b-41d4-a716-446655440000</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run. When set to true, only parameter validation and business logic checks are performed without actually creating or updating resources.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The document configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder fileConfig(String fileConfig) {
             this.putBodyParameter("FileConfig", fileConfig);
@@ -208,7 +260,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * KeywordFilterLibs.
+         * <p>The keyword filter libraries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder keywordFilterLibs(String keywordFilterLibs) {
             this.putBodyParameter("KeywordFilterLibs", keywordFilterLibs);
@@ -217,7 +272,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * KeywordHitLibs.
+         * <p>The keyword hit libraries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder keywordHitLibs(String keywordHitLibs) {
             this.putBodyParameter("KeywordHitLibs", keywordHitLibs);
@@ -226,7 +284,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * ManualMachineConfig.
+         * <p>The human-machine moderation configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder manualMachineConfig(String manualMachineConfig) {
             this.putBodyParameter("ManualMachineConfig", manualMachineConfig);
@@ -235,7 +296,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,7 +308,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -253,7 +320,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>The moderation scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pornographic</p>
          */
         public Builder scene(String scene) {
             this.putBodyParameter("Scene", scene);
@@ -262,7 +332,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * SceneConfig.
+         * <p>The scenario configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder sceneConfig(String sceneConfig) {
             this.putBodyParameter("SceneConfig", sceneConfig);
@@ -271,7 +344,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);
@@ -280,7 +356,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * ServiceConfig.
+         * <p>The service configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder serviceConfig(String serviceConfig) {
             this.putBodyParameter("ServiceConfig", serviceConfig);
@@ -289,7 +368,10 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * VideoConfig.
+         * <p>The video configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder videoConfig(String videoConfig) {
             this.putBodyParameter("VideoConfig", videoConfig);

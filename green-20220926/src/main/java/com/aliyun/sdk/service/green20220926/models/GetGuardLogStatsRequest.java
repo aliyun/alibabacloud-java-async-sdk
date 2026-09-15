@@ -59,7 +59,10 @@ public class GetGuardLogStatsRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lvwang_guardrail_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);

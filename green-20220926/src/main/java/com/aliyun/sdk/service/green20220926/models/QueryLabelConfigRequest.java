@@ -115,7 +115,10 @@ public class QueryLabelConfigRequest extends Request {
         } 
 
         /**
-         * Classify.
+         * <p>The classification. Separate multiple values with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guard-scene</p>
          */
         public Builder classify(String classify) {
             this.putQueryParameter("Classify", classify);
@@ -124,7 +127,10 @@ public class QueryLabelConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +139,10 @@ public class QueryLabelConfigRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Separate multiple values with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -142,7 +151,10 @@ public class QueryLabelConfigRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>The service code. Separate multiple values with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -151,7 +163,11 @@ public class QueryLabelConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type. Separate multiple values with commas.
+         * content_moderation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content_moderation</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

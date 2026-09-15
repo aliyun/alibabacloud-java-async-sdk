@@ -80,7 +80,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * History.
+         * <p>The historical versions.</p>
          */
         public Builder history(java.util.List<History> history) {
             this.history = history;
@@ -88,7 +88,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Publish.
+         * <p>The published versions.</p>
          */
         public Builder publish(java.util.List<Publish> publish) {
             this.publish = publish;
@@ -96,7 +96,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. It can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +280,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Classify.
+             * <p><strong>[Deprecated]</strong> The categorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guard-scene</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -285,7 +291,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * CustomConfig.
+             * <p><strong>[Deprecated]</strong> The configuration details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;agentItemConfigs&quot;: &quot;[{\&quot;agentId\&quot;:\&quot;ag.abcxxx\&quot;,\&quot;enable\&quot;:true,\&quot;name\&quot;:\&quot;Agent 1\&quot;}]&quot;}</p>
              */
             public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
@@ -293,7 +302,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * DeployStatus.
+             * <p><strong>[Deprecated]</strong> The publish status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>editing</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -301,7 +313,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-29 10:05:27</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -309,7 +324,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p><strong>[Deprecated]</strong> The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom text moderation</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +335,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Option.
+             * <p><strong>[Deprecated]</strong> The preset options.</p>
              */
             public Builder option(java.util.Map<String, ?> option) {
                 this.option = option;
@@ -325,7 +343,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p><strong>[Deprecated]</strong> The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_text</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -333,7 +354,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p><strong>[Deprecated]</strong> The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plus</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -341,7 +365,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1785888163</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -523,7 +550,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Classify.
+             * <p><strong>[Deprecated]</strong> The categorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guard-scene</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -531,7 +561,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * CustomConfig.
+             * <p><strong>[Deprecated]</strong> The configuration details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;agentItemConfigs&quot;: &quot;[{\&quot;agentId\&quot;:\&quot;ag.abcxxx\&quot;,\&quot;enable\&quot;:true,\&quot;name\&quot;:\&quot;Agent 1\&quot;}]&quot;}</p>
              */
             public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
@@ -539,7 +572,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * DeployStatus.
+             * <p><strong>[Deprecated]</strong> The publish status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>editing</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -547,7 +583,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-25 09:52:12</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -555,7 +594,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p><strong>[Deprecated]</strong> The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom text moderation</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -563,7 +605,7 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Option.
+             * <p><strong>[Deprecated]</strong> The preset options.</p>
              */
             public Builder option(java.util.Map<String, ?> option) {
                 this.option = option;
@@ -571,7 +613,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p><strong>[Deprecated]</strong> The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_text</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -579,7 +624,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p><strong>[Deprecated]</strong> The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plus</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -587,7 +635,10 @@ public class ListAppConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1785898163</p>
              */
             public Builder version(Long version) {
                 this.version = version;

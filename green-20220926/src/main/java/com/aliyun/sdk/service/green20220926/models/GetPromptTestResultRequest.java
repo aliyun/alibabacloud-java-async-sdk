@@ -115,7 +115,10 @@ public class GetPromptTestResultRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;enable\&quot;:false}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -124,7 +127,10 @@ public class GetPromptTestResultRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -133,7 +139,10 @@ public class GetPromptTestResultRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -142,7 +151,10 @@ public class GetPromptTestResultRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文本</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -151,7 +163,10 @@ public class GetPromptTestResultRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_llm_template</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

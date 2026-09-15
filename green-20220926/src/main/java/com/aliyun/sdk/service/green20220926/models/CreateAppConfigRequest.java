@@ -115,7 +115,10 @@ public class CreateAppConfigRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CustomReview</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -124,7 +127,10 @@ public class CreateAppConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +139,10 @@ public class CreateAppConfigRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -142,7 +151,10 @@ public class CreateAppConfigRequest extends Request {
         }
 
         /**
-         * SysAppId.
+         * <p>The system app ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>txt_check_agent</p>
          */
         public Builder sysAppId(String sysAppId) {
             this.putQueryParameter("SysAppId", sysAppId);
@@ -151,7 +163,10 @@ public class CreateAppConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plus</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

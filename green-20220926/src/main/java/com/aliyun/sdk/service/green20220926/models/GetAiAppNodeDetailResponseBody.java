@@ -145,7 +145,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id-xxx</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -153,7 +156,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Channel.
+         * <p>The channel information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder channel(String channel) {
             this.channel = channel;
@@ -161,7 +167,7 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventData.
+         * <p>The list of event data.</p>
          */
         public Builder eventData(java.util.List<EventData> eventData) {
             this.eventData = eventData;
@@ -169,7 +175,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node-xxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -177,7 +186,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NodeName.
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namexxx</p>
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
@@ -185,7 +197,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NodeType.
+         * <p>The node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TOOL</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -193,7 +208,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.riskLevel = riskLevel;
@@ -280,7 +301,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Label.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -288,7 +312,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LabelDesc.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn desc</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -296,7 +323,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -428,7 +458,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Channel.
+             * <p>The channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -436,7 +469,7 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The list of labels.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -444,7 +477,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -452,7 +488,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -460,7 +499,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the event occurred. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01 16:08:38</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -468,7 +510,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The trace ID, which is used to query the exact call information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -476,7 +521,10 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hit_sensitive_data</p>
              */
             public Builder type(String type) {
                 this.type = type;

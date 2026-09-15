@@ -67,7 +67,7 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,20 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeCategory.
+             * <p>The node category.</p>
+             * <ul>
+             * <li><p>LLM</p>
+             * </li>
+             * <li><p>Knowledge</p>
+             * </li>
+             * <li><p>Tools</p>
+             * </li>
+             * <li><p>Others</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LLM</p>
              */
             public Builder nodeCategory(String nodeCategory) {
                 this.nodeCategory = nodeCategory;
@@ -214,7 +230,10 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idxxx</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -222,7 +241,10 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namexxx</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -230,7 +252,15 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li><strong>APP</strong>: end-to-end agent.</li>
+             * <li><strong>MODEL</strong>: large language model.</li>
+             * <li><strong>TOOL</strong>: tool.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TOOL</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -238,7 +268,10 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * RequestCount.
+             * <p>The request count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder requestCount(Long requestCount) {
                 this.requestCount = requestCount;
@@ -246,7 +279,10 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -254,7 +290,10 @@ public class GetAiAppDetailTopoResponseBody extends TeaModel {
             }
 
             /**
-             * WarningCount.
+             * <p>The alert count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder warningCount(Integer warningCount) {
                 this.warningCount = warningCount;

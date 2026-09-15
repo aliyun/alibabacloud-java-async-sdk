@@ -116,7 +116,10 @@ public class GetRiskStatsRequest extends Request {
         } 
 
         /**
-         * Classify.
+         * <p>The classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guard-scene</p>
          */
         public Builder classify(String classify) {
             this.putQueryParameter("Classify", classify);
@@ -125,7 +128,10 @@ public class GetRiskStatsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02 00:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -134,7 +140,10 @@ public class GetRiskStatsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,7 +152,10 @@ public class GetRiskStatsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -152,6 +164,7 @@ public class GetRiskStatsRequest extends Request {
         }
 
         /**
+         * <p>The type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

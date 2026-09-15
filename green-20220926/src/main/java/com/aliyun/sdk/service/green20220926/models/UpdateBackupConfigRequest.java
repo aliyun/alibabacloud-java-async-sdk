@@ -101,7 +101,7 @@ public class UpdateBackupConfigRequest extends Request {
         } 
 
         /**
-         * <p>Evidence backup configuration.</p>
+         * <p>The evidence transfer configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -113,7 +113,7 @@ public class UpdateBackupConfigRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -125,7 +125,7 @@ public class UpdateBackupConfigRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>video</p>
@@ -137,7 +137,7 @@ public class UpdateBackupConfigRequest extends Request {
         }
 
         /**
-         * <p>Service code.</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>videoDetection</p>

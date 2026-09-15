@@ -158,7 +158,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id-xxx</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -166,7 +169,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * AvgModelDuration.
+         * <p>The average duration of model calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.55</p>
          */
         public Builder avgModelDuration(Float avgModelDuration) {
             this.avgModelDuration = avgModelDuration;
@@ -174,7 +180,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * AvgModelDurationDau.
+         * <p>The day-over-day change ratio of average model call duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.05</p>
          */
         public Builder avgModelDurationDau(Float avgModelDurationDau) {
             this.avgModelDurationDau = avgModelDurationDau;
@@ -182,7 +191,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * ModelCount.
+         * <p>The number of model calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder modelCount(Long modelCount) {
             this.modelCount = modelCount;
@@ -190,7 +202,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * ModelCountDau.
+         * <p>The day-over-day change ratio of model call count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.15</p>
          */
         public Builder modelCountDau(Float modelCountDau) {
             this.modelCountDau = modelCountDau;
@@ -198,7 +213,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +224,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * RiskEventCount.
+         * <p>The number of risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskEventCount(Long riskEventCount) {
             this.riskEventCount = riskEventCount;
@@ -214,7 +235,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * TokenCount.
+         * <p>The number of tokens consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11000</p>
          */
         public Builder tokenCount(Long tokenCount) {
             this.tokenCount = tokenCount;
@@ -222,7 +246,10 @@ public class GetAiAppDetailStatResponseBody extends TeaModel {
         }
 
         /**
-         * TokenCountDau.
+         * <p>The day-over-day change ratio of token consumption count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-0.15</p>
          */
         public Builder tokenCountDau(Float tokenCountDau) {
             this.tokenCountDau = tokenCountDau;

@@ -119,7 +119,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Success indicator.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>query</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -141,7 +141,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -163,7 +163,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data</p>
+         * <p>The request ID. You can use this ID to locate issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -174,7 +174,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message of this request.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

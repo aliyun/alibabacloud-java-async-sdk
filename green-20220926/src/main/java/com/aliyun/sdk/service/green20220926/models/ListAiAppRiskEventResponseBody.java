@@ -67,7 +67,7 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend that uniquely identifies a request. This ID can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-25 10:22:02</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -279,7 +285,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventCode.
+             * <p>The event code that identifies the type or category of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hit-xxxx</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -287,7 +296,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventDesc.
+             * <p>The event description that provides details about the risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc-xxx</p>
              */
             public Builder eventDesc(String eventDesc) {
                 this.eventDesc = eventDesc;
@@ -295,7 +307,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventDescEn.
+             * <p>The event description in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc-xxx</p>
              */
             public Builder eventDescEn(String eventDescEn) {
                 this.eventDescEn = eventDescEn;
@@ -303,7 +318,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The event ID that uniquely identifies a risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id-xxx</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -311,7 +329,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The event name that briefly describes the risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name-xxx</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -319,7 +340,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label used to mark or categorize the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -327,7 +351,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * LabelDesc.
+             * <p>The label description that provides details about the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc-xxx</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -335,7 +362,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The risk level that indicates the severity of the event, such as high, medium, or low.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -343,7 +373,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The effective period. Format: YYYY-MM-DD HH:mm:ss (default time zone: UTC+08:00).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-22 16:41:15</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -351,7 +384,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The event status that indicates the current processing state of the event, such as pending or resolved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>resovled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +395,10 @@ public class ListAiAppRiskEventResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The event type that indicates the category of the risk event, such as security or performance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sensitiveData</p>
              */
             public Builder type(String type) {
                 this.type = type;

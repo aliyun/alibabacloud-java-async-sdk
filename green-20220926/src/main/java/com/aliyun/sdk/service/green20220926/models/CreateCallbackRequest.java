@@ -115,7 +115,7 @@ public class CreateCallbackRequest extends Request {
         } 
 
         /**
-         * <p>Encryption algorithm.</p>
+         * <p>The encryption algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>SHA256</p>
@@ -127,7 +127,7 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * <p>Plan name.</p>
+         * <p>The name of the scheme.</p>
          * 
          * <strong>example:</strong>
          * <p>消息通知1</p>
@@ -139,7 +139,7 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -151,7 +151,7 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * <p>Review result.</p>
+         * <p>The moderation result.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -163,7 +163,7 @@ public class CreateCallbackRequest extends Request {
         }
 
         /**
-         * <p>Callback URL.</p>
+         * <p>The callback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://console.aliyun.com">https://console.aliyun.com</a></p>

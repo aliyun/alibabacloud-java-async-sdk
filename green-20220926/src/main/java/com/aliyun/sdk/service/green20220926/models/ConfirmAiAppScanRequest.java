@@ -74,6 +74,7 @@ public class ConfirmAiAppScanRequest extends Request {
         } 
 
         /**
+         * <p>The commodity code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class ConfirmAiAppScanRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

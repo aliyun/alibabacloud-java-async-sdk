@@ -59,7 +59,7 @@ public class GetOssCheckStatusRequest extends Request {
         } 
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

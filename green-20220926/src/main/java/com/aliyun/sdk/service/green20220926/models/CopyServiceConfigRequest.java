@@ -115,7 +115,7 @@ public class CopyServiceConfigRequest extends Request {
         } 
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -127,7 +127,7 @@ public class CopyServiceConfigRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -139,7 +139,7 @@ public class CopyServiceConfigRequest extends Request {
         }
 
         /**
-         * <p>Service code.</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>
@@ -151,10 +151,10 @@ public class CopyServiceConfigRequest extends Request {
         }
 
         /**
-         * <p>Service description</p>
+         * <p>The service description.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>服务备注</p>
          */
         public Builder serviceDesc(String serviceDesc) {
             this.putBodyParameter("ServiceDesc", serviceDesc);
@@ -166,7 +166,7 @@ public class CopyServiceConfigRequest extends Request {
          * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_name</p>
+         * <p>用户昵称检测</p>
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);

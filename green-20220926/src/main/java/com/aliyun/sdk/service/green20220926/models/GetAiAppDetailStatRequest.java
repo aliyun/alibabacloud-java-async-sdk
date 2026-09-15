@@ -102,6 +102,7 @@ public class GetAiAppDetailStatRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI application. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class GetAiAppDetailStatRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-09 10:30:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +127,10 @@ public class GetAiAppDetailStatRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +139,10 @@ public class GetAiAppDetailStatRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-10 14:48:01</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

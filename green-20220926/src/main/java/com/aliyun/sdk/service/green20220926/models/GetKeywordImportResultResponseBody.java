@@ -106,7 +106,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend to uniquely identify a request, which can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -147,7 +147,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -333,7 +333,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Internationalization key.</p>
+             * <p>The internationalization key.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -344,7 +344,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of keywords with illegal length (too long or too short).</p>
+             * <p>The list of keywords that are too long or too short.</p>
              */
             public Builder illegalLengthKeywords(java.util.List<String> illegalLengthKeywords) {
                 this.illegalLengthKeywords = illegalLengthKeywords;
@@ -352,7 +352,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invalid count.</p>
+             * <p>The number of invalid keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -363,7 +363,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of invalid keywords.</p>
+             * <p>The list of invalid keywords.</p>
              */
             public Builder invalidKeywords(java.util.List<String> invalidKeywords) {
                 this.invalidKeywords = invalidKeywords;
@@ -371,7 +371,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Keyword library ID.</p>
+             * <p>The keyword library ID.</p>
              * 
              * <strong>example:</strong>
              * <p>customxx_xxx</p>
@@ -382,7 +382,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task progress percentage.</p>
+             * <p>The task progress percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -393,7 +393,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Repeat count.</p>
+             * <p>The number of duplicate keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -404,7 +404,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of repeated keywords.</p>
+             * <p>The list of duplicate keywords.</p>
              */
             public Builder repeatKeywords(java.util.List<String> repeatKeywords) {
                 this.repeatKeywords = repeatKeywords;
@@ -412,7 +412,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Success count.</p>
+             * <p>The number of successfully imported keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -423,7 +423,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tips message.</p>
+             * <p>The prompt information.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -434,7 +434,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

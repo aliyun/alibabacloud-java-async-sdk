@@ -67,7 +67,10 @@ public class UpdateMetaLogResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateMetaLogResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

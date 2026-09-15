@@ -195,7 +195,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Classify.
+         * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guard-scene</p>
          */
         public Builder classify(String classify) {
             this.classify = classify;
@@ -203,7 +206,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CustomConfig.
+         * <p>The configuration details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;agentItemConfigs&quot;: &quot;[{\&quot;agentId\&quot;:\&quot;ag.abcxxx\&quot;,\&quot;enable\&quot;:true,\&quot;name\&quot;:\&quot;Agent 1\&quot;}]&quot;}</p>
          */
         public Builder customConfig(java.util.Map<String, ?> customConfig) {
             this.customConfig = customConfig;
@@ -211,7 +217,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DeployStatus.
+         * <p>The publish status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>editing</p>
          */
         public Builder deployStatus(String deployStatus) {
             this.deployStatus = deployStatus;
@@ -219,7 +228,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-09 10:12:50</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -227,7 +239,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom text moderation</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -235,7 +250,7 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Option.
+         * <p>The preset options.</p>
          */
         public Builder option(java.util.Map<String, ?> option) {
             this.option = option;
@@ -243,7 +258,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -251,7 +269,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_text</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -259,7 +280,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plus</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -267,7 +291,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1785898163</p>
          */
         public Builder version(Long version) {
             this.version = version;

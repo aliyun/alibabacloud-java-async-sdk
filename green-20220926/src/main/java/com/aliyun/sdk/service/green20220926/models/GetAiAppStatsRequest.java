@@ -129,7 +129,10 @@ public class GetAiAppStatsRequest extends Request {
         } 
 
         /**
-         * ByMonth.
+         * <p>Specifies whether to aggregate statistics by month. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder byMonth(Boolean byMonth) {
             this.putQueryParameter("ByMonth", byMonth);
@@ -138,7 +141,10 @@ public class GetAiAppStatsRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end date of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02 00:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -147,7 +153,10 @@ public class GetAiAppStatsRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -156,7 +165,10 @@ public class GetAiAppStatsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +177,10 @@ public class GetAiAppStatsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 00:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -174,7 +189,10 @@ public class GetAiAppStatsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sensitive_data</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -171,7 +171,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         } 
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,7 +183,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * <p>End time.</p>
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-18 02:08:00</p>
@@ -195,7 +195,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * <p>Whether it is a scheduled scan task.</p>
+         * <p>Specifies whether the task is a scheduled scan task.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -207,10 +207,10 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * <p>Media type.</p>
+         * <p>The media asset type.</p>
          * 
          * <strong>example:</strong>
-         * <p>image</p>
+         * <p>1</p>
          */
         public Builder mediaType(Integer mediaType) {
             this.putBodyParameter("MediaType", mediaType);
@@ -219,7 +219,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -231,7 +231,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -243,7 +243,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * <p>Sort field.</p>
+         * <p>The sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -253,7 +253,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * <p>Start time.</p>
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-17 02:08:00</p>
@@ -265,7 +265,7 @@ public class GetStockOssCheckTasksListRequest extends Request {
         }
 
         /**
-         * <p>Task type.</p>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>batch</p>

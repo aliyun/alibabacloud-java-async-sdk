@@ -119,7 +119,7 @@ public class InitAiAppScanResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthInfo.
+         * <p>The access entry information.</p>
          */
         public Builder authInfo(AuthInfo authInfo) {
             this.authInfo = authInfo;
@@ -127,7 +127,7 @@ public class InitAiAppScanResponseBody extends TeaModel {
         }
 
         /**
-         * AuthInfoConfig.
+         * <p>The access information.</p>
          */
         public Builder authInfoConfig(java.util.Map<String, AuthInfoConfigValue> authInfoConfig) {
             this.authInfoConfig = authInfoConfig;
@@ -135,7 +135,10 @@ public class InitAiAppScanResponseBody extends TeaModel {
         }
 
         /**
-         * AuthStatus.
+         * <p>The authorization status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder authStatus(String authStatus) {
             this.authStatus = authStatus;
@@ -143,7 +146,10 @@ public class InitAiAppScanResponseBody extends TeaModel {
         }
 
         /**
-         * OpenStatus.
+         * <p>The service activation status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder openStatus(String openStatus) {
             this.openStatus = openStatus;
@@ -151,7 +157,10 @@ public class InitAiAppScanResponseBody extends TeaModel {
         }
 
         /**
-         * ReadyStatus.
+         * <p>The ready status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder readyStatus(String readyStatus) {
             this.readyStatus = readyStatus;
@@ -159,7 +168,10 @@ public class InitAiAppScanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -251,7 +263,10 @@ public class InitAiAppScanResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthToken.
+             * <p>The credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token-xxx</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -259,7 +274,10 @@ public class InitAiAppScanResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateDomain.
+             * <p>The private domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx">https://xxx</a></p>
              */
             public Builder privateDomain(String privateDomain) {
                 this.privateDomain = privateDomain;
@@ -267,7 +285,10 @@ public class InitAiAppScanResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * <p>The project space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proj-xxx</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -275,7 +296,10 @@ public class InitAiAppScanResponseBody extends TeaModel {
             }
 
             /**
-             * PublicDomain.
+             * <p>The public domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx">https://xxx</a></p>
              */
             public Builder publicDomain(String publicDomain) {
                 this.publicDomain = publicDomain;

@@ -101,7 +101,7 @@ public class ExportTextScanResultRequest extends Request {
         } 
 
         /**
-         * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-11 10:00:00</p>
@@ -113,7 +113,7 @@ public class ExportTextScanResultRequest extends Request {
         }
 
         /**
-         * <p>Query conditions.</p>
+         * <p>The query condition.</p>
          */
         public Builder query(java.util.Map<String, String> query) {
             String queryShrink = shrink(query, "Query", "json");
@@ -123,7 +123,7 @@ public class ExportTextScanResultRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -135,7 +135,7 @@ public class ExportTextScanResultRequest extends Request {
         }
 
         /**
-         * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-10 10:00:00</p>

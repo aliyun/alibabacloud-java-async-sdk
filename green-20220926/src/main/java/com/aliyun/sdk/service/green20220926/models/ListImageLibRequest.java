@@ -73,7 +73,7 @@ public class ListImageLibRequest extends Request {
         } 
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -85,7 +85,10 @@ public class ListImageLibRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>The selected service identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>response_security_check</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);

@@ -129,7 +129,10 @@ public class QueryAnswerSampleByPageRequest extends Request {
         } 
 
         /**
-         * Answer.
+         * <p>The answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>答案</p>
          */
         public Builder answer(String answer) {
             this.putQueryParameter("Answer", answer);
@@ -138,7 +141,10 @@ public class QueryAnswerSampleByPageRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +153,10 @@ public class QueryAnswerSampleByPageRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>The ID of the proxy answer library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putQueryParameter("LibId", libId);
@@ -156,7 +165,10 @@ public class QueryAnswerSampleByPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +177,10 @@ public class QueryAnswerSampleByPageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +189,7 @@ public class QueryAnswerSampleByPageRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");

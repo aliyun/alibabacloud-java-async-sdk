@@ -116,7 +116,10 @@ public class GetAiAppTraceDetailRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The AI application ID, which identifies a specific AI application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id-xxx</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -125,7 +128,10 @@ public class GetAiAppTraceDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02 16:08:38</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -134,7 +140,10 @@ public class GetAiAppTraceDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,7 +152,10 @@ public class GetAiAppTraceDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 16:08:38</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -152,6 +164,7 @@ public class GetAiAppTraceDetailRequest extends Request {
         }
 
         /**
+         * <p>The trace ID, which is used to track and correlate a specific request chain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

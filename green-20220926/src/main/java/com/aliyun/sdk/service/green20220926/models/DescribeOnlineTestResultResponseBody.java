@@ -171,7 +171,7 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         } 
 
         /**
-         * AudioData.
+         * <p>The audio data.</p>
          */
         public Builder audioData(AudioData audioData) {
             this.audioData = audioData;
@@ -179,7 +179,7 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * FrameData.
+         * <p>The video frame data.</p>
          */
         public Builder frameData(FrameData frameData) {
             this.frameData = frameData;
@@ -187,7 +187,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * ModerationTime.
+         * <p>The detection time, represented as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725761005419</p>
          */
         public Builder moderationTime(String moderationTime) {
             this.moderationTime = moderationTime;
@@ -195,7 +198,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +209,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.riskLevel = riskLevel;
@@ -211,7 +220,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCode.
+         * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>videoDetection</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = serviceCode;
@@ -219,7 +231,7 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * SummaryList.
+         * <p>The list of detection results.</p>
          */
         public Builder summaryList(java.util.List<SummaryList> summaryList) {
             this.summaryList = summaryList;
@@ -227,7 +239,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -235,7 +250,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The detection status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -243,7 +261,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The detection URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxxx.com/data/data.png">https://xxxxxxxxx.com/data/data.png</a></p>
          */
         public Builder url(String url) {
             this.url = url;
@@ -296,7 +317,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * TimeStamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724378510396</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -363,7 +387,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * TimeStamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1725761005419</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -371,7 +398,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The detection URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxxxxxx.com/data/data.mp4">https://xxxxxxxxx.com/data/data.mp4</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -464,7 +494,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -472,7 +505,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -480,7 +516,7 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelSummary.
+             * <p>The risk level summary.</p>
              */
             public Builder riskLevelSummary(java.util.Map<String, Long> riskLevelSummary) {
                 this.riskLevelSummary = riskLevelSummary;
@@ -488,7 +524,10 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * SliceCount.
+             * <p>The number of shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sliceCount(Integer sliceCount) {
                 this.sliceCount = sliceCount;

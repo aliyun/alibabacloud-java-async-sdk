@@ -73,7 +73,13 @@ public class GetQpsStatsRequest extends Request {
         } 
 
         /**
-         * Query.
+         * <p>The query condition. The value is a string in JSON format.</p>
+         * <blockquote>
+         * <p>Different query conditions return different protected objects. For more information, see <strong>Query parameter description</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -82,7 +88,10 @@ public class GetQpsStatsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

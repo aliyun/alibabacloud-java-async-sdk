@@ -115,10 +115,10 @@ public class GetFeatureConfigRequest extends Request {
         } 
 
         /**
-         * <p>Query conditions.</p>
+         * <p>The query condition.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Lang&quot;:&quot;zh&quot;,&quot;CategoryType&quot;:1,&quot;Default&quot;:false,&quot;ParentCategoryId&quot;:1720}</p>
+         * <p>{\&quot;Lang\&quot;:\&quot;zh\&quot;,\&quot;CategoryType\&quot;:1,\&quot;Default\&quot;:false,\&quot;ParentCategoryId\&quot;:1720}</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("Query", query);
@@ -127,7 +127,7 @@ public class GetFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -139,7 +139,7 @@ public class GetFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -151,7 +151,7 @@ public class GetFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Service code.</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>llm_query_moderation</p>
@@ -163,7 +163,7 @@ public class GetFeatureConfigRequest extends Request {
         }
 
         /**
-         * <p>Type</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_llm_template</p>

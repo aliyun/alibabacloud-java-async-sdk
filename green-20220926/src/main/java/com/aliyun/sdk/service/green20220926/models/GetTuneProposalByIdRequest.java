@@ -59,7 +59,10 @@ public class GetTuneProposalByIdRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prop-xxxxxxxx</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

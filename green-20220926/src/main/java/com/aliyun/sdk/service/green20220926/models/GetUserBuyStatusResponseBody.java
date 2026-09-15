@@ -106,7 +106,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. This ID can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -147,7 +147,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>The success flag.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -255,7 +255,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Bid.</p>
+             * <p>Bid。</p>
              * 
              * <strong>example:</strong>
              * <p>26842</p>
@@ -266,7 +266,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the product has been activated on Alibaba Cloud.</p>
+             * <p>Indicates whether the commodity is activated on Alibaba Cloud.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -277,7 +277,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether there is an outstanding payment.</p>
+             * <p>Indicates whether there is an overdue payment.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -288,7 +288,10 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx-xxx-xxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -296,7 +299,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tag.</p>
+             * <p>The label.</p>
              * 
              * <strong>example:</strong>
              * <p>bailian</p>

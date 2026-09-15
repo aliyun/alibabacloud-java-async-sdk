@@ -67,7 +67,7 @@ public class QueryLabelConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ContentModeration.
+         * <p>The content moderation configuration.</p>
          */
         public Builder contentModeration(java.util.List<?> contentModeration) {
             this.contentModeration = contentModeration;
@@ -75,7 +75,10 @@ public class QueryLabelConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

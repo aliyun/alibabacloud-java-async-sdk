@@ -106,7 +106,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -147,7 +147,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -268,7 +268,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-30 16:30:29</p>
@@ -279,7 +279,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of keywords.</p>
+             * <p>The number of keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -290,7 +290,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Library ID.</p>
+             * <p>The library ID.</p>
              * 
              * <strong>example:</strong>
              * <p>custom_xxxxx</p>
@@ -301,7 +301,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Library name.</p>
+             * <p>The library name.</p>
              * 
              * <strong>example:</strong>
              * <p>测试</p>
@@ -312,7 +312,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service codes.</p>
+             * <p>The service codes.</p>
              * 
              * <strong>example:</strong>
              * <p>service1,service2</p>
@@ -323,7 +323,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID.</p>
+             * <p>UID。</p>
              * 
              * <strong>example:</strong>
              * <p>19964*****086772</p>

@@ -106,7 +106,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The data on the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * Label.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -225,7 +240,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * LabelDesc.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -233,7 +251,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sensitiveData</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -365,7 +386,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * EventCode.
+             * <p>The risk event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hit-xxx</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -373,7 +397,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * EventCount.
+             * <p>The number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder eventCount(Long eventCount) {
                 this.eventCount = eventCount;
@@ -381,7 +408,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * EventDescs.
+             * <p>The event descriptions.</p>
              */
             public Builder eventDescs(java.util.List<String> eventDescs) {
                 this.eventDescs = eventDescs;
@@ -389,7 +416,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * EventIds.
+             * <p>The list of risk event IDs.</p>
              */
             public Builder eventIds(java.util.List<String> eventIds) {
                 this.eventIds = eventIds;
@@ -397,7 +424,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The risk event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -405,7 +435,14 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * EventStatus.
+             * <p>The event status. Valid values:</p>
+             * <ul>
+             * <li><strong>unhandled</strong>: Unhandled.</li>
+             * <li><strong>resolved</strong>: Resolved.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>resolved</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -413,7 +450,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The list of label items.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -595,7 +632,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name-xxx</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -603,7 +643,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * AppStatus.
+             * <p>The application status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder appStatus(String appStatus) {
                 this.appStatus = appStatus;
@@ -611,7 +654,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>The channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -619,7 +665,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * LastTraceTime.
+             * <p>The last active time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01 00:00:00</p>
              */
             public Builder lastTraceTime(String lastTraceTime) {
                 this.lastTraceTime = lastTraceTime;
@@ -627,7 +676,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * RiskEvents.
+             * <p>The risk events.</p>
              */
             public Builder riskEvents(java.util.List<RiskEvents> riskEvents) {
                 this.riskEvents = riskEvents;
@@ -635,7 +684,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -643,7 +695,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * TraceStatus.
+             * <p>The Tracing Analysis status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder traceStatus(String traceStatus) {
                 this.traceStatus = traceStatus;
@@ -662,7 +717,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * WarningCount.
+             * <p>The number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder warningCount(Integer warningCount) {
                 this.warningCount = warningCount;

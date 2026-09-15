@@ -106,7 +106,7 @@ public class DeleteKeywordLibResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DeleteKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -128,7 +128,7 @@ public class DeleteKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -139,7 +139,7 @@ public class DeleteKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -150,7 +150,7 @@ public class DeleteKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

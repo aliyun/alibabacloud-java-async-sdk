@@ -158,7 +158,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of model generation results</p>
+         * <p>The list of model generation results.</p>
          */
         public Builder choices(java.util.List<Choices> choices) {
             this.choices = choices;
@@ -166,7 +166,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Timestamp of session creation</p>
+         * <p>The timestamp when the session was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1750990728</p>
@@ -177,7 +177,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Streaming response error information content</p>
+         * <p>The fault information content in the streaming response.</p>
          */
         public Builder error(Error error) {
             this.error = error;
@@ -185,7 +185,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Unique ID for this session</p>
+         * <p>The unique ID of this session.</p>
          * 
          * <strong>example:</strong>
          * <p>chatcmpl-777bce52-93d3-9f8c-89c3-e99884f4f57f</p>
@@ -196,7 +196,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Model identifier</p>
+         * <p>The model identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>deepseek-v3</p>
@@ -207,7 +207,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response type</p>
+         * <p>The response type.</p>
          * 
          * <strong>example:</strong>
          * <p>chat.completion.chunk</p>
@@ -218,7 +218,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Unique request ID</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>21d296d6-594e-97de-812f-925ec6e05673</p>
@@ -229,7 +229,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>System fingerprint</p>
+         * <p>The system fingerprint.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -240,7 +240,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Token usage</p>
+         * <p>The token usage information.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -309,10 +309,10 @@ public class LlmStreamChatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Real-time generated text content</p>
+             * <p>The text content generated in real time.</p>
              * 
              * <strong>example:</strong>
-             * <p>我是Deepseek-V3，有什么可以帮你</p>
+             * <p>I am Deepseek-V3. How can I help you?</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -320,7 +320,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Role identifier</p>
+             * <p>The role identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>assistant</p>
@@ -416,7 +416,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Incremental content object</p>
+             * <p>The incremental content object.</p>
              */
             public Builder delta(Delta delta) {
                 this.delta = delta;
@@ -424,7 +424,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>For streaming output, it is null while generating and becomes &quot;stop&quot; if the generation ends due to a stop token.</p>
+             * <p>During streaming output, this value is null while content is being generated. When generation is complete, the value is stop if the generation ended due to a stop token.</p>
              * 
              * <strong>example:</strong>
              * <p>stop</p>
@@ -435,7 +435,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Stream sequence number</p>
+             * <p>The stream sequence number.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -446,7 +446,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Token probability information</p>
+             * <p>The token probability information.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -542,7 +542,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error code</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>data_inspection_failed</p>
@@ -553,7 +553,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error message</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>Input data may contain inappropriate content.</p>
@@ -564,7 +564,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Parameter that caused the error</p>
+             * <p>The parameter that caused the error.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -575,7 +575,7 @@ public class LlmStreamChatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error type</p>
+             * <p>The error type.</p>
              * 
              * <strong>example:</strong>
              * <p>data_inspection_failed</p>

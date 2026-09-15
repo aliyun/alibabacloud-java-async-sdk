@@ -93,7 +93,7 @@ public class GetGuardStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * LogScanStatus.
+         * <p>The list of log scan statistics.</p>
          */
         public Builder logScanStatus(java.util.List<LogScanStatus> logScanStatus) {
             this.logScanStatus = logScanStatus;
@@ -101,7 +101,7 @@ public class GetGuardStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ProtectionStatus.
+         * <p>The list of protection status statistics.</p>
          */
         public Builder protectionStatus(java.util.List<ProtectionStatus> protectionStatus) {
             this.protectionStatus = protectionStatus;
@@ -109,7 +109,7 @@ public class GetGuardStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RealTimeStatus.
+         * <p>The list of real-time protection statistics.</p>
          */
         public Builder realTimeStatus(java.util.List<RealTimeStatus> realTimeStatus) {
             this.realTimeStatus = realTimeStatus;
@@ -117,7 +117,10 @@ public class GetGuardStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +186,14 @@ public class GetGuardStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>enabled: Running.</li>
+             * <li>disabled: Not accessed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -191,7 +201,10 @@ public class GetGuardStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai_app_scan_bailian</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -258,7 +271,14 @@ public class GetGuardStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>enabled: Running.</li>
+             * <li>disabled: Not accessed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -266,7 +286,10 @@ public class GetGuardStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -333,7 +356,14 @@ public class GetGuardStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>enabled: Running.</li>
+             * <li>disabled: Not accessed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -341,7 +371,10 @@ public class GetGuardStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -147,6 +147,7 @@ public class GetAiAppNodeDetailRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +160,10 @@ public class GetAiAppNodeDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02 16:08:38</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -168,6 +172,7 @@ public class GetAiAppNodeDetailRequest extends Request {
         }
 
         /**
+         * <p>The node ID. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +185,7 @@ public class GetAiAppNodeDetailRequest extends Request {
         }
 
         /**
+         * <p>The node name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +198,7 @@ public class GetAiAppNodeDetailRequest extends Request {
         }
 
         /**
+         * <p>The node type. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +211,10 @@ public class GetAiAppNodeDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +223,10 @@ public class GetAiAppNodeDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 16:08:38</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

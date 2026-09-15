@@ -67,7 +67,10 @@ public class GetPromptTestResultResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetPromptTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -154,7 +157,10 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暴恐</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +168,10 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terrorism</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -170,7 +179,10 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason why the model determined this risk level for the text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>该文本涉及暴力恐怖信息</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -250,7 +262,10 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文本</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -258,7 +273,7 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * LabelDetails.
+             * <p>The labels.</p>
              */
             public Builder labelDetails(java.util.List<LabelDetails> labelDetails) {
                 this.labelDetails = labelDetails;
@@ -266,7 +281,20 @@ public class GetPromptTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level, which is returned based on the configured high and low risk scores. Valid values:</p>
+             * <ul>
+             * <li><p>high: High risk.</p>
+             * </li>
+             * <li><p>medium: Medium risk.</p>
+             * </li>
+             * <li><p>low: Low risk.</p>
+             * </li>
+             * <li><p>none: No risk detected.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

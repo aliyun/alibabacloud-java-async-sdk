@@ -106,7 +106,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -147,7 +147,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -320,7 +320,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Internationalization key.</p>
+             * <p>The internationalization key.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -331,7 +331,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of keywords that are too long or too short.</p>
+             * <p>The list of keywords with invalid length.</p>
              */
             public Builder illegalLengthKeywords(java.util.List<String> illegalLengthKeywords) {
                 this.illegalLengthKeywords = illegalLengthKeywords;
@@ -339,7 +339,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invalid keyword count</p>
+             * <p>The number of invalid keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>133</p>
@@ -350,7 +350,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of invalid keywords</p>
+             * <p>The list of invalid keywords.</p>
              */
             public Builder invalidKeywords(java.util.List<String> invalidKeywords) {
                 this.invalidKeywords = invalidKeywords;
@@ -358,7 +358,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The id of the keyword library.</p>
+             * <p>The ID of the keyword library.</p>
              * 
              * <strong>example:</strong>
              * <p>customxx_xxxx</p>
@@ -369,7 +369,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Duplicate keyword count</p>
+             * <p>The number of duplicate keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>118</p>
@@ -380,7 +380,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of duplicate keywords</p>
+             * <p>The list of duplicate keywords.</p>
              */
             public Builder repeatKeywords(java.util.List<String> repeatKeywords) {
                 this.repeatKeywords = repeatKeywords;
@@ -388,7 +388,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Successful keyword count</p>
+             * <p>The number of successful keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>278</p>
@@ -399,7 +399,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tips.</p>
+             * <p>The prompt information.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -410,7 +410,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of keywords.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>529</p>
@@ -493,7 +493,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Result.</p>
+             * <p>The result.</p>
              */
             public Builder keywordsResult(KeywordsResult keywordsResult) {
                 this.keywordsResult = keywordsResult;
@@ -501,7 +501,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The id of the keyword library.</p>
+             * <p>The ID of the keyword library.</p>
              * 
              * <strong>example:</strong>
              * <p>customxx_xxxx</p>

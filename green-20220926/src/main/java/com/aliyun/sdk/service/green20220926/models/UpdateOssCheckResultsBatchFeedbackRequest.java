@@ -87,7 +87,10 @@ public class UpdateOssCheckResultsBatchFeedbackRequest extends Request {
         } 
 
         /**
-         * Feedback.
+         * <p>The feedback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>misreport</p>
          */
         public Builder feedback(String feedback) {
             this.putQueryParameter("Feedback", feedback);
@@ -96,7 +99,10 @@ public class UpdateOssCheckResultsBatchFeedbackRequest extends Request {
         }
 
         /**
-         * Items.
+         * <p>The result items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder items(String items) {
             this.putQueryParameter("Items", items);
@@ -105,7 +111,10 @@ public class UpdateOssCheckResultsBatchFeedbackRequest extends Request {
         }
 
         /**
-         * ParentTaskId.
+         * <p>The ID of the parent task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_XHDUS</p>
          */
         public Builder parentTaskId(String parentTaskId) {
             this.putQueryParameter("ParentTaskId", parentTaskId);

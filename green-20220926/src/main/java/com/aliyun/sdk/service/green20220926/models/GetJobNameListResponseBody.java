@@ -67,7 +67,7 @@ public class GetJobNameListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<String> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetJobNameListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

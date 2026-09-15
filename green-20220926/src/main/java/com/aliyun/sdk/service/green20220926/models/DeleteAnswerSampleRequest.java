@@ -87,7 +87,10 @@ public class DeleteAnswerSampleRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * <p>The IDs of the proxy answers to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[15463605]</p>
          */
         public Builder ids(String ids) {
             this.putBodyParameter("Ids", ids);
@@ -96,7 +99,10 @@ public class DeleteAnswerSampleRequest extends Request {
         }
 
         /**
-         * LibId.
+         * <p>The ID of the proxy answer library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alxxx</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -105,7 +111,10 @@ public class DeleteAnswerSampleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

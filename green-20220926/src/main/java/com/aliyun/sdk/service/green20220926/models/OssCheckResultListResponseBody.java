@@ -119,7 +119,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The authorization status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The data on the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -149,7 +149,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -160,7 +160,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task status.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -171,7 +171,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Authorization status.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -435,7 +435,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data of the current page.</p>
+             * <p>The name of the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>tmp</p>
@@ -446,7 +446,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service code.</p>
+             * <p>The status code. A value of 200 indicates success.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -457,7 +457,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Primary service.</p>
+             * <p>The audio and video detection type.</p>
              * 
              * <strong>example:</strong>
              * <p>audio</p>
@@ -468,7 +468,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to copy.</p>
+             * <p>The primary service.</p>
              * 
              * <strong>example:</strong>
              * <p>audio_media_detection</p>
@@ -479,7 +479,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the result.</p>
+             * <p>The URL of the image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></p>
@@ -490,7 +490,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>Indicates whether the task is copied.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -501,7 +501,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image URL.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>dhT20X2310</p>
@@ -512,7 +512,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Further description of the error code.</p>
+             * <p>The image labels.</p>
              */
             public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
@@ -520,7 +520,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job name.</p>
+             * <p>The text labels.</p>
              */
             public Builder labels2(java.util.List<String> labels2) {
                 this.labels2 = labels2;
@@ -528,7 +528,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object name.</p>
+             * <p>The MD5 hash of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>54416c9b159df4a60ae03c04ccb94cb5</p>
@@ -539,7 +539,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status code. 200 indicates success.</p>
+             * <p>The description of the error code.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -550,7 +550,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Bucket name.</p>
+             * <p>The object name.</p>
              * 
              * <strong>example:</strong>
              * <p>1713014531569_958.png.jpeg</p>
@@ -561,7 +561,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image labels.</p>
+             * <p>The result details.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -572,7 +572,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File MD5.</p>
+             * <p>The service code.</p>
              * 
              * <strong>example:</strong>
              * <p>audio_media_detection_01</p>
@@ -583,7 +583,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task ID.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>服务名称</p>
@@ -594,7 +594,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task URL.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>P_XHDUS</p>
@@ -605,7 +605,7 @@ public class OssCheckResultListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Text labels.</p>
+             * <p>The task URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>

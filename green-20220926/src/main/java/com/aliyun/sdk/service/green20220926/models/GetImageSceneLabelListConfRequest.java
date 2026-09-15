@@ -73,7 +73,7 @@ public class GetImageSceneLabelListConfRequest extends Request {
         } 
 
         /**
-         * <p>Service code.</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>baselineCheck</p>
@@ -85,7 +85,7 @@ public class GetImageSceneLabelListConfRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

@@ -106,7 +106,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -117,7 +117,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -147,7 +147,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -203,7 +203,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Image services.</p>
+             * <p>The image service.</p>
              */
             public Builder services(java.util.List<String> services) {
                 this.services = services;
@@ -257,7 +257,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Text services.</p>
+             * <p>The text services.</p>
              */
             public Builder services(java.util.List<String> services) {
                 this.services = services;
@@ -337,7 +337,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Image review rule.</p>
+             * <p>The image moderation rule.</p>
              */
             public Builder imageScanRule(ImageScanRule imageScanRule) {
                 this.imageScanRule = imageScanRule;
@@ -345,7 +345,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Index.</p>
+             * <p>The ordinal number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -356,7 +356,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Text review rule.</p>
+             * <p>The text moderation rule.</p>
              */
             public Builder textScanRule(TextScanRule textScanRule) {
                 this.textScanRule = textScanRule;
@@ -475,7 +475,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Audio service.</p>
+             * <p>The audio service.</p>
              * 
              * <strong>example:</strong>
              * <p>audio_media_detection</p>
@@ -486,7 +486,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image services.</p>
+             * <p>The image service.</p>
              */
             public Builder imageService(java.util.List<String> imageService) {
                 this.imageService = imageService;
@@ -494,7 +494,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Ignored word libraries.</p>
+             * <p>The ignored keyword library.</p>
              */
             public Builder keywordFilterLibs(java.util.List<String> keywordFilterLibs) {
                 this.keywordFilterLibs = keywordFilterLibs;
@@ -502,7 +502,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Hit word libraries.</p>
+             * <p>The hit keyword library.</p>
              */
             public Builder keywordHitLibs(java.util.List<String> keywordHitLibs) {
                 this.keywordHitLibs = keywordHitLibs;
@@ -510,7 +510,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service rules</p>
+             * <p>The service rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -518,7 +518,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Hit similar text libraries.</p>
+             * <p>The hit similar text library.</p>
              */
             public Builder similarTextHitLibs(java.util.List<String> similarTextHitLibs) {
                 this.similarTextHitLibs = similarTextHitLibs;
@@ -728,7 +728,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Category.</p>
+             * <p>The classification.</p>
              * 
              * <strong>example:</strong>
              * <p>guard-scene</p>
@@ -739,7 +739,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Main service.</p>
+             * <p>The primary service.</p>
              * 
              * <strong>example:</strong>
              * <p>nickname_detection</p>
@@ -750,7 +750,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service configuration.</p>
+             * <p>The service configuration.</p>
              */
             public Builder customServiceConf(CustomServiceConf customServiceConf) {
                 this.customServiceConf = customServiceConf;
@@ -758,7 +758,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-11 15:40:04</p>
@@ -769,7 +769,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Options.</p>
+             * <p>The options.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -780,7 +780,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource type.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -791,7 +791,16 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SceneType.
+             * <p>The scene type. Valid values:</p>
+             * <ul>
+             * <li><p>recommended_scene: recommended scenario.</p>
+             * </li>
+             * <li><p>all_scene: all scenarios.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all_scene</p>
              */
             public Builder sceneType(String sceneType) {
                 this.sceneType = sceneType;
@@ -799,7 +808,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service code.</p>
+             * <p>The service code.</p>
              * 
              * <strong>example:</strong>
              * <p>nickname_detection</p>
@@ -810,7 +819,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service description.</p>
+             * <p>The service description.</p>
              * 
              * <strong>example:</strong>
              * <p>服务描述</p>
@@ -821,7 +830,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>服务名称</p>
@@ -832,7 +841,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service type.</p>
+             * <p>The service type.</p>
              * 
              * <strong>example:</strong>
              * <p>plus</p>
@@ -843,7 +852,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID.</p>
+             * <p>UID。</p>
              * 
              * <strong>example:</strong>
              * <p>1674*****0071291</p>
@@ -854,7 +863,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Usage status</p>
+             * <p>The usage status.</p>
              * 
              * <strong>example:</strong>
              * <p>in</p>

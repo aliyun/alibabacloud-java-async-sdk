@@ -129,10 +129,11 @@ public class AddKeywordLibRequest extends Request {
         } 
 
         /**
-         * <p>Keywords, with multiple keywords separated by \n.</p>
+         * <p>The keywords. Separate multiple keywords with 
+         * .</p>
          * 
          * <strong>example:</strong>
-         * <p>keywords1\nkeywords2</p>
+         * <p>keyword1\nkeyword2</p>
          */
         public Builder keywords(String keywords) {
             this.putBodyParameter("Keywords", keywords);
@@ -141,7 +142,7 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
-         * <p>The name of the keywords file.</p>
+         * <p>The name of the keyword file.</p>
          * 
          * <strong>example:</strong>
          * <p>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</p>
@@ -156,7 +157,7 @@ public class AddKeywordLibRequest extends Request {
          * <p>The name of the keyword library.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_keyword_lib</p>
+         * <p>TestLibrary.</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -165,7 +166,10 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
-         * Properties.
+         * <p>The properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;attribute&quot;:&quot;xx&quot;}</p>
          */
         public Builder properties(String properties) {
             this.putQueryParameter("Properties", properties);
@@ -174,7 +178,7 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -186,7 +190,13 @@ public class AddKeywordLibRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The library code.</p>
+         * <ul>
+         * <li>desensitize: desensitization library</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desensitize</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putQueryParameter("TenantCode", tenantCode);

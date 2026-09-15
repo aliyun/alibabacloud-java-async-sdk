@@ -113,7 +113,10 @@ public class ModifyAppInfoRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The app name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom text moderation</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -122,7 +125,10 @@ public class ModifyAppInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +137,10 @@ public class ModifyAppInfoRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

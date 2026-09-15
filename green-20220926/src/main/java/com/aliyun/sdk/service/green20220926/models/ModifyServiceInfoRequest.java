@@ -115,7 +115,7 @@ public class ModifyServiceInfoRequest extends Request {
         } 
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -127,7 +127,7 @@ public class ModifyServiceInfoRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>
@@ -139,7 +139,7 @@ public class ModifyServiceInfoRequest extends Request {
         }
 
         /**
-         * <p>Service code.</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>baselineCheck</p>
@@ -151,7 +151,7 @@ public class ModifyServiceInfoRequest extends Request {
         }
 
         /**
-         * <p>Service description.</p>
+         * <p>The service description.</p>
          * 
          * <strong>example:</strong>
          * <p>描述</p>
@@ -163,7 +163,7 @@ public class ModifyServiceInfoRequest extends Request {
         }
 
         /**
-         * <p>Service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>通用基线检测</p>

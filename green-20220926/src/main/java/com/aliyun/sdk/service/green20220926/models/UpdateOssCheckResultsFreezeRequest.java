@@ -143,7 +143,10 @@ public class UpdateOssCheckResultsFreezeRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-21 16:08:38</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -152,7 +155,10 @@ public class UpdateOssCheckResultsFreezeRequest extends Request {
         }
 
         /**
-         * FreezeItems.
+         * <p>The items to freeze.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder freezeItems(String freezeItems) {
             this.putQueryParameter("FreezeItems", freezeItems);
@@ -161,7 +167,10 @@ public class UpdateOssCheckResultsFreezeRequest extends Request {
         }
 
         /**
-         * FreezeRestorePath.
+         * <p>The directory to which the frozen files are moved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uploadTest/</p>
          */
         public Builder freezeRestorePath(String freezeRestorePath) {
             this.putQueryParameter("FreezeRestorePath", freezeRestorePath);
@@ -170,7 +179,10 @@ public class UpdateOssCheckResultsFreezeRequest extends Request {
         }
 
         /**
-         * FreezeType.
+         * <p>The freeze type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACL</p>
          */
         public Builder freezeType(String freezeType) {
             this.putQueryParameter("FreezeType", freezeType);
@@ -179,7 +191,10 @@ public class UpdateOssCheckResultsFreezeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -188,7 +203,10 @@ public class UpdateOssCheckResultsFreezeRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-21 16:08:38</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -197,7 +215,10 @@ public class UpdateOssCheckResultsFreezeRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_15BU42</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

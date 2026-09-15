@@ -155,7 +155,10 @@ public class ModifyAppAgentRequest extends Request {
         }
 
         /**
-         * AgentName.
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent1</p>
          */
         public Builder agentName(String agentName) {
             this.putBodyParameter("AgentName", agentName);
@@ -176,7 +179,10 @@ public class ModifyAppAgentRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The configuration details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;model&quot;:&quot;default&quot;,&quot;scene&quot;:&quot;0swLgojx&quot;,&quot;labelConfig&quot;:[{&quot;label&quot;:&quot;Abuse&quot;,&quot;labelDefinition&quot;:&quot;Text content in the reviewed text that contains abusive language&quot;}]}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -185,7 +191,14 @@ public class ModifyAppAgentRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable the agent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("Enable", enable);
@@ -194,7 +207,10 @@ public class ModifyAppAgentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -203,7 +219,10 @@ public class ModifyAppAgentRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);

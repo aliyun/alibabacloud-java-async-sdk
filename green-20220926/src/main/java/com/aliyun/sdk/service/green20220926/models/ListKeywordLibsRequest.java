@@ -73,7 +73,7 @@ public class ListKeywordLibsRequest extends Request {
         } 
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -85,7 +85,13 @@ public class ListKeywordLibsRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The library code.</p>
+         * <ul>
+         * <li>desensitize: desensitization library.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desensitize</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putQueryParameter("TenantCode", tenantCode);

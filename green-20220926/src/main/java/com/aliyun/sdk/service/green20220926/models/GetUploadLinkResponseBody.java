@@ -67,7 +67,10 @@ public class GetUploadLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class GetUploadLinkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E37E2B77-A664-5278-8219-23BBC0EB2A35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

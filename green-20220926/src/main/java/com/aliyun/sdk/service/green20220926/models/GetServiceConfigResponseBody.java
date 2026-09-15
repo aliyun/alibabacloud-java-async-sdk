@@ -106,7 +106,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The further description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -147,7 +147,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>The success flag.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -242,7 +242,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Risk levels.</p>
+             * <p>The risk levels.</p>
              */
             public Builder auditRiskLevels(java.util.List<String> auditRiskLevels) {
                 this.auditRiskLevels = auditRiskLevels;
@@ -250,7 +250,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Callback notification ID</p>
+             * <p>The callback notification ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -261,10 +261,10 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable. Values:</p>
+             * <p>Specifies whether to enable the feature. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Enabled</li>
-             * <li><strong>false</strong>: Disabled</li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Manual review service</p>
+             * <p>The manual review service.</p>
              * 
              * <strong>example:</strong>
              * <p>imageManualCheck</p>
@@ -372,7 +372,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Ignore word libraries.</p>
+             * <p>The ignored keyword libraries.</p>
              */
             public Builder keywordFilterLibs(java.util.List<String> keywordFilterLibs) {
                 this.keywordFilterLibs = keywordFilterLibs;
@@ -380,7 +380,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Hit word libraries.</p>
+             * <p>The hit keyword libraries.</p>
              */
             public Builder keywordHitLibs(java.util.List<String> keywordHitLibs) {
                 this.keywordHitLibs = keywordHitLibs;
@@ -388,7 +388,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Human-machine review configuration.</p>
+             * <p>The machine-assisted moderation configuration.</p>
              */
             public Builder manualMachineConfig(ManualMachineConfig manualMachineConfig) {
                 this.manualMachineConfig = manualMachineConfig;
@@ -396,7 +396,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Hit similar text libraries.</p>
+             * <p>The hit similar text libraries.</p>
              */
             public Builder similarTextHitLibs(java.util.List<String> similarTextHitLibs) {
                 this.similarTextHitLibs = similarTextHitLibs;
@@ -502,7 +502,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Custom service details</p>
+             * <p>The custom service details.</p>
              */
             public Builder customServiceConf(CustomServiceConf customServiceConf) {
                 this.customServiceConf = customServiceConf;
@@ -510,7 +510,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-06 03:07:44</p>
@@ -521,7 +521,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource type.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -532,7 +532,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service code.</p>
+             * <p>The service code.</p>
              * 
              * <strong>example:</strong>
              * <p>nickname_detection</p>
@@ -543,7 +543,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID.</p>
+             * <p>UID。</p>
              * 
              * <strong>example:</strong>
              * <p>165379****31937</p>

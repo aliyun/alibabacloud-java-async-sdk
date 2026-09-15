@@ -101,7 +101,10 @@ public class CopyAppConfigRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the source App to copy from.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>txt_check_agent_01</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -110,7 +113,10 @@ public class CopyAppConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the new App to be created from the copy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CustomTextModeration</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -119,7 +125,10 @@ public class CopyAppConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +137,10 @@ public class CopyAppConfigRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

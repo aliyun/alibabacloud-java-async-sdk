@@ -143,7 +143,7 @@ public class ListKeywordsRequest extends Request {
         } 
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +155,7 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * <p>Library ID.</p>
+         * <p>The keyword library ID.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
@@ -167,7 +167,7 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +179,7 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -191,7 +191,10 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * <p>Sort field.</p>
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;GmtCreate\&quot;:\&quot;desc\&quot;}</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -201,7 +204,13 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The keyword library code. Valid values:</p>
+         * <ul>
+         * <li>desensitize: desensitization keyword library.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desensitize</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putQueryParameter("TenantCode", tenantCode);
@@ -210,7 +219,7 @@ public class ListKeywordsRequest extends Request {
         }
 
         /**
-         * <p>Keyword.</p>
+         * <p>The keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>测试词</p>

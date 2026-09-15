@@ -132,7 +132,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Bid.</p>
+         * <p>Bid。</p>
          * 
          * <strong>example:</strong>
          * <p>26842</p>
@@ -143,7 +143,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether a product has been activated on Alibaba Cloud.</p>
+         * <p>Indicates whether the commodity is activated on Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -154,7 +154,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Commodity code.</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -165,7 +165,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether there is an outstanding payment.</p>
+         * <p>Indicates whether there is an overdue payment.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -176,7 +176,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether internal security is authorized.</p>
+         * <p>Indicates whether Security Center is authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -187,7 +187,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -198,7 +198,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether log analysis function is authorized.</p>
+         * <p>Indicates whether the log analysis feature is authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

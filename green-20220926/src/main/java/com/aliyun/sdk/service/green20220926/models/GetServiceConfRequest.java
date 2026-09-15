@@ -115,7 +115,7 @@ public class GetServiceConfRequest extends Request {
         } 
 
         /**
-         * <p>Query default configuration</p>
+         * <p>Queries the default configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -151,7 +151,7 @@ public class GetServiceConfRequest extends Request {
         }
 
         /**
-         * <p>Audit scenario.</p>
+         * <p>Moderation scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>pornographic</p>

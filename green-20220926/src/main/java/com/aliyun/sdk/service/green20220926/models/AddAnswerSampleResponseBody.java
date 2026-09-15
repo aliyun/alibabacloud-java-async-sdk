@@ -93,7 +93,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         } 
 
         /**
-         * LibId.
+         * <p>The ID of the proxy answer library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alxxxx</p>
          */
         public Builder libId(String libId) {
             this.libId = libId;
@@ -101,7 +104,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -117,7 +123,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alAxbbxxxx-xxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -287,7 +296,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             } 
 
             /**
-             * I18nKey.
+             * <p>The internationalization key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder i18nKey(String i18nKey) {
                 this.i18nKey = i18nKey;
@@ -295,7 +307,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * IllegalLengthSamples.
+             * <p>The collection of samples whose length is too long or too short.</p>
              */
             public Builder illegalLengthSamples(java.util.List<String> illegalLengthSamples) {
                 this.illegalLengthSamples = illegalLengthSamples;
@@ -303,7 +315,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * InvalidCount.
+             * <p>The number of invalid records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>118</p>
              */
             public Builder invalidCount(Integer invalidCount) {
                 this.invalidCount = invalidCount;
@@ -311,7 +326,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * LibId.
+             * <p>The ID of the proxy answer library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alxxxx</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -319,7 +337,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress. For example, 90 indicates 90%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -327,7 +348,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatCount.
+             * <p>The number of duplicate records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98</p>
              */
             public Builder repeatCount(Integer repeatCount) {
                 this.repeatCount = repeatCount;
@@ -335,7 +359,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatSamples.
+             * <p>The collection of duplicate samples.</p>
              */
             public Builder repeatSamples(java.util.List<String> repeatSamples) {
                 this.repeatSamples = repeatSamples;
@@ -343,7 +367,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successful records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>318</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -351,7 +378,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alAxbbxxxx-xxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -359,7 +389,10 @@ public class AddAnswerSampleResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>534</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

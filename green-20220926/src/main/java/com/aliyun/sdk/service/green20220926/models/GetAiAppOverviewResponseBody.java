@@ -119,7 +119,10 @@ public class GetAiAppOverviewResponseBody extends TeaModel {
         } 
 
         /**
-         * AppTotal.
+         * <p>The total number of agents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder appTotal(Long appTotal) {
             this.appTotal = appTotal;
@@ -127,7 +130,10 @@ public class GetAiAppOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +141,7 @@ public class GetAiAppOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * RiskEventLevelDistribution.
+         * <p>The distribution of risk events by level.</p>
          */
         public Builder riskEventLevelDistribution(java.util.Map<String, ?> riskEventLevelDistribution) {
             this.riskEventLevelDistribution = riskEventLevelDistribution;
@@ -143,7 +149,10 @@ public class GetAiAppOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * RiskEventResolvedTotal.
+         * <p>The total number of resolved risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder riskEventResolvedTotal(Long riskEventResolvedTotal) {
             this.riskEventResolvedTotal = riskEventResolvedTotal;
@@ -151,7 +160,10 @@ public class GetAiAppOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * RiskEventTotal.
+         * <p>The total number of risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder riskEventTotal(Long riskEventTotal) {
             this.riskEventTotal = riskEventTotal;
@@ -159,7 +171,10 @@ public class GetAiAppOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * RiskEventUnhandledTotal.
+         * <p>The total number of unhandled risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder riskEventUnhandledTotal(Long riskEventUnhandledTotal) {
             this.riskEventUnhandledTotal = riskEventUnhandledTotal;

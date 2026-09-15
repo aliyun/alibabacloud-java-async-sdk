@@ -157,7 +157,7 @@ public class ExportScanResultRequest extends Request {
         } 
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-11 10:00:00</p>
@@ -181,7 +181,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -193,7 +193,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>Query content.</p>
+         * <p>The query content.</p>
          */
         public Builder query(java.util.Map<String, String> query) {
             String queryShrink = shrink(query, "Query", "json");
@@ -203,7 +203,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -215,7 +215,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -227,7 +227,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>Sort fields.</p>
+         * <p>The sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -237,7 +237,7 @@ public class ExportScanResultRequest extends Request {
         }
 
         /**
-         * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-10 10:00:00</p>

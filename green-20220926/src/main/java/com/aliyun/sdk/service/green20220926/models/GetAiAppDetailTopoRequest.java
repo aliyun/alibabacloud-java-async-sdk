@@ -88,6 +88,7 @@ public class GetAiAppDetailTopoRequest extends Request {
         } 
 
         /**
+         * <p>The application ID that identifies a specific AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetAiAppDetailTopoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +113,7 @@ public class GetAiAppDetailTopoRequest extends Request {
         }
 
         /**
-         * TimeQuery.
+         * <p>The time query.</p>
          */
         public Builder timeQuery(TimeQuery timeQuery) {
             String timeQueryShrink = shrink(timeQuery, "TimeQuery", "json");
@@ -191,7 +195,10 @@ public class GetAiAppDetailTopoRequest extends Request {
             } 
 
             /**
-             * Dimension.
+             * <p>The dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAY</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -199,7 +206,10 @@ public class GetAiAppDetailTopoRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-28 17:04:08</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -207,7 +217,10 @@ public class GetAiAppDetailTopoRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-22 17:04:08</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

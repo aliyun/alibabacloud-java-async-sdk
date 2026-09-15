@@ -102,6 +102,7 @@ public class ListAiAppRiskEventRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListAiAppRiskEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02 16:08:38</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +127,10 @@ public class ListAiAppRiskEventRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +139,10 @@ public class ListAiAppRiskEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 16:08:38</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

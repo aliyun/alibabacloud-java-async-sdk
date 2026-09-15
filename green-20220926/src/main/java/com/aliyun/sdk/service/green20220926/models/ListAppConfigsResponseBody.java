@@ -67,7 +67,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +259,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Classify.
+             * <p>The classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guard-scene</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -264,7 +270,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomConfig.
+             * <p>The configuration details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;agentItemConfigs&quot;: &quot;[{\&quot;agentId\&quot;:\&quot;ag.abcxxx\&quot;,\&quot;enable\&quot;:true,\&quot;name\&quot;:\&quot;Agent 1\&quot;}]&quot;}</p>
              */
             public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
@@ -272,7 +281,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DeployStatus.
+             * <p>The publish status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>editing</p>
              */
             public Builder deployStatus(String deployStatus) {
                 this.deployStatus = deployStatus;
@@ -280,7 +292,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-15 10:17:49</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -288,7 +303,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom text moderation</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +314,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Option.
+             * <p>The preset options.</p>
              */
             public Builder option(java.util.Map<String, ?> option) {
                 this.option = option;
@@ -304,7 +322,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_text</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -312,7 +333,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plus</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -320,7 +344,10 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1785898163</p>
              */
             public Builder version(Long version) {
                 this.version = version;

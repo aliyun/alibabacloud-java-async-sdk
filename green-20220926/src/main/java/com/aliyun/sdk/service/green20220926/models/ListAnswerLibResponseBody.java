@@ -67,7 +67,7 @@ public class ListAnswerLibResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListAnswerLibResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class ListAnswerLibResponseBody extends TeaModel {
             } 
 
             /**
-             * AnswerCount.
+             * <p>The number of proxy answers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder answerCount(Integer answerCount) {
                 this.answerCount = answerCount;
@@ -188,7 +194,10 @@ public class ListAnswerLibResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-03 18:15:01</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -196,7 +205,10 @@ public class ListAnswerLibResponseBody extends TeaModel {
             }
 
             /**
-             * LibId.
+             * <p>The ID of the proxy answer library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alxxx</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -204,7 +216,10 @@ public class ListAnswerLibResponseBody extends TeaModel {
             }
 
             /**
-             * LibName.
+             * <p>The name of the library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ProxyAnswerLibraryName</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;

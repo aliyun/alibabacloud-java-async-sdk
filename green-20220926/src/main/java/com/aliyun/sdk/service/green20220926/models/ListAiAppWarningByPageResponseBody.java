@@ -119,7 +119,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Ext.
+         * <p>The extension field.</p>
          */
         public Builder ext(Ext ext) {
             this.ext = ext;
@@ -135,7 +138,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The data on the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -143,7 +146,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +157,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +168,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -212,7 +224,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * Option.
+             * <p>The option.</p>
              */
             public Builder option(java.util.Map<String, ?> option) {
                 this.option = option;
@@ -305,7 +317,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -313,7 +328,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -321,7 +339,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * LabelDesc.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc-xxx</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -329,7 +350,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>promptAttack</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -461,7 +485,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>appId。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id-xxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -469,7 +496,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name-xxx</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -477,7 +507,7 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The list of labels.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -485,7 +515,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baselineCheck_01</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -493,7 +526,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The trace ID used to correlate and trace alert events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0bc3b4b0********516098843e19bc</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -501,7 +537,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * WarningCount.
+             * <p>The number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder warningCount(Long warningCount) {
                 this.warningCount = warningCount;
@@ -509,7 +548,10 @@ public class ListAiAppWarningByPageResponseBody extends TeaModel {
             }
 
             /**
-             * WarningTime.
+             * <p>The alert time in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01 00:00:00</p>
              */
             public Builder warningTime(String warningTime) {
                 this.warningTime = warningTime;

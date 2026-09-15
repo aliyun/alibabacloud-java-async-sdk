@@ -106,7 +106,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -147,7 +147,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -229,7 +229,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Confidence score, ranging from 0 to 100, with two decimal places retained.</p>
+             * <p>The confidence score, ranging from 0 to 100 and rounded to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>25.0</p>
@@ -240,7 +240,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>疑似色情内容</p>
@@ -251,7 +251,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Label.</p>
+             * <p>The labels.</p>
              * 
              * <strong>example:</strong>
              * <p>political_n</p>
@@ -516,7 +516,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The AccountId passed in by the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accountIdtest123</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -524,7 +527,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bailian Request ID</p>
+             * <p>The Bailian request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -535,7 +538,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Content.</p>
+             * <p>The content.</p>
              * 
              * <strong>example:</strong>
              * <p>测试内容</p>
@@ -546,7 +549,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * <p>The DataId passed in by the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -554,7 +560,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Feedback information.</p>
+             * <p>The feedback information.</p>
              * 
              * <strong>example:</strong>
              * <p>miss</p>
@@ -565,7 +571,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Spare parameters.</p>
+             * <p>The reserved parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -576,7 +582,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-11 14:21:36</p>
@@ -587,7 +593,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Labels.</p>
+             * <p>The labels.</p>
              * 
              * <strong>example:</strong>
              * <p>nonLabel</p>
@@ -598,7 +604,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Request ID.</p>
+             * <p>The request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -609,7 +615,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Request time.</p>
+             * <p>The request time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-11 14:21:36</p>
@@ -620,7 +626,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detection results.</p>
+             * <p>The detection results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -628,15 +634,15 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk level, returned based on the set high and low risk scores. The return values include:</p>
+             * <p>The risk level, which is returned based on the configured high and low risk score thresholds. Valid values:</p>
              * <ul>
-             * <li><p>high: High risk</p>
+             * <li><p>high: high risk.</p>
              * </li>
-             * <li><p>medium: Medium risk</p>
+             * <li><p>medium: medium risk.</p>
              * </li>
-             * <li><p>low: Low risk</p>
+             * <li><p>low: low risk.</p>
              * </li>
-             * <li><p>none: No risk detected</p>
+             * <li><p>none: no risk detected.</p>
              * </li>
              * </ul>
              * 
@@ -649,7 +655,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the result.</p>
+             * <p>The result details.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -660,7 +666,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Score.</p>
+             * <p>The score.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -671,7 +677,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service code.</p>
+             * <p>The service code.</p>
              * 
              * <strong>example:</strong>
              * <p>nickname_detection</p>
@@ -682,7 +688,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Suggestion for handling.</p>
+             * <p>The suggested action.</p>
              * 
              * <strong>example:</strong>
              * <p>review</p>
@@ -693,7 +699,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>txtwkgb******AsYNXoJswy-1Aa1Qk</p>
@@ -789,7 +795,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Current page number.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -800,7 +806,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data for the current page.</p>
+             * <p>The data on the current page.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -808,7 +814,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -819,7 +825,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of records.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

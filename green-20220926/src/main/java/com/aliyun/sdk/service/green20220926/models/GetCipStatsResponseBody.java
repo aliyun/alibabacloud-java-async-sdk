@@ -119,7 +119,10 @@ public class GetCipStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code, which is consistent with the HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The further description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -151,7 +160,10 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No risk detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +264,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nonLabel</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +275,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The label proportion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0274</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -334,7 +358,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No risk detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -342,7 +369,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nonLabel</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -350,7 +380,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The proportion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0274</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -430,7 +463,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Suspected political figure</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -438,7 +474,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickNameDetection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -446,7 +485,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.91</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -526,7 +568,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Suspected specific song</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -534,7 +579,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickNameDetection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +590,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.91</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -609,7 +660,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The returned data.</p>
              */
             public Builder data(java.util.List<Long> data) {
                 this.data = data;
@@ -617,7 +668,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickNameDetection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -762,7 +816,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageTreeChar.
+             * <p>The image label statistics.</p>
              */
             public Builder imageTreeChar(java.util.List<ImageTreeChar> imageTreeChar) {
                 this.imageTreeChar = imageTreeChar;
@@ -770,7 +824,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickNameDetection</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -778,7 +835,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TextTreeChart.
+             * <p>The text label statistics.</p>
              */
             public Builder textTreeChart(java.util.List<TextTreeChart> textTreeChart) {
                 this.textTreeChart = textTreeChart;
@@ -786,7 +843,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>117</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -794,7 +854,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TreeChart.
+             * <p>The tree chart.</p>
              */
             public Builder treeChart(java.util.List<TreeChart> treeChart) {
                 this.treeChart = treeChart;
@@ -802,7 +862,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceTreeChart.
+             * <p>The audio tree chart.</p>
              */
             public Builder voiceTreeChart(java.util.List<VoiceTreeChart> voiceTreeChart) {
                 this.voiceTreeChart = voiceTreeChart;
@@ -810,7 +870,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The X value of the coordinate point.</p>
              */
             public Builder x(java.util.List<String> x) {
                 this.x = x;
@@ -818,7 +878,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The Y value of the coordinate point.</p>
              */
             public Builder y(java.util.List<Y> y) {
                 this.y = y;
@@ -885,7 +945,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The returned data.</p>
              */
             public Builder data(java.util.List<Long> data) {
                 this.data = data;
@@ -893,7 +953,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickNameDetection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -960,7 +1023,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The count.</p>
              */
             public Builder data(java.util.List<Long> data) {
                 this.data = data;
@@ -968,7 +1031,10 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickNameDetection</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1087,7 +1153,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * LabelStatChart.
+             * <p>The label usage chart.</p>
              */
             public Builder labelStatChart(java.util.List<LabelStatChart> labelStatChart) {
                 this.labelStatChart = labelStatChart;
@@ -1095,7 +1161,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalStat.
+             * <p>The total count by category.</p>
              */
             public Builder totalStat(java.util.Map<String, java.util.Map<String, ?>> totalStat) {
                 this.totalStat = totalStat;
@@ -1103,7 +1169,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Uids.
+             * <p>The list of UIDs.</p>
              */
             public Builder uids(java.util.List<String> uids) {
                 this.uids = uids;
@@ -1111,7 +1177,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The X value of the coordinate point.</p>
              */
             public Builder x(java.util.List<String> x) {
                 this.x = x;
@@ -1119,7 +1185,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The Y value of the coordinate point.</p>
              */
             public Builder y(java.util.List<DataY> y) {
                 this.y = y;
@@ -1127,7 +1193,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Z.
+             * <p>The hit data.</p>
              */
             public Builder z(java.util.List<Z> z) {
                 this.z = z;

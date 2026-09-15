@@ -93,7 +93,10 @@ public class GetTuneProposalByIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetTuneProposalByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetTuneProposalByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -173,7 +179,10 @@ public class GetTuneProposalByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * JsonContent.
+             * <p>The response data in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;example&quot;:&quot;xxxx&quot;}</p>
              */
             public Builder jsonContent(String jsonContent) {
                 this.jsonContent = jsonContent;

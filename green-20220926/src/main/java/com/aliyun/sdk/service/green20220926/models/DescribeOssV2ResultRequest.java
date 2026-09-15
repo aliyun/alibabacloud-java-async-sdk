@@ -143,7 +143,10 @@ public class DescribeOssV2ResultRequest extends Request {
         } 
 
         /**
-         * Bucket.
+         * <p>The OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buckect_test</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -152,7 +155,10 @@ public class DescribeOssV2ResultRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -161,7 +167,10 @@ public class DescribeOssV2ResultRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-14 16:08:38</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -170,7 +179,10 @@ public class DescribeOssV2ResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +191,10 @@ public class DescribeOssV2ResultRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -188,7 +203,10 @@ public class DescribeOssV2ResultRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-14 16:08:38</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -197,7 +215,10 @@ public class DescribeOssV2ResultRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Image batch task 20240914100517757</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

@@ -115,7 +115,10 @@ public class UpdateOssCheckResultsFeedBackRequest extends Request {
         } 
 
         /**
-         * Feedback.
+         * <p>The feedback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>misreport</p>
          */
         public Builder feedback(String feedback) {
             this.putQueryParameter("Feedback", feedback);
@@ -124,7 +127,10 @@ public class UpdateOssCheckResultsFeedBackRequest extends Request {
         }
 
         /**
-         * QueryRequestId.
+         * <p>The request ID of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder queryRequestId(String queryRequestId) {
             this.putQueryParameter("QueryRequestId", queryRequestId);
@@ -133,7 +139,10 @@ public class UpdateOssCheckResultsFeedBackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +151,10 @@ public class UpdateOssCheckResultsFeedBackRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -151,7 +163,10 @@ public class UpdateOssCheckResultsFeedBackRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_7SCUK8</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

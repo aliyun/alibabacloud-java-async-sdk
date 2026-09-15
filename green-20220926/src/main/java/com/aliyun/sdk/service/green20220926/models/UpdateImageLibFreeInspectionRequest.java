@@ -87,7 +87,10 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
         } 
 
         /**
-         * <p>Configuration.</p>
+         * <p>The configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;2833014490001\&quot;:0}</p>
          */
         public Builder config(java.util.Map<String, Integer> config) {
             String configShrink = shrink(config, "Config", "json");
@@ -97,7 +100,7 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -109,7 +112,10 @@ public class UpdateImageLibFreeInspectionRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>The selected service identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>response_security_check</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);

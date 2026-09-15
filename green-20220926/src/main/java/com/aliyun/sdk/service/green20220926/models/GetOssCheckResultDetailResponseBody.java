@@ -106,7 +106,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code, consistent with HTTP status.</p>
+         * <p>The error code, which is consistent with the HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detailed data.</p>
+         * <p>The details data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The further description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -136,7 +136,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Backend-assigned ID used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>62E97001-1255-50A9-8E1E-4FD05473D952</p>
@@ -147,7 +147,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +229,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Confidence score, 0 to 100, retained to two decimal places.</p>
+             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -240,7 +240,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Label description.</p>
+             * <p>The label description.</p>
              * 
              * <strong>example:</strong>
              * <p>涉政</p>
@@ -251,7 +251,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Label.</p>
+             * <p>The labels.</p>
              * 
              * <strong>example:</strong>
              * <p>politics</p>
@@ -334,7 +334,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Confidence score, 0 to 100, retained to two decimal places.</p>
+             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -345,7 +345,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Label description.</p>
+             * <p>The label description.</p>
              * 
              * <strong>example:</strong>
              * <p>涉政</p>
@@ -356,7 +356,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Label.</p>
+             * <p>The labels.</p>
              * 
              * <strong>example:</strong>
              * <p>politics</p>
@@ -452,7 +452,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Main service.</p>
+             * <p>The primary service.</p>
              * 
              * <strong>example:</strong>
              * <p>audio_media_detection</p>
@@ -463,7 +463,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to copy.</p>
+             * <p>Indicates whether the content is copied.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -474,7 +474,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service code.</p>
+             * <p>The service code.</p>
              * 
              * <strong>example:</strong>
              * <p>audio_media_detection_01</p>
@@ -485,7 +485,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>服务名称</p>
@@ -893,7 +893,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Bucket name.</p>
+             * <p>The storage bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-tmp</p>
@@ -904,7 +904,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error code, consistent with HTTP status.</p>
+             * <p>The error code, which is consistent with the HTTP status code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -915,7 +915,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Audio and video detection type.</p>
+             * <p>The audio and video detection type.</p>
              * 
              * <strong>example:</strong>
              * <p>audio</p>
@@ -926,7 +926,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Primary service.</p>
+             * <p>The primary service.</p>
              * 
              * <strong>example:</strong>
              * <p>audio_media_detection</p>
@@ -937,7 +937,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Freeze status.</p>
+             * <p>The freeze status.</p>
              * 
              * <strong>example:</strong>
              * <p>UNFREEZED</p>
@@ -948,7 +948,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Freeze type.</p>
+             * <p>The freeze type.</p>
              * 
              * <strong>example:</strong>
              * <p>COPY</p>
@@ -959,7 +959,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image URL.</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></p>
@@ -970,7 +970,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to copy.</p>
+             * <p>Indicates whether the content is copied.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -981,7 +981,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job name.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>dhT20X2310</p>
@@ -992,7 +992,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Labels.</p>
+             * <p>The labels.</p>
              */
             public Builder labelDetails(java.util.List<LabelDetails> labelDetails) {
                 this.labelDetails = labelDetails;
@@ -1000,7 +1000,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Labels.</p>
+             * <p>The labels.</p>
              */
             public Builder labelDetails2(java.util.List<LabelDetails2> labelDetails2) {
                 this.labelDetails2 = labelDetails2;
@@ -1008,7 +1008,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image labels.</p>
+             * <p>The image labels.</p>
              */
             public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
@@ -1016,7 +1016,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Text labels.</p>
+             * <p>The text labels.</p>
              */
             public Builder labels2(java.util.List<String> labels2) {
                 this.labels2 = labels2;
@@ -1024,7 +1024,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Manual handling status.</p>
+             * <p>The manual disposition status.</p>
              * 
              * <strong>example:</strong>
              * <p>FREEZE</p>
@@ -1035,7 +1035,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Handling time.</p>
+             * <p>The disposition time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-09 12:00:00</p>
@@ -1046,7 +1046,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Handler.</p>
+             * <p>The operator who performed the disposition.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -1057,7 +1057,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File MD5.</p>
+             * <p>The MD5 hash of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>f6e2e1946f06310c8a0cc443a05819f3</p>
@@ -1068,7 +1068,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Further description of the error code.</p>
+             * <p>The further description of the error code.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -1079,7 +1079,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Object name.</p>
+             * <p>The object name.</p>
              * 
              * <strong>example:</strong>
              * <p>1748396909030.jpg</p>
@@ -1090,7 +1090,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image risk level</p>
+             * <p>The image risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1101,7 +1101,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Overall risk level.</p>
+             * <p>The overall risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>low</p>
@@ -1112,7 +1112,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Text risk level</p>
+             * <p>The text risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>medium</p>
@@ -1123,7 +1123,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detailed scan results.</p>
+             * <p>The result details.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -1134,7 +1134,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detection service information</p>
+             * <p>The detection service information.</p>
              */
             public Builder scanServiceInfos(java.util.List<ScanServiceInfos> scanServiceInfos) {
                 this.scanServiceInfos = scanServiceInfos;
@@ -1142,7 +1142,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service code.</p>
+             * <p>The service code.</p>
              * 
              * <strong>example:</strong>
              * <p>audio_media_detection_01</p>
@@ -1153,7 +1153,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>服务名称</p>
@@ -1164,7 +1164,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>P_Z7OLMN</p>
@@ -1175,7 +1175,7 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task URL.</p>
+             * <p>The task URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>

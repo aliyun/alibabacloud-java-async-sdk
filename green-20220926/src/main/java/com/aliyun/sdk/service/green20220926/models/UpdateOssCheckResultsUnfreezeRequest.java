@@ -115,7 +115,10 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-21 16:08:38</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -124,7 +127,10 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         }
 
         /**
-         * FreezeItems.
+         * <p>The frozen items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder freezeItems(String freezeItems) {
             this.putQueryParameter("FreezeItems", freezeItems);
@@ -133,7 +139,10 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +151,10 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-21 16:08:38</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -151,7 +163,10 @@ public class UpdateOssCheckResultsUnfreezeRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_B6YRVD</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

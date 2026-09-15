@@ -73,7 +73,10 @@ public class DeleteAnswerLibRequest extends Request {
         } 
 
         /**
-         * LibId.
+         * <p>The ID of the proxy answer library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alxxx</p>
          */
         public Builder libId(String libId) {
             this.putQueryParameter("LibId", libId);
@@ -82,7 +85,10 @@ public class DeleteAnswerLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

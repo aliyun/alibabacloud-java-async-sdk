@@ -157,7 +157,7 @@ public class ListImagesFromLibRequest extends Request {
         } 
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * <p>End date.</p>
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 10:01:55</p>
@@ -181,7 +181,7 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * <p>Image ID.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>112</p>
@@ -193,7 +193,7 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * <p>Gallery ID.</p>
+         * <p>The image library ID.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
@@ -205,7 +205,7 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -217,7 +217,7 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -229,7 +229,7 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * <p>Sort field.</p>
+         * <p>The sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -239,7 +239,7 @@ public class ListImagesFromLibRequest extends Request {
         }
 
         /**
-         * <p>Start date.</p>
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-11 09:00:19</p>

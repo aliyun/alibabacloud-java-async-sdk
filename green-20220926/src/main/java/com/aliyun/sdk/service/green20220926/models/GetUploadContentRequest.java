@@ -59,7 +59,10 @@ public class GetUploadContentRequest extends Request {
         } 
 
         /**
-         * UploadUrl.
+         * <p>The OSS URL of the uploaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/test_text.txt">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/test_text.txt</a></p>
          */
         public Builder uploadUrl(String uploadUrl) {
             this.putQueryParameter("UploadUrl", uploadUrl);

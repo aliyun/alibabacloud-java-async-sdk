@@ -101,7 +101,10 @@ public class UpdateMetaLogRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lvwang_guardrail_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -110,7 +113,10 @@ public class UpdateMetaLogRequest extends Request {
         }
 
         /**
-         * DeliveryRegion.
+         * <p>The delivery region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder deliveryRegion(String deliveryRegion) {
             this.putQueryParameter("DeliveryRegion", deliveryRegion);
@@ -119,7 +125,10 @@ public class UpdateMetaLogRequest extends Request {
         }
 
         /**
-         * Storage.
+         * <p>The storage capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder storage(Long storage) {
             this.putQueryParameter("Storage", storage);
@@ -128,7 +137,10 @@ public class UpdateMetaLogRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * <p>The time to live.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);

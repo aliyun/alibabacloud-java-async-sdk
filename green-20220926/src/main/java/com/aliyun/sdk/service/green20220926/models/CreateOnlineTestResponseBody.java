@@ -106,7 +106,7 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -117,7 +117,7 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Service Code</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>VideoModeration</p>
@@ -128,7 +128,7 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detection Task ID</p>
+         * <p>The ID of the detection task.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxx-xxxxx</p>
@@ -139,7 +139,7 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detection Status</p>
+         * <p>The detection status.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -150,7 +150,7 @@ public class CreateOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detection URL</p>
+         * <p>The URL to be detected.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></p>

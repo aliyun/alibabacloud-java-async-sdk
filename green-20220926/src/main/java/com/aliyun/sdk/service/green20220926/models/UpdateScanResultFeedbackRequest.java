@@ -129,7 +129,7 @@ public class UpdateScanResultFeedbackRequest extends Request {
         } 
 
         /**
-         * <p>Feedback</p>
+         * <p>The feedback.</p>
          * 
          * <strong>example:</strong>
          * <p>missOut</p>
@@ -141,7 +141,7 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * <p>Labels.</p>
+         * <p>The labels.</p>
          * 
          * <strong>example:</strong>
          * <p>abuse</p>
@@ -153,7 +153,7 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>46232656-984E-****-A648-B1D0667B6C3E</p>
@@ -165,7 +165,7 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -177,7 +177,7 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * <p>Resource Type</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -189,7 +189,7 @@ public class UpdateScanResultFeedbackRequest extends Request {
         }
 
         /**
-         * <p>Risk Level</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>

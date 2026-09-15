@@ -101,10 +101,10 @@ public class UpdateKeywordLibRequest extends Request {
         } 
 
         /**
-         * <p>Library ID.</p>
+         * <p>The keyword library ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>custom_xxxx</p>
+         * <p>custom_6.2193748597</p>
          */
         public Builder libId(String libId) {
             this.putBodyParameter("LibId", libId);
@@ -113,10 +113,10 @@ public class UpdateKeywordLibRequest extends Request {
         }
 
         /**
-         * <p>Keyword library name.</p>
+         * <p>The keyword library name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试库</p>
+         * <p>TestLibrary.</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -125,7 +125,7 @@ public class UpdateKeywordLibRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -137,7 +137,13 @@ public class UpdateKeywordLibRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The keyword library code.</p>
+         * <ul>
+         * <li>desensitize: desensitization keyword library</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desensitize</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putQueryParameter("TenantCode", tenantCode);

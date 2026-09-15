@@ -249,7 +249,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Buckets.
+         * <p>The storage buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;Bucket\&quot;:\&quot;aileshijie\&quot;,\&quot;Region\&quot;:\&quot;cn-hangzhou\&quot;}]</p>
          */
         public Builder buckets(String buckets) {
             this.buckets = buckets;
@@ -257,7 +260,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The configuration item.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -265,7 +268,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-09 10:30:00</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -273,7 +279,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * FinishNum.
+         * <p>The number of completed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
          */
         public Builder finishNum(Long finishNum) {
             this.finishNum = finishNum;
@@ -281,7 +290,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * IsInc.
+         * <p>Indicates whether this is a scheduled scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isInc(Boolean isInc) {
             this.isInc = isInc;
@@ -289,7 +301,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * LastExecuteDate.
+         * <p>The next execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-09 10:30:00</p>
          */
         public Builder lastExecuteDate(String lastExecuteDate) {
             this.lastExecuteDate = lastExecuteDate;
@@ -297,7 +312,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * MediaType.
+         * <p>The media asset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mediaType(Integer mediaType) {
             this.mediaType = mediaType;
@@ -305,7 +323,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NextExecuteDate.
+         * <p>The last execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-08 10:30:00</p>
          */
         public Builder nextExecuteDate(String nextExecuteDate) {
             this.nextExecuteDate = nextExecuteDate;
@@ -313,7 +334,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ObjectNum.
+         * <p>The total number of files in the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder objectNum(Long objectNum) {
             this.objectNum = objectNum;
@@ -321,7 +345,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -329,7 +356,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SearchNum.
+         * <p>The number of scan tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder searchNum(Long searchNum) {
             this.searchNum = searchNum;
@@ -337,7 +367,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-21 16:08:38</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -345,7 +378,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -353,7 +389,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -361,7 +400,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Document stock task 20240914100517757</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -369,7 +411,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>increment</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -461,7 +506,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CopyFrom.
+             * <p>The primary service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss_baselineCheck</p>
              */
             public Builder copyFrom(String copyFrom) {
                 this.copyFrom = copyFrom;
@@ -469,7 +517,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsCopy.
+             * <p>Indicates whether the service is copied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCopy(Boolean isCopy) {
                 this.isCopy = isCopy;
@@ -477,7 +528,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCode.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss_baselineCheck</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -485,7 +539,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Content moderation.</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -552,7 +609,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * FreezeRestorePath.
+             * <p>The transfer directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder freezeRestorePath(String freezeRestorePath) {
                 this.freezeRestorePath = freezeRestorePath;
@@ -560,7 +620,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeType.
+             * <p>The freeze type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder freezeType(String freezeType) {
                 this.freezeType = freezeType;
@@ -926,7 +989,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * BucketPrefixFilterConfig.
+             * <p>The filter configuration for each bucket. The key is the bucket name, and the value is the filter configuration, which includes prefix/suffix filters and filter character lists.</p>
              */
             public Builder bucketPrefixFilterConfig(java.util.Map<String, ConfigBucketPrefixFilterConfigValue> bucketPrefixFilterConfig) {
                 this.bucketPrefixFilterConfig = bucketPrefixFilterConfig;
@@ -934,7 +997,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CallbackId.
+             * <p>The callback notification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>188</p>
              */
             public Builder callbackId(Long callbackId) {
                 this.callbackId = callbackId;
@@ -942,7 +1008,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DistinctHistoryTasks.
+             * <p>Indicates whether to deduplicate previously scanned tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder distinctHistoryTasks(Boolean distinctHistoryTasks) {
                 this.distinctHistoryTasks = distinctHistoryTasks;
@@ -950,7 +1019,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-09 10:30:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -958,7 +1030,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteDate.
+             * <p>The execution date of the scheduled task. The value is an integer in the format of a single digit, such as 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executeDate(Integer executeDate) {
                 this.executeDate = executeDate;
@@ -966,7 +1041,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * <p>The expected execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-09 10:30:00</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -974,7 +1052,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Freeze.
+             * <p>Indicates whether to freeze.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freeze(Boolean freeze) {
                 this.freeze = freeze;
@@ -982,7 +1063,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeHighRisk1.
+             * <p>Specifies whether to freeze high-risk images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freezeHighRisk1(Boolean freezeHighRisk1) {
                 this.freezeHighRisk1 = freezeHighRisk1;
@@ -990,7 +1074,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeHighRisk2.
+             * <p>Specifies whether to freeze high-risk audio and text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freezeHighRisk2(Boolean freezeHighRisk2) {
                 this.freezeHighRisk2 = freezeHighRisk2;
@@ -998,7 +1085,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeMediumRisk1.
+             * <p>Specifies whether to freeze medium-risk images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freezeMediumRisk1(Boolean freezeMediumRisk1) {
                 this.freezeMediumRisk1 = freezeMediumRisk1;
@@ -1006,7 +1096,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeMediumRisk2.
+             * <p>Specifies whether to freeze medium-risk audio and text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder freezeMediumRisk2(Boolean freezeMediumRisk2) {
                 this.freezeMediumRisk2 = freezeMediumRisk2;
@@ -1014,7 +1107,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeRestorePath.
+             * <p>The transfer path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder freezeRestorePath(String freezeRestorePath) {
                 this.freezeRestorePath = freezeRestorePath;
@@ -1022,7 +1118,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeType.
+             * <p>The freeze type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder freezeType(String freezeType) {
                 this.freezeType = freezeType;
@@ -1030,7 +1129,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixFilterType.
+             * <p>The prefix filter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder prefixFilterType(String prefixFilterType) {
                 this.prefixFilterType = prefixFilterType;
@@ -1038,7 +1140,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixFilters.
+             * <p>The prefixes.</p>
              */
             public Builder prefixFilters(java.util.List<String> prefixFilters) {
                 this.prefixFilters = prefixFilters;
@@ -1046,7 +1148,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1065,7 +1170,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ScanLimit.
+             * <p>The scan limit quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder scanLimit(Long scanLimit) {
                 this.scanLimit = scanLimit;
@@ -1073,7 +1181,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ScanNoFileType.
+             * <p>Indicates whether to scan images without file extensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder scanNoFileType(Boolean scanNoFileType) {
                 this.scanNoFileType = scanNoFileType;
@@ -1081,7 +1192,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ScanResourceType.
+             * <p>The file type to scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanResourceType(Integer scanResourceType) {
                 this.scanResourceType = scanResourceType;
@@ -1089,7 +1203,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ScanService.
+             * <p>The scan service code.</p>
              */
             public Builder scanService(java.util.List<String> scanService) {
                 this.scanService = scanService;
@@ -1097,7 +1211,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ScanServiceInfos.
+             * <p>The scan service information.</p>
              */
             public Builder scanServiceInfos(java.util.List<ScanServiceInfos> scanServiceInfos) {
                 this.scanServiceInfos = scanServiceInfos;
@@ -1105,7 +1219,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-21 16:08:38</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1113,7 +1230,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCycle.
+             * <p>The scheduling date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskCycle(Integer taskCycle) {
                 this.taskCycle = taskCycle;
@@ -1121,7 +1241,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserFreezeConfig.
+             * <p>The user freeze configuration.</p>
              */
             public Builder userFreezeConfig(UserFreezeConfig userFreezeConfig) {
                 this.userFreezeConfig = userFreezeConfig;

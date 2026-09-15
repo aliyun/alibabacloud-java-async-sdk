@@ -87,7 +87,10 @@ public class ListAppConfigsRequest extends Request {
         } 
 
         /**
-         * Classify.
+         * <p>The classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guard-scene</p>
          */
         public Builder classify(String classify) {
             this.putQueryParameter("Classify", classify);
@@ -96,7 +99,10 @@ public class ListAppConfigsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +111,10 @@ public class ListAppConfigsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

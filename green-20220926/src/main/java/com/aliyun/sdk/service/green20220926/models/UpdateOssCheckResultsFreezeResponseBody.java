@@ -67,7 +67,7 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
             } 
 
             /**
-             * InvalidCount.
+             * <p>The number of invalid records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder invalidCount(Integer invalidCount) {
                 this.invalidCount = invalidCount;
@@ -175,7 +181,10 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatCount.
+             * <p>The number of duplicate records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder repeatCount(Integer repeatCount) {
                 this.repeatCount = repeatCount;
@@ -183,7 +192,10 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successful operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -191,7 +203,10 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

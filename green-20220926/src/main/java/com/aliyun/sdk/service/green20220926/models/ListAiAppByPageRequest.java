@@ -101,7 +101,10 @@ public class ListAiAppByPageRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -110,7 +113,10 @@ public class ListAiAppByPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -119,7 +125,10 @@ public class ListAiAppByPageRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -128,7 +137,10 @@ public class ListAiAppByPageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

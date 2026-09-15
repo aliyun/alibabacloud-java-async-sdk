@@ -115,7 +115,7 @@ public class DeleteKeywordRequest extends Request {
         } 
 
         /**
-         * <p>The ids&quot; list of keywords.</p>
+         * <p>The IDs of the keywords to delete.</p>
          * 
          * <strong>example:</strong>
          * <p>[6715465]</p>
@@ -127,7 +127,7 @@ public class DeleteKeywordRequest extends Request {
         }
 
         /**
-         * <p>The ids of keywords.</p>
+         * <p>The IDs of the keywords to delete.</p>
          * 
          * <strong>example:</strong>
          * <p>[16754493]</p>
@@ -139,7 +139,7 @@ public class DeleteKeywordRequest extends Request {
         }
 
         /**
-         * <p>Library id</p>
+         * <p>The ID of the keyword library.</p>
          * 
          * <strong>example:</strong>
          * <p>customxx_xxxx</p>
@@ -151,7 +151,7 @@ public class DeleteKeywordRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -163,7 +163,13 @@ public class DeleteKeywordRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The code of the keyword library.</p>
+         * <ul>
+         * <li>desensitize: masking keyword library.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desensitize</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putQueryParameter("TenantCode", tenantCode);

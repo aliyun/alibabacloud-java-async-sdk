@@ -67,7 +67,7 @@ public class GetQpsStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Charts.
+         * <p>The chart configurations.</p>
          */
         public Builder charts(java.util.Map<String, ChartsValue> charts) {
             this.charts = charts;
@@ -75,7 +75,10 @@ public class GetQpsStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. It can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

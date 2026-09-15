@@ -119,7 +119,10 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
         } 
 
         /**
-         * InvalidCount.
+         * <p>The number of invalid items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder invalidCount(Integer invalidCount) {
             this.invalidCount = invalidCount;
@@ -127,7 +130,10 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * RepeatCount.
+         * <p>The number of duplicate items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder repeatCount(Integer repeatCount) {
             this.repeatCount = repeatCount;
@@ -135,7 +141,10 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +152,10 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * <p>The number of successful items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -151,7 +163,10 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * Tips.
+         * <p>The prompt information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder tips(String tips) {
             this.tips = tips;
@@ -159,7 +174,10 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

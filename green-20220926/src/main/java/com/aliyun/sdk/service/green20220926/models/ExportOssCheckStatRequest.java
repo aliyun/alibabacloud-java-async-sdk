@@ -115,7 +115,11 @@ public class ExportOssCheckStatRequest extends Request {
         } 
 
         /**
-         * <p>Whether to support monthly indexing. Values: -true: supported. -false: not supported.</p>
+         * <p>Specifies whether monthly indexing is supported. Valid values:</p>
+         * <ul>
+         * <li>true: Supported.</li>
+         * <li>false: Not supported.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -127,7 +131,7 @@ public class ExportOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-11 10:00:00</p>
@@ -139,7 +143,7 @@ public class ExportOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>OSS detection task ID.</p>
+         * <p>The ID of the OSS scan task.</p>
          * 
          * <strong>example:</strong>
          * <p>P_UX0K5X</p>
@@ -151,7 +155,7 @@ public class ExportOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -163,7 +167,7 @@ public class ExportOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-10 10:00:00</p>

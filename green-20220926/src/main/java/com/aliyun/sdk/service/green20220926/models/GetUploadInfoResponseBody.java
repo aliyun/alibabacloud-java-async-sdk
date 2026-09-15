@@ -223,7 +223,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Upload authorization ID.</p>
+         * <p>The upload authorization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>LTAI5t9HM*****EXQmw3DVH</p>
@@ -234,7 +234,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code, consistent with HTTP status.</p>
+         * <p>The error code, which is consistent with the HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -245,7 +245,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>In seconds.</p>
+         * <p>The expiration time. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -256,7 +256,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Folder name.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>image/upload/xxx</p>
@@ -267,7 +267,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Upload host.</p>
+         * <p>The upload host.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com</a></p>
@@ -278,7 +278,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -289,7 +289,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Key used for uploading files.</p>
+         * <p>The key used for uploading the file.</p>
          * 
          * <strong>example:</strong>
          * <p>image/upload/xxx</p>
@@ -300,7 +300,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The further description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -311,10 +311,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Used for front-end image upload.</p>
+         * <p>Used by the frontend for image upload.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -322,7 +322,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>OSS upload file Policy.</p>
+         * <p>The policy for uploading files to OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -333,7 +333,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -344,7 +344,10 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityToken.
+         * <p>STS token</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
@@ -352,7 +355,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Upload signature information.</p>
+         * <p>The signature information for the upload.</p>
          * 
          * <strong>example:</strong>
          * <p>iyu7VHblYj+mEF9p46cdGOlNPAw=</p>
@@ -363,7 +366,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator.</p>
+         * <p>The success flag.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

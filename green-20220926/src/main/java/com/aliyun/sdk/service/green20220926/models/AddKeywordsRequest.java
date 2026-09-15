@@ -115,10 +115,11 @@ public class AddKeywordsRequest extends Request {
         } 
 
         /**
-         * <p>The keywords to be added.</p>
+         * <p>The keywords. Separate multiple keywords with 
+         * .</p>
          * 
          * <strong>example:</strong>
-         * <p>keywords</p>
+         * <p>Keyword1\nKeyword2</p>
          */
         public Builder keywords(String keywords) {
             this.putBodyParameter("Keywords", keywords);
@@ -127,7 +128,7 @@ public class AddKeywordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the keyword file.</p>
+         * <p>The keyword file name.</p>
          * 
          * <strong>example:</strong>
          * <p>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</p>
@@ -139,7 +140,7 @@ public class AddKeywordsRequest extends Request {
         }
 
         /**
-         * <p>The id of keyword library.</p>
+         * <p>The keyword library ID.</p>
          * 
          * <strong>example:</strong>
          * <p>customxx_xxxx</p>
@@ -151,7 +152,7 @@ public class AddKeywordsRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -163,7 +164,13 @@ public class AddKeywordsRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The library code.</p>
+         * <ul>
+         * <li>desensitize: masking library</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desensitize</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putQueryParameter("TenantCode", tenantCode);

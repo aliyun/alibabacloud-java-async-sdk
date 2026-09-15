@@ -115,7 +115,7 @@ public class GetOssCheckStatRequest extends Request {
         } 
 
         /**
-         * <p>Whether to query by month.</p>
+         * <p>Specifies whether to query by month.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -127,7 +127,7 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>End date.</p>
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 10:01:55</p>
@@ -139,7 +139,7 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>Parent task ID.</p>
+         * <p>The parent task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>P_UNHBH</p>
@@ -151,7 +151,7 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -163,7 +163,7 @@ public class GetOssCheckStatRequest extends Request {
         }
 
         /**
-         * <p>Start date.</p>
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-11 09:00:19</p>

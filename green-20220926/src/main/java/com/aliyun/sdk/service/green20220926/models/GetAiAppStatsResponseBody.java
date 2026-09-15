@@ -67,7 +67,7 @@ public class GetAiAppStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetAiAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +168,10 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +179,10 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.91</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -224,7 +236,7 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * TreeChart.
+             * <p>The tree chart.</p>
              */
             public Builder treeChart(java.util.List<TreeChart> treeChart) {
                 this.treeChart = treeChart;
@@ -291,7 +303,7 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The returned data.</p>
              */
             public Builder data(java.util.List<Long> data) {
                 this.data = data;
@@ -299,7 +311,10 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -392,7 +407,7 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * LabelStatChart.
+             * <p>The label usage chart.</p>
              */
             public Builder labelStatChart(java.util.List<LabelStatChart> labelStatChart) {
                 this.labelStatChart = labelStatChart;
@@ -400,7 +415,7 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalStat.
+             * <p>The total count categorized statistics.</p>
              */
             public Builder totalStat(java.util.Map<String, DataTotalStatValue> totalStat) {
                 this.totalStat = totalStat;
@@ -408,7 +423,7 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The X value of the coordinate point.</p>
              */
             public Builder x(java.util.List<String> x) {
                 this.x = x;
@@ -416,7 +431,7 @@ public class GetAiAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The Y value of the coordinate point.</p>
              */
             public Builder y(java.util.List<Y> y) {
                 this.y = y;

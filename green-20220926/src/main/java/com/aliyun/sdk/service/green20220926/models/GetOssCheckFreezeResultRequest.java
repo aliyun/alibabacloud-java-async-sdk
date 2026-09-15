@@ -171,7 +171,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         } 
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,7 +183,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>End time.</p>
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-19 10:05:11</p>
@@ -195,7 +195,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>Number of completed tasks.</p>
+         * <p>The number of completed tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -207,7 +207,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,10 +219,10 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>Query condition.</p>
+         * <p>The query condition.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;TaskId&quot;:&quot;P_O3SI0I&quot;}</p>
+         * <p>{\&quot;TaskId\&quot;:\&quot;P_O3SI0I\&quot;}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -231,7 +231,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -243,7 +243,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>Sort field.</p>
+         * <p>The sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -253,7 +253,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>Start time.</p>
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-09 10:28:54</p>
@@ -265,7 +265,7 @@ public class GetOssCheckFreezeResultRequest extends Request {
         }
 
         /**
-         * <p>Task status.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

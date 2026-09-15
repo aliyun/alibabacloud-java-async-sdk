@@ -87,7 +87,10 @@ public class StopOnlineTestRequest extends Request {
         } 
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -96,7 +99,10 @@ public class StopOnlineTestRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -105,7 +111,10 @@ public class StopOnlineTestRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

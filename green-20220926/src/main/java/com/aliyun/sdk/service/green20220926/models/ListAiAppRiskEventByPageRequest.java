@@ -129,7 +129,10 @@ public class ListAiAppRiskEventByPageRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -138,7 +141,10 @@ public class ListAiAppRiskEventByPageRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -147,7 +153,10 @@ public class ListAiAppRiskEventByPageRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a320d468c75e987765861ec6d10f8cd3aea63fac9610c5c</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -156,7 +165,10 @@ public class ListAiAppRiskEventByPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +177,10 @@ public class ListAiAppRiskEventByPageRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The query parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Lang\&quot;:\&quot;zh\&quot;}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -174,7 +189,10 @@ public class ListAiAppRiskEventByPageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

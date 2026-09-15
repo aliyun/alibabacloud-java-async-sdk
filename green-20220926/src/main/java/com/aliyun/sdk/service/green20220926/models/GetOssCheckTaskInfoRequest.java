@@ -59,7 +59,10 @@ public class GetOssCheckTaskInfoRequest extends Request {
         } 
 
         /**
-         * ParentTaskId.
+         * <p>The parent task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P_AAA**</p>
          */
         public Builder parentTaskId(String parentTaskId) {
             this.putQueryParameter("ParentTaskId", parentTaskId);

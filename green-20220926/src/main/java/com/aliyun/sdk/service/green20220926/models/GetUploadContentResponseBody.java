@@ -67,7 +67,10 @@ public class GetUploadContentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder data(String data) {
             this.data = data;

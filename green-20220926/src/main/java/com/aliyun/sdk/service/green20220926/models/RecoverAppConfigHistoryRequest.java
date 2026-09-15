@@ -113,7 +113,10 @@ public class RecoverAppConfigHistoryRequest extends Request {
         }
 
         /**
-         * AppVersion.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1785898163</p>
          */
         public Builder appVersion(Long appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -122,7 +125,10 @@ public class RecoverAppConfigHistoryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +137,10 @@ public class RecoverAppConfigHistoryRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -87,7 +87,7 @@ public class ExportKeywordRequest extends Request {
         } 
 
         /**
-         * <p>Keyword library ID.</p>
+         * <p>The keyword library ID.</p>
          * 
          * <strong>example:</strong>
          * <p>customxx_xxxx</p>
@@ -99,7 +99,7 @@ public class ExportKeywordRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -111,7 +111,13 @@ public class ExportKeywordRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>The vocabulary encoding.</p>
+         * <ul>
+         * <li>desensitize: sensitive data masking vocabulary</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desensitize</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putQueryParameter("TenantCode", tenantCode);

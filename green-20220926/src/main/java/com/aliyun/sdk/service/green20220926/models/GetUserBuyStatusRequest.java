@@ -73,7 +73,7 @@ public class GetUserBuyStatusRequest extends Request {
         } 
 
         /**
-         * <p>Commodity code.</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
          * <p>lvwang_public_cn</p>
@@ -85,7 +85,7 @@ public class GetUserBuyStatusRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

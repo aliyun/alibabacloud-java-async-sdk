@@ -115,7 +115,7 @@ public class ListServiceConfigsRequest extends Request {
         } 
 
         /**
-         * <p>Category.</p>
+         * <p>The classification.</p>
          * 
          * <strong>example:</strong>
          * <p>guard-scene</p>
@@ -127,7 +127,18 @@ public class ListServiceConfigsRequest extends Request {
         }
 
         /**
-         * ProtectionType.
+         * <p>The protection type. Valid values:</p>
+         * <ul>
+         * <li><p>modelProtection: model protection.</p>
+         * </li>
+         * <li><p>agentRealtimeProtection: agent real-time protection.</p>
+         * </li>
+         * <li><p>agentBehaviorAudit: agent behavior audit.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>modelProtection</p>
          */
         public Builder protectionType(String protectionType) {
             this.putQueryParameter("ProtectionType", protectionType);
@@ -136,7 +147,7 @@ public class ListServiceConfigsRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -148,7 +159,7 @@ public class ListServiceConfigsRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -160,7 +171,7 @@ public class ListServiceConfigsRequest extends Request {
         }
 
         /**
-         * <p>Usage status.</p>
+         * <p>The usage status.</p>
          * 
          * <strong>example:</strong>
          * <p>in</p>

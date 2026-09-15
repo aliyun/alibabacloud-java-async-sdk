@@ -106,7 +106,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -147,7 +147,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success flag.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -203,7 +203,10 @@ public class ListKeywordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Attribute.
+             * <p>The properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -335,7 +338,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-06-03 14:43:03</p>
@@ -346,7 +349,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-06-03 14:43:03</p>
@@ -357,7 +360,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Primary key ID.</p>
+             * <p>The primary key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>112</p>
@@ -368,7 +371,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Keyword library ID.</p>
+             * <p>The keyword library ID.</p>
              * 
              * <strong>example:</strong>
              * <p>custom_xxxx</p>
@@ -379,7 +382,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Keyword data ID.</p>
+             * <p>The keyword data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>4205334</p>
@@ -390,7 +393,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The properties.</p>
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -398,7 +401,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Keyword.</p>
+             * <p>The keyword.</p>
              * 
              * <strong>example:</strong>
              * <p>测试词</p>
@@ -494,7 +497,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Current page number.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -505,7 +508,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data of the current page.</p>
+             * <p>The data on the current page.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -513,7 +516,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -524,7 +527,7 @@ public class ListKeywordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>23</p>

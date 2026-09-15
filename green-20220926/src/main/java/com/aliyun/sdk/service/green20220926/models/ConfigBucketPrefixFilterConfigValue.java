@@ -67,7 +67,10 @@ public class ConfigBucketPrefixFilterConfigValue extends TeaModel {
         } 
 
         /**
-         * PrefixFilterType.
+         * <p>The prefix filter type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder prefixFilterType(String prefixFilterType) {
             this.prefixFilterType = prefixFilterType;
@@ -75,7 +78,7 @@ public class ConfigBucketPrefixFilterConfigValue extends TeaModel {
         }
 
         /**
-         * PrefixFilters.
+         * <p>The prefix list.</p>
          */
         public Builder prefixFilters(java.util.List<String> prefixFilters) {
             this.prefixFilters = prefixFilters;

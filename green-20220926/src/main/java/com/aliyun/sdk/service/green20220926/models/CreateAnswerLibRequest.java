@@ -115,7 +115,10 @@ public class CreateAnswerLibRequest extends Request {
         } 
 
         /**
-         * LibName.
+         * <p>The name of the proxy answer library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试代答库</p>
          */
         public Builder libName(String libName) {
             this.putBodyParameter("LibName", libName);
@@ -124,7 +127,10 @@ public class CreateAnswerLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +139,10 @@ public class CreateAnswerLibRequest extends Request {
         }
 
         /**
-         * SampleBucket.
+         * <p>The name of the storage space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cip-shanghai</p>
          */
         public Builder sampleBucket(String sampleBucket) {
             this.putBodyParameter("SampleBucket", sampleBucket);
@@ -142,7 +151,10 @@ public class CreateAnswerLibRequest extends Request {
         }
 
         /**
-         * SampleObject.
+         * <p>The file name of the proxy answer sample to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data/xxx.xlsx</p>
          */
         public Builder sampleObject(String sampleObject) {
             this.putBodyParameter("SampleObject", sampleObject);
@@ -151,7 +163,10 @@ public class CreateAnswerLibRequest extends Request {
         }
 
         /**
-         * Samples.
+         * <p>The samples to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>代答答案1\n代答答案2</p>
          */
         public Builder samples(String samples) {
             this.putBodyParameter("Samples", samples);

@@ -101,7 +101,10 @@ public class AddAnswerSampleRequest extends Request {
         } 
 
         /**
-         * LibId.
+         * <p>The ID of the proxy answer library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alxxxx</p>
          */
         public Builder libId(String libId) {
             this.putQueryParameter("LibId", libId);
@@ -110,7 +113,10 @@ public class AddAnswerSampleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +125,10 @@ public class AddAnswerSampleRequest extends Request {
         }
 
         /**
-         * SampleObject.
+         * <p>The file name of the proxy answer sample to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data/xxx.xlsx</p>
          */
         public Builder sampleObject(String sampleObject) {
             this.putQueryParameter("SampleObject", sampleObject);
@@ -128,7 +137,10 @@ public class AddAnswerSampleRequest extends Request {
         }
 
         /**
-         * Samples.
+         * <p>The samples to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>代答答案1\n代答答案2</p>
          */
         public Builder samples(String samples) {
             this.putQueryParameter("Samples", samples);

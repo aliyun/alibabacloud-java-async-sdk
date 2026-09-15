@@ -353,6 +353,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before using this operation, complete the following steps:</p>
+     * <ol>
+     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</li>
+     * <li>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</li>
+     * <li>For more information about API operations and parameters, see <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</li>
+     * </ol>
+     * 
      * @param request the request parameters of CreateImageLib  CreateImageLibRequest
      * @return CreateImageLibResponse
      */
@@ -587,6 +595,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</p>
+     * 
      * @param request the request parameters of DescribeOssV2Result  DescribeOssV2ResultRequest
      * @return DescribeOssV2ResultResponse
      */
@@ -1415,6 +1426,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>API operation is used together with the enhanced image moderation API. After you call the enhanced image moderation API, call API operation to retrieve additional detection information. API operation is free of charge.</p>
+     * 
      * @param request the request parameters of GetTuneProposalById  GetTuneProposalByIdRequest
      * @return GetTuneProposalByIdResponse
      */
@@ -1803,6 +1817,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</p>
+     * 
      * @param request the request parameters of MarkOssV2Result  MarkOssV2ResultRequest
      * @return MarkOssV2ResultResponse
      */

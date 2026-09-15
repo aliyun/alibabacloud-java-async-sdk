@@ -67,7 +67,7 @@ public class ChartsValue extends TeaModel {
         } 
 
         /**
-         * X.
+         * <p>The X-axis.</p>
          */
         public Builder x(java.util.List<String> x) {
             this.x = x;
@@ -75,7 +75,7 @@ public class ChartsValue extends TeaModel {
         }
 
         /**
-         * Y.
+         * <p>The Y-axis.</p>
          */
         public Builder y(java.util.List<Y> y) {
             this.y = y;
@@ -141,7 +141,10 @@ public class ChartsValue extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +152,7 @@ public class ChartsValue extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The QPS at the point in time.</p>
              */
             public Builder data(java.util.List<Long> data) {
                 this.data = data;

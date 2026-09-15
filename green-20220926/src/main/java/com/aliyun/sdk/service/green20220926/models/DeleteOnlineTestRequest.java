@@ -73,7 +73,7 @@ public class DeleteOnlineTestRequest extends Request {
         } 
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -85,7 +85,7 @@ public class DeleteOnlineTestRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>

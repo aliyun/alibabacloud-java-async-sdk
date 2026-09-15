@@ -171,7 +171,7 @@ public class OssCheckResultListRequest extends Request {
         } 
 
         /**
-         * <p>Page size.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,7 +183,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>Start date.</p>
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-21 16:08:38</p>
@@ -195,7 +195,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The number of completed items.</p>
          * 
          * <strong>example:</strong>
          * <p>55</p>
@@ -207,7 +207,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>Query condition.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,7 +219,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>End date.</p>
+         * <p>The query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -231,7 +231,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>Sort field.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -243,7 +243,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The sort field.</p>
          */
         public Builder sort(java.util.Map<String, String> sort) {
             String sortShrink = shrink(sort, "Sort", "json");
@@ -253,7 +253,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>System-defined parameter. Value: <strong>OssCheckResultList</strong>.</p>
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-21 16:08:38</p>
@@ -265,7 +265,7 @@ public class OssCheckResultListRequest extends Request {
         }
 
         /**
-         * <p>Number of completed items.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

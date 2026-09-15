@@ -106,7 +106,10 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The data on the current page.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +125,10 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
             } 
 
             /**
-             * Answer.
+             * <p>The answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>答案</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -251,7 +266,10 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-31 06:16:06</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -259,7 +277,10 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -267,7 +288,10 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
             }
 
             /**
-             * LibId.
+             * <p>The ID of the proxy answer library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_xxxx</p>
              */
             public Builder libId(String libId) {
                 this.libId = libId;

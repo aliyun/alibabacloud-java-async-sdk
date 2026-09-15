@@ -87,7 +87,7 @@ public class AddImages2LibRequest extends Request {
         } 
 
         /**
-         * <p>URL of the image to be uploaded.</p>
+         * <p>The image URL.</p>
          * 
          * <strong>example:</strong>
          * <p>upload/ea7a98f9-f8bd-4905-a79b-963c9da419c5.jpg</p>
@@ -99,7 +99,7 @@ public class AddImages2LibRequest extends Request {
         }
 
         /**
-         * <p>The ID of image library.</p>
+         * <p>The image library ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -111,7 +111,7 @@ public class AddImages2LibRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

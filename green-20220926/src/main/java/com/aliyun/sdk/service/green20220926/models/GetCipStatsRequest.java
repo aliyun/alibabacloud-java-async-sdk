@@ -185,7 +185,14 @@ public class GetCipStatsRequest extends Request {
         } 
 
         /**
-         * ByMonth.
+         * <p>Specifies whether monthly indexing is supported. Valid values:</p>
+         * <ul>
+         * <li>true: Supported.</li>
+         * <li>false: Not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder byMonth(Boolean byMonth) {
             this.putBodyParameter("ByMonth", byMonth);
@@ -194,7 +201,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-11 10:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -203,7 +213,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -212,7 +225,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -221,7 +237,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +249,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -239,7 +261,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * ServiceCode.
+         * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putQueryParameter("ServiceCode", serviceCode);
@@ -248,7 +273,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-10 10:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -257,7 +285,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * SubUid.
+         * <p>The UID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253552244990701265</p>
          */
         public Builder subUid(String subUid) {
             this.putBodyParameter("SubUid", subUid);
@@ -266,7 +297,10 @@ public class GetCipStatsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type. Valid values: <strong>cip</strong>: Content Moderation invoke volume statistics. <strong>risk_level</strong>: Content Moderation risk level statistics. <strong>content_moderation</strong>: AI security guardrail content compliance risk level and tag statistics. <strong>sensitive_data</strong>: AI security guardrail sensitive data risk level and tag statistics. <strong>prompt_attack</strong>: AI security guardrail prompt risk level and tag statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>risk_level</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

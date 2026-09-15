@@ -451,7 +451,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         } 
 
         /**
-         * BucketPrefixFilterConfig.
+         * <p>The filter configuration for each bucket. The value can be parsed as a JSON map. The key is the bucket name, and the value is the filter configuration, which includes prefix/suffix filters and a list of filter strings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;test-bucket1\&quot;:{\&quot;prefixFilterType\&quot;:\&quot;include\&quot;,\&quot;prefixFilters\&quot;:[\&quot;test1\&quot;]},\&quot;test-bucket2\&quot;:{\&quot;prefixFilterType\&quot;:\&quot;exclude\&quot;,\&quot;prefixFilters\&quot;:[\&quot;test2\&quot;]}}&quot;</p>
          */
         public Builder bucketPrefixFilterConfig(String bucketPrefixFilterConfig) {
             this.putQueryParameter("BucketPrefixFilterConfig", bucketPrefixFilterConfig);
@@ -460,10 +463,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>OSS buckets</p>
+         * <p>The storage buckets.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Bucket&quot;:&quot;bucket01-test&quot;,&quot;Region&quot;:&quot;cn-beijing&quot;}]</p>
+         * <p>[{\&quot;Bucket\&quot;:\&quot;bucket01-test\&quot;,\&quot;Region\&quot;:\&quot;cn-beijing\&quot;}]</p>
          */
         public Builder buckets(String buckets) {
             this.putQueryParameter("Buckets", buckets);
@@ -472,7 +475,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Callback ID</p>
+         * <p>The notification callback ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1751</p>
@@ -484,7 +487,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Flag for deduplicating against previously detected tasks.</p>
+         * <p>Specifies whether to deduplicate against historically scanned tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -496,7 +499,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The end time of the task.</p>
+         * <p>The task end time. Format: <code>YYYY-MM-DD HH:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-18 10:08:00</p>
@@ -508,7 +511,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Execute date of scheduled task.</p>
+         * <p>The execution date of the scheduled task. The value is in integer format.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -520,7 +523,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Execute time of scheduled task.</p>
+         * <p>The expected execution time of the scheduled task. Format: <code>HH:mm:ss-HH:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>01:09:30-01:19:30</p>
@@ -532,7 +535,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Freeze indicator</p>
+         * <p>Specifies whether to freeze files.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -544,7 +547,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Freeze High-Risk Images</p>
+         * <p>Specifies whether to freeze high-risk images.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -556,7 +559,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Freeze High-Risk Audio and Text</p>
+         * <p>Specifies whether to freeze high-risk audio and text.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -568,7 +571,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Freeze Medium-Risk Images</p>
+         * <p>Specifies whether to freeze medium-risk images.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -580,7 +583,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Freeze Medium-Risk Audio and Text</p>
+         * <p>Specifies whether to freeze medium-risk audio and text.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -592,7 +595,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Freeze Restore Path</p>
+         * <p>The path to which frozen files are transferred.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -604,7 +607,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Freeze type</p>
+         * <p>The freeze type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACL</p>
@@ -616,7 +619,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Indicator for scheduled task.</p>
+         * <p>Specifies whether the task is a scheduled scan task.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -628,7 +631,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Media type.</p>
+         * <p>The media asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -640,7 +643,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Prefix filter type.</p>
+         * <p>The prefix filter type.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -652,7 +655,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Prefix filters</p>
+         * <p>The prefixes.</p>
          * 
          * <strong>example:</strong>
          * <p>dir1,dir2</p>
@@ -664,7 +667,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The priority of the task.</p>
+         * <p>The priority.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -676,7 +679,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Referer.</p>
+         * <p>Referer。</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
@@ -688,7 +691,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -700,7 +703,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The scan limit of the task.</p>
+         * <p>The maximum number of files to scan.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -712,7 +715,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Indicator for scanning files without file type.</p>
+         * <p>Specifies whether to scan images without file extensions.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -724,7 +727,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Scan resource type.</p>
+         * <p>The type of files to scan.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -736,7 +739,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The code of scan service.</p>
+         * <p>The scan service code.</p>
          * 
          * <strong>example:</strong>
          * <p>baselineCheck</p>
@@ -748,7 +751,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The start time of the task.</p>
+         * <p>The task start time. Format: <code>YYYY-MM-DD HH:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-17 10:08:00</p>
@@ -760,7 +763,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Task Cycle</p>
+         * <p>The scheduling cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -772,10 +775,10 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>image task 20240709101602004</p>
+         * <p>图片任务 20240709101602004</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -784,7 +787,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
         }
 
         /**
-         * <p>Task type.</p>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>batch</p>

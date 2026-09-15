@@ -106,7 +106,10 @@ public class StopOnlineTestResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,10 @@ public class StopOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCode.
+         * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = serviceCode;
@@ -122,7 +128,10 @@ public class StopOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -130,7 +139,10 @@ public class StopOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The detection status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -138,7 +150,10 @@ public class StopOnlineTestResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The detection URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxx.com/data/data.png">https://xxxxxxxx.com/data/data.png</a></p>
          */
         public Builder url(String url) {
             this.url = url;

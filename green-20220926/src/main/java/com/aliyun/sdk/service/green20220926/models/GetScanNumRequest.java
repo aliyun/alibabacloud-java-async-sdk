@@ -87,7 +87,7 @@ public class GetScanNumRequest extends Request {
         } 
 
         /**
-         * <p>Storage space.</p>
+         * <p>The storage space.</p>
          * 
          * <strong>example:</strong>
          * <p>tmpsample</p>
@@ -99,10 +99,10 @@ public class GetScanNumRequest extends Request {
         }
 
         /**
-         * <p>Media type.</p>
+         * <p>The media asset type.</p>
          * 
          * <strong>example:</strong>
-         * <p>image</p>
+         * <p>1</p>
          */
         public Builder mediaType(Integer mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -111,7 +111,7 @@ public class GetScanNumRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

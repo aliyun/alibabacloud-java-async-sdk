@@ -67,7 +67,10 @@ public class DataTotalStatValue extends TeaModel {
         } 
 
         /**
-         * Total.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -75,7 +78,10 @@ public class DataTotalStatValue extends TeaModel {
         }
 
         /**
-         * Share.
+         * <p>The proportion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.50%</p>
          */
         public Builder share(String share) {
             this.share = share;

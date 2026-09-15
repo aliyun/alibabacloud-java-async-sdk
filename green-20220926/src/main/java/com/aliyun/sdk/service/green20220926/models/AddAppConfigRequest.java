@@ -129,7 +129,10 @@ public class AddAppConfigRequest extends Request {
         } 
 
         /**
-         * Classify.
+         * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guard-scene</p>
          */
         public Builder classify(String classify) {
             this.putQueryParameter("Classify", classify);
@@ -138,7 +141,10 @@ public class AddAppConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,7 +153,10 @@ public class AddAppConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +165,10 @@ public class AddAppConfigRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -177,7 +189,10 @@ public class AddAppConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plus</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

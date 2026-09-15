@@ -184,7 +184,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Encryption algorithm.</p>
+         * <p>The encryption algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>SHA256</p>
@@ -195,7 +195,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether there is an OSS detection task.</p>
+         * <p>Indicates whether an OSS detection task exists.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -206,7 +206,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-30 16:30:29</p>
@@ -217,7 +217,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
@@ -228,7 +228,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Primary key ID.</p>
+         * <p>The primary key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11234</p>
@@ -239,7 +239,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>回调通知</p>
@@ -250,7 +250,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -261,7 +261,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result scope.</p>
+         * <p>The result scope.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -272,7 +272,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Seed.</p>
+         * <p>Seed。</p>
          * 
          * <strong>example:</strong>
          * <p>cb2MysbJTAAIf6gB3u4vpIEU-1ySnnf</p>
@@ -283,7 +283,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>UID.</p>
+         * <p>UID。</p>
          * 
          * <strong>example:</strong>
          * <p>19964*****086772</p>
@@ -294,7 +294,7 @@ public class QueryCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Callback URL.</p>
+         * <p>The callback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyuncs.com">https://www.aliyuncs.com</a></p>

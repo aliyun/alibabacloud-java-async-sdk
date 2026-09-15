@@ -119,7 +119,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message for this request.</p>
+         * <p>The response message for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -171,7 +171,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Success indicator</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -279,7 +279,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of feature configurations</p>
+             * <p>The list of feature configurations.</p>
              */
             public Builder featureConf(java.util.List<java.util.Map<String, ?>> featureConf) {
                 this.featureConf = featureConf;
@@ -287,7 +287,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource type.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -298,7 +298,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service code.</p>
+             * <p>The service code.</p>
              * 
              * <strong>example:</strong>
              * <p>llm_query_moderation</p>
@@ -309,7 +309,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>custom_llm_template</p>
@@ -320,7 +320,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID.</p>
+             * <p>UID。</p>
              * 
              * <strong>example:</strong>
              * <p>1643953****74290</p>

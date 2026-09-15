@@ -87,7 +87,10 @@ public class ModifyAnswerLibRequest extends Request {
         } 
 
         /**
-         * LibId.
+         * <p>The ID of the proxy response library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_xxxx</p>
          */
         public Builder libId(String libId) {
             this.putQueryParameter("LibId", libId);
@@ -96,7 +99,10 @@ public class ModifyAnswerLibRequest extends Request {
         }
 
         /**
-         * LibName.
+         * <p>The name of the library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试库</p>
          */
         public Builder libName(String libName) {
             this.putQueryParameter("LibName", libName);
@@ -105,7 +111,10 @@ public class ModifyAnswerLibRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -67,7 +67,10 @@ public class GetRiskStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetRiskStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RiskStats.
+         * <p>The list of risk posture statistics.</p>
          */
         public Builder riskStats(java.util.List<RiskStats> riskStats) {
             this.riskStats = riskStats;
@@ -154,7 +157,10 @@ public class GetRiskStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * RequestCount.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder requestCount(Long requestCount) {
                 this.requestCount = requestCount;
@@ -162,7 +168,10 @@ public class GetRiskStatsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * <p>The number of detected risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -170,7 +179,10 @@ public class GetRiskStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prompt_attack</p>
              */
             public Builder type(String type) {
                 this.type = type;

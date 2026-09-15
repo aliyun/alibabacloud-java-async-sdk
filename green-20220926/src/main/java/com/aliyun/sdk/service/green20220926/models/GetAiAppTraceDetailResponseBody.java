@@ -145,7 +145,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Analysis.
+         * <p>The AI analysis result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder analysis(String analysis) {
             this.analysis = analysis;
@@ -153,7 +156,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id-xxx</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -161,7 +167,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appxxx</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -169,7 +178,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Channel.
+         * <p>The application channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder channel(String channel) {
             this.channel = channel;
@@ -177,7 +189,7 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of labels.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -185,7 +197,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID, which is used to correlate and track alert events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0abb7ee117615311812886711e0a15</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -201,7 +219,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * WarningTime.
+         * <p>The alert time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 16:08:38</p>
          */
         public Builder warningTime(String warningTime) {
             this.warningTime = warningTime;
@@ -293,7 +314,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -301,7 +325,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -309,7 +336,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LabelDesc.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -317,7 +347,10 @@ public class GetAiAppTraceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sensitiveData</p>
              */
             public Builder type(String type) {
                 this.type = type;

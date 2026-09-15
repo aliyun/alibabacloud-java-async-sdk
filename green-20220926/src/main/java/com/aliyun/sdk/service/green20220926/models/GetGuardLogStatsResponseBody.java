@@ -67,7 +67,7 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * DeliveryRegion.
+             * <p>The delivery region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder deliveryRegion(String deliveryRegion) {
                 this.deliveryRegion = deliveryRegion;
@@ -279,7 +285,14 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -287,7 +300,7 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * LogAnalysisConfig.
+             * <p>The log analysis configuration.</p>
              */
             public Builder logAnalysisConfig(java.util.Map<String, ?> logAnalysisConfig) {
                 this.logAnalysisConfig = logAnalysisConfig;
@@ -295,7 +308,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The name of the Simple Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test003x</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -303,7 +319,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * PendingStorage.
+             * <p>The remaining storage space. Unit: TB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pendingStorage(Long pendingStorage) {
                 this.pendingStorage = pendingStorage;
@@ -311,7 +330,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * PreserveStorage.
+             * <p>The reserved storage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder preserveStorage(Long preserveStorage) {
                 this.preserveStorage = preserveStorage;
@@ -319,7 +341,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * <p>The project space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx_log</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -327,7 +352,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalStorage.
+             * <p>The total storage space. Unit: TB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalStorage(Long totalStorage) {
                 this.totalStorage = totalStorage;
@@ -335,7 +363,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * <p>The number of days for which data is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;
@@ -343,7 +374,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guard_meta_log</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -362,7 +396,10 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedStorage.
+             * <p>The used storage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usedStorage(Long usedStorage) {
                 this.usedStorage = usedStorage;

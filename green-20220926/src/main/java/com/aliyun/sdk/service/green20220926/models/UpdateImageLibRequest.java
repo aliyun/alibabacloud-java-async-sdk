@@ -115,7 +115,7 @@ public class UpdateImageLibRequest extends Request {
         } 
 
         /**
-         * <p>Comment information for the library.</p>
+         * <p>The remarks of the image library.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -127,7 +127,7 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * <p>Exemption from review configuration.</p>
+         * <p>The review-free configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -139,7 +139,7 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * <p>Library ID.</p>
+         * <p>The ID of the image library.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
@@ -151,7 +151,7 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * <p>Library name.</p>
+         * <p>The name of the image library.</p>
          * 
          * <strong>example:</strong>
          * <p>测试图库</p>
@@ -163,7 +163,7 @@ public class UpdateImageLibRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

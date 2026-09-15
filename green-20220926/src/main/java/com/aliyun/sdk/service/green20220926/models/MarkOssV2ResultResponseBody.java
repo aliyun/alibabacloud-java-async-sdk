@@ -80,7 +80,7 @@ public class MarkOssV2ResultResponseBody extends TeaModel {
         } 
 
         /**
-         * FailureRequestIds.
+         * <p>The list of request IDs for failed operations.</p>
          */
         public Builder failureRequestIds(java.util.List<String> failureRequestIds) {
             this.failureRequestIds = failureRequestIds;
@@ -88,7 +88,10 @@ public class MarkOssV2ResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID assigned by the backend to uniquely identify a request. You can use this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class MarkOssV2ResultResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessRequestIds.
+         * <p>The list of request IDs for successful operations.</p>
          */
         public Builder successRequestIds(java.util.List<String> successRequestIds) {
             this.successRequestIds = successRequestIds;

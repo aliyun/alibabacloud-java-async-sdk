@@ -143,7 +143,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-xxx</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -151,7 +154,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Chart.
+         * <p>The chart.</p>
          */
         public Builder chart(Chart chart) {
             this.chart = chart;
@@ -159,7 +162,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +173,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RiskEvents.
+         * <p>The risk events.</p>
          */
         public Builder riskEvents(java.util.List<RiskEvents> riskEvents) {
             this.riskEvents = riskEvents;
@@ -175,7 +181,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Score.
+         * <p>The score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder score(Integer score) {
             this.score = score;
@@ -252,7 +261,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The returned collection.</p>
              */
             public Builder data(java.util.List<Long> data) {
                 this.data = data;
@@ -260,7 +269,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>score</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +339,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * X.
+             * <p>The X value of the coordinate point.</p>
              */
             public Builder x(java.util.List<String> x) {
                 this.x = x;
@@ -335,7 +347,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The Y value of the coordinate point.</p>
              */
             public Builder y(java.util.List<Y> y) {
                 this.y = y;
@@ -415,7 +427,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Label.
+             * <p>The labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inappropriate_profanity</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -423,7 +438,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LabelDesc.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder labelDesc(String labelDesc) {
                 this.labelDesc = labelDesc;
@@ -431,7 +449,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contentModeration</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -550,7 +571,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EventCode.
+             * <p>The risk event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hit_xxx</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -558,7 +582,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EventCount.
+             * <p>The number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder eventCount(Long eventCount) {
                 this.eventCount = eventCount;
@@ -566,7 +593,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EventIds.
+             * <p>The list of risk event IDs.</p>
              */
             public Builder eventIds(java.util.List<String> eventIds) {
                 this.eventIds = eventIds;
@@ -574,7 +601,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The risk event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -582,7 +612,14 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EventStatus.
+             * <p>The event status. Valid values:</p>
+             * <ul>
+             * <li><strong>unhandled</strong>: Not handled.</li>
+             * <li><strong>resolved</strong>: Handled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>resolved</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -590,7 +627,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The labels.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;

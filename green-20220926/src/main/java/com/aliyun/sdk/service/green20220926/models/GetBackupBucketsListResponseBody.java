@@ -67,7 +67,7 @@ public class GetBackupBucketsListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetBackupBucketsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -144,7 +144,7 @@ public class GetBackupBucketsListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>OSS file storage bucket name.</p>
+             * <p>The name of the OSS bucket where files are stored.</p>
              * 
              * <strong>example:</strong>
              * <p>gj-bucket1</p>
@@ -155,7 +155,7 @@ public class GetBackupBucketsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>

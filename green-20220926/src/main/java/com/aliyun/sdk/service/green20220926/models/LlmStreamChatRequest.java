@@ -115,7 +115,10 @@ public class LlmStreamChatRequest extends Request {
         } 
 
         /**
-         * Channel.
+         * <p>channel</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guardCustomTest</p>
          */
         public Builder channel(String channel) {
             this.putBodyParameter("Channel", channel);
@@ -124,10 +127,10 @@ public class LlmStreamChatRequest extends Request {
         }
 
         /**
-         * <p>Conversation information</p>
+         * <p>The conversation messages.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;content&quot;:&quot;你好&quot;,&quot;role&quot;:&quot;user&quot;}]</p>
+         * <p>[{&quot;content&quot;:&quot;Hello&quot;,&quot;role&quot;:&quot;user&quot;}]</p>
          */
         public Builder messages(Object messages) {
             this.putBodyParameter("Messages", messages);
@@ -136,7 +139,7 @@ public class LlmStreamChatRequest extends Request {
         }
 
         /**
-         * <p>Temperature value for the large model</p>
+         * <p>The temperature value of the large language model.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -148,7 +151,7 @@ public class LlmStreamChatRequest extends Request {
         }
 
         /**
-         * <p>Top p parameter controlling the randomness of the large model&quot;s output.</p>
+         * <p>The top_p parameter that controls the randomness of the large language model output.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -160,7 +163,7 @@ public class LlmStreamChatRequest extends Request {
         }
 
         /**
-         * <p>Type of conversation</p>
+         * <p>The conversation type.</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>

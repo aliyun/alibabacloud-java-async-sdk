@@ -59,7 +59,10 @@ public class GetUploadLinkRequest extends Request {
         } 
 
         /**
-         * UploadUrl.
+         * <p>The upload URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>
          */
         public Builder uploadUrl(String uploadUrl) {
             this.putQueryParameter("UploadUrl", uploadUrl);

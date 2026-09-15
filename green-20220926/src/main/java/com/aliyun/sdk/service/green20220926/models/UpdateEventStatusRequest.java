@@ -131,6 +131,7 @@ public class UpdateEventStatusRequest extends Request {
         } 
 
         /**
+         * <p>The application ID that identifies the application to which the operation belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,7 @@ public class UpdateEventStatusRequest extends Request {
         }
 
         /**
-         * EventIds.
+         * <p>The list of risk event IDs.</p>
          */
         public Builder eventIds(java.util.List<String> eventIds) {
             String eventIdsShrink = shrink(eventIds, "EventIds", "json");
@@ -153,6 +154,7 @@ public class UpdateEventStatusRequest extends Request {
         }
 
         /**
+         * <p>The operation code that defines the specific type of event status change operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +167,10 @@ public class UpdateEventStatusRequest extends Request {
         }
 
         /**
-         * OperationParams.
+         * <p>The operation parameters that contain additional parameter information required to execute the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
@@ -174,7 +179,10 @@ public class UpdateEventStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +191,10 @@ public class UpdateEventStatusRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The operation source that identifies the source system or module that triggered this status update request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
