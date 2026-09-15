@@ -22,16 +22,8 @@ public class ListComputeInstancesInPageRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private String instanceId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    private String orderId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -42,14 +34,17 @@ public class ListComputeInstancesInPageRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private ListComputeInstancesInPageRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
-        this.instanceId = builder.instanceId;
         this.instanceIds = builder.instanceIds;
-        this.orderId = builder.orderId;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -73,24 +68,10 @@ public class ListComputeInstancesInPageRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
-    }
-
-    /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
     }
 
     /**
@@ -107,13 +88,19 @@ public class ListComputeInstancesInPageRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListComputeInstancesInPageRequest, Builder> {
         private Integer currentPage; 
-        private String instanceId; 
         private java.util.List<String> instanceIds; 
-        private String orderId; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -122,11 +109,10 @@ public class ListComputeInstancesInPageRequest extends Request {
         private Builder(ListComputeInstancesInPageRequest request) {
             super(request);
             this.currentPage = request.currentPage;
-            this.instanceId = request.instanceId;
             this.instanceIds = request.instanceIds;
-            this.orderId = request.orderId;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -135,15 +121,6 @@ public class ListComputeInstancesInPageRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
             return this;
         }
 
@@ -158,15 +135,6 @@ public class ListComputeInstancesInPageRequest extends Request {
         }
 
         /**
-         * OrderId.
-         */
-        public Builder orderId(String orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
-            return this;
-        }
-
-        /**
          * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
@@ -177,10 +145,22 @@ public class ListComputeInstancesInPageRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

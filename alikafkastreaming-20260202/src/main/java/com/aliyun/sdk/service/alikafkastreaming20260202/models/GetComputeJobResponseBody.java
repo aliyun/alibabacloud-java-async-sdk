@@ -158,14 +158,14 @@ public class GetComputeJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DraftSql")
         private String draftSql;
 
-        @com.aliyun.core.annotation.NameInMap("HistoryInfos")
-        private String historyInfos;
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
+
+        @com.aliyun.core.annotation.NameInMap("ExpirationTime")
+        private String expirationTime;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
-
-        @com.aliyun.core.annotation.NameInMap("JobConfig")
-        private String jobConfig;
 
         @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
@@ -193,9 +193,9 @@ public class GetComputeJobResponseBody extends TeaModel {
             this.debugMode = builder.debugMode;
             this.deployedSql = builder.deployedSql;
             this.draftSql = builder.draftSql;
-            this.historyInfos = builder.historyInfos;
+            this.errorMsg = builder.errorMsg;
+            this.expirationTime = builder.expirationTime;
             this.instanceId = builder.instanceId;
-            this.jobConfig = builder.jobConfig;
             this.jobName = builder.jobName;
             this.owner = builder.owner;
             this.regionId = builder.regionId;
@@ -262,10 +262,17 @@ public class GetComputeJobResponseBody extends TeaModel {
         }
 
         /**
-         * @return historyInfos
+         * @return errorMsg
          */
-        public String getHistoryInfos() {
-            return this.historyInfos;
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        /**
+         * @return expirationTime
+         */
+        public String getExpirationTime() {
+            return this.expirationTime;
         }
 
         /**
@@ -273,13 +280,6 @@ public class GetComputeJobResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-        /**
-         * @return jobConfig
-         */
-        public String getJobConfig() {
-            return this.jobConfig;
         }
 
         /**
@@ -332,9 +332,9 @@ public class GetComputeJobResponseBody extends TeaModel {
             private Integer debugMode; 
             private String deployedSql; 
             private String draftSql; 
-            private String historyInfos; 
+            private String errorMsg; 
+            private String expirationTime; 
             private String instanceId; 
-            private String jobConfig; 
             private String jobName; 
             private String owner; 
             private String regionId; 
@@ -353,9 +353,9 @@ public class GetComputeJobResponseBody extends TeaModel {
                 this.debugMode = model.debugMode;
                 this.deployedSql = model.deployedSql;
                 this.draftSql = model.draftSql;
-                this.historyInfos = model.historyInfos;
+                this.errorMsg = model.errorMsg;
+                this.expirationTime = model.expirationTime;
                 this.instanceId = model.instanceId;
-                this.jobConfig = model.jobConfig;
                 this.jobName = model.jobName;
                 this.owner = model.owner;
                 this.regionId = model.regionId;
@@ -366,6 +366,9 @@ public class GetComputeJobResponseBody extends TeaModel {
 
             /**
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-02T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -421,10 +424,21 @@ public class GetComputeJobResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryInfos.
+             * ErrorMsg.
              */
-            public Builder historyInfos(String historyInfos) {
-                this.historyInfos = historyInfos;
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
+                return this;
+            }
+
+            /**
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-11T04:33:03Z</p>
+             */
+            public Builder expirationTime(String expirationTime) {
+                this.expirationTime = expirationTime;
                 return this;
             }
 
@@ -433,14 +447,6 @@ public class GetComputeJobResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * JobConfig.
-             */
-            public Builder jobConfig(String jobConfig) {
-                this.jobConfig = jobConfig;
                 return this;
             }
 

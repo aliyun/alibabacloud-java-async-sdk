@@ -161,17 +161,11 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @com.aliyun.core.annotation.NameInMap("OrderId")
-        private String orderId;
-
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("ServiceStatus")
         private String serviceStatus;
-
-        @com.aliyun.core.annotation.NameInMap("ServiceVersion")
-        private String serviceVersion;
 
         @com.aliyun.core.annotation.NameInMap("TotalJobs")
         private Long totalJobs;
@@ -194,10 +188,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
-            this.orderId = builder.orderId;
             this.regionId = builder.regionId;
             this.serviceStatus = builder.serviceStatus;
-            this.serviceVersion = builder.serviceVersion;
             this.totalJobs = builder.totalJobs;
             this.totalRunningJobs = builder.totalRunningJobs;
             this.vSwitchIds = builder.vSwitchIds;
@@ -269,13 +261,6 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return orderId
-         */
-        public String getOrderId() {
-            return this.orderId;
-        }
-
-        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -287,13 +272,6 @@ public class GetComputeInstanceResponseBody extends TeaModel {
          */
         public String getServiceStatus() {
             return this.serviceStatus;
-        }
-
-        /**
-         * @return serviceVersion
-         */
-        public String getServiceVersion() {
-            return this.serviceVersion;
         }
 
         /**
@@ -333,10 +311,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             private String expireTime; 
             private String instanceId; 
             private String instanceName; 
-            private String orderId; 
             private String regionId; 
             private String serviceStatus; 
-            private String serviceVersion; 
             private Long totalJobs; 
             private Long totalRunningJobs; 
             private java.util.List<String> vSwitchIds; 
@@ -354,10 +330,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
                 this.expireTime = model.expireTime;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
-                this.orderId = model.orderId;
                 this.regionId = model.regionId;
                 this.serviceStatus = model.serviceStatus;
-                this.serviceVersion = model.serviceVersion;
                 this.totalJobs = model.totalJobs;
                 this.totalRunningJobs = model.totalRunningJobs;
                 this.vSwitchIds = model.vSwitchIds;
@@ -374,6 +348,9 @@ public class GetComputeInstanceResponseBody extends TeaModel {
 
             /**
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-02T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -406,6 +383,9 @@ public class GetComputeInstanceResponseBody extends TeaModel {
 
             /**
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2027-09-02T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -429,14 +409,6 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
-             */
-            public Builder orderId(String orderId) {
-                this.orderId = orderId;
-                return this;
-            }
-
-            /**
              * RegionId.
              */
             public Builder regionId(String regionId) {
@@ -449,14 +421,6 @@ public class GetComputeInstanceResponseBody extends TeaModel {
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;
-                return this;
-            }
-
-            /**
-             * ServiceVersion.
-             */
-            public Builder serviceVersion(String serviceVersion) {
-                this.serviceVersion = serviceVersion;
                 return this;
             }
 

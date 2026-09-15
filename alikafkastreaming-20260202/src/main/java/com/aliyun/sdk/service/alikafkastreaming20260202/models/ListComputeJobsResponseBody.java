@@ -364,6 +364,9 @@ public class ListComputeJobsResponseBody extends TeaModel {
 
             /**
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-02T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;

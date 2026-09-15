@@ -27,15 +27,10 @@ public class DeleteComputeInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceType")
-    private String resourceType;
-
     private DeleteComputeInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -65,17 +60,9 @@ public class DeleteComputeInstanceRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return resourceType
-     */
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
     public static final class Builder extends Request.Builder<DeleteComputeInstanceRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private String resourceType; 
 
         private Builder() {
             super();
@@ -85,11 +72,13 @@ public class DeleteComputeInstanceRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.resourceType = request.resourceType;
         } 
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-pe333xxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -99,19 +88,13 @@ public class DeleteComputeInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceType.
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
             return this;
         }
 

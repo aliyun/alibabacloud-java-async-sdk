@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateComputeJobRequest</p>
  */
 public class UpdateComputeJobRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -40,18 +36,12 @@ public class UpdateComputeJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UpgradeMode")
-    private String upgradeMode;
-
     private UpdateComputeJobRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.instanceId = builder.instanceId;
         this.jobName = builder.jobName;
         this.regionId = builder.regionId;
         this.remark = builder.remark;
-        this.upgradeMode = builder.upgradeMode;
     }
 
     public static Builder builder() {
@@ -65,13 +55,6 @@ public class UpdateComputeJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -102,20 +85,11 @@ public class UpdateComputeJobRequest extends Request {
         return this.remark;
     }
 
-    /**
-     * @return upgradeMode
-     */
-    public String getUpgradeMode() {
-        return this.upgradeMode;
-    }
-
     public static final class Builder extends Request.Builder<UpdateComputeJobRequest, Builder> {
-        private String clientToken; 
         private String instanceId; 
         private String jobName; 
         private String regionId; 
         private String remark; 
-        private String upgradeMode; 
 
         private Builder() {
             super();
@@ -123,25 +97,17 @@ public class UpdateComputeJobRequest extends Request {
 
         private Builder(UpdateComputeJobRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.instanceId = request.instanceId;
             this.jobName = request.jobName;
             this.regionId = request.regionId;
             this.remark = request.remark;
-            this.upgradeMode = request.upgradeMode;
         } 
 
         /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-a1b2c3d4</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,6 +117,9 @@ public class UpdateComputeJobRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_enrichment</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -160,6 +129,9 @@ public class UpdateComputeJobRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,15 +145,6 @@ public class UpdateComputeJobRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
-            return this;
-        }
-
-        /**
-         * UpgradeMode.
-         */
-        public Builder upgradeMode(String upgradeMode) {
-            this.putQueryParameter("UpgradeMode", upgradeMode);
-            this.upgradeMode = upgradeMode;
             return this;
         }
 

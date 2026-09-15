@@ -206,14 +206,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @com.aliyun.core.annotation.NameInMap("CommodityCode")
-        private String commodityCode;
-
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
-
-        @com.aliyun.core.annotation.NameInMap("Cu")
-        private Integer cu;
 
         @com.aliyun.core.annotation.NameInMap("CuLimitSum")
         private Double cuLimitSum;
@@ -251,18 +245,13 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List<String> vSwitchIds;
 
-        @com.aliyun.core.annotation.NameInMap("Version")
-        private String version;
-
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {
             this.autoRenewFlag = builder.autoRenewFlag;
             this.chargeType = builder.chargeType;
-            this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
-            this.cu = builder.cu;
             this.cuLimitSum = builder.cuLimitSum;
             this.cuReservedSum = builder.cuReservedSum;
             this.cuUsedSum = builder.cuUsedSum;
@@ -275,7 +264,6 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             this.totalJobs = builder.totalJobs;
             this.totalRunningJobs = builder.totalRunningJobs;
             this.vSwitchIds = builder.vSwitchIds;
-            this.version = builder.version;
             this.vpcId = builder.vpcId;
         }
 
@@ -302,24 +290,10 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
 
         /**
-         * @return commodityCode
-         */
-        public String getCommodityCode() {
-            return this.commodityCode;
-        }
-
-        /**
          * @return createTime
          */
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        /**
-         * @return cu
-         */
-        public Integer getCu() {
-            return this.cu;
         }
 
         /**
@@ -407,13 +381,6 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         }
 
         /**
-         * @return version
-         */
-        public String getVersion() {
-            return this.version;
-        }
-
-        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -423,9 +390,7 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean autoRenewFlag; 
             private String chargeType; 
-            private String commodityCode; 
             private String createTime; 
-            private Integer cu; 
             private Double cuLimitSum; 
             private Double cuReservedSum; 
             private Double cuUsedSum; 
@@ -438,7 +403,6 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             private Long totalJobs; 
             private Long totalRunningJobs; 
             private java.util.List<String> vSwitchIds; 
-            private String version; 
             private String vpcId; 
 
             private Builder() {
@@ -447,9 +411,7 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.autoRenewFlag = model.autoRenewFlag;
                 this.chargeType = model.chargeType;
-                this.commodityCode = model.commodityCode;
                 this.createTime = model.createTime;
-                this.cu = model.cu;
                 this.cuLimitSum = model.cuLimitSum;
                 this.cuReservedSum = model.cuReservedSum;
                 this.cuUsedSum = model.cuUsedSum;
@@ -462,7 +424,6 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
                 this.totalJobs = model.totalJobs;
                 this.totalRunningJobs = model.totalRunningJobs;
                 this.vSwitchIds = model.vSwitchIds;
-                this.version = model.version;
                 this.vpcId = model.vpcId;
             } 
 
@@ -483,26 +444,13 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
-             */
-            public Builder commodityCode(String commodityCode) {
-                this.commodityCode = commodityCode;
-                return this;
-            }
-
-            /**
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-02T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * Cu.
-             */
-            public Builder cu(Integer cu) {
-                this.cu = cu;
                 return this;
             }
 
@@ -532,6 +480,9 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
 
             /**
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2027-09-02T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -599,14 +550,6 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
-                return this;
-            }
-
-            /**
-             * Version.
-             */
-            public Builder version(String version) {
-                this.version = version;
                 return this;
             }
 

@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateComputeJobDraftSqlRequest</p>
  */
 public class UpdateComputeJobDraftSqlRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DraftSql")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -43,7 +39,6 @@ public class UpdateComputeJobDraftSqlRequest extends Request {
 
     private UpdateComputeJobDraftSqlRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.draftSql = builder.draftSql;
         this.instanceId = builder.instanceId;
         this.jobName = builder.jobName;
@@ -61,13 +56,6 @@ public class UpdateComputeJobDraftSqlRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -99,7 +87,6 @@ public class UpdateComputeJobDraftSqlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateComputeJobDraftSqlRequest, Builder> {
-        private String clientToken; 
         private String draftSql; 
         private String instanceId; 
         private String jobName; 
@@ -111,7 +98,6 @@ public class UpdateComputeJobDraftSqlRequest extends Request {
 
         private Builder(UpdateComputeJobDraftSqlRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.draftSql = request.draftSql;
             this.instanceId = request.instanceId;
             this.jobName = request.jobName;
@@ -119,16 +105,10 @@ public class UpdateComputeJobDraftSqlRequest extends Request {
         } 
 
         /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT INTO sink_table SELECT * FROM source_table;</p>
          */
         public Builder draftSql(String draftSql) {
             this.putQueryParameter("DraftSql", draftSql);
@@ -138,6 +118,9 @@ public class UpdateComputeJobDraftSqlRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-a1b2c3d4</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,6 +130,9 @@ public class UpdateComputeJobDraftSqlRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_enrichment</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -156,6 +142,9 @@ public class UpdateComputeJobDraftSqlRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

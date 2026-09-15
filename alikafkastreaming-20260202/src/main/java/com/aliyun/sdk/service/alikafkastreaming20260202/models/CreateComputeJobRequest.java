@@ -17,30 +17,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateComputeJobRequest</p>
  */
 public class CreateComputeJobRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CuLimit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double cuLimit;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CuReserved")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double cuReserved;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DraftSql")
-    private String draftSql;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("JobConfig")
-    private String jobConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobName")
@@ -56,27 +46,14 @@ public class CreateComputeJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UpgradeMode")
-    private String upgradeMode;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UserId")
-    private String userId;
-
     private CreateComputeJobRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.cuLimit = builder.cuLimit;
         this.cuReserved = builder.cuReserved;
-        this.draftSql = builder.draftSql;
         this.instanceId = builder.instanceId;
-        this.jobConfig = builder.jobConfig;
         this.jobName = builder.jobName;
         this.regionId = builder.regionId;
         this.remark = builder.remark;
-        this.upgradeMode = builder.upgradeMode;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -90,13 +67,6 @@ public class CreateComputeJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -114,24 +84,10 @@ public class CreateComputeJobRequest extends Request {
     }
 
     /**
-     * @return draftSql
-     */
-    public String getDraftSql() {
-        return this.draftSql;
-    }
-
-    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return jobConfig
-     */
-    public String getJobConfig() {
-        return this.jobConfig;
     }
 
     /**
@@ -155,32 +111,13 @@ public class CreateComputeJobRequest extends Request {
         return this.remark;
     }
 
-    /**
-     * @return upgradeMode
-     */
-    public String getUpgradeMode() {
-        return this.upgradeMode;
-    }
-
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static final class Builder extends Request.Builder<CreateComputeJobRequest, Builder> {
-        private String clientToken; 
         private Double cuLimit; 
         private Double cuReserved; 
-        private String draftSql; 
         private String instanceId; 
-        private String jobConfig; 
         private String jobName; 
         private String regionId; 
         private String remark; 
-        private String upgradeMode; 
-        private String userId; 
 
         private Builder() {
             super();
@@ -188,30 +125,19 @@ public class CreateComputeJobRequest extends Request {
 
         private Builder(CreateComputeJobRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.cuLimit = request.cuLimit;
             this.cuReserved = request.cuReserved;
-            this.draftSql = request.draftSql;
             this.instanceId = request.instanceId;
-            this.jobConfig = request.jobConfig;
             this.jobName = request.jobName;
             this.regionId = request.regionId;
             this.remark = request.remark;
-            this.upgradeMode = request.upgradeMode;
-            this.userId = request.userId;
         } 
 
         /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * CuLimit.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder cuLimit(Double cuLimit) {
             this.putQueryParameter("CuLimit", cuLimit);
@@ -220,7 +146,10 @@ public class CreateComputeJobRequest extends Request {
         }
 
         /**
-         * CuReserved.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder cuReserved(Double cuReserved) {
             this.putQueryParameter("CuReserved", cuReserved);
@@ -229,16 +158,10 @@ public class CreateComputeJobRequest extends Request {
         }
 
         /**
-         * DraftSql.
-         */
-        public Builder draftSql(String draftSql) {
-            this.putQueryParameter("DraftSql", draftSql);
-            this.draftSql = draftSql;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-pe333xxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -247,16 +170,10 @@ public class CreateComputeJobRequest extends Request {
         }
 
         /**
-         * JobConfig.
-         */
-        public Builder jobConfig(String jobConfig) {
-            this.putQueryParameter("JobConfig", jobConfig);
-            this.jobConfig = jobConfig;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_enrichment</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -266,6 +183,9 @@ public class CreateComputeJobRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -279,24 +199,6 @@ public class CreateComputeJobRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
-            return this;
-        }
-
-        /**
-         * UpgradeMode.
-         */
-        public Builder upgradeMode(String upgradeMode) {
-            this.putQueryParameter("UpgradeMode", upgradeMode);
-            this.upgradeMode = upgradeMode;
-            return this;
-        }
-
-        /**
-         * UserId.
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("UserId", userId);
-            this.userId = userId;
             return this;
         }
 

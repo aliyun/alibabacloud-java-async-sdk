@@ -31,16 +31,11 @@ public class CreateComputeInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceType")
-    private String resourceType;
-
     private CreateComputeInstanceRequest(Builder builder) {
         super(builder);
         this.paidType = builder.paidType;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -77,18 +72,10 @@ public class CreateComputeInstanceRequest extends Request {
         return this.resourceGroupId;
     }
 
-    /**
-     * @return resourceType
-     */
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
     public static final class Builder extends Request.Builder<CreateComputeInstanceRequest, Builder> {
         private Long paidType; 
         private String regionId; 
         private String resourceGroupId; 
-        private String resourceType; 
 
         private Builder() {
             super();
@@ -99,11 +86,13 @@ public class CreateComputeInstanceRequest extends Request {
             this.paidType = request.paidType;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.resourceType = request.resourceType;
         } 
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder paidType(Long paidType) {
             this.putQueryParameter("PaidType", paidType);
@@ -113,6 +102,9 @@ public class CreateComputeInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,15 +118,6 @@ public class CreateComputeInstanceRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * ResourceType.
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
             return this;
         }
 

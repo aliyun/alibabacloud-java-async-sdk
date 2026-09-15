@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListComputeJobsRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CurrentPage")
-    private Long currentPage;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -33,10 +29,6 @@ public class ListComputeJobsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PageSize")
-    private Long pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -57,11 +49,9 @@ public class ListComputeJobsRequest extends Request {
 
     private ListComputeJobsRequest(Builder builder) {
         super(builder);
-        this.currentPage = builder.currentPage;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.search = builder.search;
         this.sortDirection = builder.sortDirection;
@@ -79,13 +69,6 @@ public class ListComputeJobsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return currentPage
-     */
-    public Long getCurrentPage() {
-        return this.currentPage;
     }
 
     /**
@@ -107,13 +90,6 @@ public class ListComputeJobsRequest extends Request {
      */
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     /**
@@ -145,11 +121,9 @@ public class ListComputeJobsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListComputeJobsRequest, Builder> {
-        private Long currentPage; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
-        private Long pageSize; 
         private String regionId; 
         private String search; 
         private String sortDirection; 
@@ -161,11 +135,9 @@ public class ListComputeJobsRequest extends Request {
 
         private Builder(ListComputeJobsRequest request) {
             super(request);
-            this.currentPage = request.currentPage;
             this.instanceId = request.instanceId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
-            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.search = request.search;
             this.sortDirection = request.sortDirection;
@@ -173,16 +145,10 @@ public class ListComputeJobsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
-         */
-        public Builder currentPage(Long currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-a1b2c3d4</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -209,16 +175,10 @@ public class ListComputeJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

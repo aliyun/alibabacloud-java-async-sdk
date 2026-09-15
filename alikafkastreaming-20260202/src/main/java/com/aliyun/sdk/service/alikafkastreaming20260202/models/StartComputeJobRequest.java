@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartComputeJobRequest</p>
  */
 public class StartComputeJobRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CuLimit")
     private Double cuLimit;
@@ -32,10 +28,6 @@ public class StartComputeJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DraftSql")
     private String draftSql;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DraftSqlStart")
-    private Boolean draftSqlStart;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -58,11 +50,9 @@ public class StartComputeJobRequest extends Request {
 
     private StartComputeJobRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.cuLimit = builder.cuLimit;
         this.cuReserved = builder.cuReserved;
         this.draftSql = builder.draftSql;
-        this.draftSqlStart = builder.draftSqlStart;
         this.instanceId = builder.instanceId;
         this.jobName = builder.jobName;
         this.recoveryMode = builder.recoveryMode;
@@ -80,13 +70,6 @@ public class StartComputeJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -108,13 +91,6 @@ public class StartComputeJobRequest extends Request {
      */
     public String getDraftSql() {
         return this.draftSql;
-    }
-
-    /**
-     * @return draftSqlStart
-     */
-    public Boolean getDraftSqlStart() {
-        return this.draftSqlStart;
     }
 
     /**
@@ -146,11 +122,9 @@ public class StartComputeJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartComputeJobRequest, Builder> {
-        private String clientToken; 
         private Double cuLimit; 
         private Double cuReserved; 
         private String draftSql; 
-        private Boolean draftSqlStart; 
         private String instanceId; 
         private String jobName; 
         private String recoveryMode; 
@@ -162,25 +136,14 @@ public class StartComputeJobRequest extends Request {
 
         private Builder(StartComputeJobRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.cuLimit = request.cuLimit;
             this.cuReserved = request.cuReserved;
             this.draftSql = request.draftSql;
-            this.draftSqlStart = request.draftSqlStart;
             this.instanceId = request.instanceId;
             this.jobName = request.jobName;
             this.recoveryMode = request.recoveryMode;
             this.regionId = request.regionId;
         } 
-
-        /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
 
         /**
          * CuLimit.
@@ -210,16 +173,10 @@ public class StartComputeJobRequest extends Request {
         }
 
         /**
-         * DraftSqlStart.
-         */
-        public Builder draftSqlStart(Boolean draftSqlStart) {
-            this.putQueryParameter("DraftSqlStart", draftSqlStart);
-            this.draftSqlStart = draftSqlStart;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-pe333xxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -229,6 +186,9 @@ public class StartComputeJobRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_enrichment</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -247,6 +207,9 @@ public class StartComputeJobRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

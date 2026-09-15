@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateComputeInstanceNameRequest</p>
  */
 public class UpdateComputeInstanceNameRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -38,7 +34,6 @@ public class UpdateComputeInstanceNameRequest extends Request {
 
     private UpdateComputeInstanceNameRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
@@ -55,13 +50,6 @@ public class UpdateComputeInstanceNameRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -86,7 +74,6 @@ public class UpdateComputeInstanceNameRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateComputeInstanceNameRequest, Builder> {
-        private String clientToken; 
         private String instanceId; 
         private String instanceName; 
         private String regionId; 
@@ -97,23 +84,16 @@ public class UpdateComputeInstanceNameRequest extends Request {
 
         private Builder(UpdateComputeInstanceNameRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-pe333xxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,6 +103,9 @@ public class UpdateComputeInstanceNameRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>streaming-prod</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -132,6 +115,9 @@ public class UpdateComputeInstanceNameRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

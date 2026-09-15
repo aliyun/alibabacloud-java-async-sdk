@@ -23,10 +23,6 @@ public class GetComputeInstanceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    private String orderId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -34,7 +30,6 @@ public class GetComputeInstanceRequest extends Request {
     private GetComputeInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.orderId = builder.orderId;
         this.regionId = builder.regionId;
     }
 
@@ -59,13 +54,6 @@ public class GetComputeInstanceRequest extends Request {
     }
 
     /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -74,7 +62,6 @@ public class GetComputeInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetComputeInstanceRequest, Builder> {
         private String instanceId; 
-        private String orderId; 
         private String regionId; 
 
         private Builder() {
@@ -84,12 +71,14 @@ public class GetComputeInstanceRequest extends Request {
         private Builder(GetComputeInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.orderId = request.orderId;
             this.regionId = request.regionId;
         } 
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-xxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -98,16 +87,10 @@ public class GetComputeInstanceRequest extends Request {
         }
 
         /**
-         * OrderId.
-         */
-        public Builder orderId(String orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

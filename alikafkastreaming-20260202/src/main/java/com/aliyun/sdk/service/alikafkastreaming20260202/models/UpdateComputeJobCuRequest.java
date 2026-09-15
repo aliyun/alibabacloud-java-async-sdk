@@ -17,16 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateComputeJobCuRequest</p>
  */
 public class UpdateComputeJobCuRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CuLimit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double cuLimit;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CuReserved")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double cuReserved;
 
     @com.aliyun.core.annotation.Query
@@ -46,7 +44,6 @@ public class UpdateComputeJobCuRequest extends Request {
 
     private UpdateComputeJobCuRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.cuLimit = builder.cuLimit;
         this.cuReserved = builder.cuReserved;
         this.instanceId = builder.instanceId;
@@ -65,13 +62,6 @@ public class UpdateComputeJobCuRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -110,7 +100,6 @@ public class UpdateComputeJobCuRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateComputeJobCuRequest, Builder> {
-        private String clientToken; 
         private Double cuLimit; 
         private Double cuReserved; 
         private String instanceId; 
@@ -123,7 +112,6 @@ public class UpdateComputeJobCuRequest extends Request {
 
         private Builder(UpdateComputeJobCuRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.cuLimit = request.cuLimit;
             this.cuReserved = request.cuReserved;
             this.instanceId = request.instanceId;
@@ -132,16 +120,10 @@ public class UpdateComputeJobCuRequest extends Request {
         } 
 
         /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * CuLimit.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder cuLimit(Double cuLimit) {
             this.putQueryParameter("CuLimit", cuLimit);
@@ -150,7 +132,10 @@ public class UpdateComputeJobCuRequest extends Request {
         }
 
         /**
-         * CuReserved.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder cuReserved(Double cuReserved) {
             this.putQueryParameter("CuReserved", cuReserved);
@@ -160,6 +145,9 @@ public class UpdateComputeJobCuRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-a1b2c3d4</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -169,6 +157,9 @@ public class UpdateComputeJobCuRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_enrichment</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -178,6 +169,9 @@ public class UpdateComputeJobCuRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

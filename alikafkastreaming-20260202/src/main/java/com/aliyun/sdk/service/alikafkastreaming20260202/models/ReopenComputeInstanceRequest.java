@@ -17,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReopenComputeInstanceRequest</p>
  */
 public class ReopenComputeInstanceRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -33,7 +29,6 @@ public class ReopenComputeInstanceRequest extends Request {
 
     private ReopenComputeInstanceRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
     }
@@ -52,13 +47,6 @@ public class ReopenComputeInstanceRequest extends Request {
     }
 
     /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -73,7 +61,6 @@ public class ReopenComputeInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReopenComputeInstanceRequest, Builder> {
-        private String clientToken; 
         private String instanceId; 
         private String regionId; 
 
@@ -83,22 +70,15 @@ public class ReopenComputeInstanceRequest extends Request {
 
         private Builder(ReopenComputeInstanceRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_streaming-cn-pe333xxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,6 +88,9 @@ public class ReopenComputeInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
