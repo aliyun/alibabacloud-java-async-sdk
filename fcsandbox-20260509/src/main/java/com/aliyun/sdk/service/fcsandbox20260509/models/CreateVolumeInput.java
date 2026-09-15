@@ -119,7 +119,7 @@ public class CreateVolumeInput extends TeaModel {
         } 
 
         /**
-         * agenticBucketVolumeConfig.
+         * <p>The AgenticBucket configuration.</p>
          */
         public Builder agenticBucketVolumeConfig(AgenticBucketVolumeConfig agenticBucketVolumeConfig) {
             this.agenticBucketVolumeConfig = agenticBucketVolumeConfig;
@@ -333,7 +333,7 @@ public class CreateVolumeInput extends TeaModel {
             } 
 
             /**
-             * <p>The RAM role that the user grants to the cloud sandbox. After this role is set, the cloud sandbox assumes the role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the cloud sandbox, such as OSS and AgenticFS.</p>
+             * <p>The RAM role that the user grants to the cloud sandbox. After the role is set, the cloud sandbox assumes this role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the cloud sandbox, such as OSS and AgenticFS.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1338904783509062:role/aliyunfcdefaultrole</p>

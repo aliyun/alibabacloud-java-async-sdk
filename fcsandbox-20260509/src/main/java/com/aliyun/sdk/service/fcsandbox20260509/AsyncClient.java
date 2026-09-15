@@ -158,6 +158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTeamResponse> updateTeam(UpdateTeamRequest request);
 
     /**
+     * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
+     * @return UpdateTemplateResponse
+     */
+    CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
+
+    /**
      * @param request the request parameters of UpdateVolume  UpdateVolumeRequest
      * @return UpdateVolumeResponse
      */

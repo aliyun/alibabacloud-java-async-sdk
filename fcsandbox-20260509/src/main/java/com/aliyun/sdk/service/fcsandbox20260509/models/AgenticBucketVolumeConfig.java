@@ -106,7 +106,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         } 
 
         /**
-         * agenticBucket.
+         * <p>AgenticBucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>absx9f61c8a-1311999136518149-cn-hangzhou-ab-apsr</p>
          */
         public Builder agenticBucket(String agenticBucket) {
             this.agenticBucket = agenticBucket;
@@ -114,7 +117,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * bucketName.
+         * <p>The BucketSpace of the agentic child.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bs429pop1-1311999136518149-cn-hangzhou-bs-apsr</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -122,7 +128,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * bucketPath.
+         * <p>The file path under the BucketSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/</p>
          */
         public Builder bucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
@@ -130,7 +139,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * endpoint.
+         * <p>Agentic Bucket Endpoint</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a>&quot;</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -138,7 +150,10 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * readOnly.
+         * <p>Indicates whether the bucket is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = readOnly;
