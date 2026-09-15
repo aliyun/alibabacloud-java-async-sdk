@@ -164,6 +164,9 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("ServiceStatus")
         private String serviceStatus;
 
@@ -189,6 +192,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceStatus = builder.serviceStatus;
             this.totalJobs = builder.totalJobs;
             this.totalRunningJobs = builder.totalRunningJobs;
@@ -268,6 +272,13 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return serviceStatus
          */
         public String getServiceStatus() {
@@ -312,6 +323,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
+            private String resourceGroupId; 
             private String serviceStatus; 
             private Long totalJobs; 
             private Long totalRunningJobs; 
@@ -331,6 +343,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.serviceStatus = model.serviceStatus;
                 this.totalJobs = model.totalJobs;
                 this.totalRunningJobs = model.totalRunningJobs;
@@ -413,6 +426,14 @@ public class GetComputeInstanceResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
