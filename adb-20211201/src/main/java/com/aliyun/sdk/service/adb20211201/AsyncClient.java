@@ -2176,6 +2176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveKnowledgeTagsResponse> removeKnowledgeTags(RemoveKnowledgeTagsRequest request);
 
     /**
+     * @param request the request parameters of RemoveKnowledgeUploadUser  RemoveKnowledgeUploadUserRequest
+     * @return RemoveKnowledgeUploadUserResponse
+     */
+    CompletableFuture<RemoveKnowledgeUploadUserResponse> removeKnowledgeUploadUser(RemoveKnowledgeUploadUserRequest request);
+
+    /**
      * @param request the request parameters of RenameSemanticView  RenameSemanticViewRequest
      * @return RenameSemanticViewResponse
      */

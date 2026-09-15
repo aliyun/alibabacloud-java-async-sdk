@@ -23,9 +23,17 @@ public class GetKnowledgeRecallRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
+    private String path;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Question")
     @com.aliyun.core.annotation.Validation(required = true)
     private String question;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private String tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Topk")
@@ -38,7 +46,9 @@ public class GetKnowledgeRecallRequest extends Request {
     private GetKnowledgeRecallRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.path = builder.path;
         this.question = builder.question;
+        this.tags = builder.tags;
         this.topk = builder.topk;
         this.user = builder.user;
     }
@@ -64,10 +74,24 @@ public class GetKnowledgeRecallRequest extends Request {
     }
 
     /**
+     * @return path
+     */
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
      * @return question
      */
     public String getQuestion() {
         return this.question;
+    }
+
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
     }
 
     /**
@@ -86,7 +110,9 @@ public class GetKnowledgeRecallRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetKnowledgeRecallRequest, Builder> {
         private String DBClusterId; 
+        private String path; 
         private String question; 
+        private String tags; 
         private Integer topk; 
         private String user; 
 
@@ -97,13 +123,15 @@ public class GetKnowledgeRecallRequest extends Request {
         private Builder(GetKnowledgeRecallRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.path = request.path;
             this.question = request.question;
+            this.tags = request.tags;
             this.topk = request.topk;
             this.user = request.user;
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+         * <p>The ID of the ADB MySQL cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +140,18 @@ public class GetKnowledgeRecallRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * <p>The file path prefix. Only files that match the specified path prefix are recalled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucketName/path/prefix/</p>
+         */
+        public Builder path(String path) {
+            this.putQueryParameter("Path", path);
+            this.path = path;
             return this;
         }
 
@@ -129,7 +169,19 @@ public class GetKnowledgeRecallRequest extends Request {
         }
 
         /**
-         * <p>The top K number of related files to recall.</p>
+         * <p>The list of tags in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;tag_key1&quot;: [&quot;tag_key1_value1&quot;, &quot;tag_key1_value2&quot;],   &quot;tag_key2&quot;: [&quot;tag_key2_value&quot;] }</p>
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * <p>The top K associated files to recall.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -141,7 +193,7 @@ public class GetKnowledgeRecallRequest extends Request {
         }
 
         /**
-         * <p>The username. Only files that this user has permission to access are recalled.</p>
+         * <p>The username. Only files that the specified user has permission to access are recalled.</p>
          * 
          * <strong>example:</strong>
          * <p>user_name1</p>

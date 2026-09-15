@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetKnowledgeRecallResponseBody} extends {@link TeaModel}
+ * {@link RemoveKnowledgeUploadUserResponseBody} extends {@link TeaModel}
  *
- * <p>GetKnowledgeRecallResponseBody</p>
+ * <p>RemoveKnowledgeUploadUserResponseBody</p>
  */
-public class GetKnowledgeRecallResponseBody extends TeaModel {
+public class RemoveKnowledgeUploadUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetKnowledgeRecallResponseBody(Builder builder) {
+    private RemoveKnowledgeUploadUserResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -32,7 +32,7 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetKnowledgeRecallResponseBody create() {
+    public static RemoveKnowledgeUploadUserResponseBody create() {
         return builder().build();
     }
 
@@ -61,7 +61,7 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetKnowledgeRecallResponseBody model) {
+        private Builder(RemoveKnowledgeUploadUserResponseBody model) {
             this.data = model.data;
             this.requestId = model.requestId;
         } 
@@ -85,36 +85,36 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
             return this;
         }
 
-        public GetKnowledgeRecallResponseBody build() {
-            return new GetKnowledgeRecallResponseBody(this);
+        public RemoveKnowledgeUploadUserResponseBody build() {
+            return new RemoveKnowledgeUploadUserResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetKnowledgeRecallResponseBody} extends {@link TeaModel}
+     * {@link RemoveKnowledgeUploadUserResponseBody} extends {@link TeaModel}
      *
-     * <p>GetKnowledgeRecallResponseBody</p>
+     * <p>RemoveKnowledgeUploadUserResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Count")
-        private Integer count;
+        @com.aliyun.core.annotation.NameInMap("FileLocation")
+        private String fileLocation;
 
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List<java.util.Map<String, ?>> results;
+        @com.aliyun.core.annotation.NameInMap("Removed")
+        private Integer removed;
 
-        @com.aliyun.core.annotation.NameInMap("TraceId")
-        private String traceId;
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
 
         private Data(Builder builder) {
-            this.count = builder.count;
+            this.fileLocation = builder.fileLocation;
             this.message = builder.message;
-            this.results = builder.results;
-            this.traceId = builder.traceId;
+            this.removed = builder.removed;
+            this.success = builder.success;
         }
 
         public static Builder builder() {
@@ -126,10 +126,10 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
         }
 
         /**
-         * @return count
+         * @return fileLocation
          */
-        public Integer getCount() {
-            return this.count;
+        public String getFileLocation() {
+            return this.fileLocation;
         }
 
         /**
@@ -140,43 +140,43 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
         }
 
         /**
-         * @return results
+         * @return removed
          */
-        public java.util.List<java.util.Map<String, ?>> getResults() {
-            return this.results;
+        public Integer getRemoved() {
+            return this.removed;
         }
 
         /**
-         * @return traceId
+         * @return success
          */
-        public String getTraceId() {
-            return this.traceId;
+        public Boolean getSuccess() {
+            return this.success;
         }
 
         public static final class Builder {
-            private Integer count; 
+            private String fileLocation; 
             private String message; 
-            private java.util.List<java.util.Map<String, ?>> results; 
-            private String traceId; 
+            private Integer removed; 
+            private Boolean success; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.count = model.count;
+                this.fileLocation = model.fileLocation;
                 this.message = model.message;
-                this.results = model.results;
-                this.traceId = model.traceId;
+                this.removed = model.removed;
+                this.success = model.success;
             } 
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The location of the knowledge base file.</p>
              * 
              * <strong>example:</strong>
-             * <p>5</p>
+             * <p>oss://bucketName/path/to/file.pdf</p>
              */
-            public Builder count(Integer count) {
-                this.count = count;
+            public Builder fileLocation(String fileLocation) {
+                this.fileLocation = fileLocation;
                 return this;
             }
 
@@ -184,7 +184,7 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
              * <p>The prompt message.</p>
              * 
              * <strong>example:</strong>
-             * <p>recall 5 files</p>
+             * <p>Successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -192,21 +192,28 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recall results.</p>
+             * <p>The number of users that were successfully deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder results(java.util.List<java.util.Map<String, ?>> results) {
-                this.results = results;
+            public Builder removed(Integer removed) {
+                this.removed = removed;
                 return this;
             }
 
             /**
-             * <p>The Tracing Analysis ID.</p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The request was successful.</li>
+             * <li><strong>false</strong>: The request failed.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>qf_c41fc27697d3</p>
+             * <p>true</p>
              */
-            public Builder traceId(String traceId) {
-                this.traceId = traceId;
+            public Builder success(Boolean success) {
+                this.success = success;
                 return this;
             }
 

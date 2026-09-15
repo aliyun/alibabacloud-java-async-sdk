@@ -132,7 +132,7 @@ public class DescribeDBResourceGroupRequest extends Request {
         /**
          * <p>The name of the resource group.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, information about all resource groups in the specified cluster is returned.</p>
+         * <p>If you do not specify this parameter, the information about all resource groups in the specified cluster is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
