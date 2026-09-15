@@ -89,6 +89,7 @@ public class VideoGenerationRequest extends Request {
         } 
 
         /**
+         * <p>The product input.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -99,7 +100,7 @@ public class VideoGenerationRequest extends Request {
         }
 
         /**
-         * Intent.
+         * <p>The intent parameters. Currently unavailable.</p>
          */
         public Builder intent(Intent intent) {
             String intentShrink = shrink(intent, "Intent", "json");
@@ -109,6 +110,7 @@ public class VideoGenerationRequest extends Request {
         }
 
         /**
+         * <p>The output parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
@@ -191,7 +193,10 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * AssetIndex.
+             * <p>The asset index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetIndex(Integer assetIndex) {
                 this.assetIndex = assetIndex;
@@ -199,7 +204,12 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>素材的自然语言描述</p>
+             * <p>The asset description.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -207,7 +217,12 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>可选值：look_reference（外观参考）、scene_reference（场景参考）</p>
+             * <p>The asset usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder slot(String slot) {
                 this.slot = slot;
@@ -302,7 +317,7 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * <p>按素材索引指定图片的用途及描述</p>
+             * <p>The asset binding list.</p>
              */
             public Builder assetBindings(java.util.List<AssetBindings> assetBindings) {
                 this.assetBindings = assetBindings;
@@ -310,7 +325,7 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * Extra.
+             * <p>The extended information.</p>
              */
             public Builder extra(java.util.Map<String, ?> extra) {
                 this.extra = extra;
@@ -318,6 +333,7 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
+             * <p>The list of product image URLs (1 to 6 images). The URLs must be publicly accessible.</p>
              * <p>This parameter is required.</p>
              */
             public Builder images(java.util.List<String> images) {
@@ -326,10 +342,11 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
+             * <p>The product title. A maximum of the first 60 characters are used.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>2026 New Slimming Women&quot;s Summer Dress with Mid-Length Design, High-Quality Waist Definition for a Slender Look</p>
+             * <p>2026 New Slimming Women\&quot;s Summer Dress with Mid-Length Design, High-Quality Waist Definition for a Slender Look</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -409,7 +426,12 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
-             * Channel.
+             * <p>The distribution channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -417,12 +439,13 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>camera_motion（运镜模式，按固定360运镜逻辑生成）、scripted_video（带脚本模式）、auto_video（不带脚本模式，由系统自动规划脚本）</p>
+             * <p>The business goal. Valid values:</p>
+             * <p>camera_motion: Camera movement mode. Generates video based on fixed 360° camera movement logic.</p>
+             * <p>scripted_video: Scripted mode. Provides a script or prompt, and the system generates video based on the script.</p>
+             * <p>auto_video: Unscripted mode. No script is provided. The system automatically plans the script and then generates the video.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>auto_video</p>
              */
             public Builder goal(String goal) {
                 this.goal = goal;
@@ -430,7 +453,21 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * <p>goal 为 scripted_video 时必须提供</p>
+             * <p>The script or prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>【2. Shot Breakdown】<br>[0-1s]【Eye-level close-up, static camera】Summer commute trousers folded on a clean tabletop; one corner is quickly unfolded to reveal the solid-color fabric and crisp crease line. The frame focuses on the trouser leg\&quot;s surface smoothness and sharp appearance. [BGM/SFX: Upbeat, crisp commute-vibe background music begins]</p>
+             * <p>[1-2s]【Low-angle mid-shot, static camera】The full pair of trousers hangs freely in the air with a slight swing, showcasing the natural drape of the lightweight fabric and the complete straight-leg silhouette, then returns to a still, hanging state.</p>
+             * <p>[2-3s]【Eye-level mid-shot, static camera】A commute-styled model stands in a fitting area, holding the folded trousers at waist level with both hands, performing one up-and-down sizing gesture before holding them steady, displaying the overall proportions of the trousers in their folded state and the expected fit. [[Voiceover]: Who says wearing trousers in summer has to be stuffy? Most likely you just haven\&quot;t picked the right pair.]</p>
+             * <p>[3-5s]【Eye-level full shot, slight pullback】The commute-styled model, now wearing the trousers paired with a clean commute top, takes two steps forward in a modern office building corridor, dynamically showcasing the front straight-leg silhouette, trouser leg lines, and commute outfit coordination.</p>
+             * <p>[5-7s]【Low-angle mid-shot, static camera】The commute-styled model shifts to an angled side stance, one hand in the front pocket and the other in the back pocket, displaying the cut from waist and hip down to the knee, the solid-color surface, and the clean lateral lines.</p>
+             * <p>[7-9s]【Eye-level mid-shot, static camera】The commute-styled model lifts one foot onto a low step, one hand brushes down the lower-leg trouser fabric and lightly lifts the hem, briefly exposing the ankle, showcasing the hem edge, side-seam details, and the wearing state during movement. [[Voiceover]: These ice-skin trousers are lightweight and breathable, solid-color straight-leg — looking sharp and at ease even when walking around at work.]</p>
+             * <p>[9-11s]【Overhead close-up, static camera】The lens focuses closely on the waistband area; the commute-styled model presses both hands along the waistband contour and smooths it, then pauses to display the seams and actual wearing state, clearly presenting the waistband shape and structural details.</p>
+             * <p>[11-13s]【Eye-level close-up, static camera】The commute-styled model gently lifts the fabric on both sides of the thigh with both hands, then raises one knee with a slight lateral turn before returning to a natural stance, demonstrating the actual range of motion during knee-lift and side-turn, as well as how the straight-leg trouser recovers after the foot lands.</p>
+             * <p>[13-15s]【Eye-level close-up, static camera】The commute-styled model enters the frame from the rear side, places one hand in the back pocket, then lightly traces along the back pocket edge and rear waist seam, showcasing the back pocket contour, pocket opening edge, and rear waist seam details up close. [[Voiceover]: If you\&quot;re always on the move, there\&quot;s room for knee lifts and side turns — commuting just got easier.]</p>
+             * <p>[15-17s]【Eye-level mid-shot, static camera】The commute-styled model faces away to display the rear silhouette of the trousers, hands naturally in pockets with a slight weight shift, then turns slightly to an angled side view so both the rear and lateral trouser lines are visible, fully presenting the rear cut and the overall line from hip and thigh down to the hem.</p>
+             * <p>[17-19s]【Eye-level full shot, smooth follow】The commute-styled model first walks sideways to the right, then transitions into a forward stride to complete the full presentation, finishing in the modern office building corridor in full commute attire, clearly showing the front straight-leg silhouette, clean lines, and overall fit. [[Voiceover]: If you like this fit, go check out the details.]</p>
+             * <p>【3. Negative/Constraint Instructions】<br>The entire video centers on the summer commute trousers; no unrelated products or multi-person interactions are allowed.</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -512,6 +549,7 @@ public class VideoGenerationRequest extends Request {
             } 
 
             /**
+             * <p>The video duration in seconds. Currently supports integers between 5 and 15. More options will be available in the future.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -523,6 +561,7 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
+             * <p>The output resolution.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -534,7 +573,10 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * Ratio.
+             * <p>The video aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9:16</p>
              */
             public Builder ratio(String ratio) {
                 this.ratio = ratio;

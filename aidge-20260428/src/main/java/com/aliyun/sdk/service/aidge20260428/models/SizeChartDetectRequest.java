@@ -74,6 +74,7 @@ public class SizeChartDetectRequest extends Request {
         } 
 
         /**
+         * <p>The URL of the image to detect.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class SizeChartDetectRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * <p>The detection threshold. Valid values: 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder threshold(Double threshold) {
             this.putQueryParameter("Threshold", threshold);

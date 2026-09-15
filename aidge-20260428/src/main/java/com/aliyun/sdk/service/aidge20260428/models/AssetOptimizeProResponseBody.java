@@ -106,7 +106,10 @@ public class AssetOptimizeProResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. The value &quot;success&quot; is returned for a successful call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The submit result of the asynchronous task, which contains the asynchronous task ID.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class AssetOptimizeProResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. The value &quot;Success&quot; is returned for a successful call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,10 +136,10 @@ public class AssetOptimizeProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID, which uniquely identifies the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
+         * <p>4FCCA90A-A7A4-1D37-88C3-C17549886E70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +147,10 @@ public class AssetOptimizeProResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +203,10 @@ public class AssetOptimizeProResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The asynchronous task ID. Use this ID to query the processing result by calling QueryAsyncTaskResult.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080345d-b28a-9e2e-9ad7-370f8e236949</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

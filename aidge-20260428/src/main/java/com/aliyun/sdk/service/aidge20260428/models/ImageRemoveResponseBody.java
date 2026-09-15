@@ -106,7 +106,10 @@ public class ImageRemoveResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;success&quot;</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImageRemoveResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The intelligent removal result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImageRemoveResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“The parameters contain sensitive information, please try other inputs”</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ImageRemoveResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2728332e-72c1-9c0d-8869-5781b2cd25d4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ImageRemoveResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +242,10 @@ public class ImageRemoveResponseBody extends TeaModel {
             } 
 
             /**
-             * Height.
+             * <p>The height of the result image, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -238,7 +253,11 @@ public class ImageRemoveResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the result image after removal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“<a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a>
+             * ”</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -246,7 +265,10 @@ public class ImageRemoveResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;
@@ -254,7 +276,10 @@ public class ImageRemoveResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the result image, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

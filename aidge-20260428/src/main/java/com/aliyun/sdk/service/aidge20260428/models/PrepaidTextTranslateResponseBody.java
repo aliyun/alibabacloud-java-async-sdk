@@ -106,7 +106,10 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. The value &quot;success&quot; is returned for successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The translation result data, including the translation list and usage information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. The value &quot;Success&quot; is returned for successful calls. For exceptions, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, used to uniquely identify a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +229,10 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
             } 
 
             /**
-             * Characters.
+             * <p>The number of characters in the source text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder characters(Long characters) {
                 this.characters = characters;
@@ -225,7 +240,10 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
             }
 
             /**
-             * DetectedLanguage.
+             * <p>The automatically detected source language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder detectedLanguage(String detectedLanguage) {
                 this.detectedLanguage = detectedLanguage;
@@ -233,7 +251,10 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
             }
 
             /**
-             * TranslatedText.
+             * <p>The translated text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好世界</p>
              */
             public Builder translatedText(String translatedText) {
                 this.translatedText = translatedText;
@@ -300,7 +321,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
             } 
 
             /**
-             * Translations.
+             * <p>The translation result list. Each element corresponds to a translation result for an entry in the input text list.</p>
              */
             public Builder translations(java.util.List<Translations> translations) {
                 this.translations = translations;
@@ -308,7 +329,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information, including the number of input characters.</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

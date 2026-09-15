@@ -59,7 +59,10 @@ public class QueryAsyncTaskResultRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>The ID of the asynchronous task. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b67f6089-085a-9402-93c6-bac0561b3a06</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

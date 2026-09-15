@@ -74,7 +74,15 @@ public class ImageRemovalProRequest extends Request {
         } 
 
         /**
-         * Async.
+         * <p>The call type. Valid values:</p>
+         * <ul>
+         * <li>true: Asynchronous.</li>
+         * <li>false: Synchronous.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -83,6 +91,7 @@ public class ImageRemovalProRequest extends Request {
         }
 
         /**
+         * <p>The URL of the image to process.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

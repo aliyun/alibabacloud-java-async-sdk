@@ -106,7 +106,10 @@ public class VideoGenerationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of success indicates a successful call, and a value of failed indicates a failed call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class VideoGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class VideoGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. An error message is returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class VideoGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which uniquely identifies a single API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class VideoGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class VideoGenerationResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The downstream task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>778fa8bd21804828a5d147050e30edac</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -212,7 +227,7 @@ public class VideoGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The metering usage information.</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

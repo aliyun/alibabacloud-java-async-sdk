@@ -90,10 +90,11 @@ public class ImageCroppingRequest extends Request {
         } 
 
         /**
+         * <p>The URL of the image to process.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://jv-comfyui-image.tiangong.tech/dify_upload/xxx.jpg">https://jv-comfyui-image.tiangong.tech/dify_upload/xxx.jpg</a></p>
+         * <p><a href="https://example.com/image.jpg">https://example.com/image.jpg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -102,10 +103,11 @@ public class ImageCroppingRequest extends Request {
         }
 
         /**
+         * <p>The target height.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>300</p>
+         * <p>800</p>
          */
         public Builder targetHeight(Integer targetHeight) {
             this.putQueryParameter("TargetHeight", targetHeight);
@@ -114,10 +116,11 @@ public class ImageCroppingRequest extends Request {
         }
 
         /**
+         * <p>The target width.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>300</p>
+         * <p>800</p>
          */
         public Builder targetWidth(Integer targetWidth) {
             this.putQueryParameter("TargetWidth", targetWidth);

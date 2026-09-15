@@ -163,7 +163,10 @@ public class CategoryAttributeMatchRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The product details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Silk, new spring style</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -172,7 +175,10 @@ public class CategoryAttributeMatchRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * <p>The product image URLs. A maximum of 10 images are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg">https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg</a></p>
          */
         public Builder imageUrl(java.util.List<String> imageUrl) {
             String imageUrlShrink = shrink(imageUrl, "ImageUrl", "json");
@@ -182,7 +188,11 @@ public class CategoryAttributeMatchRequest extends Request {
         }
 
         /**
+         * <p>The product attributes that describe the product characteristics.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For example, the material of the product. Enter the attribute name and attribute value</p>
          */
         public Builder itemSpec(String itemSpec) {
             this.putBodyParameter("ItemSpec", itemSpec);
@@ -191,7 +201,11 @@ public class CategoryAttributeMatchRequest extends Request {
         }
 
         /**
+         * <p>The product SKU title.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0:0:Color:Black (without locator);0:1:Color:Smart Locator (without collar);0:2:Color:Range Locator (without collar);0:3:Color:Blue (without locator);0:4:Color:Orange (without locator);0:5:Color:Pink (without locator);0:6:Color:Red (without locator);0:7:Color:Yellow (without locator);0:8:Color:Purple (without locator)</p>
          */
         public Builder sku(String sku) {
             this.putBodyParameter("Sku", sku);
@@ -200,7 +214,11 @@ public class CategoryAttributeMatchRequest extends Request {
         }
 
         /**
+         * <p>The product category on the source platform.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Clothing</p>
          */
         public Builder sourceCategory(String sourceCategory) {
             this.putBodyParameter("SourceCategory", sourceCategory);
@@ -209,6 +227,7 @@ public class CategoryAttributeMatchRequest extends Request {
         }
 
         /**
+         * <p>The source platform from which the product originates.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +240,7 @@ public class CategoryAttributeMatchRequest extends Request {
         }
 
         /**
+         * <p>The target listing platform. Currently, only temu is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,10 +253,11 @@ public class CategoryAttributeMatchRequest extends Request {
         }
 
         /**
+         * <p>The product title.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试商品</p>
+         * <p>Women\&quot;s New Spring Clothing</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

@@ -285,6 +285,7 @@ public class VisionFlowRequest extends Request {
         } 
 
         /**
+         * <p>The AI capabilities to apply (1 = Intelligent Element Detection, 2 = Intelligent Matting, 3 = Intelligent Removal, 4 = Image Translation Pro, 5 = Intelligent Cropping, 6 = HD Upscaling). Multiple selections allowed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +299,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * BackGroundType.
+         * <p>The background type of the output image. Valid values: WHITE_BACKGROUND (white background) and TRANSPARENT (transparent background). This parameter is required when the Intelligent Matting capability is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHITE_BACKGROUND</p>
          */
         public Builder backGroundType(String backGroundType) {
             this.putQueryParameter("BackGroundType", backGroundType);
@@ -307,7 +311,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * Glossary.
+         * <p>The glossary ID. Optional. Create a glossary separately in the console and provide its ID. If left empty, translation results are not modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>glossary_1</p>
          */
         public Builder glossary(String glossary) {
             this.putQueryParameter("Glossary", glossary);
@@ -316,6 +323,7 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
+         * <p>The URL of the image to process. This parameter is required. Resolution must be greater than 256 × 256, long side no greater than 1920 pixels, short side no greater than 1080 pixels. Maximum size: 5 MB. Supported formats: png, jpeg, jpg, bmp, and webp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,7 +336,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * IncludingProductArea.
+         * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. Helps protect embedded information such as product names from being translated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includingProductArea(Boolean includingProductArea) {
             this.putQueryParameter("IncludingProductArea", includingProductArea);
@@ -337,7 +348,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * IsFilter.
+         * <p>Specifies whether images with the detected elements proceed to subsequent processing. A value of true indicates that images containing the elements proceed to subsequent processing. A value of false indicates that they do not. This parameter is required when the Intelligent Element Detection capability is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isFilter(Boolean isFilter) {
             this.putQueryParameter("IsFilter", isFilter);
@@ -346,7 +360,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * Mask.
+         * <p>The specific removal region in RLE format. Optional. If provided, this parameter takes priority and the ObjectRemoveElements and NonobjectRemoveElements parameters are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>474556 160 475356 160</p>
          */
         public Builder mask(String mask) {
             this.putQueryParameter("Mask", mask);
@@ -355,7 +372,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * NonobjectDetectElements.
+         * <p>The elements to detect on the non-subject area of the image (1 = Watermark, 2 = Logo, 3 = Text, 4 = Text-bearing color block). Multiple selections allowed. When the Intelligent Element Detection capability is selected, at least one of NonobjectDetectElements or ObjectDetectElements is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3]</p>
          */
         public Builder nonobjectDetectElements(java.util.List<Integer> nonobjectDetectElements) {
             String nonobjectDetectElementsShrink = shrink(nonobjectDetectElements, "NonobjectDetectElements", "json");
@@ -365,7 +385,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * NonobjectRemoveElements.
+         * <p>The elements to remove from the non-subject area of the image (1 = Transparent text block, 2 = Specific name, 3 = Text, 4 = Overlay patch). Multiple selections allowed. When the Intelligent Removal capability is selected, at least one of NonobjectRemoveElements or ObjectRemoveElements is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,4]</p>
          */
         public Builder nonobjectRemoveElements(java.util.List<Integer> nonobjectRemoveElements) {
             String nonobjectRemoveElementsShrink = shrink(nonobjectRemoveElements, "NonobjectRemoveElements", "json");
@@ -375,7 +398,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * ObjectDetectElements.
+         * <p>The elements to detect on the image subject (1 = Watermark, 2 = Logo, 3 = Text, 4 = Text-bearing color block). Multiple selections allowed. When the Intelligent Element Detection capability is selected, at least one of ObjectDetectElements or NonobjectDetectElements is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3,4]</p>
          */
         public Builder objectDetectElements(java.util.List<Integer> objectDetectElements) {
             String objectDetectElementsShrink = shrink(objectDetectElements, "ObjectDetectElements", "json");
@@ -385,7 +411,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * ObjectRemoveElements.
+         * <p>The elements to remove from the image subject (1 = Transparent text block, 2 = Specific name, 3 = Text, 4 = Overlay patch). Multiple selections allowed. When the Intelligent Removal capability is selected, at least one of ObjectRemoveElements or NonobjectRemoveElements is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,4]</p>
          */
         public Builder objectRemoveElements(java.util.List<Integer> objectRemoveElements) {
             String objectRemoveElementsShrink = shrink(objectRemoveElements, "ObjectRemoveElements", "json");
@@ -395,7 +424,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>The source language code. Optional. For supported language pairs, refer to the supported translation language pairs list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putQueryParameter("SourceLanguage", sourceLanguage);
@@ -404,7 +436,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * TargetHeight.
+         * <p>The desired height of the cropped image, in pixels. Valid values: 100 to 5000. This parameter is required when the Intelligent Cropping capability is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder targetHeight(Integer targetHeight) {
             this.putQueryParameter("TargetHeight", targetHeight);
@@ -413,7 +448,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * TargetLanguage.
+         * <p>The target language code. Optional. For supported language pairs, refer to the supported translation language pairs list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putQueryParameter("TargetLanguage", targetLanguage);
@@ -422,7 +460,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * TargetWidth.
+         * <p>The desired width of the cropped image, in pixels. Valid values: 100 to 5000. This parameter is required when the Intelligent Cropping capability is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder targetWidth(Integer targetWidth) {
             this.putQueryParameter("TargetWidth", targetWidth);
@@ -431,7 +472,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * TranslatingBrandInTheProduct.
+         * <p>Specifies whether to translate brand names in the image. Optional. Default value: false. Helps protect brand name information from being translated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder translatingBrandInTheProduct(Boolean translatingBrandInTheProduct) {
             this.putQueryParameter("TranslatingBrandInTheProduct", translatingBrandInTheProduct);
@@ -440,7 +484,10 @@ public class VisionFlowRequest extends Request {
         }
 
         /**
-         * UpscaleFactor.
+         * <p>The image upscaling factor. Optional. Default value: 2. Valid values: 2 to 4. This parameter is required when the HD Upscaling capability is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder upscaleFactor(Integer upscaleFactor) {
             this.putQueryParameter("UpscaleFactor", upscaleFactor);

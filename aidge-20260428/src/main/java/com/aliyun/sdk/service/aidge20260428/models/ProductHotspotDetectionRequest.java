@@ -89,6 +89,7 @@ public class ProductHotspotDetectionRequest extends Request {
         } 
 
         /**
+         * <p>The HTTPS URLs of reference images that define the SKU whitelist. A maximum of 20 images are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder referenceImageUrls(java.util.List<String> referenceImageUrls) {
@@ -99,7 +100,10 @@ public class ProductHotspotDetectionRequest extends Request {
         }
 
         /**
-         * ReqId.
+         * <p>The unique business ID for this single-scene call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hotspot-request-001</p>
          */
         public Builder reqId(String reqId) {
             this.putQueryParameter("ReqId", reqId);
@@ -108,6 +112,7 @@ public class ProductHotspotDetectionRequest extends Request {
         }
 
         /**
+         * <p>The HTTPS OSS or CDN URL of the target image to be annotated with bounding boxes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

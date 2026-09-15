@@ -106,7 +106,10 @@ public class LanguageDetectResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class LanguageDetectResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The language identification result data, including the detected language and usage information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class LanguageDetectResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class LanguageDetectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which uniquely identifies the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42542C6C-F2A4-1B2B-8EFF-130C8FD06F54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class LanguageDetectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class LanguageDetectResponseBody extends TeaModel {
             } 
 
             /**
-             * DetectedLanguage.
+             * <p>The detected language code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder detectedLanguage(String detectedLanguage) {
                 this.detectedLanguage = detectedLanguage;
@@ -212,7 +227,10 @@ public class LanguageDetectResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information, including the number of input characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;InputCharacterCount&quot;:4}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

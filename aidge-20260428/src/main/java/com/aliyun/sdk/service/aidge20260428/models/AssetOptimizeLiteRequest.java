@@ -175,7 +175,10 @@ public class AssetOptimizeLiteRequest extends Request {
         } 
 
         /**
-         * Glossary.
+         * <p>The custom glossary for term intervention.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder glossary(String glossary) {
             this.putQueryParameter("Glossary", glossary);
@@ -184,7 +187,10 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
-         * IncludingProductArea.
+         * <p>Specifies whether product area translation is included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includingProductArea(Boolean includingProductArea) {
             this.putQueryParameter("IncludingProductArea", includingProductArea);
@@ -193,6 +199,7 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether translation is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,6 +212,7 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
+         * <p>The product URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +225,10 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>The source language code, such as zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putQueryParameter("SourceLanguage", sourceLanguage);
@@ -226,6 +237,7 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
+         * <p>The source platform, such as 1688.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +250,10 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
-         * TargetLanguage.
+         * <p>The target language code, such as en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putQueryParameter("TargetLanguage", targetLanguage);
@@ -247,6 +262,7 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
+         * <p>The target platform, such as temu.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +275,10 @@ public class AssetOptimizeLiteRequest extends Request {
         }
 
         /**
-         * TranslatingBrandInTheProduct.
+         * <p>Specifies whether to translate brand names in images. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder translatingBrandInTheProduct(Boolean translatingBrandInTheProduct) {
             this.putQueryParameter("TranslatingBrandInTheProduct", translatingBrandInTheProduct);

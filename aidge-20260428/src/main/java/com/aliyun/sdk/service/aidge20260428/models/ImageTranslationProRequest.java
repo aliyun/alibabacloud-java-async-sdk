@@ -160,7 +160,10 @@ public class ImageTranslationProRequest extends Request {
         } 
 
         /**
-         * Async.
+         * <p>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). If you set this parameter to true, the API immediately returns a TaskId. Use the query translation result API to retrieve the final result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder async(Boolean async) {
             this.putBodyParameter("Async", async);
@@ -169,7 +172,10 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
-         * Glossary.
+         * <p>The ID of the intervention glossary. This parameter is optional. Create the glossary in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>glossary_1</p>
          */
         public Builder glossary(String glossary) {
             this.putBodyParameter("Glossary", glossary);
@@ -178,10 +184,18 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
+         * <p>The URL of the original image. This parameter is required.</p>
+         * <p>Image requirements:</p>
+         * <ul>
+         * <li>Image URL: Must be publicly accessible.</li>
+         * <li>Format: png, jpeg, jpg, bmp, or webp.</li>
+         * <li>Pixels: Width and height must not exceed 4000 pixels each.</li>
+         * <li>File size: The original file must be 10 MB or smaller.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://example.com/image.jpg">https://example.com/image.jpg</a></p>
+         * <p><a href="https://img.alicdn.com/imgextra/i3/O1CN01HTDhDi28Fd85ZYs7H_!!6000000007903-0-tps-800-800.jpg">https://img.alicdn.com/imgextra/i3/O1CN01HTDhDi28Fd85ZYs7H_!!6000000007903-0-tps-800-800.jpg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putBodyParameter("ImageUrl", imageUrl);
@@ -190,7 +204,10 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
-         * IncludingProductArea.
+         * <p>Specifies whether to translate text on the image subject. This parameter is optional. Default value: false. This helps protect information such as embedded product names from being translated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includingProductArea(Boolean includingProductArea) {
             this.putBodyParameter("IncludingProductArea", includingProductArea);
@@ -199,6 +216,7 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
+         * <p>The source language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,10 +229,11 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
+         * <p>The target language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>zh</p>
+         * <p>ko</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);
@@ -223,7 +242,10 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
-         * TranslatingBrandInTheProduct.
+         * <p>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder translatingBrandInTheProduct(Boolean translatingBrandInTheProduct) {
             this.putBodyParameter("TranslatingBrandInTheProduct", translatingBrandInTheProduct);
@@ -232,7 +254,10 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
-         * UseImageEditor.
+         * <p>Specifies whether to return layout information such as text position, font, and color. Set this parameter to true to retrieve layer information for secondary editing with an image editor. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useImageEditor(Boolean useImageEditor) {
             this.putBodyParameter("UseImageEditor", useImageEditor);

@@ -106,7 +106,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The translation result data. ResultList contains the URLs of the translation results. GenFiles contains EditInfo, which includes the recognized text information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which uniquely identifies the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61785C32-80C2-19A3-9E55-2C3702C84B40</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +255,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>矩形旋转角度</p>
+             * <p>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder degree(Integer degree) {
                 this.degree = degree;
@@ -251,7 +266,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形高度</p>
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -259,7 +277,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形左侧X坐标</p>
+             * <p>The left coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder left(Integer left) {
                 this.left = left;
@@ -267,7 +288,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形顶部Y坐标</p>
+             * <p>The top coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder top(Integer top) {
                 this.top = top;
@@ -275,7 +299,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形宽度</p>
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -381,7 +408,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>矩形旋转角度</p>
+             * <p>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder degree(Integer degree) {
                 this.degree = degree;
@@ -389,7 +419,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形高度</p>
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -397,7 +430,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形左侧X坐标</p>
+             * <p>The left coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43</p>
              */
             public Builder left(Integer left) {
                 this.left = left;
@@ -405,7 +441,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形顶部Y坐标</p>
+             * <p>The top coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder top(Integer top) {
                 this.top = top;
@@ -413,7 +452,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形宽度</p>
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>418</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -519,7 +561,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>矩形旋转角度</p>
+             * <p>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder degree(Integer degree) {
                 this.degree = degree;
@@ -527,7 +572,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形高度</p>
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -535,7 +583,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形左侧X坐标</p>
+             * <p>The left coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder left(Integer left) {
                 this.left = left;
@@ -543,7 +594,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形顶部Y坐标</p>
+             * <p>The top coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder top(Integer top) {
                 this.top = top;
@@ -551,7 +605,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>矩形宽度</p>
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>488</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -722,7 +779,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>文本颜色</p>
+             * <p>The text color after translation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#515151</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -730,7 +790,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字体大小</p>
+             * <p>The font size of the translated text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder fontsize(Integer fontsize) {
                 this.fontsize = fontsize;
@@ -738,7 +801,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>水平布局方式</p>
+             * <p>The horizontal layout mode. Valid values: center, left, right.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>center</p>
              */
             public Builder horizontalLayout(String horizontalLayout) {
                 this.horizontalLayout = horizontalLayout;
@@ -746,7 +812,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>图片区域矩形信息</p>
+             * <p>The coordinates of the image repair area.</p>
              */
             public Builder imageRect(ImageRect imageRect) {
                 this.imageRect = imageRect;
@@ -754,7 +820,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文本语言</p>
+             * <p>The target language code for translation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -762,7 +831,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文本行数</p>
+             * <p>The number of lines in the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lineCount(Integer lineCount) {
                 this.lineCount = lineCount;
@@ -770,7 +842,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文本区域矩形信息</p>
+             * <p>The coordinates of the text box area.</p>
              */
             public Builder textRect(TextRect textRect) {
                 this.textRect = textRect;
@@ -778,7 +850,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文本是否有效</p>
+             * <p>Indicates whether the TextItem is valid. The TextItem is invalid if this value does not exist or is set to false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder valid(Boolean valid) {
                 this.valid = valid;
@@ -786,7 +861,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>翻译后的文本值</p>
+             * <p>The translated text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Adorable Design · Crisp Bell Sound</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -794,7 +872,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>垂直布局方式</p>
+             * <p>The vertical layout mode. Valid values: center, top, and down.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>center</p>
              */
             public Builder verticalLayout(String verticalLayout) {
                 this.verticalLayout = verticalLayout;
@@ -926,7 +1007,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>文本颜色</p>
+             * <p>The text color, such as #ffffff.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#515151</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -934,7 +1018,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文本区域内容</p>
+             * <p>The original text before translation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>萌趣造型·清脆响铃</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -942,7 +1029,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字体大小</p>
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder fontsize(Integer fontsize) {
                 this.fontsize = fontsize;
@@ -950,7 +1040,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>水平布局方式</p>
+             * <p>The horizontal layout mode. Valid values: center, left, right.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>left</p>
              */
             public Builder horizontalLayout(String horizontalLayout) {
                 this.horizontalLayout = horizontalLayout;
@@ -958,7 +1051,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文本区域行数</p>
+             * <p>The number of lines in the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lineCount(Integer lineCount) {
                 this.lineCount = lineCount;
@@ -966,7 +1062,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文本列表</p>
+             * <p>The list of translated texts. Each element corresponds to the translation result for a target language.</p>
              */
             public Builder texts(java.util.List<Texts> texts) {
                 this.texts = texts;
@@ -974,7 +1070,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>垂直布局方式</p>
+             * <p>The vertical layout mode. Valid values: center, top, and down.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>center</p>
              */
             public Builder verticalLayout(String verticalLayout) {
                 this.verticalLayout = verticalLayout;
@@ -1093,7 +1192,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>使用的字体列表</p>
+             * <p>The list of font types.</p>
              */
             public Builder font(java.util.List<String> font) {
                 this.font = font;
@@ -1101,7 +1200,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>商品区域矩形信息</p>
+             * <p>The coordinate information of the product bounding box area.</p>
              */
             public Builder goodsRects(GoodsRects goodsRects) {
                 this.goodsRects = goodsRects;
@@ -1109,7 +1208,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>检测到的语言列表</p>
+             * <p>The list of target languages for translation.</p>
              */
             public Builder languages(java.util.List<String> languages) {
                 this.languages = languages;
@@ -1117,7 +1216,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修复后的图片URL</p>
+             * <p>The URL of the image after all text has been inpainted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png</a></p>
              */
             public Builder repairedUrl(String repairedUrl) {
                 this.repairedUrl = repairedUrl;
@@ -1125,7 +1227,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>结果图片ID列表</p>
+             * <p>The collection of global IDs for the translated images.</p>
              */
             public Builder resultImageIds(java.util.List<String> resultImageIds) {
                 this.resultImageIds = resultImageIds;
@@ -1133,7 +1235,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文本区域列表</p>
+             * <p>The list of text boxes, which contains information about all recognized text areas.</p>
              */
             public Builder textAreas(java.util.List<TextAreas> textAreas) {
                 this.textAreas = textAreas;
@@ -1200,7 +1302,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>翻译后文件URL</p>
+             * <p>The URL of the translated image file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -1208,7 +1313,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>翻译语言</p>
+             * <p>The target language for translation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -1288,7 +1396,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>图片编辑相关信息</p>
+             * <p>The editor information, which contains recognized information such as text areas, product areas, and fonts.</p>
              */
             public Builder editInfo(EditInfo editInfo) {
                 this.editInfo = editInfo;
@@ -1296,7 +1404,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>翻译结果列表</p>
+             * <p>The collection of translation results.</p>
              */
             public Builder resultList(java.util.List<ResultList> resultList) {
                 this.resultList = resultList;
@@ -1304,7 +1412,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>源图片URL</p>
+             * <p>The URL of the original image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/imgextra/i3/O1CN01HTDhDi28Fd85ZYs7H_!!6000000007903-0-tps-800-800.jpg">https://img.alicdn.com/imgextra/i3/O1CN01HTDhDi28Fd85ZYs7H_!!6000000007903-0-tps-800-800.jpg</a></p>
              */
             public Builder srcImage(String srcImage) {
                 this.srcImage = srcImage;
@@ -1371,7 +1482,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>翻译后文件URL</p>
+             * <p>The URL of the translated result image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -1379,7 +1493,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>翻译语言</p>
+             * <p>The target language for image translation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -1472,7 +1589,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>翻译后的文件列表</p>
+             * <p>The editor protocol, which contains translation result files and editing information.</p>
              */
             public Builder genFiles(java.util.List<GenFiles> genFiles) {
                 this.genFiles = genFiles;
@@ -1480,7 +1597,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * <p>翻译结果列表</p>
+             * <p>The list of image translation results.</p>
              */
             public Builder resultList(java.util.List<DataResultList> resultList) {
                 this.resultList = resultList;
@@ -1488,7 +1605,10 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The asynchronous task ID. This parameter is not returned for synchronous calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc123-task-id</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1496,7 +1616,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information, such as the number of processed images.</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

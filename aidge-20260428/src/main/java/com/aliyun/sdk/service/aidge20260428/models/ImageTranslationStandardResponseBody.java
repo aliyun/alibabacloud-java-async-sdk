@@ -106,7 +106,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The translation result data, including the translated image URL and usage information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which uniquely identifies the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CEC4D94-905A-1ED1-A7B4-1BFEFFB3D850</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +255,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             } 
 
             /**
-             * Degree.
+             * <p>The rotation angle.</p>
              */
             public Builder degree(Integer degree) {
                 this.degree = degree;
@@ -251,7 +263,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -259,7 +271,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Left.
+             * <p>The left coordinate.</p>
              */
             public Builder left(Integer left) {
                 this.left = left;
@@ -267,7 +279,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Top.
+             * <p>The top coordinate.</p>
              */
             public Builder top(Integer top) {
                 this.top = top;
@@ -275,7 +287,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -381,7 +393,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             } 
 
             /**
-             * Degree.
+             * <p>The rotation angle.</p>
              */
             public Builder degree(Integer degree) {
                 this.degree = degree;
@@ -389,7 +401,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -397,7 +409,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Left.
+             * <p>The left coordinate.</p>
              */
             public Builder left(Integer left) {
                 this.left = left;
@@ -405,7 +417,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Top.
+             * <p>The top coordinate.</p>
              */
             public Builder top(Integer top) {
                 this.top = top;
@@ -413,7 +425,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -519,7 +531,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             } 
 
             /**
-             * Degree.
+             * <p>The rotation angle.</p>
              */
             public Builder degree(Integer degree) {
                 this.degree = degree;
@@ -527,7 +539,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -535,7 +547,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Left.
+             * <p>The left coordinate.</p>
              */
             public Builder left(Integer left) {
                 this.left = left;
@@ -543,7 +555,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Top.
+             * <p>The top coordinate.</p>
              */
             public Builder top(Integer top) {
                 this.top = top;
@@ -551,7 +563,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -722,7 +734,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             } 
 
             /**
-             * Color.
+             * <p>The color.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#9d7746</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -730,7 +745,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Fontsize.
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder fontsize(Integer fontsize) {
                 this.fontsize = fontsize;
@@ -738,7 +756,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * HorizontalLayout.
+             * <p>The horizontal layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>left</p>
              */
             public Builder horizontalLayout(String horizontalLayout) {
                 this.horizontalLayout = horizontalLayout;
@@ -746,7 +767,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRect.
+             * <p>The image area.</p>
              */
             public Builder imageRect(ImageRect imageRect) {
                 this.imageRect = imageRect;
@@ -754,7 +775,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -762,7 +786,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * LineCount.
+             * <p>The line count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lineCount(Integer lineCount) {
                 this.lineCount = lineCount;
@@ -770,7 +797,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * TextRect.
+             * <p>The text area.</p>
              */
             public Builder textRect(TextRect textRect) {
                 this.textRect = textRect;
@@ -778,7 +805,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Valid.
+             * <p>Indicates whether the text is valid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder valid(Boolean valid) {
                 this.valid = valid;
@@ -786,7 +816,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The text value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Solid Wood Wardrobe</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -794,7 +827,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * VerticalLayout.
+             * <p>The vertical layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>center</p>
              */
             public Builder verticalLayout(String verticalLayout) {
                 this.verticalLayout = verticalLayout;
@@ -926,7 +962,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             } 
 
             /**
-             * Color.
+             * <p>The color.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#000000</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -934,7 +973,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SOLIDWOOD WARDROBE</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -942,7 +984,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Fontsize.
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontsize(Integer fontsize) {
                 this.fontsize = fontsize;
@@ -950,7 +995,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * HorizontalLayout.
+             * <p>The horizontal layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>left</p>
              */
             public Builder horizontalLayout(String horizontalLayout) {
                 this.horizontalLayout = horizontalLayout;
@@ -958,7 +1006,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * LineCount.
+             * <p>The line count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder lineCount(Integer lineCount) {
                 this.lineCount = lineCount;
@@ -966,7 +1017,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Texts.
+             * <p>The list of texts.</p>
              */
             public Builder texts(java.util.List<Texts> texts) {
                 this.texts = texts;
@@ -974,7 +1025,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * VerticalLayout.
+             * <p>The vertical layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>center</p>
              */
             public Builder verticalLayout(String verticalLayout) {
                 this.verticalLayout = verticalLayout;
@@ -1145,7 +1199,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             } 
 
             /**
-             * Font.
+             * <p>The list of fonts used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;NotoSansSC-Bold&quot;]</p>
              */
             public Builder font(java.util.List<String> font) {
                 this.font = font;
@@ -1153,7 +1210,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * GoodsRects.
+             * <p>The product area rectangles.</p>
              */
             public Builder goodsRects(GoodsRects goodsRects) {
                 this.goodsRects = goodsRects;
@@ -1161,7 +1218,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * GoodsUrl.
+             * <p>The product image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></p>
              */
             public Builder goodsUrl(String goodsUrl) {
                 this.goodsUrl = goodsUrl;
@@ -1169,7 +1229,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * Languages.
+             * <p>The list of target languages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;zh&quot;]</p>
              */
             public Builder languages(java.util.List<String> languages) {
                 this.languages = languages;
@@ -1177,7 +1240,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * PictUrl.
+             * <p>The original image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></p>
              */
             public Builder pictUrl(String pictUrl) {
                 this.pictUrl = pictUrl;
@@ -1185,7 +1251,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * RepairedUrl.
+             * <p>The repaired image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png</a></p>
              */
             public Builder repairedUrl(String repairedUrl) {
                 this.repairedUrl = repairedUrl;
@@ -1193,7 +1262,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * RepairedUrls.
+             * <p>The list of repaired image URLs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;<a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png%22%5D">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png&quot;]</a></p>
              */
             public Builder repairedUrls(java.util.List<String> repairedUrls) {
                 this.repairedUrls = repairedUrls;
@@ -1201,7 +1273,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * ResultImageIds.
+             * <p>The list of result image IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;c18ab570-81aa-11f1-a14a-5ee00dcfdc3c&quot;]</p>
              */
             public Builder resultImageIds(java.util.List<String> resultImageIds) {
                 this.resultImageIds = resultImageIds;
@@ -1209,7 +1284,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * ResultUrls.
+             * <p>The list of result image URLs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;<a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg%22%5D">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg&quot;]</a></p>
              */
             public Builder resultUrls(java.util.List<String> resultUrls) {
                 this.resultUrls = resultUrls;
@@ -1217,7 +1295,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * TextAreas.
+             * <p>The list of text areas.</p>
              */
             public Builder textAreas(java.util.List<TextAreas> textAreas) {
                 this.textAreas = textAreas;
@@ -1297,7 +1375,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             } 
 
             /**
-             * EditInfo.
+             * <p>The edit information.</p>
              */
             public Builder editInfo(EditInfo editInfo) {
                 this.editInfo = editInfo;
@@ -1305,7 +1383,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the image generated after image translation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1313,7 +1394,10 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information, including the number of processed images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

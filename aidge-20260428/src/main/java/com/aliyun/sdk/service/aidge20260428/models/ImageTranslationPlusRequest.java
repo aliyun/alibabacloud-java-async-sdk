@@ -146,7 +146,10 @@ public class ImageTranslationPlusRequest extends Request {
         } 
 
         /**
-         * Glossary.
+         * <p>The ID of the intervention glossary. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>glossary-001</p>
          */
         public Builder glossary(String glossary) {
             this.putBodyParameter("Glossary", glossary);
@@ -155,6 +158,7 @@ public class ImageTranslationPlusRequest extends Request {
         }
 
         /**
+         * <p>The URL of the original image. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +171,10 @@ public class ImageTranslationPlusRequest extends Request {
         }
 
         /**
-         * IncludingProductArea.
+         * <p>Specifies whether to translate text on the product body. This parameter is optional. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includingProductArea(Boolean includingProductArea) {
             this.putBodyParameter("IncludingProductArea", includingProductArea);
@@ -176,6 +183,7 @@ public class ImageTranslationPlusRequest extends Request {
         }
 
         /**
+         * <p>The source language. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +196,7 @@ public class ImageTranslationPlusRequest extends Request {
         }
 
         /**
+         * <p>The target language. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +209,10 @@ public class ImageTranslationPlusRequest extends Request {
         }
 
         /**
-         * TranslatingBrandInTheProduct.
+         * <p>Specifies whether to translate brand text on the product. This parameter is optional. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder translatingBrandInTheProduct(Boolean translatingBrandInTheProduct) {
             this.putBodyParameter("TranslatingBrandInTheProduct", translatingBrandInTheProduct);
@@ -209,7 +221,10 @@ public class ImageTranslationPlusRequest extends Request {
         }
 
         /**
-         * UseImageEditor.
+         * <p>Specifies whether to use the image translation editor protocol. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useImageEditor(Boolean useImageEditor) {
             this.putBodyParameter("UseImageEditor", useImageEditor);

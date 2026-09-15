@@ -102,7 +102,10 @@ public class MerchandisePlacementDetectionRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * <p>Specify this parameter to use a custom API version. If you created a custom API during the trial phase, you can find the corresponding ApiId in the product console under <strong>Intelligent Inspection &gt; API Management &gt; My APIs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api_xxx</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -111,6 +114,7 @@ public class MerchandisePlacementDetectionRequest extends Request {
         }
 
         /**
+         * <p>The URL of the shelf or floor-stack photo to be recognized (accessible over the Internet or from OSS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class MerchandisePlacementDetectionRequest extends Request {
         }
 
         /**
-         * RagId.
+         * <p>The ID of the customer-specific SKU vector library, which determines which library is used for recall. The library must be created in advance through the library creation process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rag_xxx</p>
          */
         public Builder ragId(String ragId) {
             this.putQueryParameter("RagId", ragId);
@@ -132,7 +139,10 @@ public class MerchandisePlacementDetectionRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The business type (reserved for future routing by business line). The current release supports skincare.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skincare</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

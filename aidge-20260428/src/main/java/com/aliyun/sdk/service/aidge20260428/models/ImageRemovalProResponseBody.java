@@ -106,7 +106,10 @@ public class ImageRemovalProResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImageRemovalProResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The Intelligent Eraser Pro result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImageRemovalProResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,14 @@ public class ImageRemovalProResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -220,7 +233,10 @@ public class ImageRemovalProResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageUrl.
+             * <p>The URL of the erasure result image. This parameter is returned in synchronous mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&Expires=4999655814&Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D">https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&amp;Expires=4999655814&amp;Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -228,7 +244,10 @@ public class ImageRemovalProResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The asynchronous task ID. This parameter is returned in asynchronous mode and is used to query task results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ed9d8504-6141-9fbb-8345-4fa36433483f</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -236,7 +255,7 @@ public class ImageRemovalProResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage details. This parameter is returned in synchronous mode.</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

@@ -106,7 +106,10 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The submit result of the asynchronous task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +203,10 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The asynchronous task ID, which is used to query the result later.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-xxxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

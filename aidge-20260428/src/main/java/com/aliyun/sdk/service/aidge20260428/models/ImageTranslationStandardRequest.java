@@ -146,7 +146,10 @@ public class ImageTranslationStandardRequest extends Request {
         } 
 
         /**
-         * Glossary.
+         * <p>The intervention glossary ID. Optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>glossary_1</p>
          */
         public Builder glossary(String glossary) {
             this.putQueryParameter("Glossary", glossary);
@@ -155,10 +158,16 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
+         * <ul>
+         * <li>Image URL: Must be publicly accessible.</li>
+         * <li>Format: png, jpeg, jpg, bmp, webp</li>
+         * <li>Pixels: Both width and height must not exceed 4000</li>
+         * <li>File size: Original file ≤ 10 MB</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://img.alicdn.com/imgextra/i1/O1CN01qOfLLy1Unu9CHZJoe_!!6000000002563-0-tps-436-582.jpg">https://img.alicdn.com/imgextra/i1/O1CN01qOfLLy1Unu9CHZJoe_!!6000000002563-0-tps-436-582.jpg</a></p>
+         * <p><a href="https://images-na.ssl-images-amazon.com/images/I/41bKsNBDcwL.jpg">https://images-na.ssl-images-amazon.com/images/I/41bKsNBDcwL.jpg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -167,7 +176,10 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * IncludingProductArea.
+         * <p>Specifies whether to translate text on the product area of an image. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includingProductArea(Boolean includingProductArea) {
             this.putQueryParameter("IncludingProductArea", includingProductArea);
@@ -176,10 +188,11 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
+         * <p>The source language code. Required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vi</p>
+         * <p>en</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putQueryParameter("SourceLanguage", sourceLanguage);
@@ -188,10 +201,11 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
+         * <p>The target language code. Required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>zh</p>
+         * <p>ko</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putQueryParameter("TargetLanguage", targetLanguage);
@@ -200,7 +214,10 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * TranslatingBrandInTheProduct.
+         * <p>Specifies whether to translate brand names on images. Optional. Default value: false. This helps protect brand name information from being translated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder translatingBrandInTheProduct(Boolean translatingBrandInTheProduct) {
             this.putQueryParameter("TranslatingBrandInTheProduct", translatingBrandInTheProduct);
@@ -209,7 +226,10 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * UseImageEditor.
+         * <p>Specifies whether to return layer information such as text position, font, and color. If you set this parameter to true, layer information is returned, which can be used to integrate with image editors for secondary editing. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useImageEditor(Boolean useImageEditor) {
             this.putQueryParameter("UseImageEditor", useImageEditor);

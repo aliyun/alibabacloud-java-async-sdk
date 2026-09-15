@@ -158,6 +158,7 @@ public class ImageRecognitionRequest extends Request {
         } 
 
         /**
+         * <p>The URL of the image to recognize.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,10 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * NonObjectDetectElements.
+         * <p>The list of non-subject element types to detect. Valid values: 1 (background), 2 (border), 3 (watermark), and 4 (splice).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3,4]</p>
          */
         public Builder nonObjectDetectElements(java.util.List<Integer> nonObjectDetectElements) {
             String nonObjectDetectElementsShrink = shrink(nonObjectDetectElements, "NonObjectDetectElements", "json");
@@ -180,7 +184,10 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * ObjectDetectElements.
+         * <p>The list of subject element types to detect. Valid values: 1 (product subject), 2 (model), 3 (text), and 4 (logo).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3,4]</p>
          */
         public Builder objectDetectElements(java.util.List<Integer> objectDetectElements) {
             String objectDetectElementsShrink = shrink(objectDetectElements, "ObjectDetectElements", "json");
@@ -190,7 +197,10 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * ReturnBorderPixel.
+         * <p>Specifies whether to return border pixel information. Valid values: 1 (return) and 0 (do not return).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnBorderPixel(Integer returnBorderPixel) {
             this.putQueryParameter("ReturnBorderPixel", returnBorderPixel);
@@ -199,7 +209,10 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * ReturnCharacter.
+         * <p>Specifies whether to return text information. Valid values: 1 (return) and 0 (do not return).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnCharacter(Integer returnCharacter) {
             this.putQueryParameter("ReturnCharacter", returnCharacter);
@@ -208,7 +221,10 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * ReturnCharacterProp.
+         * <p>Specifies whether to return text property information. Valid values: 1 (return) and 0 (do not return).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnCharacterProp(Integer returnCharacterProp) {
             this.putQueryParameter("ReturnCharacterProp", returnCharacterProp);
@@ -217,7 +233,10 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * ReturnProductNum.
+         * <p>Specifies whether to return the product count. Valid values: 1 (return) and 0 (do not return).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnProductNum(Integer returnProductNum) {
             this.putQueryParameter("ReturnProductNum", returnProductNum);
@@ -226,7 +245,10 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * ReturnProductProp.
+         * <p>Specifies whether to return product property information. Valid values: 1 (return) and 0 (do not return).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder returnProductProp(Integer returnProductProp) {
             this.putQueryParameter("ReturnProductProp", returnProductProp);

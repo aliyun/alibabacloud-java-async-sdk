@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QueryAsyncTaskResultResponseBody} extends {@link TeaModel}
+ * {@link SubmitProductMatchResponseBody} extends {@link TeaModel}
  *
- * <p>QueryAsyncTaskResultResponseBody</p>
+ * <p>SubmitProductMatchResponseBody</p>
  */
-public class QueryAsyncTaskResultResponseBody extends TeaModel {
+public class SubmitProductMatchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private QueryAsyncTaskResultResponseBody(Builder builder) {
+    private SubmitProductMatchResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static QueryAsyncTaskResultResponseBody create() {
+    public static SubmitProductMatchResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(QueryAsyncTaskResultResponseBody model) {
+        private Builder(SubmitProductMatchResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -117,7 +117,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The asynchronous task result.</p>
+         * <p>The submit result of the matching product identification asynchronous task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,36 +161,28 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
             return this;
         }
 
-        public QueryAsyncTaskResultResponseBody build() {
-            return new QueryAsyncTaskResultResponseBody(this);
+        public SubmitProductMatchResponseBody build() {
+            return new SubmitProductMatchResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link QueryAsyncTaskResultResponseBody} extends {@link TeaModel}
+     * {@link SubmitProductMatchResponseBody} extends {@link TeaModel}
      *
-     * <p>QueryAsyncTaskResultResponseBody</p>
+     * <p>SubmitProductMatchResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Result")
-        private String result;
-
-        @com.aliyun.core.annotation.NameInMap("Status")
-        private String status;
+        @com.aliyun.core.annotation.NameInMap("SubmittedAt")
+        private String submittedAt;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @com.aliyun.core.annotation.NameInMap("UsageMap")
-        private java.util.Map<String, ?> usageMap;
-
         private Data(Builder builder) {
-            this.result = builder.result;
-            this.status = builder.status;
+            this.submittedAt = builder.submittedAt;
             this.taskId = builder.taskId;
-            this.usageMap = builder.usageMap;
         }
 
         public static Builder builder() {
@@ -202,17 +194,10 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return result
+         * @return submittedAt
          */
-        public String getResult() {
-            return this.result;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
+        public String getSubmittedAt() {
+            return this.submittedAt;
         }
 
         /**
@@ -222,67 +207,37 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        /**
-         * @return usageMap
-         */
-        public java.util.Map<String, ?> getUsageMap() {
-            return this.usageMap;
-        }
-
         public static final class Builder {
-            private String result; 
-            private String status; 
+            private String submittedAt; 
             private String taskId; 
-            private java.util.Map<String, ?> usageMap; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.result = model.result;
-                this.status = model.status;
+                this.submittedAt = model.submittedAt;
                 this.taskId = model.taskId;
-                this.usageMap = model.usageMap;
             } 
 
             /**
-             * <p>The task result.</p>
+             * <p>The task acceptance time in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;url\&quot;:\&quot;<a href="https://aidge-bailian-oss.oss-cn-beijing.aliyuncs.com/gaolinfeng/pdf_trans/translated_en.pdf?security-token=CAISzwJ1q6Ft5B2yfSjIr5ntKv7urOdn9YTeaVbb1lQRfcxi2Kz%2BgDz2IHhMeHFgAeAbs%2Fw%2Fm29W6v4SlqZdVplOWU3Da%2BB364xK7Q754wRDcULuv9I%2Bk5SANTW5KXyShb3%2FAYjQSNfaZY3eCTTtnTNyxr3XbCirW0ffX7SClZ9gaKZ8PGD6F00kYu1bPQx%2FssQXGGLMPPK2SH7Qj3HXEVBjt3gX6wo9y9zmk53FsUWA1QKmlr9F%2BdWhGPX%2BMZkwZqUYesyuwel7epDG1CNt8BVQ%2FM909vccoWuf7onNXgQJs0rZbbaMoscSJQ51aaV%2FFaUBt%2FXmi%2Fxzt6nJkID626jAvGbZzsW0rumBtyikcIvBXr5RHT3rIrVAU%2BuEf19557bo3dbfkNdWOrtHZDY5Qn9nURKxAbSEg2uBaWTIIJPmvc97r9wbhjuH87JeC0jQHt3xuRqAATp5EbLOeo%2BZktMLbi%2FUsZgcvdIEIv3tPBCYfyJnh%2Bj6U8IyaLKQYHQBtjsfyMngFfS09jFdjBcUebzvYJs21gyU5u%2FZ9SeReh%2FacuIMVoggWy3o9Y%2BnBA2QPCcKqVM7XlwriM%2FJOAyhvj%2Bjtj7BUoyD%2BrSgF5brq5ykjN7t2U7oIAA%3D&OSSAccessKeyId=STS.NZXaDZA8FBF5kpj2TDqCN7iUb&Expires=1780315869&Signature=CdbMkhcED4Ovhw438ZVe5nzU1mk%3D%5C%5C%22%7D">https://aidge-bailian-oss.oss-cn-beijing.aliyuncs.com/gaolinfeng/pdf_trans/translated_en.pdf?security-token=CAISzwJ1q6Ft5B2yfSjIr5ntKv7urOdn9YTeaVbb1lQRfcxi2Kz%2BgDz2IHhMeHFgAeAbs%2Fw%2Fm29W6v4SlqZdVplOWU3Da%2BB364xK7Q754wRDcULuv9I%2Bk5SANTW5KXyShb3%2FAYjQSNfaZY3eCTTtnTNyxr3XbCirW0ffX7SClZ9gaKZ8PGD6F00kYu1bPQx%2FssQXGGLMPPK2SH7Qj3HXEVBjt3gX6wo9y9zmk53FsUWA1QKmlr9F%2BdWhGPX%2BMZkwZqUYesyuwel7epDG1CNt8BVQ%2FM909vccoWuf7onNXgQJs0rZbbaMoscSJQ51aaV%2FFaUBt%2FXmi%2Fxzt6nJkID626jAvGbZzsW0rumBtyikcIvBXr5RHT3rIrVAU%2BuEf19557bo3dbfkNdWOrtHZDY5Qn9nURKxAbSEg2uBaWTIIJPmvc97r9wbhjuH87JeC0jQHt3xuRqAATp5EbLOeo%2BZktMLbi%2FUsZgcvdIEIv3tPBCYfyJnh%2Bj6U8IyaLKQYHQBtjsfyMngFfS09jFdjBcUebzvYJs21gyU5u%2FZ9SeReh%2FacuIMVoggWy3o9Y%2BnBA2QPCcKqVM7XlwriM%2FJOAyhvj%2Bjtj7BUoyD%2BrSgF5brq5ykjN7t2U7oIAA%3D&amp;OSSAccessKeyId=STS.NZXaDZA8FBF5kpj2TDqCN7iUb&amp;Expires=1780315869&amp;Signature=CdbMkhcED4Ovhw438ZVe5nzU1mk%3D\\&quot;}</a></p>
+             * <p>2026-08-20T09:30:00Z</p>
              */
-            public Builder result(String result) {
-                this.result = result;
+            public Builder submittedAt(String submittedAt) {
+                this.submittedAt = submittedAt;
                 return this;
             }
 
             /**
-             * <p>The task status.</p>
+             * <p>The asynchronous task ID used for QueryAsyncTaskResult queries.</p>
              * 
              * <strong>example:</strong>
-             * <p>COMPLETED</p>
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * <p>The downstream task ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>task-xxxxx</p>
+             * <p>b7ea15cb609f47b7999d2d68dfbf3c90</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
-                return this;
-            }
-
-            /**
-             * <p>The usage information.</p>
-             */
-            public Builder usageMap(java.util.Map<String, ?> usageMap) {
-                this.usageMap = usageMap;
                 return this;
             }
 

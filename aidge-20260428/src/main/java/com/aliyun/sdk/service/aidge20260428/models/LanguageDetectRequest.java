@@ -74,7 +74,7 @@ public class LanguageDetectRequest extends Request {
         } 
 
         /**
-         * <p>非必填；可传入 query（不区分大小写），表示走新模型；不传或传错时默认 common（通用语种检测）</p>
+         * <p>The detection scenario. Default value: common. If you are identifying search phrases, set this parameter to query. If an incorrect value is specified or this parameter is left empty, the common general identification mode is used. Note: pass query in lowercase.</p>
          * 
          * <strong>example:</strong>
          * <p>query</p>
@@ -86,10 +86,11 @@ public class LanguageDetectRequest extends Request {
         }
 
         /**
+         * <p>The source text to identify. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Sample text</p>
          */
         public Builder sourceText(String sourceText) {
             this.putQueryParameter("SourceText", sourceText);

@@ -104,6 +104,7 @@ public class VirtualTryOnRequest extends Request {
         } 
 
         /**
+         * <p>The URL of the garment image. Only one image is supported. The URL must be a publicly accessible <code>http</code>/<code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,10 @@ public class VirtualTryOnRequest extends Request {
         }
 
         /**
-         * ClothType.
+         * <p>The garment type. Valid values: tops, bottoms, dresses, tops_and_bottoms, shoes, and hats. If this parameter is not specified, the system automatically identifies the garment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tops</p>
          */
         public Builder clothType(String clothType) {
             this.putQueryParameter("ClothType", clothType);
@@ -125,6 +129,7 @@ public class VirtualTryOnRequest extends Request {
         }
 
         /**
+         * <p>The URL of the model image. Only one image is supported. The URL must be a publicly accessible <code>http</code>/<code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class VirtualTryOnRequest extends Request {
         }
 
         /**
+         * <p>Required. The image resolution. Valid values: 1K and 2K.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

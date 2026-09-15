@@ -74,6 +74,7 @@ public class EcomVideoRecreationRequest extends Request {
         } 
 
         /**
+         * <p>The input parameters for video multiplication.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -84,7 +85,7 @@ public class EcomVideoRecreationRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>The output specifications for the final video.</p>
          */
         public Builder output(Output output) {
             String outputShrink = shrink(output, "Output", "json");
@@ -166,7 +167,10 @@ public class EcomVideoRecreationRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>The product category.<br>Example: Womenswear/Sun-protective clothing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Women\&quot;s clothing/sun protection clothing</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -174,7 +178,10 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
-             * Detail.
+             * <p>The actual product information (SKU, brand, color, material, size, specifications, logo, and usage), used to constrain voiceover facts.<br>Example: Light yellow, cooling fabric, sun protection to the back of the hand, UPF50+</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Light moon yellow, cool-touch fabric, sun protection extending to the back of the hand, UPF50+</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -182,7 +189,10 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>The name of the target product. This parameter is required for product replacement mode. Maximum length: 200 characters.<br>Example: Light yellow cooling sun-protective jacket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Light moon yellow cool-touch sun protection clothing</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -302,7 +312,10 @@ public class EcomVideoRecreationRequest extends Request {
             } 
 
             /**
-             * ChangeDescription.
+             * <p>The description or supplementary constraints for the target person in person replacement mode. The value must be 1 to 500 characters in length. This parameter is required if PersonReferenceImageUrls is not provided.<br>Example: The target person is an adult male. Retain the original clothing and actions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The target character is an adult male, with the original costume and movements preserved.</p>
              */
             public Builder changeDescription(String changeDescription) {
                 this.changeDescription = changeDescription;
@@ -310,7 +323,10 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The replacement mode. Valid values: <code>product_replacement</code> (default) and <code>person_replacement</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_replacement</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -318,7 +334,7 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
-             * PersonReferenceImageUrls.
+             * <p>The URLs of reference images for the target person in person replacement mode. You can specify 1 to 5 images, which must be of the same person. Arrange the images in the following order: facial close-up, front view, 45-degree view, side view, and back view.<br>Example: [&quot;<a href="https://example.com/person.jpg%22%5D">https://example.com/person.jpg&quot;]</a></p>
              */
             public Builder personReferenceImageUrls(java.util.List<String> personReferenceImageUrls) {
                 this.personReferenceImageUrls = personReferenceImageUrls;
@@ -326,7 +342,7 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
-             * ProductImageUrls.
+             * <p>The URLs of target product images. This parameter is required for product replacement mode. You can upload 1 to 8 images for the same SKU. Use images with a clear subject, no occlusion, and a clean background.<br>Example: [&quot;<a href="https://example.com/product.png%22%5D">https://example.com/product.png&quot;]</a></p>
              */
             public Builder productImageUrls(java.util.List<String> productImageUrls) {
                 this.productImageUrls = productImageUrls;
@@ -334,7 +350,7 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
-             * ProductInfo.
+             * <p>The target product information. Specify this parameter to improve voiceover accuracy.</p>
              */
             public Builder productInfo(ProductInfo productInfo) {
                 this.productInfo = productInfo;
@@ -342,6 +358,7 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
+             * <p>The HTTP(S) URL of the reference video. The video duration must be 2 to 360 seconds. The URL must remain accessible during task execution. A validity period of at least 24 hours is recommended.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -425,7 +442,10 @@ public class EcomVideoRecreationRequest extends Request {
             } 
 
             /**
-             * Duration.
+             * <p>The target duration in seconds. Set to <code>&quot;auto&quot;</code> (default) to let the system decide. For product replacement, specify an integer from 5 to 60. For person replacement, only <code>&quot;auto&quot;</code> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -433,7 +453,10 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
-             * Quality.
+             * <p>The output resolution. Default value: <code>720p</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720p、1080p</p>
              */
             public Builder quality(String quality) {
                 this.quality = quality;
@@ -441,7 +464,10 @@ public class EcomVideoRecreationRequest extends Request {
             }
 
             /**
-             * Ratio.
+             * <p>The output aspect ratio. Default value: <code>auto</code> (automatically matches the original video).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto、9:16、3:4、1:1、4:3、16:9</p>
              */
             public Builder ratio(String ratio) {
                 this.ratio = ratio;

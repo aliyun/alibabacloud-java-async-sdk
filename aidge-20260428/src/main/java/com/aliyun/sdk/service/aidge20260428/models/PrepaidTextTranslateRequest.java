@@ -145,7 +145,10 @@ public class PrepaidTextTranslateRequest extends Request {
         } 
 
         /**
-         * BizName.
+         * <p>The business scenario identifier. This parameter is optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or an invalid value is passed, the general translation policy is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba-商品</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -154,7 +157,10 @@ public class PrepaidTextTranslateRequest extends Request {
         }
 
         /**
-         * FormatType.
+         * <p>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format that preserves HTML tags).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder formatType(String formatType) {
             this.putBodyParameter("FormatType", formatType);
@@ -163,7 +169,10 @@ public class PrepaidTextTranslateRequest extends Request {
         }
 
         /**
-         * Glossary.
+         * <p>The intervention glossary ID. This parameter is optional. The glossary must be created separately in the console, and its ID must be provided. If the glossary ID is empty, the translation result is not modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom_glossary</p>
          */
         public Builder glossary(String glossary) {
             this.putBodyParameter("Glossary", glossary);
@@ -172,7 +181,10 @@ public class PrepaidTextTranslateRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>The source language code. This parameter is optional. If not specified, the language is automatically detected. You can pass auto for language detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -181,6 +193,7 @@ public class PrepaidTextTranslateRequest extends Request {
         }
 
         /**
+         * <p>The list of texts to translate. This parameter is required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +207,7 @@ public class PrepaidTextTranslateRequest extends Request {
         }
 
         /**
+         * <p>The target language code. This parameter is required. More than 100 language directions are supported. For details, refer to the supported language directions list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +220,10 @@ public class PrepaidTextTranslateRequest extends Request {
         }
 
         /**
-         * TranslateScene.
+         * <p>The format of the translation text. html (web page format. This setting processes the source text and translated text in HTML format). text (text format. This setting processes the source text and translated text as plain text without any format processing).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-commerce-title</p>
          */
         public Builder translateScene(String translateScene) {
             this.putBodyParameter("TranslateScene", translateScene);

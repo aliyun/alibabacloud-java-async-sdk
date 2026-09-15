@@ -104,7 +104,16 @@ public class DocumentTranslateRequest extends Request {
         } 
 
         /**
+         * <p>The supported document types: PDF/Word.<br>Supported capacity limits:  </p>
+         * <ul>
+         * <li>word: 200 MB/100 pages </li>
+         * <li>PDF: 200 MB/100 pages  </li>
+         * <li>Maximum size per file: 200 MB</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PDF</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -113,7 +122,10 @@ public class DocumentTranslateRequest extends Request {
         }
 
         /**
-         * Glossary.
+         * <p>The glossary ID. Specify this parameter when you need the glossary feature. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for scenarios such as brand name protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>glossary_1</p>
          */
         public Builder glossary(String glossary) {
             this.putQueryParameter("Glossary", glossary);
@@ -122,7 +134,11 @@ public class DocumentTranslateRequest extends Request {
         }
 
         /**
+         * <p>The target language. The language code uses the two-letter ISO 639-1 standard.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putQueryParameter("TargetLanguage", targetLanguage);
@@ -131,7 +147,11 @@ public class DocumentTranslateRequest extends Request {
         }
 
         /**
+         * <p>The OSS URL of the document to be translated.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&OSSAccessKeyId=LTAI5tE8X3gEy66SRU1V8dig&Signature=8niQY2HtMQY7h05zmSUdyORML9E%3D">https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&amp;OSSAccessKeyId=LTAI5tE8X3gEy66SRU1V8dig&amp;Signature=8niQY2HtMQY7h05zmSUdyORML9E%3D</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

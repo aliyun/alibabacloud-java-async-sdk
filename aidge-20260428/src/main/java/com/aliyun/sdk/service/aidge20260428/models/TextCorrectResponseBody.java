@@ -106,7 +106,10 @@ public class TextCorrectResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. The value &quot;success&quot; is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class TextCorrectResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The intelligent correction result data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class TextCorrectResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. The value &quot;Success&quot; is returned if the call is successful. A specific error message is returned if an exception occurs, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class TextCorrectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which uniquely identifies the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32882AD0-50D1-1D90-A221-3987325EC03E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class TextCorrectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class TextCorrectResponseBody extends TeaModel {
             } 
 
             /**
-             * CorrectedText.
+             * <p>The corrected text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Empfehlung</p>
              */
             public Builder correctedText(String correctedText) {
                 this.correctedText = correctedText;
@@ -212,7 +227,10 @@ public class TextCorrectResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information, including the number of input characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;InputCharacterCount&quot;:9}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

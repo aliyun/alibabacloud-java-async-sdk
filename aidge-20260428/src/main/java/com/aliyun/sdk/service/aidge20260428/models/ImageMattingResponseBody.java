@@ -106,7 +106,10 @@ public class ImageMattingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImageMattingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The matting result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImageMattingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ImageMattingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ImageMattingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +259,10 @@ public class ImageMattingResponseBody extends TeaModel {
             } 
 
             /**
-             * Height.
+             * <p>The height of the result image in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -251,7 +270,10 @@ public class ImageMattingResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the image matting result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -259,7 +281,10 @@ public class ImageMattingResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The quality score of the image matting result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.11</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -267,7 +292,10 @@ public class ImageMattingResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;
@@ -275,7 +303,10 @@ public class ImageMattingResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the result image in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

@@ -106,7 +106,10 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The submit status result data, which contains the asynchronous task ID.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which uniquely identifies the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F93D82E4-D0B6-1043-AC58-282597BC3C10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +203,10 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The asynchronous task ID used to query the review result later by calling QueryAsyncTaskResult.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a8323ada-a196-9061-976f-90e38b27323a</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

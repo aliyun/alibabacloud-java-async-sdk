@@ -106,7 +106,10 @@ public class DocumentTranslateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The asynchronous task information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,11 @@ public class DocumentTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message, such as &quot;The parameters contain sensitive information. Try other input.&quot;
+         * This parameter is not returned for successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +137,10 @@ public class DocumentTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request identity, used for troubleshooting and Tracing Analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +148,10 @@ public class DocumentTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. true: The call is successful. false: The call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +204,10 @@ public class DocumentTranslateResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The unique identifier of the asynchronous task. Use this ID to query the task status and result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6071a030-5c92-9df1-96d0-44952343439a</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

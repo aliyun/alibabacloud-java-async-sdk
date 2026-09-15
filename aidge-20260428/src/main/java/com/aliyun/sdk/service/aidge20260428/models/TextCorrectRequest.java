@@ -75,10 +75,11 @@ public class TextCorrectRequest extends Request {
         } 
 
         /**
+         * <p>The source language code. This parameter is required. You can set this parameter to auto for automatic language detection. 14 languages are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>en</p>
+         * <p>de</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putQueryParameter("SourceLanguage", sourceLanguage);
@@ -87,10 +88,11 @@ public class TextCorrectRequest extends Request {
         }
 
         /**
+         * <p>The text to correct. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>telecomando pc</p>
+         * <p>Empfelung</p>
          */
         public Builder sourceText(String sourceText) {
             this.putQueryParameter("SourceText", sourceText);

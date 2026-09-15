@@ -106,7 +106,10 @@ public class ImageCroppingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImageCroppingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The cropping result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImageCroppingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ImageCroppingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ImageCroppingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +246,10 @@ public class ImageCroppingResponseBody extends TeaModel {
             } 
 
             /**
-             * Height.
+             * <p>The image height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -238,7 +257,10 @@ public class ImageCroppingResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the cropped image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/cropped.jpg">https://example.com/cropped.jpg</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -246,7 +268,10 @@ public class ImageCroppingResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;
@@ -254,7 +279,10 @@ public class ImageCroppingResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The image width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

@@ -106,7 +106,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. This parameter is not returned for successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is not returned for successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +307,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             } 
 
             /**
-             * AttrId.
+             * <p>The attribute ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>682439</p>
              */
             public Builder attrId(Integer attrId) {
                 this.attrId = attrId;
@@ -306,7 +318,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * Confidence.
+             * <p>The matching confidence score, ranging from 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder confidence(Integer confidence) {
                 this.confidence = confidence;
@@ -314,7 +329,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * InputType.
+             * <p>The attribute input type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Single-select dropdown</p>
              */
             public Builder inputType(String inputType) {
                 this.inputType = inputType;
@@ -322,7 +340,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * Matched.
+             * <p>Indicates whether the attribute is successfully matched. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder matched(Boolean matched) {
                 this.matched = matched;
@@ -330,7 +351,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The Chinese name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>netpila-backup-vpc-j5ekvvg5i5iquaeqbyf6b-cn-shenzhen-finance-1d</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +362,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * NameEn.
+             * <p>The English name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ABC Private POP</p>
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -346,7 +373,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The explanation for the matching result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a_reason</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -354,7 +384,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * SelectedValues.
+             * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;\].</p>
              */
             public Builder selectedValues(java.util.List<String> selectedValues) {
                 this.selectedValues = selectedValues;
@@ -362,7 +392,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * SelectedVids.
+             * <p>The list of selected attribute value IDs, such as [30127,30128\].</p>
              */
             public Builder selectedVids(java.util.List<Integer> selectedVids) {
                 this.selectedVids = selectedVids;
@@ -416,7 +446,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             } 
 
             /**
-             * ProcessingCount.
+             * <p>The number of processing times.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder processingCount(Integer processingCount) {
                 this.processingCount = processingCount;
@@ -561,7 +594,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             } 
 
             /**
-             * Attributes.
+             * <p>The list of attribute filling results.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
@@ -569,7 +602,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FC-F3A8A2802D10606D</p>
              */
             public Builder categoryId(Integer categoryId) {
                 this.categoryId = categoryId;
@@ -577,7 +613,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cat Collars</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -585,7 +624,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryPath.
+             * <p>The full path of the category, separated by &quot;/&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pet Supplies/Cat Supplies/Cat Charms, Collars &amp; Leashes/Cat Collars</p>
              */
             public Builder categoryPath(String categoryPath) {
                 this.categoryPath = categoryPath;
@@ -593,7 +635,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * FilledCount.
+             * <p>The number of attributes that are successfully filled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder filledCount(Integer filledCount) {
                 this.filledCount = filledCount;
@@ -601,7 +646,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * Matched.
+             * <p>Indicates whether the attribute is successfully matched. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder matched(Boolean matched) {
                 this.matched = matched;
@@ -609,7 +657,10 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAttributes.
+             * <p>The total number of attributes under the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalAttributes(Integer totalAttributes) {
                 this.totalAttributes = totalAttributes;
@@ -617,7 +668,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage fields.</p>
              */
             public Builder usageMap(UsageMap usageMap) {
                 this.usageMap = usageMap;

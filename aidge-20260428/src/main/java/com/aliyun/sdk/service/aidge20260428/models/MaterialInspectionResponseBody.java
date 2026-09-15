@@ -106,7 +106,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The material display detection result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,14 @@ public class MaterialInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +220,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Result.
+             * <p>The determination result of the step. Valid values: PASS, FAIL, and UNABLE_TO_JUDGE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASS</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -215,7 +231,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * StepId.
+             * <p>The step ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX</p>
              */
             public Builder stepId(String stepId) {
                 this.stepId = stepId;
@@ -321,7 +340,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Evidence.
+             * <p>The natural language summary, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 rule: 1 PASS, all inspection items are compliant</p>
              */
             public Builder evidence(String evidence) {
                 this.evidence = evidence;
@@ -329,7 +351,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * OverallResult.
+             * <p>The overall determination result. Valid values: PASS and FAIL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASS</p>
              */
             public Builder overallResult(String overallResult) {
                 this.overallResult = overallResult;
@@ -337,7 +362,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * <p>The request ID returned as-is from the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>req-001</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -345,7 +373,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * Steps.
+             * <p>The list of detection steps.</p>
              */
             public Builder steps(java.util.List<Steps> steps) {
                 this.steps = steps;
@@ -353,7 +381,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The detection type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stamp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -420,7 +451,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Result.
+             * <p>The inspection result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -428,7 +459,10 @@ public class MaterialInspectionResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information. The key is the usage metric name and the value is the count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessingCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

@@ -106,7 +106,10 @@ public class CategoryMatchResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. The value &quot;success&quot; is returned for successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The product category matching result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CategoryMatchResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. The value &quot;Success&quot; is returned for successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,10 +136,10 @@ public class CategoryMatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID, which uniquely identifies the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
+         * <p>2157065A-D6C8-1F3E-A4D0-B1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +147,10 @@ public class CategoryMatchResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -272,7 +281,10 @@ public class CategoryMatchResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The ID of the matched category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1522</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -280,7 +292,10 @@ public class CategoryMatchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The name of the matched category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>位置和活动跟踪器</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -288,7 +303,10 @@ public class CategoryMatchResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryPath.
+             * <p>The full path of the category, separated by forward slashes (/).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>宠物用品/猫用品/猫挂饰、项圈、牵引带/位置和活动跟踪器</p>
              */
             public Builder categoryPath(String categoryPath) {
                 this.categoryPath = categoryPath;
@@ -296,7 +314,10 @@ public class CategoryMatchResponseBody extends TeaModel {
             }
 
             /**
-             * Confidence.
+             * <p>The match confidence score. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96</p>
              */
             public Builder confidence(Integer confidence) {
                 this.confidence = confidence;
@@ -304,7 +325,10 @@ public class CategoryMatchResponseBody extends TeaModel {
             }
 
             /**
-             * MatchSuccessful.
+             * <p>Indicates whether the category matching is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder matchSuccessful(Boolean matchSuccessful) {
                 this.matchSuccessful = matchSuccessful;
@@ -312,7 +336,10 @@ public class CategoryMatchResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for the category match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The core product is a cat collar with AirTag positioning functionality, belonging to the \&quot;Location and Activity Trackers\&quot; category. The leaf node semantically matches its tracking functionality and cat-use attributes precisely</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -320,7 +347,7 @@ public class CategoryMatchResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information.</p>
              */
             public Builder usageMap(java.util.Map<String, Integer> usageMap) {
                 this.usageMap = usageMap;

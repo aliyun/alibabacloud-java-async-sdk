@@ -106,7 +106,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The floor display area inference result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -220,7 +229,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             } 
 
             /**
-             * AreaM2.
+             * <p>The floor display area, in square meters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5334</p>
              */
             public Builder areaM2(Double areaM2) {
                 this.areaM2 = areaM2;
@@ -228,7 +240,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * LeftEdgeM.
+             * <p>The left edge length, in meters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.025</p>
              */
             public Builder leftEdgeM(Double leftEdgeM) {
                 this.leftEdgeM = leftEdgeM;
@@ -236,7 +251,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * RightEdgeM.
+             * <p>The right edge length, in meters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.419</p>
              */
             public Builder rightEdgeM(Double rightEdgeM) {
                 this.rightEdgeM = rightEdgeM;
@@ -290,7 +308,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             } 
 
             /**
-             * Stage4AreaLabel.
+             * <p>The stage 4 area label.</p>
              */
             public Builder stage4AreaLabel(Stage4AreaLabel stage4AreaLabel) {
                 this.stage4AreaLabel = stage4AreaLabel;
@@ -474,7 +492,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             } 
 
             /**
-             * Attempts.
+             * <p>The number of downstream calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -482,7 +503,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The workflow error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -490,7 +514,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * HttpStatus.
+             * <p>The downstream HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder httpStatus(Integer httpStatus) {
                 this.httpStatus = httpStatus;
@@ -498,7 +525,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * LatencyMs.
+             * <p>The downstream call latency, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder latencyMs(Long latencyMs) {
                 this.latencyMs = latencyMs;
@@ -506,7 +536,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The workflow description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -514,7 +547,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * ModelRequestId.
+             * <p>The model request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_req_id_xx</p>
              */
             public Builder modelRequestId(String modelRequestId) {
                 this.modelRequestId = modelRequestId;
@@ -522,7 +558,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * <p>The business request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>643913D2-063F-599C-B3DF-B8D415CE171F</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -530,7 +569,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The area calculation result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -538,7 +577,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The workflow status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -546,7 +588,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the workflow execution is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -554,7 +599,10 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessingCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

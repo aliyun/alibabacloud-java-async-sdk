@@ -106,7 +106,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The intelligent element recognition result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -360,7 +372,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             } 
 
             /**
-             * BorderPixel.
+             * <p>The border pixel information, returned as a comma-separated string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8,10,0,1,330,330</p>
              */
             public Builder borderPixel(String borderPixel) {
                 this.borderPixel = borderPixel;
@@ -368,7 +383,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * NoobjCharacter.
+             * <p>Indicates whether the non-subject area contains text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder noobjCharacter(Boolean noobjCharacter) {
                 this.noobjCharacter = noobjCharacter;
@@ -376,7 +394,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * NoobjLogo.
+             * <p>Indicates whether the non-subject area contains a logo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder noobjLogo(Boolean noobjLogo) {
                 this.noobjLogo = noobjLogo;
@@ -384,7 +405,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * NoobjNpx.
+             * <p>Indicates whether the non-subject area contains irrelevant pixels or noise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder noobjNpx(Boolean noobjNpx) {
                 this.noobjNpx = noobjNpx;
@@ -392,7 +416,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * NoobjWatermark.
+             * <p>Indicates whether the non-subject area contains a watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder noobjWatermark(Boolean noobjWatermark) {
                 this.noobjWatermark = noobjWatermark;
@@ -400,7 +427,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * ObjCharacter.
+             * <p>Indicates whether the subject area contains text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder objCharacter(Boolean objCharacter) {
                 this.objCharacter = objCharacter;
@@ -408,7 +438,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * ObjLogo.
+             * <p>Indicates whether the subject area contains a logo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder objLogo(Boolean objLogo) {
                 this.objLogo = objLogo;
@@ -416,7 +449,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * ObjNpx.
+             * <p>Indicates whether the subject area contains irrelevant pixels or noise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder objNpx(Boolean objNpx) {
                 this.objNpx = objNpx;
@@ -424,7 +460,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * ObjWatermark.
+             * <p>Indicates whether the subject area contains a watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder objWatermark(Boolean objWatermark) {
                 this.objWatermark = objWatermark;
@@ -432,7 +471,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * PdNum.
+             * <p>The number of products.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pdNum(Integer pdNum) {
                 this.pdNum = pdNum;
@@ -440,7 +482,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * PdProp.
+             * <p>The proportion of the product area in the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74.15%</p>
              */
             public Builder pdProp(String pdProp) {
                 this.pdProp = pdProp;
@@ -448,7 +493,7 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * RecText.
+             * <p>The list of recognized text.</p>
              */
             public Builder recText(java.util.List<String> recText) {
                 this.recText = recText;
@@ -456,7 +501,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * TextProp.
+             * <p>The proportion of the text area in the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.52%</p>
              */
             public Builder textProp(String textProp) {
                 this.textProp = textProp;
@@ -464,7 +512,10 @@ public class ImageRecognitionResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

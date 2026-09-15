@@ -88,7 +88,10 @@ public class SizeChartExtractRequest extends Request {
         } 
 
         /**
-         * ColumnNameList.
+         * <p>The list of column names (such as Size, Bust, Length).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Size&quot;,&quot;Bust&quot;,&quot;Length&quot;]</p>
          */
         public Builder columnNameList(java.util.List<String> columnNameList) {
             String columnNameListShrink = shrink(columnNameList, "ColumnNameList", "json");
@@ -98,6 +101,7 @@ public class SizeChartExtractRequest extends Request {
         }
 
         /**
+         * <p>The URL of the size chart image to extract.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +114,10 @@ public class SizeChartExtractRequest extends Request {
         }
 
         /**
-         * LanguageModel.
+         * <p>The language model for output (such as en, cn). Set this parameter to cn for Chinese or en for English. If not specified, the original language is preserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder languageModel(String languageModel) {
             this.putQueryParameter("LanguageModel", languageModel);

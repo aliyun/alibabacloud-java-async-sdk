@@ -104,6 +104,7 @@ public class VideoTranslationRequest extends Request {
         } 
 
         /**
+         * <p>The array of translation capabilities. Valid values: [&quot;visual&quot;].</p>
          * <p>This parameter is required.</p>
          */
         public Builder capabilities(java.util.List<String> capabilities) {
@@ -114,7 +115,10 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>The source language. This parameter is optional. Default value: auto (automatic detection).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -123,6 +127,7 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
+         * <p>The target language. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +140,7 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
+         * <p>The URL of the video (MP4/MOV, ≤ 200 MB).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class VideoTranslationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Processing</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class VideoTranslationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The asynchronous task submit result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class VideoTranslationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Translation processing</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,10 +136,10 @@ public class VideoTranslationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
+         * <p>req_20260608_jkl012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +147,10 @@ public class VideoTranslationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +203,10 @@ public class VideoTranslationResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The asynchronous task ID, used for subsequent queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ea3b66e88a543658520c994f08896a0</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

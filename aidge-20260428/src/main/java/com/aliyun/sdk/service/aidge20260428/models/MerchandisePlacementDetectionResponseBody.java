@@ -106,7 +106,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The display detection result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,14 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -220,7 +233,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Score.
+             * <p>The similarity score, ranging from 0 to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.53</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -228,7 +244,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SkuId.
+             * <p>The ID of the recalled product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder skuId(String skuId) {
                 this.skuId = skuId;
@@ -236,7 +255,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SkuName.
+             * <p>The name of the recalled product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>光明牛奶500ml</p>
              */
             public Builder skuName(String skuName) {
                 this.skuName = skuName;
@@ -329,7 +351,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Rank.
+             * <p>The recall rank of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rank(Integer rank) {
                 this.rank = rank;
@@ -337,7 +362,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The similarity score, ranging from 0 to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.82</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -345,7 +373,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SkuId.
+             * <p>The ID of the recalled product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder skuId(String skuId) {
                 this.skuId = skuId;
@@ -353,7 +384,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SkuName.
+             * <p>The name of the recalled product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>光明牛奶500ml</p>
              */
             public Builder skuName(String skuName) {
                 this.skuName = skuName;
@@ -459,7 +493,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Bbox.
+             * <p>The position coordinates of the detection box in the format [x1,y1,x2,y2].</p>
              */
             public Builder bbox(java.util.List<Float> bbox) {
                 this.bbox = bbox;
@@ -467,7 +501,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The failure reason for the detection box. The value is null if the detection is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Embedding failed&quot;</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -475,7 +512,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Idx.
+             * <p>The index of the detection box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder idx(Integer idx) {
                 this.idx = idx;
@@ -483,7 +523,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Top1.
+             * <p>The top-1 recalled product for the detection box.</p>
              */
             public Builder top1(Top1 top1) {
                 this.top1 = top1;
@@ -491,7 +531,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Topk.
+             * <p>The list of top-K recalled products for the detection box.</p>
              */
             public Builder topk(java.util.List<Topk> topk) {
                 this.topk = topk;
@@ -571,7 +611,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * BoxCount.
+             * <p>The number of valid detection boxes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder boxCount(Integer boxCount) {
                 this.boxCount = boxCount;
@@ -579,7 +622,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The list of recall details for each detection box.</p>
              */
             public Builder data(java.util.List<DataData> data) {
                 this.data = data;
@@ -587,7 +630,10 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage information, where the key is the usage name and the value is the count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessingCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

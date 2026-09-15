@@ -103,6 +103,7 @@ public class DiduiAreaDeductionRequest extends Request {
         } 
 
         /**
+         * <p>The list of products and their detection boxes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder products(java.util.List<Products> products) {
@@ -113,7 +114,10 @@ public class DiduiAreaDeductionRequest extends Request {
         }
 
         /**
-         * RagId.
+         * <p>The ID of the customer-specific SKU vector database that determines which database is used for recall. The database must be created in advance through the database creation process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rag_xxx</p>
          */
         public Builder ragId(String ragId) {
             this.putQueryParameter("RagId", ragId);
@@ -122,7 +126,10 @@ public class DiduiAreaDeductionRequest extends Request {
         }
 
         /**
-         * ReqId.
+         * <p>The optional business request ID used for Tracing Analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>didui-request-001</p>
          */
         public Builder reqId(String reqId) {
             this.putQueryParameter("ReqId", reqId);
@@ -131,6 +138,7 @@ public class DiduiAreaDeductionRequest extends Request {
         }
 
         /**
+         * <p>The HTTPS URL of the overall floor display image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,6 +240,7 @@ public class DiduiAreaDeductionRequest extends Request {
             } 
 
             /**
+             * <p>The bottom boundary of the detection box.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -243,6 +252,7 @@ public class DiduiAreaDeductionRequest extends Request {
             }
 
             /**
+             * <p>The left boundary of the detection box.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -254,6 +264,7 @@ public class DiduiAreaDeductionRequest extends Request {
             }
 
             /**
+             * <p>The right boundary of the detection box.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -265,6 +276,7 @@ public class DiduiAreaDeductionRequest extends Request {
             }
 
             /**
+             * <p>The top boundary of the detection box.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -337,6 +349,7 @@ public class DiduiAreaDeductionRequest extends Request {
             } 
 
             /**
+             * <p>The instance boxes for the current SKU. The coordinate range is 0 to 1000.</p>
              * <p>This parameter is required.</p>
              */
             public Builder boxes(java.util.List<Boxes> boxes) {
@@ -345,6 +358,7 @@ public class DiduiAreaDeductionRequest extends Request {
             }
 
             /**
+             * <p>The unique ID of the SKU.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
