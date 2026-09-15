@@ -175,9 +175,9 @@ public class DeleteNatIpCidrRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -190,10 +190,12 @@ public class DeleteNatIpCidrRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run. The NAT CIDR block is not deleted. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the NAT CIDR block is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +208,7 @@ public class DeleteNatIpCidrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.</p>
+         * <p>The instance ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +223,7 @@ public class DeleteNatIpCidrRequest extends Request {
         /**
          * <p>The NAT CIDR block to be deleted.</p>
          * <ul>
-         * <li>Before you delete a NAT CIDR block, you must delete all NAT IP addresses from the CIDR block.</li>
+         * <li>Before you delete a NAT CIDR block, delete all NAT IP addresses in the CIDR block.</li>
          * <li>The default NAT CIDR block cannot be deleted.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -255,7 +257,7 @@ public class DeleteNatIpCidrRequest extends Request {
 
         /**
          * <p>The region ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

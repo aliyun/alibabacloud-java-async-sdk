@@ -80,10 +80,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token that is used for the next query. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
-         * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C46FF5A8-C5F0-4024-8262-B16B639225A0</p>
@@ -106,7 +106,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of tags that meet the filter conditions.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -172,10 +172,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -183,10 +180,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

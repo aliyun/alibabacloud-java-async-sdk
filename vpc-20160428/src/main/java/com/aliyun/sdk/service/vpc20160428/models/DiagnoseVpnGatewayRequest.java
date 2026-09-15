@@ -134,9 +134,9 @@ public class DiagnoseVpnGatewayRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -149,10 +149,10 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * <p>Check the connectivity of the destination address. Valid values:</p>
+         * <p>Checks private network connectivity between specified addresses. Valid values:</p>
          * <ul>
-         * <li><strong>PrivateSourceIp</strong>: the source IP address. The source IP address must be on the VPC side.</li>
-         * <li><strong>PrivateDestinationIp</strong>: the destination IP address. The destination IP address must be on the data center side.</li>
+         * <li><strong>PrivateSourceIp</strong>: the source IP address. The source IP address must be an address on the VPC side.</li>
+         * <li><strong>PrivateDestinationIp</strong>: the destination IP address. The destination IP address must be an address on the on-premises data center side.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,8 +165,8 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the VPN gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPN gateway instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,8 +192,8 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
-         * <p>Set the value to <strong>Ipsec</strong>, which specifies an IPsec-VPN connection.</p>
+         * <p>The type of the resource to be diagnosed.</p>
+         * <p>Set the value to <strong>IPsec</strong>, which indicates an IPsec-VPN connection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

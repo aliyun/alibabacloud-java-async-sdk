@@ -273,8 +273,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         /**
          * <p>Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: Deletes the health check IP addresses.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Does not delete the health check IP addresses.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,11 +289,11 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The description of the router interface.</p>
-         * <p>The value must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the router interface. </p>
+         * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the router interface.</p>
+         * <p>路由器接口</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -300,8 +302,8 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The rate of health checks. Unit: milliseconds. The recommended value is <strong>2000</strong>. This value specifies the interval at which probe packets are sent during a health check.</p>
-         * <p>In this example, <strong>HcThreshold</strong> is set to <strong>8</strong> and <strong>HcRate</strong> is set to <strong>2000</strong>. In this example, probe packets are sent from <strong>HealthCheckSourceIp</strong> (source address) to <strong>HealthCheckTargetIp</strong> (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.</p>
+         * <p>The health check rate. Unit: milliseconds. Recommended value: <strong>2000</strong>. This parameter specifies the interval between consecutive probe packets sent during a health check.</p>
+         * <p>In this example, <strong>HcThreshold</strong> is set to <strong>8</strong> and <strong>HcRate</strong> is set to <strong>2000</strong>. This means that during a health check, a probe packet is sent from <strong>HealthCheckSourceIp</strong> (the source IP address for health checks) to <strong>HealthCheckTargetIp</strong> (the destination IP address for health checks) every 2000 milliseconds. If 8 consecutive probe packets receive no response, the health check fails.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -313,7 +315,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The healthy threshold. Unit: packets. We recommend that you set the value to <strong>8</strong>. This value specifies the number of probe packets that are sent during a health check.</p>
+         * <p>The health check threshold. Unit: packets. Recommended value: <strong>8</strong>. This parameter specifies the number of probe packets sent during a health check.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -325,9 +327,9 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).</p>
+         * <p>The source IP address for health checks. The IP address must be an unused IP address in the local VPC.</p>
          * <blockquote>
-         * <p> You can set this parameter when an Express Connect circuit is used.</p>
+         * <p>You can specify this parameter in Express Connect circuit scenarios.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -340,9 +342,9 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The destination IP address that is used to perform health checks.</p>
+         * <p>The destination IP address for health checks. </p>
          * <blockquote>
-         * <p> This parameter is required when <strong>HealthCheckSourceIp</strong> is specified.</p>
+         * <p>This parameter is required if <strong>HealthCheckSourceIp</strong> is specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -356,7 +358,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
 
         /**
          * <p>The name of the router interface.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>TEST</p>
@@ -380,7 +382,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
+         * <p>The ID of the account to which the peer router interface belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>28768383240243****</p>
@@ -404,10 +406,12 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The type of router to which the peer router interface belongs. Valid values:</p>
+         * <p>The type of the router to which the peer router interface belongs. Valid values:</p>
          * <ul>
-         * <li><strong>VRouter</strong></li>
-         * <li><strong>VBR</strong> (default)</li>
+         * <li><p><strong>VRouter</strong>: vRouter.</p>
+         * </li>
+         * <li><p><strong>VBR</strong> (default): Virtual Border Router.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -430,7 +434,7 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
 
         /**
          * <p>The region ID of the router interface.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

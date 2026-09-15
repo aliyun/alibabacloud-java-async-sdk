@@ -147,8 +147,8 @@ public class DescribeAccessPointsRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh-CN</strong>: Chinese</li>
-         * <li><strong>en-US</strong> (default): English</li>
+         * <li><strong>zh-CN</strong>: Chinese.</li>
+         * <li><strong>en-US</strong> (default): English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -195,7 +195,7 @@ public class DescribeAccessPointsRequest extends Request {
 
         /**
          * <p>The region ID of the access point.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

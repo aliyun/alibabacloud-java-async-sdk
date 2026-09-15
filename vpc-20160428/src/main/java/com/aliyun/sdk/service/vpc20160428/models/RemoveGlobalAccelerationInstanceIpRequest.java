@@ -146,7 +146,7 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the shared-bandwidth instance.</p>
+         * <p>The instance ID of the Internet Shared Bandwidth instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,8 +159,8 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EIP.</p>
-         * <p>To query the EIP ID, call DescribeEipAddresses.</p>
+         * <p>The ID of the EIP instance. </p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query the EIP instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,8 +191,7 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the shared-bandwidth instance is located.</p>
-         * <p>To query the region ID, call DescribeRegions.</p>
+         * <p>The region where the Internet Shared Bandwidth instance is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

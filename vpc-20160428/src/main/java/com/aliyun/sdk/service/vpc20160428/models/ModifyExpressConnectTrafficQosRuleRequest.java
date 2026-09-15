@@ -330,7 +330,10 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -342,13 +345,13 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The destination IPv4 CIDR block that matches the QoS rule traffic.</p>
+         * <p>The destination IP address IPv4 CIDR block for traffic matching in the QoS rule.</p>
          * <blockquote>
-         * <p>When this parameter is unavailable, specify <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
+         * <p>This parameter cannot be specified together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.0/24</p>
+         * <p><code>1.1.**.**</code>/24</p>
          */
         public Builder dstCidr(String dstCidr) {
             this.putQueryParameter("DstCidr", dstCidr);
@@ -357,13 +360,13 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The destination IPv6 CIDR block that matches the QoS rule traffic.</p>
+         * <p>The destination IP address IPv6 CIDR block for traffic matching in the QoS rule.</p>
          * <blockquote>
-         * <p>When this parameter is unavailable, specify <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
+         * <p>This parameter cannot be specified together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2001:0db8:1234:5678::/64</p>
+         * <p>2001:0db8:1234:****::/64</p>
          */
         public Builder dstIPv6Cidr(String dstIPv6Cidr) {
             this.putQueryParameter("DstIPv6Cidr", dstIPv6Cidr);
@@ -372,24 +375,40 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The range of destination ports that match the QoS rule traffic. Valid values: <strong>0</strong> to <strong>65535</strong>. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number. Different protocols correspond to different ports. Valid values:</p>
+         * <p>The destination port range for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. Set the value to -1 if no matching is required. Currently, only a single port number can be specified. The start and end port numbers must be the same. The destination port range is fixed for each protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>ALL</strong> (uneditable): -1/-1.</li>
-         * <li><strong>ICMP(IPv4)</strong> (uneditable): -1/-1.</li>
-         * <li><strong>ICMPv6(IPv6)</strong> (uneditable): -1/-1.</li>
-         * <li><strong>TCP</strong> (editable): -1/-1.</li>
-         * <li><strong>UDP</strong> (editable): -1/-1.</li>
-         * <li><strong>GRE</strong> (uneditable): -1/-1.</li>
-         * <li><strong>SSH</strong> (uneditable): 22/22.</li>
-         * <li><strong>Telnet</strong> (uneditable): 23/23.</li>
-         * <li><strong>HTTP</strong> (uneditable): 80/80.</li>
-         * <li><strong>HTTPS</strong> (uneditable): 443/443.</li>
-         * <li><strong>MS SQL</strong> (uneditable): 1443/1443.</li>
-         * <li><strong>Oracle</strong> (uneditable): 1521/1521.</li>
-         * <li><strong>MySql</strong> (uneditable): 3306/3306.</li>
-         * <li><strong>RDP</strong> (uneditable): 3389/3389.</li>
-         * <li><strong>PostgreSQL</strong> (uneditable): 5432/5432.</li>
-         * <li><strong>Redis</strong> (uneditable): 6379/6379.</li>
+         * <li><p><strong>ALL</strong>: -1/-1. Not editable.</p>
+         * </li>
+         * <li><p><strong>ICMP(IPv4)</strong>: -1/-1. Not editable.</p>
+         * </li>
+         * <li><p><strong>ICMPv6(IPv6)</strong>: -1/-1. Not editable.</p>
+         * </li>
+         * <li><p><strong>TCP</strong>: -1/-1. Editable.</p>
+         * </li>
+         * <li><p><strong>UDP</strong>: -1/-1. Editable.</p>
+         * </li>
+         * <li><p><strong>GRE</strong>: -1/-1. Not editable.</p>
+         * </li>
+         * <li><p><strong>SSH</strong>: 22/22. Not editable.</p>
+         * </li>
+         * <li><p><strong>Telnet</strong>: 23/23. Not editable.</p>
+         * </li>
+         * <li><p><strong>HTTP</strong>: 80/80. Not editable.</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: 443/443. Not editable.</p>
+         * </li>
+         * <li><p><strong>MS SQL</strong>: 1443/1443. Not editable.</p>
+         * </li>
+         * <li><p><strong>Oracle</strong>: 1521/1521. Not editable.</p>
+         * </li>
+         * <li><p><strong>MySql</strong>: 3306/3306. Not editable.</p>
+         * </li>
+         * <li><p><strong>RDP</strong>: 3389/3389. Not editable.</p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong>: 5432/5432. Not editable.</p>
+         * </li>
+         * <li><p><strong>Redis</strong>: 6379/6379. Not editable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,7 +421,7 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The DSCP value that matches the QoS rule traffic. Valid values: <strong>0</strong> to <strong>63</strong>. If no value is matched, the value is -1.</p>
+         * <p>The DSCP value for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>63</strong>. Set the value to -1 if no matching is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -432,7 +451,7 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. The priority of each QoS rule must be unique in the same QoS policy.</p>
+         * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. The priority of each QoS rule must be unique within the same QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -444,24 +463,40 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The protocol of the QoS rule. Valid values:</p>
+         * <p>The protocol type of the QoS rule. Valid values:</p>
          * <ul>
-         * <li><strong>ALL</strong></li>
-         * <li><strong>ICMP(IPv4)</strong></li>
-         * <li><strong>ICMPv6(IPv6)</strong></li>
-         * <li><strong>TCP</strong></li>
-         * <li><strong>UDP</strong></li>
-         * <li><strong>GRE</strong></li>
-         * <li><strong>SSH</strong></li>
-         * <li><strong>Telnet</strong></li>
-         * <li><strong>HTTP</strong></li>
-         * <li><strong>HTTPS</strong></li>
-         * <li><strong>MS SQL</strong></li>
-         * <li><strong>Oracle</strong></li>
-         * <li><strong>MySql</strong></li>
-         * <li><strong>RDP</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>Redis</strong></li>
+         * <li><p><strong>ALL</strong></p>
+         * </li>
+         * <li><p><strong>ICMP(IPv4)</strong></p>
+         * </li>
+         * <li><p><strong>ICMPv6(IPv6)</strong></p>
+         * </li>
+         * <li><p><strong>TCP</strong></p>
+         * </li>
+         * <li><p><strong>UDP</strong></p>
+         * </li>
+         * <li><p><strong>GRE</strong></p>
+         * </li>
+         * <li><p><strong>SSH</strong></p>
+         * </li>
+         * <li><p><strong>Telnet</strong></p>
+         * </li>
+         * <li><p><strong>HTTP</strong></p>
+         * </li>
+         * <li><p><strong>HTTPS</strong></p>
+         * </li>
+         * <li><p><strong>MS SQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * <li><p><strong>MySql</strong></p>
+         * </li>
+         * <li><p><strong>RDP</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>Redis</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -474,11 +509,11 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The QoS policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-2giu0a6vd5x0mv4700</p>
+         * <p>qos-2giu0a6vd5x0mv****</p>
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -487,11 +522,11 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the QoS queue.</p>
+         * <p>The QoS queue ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+         * <p>qos-queue-9nyx2u7n71s2rc****</p>
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -501,7 +536,7 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
 
         /**
          * <p>The region ID of the QoS policy.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -514,7 +549,7 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The new DSCP value. Valid values: <strong>0</strong> to <strong>63</strong>. If you do not change the value, set the value to -1.</p>
+         * <p>The new DSCP value to remark in the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. Set the value to -1 if no remarking is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -548,11 +583,11 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the QoS rule.</p>
+         * <p>The QoS rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-rule-iugg0l9x27f2nocouj</p>
+         * <p>qos-rule-iugg0l9x27f2no****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -574,13 +609,13 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The source IPv4 CIDR block that matches the QoS rule traffic.</p>
+         * <p>The source IPv4 CIDR block for traffic matching in the QoS rule.</p>
          * <blockquote>
-         * <p>When this parameter is unavailable, specify <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
+         * <p>This parameter cannot be specified together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.0/24</p>
+         * <p><code>1.1.**.**</code>/24</p>
          */
         public Builder srcCidr(String srcCidr) {
             this.putQueryParameter("SrcCidr", srcCidr);
@@ -589,13 +624,13 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The source IPv6 CIDR block that matches the QoS rule traffic.</p>
+         * <p>The source IPv6 CIDR block for traffic matching in the QoS rule.</p>
          * <blockquote>
-         * <p>When this parameter is unavailable, specify <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
+         * <p>This parameter cannot be specified together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2001:0db8:1234:5678::/64</p>
+         * <p>2001:0db8:1234:****::/64</p>
          */
         public Builder srcIPv6Cidr(String srcIPv6Cidr) {
             this.putQueryParameter("SrcIPv6Cidr", srcIPv6Cidr);
@@ -604,7 +639,7 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The range of source ports that match the QoS rule traffic. Valid values: <strong>0</strong> to <strong>65535</strong>. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number.</p>
+         * <p>The source port range for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. Set the value to -1 if no matching is required. Currently, only a single port number can be specified. The start and end port numbers must be the same.</p>
          * 
          * <strong>example:</strong>
          * <p>-1/-1</p>

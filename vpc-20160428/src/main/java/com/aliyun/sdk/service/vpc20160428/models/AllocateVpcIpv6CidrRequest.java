@@ -174,10 +174,8 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         /**
          * <p>The type of the IPv6 address pool. Valid values:</p>
          * <ul>
-         * <li><p><strong>aliyun</strong> (default): IPv6 CIDR block is allocated by the system.</p>
-         * </li>
-         * <li><p><strong>custom</strong>: custom IPv6 CIDR block.</p>
-         * </li>
+         * <li><strong>aliyun</strong> (default): The system assigns an IPv6 CIDR block.</li>
+         * <li><strong>custom</strong>: A user-defined IPv6 CIDR block.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,9 +188,9 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -205,7 +203,7 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 CIDR block that you want to reserve.</p>
+         * <p>The IPv6 CIDR block to reserve.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:XXXX:0:a600::/56</p>
@@ -217,23 +215,23 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * <p>The type of IPv6 CIDR block. Valid values:</p>
+         * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
          * <ul>
-         * <li><strong>BGP</strong> (default): BGP (Multi-ISP)</li>
-         * <li><strong>BGP_International</strong>: BGP (Multi-ISP) International</li>
-         * <li><strong>ChinaMobile</strong>: China Mobile (Single-ISP)</li>
-         * <li><strong>ChinaUnicom</strong>: China Unicom (Single-ISP)</li>
-         * <li><strong>ChinaTelecom</strong>: China Telecom (Single-ISP)</li>
-         * <li><strong>ChinaMobile_L2</strong>: China Mobile (Single-ISP)_L2</li>
-         * <li><strong>ChinaUnicom_L2</strong>: China Unicom (Single-ISP)_L2</li>
-         * <li><strong>ChinaTelecom_L2</strong>: China Telecom (Single-ISP)_L2<blockquote>
+         * <li><strong>BGP</strong> (default): BGP (multi-ISP).</li>
+         * <li><strong>BGP_International</strong>: BGP (multi-ISP)_International.</li>
+         * <li><strong>ChinaMobile</strong>: China Mobile (single-ISP).</li>
+         * <li><strong>ChinaUnicom</strong>: China Unicom (single-ISP).</li>
+         * <li><strong>ChinaTelecom</strong>: China Telecom (single-ISP).</li>
+         * <li><strong>ChinaMobile_L2</strong>: China Mobile (single-ISP)_L2.</li>
+         * <li><strong>ChinaUnicom_L2</strong>: China Unicom (single-ISP)_L2.</li>
+         * <li><strong>ChinaTelecom_L2</strong>: China Telecom (single-ISP)_L2.</li>
+         * </ul>
+         * <blockquote>
          * <ul>
-         * <li>If your account is included in the whitelist, you can set this parameter to one of the following values: <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, <strong>ChinaMobile</strong>, <strong>ChinaTelecom_L2</strong>, <strong>ChinaUnicom_L2</strong>, <strong>ChinaMobile_L2</strong>, and <strong>BGP_International</strong>.</li>
-         * <li>You can reserve only one IPv6 CIDR block of each type. You can reserve another IPv6 CIDR block only after the existing one is allocated to a VPC.</li>
+         * <li>If you are a user whose whitelist is activated, you can set this parameter to <strong>ChinaTelecom</strong> (China Telecom), <strong>ChinaUnicom</strong> (China Unicom), <strong>ChinaMobile</strong> (China Mobile), <strong>ChinaTelecom_L2</strong> (China L2 Telecom), <strong>ChinaUnicom_L2</strong> (China L2 Unicom), <strong>ChinaMobile_L2</strong> (China L2 Mobile), or <strong>BGP_International</strong> (BGP multi-ISP International).</li>
+         * <li>You can reserve only one IPv6 CIDR block of each type. You can reserve the next one only after the current one is assigned to a VPC.</li>
          * </ul>
          * </blockquote>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BGP</p>
@@ -264,7 +262,7 @@ public class AllocateVpcIpv6CidrRequest extends Request {
 
         /**
          * <p>The region ID of the VPC.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

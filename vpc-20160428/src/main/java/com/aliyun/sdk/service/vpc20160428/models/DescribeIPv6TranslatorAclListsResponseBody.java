@@ -106,7 +106,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of network ACLs.</p>
+         * Ipv6TranslatorAcls.
          */
         public Builder ipv6TranslatorAcls(Ipv6TranslatorAcls ipv6TranslatorAcls) {
             this.ipv6TranslatorAcls = ipv6TranslatorAcls;
@@ -114,7 +114,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,10 +216,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ACL ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ipv6transacl-bp1de2****</p>
+             * AclId.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -227,10 +224,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ACL name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acl1</p>
+             * AclName.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;

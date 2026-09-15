@@ -271,12 +271,20 @@ public class CreateVSwitchRequest extends Request {
         } 
 
         /**
-         * <p>The CIDR block of the vSwitch. Take note of the following limits:</p>
+         * <p>The CIDR block of the vSwitch. The vSwitch CIDR block must meet the following requirements: </p>
          * <ul>
-         * <li>The subnet mask of the CIDR block must be 16 to 29 bits in length.</li>
-         * <li>The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</li>
-         * <li>The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</li>
+         * <li><p>The mask length of the vSwitch CIDR block must be 16 to 29 bits.  </p>
+         * </li>
+         * <li><p>The vSwitch CIDR block must be a subset of the CIDR block of the VPC to which the vSwitch belongs. </p>
+         * </li>
+         * <li><p>The vSwitch CIDR block cannot be the same as the destination CIDR block of a route entry in the VPC, but can be a subset of the destination CIDR block. </p>
+         * </li>
+         * <li><p>The vSwitch CIDR block cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>After a vSwitch is created, you cannot modify its CIDR block.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
@@ -288,7 +296,13 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * CidrMask.
+         * <p>The mask length of the IPv4 CIDR block of the vSwitch.</p>
+         * <blockquote>
+         * <p>The mask length of the vSwitch IPv4 CIDR block must be 16 to 29 bits. You must specify at least one of CidrBlock and CidrMask.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder cidrMask(Integer cidrMask) {
             this.putQueryParameter("CidrMask", cidrMask);
@@ -298,9 +312,9 @@ public class CreateVSwitchRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -313,7 +327,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The description of the vSwitch.</p>
+         * <p>The description of the vSwitch.  </p>
          * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -326,7 +340,8 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
+         * <p>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.
+         * You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when the VPC to which the vSwitch belongs has IPv6 enabled. After the IPv6 CIDR block is assigned, it cannot be changed to another CIDR block. Make sure that the CIDR block does not overlap with those of other vSwitches in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -338,7 +353,13 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * Ipv6CidrMask.
+         * <p>The subnet mask of the IPv6 CIDR block of the vSwitch. You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when the VPC to which the vSwitch belongs has IPv6 enabled.</p>
+         * <blockquote>
+         * <p>Only 64 is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder ipv6CidrMask(Integer ipv6CidrMask) {
             this.putQueryParameter("Ipv6CidrMask", ipv6CidrMask);
@@ -365,8 +386,8 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the vSwitch.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the vSwitch to create.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -396,7 +417,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The tag of the resource.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -405,8 +426,8 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The name of the vSwitch.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the vSwitch. </p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>vSwitch-1</p>
@@ -418,7 +439,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC where you want to create the vSwitch.</p>
+         * <p>The ID of the VPC to which the vSwitch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -431,7 +452,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 CIDR block of the VPC.</p>
+         * <p>The IPv6 CIDR block of the VPC. If the VPC to which the vSwitch belongs has multiple IPv6 CIDR blocks, you can specify this parameter to determine the IPv6 CIDR block range for the vSwitch. If you do not specify this parameter, the IPv6 CIDR block assigned when IPv6 was enabled for the VPC is used.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:XXXX:0:6a::/56</p>
@@ -443,8 +464,8 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the vSwitch.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The ID of the zone in which to create the vSwitch.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -516,8 +537,8 @@ public class CreateVSwitchRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>
@@ -528,8 +549,8 @@ public class CreateVSwitchRequest extends Request {
             }
 
             /**
-             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length, but cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>

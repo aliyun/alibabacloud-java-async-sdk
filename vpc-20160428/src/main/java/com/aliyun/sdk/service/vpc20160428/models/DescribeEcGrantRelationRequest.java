@@ -117,10 +117,12 @@ public class DescribeEcGrantRelationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID of the instance for which you want to query authorization relationships.</p>
          * <ul>
-         * <li>If you set <strong>InstanceType</strong> to <strong>VBR</strong>, specify a VBR ID.</li>
-         * <li>If you set <strong>InstanceType</strong> to <strong>VPC</strong>, specify a VPC ID.</li>
+         * <li><p>If <strong>InstanceType</strong> is set to <strong>VBR</strong>, set this parameter to the VBR instance ID.</p>
+         * </li>
+         * <li><p>If <strong>InstanceType</strong> is set to <strong>VPC</strong>, set this parameter to the VPC-connected instance ID.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -134,10 +136,10 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * <p>The type of instance. Valid values:</p>
+         * <p>The type of instance for which you want to query authorization relationships. Valid values:</p>
          * <ul>
-         * <li><strong>VBR</strong>: queries the permissions that are granted to a VBR.</li>
-         * <li><strong>VPC</strong>: queries the permissions that are granted from a VPC.</li>
+         * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance. Queries the VPC-connected instances that have granted authorization to the VBR instance.</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) instance. Queries the VBR instances to which the VPC-connected instance has granted authorization.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -151,7 +153,7 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +165,7 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -175,10 +177,12 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance is deployed.</p>
+         * <p>The region ID of the VBR instance for which you want to query authorization relationships.</p>
          * <ul>
-         * <li>If <strong>InstanceType</strong> is set to <strong>VBR</strong>, this parameter is required.</li>
-         * <li>If <strong>InstanceType</strong> is set to <strong>VPC</strong>, you can ignore this parameter.</li>
+         * <li><p>If <strong>InstanceType</strong> is set to <strong>VBR</strong>, this parameter is required.</p>
+         * </li>
+         * <li><p>If <strong>InstanceType</strong> is set to <strong>VPC</strong>, this parameter is not required.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

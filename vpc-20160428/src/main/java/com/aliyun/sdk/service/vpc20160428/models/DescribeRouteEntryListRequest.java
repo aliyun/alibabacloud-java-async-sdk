@@ -286,7 +286,7 @@ public class DescribeRouteEntryListRequest extends Request {
         } 
 
         /**
-         * <p>The destination CIDR blocks of the routes.</p>
+         * <p>The list of destination CIDR blocks of routes.</p>
          */
         public Builder destCidrBlockList(java.util.List<String> destCidrBlockList) {
             this.putQueryParameter("DestCidrBlockList", destCidrBlockList);
@@ -295,7 +295,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The destination CIDR block of the route. IPv4 and IPv6 CIDR blocks are supported.</p>
+         * <p>The destination CIDR block of the route. Both IPv4 and IPv6 CIDR blocks are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.2.0/24</p>
@@ -307,14 +307,16 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The IP version. Valid values:</p>
+         * <p>The version of the IP protocol. Valid values:</p>
          * <ul>
-         * <li><strong>IPv4</strong></li>
-         * <li><strong>IPv6</strong></li>
+         * <li><p><strong>ipv4</strong>: IPv4.</p>
+         * </li>
+         * <li><p><strong>ipv6</strong>: IPv6.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>IPv4</p>
+         * <p>ipv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -323,7 +325,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -335,7 +337,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The instance ID of the next hop.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp10zyaph5cc8b7c7****</p>
@@ -349,18 +351,28 @@ public class DescribeRouteEntryListRequest extends Request {
         /**
          * <p>The next hop type. Valid values:</p>
          * <ul>
-         * <li><strong>Instance</strong>: an Elastic Compute Service (ECS) instance. This is the default value.</li>
-         * <li><strong>HaVip</strong>: a high-availability virtual IP address (HaVip).</li>
-         * <li><strong>VpnGateway</strong>: a VPN gateway.</li>
-         * <li><strong>NatGateway</strong>: a NAT gateway.</li>
-         * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI).</li>
-         * <li><strong>RouterInterface</strong>: a router interface.</li>
-         * <li><strong>IPv6Gateway</strong>: an IPv6 gateway.</li>
-         * <li><strong>Attachment</strong>: a transit router.</li>
-         * <li><strong>Ipv4Gateway</strong>: an IPv4 gateway.</li>
-         * <li><strong>GatewayEndpoint</strong>: a gateway endpoint.</li>
-         * <li><strong>CenBasic</strong>: CEN does not support transit routers.</li>
-         * <li><strong>Ecr</strong>: Express Connect Router (ECR).</li>
+         * <li><p><strong>Instance</strong> (default): ECS instance.</p>
+         * </li>
+         * <li><p><strong>HaVip</strong>: high-availability virtual IP address.</p>
+         * </li>
+         * <li><p><strong>VpnGateway</strong>: VPN gateway.</p>
+         * </li>
+         * <li><p><strong>NatGateway</strong>: NAT gateway.</p>
+         * </li>
+         * <li><p><strong>NetworkInterface</strong>: secondary elastic network interface controller (NIC).</p>
+         * </li>
+         * <li><p><strong>RouterInterface</strong>: vRouter interface.</p>
+         * </li>
+         * <li><p><strong>IPv6Gateway</strong>: IPv6 gateway.</p>
+         * </li>
+         * <li><p><strong>Attachment</strong>: transit router.</p>
+         * </li>
+         * <li><p><strong>Ipv4Gateway</strong>: IPv4 gateway.</p>
+         * </li>
+         * <li><p><strong>GatewayEndpoint</strong>: gateway endpoint.</p>
+         * </li>
+         * <li><p><strong>Ecr</strong>: Express Connect Router (ECR).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -375,8 +387,8 @@ public class DescribeRouteEntryListRequest extends Request {
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * <li>You do not need to specify this parameter for the first request or if no subsequent request exists.</li>
+         * <li>If a subsequent request exists, set the value to the NextToken value that is returned from the last call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -407,8 +419,8 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the route table.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the route table to which the route belongs.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -451,7 +463,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The name of the route entry.</p>
+         * <p>The name of the route.</p>
          * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -464,13 +476,13 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>The route type. Valid values:</p>
+         * <p>The type of the route. Valid values:</p>
          * <ul>
-         * <li><strong>Custom</strong>: custom routes.</li>
-         * <li><strong>System</strong>: system routes.</li>
-         * <li><strong>BGP</strong>: BGP routes.</li>
-         * <li><strong>CEN</strong>: Cloud Enterprise Network (CEN) routes.</li>
-         * <li><strong>ECR</strong>: Express Connect Router (ECR) routes.</li>
+         * <li><strong>Custom</strong>: custom route.</li>
+         * <li><strong>System</strong>: system route.</li>
+         * <li><strong>BGP</strong>: BGP route.</li>
+         * <li><strong>CEN</strong>: Cloud Enterprise Network (CEN) route.</li>
+         * <li><strong>ECR</strong>: Express Connect Router (ECR) route.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,8 +508,8 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to host the route. If the parameter is empty, the route is not hosted.</p>
-         * <p>Set the value to <strong>TR</strong>, which specifies that the route is hosted by a transit router.</p>
+         * <p>The type of route hosting. If this field is empty, the route is not hosted.</p>
+         * <p>Valid values: <strong>TR</strong>, which indicates that the hosting type is transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>TR</p>

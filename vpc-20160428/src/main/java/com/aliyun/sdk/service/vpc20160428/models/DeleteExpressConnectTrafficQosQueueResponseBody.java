@@ -54,7 +54,7 @@ public class DeleteExpressConnectTrafficQosQueueResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B9300FE-11E2-4E3B-949C-BED3B44DD26D</p>

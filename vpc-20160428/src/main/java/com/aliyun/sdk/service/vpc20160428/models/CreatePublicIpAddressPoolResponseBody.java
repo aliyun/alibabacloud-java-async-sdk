@@ -94,7 +94,7 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the IP address pool.</p>
+         * <p>The instance ID of the IPAM pool.</p>
          * 
          * <strong>example:</strong>
          * <p>pippool-6wetvn6fumkgycssx****</p>
@@ -105,7 +105,7 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the IP address pool.</p>
+         * <p>The instance ID of the IPAM pool.</p>
          * 
          * <strong>example:</strong>
          * <p>pippool-6wetvn6fumkgycssx****</p>

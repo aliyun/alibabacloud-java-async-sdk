@@ -171,7 +171,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
+         * <p>The autonomous system number of the on-premises data center gateway device.</p>
          * 
          * <strong>example:</strong>
          * <p>65535</p>
@@ -182,7 +182,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.</p>
+         * <p>The authentication key of the BGP routing protocol for the on-premises data center gateway device.</p>
          * 
          * <strong>example:</strong>
          * <p>AuthKey****</p>
@@ -193,8 +193,8 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp generated when the customer gateway was created. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the customer gateway was created. Unit: milliseconds.</p>
+         * <p>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1492747187000</p>
@@ -205,7 +205,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the customer gateway.</p>
+         * <p>The instance ID of the customer gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cgw-bp1pvpl9r9adju6l5****</p>
@@ -227,7 +227,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP address of the gateway device in the data center.</p>
+         * <p>The IP address of the on-premises data center gateway device.</p>
          * 
          * <strong>example:</strong>
          * <p>139.32.XX.XX</p>
@@ -261,7 +261,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group to which the customer gateway belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>
@@ -272,7 +272,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of tags added to the customer gateway.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -338,10 +338,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TagKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -349,10 +346,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TagValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

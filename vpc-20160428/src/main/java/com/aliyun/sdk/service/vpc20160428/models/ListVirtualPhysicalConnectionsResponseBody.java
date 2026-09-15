@@ -106,7 +106,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned in this query.</p>
+         * <p>The number of entries returned in the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,10 +117,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>Indicates whether a next query token exists. Valid values:</p>
          * <ul>
-         * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
-         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of hosted connections returned.</p>
+         * <p>The list of shared Express Connect circuits.</p>
          */
         public Builder virtualPhysicalConnections(java.util.List<VirtualPhysicalConnections> virtualPhysicalConnections) {
             this.virtualPhysicalConnections = virtualPhysicalConnections;
@@ -220,8 +220,8 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of tag N that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -232,8 +232,8 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-             * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>
@@ -680,7 +680,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the access point that is associated with the Express Connect circuit.</p>
+             * <p>The access point ID of the Express Connect circuit.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-cn-hangzhou-finance-yh-E</p>
@@ -691,10 +691,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The geographical location of the access device.</p>
+             * <p>The physical location of the access device for the Express Connect circuit.</p>
              * 
              * <strong>example:</strong>
-             * <p>Yuhang Economic Development Zone XXX Intersection, Yuhang XX Machine Room, E*** Suite.</p>
+             * <p>Yuhang Economic Development Zone, XX Intersection, Yuhang XX Data Center, Room E***</p>
              */
             public Builder adLocation(String adLocation) {
                 this.adLocation = adLocation;
@@ -702,10 +702,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the hosted connection owner.</p>
+             * <p>The Alibaba Cloud account ID of the shared Express Connect circuits owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>253460731706911258</p>
+             * <p>15346073170691****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -724,11 +724,11 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Express Connect circuit. Valid values:</p>
+             * <p>The business status of the Express Connect circuit. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>FinancialLocked</strong></li>
-             * <li><strong>SecurityLocked</strong></li>
+             * <li><strong>Normal</strong>: Enabled.</li>
+             * <li><strong>FinancialLocked</strong>: Locked due to overdue payment.</li>
+             * <li><strong>SecurityLocked</strong>: Locked for security reasons.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -741,7 +741,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
 
             /**
              * <p>The billing method of the Express Connect circuit.</p>
-             * <p>If <strong>Prepaid</strong> is returned, it indicates that the Express Connect circuit is billed on a subscription basis.</p>
+             * <p>Valid values: <strong>Prepaid</strong>, which indicates subscription.</p>
              * 
              * <strong>example:</strong>
              * <p>Prepaid</p>
@@ -752,7 +752,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+             * <p>The circuit code provided by the carrier for the Express Connect circuit.</p>
              * 
              * <strong>example:</strong>
              * <p>longtel001</p>
@@ -763,10 +763,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the Express Connect circuit was created.</p>
+             * <p>The time when the Express Connect circuit was created. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-06-08T12:20:55</p>
+             * <p>2021-06-08T12:20:55Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -785,10 +785,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the Express Connect circuit is enabled.</p>
+             * <p>The time when the Express Connect circuit was enabled. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-10-08T10:44Z</p>
+             * <p>2021-10-08T10:44:00Z</p>
              */
             public Builder enabledTime(String enabledTime) {
                 this.enabledTime = enabledTime;
@@ -796,8 +796,8 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration date of the hosted connection.</p>
-             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The expiration time of the shared Express Connect circuits.</p>
+             * <p>The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-08T16:00:00Z</p>
@@ -808,8 +808,8 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.</p>
-             * <p><strong>M</strong> indicates Mbit/s and <strong>G</strong> indicates Gbit/s.</p>
+             * <p>The expected bandwidth value of the shared Express Connect circuits. The expected bandwidth value takes effect only after payment is completed.</p>
+             * <p>Unit: <strong>M</strong> indicates Mbit/s, and <strong>G</strong> indicates Gbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>50M</p>
@@ -820,14 +820,14 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+             * <p>The carrier that provides the physical line for access. Valid values:</p>
              * <ul>
              * <li><strong>CT</strong>: China Telecom.</li>
              * <li><strong>CU</strong>: China Unicom.</li>
              * <li><strong>CM</strong>: China Mobile.</li>
-             * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland.</li>
+             * <li><strong>CO</strong>: Other carriers in the Chinese mainland.</li>
              * <li><strong>Equinix</strong>: Equinix.</li>
-             * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</li>
+             * <li><strong>Other</strong>: Other carriers outside the Chinese mainland.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -839,15 +839,15 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the letter of authorization (LOA). Valid values:</p>
+             * <p>The status of the Letter of Authorization (LOA). Valid values:</p>
              * <ul>
-             * <li><strong>Applying</strong></li>
-             * <li><strong>Accept</strong></li>
-             * <li><strong>Available</strong></li>
-             * <li><strong>Rejected</strong></li>
-             * <li><strong>Completing</strong></li>
-             * <li><strong>Complete</strong></li>
-             * <li><strong>Deleted</strong></li>
+             * <li><strong>Applying</strong>: The LOA application is being processed.</li>
+             * <li><strong>Accept</strong>: The LOA application is approved.</li>
+             * <li><strong>Available</strong>: The LOA is available.</li>
+             * <li><strong>Rejected</strong>: The LOA application is rejected.</li>
+             * <li><strong>Completing</strong>: The Express Connect circuit is under construction.</li>
+             * <li><strong>Complete</strong>: The Express Connect circuit construction is complete.</li>
+             * <li><strong>Deleted</strong>: The LOA is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -870,10 +870,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payer for the shared Express Connect circuit. Valid values:</p>
+             * <p>The payer of the shared Express Connect circuits. Valid values:</p>
              * <ul>
-             * <li><strong>PayByPhysicalConnectionOwner</strong>: the owner of the shared Express Connect circuit</li>
-             * <li><strong>PayByVirtualPhysicalConnectionOwner</strong>: the owner of the hosted connection</li>
+             * <li><strong>PayByPhysicalConnectionOwner</strong>: The owner of the Express Connect circuit associated with the shared Express Connect circuits is the payer.</li>
+             * <li><strong>PayByVirtualPhysicalConnectionOwner</strong>: The owner of the shared Express Connect circuits is the payer.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -885,10 +885,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.</p>
+             * <p>The Alibaba Cloud account ID that owns the Express Connect circuit.</p>
              * 
              * <strong>example:</strong>
-             * <p>283117732402483989</p>
+             * <p>18311773240248****</p>
              */
             public Builder parentPhysicalConnectionAliUid(String parentPhysicalConnectionAliUid) {
                 this.parentPhysicalConnectionAliUid = parentPhysicalConnectionAliUid;
@@ -896,7 +896,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Express Connect circuit.</p>
+             * <p>The instance ID of the Express Connect circuit.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-bp1ciz7ekd2grn1as****</p>
@@ -907,10 +907,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The geographical location of the data center.</p>
+             * <p>The geographic location of the on-premises data center.</p>
              * 
              * <strong>example:</strong>
-             * <p>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</p>
+             * <p>No. XX, XX Street, XX District, Hangzhou, Zhejiang Province</p>
              */
             public Builder peerLocation(String peerLocation) {
                 this.peerLocation = peerLocation;
@@ -918,7 +918,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the hosted connection.</p>
+             * <p>The instance ID of the shared Express Connect circuits.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-bp1mrgfbtmc9brre7****</p>
@@ -929,7 +929,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the port on the access device.</p>
+             * <p>The port number of the access device for the Express Connect circuit.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -940,15 +940,15 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port type. Valid values:</p>
+             * <p>The port type of the access device for the Express Connect circuit. Valid values:</p>
              * <ul>
-             * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
-             * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
-             * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
-             * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
-             * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
-             * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
-             * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+             * <li><strong>100Base-T</strong>: 100M Ethernet port.</li>
+             * <li><strong>1000Base-T</strong>: GE electrical port.</li>
+             * <li><strong>1000Base-LX</strong>: GE single-mode optical port (10 km).</li>
+             * <li><strong>10GBase-T</strong>: 10 GE electrical port.</li>
+             * <li><strong>10GBase-LR</strong>: 10 GE single-mode optical port (10 km).</li>
+             * <li><strong>40GBase-LR</strong>: 40 GE single-mode optical port.</li>
+             * <li><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -962,8 +962,8 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             /**
              * <p>The type of the Express Connect circuit. Valid values:</p>
              * <ul>
-             * <li><strong>VirtualPhysicalConnection</strong>: shared Express Connect circuit</li>
-             * <li><strong>PhysicalConnection</strong>: dedicated Express Connect circuit</li>
+             * <li><strong>VirtualPhysicalConnection</strong>: Shared Express Connect circuits.</li>
+             * <li><strong>PhysicalConnection</strong>: Dedicated Express Connect circuit.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -986,10 +986,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the hosted connection belongs.</p>
+             * <p>The ID of the resource group to which the shared Express Connect circuits belong.</p>
              * 
              * <strong>example:</strong>
-             * <p>rg-acfm3wmsyuimpma</p>
+             * <p>rg-acfm3wmsyui****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -997,8 +997,8 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth value of the hosted connection.</p>
-             * <p><strong>M</strong> indicates Mbit/s and <strong>G</strong> indicates Gbit/s.</p>
+             * <p>The bandwidth value of the shared Express Connect circuits.</p>
+             * <p>Unit: <strong>M</strong> indicates Mbit/s, and <strong>G</strong> indicates Gbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>50M</p>
@@ -1013,14 +1013,14 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
              * <ul>
              * <li><strong>Initial</strong>: The application is under review.</li>
              * <li><strong>Approved</strong>: The application is approved.</li>
-             * <li><strong>Allocating</strong>: The system is allocating resources.</li>
-             * <li><strong>Allocated</strong>: The Express Connect circuit is under construction.</li>
-             * <li><strong>Confirmed</strong>: The Express Connect circuit is pending for user confirmation.</li>
-             * <li><strong>Enabled</strong>: The Express Connect circuit is enabled.</li>
+             * <li><strong>Allocating</strong>: Resources are being allocated.</li>
+             * <li><strong>Allocated</strong>: Under construction.</li>
+             * <li><strong>Confirmed</strong>: Waiting for user confirmation.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Rejected</strong>: The application is rejected.</li>
-             * <li><strong>Canceled</strong>: The application is canceled.</li>
-             * <li><strong>Allocation Failed</strong>: The system failed to allocate resources.</li>
-             * <li><strong>Terminated</strong>: The Express Connect circuit is disabled.</li>
+             * <li><strong>Canceled</strong>: Canceled.</li>
+             * <li><strong>Allocation Failed</strong>: Resource allocation failed.</li>
+             * <li><strong>Terminated</strong>: Terminated.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1040,7 +1040,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of Express Connect circuit. Default value: <strong>VPC</strong>.</p>
+             * <p>The type of the Express Connect circuit. Default value: <strong>VPC</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -1051,11 +1051,11 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the hosted connection. Valid values:</p>
+             * <p>The business status of the shared Express Connect circuits. Valid values:</p>
              * <ul>
-             * <li><strong>Confirmed</strong></li>
-             * <li><strong>UnConfirmed</strong></li>
-             * <li><strong>Deleted</strong></li>
+             * <li><strong>Confirmed</strong>: The shared Express Connect circuits have been accepted.</li>
+             * <li><strong>UnConfirmed</strong>: The shared Express Connect circuits have not been accepted.</li>
+             * <li><strong>Deleted</strong>: The shared Express Connect circuits have been deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1067,7 +1067,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VLAN ID of the hosted connection.</p>
+             * <p>The VLAN ID of the shared Express Connect circuits.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

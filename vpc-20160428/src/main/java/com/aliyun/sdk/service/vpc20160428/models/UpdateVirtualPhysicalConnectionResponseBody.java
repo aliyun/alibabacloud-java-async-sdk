@@ -78,10 +78,10 @@ public class UpdateVirtualPhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the VLAN ID of the hosted connection is changed. Valid values:</p>
+         * <p>Indicates whether the VLAN ID of the shared Express Connect circuit is modified.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The VLAN ID is modified.</li>
+         * <li><strong>false</strong>: The VLAN ID failed to be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>

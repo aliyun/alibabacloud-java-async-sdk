@@ -173,9 +173,9 @@ public class DeleteVpcRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -190,8 +190,8 @@ public class DeleteVpcRequest extends Request {
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): sends the request directly without performing a dry run. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs a dry run without deleting the virtual private cloud (VPC). The system checks the required parameters, request format, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): sends a Normal request. After the request passes the check, an HTTP 2xx status code is returned and the VPC is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,15 +204,15 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully delete the VPC. Valid values:</p>
+         * <p>Specifies whether to force delete the VPC. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong> (default): no</li>
+         * <li><strong>true</strong>: force deletes the VPC.</li>
+         * <li><strong>false</strong> (default): does not force delete the VPC.</li>
          * </ul>
-         * <p>You can forcefully delete a VPC in the following scenarios:</p>
+         * <p>You can force delete a VPC only when the VPC contains only the following resources:</p>
          * <ul>
-         * <li>Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.</li>
-         * <li>Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.</li>
+         * <li>The VPC contains only an IPv4 gateway and routes that point to the IPv4 gateway.</li>
+         * <li>The VPC contains only an IPv6 gateway and routes that point to the IPv6 gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,8 +243,8 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VPC is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPC that you want to delete.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

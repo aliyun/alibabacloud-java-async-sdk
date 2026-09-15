@@ -133,7 +133,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
 
         /**
          * <p>The list of certificate IDs.</p>
-         * <p>You can query the association between at most 20 SSL certificates and VPN gateways.</p>
+         * <p>You can query the associations between up to 20 SSL certificates and VPN gateway instances at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>6bfe4218-ea1d****</p>
@@ -147,8 +147,10 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         /**
          * <p>The certificate type. Valid values:</p>
          * <ul>
-         * <li><strong>Encryption</strong></li>
-         * <li><strong>Signature</strong></li>
+         * <li><p><strong>Encryption</strong>: encryption certificate.</p>
+         * </li>
+         * <li><p><strong>Signature</strong>: signing certificate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +163,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -173,10 +175,12 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li><p>If this is the first query or no subsequent query exists, leave this parameter empty.</p>
+         * </li>
+         * <li><p>If a subsequent query exists, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
 
         /**
          * <p>The region ID of the VPN gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,8 +207,8 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The list of VPN gateway IDs.</p>
-         * <p>You can query the association between at most 20 VPN gateways and SSL certificates.</p>
+         * <p>The list of VPN gateway instance IDs.</p>
+         * <p>You can query the associations between up to 20 VPN gateway instances and SSL certificates at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp1q8bgx4xnkm****</p>

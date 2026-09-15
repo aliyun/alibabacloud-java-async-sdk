@@ -106,7 +106,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of SNAT entries.</p>
+         * SnatTableEntries.
          */
         public Builder snatTableEntries(SnatTableEntries snatTableEntries) {
             this.snatTableEntries = snatTableEntries;
@@ -147,7 +147,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -320,16 +320,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether to enable IP affinity. Values:</p>
-             * <ul>
-             * <li><strong>0</strong>: Disable IP affinity. - <strong>1</strong>: Enable IP affinity.<blockquote>
-             * <p>After enabling the IP affinity switch, if an SNAT entry is bound to multiple EIPs or NAT IPs, the same client will use the same EIP or NAT IP for access. Otherwise, the client will randomly select from the bound EIPs or NAT IPs for access.</p>
-             * </blockquote>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * EipAffinity.
              */
             public Builder eipAffinity(String eipAffinity) {
                 this.eipAffinity = eipAffinity;
@@ -337,10 +328,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAT gateway to which the SNAT entry belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ngw-bp1uewa15k4iy5770****</p>
+             * NatGatewayId.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -348,10 +336,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Elastic Network Interface ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eni-gw8g131ef2dnbu3k****</p>
+             * NetworkInterfaceId.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -359,10 +344,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SNAT entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>snat-kmd6nv8fy****</p>
+             * SnatEntryId.
              */
             public Builder snatEntryId(String snatEntryId) {
                 this.snatEntryId = snatEntryId;
@@ -370,10 +352,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SNAT entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SnatEntry-1</p>
+             * SnatEntryName.
              */
             public Builder snatEntryName(String snatEntryName) {
                 this.snatEntryName = snatEntryName;
@@ -381,13 +360,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li>When you query SNAT entries of Internet NAT gateways, this parameter indicates the EIP in an SNAT entry.</li>
-             * <li>When you query SNAT entries of VPC NAT gateways, this parameter indicates the NAT IP address in an SNAT entry.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>116.22.XX.XX</p>
+             * SnatIp.
              */
             public Builder snatIp(String snatIp) {
                 this.snatIp = snatIp;
@@ -395,10 +368,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>stb-gz3r3odawdgffde****</p>
+             * SnatTableId.
              */
             public Builder snatTableId(String snatTableId) {
                 this.snatTableId = snatTableId;
@@ -406,10 +376,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source CIDR block specified in the SNAT entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>116.22.XX.XX/24</p>
+             * SourceCIDR.
              */
             public Builder sourceCIDR(String sourceCIDR) {
                 this.sourceCIDR = sourceCIDR;
@@ -417,13 +384,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li>When you query SNAT entries of Internet NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access the Internet.</li>
-             * <li>When you query SNAT entries of VPC NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access external networks.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-3xbdsffvfgdfds****</p>
+             * SourceVSwitchId.
              */
             public Builder sourceVSwitchId(String sourceVSwitchId) {
                 this.sourceVSwitchId = sourceVSwitchId;
@@ -431,15 +392,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SNAT entry. Valid values:</p>
-             * <ul>
-             * <li><strong>Pending</strong></li>
-             * <li><strong>Available</strong></li>
-             * <li><strong>Deleting</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Pending</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

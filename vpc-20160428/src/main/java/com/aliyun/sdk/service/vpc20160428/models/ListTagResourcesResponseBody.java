@@ -80,10 +80,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
-         * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag key.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -198,10 +198,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp16qjewdsunr41m1****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -209,19 +206,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid values:</p>
-             * <ul>
-             * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-             * <li><strong>VSWITCH</strong>: vSwitch</li>
-             * <li><strong>ROUTETABLE</strong>: route table</li>
-             * <li><strong>EIP</strong>: EIP</li>
-             * <li><strong>VpnGateWay</strong>: VPN gateway</li>
-             * <li><strong>NATGATEWAY</strong>: NAT gateway</li>
-             * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -229,10 +214,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -240,10 +222,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

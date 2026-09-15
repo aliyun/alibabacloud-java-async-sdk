@@ -159,14 +159,11 @@ public class EnablePhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to skip the order lifecycle. Valid values:</p>
+         * <p>Specifies whether to skip the SP (sales and billing system) billing order flow and directly enable the Express Connect circuit. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li>false (default): Standard flow. A billing order is automatically created when the circuit is enabled. The circuit enters the Enabled state after the order is created.</li>
+         * <li>true: Skips the billing order and directly enables the circuit. This capability is available only to whitelist accounts.</li>
          * </ul>
-         * <blockquote>
-         * <p> To use this feature, you must contact your account manager.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -179,7 +176,7 @@ public class EnablePhysicalConnectionRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client generates the value of this parameter. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -213,7 +210,7 @@ public class EnablePhysicalConnectionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pc-119mfjz****</p>
+         * <p>pc-2zeoaxkq3x****</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -222,8 +219,8 @@ public class EnablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * <p>The region where the Express Connect circuit is deployed.</p>
-         * <p>You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region where the Express Connect circuit resides.</p>
+         * <p>You can call the DescribeRegions operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -133,7 +133,14 @@ public class ModifyVpcCidrBlockRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -142,7 +149,14 @@ public class ModifyVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run without modifying the CIDR block of the virtual private cloud (VPC). The system checks the request for potential issues. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): sends a Normal request. If the check succeeds, an HTTP 2xx status code is returned and the modification is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -151,6 +165,7 @@ public class ModifyVpcCidrBlockRequest extends Request {
         }
 
         /**
+         * <p>The CIDR block of the VPC to modify. Both primary and secondary CIDR blocks are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,6 +178,8 @@ public class ModifyVpcCidrBlockRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the VPC resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +192,7 @@ public class ModifyVpcCidrBlockRequest extends Request {
         }
 
         /**
+         * <p>The new CIDR block for the VPC after modification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +205,7 @@ public class ModifyVpcCidrBlockRequest extends Request {
         }
 
         /**
+         * <p>The ID of the VPC to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

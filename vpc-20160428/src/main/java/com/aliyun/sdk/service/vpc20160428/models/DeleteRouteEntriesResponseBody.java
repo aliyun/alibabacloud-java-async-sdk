@@ -104,7 +104,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the route entry that failed to be deleted.</p>
+         * <p>The information about the route entries that failed to be deleted.</p>
          */
         public Builder failedRouteEntries(java.util.List<FailedRouteEntries> failedRouteEntries) {
             this.failedRouteEntries = failedRouteEntries;
@@ -231,7 +231,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The destination CIDR block of the route entry that failed to be deleted. IPv4 and IPv6 CIDR blocks are supported.</p>
+             * <p>The destination CIDR block of the route entry that failed to be deleted. IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix list CIDR blocks are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/24</p>
@@ -242,7 +242,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code.</p>
+             * <p>The error code returned for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC_ROUTER_ENTRY_NOT_EXIST</p>
@@ -253,7 +253,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
+             * <p>The error message returned for the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>vRouterEntry not exists</p>
@@ -264,7 +264,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the next hop that failed to be deleted.</p>
+             * <p>The instance ID of the next hop that failed to be deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>i-j6c2fp57q8rr4jlu****</p>

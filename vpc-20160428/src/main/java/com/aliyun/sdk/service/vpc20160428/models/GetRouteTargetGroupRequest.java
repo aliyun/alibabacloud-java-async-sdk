@@ -103,10 +103,10 @@ public class GetRouteTargetGroupRequest extends Request {
         } 
 
         /**
-         * <p>Client token, used to ensure idempotence of the request.</p>
-         * <p>Generate a parameter value from your client and ensure that it is unique across different requests. ClientToken only supports ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong> identifier. The <strong>RequestId</strong> may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class GetRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>ID of the region to which the route target group belongs. You can obtain the region ID by calling the DescribeRegions interface.</p>
+         * <p>The ID of the region to which the route target group belongs. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class GetRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>ID of the route target group member instance.</p>
+         * <p>The instance ID of the routing target group member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class GetRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>Tag information.</p>
+         * <p>The tag information.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -213,8 +213,8 @@ public class GetRouteTargetGroupRequest extends Request {
             } 
 
             /**
-             * <p>Resource tag key. Up to 20 tag keys are supported. If you need to pass this value, you cannot input an empty string.</p>
-             * <p>A tag key can have up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -225,8 +225,8 @@ public class GetRouteTargetGroupRequest extends Request {
             }
 
             /**
-             * <p>Resource tag value. Up to 20 tag values are supported. If you need to pass this value, you can input an empty string.</p>
-             * <p>A tag value can have up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

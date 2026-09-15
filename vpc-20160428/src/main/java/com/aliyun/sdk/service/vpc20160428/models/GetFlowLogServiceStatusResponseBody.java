@@ -67,10 +67,12 @@ public class GetFlowLogServiceStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the flow log feature is enabled. Valid values:</p>
+         * <p>Indicates whether the flow log service is activated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to enable the flow log feature.</li>
+         * <li><p><strong>true</strong>: The flow log service is activated.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The flow log service is not activated. You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to activate the flow log service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class GetFlowLogServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54B48E3D-DF70-471B-AA93-06F83A1B457</p>

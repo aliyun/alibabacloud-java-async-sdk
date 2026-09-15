@@ -67,10 +67,10 @@ public class CreateExpressConnectTrafficQosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The QoS policy ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-2giu0a6vd5x0mv4700</p>
+         * <p>qos-2giu0a6vd5x0mv****</p>
          */
         public Builder qosId(String qosId) {
             this.qosId = qosId;
@@ -78,7 +78,7 @@ public class CreateExpressConnectTrafficQosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</p>

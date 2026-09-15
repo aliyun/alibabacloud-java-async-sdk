@@ -106,7 +106,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
@@ -139,7 +139,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the vRouters.</p>
+         * VRouters.
          */
         public Builder vRouters(VRouters vRouters) {
             this.vRouters = vRouters;
@@ -335,10 +335,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the vRouter was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-03-22T07:46:20Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -346,10 +343,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the vRouter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abc</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -357,10 +351,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region to which the vRouter belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -368,7 +359,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the route tables.</p>
+             * RouteTableIds.
              */
             public Builder routeTableIds(RouteTableIds routeTableIds) {
                 this.routeTableIds = routeTableIds;
@@ -376,10 +367,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vRouter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vrt-rj98khsezfqpjrxmv****</p>
+             * VRouterId.
              */
             public Builder vRouterId(String vRouterId) {
                 this.vRouterId = vRouterId;
@@ -387,10 +375,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vRouter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doctest</p>
+             * VRouterName.
              */
             public Builder vRouterName(String vRouterName) {
                 this.vRouterName = vRouterName;
@@ -398,10 +383,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC) to which the vRouter belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-rj905wotv6y030t1****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -106,7 +106,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the HaVip.</p>
+         * HaVips.
          */
         public Builder haVips(HaVips haVips) {
             this.haVips = haVips;
@@ -114,7 +114,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -324,10 +324,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of tag N added to the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -335,10 +332,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N added to the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -641,7 +635,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of EIPs associated with the HaVip.</p>
+             * AssociatedEipAddresses.
              */
             public Builder associatedEipAddresses(AssociatedEipAddresses associatedEipAddresses) {
                 this.associatedEipAddresses = associatedEipAddresses;
@@ -649,14 +643,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance with which the HaVip is associated. Valid values:</p>
-             * <ul>
-             * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
-             * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>EcsInstance</p>
+             * AssociatedInstanceType.
              */
             public Builder associatedInstanceType(String associatedInstanceType) {
                 this.associatedInstanceType = associatedInstanceType;
@@ -664,7 +651,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the instance associated with the HaVip.</p>
+             * AssociatedInstances.
              */
             public Builder associatedInstances(AssociatedInstances associatedInstances) {
                 this.associatedInstances = associatedInstances;
@@ -672,10 +659,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter is invalid. No value is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>none</p>
+             * ChargeType.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -683,10 +667,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the HaVip was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-07-03T14:25:26Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -694,10 +675,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the HaVip.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>My HaVip</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -705,10 +683,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the HaVip.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>havip-bp149uyvut73dpld****</p>
+             * HaVipId.
              */
             public Builder haVipId(String haVipId) {
                 this.haVipId = haVipId;
@@ -716,10 +691,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the HaVip.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.24.5</p>
+             * IpAddress.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -727,10 +699,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the active instance that is associated with the HaVip.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-bp145q7glnuzdvz****</p>
+             * MasterInstanceId.
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -738,10 +707,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the HaVip.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -749,10 +715,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region to which the HaVip belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -760,10 +723,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the HaVip belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4ph****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -771,15 +731,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the HaVip. Valid values:</p>
-             * <ul>
-             * <li><strong>Creating</strong>: The server group is being created.</li>
-             * <li><strong>Available</strong>: The FULLNAT entry is available.</li>
-             * <li><strong>Deleting</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -787,7 +739,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag list.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -795,10 +747,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which the HaVip belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp1pkt1fba8e824ez****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -806,10 +755,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the HaVip belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp1kcm36tevkpms97****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

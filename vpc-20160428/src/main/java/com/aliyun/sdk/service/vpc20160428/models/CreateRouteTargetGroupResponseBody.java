@@ -67,7 +67,7 @@ public class CreateRouteTargetGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>8AA5CE21-2E6A-4530-BDF5-F055849476E6</p>
@@ -78,7 +78,7 @@ public class CreateRouteTargetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the route target group instance.</p>
+         * <p>The instance ID of the route target group.</p>
          * 
          * <strong>example:</strong>
          * <p>rtg-xxxx</p>

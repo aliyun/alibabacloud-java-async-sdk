@@ -134,10 +134,12 @@ public class RevokeInstanceFromVbrRequest extends Request {
         } 
 
         /**
-         * <p>The VBRs for which you want to revoke permissions on the VPC. Valid values:</p>
+         * <p>The scope of VBR instances for which the VPC-connected instance authorization is being revoked. Valid values:</p>
          * <ul>
-         * <li><strong>ALL</strong>: Permissions on the VPC are revoked for all VBRs in the specified region. <strong>VbrInstanceIds</strong> can be left empty.</li>
-         * <li><strong>Specify</strong>: Permissions on the VPC are revoked for the specified VBRs. <strong>VbrInstanceIds</strong> must be assigned a value.</li>
+         * <li><p><strong>ALL</strong>: Revokes the VPC-connected instance authorization for all VBR instances in the specified region. In this case, the <strong>VbrInstanceIds</strong> parameter can be left empty.</p>
+         * </li>
+         * <li><p><strong>Specify</strong>: Revokes the VPC-connected instance authorization for the specified VBR instances. In this case, the <strong>VbrInstanceIds</strong> parameter is required.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -151,7 +153,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The instance ID of the VPC-connected instance for which you want to revoke the authorization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,8 +166,8 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VPC is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPC-connected instance for which you want to revoke the authorization.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the VBRs for which you want to revoke the permissions.</p>
+         * <p>The list of VBR instance IDs for which the VPC-connected instance authorization is being revoked.</p>
          */
         public Builder vbrInstanceIds(java.util.List<String> vbrInstanceIds) {
             String vbrInstanceIdsShrink = shrink(vbrInstanceIds, "VbrInstanceIds", "simple");
@@ -188,7 +190,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <p>The Alibaba Cloud account ID of the VBR instance for which the authorization is being revoked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +203,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>The region ID of the VBR instance for which the VPC-connected instance authorization is being revoked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

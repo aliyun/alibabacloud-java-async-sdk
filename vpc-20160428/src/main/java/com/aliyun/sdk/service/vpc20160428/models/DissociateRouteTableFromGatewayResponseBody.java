@@ -54,7 +54,7 @@ public class DissociateRouteTableFromGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C5644C9A-7480-13B6-AECB-30FF142E3724</p>

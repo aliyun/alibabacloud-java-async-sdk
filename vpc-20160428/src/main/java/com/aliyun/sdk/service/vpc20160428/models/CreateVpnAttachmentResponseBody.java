@@ -132,7 +132,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned by the current operation. <strong>200</strong> indicates that the operation is successful.</p>
+         * <p>The status code returned by the current task. A value of <strong>200</strong> indicates that the task is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,8 +143,8 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.</p>
+         * <p>The timestamp is in the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the IPsec-VPN connection was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1658201810000</p>
@@ -155,7 +155,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information returned by the current operation.</p>
+         * <p>The message returned by the current task.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -188,10 +188,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current operation is successful.</p>
+         * <p>Indicates whether the current task is successfully executed.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Successfully executed.</li>
+         * <li><strong>false</strong>: Not successfully executed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the IPsec-VPN connection.</p>
+         * <p>The IPsec-VPN connection ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vco-p0wb09rama8qwwgfn****</p>

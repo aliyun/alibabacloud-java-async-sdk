@@ -54,7 +54,7 @@ public class DeletionProtectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BAAEF103-96C4-4454-9210-066F2405F511</p>

@@ -177,7 +177,7 @@ public class DescribeVpnPbrRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class DescribeVpnPbrRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -201,12 +201,12 @@ public class DescribeVpnPbrRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the VPN gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPN gateway instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-zhangjiakou</p>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -233,7 +233,7 @@ public class DescribeVpnPbrRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

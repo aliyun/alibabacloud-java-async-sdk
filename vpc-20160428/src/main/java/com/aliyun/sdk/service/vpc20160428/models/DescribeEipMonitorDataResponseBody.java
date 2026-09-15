@@ -67,7 +67,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed information about the monitoring data of the EIP.</p>
+         * EipMonitorDatas.
          */
         public Builder eipMonitorDatas(EipMonitorDatas eipMonitorDatas) {
             this.eipMonitorDatas = eipMonitorDatas;
@@ -204,10 +204,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sum of inbound and outbound traffic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>465</p>
+             * EipFlow.
              */
             public Builder eipFlow(Long eipFlow) {
                 this.eipFlow = eipFlow;
@@ -215,10 +212,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of packets.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3434</p>
+             * EipPackets.
              */
             public Builder eipPackets(Integer eipPackets) {
                 this.eipPackets = eipPackets;
@@ -226,10 +220,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inbound traffic. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>122</p>
+             * EipRX.
              */
             public Builder eipRX(Long eipRX) {
                 this.eipRX = eipRX;
@@ -237,10 +228,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound traffic. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>343</p>
+             * EipTX.
              */
             public Builder eipTX(Long eipTX) {
                 this.eipTX = eipTX;
@@ -248,10 +236,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the monitoring data. Specify the time in the ISO8601 standard. Example: <code>2020-01-21T09:50:23Z</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-01-21T09:50:23Z</p>
+             * TimeStamp.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

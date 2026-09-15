@@ -161,7 +161,7 @@ public class MoveVpnResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class MoveVpnResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the new resource group.</p>
+         * <p>The ID of the new resource group to which the resource belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class MoveVpnResourceGroupRequest extends Request {
 
         /**
          * <p>The region ID of the resource.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,15 +237,15 @@ public class MoveVpnResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of resource.</p>
+         * <p>The resource type.</p>
          * <ul>
-         * <li><p><strong>VpnGateway</strong>: VPN gateway</p>
-         * <p>After you move a VPN gateway to a new resource group, the following associated resources are also moved to the new resource group: IPsec servers, SSL servers, SSL client certificates, and IPsec-VPN connections.</p>
+         * <li><p><strong>VpnGateway</strong>: VPN gateway instance.</p>
+         * <p>After you change the resource group to which a VPN gateway instance belongs, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connection (the IPsec-VPN connection associated with the VPN gateway instance) under the VPN gateway instance is also changed.</p>
          * </li>
-         * <li><p><strong>CustomerGateway</strong>: customer gateway</p>
+         * <li><p><strong>CustomerGateway</strong>: customer gateway instance.</p>
          * </li>
-         * <li><p><strong>VpnAttachment</strong>: IPsec-VPN connection</p>
-         * <p>An IPsec-VPN connection associated with a transit router or not associate with a resource.</p>
+         * <li><p><strong>VpnAttachment</strong>: IPsec-VPN connection instance.</p>
+         * <p>This refers to an IPsec-VPN connection associated with a transit router instance or an IPsec-VPN connection that is not associated with any resource.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>

@@ -78,7 +78,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information returned.</p>
+         * <p>The bandwidth statistics information of the Internet Shared Bandwidth instance that uses the enhanced 95th percentile billing method.</p>
          */
         public Builder traffic95Summary(Traffic95Summary traffic95Summary) {
             this.traffic95Summary = traffic95Summary;
@@ -170,10 +170,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The sampled bandwidth value, which is the larger bandwidth value in the inbound and outbound directions within a sampling interval. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>118.5090322113037</p>
+             * BillBandwidth.
              */
             public Builder billBandwidth(String billBandwidth) {
                 this.billBandwidth = billBandwidth;
@@ -181,10 +178,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inbound bandwidth. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>118.5090322113037</p>
+             * InBandwidth.
              */
             public Builder inBandwidth(String inBandwidth) {
                 this.inBandwidth = inBandwidth;
@@ -192,10 +186,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound bandwidth. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>96.41217480977376</p>
+             * OutBandwidth.
              */
             public Builder outBandwidth(String outBandwidth) {
                 this.outBandwidth = outBandwidth;
@@ -203,10 +194,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical time. The value is a string.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-01-01T00:00:00Z</p>
+             * Time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -379,7 +367,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+             * <p>The peak bandwidth of the Internet Shared Bandwidth instance on the queried date. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>20000.0</p>
@@ -390,8 +378,8 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The daily peak bandwidth. Unit: Mbit/s.
-             * &lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/89729.html">Daily peak bandwidth</a>.</p>
+             * <p>The daily peak bandwidth. Unit: Mbit/s.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/89729.html">Daily peak bandwidth</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>1064.244837773641</p>
@@ -413,11 +401,11 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metering method of the Internet Shared Bandwidth instance. Valid values:</p>
+             * <p>The billable methods of the Internet Shared Bandwidth instance on the queried date. Valid values:</p>
              * <ul>
-             * <li>PayBy95: pay-by-enhanced-95th-percentile</li>
-             * <li>PayByBandwidth: pay-by-bandwidth</li>
-             * <li>PayByDominantTraffic: pay-by-dominant-traffic</li>
+             * <li><strong>PayBy95</strong>: enhanced 95th percentile billing.</li>
+             * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth.</li>
+             * <li><strong>PayByDominantTraffic</strong>: pay-by-dominant-traffic.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -429,7 +417,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The guaranteed bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+             * <p>The minimum guaranteed bandwidth of the Internet Shared Bandwidth instance on the queried date. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0</p>
@@ -440,7 +428,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average bandwidth every 5 minutes in the inbound and outbound directions.</p>
+             * Traffic95DetailList.
              */
             public Builder traffic95DetailList(Traffic95DetailList traffic95DetailList) {
                 this.traffic95DetailList = traffic95DetailList;

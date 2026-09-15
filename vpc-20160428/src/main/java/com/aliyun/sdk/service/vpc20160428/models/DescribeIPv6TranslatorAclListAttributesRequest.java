@@ -159,7 +159,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends Request {
         } 
 
         /**
-         * <p>The ACL ID.</p>
+         * <p>The ID of the access control policy group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -202,7 +202,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page when paging is used. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -214,7 +214,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends Request {
         }
 
         /**
-         * <p>The region of the ACL.</p>
+         * <p>The region of the access control policy group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

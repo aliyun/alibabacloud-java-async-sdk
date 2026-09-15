@@ -158,10 +158,12 @@ public class DescribePublicIpAddressRequest extends Request {
         } 
 
         /**
-         * <p>The IP version. Valid values:</p>
+         * <p>The version of the IP protocol. Valid values:</p>
          * <ul>
-         * <li><strong>IPv4</strong> (default)</li>
-         * <li><strong>IPv6</strong></li>
+         * <li><p><strong>ipv4</strong> (default): IPv4.</p>
+         * </li>
+         * <li><p><strong>ipv6</strong>: IPv6.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +194,7 @@ public class DescribePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -204,7 +206,7 @@ public class DescribePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +219,8 @@ public class DescribePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The region that you want to query. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region to query.
+         * You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

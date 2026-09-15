@@ -302,7 +302,7 @@ public class CreateFlowLogRequest extends Request {
         } 
 
         /**
-         * <p>The sampling interval of the flow log. Unit: seconds. Valid values: <strong>1</strong>, <strong>5</strong>, and <strong>10</strong> (default).</p>
+         * <p>The sampling interval of the flow log. Unit: minutes. Valid values: <strong>1</strong>, <strong>5</strong>, and <strong>10</strong> (default).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -340,7 +340,10 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * <p>The IP version of the traffic captured by the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -358,10 +361,10 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The name of the Logstore that stores the captured traffic data.</p>
+         * <p>The name of the Logstore that stores the captured traffic.</p>
          * <ul>
-         * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>The name must start and end with a lowercase letter or a digit.</li>
+         * <li>The Logstore name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must start and end with a lowercase letter or digit.</li>
          * <li>The name must be 3 to 63 characters in length.</li>
          * </ul>
          * 
@@ -393,10 +396,10 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The name of the project that stores the captured traffic data.</p>
+         * <p>The name of the project that manages the captured traffic.</p>
          * <ul>
-         * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
-         * <li>The name must start and end with a lowercase letter or a digit.</li>
+         * <li>The project name can contain only lowercase letters, digits, and hyphens (-).</li>
+         * <li>The name must start and end with a lowercase letter or digit.</li>
          * <li>The name must be 3 to 63 characters in length.</li>
          * </ul>
          * 
@@ -410,7 +413,7 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where you want to create the flow log. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the flow log. You can call <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -468,9 +471,12 @@ public class CreateFlowLogRequest extends Request {
         /**
          * <p>The type of the resource whose traffic you want to capture. Valid values:</p>
          * <ul>
-         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
-         * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
-         * <li><strong>VPC</strong>: all ENIs in a virtual private cloud (VPC)</li>
+         * <li><p><strong>NetworkInterface</strong>: network interface controllers (NICs).</p>
+         * </li>
+         * <li><p><strong>VSwitch</strong>: all network interface controllers (NICs) in a vSwitch.</p>
+         * </li>
+         * <li><p><strong>VPC</strong>: all network interface controllers (NICs) in a virtual private cloud (VPC).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -484,7 +490,7 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The tag of the resource.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -493,10 +499,18 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The scope of the traffic that you want to capture. Valid values:</p>
+         * <p>The traffic path to collect. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong>: all traffic.</li>
-         * <li><strong>internetGateway</strong>: Internet traffic.</li>
+         * <li><strong>all</strong> (default): all scenarios.</li>
+         * <li><strong>internetGateway</strong>: traffic to access the Internet.</li>
+         * <li><strong>natGateway</strong>: traffic through NAT gateway.</li>
+         * <li><strong>vpnGateway</strong>: traffic through VPN gateway.</li>
+         * <li><strong>transitRouter</strong>: traffic through TR.</li>
+         * <li><strong>gatewayEndpoint</strong>: traffic through gateway endpoint to access Alibaba Cloud services.</li>
+         * <li><strong>vbr</strong>: traffic through Virtual Border Router (VBR) to access Express Connect circuits.</li>
+         * <li><strong>ecr</strong>: traffic through Express Connect Router (ECR).</li>
+         * <li><strong>ipv4Gateway</strong>: traffic through IPv4 gateway to access the Internet.</li>
+         * <li><strong>gatewayLoadBalancerEndpoint</strong>: traffic through Gateway Load Balancer endpoint (GWLBe).</li>
          * </ul>
          */
         public Builder trafficPath(java.util.List<String> trafficPath) {
@@ -506,11 +520,14 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The type of traffic that you want to capture. Valid values:</p>
+         * <p>The traffic type to collect. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: all traffic</li>
-         * <li><strong>Allow</strong>: traffic that is allowed</li>
-         * <li><strong>Drop</strong>: traffic that is rejected</li>
+         * <li><p><strong>All</strong>: all traffic.</p>
+         * </li>
+         * <li><p><strong>Allow</strong>: traffic allowed by access control.</p>
+         * </li>
+         * <li><p><strong>Drop</strong>: traffic denied by access control.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -583,8 +600,8 @@ public class CreateFlowLogRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string for this parameter.</p>
+             * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -595,8 +612,8 @@ public class CreateFlowLogRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

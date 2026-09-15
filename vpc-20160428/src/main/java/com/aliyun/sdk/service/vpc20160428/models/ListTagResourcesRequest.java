@@ -188,7 +188,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries to return on each page. Valid values:<strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -200,10 +200,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li><p>Leave this parameter empty for the first request or if no subsequent query exists.</p>
+         * </li>
+         * <li><p>If a subsequent query exists, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,7 +237,7 @@ public class ListTagResourcesRequest extends Request {
 
         /**
          * <p>The region ID of the resource.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +250,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+         * <p>The resource ID. You can specify up to 50 resource IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp16qjewdsunr41m1****</p>
@@ -280,14 +282,29 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>VSWITCH</strong></li>
-         * <li><strong>ROUTETABLE</strong></li>
-         * <li><strong>EIP</strong></li>
-         * <li><strong>VpnGateway</strong></li>
-         * <li><strong>NATGATEWAY</strong></li>
-         * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+         * <li><strong>VSWITCH</strong>: virtual switch instance.</li>
+         * <li><strong>ROUTETABLE</strong>: route table instance.</li>
+         * <li><strong>EIP</strong>: elastic IP address (EIP) instance.</li>
+         * <li><strong>VPNGATEWAY</strong>: VPN gateway instance.</li>
+         * <li><strong>NATGATEWAY</strong>: NAT gateway instance.</li>
+         * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: Internet Shared Bandwidth instance.</li>
+         * <li><strong>PREFIXLIST</strong>: prefix list instance.</li>
+         * <li><strong>PUBLICIPADDRESSPOOL</strong>: IP IPAM pool instance.</li>
+         * <li><strong>IPV4GATEWAY</strong>: IPv4 gateway instance.</li>
+         * <li><strong>IPV6GATEWAY</strong>: IPv6 gateway instance.</li>
+         * <li><strong>NETWORKACL</strong>: network ACL instance.</li>
+         * <li><strong>TRAFFICMIRRORFILTER</strong>: traffic mirror filter instance.</li>
+         * <li><strong>TRAFFICMIRRORSESSION</strong>: traffic mirror session instance.</li>
+         * <li><strong>FLOWLOG</strong>: flow log instance.</li>
+         * <li><strong>HAVIP</strong>: high-availability virtual IP address (HAVIP) instance.</li>
+         * <li><strong>DHCPOPTIONSSET</strong>: DHCP options set instance.</li>
+         * <li><strong>GATEWAYENDPOINT</strong>: gateway endpoint instance.</li>
+         * <li><strong>IPV6ADDRESS</strong>: IPv6 address instance.</li>
          * </ul>
+         * <blockquote>
+         * <p>The resource type value is case-insensitive.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,11 +317,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag value. You can specify up to 20 tag values. It can be an empty string.</p>
-         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <blockquote>
-         * <p> You must specify at least one of <strong>ResourceId.N</strong> and <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
-         * </blockquote>
+         * <p>The tag information.</p>
          * 
          * <strong>example:</strong>
          * <p>ListTagResources</p>
@@ -375,10 +388,10 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot be an empty string or start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <blockquote>
-             * <p> Specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> parameters (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+             * <p>Specify at least <strong>ResourceId.N</strong> or <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -390,10 +403,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values.</p>
+             * <p>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <blockquote>
-             * <p> Specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> parameters (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+             * <p>Specify at least <strong>ResourceId.N</strong> or <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

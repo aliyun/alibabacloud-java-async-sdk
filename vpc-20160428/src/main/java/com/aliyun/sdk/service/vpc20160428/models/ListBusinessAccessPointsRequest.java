@@ -59,8 +59,8 @@ public class ListBusinessAccessPointsRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the Express Connect circuit.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the Express Connect circuit instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

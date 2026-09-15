@@ -117,7 +117,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

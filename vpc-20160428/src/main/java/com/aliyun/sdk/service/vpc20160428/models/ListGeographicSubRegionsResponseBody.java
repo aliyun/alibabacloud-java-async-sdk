@@ -80,7 +80,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries.</p>
+         * <p>The number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -91,7 +91,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region list.</p>
+         * <p>The list of regions to query.</p>
          */
         public Builder geographicSubRegions(java.util.List<String> geographicSubRegions) {
             this.geographicSubRegions = geographicSubRegions;

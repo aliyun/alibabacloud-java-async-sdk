@@ -67,7 +67,7 @@ public class CreateNatIpCidrResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the NAT CIDR block.</p>
+         * <p>The instance ID of the NAT CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>vpcnatcidr-gw8lhqtvdn4qnea****</p>

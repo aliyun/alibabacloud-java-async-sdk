@@ -174,6 +174,7 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,14 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,7 +203,7 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run without performing the actual operation.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -204,6 +212,8 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
+         * <p>The ID of the EIP. </p>
+         * <p>You can call the <a href="https://www.alibabacloud.com/help/en/eip/developer-reference/api-vpc-2016-04-28-describeeipaddresses-eips">DescribeEipAddresses</a> operation to query the EIP ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,6 +244,8 @@ public class RemoveCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the Internet Shared Bandwidth instance. </p>
+         * <p>You can call the <a href="https://www.alibabacloud.com/help/en/vpc/developer-reference/api-vpc-2016-04-28-describeregions">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

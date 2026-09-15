@@ -216,9 +216,9 @@ public class CreateHaVipRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The description of the HaVip.</p>
+         * <p>The description of the HAVIP.</p>
          * <p>The description must be 1 to 255 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -244,8 +244,8 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the HaVip.</p>
-         * <p>The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HaVip.</p>
+         * <p>The IP address of the HAVIP.</p>
+         * <p>The specified IP address must be an idle IP address within vSwitch CIDR block of the vSwitch. If you do not specify this parameter, an idle IP address is randomly assigned from vSwitch CIDR block of the specified vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.10</p>
@@ -257,8 +257,8 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The name of the HaVip.</p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the HAVIP.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -288,7 +288,7 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the HaVip. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the HAVIP. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the HaVip belongs.</p>
+         * <p>The ID of the resource group to which the HAVIP belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph6aiy****</p>
@@ -331,7 +331,7 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The tag of the resource.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -340,7 +340,7 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch to which the HaVip belongs.</p>
+         * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -412,8 +412,8 @@ public class CreateHaVipRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -424,8 +424,8 @@ public class CreateHaVipRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length, but cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

@@ -106,7 +106,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -117,10 +117,12 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-         * <li>If <strong>NextToken</strong> is not empty, the value indicates the token that is used for the next query.</li>
+         * <li><p>If <strong>NextToken</strong> is empty, no subsequent query exists.</p>
+         * </li>
+         * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of associations.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -154,7 +156,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The association information.</p>
+         * <p>The list of associations.</p>
          */
         public Builder vpnCertificateRelations(java.util.List<VpnCertificateRelations> vpnCertificateRelations) {
             this.vpnCertificateRelations = vpnCertificateRelations;
@@ -259,8 +261,8 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the Anycast EIP was associated.</p>
-             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the association was created.</p>
+             * <p>The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-29T09:30:29Z</p>
@@ -282,10 +284,12 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the certificate.</p>
+             * <p>The certificate type.</p>
              * <ul>
-             * <li><strong>Encryption</strong></li>
-             * <li><strong>Signature</strong></li>
+             * <li><p><strong>Encryption</strong>: encryption certificate.</p>
+             * </li>
+             * <li><p><strong>Signature</strong>: signing certificate.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -297,7 +301,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the VPN gateway is created.</p>
+             * <p>The region ID of the VPN gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -308,7 +312,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPN gateway.</p>
+             * <p>The VPN gateway instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpn-bp1usbiorilk51760****</p>

@@ -245,9 +245,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
 
         /**
          * <p>The description of the gateway route table.</p>
-         * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>new</p>
@@ -273,7 +273,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The destination CIDR block of the route entry in the gateway route table.</p>
+         * <p>The destination CIDR block of the route in the gateway route table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,10 +286,10 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to precheck only this request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: prechecks the request without modifying the gateway route table. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the gateway route table is modified.</li>
+         * <li><strong>true</strong>: performs a dry run without modifying the gateway route table. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the gateway route table is modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
 
         /**
          * <p>The name of the gateway route table.</p>
-         * <p>The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -339,14 +339,14 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new next hop ID of the route entry.</p>
+         * <p>The instance ID of the next hop that you want to modify.</p>
          * <ul>
-         * <li>If you set <strong>NextHopType</strong> to <strong>Instance</strong>, specify an ECS instance ID for <strong>NextHopId</strong>.</li>
-         * <li>If you set <strong>NextHopType</strong> to <strong>NetworkInterface</strong>, specify an ENI ID for <strong>NextHopId</strong>.</li>
-         * <li>If you set <strong>NextHopType</strong> to <strong>Local</strong>, leave <strong>NextHopId</strong> empty. This indicates a local next hop.</li>
+         * <li>If <strong>NextHopType</strong> is set to <strong>Instance</strong>, set <strong>NextHopId</strong> to the ID of an ECS instance.</li>
+         * <li>If <strong>NextHopType</strong> is set to <strong>NetworkInterface</strong>, set <strong>NextHopId</strong> to the ID of an elastic network interface controller (NIC) instance.</li>
+         * <li>If <strong>NextHopType</strong> is set to <strong>Local</strong>, leave <strong>NextHopId</strong> empty, which indicates a local next hop.</li>
          * </ul>
          * <blockquote>
-         * <p> If the value of NextHopType is <strong>Instance</strong> or <strong>NetworkInterface</strong>, and you want to modify the next hop, you must set <strong>NextHopType</strong> to <strong>Local</strong> first. Then, set <strong>NextHopType</strong> to <strong>Instance</strong> or <strong>NetworkInterface</strong> and specify <strong>NextHopId</strong> based on your requirements. If the next hop type of a route entry is Instance or NetworkInterface, you cannot directly specify a different ENI ID or ECS instance ID for the NextHopId parameter.</p>
+         * <p>If the next hop type of the route is <strong>Instance</strong> or <strong>NetworkInterface</strong> and you want to modify the next hop, you must first change <strong>NextHopType</strong> to <strong>Local</strong>, and then change <strong>NextHopType</strong> to <strong>Instance</strong> or <strong>NetworkInterface</strong> and specify a new <strong>NextHopId</strong>. You cannot directly change the next hop from one network interface controller (NIC) or ECS instance to another network interface controller (NIC) or ECS instance when the next hop type is network interface controller (NIC) or ECS instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -359,16 +359,19 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new next hop type of the route. Valid values:</p>
+         * <p>The next hop type of the route that you want to modify. Valid values:</p>
          * <ul>
-         * <li><strong>Instance</strong>: Elastic Compute Service (ECS) instance</li>
-         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
-         * <li><strong>Local</strong>: local next hop</li>
+         * <li><p><strong>Instance</strong>: ECS instance.</p>
+         * </li>
+         * <li><p><strong>NetworkInterface</strong>: elastic network interface controller (NIC) instance.</p>
+         * </li>
+         * <li><p><strong>Local</strong>: local.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>EcsInstance</p>
+         * <p>Instance</p>
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -395,7 +398,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the gateway route table that you want to modify belongs.</p>
+         * <p>The region ID of the gateway route table that you want to modify.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 

@@ -80,10 +80,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token that is used for the next query. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
-         * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
@@ -106,7 +106,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of tag keys.</p>
+         * TagKeys.
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -172,10 +172,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -183,14 +180,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the tag key. Valid values:</p>
-             * <ul>
-             * <li><strong>Custom</strong>: custom</li>
-             * <li><strong>System</strong>: system</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Custom</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -244,10 +234,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * TagKey.
              */
             public Builder tagKey(java.util.List<TagKey> tagKey) {
                 this.tagKey = tagKey;

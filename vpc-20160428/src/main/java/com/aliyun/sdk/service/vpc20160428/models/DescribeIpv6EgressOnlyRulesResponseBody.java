@@ -106,7 +106,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the egress-only rules.</p>
+         * Ipv6EgressOnlyRules.
          */
         public Builder ipv6EgressOnlyRules(Ipv6EgressOnlyRules ipv6EgressOnlyRules) {
             this.ipv6EgressOnlyRules = ipv6EgressOnlyRules;
@@ -114,7 +114,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E16671B7-DEA6-48E0-8E9C-41913DAD44DD</p>
@@ -268,10 +268,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the egress-only rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ruledescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -279,10 +276,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance to which the egress-only rule applies.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ipv6gw-bp1rhhs9zjlxukc5e****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -290,10 +284,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance to which the egress-only rule applies.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Ipv6Address</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -301,10 +292,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the egress-only rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ipv6py-bp1rr7fq1md8pbb3k****</p>
+             * Ipv6EgressOnlyRuleId.
              */
             public Builder ipv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
                 this.ipv6EgressOnlyRuleId = ipv6EgressOnlyRuleId;
@@ -312,10 +300,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the egress-only rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rulename</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -323,10 +308,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the egress-only rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

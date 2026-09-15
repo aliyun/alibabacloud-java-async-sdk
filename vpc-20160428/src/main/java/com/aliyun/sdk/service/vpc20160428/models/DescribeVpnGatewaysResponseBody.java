@@ -106,7 +106,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in a paged query. This is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

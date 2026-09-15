@@ -54,7 +54,7 @@ public class ModifyCommonBandwidthPackageAttributeResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B450CAD8-50BC-4506-ADA7-35C6CE63E96B</p>

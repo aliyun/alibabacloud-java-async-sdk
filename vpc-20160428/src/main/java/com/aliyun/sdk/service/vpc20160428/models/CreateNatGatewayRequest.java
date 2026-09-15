@@ -439,10 +439,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+         * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
          * 
          * <strong>example:</strong>
-         * <p>Invalid parameter.</p>
+         * <p>无效参数</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -463,7 +463,7 @@ public class CreateNatGatewayRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -477,7 +477,7 @@ public class CreateNatGatewayRequest extends Request {
 
         /**
          * <p>The description of the NAT gateway.</p>
-         * <p>You can leave this parameter empty or enter a description. If you enter a description, the description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description can be empty or 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>testnat</p>
@@ -489,10 +489,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+         * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
          * 
          * <strong>example:</strong>
-         * <p>Invalid parameter.</p>
+         * <p>无效参数</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -501,16 +501,14 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The mode in which the EIP is associated with the NAT gateway. Valid values:</p>
+         * <p>The EIP binding pattern of the NAT gateway. Valid values:</p>
          * <ul>
-         * <li><p><strong>MULTI_BINDED</strong>(default): the multi-EIP-to-ENI mode.</p>
-         * </li>
-         * <li><p><strong>NAT</strong>: NAT mode, which is compatible with IPv4 addresses.</p>
+         * <li><strong>MULTI_BINDED</strong> (default): multi-EIP network interface controller (NIC)-visible pattern.</li>
+         * <li><strong>NAT</strong>: EIP normal pattern, compatible with IPv4 gateways.<blockquote>
+         * <p>When the EIP binding pattern of the NAT gateway is set to EIP normal pattern, each EIP occupies a private IP address in the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If no idle private IP addresses are available in the vSwitch, new EIPs cannot be attached. In EIP normal pattern, a maximum of 50 EIPs can be attached to the NAT gateway.</p>
+         * </blockquote>
          * </li>
          * </ul>
-         * <blockquote>
-         * <p>If an EIP is associated with a NAT gateway in NAT mode, the EIP occupies a private IP address of the vSwitch where the NAT gateway is deployed. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, EIPs cannot be associated with the NAT gateway. In NAT mode, a maximum number of 50 EIPs can be associated with each NAT gateway.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>MULTI_BINDED</p>
@@ -522,10 +520,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable ICMP retrieval. Valid values:</p>
+         * <p>Specifies whether to enable ICMP echo reply. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong> (default): Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -538,9 +536,9 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the NAT gateway.</p>
-         * <p>Set the value to <strong>PostPaid</strong> (pay-as-you-go), which is the default value.</p>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Internet NAT gateway billing</a> and <a href="https://help.aliyun.com/document_detail/270913.html">VPC NAT gateway billing</a>.</p>
+         * <p>The billing method of the NAT gateway. Valid values:</p>
+         * <p><strong>PostPaid</strong> (default): pay-as-you-go.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Billing of Internet NAT gateways</a> and <a href="https://help.aliyun.com/document_detail/270913.html">Billing of VPC NAT gateways</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -552,7 +550,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The metering method of the NAT gateway. Set the value to <strong>PayByLcu</strong>, which specifies the pay-by-CU metering method.</p>
+         * <p>The metering method of the NAT gateway. Valid values: <strong>PayByLcu</strong>: pay-by-data-transfer.</p>
          * 
          * <strong>example:</strong>
          * <p>PayByLcu</p>
@@ -564,7 +562,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>Create an IP prefix address segment for batch creation of NAT IPs. Please use the reserved and unallocated network segments in the VSwitch where the NAT is located.</p>
+         * <p>The IP prefix CIDR block used to create NAT IP addresses in batches. Specify an unassigned reserved CIDR block from the vSwitch to which the NAT gateway belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/28</p>
@@ -577,8 +575,8 @@ public class CreateNatGatewayRequest extends Request {
 
         /**
          * <p>The name of the NAT gateway.</p>
-         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
-         * <p>If this parameter is not set, the system assigns a default name to the NAT gateway.</p>
+         * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
+         * <p>If you do not specify this parameter, the system assigns a default name to the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>fortest</p>
@@ -590,10 +588,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The private IP address occupied by the NAT gateway. Please use an unassigned IP from the subnet where the NAT is located. If left empty, an IP address will be randomly assigned.</p>
+         * <p>The private IP address occupied by the NAT gateway. Specify an unallocated IP address from the vSwitch CIDR block to which the NAT gateway belongs. If this parameter is left empty, a random IP address is allocated.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.0.x</p>
+         * <p>192.168.0.2</p>
          */
         public Builder natIp(String natIp) {
             this.putQueryParameter("NatIp", natIp);
@@ -602,7 +600,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The type of NAT gateway. Set the value to <strong>Enhanced</strong>, which specifies enhanced NAT gateway.</p>
+         * <p>The type of the NAT gateway. Valid values: <strong>Enhanced</strong>: enhanced NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>Enhanced</p>
@@ -614,10 +612,12 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The network type of the NAT gateway. Valid values:</p>
+         * <p>The type of NAT gateway to create. Valid values:</p>
          * <ul>
-         * <li><strong>internet</strong>: Internet</li>
-         * <li><strong>intranet</strong>: VPC</li>
+         * <li><p><strong>internet</strong>: Internet NAT gateway.</p>
+         * </li>
+         * <li><p><strong>intranet</strong>: VPC NAT gateway.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -648,10 +648,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+         * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
          * 
          * <strong>example:</strong>
-         * <p>Invalid parameter.</p>
+         * <p>无效参数</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -660,7 +660,13 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>PrivateLink is not supported by default. If you set the value to true, PrivateLink is supported.</p>
+         * <p>Specifies whether to enable PrivateLink. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false (default): Disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -673,7 +679,7 @@ public class CreateNatGatewayRequest extends Request {
 
         /**
          * <p>The region ID of the NAT gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -706,7 +712,10 @@ public class CreateNatGatewayRequest extends Request {
         /**
          * <p>Specifies whether to enable the firewall feature. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default)&gt;Notice: This parameter is deprecated.</li>
+         * <li><strong>false</strong> (default): Disabled.<blockquote>
+         * <p>Notice:  This parameter is deprecated.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -719,10 +728,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+         * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
          * 
          * <strong>example:</strong>
-         * <p>Invalid parameter.</p>
+         * <p>无效参数</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -731,7 +740,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          * 
          * <strong>example:</strong>
          * <p>MULTI_BINDED</p>
@@ -743,14 +752,16 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch to which the NAT gateway is attached.</p>
-         * <p>When you create a NAT gateway, you must specify a vSwitch for the NAT gateway. Then, the system assigns an idle private IP address from the vSwitch to the NAT gateway.</p>
+         * <p>The ID of the vSwitch to which the NAT gateway belongs.</p>
+         * <p>When you create a NAT gateway, you must specify the vSwitch to which the NAT gateway belongs. The system allocates an available private IP address from the vSwitch to the NAT gateway.</p>
          * <ul>
-         * <li>To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.</li>
-         * <li>If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.</li>
+         * <li><p>To create a NAT gateway in an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways and the vSwitch has active IP addresses.</p>
+         * </li>
+         * <li><p>If you have not created a vSwitch, create a vSwitch in a zone that supports NAT gateways first, and then specify the vSwitch for the NAT gateway.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/182292.html">ListEnhanhcedNatGatewayAvailableZones</a> operation to query zones that support NAT gateways. You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query idle IP addresses in a vSwitch.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/182292.html">ListEnhanhcedNatGatewayAvailableZones</a> operation to query the zones that support NAT gateways, and call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the available IP address count in a vSwitch.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -763,7 +774,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC where you want to create the NAT gateway.</p>
+         * <p>The ID of the VPC in which you want to create the NAT gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -835,15 +846,15 @@ public class CreateNatGatewayRequest extends Request {
             } 
 
             /**
-             * <p>Access mode. Valid values:</p>
+             * <p>The access mode. Valid values:</p>
              * <ul>
-             * <li><p><strong>route</strong>: route mode</p>
+             * <li><p><strong>route</strong>: route mode.</p>
              * </li>
-             * <li><p><strong>tunnel</strong>: tunnel mode</p>
+             * <li><p><strong>tunnel</strong>: tunnel mode.</p>
              * </li>
              * </ul>
              * <blockquote>
-             * <p>If this parameter is specified, you must set <strong>PrivateLinkEnabled</strong> to <strong>true</strong>.</p>
+             * <p>When this field is specified, the <strong>PrivateLinkEnabled</strong> field must be set to <strong>true</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -855,12 +866,12 @@ public class CreateNatGatewayRequest extends Request {
             }
 
             /**
-             * <p>Tunnel mode type:</p>
+             * <p>The tunnel mode type. Valid values:</p>
              * <ul>
-             * <li><strong>geneve</strong>: Geneve type</li>
+             * <li><strong>geneve</strong>: Geneve type.</li>
              * </ul>
              * <blockquote>
-             * <p>This value takes effect if the access mode is the tunnel mode.</p>
+             * <p>This value takes effect only when the access mode is tunnel mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -931,7 +942,7 @@ public class CreateNatGatewayRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * <p>The tag key. Specify this parameter in the Tag.N.Key format. N is the index of the tag, with valid values from 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -942,7 +953,7 @@ public class CreateNatGatewayRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * <p>The tag value. Specify this parameter in the Tag.N.Value format. N is the index of the tag, with valid values from 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

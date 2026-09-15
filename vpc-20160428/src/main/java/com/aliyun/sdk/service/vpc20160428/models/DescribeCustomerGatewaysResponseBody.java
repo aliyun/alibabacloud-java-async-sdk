@@ -106,7 +106,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about customer gateways.</p>
+         * CustomerGateways.
          */
         public Builder customerGateways(CustomerGateways customerGateways) {
             this.customerGateways = customerGateways;
@@ -114,7 +114,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of returned entries.</p>
+         * <p>The total number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,10 +216,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TagKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,10 +224,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TagValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -442,10 +436,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>65530</p>
+             * Asn.
              */
             public Builder asn(Long asn) {
                 this.asn = asn;
@@ -453,10 +444,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication key that is used to connect to the gateway device in the data center by using Border Gateway Protocol (BGP).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>AuthKey****</p>
+             * AuthKey.
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -464,11 +452,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the customer gateway was created. Unit: millisecond.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1492747187000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -476,10 +460,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The customer gateway ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cgw-bp1pvpl9r9adju6l5****</p>
+             * CustomerGatewayId.
              */
             public Builder customerGatewayId(String customerGatewayId) {
                 this.customerGatewayId = customerGatewayId;
@@ -487,10 +468,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the customer gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>desctest</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -498,10 +476,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the gateway device in the data center.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>139.32.XX.XX</p>
+             * IpAddress.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -509,10 +484,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the customer gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>nametest</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -520,11 +492,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the customer gateway belongs.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfmzs372yg****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -532,7 +500,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the customer gateway.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

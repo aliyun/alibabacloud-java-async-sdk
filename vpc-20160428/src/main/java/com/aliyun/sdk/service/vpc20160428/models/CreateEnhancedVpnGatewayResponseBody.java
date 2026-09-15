@@ -80,7 +80,10 @@ public class CreateEnhancedVpnGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * Name.
+         * <p>The name of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYVPN</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -88,7 +91,10 @@ public class CreateEnhancedVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB2C156A-41F8-49CC-A756-D55AFC8BFD69</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreateEnhancedVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * VpnGatewayId.
+         * <p>The instance ID of the enhanced VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-uf68lxhgr7ftbqr3p****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;

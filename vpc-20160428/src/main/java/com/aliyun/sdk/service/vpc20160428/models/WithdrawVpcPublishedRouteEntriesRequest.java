@@ -173,10 +173,10 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs a dry run without withdrawing the published routing entry. The system checks the required parameters, request format, and business limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the operation to withdraw the VPC published routing entry is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. Call the DescribeRegions operation to access it.</p>
+         * <p>The region ID of the instance. You can call the DescribeRegions operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -237,7 +237,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The route entries to be withdrawn. Maximum value: 50.</p>
+         * <p>The list of route entries to withdraw. You can specify up to 50 route entries.</p>
          */
         public Builder routeEntries(java.util.List<RouteEntries> routeEntries) {
             this.putQueryParameter("RouteEntries", routeEntries);
@@ -246,7 +246,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>Target instance ID.</p>
+         * <p>The publish route entry target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The type of target instance.</p>
+         * <p>The type of the route publish target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
             } 
 
             /**
-             * <p>The destination CIDR block</p>
+             * <p>The destination CIDR block of the route entry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -345,7 +345,7 @@ public class WithdrawVpcPublishedRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the route table.</p>
+             * <p>The route table ID of the route entry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

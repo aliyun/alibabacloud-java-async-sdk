@@ -187,7 +187,7 @@ public class DescribeHaVipsRequest extends Request {
         } 
 
         /**
-         * <p>The details of the filter condition.</p>
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -214,7 +214,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +226,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -239,7 +239,7 @@ public class DescribeHaVipsRequest extends Request {
 
         /**
          * <p>The region ID of the HaVip.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * <p>The tag list.</p>
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -350,16 +350,22 @@ public class DescribeHaVipsRequest extends Request {
             } 
 
             /**
-             * <p>The filter keys. You can specify at most five filter keys. Valid values of <strong>N</strong>: <strong>1 to 5</strong>. The following filter keys are supported:</p>
+             * <p>The filter condition. You can specify up to 5 filter conditions. Valid values of <strong>N</strong>: <strong>1 to 5</strong>.</p>
+             * <p>The following filter conditions are supported:</p>
              * <ul>
-             * <li><strong>VpcId</strong>: virtual private cloud (VPC) ID</li>
-             * <li><strong>VSwitchId</strong>: vSwitch ID</li>
-             * <li><strong>Status</strong>: HaVip status</li>
-             * <li><strong>HaVipId</strong>: HaVip ID</li>
-             * <li><strong>HaVipAddress</strong>: HaVip IP address</li>
+             * <li><p><strong>VpcId</strong>: the virtual private cloud (VPC) ID.</p>
+             * </li>
+             * <li><p><strong>VSwitchId</strong>: the vSwitch ID.</p>
+             * </li>
+             * <li><p><strong>Status</strong>: the HaVip status.</p>
+             * </li>
+             * <li><p><strong>HaVipId</strong>: the HaVip ID.</p>
+             * </li>
+             * <li><p><strong>HaVipAddress</strong>: the IP address of the HaVip.</p>
+             * </li>
              * </ul>
-             * <p>You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.</p>
-             * <p>The logical operator among multiple filter keys is AND. HaVips can be queried only if all filter keys are matched.</p>
+             * <p>Each filter condition (Filter Key) can have multiple values. The values have an OR relationship, which means that a match on any value satisfies the filter condition.</p>
+             * <p>Different filter conditions (Filter Keys) have an AND relationship, which means that all parameter filter conditions must be met for a record to be returned.</p>
              * 
              * <strong>example:</strong>
              * <p>HaVipId</p>
@@ -370,7 +376,7 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * <p>The value of the filter key. Valid values of <strong>N</strong>: <strong>1 to 5</strong>.</p>
+             * <p>The values of the specified filter condition. Valid values of <strong>N</strong>: <strong>1 to 5</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>havip-bp19o63nequs01i8d****</p>
@@ -440,8 +446,8 @@ public class DescribeHaVipsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -452,8 +458,8 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

@@ -106,10 +106,10 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -128,10 +128,10 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>none</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,10 +150,12 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the modification was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

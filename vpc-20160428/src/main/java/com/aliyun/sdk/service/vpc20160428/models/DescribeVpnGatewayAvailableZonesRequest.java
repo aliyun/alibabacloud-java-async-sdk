@@ -159,10 +159,10 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         } 
 
         /**
-         * <p>The language in which the returned results are displayed. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li><strong>zh-CN</strong>: Chinese</li>
-         * <li><strong>en-US</strong> (default): English</li>
+         * <li><strong>zh-CN</strong>: Chinese.</li>
+         * <li><strong>en-US</strong> (default): English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,15 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>The VPN gateway type. Valid values:</p>
+         * <ul>
+         * <li><strong>Traditional</strong>: Returns zone information for zones where traditional VPN gateways can be created.</li>
+         * <li><strong>Enhanced.SiteToSite</strong>: Returns zone information for zones where enhanced site-to-cloud VPN gateways can be created.</li>
+         * <li><strong>Default value</strong>: Returns zone information for zones where all types of VPN gateways can be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Traditional</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("GatewayType", gatewayType);
@@ -235,10 +243,10 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         /**
          * <p>The bandwidth specification.</p>
          * <ul>
-         * <li>If an IPsec-VPN connection can be associated with the VPN gateway, this parameter specifies the bandwidth specification of the VPN gateway.</li>
-         * <li>In scenarios where an IPsec-VPN connection can be associated with a transit router. This parameter specifies the bandwidth specification supported by an IPsec-VPN connection.</li>
+         * <li>If the IPsec-VPN connection is associated with a VPN gateway instance, this parameter specifies the bandwidth specification of the VPN gateway instance.</li>
+         * <li>If the IPsec-VPN connection is associated with a transit router, this parameter specifies the expected bandwidth specification that the IPsec-VPN connection can support.</li>
          * </ul>
-         * <p>Different bandwidth specifications may affect returned zone information. Valid values:</p>
+         * <p>Different bandwidth specifications may affect the returned zone information. Valid values:</p>
          * <ul>
          * <li><strong>5M</strong></li>
          * <li><strong>10M</strong></li>

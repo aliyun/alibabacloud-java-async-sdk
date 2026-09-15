@@ -67,7 +67,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The LOA information about the Express Connect circuit.</p>
+         * <p>The LOA information of the Express Connect circuit.</p>
          */
         public Builder physicalConnectionLOAType(PhysicalConnectionLOAType physicalConnectionLOAType) {
             this.physicalConnectionLOAType = physicalConnectionLOAType;
@@ -75,7 +75,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>318BB676-0A2B-43A0-9AD8-F1D34E93750F</p>
@@ -183,10 +183,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The identity document number of the construction worker.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345671****</p>
+             * PMCertificateNo.
              */
             public Builder PMCertificateNo(String PMCertificateNo) {
                 this.PMCertificateNo = PMCertificateNo;
@@ -194,15 +191,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity document type of the construction worker. Valid values:</p>
-             * <ul>
-             * <li><strong>IDCard</strong></li>
-             * <li><strong>Passport</strong></li>
-             * <li><strong>Other</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Other</p>
+             * PMCertificateType.
              */
             public Builder PMCertificateType(String PMCertificateType) {
                 this.PMCertificateType = PMCertificateType;
@@ -210,10 +199,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number of the construction worker.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18910010****</p>
+             * PMContactInfo.
              */
             public Builder PMContactInfo(String PMContactInfo) {
                 this.PMContactInfo = PMContactInfo;
@@ -221,14 +207,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gender of the construction worker. Valid values:</p>
-             * <ul>
-             * <li><strong>Male</strong></li>
-             * <li><strong>Female</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Male</p>
+             * PMGender.
              */
             public Builder PMGender(String PMGender) {
                 this.PMGender = PMGender;
@@ -236,10 +215,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the construction worker.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>name</p>
+             * PMName.
              */
             public Builder PMName(String PMName) {
                 this.PMName = PMName;
@@ -527,7 +503,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the organization that requires the Express Connect circuit.</p>
+             * <p>The name of the organization that requires the Express Connect circuit deployment.</p>
              * 
              * <strong>example:</strong>
              * <p>test1234</p>
@@ -538,7 +514,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when construction starts.</p>
+             * <p>The time when the construction starts. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-02-26T08:00:00Z</p>
@@ -549,7 +525,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The LOA error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IllegalParam.CardId</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -557,7 +536,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Express Connect circuit.</p>
+             * <p>The instance ID of the Express Connect circuit.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-bp1ca4wca27****</p>
@@ -568,7 +547,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The circuit code provided by the connectivity provider.</p>
+             * <p>The line code of the carrier.</p>
              * 
              * <strong>example:</strong>
              * <p>aaa111</p>
@@ -579,7 +558,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label of the cable in the data center.</p>
+             * <p>The cable label in the data center building.</p>
              * 
              * <strong>example:</strong>
              * <p>bbb222</p>
@@ -590,7 +569,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The contact information about line O&amp;M.</p>
+             * <p>The contact information for line O&amp;M.</p>
              * 
              * <strong>example:</strong>
              * <p>1388888****</p>
@@ -601,16 +580,16 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ISP. Valid values:</p>
+             * <p>The telecommunications service provider. Valid values:</p>
              * <ul>
-             * <li><strong>China Telecom</strong></li>
-             * <li><strong>China Unicom</strong></li>
-             * <li><strong>China Mobile</strong></li>
-             * <li><strong>Other ISPs in China</strong></li>
+             * <li><strong>中国电信</strong></li>
+             * <li><strong>中国联通</strong></li>
+             * <li><strong>中国移动</strong></li>
+             * <li><strong>中国其他</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Other ISPs in China</p>
+             * <p>中国其他</p>
              */
             public Builder lineServiceProvider(String lineServiceProvider) {
                 this.lineServiceProvider = lineServiceProvider;
@@ -646,7 +625,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the construction workers.</p>
+             * PMInfo.
              */
             public Builder PMInfo(PhysicalConnectionLOATypePMInfo PMInfo) {
                 this.PMInfo = PMInfo;
@@ -654,7 +633,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The on-site construction company.</p>
+             * <p>The construction company.</p>
              * 
              * <strong>example:</strong>
              * <p>ctcu</p>
@@ -667,12 +646,12 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             /**
              * <p>The status of the LOA. Valid values:</p>
              * <ul>
-             * <li><strong>Applying</strong>: The LOA is pending for approval.</li>
-             * <li><strong>Accept</strong>: The LOA is approved.</li>
+             * <li><strong>Applying</strong>: The LOA application is being processed.</li>
+             * <li><strong>Accept</strong>: The LOA application is approved.</li>
              * <li><strong>Available</strong>: The LOA is available.</li>
-             * <li><strong>Rejected</strong>: The LOA is rejected.</li>
-             * <li><strong>Completing</strong>: The Express Connect circuit is under construction.</li>
-             * <li><strong>Complete</strong>: The Express Connect circuit is installed.</li>
+             * <li><strong>Rejected</strong>: The LOA application is rejected.</li>
+             * <li><strong>Completing</strong>: The circuit is under construction.</li>
+             * <li><strong>Complete</strong>: The circuit construction is complete.</li>
              * <li><strong>Deleted</strong>: The LOA is deleted.</li>
              * </ul>
              * 

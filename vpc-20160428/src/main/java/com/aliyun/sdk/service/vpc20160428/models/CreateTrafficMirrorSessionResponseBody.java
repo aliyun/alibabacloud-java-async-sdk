@@ -80,7 +80,7 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
@@ -91,7 +91,7 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+         * <p>The ID of the resource group to which the traffic mirroring instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4ph****</p>
@@ -102,7 +102,7 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the traffic mirror session.</p>
+         * <p>The instance ID of the traffic mirror session.</p>
          * 
          * <strong>example:</strong>
          * <p>tms-j6ce5di4w7nvigfjz****</p>

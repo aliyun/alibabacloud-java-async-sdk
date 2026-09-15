@@ -158,7 +158,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the VBR was created.</p>
+         * <p>The time when the VBR was created. The time is displayed in the ISO 8601 standard in UTC. The format is YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-08T12:20:55</p>
@@ -170,7 +170,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
 
         /**
          * <p>The description of the VBR failover group.</p>
-         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -192,7 +192,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the other VBR in the VBR failover group.</p>
+         * <p>The instance ID of the other VBR in the VBR failover group.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-bp12mw1f8k3jgygk9****</p>
@@ -203,10 +203,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region in which the VBR is deployed.</p>
+         * <p>The region ID of the VBR.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -225,10 +225,12 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the VBR failover group.</p>
+         * <p>The status of the VBR failover group. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Active</strong></li>
+         * <li><p><strong>Creating</strong>: being created.</p>
+         * </li>
+         * <li><p><strong>Active</strong>: Normal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,7 +242,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VBR failover group.</p>
+         * <p>The VBR failover group instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vbrha-sa1sxheuxtd98****</p>
@@ -251,7 +253,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VBR ID.</p>
+         * <p>The VBR instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-bp1jcg5cmxjbl9xgc****</p>

@@ -54,7 +54,10 @@ public class DeleteEnhancedVpnGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9A8AABE-A84B-4AF2-A68A-8E2EA190E7AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

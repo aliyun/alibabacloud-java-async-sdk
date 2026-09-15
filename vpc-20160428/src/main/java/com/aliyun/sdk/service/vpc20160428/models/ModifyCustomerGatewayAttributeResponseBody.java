@@ -132,7 +132,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The timestamp generated when the customer gateway was created.</p>
+         * <p>The timestamp when the customer gateway was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1492747187000</p>
@@ -143,7 +143,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the customer gateway.</p>
+         * <p>The instance ID of the customer gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cgw-bp1pvpl9r9adju6l5****</p>
@@ -165,7 +165,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public IP address of the gateway device in the data center.</p>
+         * <p>The public IP address of the on-premises data center gateway device.</p>
          * 
          * <strong>example:</strong>
          * <p>139.32.XX.XX</p>
@@ -199,7 +199,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group to which the customer gateway belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>

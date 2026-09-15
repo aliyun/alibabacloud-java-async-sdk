@@ -106,7 +106,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of DNAT entries.</p>
+         * ForwardTableEntries.
          */
         public Builder forwardTableEntries(ForwardTableEntries forwardTableEntries) {
             this.forwardTableEntries = forwardTableEntries;
@@ -114,7 +114,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -320,13 +320,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <ul>
-             * <li>The EIPs that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.</li>
-             * <li>The NAT IP addresses that can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>139.79.XX.XX</p>
+             * ExternalIp.
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -334,13 +328,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li>The external port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</li>
-             * <li>The port that is used when the NAT IP address can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * ExternalPort.
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -348,10 +336,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the DNAT entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fwd-119smw5tk****</p>
+             * ForwardEntryId.
              */
             public Builder forwardEntryId(String forwardEntryId) {
                 this.forwardEntryId = forwardEntryId;
@@ -359,10 +344,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the DNAT entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ForwardEntry-1</p>
+             * ForwardEntryName.
              */
             public Builder forwardEntryName(String forwardEntryName) {
                 this.forwardEntryName = forwardEntryName;
@@ -370,10 +352,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the DNAT table to which the DNAT entry belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ftb-11tc6xgmv****</p>
+             * ForwardTableId.
              */
             public Builder forwardTableId(String forwardTableId) {
                 this.forwardTableId = forwardTableId;
@@ -381,14 +360,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address.</p>
-             * <ul>
-             * <li>The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you query DNAT entries of Internet NAT gateways.</li>
-             * <li>The private IP address that uses DNAT entries when you query DNAT entries of VPC NAT gateways.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XX.XX</p>
+             * InternalIp.
              */
             public Builder internalIp(String internalIp) {
                 this.internalIp = internalIp;
@@ -396,13 +368,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li>The internal port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</li>
-             * <li>The destination ECS instance port to be mapped when you query DNAT entries of VPC NAT gateways.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>25</p>
+             * InternalPort.
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -410,15 +376,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol. Valid values:</p>
-             * <ul>
-             * <li><strong>TCP</strong></li>
-             * <li><strong>UDP</strong></li>
-             * <li><strong>Any</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>TCP</p>
+             * IpProtocol.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -426,10 +384,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAT gateway to which the DNAT entry belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ngw-bp1uewa15k4iy5770****</p>
+             * NatGatewayId.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -437,15 +392,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the DNAT entry. Valid values:</p>
-             * <ul>
-             * <li><strong>Pending</strong></li>
-             * <li><strong>Available</strong></li>
-             * <li><strong>Deleting</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

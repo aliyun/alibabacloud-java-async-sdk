@@ -67,7 +67,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of access points.</p>
+         * <p>The list of all access point information for Express Connect circuits.</p>
          */
         public Builder businessAccessPoints(java.util.List<BusinessAccessPoints> businessAccessPoints) {
             this.businessAccessPoints = businessAccessPoints;
@@ -144,7 +144,25 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * OpticalModuleModel.
+             * <p>The optical module model supported by the Express Connect circuit access point. Valid values:
+             * 1000Base-LX : 
+             * SFP-GE-LR-SM1310,10KM
+             * SFP-GE-ER-SM1310,40KM
+             * SFP-GE-ZR-SM1550,80KM 
+             * 10GBase-LR : 
+             * SFP-10G-LR-SM1310,10KM
+             * SFP-10G-ER-SM1550,40KM 
+             * SFP-10G-ZR-SM1550,80KM<br>40GBase-LR : 
+             * QSFP-40G-LR4-WDM1300,10KM
+             * QSFP-40G-ER4-WDM1300,40KM
+             * QSFP-40G-ZR4-WDM1300,80KM
+             * 100GBase-LR : 
+             * QSFP28-100G-LR4-WDM1300,10KM
+             * QSFP28-100G-ER4-WDM1300,40KM
+             * QSFP28-100G-ZR4-WDM1300,80KM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SFP-GE-LR-SM1310,10KM</p>
              */
             public Builder opticalModuleModel(String opticalModuleModel) {
                 this.opticalModuleModel = opticalModuleModel;
@@ -152,7 +170,14 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * PortType.
+             * <p>The port type supported by the optical module at the Express Connect circuit access point. Valid values:
+             * ● 1000Base-LX: GE single-mode optical port.
+             * ● 10GBase-LR: 10 GE single-mode optical port.
+             * ● 40GBase-LR: 40 GE single-mode optical port.
+             * ● 100GBase-LR: 100 GE single-mode optical port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000Base-LX</p>
              */
             public Builder portType(String portType) {
                 this.portType = portType;
@@ -297,7 +322,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the access point.</p>
+             * <p>The ID of the Express Connect circuit access point.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-cn-hangzhou-xs-B</p>
@@ -308,10 +333,10 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the access point.</p>
+             * <p>The name of the Express Connect circuit access point.</p>
              * 
              * <strong>example:</strong>
-             * <p>hangzhou-xs-B</p>
+             * <p>杭州-萧山-B</p>
              */
             public Builder accessPointName(String accessPointName) {
                 this.accessPointName = accessPointName;
@@ -319,9 +344,9 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud box.</p>
+             * <p>The CloudBox instance ID.</p>
              * <blockquote>
-             * <p> You can query this parameter if the Express Connect circuits and access points are of the cloud box type.</p>
+             * <p>This parameter is available only when the queried Express Connect circuit and access point are CloudBox Express Connect circuits and CloudBox access points.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -355,7 +380,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * OpticalModuleModels.
+             * <p>The collection of optical module models supported by the current access point.</p>
              */
             public Builder opticalModuleModels(java.util.List<OpticalModuleModels> opticalModuleModels) {
                 this.opticalModuleModels = opticalModuleModels;
@@ -363,14 +388,14 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+             * <p>The telecommunications service providers that support physical line access. Valid values:</p>
              * <ul>
              * <li><strong>CT</strong>: China Telecom.</li>
              * <li><strong>CU</strong>: China Unicom.</li>
              * <li><strong>CM</strong>: China Mobile.</li>
-             * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland.</li>
+             * <li><strong>CO</strong>: Other Chinese providers.</li>
              * <li><strong>Equinix</strong>: Equinix.</li>
-             * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</li>
+             * <li><strong>Other</strong>: Other providers outside the Chinese mainland.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -382,18 +407,18 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port type supported by the access point. Valid values:</p>
+             * <p>The port types available for purchase at the Express Connect circuit access point. Valid values:</p>
              * <ul>
-             * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
-             * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
-             * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
-             * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
-             * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
-             * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
-             * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+             * <li><strong>100Base-T</strong>: 100M Ethernet port.</li>
+             * <li><strong>1000Base-T</strong>: 1 GE electrical port.</li>
+             * <li><strong>1000Base-LX</strong>: GE single-mode optical port (10 km).</li>
+             * <li><strong>10GBase-T</strong>: 10 GE electrical port.</li>
+             * <li><strong>10GBase-LR</strong>: 10 GE single-mode optical port (10 km).</li>
+             * <li><strong>40GBase-LR</strong>: 40 GE single-mode optical port.</li>
+             * <li><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</li>
              * </ul>
              * <blockquote>
-             * <p> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+             * <p> The creation of 40GBase-LR and 100GBase-LR ports depends on the actual backend port availability. Contact your account manager for details.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

@@ -133,7 +133,7 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,10 +146,10 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * <p>The type of the certificate. Valid values:</p>
+         * <p>The certificate type. Valid values:</p>
          * <ul>
-         * <li><strong>Encryption</strong></li>
-         * <li><strong>Signature</strong></li>
+         * <li><strong>Encryption</strong>: specifies the SSL certificate as the encryption certificate.</li>
+         * <li><strong>Signature</strong>: specifies the SSL certificate as the signing certificate.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -164,9 +164,9 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -179,10 +179,12 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request passes the dry run, a request ID is returned. Otherwise, an error message is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run without actually associating the certificate. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, the VPN gateway is associated with the certificate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +198,7 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
 
         /**
          * <p>The region ID of the VPN gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,9 +211,9 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * <blockquote>
-         * <p>You can associate only VPN gateways of the SM type with certificates.</p>
+         * <p>Only ShangMi (SM) VPN gateways support attaching certificates.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

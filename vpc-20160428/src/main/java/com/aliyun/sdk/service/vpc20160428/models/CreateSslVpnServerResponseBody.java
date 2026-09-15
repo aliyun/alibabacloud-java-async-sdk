@@ -80,7 +80,7 @@ public class CreateSslVpnServerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The SSL server name.</p>
+         * <p>The name of the SSL-VPN server.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -102,7 +102,7 @@ public class CreateSslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the SSL server.</p>
+         * <p>The ID of the SSL-VPN server.</p>
          * 
          * <strong>example:</strong>
          * <p>vss-bp18q7hzj6largv4v****</p>

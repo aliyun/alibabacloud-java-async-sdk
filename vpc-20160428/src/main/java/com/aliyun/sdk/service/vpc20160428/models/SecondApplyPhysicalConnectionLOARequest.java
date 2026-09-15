@@ -260,10 +260,10 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. </p>
+         * <p>The client generates the value. Ensure that the value is unique among different requests. </p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The name of the customer company that requires the Express Connect circuit.</p>
+         * <p>The name of the company that accesses the Express Connect circuit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +289,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the construction company enters the site. The time is in the ISO 8601 standard and must be in UTC. Format: YYYY-MM-DDThh:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +302,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The ID of the Express Connect circuit.</p>
+         * <p>The instance ID of the Express Connect circuit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The type of Express Connect circuit. Valid values:</p>
+         * <p>The type of the Express Connect circuit. Valid values:</p>
          * <ul>
          * <li><strong>MSTP</strong></li>
          * <li><strong>MPLSVPN</strong></li>
@@ -352,7 +352,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The information about the construction engineer.</p>
+         * <p>The information about the construction engineers.</p>
          */
         public Builder PMInfo(java.util.List<PMInfo> PMInfo) {
             this.putQueryParameter("PMInfo", PMInfo);
@@ -361,10 +361,10 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The geographic location where the Express Connect circuit is deployed.</p>
+         * <p>The geographical location where the Express Connect circuit is deployed.</p>
          * 
          * <strong>example:</strong>
-         * <p>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</p>
+         * <p>杭州</p>
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -373,7 +373,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The region where the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region where the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -404,11 +404,11 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The construction company.</p>
+         * <p>The construction company of the Express Connect circuit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>company</p>
+         * <p>阿里</p>
          */
         public Builder si(String si) {
             this.putQueryParameter("Si", si);
@@ -515,7 +515,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
             } 
 
             /**
-             * <p>The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.</p>
+             * <p>The ID number of the construction engineer. You can specify an ID card number or a passport number.</p>
              * <p>You can configure information for up to 16 construction engineers.</p>
              * 
              * <strong>example:</strong>
@@ -527,10 +527,10 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
             }
 
             /**
-             * <p>The type of the identity document of the construction engineer. Valid values:</p>
+             * <p>The type of the ID document of the construction engineer. Valid values:</p>
              * <ul>
-             * <li><strong>IDCard</strong></li>
-             * <li><strong>Passport</strong></li>
+             * <li><strong>IDCard</strong>: ID card.</li>
+             * <li><strong>Passport</strong>: passport.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -542,7 +542,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
             }
 
             /**
-             * <p>The contact information about the construction engineer.</p>
+             * <p>The contact information of the construction engineer.</p>
              * 
              * <strong>example:</strong>
              * <p>1390000****</p>
@@ -567,7 +567,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends Request {
              * <p>The name of the construction engineer.</p>
              * 
              * <strong>example:</strong>
-             * <p>Zhangsan</p>
+             * <p>张三</p>
              */
             public Builder PMName(String PMName) {
                 this.PMName = PMName;

@@ -144,14 +144,9 @@ public class DeleteRouteEntriesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p><strong>true</strong>: performs a dry run without actually deleting the route entries. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
+         * <p><strong>false</strong> (default): sends a normal request. If the check passes, a 2xx HTTP status code is returned and the route entries are deleted.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -178,8 +173,8 @@ public class DeleteRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the route table.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the route table resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +205,7 @@ public class DeleteRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The information about the routes that you want to delete.</p>
+         * <p>The information about the route entries to delete.</p>
          */
         public Builder routeEntries(java.util.List<RouteEntries> routeEntries) {
             this.putQueryParameter("RouteEntries", routeEntries);
@@ -305,9 +300,9 @@ public class DeleteRouteEntriesRequest extends Request {
             } 
 
             /**
-             * <p>The destination CIDR block of the route that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.</p>
+             * <p>The destination CIDR block of the route entry to delete. IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix list CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.</p>
              * <blockquote>
-             * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+             * <p>If the <strong>RouteEntryId</strong> parameter is not specified, the <strong>DstCidrBlock</strong> and <strong>NextHop</strong> parameters are required.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -319,9 +314,9 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.</p>
+             * <p>The ID of the next hop instance to delete. You can specify up to 50 instance IDs.</p>
              * <blockquote>
-             * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+             * <p>If the <strong>RouteEntryId</strong> parameter is not specified, the <strong>DstCidrBlock</strong> and <strong>NextHop</strong> parameters are required.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -333,9 +328,9 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the route that you want to delete. You can specify up to 50 route IDs.</p>
+             * <p>The ID of the route entry to delete. You can specify up to 50 route entry IDs.</p>
              * <blockquote>
-             * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+             * <p>If the <strong>RouteEntryId</strong> parameter is not specified, the <strong>DstCidrBlock</strong> and <strong>NextHop</strong> parameters are required.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -347,7 +342,7 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the route table to which the routes to be deleted belongs. You can specify up to 50 route table IDs.</p>
+             * <p>The ID of the route table that contains the route entry to delete. You can specify up to 50 route table IDs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

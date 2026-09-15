@@ -119,7 +119,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +141,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BF3995A6-FA4F-4C74-B90F-89ECF4BFF4D5</p>
@@ -152,7 +152,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,10 +163,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about route entries of the VPN gateway in dual-tunnel mode.</p>
-         * <blockquote>
-         * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
-         * </blockquote>
+         * VpnRouteCounts.
          */
         public Builder vpnRouteCounts(VpnRouteCounts vpnRouteCounts) {
             this.vpnRouteCounts = vpnRouteCounts;
@@ -174,7 +171,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The route entry list.</p>
+         * VpnRouteEntries.
          */
         public Builder vpnRouteEntries(VpnRouteEntries vpnRouteEntries) {
             this.vpnRouteEntries = vpnRouteEntries;
@@ -253,10 +250,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of route entries.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * RouteCount.
              */
             public Builder routeCount(Integer routeCount) {
                 this.routeCount = routeCount;
@@ -264,14 +258,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route type. Valid values:</p>
-             * <ul>
-             * <li><strong>custom</strong> (default): destination-based route.</li>
-             * <li><strong>bgp</strong> : BGP route entry.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>bgp</p>
+             * RouteEntryType.
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -279,14 +266,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the BGP route. Valid values:</p>
-             * <ul>
-             * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
-             * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPN_BGP</p>
+             * Source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -524,10 +504,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AS path of the route entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>65501,65001,60011</p>
+             * AsPath.
              */
             public Builder asPath(String asPath) {
                 this.asPath = asPath;
@@ -535,10 +512,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The community attributes of the route entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>65001:1000,65501:2000</p>
+             * Community.
              */
             public Builder community(String community) {
                 this.community = community;
@@ -546,10 +520,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the route entry was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1563874074000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -557,10 +528,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next hop of the route entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vco-bp1tui07ob10fmuro****</p>
+             * NextHop.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -568,13 +536,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tunnel associated with the next hop. </p>
-             * <blockquote>
-             * <p>This parameter is returned only if the VPN gateway supports the dual-tunnel mode.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>tun-36cfgpwjn58axj****</p>
+             * NextHopTunnelId.
              */
             public Builder nextHopTunnelId(String nextHopTunnelId) {
                 this.nextHopTunnelId = nextHopTunnelId;
@@ -582,10 +544,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination CIDR block of the route entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.0.0.0/24</p>
+             * RouteDest.
              */
             public Builder routeDest(String routeDest) {
                 this.routeDest = routeDest;
@@ -593,14 +552,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the route entry. Valid values:</p>
-             * <ul>
-             * <li><strong>Custom</strong>: custom</li>
-             * <li><strong>System</strong>: system</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>System</p>
+             * RouteEntryType.
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -608,14 +560,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the BGP route. Valid values:</p>
-             * <ul>
-             * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
-             * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.10.0/24</p>
+             * Source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -623,14 +568,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the route entry. Valid values:</p>
-             * <ul>
-             * <li><strong>published</strong>: advertised</li>
-             * <li><strong>normal</strong>: not advertised</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>normal</p>
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -638,10 +576,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPN gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpn-bp1cmw7jh1nfe43m9****</p>
+             * VpnInstanceId.
              */
             public Builder vpnInstanceId(String vpnInstanceId) {
                 this.vpnInstanceId = vpnInstanceId;
@@ -649,14 +584,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the route entry. Valid values: <strong>0</strong> and <strong>100</strong>.</p>
-             * <ul>
-             * <li><strong>0</strong>: a low priority</li>
-             * <li><strong>100</strong>: a high priority</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Weight.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

@@ -67,7 +67,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</p>
@@ -78,7 +78,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the routes in the route tables.</p>
+         * <p>The information about all queried route tables.</p>
          */
         public Builder routeEntrySummarys(java.util.List<RouteEntrySummarys> routeEntrySummarys) {
             this.routeEntrySummarys = routeEntrySummarys;
@@ -144,7 +144,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned.</p>
+             * <p>The number of entries in the list.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -157,12 +157,17 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             /**
              * <p>The type of the route. Valid values:</p>
              * <ul>
-             * <li><strong>All</strong>: all route types</li>
-             * <li><strong>Custom</strong>: a custom route</li>
-             * <li><strong>System</strong>: a system route</li>
-             * <li><strong>BGP</strong>: a BGP route</li>
-             * <li><strong>CEN</strong>: a CEN route</li>
+             * <li><strong>all</strong>: all route types.</li>
+             * <li><strong>custom</strong>: custom routes.</li>
+             * <li><strong>system</strong>: system routes.</li>
+             * <li><strong>bgp</strong>: BGP routes.</li>
+             * <li><strong>cen</strong>: Cloud Enterprise Network (CEN) routes.</li>
+             * <li><strong>type_vpn_bgp_internal</strong>: BGP routes of VPN.</li>
+             * <li><strong>ECR</strong>: Express Connect Router (ECR) routes.</li>
              * </ul>
+             * <blockquote>
+             * <p>The returned system routes are the system routes under the system route table.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -232,7 +237,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the routes of different types in one route table.</p>
+             * <p>The collection of route entry counts by type in a single route table.</p>
              */
             public Builder entrySummarys(java.util.List<EntrySummarys> entrySummarys) {
                 this.entrySummarys = entrySummarys;

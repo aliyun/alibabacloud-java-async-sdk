@@ -187,8 +187,8 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The authentication key of the BGP routing protocol for the gateway device in the data center.</p>
-         * <p>The key must be 1 to 64 characters in length. It can contain only ASCII characters and cannot contain spaces or question marks (?).</p>
+         * <p>The authentication key of the BGP route routing protocol for the on-premises data center gateway device.</p>
+         * <p>The key must be 1 to 64 characters in length, can contain only ASCII characters, and cannot contain spaces, Chinese characters, or half-width question marks (?).</p>
          * 
          * <strong>example:</strong>
          * <p>AuthKey****</p>
@@ -201,9 +201,9 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the customer gateway.</p>
+         * <p>The instance ID of the customer gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,8 +229,8 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * <p>The description of the customer gateway.</p>
-         * <p>The description must be 1 to 100 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the customer gateway.  </p>
+         * <p>The description must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -242,8 +242,8 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the customer gateway.</p>
-         * <p>The name must be 1 to 100 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the customer gateway.  </p>
+         * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -273,8 +273,8 @@ public class ModifyCustomerGatewayAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the customer gateway is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the customer gateway. </p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

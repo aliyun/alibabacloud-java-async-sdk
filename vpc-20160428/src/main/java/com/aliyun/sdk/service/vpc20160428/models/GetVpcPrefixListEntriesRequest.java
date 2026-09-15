@@ -160,7 +160,7 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -172,10 +172,10 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * <li>Leave this parameter empty for the first query or if no subsequent query is required.</li>
+         * <li>If a subsequent query is required, set this parameter to the NextToken value returned in the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the prefix list that you want to query.</p>
+         * <p>The instance ID of the prefix list to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,8 +219,8 @@ public class GetVpcPrefixListEntriesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the prefix list.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the prefix list to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,10 +80,10 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags that are added to the resource.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -198,10 +198,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pc-bp16qjewdsunr41m1****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -209,15 +206,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. Valid values:</p>
-             * <ul>
-             * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
-             * <li><strong>VIRTUALBORDERROUTER</strong>: VBR.</li>
-             * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PHYSICALCONNECTION</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -225,10 +214,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag that is added to the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -236,10 +222,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag that is added to the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

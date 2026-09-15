@@ -146,8 +146,14 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
         } 
 
         /**
-         * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>1000</strong>.</p>
+         * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>2</strong> to <strong>20000</strong>.</li>
+         * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-95th-percentile-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>200</strong> to <strong>20000</strong>.</li>
+         * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-predominant-traffic, the default value range of <strong>Bandwidth</strong> is <strong>1</strong> to <strong>2000</strong>.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;Valid values: <strong>1</strong> to <strong>1000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,8 +197,8 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Internet Shared Bandwidth instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the Internet Shared Bandwidth instance. </p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

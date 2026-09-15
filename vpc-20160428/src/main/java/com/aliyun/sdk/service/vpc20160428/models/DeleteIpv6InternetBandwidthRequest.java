@@ -172,7 +172,10 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <blockquote>
+         * <h2>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</h2>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -184,10 +187,12 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run without actually deleting the Internet bandwidth. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error message is returned. If the check succeeds, <code>DryRunOperation</code> is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, the Internet bandwidth is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +207,7 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         /**
          * <p>The ID of the IPv6 address.</p>
          * <blockquote>
-         * <p> You must specify one of <strong>Ipv6AddressId</strong> and <strong>Ipv6InternetBandwidthId</strong>.</p>
+         * <p>You must specify either <strong>Ipv6AddressId</strong> or <strong>Ipv6InternetBandwidthId</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -215,7 +220,7 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the Internet bandwidth of the IPv6 address.</p>
+         * <p>The Internet bandwidth instance ID of the IPv6 address.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
@@ -246,7 +251,7 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
 
         /**
          * <p>The region ID of the IPv6 gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

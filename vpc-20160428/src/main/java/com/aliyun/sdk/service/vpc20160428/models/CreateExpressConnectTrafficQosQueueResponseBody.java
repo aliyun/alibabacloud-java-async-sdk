@@ -83,7 +83,7 @@ public class CreateExpressConnectTrafficQosQueueResponseBody extends TeaModel {
          * <p>The ID of the QoS policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-2giu0a6vd5x0mv4700</p>
+         * <p>qos-2giu0a6vd5x0mv****</p>
          */
         public Builder qosId(String qosId) {
             this.qosId = qosId;
@@ -94,7 +94,7 @@ public class CreateExpressConnectTrafficQosQueueResponseBody extends TeaModel {
          * <p>The ID of the QoS queue.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+         * <p>qos-queue-9nyx2u7n71s2rc****</p>
          */
         public Builder queueId(String queueId) {
             this.queueId = queueId;

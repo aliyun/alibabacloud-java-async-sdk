@@ -179,8 +179,8 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the resource is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>The region ID of the resource to which you want to create and bind tags.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs. You can specify up to 20 resource IDs.</p>
+         * <p>The resource ID. You can specify up to 20 resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -221,11 +221,12 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
-         * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
-         * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+         * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit instance.</li>
+         * <li><strong>VIRTUALBORDERROUTER</strong>: Virtual Border Router.</li>
+         * <li><strong>ROUTERINTERFACE</strong>: VBR uplink.</li>
+         * <li><strong>TRAFFICQOS</strong>: QoS policy.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -239,7 +240,7 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the resource.</p>
+         * <p>The list of resource tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -308,8 +309,8 @@ public class TagResourcesForExpressConnectRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -320,8 +321,8 @@ public class TagResourcesForExpressConnectRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

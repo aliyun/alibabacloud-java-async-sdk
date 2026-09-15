@@ -230,7 +230,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,7 +242,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The number of entries per page for paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -254,8 +254,8 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SSL client certificate.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the SSL client certificates that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
 
         /**
          * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
-         * <p>The SSL client certificate and its associated SSL server belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/2794078.html">DescribeSslVpnServers</a> operation to query the ID of the resource group to which the SSL server belongs.</p>
+         * <p>The SSL client certificate belongs to the same resource group as its associated SSL server. You can call the <a href="https://help.aliyun.com/document_detail/2794078.html">DescribeSslVpnServers</a> operation to query the resource group ID of the SSL server.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>

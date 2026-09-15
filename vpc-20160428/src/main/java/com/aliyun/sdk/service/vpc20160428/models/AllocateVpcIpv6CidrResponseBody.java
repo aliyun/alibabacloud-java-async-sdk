@@ -67,7 +67,7 @@ public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IPv6 CIDR block that is reserved.</p>
+         * <p>The reserved IPv6 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:XXXX:0:a600::/56</p>

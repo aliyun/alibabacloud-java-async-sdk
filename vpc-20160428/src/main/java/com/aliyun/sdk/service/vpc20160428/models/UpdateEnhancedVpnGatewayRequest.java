@@ -187,7 +187,18 @@ public class UpdateEnhancedVpnGatewayRequest extends Request {
         } 
 
         /**
-         * AutoPropagate.
+         * <p>Specifies whether to enable the routing automatic propagation feature for the enhanced VPN gateway instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enabled.<br>
+         * After routing automatic propagation is enabled, the enhanced VPN gateway instance uses automatic learning to obtain system routes from the system route table of the VPC instance and automatically propagates routes of the on-premises data center to the system route table of the VPC instance.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled.<br>
+         * Before you disable routing automatic propagation, make sure that BGP dynamic route is disabled for all IPsec-VPN connections under the enhanced VPN gateway.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPropagate(Boolean autoPropagate) {
             this.putQueryParameter("AutoPropagate", autoPropagate);
@@ -196,7 +207,14 @@ public class UpdateEnhancedVpnGatewayRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-4266****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -205,7 +223,11 @@ public class UpdateEnhancedVpnGatewayRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new description of the enhanced VPN gateway.</p>
+         * <p>The description must be 1 to 100 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -214,7 +236,11 @@ public class UpdateEnhancedVpnGatewayRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name of the enhanced VPN gateway.</p>
+         * <p>The name must be 2 to 100 characters in length. It cannot start with http:// or https://. It must start with an uppercase or lowercase letter and can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myvpn</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -241,6 +267,7 @@ public class UpdateEnhancedVpnGatewayRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the enhanced VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +298,7 @@ public class UpdateEnhancedVpnGatewayRequest extends Request {
         }
 
         /**
+         * <p>The ID of the enhanced VPN gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

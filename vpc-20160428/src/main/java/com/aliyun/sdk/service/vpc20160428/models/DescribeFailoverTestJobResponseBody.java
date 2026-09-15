@@ -67,7 +67,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The failover test.</p>
+         * <p>The failover test job.</p>
          */
         public Builder failoverTestJobModel(FailoverTestJobModel failoverTestJobModel) {
             this.failoverTestJobModel = failoverTestJobModel;
@@ -248,8 +248,8 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the failover test.</p>
-             * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The description of the failover test job.</p>
+             * <p>The description is 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -260,7 +260,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the failover test. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+             * <p>The failover test duration. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -271,10 +271,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the failover test.</p>
+             * <p>The failover test job ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ftj-xxxxxxxxx</p>
+             * <p>ftj-bp1yh6mvi13aq3g8w****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -282,10 +282,12 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the failover test is performed immediately. Valid values:</p>
+             * <p>The failover test type. Valid values:</p>
              * <ul>
-             * <li><strong>StartNow</strong></li>
-             * <li><strong>StartLater</strong></li>
+             * <li><p><strong>StartNow</strong>: start immediately. The test starts immediately after the job is created.</p>
+             * </li>
+             * <li><p><strong>StartLater</strong>: start later. Only the test job is created without starting the test.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -297,8 +299,8 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the failover test.</p>
-             * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>The name of the failover test job.</p>
+             * <p>The name is 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -309,7 +311,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of failover test resources.</p>
+             * <p>The list of failover test resource IDs.</p>
              */
             public Builder resourceId(java.util.List<String> resourceId) {
                 this.resourceId = resourceId;
@@ -317,7 +319,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of failover test resource. Only <strong>PHYSICALCONNECTION</strong> is returned.</p>
+             * <p>The failover test resource type. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
              * 
              * <strong>example:</strong>
              * <p>PHYSICALCONNECTION</p>
@@ -328,7 +330,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The start time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format as defined by ISO 8601.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-21T14:00:00Z</p>
@@ -339,13 +341,18 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the failover test. Valid values:</p>
+             * <p>The status of the failover test job. Valid values:</p>
              * <ul>
-             * <li><strong>Init</strong></li>
-             * <li><strong>Starting</strong></li>
-             * <li><strong>Testing</strong></li>
-             * <li><strong>Stopping</strong></li>
-             * <li><strong>Stopped</strong></li>
+             * <li><p><strong>Init</strong>: pending.</p>
+             * </li>
+             * <li><p><strong>Starting</strong>: starting.</p>
+             * </li>
+             * <li><p><strong>Testing</strong>: in progress.</p>
+             * </li>
+             * <li><p><strong>Stopping</strong>: stopping.</p>
+             * </li>
+             * <li><p><strong>Stopped</strong>: completed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -357,7 +364,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The end time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format as defined by ISO 8601.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-21T15:00:00Z</p>

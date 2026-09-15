@@ -326,10 +326,12 @@ public class AllocateEipAddressProRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: Automatic payment is disabled. After an order is generated, you must go to the Order Center to complete the payment.</li>
-         * <li><strong>true</strong>: Automatic payment is enabled. After an order is generated, the payment is automatically completed.</li>
+         * <li><p><strong>false</strong>: Automatic payment is disabled. After an order is generated, go to the Order Center to complete the payment.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Automatic payment is enabled. The order is automatically paid.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. This parameter is optional if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
          * 
@@ -343,13 +345,16 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The maximum bandwidth of the specified EIP. Unit: Mbit/s.</p>
+         * <p>The maximum bandwidth of the EIP to allocate. Unit: Mbit/s.</p>
          * <ul>
-         * <li>When <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>500</strong>.</li>
-         * <li>When <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>200</strong>.</li>
-         * <li>When <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>1000</strong>.</li>
+         * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>500</strong>.</p>
+         * </li>
+         * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>200</strong>.</p>
+         * </li>
+         * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>1000</strong>.</p>
+         * </li>
          * </ul>
-         * <p>Default value: <strong>5</strong> Mbit /s.</p>
+         * <p>Default value: <strong>5</strong> Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -362,9 +367,9 @@ public class AllocateEipAddressProRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -379,23 +384,21 @@ public class AllocateEipAddressProRequest extends Request {
         /**
          * <p>The line type. Valid values:</p>
          * <ul>
-         * <li><strong>BGP</strong> (default): BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</li>
-         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line The BGP (Multi-ISP) Pro line is supported in the China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+         * <li><strong>BGP</strong> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) EIPs.</li>
+         * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line. Only the following regions support BGP (multi-ISP) Pro EIPs: Hong Kong (China), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
          * </ul>
-         * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the &quot;Line types&quot; section of <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a></p>
+         * <p>For more information about BGP (multi-ISP) and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
          * <ul>
-         * <li><p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
-         * <ul>
-         * <li><strong>ChinaTelecom</strong></li>
-         * <li><strong>ChinaUnicom</strong></li>
-         * <li><strong>ChinaMobile</strong></li>
-         * <li><strong>ChinaTelecom_L2</strong></li>
-         * <li><strong>ChinaUnicom_L2</strong></li>
-         * <li><strong>ChinaMobile_L2</strong></li>
+         * <li>If you are a single-ISP bandwidth whitelist user, you can also select the following types:<ul>
+         * <li><strong>ChinaTelecom</strong>: China Telecom</li>
+         * <li><strong>ChinaUnicom</strong>: China Unicom</li>
+         * <li><strong>ChinaMobile</strong>: China Mobile</li>
+         * <li><strong>ChinaTelecom_L2</strong>: China Telecom L2</li>
+         * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
+         * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
          * </ul>
          * </li>
-         * <li><p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to <strong>BGP_FinanceCloud</strong>.</p>
-         * </li>
+         * <li>If you are a China (Hangzhou) Finance Cloud user, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,13 +411,15 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the EIP. Valid values:</p>
+         * <p>The billing method of the EIP to allocate. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong>: subscription</li>
-         * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
+         * <li><p><strong>PrePaid</strong>: subscription.</p>
+         * </li>
+         * <li><p><strong>PostPaid</strong> (default): pay-as-you-go.</p>
+         * </li>
          * </ul>
-         * <p>Set the value of <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>.</p>
-         * <p>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>: <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
+         * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, <strong>InternetChargeType</strong> must be set to <strong>PayByBandwidth</strong>.</p>
+         * <p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, <strong>InternetChargeType</strong> can be set to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -426,8 +431,8 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The EIP ID.</p>
-         * <p>Specify <strong>IpAddress</strong> or <strong>InstanceId</strong>. If you leave both parameters empty, the system randomly allocates an EIP.</p>
+         * <p>The instance ID of the EIP to allocate.</p>
+         * <p>You need to specify only one of <strong>IpAddress</strong> and <strong>InstanceId</strong>. If neither is specified, the system randomly allocates an EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-25877c70gddh****</p>
@@ -439,12 +444,14 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The metering method of the EIP. Valid values:</p>
+         * <p>The metering method of the EIP to allocate. Valid values:</p>
          * <ul>
-         * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
-         * <li><strong>PayByTraffic</strong>: pay-by-data-transfer.</li>
+         * <li><p><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</p>
+         * </li>
+         * <li><p><strong>PayByTraffic</strong>: pay-by-data-transfer.</p>
+         * </li>
          * </ul>
-         * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, you must set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>.</p>
+         * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, <strong>InternetChargeType</strong> must be set to <strong>PayByBandwidth</strong>.</p>
          * <p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, <strong>InternetChargeType</strong> can be set to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -457,8 +464,8 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the EIP.</p>
-         * <p>Specify <strong>IpAddress</strong> or <strong>InstanceId</strong>. If you leave both parameters empty, the system randomly allocates an EIP.</p>
+         * <p>The IP address of the EIP to allocate.</p>
+         * <p>You need to specify only one of <strong>IpAddress</strong> and <strong>InstanceId</strong>. If neither is specified, the system randomly allocates an EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX</p>
@@ -470,7 +477,7 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The network type. By default, this value is set to <strong>public</strong>, which specifies the public network type.</p>
+         * <p>The network type. The value can only be <strong>public</strong> (default), which indicates the public network.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -502,11 +509,13 @@ public class AllocateEipAddressProRequest extends Request {
         /**
          * <p>The subscription duration.</p>
          * <ul>
-         * <li>Valid values when <strong>PricingCycle</strong> is set to <strong>Month</strong>: <strong>1 to 9</strong>.****</li>
-         * <li>Valid values when <strong>PricingCycle</strong> is set to <strong>Year</strong>: <strong>1 to 3</strong>.****</li>
+         * <li><p>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, valid values of <strong>Period</strong> are <strong>1</strong> to <strong>9</strong>.</p>
+         * </li>
+         * <li><p>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, valid values of <strong>Period</strong> are <strong>1</strong> to <strong>3</strong>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>.</p>
-         * <p>Leave this parameter empty if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
+         * <p>Do not set this parameter if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -518,10 +527,12 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle of the subscription EIP. Valid values:</p>
+         * <p>The billing cycle of the subscription. Valid values:</p>
          * <ul>
-         * <li><strong>Month</strong> (default)</li>
-         * <li><strong>Year</strong></li>
+         * <li><p><strong>Month</strong> (default): billed on a monthly basis.</p>
+         * </li>
+         * <li><p><strong>Year</strong>: billed on a yearly basis.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. This parameter is optional if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
          * 
@@ -536,8 +547,8 @@ public class AllocateEipAddressProRequest extends Request {
 
         /**
          * <p>The ID of the IP address pool.</p>
-         * <p>The EIP is allocated from the IP address pool.</p>
-         * <p>By default, the IP address pool feature is unavailable. If you need to use this feature, contact your account manager.</p>
+         * <p>The EIP is allocated from the specified IP address pool.</p>
+         * <p>The IP address pool feature is not available by default. To use this feature, apply for the IP address pool privilege quota in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase a quota in Quota Center</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>pippool-2vc0kxcedhquybdsz****</p>
@@ -549,8 +560,8 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the EIP belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>The region ID of the EIP to allocate.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -593,12 +604,13 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * <p>The editions of Anti-DDoS.</p>
+         * <p>The security protection level.</p>
          * <ul>
-         * <li>If you do not specify this parameter, Anti-DDoS Origin Basic is used.</li>
-         * <li>If you set the parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Pro/Premium is used.</li>
+         * <li><p>If this parameter is left empty, the default value is Anti-DDoS Basic.</p>
+         * </li>
+         * <li><p>If this parameter is set to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS (Enhanced) is enabled.</p>
+         * </li>
          * </ul>
-         * <p>You can configure Anti-DDoS editions for up to 10 EIPs.</p>
          */
         public Builder securityProtectionTypes(java.util.List<String> securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);

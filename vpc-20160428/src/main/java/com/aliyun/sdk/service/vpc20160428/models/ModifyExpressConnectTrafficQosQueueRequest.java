@@ -188,10 +188,10 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends Request {
         } 
 
         /**
-         * <p>The percentage of bandwidth allocated to the QoS queue.</p>
+         * <p>The bandwidth percentage of the QoS queue.</p>
          * <ul>
-         * <li>If QueueType is set to <strong>Medium</strong>, this parameter is required. Valid values: 1 to 100.</li>
-         * <li>If QueueType is set to <strong>Default</strong>, a value of - is returned.</li>
+         * <li>If the QoS queue type is <strong>Medium</strong>, this parameter is required. Valid values: 1 to 100.</li>
+         * <li>If the QoS queue type is <strong>Default</strong>, this parameter is set to &quot;-&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,9 +205,9 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> might be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-2giu0a6vd5x0mv4700</p>
+         * <p>qos-2giu0a6vd5x0mv****</p>
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -268,7 +268,7 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+         * <p>qos-queue-9nyx2u7n71s2rc****</p>
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -291,7 +291,7 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The region ID of the QoS policy.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

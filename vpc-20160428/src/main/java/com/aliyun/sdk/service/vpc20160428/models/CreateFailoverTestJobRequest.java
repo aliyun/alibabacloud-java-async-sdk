@@ -218,9 +218,9 @@ public class CreateFailoverTestJobRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The description of the failover test.</p>
+         * <p>The description of the failover test job.</p>
          * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,11 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>If you set the value to true, the system performs only a dry run without actually performing the actual request. If you set the value to false, the system performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: sends the request without creating the failover test node. The system checks the AccessKey validity, Resource Access Management (RAM) user authorization, and required parameters. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a Normal request. After the check passes, a 2xx HTTP status code is returned and the failover test job is created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -258,7 +262,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The duration of the failover test. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+         * <p>The duration of the failover test job. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,10 +275,12 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the failover test. Valid values:</p>
+         * <p>The failover test job type. Valid values:</p>
          * <ul>
-         * <li><strong>StartNow</strong></li>
-         * <li><strong>StartLater</strong></li>
+         * <li><p><strong>StartNow</strong>: starts immediately. The test job starts executing immediately after it is created.</p>
+         * </li>
+         * <li><p><strong>StartLater</strong>: does not start. Only creates the test job without executing it.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -288,7 +294,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the failover test.</p>
+         * <p>The name of the failover test job.</p>
          * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -319,8 +325,8 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the failover test.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the failover test job.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -332,7 +338,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The IDs of failover test resources. You can add at most 16 resources.</p>
+         * <p>The list of test resource IDs. You can add up to 16 test resources.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -351,7 +357,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The resource type of the failover test. Set the value to <strong>PHYSICALCONNECTION</strong>.</p>
+         * <p>The type of the test resource. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

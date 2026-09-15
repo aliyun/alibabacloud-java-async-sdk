@@ -174,7 +174,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * <p>The instance ID of the Internet Shared Bandwidth instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,8 +203,8 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * <p>The list of EIPs that you want to associate with the Internet Shared Bandwidth instance.</p>
-         * <p>You can specify at most 10 EIP IDs at a time.</p>
+         * <p>The list of EIP instance IDs to be added.</p>
+         * <p>You can add up to 10 EIP instance IDs at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ipInstanceIds(java.util.List<String> ipInstanceIds) {
@@ -214,7 +214,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * <p>The IP type. Set the value to <strong>EIP</strong>, which indicates that an EIP is added to the Shared Bandwidth.</p>
+         * <p>The IP type. Set the value to <strong>EIP</strong>, which specifies that EIPs are added to the Internet Shared Bandwidth instance.</p>
          * 
          * <strong>example:</strong>
          * <p>EIP</p>
@@ -244,7 +244,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Internet Shared Bandwidth instance.</p>
+         * <p>The region ID of the Internet Shared Bandwidth instance. </p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 

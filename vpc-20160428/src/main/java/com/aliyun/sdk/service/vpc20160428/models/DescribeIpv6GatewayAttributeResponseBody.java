@@ -236,11 +236,14 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status of the IPv6 gateway. Valid values:</p>
+         * <p>The business status of the IPv6 gateway. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>FinancialLocked</strong></li>
-         * <li><strong>SecurityLocked</strong></li>
+         * <li><p><strong>Normal</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>FinancialLocked</strong>: financial lock.</p>
+         * </li>
+         * <li><p><strong>SecurityLocked</strong>: security lock.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +277,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the IPv6 gateway expires.</p>
+         * <p>The expiration time of the IPv6 gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-1-05T09:21:35Z</p>
@@ -287,7 +290,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the gateway route table associated with the IPv6 gateway.</p>
          * <blockquote>
-         * <p> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
+         * <p>This parameter is displayed only for IPv6 gateways that are associated with a gateway route table.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -299,7 +302,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metering method of the IPv6 gateway.</p>
+         * <p>The billing method of the IPv6 gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -310,7 +313,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the IPv6 gateway.</p>
+         * <p>The instance ID of the IPv6 gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6gw-hp3y0l3ln89j8cdvf****</p>
@@ -332,9 +335,9 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the IPv6 gateway belongs.</p>
+         * <p>The Alibaba Cloud account ID of the IPv6 gateway owner.</p>
          * <blockquote>
-         * <p> This value is of the Long type. In some languages, the precision may be lost. Use this value with caution.</p>
+         * <p>Notice: This value is of the Long type. Precision loss may occur in certain programming languages. Use this value with caution.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -346,7 +349,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region where the IPv6 gateway is deployed.</p>
+         * <p>The region ID of the IPv6 gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huhehaote</p>
@@ -357,7 +360,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC</p>
@@ -368,7 +371,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph6aiy****</p>
@@ -381,8 +384,10 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         /**
          * <p>The status of the IPv6 gateway. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
+         * <li><p><strong>Pending</strong>: being configured.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: active.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -394,7 +399,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the tags.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -402,7 +407,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the IPv6 gateway belongs.</p>
+         * <p>The ID of the VPC to which the IPv6 gateway belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-123sedrfswd23****</p>
@@ -471,11 +476,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -483,11 +484,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

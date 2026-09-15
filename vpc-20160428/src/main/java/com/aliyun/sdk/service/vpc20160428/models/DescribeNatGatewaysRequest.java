@@ -338,8 +338,10 @@ public class DescribeNatGatewaysRequest extends Request {
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM user authorization, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): performs a dry run and sends the request. After the request passes the dry run, a 2xx HTTP status code is returned and the resource status is queried. This is the Normal request behavior.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,7 +354,13 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the NAT gateway. Set the value to <strong>PostPaid</strong>, which specifies the pay-as-you-go billing method.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The billing method of the NAT gateway instance that you want to query. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+         * <li><strong>PrePaid</strong>: the legacy subscription billing method. New purchases under the subscription billing method are no longer supported.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;The billing method of the NAT gateway instance that you want to query. Valid value: <strong>PostPaid</strong> (pay-as-you-go).</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -364,9 +372,8 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The name of the NAT gateway. </p>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>. </p>
-         * <p>If this parameter is not set, the system automatically assigns a name to the NAT gateway.</p>
+         * <p>The name of the NAT gateway that you want to query.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -378,7 +385,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT gateway.</p>
+         * <p>The ID of the NAT gateway that you want to query.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-bp1uewa15k4iy5770****</p>
@@ -390,7 +397,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The type of NAT gateway. Set the value to <strong>Enhanced</strong> (enhanced NAT gateway).</p>
+         * <p>The type of the NAT gateway. Valid value: <strong>Enhanced</strong> (enhanced NAT gateway).</p>
          * 
          * <strong>example:</strong>
          * <p>Enhanced</p>
@@ -402,10 +409,10 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The type of the NAT gateway. Valid values:</p>
+         * <p>The type of the NAT gateway that you want to query. Valid values:</p>
          * <ul>
-         * <li><strong>internet</strong>: an Internet NAT gateway</li>
-         * <li><strong>intranet</strong>: a VPC NAT gateway</li>
+         * <li><strong>internet</strong>: Internet NAT gateway.</li>
+         * <li><strong>intranet</strong>: VPC NAT gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,7 +455,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -460,8 +467,8 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the NAT gateways that you want to query.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the NAT gateway that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -474,7 +481,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the NAT gateway belongs.</p>
+         * <p>The ID of the resource group to which the NAT gateway that you want to query belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4ph****</p>
@@ -504,10 +511,17 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The size of the NAT gateway. Ignore this parameter.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The specification of the Internet NAT gateway. This parameter is supported only when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong> (legacy subscription Internet NAT gateway) to create a NAT gateway with defined specifications. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><strong>Small</strong> (default): small.</li>
+         * <li><strong>Middle</strong>: medium.</li>
+         * <li><strong>Large</strong>: large.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;The specification of the NAT gateway. Leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>Invalid parameter.</p>
+         * <p>中国站示例值：Small，国际站示例值：无需填写</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -516,13 +530,18 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The status of the NAT gateway. Valid values:</p>
+         * <p>The status of the NAT gateway that you want to query. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the <strong>Creating</strong> state until the operation is completed.</li>
-         * <li><strong>Available</strong>: The NAT gateway remains in a stable state after the NAT gateway is created.</li>
-         * <li><strong>Modifying</strong>: After you send a request to modify a NAT gateway, the system modifies the NAT gateway in the background. The NAT gateway remains in the <strong>Modifying</strong> state until the operation is completed.</li>
-         * <li><strong>Deleting</strong>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the <strong>Deleting</strong> state until the operation is completed.</li>
-         * <li><strong>Converting</strong>: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the <strong>Converting</strong> state until the operation is completed.</li>
+         * <li><p><strong>Creating</strong>: The NAT gateway is being created. Creating a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Creating</strong> state until the operation is complete.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: The NAT gateway is available. This is a stable state after the NAT gateway is created.</p>
+         * </li>
+         * <li><p><strong>Modifying</strong>: The NAT gateway is being modified. Modifying a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Modifying</strong> state until the operation is complete.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The NAT gateway is being deleted. Deleting a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Deleting</strong> state until the operation is complete.</p>
+         * </li>
+         * <li><p><strong>Converting</strong>: The NAT gateway is being upgraded from a standard NAT gateway to an enhanced NAT gateway. This is an asynchronous operation. The NAT gateway remains in the <strong>Converting</strong> state until the operation is complete.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -535,7 +554,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -544,7 +563,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC to which the NAT gateway belongs.</p>
+         * <p>The ID of the VPC to which the NAT gateway that you want to query belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp15zckdt37pq72z****</p>
@@ -556,7 +575,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone to which the NAT gateway belongs.</p>
+         * <p>The zone ID of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
@@ -627,8 +646,8 @@ public class DescribeNatGatewaysRequest extends Request {
             } 
 
             /**
-             * <p>The tag keys of the NAT gateway. You can specify up to 20 tag keys.</p>
-             * <p>Each tag key cannot exceed 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the NAT gateway instance. You can specify up to 20 tag keys.</p>
+             * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyTest</p>
@@ -639,8 +658,8 @@ public class DescribeNatGatewaysRequest extends Request {
             }
 
             /**
-             * <p>The tag values of the NAT gateway. You can specify up to 20 tag values.</p>
-             * <p>The tag value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the NAT gateway instance. You can specify up to 20 tag values.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>valueTest</p>

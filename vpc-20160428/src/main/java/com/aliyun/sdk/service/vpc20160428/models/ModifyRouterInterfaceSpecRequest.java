@@ -161,9 +161,9 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -194,8 +194,8 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the router interface is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region where the router interface is located.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,23 +239,35 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         }
 
         /**
-         * <p>The specification of the router interface. Valid specifications and bandwidth values:</p>
+         * <p>The specification of the router interface. The following specifications and their corresponding bandwidths are available:</p>
          * <ul>
-         * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
-         * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
-         * <li><strong>Small.1</strong>: 10 Mbit/s</li>
-         * <li><strong>Small.2</strong>: 20 Mbit/s</li>
-         * <li><strong>Small.5</strong>: 50 Mbit/s</li>
-         * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
-         * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
-         * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
-         * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
-         * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
-         * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
-         * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
+         * <li><p><strong>Mini.2</strong>: 2 Mbps</p>
+         * </li>
+         * <li><p><strong>Mini.5</strong>: 5 Mbps</p>
+         * </li>
+         * <li><p><strong>Small.1</strong>: 10 Mbps</p>
+         * </li>
+         * <li><p><strong>Small.2</strong>: 20 Mbps</p>
+         * </li>
+         * <li><p><strong>Small.5</strong>: 50 Mbps</p>
+         * </li>
+         * <li><p><strong>Middle.1</strong>: 100 Mbps</p>
+         * </li>
+         * <li><p><strong>Middle.2</strong>: 200 Mbps</p>
+         * </li>
+         * <li><p><strong>Middle.5</strong>: 500 Mbps</p>
+         * </li>
+         * <li><p><strong>Large.1</strong>: 1000 Mbps</p>
+         * </li>
+         * <li><p><strong>Large.2</strong>: 2000 Mbps</p>
+         * </li>
+         * <li><p><strong>Large.5</strong>: 5000 Mbps</p>
+         * </li>
+         * <li><p><strong>Xlarge.1</strong>: 10000 Mbps</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> When <strong>Role</strong> is set to <strong>AcceptingSide</strong>, set <strong>Spec</strong> to <strong>Negative</strong>.</p>
+         * <p>If <strong>Role</strong> is set to <strong>AcceptingSide</strong> (accepter VPC), set <strong>Spec</strong> to <strong>Negative</strong>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

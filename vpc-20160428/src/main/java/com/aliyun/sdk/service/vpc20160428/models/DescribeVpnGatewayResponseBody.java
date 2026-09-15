@@ -418,10 +418,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether BGP routes are automatically advertised to the VPC. Valid values:</p>
+         * <p>Indicates whether automatic propagation is enabled for the VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -435,8 +437,10 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         /**
          * <p>The payment status of the VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>FinancialLocked</strong></li>
+         * <li><p><strong>Normal</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>FinancialLocked</strong>: locked due to overdue payment.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,11 +452,13 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billing method. Valid value:</p>
-         * <p><strong>POSTPAY</strong>: pay-as-you-go</p>
+         * <p>The billing method. Value:</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;<strong>POSTPAY</strong>: pay-as-you-go billing method.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;<strong>POSTPAY</strong>: pay-as-you-go billing method.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;<strong>Prepay</strong>: subscription.</p>
          * 
          * <strong>example:</strong>
-         * <p>中国站示例值：Prepay，国际站示例值：POSTPAY</p>
+         * <p>China site example: Prepay, International site example: POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -461,7 +467,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the VPN gateway was created. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1495382400000</p>
@@ -483,8 +489,8 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The second IP address assigned by the system to create an IPsec-VPN connection.</p>
-         * <p>This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
+         * <p>The second IP address assigned by the system to the VPN gateway instance for creating IPsec-VPN connections.</p>
+         * <p>This parameter is returned only for VPN gateway instances that support creating dual-tunnel IPsec-VPN connections.</p>
          * 
          * <strong>example:</strong>
          * <p>47.91.XX.XX</p>
@@ -495,8 +501,8 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the second vSwitch associated with the VPN gateway.</p>
-         * <p>This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
+         * <p>The ID of the second vSwitch associated with the VPN gateway instance.</p>
+         * <p>This parameter is returned only for VPN gateway instances that support creating dual-tunnel IPsec-VPN connections.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-p0w95ql6tmr2ludkt****</p>
@@ -507,10 +513,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether BGP is enabled for the VPN gateway. Valid values:</p>
+         * <p>The enabling status of the BGP feature for the VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -523,7 +531,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the VPN gateway expires. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1544666102000</p>
@@ -542,10 +550,10 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Type of VPN gateway:</p>
+         * <p>The type of the VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>Traditional</strong>: Traditional-type VPN gateway, supports both IPSec and SSL.</li>
-         * <li><strong>Enhanced.SiteToSite</strong>: Enhanced Site-to-Site VPN gateway, only supports IPSec.</li>
+         * <li><strong>Traditional</strong>: traditional VPN gateway that supports both IPsec and SSL features.</li>
+         * <li><strong>Enhanced.SiteToSite</strong>: enhanced site-to-cloud VPN gateway that supports only the IPsec feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -558,10 +566,10 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li><p>If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.</p>
+         * <li><p>If the VPN gateway instance supports creating single-tunnel IPsec-VPN connections, this address is the IP address of the VPN gateway instance and can be used to create IPsec-VPN connections or SSL-VPN connections.</p>
          * </li>
-         * <li><p>If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection.</p>
-         * <p>If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.</p>
+         * <li><p>If the VPN gateway instance supports creating dual-tunnel IPsec-VPN connections, this address is the first IP address used to create IPsec-VPN connections and cannot be used to create SSL-VPN connections.</p>
+         * <p>  If the VPN gateway instance supports creating dual-tunnel IPsec-VPN connections, the system assigns two IPsec IP addresses to the VPN gateway instance for creating dual-tunnel IPsec-VPN connections.</p>
          * </li>
          * </ul>
          * 
@@ -574,10 +582,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the IPsec-VPN feature is enabled. Valid values:</p>
+         * <p>Indicates whether IPsec-VPN is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong></li>
-         * <li><strong>disable</strong></li>
+         * <li><p><strong>enable</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>disable</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -602,8 +612,8 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         /**
          * <p>The network type of the VPN gateway.</p>
          * <ul>
-         * <li><strong>public</strong></li>
-         * <li><strong>private</strong></li>
+         * <li><strong>public</strong>: public VPN gateway.</li>
+         * <li><strong>private</strong>: private VPN gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -626,9 +636,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about pending orders.</p>
+         * <p>The pending order data.</p>
          * <blockquote>
-         * <p>This set of parameters is returned only when <strong>IncludeReservationData</strong> is set to <strong>true</strong>.</p>
+         * <p>This parameter is returned only when <strong>IncludeReservationData</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
          */
         public Builder reservationData(ReservationData reservationData) {
@@ -638,7 +648,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group to which the VPN gateway belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>
@@ -649,7 +659,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum bandwidth of the VPN gateway. Unit: Mbit/s.</p>
+         * <p>The bandwidth specification of the VPN gateway. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -671,10 +681,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the SSL-VPN feature. Valid values:</p>
+         * <p>The enabling status of the SSL-VPN feature. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong></li>
-         * <li><strong>disable</strong></li>
+         * <li><p><strong>enable</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>disable</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -686,8 +698,8 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP address of the SSL-VPN connection.</p>
-         * <p>This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.</p>
+         * <p>The IP address for SSL-VPN connections.</p>
+         * <p>This parameter is returned only when the SSL-VPN feature is enabled on a VPN gateway instance that has a public network type and supports creating dual-tunnel IPsec-VPN connections.</p>
          * 
          * <strong>example:</strong>
          * <p>47.74.XX.XX</p>
@@ -700,11 +712,16 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         /**
          * <p>The status of the VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>init</strong></li>
-         * <li><strong>provisioning</strong></li>
-         * <li><strong>active</strong></li>
-         * <li><strong>updating</strong></li>
-         * <li><strong>deleting</strong></li>
+         * <li><p><strong>init</strong>: initializing.</p>
+         * </li>
+         * <li><p><strong>provisioning</strong>: preparing.</p>
+         * </li>
+         * <li><p><strong>active</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>updating</strong>: updating.</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: deleting.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -716,46 +733,39 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</p>
+         * <p>The system-generated labels of the VPN gateway.</p>
          * <ul>
-         * <li><p><strong>VpnEnableBgp</strong>: indicates whether the VPN gateway supports BGP. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>VpnEnableBgp</strong>: indicates whether the VPN gateway supports the BGP feature.<ul>
+         * <li><strong>true</strong>: supported.</li>
+         * <li><strong>false</strong>: not supported.</li>
          * </ul>
          * </li>
-         * <li><p><strong>VisuallySsl</strong>: indicates whether the VPN gateway allows you to view the connection information of SSL clients. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>VisuallySsl</strong>: indicates whether the VPN gateway supports viewing SSL client connection information.<ul>
+         * <li><strong>true</strong>: supported.</li>
+         * <li><strong>false</strong>: not supported.</li>
          * </ul>
          * </li>
-         * <li><p><strong>PbrPriority</strong>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>PbrPriority</strong>: indicates whether the VPN gateway supports configuring policy priority for policy-based routing.<ul>
+         * <li><strong>true</strong>: supported.</li>
+         * <li><strong>false</strong>: not supported.</li>
          * </ul>
          * </li>
-         * <li><p><strong>VpnNewImage</strong>: indicates whether the VPN gateway is upgraded. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>VpnNewImage</strong>: indicates whether the VPN gateway is a new-generation VPN gateway.<ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * </li>
-         * <li><p><strong>description</strong>: the description of the VPN gateway. This parameter is only for internal use.</p>
-         * </li>
-         * <li><p><strong>VpnVersion</strong>: the version of the VPN gateway.</p>
-         * </li>
-         * <li><p><strong>IDaaSNewVersion</strong>: indicates whether the VPN gateway can be associated with an EIAM 2.0 instance.</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>description</strong>: the description of the VPN gateway, which is used only for internal system purposes.</li>
+         * <li><strong>VpnVersion</strong>: the version number of the VPN gateway.</li>
+         * <li><strong>IDaaSNewVersion</strong>: indicates whether the VPN gateway supports attaching to an EIAM 2.0 instance.<ul>
+         * <li><strong>true</strong>: supported.</li>
+         * <li><strong>false</strong>: not supported.</li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;转发1.3.24&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;,&quot;IDaaSNewVersion&quot;:&quot;true&quot;}</p>
+         * <p>{\&quot;VpnEnableBgp\&quot;:\&quot;true\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;VpnNewImage\&quot;:\&quot;true\&quot;,\&quot;description\&quot;:\&quot;Forwarding 1.3.24\&quot;,\&quot;VpnVersion\&quot;:\&quot;v1.2.4\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;
@@ -793,7 +803,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp1r3v1xqkl0w519g****</p>
@@ -804,7 +814,15 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of VPN gateway. Only <strong>Normal</strong> may be returned, which indicates a standard VPN gateway.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The type of the VPN gateway. Value: <strong>Normal</strong>, which indicates a standard VPN gateway.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The type of the VPN gateway. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Normal</strong>: standard.</p>
+         * </li>
+         * <li><p><strong>NationalStandard</strong>: Chinese SM-based.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -992,8 +1010,8 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>If the order type is <strong>TEMP_UPGRADE</strong> (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.</p>
-             * <p>If the order type is <strong>RENEWCHANGE</strong> (renewal with a specification change) or <strong>RENEW</strong> (renewal), this parameter indicates the time when the renewal or renewal with a specification change takes effect.</p>
+             * <p>If the pending order type is <strong>TEMP_UPGRADE</strong> (temporary upgrade), this parameter indicates the revert time for the temporary upgrade.</p>
+             * <p>If the pending order type is <strong>RENEWCHANGE</strong> (renewal with specification change) or <strong>RENEW</strong> (renewal), this parameter indicates the effective period when the renewal or renewal with specification change takes effect.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-07-20T16:00:00Z</p>
@@ -1004,10 +1022,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPsec-VPN status of the pending order. Valid values:</p>
+             * <p>The enabling status of the IPsec-VPN feature for the pending order. Valid values:</p>
              * <ul>
-             * <li><strong>enable</strong></li>
-             * <li><strong>disable</strong></li>
+             * <li><p><strong>enable</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>disable</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1032,9 +1052,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             /**
              * <p>The type of the pending order. Valid values:</p>
              * <ul>
-             * <li><strong>RENEWCHANGE</strong>: renewal with upgrade or downgrade</li>
-             * <li><strong>TEMP_UPGRADE</strong>: temporary upgrade</li>
-             * <li><strong>RENEW</strong>: renewal</li>
+             * <li><p><strong>RENEWCHANGE</strong>: renewal with specification change.</p>
+             * </li>
+             * <li><p><strong>TEMP_UPGRADE</strong>: temporary upgrade.</p>
+             * </li>
+             * <li><p><strong>RENEW</strong>: renewal.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1046,7 +1069,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth of the pending order. Unit: Mbit/s.</p>
+             * <p>The bandwidth specification of the pending order. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1057,10 +1080,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SSL-VPN status of the pending order. Valid values:</p>
+             * <p>The enabling status of the SSL-VPN feature for the pending order. Valid values:</p>
              * <ul>
-             * <li><strong>enable</strong></li>
-             * <li><strong>disable</strong></li>
+             * <li><p><strong>enable</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>disable</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1074,8 +1099,10 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             /**
              * <p>The status of the pending order. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: indicates that the order of the renewal or specification change has not taken effect.</li>
-             * <li><strong>2</strong>: indicates that the order is an order for temporary upgrade and the order has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, <strong>ReservationIpsec</strong>, <strong>ReservationMaxConnections</strong>, <strong>ReservationSpec</strong>, and <strong>ReservationSsl</strong> indicate the previous specification.</li>
+             * <li><p><strong>1</strong>: the renewal or renewal with specification change order has not taken effect.</p>
+             * </li>
+             * <li><p><strong>2</strong>: the temporary upgrade order has taken effect. After the restoration time is reached, the system restores the VPN gateway to the specification before the temporary upgrade. In this case, <strong>ReservationIpsec</strong>, <strong>ReservationMaxConnections</strong>, <strong>ReservationSpec</strong>, and <strong>ReservationSsl</strong> indicate the specifications before the temporary upgrade.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1208,46 +1235,39 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</p>
+             * <p>The system-generated labels of the VPN gateway.</p>
              * <ul>
-             * <li><p><strong>VpnEnableBgp</strong>: indicates whether the VPN gateway supports BGP. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>VpnEnableBgp</strong>: indicates whether the VPN gateway supports the BGP feature.<ul>
+             * <li><strong>true</strong>: supported.</li>
+             * <li><strong>false</strong>: not supported.</li>
              * </ul>
              * </li>
-             * <li><p><strong>VisuallySsl</strong>: indicates whether the VPN gateway allows you to view the connection information of SSL clients. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>VisuallySsl</strong>: indicates whether the VPN gateway supports viewing SSL client connection information.<ul>
+             * <li><strong>true</strong>: supported.</li>
+             * <li><strong>false</strong>: not supported.</li>
              * </ul>
              * </li>
-             * <li><p><strong>PbrPriority</strong>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>PbrPriority</strong>: indicates whether the VPN gateway supports configuring policy priority for policy-based routing.<ul>
+             * <li><strong>true</strong>: supported.</li>
+             * <li><strong>false</strong>: not supported.</li>
              * </ul>
              * </li>
-             * <li><p><strong>VpnNewImage</strong>: indicates whether the VPN gateway is upgraded. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>VpnNewImage</strong>: indicates whether the VPN gateway is a new-generation VPN gateway.<ul>
+             * <li><strong>true</strong>: yes.</li>
+             * <li><strong>false</strong>: no.</li>
              * </ul>
              * </li>
-             * <li><p><strong>description</strong>: the description of the VPN gateway. This parameter is only for internal use.</p>
-             * </li>
-             * <li><p><strong>VpnVersion</strong>: the version of the VPN gateway.</p>
-             * </li>
-             * <li><p><strong>IDaaSNewVersion</strong>: indicates whether the VPN gateway can be associated with an EIAM 2.0 instance.</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>description</strong>: the description of the VPN gateway, which is used only for internal system purposes.</li>
+             * <li><strong>VpnVersion</strong>: the version number of the VPN gateway.</li>
+             * <li><strong>IDaaSNewVersion</strong>: indicates whether the VPN gateway supports attaching to an EIAM 2.0 instance.<ul>
+             * <li><strong>true</strong>: supported.</li>
+             * <li><strong>false</strong>: not supported.</li>
              * </ul>
              * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;转发1.3.24&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;,&quot;IDaaSNewVersion&quot;:&quot;true&quot;}</p>
+             * <p>{\&quot;VpnEnableBgp\&quot;:\&quot;true\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;VpnNewImage\&quot;:\&quot;true\&quot;,\&quot;description\&quot;:\&quot;Forwarding 1.3.24\&quot;,\&quot;VpnVersion\&quot;:\&quot;v1.2.4\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
              */
             public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;

@@ -93,7 +93,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code of the operation.</p>
+         * <p>The operation status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed information about the EIP.</p>
+         * EipInfos.
          */
         public Builder eipInfos(EipInfos eipInfos) {
             this.eipInfos = eipInfos;
@@ -112,7 +112,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the operation.</p>
+         * <p>The operation message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -205,10 +205,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the EIP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.XX.XX.236</p>
+             * Ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -216,10 +213,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the gateway that is associated with the EIP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.XX.XX.1</p>
+             * IpGw.
              */
             public Builder ipGw(String ipGw) {
                 this.ipGw = ipGw;
@@ -227,10 +221,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subnet mask of the EIP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>255.255.255.0</p>
+             * IpMask.
              */
             public Builder ipMask(String ipMask) {
                 this.ipMask = ipMask;

@@ -80,7 +80,7 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information returned after the flow log feature is enabled.</p>
+         * <p>The message returned when the flow log service is activated.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -102,7 +102,7 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>28CF47AB-B6C0-5FA2-80C7-2B28826A92CB</p>

@@ -80,7 +80,7 @@ public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaMod
         } 
 
         /**
-         * <p>The ID of the IP address pool.</p>
+         * <p>The instance ID of the IP address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>pippool-6wetvn6fumkgycssx****</p>

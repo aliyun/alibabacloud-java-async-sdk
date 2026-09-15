@@ -159,9 +159,9 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -192,10 +192,13 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The QoS policy ID returned by the CreateExpressConnectTrafficQos operation.</p>
+         * <blockquote>
+         * <p>This parameter is required. If you do not specify this parameter, the IllegalParam.QosId (400) error is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>qos-2giu0a6vd5x0mv4700</p>
+         * <p>qos-2giu0a6vd5x0mv****</p>
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -204,7 +207,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the QoS queues.</p>
+         * <p>The collection of QoS queue IDs.</p>
          */
         public Builder queueIdList(java.util.List<String> queueIdList) {
             this.putQueryParameter("QueueIdList", queueIdList);
@@ -213,7 +216,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * <p>The names of the QoS queues.</p>
+         * <p>The collection of QoS queue names.</p>
          */
         public Builder queueNameList(java.util.List<String> queueNameList) {
             this.putQueryParameter("QueueNameList", queueNameList);
@@ -223,7 +226,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The region ID of the QoS policy.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

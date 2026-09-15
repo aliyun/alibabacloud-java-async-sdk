@@ -104,7 +104,7 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the IPv6 address.</p>
+         * <p>The instance ID of the IPv6 address.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6-2zen5j4axcp5l5qyy****</p>
@@ -126,7 +126,7 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazdjdhd****</p>

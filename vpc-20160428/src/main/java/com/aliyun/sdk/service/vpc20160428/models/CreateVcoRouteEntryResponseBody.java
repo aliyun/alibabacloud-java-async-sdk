@@ -158,7 +158,11 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The timestamp when the destination route entry was created. Unit: milliseconds.</p>
+         * <p>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the destination route entry was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1658387202664</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -166,7 +170,10 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the destination route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -174,7 +181,10 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * NextHop.
+         * <p>The next hop of the destination route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-p0w2jpkhi2eeop6q6****</p>
          */
         public Builder nextHop(String nextHop) {
             this.nextHop = nextHop;
@@ -182,7 +192,11 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * OverlayMode.
+         * <p>The tunneling protocol.</p>
+         * <p>The value is <strong>Ipsec</strong>, which specifies the IPsec tunneling protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipsec</p>
          */
         public Builder overlayMode(String overlayMode) {
             this.overlayMode = overlayMode;
@@ -190,7 +204,10 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CFC4D13B-E680-3985-95B1-87AA155481DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +215,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the destination-based route.</p>
+         * <p>The destination CIDR block of the destination route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/24</p>
@@ -209,7 +226,11 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The publish status of the destination route entry.</p>
+         * <p>The value is <strong>published</strong>, which indicates that the route entry is published to the transit router instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>published</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -217,7 +238,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the IPsec-VPN connection.</p>
          * 
          * <strong>example:</strong>
          * <p>vco-p0w2jpkhi2eeop6q6****</p>
@@ -228,7 +249,14 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Weight.
+         * <p>The weight of the destination route entry.</p>
+         * <ul>
+         * <li><strong>0</strong>: low priority.</li>
+         * <li><strong>100</strong>: high priority.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

@@ -131,7 +131,7 @@ public class DeactiveFlowLogRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the flow log.</p>
+         * <p>The flow log ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class DeactiveFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where you want to create the flow log. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the flow log. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

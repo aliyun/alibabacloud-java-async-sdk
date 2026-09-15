@@ -191,7 +191,7 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +203,7 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paging queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -215,8 +215,8 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VPN gateway is created.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPN gateway instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,12 +249,12 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         /**
          * <p>The type of the route entry. Valid values:</p>
          * <ul>
-         * <li><strong>Custom</strong>: custom</li>
-         * <li><strong>System</strong>: system</li>
+         * <li><strong>custom</strong> (default): queries the destination routes of the VPN gateway instance.</li>
+         * <li><strong>bgp</strong>: queries the BGP routes of the VPN gateway instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>System</p>
+         * <p>custom</p>
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -263,7 +263,7 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

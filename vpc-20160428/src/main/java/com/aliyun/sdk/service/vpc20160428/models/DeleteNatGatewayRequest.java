@@ -147,20 +147,28 @@ public class DeleteNatGatewayRequest extends Request {
         /**
          * <p>Specifies whether to forcefully delete the NAT gateway. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong> If you set the value to <strong>true</strong>:</p>
+         * <li><p><strong>true</strong>: forcefully deletes the NAT gateway. If you set this parameter to <strong>true</strong>:</p>
          * <ul>
-         * <li>If the NAT gateway has SNAT entries, the system automatically deletes them.</li>
-         * <li>If the NAT gateway has DNAT entries, the system automatically deletes them.</li>
-         * <li>If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.</li>
-         * <li>If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan.</li>
+         * <li><p>If the NAT gateway has SNAT rules, the system force deletes the SNAT rules.</p>
+         * </li>
+         * <li><p>If the NAT gateway has DNAT rules, the system force deletes the DNAT rules.</p>
+         * </li>
+         * <li><p>If the NAT gateway has associated elastic IP addresses (EIPs), the system automatically disassociates the EIPs.</p>
+         * </li>
+         * <li><p>If the NAT gateway has NAT service plans that are not deleted, the system force deletes the NAT service plans.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p><strong>false</strong>(default): no If you set the value to <strong>false</strong>:</p>
+         * <li><p><strong>false</strong> (default): does not forcefully delete the NAT gateway. If you set this parameter to <strong>false</strong>:</p>
          * <ul>
-         * <li>If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT bandwidth plan first.</li>
-         * <li>If the NAT gateway has SNAT entries, delete them first.</li>
-         * <li>If the NAT gateway has DNAT entries, delete them first.</li>
-         * <li>If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.</li>
+         * <li><p>If the NAT gateway has NAT service plans that are not deleted, delete the NAT service plans first.</p>
+         * </li>
+         * <li><p>If the NAT gateway has SNAT rules, delete the SNAT rules first.</p>
+         * </li>
+         * <li><p>If the NAT gateway has DNAT rules, delete the DNAT rules first.</p>
+         * </li>
+         * <li><p>If the NAT gateway has associated EIPs, disassociate the EIPs first.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -175,7 +183,7 @@ public class DeleteNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT gateway that you want to delete.</p>
+         * <p>The instance ID of the NAT gateway that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +215,7 @@ public class DeleteNatGatewayRequest extends Request {
 
         /**
          * <p>The region ID of the NAT gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

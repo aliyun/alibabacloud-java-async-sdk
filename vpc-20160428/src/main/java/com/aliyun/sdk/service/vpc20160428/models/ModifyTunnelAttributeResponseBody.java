@@ -210,7 +210,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the customer gateway associated with the customer gateway.</p>
+         * <p>The instance ID of the customer gateway associated with the tunnel.</p>
          * 
          * <strong>example:</strong>
          * <p>cgw-p0wx48ayhrygitm80****</p>
@@ -221,10 +221,12 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether DPD is enabled. Valid values:</p>
+         * <p>Indicates whether the Dead Peer Detection (DPD) feature is enabled.</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,8 +240,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether NAT traversal is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +255,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tunnel IP address.</p>
+         * <p>The IP address of the tunnel.</p>
          * 
          * <strong>example:</strong>
          * <p>47.XX.XX.87</p>
@@ -262,7 +266,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The peer CA certificate when a VPN gateway that uses an SM certificate is used to create the IPsec connection.</p>
+         * <p>The peer CA certificate when the IPsec-VPN connection is created with a China CA VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</p>
@@ -284,10 +288,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tunnel role. Valid values:</p>
+         * <p>The role of the tunnel.</p>
          * <ul>
-         * <li><strong>master</strong></li>
-         * <li><strong>slave</strong></li>
+         * <li><strong>master</strong>: the active tunnel.</li>
+         * <li><strong>slave</strong>: the standby tunnel.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -299,11 +303,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tunnel status. Valid values:</p>
+         * <p>The status of the tunnel.</p>
          * <ul>
-         * <li><strong>active</strong></li>
-         * <li><strong>updating</strong></li>
-         * <li><strong>deleting</strong></li>
+         * <li><strong>active</strong>: The tunnel is available.</li>
+         * <li><strong>updating</strong>: The tunnel is being updated.</li>
+         * <li><strong>deleting</strong>: The tunnel is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,7 +319,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The BGP configuration.</p>
+         * <p>The BGP configuration of the tunnel.</p>
          */
         public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
             this.tunnelBgpConfig = tunnelBgpConfig;
@@ -334,7 +338,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Phase 1 configuration.</p>
+         * <p>The IKE phase (Phase 1) configuration of the tunnel.</p>
          */
         public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
             this.tunnelIkeConfig = tunnelIkeConfig;
@@ -342,7 +346,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations of IPsec Phase 2.</p>
+         * <p>The IPsec phase (Phase 2) configuration of the tunnel.</p>
          */
         public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
             this.tunnelIpsecConfig = tunnelIpsecConfig;
@@ -350,7 +354,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tunnel zone.</p>
+         * <p>The zone of the tunnel.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -471,10 +475,12 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the BGP feature is enabled. Valid values:</p>
+             * <p>The enabling status of BGP.</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -486,7 +492,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local ASN.</p>
+             * <p>The autonomous system number (ASN) of the local end of the tunnel.</p>
              * 
              * <strong>example:</strong>
              * <p>65530</p>
@@ -497,7 +503,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BGP IP address of the tunnel.</p>
+             * <p>The BGP IP address of the local end of the tunnel.</p>
              * 
              * <strong>example:</strong>
              * <p>169.254.11.1</p>
@@ -508,7 +514,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peer ASN.</p>
+             * <p>The autonomous system number (ASN) of the peer end of the tunnel.</p>
              * 
              * <strong>example:</strong>
              * <p>65531</p>
@@ -519,7 +525,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The BGP IP address of the peer.</p>
+             * <p>The BGP IP address of the peer end of the tunnel.</p>
              * 
              * <strong>example:</strong>
              * <p>169.254.11.2</p>
@@ -530,7 +536,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block to which the tunnel BGP IP address belongs.</p>
+             * <p>The CIDR block of the tunnel BGP IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>169.254.11.0/30</p>
@@ -726,8 +732,8 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             /**
              * <p>The IKE negotiation mode.</p>
              * <ul>
-             * <li><strong>main:</strong> This mode offers higher security during negotiations.</li>
-             * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+             * <li><strong>main</strong>: main mode. The negotiation process is more secure.</li>
+             * <li><strong>aggressive</strong>: aggressive mode. The negotiation is faster and has a higher success rate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -750,12 +756,12 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE version.</p>
+             * <p>The IKE protocol version.</p>
              * <ul>
              * <li><strong>ikev1</strong></li>
              * <li><strong>ikev2</strong></li>
              * </ul>
-             * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for scenarios with multiple CIDR blocks.</p>
+             * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR-block scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>ikev2</p>
@@ -766,7 +772,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tunnel identifier. The identifier supports FQDNs and IP addresses. The default value is the tunnel IP address.</p>
+             * <p>The identifier of the local end of the tunnel. The value supports FQDN and IP formats. Default value: the IP address of the current tunnel.</p>
              * 
              * <strong>example:</strong>
              * <p>47.XX.XX.87</p>
@@ -788,7 +794,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peer identifier. The identifier supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.</p>
+             * <p>The identifier of the peer end of the tunnel. The value supports FQDN and IP formats. Default value: the IP address of the customer gateway instance associated with the tunnel.</p>
              * 
              * <strong>example:</strong>
              * <p>47.XX.XX.207</p>

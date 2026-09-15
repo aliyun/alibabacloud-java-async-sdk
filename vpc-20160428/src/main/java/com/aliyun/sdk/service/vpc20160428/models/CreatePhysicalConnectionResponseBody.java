@@ -67,7 +67,7 @@ public class CreatePhysicalConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the Express Connect circuit.</p>
+         * <p>The instance ID of the Express Connect circuit.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1ciz7ekd2grn1as****</p>

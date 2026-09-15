@@ -80,7 +80,7 @@ public class CreateHaVipResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the HaVip.</p>
+         * <p>The ID of the HAVIP.</p>
          * 
          * <strong>example:</strong>
          * <p>havip-2zeo05qre24nhrqpy****</p>
@@ -91,7 +91,7 @@ public class CreateHaVipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP address of the HaVip.</p>
+         * <p>The IP address of the HAVIP.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.10</p>
@@ -102,7 +102,7 @@ public class CreateHaVipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C44F62BE-9CE7-4277-B117-69243F3988BF</p>

@@ -159,7 +159,7 @@ public class ModifyVRouterAttributeRequest extends Request {
 
         /**
          * <p>The description of the vRouter.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>My VRouter</p>
@@ -189,8 +189,8 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the vRouter.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the vRouter to modify.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -220,7 +220,7 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The vRouter ID.</p>
+         * <p>The ID of the vRouter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

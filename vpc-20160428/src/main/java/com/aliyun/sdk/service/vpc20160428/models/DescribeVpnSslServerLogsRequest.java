@@ -215,9 +215,9 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         } 
 
         /**
-         * <p>The beginning of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.</p>
+         * <p>The start time of the log. Only UNIX timestamps in seconds are supported. For example, 1600738962 represents 2020-09-22 09:42:42.</p>
          * <blockquote>
-         * <p> If you specify <strong>From</strong>, you must also specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
+         * <p>If you specify <strong>From</strong>, you must also specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -230,9 +230,9 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * <p>The interval at which log data is queried. Unit: minutes.</p>
+         * <p>The log period. Unit: minutes.</p>
          * <blockquote>
-         * <p> If both <strong>From</strong> and <strong>To</strong> are not specified, you must specify <strong>MinutePeriod</strong>.</p>
+         * <p>If you do not specify <strong>From</strong> or <strong>To</strong>, you must specify <strong>MinutePeriod</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -263,7 +263,7 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -275,7 +275,7 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page when using paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -287,7 +287,7 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SSL server is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the SSL server. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,9 +330,9 @@ public class DescribeVpnSslServerLogsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.</p>
+         * <p>The end time of the log. Only UNIX timestamps in seconds are supported. For example, 1600738962 represents 2020-09-22 09:42:42.</p>
          * <blockquote>
-         * <p> If you specify <strong>To</strong>, you must also specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
+         * <p>If you specify <strong>To</strong>, you must also specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -287,9 +287,9 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         } 
 
         /**
-         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+         * <p>The circuit code provided by the carrier for the Express Connect circuit. </p>
          * <blockquote>
-         * <p> Only the Express Connect circuit owner can specify this parameter.</p>
+         * <p>Only the owner of the Express Connect circuit can specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -303,9 +303,9 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client generates the value of this parameter. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -320,8 +320,10 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         /**
          * <p>Specifies whether to enable IPv6. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -334,7 +336,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The IP address of the gateway device on the Alibaba Cloud side.</p>
+         * <p>The Alibaba Cloud-side IP address of the VBR instance. You must specify <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, and <strong>PeeringSubnetMask</strong> together when you call this operation. The request fails if any of these parameters is missing.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -346,7 +348,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The IPv6 address of the gateway device on the Alibaba Cloud side.</p>
+         * <p>The Alibaba Cloud-side IPv6 address of the VBR instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
@@ -376,11 +378,8 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The IP address of the gateway device on the user side.</p>
-         * <ul>
-         * <li>Only the owner of the VBR can set or modify this parameter.</li>
-         * <li>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</li>
-         * </ul>
+         * <p>The client-side IP address of the VBR instance.</p>
+         * <p>Only the VBR owner can specify or modify this property. You must specify <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, and <strong>PeeringSubnetMask</strong> together when you call this operation. The request fails if any of these parameters is missing.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -392,10 +391,12 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The IPv6 address of the gateway device in the data center.</p>
+         * <p>The client-side IPv6 address of the VBR instance.</p>
          * <ul>
-         * <li>Only the owner of the VBR can specify or modify this parameter.</li>
-         * <li>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</li>
+         * <li><p>Only the VBR owner can specify or modify this property.</p>
+         * </li>
+         * <li><p>This parameter is required when you create a VBR instance for the Express Connect circuit owner.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,8 +409,8 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The subnet mask of the IPv6 addresses of the gateway devices on the user side and Alibaba Cloud side.</p>
-         * <p>The two IPv6 addresses must fall within the same subnet.</p>
+         * <p>The subnet mask for the Alibaba Cloud-side and client-side IPv6 addresses of the VBR instance.</p>
+         * <p>The two IPv6 addresses must be in the same subnet.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:4004:cc:400::/56</p>
@@ -421,8 +422,8 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The subnet mask of the IP addresses of the VBR and the gateway device in the data center.</p>
-         * <p>The two IP addresses must fall within the same subnet.</p>
+         * <p>The subnet mask for the Alibaba Cloud-side and client-side IP addresses of the VBR instance.</p>
+         * <p>The two IP addresses must be in the same subnet. You must specify <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, and <strong>PeeringSubnetMask</strong> together when you call this operation. The request fails if any of these parameters is missing.</p>
          * 
          * <strong>example:</strong>
          * <p>255.255.255.0</p>
@@ -434,7 +435,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The ID of the Express Connect circuit.</p>
+         * <p>The Express Connect circuit instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -448,7 +449,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
 
         /**
          * <p>The region ID of the Express Connect circuit.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -479,7 +480,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The VBR instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -492,9 +493,9 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * <p>The VLAN ID of the VBR. Valid values: <strong>0 to 2999</strong>.</p>
+         * <p>The VLAN ID of the VBR. Valid values: <strong>0 to 2999</strong>. </p>
          * <blockquote>
-         * <p> Only the Express Connect circuit owner can specify this parameter. Two VBRs associated with the same Express Connect circuit cannot use the same VLAN ID.</p>
+         * <p>Only the owner of the Express Connect circuit can specify this parameter. Two VBRs on the same Express Connect circuit cannot have the same VLAN ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

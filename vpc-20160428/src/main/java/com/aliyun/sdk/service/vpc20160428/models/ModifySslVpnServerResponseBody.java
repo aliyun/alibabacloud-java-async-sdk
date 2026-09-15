@@ -301,7 +301,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The encryption algorithm.</p>
+         * <p>The encryption algorithm used.</p>
          * 
          * <strong>example:</strong>
          * <p>AES-128-CBC</p>
@@ -323,7 +323,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether data compression is enabled.</p>
+         * <p>Indicates whether communication is compressed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -334,7 +334,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of current connections.</p>
+         * <p>The current number of connections.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -345,7 +345,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the SSL server was created.</p>
+         * <p>The time when the SSL-VPN server was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1492753580000</p>
@@ -358,8 +358,10 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         /**
          * <p>Indicates whether two-factor authentication is enabled.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -382,7 +384,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the IDaaS EIAM instance.</p>
+         * <p>The instance ID of the IDaaS EIAM instance.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas-cn-hangzhou-****</p>
@@ -395,8 +397,8 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         /**
          * <p>The version of the IDaaS EIAM instance.</p>
          * <ul>
-         * <li>This parameter is returned only if the SSL server is associated with an IDaaS EIAM 2.0 instance. Only <strong>EIAM 2.0</strong> is returned.</li>
-         * <li>If the SSL server is associated with an IDaaS EIAM 1.0 instance, no value is returned.</li>
+         * <li>This parameter is returned only when the SSL server is bound to an IDaaS EIAM 2.0 instance. The value is <strong>EIAM 2.0</strong>.</li>
+         * <li>If the SSL server is bound to an IDaaS EIAM 1.0 instance, this parameter is not returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,7 +443,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the SSL server.</p>
+         * <p>The name of the SSL-VPN server.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -452,7 +454,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The port that is used by the SSL server.</p>
+         * <p>The port of the SSL-VPN server.</p>
          * 
          * <strong>example:</strong>
          * <p>1194</p>
@@ -463,7 +465,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The protocol that is used by the SSL server.</p>
+         * <p>The protocol used by the SSL-VPN server.</p>
          * 
          * <strong>example:</strong>
          * <p>UDP</p>
@@ -474,7 +476,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region where the SSL server is created.</p>
+         * <p>The region ID of the SSL-VPN server.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -496,8 +498,8 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the SSL server belongs.</p>
-         * <p>The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+         * <p>The ID of the resource group to which the SSL-VPN server belongs.</p>
+         * <p>The SSL-VPN server belongs to the same resource group as the associated VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>
@@ -508,7 +510,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the SSL server.</p>
+         * <p>The ID of the SSL-VPN server.</p>
          * 
          * <strong>example:</strong>
          * <p>vss-bp18q7hzj6largv4v****</p>
@@ -519,7 +521,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp1q8bgx4xnkm2ogj****</p>

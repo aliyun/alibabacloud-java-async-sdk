@@ -78,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone list.</p>
+         * Zones.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -157,10 +157,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The zone name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Hangzhou Zone B</p>
+             * LocalName.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -168,10 +165,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-b</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -179,10 +173,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone type. Default value: <strong>AvailabilityZone</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>AvailabilityZone</p>
+             * ZoneType.
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;

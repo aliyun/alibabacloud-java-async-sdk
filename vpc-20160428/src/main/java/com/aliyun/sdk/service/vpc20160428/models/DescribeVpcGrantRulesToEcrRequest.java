@@ -228,7 +228,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ECR that you want to query.</p>
+         * <p>The ID of the Express Connect Router (ECR) instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-ncxadcujadncsa****</p>
@@ -240,9 +240,9 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the ECR belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the ECR instance.</p>
          * <blockquote>
-         * <p>If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+         * <p>This parameter is required if you want to load a cross-account network instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network instance.</p>
+         * <p>The ID of the network instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9ek66wd7tl5xqpy****</p>
@@ -267,10 +267,10 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The type of instance. Valid values:</p>
+         * <p>The type of the instance for which to query the authorization relationship. Valid values:</p>
          * <ul>
-         * <li><strong>VBR</strong>: queries the permissions that are granted to a VBR.</li>
-         * <li><strong>VPC</strong>: queries the permissions that are granted from a VPC.</li>
+         * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance. Queries the VPC instances for which the VBR instance has been granted authorization.</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) instance. Queries the VBR instances to which the VPC instance has granted authorization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paginated queries. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -295,10 +295,12 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token for the next query. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li><p>Leave this parameter empty for the first query or if no more results exist.</p>
+         * </li>
+         * <li><p>If a next query is available, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +331,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the network instance that you want to query.</p>
+         * <p>The region where the network instance to query resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -372,7 +374,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The tag.</p>
+         * <p>The tag information.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -440,8 +442,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag. You must specify at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You must specify at least 1 tag key and can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -452,8 +454,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. You can enter a maximum of 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

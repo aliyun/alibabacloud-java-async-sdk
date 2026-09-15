@@ -119,7 +119,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The ID of the instance whose fine-grained monitoring configurations you want to query.</p>
+         * <p>The instance ID for which high-precision second-level monitoring is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-wz9fi6qboho9fwgx7****</p>
@@ -130,7 +130,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The type of instance for which you want to query fine-grained monitoring. Only <strong>EIP</strong> may be returned.</p>
+         * <p>The type of the instance for which high-precision second-level monitoring is queried. The value is <strong>EIP</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>EIP</p>
@@ -141,7 +141,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The name of the project.</p>
+         * <p>The name of the LogProject.</p>
          * 
          * <strong>example:</strong>
          * <p>hdmonitor-cn-shenzhen-1658206966225390</p>
@@ -152,7 +152,7 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>The name of the Logstore.</p>
+         * <p>The name of the LogStore.</p>
          * 
          * <strong>example:</strong>
          * <p>hdmonitor</p>
@@ -174,10 +174,10 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * <p>Indicates whether the operation is performed. Valid values:</p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

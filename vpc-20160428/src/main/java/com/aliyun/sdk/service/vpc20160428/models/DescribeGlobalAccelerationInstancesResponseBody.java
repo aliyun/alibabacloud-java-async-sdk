@@ -106,7 +106,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the GA instances.</p>
+         * GlobalAccelerationInstances.
          */
         public Builder globalAccelerationInstances(GlobalAccelerationInstances globalAccelerationInstances) {
             this.globalAccelerationInstances = globalAccelerationInstances;
@@ -114,7 +114,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,10 +242,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region where the backend servers are deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -253,10 +250,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backend server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2zeg83zvn5d4ed4y****</p>
+             * ServerId.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -264,10 +258,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the backend server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.xx.xx.109</p>
+             * ServerIpAddress.
              */
             public Builder serverIpAddress(String serverIpAddress) {
                 this.serverIpAddress = serverIpAddress;
@@ -275,14 +266,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the backend server.</p>
-             * <ul>
-             * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
-             * <li><strong>SlbInstance</strong>: Server Load Balancer (SLB) instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>EcsInstance</p>
+             * ServerType.
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -403,10 +387,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the public IP address of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eip-bp19yqraac4w3y0jd****</p>
+             * AllocationId.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -414,10 +395,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12.xx.xx.78</p>
+             * IpAddress.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -720,10 +698,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The acceleration area of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>china-mainland</p>
+             * AccelerationLocation.
              */
             public Builder accelerationLocation(String accelerationLocation) {
                 this.accelerationLocation = accelerationLocation;
@@ -731,7 +706,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the backend servers of the GA instance.</p>
+             * BackendServers.
              */
             public Builder backendServers(BackendServers backendServers) {
                 this.backendServers = backendServers;
@@ -739,10 +714,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum bandwidth of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Bandwidth.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -750,14 +722,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth type of the GA instance.</p>
-             * <ul>
-             * <li><strong>Sharing</strong></li>
-             * <li><strong>Exclusive</strong> (default)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Exclusive</p>
+             * BandwidthType.
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -765,10 +730,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PrePaid</p>
+             * ChargeType.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -776,10 +738,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the GA instance was created. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-07-05T03:39:31Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -787,10 +746,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>apiDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -798,10 +754,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-08-05T16:00Z</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -809,10 +762,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ga-bp1x99kj7kl1ziw5x****</p>
+             * GlobalAccelerationInstanceId.
              */
             public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
                 this.globalAccelerationInstanceId = globalAccelerationInstanceId;
@@ -820,10 +770,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PayByBandwidth</p>
+             * InternetChargeType.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -831,10 +778,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the dedicated GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.xx.xx.99</p>
+             * IpAddress.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -842,10 +786,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instanceName</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -853,7 +794,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address.</p>
+             * PublicIpAddresses.
              */
             public Builder publicIpAddresses(PublicIpAddresses publicIpAddresses) {
                 this.publicIpAddresses = publicIpAddresses;
@@ -861,10 +802,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -872,10 +810,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service area of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>china-mainland</p>
+             * ServiceLocation.
              */
             public Builder serviceLocation(String serviceLocation) {
                 this.serviceLocation = serviceLocation;
@@ -883,16 +818,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the GA instance.</p>
-             * <ul>
-             * <li><strong>Available</strong></li>
-             * <li><strong>Inuse</strong></li>
-             * <li><strong>Associating</strong></li>
-             * <li><strong>Unassociating</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>InUse</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

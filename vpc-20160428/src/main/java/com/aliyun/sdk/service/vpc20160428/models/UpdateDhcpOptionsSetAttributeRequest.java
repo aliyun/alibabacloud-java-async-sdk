@@ -246,7 +246,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -259,8 +259,8 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>Enter a description for the DHCP options set.</p>
-         * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. You can also leave the description empty.</p>
+         * <p>The description of the DHCP options set. </p>
+         * <p>The description can be empty or 2 to 256 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -272,7 +272,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DHCP options set.</p>
+         * <p>The ID of the DHCP options set to be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
 
         /**
          * <p>The name of the DHCP options set.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -298,8 +298,8 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The root domain. For example, you can set the value to example.com.</p>
-         * <p>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.</p>
+         * <p>The hostname suffix, such as example.com.</p>
+         * <p>After the DHCP options set is associated with a VPC, the hostname suffix is automatically synchronized to the ECS instances in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -311,9 +311,9 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the DNS server. You can enter at most four DNS server IP addresses. Separate IP addresses with commas (,).</p>
+         * <p>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses. Separate multiple IP addresses with commas (,).</p>
          * <blockquote>
-         * <p> If you do not specify a DNS server IP address, Elastic Compute Service (ECS) instances use the IP addresses of the Alibaba Cloud DNS servers, which are 100.100.2.136 and 100.100.2.138.</p>
+         * <p>If you do not specify any DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud by default (100.100.2.136 and 100.100.2.138).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -327,8 +327,8 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
 
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
-         * <p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-         * <p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+         * <p><strong>true</strong>: performs a dry run without modifying the DHCP options set configuration. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</p>
+         * <p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -340,13 +340,15 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The lease time of the IPv6 addresses for the DHCP options set.</p>
+         * <p>The lease time of the IPv6 DHCP options set.</p>
          * <ul>
-         * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
-         * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+         * <li><p>When the lease time is set in hours: Unit: h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>24h</strong>.</p>
+         * </li>
+         * <li><p>When the lease time is set in days: Unit: d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>1d</strong>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you specify a value, you must also specify the unit.</p>
+         * <p>You must include the unit when specifying the value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -359,13 +361,15 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
+         * <p>The lease time of the IPv4 DHCP options set.</p>
          * <ul>
-         * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
-         * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+         * <li><p>When the lease time is set in hours: Unit: h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</p>
+         * </li>
+         * <li><p>When the lease time is set in days: Unit: d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you specify a value, you must also specify the unit.</p>
+         * <p>You must include the unit when specifying the value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -396,7 +400,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region where the DHCP options set is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region where the DHCP options set to be modified resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

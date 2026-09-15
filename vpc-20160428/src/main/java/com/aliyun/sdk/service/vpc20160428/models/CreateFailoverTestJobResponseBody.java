@@ -67,10 +67,10 @@ public class CreateFailoverTestJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the failover test.</p>
+         * <p>The failover test job ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ftj-xxxxxxxxx</p>
+         * <p>ftj-bp1yh6mvi13aq3g8w****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;

@@ -93,7 +93,7 @@ public class DeleteVpnAttachmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned by the current operation. <strong>200</strong> indicates that the operation is successful.</p>
+         * <p>The status code returned by the current task. A value of <strong>200</strong> indicates that the task is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DeleteVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information returned by the current operation.</p>
+         * <p>The message returned by the current task.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -126,10 +126,10 @@ public class DeleteVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current operation is successful.</p>
+         * <p>Indicates whether the current task is successfully executed.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The task is successfully executed.</li>
+         * <li><strong>false</strong>: The task failed to be executed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

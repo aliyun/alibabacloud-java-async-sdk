@@ -119,7 +119,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +141,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E18980E8-C8C2-31BD-8156-AE2BBDEC87E1</p>
@@ -152,7 +152,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +163,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of route entries.</p>
+         * <p>The list of routes.</p>
          */
         public Builder vcoRouteEntries(java.util.List<VcoRouteEntries> vcoRouteEntries) {
             this.vcoRouteEntries = vcoRouteEntries;
@@ -171,9 +171,9 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information on route entries of the dual-tunnel IPsec connection.</p>
+         * <p>The route statistics for the IPsec-VPN connection in dual-tunnel mode.</p>
          * <blockquote>
-         * <p> This parameter is returned only for IPsec connections in dual-tunnel mode.</p>
+         * <p>This information is returned only for IPsec-VPN connections in dual-tunnel mode.</p>
          * </blockquote>
          */
         public Builder vpnRouteCounts(java.util.List<VpnRouteCounts> vpnRouteCounts) {
@@ -357,7 +357,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of autonomous system (AS) numbers that the BGP route goes through.</p>
+             * <p>The list of autonomous system (AS) numbers that the BGP route passes through.</p>
              * 
              * <strong>example:</strong>
              * <p>[12000]</p>
@@ -379,8 +379,8 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the route was created.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The timestamp when the destination route was created.</p>
+             * <p>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1658217008000</p>
@@ -402,11 +402,11 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of next hops.</p>
+             * <p>The list of next-hop tunnels.</p>
              * <blockquote>
              * <ul>
-             * <li>This parameter is returned only by dual-tunnel IPsec connections.</li>
-             * <li>This parameter is returned only when the tunnel status is <strong>Phase 2 Negotiation Successful</strong>.</li>
+             * <li>This information is returned only for IPsec-VPN connections in dual-tunnel mode.</li>
+             * <li>Tunnel information is returned only when the tunnel status is <strong>Phase 2 negotiations succeeded</strong>.</li>
              * </ul>
              * </blockquote>
              */
@@ -427,10 +427,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route type. Valid values:</p>
+             * <p>The type of the route.</p>
              * <ul>
-             * <li><strong>custom</strong>: a destination-based route</li>
-             * <li><strong>bgp</strong>: a BGP route</li>
+             * <li><strong>custom</strong>: The route is a destination route.</li>
+             * <li><strong>bgp</strong>: The route is a BGP route.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -442,10 +442,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the BGP route. Valid values:</p>
+             * <p>The source of the BGP route.</p>
              * <ul>
-             * <li><strong>CLOUD</strong>: indicates that the current BGP route is learned by the IPsec-VPN connection from the transit router.</li>
-             * <li><strong>VPN_BGP</strong>: indicates that the current BGP route is learned by the IPsec-VPN connection from the data center.</li>
+             * <li><strong>CLOUD</strong>: The BGP route is learned by the IPsec-VPN connection from the transit router.</li>
+             * <li><strong>VPN_BGP</strong>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -459,8 +459,8 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             /**
              * <p>The status of the route.</p>
              * <ul>
-             * <li><strong>published</strong>: indicates that the current route is advertised to the transit router.</li>
-             * <li><strong>Active</strong>: indicates that the current BGP route is available.</li>
+             * <li><strong>published</strong>: The destination route has been published to the transit router instance.</li>
+             * <li><strong>Active</strong>: The BGP route is available.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -483,9 +483,9 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the destination-based route.</p>
+             * <p>The weight of the destination route.</p>
              * <blockquote>
-             * <p> The current parameter has no effect.</p>
+             * <p>This parameter is not in use.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -569,7 +569,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of route entries.</p>
+             * <p>The number of routes.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -580,9 +580,9 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route type. Valid values:</p>
+             * <p>The type of the route.</p>
              * <ul>
-             * <li><strong>custom</strong>: destination-based route.</li>
+             * <li><strong>custom</strong>: destination route.</li>
              * <li><strong>bgp</strong>: BGP route.</li>
              * </ul>
              * 
@@ -595,10 +595,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the BGP route. Valid values:</p>
+             * <p>The source of the BGP route.</p>
              * <ul>
-             * <li><strong>CLOUD</strong>: The current BGP route is learned by the IPsec connection from the transit router.</li>
-             * <li><strong>VPN_BGP</strong>: The current BGP route is learned by the IPsec connection from the data center.</li>
+             * <li><strong>CLOUD</strong>: The BGP route is learned by the IPsec-VPN connection from the transit router.</li>
+             * <li><strong>VPN_BGP</strong>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</li>
              * </ul>
              * 
              * <strong>example:</strong>

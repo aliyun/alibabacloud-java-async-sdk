@@ -129,10 +129,12 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response. Valid values: </p>
          * <ul>
-         * <li><strong>zh-CN</strong> (default): Chinese</li>
-         * <li><strong>en-US</strong>: English</li>
+         * <li><p><strong>zh-CN</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en-US</strong>: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +165,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * <p>The service type. Default value: <strong>VPC</strong>.</p>
+         * <p>The product type. Default value: <strong>VPC</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>

@@ -80,10 +80,10 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> has a return value, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag keys.</p>
+         * TagKeys.
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -172,10 +172,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -183,10 +180,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. The value is set to <strong>PHYSICALCONNECTION</strong>, which indicates an Express Connect circuit.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PHYSICALCONNECTION</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -240,10 +234,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * TagKey.
              */
             public Builder tagKey(java.util.List<TagKey> tagKey) {
                 this.tagKey = tagKey;

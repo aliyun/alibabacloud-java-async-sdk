@@ -106,7 +106,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -150,7 +150,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the vSwitch.</p>
+         * VSwitches.
          */
         public Builder vSwitches(VSwitches vSwitches) {
             this.vSwitches = vSwitches;
@@ -216,10 +216,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the route table that is associated with the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vrt-bp145q7glnuzdv****</p>
+             * RouteTableId.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -227,14 +224,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the route table. Valid values:</p>
-             * <ul>
-             * <li><strong>System</strong></li>
-             * <li><strong>Custom</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>System</p>
+             * RouteTableType.
              */
             public Builder routeTableType(String routeTableType) {
                 this.routeTableType = routeTableType;
@@ -301,10 +291,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>department</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,10 +299,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dev</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -644,10 +628,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available IP addresses in the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AvailableIpAddressCount.
              */
             public Builder availableIpAddressCount(Long availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -655,10 +636,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv4 CIDR block of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.0.0/24</p>
+             * CidrBlock.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -666,10 +644,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the vSwitch was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-01-18T12:43:57Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -677,10 +652,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VSwitchDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -688,14 +660,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure an IPv6 CIDR block for the vSwitch. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EnabledIpv6.
              */
             public Builder enabledIpv6(Boolean enabledIpv6) {
                 this.enabledIpv6 = enabledIpv6;
@@ -703,10 +668,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv6 CIDR block of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2408:4002:10c4:4e03::/64</p>
+             * Ipv6CidrBlock.
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -714,14 +676,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsDefault.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -729,10 +684,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network access control list (ACL).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>nacl-a2do9e413e0spzasx****</p>
+             * NetworkAclId.
              */
             public Builder networkAclId(String networkAclId) {
                 this.networkAclId = networkAclId;
@@ -740,10 +692,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>25346073170691****</p>
+             * OwnerId.
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -751,10 +700,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the vSwitch belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfmxazb4ph6aiy****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -762,7 +708,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the route table.</p>
+             * RouteTable.
              */
             public Builder routeTable(RouteTable routeTable) {
                 this.routeTable = routeTable;
@@ -770,15 +716,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the vSwitch is shared.</p>
-             * <ul>
-             * <li>If no value is returned, the vSwitch is a regular vSwitch.</li>
-             * <li>If <strong>Shared</strong> is returned, the vSwitch is shared.</li>
-             * <li>If <strong>Sharing</strong> is returned, the vSwitch is being shared.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Shared</p>
+             * ShareType.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -786,14 +724,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the vSwitch. Valid values:</p>
-             * <ul>
-             * <li><strong>Pending</strong></li>
-             * <li><strong>Available</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -801,7 +732,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the vSwitch.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -809,10 +740,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-25bcdxs7pv1****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -820,10 +748,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vSwitch</p>
+             * VSwitchName.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -831,10 +756,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the vSwitch belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-257gcdcdq64****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -842,10 +764,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone to which the vSwitch belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-d</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

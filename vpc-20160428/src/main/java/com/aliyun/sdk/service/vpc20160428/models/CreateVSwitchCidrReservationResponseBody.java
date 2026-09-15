@@ -78,7 +78,7 @@ public class CreateVSwitchCidrReservationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the reserved CIDR block.</p>
+         * <p>The instance ID of the reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vcr-bp1m12saqteraw3rp****</p>

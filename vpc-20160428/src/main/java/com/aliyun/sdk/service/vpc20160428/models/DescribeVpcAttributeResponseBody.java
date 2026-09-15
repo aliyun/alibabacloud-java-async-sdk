@@ -406,8 +406,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.</p>
-         * <p>If the VPC is not attached to a CEN instance, the parameter is not returned.</p>
+         * AssociatedCens.
          */
         public Builder associatedCens(AssociatedCens associatedCens) {
             this.associatedCens = associatedCens;
@@ -415,7 +414,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The route source associated with the VPC.</p>
+         * AssociatedPropagationSources.
          */
         public Builder associatedPropagationSources(AssociatedPropagationSources associatedPropagationSources) {
             this.associatedPropagationSources = associatedPropagationSources;
@@ -434,10 +433,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the ClassicLink feature is enabled. Valid values:</p>
+         * <p>Indicates whether ClassicLink is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: ClassicLink is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): ClassicLink is not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,7 +458,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the VPC was created.</p>
+         * <p>The creation time of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-16T07:31:09Z</p>
@@ -492,10 +493,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         /**
          * <p>The status of the DHCP options set. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>InUse</strong></li>
-         * <li><strong>Deleted</strong></li>
-         * <li><strong>Pending</strong></li>
+         * <li><p><strong>Available</strong>: active.</p>
+         * </li>
+         * <li><p><strong>InUse</strong>: in use.</p>
+         * </li>
+         * <li><p><strong>Deleted</strong>: deleted.</p>
+         * </li>
+         * <li><p><strong>Pending</strong>: being configured.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -507,7 +512,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether DNS hostname is enabled.</p>
+         * <p>Indicates whether DNS hostnames are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>DISABLED</p>
@@ -518,11 +523,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the VPC enables IPv6 .</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether IPv6 is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -533,7 +534,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the IPv4 gateway.</p>
+         * <p>The instance ID of the IPv4 gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
@@ -555,7 +556,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IPv6 CIDR block of the VPC.</p>
+         * Ipv6CidrBlocks.
          */
         public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -565,8 +566,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: The VPC is the default VPC.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): The VPC is not the default VPC.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -578,7 +581,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * <p>The ID of the account to which the VPC belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>28311773240248****</p>
@@ -589,7 +592,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region to which the VPC belongs.</p>
+         * <p>The region ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -611,7 +614,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazbvgb4ph****</p>
@@ -622,7 +625,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The secondary IPv4 CIDR block of the VPC.</p>
+         * SecondaryCidrBlocks.
          */
         public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
             this.secondaryCidrBlocks = secondaryCidrBlocks;
@@ -632,8 +635,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         /**
          * <p>The status of the VPC. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Pending</strong></li>
+         * <li><p><strong>Available</strong>: active.</p>
+         * </li>
+         * <li><p><strong>Pending</strong>: being configured.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -645,11 +650,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the VPC supports IPv4 gateways.</p>
+         * <p>Indicates whether the VPC operates in centralized control with IPv4 gateway mode.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The VPC operates in centralized control with IPv4 gateway mode, where Internet traffic is centrally managed by the IPv4 gateway (activated after the IPv4 gateway is created and routing is configured), or the VPC is a private network-only VPC (the IPv4 gateway is deleted in private mode).</li>
+         * <li><strong>false</strong>: The VPC operates in Direct Internet Access mode (access mode).</li>
          * </ul>
+         * <blockquote>
+         * <p>For details, see <a href="https://help.aliyun.com/document_detail/376445.html">IPv4 gateway</a>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -660,7 +668,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the tags.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -668,7 +676,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.</p>
+         * UserCidrs.
          */
         public Builder userCidrs(UserCidrs userCidrs) {
             this.userCidrs = userCidrs;
@@ -676,7 +684,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the vRouter that belongs to the VPC.</p>
+         * <p>The ID of the vRouter in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vrt-bp1jso6ng1at0ajsc****</p>
@@ -687,7 +695,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of vSwitches deployed in the VPC.</p>
+         * VSwitchIds.
          */
         public Builder vSwitchIds(VSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -788,10 +796,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CEN instance to which the VPC is attached.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-7qthudw0ll6jmc****</p>
+             * CenId.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -799,10 +804,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account to which the CEN instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>28311773240248****</p>
+             * CenOwnerId.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -810,11 +812,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the CEN instance.</p>
-             * <p><strong>Attached</strong> is returned only when the VPC is attached to a CEN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Attached</p>
+             * CenStatus.
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -974,10 +972,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether routes are advertised to the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * RoutePropagated.
              */
             public Builder routePropagated(Boolean routePropagated) {
                 this.routePropagated = routePropagated;
@@ -985,10 +980,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the source.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-dc4vwznpwbobrl****</p>
+             * SourceInstanceId.
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -996,10 +988,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the source.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>153980532164****</p>
+             * SourceOwnerId.
              */
             public Builder sourceOwnerId(Long sourceOwnerId) {
                 this.sourceOwnerId = sourceOwnerId;
@@ -1007,16 +996,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type.</p>
-             * <ul>
-             * <li><strong>CEN</strong></li>
-             * <li><strong>VPN</strong></li>
-             * <li><strong>TR</strong></li>
-             * <li><strong>ECR</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CEN</p>
+             * SourceType.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1024,15 +1004,16 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding status.</p>
+             * <p>The status of the VPC. Valid values:</p>
              * <ul>
-             * <li><strong>Attaching</strong></li>
-             * <li><strong>Attached</strong></li>
-             * <li><strong>Detaching</strong></li>
+             * <li><p><strong>Available</strong>: active.</p>
+             * </li>
+             * <li><p><strong>Pending</strong>: being configured.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Attaching</p>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1086,7 +1067,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The route source associated with the VPC.</p>
+             * AssociatedPropagationSources.
              */
             public Builder associatedPropagationSources(java.util.List<AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources) {
                 this.associatedPropagationSources = associatedPropagationSources;
@@ -1153,10 +1134,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of resources in the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ResourceCount.
              */
             public Builder resourceCount(Integer resourceCount) {
                 this.resourceCount = resourceCount;
@@ -1164,15 +1142,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of resource deployed in the VPC. Valid values: Valid values:</p>
-             * <ul>
-             * <li><strong>VSwitch</strong></li>
-             * <li><strong>VRouter</strong></li>
-             * <li><strong>RouteTable</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VSwitch</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1296,7 +1266,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
              * <p>The IPv6 CIDR block of the VPC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2408:XXXX:0:6a::/56</p>
+             * <p>2408:XXXX:0:a600::/56</p>
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -1304,19 +1274,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv6 CIDR block type of the VPC. Valid values:</p>
-             * <ul>
-             * <li><strong>BGP</strong> (default)</li>
-             * <li><strong>ChinaMobile</strong></li>
-             * <li><strong>ChinaUnicom</strong></li>
-             * <li><strong>ChinaTelecom</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p> If you are allowed to use single-ISP bandwidth, valid values are <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, and <strong>ChinaMobile</strong></p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>BGP</p>
+             * Ipv6Isp.
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -1373,7 +1331,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
              * <p>The IPv6 CIDR block of the VPC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2408:XXXX:0:6a::/56</p>
+             * <p>2408:XXXX:0:a600::/56</p>
              */
             public Builder ipv6CidrBlock(java.util.List<Ipv6CidrBlock> ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -1494,10 +1452,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of tag N.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1505,10 +1460,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

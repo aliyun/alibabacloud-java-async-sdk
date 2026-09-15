@@ -199,7 +199,10 @@ public class DeleteRouteEntryRequest extends Request {
         } 
 
         /**
-         * <p>The destination CIDR block of the route. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</p>
+         * <p>The destination CIDR block of the route. IPv4 CIDR blocks, IPv6 CIDR blocks, prefix list CIDR blocks, and prefix list instance IDs are supported. This parameter is mutually exclusive with the RouteEntryId parameter.</p>
+         * <blockquote>
+         * <p>If the <strong>RouteEntryId</strong> parameter is not specified, the <strong>DestinationCidrBlock</strong> and <strong>RouteTableId</strong> parameters are required. Configure the <strong>NextHopId</strong> or <strong>NextHopList</strong> parameter as needed.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX/16</p>
@@ -211,9 +214,9 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-         * <p><strong>true</strong>: sends a request without deleting the route entry. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-         * <p><strong>false</strong> (default): performs a dry run and the actual request. If the request passes the check, a 2xx HTTP status code is returned and the route entry is deleted.</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p><strong>true</strong>: performs a dry run without deleting the route. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+         * <p><strong>false</strong> (default): sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the route is deleted.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -222,10 +225,10 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The ID of the next hop instance.</p>
          * <ul>
-         * <li>To delete a route other than an equal-cost multi-path (ECMP) route, set the <strong>NextHopId</strong> parameter and ignore the <strong>NextHopList</strong> parameter.</li>
-         * <li>To delete an ECMP route, set the <strong>NextHopList</strong> parameter and ignore the <strong>NextHopId</strong> parameter.</li>
+         * <li>To delete a non-ECMP route, specify <strong>NextHopId</strong>. Do not specify <strong>NextHopList</strong>.</li>
+         * <li>To delete an ECMP route, specify <strong>NextHopList</strong>. Do not specify <strong>NextHopId</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +241,7 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The list of the next hop of the ECMP route.</p>
+         * <p>The information about the next hop instances of the ECMP route. A maximum of 16 next hop instances are supported.</p>
          */
         public Builder nextHopList(java.util.List<NextHopList> nextHopList) {
             this.putQueryParameter("NextHopList", nextHopList);
@@ -265,8 +268,8 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the route table.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the route table resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -296,7 +299,10 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route that you want to delete.</p>
+         * <p>The ID of the route that you want to delete. This parameter is mutually exclusive with the DestinationCidrBlock parameter.</p>
+         * <blockquote>
+         * <p>If the <strong>DestinationCidrBlock</strong> parameter is not specified, the <strong>RouteEntryId</strong> parameter is required.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>rte-bp1mnnr2al0naomnpv****</p>
@@ -308,7 +314,10 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route table to which the route belongs.</p>
+         * <p>The ID of the route table that contains the route.  </p>
+         * <blockquote>
+         * <p>If the <strong>RouteEntryId</strong> parameter is not specified, the <strong>DestinationCidrBlock</strong> and <strong>RouteTableId</strong> parameters are required. Configure the <strong>NextHopId</strong> or <strong>NextHopList</strong> parameter as needed.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>vtb-2ze3jgygk9bmsj23s****</p>
@@ -379,7 +388,7 @@ public class DeleteRouteEntryRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.</p>
+             * <p>The ID of the next hop instance of the ECMP route. A maximum of 16 next hop instances are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>ri-2zeo3xzyf38r43cd****</p>
@@ -390,7 +399,7 @@ public class DeleteRouteEntryRequest extends Request {
             }
 
             /**
-             * <p>The type of the next hop that is configured for ECMP routing. Set the value to <strong>RouterInterface</strong>. You can specify information about at most 16 next hops.</p>
+             * <p>The type of the next hop of the ECMP route. Set the value to <strong>RouterInterface</strong> (router interface). A maximum of 16 next hop instances are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>RouterInterface</p>

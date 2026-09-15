@@ -134,7 +134,7 @@ public class GetPhysicalConnectionServiceStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region for which you want to query the status of outbound data transfer billing.</p>
+         * <p>The ID of the region for which you want to query whether outbound traffic billing is enabled. </p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 

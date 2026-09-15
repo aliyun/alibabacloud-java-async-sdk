@@ -300,7 +300,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The backend domain name of the FULLNAT address translation that needs to be modified.</p>
+         * <p>The backend domain name to be modified for FULLNAT address translation.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.com</p>
@@ -312,7 +312,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The backend IP address to be modified in FULLNAT address translation.</p>
+         * <p>The backend IP address to be modified for FULLNAT address translation.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -324,7 +324,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The backend port to be modified in FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The backend port to be modified for FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -339,7 +339,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -352,10 +352,10 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs a dry run without modifying the FULLNAT entry. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the FULLNAT entry is modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -369,7 +369,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
 
         /**
          * <p>The new description of the FULLNAT entry.</p>
-         * <p>You can leave this parameter empty or enter a description. If you enter a description, the description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description can be empty or 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -395,7 +395,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
 
         /**
          * <p>The new name of the FULLNAT entry.</p>
-         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>modify</p>
@@ -407,7 +407,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the FULLNAT table to be modified.</p>
+         * <p>The ID of the FULLNAT table to which the FULLNAT entry belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -420,10 +420,10 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The protocol of the packets that are forwarded by the port. Valid values:</p>
+         * <p>The protocol type of the Redirection Port. Valid values:</p>
          * <ul>
-         * <li><strong>TCP</strong>: TCP</li>
-         * <li><strong>UDP</strong></li>
+         * <li><strong>TCP</strong>: forwards TCP packets. </li>
+         * <li><strong>UDP</strong>: forwards UDP packets.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,7 +448,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The frontend port to be modified in FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The frontend port to be modified for FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -460,7 +460,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the elastic network interface (ENI) to be modified.</p>
+         * <p>The ID of the elastic network interfaces (ENIs), also known as the network interface controller (NIC), to be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-gw8g131ef2dnbu3k****</p>
@@ -490,7 +490,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be modified belongs.</p>
+         * <p>The region ID of the VPC NAT gateway to which the FULLNAT entry belongs.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 

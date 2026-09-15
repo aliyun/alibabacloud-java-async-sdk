@@ -203,7 +203,7 @@ public class DescribeExpressConnectTrafficQosRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class DescribeExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paginated queries. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -228,10 +228,12 @@ public class DescribeExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If no value is returned for NetToken, you do not need to specify this parameter.</li>
-         * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li><p>Leave this parameter empty for the first query or if no subsequent query is required.</p>
+         * </li>
+         * <li><p>If a next query is to be sent, set the value to the <strong>NextToken</strong> value returned in the previous API call.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +264,7 @@ public class DescribeExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * <p>The IDs of QoS policies.</p>
+         * <p>The list of QoS policy IDs.</p>
          */
         public Builder qosIdList(java.util.List<String> qosIdList) {
             this.putQueryParameter("QosIdList", qosIdList);
@@ -271,7 +273,7 @@ public class DescribeExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * <p>The names of QoS policies.</p>
+         * <p>The list of QoS policy names.</p>
          */
         public Builder qosNameList(java.util.List<String> qosNameList) {
             this.putQueryParameter("QosNameList", qosNameList);
@@ -280,8 +282,8 @@ public class DescribeExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the QoS policy is created.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the QoS policy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -383,8 +385,8 @@ public class DescribeExpressConnectTrafficQosRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You must enter at least one tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>A tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You must specify at least 1 tag key and can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -395,8 +397,8 @@ public class DescribeExpressConnectTrafficQosRequest extends Request {
             }
 
             /**
-             * <p>The tag values of the resources. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value of the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

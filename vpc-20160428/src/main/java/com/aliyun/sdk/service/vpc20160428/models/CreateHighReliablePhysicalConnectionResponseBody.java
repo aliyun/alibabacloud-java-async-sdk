@@ -80,13 +80,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>If the request fails the dry run, the following error codes and error messages may be returned:</p>
-         * <ul>
-         * <li>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing. Billing for outbound data transfer is not enabled.</li>
-         * <li>pconn.high.reliable.dryrun.error.incompatable.device.capacity. No device in the access point supports advanced features.</li>
-         * <li>pconn.high.reliable.dryrun.error.quota.exceeded. The quota is insufficient.</li>
-         * <li>pconn.high.reliable.dryrun.error.not.enough.resource. The access point resources are insufficient.</li>
-         * </ul>
+         * ErrorInfoList.
          */
         public Builder errorInfoList(ErrorInfoList errorInfoList) {
             this.errorInfoList = errorInfoList;
@@ -94,7 +88,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Express Connect circuits.</p>
+         * PhysicalConnectionList.
          */
         public Builder physicalConnectionList(PhysicalConnectionList physicalConnectionList) {
             this.physicalConnectionList = physicalConnectionList;
@@ -184,10 +178,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error codes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing</p>
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -195,10 +186,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned error message.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing</p>
+             * ErrorMessage.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -206,10 +194,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Express Connect circuit.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pc-j5e5qqo616p81ncspbll1</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,10 +315,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Express Connect circuit.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pc-j5e5qqo616p81ncspbll1</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -341,10 +323,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the Express Connect circuit.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * RegionNo.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

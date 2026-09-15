@@ -288,7 +288,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of available IP addresses.</p>
+         * <p>The active IP address count.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -299,10 +299,10 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CIDR block of the vSwitch.</p>
+         * <p>The private network address range of the vSwitch.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.0.0/24</p>
+         * <p>192.168.0.1/24</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -332,12 +332,11 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure the IPv6 CIDR block of the vSwitch. Valid values:</p>
+         * <p>Indicates whether the IPv6 CIDR block is enabled for the vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: not enabled.</li>
          * </ul>
-         * <p>This field is returned only when IPv6 is enabled for the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -361,8 +360,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The vSwitch is the default vSwitch.</li>
+         * <li><strong>false</strong>: The vSwitch is not the default vSwitch.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -374,10 +373,10 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network access control list (ACL) rules.</p>
+         * <p>The network ACL rules.</p>
          * 
          * <strong>example:</strong>
-         * <p>nacl-bp1fg655nh68xyz9****</p>
+         * <p>1</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.networkAclId = networkAclId;
@@ -385,7 +384,10 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The Alibaba Cloud account ID of the resource ownership.</p>
+         * <blockquote>
+         * <p>Notice: This value is of the Long type. Precision loss may occur in certain programming languages. Use this value with caution.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>28768383240243****</p>
@@ -407,7 +409,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the ACL belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph****</p>
@@ -418,7 +420,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the route table that is associated with the vSwitch.</p>
+         * <p>The route table information of the vSwitch.</p>
          */
         public Builder routeTable(RouteTable routeTable) {
             this.routeTable = routeTable;
@@ -426,11 +428,11 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the vSwitch is shared.</p>
+         * <p>The sharing type of the vSwitch.</p>
          * <ul>
-         * <li>If no value is returned, the vSwitch is a regular vSwitch.</li>
-         * <li>If <strong>Shared</strong> is returned, the vSwitch is shared.</li>
-         * <li>If <strong>Sharing</strong> is returned, the vSwitch is being shared.</li>
+         * <li>If the value is empty, the vSwitch is a private vSwitch.</li>
+         * <li>If the value is <strong>Shared</strong>, the vSwitch is a shared vSwitch.</li>
+         * <li>If the value is <strong>Sharing</strong>, the vSwitch is being shared with other accounts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,8 +446,10 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         /**
          * <p>The status of the vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
+         * <li><p><strong>Pending</strong>: being configured. </p>
+         * </li>
+         * <li><p><strong>Available</strong>: active.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,7 +461,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the tags.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -465,7 +469,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-25b7pv15t****</p>
@@ -476,7 +480,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vSwitch name.</p>
+         * <p>The name of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -498,7 +502,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>The zone to which the vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-a</p>
@@ -567,7 +571,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the route table that is associated with the vSwitch.</p>
+             * <p>The ID of the route table associated with the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-bp145q7glnuzdv****</p>
@@ -580,8 +584,10 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             /**
              * <p>The type of the route table. Valid values:</p>
              * <ul>
-             * <li><strong>System</strong></li>
-             * <li><strong>Custom</strong></li>
+             * <li><p><strong>System</strong>: system route table.</p>
+             * </li>
+             * <li><p><strong>Custom</strong>: custom route table.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -652,10 +658,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of tag N added to the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -663,10 +666,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N added to the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

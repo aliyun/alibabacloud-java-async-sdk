@@ -160,7 +160,7 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ACL entry to be deleted.</p>
+         * <p>The ID of the access control policy entry that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ACL to which the ACL entry belongs.</p>
+         * <p>The ID of the access control policy group to which the access control policy entry belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * <p>The region of the ACL.</p>
+         * <p>The region of the access control policy group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class CreateBgpGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the BGP group.</p>
+         * <p>The ID of the created BGP group.</p>
          * 
          * <strong>example:</strong>
          * <p>bgpg-bp1k25cyp26cllath****</p>

@@ -67,7 +67,7 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The details.</p>
+         * <p>The detailed information about the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,7 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The ID of the order that is placed.</p>
+             * <p>The ID of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>50187055895****</p>

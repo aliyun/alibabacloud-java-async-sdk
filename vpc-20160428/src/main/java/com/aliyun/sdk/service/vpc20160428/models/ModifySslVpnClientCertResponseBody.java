@@ -80,7 +80,7 @@ public class ModifySslVpnClientCertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the SSL client certificate.</p>
+         * <p>The name of the SSL-VPN client certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>cert2</p>
@@ -102,7 +102,7 @@ public class ModifySslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the SSL client certificate.</p>
+         * <p>The ID of the SSL-VPN client certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-bp1n8wcf134yl0osr****</p>

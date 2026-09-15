@@ -118,10 +118,10 @@ public class AttachVbrToVpconnRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the request ID is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs a dry run without associating the VBR instance with shared Express Connect circuits. The system checks whether the required parameters are specified, the request format is valid, and the instance status is correct. If the check fails, the corresponding error is returned. If the check passes, the request ID is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request. After the check passes, the VBR instance is directly associated with shared Express Connect circuits.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,8 +134,8 @@ public class AttachVbrToVpconnRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the hosted connection.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the shared Express Connect circuits.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class AttachVbrToVpconnRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token must be unique among different requests. The maximum length is 64 ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>CBCE910E-D396-4944-8****</p>
@@ -161,7 +161,10 @@ public class AttachVbrToVpconnRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The VBR instance ID.</p>
+         * <blockquote>
+         * <p>The ID of the VBR instance to be migrated. The VBR must currently be directly attached to an Express Connect circuit owned by the caller, and must be the same VBR specified in CreateVpconnFromVbr.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +177,10 @@ public class AttachVbrToVpconnRequest extends Request {
         }
 
         /**
-         * <p>The ID of the hosted connection.</p>
+         * <p>The ID of the shared Express Connect circuits (VirtualPhysicalConnection) instance.</p>
+         * <blockquote>
+         * <p>The shared Express Connect circuits instance ID returned by CreateVpconnFromVbr. The instance must have been confirmed and accepted by the tenant (Confirmed) and be in the Enabled state.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

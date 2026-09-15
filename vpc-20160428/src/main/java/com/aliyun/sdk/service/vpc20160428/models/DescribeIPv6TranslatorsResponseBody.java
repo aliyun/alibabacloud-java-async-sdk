@@ -106,7 +106,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of IPv6 Translation Service instances.</p>
+         * Ipv6Translators.
          */
         public Builder ipv6Translators(Ipv6Translators ipv6Translators) {
             this.ipv6Translators = ipv6Translators;
@@ -114,7 +114,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -439,10 +439,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IPv4 address allocated to the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.99.XX.XX</p>
+             * AllocateIpv4Addr.
              */
             public Builder allocateIpv4Addr(String allocateIpv4Addr) {
                 this.allocateIpv4Addr = allocateIpv4Addr;
@@ -450,10 +447,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2400:3200:1600::XXXX</p>
+             * AllocateIpv6Addr.
              */
             public Builder allocateIpv6Addr(String allocateIpv6Addr) {
                 this.allocateIpv6Addr = allocateIpv6Addr;
@@ -461,10 +455,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth of the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AvailableBandwidth.
              */
             public Builder availableBandwidth(String availableBandwidth) {
                 this.availableBandwidth = availableBandwidth;
@@ -472,10 +463,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Bandwidth.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -483,14 +471,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business status of the IPv6 Translation Service instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>FinancialLocked</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * BusinessStatus.
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -498,10 +479,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the IPv6 Translation Service instance was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1537151540000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -509,10 +487,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>descriptionforinstance</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -520,10 +495,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when IPv6 Translation Service instance expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1539792000000</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -531,7 +503,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of IPv6 mapping entries of the IPv6 Translation Service instance.</p>
+             * Ipv6TranslatorEntryIds.
              */
             public Builder ipv6TranslatorEntryIds(Ipv6TranslatorEntryIds ipv6TranslatorEntryIds) {
                 this.ipv6TranslatorEntryIds = ipv6TranslatorEntryIds;
@@ -539,10 +511,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ipv6trans-bp1858ys*****</p>
+             * Ipv6TranslatorId.
              */
             public Builder ipv6TranslatorId(String ipv6TranslatorId) {
                 this.ipv6TranslatorId = ipv6TranslatorId;
@@ -550,10 +519,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -561,14 +527,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the IPv6 Translation Service instance.</p>
-             * <ul>
-             * <li><strong>Prepay</strong>: subscription</li>
-             * <li><strong>Postpay</strong>: pay-as-you-go</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Prepay</p>
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -576,10 +535,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region of the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -587,10 +543,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification of the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>small</p>
+             * Spec.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -598,10 +551,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

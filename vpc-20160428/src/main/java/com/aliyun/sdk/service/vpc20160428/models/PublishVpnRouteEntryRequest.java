@@ -208,7 +208,7 @@ public class PublishVpnRouteEntryRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The next hop of the VPN gateway route.</p>
+         * <p>The next hop of the route entry of the VPN gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,11 +252,16 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to advertise the VPN gateway route to the VPC route table. Valid values:</p>
+         * <p>Specifies whether to publish or withdraw the route. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Publishes the destination-based route or policy-based route to the system route table of the VPC.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Withdraws the published destination-based route or policy-based route from the system route table of the VPC.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>If a route entry with the same destination CIDR block exists in both the policy-based route table and the destination-based route table, and both route entries are published to the same VPC, when you withdraw the route entry from the policy-based route table, the route entry in the destination-based route table is also withdrawn. When you withdraw the route entry from the destination-based route table, the route entry in the policy-based route table is also withdrawn.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,8 +274,8 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VPN gateway is created.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPN gateway instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +306,7 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The destination CIDR block of the VPN gateway route.</p>
+         * <p>The destination CIDR block of the route entry of the VPN gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,10 +319,12 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The type of the VPN gateway route. Valid values:</p>
+         * <p>The type of the route entry of the VPN gateway. Valid values:</p>
          * <ul>
-         * <li><strong>pbr</strong>: policy-based route</li>
-         * <li><strong>dbr</strong>: destination-based route</li>
+         * <li><p><strong>pbr</strong>: policy-based route.</p>
+         * </li>
+         * <li><p><strong>dbr</strong>: destination-based route.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -331,7 +338,7 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -173,9 +173,9 @@ public class DescribeVbrHaRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,10 +188,12 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid Values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, the instance is started.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +224,7 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the VBR is deployed.</p>
+         * <p>The region ID of the VBR.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +255,7 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VBR failover group.</p>
+         * <p>The VBR failover group instance ID. You must specify at least one of <strong>VbrHaId</strong> and <strong>VbrId</strong>. If both are omitted, the service returns MissingParam.VbrHaIdOrVbrId (400).</p>
          * 
          * <strong>example:</strong>
          * <p>vbrha-sa1sxheuxtd98****</p>
@@ -265,7 +267,7 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * <p>The VBR ID.</p>
+         * <p>The VBR instance ID. You must specify at least one of <strong>VbrId</strong> and <strong>VbrHaId</strong>. If both are omitted, the service returns MissingParam.VbrHaIdOrVbrId (400).</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-bp1jcg5cmxjbl9xgc****</p>

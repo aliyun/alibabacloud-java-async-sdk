@@ -120,7 +120,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
 
         /**
          * <p>The time when the IPsec server was created.</p>
-         * <p>T is used as a delimiter. Z indicates that the time is in UTC.</p>
+         * <p>T is the separator and Z indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-22T03:24:28Z</p>
@@ -131,7 +131,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IPsec server ID.</p>
+         * <p>The ID of the IPsec server.</p>
          * 
          * <strong>example:</strong>
          * <p>iss-bp1jougp8cfsbo8y9****</p>
@@ -142,7 +142,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IPsec server name.</p>
+         * <p>The name of the IPsec server.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -153,7 +153,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region where the VPN gateway is deployed.</p>
+         * <p>The region ID of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -175,7 +175,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>vpn-bp17lofy9fd0dnvzv****</p>

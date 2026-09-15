@@ -54,7 +54,7 @@ public class DeleteVpcPrefixListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>64B48E3D-DF70-471B-AA93-08E683A1B45</p>

@@ -275,7 +275,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the associated ACL.</p>
+         * <p>The ID of the associated access control policy group.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6transacl-bp1g8bhrdexnrxxxx</p>
@@ -287,10 +287,10 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable access control lists (ACLs). Valid values:</p>
+         * <p>Specifies whether to enable access control. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,10 +303,12 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable ACLs. Valid values:</p>
+         * <p>The type of access control:</p>
          * <ul>
-         * <li><strong>white</strong>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</li>
-         * <li><strong>black</strong>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</li>
+         * <li><p><strong>white</strong>: Allows the IPv6 addresses in the access control policy group to access backend services.</p>
+         * </li>
+         * <li><p><strong>black</strong>: Denies the IPv6 addresses in the access control policy group from accessing backend services.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -319,7 +321,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * <p>The port used by the IPv6 address allocated by the IPv6 Translation Service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +334,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The public IPv4 address that needs to provide IPv6 services.</p>
+         * <p>The public IPv4 address that requires IPv6 services (the IPv4 address of the IPv4-only server).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,7 +347,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The port of the public IPv4 address that needs to provide IPv6 services.</p>
+         * <p>The port of the public IPv4 address that requires IPv6 services.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,13 +360,13 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The maximum bandwidth specified in the IPv6 mapping entry. Valid values:</p>
+         * <p>The peak bandwidth of the IPv6 translation mapping entry. Valid values: </p>
          * <ul>
-         * <li>-1 (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</li>
-         * <li>1 to 200: the bandwidth value specified in the IPv6 mapping entry. Unit: Mbit/s.</li>
+         * <li>-1 (default): No bandwidth limit is imposed on the IPv6 translation mapping entry.  </li>
+         * <li>1-200Mbps: The bandwidth value of the mapping entry.</li>
          * </ul>
          * <blockquote>
-         * <p>The sum of the maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</p>
+         * <p>The sum of peak bandwidth values of all IPv6 translation mapping entries cannot exceed the peak bandwidth of the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -377,7 +379,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The description of the IPv6 mapping entry.</p>
+         * <p>The description of the IPv6 translation mapping entry.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -389,7 +391,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the IPv6 translation mapping entry. The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>name1</p>
@@ -401,7 +403,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the IPv6 Translation Service instance.</p>
+         * <p>The instance ID of the IPv6 Translation Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -432,7 +434,7 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
+         * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -463,10 +465,10 @@ public class CreateIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><strong>tcp</strong>: Forwards TCP packets.  </li>
+         * <li><strong>udp</strong>: Forwards UDP packets.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

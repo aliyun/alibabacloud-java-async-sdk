@@ -70,7 +70,7 @@ public class CreateSnatEntryResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD97C3</p>
+         * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

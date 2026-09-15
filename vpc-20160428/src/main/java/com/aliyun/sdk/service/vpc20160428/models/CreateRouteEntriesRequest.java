@@ -145,14 +145,9 @@ public class CreateRouteEntriesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to only precheck the request. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p><strong>true</strong>: performs a dry run without creating routes. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</p>
+         * <p><strong>false</strong> (default): performs a normal request and sends the request. If the check passes, a 2xx HTTP status code is returned and the routes are created.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -179,8 +174,8 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the route table.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the route table resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +206,7 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         /**
-         * <p>The routes.</p>
+         * <p>The list of route entry information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder routeEntries(java.util.List<RouteEntries> routeEntries) {
@@ -349,7 +344,7 @@ public class CreateRouteEntriesRequest extends Request {
             } 
 
             /**
-             * <p>The description of the custom route. You can specify at most 50 descriptions.</p>
+             * <p>The description of the custom route entry. You can specify up to 50 descriptions.</p>
              * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -361,10 +356,12 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The destination CIDR block of the custom route. IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported. You can enter up to 50 destination CIDR blocks. Make sure that the following requirements are met:</p>
+             * <p>The destination CIDR block of the custom route entry. Both IPv4 and IPv6 destination CIDR blocks are supported. You can specify up to 50 destination CIDR blocks. The following requirements must be met:</p>
              * <ul>
-             * <li>The destination CIDR block cannot point to 100.64.0.0/10 or belong to 100.64.0.0/10.</li>
-             * <li>The destination CIDR block of each route in the route table is unique.</li>
+             * <li><p>The destination CIDR block cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.  </p>
+             * </li>
+             * <li><p>The destination CIDR blocks of different route entries in the same route table must be unique.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -377,14 +374,14 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The IP version. Valid values: You can specify at most 50 IP versions. Valid values:</p>
+             * <p>The version of the IP protocol. You can specify up to 50 IP protocol versions. Valid values:</p>
              * <ul>
-             * <li><strong>4</strong>: IPv4</li>
-             * <li><strong>6</strong>: IPv6</li>
+             * <li><strong>4</strong>: IPv4.</li>
+             * <li><strong>6</strong>: IPv6.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>IPv4</p>
+             * <p>4</p>
              */
             public Builder ipVersion(Integer ipVersion) {
                 this.ipVersion = ipVersion;
@@ -392,7 +389,7 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The name of the custom route that you want to add. You can specify at most 50 names.</p>
+             * <p>The name of the custom route entry to add. You can specify up to 50 names.</p>
              * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -404,7 +401,10 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the next hop for the custom route. You can specify at most 50 instance IDs.</p>
+             * <p>The ID of the next hop instance of the custom route entry. You can specify up to 50 instance IDs.</p>
+             * <blockquote>
+             * <p>If NextHopType is set to ECR, you can call the <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> operation to obtain the AssociationId as the next hop ID.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -416,21 +416,38 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The type of next hop. You can specify at most 50 next hop types. Valid values:</p>
+             * <p>The type of the next hop of the custom route entry. You can specify up to 50 next hop types. Valid values: </p>
              * <ul>
-             * <li><strong>Instance</strong>: Elastic Compute Service (ECS) instance. This is the default value.</li>
-             * <li><strong>HaVip</strong>: high-availability virtual IP address (HaVip).</li>
-             * <li><strong>RouterInterface</strong>: router interface.</li>
-             * <li><strong>NetworkInterface</strong>: elastic network interface (ENI).</li>
-             * <li><strong>VpnGateway</strong>: VPN gateway.</li>
-             * <li><strong>IPv6Gateway</strong>: IPv6 gateway.</li>
-             * <li><strong>NatGateway</strong>: NAT gateway.</li>
-             * <li><strong>Attachment</strong>: transit router.</li>
-             * <li><strong>VpcPeer</strong>: VPC peering connection.</li>
-             * <li><strong>Ipv4Gateway</strong>: IPv4 gateway.</li>
-             * <li><strong>GatewayEndpoint</strong>: gateway endpoint.</li>
-             * <li><strong>CenBasic</strong>: CEN does not support transfer routers.</li>
-             * <li><strong>Ecr</strong>: Express Connect Router (ECR).</li>
+             * <li><p><strong>Instance</strong> (default): ECS instance.</p>
+             * </li>
+             * <li><p><strong>HaVip</strong>: high-availability virtual IP address.  </p>
+             * </li>
+             * <li><p><strong>RouterInterface</strong>: vRouter interface.</p>
+             * </li>
+             * <li><p><strong>NetworkInterface</strong>: elastic network interfaces (ENIs).</p>
+             * </li>
+             * <li><p><strong>VpnGateway</strong>: VPN gateway.</p>
+             * </li>
+             * <li><p><strong>IPv6Gateway</strong>: IPv6 gateway.</p>
+             * </li>
+             * <li><p><strong>NatGateway</strong>: NAT gateway.</p>
+             * </li>
+             * <li><p><strong>Attachment</strong>: forward router.</p>
+             * </li>
+             * <li><p><strong>VpcPeer</strong>: VPC peering connection.</p>
+             * </li>
+             * <li><p><strong>Ipv4Gateway</strong>: IPv4 gateway.</p>
+             * </li>
+             * <li><p><strong>GatewayEndpoint</strong>: gateway endpoint.</p>
+             * </li>
+             * <li><p><strong>CenBasic</strong>: CEN that does not support forward routers.</p>
+             * </li>
+             * <li><p><strong>Ecr</strong>: Express Connect Router (ECR).</p>
+             * </li>
+             * <li><p><strong>GatewayLoadBalancerEndpoint</strong>: Gateway Load Balancer endpoint (GWLBe).</p>
+             * </li>
+             * <li><p><strong>RouteTargetGroup</strong>: route target group.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -443,7 +460,7 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the route table to which you want to add custom route s. You can specify at most 50 route table IDs.</p>
+             * <p>The ID of the route table to which you want to add custom route entries. You can specify up to 50 route table IDs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

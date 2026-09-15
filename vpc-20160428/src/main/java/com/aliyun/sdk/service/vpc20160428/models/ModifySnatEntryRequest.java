@@ -231,9 +231,9 @@ public class ModifySnatEntryRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -246,10 +246,12 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * <p>Whether to perform a dry run of this request, with values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Sends a check request without modifying the SNAT entry. The checks include whether the required parameters are filled in, the request format, and business restrictions. If the check fails, the corresponding error is returned. If the check passes, an error code <code>DryRunOperation</code> is returned.</li>
-         * <li><strong>false</strong> (default): Sends a normal request. After passing the check, it returns a 2xx HTTP status code and modifies the SNAT entry.</li>
+         * <li><p><strong>true</strong>: performs a dry run without modifying the SNAT entry. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, a 2xx HTTP status code is returned and the SNAT entry is modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,14 +264,16 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable IP affinity. Values:</p>
+         * <p>Specifies whether to enable EIP affinity. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Disable IP affinity.</li>
-         * <li><strong>1</strong>: Enable IP affinity.<blockquote>
-         * <p>After enabling the IP affinity switch, if an SNAT entry is bound to multiple EIPs or NAT IPs, the same client will use the same EIP or NAT IP for access; otherwise, the client will randomly select from the bound EIPs or NAT IPs for access.</p>
-         * </blockquote>
+         * <li><p><strong>0</strong>: Disables EIP affinity.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Enables EIP affinity.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>After EIP affinity is enabled, if the SNAT entry is associated with multiple EIPs or NAT IP addresses, the same client uses the same EIP or NAT IP address for access. Otherwise, the client randomly selects an EIP or NAT IP address from the associated ones for access.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -281,7 +285,10 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * <p>Elastic Network Interface ID. The IPv4 address set of the elastic network interface will be used as the SNAT address.</p>
+         * <p>The ID of the elastic network interface (ENI).</p>
+         * <blockquote>
+         * <p>The IPv4 addresses of the ENI are used as the SNAT addresses.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>eni-gw8g131ef2dnbu3k****</p>
@@ -312,7 +319,7 @@ public class ModifySnatEntryRequest extends Request {
 
         /**
          * <p>The region ID of the NAT gateway.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +364,7 @@ public class ModifySnatEntryRequest extends Request {
 
         /**
          * <p>The name of the SNAT entry.</p>
-         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>SnatEntry-1</p>
@@ -370,10 +377,15 @@ public class ModifySnatEntryRequest extends Request {
 
         /**
          * <ul>
-         * <li><p>The elastic IP addresses (EIPs) specified in the SNAT entry when you modify an SNAT entry of an Internet NAT gateway. Separate EIPs with commas (,).</p>
-         * <p>If you select multiple EIPs to create an SNAT address pool, connections are hashed to these EIPs. Network traffic may not be evenly distributed to the EIPs because the amount of traffic passes through each connection varies. We recommend that you associate these EIPs with the same EIP bandwidth plan to prevent service interruptions due to the bandwidth limit of an individual EIP.</p>
+         * <li>When you modify a SNAT entry for an Internet NAT gateway, this parameter specifies the EIP in the SNAT entry. Separate multiple EIPs with commas (,).</li>
+         * </ul>
+         * <blockquote>
+         * <p>When you allocate multiple EIPs to configure a SNAT IP address pool, connections are distributed across the EIPs by using a hash algorithm. Because the traffic volume of each connection varies, service traffic may be unevenly distributed across the EIPs. To prevent service interruptions caused by bandwidth limits on a single EIP, add all EIPs to the same Internet Shared Bandwidth instance.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>When you modify a SNAT entry for a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry. Separate multiple NAT IP addresses with commas (,).</p>
          * </li>
-         * <li><p>When you modify an SNAT entry of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.</p>
+         * <li><p>The SnatIp and NetworkInterfaceId parameters cannot be specified at the same time.</p>
          * </li>
          * </ul>
          * 

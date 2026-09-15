@@ -132,7 +132,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The ACLs.</p>
+         * AclEntries.
          */
         public Builder aclEntries(AclEntries aclEntries) {
             this.aclEntries = aclEntries;
@@ -140,7 +140,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * <p>The ACL ID.</p>
+         * <p>The ID of the access control policy group.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6transacl-bp1de2****</p>
@@ -151,7 +151,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * <p>The name of the ACL.</p>
+         * <p>The name of the access control policy group.</p>
          * 
          * <strong>example:</strong>
          * <p>acl1</p>
@@ -162,7 +162,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -277,10 +277,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The remarks of the ACL entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>client IP</p>
+             * AclEntryComment.
              */
             public Builder aclEntryComment(String aclEntryComment) {
                 this.aclEntryComment = aclEntryComment;
@@ -288,10 +285,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             }
 
             /**
-             * <p>The ID of the ACL entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ipv6transaclentry-bp105jrs****</p>
+             * AclEntryId.
              */
             public Builder aclEntryId(String aclEntryId) {
                 this.aclEntryId = aclEntryId;
@@ -299,10 +293,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             }
 
             /**
-             * <p>The IP address specified in the ACL entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12ab:0:0:XXXX::0102/128</p>
+             * AclEntryIp.
              */
             public Builder aclEntryIp(String aclEntryIp) {
                 this.aclEntryIp = aclEntryIp;

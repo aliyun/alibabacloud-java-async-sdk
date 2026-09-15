@@ -67,7 +67,7 @@ public class CreateIPv6TranslatorAclListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ACL ID.</p>
+         * <p>The ID of the access control policy group.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6transacl-bp1de2xxxx</p>

@@ -312,7 +312,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the network ACL.</p>
+         * <p>The ID of the access control policy group.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6transacl-bp1de2****</p>
@@ -324,10 +324,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable access control lists (ACLs). Valid values:</p>
+         * <p>Specifies whether to enable access control. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,10 +340,12 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ACL type. Valid values:</p>
+         * <p>The type of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>white</strong>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</li>
-         * <li><strong>black</strong>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</li>
+         * <li><p><strong>white</strong>: allows the IPv6 addresses in the access control policy group to access backend services.</p>
+         * </li>
+         * <li><p><strong>black</strong>: denies the IPv6 addresses in the access control policy group from accessing backend services.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,7 +358,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * <p>The IPv6 address allocated by the IPv6 Translation Service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2400:3200:1600::XX</p>
@@ -368,7 +370,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The port used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * <p>The port used by the IPv6 address allocated by the IPv6 Translation Service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -380,7 +382,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The public IPv4 address that needs to provide IPv6 services.</p>
+         * <p>The public IPv4 address that requires IPv6 services.</p>
          * 
          * <strong>example:</strong>
          * <p>47.99.XX.XX</p>
@@ -392,7 +394,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The port used by the public IPv4 address that needs to provide IPv6 services.</p>
+         * <p>The port used by the public IPv4 address that requires IPv6 services.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -405,7 +407,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -417,7 +419,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The name of the IPv6 mapping entry.</p>
+         * <p>The name of the IPv6 Translation mapping entry.</p>
          * 
          * <strong>example:</strong>
          * <p>entryname</p>
@@ -429,9 +431,9 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the IPv6 mapping entry.</p>
+         * <p>The ID of the IPv6 Translation mapping entry to query. </p>
          * <blockquote>
-         * <p>If <strong>Ipv6TranslatorId</strong> and <strong>Ipv6TranslatorEntryId</strong> are empty, information about all IPv6 mapping entries is returned. If only <strong>Ipv6TranslatorEntryId</strong> is empty, information about the IPv6 mapping entries of the current IPv6 Translation Service instance is returned.</p>
+         * <p>If both <strong>Ipv6TranslatorId</strong> and <strong>Ipv6TranslatorEntryId</strong> are empty, all IPv6 Translation mapping entries are returned. If only <strong>Ipv6TranslatorEntryId</strong> is empty, all IPv6 Translation mapping entries under the current IPv6 Translation Service instance are returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -474,7 +476,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -486,7 +488,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -498,7 +500,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
+         * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -529,7 +531,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * <p>The protocol used by the data to be forwarded.</p>
+         * <p>The protocol type used for data forwarding.</p>
          * 
          * <strong>example:</strong>
          * <p>tcp</p>

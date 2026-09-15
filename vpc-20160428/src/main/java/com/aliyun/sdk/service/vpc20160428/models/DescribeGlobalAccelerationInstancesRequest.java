@@ -257,10 +257,12 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The bandwidth type of the GA instance. Valid values:</p>
+         * <p>The bandwidth type of the Alibaba Cloud Global Accelerator (GA) instance. Valid values: </p>
          * <ul>
-         * <li><strong>Sharing</strong></li>
-         * <li><strong>Exclusive</strong> (default)</li>
+         * <li><p><strong>Sharing</strong>: Queries shared-bandwidth instances.</p>
+         * </li>
+         * <li><p><strong>Exclusive</strong> (default): Queries dedicated-bandwidth instances.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,7 +275,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the GA instance.</p>
+         * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ga-234sljmxaz****</p>
@@ -285,10 +287,12 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return information about pending orders. Valid values:</p>
+         * <p>Specifies whether to include reservation data that has not taken effect. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default)</li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong> (default): Does not include reservation data that has not taken effect.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Includes reservation data that has not taken effect.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,7 +305,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the GA instance.</p>
+         * <p>The public IP address of the Alibaba Cloud Global Accelerator (GA) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>12.xx.xx.78</p>
@@ -313,7 +317,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the GA instance.</p>
+         * <p>The name of the Alibaba Cloud Global Accelerator (GA) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>GA-1</p>
@@ -343,7 +347,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -355,7 +359,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page for paging queries. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -367,7 +371,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the GA instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region where the Alibaba Cloud Global Accelerator (GA) instance resides. You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -398,7 +402,7 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backend service instance.</p>
+         * <p>The instance ID of the backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>i-sxjblddejj9x****</p>
@@ -410,12 +414,16 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region of the backend service. Valid values:</p>
+         * <p>The backend service region. Valid values: </p>
          * <ul>
-         * <li><strong>china-mainland</strong></li>
-         * <li><strong>north-america</strong></li>
-         * <li><strong>asia-pacific</strong></li>
-         * <li><strong>europe</strong></li>
+         * <li><p><strong>china-mainland</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>north-america</strong>: North America.</p>
+         * </li>
+         * <li><p><strong>asia-pacific</strong>: Asia Pacific.</p>
+         * </li>
+         * <li><p><strong>europe</strong>: Europe.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,12 +436,16 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the GA instance. Valid values:</p>
+         * <p>The instance status of the Alibaba Cloud Global Accelerator (GA) instance. Valid values: </p>
          * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Inuse</strong></li>
-         * <li><strong>Associating</strong></li>
-         * <li><strong>Unassociating</strong></li>
+         * <li><p><strong>Available</strong>: active.</p>
+         * </li>
+         * <li><p><strong>Inuse</strong>: Allocated.</p>
+         * </li>
+         * <li><p><strong>Associating</strong>: Being attached.</p>
+         * </li>
+         * <li><p><strong>Unassociating</strong>: Being disassociated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

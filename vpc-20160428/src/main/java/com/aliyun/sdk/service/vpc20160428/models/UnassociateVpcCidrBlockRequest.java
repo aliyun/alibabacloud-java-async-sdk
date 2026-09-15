@@ -159,11 +159,9 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         } 
 
         /**
-         * <p>The secondary IPv6 CIDR block to be deleted.</p>
+         * <p>The secondary IPv6 CIDR block to delete.</p>
          * <blockquote>
-         * <ul>
-         * <li>You must set one of the Ipv6CidrBlock and SecondaryCidrBlock parameters.</li>
-         * </ul>
+         * <p>You must specify one of the <strong>Ipv6CidrBlock</strong> parameter and the <strong>SecondaryCidrBlock</strong> parameter, but you cannot specify both.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -194,12 +192,12 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the VPC to which the secondary CIDR block to be deleted belongs.</p>
+         * <p>The region ID of the VPC from which you want to delete a secondary CIDR block. </p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>ch-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -226,11 +224,9 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * <p>The secondary IPv4 CIDR block to be deleted.</p>
+         * <p>The secondary IPv4 CIDR block to delete.</p>
          * <blockquote>
-         * <ul>
-         * <li>You must set one of the SecondaryCidrBlock and Ipv6CidrBlock parameters.</li>
-         * </ul>
+         * <p>You must specify one of the <strong>SecondaryCidrBlock</strong> parameter and the <strong>Ipv6CidrBlock</strong> parameter, but you cannot specify both.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

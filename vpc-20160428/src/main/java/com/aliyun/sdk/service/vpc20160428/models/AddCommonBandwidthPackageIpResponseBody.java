@@ -54,7 +54,10 @@ public class AddCommonBandwidthPackageIpResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01FDDD49-C4B7-4D2A-A8E5-A93915C450A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

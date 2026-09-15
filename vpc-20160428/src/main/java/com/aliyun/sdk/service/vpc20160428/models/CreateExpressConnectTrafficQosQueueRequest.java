@@ -188,10 +188,10 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         } 
 
         /**
-         * <p>The percentage of bandwidth allocated to the QoS queue.</p>
+         * <p>The bandwidth percentage of the QoS queue.</p>
          * <ul>
-         * <li>If QueueType is set to <strong>Medium</strong>, this parameter is required. Valid values: 1 to 100.</li>
-         * <li>If QueueType is set to <strong>Default</strong>, a value of - is returned.</li>
+         * <li>If the QoS queue type is <strong>Medium</strong>, this parameter is required. Valid values: 1 to 100.</li>
+         * <li>If the QoS queue type is <strong>Default</strong>, this parameter is set to &quot;-&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,9 +205,9 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-2giu0a6vd5x0mv4700</p>
+         * <p>qos-2giu0a6vd5x0mv****</p>
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -252,7 +252,7 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The description of the QoS queue.</p>
-         * <p>It must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-queue-test</p>
@@ -265,7 +265,7 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The name of the QoS queue.</p>
-         * <p>It must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-queue-test</p>
@@ -277,14 +277,17 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * <p>The priority of the QoS queue. Valid values:</p>
+         * <p>The type of the QoS queue. Valid values:</p>
          * <ul>
-         * <li><strong>High</strong></li>
-         * <li><strong>Medium</strong></li>
-         * <li><strong>Default</strong>: default queue.</li>
+         * <li><p><strong>High</strong>: high-priority queue.</p>
+         * </li>
+         * <li><p><strong>Medium</strong>: lower-priority queue.</p>
+         * </li>
+         * <li><p><strong>Default</strong>: default priority queue.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>You cannot create a QoS queue of the default priority.</p>
+         * <p>The default priority queue cannot be created.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -299,7 +302,7 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
 
         /**
          * <p>The region ID of the QoS policy.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

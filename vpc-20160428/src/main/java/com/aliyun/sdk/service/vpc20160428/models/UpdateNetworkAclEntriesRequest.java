@@ -216,9 +216,9 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,10 +231,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,7 +297,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
         /**
          * <p>The region ID of the network ACL.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,11 +330,13 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         /**
          * <p>Specifies whether to update outbound rules. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: updates outbound rules.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): does not update outbound rules.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter cannot be used to add outbound rules to ACLs. If you want to add more outbound rules to ACLs, specify both the existing rule and the rule that you want to add when you call this API operation. If you specify only the rule that you want to add, it overwrites the existing rule.</p>
+         * <p>This parameter does not support incremental updates. If the ACL already has one outbound rule and you want to add another outbound rule, you must pass in both rules when calling this operation. If you pass in only the new outbound rule, the existing outbound rule is deleted.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -349,11 +351,13 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         /**
          * <p>Specifies whether to update inbound rules. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: updates inbound rules.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): does not update inbound rules.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter cannot be used to add inbound rules to ACLs. If you want to add more inbound rules to ACLs, you must specify both the existing rule and the rule that you want to add when you call this API operation. If you specify only the rule that you want to add, it overwrites the existing rule.</p>
+         * <p>This parameter does not support incremental updates. If the ACL already has one inbound rule and you want to add another inbound rule, you must pass in both rules when calling this operation. If you pass in only the new inbound rule, the existing inbound rule is deleted.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -528,7 +532,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The destination CIDR block. Alternatively, a prefix list ID can be provided.</p>
+             * <p>The destination CIDR block. You can also specify a prefix list.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/24
@@ -540,7 +544,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The rule type. Set the value to <strong>custom</strong>.</p>
+             * <p>The rule type. Set the value to <strong>custom</strong>, which indicates a custom rule.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -551,7 +555,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The IP version:</p>
+             * <p>The IP version. Valid values:</p>
              * <ul>
              * <li><strong>IPv4</strong></li>
              * <li><strong>IPv6</strong></li>
@@ -566,8 +570,8 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the outbound rule.</p>
-             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>99</strong>. You can specify at most 100 outbound rule IDs.</p>
+             * <p>The ID of the outbound rule entry.</p>
+             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>99</strong>. You can update up to 100 outbound rule entries.</p>
              * 
              * <strong>example:</strong>
              * <p>nae-2zecs97e0brcge46****</p>
@@ -578,7 +582,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The name of the outbound rule.</p>
+             * <p>The name of the outbound rule entries.</p>
              * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -590,10 +594,12 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The access control policy. Valid values:</p>
+             * <p>The authorization policy. Valid values:</p>
              * <ul>
-             * <li><strong>accept</strong></li>
-             * <li><strong>drop</strong></li>
+             * <li><p><strong>accept</strong>: allows access.</p>
+             * </li>
+             * <li><p><strong>drop</strong>: denies access.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -605,10 +611,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The destination port range of the outbound traffic.</p>
+             * <p>The destination port range of the outbound rule.</p>
              * <ul>
-             * <li>If <strong>Protocol</strong> is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which indicates all ports are available.</li>
-             * <li>If <strong>Protocol</strong> is set to <strong>tcp</strong> or <strong>udp</strong>, valid port numbers are <strong>1</strong> to <strong>65535</strong>. Format: <strong>1/200</strong> (port 1 to 200) or <strong>80/80</strong> (port 80).</li>
+             * <li>If <strong>Protocol</strong> (Protocol Type) is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which indicates all ports.</li>
+             * <li>If <strong>Protocol</strong> (Protocol Type) is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is <strong>1</strong> to <strong>65535</strong>. The format is <strong>1/200</strong> or <strong>80/80</strong>, which indicates port 1 to port 200 or port 80.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -622,12 +628,18 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             /**
              * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li><strong>icmp</strong></li>
-             * <li><strong>gre</strong></li>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
-             * <li><strong>all</strong></li>
-             * <li><strong>icmpv6</strong></li>
+             * <li><p><strong>icmp</strong>: Internet Control Message Protocol.</p>
+             * </li>
+             * <li><p><strong>gre</strong>: Generic Routing Encapsulation.</p>
+             * </li>
+             * <li><p><strong>tcp</strong>: Transmission Control Protocol.</p>
+             * </li>
+             * <li><p><strong>udp</strong>: User Datagram Protocol.</p>
+             * </li>
+             * <li><p><strong>all</strong>: all protocols.</p>
+             * </li>
+             * <li><p><strong>icmpv6</strong>: Internet Control Message Protocol for IPv6.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -801,7 +813,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The rule type. Set the value to <strong>custom</strong>.</p>
+             * <p>The rule type. Set the value to <strong>custom</strong>, which indicates a custom rule.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -812,7 +824,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The IP version:</p>
+             * <p>The IP version. Valid values:</p>
              * <ul>
              * <li><strong>IPv4</strong></li>
              * <li><strong>IPv6</strong></li>
@@ -827,8 +839,8 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the inbound rule.</p>
-             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>99</strong>. You can specify at most 100 inbound rule IDs.</p>
+             * <p>The ID of the inbound rule entry.</p>
+             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>99</strong>. You can update up to 100 inbound rule entries.</p>
              * 
              * <strong>example:</strong>
              * <p>nae-2zepn32de59j8m4****</p>
@@ -839,7 +851,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The name of the inbound rule.</p>
+             * <p>The name of the inbound rule entries.</p>
              * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
@@ -851,10 +863,12 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The access control policy. Valid values:</p>
+             * <p>The authorization policy. Valid values:</p>
              * <ul>
-             * <li><strong>accept</strong>: allows network traffic.</li>
-             * <li><strong>drop</strong></li>
+             * <li><p><strong>accept</strong>: allows access.</p>
+             * </li>
+             * <li><p><strong>drop</strong>: denies access.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -868,8 +882,8 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             /**
              * <p>The source port range of the inbound rule.</p>
              * <ul>
-             * <li>If <strong>Protocol</strong> is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which indicates all ports are available.</li>
-             * <li>If <strong>Protocol</strong> is set to <strong>tcp</strong> or <strong>udp</strong>, valid port numbers are <strong>1</strong> to <strong>65535</strong>. Format: <strong>1/200</strong> (port 1 to 200) or <strong>80/80</strong> (port 80).</li>
+             * <li>If <strong>Protocol</strong> (Protocol Type) is set to <strong>all</strong>, <strong>icmp</strong>, or <strong>gre</strong>, the port range is -1/-1, which indicates all ports.</li>
+             * <li>If <strong>Protocol</strong> (Protocol Type) is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is <strong>1</strong> to <strong>65535</strong>. The format is <strong>1/200</strong> or <strong>80/80</strong>, which indicates port 1 to port 200 or port 80.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -881,14 +895,20 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>Protocol type. Valid values:</p>
+             * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li><strong>icmp</strong></li>
-             * <li><strong>gre</strong></li>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
-             * <li><strong>all</strong></li>
-             * <li><strong>icmpv6</strong></li>
+             * <li><p><strong>icmp</strong>: Internet Control Message Protocol.</p>
+             * </li>
+             * <li><p><strong>gre</strong>: Generic Routing Encapsulation.</p>
+             * </li>
+             * <li><p><strong>tcp</strong>: Transmission Control Protocol.</p>
+             * </li>
+             * <li><p><strong>udp</strong>: User Datagram Protocol.</p>
+             * </li>
+             * <li><p><strong>all</strong>: all protocols.</p>
+             * </li>
+             * <li><p><strong>icmpv6</strong>: Internet Control Message Protocol for IPv6.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -900,7 +920,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * <p>The source CIDR block. Alternatively, a prefix list ID can be provided.</p>
+             * <p>The source CIDR block. You can also specify a prefix list.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/24

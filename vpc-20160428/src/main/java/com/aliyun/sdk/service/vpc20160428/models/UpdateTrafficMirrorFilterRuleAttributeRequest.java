@@ -258,9 +258,9 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -273,7 +273,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new destination CIDR block of the inbound or outbound traffic.</p>
+         * <p>The destination CIDR block of the network traffic for the inbound or outbound rule to be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>
@@ -285,9 +285,9 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new destination port range of the inbound or outbound traffic.</p>
+         * <p>The destination port range of the network traffic for the inbound or outbound rule to be modified.</p>
          * <blockquote>
-         * <p> If you set <strong>Protocol</strong> to <strong>ICMP</strong>, you cannot change the port range.</p>
+         * <p>If <strong>Protocol</strong> is set to <strong>ICMP</strong>, the port range cannot be modified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -300,10 +300,12 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: only checks the API request. The configuration of the inbound or outbound rule is not modified. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</li>
+         * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -334,7 +336,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new priority of the inbound or outbound rule. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the inbound or outbound rule to be modified. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,12 +348,16 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new protocol that is used by the traffic to be mirrored by the inbound or outbound rule. Valid values:</p>
+         * <p>The Protocol Type of the network traffic to be mirrored by the inbound or outbound rule. Valid values:</p>
          * <ul>
-         * <li><strong>ALL</strong>: all protocols</li>
-         * <li><strong>ICMP</strong>: Internet Control Message Protocol (ICMP)</li>
-         * <li><strong>TCP</strong>: TCP</li>
-         * <li><strong>UDP</strong>: User Datagram Protocol (UDP)</li>
+         * <li><p><strong>ALL</strong>: all protocols.</p>
+         * </li>
+         * <li><p><strong>ICMP</strong>: Internet Control Message Protocol.</p>
+         * </li>
+         * <li><p><strong>TCP</strong>: Transmission Control Protocol.</p>
+         * </li>
+         * <li><p><strong>UDP</strong>: User Datagram Protocol.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,8 +370,8 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the mirrored traffic belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</p>
+         * <p>The region ID of the traffic mirror.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -396,10 +402,12 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new action of the inbound or outbound rule. Valid values:</p>
+         * <p>The collection policy of the inbound or outbound rule to be modified. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: accepts network traffic.</li>
-         * <li><strong>drop</strong>: drops network traffic.</li>
+         * <li><p><strong>accept</strong>: collects network traffic.</p>
+         * </li>
+         * <li><p><strong>drop</strong>: does not collect network traffic.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -412,7 +420,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new source CIDR block of the inbound or outbound traffic.</p>
+         * <p>The source CIDR block of the network traffic for the inbound or outbound rule to be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -424,9 +432,9 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new source port range of the inbound or outbound traffic.</p>
+         * <p>The source port range of the network traffic for the inbound or outbound rule to be modified.</p>
          * <blockquote>
-         * <p> If you set <strong>Protocol</strong> to <strong>ICMP</strong>, you cannot change the port range.</p>
+         * <p>If <strong>Protocol</strong> is set to <strong>ICMP</strong>, the port range cannot be modified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -439,7 +447,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the inbound or outbound rule.</p>
+         * <p>The instance ID of the inbound or outbound rule of the traffic mirroring filter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -273,7 +273,7 @@ public class CreateExpressCloudConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The bandwidth for ECC, which corresponds to the bandwidth for the underlying circuit.</p>
+         * <p>The bandwidth of the Express Cloud Connection instance, which corresponds to the bandwidth of the underlying physical connection.</p>
          * <p>Unit: Mbit/s.</p>
          * <p>This parameter is required.</p>
          * 
@@ -287,7 +287,7 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The email address of the contact who applies for ECC.</p>
+         * <p>The email address of the contact person for the Express Cloud Connection application.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:XX@example.com">XX@example.com</a></p>
@@ -299,7 +299,7 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The phone number of the contact who applies for ECC.</p>
+         * <p>The phone number of the contact person for the Express Cloud Connection application.</p>
          * 
          * <strong>example:</strong>
          * <p>132*********</p>
@@ -311,11 +311,11 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The description of ECC.</p>
-         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the Express Cloud Connection instance.</p>
+         * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character, but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECC</p>
+         * <p>高速上云服务</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -324,7 +324,7 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The ID card number of the contact who applies for ECC.</p>
+         * <p>The ID card number of the contact person for the Express Cloud Connection application.</p>
          * 
          * <strong>example:</strong>
          * <p>32*****************</p>
@@ -336,7 +336,7 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The Internet service provider (ISP) for the data center.</p>
+         * <p>The network service provider of the IDC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -349,8 +349,8 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The name of the ECC instance.</p>
-         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the Express Cloud Connection instance.</p>
+         * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-), but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>doctest</p>
@@ -380,10 +380,10 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The city where the data center is located.</p>
+         * <p>The city where the on-premises IDC is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hangzhou</p>
+         * <p>杭州</p>
          */
         public Builder peerCity(String peerCity) {
             this.putQueryParameter("PeerCity", peerCity);
@@ -392,14 +392,14 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The geographical location of the data center.</p>
+         * <p>The geographic location of the on-premises data center.</p>
          * <blockquote>
-         * <p>It must be accurate to house number-floor-room number-server rack number.</p>
+         * <p>The location must be accurate to the street number, floor, room number, and rack number.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>**city**district/county**road**number**property or building name**building**floor**room number**server rack number**server rack name**device**port</p>
+         * <p><strong>市</strong>区/县<strong>路</strong>号<strong>物业或楼宇名称</strong>座<strong>楼层</strong>房间号<strong>机柜号</strong>机柜名称<strong>设备</strong>端口</p>
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -408,13 +408,18 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The port of the Express Connect circuit. Valid values:</p>
+         * <p>The port type of the Express Connect circuit. Valid values:</p>
          * <ul>
-         * <li>100Base-T</li>
-         * <li>1000Base-T</li>
-         * <li>1000Base-LX</li>
-         * <li>10GBase-T</li>
-         * <li>10GBase-LR</li>
+         * <li><p>100Base-T: 100M Ethernet port</p>
+         * </li>
+         * <li><p>1000Base-T (default): GE electrical port</p>
+         * </li>
+         * <li><p>1000Base-LX: GE single-mode optical port (10 km)</p>
+         * </li>
+         * <li><p>10GBase-T: 10 GE electrical port</p>
+         * </li>
+         * <li><p>10GBase-LR: 10 GE single-mode optical port (10 km)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -427,7 +432,7 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the standby Express Connect circuit.</p>
+         * <p>The instance ID of the redundant Express Cloud Connection circuit.</p>
          * 
          * <strong>example:</strong>
          * <p>ecc-d****</p>
@@ -439,7 +444,7 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the ECC instance.</p>
+         * <p>The region ID of the Express Cloud Connection instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

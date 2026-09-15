@@ -145,7 +145,7 @@ public class UnassociateGlobalAccelerationInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the GA instance.</p>
+         * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,11 +158,14 @@ public class UnassociateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * <p>The backend server type. Valid values:</p>
+         * <p>The type of the instance to disassociate. Valid values:</p>
          * <ul>
-         * <li><strong>RemoteEcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
-         * <li><strong>RemoteSlbInstance</strong>: Server Load Balancer (SLB) instance</li>
-         * <li><strong>RemoteEniInstance</strong>: elastic network interface (ENI)</li>
+         * <li><p><strong>RemoteEcsInstance</strong>: ECS instance.</p>
+         * </li>
+         * <li><p><strong>RemoteSlbInstance</strong>: load balancing instance.</p>
+         * </li>
+         * <li><p><strong>RemoteEniInstance</strong>: network interface controller (NIC) instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,8 +196,8 @@ public class UnassociateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the GA instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region where the Alibaba Cloud Global Accelerator (GA) instance is deployed. </p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

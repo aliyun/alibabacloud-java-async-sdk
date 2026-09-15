@@ -78,7 +78,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations of the peer gateway device.</p>
+         * <p>The configuration of the peer gateway device of the IPsec-VPN connection.</p>
          */
         public Builder vpnConnectionConfig(VpnConnectionConfig vpnConnectionConfig) {
             this.vpnConnectionConfig = vpnConnectionConfig;
@@ -448,7 +448,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication algorithm in the IKE phase.</p>
+             * <p>The authentication algorithm of the IKE phase.</p>
              * 
              * <strong>example:</strong>
              * <p>sha1</p>
@@ -459,7 +459,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm in the IKE phase.</p>
+             * <p>The encryption algorithm of the IKE phase.</p>
              * 
              * <strong>example:</strong>
              * <p>aes</p>
@@ -470,7 +470,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+             * <p>The lifetime of the IKE phase. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -481,10 +481,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE negotiation mode. Valid values:</p>
+             * <p>The IKE negotiation mode.</p>
              * <ul>
-             * <li><strong>main</strong>: This mode offers higher security during negotiations.</li>
-             * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+             * <li><strong>main</strong>: Main mode. This mode offers high negotiation security.</li>
+             * <li><strong>aggressive</strong>: Aggressive mode. This mode supports fast negotiation and a high negotiation success rate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -496,7 +496,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DH group in the IKE phase.</p>
+             * <p>The DH group of the IKE phase.</p>
              * 
              * <strong>example:</strong>
              * <p>group2</p>
@@ -507,10 +507,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE version.</p>
+             * <p>The version of the IKE protocol.</p>
              * 
              * <strong>example:</strong>
-             * <p>ikev1</p>
+             * <p>ikev2</p>
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -521,7 +521,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
              * <p>The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.</p>
              * 
              * <strong>example:</strong>
-             * <p>116.62.XX.XX</p>
+             * <p>139.196.XX.XX</p>
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -543,7 +543,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
              * <p>The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.</p>
              * 
              * <strong>example:</strong>
-             * <p>139.196.XX.XX</p>
+             * <p>116.62.XX.XX</p>
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -636,7 +636,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication algorithm in the IPsec phase.</p>
+             * <p>The authentication algorithm of the IPsec phase.</p>
              * 
              * <strong>example:</strong>
              * <p>sha1</p>
@@ -647,7 +647,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm in the IPsec phase.</p>
+             * <p>The encryption algorithm of the IPsec phase.</p>
              * 
              * <strong>example:</strong>
              * <p>aes</p>
@@ -658,7 +658,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+             * <p>The lifetime of the IPsec phase. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -669,7 +669,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DH group in the IPsec phase.</p>
+             * <p>The DH group of the IPsec phase.</p>
              * 
              * <strong>example:</strong>
              * <p>group2</p>
@@ -830,7 +830,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication algorithm in the IKE phase.</p>
+             * <p>The authentication algorithm of the IKE phase.</p>
              * 
              * <strong>example:</strong>
              * <p>sha1</p>
@@ -841,7 +841,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm in the IKE phase.</p>
+             * <p>The encryption algorithm of the IKE phase.</p>
              * 
              * <strong>example:</strong>
              * <p>aes</p>
@@ -852,7 +852,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+             * <p>The lifetime of the IKE phase. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -863,10 +863,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE negotiation mode. Valid values:</p>
+             * <p>The IKE negotiation mode.</p>
              * <ul>
-             * <li><strong>main</strong>: This mode offers higher security during negotiations.</li>
-             * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+             * <li><strong>main</strong>: Main mode. This mode offers high negotiation security.</li>
+             * <li><strong>aggressive</strong>: Aggressive mode. This mode supports fast negotiation and a high negotiation success rate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -878,7 +878,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DH group in the IKE phase.</p>
+             * <p>The DH group of the IKE phase.</p>
              * 
              * <strong>example:</strong>
              * <p>group2</p>
@@ -889,10 +889,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IKE version.</p>
+             * <p>The version of the IKE protocol.</p>
              * 
              * <strong>example:</strong>
-             * <p>ikev1</p>
+             * <p>ikev2</p>
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -903,7 +903,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
              * <p>The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.</p>
              * 
              * <strong>example:</strong>
-             * <p>116.62.XX.XX</p>
+             * <p>139.196.XX.XX</p>
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -925,7 +925,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
              * <p>The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.</p>
              * 
              * <strong>example:</strong>
-             * <p>139.196.XX.XX</p>
+             * <p>116.62.XX.XX</p>
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -1018,7 +1018,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication algorithm in the IPsec phase.</p>
+             * <p>The authentication algorithm of the IPsec phase.</p>
              * 
              * <strong>example:</strong>
              * <p>sha1</p>
@@ -1029,7 +1029,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption algorithm in the IPsec phase.</p>
+             * <p>The encryption algorithm of the IPsec phase.</p>
              * 
              * <strong>example:</strong>
              * <p>aes</p>
@@ -1040,7 +1040,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+             * <p>The lifetime of the IPsec phase. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -1051,7 +1051,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DH group in the IPsec phase.</p>
+             * <p>The DH group of the IPsec phase.</p>
              * 
              * <strong>example:</strong>
              * <p>group2</p>
@@ -1399,7 +1399,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of Phase 1 negotiations.</p>
+             * <p>The configuration of Phase 1 negotiation.</p>
              */
             public Builder ikeConfig(IkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -1407,7 +1407,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of Phase 2 negotiations.</p>
+             * <p>The configuration of Phase 2 negotiation.</p>
              */
             public Builder ipsecConfig(IpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -1426,7 +1426,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block on the data center side.</p>
+             * <p>The CIDR block on the on-premises data center side.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/8</p>
@@ -1448,7 +1448,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block on the virtual private cloud (VPC) side.</p>
+             * <p>The CIDR block on the VPC side.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/16</p>

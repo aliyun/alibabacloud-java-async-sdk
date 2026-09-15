@@ -172,8 +172,8 @@ public class DescribeVpnAttachmentsRequest extends Request {
         } 
 
         /**
-         * <p>The type of resource that is associated with the IPsec-VPN connection. Default value: <strong>CEN</strong>.</p>
-         * <p>Set the value to <strong>CEN</strong>, which specifies to query IPsec-VPN connections associated with the transit router.</p>
+         * <p>The type of resource to which the IPsec-VPN connection is attached. Default value: <strong>CEN</strong>.</p>
+         * <p>The value can only be <strong>CEN</strong>, which indicates that the system queries IPsec-VPN connections that are associated with transit router instances.</p>
          * 
          * <strong>example:</strong>
          * <p>CEN</p>
@@ -215,7 +215,7 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The number of entries per page when using paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -227,8 +227,8 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the IPsec-VPN connection is established.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the IPsec-VPN connection.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class DescribeVpnAttachmentsRequest extends Request {
         /**
          * <p>The ID of the IPsec-VPN connection.</p>
          * <blockquote>
-         * <p> If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.</p>
+         * <p>If you do not specify the IPsec-VPN connection ID, the system queries all IPsec-VPN connections that are associated with transit router instances in the current region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

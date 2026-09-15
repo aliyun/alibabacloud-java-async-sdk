@@ -54,7 +54,7 @@ public class RemoveGlobalAccelerationInstanceIpResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>

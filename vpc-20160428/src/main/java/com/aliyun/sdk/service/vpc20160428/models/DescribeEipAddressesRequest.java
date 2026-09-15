@@ -406,11 +406,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EIP that you want to query.</p>
-         * <p>You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</p>
-         * <blockquote>
-         * <p> If both <strong>EipAddress</strong> and <strong>AllocationId</strong> are specified, you can specify up to 50 EIP IDs for <strong>AllocationId</strong>, and specify up to 50 EIPs for <strong>EipAddress</strong>.</p>
-         * </blockquote>
+         * <p>The ID of the EIP instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-2zeerraiwb7ujxscd****</p>
@@ -422,7 +418,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance associated with the EIP.</p>
+         * <p>The instance ID of the cloud resource.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zebb08phyccdvf****</p>
@@ -434,18 +430,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud resource with which you want to associate the EIP. Valid values:</p>
-         * <ul>
-         * <li><strong>EcsInstance</strong> (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</li>
-         * <li><strong>SlbInstance</strong>: a CLB instance in a VPC.</li>
-         * <li><strong>Nat</strong>: a NAT gateway.</li>
-         * <li><strong>HaVip</strong>: an HAVIP.</li>
-         * <li><strong>NetworkInterface</strong>: a secondary ENI.</li>
-         * <li><strong>IpAddress</strong>: an IP address.</li>
-         * </ul>
-         * <blockquote>
-         * <p> Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">Associate EIPs with and disassociate EIPs from cloud resources</a>.</p>
-         * </blockquote>
+         * <p>The type of the cloud resource instance to be associated. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>EcsInstance</p>
@@ -458,10 +443,6 @@ public class DescribeEipAddressesRequest extends Request {
 
         /**
          * <p>The billing method of the EIP. Valid values:</p>
-         * <ul>
-         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
-         * <li><strong>PrePaid</strong>: subscription.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -473,11 +454,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
-         * </ul>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -489,11 +466,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The EIP that you want to query.</p>
-         * <p>You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</p>
-         * <blockquote>
-         * <p> If both <strong>EipAddress</strong> and <strong>AllocationId</strong> are specified, you can specify up to 50 EIPs for <strong>EipAddress</strong>, and specify up to 50 EIP IDs for <strong>AllocationId</strong>.</p>
-         * </blockquote>
+         * <p>The IP address of the EIP to query.</p>
          * 
          * <strong>example:</strong>
          * <p>47.75.XX.XX</p>
@@ -506,7 +479,6 @@ public class DescribeEipAddressesRequest extends Request {
 
         /**
          * <p>The name of the EIP.</p>
-         * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
          * <strong>example:</strong>
          * <p>EIP-01</p>
@@ -519,21 +491,6 @@ public class DescribeEipAddressesRequest extends Request {
 
         /**
          * <p>The line type. Valid values:</p>
-         * <ul>
-         * <li><strong>BGP</strong> (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</li>
-         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
-         * </ul>
-         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the <a href="https://help.aliyun.com/document_detail/32321.html">Line types</a> section of the &quot;What is EIP?&quot; topic.</p>
-         * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
-         * <ul>
-         * <li><strong>ChinaTelecom</strong></li>
-         * <li><strong>ChinaUnicom</strong></li>
-         * <li><strong>ChinaMobile</strong></li>
-         * <li><strong>ChinaTelecom_L2</strong></li>
-         * <li><strong>ChinaUnicom_L2</strong></li>
-         * <li><strong>ChinaMobile_L2</strong></li>
-         * </ul>
-         * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>BGP</p>
@@ -545,11 +502,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return information about pending orders. Valid values:</p>
-         * <ul>
-         * <li><strong>false</strong> (default)</li>
-         * <li><strong>true</strong></li>
-         * </ul>
+         * <p>Specifies whether to include subscription data that has not taken effect. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -561,11 +514,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The reason why the EIP is locked. Valid values:</p>
-         * <ul>
-         * <li><strong>financial</strong>: The EIP is locked due to overdue payments.</li>
-         * <li><strong>security</strong>: The EIP is locked for security reasons.</li>
-         * </ul>
+         * <p>The lock type. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>financial</p>
@@ -595,7 +544,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -607,7 +556,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -619,7 +568,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The IP address pool to which the EIP that you want to query belongs.</p>
+         * <p>The ID of the IP address pool to which the EIP to query belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>pippool-2vc0kxcedhquybdsz****</p>
@@ -632,7 +581,6 @@ public class DescribeEipAddressesRequest extends Request {
 
         /**
          * <p>The region ID of the EIP.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -675,11 +623,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to activate Anti-DDoS Pro/Premium. Valid values:</p>
-         * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
-         * </ul>
+         * <p>Specifies whether Anti-DDoS (Enhanced) is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -691,7 +635,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the contiguous EIP group.</p>
+         * <p>The instance ID of the contiguous EIP group.</p>
          * 
          * <strong>example:</strong>
          * <p>eipsg-t4nr90yik5oy38xdy****</p>
@@ -703,12 +647,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the instance is managed. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no.</li>
-         * </ul>
-         * <p>If you do not specify this parameter, all instances are queried.</p>
+         * <p>Specifies whether the instance is a managed instance. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -720,14 +659,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The state of the EIP. Valid values:</p>
-         * <ul>
-         * <li><strong>Associating</strong></li>
-         * <li><strong>Unassociating</strong></li>
-         * <li><strong>InUse</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Releasing</strong></li>
-         * </ul>
+         * <p>The status of the EIP. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -807,7 +739,7 @@ public class DescribeEipAddressesRequest extends Request {
             } 
 
             /**
-             * <p>The filter key used to query resources. Set the value to <strong>CreationStartTime</strong>, which specifies the time when the system started to create the resource.</p>
+             * <p>The filter key for querying resources. The value must be <strong>CreationStartTime</strong>, which specifies the start time when the resource was created.</p>
              * 
              * <strong>example:</strong>
              * <p>CreationStartTime</p>
@@ -818,7 +750,7 @@ public class DescribeEipAddressesRequest extends Request {
             }
 
             /**
-             * <p>The filter value used to query resources. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
+             * <p>The filter value for querying resources. Specify the value in UTC in the <code>YYYY-MM-DDThh:mmZ</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-01T01:00Z</p>
@@ -888,8 +820,7 @@ public class DescribeEipAddressesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -900,8 +831,7 @@ public class DescribeEipAddressesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

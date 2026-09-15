@@ -106,7 +106,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IPv6 mapping entries that are queried.</p>
+         * Ipv6TranslatorEntries.
          */
         public Builder ipv6TranslatorEntries(Ipv6TranslatorEntries ipv6TranslatorEntries) {
             this.ipv6TranslatorEntries = ipv6TranslatorEntries;
@@ -114,7 +114,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -385,10 +385,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the associated ACL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ipv6transacl-bp1de2****</p>
+             * AclId.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -396,10 +393,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether ACLs are enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>on</p>
+             * AclStatus.
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -407,14 +401,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ACL type.</p>
-             * <ul>
-             * <li><strong>white</strong>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</li>
-             * <li><strong>black</strong>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>white</p>
+             * AclType.
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -422,10 +409,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2400:3200:1600::XX</p>
+             * AllocateIpv6Addr.
              */
             public Builder allocateIpv6Addr(String allocateIpv6Addr) {
                 this.allocateIpv6Addr = allocateIpv6Addr;
@@ -433,10 +417,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * AllocateIpv6Port.
              */
             public Builder allocateIpv6Port(Integer allocateIpv6Port) {
                 this.allocateIpv6Port = allocateIpv6Port;
@@ -444,10 +425,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the backend IPv4 server.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.99.XX.XX</p>
+             * BackendIpv4Addr.
              */
             public Builder backendIpv4Addr(String backendIpv4Addr) {
                 this.backendIpv4Addr = backendIpv4Addr;
@@ -455,10 +433,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IPv4 port used by the IPv4 server that needs to provide IPv6 access.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * BackendIpv4Port.
              */
             public Builder backendIpv4Port(String backendIpv4Port) {
                 this.backendIpv4Port = backendIpv4Port;
@@ -466,10 +441,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth specified in the IPv6 mapping entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * EntryBandwidth.
              */
             public Builder entryBandwidth(String entryBandwidth) {
                 this.entryBandwidth = entryBandwidth;
@@ -477,10 +449,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the IPv6 mapping entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>description</p>
+             * EntryDescription.
              */
             public Builder entryDescription(String entryDescription) {
                 this.entryDescription = entryDescription;
@@ -488,10 +457,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IPv6 mapping entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>name</p>
+             * EntryName.
              */
             public Builder entryName(String entryName) {
                 this.entryName = entryName;
@@ -499,10 +465,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the IPv6 mapping entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * EntryStatus.
              */
             public Builder entryStatus(String entryStatus) {
                 this.entryStatus = entryStatus;
@@ -510,10 +473,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IPv6 mapping entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ipv6transentry-bp1g8bhrde****</p>
+             * Ipv6TranslatorEntryId.
              */
             public Builder ipv6TranslatorEntryId(String ipv6TranslatorEntryId) {
                 this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
@@ -521,10 +481,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IPv6 Translation Service instance to which the IPv6 mapping entry belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ipv6trans-bp1858ys****</p>
+             * Ipv6TranslatorId.
              */
             public Builder ipv6TranslatorId(String ipv6TranslatorId) {
                 this.ipv6TranslatorId = ipv6TranslatorId;
@@ -532,10 +489,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region of the IPv6 Translation Service instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -543,10 +497,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tcp</p>
+             * TransProtocol.
              */
             public Builder transProtocol(String transProtocol) {
                 this.transProtocol = transProtocol;

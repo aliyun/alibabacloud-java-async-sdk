@@ -162,7 +162,7 @@ public class CreateDefaultVSwitchRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class CreateDefaultVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
+         * <p>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -205,12 +205,12 @@ public class CreateDefaultVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the default vSwitch.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the default vSwitch that you want to create.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ap-southeast-1</p>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -237,12 +237,12 @@ public class CreateDefaultVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the default vSwitch.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID of the default vSwitch that you want to create.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ap-southeast-1a</p>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

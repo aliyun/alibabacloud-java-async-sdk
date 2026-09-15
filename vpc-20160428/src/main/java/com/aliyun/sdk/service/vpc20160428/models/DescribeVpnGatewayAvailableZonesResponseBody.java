@@ -80,7 +80,7 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The zones.</p>
+         * <p>The list of zones.</p>
          */
         public Builder availableZoneIdList(java.util.List<AvailableZoneIdList> availableZoneIdList) {
             this.availableZoneIdList = availableZoneIdList;

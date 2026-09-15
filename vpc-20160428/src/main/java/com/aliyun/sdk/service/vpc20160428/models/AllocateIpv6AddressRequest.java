@@ -245,8 +245,8 @@ public class AllocateIpv6AddressRequest extends Request {
         /**
          * <p>The type of the IPv6 address. Valid values:</p>
          * <ul>
-         * <li>IPv6Address (default): an IPv6 address.</li>
-         * <li>IPv6Prefix: an IPv6 CIDR block.</li>
+         * <li>IPv6Address (default): The instance is a single IPv6 address.</li>
+         * <li>IPv6Prefix: The instance is an IPv6 CIDR block.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,9 +259,9 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -274,10 +274,12 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p>true: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
+         * </li>
+         * <li><p>false (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,7 +292,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 address. The IPv6 address must be an idle one that falls within the vSwitch CIDR block.</p>
+         * <p>The IPv6 address to allocate. The specified IPv6 address must be an idle address within the CIDR block of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
@@ -302,7 +304,8 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * <p>The description of the IPv6 address.</p>
+         * <p>The description of the IPv6 address instance.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6-description</p>
@@ -314,7 +317,8 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * <p>The name of the IPv6 address.</p>
+         * <p>The name of the IPv6 address instance.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6-name</p>
@@ -357,7 +361,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+         * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4ph****</p>
@@ -387,7 +391,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * <p>The tag list.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -468,8 +472,8 @@ public class AllocateIpv6AddressRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -480,7 +484,7 @@ public class AllocateIpv6AddressRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</p>
              * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>

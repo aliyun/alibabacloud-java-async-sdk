@@ -54,7 +54,10 @@ public class DisassociateMacSecKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D32B3C26-6C6C-4988-93E9-D2A6444CE6AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -214,10 +214,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the hosted connection is accepted by the tenant. Valid values:</p>
+         * <p>Specifies whether the shared Express Connect circuits have been confirmed and accepted by the tenant. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page when you query results by page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -242,10 +242,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>Specifies whether a next query token exists. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * <li>You do not need to specify this parameter for the first query or if no next query exists.</li>
+         * <li>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,8 +258,8 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Express Connect circuit over which the hosted connections are created.</p>
-         * <p>Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.</p>
+         * <p>The ID of the Express Connect circuit associated with the shared Express Connect circuits.</p>
+         * <p>In the following content of this topic, the Express Connect circuit associated with the shared Express Connect circuits is referred to as the Express Connect circuit, to distinguish it from the shared Express Connect circuits.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1ciz7ekd2grn1as****</p>
@@ -271,8 +271,8 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the hosted connection.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the shared Express Connect circuits.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the hosted connection belongs.</p>
+         * <p>The ID of the resource group to which the shared Express Connect circuits belong.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4p****</p>
@@ -306,7 +306,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The information about the Alibaba Cloud account that owns the hosted connection.</p>
+         * <p>The Alibaba Cloud account information of the shared Express Connect circuits owner.</p>
          * 
          * <strong>example:</strong>
          * <p>189xxx</p>
@@ -318,11 +318,11 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The business status of the hosted connection. Valid values:</p>
+         * <p>The business status of the shared Express Connect circuits. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>FinancialLocked</strong></li>
-         * <li><strong>SecurityLocked</strong></li>
+         * <li><strong>Normal</strong>: Normal.</li>
+         * <li><strong>FinancialLocked</strong>: Locked due to overdue payment.</li>
+         * <li><strong>SecurityLocked</strong>: Locked for security reasons.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The information about the hosted connection.</p>
+         * <p>The shared Express Connect circuits information.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-xxx</p>
@@ -347,7 +347,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The business status of the hosted connection.</p>
+         * <p>The business status information of the shared Express Connect circuits.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-xxx</p>
@@ -359,7 +359,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * <p>The VLAN ID of the hosted connection.</p>
+         * <p>The VLAN ID of the shared Express Connect circuits.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-xxx</p>
@@ -430,8 +430,8 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -442,8 +442,8 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-             * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

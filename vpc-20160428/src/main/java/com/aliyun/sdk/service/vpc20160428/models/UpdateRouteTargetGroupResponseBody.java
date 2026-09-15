@@ -54,7 +54,7 @@ public class UpdateRouteTargetGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC</p>

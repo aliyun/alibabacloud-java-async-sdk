@@ -131,9 +131,9 @@ public class DescribeFailoverTestJobRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,11 +146,11 @@ public class DescribeFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the failover test.</p>
+         * <p>The failover test job ID. Before calling this operation, use CreateFailoverTestJob to create a job and obtain this ID. If the test resource is an Express Connect circuit, the circuit must be in the <strong>Enabled</strong> state and its business status must be <strong>Normal</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ftj-xxxxxxxxx</p>
+         * <p>ftj-bp1yh6mvi13aq****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -177,8 +177,8 @@ public class DescribeFailoverTestJobRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the failover test.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the failover test job. </p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -126,8 +126,8 @@ public class ConnectRouterInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the router interface is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region where the router interface is located. </p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ConnectRouterInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the initiator router interface.</p>
+         * <p>The ID of the requester VPC router interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

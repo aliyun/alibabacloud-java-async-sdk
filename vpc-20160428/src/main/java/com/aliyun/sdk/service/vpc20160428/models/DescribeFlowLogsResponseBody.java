@@ -119,7 +119,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of flow logs.</p>
+         * FlowLogs.
          */
         public Builder flowLogs(FlowLogs flowLogs) {
             this.flowLogs = flowLogs;
@@ -138,7 +138,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of items per page in a paginated query.</p>
+         * <p>The number of entries per page in paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -160,9 +160,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>true</strong>: The call is successful.</li>
          * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
@@ -175,7 +175,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries in the queried flow log list.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -244,10 +244,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceDept</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,10 +252,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FinanceJoshua</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -680,10 +674,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The sampling interval of the flow log. Unit: minutes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * AggregationInterval.
              */
             public Builder aggregationInterval(Integer aggregationInterval) {
                 this.aggregationInterval = aggregationInterval;
@@ -691,14 +682,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business status. Values:</p>
-             * <ul>
-             * <li><strong>Normal</strong>: Normal status.</li>
-             * <li><strong>FinancialLocked</strong>: Locked due to unpaid bills.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * BusinessStatus.
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -706,10 +690,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-01-21T03:08:50Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -717,10 +698,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Description</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -728,15 +706,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>When log delivery fails, you can troubleshoot based on the error messages. Possible error messages include:</p>
-             * <ul>
-             * <li><strong>UnavaliableTarget</strong>: The Logstore of the Log Service SLS is unavailable and cannot receive logs. It is recommended to check if the corresponding Logstore actually exists and is accessible. </li>
-             * <li><strong>ProjectNotExist</strong>: The Project of the Log Service SLS does not exist. It is suggested to delete the original flow log and create a new one pointing to an existing Project. </li>
-             * <li><strong>UnknownError</strong>: An internal error has occurred. Please try again later.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>UnavaliableTarget</p>
+             * FlowLogDeliverErrorMessage.
              */
             public Builder flowLogDeliverErrorMessage(String flowLogDeliverErrorMessage) {
                 this.flowLogDeliverErrorMessage = flowLogDeliverErrorMessage;
@@ -744,14 +714,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery status of the flow log, with values:</p>
-             * <ul>
-             * <li><strong>SUCCESS</strong>: Delivery succeeded. </li>
-             * <li><strong>FAILED</strong>: Delivery failed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>FAILED</p>
+             * FlowLogDeliverStatus.
              */
             public Builder flowLogDeliverStatus(String flowLogDeliverStatus) {
                 this.flowLogDeliverStatus = flowLogDeliverStatus;
@@ -759,10 +722,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fl-bp1f6qqhsrc2c12ta****</p>
+             * FlowLogId.
              */
             public Builder flowLogId(String flowLogId) {
                 this.flowLogId = flowLogId;
@@ -770,10 +730,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myFlowlog</p>
+             * FlowLogName.
              */
             public Builder flowLogName(String flowLogName) {
                 this.flowLogName = flowLogName;
@@ -781,10 +738,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of IP address for collecting flow log traffic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>IPv4</p>
+             * IpVersion.
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -800,10 +754,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Logstore where the captured traffic is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FlowLogStore</p>
+             * LogStoreName.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -811,10 +762,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Project that manages the captured traffic.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FlowLogProject</p>
+             * ProjectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -822,10 +770,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID to which the flow log belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -833,10 +778,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the flow log belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-bp67acfmxazb4ph****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -844,10 +786,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID of the traffic captured by the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>eni-askldfas****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -855,15 +794,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type of the traffic captured by the flow log:</p>
-             * <ul>
-             * <li><strong>NetworkInterface</strong>: Elastic network interface.</li>
-             * <li><strong>VSwitch</strong>: All elastic network interfaces within a VSwitch.</li>
-             * <li><strong>VPC</strong>: All elastic network interfaces within a VPC.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>NetworkInterface</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -871,17 +802,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hosting type of the cloud service.</p>
-             * <ul>
-             * <li>It can be empty, indicating that the flow log was created by the user. </li>
-             * <li>When not empty, the only supported value is: <strong>sls</strong>, indicating that the flow log was created through the Log Service console.<blockquote>
-             * <p>Flow log instances created through the Log Service console can be displayed in the VPC list, but they cannot be modified, started, stopped, or deleted within the VPC. If you need to perform these operations on the flow log, you can log in to the <a href="https://sls.console.aliyun.com">Log Service console</a> to modify, start, stop, or delete it.</p>
-             * </blockquote>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>sls</p>
+             * ServiceType.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -889,18 +810,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the flow log. Values:</p>
-             * <ul>
-             * <li><p><strong>Active</strong>: The flow log is in an active state.</p>
-             * </li>
-             * <li><p><strong>Activating</strong>: The flow log is being created.</p>
-             * </li>
-             * <li><p><strong>Inactive</strong>: The flow log is in an inactive state.</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -908,7 +818,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of tags</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -916,11 +826,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the captured traffic. Values:</p>
-             * <ul>
-             * <li><strong>all</strong>: Indicates full collection.</li>
-             * <li><strong>internetGateway</strong>: Indicates public network traffic collection.</li>
-             * </ul>
+             * TrafficPath.
              */
             public Builder trafficPath(TrafficPath trafficPath) {
                 this.trafficPath = trafficPath;
@@ -928,15 +834,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of traffic captured by the flow log. Values:</p>
-             * <ul>
-             * <li><strong>All</strong>: All traffic.</li>
-             * <li><strong>Allow</strong>: Traffic allowed by access control.</li>
-             * <li><strong>Drop</strong>: Traffic denied by access control.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>All</p>
+             * TrafficType.
              */
             public Builder trafficType(String trafficType) {
                 this.trafficType = trafficType;

@@ -177,7 +177,7 @@ public class DescribeVRoutersRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class DescribeVRoutersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -201,8 +201,8 @@ public class DescribeVRoutersRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the vRouter that you want to query.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the vRouter resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class DescribeVRoutersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vRouter.</p>
+         * <p>The ID of the vRouter to query.</p>
          * 
          * <strong>example:</strong>
          * <p>vrt-bp1lhl0taikrteen****</p>

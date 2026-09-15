@@ -131,7 +131,7 @@ public class DescribeGrantRulesToEcrRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>VBR ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DescribeGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number of the list. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,7 +156,7 @@ public class DescribeGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -168,8 +168,8 @@ public class DescribeGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The region ID</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
+         * <p>The region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class DescribeGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the VBR belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazdjdhd****</p>
@@ -194,7 +194,7 @@ public class DescribeGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * <p>The tag list.</p>
+         * <p>The tags of the VBR.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -262,8 +262,8 @@ public class DescribeGrantRulesToEcrRequest extends Request {
             } 
 
             /**
-             * <p>The tag keys. You must specify at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You must specify at least 1 tag key and can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -274,7 +274,7 @@ public class DescribeGrantRulesToEcrRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

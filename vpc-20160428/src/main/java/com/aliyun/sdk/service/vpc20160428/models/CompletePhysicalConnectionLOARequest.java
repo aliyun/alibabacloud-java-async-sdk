@@ -216,9 +216,9 @@ public class CompletePhysicalConnectionLOARequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+         * <p>The client generates the value. Ensure that the value is unique among different requests.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> of each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -233,8 +233,8 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         /**
          * <p>Specifies whether the construction is completed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Construction is completed.</li>
+         * <li><strong>false</strong>: Line O&amp;M.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The ID of the Express Connect circuit.</p>
+         * <p>The instance ID of the Express Connect circuit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The circuit code provided by the connectivity provider.</p>
+         * <p>The line code of the carrier.</p>
          * 
          * <strong>example:</strong>
          * <p>aaa111****</p>
@@ -272,7 +272,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The label of the cable in the data center.</p>
+         * <p>The cable label in the data center building.</p>
          * 
          * <strong>example:</strong>
          * <p>bbb222****</p>
@@ -284,7 +284,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The contact information about line O&amp;M.</p>
+         * <p>The O&amp;M contact information of the line carrier.</p>
          * 
          * <strong>example:</strong>
          * <p>1388888****</p>
@@ -296,16 +296,16 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * <p>The ISP. Valid values:</p>
+         * <p>The carrier. Valid values:</p>
          * <ul>
-         * <li><strong>China Telecom</strong></li>
-         * <li><strong>China Unicom</strong></li>
-         * <li><strong>China Mobile</strong></li>
-         * <li><strong>Other ISPs in China</strong></li>
+         * <li><strong>中国电信</strong>.</li>
+         * <li><strong>中国联通</strong>.</li>
+         * <li><strong>中国移动</strong>.</li>
+         * <li><strong>中国其他</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Other ISPs in China</p>
+         * <p>中国其他</p>
          */
         public Builder lineServiceProvider(String lineServiceProvider) {
             this.putQueryParameter("LineServiceProvider", lineServiceProvider);
@@ -333,7 +333,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
 
         /**
          * <p>The region ID of the Express Connect circuit.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

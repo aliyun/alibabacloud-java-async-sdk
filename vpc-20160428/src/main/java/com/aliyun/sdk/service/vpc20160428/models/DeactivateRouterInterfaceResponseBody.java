@@ -54,7 +54,7 @@ public class DeactivateRouterInterfaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BE7EB53A-99AB-4DA8-AEDE-75FA90D046A6</p>

@@ -134,10 +134,10 @@ public class GrantInstanceToVbrRequest extends Request {
         } 
 
         /**
-         * <p>The VBRs that need to acquire permissions on the VPC. Valid values:</p>
+         * <p>The scope of the VBR instances to be authorized. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave <strong>VbrInstanceIds</strong> empty.</li>
-         * <li><strong>Specify</strong>: Permissions on the VPC are granted to the specified VBRs. <strong>VbrInstanceIds</strong> must be assigned a value.</li>
+         * <li><strong>All</strong>: Grants authorization of the VPC-connected instance to all VBR instances in the specified region under the specified Alibaba Cloud account. In this case, the <strong>VbrInstanceIds</strong> parameter can be left empty.</li>
+         * <li><strong>Specify</strong>: Grants authorization of the VPC-connected instance to the specified VBR instances. In this case, the <strong>VbrInstanceIds</strong> parameter is required.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -151,7 +151,7 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the VPC-connected instance for which authorization is to be granted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,8 +164,8 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VPC is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPC-connected instance for which authorization is to be granted.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * <p>The information about the VBRs.</p>
+         * <p>The list of VBR instances to be authorized.</p>
          */
         public Builder vbrInstanceIds(java.util.List<String> vbrInstanceIds) {
             String vbrInstanceIdsShrink = shrink(vbrInstanceIds, "VbrInstanceIds", "simple");
@@ -188,7 +188,7 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the VBR instance to be authorized. This account must be different from the caller\&quot;s account. You cannot specify the caller\&quot;s own account ID. This operation is used for cross-account authorization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>The region ID of the VBR instance to be authorized.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

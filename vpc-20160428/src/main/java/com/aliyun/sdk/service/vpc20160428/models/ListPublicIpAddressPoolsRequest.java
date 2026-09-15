@@ -256,10 +256,10 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs a dry run without querying available IP address pool information. The system checks whether the required parameters are specified, whether the request format is valid, and whether business restrictions are met. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,20 +274,22 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         /**
          * <p>The line type. Valid values:</p>
          * <ul>
-         * <li><strong>BGP</strong> (default): BGP (Multi-ISP) line</li>
-         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line</li>
+         * <li><p><strong>BGP</strong> (default): BGP (multi-ISP) line.</p>
+         * </li>
+         * <li><p><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line.</p>
+         * </li>
          * </ul>
-         * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the &quot;Line types&quot; section of <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a></p>
-         * <p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
+         * <p>For more information about BGP (multi-ISP) lines and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
+         * <p>If you are a whitelist user of single-ISP bandwidth, you can also select the following types:</p>
          * <ul>
-         * <li><strong>ChinaTelecom</strong></li>
-         * <li><strong>ChinaUnicom</strong></li>
-         * <li><strong>ChinaMobile</strong></li>
-         * <li><strong>ChinaTelecom_L2</strong></li>
-         * <li><strong>ChinaUnicom_L2</strong></li>
-         * <li><strong>ChinaMobile_L2</strong></li>
+         * <li><strong>ChinaTelecom</strong>: China Telecom</li>
+         * <li><strong>ChinaUnicom</strong>: China Unicom</li>
+         * <li><strong>ChinaMobile</strong>: China Mobile</li>
+         * <li><strong>ChinaTelecom_L2</strong>: China Telecom L2</li>
+         * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
+         * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
          * </ul>
-         * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to <strong>BGP_FinanceCloud</strong>.</p>
+         * <p>If you are a China (Hangzhou) Finance Cloud user, this field is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>BGP</p>
@@ -299,7 +301,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The maximum number of entries to return in this request. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -311,8 +313,8 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP address pool.</p>
-         * <p>If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the IP address pool instance.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>AddressPoolName</p>
@@ -324,10 +326,10 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * <li>You do not need to specify this parameter for the first request or if no subsequent request is to be sent.</li>
+         * <li>If a subsequent request is to be sent, set the value to the NextToken value returned in the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -358,8 +360,8 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the IP address pool.</p>
-         * <p>You can enter up to 100 IDs.</p>
+         * <p>The list of IP address pool instance IDs.</p>
+         * <p>You can specify up to 100 IP address pool instance IDs.</p>
          */
         public Builder publicIpAddressPoolIds(java.util.List<String> publicIpAddressPoolIds) {
             this.putQueryParameter("PublicIpAddressPoolIds", publicIpAddressPoolIds);
@@ -368,8 +370,8 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the IP address pool that you want to query resides.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>The region ID of the IP address pool that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -412,10 +414,10 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:</p>
+         * <p>Specifies whether to enable Anti-DDoS (Enhanced). Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: disabled.</li>
+         * <li><strong>true</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,11 +430,11 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * <p>The status of the IP address pool. Valid values:</p>
+         * <p>The instance status of the IPAM pool. Valid values:</p>
          * <ul>
-         * <li><strong>Created</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * <li><strong>Modifying</strong></li>
+         * <li><strong>Created</strong>: active.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Modifying</strong>: being modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -445,7 +447,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the resource.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -513,8 +515,8 @@ public class ListPublicIpAddressPoolsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -525,8 +527,8 @@ public class ListPublicIpAddressPoolsRequest extends Request {
             }
 
             /**
-             * <p>The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

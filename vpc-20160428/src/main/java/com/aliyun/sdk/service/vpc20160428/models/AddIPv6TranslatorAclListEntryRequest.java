@@ -160,8 +160,8 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
         } 
 
         /**
-         * <p>The remarks of the ACL entry.</p>
-         * <p>It must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The description of the access control policy group entry.</p>
+         * <p>The description must be 2 to 100 characters in length and must start with an uppercase letter, lowercase letter, or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>clientIP1</p>
@@ -173,7 +173,7 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 address or IPv6 CIDR block that you want to add to the ACL entry, for example, 12XX:0:0:XXXX::0102 or 12XX:0:0:XXXX::/60.</p>
+         * <p>The IPv6 address or IPv6 CIDR block to add to the access control policy group entry. Example: 12XX:0:0:XXXX::0102 or 12XX:0:0:XXXX::/60.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ACL to which you want to add the IP entry.</p>
+         * <p>The ID of the access control policy group to which the IP entry belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class AddIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the ACL.</p>
+         * <p>The region ID of the access control policy group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

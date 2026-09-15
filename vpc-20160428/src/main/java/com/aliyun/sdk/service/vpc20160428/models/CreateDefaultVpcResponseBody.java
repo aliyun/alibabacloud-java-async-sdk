@@ -104,7 +104,7 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The route table ID that is automatically created by the system after you create a default VPC.</p>
+         * <p>The ID of the route table that the system automatically creates after the default VPC is created.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1q1uirugzb1x32m****</p>
@@ -115,7 +115,7 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vRouter ID that is automatically created by the system after you create a default VPC.</p>
+         * <p>The ID of the vRouter that the system automatically creates after the default VPC is created.</p>
          * 
          * <strong>example:</strong>
          * <p>vrt-bp1lhl0taikrteen8****</p>
@@ -126,7 +126,7 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the default VPC.</p>
+         * <p>The ID of the default VPC that is created.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp15zckdt37pq72zv****</p>

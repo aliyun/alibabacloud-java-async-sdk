@@ -202,9 +202,10 @@ public class CreateBgpPeerRequest extends Request {
 
         /**
          * <p>The BFD hop count. Valid values: <strong>1</strong> to <strong>255</strong>.</p>
-         * <p>This parameter is required only if you enable BFD. The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</p>
+         * <p>This parameter is required when BFD is enabled.
+         * Enter the BFD hop count, which specifies the maximum number of devices that data passes through from the source to the destination. You can configure different hop counts based on the actual physical link factors.</p>
          * <blockquote>
-         * <p>If you use BFD in a multi-cloud environment or a fiber-optic direct connection network without any bridge device, you need to change the default BFD hop count from <strong>255</strong> to <strong>1</strong>.</p>
+         * <p>If you use BFD in a multi-cloud environment or a direct fiber connection topology with no bridging devices in between, change the default BFD hop count from <strong>255</strong> to <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,9 +232,9 @@ public class CreateBgpPeerRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the system uses the value of <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -246,10 +247,12 @@ public class CreateBgpPeerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:</p>
+         * <p>Specifies whether to enable Bidirectional Forwarding Detection (BFD). Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables BFD.</li>
-         * <li><strong>false</strong>: disables BFD.</li>
+         * <li><p><strong>true</strong>: enables BFD.</p>
+         * </li>
+         * <li><p><strong>false</strong>: does not enable BFD.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,8 +267,8 @@ public class CreateBgpPeerRequest extends Request {
         /**
          * <p>The IP version. Valid values:</p>
          * <ul>
-         * <li><strong>IPv4</strong>: This is the default value.</li>
-         * <li><strong>IPv6</strong>: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.</li>
+         * <li><strong>IPv4</strong> (default): IPv4.</li>
+         * <li><strong>IPv6</strong>: IPv6. IPv6 is supported only when the Virtual Border Router (VBR) on which the BGP group is created has the enable IPv6 feature turned on.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,8 +311,8 @@ public class CreateBgpPeerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the BGP group belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the BGP group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

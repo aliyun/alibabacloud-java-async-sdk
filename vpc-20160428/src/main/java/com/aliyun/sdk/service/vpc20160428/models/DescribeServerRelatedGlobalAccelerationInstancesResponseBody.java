@@ -67,7 +67,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         } 
 
         /**
-         * <p>The list of GA instances.</p>
+         * GlobalAccelerationInstances.
          */
         public Builder globalAccelerationInstances(GlobalAccelerationInstances globalAccelerationInstances) {
             this.globalAccelerationInstances = globalAccelerationInstances;
@@ -170,10 +170,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             } 
 
             /**
-             * <p>The ID of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ga-t4nku6vv9****</p>
+             * GlobalAccelerationInstanceId.
              */
             public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
                 this.globalAccelerationInstanceId = globalAccelerationInstanceId;
@@ -181,10 +178,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * <p>The public IP address of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12.34.56.78</p>
+             * IpAddress.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -192,10 +186,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * <p>The region ID of the GA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ap-southeast-1</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -203,10 +194,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * <p>The IP address of the backend service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.24.52.234</p>
+             * ServerIpAddress.
              */
             public Builder serverIpAddress(String serverIpAddress) {
                 this.serverIpAddress = serverIpAddress;

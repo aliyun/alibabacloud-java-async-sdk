@@ -234,9 +234,9 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong>.</p>
+         * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
          * 
          * <strong>example:</strong>
          * <p>Ipsec</p>
@@ -292,13 +292,12 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The priority of the policy-based route.</p>
+         * <p>The policy priority of the policy-based route.</p>
          * <ul>
-         * <li><p>If the route was not assigned a priority, this parameter is optional.</p>
+         * <li><p>If no policy priority was previously configured for the policy-based route, you do not need to specify this parameter.</p>
          * </li>
-         * <li><p>If the route was assigned a priority, this parameter is optional.</p>
-         * <pre><code>If you specify this parameter, set the value to the priority configured for the policy-based route. Otherwise, the operation cannot be performed.
-         * </code></pre>
+         * <li><p>If a policy priority was previously configured for the policy-based route, you can choose whether to specify this parameter.</p>
+         * <p>  If you specify this parameter, enter the policy priority that was previously configured for the policy-based route. If you enter a different value, the operation fails.</p>
          * </li>
          * </ul>
          * 
@@ -312,7 +311,7 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VPN gateway is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -369,7 +368,7 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The instance ID of the VPN gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -382,8 +381,8 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The weight of the policy-based route. Valid values:</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/2526959.html">DescribeVpnPbrRouteEntries</a> to query weights of policy-based routes.</p>
+         * <p>The weight of the policy-based route.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2526959.html">DescribeVpnPbrRouteEntries</a> operation to query the weight of the policy-based route.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

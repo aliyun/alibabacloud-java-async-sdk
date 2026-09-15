@@ -187,7 +187,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         } 
 
         /**
-         * <p>The information about the filter.</p>
+         * <p>The filter information.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -196,10 +196,12 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether cross-account VBRs are included.</p>
+         * <p>Specifies whether to include cross-account Virtual Border Routers.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: Included.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Not included.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,7 +223,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -233,7 +235,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -245,7 +247,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the VBR is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>The region ID of the VBR. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +261,6 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
 
         /**
          * <p>The resource group ID.</p>
-         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph6aiy****</p>
@@ -289,7 +290,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -357,16 +358,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             } 
 
             /**
-             * <p>The filter conditions. You can specify up to five filter conditions. Valid values:</p>
-             * <ul>
-             * <li><strong>PhysicalConnectionId</strong>: Filter by Express Connect circuit ID.</li>
-             * <li><strong>VbrId</strong>: Filter by VBR ID.</li>
-             * <li><strong>Status</strong>: Filter by VBR status.</li>
-             * <li><strong>Name</strong>: Filter by VBR name.</li>
-             * <li><strong>AccessPointId</strong>: Filter by access point ID.</li>
-             * <li><strong>eccId:</strong> Filter by Express Cloud Connect (ECC) instance ID.</li>
-             * <li><strong>type</strong>: Filter by Express Connect circuit type.</li>
-             * </ul>
+             * <p>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</p>
              * 
              * <strong>example:</strong>
              * <p>Status</p>
@@ -377,7 +369,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             }
 
             /**
-             * <p>The filter values for keys. You can specify multiple filter values for one key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+             * <p>The filter value based on the specified Key. You can specify multiple filter values for a Key. The relationship between multiple filter values is OR, which means that a match with any one of the filter values is considered a match with the filter condition.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -447,8 +439,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The key cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You must specify at least 1 tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -459,8 +450,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             }
 
             /**
-             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

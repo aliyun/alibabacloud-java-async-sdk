@@ -213,7 +213,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
          * <p>The CA certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>CA certificate</p>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIID****r4w=
+         * -----END CERTIFICATE-----</p>
          */
         public Builder caCert(String caCert) {
             this.caCert = caCert;
@@ -224,7 +226,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
          * <p>The client certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>Client certificate</p>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIDR****A==
+         * -----END CERTIFICATE-----</p>
          */
         public Builder clientCert(String clientCert) {
             this.clientCert = clientCert;
@@ -235,7 +239,20 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
          * <p>The client configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>Client configuration</p>
+         * <p>client
+         * dev tun
+         * proto tcp
+         * remote 120.XX.XX.33 1194
+         * resolv-retry infinite
+         * nobind
+         * persist-key
+         * persist-tun
+         * ca ca.crt
+         * cert vsc-bp15t7****.crt
+         * key vsc-bp15t7****.key
+         * cipher AES-128-CBC
+         * ;comp-lzo
+         * verb 4</p>
          */
         public Builder clientConfig(String clientConfig) {
             this.clientConfig = clientConfig;
@@ -246,7 +263,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
          * <p>The client key.</p>
          * 
          * <strong>example:</strong>
-         * <p>The key of the client</p>
+         * <p>-----BEGIN RSA PRIVATE KEY-----
+         * MIIEpAI****ZzNFhuM/za==
+         * -----END RSA PRIVATE KEY-----</p>
          */
         public Builder clientKey(String clientKey) {
             this.clientKey = clientKey;
@@ -254,8 +273,8 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the SSL client certificate was created. Unit: milliseconds.</p>
+         * <p>The timestamp is in the Unix format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC, to the time when the SSL client certificate was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1552550980000</p>
@@ -266,8 +285,8 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the SSL client certificate expires. Unit: milliseconds.</p>
+         * <p>The timestamp is in the Unix format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC, to the time when the SSL client certificate expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1647158980000</p>
@@ -289,7 +308,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region where the SSL client certificate is created.</p>
+         * <p>The region ID of the SSL client certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -311,8 +330,8 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
-         * <p>The SSL client certificate and the SSL server associated with the SSL client certificate belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+         * <p>The resource group ID of the SSL client certificate.</p>
+         * <p>The SSL client certificate belongs to the same resource group as its associated SSL server. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>
@@ -334,7 +353,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the SSL server.</p>
+         * <p>The SSL server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vss-bp155e9yclsg1xgq4****</p>
@@ -347,9 +366,12 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         /**
          * <p>The status of the SSL client certificate. Valid values:</p>
          * <ul>
-         * <li><strong>expiring-soon</strong></li>
-         * <li><strong>normal</strong></li>
-         * <li><strong>expired</strong></li>
+         * <li><p><strong>expiring-soon</strong>: The certificate will expire within one week.</p>
+         * </li>
+         * <li><p><strong>normal</strong>: Normal. </p>
+         * </li>
+         * <li><p><strong>expired</strong>: Expired.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -91,10 +91,10 @@ public class CreateSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>079874CD-AEC1-43E6-AC03-ADD96B6E4907</p>
+         * <p>606998F0-B94D-48FE-8316-ACA81BB230DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
