@@ -185,7 +185,7 @@ public class GetDashboardRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifier of the gateway. Before calling this operation, make sure that the target gateway has enabled SLS log delivery by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</p>
+         * <p>The unique ID of the gateway. Before calling this operation, make sure that the target gateway has enabled the Simple Log Service (SLS) log delivery feature by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-co370icmjeu****</p>
@@ -197,9 +197,11 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>The response language. Valid values:
-         * zh: Chinese
-         * en: English</p>
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -236,7 +238,7 @@ public class GetDashboardRequest extends Request {
          * <p>The dashboard name. Valid values:</p>
          * <ul>
          * <li>LOG: access log</li>
-         * <li>PLUGIN: plug-in log</li>
+         * <li>PLUGIN: plugin log</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +251,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>The plug-in type ID.</p>
+         * <p>The plugin type ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-dn82a9djd8z****</p>
@@ -261,7 +263,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>The plug-in ID.</p>
+         * <p>The plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>inner-ai-search-cvd3mcum1hks660icn10</p>

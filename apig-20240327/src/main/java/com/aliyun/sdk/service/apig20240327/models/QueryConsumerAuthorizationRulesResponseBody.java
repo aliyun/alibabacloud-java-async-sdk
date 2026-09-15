@@ -192,7 +192,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation information.</p>
+             * <p>The API operation information.</p>
              */
             public Builder operationInfo(HttpApiOperationInfo operationInfo) {
                 this.operationInfo = operationInfo;
@@ -475,7 +475,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API information details.</p>
+             * <p>The API information.</p>
              */
             public Builder apiInfo(HttpApiApiInfo apiInfo) {
                 this.apiInfo = apiInfo;
@@ -524,7 +524,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer information details.</p>
+             * <p>The consumer information.</p>
              */
             public Builder consumerInfo(ConsumerInfo consumerInfo) {
                 this.consumerInfo = consumerInfo;
@@ -543,7 +543,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish status of the API in the current environment.</p>
+             * <p>The deployment status of the API in the current environment.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -562,11 +562,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration mode. Valid values:</p>
-             * <ul>
-             * <li>LongTerm</li>
-             * <li>ShortTerm</li>
-             * </ul>
+             * <p>The expiration mode. Valid values: LongTerm and ShortTerm.</p>
              * 
              * <strong>example:</strong>
              * <p>ShortTerm</p>
@@ -607,7 +603,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The principal type. Valid values: Consumer or ConsumerGroup.</p>
+             * <p>The principal type. Valid values: Consumer and ConsumerGroup.</p>
              * 
              * <strong>example:</strong>
              * <p>ConsumerGroup</p>
@@ -629,7 +625,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource information details.</p>
+             * <p>The resource information.</p>
              */
             public Builder resourceInfo(ResourceInfo resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -744,7 +740,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of consumer rules.</p>
+             * <p>The list of consumer authorization rules.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

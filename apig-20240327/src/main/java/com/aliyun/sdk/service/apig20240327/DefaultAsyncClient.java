@@ -862,7 +862,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
+     * <p>Deletes a quota rule based on an API consumer or consumer group from an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</p>
      * 
      * @param request the request parameters of DeleteGatewayQuotaRule  DeleteGatewayQuotaRuleRequest
      * @return DeleteGatewayQuotaRuleResponse
