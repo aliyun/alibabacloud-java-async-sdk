@@ -149,7 +149,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The return value. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
@@ -309,7 +309,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backend completed the artifact task. This is a UNIX timestamp accurate to the second.</p>
+             * <p>The time when the backend completed the artifact task. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1778743587</p>
@@ -320,7 +320,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The globally unique artifact ID. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId in the response of the SendChatMessage operation.</p>
+             * <p>The artifact ID, which is globally unique. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId in the response of the SendChatMessage operation.</p>
              * 
              * <strong>example:</strong>
              * <p>bab******33e1</p>
@@ -331,7 +331,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The artifact name. This is typically a string concatenated by the system and is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</p>
+             * <p>The artifact name, which is typically a string concatenated by the system. This name is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</p>
              * 
              * <strong>example:</strong>
              * <p>report_****_2026****</p>
@@ -342,7 +342,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backend received the artifact request. This is a UNIX timestamp accurate to the second.</p>
+             * <p>The time when the backend received the artifact request. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1778743587</p>
@@ -353,7 +353,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backend actually started running the artifact task. This is a UNIX timestamp accurate to the second.</p>
+             * <p>The time when the backend actually started running the artifact task. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1778743587</p>
@@ -455,7 +455,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the chat replay history.</p>
+             * <p>The key of the chat history replay record.</p>
              * 
              * <strong>example:</strong>
              * <p>testKey1</p>
@@ -466,7 +466,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS download URL of the chat replay history.</p>
+             * <p>The OSS download URL of the chat history replay record.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -538,9 +538,9 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             /**
              * <p>The data source category. Valid values:</p>
              * <ul>
-             * <li><p><strong>CHAT</strong>: specified through the CreateDataAgentSession or SendChatMessage operation during a conversation.</p>
+             * <li><p><strong>CHAT</strong>: Specified through the CreateDataAgentSession or SendChatMessage operation during a conversation.</p>
              * </li>
-             * <li><p><strong>CUSTOM_AGENT</strong>: from the preset analysis data scope in a custom agent.</p>
+             * <li><p><strong>CUSTOM_AGENT</strong>: From the preset analysis data scope in a custom agent.</p>
              * </li>
              * </ul>
              * 
@@ -648,7 +648,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The similarity score of this data entry. The scoring algorithm is related to the algorithm (l2/ip/cosine) specified when the index was created.</p>
+             * <p>The similarity score of this record. The scoring algorithm is related to the algorithm (l2/ip/cosine) specified when the index was created.</p>
              * 
              * <strong>example:</strong>
              * <p>0.65</p>
@@ -872,8 +872,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             /**
              * <p>The stage of the custom agent. Valid values:</p>
              * <ul>
-             * <li><strong>debug</strong>: test stage.</li>
-             * <li><strong>prod</strong>: production stage.</li>
+             * <li><strong>debug</strong>: The debug stage.</li>
+             * <li><strong>prod</strong>: The production stage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -951,9 +951,9 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             /**
              * <p>The mode. Valid values:</p>
              * <ul>
-             * <li><strong>ASK_DATA</strong>: ask data mode.</li>
-             * <li><strong>ANALYSIS</strong>: analysis mode.</li>
-             * <li><strong>INSIGHT</strong>: insight mode.</li>
+             * <li><strong>ASK_DATA</strong>: The ask-data mode.</li>
+             * <li><strong>ANALYSIS</strong>: The analysis mode.</li>
+             * <li><strong>INSIGHT</strong>: The insight mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -987,10 +987,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user OSS bucket.</p>
-             * <ul>
-             * <li>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</li>
-             * </ul>
+             * <p>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>user-oss-bucket</p>
@@ -1259,7 +1256,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The chat replay history.</p>
+             * <p>The chat history replay records.</p>
              */
             public Builder chatHistoryLocations(java.util.List<ChatHistoryLocations> chatHistoryLocations) {
                 this.chatHistoryLocations = chatHistoryLocations;
@@ -1360,7 +1357,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
              * <p>The title.</p>
              * 
              * <strong>example:</strong>
-             * <p>分析一下这份文件，给出报告。</p>
+             * <p>Analyze this file and generate a report</p>
              */
             public Builder title(String title) {
                 this.title = title;

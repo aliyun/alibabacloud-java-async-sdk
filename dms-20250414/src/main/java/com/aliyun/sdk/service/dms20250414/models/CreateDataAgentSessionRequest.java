@@ -149,10 +149,10 @@ public class CreateDataAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The session title. Supports Chinese and English. Maximum length: 128 characters.</p>
+         * <p>The title. Chinese and English characters are supported. Maximum length: 128 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>帮我分析一下这份数据，给出报告。</p>
+         * <p>Help me analyze this data and generate a report</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -373,12 +373,10 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * <p>The custom agent stage. Valid values:</p>
+             * <p>The stage of the custom agent. Valid values:</p>
              * <ul>
-             * <li><p><strong>debug</strong>: Test stage.</p>
-             * </li>
-             * <li><p><strong>prod</strong>: Production stage.</p>
-             * </li>
+             * <li><strong>debug</strong>: Debug stage.</li>
+             * <li><strong>prod</strong>: Production stage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -401,7 +399,10 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * EncryptKey.
+             * <p>The encryption key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -409,7 +410,10 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * EncryptType.
+             * <p>The encryption type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder encryptType(String encryptType) {
                 this.encryptType = encryptType;
@@ -417,7 +421,7 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * KbUuidList.
+             * <p>The list of knowledge base IDs.</p>
              */
             public Builder kbUuidList(java.util.List<String> kbUuidList) {
                 this.kbUuidList = kbUuidList;
@@ -427,10 +431,8 @@ public class CreateDataAgentSessionRequest extends Request {
             /**
              * <p>The language. Valid values:</p>
              * <ul>
-             * <li><p><strong>CHINESE</strong>: Chinese</p>
-             * </li>
-             * <li><p><strong>ENGLISH</strong>: English</p>
-             * </li>
+             * <li><strong>CHINESE</strong>: Chinese.</li>
+             * <li><strong>ENGLISH</strong>: English.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -442,7 +444,7 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * <p>A list of MCP server IDs.</p>
+             * <p>The list of MCP server IDs in the session configuration.</p>
              */
             public Builder mcpServerIds(java.util.List<String> mcpServerIds) {
                 this.mcpServerIds = mcpServerIds;
@@ -452,12 +454,9 @@ public class CreateDataAgentSessionRequest extends Request {
             /**
              * <p>The mode. Valid values:</p>
              * <ul>
-             * <li><p><strong>ASK_DATA</strong>: Quick inquiry mode.</p>
-             * </li>
-             * <li><p><strong>ANALYSIS</strong>: Analysis mode.</p>
-             * </li>
-             * <li><p><strong>INSIGHT</strong>: Insight mode.</p>
-             * </li>
+             * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
+             * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
+             * <li><strong>INSIGHT</strong>: Insight mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -469,7 +468,10 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * ReportPageWidth.
+             * <p>The report page width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reportPageWidth(Long reportPageWidth) {
                 this.reportPageWidth = reportPageWidth;
@@ -477,7 +479,10 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * ReportWaterMark.
+             * <p>The report watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder reportWaterMark(String reportWaterMark) {
                 this.reportWaterMark = reportWaterMark;
@@ -485,9 +490,9 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * <p>The OSS bucket name.</p>
+             * <p>The name of the user OSS bucket.</p>
              * <ul>
-             * <li>This bucket stores intermediate files and report artifacts from the analysis.</li>
+             * <li>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</li>
              * </ul>
              * 
              * <strong>example:</strong>

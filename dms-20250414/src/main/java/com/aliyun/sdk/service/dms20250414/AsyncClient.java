@@ -71,6 +71,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConfigDataAgentMemoryResponse> configDataAgentMemory(ConfigDataAgentMemoryRequest request);
 
     /**
+     * @param request the request parameters of CreateAgent  CreateAgentRequest
+     * @return CreateAgentResponse
+     */
+    CompletableFuture<CreateAgentResponse> createAgent(CreateAgentRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Creates an Airflow instance in a workspace.</p>
      * 

@@ -45,6 +45,10 @@ public class ListDataAgentThemeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ThemeType")
     private String themeType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListDataAgentThemeRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
@@ -54,6 +58,7 @@ public class ListDataAgentThemeRequest extends Request {
         this.pageSize = builder.pageSize;
         this.themeFrom = builder.themeFrom;
         this.themeType = builder.themeType;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -118,6 +123,13 @@ public class ListDataAgentThemeRequest extends Request {
         return this.themeType;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListDataAgentThemeRequest, Builder> {
         private String category; 
         private Integer maxResults; 
@@ -126,6 +138,7 @@ public class ListDataAgentThemeRequest extends Request {
         private Integer pageSize; 
         private String themeFrom; 
         private String themeType; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -140,10 +153,11 @@ public class ListDataAgentThemeRequest extends Request {
             this.pageSize = request.pageSize;
             this.themeFrom = request.themeFrom;
             this.themeType = request.themeType;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The common scenarios. Valid values: report, infographic, and others.</p>
+         * <p>The common scenario of the theme. Valid values: report, infographic, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>report</p>
@@ -155,7 +169,7 @@ public class ListDataAgentThemeRequest extends Request {
         }
 
         /**
-         * <p><strong>[Not supported]</strong> The page size. Maximum value: 100.</p>
+         * <p><strong>[Not currently supported]</strong> The maximum number of entries per page. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -167,10 +181,10 @@ public class ListDataAgentThemeRequest extends Request {
         }
 
         /**
-         * <p><strong>[Not supported]</strong> The pagination token for the next query. Valid values:</p>
+         * <p><strong>[Not currently supported]</strong> The pagination token for the next query. Valid values:</p>
          * <ul>
          * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-         * <li>If <strong>NextToken</strong> has a return value, the value indicates the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +209,7 @@ public class ListDataAgentThemeRequest extends Request {
         }
 
         /**
-         * <p>The current page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -226,8 +240,8 @@ public class ListDataAgentThemeRequest extends Request {
         /**
          * <p>The theme stage. Valid values:</p>
          * <ul>
-         * <li>design: contains only design.md.</li>
-         * <li>template: complete and renderable.</li>
+         * <li>design: The theme contains only design.md.</li>
+         * <li>template: The theme is complete and renderable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,6 +250,18 @@ public class ListDataAgentThemeRequest extends Request {
         public Builder themeType(String themeType) {
             this.putQueryParameter("ThemeType", themeType);
             this.themeType = themeType;
+            return this;
+        }
+
+        /**
+         * <p>The workspace context. If this parameter is left empty or set to personal, the personal workspace is used. To query themes in a collaborative workspace, specify the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99fad*******6c0l4nlacu</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

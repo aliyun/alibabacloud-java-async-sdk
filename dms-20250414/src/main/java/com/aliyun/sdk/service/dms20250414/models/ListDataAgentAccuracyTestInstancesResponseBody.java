@@ -536,7 +536,10 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Datasource.
+             * <p>The data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder datasource(String datasource) {
                 this.datasource = datasource;
@@ -613,7 +616,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
              * <p>The custom agent name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Agent测试名称</p>
+             * <p>AgentTestName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -621,7 +624,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
+             * <p>Specifies whether sessions are displayed after analysis. This feature is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

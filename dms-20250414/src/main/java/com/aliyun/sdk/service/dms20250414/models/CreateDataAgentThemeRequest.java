@@ -41,6 +41,10 @@ public class CreateDataAgentThemeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ThemeType")
     private String themeType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private CreateDataAgentThemeRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
@@ -49,6 +53,7 @@ public class CreateDataAgentThemeRequest extends Request {
         this.themeId = builder.themeId;
         this.themeName = builder.themeName;
         this.themeType = builder.themeType;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class CreateDataAgentThemeRequest extends Request {
         return this.themeType;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<CreateDataAgentThemeRequest, Builder> {
         private String category; 
         private String description; 
@@ -113,6 +125,7 @@ public class CreateDataAgentThemeRequest extends Request {
         private String themeId; 
         private String themeName; 
         private String themeType; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -126,14 +139,15 @@ public class CreateDataAgentThemeRequest extends Request {
             this.themeId = request.themeId;
             this.themeName = request.themeName;
             this.themeType = request.themeType;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The application scenario, which affects filtering when viewing the theme list in the console. Valid values:</p>
+         * <p>The scenario, which affects the filtering when you view the theme list in the console. Valid values:</p>
          * <ul>
-         * <li>(Recommended) custom: a user-uploaded custom theme with no preset style or information organization structure.</li>
-         * <li>report: a web report that conforms to the DataAgent information organization structure.</li>
-         * <li>(Not supported) infographic: an infographic that conforms to the DataAgent information organization structure.</li>
+         * <li>(Recommended) custom: A user-uploaded custom theme with no preset style or information organization structure.</li>
+         * <li>report: A web report that conforms to the DataAgent information organization structure.</li>
+         * <li>(Not supported) infographic: An infographic that conforms to the DataAgent information organization structure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,9 +174,9 @@ public class CreateDataAgentThemeRequest extends Request {
         /**
          * <p>The file source, which affects the backend logic for determining whether the theme is valid. Valid values:</p>
          * <ul>
-         * <li>upload: uploaded through OSS.</li>
-         * <li>(Not supported) public_url: provided through an OSS URL that allows public network access.</li>
-         * <li>(Not supported) user_oss: provided through a user OSS URL.</li>
+         * <li>upload: The file is uploaded through OSS.</li>
+         * <li>(Not supported) public_url: The file is provided through a public network access OSS URL.</li>
+         * <li>(Not supported) user_oss: The file is provided through a user OSS URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +201,7 @@ public class CreateDataAgentThemeRequest extends Request {
         }
 
         /**
-         * <p>The display name of the theme. The value can be up to 64 characters in length. This parameter is required during creation.</p>
+         * <p>The display name of the theme. The value can be up to 64 characters in length. This parameter is required when you create a theme.</p>
          * 
          * <strong>example:</strong>
          * <p>weekly report</p>
@@ -211,6 +225,18 @@ public class CreateDataAgentThemeRequest extends Request {
         public Builder themeType(String themeType) {
             this.putQueryParameter("ThemeType", themeType);
             this.themeType = themeType;
+            return this;
+        }
+
+        /**
+         * <p>The workspace to which the theme belongs. If this parameter is not specified or is set to personal, the personal workspace is used. You can also specify a collaboration workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99fad******qg6c0l4nlacu</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -114,7 +114,7 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when the request is abnormal.</p>
+         * <p>The error code returned when the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -147,10 +147,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          */
         public Builder success(Boolean success) {
@@ -352,7 +352,7 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The theme tracing information. This field is currently not enabled.</p>
+             * <p>The tracing information of the theme. This field is currently not enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>6d1e3f9a-<strong><strong>-</strong></strong>-****-2b8c4e6f0a1d</p>
@@ -363,11 +363,7 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the theme. Valid values:</p>
-             * <ul>
-             * <li>system</li>
-             * <li>custom</li>
-             * </ul>
+             * <p>The source of the theme. Valid values: system, custom.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -400,10 +396,10 @@ public class DescribeDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The theme stage. Valid values:</p>
+             * <p>The stage of the theme. Valid values:</p>
              * <ul>
-             * <li>design: design.md only.</li>
-             * <li>template: complete and renderable.</li>
+             * <li>design: The theme contains only design.md.</li>
+             * <li>template: The theme is complete and renderable.</li>
              * </ul>
              * 
              * <strong>example:</strong>

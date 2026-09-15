@@ -192,7 +192,7 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when the request failed.</p>
+         * <p>The error code returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -203,7 +203,7 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the request failed.</p>
+         * <p>The error message returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -214,7 +214,7 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -247,7 +247,7 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -452,7 +452,7 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The common scenarios. Valid values: report, infographic, and others.</p>
+             * <p>The common scenario of the theme. Valid values: report, infographic, and others.</p>
              * 
              * <strong>example:</strong>
              * <p>report</p>
@@ -496,7 +496,7 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tracing reference that points to the UUID of the source theme.</p>
+             * <p>The traceability reference that points to the UUID of the source theme.</p>
              * 
              * <strong>example:</strong>
              * <p>6d1e3f9a-<strong><strong>-</strong></strong>-****-2b8c4e6f0a1d</p>
@@ -547,8 +547,8 @@ public class ListDataAgentThemeResponseBody extends TeaModel {
             /**
              * <p>The theme stage. Valid values:</p>
              * <ul>
-             * <li>design: contains only design.md.</li>
-             * <li>template: complete and renderable.</li>
+             * <li>design: The theme contains only design.md.</li>
+             * <li>template: The theme is complete and renderable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
