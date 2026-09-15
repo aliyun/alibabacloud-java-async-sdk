@@ -67,7 +67,10 @@ public class UpdateMaintainWindowResponseBody extends TeaModel {
         } 
 
         /**
-         * maintainWindowId.
+         * <p>The ID of the updated silence policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ff3fbd0-8a0b-4b31-9b1c-8e3f0a2c5d71</p>
          */
         public Builder maintainWindowId(String maintainWindowId) {
             this.maintainWindowId = maintainWindowId;
@@ -75,10 +78,10 @@ public class UpdateMaintainWindowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket tracking.</p>
          * 
          * <strong>example:</strong>
-         * <p>0CEC5375-C554-562B-A65F-*****</p>
+         * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -111,10 +111,11 @@ public class UpdateMaintainWindowRequest extends Request {
         }
 
         /**
+         * <p>The silence policy ID. If this parameter is not specified when you create a silence policy, the system automatically generates one. You can call ListMaintainWindows to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123-12-312-31-23123</p>
+         * <p>3ff3fbd0-8a0b-4b31-9b1c-8e3f0a2c5d71</p>
          */
         public Builder maintainWindowId(String maintainWindowId) {
             this.putPathParameter("maintainWindowId", maintainWindowId);
@@ -123,7 +124,7 @@ public class UpdateMaintainWindowRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body. This parameter is required by the backend. Pass in the complete MaintainWindowForModify configuration object.</p>
          */
         public Builder body(MaintainWindowForModify body) {
             this.putBodyParameter("body", body);
@@ -132,7 +133,10 @@ public class UpdateMaintainWindowRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-xxxx-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

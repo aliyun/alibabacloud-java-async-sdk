@@ -194,7 +194,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * <p>The contact IDs.</p>
+         * <p>The IDs of the alert contacts.</p>
          */
         public Builder contactIds(java.util.List<String> contactIds) {
             String contactIdsShrink = shrink(contactIds, "contactIds", "json");
@@ -204,7 +204,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * <p>The email address of the contact.</p>
+         * <p>The email address of the alert contact.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
@@ -216,7 +216,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the contact group to which the contact belongs.</p>
+         * <p>The ID of the contact group to which the alert contact belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>group-id-123</p>
@@ -228,7 +228,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * <p>The contact name.</p>
+         * <p>The name of the alert contact.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -264,7 +264,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * <p>The phone number of the contact.</p>
+         * <p>The phone number of the alert contact.</p>
          * 
          * <strong>example:</strong>
          * <p>15012345678</p>
@@ -276,7 +276,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only ungrouped contacts.</p>
+         * <p>Specifies whether to query only ungrouped alert contacts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

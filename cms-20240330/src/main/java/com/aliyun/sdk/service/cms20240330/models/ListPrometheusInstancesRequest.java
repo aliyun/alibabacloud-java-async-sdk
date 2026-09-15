@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListPrometheusInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("filterRegionIds")
+    @Deprecated
     private String filterRegionIds;
 
     @com.aliyun.core.annotation.Query
@@ -45,6 +46,7 @@ public class ListPrometheusInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resourceType")
+    @Deprecated
     private String resourceType;
 
     @com.aliyun.core.annotation.Query
@@ -187,7 +189,7 @@ public class ListPrometheusInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The region IDs for filtering, separated by commas.</p>
+         * <p>The region IDs for filtering, separated by commas. Currently, only a single region ID is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -281,11 +283,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance version. Valid values:</p>
-         * <ul>
-         * <li>V1: V1 version.</li>
-         * <li>V2: V2 version.</li>
-         * </ul>
+         * <p>The instance version. Valid values: V1 and V2.</p>
          * 
          * <strong>example:</strong>
          * <p>V2</p>

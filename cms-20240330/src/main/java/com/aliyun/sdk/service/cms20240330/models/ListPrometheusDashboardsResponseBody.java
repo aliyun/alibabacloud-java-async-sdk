@@ -80,7 +80,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of dashboards for the Prometheus instance.</p>
+         * <p>The list of dashboards for the Managed Service for Prometheus instance.</p>
          */
         public Builder prometheusDashboards(java.util.List<PrometheusDashboards> prometheusDashboards) {
             this.prometheusDashboards = prometheusDashboards;
@@ -88,7 +88,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -122,6 +122,9 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
      * <p>ListPrometheusDashboardsResponseBody</p>
      */
     public static class PrometheusDashboards extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("folderUid")
+        private String folderUid;
+
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
@@ -141,6 +144,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         private String url;
 
         private PrometheusDashboards(Builder builder) {
+            this.folderUid = builder.folderUid;
             this.id = builder.id;
             this.name = builder.name;
             this.tags = builder.tags;
@@ -155,6 +159,13 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
 
         public static PrometheusDashboards create() {
             return builder().build();
+        }
+
+        /**
+         * @return folderUid
+         */
+        public String getFolderUid() {
+            return this.folderUid;
         }
 
         /**
@@ -200,6 +211,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String folderUid; 
             private String id; 
             private String name; 
             private java.util.List<String> tags; 
@@ -211,6 +223,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
             } 
 
             private Builder(PrometheusDashboards model) {
+                this.folderUid = model.folderUid;
                 this.id = model.id;
                 this.name = model.name;
                 this.tags = model.tags;
@@ -218,6 +231,17 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
                 this.uid = model.uid;
                 this.url = model.url;
             } 
+
+            /**
+             * <p>The UID of the dashboard folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
+             */
+            public Builder folderUid(String folderUid) {
+                this.folderUid = folderUid;
+                return this;
+            }
 
             /**
              * <p>The dashboard ID.</p>
@@ -272,7 +296,7 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the dashboard.</p>
+             * <p>The dashboard URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application">https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application</a></p>

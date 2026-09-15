@@ -106,7 +106,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of alert action integration configurations.</p>
+         * <p>The list of action integration configurations.</p>
          */
         public Builder alertActions(java.util.List<AlertActions> alertActions) {
             this.alertActions = alertActions;
@@ -242,7 +242,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The event provider.</p>
+             * <p>The event source.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -358,7 +358,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Auto Scaling group.</p>
+             * <p>The ID of the elastic scaling group.</p>
              * 
              * <strong>example:</strong>
              * <p>testId</p>
@@ -369,7 +369,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scaling rule.</p>
+             * <p>The ID of the elastic scaling rule.</p>
              * 
              * <strong>example:</strong>
              * <p>testId</p>
@@ -684,12 +684,10 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource.</p>
+             * <p>The resource name.</p>
              * <ul>
-             * <li><p>If the resource type is \<code>queue\\</code>, this parameter specifies the queue name.</p>
-             * </li>
-             * <li><p>If the resource type is \<code>topic\\</code>, this parameter specifies the topic name.</p>
-             * </li>
+             * <li>If the resource type is queue, the resource name is the queue name.</li>
+             * <li>If the resource type is topic, the resource name is the topic name.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -782,7 +780,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The integration webhook of PagerDuty. Versions 1 and 2 are supported.</p>
+             * <p>The integration webhook of PagerDuty. V1 and V2 versions are supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -983,7 +981,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data format. This parameter is valid only when the request method is POST.</p>
+             * <p>The data format. This parameter takes effect only when the request method is POST.</p>
              * 
              * <strong>example:</strong>
              * <p>JSON</p>
@@ -1002,7 +1000,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request method of the webhook.</p>
+             * <p>The webhook request method.</p>
              * 
              * <strong>example:</strong>
              * <p>GET</p>
@@ -1013,7 +1011,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL for alerts.</p>
+             * <p>The alert callback URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.test.com">http://www.test.com</a></p>
@@ -1200,7 +1198,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique ID of the alert action integration.</p>
+             * <p>The unique IDs of the action integrations.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1211,7 +1209,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert action integration.</p>
+             * <p>The name of the action integration.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>
@@ -1222,7 +1220,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies the event bus.</p>
+             * <p>The EventBridge parameters.</p>
              */
             public Builder ebParam(EbParam ebParam) {
                 this.ebParam = ebParam;
@@ -1230,7 +1228,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of Auto Scaling.</p>
+             * <p>The elastic scaling parameters.</p>
              */
             public Builder essParam(EssParam essParam) {
                 this.essParam = essParam;
@@ -1238,7 +1236,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of Function Compute 3.0.</p>
+             * <p>The Function Compute 3.0 parameters.</p>
              */
             public Builder fc3Param(Fc3Param fc3Param) {
                 this.fc3Param = fc3Param;
@@ -1246,7 +1244,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of Function Compute.</p>
+             * <p>The Function Compute parameters.</p>
              */
             public Builder fcParam(FcParam fcParam) {
                 this.fcParam = fcParam;
@@ -1254,7 +1252,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of Simple Message Queue (formerly MNS).</p>
+             * <p>The Simple Message Queue (formerly MNS) parameters.</p>
              */
             public Builder mnsParam(MnsParam mnsParam) {
                 this.mnsParam = mnsParam;
@@ -1270,7 +1268,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters of Simple Log Service.</p>
+             * <p>The Simple Log Service parameters.</p>
              */
             public Builder slsParam(SlsParam slsParam) {
                 this.slsParam = slsParam;
@@ -1278,7 +1276,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the alert action integration.</p>
+             * <p>The type of the action integration.</p>
              * 
              * <strong>example:</strong>
              * <p>FC</p>

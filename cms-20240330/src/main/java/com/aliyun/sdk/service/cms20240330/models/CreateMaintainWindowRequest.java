@@ -96,7 +96,7 @@ public class CreateMaintainWindowRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body. This parameter is required by the backend. Pass in a complete MaintainWindowForModify configuration object.</p>
          */
         public Builder body(MaintainWindowForModify body) {
             this.putBodyParameter("body", body);
@@ -105,7 +105,10 @@ public class CreateMaintainWindowRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-xxxx-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

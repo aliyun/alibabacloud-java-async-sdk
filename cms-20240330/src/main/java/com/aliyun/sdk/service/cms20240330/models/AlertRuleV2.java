@@ -53,6 +53,9 @@ public class AlertRuleV2 extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("labels")
     private java.util.Map<String, String> labels;
 
+    @com.aliyun.core.annotation.NameInMap("managedBy")
+    private String managedBy;
+
     @com.aliyun.core.annotation.NameInMap("notifyConfig")
     private NotifyConfigUnified notifyConfig;
 
@@ -116,6 +119,7 @@ public class AlertRuleV2 extends TeaModel {
         this.displayName = builder.displayName;
         this.enabled = builder.enabled;
         this.labels = builder.labels;
+        this.managedBy = builder.managedBy;
         this.notifyConfig = builder.notifyConfig;
         this.notifyStrategyId = builder.notifyStrategyId;
         this.observeResourceConfig = builder.observeResourceConfig;
@@ -228,6 +232,13 @@ public class AlertRuleV2 extends TeaModel {
      */
     public java.util.Map<String, String> getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return managedBy
+     */
+    public String getManagedBy() {
+        return this.managedBy;
     }
 
     /**
@@ -355,6 +366,7 @@ public class AlertRuleV2 extends TeaModel {
         private String displayName; 
         private Boolean enabled; 
         private java.util.Map<String, String> labels; 
+        private String managedBy; 
         private NotifyConfigUnified notifyConfig; 
         private String notifyStrategyId; 
         private ObserveResourceConfig observeResourceConfig; 
@@ -388,6 +400,7 @@ public class AlertRuleV2 extends TeaModel {
             this.displayName = model.displayName;
             this.enabled = model.enabled;
             this.labels = model.labels;
+            this.managedBy = model.managedBy;
             this.notifyConfig = model.notifyConfig;
             this.notifyStrategyId = model.notifyStrategyId;
             this.observeResourceConfig = model.observeResourceConfig;
@@ -423,7 +436,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The ARMS integration configuration.</p>
+         * <p>The Application Real-Time Monitoring Service (ARMS) integration configuration.</p>
          */
         public Builder armsIntegrationConfig(ArmsIntegrationConfig armsIntegrationConfig) {
             this.armsIntegrationConfig = armsIntegrationConfig;
@@ -431,10 +444,10 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The business source. This value is read-only. Example values: managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls.</p>
+         * <p>The business source (read-only), such as managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, or sls.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample value</p>
+         * <p>示例值</p>
          */
         public Builder bizSource(String bizSource) {
             this.bizSource = bizSource;
@@ -442,7 +455,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The detection condition configuration. Supported types: Prometheus simple, UModel, APM simple, and APM composite.</p>
+         * <p>The detection condition configuration aggregation (Prometheus simple, UModel, APM simple, or APM composite).</p>
          */
         public Builder conditionConfig(ConditionConfigUnified conditionConfig) {
             this.conditionConfig = conditionConfig;
@@ -461,7 +474,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The creation time in ISO 8601 format. This value is read-only.</p>
+         * <p>The creation time (read-only), in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>1751595283143</p>
@@ -472,7 +485,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The datasource configuration. This is a unified object shared by PROMETHEUS, UMODEL, and APM. Fields are selected based on the type.</p>
+         * <p>The datasource config aggregation (PROMETHEUS, UMODEL, and APM share a single object. Fields are selected based on the type).</p>
          */
         public Builder datasourceConfig(DatasourceConfigUnified datasourceConfig) {
             this.datasourceConfig = datasourceConfig;
@@ -480,7 +493,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The datasource type. This value is read-only and derived.</p>
+         * <p>The data source type (read-only, derived).</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -521,7 +534,18 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The notification configuration. Currently, only DIRECT_NOTIFY is supported, which corresponds to DirectNotifyConfig.</p>
+         * <p>The rule manager (read-only). An empty value indicates a user-created rule. A non-empty value indicates the rule is created and managed by the corresponding cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>integrationCenter</p>
+         */
+        public Builder managedBy(String managedBy) {
+            this.managedBy = managedBy;
+            return this;
+        }
+
+        /**
+         * <p>The notification configuration aggregation (currently only DIRECT_NOTIFY, corresponding to DirectNotifyConfig).</p>
          */
         public Builder notifyConfig(NotifyConfigUnified notifyConfig) {
             this.notifyConfig = notifyConfig;
@@ -529,7 +553,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The notification policy ID. This value is read-only and derived from the first entry in the notification policy list.</p>
+         * <p>The notification policy ID (read-only, derived). The value is the first entry in the notification policy list.</p>
          * 
          * <strong>example:</strong>
          * <p>example-id-001</p>
@@ -548,7 +572,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Indicates whether the rule applies to all resources of this type. This value is read-only and derived. For new integrations, use observeResourceConfig.relationType and check whether it is set to ALL for equivalent semantics.</p>
+         * <p><strong>[Deprecated]</strong> Specifies whether the rule takes effect on all resources of this type (read-only, derived). For new integrations, use observeResourceConfig.relationType and check whether the value is ALL for equivalent semantics.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -559,7 +583,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The list of observable resource IDs. This value is read-only and derived.</p>
+         * <p>The list of observable resource IDs (read-only, derived).</p>
          */
         public Builder observeResourceList(java.util.List<String> observeResourceList) {
             this.observeResourceList = observeResourceList;
@@ -567,7 +591,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The observable resource type. This value is read-only and derived. Use observeResourceConfig.entityType instead for new integrations.</p>
+         * <p><strong>[Deprecated]</strong> The observable resource type (read-only, derived). For new integrations, use observeResourceConfig.entityType instead.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -578,10 +602,10 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The partition key. This value is read-only and maintained by the system for rule routing and sharding.</p>
+         * <p>The partition key (read-only). Maintained by the system for rule routing and sharding.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample value</p>
+         * <p>示例值</p>
          */
         public Builder partitionKey(String partitionKey) {
             this.partitionKey = partitionKey;
@@ -589,7 +613,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The query configuration. Valid types: PROMETHEUS_SINGLE_QUERY, UMODEL_METRICSET_QUERY, and APM_MULTI_QUERY.</p>
+         * <p>The query configuration aggregation (PROMETHEUS_SINGLE_QUERY, UMODEL_METRICSET_QUERY, or APM_MULTI_QUERY).</p>
          */
         public Builder queryConfig(QueryConfigUnified queryConfig) {
             this.queryConfig = queryConfig;
@@ -597,7 +621,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The RCA (root cause analysis) configuration.</p>
+         * <p>The root cause analysis (RCA) configuration.</p>
          */
         public Builder rcaConfig(AlertRuleRcaConfig rcaConfig) {
             this.rcaConfig = rcaConfig;
@@ -605,7 +629,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The region ID, aligned with V1 AlertRule.regionId. Priority: the regionId in the request body takes precedence over the gateway callerRegionId.</p>
+         * <p>The region ID, aligned with V1 AlertRule.regionId. Priority: regionId in the request body takes precedence over callerRegionId from the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>example-id-001</p>
@@ -616,7 +640,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The scheduling configuration. Currently, only the FIXED type is supported.</p>
+         * <p>The scheduling configuration aggregation (currently only FIXED is supported).</p>
          */
         public Builder scheduleConfig(ScheduleConfigUnified scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
@@ -624,7 +648,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The severity levels covered by this rule, in comma-separated format. This value is read-only and derived. The format is consistent with the filter.severityLevels query parameter.</p>
+         * <p>The severity levels covered by this rule, separated by commas (read-only, derived). The format is consistent with the filter.severityLevels query parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -635,7 +659,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The alert status. This value is read-only.</p>
+         * <p>The alert status (read-only).</p>
          * 
          * <strong>example:</strong>
          * <p>Alarm</p>
@@ -646,7 +670,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The update time in ISO 8601 format. This value is read-only.</p>
+         * <p>The update time (read-only), in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>1764556086388</p>
@@ -657,7 +681,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The rule UUID. This value is system-generated and read-only.</p>
+         * <p>The rule UUID (system-generated, read-only).</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxx-xxxx-xxxx</p>

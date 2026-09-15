@@ -67,7 +67,10 @@ public class DisableMaintainWindowResponseBody extends TeaModel {
         } 
 
         /**
-         * maintainWindowId.
+         * <p>The ID of the paused silence policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ff3fbd0-8a0b-4b31-9b1c-8e3f0a2c5d71</p>
          */
         public Builder maintainWindowId(String maintainWindowId) {
             this.maintainWindowId = maintainWindowId;
@@ -75,10 +78,10 @@ public class DisableMaintainWindowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket tracking.</p>
          * 
          * <strong>example:</strong>
-         * <p>123123-3213-345-9941-345345345</p>
+         * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

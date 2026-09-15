@@ -345,7 +345,7 @@ public class Triggers extends TeaModel {
         } 
 
         /**
-         * <p>The comparison operator for CLOUD_MONITORING_CONDITION.</p>
+         * <p>The comparison operator when the condition type is CLOUD_MONITORING_CONDITION.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleValue</p>
@@ -356,7 +356,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The match expression for SLS_MULTI_CONDITION. Corresponds to the V1 condition field and is preserved as-is without parsing.</p>
+         * <p>The match expression when the condition type is SLS_MULTI_CONDITION. This corresponds to the V1 condition and is preserved as-is without parsing.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleValue</p>
@@ -367,7 +367,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The list of sub-conditions for UMODEL_METRICSET_MULTI / PROMETHEUS_MULTI with expressionType=COMPOSITE. Each item contains queryName, operator, and threshold.</p>
+         * <p>The list of sub-conditions when the condition type is UMODEL_METRICSET_MULTI or PROMETHEUS_MULTI with expressionType=COMPOSITE. Each item contains queryName, operator, and threshold.</p>
          */
         public Builder conditions(java.util.List<TriggerConditions> conditions) {
             this.conditions = conditions;
@@ -375,7 +375,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The count match expression for SLS_MULTI_CONDITION. Corresponds to the V1 countCondition field and is preserved as-is without parsing.</p>
+         * <p>The count match expression when the condition type is SLS_MULTI_CONDITION. This corresponds to the V1 countCondition and is preserved as-is without parsing.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleValue</p>
@@ -386,7 +386,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION countOperator is disabled. Use countCondition instead.</p>
+         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION has been disabled. Use countCondition instead.</p>
          * 
          * <strong>example:</strong>
          * <p>GTE</p>
@@ -397,7 +397,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION countOperator is disabled. Use countCondition instead.</p>
+         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION has been disabled. Use countCondition instead.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -408,7 +408,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The duration in seconds for which data must continuously meet the condition to fire an alert. If not specified, the value is inherited from conditionConfig.durationSecs. Used by UMODEL_METRICSET_MULTI_CONDITION / PROMETHEUS_MULTI_CONDITION.</p>
+         * <p>The duration in seconds during which data must continuously meet the condition before an alert is triggered. If not specified, the value is inherited from conditionConfig.durationSecs. This parameter is used by UMODEL_METRICSET_MULTI_CONDITION and PROMETHEUS_MULTI_CONDITION.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -419,7 +419,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The expression type. For UMODEL_METRICSET_MULTI_CONDITION / PROMETHEUS_MULTI_CONDITION, valid values are SIMPLE and COMPOSITE.</p>
+         * <p>The expression type. Set to SIMPLE or COMPOSITE when the condition type is UMODEL_METRICSET_MULTI_CONDITION or PROMETHEUS_MULTI_CONDITION.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -430,7 +430,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The logic operator for UMODEL_METRICSET_MULTI / PROMETHEUS_MULTI with expressionType=COMPOSITE. Valid values: AND, OR, and UNLESS.</p>
+         * <p>The logical operator when the condition type is UMODEL_METRICSET_MULTI or PROMETHEUS_MULTI with expressionType=COMPOSITE. Valid values: AND, OR, and UNLESS.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -441,7 +441,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION matchField is disabled. Use condition instead.</p>
+         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION has been disabled. Use condition instead.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleValue</p>
@@ -452,7 +452,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION matchField is disabled. Use condition instead.</p>
+         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION has been disabled. Use condition instead.</p>
          * 
          * <strong>example:</strong>
          * <p>PRESENT</p>
@@ -463,7 +463,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION matchField is disabled. Use condition instead.</p>
+         * <p><strong>[Deprecated]</strong> The write path for SLS_MULTI_CONDITION has been disabled. Use condition instead.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleValue</p>
@@ -474,7 +474,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The upper bound of the range for UMODEL_METRICSET_MULTI with expressionType=SIMPLE. Required when operator is IN_RANGE or OUT_OF_RANGE. The value must be greater than or equal to min.</p>
+         * <p>The upper bound of the range when the condition type is UMODEL_METRICSET_MULTI with expressionType=SIMPLE. This parameter is required when operator is set to IN_RANGE or OUT_OF_RANGE. The value must be greater than or equal to min.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -485,7 +485,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The metric name for CLOUD_MONITORING_CONDITION with expressionType=COMPOSITE. For SIMPLE, the metric name is specified at the conditionConfig level.</p>
+         * <p>The metric name when the condition type is CLOUD_MONITORING_CONDITION with expressionType=COMPOSITE. For SIMPLE expression type, the metric name is specified at the conditionConfig level by the metricName parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleMetricName</p>
@@ -496,7 +496,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The lower bound of the range for UMODEL_METRICSET_MULTI with expressionType=SIMPLE. Required when operator is IN_RANGE or OUT_OF_RANGE.</p>
+         * <p>The lower bound of the range when the condition type is UMODEL_METRICSET_MULTI with expressionType=SIMPLE. This parameter is required when operator is set to IN_RANGE or OUT_OF_RANGE.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -507,7 +507,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The operator. For UMODEL_METRICSET_MULTI / PROMETHEUS_MULTI with expressionType=SIMPLE, this is a comparison operator. Valid values: GT, GE, LT, LE, EQ, NE, IN_RANGE, OUT_OF_RANGE, PRESENT, NOT_PRESENT, ABOVE_UPPER, BELOW_LOWER, and OUT_OF_BAND. For SLS_MULTI_CONDITION, this aligns with the V1 caseList.type. Valid values: HAS_DATA, HAS_DATA_COUNT, HAS_DATA_MATCH, and HAS_DATA_MATCH_COUNT.</p>
+         * <p>The operator. For UMODEL_METRICSET_MULTI or PROMETHEUS_MULTI with expressionType=SIMPLE, this is a comparison operator (GT/GE/LT/LE/EQ/NE/IN_RANGE/OUT_OF_RANGE/PRESENT/NOT_PRESENT/ABOVE_UPPER/BELOW_LOWER/OUT_OF_BAND). For SLS_MULTI_CONDITION, this is aligned with the V1 caseList.type (HAS_DATA/HAS_DATA_COUNT/HAS_DATA_MATCH/HAS_DATA_MATCH_COUNT).</p>
          * 
          * <strong>example:</strong>
          * <p>GT</p>
@@ -518,7 +518,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The collection period in seconds for CLOUD_MONITORING_CONDITION with expressionType=COMPOSITE. For SIMPLE, the period is specified at the conditionConfig level.</p>
+         * <p>The collection period in seconds when the condition type is CLOUD_MONITORING_CONDITION with expressionType=COMPOSITE. For SIMPLE expression type, the period is specified at the conditionConfig level by the period parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -529,7 +529,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The precondition for CLOUD_MONITORING_CONDITION.</p>
+         * <p>The precondition when the condition type is CLOUD_MONITORING_CONDITION.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleValue</p>
@@ -540,7 +540,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The referenced query name for UMODEL_METRICSET_MULTI / PROMETHEUS_MULTI with expressionType=SIMPLE. Corresponds to QueryConfigUnified.queries[].name.</p>
+         * <p>The referenced query name when the condition type is UMODEL_METRICSET_MULTI or PROMETHEUS_MULTI with expressionType=SIMPLE. This corresponds to QueryConfigUnified.queries[].name.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleMetricName</p>
@@ -551,7 +551,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The severity level. Priority order: CRITICAL &gt; ERROR &gt; WARN / WARNING &gt; INFO. When multiple triggers exist, they are sorted by this priority, and the first match fires. This takes effect for SLS_MULTI_CONDITION and CLOUD_MONITORING_CONDITION with expressionType=SIMPLE.</p>
+         * <p>The severity level. The priority order is CRITICAL &gt; ERROR &gt; WARN / WARNING &gt; INFO. When multiple triggers exist, they are sorted by this priority, and the first match triggers the alert. This parameter takes effect when the condition type is SLS_MULTI_CONDITION or CLOUD_MONITORING_CONDITION with expressionType=SIMPLE.</p>
          * 
          * <strong>example:</strong>
          * <p>INFO</p>
@@ -562,7 +562,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The statistics method for CLOUD_MONITORING_CONDITION.</p>
+         * <p>The statistical method when the condition type is CLOUD_MONITORING_CONDITION.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleValue</p>
@@ -573,7 +573,10 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The threshold. For CLOUD_MONITORING_CONDITION, this is a string. For UMODEL_METRICSET_MULTI / PROMETHEUS_MULTI, this is a numeric value.</p>
+         * <p>The threshold value. For CLOUD_MONITORING_CONDITION, this is a string. For UMODEL_METRICSET_MULTI and PROMETHEUS_MULTI, this is a numeric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder threshold(Object threshold) {
             this.threshold = threshold;
@@ -581,7 +584,7 @@ public class Triggers extends TeaModel {
         }
 
         /**
-         * <p>The number of consecutive triggers for CLOUD_MONITORING_CONDITION with expressionType=SIMPLE. Each entry is configured independently.</p>
+         * <p>The number of consecutive times the condition must be met before an alert is triggered when the condition type is CLOUD_MONITORING_CONDITION with expressionType=SIMPLE. Each entry has its own independent setting.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

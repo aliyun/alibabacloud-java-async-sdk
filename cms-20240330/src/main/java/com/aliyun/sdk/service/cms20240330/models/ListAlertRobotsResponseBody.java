@@ -117,7 +117,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -139,7 +139,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The robot IDs.</p>
+         * <p>The robot ID.</p>
          */
         public Builder robots(java.util.List<Robots> robots) {
             this.robots = robots;
@@ -294,7 +294,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The digital employee name.</p>
+             * <p>The name of the digital employee.</p>
              * 
              * <strong>example:</strong>
              * <p>apsara-ops</p>
@@ -338,7 +338,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * robotSignKey.
+             * <p>The signature key of the robot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc123</p>
              */
             public Builder robotSignKey(String robotSignKey) {
                 this.robotSignKey = robotSignKey;

@@ -138,7 +138,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>The unique IDs of the alert action integrations.</p>
+         * <p>The unique IDs of the action integrations.</p>
          */
         public Builder alertActionIds(java.util.List<String> alertActionIds) {
             String alertActionIdsShrink = shrink(alertActionIds, "alertActionIds", "json");
@@ -148,7 +148,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert action integration.</p>
+         * <p>The name of the action integration.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -184,7 +184,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>The type of the alert action integration.</p>
+         * <p>The type of the action integration.</p>
          * 
          * <strong>example:</strong>
          * <p>FC</p>

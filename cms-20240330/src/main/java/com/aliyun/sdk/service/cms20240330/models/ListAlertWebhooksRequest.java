@@ -184,7 +184,10 @@ public class ListAlertWebhooksRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-0000000000000000-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

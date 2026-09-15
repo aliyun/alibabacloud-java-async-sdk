@@ -67,7 +67,7 @@ public class GetMaintainWindowResponseBody extends TeaModel {
         } 
 
         /**
-         * maintainWindow.
+         * <p>The details of the silence policy, including the policy ID, name, description, enabled status, filterSetting, effective period configuration, creation time, and update time. workspaceFilterSetting is not returned.</p>
          */
         public Builder maintainWindow(MaintainWindowForView maintainWindow) {
             this.maintainWindow = maintainWindow;
@@ -75,7 +75,7 @@ public class GetMaintainWindowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket submission.</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
