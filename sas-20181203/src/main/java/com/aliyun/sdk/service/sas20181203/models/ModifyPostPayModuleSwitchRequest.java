@@ -23,6 +23,10 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EdrModuleSwitch")
     private EdrModuleSwitch edrModuleSwitch;
 
@@ -49,6 +53,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
     private ModifyPostPayModuleSwitchRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.edrModuleSwitch = builder.edrModuleSwitch;
         this.postPaidHostAutoBind = builder.postPaidHostAutoBind;
         this.postPaidHostAutoBindVersion = builder.postPaidHostAutoBindVersion;
@@ -75,6 +80,13 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -121,6 +133,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyPostPayModuleSwitchRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private EdrModuleSwitch edrModuleSwitch; 
         private Integer postPaidHostAutoBind; 
         private Integer postPaidHostAutoBindVersion; 
@@ -135,6 +148,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         private Builder(ModifyPostPayModuleSwitchRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.edrModuleSwitch = request.edrModuleSwitch;
             this.postPaidHostAutoBind = request.postPaidHostAutoBind;
             this.postPaidHostAutoBindVersion = request.postPaidHostAutoBindVersion;
@@ -149,6 +163,15 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run. Valid values: true: performs a check without executing the operation. false: executes the operation. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -582,7 +605,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
              * <li><strong>1</strong>: Enabled.</li>
              * </ul>
              * <blockquote>
-             * <p>Notice: The basic service module switch cannot be manually modified. This module is enabled when any other module is enabled, and is disabled when all other modules are disabled.</p>
+             * <p>Notice: The basic service module switch cannot be manually modified. This module is in the enabling status when any other module is enabled, and is in the shutdown status only when all other modules are disabled.</notice></p>
              * </blockquote>
              * 
              * <strong>example:</strong>

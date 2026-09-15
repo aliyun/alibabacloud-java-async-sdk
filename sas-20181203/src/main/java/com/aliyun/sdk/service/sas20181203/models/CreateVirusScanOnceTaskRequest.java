@@ -23,6 +23,10 @@ public class CreateVirusScanOnceTaskRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Param")
     private String param;
 
@@ -41,6 +45,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
     private CreateVirusScanOnceTaskRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.param = builder.param;
         this.scanPath = builder.scanPath;
         this.scanType = builder.scanType;
@@ -65,6 +70,13 @@ public class CreateVirusScanOnceTaskRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -97,6 +109,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateVirusScanOnceTaskRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String param; 
         private java.util.List<String> scanPath; 
         private String scanType; 
@@ -109,6 +122,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         private Builder(CreateVirusScanOnceTaskRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.param = request.param;
             this.scanPath = request.scanPath;
             this.scanType = request.scanType;
@@ -121,6 +135,20 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run of the request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run without executing the actual operation.</li>
+         * <li>false: performs the actual request.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -152,7 +180,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
          * <p>The scan type of the virus scan. Valid values:</p>
          * <ul>
          * <li><strong>system</strong>: system scan</li>
-         * <li><strong>user</strong>: custom scan.</li>
+         * <li><strong>user</strong>: custom scan</li>
          * </ul>
          * 
          * <strong>example:</strong>

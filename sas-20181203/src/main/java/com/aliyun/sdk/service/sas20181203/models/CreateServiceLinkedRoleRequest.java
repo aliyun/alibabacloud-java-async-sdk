@@ -23,12 +23,17 @@ public class CreateServiceLinkedRoleRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceLinkedRole")
     private String serviceLinkedRole;
 
     private CreateServiceLinkedRoleRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.serviceLinkedRole = builder.serviceLinkedRole;
     }
 
@@ -53,6 +58,13 @@ public class CreateServiceLinkedRoleRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return serviceLinkedRole
      */
     public String getServiceLinkedRole() {
@@ -61,6 +73,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateServiceLinkedRoleRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String serviceLinkedRole; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         private Builder(CreateServiceLinkedRoleRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.serviceLinkedRole = request.serviceLinkedRole;
         } 
 
@@ -79,6 +93,15 @@ public class CreateServiceLinkedRoleRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -23,6 +23,10 @@ public class CreateCycleTaskRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Enable")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer enable;
@@ -73,6 +77,7 @@ public class CreateCycleTaskRequest extends Request {
     private CreateCycleTaskRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.enable = builder.enable;
         this.firstDateStr = builder.firstDateStr;
         this.intervalPeriod = builder.intervalPeriod;
@@ -103,6 +108,13 @@ public class CreateCycleTaskRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -177,6 +189,7 @@ public class CreateCycleTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCycleTaskRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private Integer enable; 
         private Long firstDateStr; 
         private Integer intervalPeriod; 
@@ -195,6 +208,7 @@ public class CreateCycleTaskRequest extends Request {
         private Builder(CreateCycleTaskRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.enable = request.enable;
             this.firstDateStr = request.firstDateStr;
             this.intervalPeriod = request.intervalPeriod;
@@ -216,6 +230,15 @@ public class CreateCycleTaskRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -264,7 +287,9 @@ public class CreateCycleTaskRequest extends Request {
 
         /**
          * <p>The extended information field.</p>
-         * <p>Note: This parameter is actually required. If this parameter is not specified, the API returns an error. The value is a JSON-formatted string that must contain at least the targetInfo array.</p>
+         * <blockquote>
+         * <p>Note: This parameter is required. If you do not specify this parameter, the API returns an error. The value is a JSON-formatted string that must contain at least the targetInfo array.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -306,7 +331,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The source from which the task is added.</p>
+         * <p>The source from which the task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>console_batch</p>
@@ -318,7 +343,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The task end time, in hours.</p>
+         * <p>The end time of the task, in hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,7 +356,7 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The task start time, in hours.</p>
+         * <p>The start time of the task, in hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,11 +382,11 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * <p>The node type. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
          * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
          * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
-         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
+         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scan.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

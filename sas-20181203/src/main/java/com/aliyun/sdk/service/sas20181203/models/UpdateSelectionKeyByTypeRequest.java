@@ -27,6 +27,10 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SelectionKey")
     private String selectionKey;
 
@@ -34,6 +38,7 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
         super(builder);
         this.businessType = builder.businessType;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.selectionKey = builder.selectionKey;
     }
 
@@ -65,6 +70,13 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return selectionKey
      */
     public String getSelectionKey() {
@@ -74,6 +86,7 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateSelectionKeyByTypeRequest, Builder> {
         private String businessType; 
         private String clientToken; 
+        private Boolean dryRun; 
         private String selectionKey; 
 
         private Builder() {
@@ -84,6 +97,7 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
             super(request);
             this.businessType = request.businessType;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.selectionKey = request.selectionKey;
         } 
 
@@ -112,6 +126,20 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run without performing the actual operation.</li>
+         * <li>false: performs the actual request.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

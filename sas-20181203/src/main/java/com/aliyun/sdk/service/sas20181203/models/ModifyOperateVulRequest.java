@@ -23,6 +23,10 @@ public class ModifyOperateVulRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
@@ -52,6 +56,7 @@ public class ModifyOperateVulRequest extends Request {
     private ModifyOperateVulRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.from = builder.from;
         this.info = builder.info;
         this.operateType = builder.operateType;
@@ -78,6 +83,13 @@ public class ModifyOperateVulRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -124,6 +136,7 @@ public class ModifyOperateVulRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyOperateVulRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String from; 
         private String info; 
         private String operateType; 
@@ -138,6 +151,7 @@ public class ModifyOperateVulRequest extends Request {
         private Builder(ModifyOperateVulRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.from = request.from;
             this.info = request.info;
             this.operateType = request.operateType;
@@ -152,6 +166,15 @@ public class ModifyOperateVulRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

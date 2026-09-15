@@ -46,6 +46,10 @@ public class CreateOssScanConfigRequest extends Request {
     private java.util.List<String> decryptionList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Enable")
     private Integer enable;
 
@@ -94,6 +98,7 @@ public class CreateOssScanConfigRequest extends Request {
         this.decompressMaxFileCount = builder.decompressMaxFileCount;
         this.decompressMaxLayer = builder.decompressMaxLayer;
         this.decryptionList = builder.decryptionList;
+        this.dryRun = builder.dryRun;
         this.enable = builder.enable;
         this.endTime = builder.endTime;
         this.keyPrefixList = builder.keyPrefixList;
@@ -166,6 +171,13 @@ public class CreateOssScanConfigRequest extends Request {
      */
     public java.util.List<String> getDecryptionList() {
         return this.decryptionList;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -246,6 +258,7 @@ public class CreateOssScanConfigRequest extends Request {
         private Integer decompressMaxFileCount; 
         private Integer decompressMaxLayer; 
         private java.util.List<String> decryptionList; 
+        private Boolean dryRun; 
         private Integer enable; 
         private String endTime; 
         private java.util.List<String> keyPrefixList; 
@@ -270,6 +283,7 @@ public class CreateOssScanConfigRequest extends Request {
             this.decompressMaxFileCount = request.decompressMaxFileCount;
             this.decompressMaxLayer = request.decompressMaxLayer;
             this.decryptionList = request.decryptionList;
+            this.dryRun = request.dryRun;
             this.enable = request.enable;
             this.endTime = request.endTime;
             this.keyPrefixList = request.keyPrefixList;
@@ -361,6 +375,15 @@ public class CreateOssScanConfigRequest extends Request {
         public Builder decryptionList(java.util.List<String> decryptionList) {
             this.putQueryParameter("DecryptionList", decryptionList);
             this.decryptionList = decryptionList;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

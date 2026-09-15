@@ -43,6 +43,10 @@ public class BindAuthToMachineRequest extends Request {
     private String criteria;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsPreBind")
     private Integer isPreBind;
 
@@ -78,6 +82,7 @@ public class BindAuthToMachineRequest extends Request {
         this.bindAll = builder.bindAll;
         this.clientToken = builder.clientToken;
         this.criteria = builder.criteria;
+        this.dryRun = builder.dryRun;
         this.isPreBind = builder.isPreBind;
         this.logicalExp = builder.logicalExp;
         this.ntmVersion = builder.ntmVersion;
@@ -143,6 +148,13 @@ public class BindAuthToMachineRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return isPreBind
      */
     public Integer getIsPreBind() {
@@ -198,6 +210,7 @@ public class BindAuthToMachineRequest extends Request {
         private Boolean bindAll; 
         private String clientToken; 
         private String criteria; 
+        private Boolean dryRun; 
         private Integer isPreBind; 
         private String logicalExp; 
         private String ntmVersion; 
@@ -218,6 +231,7 @@ public class BindAuthToMachineRequest extends Request {
             this.bindAll = request.bindAll;
             this.clientToken = request.clientToken;
             this.criteria = request.criteria;
+            this.dryRun = request.dryRun;
             this.isPreBind = request.isPreBind;
             this.logicalExp = request.logicalExp;
             this.ntmVersion = request.ntmVersion;
@@ -230,11 +244,11 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>The authorization version of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>6</strong>: Anti-virus Edition.</li>
-         * <li><strong>5</strong>: Premium Edition.</li>
-         * <li><strong>3</strong>: Enterprise Edition.</li>
-         * <li><strong>7</strong>: Ultimate Edition.</li>
-         * <li><strong>10</strong>: Value-added service Edition.</li>
+         * <li><strong>6</strong>: Anti-virus Edition</li>
+         * <li><strong>5</strong>: Advanced Edition</li>
+         * <li><strong>3</strong>: Enterprise Edition</li>
+         * <li><strong>7</strong>: Ultimate Edition</li>
+         * <li><strong>10</strong>: Value-added Service Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,8 +263,8 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic binding. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Disable automatic binding.</li>
-         * <li><strong>1</strong>: Enable automatic binding.</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,9 +314,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The conditions for searching assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
+         * <p>The conditions for searching for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
          * <blockquote>
-         * <p>You can search for assets by instance ID, instance name, VPC ID, region, or public IP address. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+         * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -311,6 +325,15 @@ public class BindAuthToMachineRequest extends Request {
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
             this.criteria = criteria;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run. Valid values: true: performs a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -336,8 +359,8 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>The logical relationship among multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: The search conditions are evaluated using a logical OR.</li>
-         * <li><strong>AND</strong>: The search conditions are evaluated using a logical AND.</li>
+         * <li><strong>OR</strong>: The search conditions are evaluated with a logical OR.</li>
+         * <li><strong>AND</strong>: The search conditions are evaluated with a logical AND.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,13 +373,13 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The order version associated with the pre-binding operation. Valid values:</p>
+         * <p>The order version associated with the pre-binding. Valid values:</p>
          * <ul>
-         * <li><strong>level7</strong>: Anti-virus Edition.</li>
-         * <li><strong>level3</strong>: Premium Edition.</li>
-         * <li><strong>level2</strong>: Enterprise Edition.</li>
-         * <li><strong>level8</strong>: Ultimate Edition.</li>
-         * <li><strong>level10</strong>: Value-added service only.</li>
+         * <li><strong>level7</strong>: Anti-virus Edition</li>
+         * <li><strong>level3</strong>: Advanced Edition</li>
+         * <li><strong>level2</strong>: Enterprise Edition</li>
+         * <li><strong>level8</strong>: Ultimate Edition</li>
+         * <li><strong>level10</strong>: Value-added service only</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -369,7 +392,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The order ID associated with the pre-binding operation.</p>
+         * <p>The order ID associated with the pre-binding.</p>
          * 
          * <strong>example:</strong>
          * <p>233016**0482</p>
@@ -390,7 +413,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member accounts (Alibaba Cloud account) in the resource directory.</p>
+         * <p>The ID of the member account in the resource folder (Alibaba Cloud account).</p>
          * <blockquote>
          * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>

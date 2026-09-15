@@ -27,6 +27,10 @@ public class ModifyVulConfigRequest extends Request {
     private String config;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -34,6 +38,7 @@ public class ModifyVulConfigRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.config = builder.config;
+        this.dryRun = builder.dryRun;
         this.type = builder.type;
     }
 
@@ -65,6 +70,13 @@ public class ModifyVulConfigRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -74,6 +86,7 @@ public class ModifyVulConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyVulConfigRequest, Builder> {
         private String clientToken; 
         private String config; 
+        private Boolean dryRun; 
         private String type; 
 
         private Builder() {
@@ -84,11 +97,12 @@ public class ModifyVulConfigRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.config = request.config;
+            this.dryRun = request.dryRun;
             this.type = request.type;
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -99,8 +113,8 @@ public class ModifyVulConfigRequest extends Request {
         /**
          * <p>Specifies whether to enable or disable vulnerability detection. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enable vulnerability detection.</li>
-         * <li><strong>off</strong>: Disable vulnerability detection.</li>
+         * <li><strong>on</strong>: Enables vulnerability detection.</li>
+         * <li><strong>off</strong>: Disables vulnerability detection.</li>
          * </ul>
          * <blockquote>
          * <p>If the type is set to real risk, valid values:</p>
@@ -116,6 +130,15 @@ public class ModifyVulConfigRequest extends Request {
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
             this.config = config;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run of the request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

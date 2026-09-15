@@ -28,6 +28,10 @@ public class OperateCommonOverallConfigRequest extends Request {
     private String config;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NoTargetAsOn")
     private Boolean noTargetAsOn;
 
@@ -44,6 +48,7 @@ public class OperateCommonOverallConfigRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.config = builder.config;
+        this.dryRun = builder.dryRun;
         this.noTargetAsOn = builder.noTargetAsOn;
         this.sourceIp = builder.sourceIp;
         this.type = builder.type;
@@ -77,6 +82,13 @@ public class OperateCommonOverallConfigRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return noTargetAsOn
      */
     public Boolean getNoTargetAsOn() {
@@ -100,6 +112,7 @@ public class OperateCommonOverallConfigRequest extends Request {
     public static final class Builder extends Request.Builder<OperateCommonOverallConfigRequest, Builder> {
         private String clientToken; 
         private String config; 
+        private Boolean dryRun; 
         private Boolean noTargetAsOn; 
         private String sourceIp; 
         private String type; 
@@ -112,13 +125,14 @@ public class OperateCommonOverallConfigRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.config = request.config;
+            this.dryRun = request.dryRun;
             this.noTargetAsOn = request.noTargetAsOn;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -129,8 +143,8 @@ public class OperateCommonOverallConfigRequest extends Request {
         /**
          * <p>The switch status. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -140,6 +154,15 @@ public class OperateCommonOverallConfigRequest extends Request {
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
             this.config = config;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -177,8 +200,8 @@ public class OperateCommonOverallConfigRequest extends Request {
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>kdump_switch</strong>: proactive defense experience optimization</li>
-         * <li><strong>threat_detect</strong>: adaptive threat detection capability</li>
+         * <li><strong>kdump_switch</strong>: proactive defense optimization</li>
+         * <li><strong>threat_detect</strong>: adaptive threat detection</li>
          * <li><strong>suspicious_aggregation</strong>: alert association</li>
          * <li><strong>alidetect</strong>: file detection</li>
          * <li><strong>USER-ENABLE-SWITCH-TYPE_38857</strong>: Linux entry service performs high-risk operations</li>
@@ -216,8 +239,8 @@ public class OperateCommonOverallConfigRequest extends Request {
          * <li><strong>USER-ENABLE-SWITCH-TYPE_54369</strong>: Windows creates WMI auto-start items</li>
          * <li><strong>USER-ENABLE-SWITCH-TYPE_50869</strong>: Linux privilege escalation to execute high-risk commands</li>
          * <li><strong>USER-ENABLE-SWITCH-TYPE_53272</strong>: Linux kernel vulnerability exploitation for privilege escalation</li>
-         * <li><strong>USER-ENABLE-SWITCH-TYPE_54395</strong>: Linux privilege escalation to read/write sensitive files</li>
-         * <li><strong>USER-ENABLE-SWITCH-TYPE_57897</strong>: Linux suspected privilege escalation behavior</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54395</strong>: Linux privilege escalation to read or write sensitive files</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_57897</strong>: Linux suspected privilege escalation</li>
          * <li><strong>USER-ENABLE-SWITCH-TYPE_52825</strong>: Windows privilege escalation to execute high-risk commands</li>
          * <li><strong>USER-ENABLE-SWITCH-TYPE_5507</strong>: Linux malicious driver</li>
          * <li><strong>USER-ENABLE-SWITCH-TYPE_50876</strong>: Linux anti-security software</li>

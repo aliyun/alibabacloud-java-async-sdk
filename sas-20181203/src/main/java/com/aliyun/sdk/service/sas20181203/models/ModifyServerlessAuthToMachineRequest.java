@@ -55,6 +55,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
     private String criteria;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogicalExp")
     private String logicalExp;
 
@@ -93,6 +97,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         this.bindUuidList = builder.bindUuidList;
         this.clientToken = builder.clientToken;
         this.criteria = builder.criteria;
+        this.dryRun = builder.dryRun;
         this.logicalExp = builder.logicalExp;
         this.ntmVersion = builder.ntmVersion;
         this.preBind = builder.preBind;
@@ -179,6 +184,13 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return logicalExp
      */
     public String getLogicalExp() {
@@ -237,6 +249,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         private java.util.List<String> bindUuidList; 
         private String clientToken; 
         private String criteria; 
+        private Boolean dryRun; 
         private String logicalExp; 
         private String ntmVersion; 
         private Integer preBind; 
@@ -260,6 +273,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
             this.bindUuidList = request.bindUuidList;
             this.clientToken = request.clientToken;
             this.criteria = request.criteria;
+            this.dryRun = request.dryRun;
             this.logicalExp = request.logicalExp;
             this.ntmVersion = request.ntmVersion;
             this.preBind = request.preBind;
@@ -341,7 +355,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The Asset Type. Valid values:</p>
+         * <p>The Asset Type for the operation. Valid values:</p>
          * <ul>
          * <li><strong>INSTANCE</strong>: Instance.</li>
          * <li><strong>APP</strong>: Application.</li>
@@ -366,7 +380,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -375,7 +389,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to the letter case when you enter the parameter.</p>
+         * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
          * <blockquote>
          * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
          * </blockquote>
@@ -386,6 +400,15 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
             this.criteria = criteria;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run. true: performs only a check without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

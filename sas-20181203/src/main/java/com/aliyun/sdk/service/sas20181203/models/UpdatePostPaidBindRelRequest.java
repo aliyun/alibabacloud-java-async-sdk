@@ -35,6 +35,10 @@ public class UpdatePostPaidBindRelRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
@@ -48,6 +52,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         this.autoBindVersion = builder.autoBindVersion;
         this.bindAction = builder.bindAction;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.productCode = builder.productCode;
         this.updateIfNecessary = builder.updateIfNecessary;
     }
@@ -94,6 +99,13 @@ public class UpdatePostPaidBindRelRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return productCode
      */
     public String getProductCode() {
@@ -112,6 +124,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         private Integer autoBindVersion; 
         private java.util.List<BindAction> bindAction; 
         private String clientToken; 
+        private Boolean dryRun; 
         private String productCode; 
         private Boolean updateIfNecessary; 
 
@@ -125,6 +138,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
             this.autoBindVersion = request.autoBindVersion;
             this.bindAction = request.bindAction;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.productCode = request.productCode;
             this.updateIfNecessary = request.updateIfNecessary;
         } 
@@ -179,6 +193,15 @@ public class UpdatePostPaidBindRelRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -31,6 +31,10 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -51,6 +55,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         this.checkGroupId = builder.checkGroupId;
         this.checkId = builder.checkId;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.instanceIds = builder.instanceIds;
         this.instanceList = builder.instanceList;
         this.remark = builder.remark;
@@ -92,6 +97,13 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -123,6 +135,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         private String checkGroupId; 
         private Long checkId; 
         private String clientToken; 
+        private Boolean dryRun; 
         private java.util.List<String> instanceIds; 
         private java.util.List<InstanceList> instanceList; 
         private String remark; 
@@ -137,6 +150,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             this.checkGroupId = request.checkGroupId;
             this.checkId = request.checkId;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.instanceIds = request.instanceIds;
             this.instanceList = request.instanceList;
             this.remark = request.remark;
@@ -176,6 +190,15 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

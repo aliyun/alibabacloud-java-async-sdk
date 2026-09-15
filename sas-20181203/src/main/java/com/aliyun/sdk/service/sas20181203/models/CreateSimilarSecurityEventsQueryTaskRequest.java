@@ -23,6 +23,10 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
@@ -46,6 +50,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
     private CreateSimilarSecurityEventsQueryTaskRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityEventId = builder.securityEventId;
@@ -71,6 +76,13 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -110,6 +122,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSimilarSecurityEventsQueryTaskRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private Long resourceDirectoryAccountId; 
         private Long resourceOwnerId; 
         private Long securityEventId; 
@@ -123,6 +136,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         private Builder(CreateSimilarSecurityEventsQueryTaskRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityEventId = request.securityEventId;
@@ -136,6 +150,20 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run of the request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run without executing the actual operation.</li>
+         * <li>false: performs the actual operation.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -158,7 +186,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security alert.</p>
+         * <p>The ID of the alert event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

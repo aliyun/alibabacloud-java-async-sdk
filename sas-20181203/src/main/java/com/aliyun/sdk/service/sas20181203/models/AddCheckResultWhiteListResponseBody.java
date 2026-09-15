@@ -80,7 +80,7 @@ public class AddCheckResultWhiteListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p><strong>[Deprecated]</strong> The result of adding to the whitelist. This field is deprecated and can be ignored.</p>
+         * <p><strong>[Deprecated]</strong> The result of adding items to the whitelist. This field is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

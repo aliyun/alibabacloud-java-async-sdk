@@ -23,6 +23,10 @@ public class ModifyCreateVulWhitelistRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
@@ -42,6 +46,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
     private ModifyCreateVulWhitelistRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.reason = builder.reason;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.targetInfo = builder.targetInfo;
@@ -66,6 +71,13 @@ public class ModifyCreateVulWhitelistRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -98,6 +110,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyCreateVulWhitelistRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String reason; 
         private Long resourceDirectoryAccountId; 
         private String targetInfo; 
@@ -110,6 +123,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         private Builder(ModifyCreateVulWhitelistRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.reason = request.reason;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.targetInfo = request.targetInfo;
@@ -117,11 +131,25 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run without executing the actual operation.</li>
+         * <li>false: performs the actual operation.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -159,7 +187,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
          * </li>
          * <li><strong>uuids</strong>: The collection of host asset UUIDs. The field type is String.</li>
          * <li><strong>groupIds</strong>: The collection of server group IDs. The field type is Long.<blockquote>
-         * <p>If this value is empty, the whitelist applies to all hosts. If <strong>type</strong> is set to <strong>GroupId</strong>, <strong>groupIds</strong> cannot be empty. If <strong>type</strong> is set to <strong>Uuid</strong>, <strong>uuids</strong> cannot be empty.</p>
+         * <p>If this parameter is left empty, the whitelist takes effect on all hosts. If <strong>type</strong> is set to <strong>GroupId</strong>, <strong>groupIds</strong> cannot be empty. If <strong>type</strong> is set to <strong>Uuid</strong>, <strong>uuids</strong> cannot be empty.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -176,7 +204,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         /**
          * <p>The information about the vulnerability to add to the whitelist. The value is a JSON string that contains the following fields:</p>
          * <ul>
-         * <li><p><strong>Status</strong>: The vulnerability status.</p>
+         * <li><p><strong>Status</strong>: The status of the vulnerability.</p>
          * </li>
          * <li><p><strong>GmtLast</strong>: The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
          * </li>
@@ -184,9 +212,9 @@ public class ModifyCreateVulWhitelistRequest extends Request {
          * </li>
          * <li><p><strong>AsapCount</strong>: The number of high-priority vulnerabilities.</p>
          * </li>
-         * <li><p><strong>Name</strong>: The vulnerability name.</p>
+         * <li><p><strong>Name</strong>: The name of the vulnerability.</p>
          * </li>
-         * <li><p><strong>Type</strong>: The vulnerability type. Valid values:</p>
+         * <li><p><strong>Type</strong>: The type of the vulnerability. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
@@ -207,7 +235,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
          * </li>
          * <li><p><strong>TotalFixCount</strong>: The total number of fixed vulnerabilities.</p>
          * </li>
-         * <li><p><strong>Tags</strong>: The vulnerability tags.</p>
+         * <li><p><strong>Tags</strong>: The tags of the vulnerability.</p>
          * </li>
          * </ul>
          * <blockquote>

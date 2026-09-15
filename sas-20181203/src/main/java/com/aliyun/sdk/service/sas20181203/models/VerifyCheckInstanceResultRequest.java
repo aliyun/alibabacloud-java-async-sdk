@@ -31,6 +31,10 @@ public class VerifyCheckInstanceResultRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -43,6 +47,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         this.checkId = builder.checkId;
         this.checkIds = builder.checkIds;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.instanceIds = builder.instanceIds;
         this.taskSource = builder.taskSource;
     }
@@ -82,6 +87,13 @@ public class VerifyCheckInstanceResultRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -99,6 +111,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         private Long checkId; 
         private java.util.List<Long> checkIds; 
         private String clientToken; 
+        private Boolean dryRun; 
         private java.util.List<String> instanceIds; 
         private String taskSource; 
 
@@ -111,6 +124,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
             this.checkId = request.checkId;
             this.checkIds = request.checkIds;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.instanceIds = request.instanceIds;
             this.taskSource = request.taskSource;
         } 
@@ -152,8 +166,17 @@ public class VerifyCheckInstanceResultRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to perform only a dry run of the request. Valid values: true: checks the request without performing the actual operation. false: performs the actual operation after the request passes the check. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * <p>The list of instance IDs of the affected assets for the check item.
-         * Note: This parameter is actually required. If this parameter is not specified, the API returns a 400 error (Code: -101).</p>
+         * Note: This parameter is actually required. If it is not provided, the API returns a 400 error (Code: -101).</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

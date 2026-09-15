@@ -23,6 +23,10 @@ public class ModifyEmgVulSubmitRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -43,6 +47,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
     private ModifyEmgVulSubmitRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.lang = builder.lang;
         this.name = builder.name;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
@@ -67,6 +72,13 @@ public class ModifyEmgVulSubmitRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -99,6 +111,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyEmgVulSubmitRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String lang; 
         private String name; 
         private Long resourceDirectoryAccountId; 
@@ -111,6 +124,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         private Builder(ModifyEmgVulSubmitRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.lang = request.lang;
             this.name = request.name;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
@@ -118,7 +132,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -127,12 +141,19 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values: true: performs a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong>: Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,10 +196,8 @@ public class ModifyEmgVulSubmitRequest extends Request {
         /**
          * <p>Specifies whether to perform vulnerability detection. Valid values:</p>
          * <ul>
-         * <li><p><strong>yes</strong>: Perform vulnerability detection.</p>
-         * </li>
-         * <li><p><strong>no</strong>: Do not perform vulnerability detection.</p>
-         * </li>
+         * <li><strong>yes</strong>: Perform vulnerability detection.</li>
+         * <li><strong>no</strong>: Do not perform vulnerability detection.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

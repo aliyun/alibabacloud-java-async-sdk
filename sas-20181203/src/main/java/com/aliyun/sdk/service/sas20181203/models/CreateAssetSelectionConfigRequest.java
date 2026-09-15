@@ -28,6 +28,10 @@ public class CreateAssetSelectionConfigRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
@@ -40,6 +44,7 @@ public class CreateAssetSelectionConfigRequest extends Request {
         super(builder);
         this.businessType = builder.businessType;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.platform = builder.platform;
         this.targetType = builder.targetType;
     }
@@ -72,6 +77,13 @@ public class CreateAssetSelectionConfigRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return platform
      */
     public String getPlatform() {
@@ -88,6 +100,7 @@ public class CreateAssetSelectionConfigRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAssetSelectionConfigRequest, Builder> {
         private String businessType; 
         private String clientToken; 
+        private Boolean dryRun; 
         private String platform; 
         private String targetType; 
 
@@ -99,6 +112,7 @@ public class CreateAssetSelectionConfigRequest extends Request {
             super(request);
             this.businessType = request.businessType;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.platform = request.platform;
             this.targetType = request.targetType;
         } 
@@ -129,6 +143,15 @@ public class CreateAssetSelectionConfigRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

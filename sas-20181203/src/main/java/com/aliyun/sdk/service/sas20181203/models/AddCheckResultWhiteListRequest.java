@@ -27,6 +27,10 @@ public class AddCheckResultWhiteListRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -42,6 +46,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         super(builder);
         this.checkIds = builder.checkIds;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.instanceIds = builder.instanceIds;
         this.remark = builder.remark;
         this.ruleType = builder.ruleType;
@@ -75,6 +80,13 @@ public class AddCheckResultWhiteListRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -98,6 +110,7 @@ public class AddCheckResultWhiteListRequest extends Request {
     public static final class Builder extends Request.Builder<AddCheckResultWhiteListRequest, Builder> {
         private java.util.List<Long> checkIds; 
         private String clientToken; 
+        private Boolean dryRun; 
         private java.util.List<String> instanceIds; 
         private String remark; 
         private String ruleType; 
@@ -110,6 +123,7 @@ public class AddCheckResultWhiteListRequest extends Request {
             super(request);
             this.checkIds = request.checkIds;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.instanceIds = request.instanceIds;
             this.remark = request.remark;
             this.ruleType = request.ruleType;
@@ -128,11 +142,20 @@ public class AddCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run. Valid values: true: performs only a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -160,7 +183,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         /**
          * <p>The rule type. Default value: <strong>WHITE</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>WHITE</strong>: adds to the whitelist.</li>
+         * <li><strong>WHITE</strong>: Add to whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>

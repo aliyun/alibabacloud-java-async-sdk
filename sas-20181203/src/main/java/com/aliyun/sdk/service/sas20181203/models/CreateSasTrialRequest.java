@@ -22,6 +22,10 @@ public class CreateSasTrialRequest extends Request {
     @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String clientToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FromEcs")
     private Boolean fromEcs;
@@ -45,6 +49,7 @@ public class CreateSasTrialRequest extends Request {
     private CreateSasTrialRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.fromEcs = builder.fromEcs;
         this.lang = builder.lang;
         this.requestForm = builder.requestForm;
@@ -70,6 +75,13 @@ public class CreateSasTrialRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -109,6 +121,7 @@ public class CreateSasTrialRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSasTrialRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private Boolean fromEcs; 
         private String lang; 
         private RequestForm requestForm; 
@@ -122,6 +135,7 @@ public class CreateSasTrialRequest extends Request {
         private Builder(CreateSasTrialRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.fromEcs = request.fromEcs;
             this.lang = request.lang;
             this.requestForm = request.requestForm;
@@ -135,6 +149,15 @@ public class CreateSasTrialRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

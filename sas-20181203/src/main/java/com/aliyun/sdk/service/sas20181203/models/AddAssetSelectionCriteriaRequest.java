@@ -31,6 +31,10 @@ public class AddAssetSelectionCriteriaRequest extends Request {
     private String criteriaOperation;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SelectionKey")
     @com.aliyun.core.annotation.Validation(required = true)
     private String selectionKey;
@@ -44,6 +48,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         this.clientToken = builder.clientToken;
         this.criteria = builder.criteria;
         this.criteriaOperation = builder.criteriaOperation;
+        this.dryRun = builder.dryRun;
         this.selectionKey = builder.selectionKey;
         this.targetOperationList = builder.targetOperationList;
     }
@@ -83,6 +88,13 @@ public class AddAssetSelectionCriteriaRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return selectionKey
      */
     public String getSelectionKey() {
@@ -100,6 +112,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         private String clientToken; 
         private String criteria; 
         private String criteriaOperation; 
+        private Boolean dryRun; 
         private String selectionKey; 
         private java.util.List<TargetOperationList> targetOperationList; 
 
@@ -112,6 +125,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
             this.clientToken = request.clientToken;
             this.criteria = request.criteria;
             this.criteriaOperation = request.criteriaOperation;
+            this.dryRun = request.dryRun;
             this.selectionKey = request.selectionKey;
             this.targetOperationList = request.targetOperationList;
         } 
@@ -153,6 +167,15 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         public Builder criteriaOperation(String criteriaOperation) {
             this.putQueryParameter("CriteriaOperation", criteriaOperation);
             this.criteriaOperation = criteriaOperation;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

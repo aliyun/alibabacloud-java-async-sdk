@@ -58,6 +58,10 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
     private String sha256;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private String tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
@@ -73,6 +77,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         this.processPath = builder.processPath;
         this.remark = builder.remark;
         this.sha256 = builder.sha256;
+        this.tag = builder.tag;
         this.uuid = builder.uuid;
     }
 
@@ -160,6 +165,13 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public String getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -177,6 +189,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         private String processPath; 
         private String remark; 
         private String sha256; 
+        private String tag; 
         private String uuid; 
 
         private Builder() {
@@ -195,16 +208,15 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
             this.processPath = request.processPath;
             this.remark = request.remark;
             this.sha256 = request.sha256;
+            this.tag = request.tag;
             this.uuid = request.uuid;
         } 
 
         /**
          * <p>The analysis result. Valid values:</p>
          * <ul>
-         * <li><p><strong>black</strong>: abnormal process</p>
-         * </li>
-         * <li><p><strong>white</strong>: normal process</p>
-         * </li>
+         * <li><strong>black</strong>: abnormal process</li>
+         * <li><strong>white</strong>: normal process</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +229,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The page number to return.</p>
+         * <p>The page number of the current page when using paged query. This is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +241,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range for the first detection, in milliseconds.</p>
+         * <p>The end of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1768891966345</p>
@@ -241,7 +253,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range for the first detection, in milliseconds.</p>
+         * <p>The start of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1768891966344</p>
@@ -253,7 +265,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The MD5 value of the file.</p>
+         * <p>The MD5 hash of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>0552c44e243abdea1729d4507bce****</p>
@@ -265,7 +277,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page.</p>
+         * <p>The maximum number of entries per page when using paged query. This is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -313,7 +325,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The SHA-256 value of the file.</p>
+         * <p>The SHA-256 hash of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>f204693a7d2ce99d6c4434e550d985ee1c7be7cb5dd9a76094369af0d2******</p>
@@ -321,6 +333,18 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         public Builder sha256(String sha256) {
             this.putQueryParameter("Sha256", sha256);
             this.sha256 = sha256;
+            return this;
+        }
+
+        /**
+         * <p>The label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Process Tag</p>
+         */
+        public Builder tag(String tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 

@@ -23,6 +23,10 @@ public class ModifyStartVulScanRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
@@ -37,6 +41,7 @@ public class ModifyStartVulScanRequest extends Request {
     private ModifyStartVulScanRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.types = builder.types;
         this.uuids = builder.uuids;
@@ -63,6 +68,13 @@ public class ModifyStartVulScanRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return resourceDirectoryAccountId
      */
     public Long getResourceDirectoryAccountId() {
@@ -85,6 +97,7 @@ public class ModifyStartVulScanRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyStartVulScanRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private Long resourceDirectoryAccountId; 
         private String types; 
         private String uuids; 
@@ -96,6 +109,7 @@ public class ModifyStartVulScanRequest extends Request {
         private Builder(ModifyStartVulScanRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.types = request.types;
             this.uuids = request.uuids;
@@ -107,6 +121,20 @@ public class ModifyStartVulScanRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run without performing the actual operation.</li>
+         * <li>false: performs the actual request.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -123,7 +151,7 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * <p>Settings for the vulnerability types to detect by using the one-click scan feature. Valid values:</p>
+         * <p>Settings for the vulnerability types to be detected by the one-click scan feature. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability.</li>
          * <li><strong>sys</strong>: Windows system vulnerability.</li>
@@ -147,7 +175,7 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
+         * <p>The list of server UUIDs. Separate multiple UUIDs with commas (,).</p>
          * <blockquote>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
