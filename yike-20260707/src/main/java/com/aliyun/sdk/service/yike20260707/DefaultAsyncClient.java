@@ -61,6 +61,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CancelGenerationJob  CancelGenerationJobRequest
+     * @return CancelGenerationJobResponse
+     */
+    @Override
+    public CompletableFuture<CancelGenerationJobResponse> cancelGenerationJob(CancelGenerationJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelGenerationJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelGenerationJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelGenerationJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
      * 
@@ -384,7 +402,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, input, parameters, and desired state results of a video translation job based on the <code>JobId</code>.</p>
+     * <p>Queries the status, input, parameters, and final results of a video translation job by <code>JobId</code>.</p>
      * 
      * @param request the request parameters of GetVideoTranslationJob  GetVideoTranslationJobRequest
      * @return GetVideoTranslationJobResponse
@@ -600,7 +618,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</p>
+     * <p>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</p>
      * 
      * @param request the request parameters of SubmitVideoDetextJob  SubmitVideoDetextJobRequest
      * @return SubmitVideoDetextJobResponse

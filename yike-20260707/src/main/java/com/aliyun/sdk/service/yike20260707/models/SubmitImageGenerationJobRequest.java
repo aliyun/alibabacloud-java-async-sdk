@@ -209,6 +209,9 @@ public class SubmitImageGenerationJobRequest extends Request {
 
         /**
          * <p>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, 1:1, and 21:9.</p>
+         * <ul>
+         * <li>qwen-image-3.0 additionally supports: 4:5, 5:4, 2:3, and 3:2.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>4:3</p>
@@ -220,7 +223,7 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. A unique, case-sensitive string of up to 32 characters. This token ensures that the request is completed no more than once, preventing duplicate operations caused by multiple retries.</p>
+         * <p>The idempotency token. A unique, case-sensitive string of up to 32 characters. This token ensures that the request is processed only once, preventing duplicate operations caused by multiple retries.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
@@ -234,9 +237,9 @@ public class SubmitImageGenerationJobRequest extends Request {
         /**
          * <p>The task input. This parameter is required. The value is a JSON string that contains the following fields:</p>
          * <ul>
-         * <li>Prompt: String. Required. The prompt for image generation.</li>
+         * <li>Prompt: String. Required. The prompt text.</li>
          * <li>Medias: A list of media items. Required when the task type is <code>image_to_image</code>. A maximum of 9 items are supported.<blockquote>
-         * <p>The Media struct contains the following fields: Type, the media type, String, valid value: image. URL, the download URL of the media, String. MediaId, the media asset ID, String.</p>
+         * <p>The Media structure contains the following fields: Type, the media type (String, valid value: image). URL, the media download URL (String). MediaId, the media asset ID (String).</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -251,7 +254,7 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * <p>The task feature parameters. The value is a JSON string. You do not need to set this parameter.</p>
+         * <p>The task feature parameters. The value is a JSON string. You do not need to set this parameter currently.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

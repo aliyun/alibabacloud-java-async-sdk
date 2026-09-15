@@ -29,6 +29,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetMediasResponse> batchGetMedias(BatchGetMediasRequest request);
 
     /**
+     * @param request the request parameters of CancelGenerationJob  CancelGenerationJobRequest
+     * @return CancelGenerationJobResponse
+     */
+    CompletableFuture<CancelGenerationJobResponse> cancelGenerationJob(CancelGenerationJobRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
      * 
@@ -160,7 +166,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, input, parameters, and desired state results of a video translation job based on the <code>JobId</code>.</p>
+     * <p>Queries the status, input, parameters, and final results of a video translation job by <code>JobId</code>.</p>
      * 
      * @param request the request parameters of GetVideoTranslationJob  GetVideoTranslationJobRequest
      * @return GetVideoTranslationJobResponse
@@ -244,7 +250,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</p>
+     * <p>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</p>
      * 
      * @param request the request parameters of SubmitVideoDetextJob  SubmitVideoDetextJobRequest
      * @return SubmitVideoDetextJobResponse

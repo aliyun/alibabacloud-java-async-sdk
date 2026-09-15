@@ -12,27 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SubmitVideoDetextJobResponseBody} extends {@link TeaModel}
+ * {@link CancelGenerationJobResponseBody} extends {@link TeaModel}
  *
- * <p>SubmitVideoDetextJobResponseBody</p>
+ * <p>CancelGenerationJobResponseBody</p>
  */
-public class SubmitVideoDetextJobResponseBody extends TeaModel {
+public class CancelGenerationJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private SubmitVideoDetextJobResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    private CancelGenerationJobResponseBody(Builder builder) {
         this.jobId = builder.jobId;
         this.requestId = builder.requestId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SubmitVideoDetextJobResponseBody create() {
+    public static CancelGenerationJobResponseBody create() {
         return builder().build();
     }
 
@@ -54,23 +58,29 @@ public class SubmitVideoDetextJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private String jobId; 
         private String requestId; 
+        private String status; 
 
         private Builder() {
         } 
 
-        private Builder(SubmitVideoDetextJobResponseBody model) {
+        private Builder(CancelGenerationJobResponseBody model) {
             this.jobId = model.jobId;
             this.requestId = model.requestId;
+            this.status = model.status;
         } 
 
         /**
-         * <p>The ID of the video text removal job. Use this ID to call GetVideoDetextJob to query the job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vdt_0123456789abcdef0123456789abcdef</p>
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -78,18 +88,23 @@ public class SubmitVideoDetextJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>req-detext-20260820-001</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public SubmitVideoDetextJobResponseBody build() {
-            return new SubmitVideoDetextJobResponseBody(this);
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        public CancelGenerationJobResponseBody build() {
+            return new CancelGenerationJobResponseBody(this);
         } 
 
     } 
