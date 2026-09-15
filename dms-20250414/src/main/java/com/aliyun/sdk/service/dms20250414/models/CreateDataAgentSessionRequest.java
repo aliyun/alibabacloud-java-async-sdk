@@ -185,6 +185,165 @@ public class CreateDataAgentSessionRequest extends Request {
      *
      * <p>CreateDataAgentSessionRequest</p>
      */
+    public static class McpHeader extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private McpHeader(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static McpHeader create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(McpHeader model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The key to add to the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserId</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value to add to the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>421****571</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public McpHeader build() {
+                return new McpHeader(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataAgentSessionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataAgentSessionRequest</p>
+     */
+    public static class McpHeaders extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("McpHeader")
+        private java.util.List<McpHeader> mcpHeader;
+
+        @com.aliyun.core.annotation.NameInMap("McpServerId")
+        private String mcpServerId;
+
+        private McpHeaders(Builder builder) {
+            this.mcpHeader = builder.mcpHeader;
+            this.mcpServerId = builder.mcpServerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static McpHeaders create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpHeader
+         */
+        public java.util.List<McpHeader> getMcpHeader() {
+            return this.mcpHeader;
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        public static final class Builder {
+            private java.util.List<McpHeader> mcpHeader; 
+            private String mcpServerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(McpHeaders model) {
+                this.mcpHeader = model.mcpHeader;
+                this.mcpServerId = model.mcpServerId;
+            } 
+
+            /**
+             * <p>The MCP header configuration.</p>
+             */
+            public Builder mcpHeader(java.util.List<McpHeader> mcpHeader) {
+                this.mcpHeader = mcpHeader;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the MCP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1fl4r*****1qi</p>
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            public McpHeaders build() {
+                return new McpHeaders(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataAgentSessionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataAgentSessionRequest</p>
+     */
     public static class SessionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomAgentId")
         private String customAgentId;
@@ -206,6 +365,9 @@ public class CreateDataAgentSessionRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
+
+        @com.aliyun.core.annotation.NameInMap("McpHeaders")
+        private java.util.List<McpHeaders> mcpHeaders;
 
         @com.aliyun.core.annotation.NameInMap("McpServerIds")
         private java.util.List<String> mcpServerIds;
@@ -230,6 +392,7 @@ public class CreateDataAgentSessionRequest extends Request {
             this.encryptType = builder.encryptType;
             this.kbUuidList = builder.kbUuidList;
             this.language = builder.language;
+            this.mcpHeaders = builder.mcpHeaders;
             this.mcpServerIds = builder.mcpServerIds;
             this.mode = builder.mode;
             this.reportPageWidth = builder.reportPageWidth;
@@ -295,6 +458,13 @@ public class CreateDataAgentSessionRequest extends Request {
         }
 
         /**
+         * @return mcpHeaders
+         */
+        public java.util.List<McpHeaders> getMcpHeaders() {
+            return this.mcpHeaders;
+        }
+
+        /**
          * @return mcpServerIds
          */
         public java.util.List<String> getMcpServerIds() {
@@ -337,6 +507,7 @@ public class CreateDataAgentSessionRequest extends Request {
             private String encryptType; 
             private java.util.List<String> kbUuidList; 
             private String language; 
+            private java.util.List<McpHeaders> mcpHeaders; 
             private java.util.List<String> mcpServerIds; 
             private String mode; 
             private Long reportPageWidth; 
@@ -354,6 +525,7 @@ public class CreateDataAgentSessionRequest extends Request {
                 this.encryptType = model.encryptType;
                 this.kbUuidList = model.kbUuidList;
                 this.language = model.language;
+                this.mcpHeaders = model.mcpHeaders;
                 this.mcpServerIds = model.mcpServerIds;
                 this.mode = model.mode;
                 this.reportPageWidth = model.reportPageWidth;
@@ -375,8 +547,8 @@ public class CreateDataAgentSessionRequest extends Request {
             /**
              * <p>The stage of the custom agent. Valid values:</p>
              * <ul>
-             * <li><strong>debug</strong>: Debug stage.</li>
-             * <li><strong>prod</strong>: Production stage.</li>
+             * <li><strong>debug</strong>: the debugging stage.</li>
+             * <li><strong>prod</strong>: the production stage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -444,6 +616,14 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
+             * <p>The list of MCP header configurations.</p>
+             */
+            public Builder mcpHeaders(java.util.List<McpHeaders> mcpHeaders) {
+                this.mcpHeaders = mcpHeaders;
+                return this;
+            }
+
+            /**
              * <p>The list of MCP server IDs in the session configuration.</p>
              */
             public Builder mcpServerIds(java.util.List<String> mcpServerIds) {
@@ -454,9 +634,9 @@ public class CreateDataAgentSessionRequest extends Request {
             /**
              * <p>The mode. Valid values:</p>
              * <ul>
-             * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
-             * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
-             * <li><strong>INSIGHT</strong>: Insight mode.</li>
+             * <li><strong>ASK_DATA</strong>: the data query mode.</li>
+             * <li><strong>ANALYSIS</strong>: the analysis mode.</li>
+             * <li><strong>INSIGHT</strong>: the insight mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -490,10 +670,7 @@ public class CreateDataAgentSessionRequest extends Request {
             }
 
             /**
-             * <p>The name of the user OSS bucket.</p>
-             * <ul>
-             * <li>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</li>
-             * </ul>
+             * <p>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>user-oss-bucket</p>

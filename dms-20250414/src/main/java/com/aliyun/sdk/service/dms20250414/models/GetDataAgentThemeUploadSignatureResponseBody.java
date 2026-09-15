@@ -114,7 +114,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when the request fails.</p>
+         * <p>The error code. This parameter is returned only if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -125,7 +125,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The error message returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -345,7 +345,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target object key, which is exactly locked by the policy.</p>
+             * <p>The target object key that is exactly locked by the policy.</p>
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -416,7 +416,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The theme business identifier generated or reused for this request. Pass this identifier to the CreateDataAgentTheme operation after the upload is complete to register the metadata.</p>
+             * <p>The theme business ID generated or reused for this request. After the upload is complete, pass this ID to the CreateDataAgentTheme operation to register the metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>0f8b2c1d****a3e5f7b1c2d</p>
@@ -435,7 +435,7 @@ public class GetDataAgentThemeUploadSignatureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PostObject destination address over the public network.</p>
+             * <p>The PostObject target address over the public network.</p>
              * 
              * <strong>example:</strong>
              * <p>https://**********.oss-cn-hangzhou.aliyuncs.com</p>

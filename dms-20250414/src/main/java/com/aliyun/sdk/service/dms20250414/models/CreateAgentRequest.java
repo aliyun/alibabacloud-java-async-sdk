@@ -127,7 +127,11 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
+         * <p>The agent name. The name must be unique within the same tenant. Maximum length: 128 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-analysis-agent</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -136,7 +140,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * AgentType.
+         * <p>The permission inheritance type of the agent, which specifies the permission source. Default value: HUMAN_BOUND.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HUMAN_BOUND</p>
          */
         public Builder agentType(String agentType) {
             this.putQueryParameter("AgentType", agentType);
@@ -145,7 +152,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the agent. Maximum length: 512 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An agent for querying and analyzing order data</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -154,7 +164,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * ExpireAfterSeconds.
+         * <p>The validity period of the automatically issued API key, in seconds. Valid values: 1 to 31536000 (up to 1 year).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2592000</p>
          */
         public Builder expireAfterSeconds(Integer expireAfterSeconds) {
             this.putQueryParameter("ExpireAfterSeconds", expireAfterSeconds);

@@ -125,7 +125,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the request failed.</p>
+         * <p>The error message returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -363,8 +363,8 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             /**
              * <p>The stage of the custom agent. Valid values:</p>
              * <ul>
-             * <li><strong>debug</strong>: Debug stage.</li>
-             * <li><strong>prod</strong>: Production stage.</li>
+             * <li><strong>debug</strong>: the debugging stage.</li>
+             * <li><strong>prod</strong>: the production stage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -442,9 +442,9 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             /**
              * <p>The mode. Valid values:</p>
              * <ul>
-             * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
-             * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
-             * <li><strong>INSIGHT</strong>: Insight mode.</li>
+             * <li><strong>ASK_DATA</strong>: the data query mode.</li>
+             * <li><strong>ANALYSIS</strong>: the analysis mode.</li>
+             * <li><strong>INSIGHT</strong>: the insight mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -478,10 +478,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user OSS bucket.</p>
-             * <ul>
-             * <li>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</li>
-             * </ul>
+             * <p>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>user-oss-bucket</p>
@@ -664,7 +661,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the session was created.</p>
+             * <p>The creation time of the session.</p>
              * 
              * <strong>example:</strong>
              * <p>1765262307992</p>
@@ -675,7 +672,7 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information about the file.</p>
+             * <p>The basic information of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>f-8*******01m</p>

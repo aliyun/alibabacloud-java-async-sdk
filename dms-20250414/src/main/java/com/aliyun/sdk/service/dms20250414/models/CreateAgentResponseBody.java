@@ -106,7 +106,7 @@ public class CreateAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The agent information and the automatically issued API key returned after the agent is created.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The status code of the request result. A value of success indicates success. A specific error code is returned upon failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the request fails. This parameter is empty when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentName must not be blank</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request. You can use this ID for troubleshooting and tracing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,7 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -373,7 +382,10 @@ public class CreateAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The ID of the agent to which the API key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agt-1a2b3c4d5e6f</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -381,7 +393,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The name of the agent to which the API key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order-analysis-agent</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -389,7 +404,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AgentType.
+             * <p>The permission inheritance type of the agent to which the API key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HUMAN_BOUND</p>
              */
             public Builder agentType(String agentType) {
                 this.agentType = agentType;
@@ -397,7 +415,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The time when the API key was created. The value is a time string in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -405,7 +426,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * <p>The user ID of the user who created the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usr-1a2b3c4d</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -413,7 +437,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the user who created the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -421,7 +448,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Access Token automatically issued when the Agent is created</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -429,7 +459,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the API key. The value is a time string in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-12-11T14:04:32Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -437,7 +470,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -445,7 +481,7 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * IsRevoked.
+             * <p>Indicates whether the API key has been revoked.</p>
              */
             public Builder isRevoked(Boolean isRevoked) {
                 this.isRevoked = isRevoked;
@@ -453,7 +489,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPrefix.
+             * <p>The non-sensitive visible prefix of the API key plaintext, used to identify the credential. The plaintext secret is not returned again.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dms_sk_1a2b</p>
              */
             public Builder keyPrefix(String keyPrefix) {
                 this.keyPrefix = keyPrefix;
@@ -461,7 +500,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * LastUsedTime.
+             * <p>The time when the API key was last used. The value is a time string in RFC 3339 format. This parameter is empty if the API key has never been used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-12T09:30:00Z</p>
              */
             public Builder lastUsedTime(String lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -469,7 +511,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order-analysis-agent-default</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -477,7 +522,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Secret.
+             * <p>The plaintext secret of the API key. This value is returned only once in this creation response. Store it securely. Subsequent API calls do not return the plaintext secret again.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dms_sk_1a2b3c4d****</p>
              */
             public Builder secret(String secret) {
                 this.secret = secret;
@@ -485,7 +533,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The credential source. Valid values: console (issued from the console), oauth (issued through the OAuth flow), install_token (issued through the install-and-authenticate flow). The API key automatically issued by this operation is always console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -643,7 +694,10 @@ public class CreateAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The globally unique ID of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agt-1a2b3c4d5e6f</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -651,7 +705,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order-analysis-agent</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -659,7 +716,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AgentType.
+             * <p>The permission inheritance type of the agent. Valid values: HUMAN_BOUND (inherits user permissions), PERMISSION_NARROW (narrows permissions), STANDALONE (operates as an independent identity principal without inheriting permissions from other principals).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HUMAN_BOUND</p>
              */
             public Builder agentType(String agentType) {
                 this.agentType = agentType;
@@ -667,7 +727,7 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKey.
+             * <p>The automatically issued API key for the new agent. The plaintext secret is returned only once in this response.</p>
              */
             public Builder apiKey(ApiKey apiKey) {
                 this.apiKey = apiKey;
@@ -675,7 +735,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The time when the agent was created. The value is a time string in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-11T14:04:32Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -683,7 +746,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CreationType.
+             * <p>The creation method of the agent. Valid values: manual (manually created in the console), auto (automatic creation by the system). Agents created by this operation are always manual.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual</p>
              */
             public Builder creationType(String creationType) {
                 this.creationType = creationType;
@@ -691,7 +757,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An agent for querying and analyzing order data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -699,7 +768,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The user ID of the agent owner, which is the current user who initiated the creation request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usr-1a2b3c4d</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -707,7 +779,10 @@ public class CreateAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the agent. Valid values: active (enabled), disabled (disabled), deleted (deleted). A newly created agent is always active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

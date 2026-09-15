@@ -93,7 +93,7 @@ public class ModifyDataAgentThemeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned when the request is abnormal.</p>
+         * <p>The error code returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -104,7 +104,7 @@ public class ModifyDataAgentThemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The error message returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
