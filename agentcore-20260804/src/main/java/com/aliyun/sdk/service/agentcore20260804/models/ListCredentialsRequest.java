@@ -155,7 +155,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The maximum number of records to return per page. Valid values: 1 to 100. If this parameter is not specified, 10 records are returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +179,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for fuzzy match by credential name.</p>
+         * <p>The fuzzy match filter condition for credential names.</p>
          * 
          * <strong>example:</strong>
          * <p>model</p>

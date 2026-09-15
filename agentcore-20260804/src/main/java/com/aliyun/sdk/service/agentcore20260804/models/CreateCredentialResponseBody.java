@@ -149,7 +149,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request failed.</p>
+         * <p>The response message. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -190,6 +190,111 @@ public class CreateCredentialResponseBody extends TeaModel {
      *
      * <p>CreateCredentialResponseBody</p>
      */
+    public static class ResourceRefs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("resourceName")
+        private String resourceName;
+
+        @com.aliyun.core.annotation.NameInMap("resourceType")
+        private String resourceType;
+
+        private ResourceRefs(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.resourceName = builder.resourceName;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceRefs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String resourceName; 
+            private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceRefs model) {
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
+            /**
+             * <p>The unique identifier of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-xxxx</p>
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>The resource name. This value is empty if the resource has been deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * <p>The resource type, such as agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public ResourceRefs build() {
+                return new ResourceRefs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateCredentialResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCredentialResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
@@ -212,6 +317,12 @@ public class CreateCredentialResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("resourceRefs")
+        private java.util.List<ResourceRefs> resourceRefs;
+
+        @com.aliyun.core.annotation.NameInMap("resourceScope")
+        private String resourceScope;
+
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
@@ -226,6 +337,8 @@ public class CreateCredentialResponseBody extends TeaModel {
             this.description = builder.description;
             this.name = builder.name;
             this.regionId = builder.regionId;
+            this.resourceRefs = builder.resourceRefs;
+            this.resourceScope = builder.resourceScope;
             this.updatedAt = builder.updatedAt;
             this.workspaceId = builder.workspaceId;
         }
@@ -288,6 +401,20 @@ public class CreateCredentialResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceRefs
+         */
+        public java.util.List<ResourceRefs> getResourceRefs() {
+            return this.resourceRefs;
+        }
+
+        /**
+         * @return resourceScope
+         */
+        public String getResourceScope() {
+            return this.resourceScope;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
@@ -309,6 +436,8 @@ public class CreateCredentialResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String regionId; 
+            private java.util.List<ResourceRefs> resourceRefs; 
+            private String resourceScope; 
             private String updatedAt; 
             private String workspaceId; 
 
@@ -323,6 +452,8 @@ public class CreateCredentialResponseBody extends TeaModel {
                 this.description = model.description;
                 this.name = model.name;
                 this.regionId = model.regionId;
+                this.resourceRefs = model.resourceRefs;
+                this.resourceScope = model.resourceScope;
                 this.updatedAt = model.updatedAt;
                 this.workspaceId = model.workspaceId;
             } 
@@ -383,7 +514,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods, underscores, and hyphens. The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
              * 
              * <strong>example:</strong>
              * <p>model-api-key</p>
@@ -394,13 +525,32 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the resource.</p>
+             * <p>The region ID where the resource resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * <p>Each item contains resourceType, resourceId, and resourceName. resourceName is empty if the resource has been deleted.</p>
+             */
+            public Builder resourceRefs(java.util.List<ResourceRefs> resourceRefs) {
+                this.resourceRefs = resourceRefs;
+                return this;
+            }
+
+            /**
+             * <p>The credential resource scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
+             */
+            public Builder resourceScope(String resourceScope) {
+                this.resourceScope = resourceScope;
                 return this;
             }
 

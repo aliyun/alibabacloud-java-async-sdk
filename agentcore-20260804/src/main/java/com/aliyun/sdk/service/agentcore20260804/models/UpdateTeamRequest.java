@@ -221,7 +221,11 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * <p>The role of the agent in the team. Valid values: LEADER, WORKER.</p>
+             * <p>The role of the agent in the team. Valid values:</p>
+             * <ul>
+             * <li>LEADER</li>
+             * <li>WORKER</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>WORKER</p>
@@ -291,7 +295,12 @@ public class UpdateTeamRequest extends Request {
             } 
 
             /**
-             * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</p>
+             * <p>The role of the user in the team. Valid values:</p>
+             * <ul>
+             * <li>ADMIN</li>
+             * <li>MEMBER</li>
+             * </ul>
+             * <p>Each team must have exactly one ADMIN.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -385,7 +394,7 @@ public class UpdateTeamRequest extends Request {
             } 
 
             /**
-             * <p>The new list of agent members. The existing agent members are replaced using full overwrite semantics. If not specified, the current value remains unchanged.</p>
+             * <p>The new agent member list. Replaces the existing agent members using full overwrite semantics. If not specified, the existing agent members remain unchanged.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -393,10 +402,10 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * <p>The new team description. If not specified, the current value remains unchanged.</p>
+             * <p>The new team description. If not specified, the existing description remains unchanged.</p>
              * 
              * <strong>example:</strong>
-             * <p>Team responsible for intelligent customer service</p>
+             * <p>A team responsible for intelligent customer service</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -404,7 +413,7 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * <p>The new list of user members. The existing user members are replaced using full overwrite semantics. When this parameter is specified, the list must contain exactly one member with the ADMIN role. If not specified, the current value remains unchanged.</p>
+             * <p>The new user member list. Replaces the existing user members using full overwrite semantics. When specified, the list must contain exactly one member with the ADMIN role. If not specified, the existing user members remain unchanged.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

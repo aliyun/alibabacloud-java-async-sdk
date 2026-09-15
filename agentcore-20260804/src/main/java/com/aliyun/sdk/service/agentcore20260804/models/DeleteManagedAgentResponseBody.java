@@ -119,7 +119,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value SUCCESS is returned if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The summary information of the managed agent after deletion.</p>
+         * <p>The summary information of the deleted managed agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value 200 is returned if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The message returned for the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -209,9 +209,6 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("effectiveSpecVersion")
-        private Long effectiveSpecVersion;
-
         @com.aliyun.core.annotation.NameInMap("latestSpecVersion")
         private Long latestSpecVersion;
 
@@ -236,7 +233,6 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
             this.description = builder.description;
-            this.effectiveSpecVersion = builder.effectiveSpecVersion;
             this.latestSpecVersion = builder.latestSpecVersion;
             this.name = builder.name;
             this.runtime = builder.runtime;
@@ -289,13 +285,6 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * @return effectiveSpecVersion
-         */
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
-        }
-
-        /**
          * @return latestSpecVersion
          */
         public Long getLatestSpecVersion() {
@@ -343,7 +332,6 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             private String createdAt; 
             private String deployType; 
             private String description; 
-            private Long effectiveSpecVersion; 
             private Long latestSpecVersion; 
             private String name; 
             private String runtime; 
@@ -360,7 +348,6 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
                 this.description = model.description;
-                this.effectiveSpecVersion = model.effectiveSpecVersion;
                 this.latestSpecVersion = model.latestSpecVersion;
                 this.name = model.name;
                 this.runtime = model.runtime;
@@ -421,17 +408,6 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
-                return this;
-            }
-
-            /**
-             * <p>The effective specification version number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder effectiveSpecVersion(Long effectiveSpecVersion) {
-                this.effectiveSpecVersion = effectiveSpecVersion;
                 return this;
             }
 

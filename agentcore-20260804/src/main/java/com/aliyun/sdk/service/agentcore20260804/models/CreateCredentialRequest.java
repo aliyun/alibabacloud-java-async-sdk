@@ -135,6 +135,111 @@ public class CreateCredentialRequest extends Request {
      *
      * <p>CreateCredentialRequest</p>
      */
+    public static class ResourceRefs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("resourceName")
+        private String resourceName;
+
+        @com.aliyun.core.annotation.NameInMap("resourceType")
+        private String resourceType;
+
+        private ResourceRefs(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.resourceName = builder.resourceName;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceRefs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String resourceName; 
+            private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceRefs model) {
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
+            /**
+             * <p>The unique identifier of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-xxxx</p>
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>The resource name. This value is empty if the resource has been deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * <p>The resource type, such as agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public ResourceRefs build() {
+                return new ResourceRefs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateCredentialRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCredentialRequest</p>
+     */
     public static class CreateCredentialRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("credentialMetadata")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -151,11 +256,19 @@ public class CreateCredentialRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("resourceRefs")
+        private java.util.List<ResourceRefs> resourceRefs;
+
+        @com.aliyun.core.annotation.NameInMap("resourceScope")
+        private String resourceScope;
+
         private CreateCredentialRequestBody(Builder builder) {
             this.credentialMetadata = builder.credentialMetadata;
             this.credentialType = builder.credentialType;
             this.description = builder.description;
             this.name = builder.name;
+            this.resourceRefs = builder.resourceRefs;
+            this.resourceScope = builder.resourceScope;
         }
 
         public static Builder builder() {
@@ -194,11 +307,27 @@ public class CreateCredentialRequest extends Request {
             return this.name;
         }
 
+        /**
+         * @return resourceRefs
+         */
+        public java.util.List<ResourceRefs> getResourceRefs() {
+            return this.resourceRefs;
+        }
+
+        /**
+         * @return resourceScope
+         */
+        public String getResourceScope() {
+            return this.resourceScope;
+        }
+
         public static final class Builder {
             private String credentialMetadata; 
             private String credentialType; 
             private String description; 
             private String name; 
+            private java.util.List<ResourceRefs> resourceRefs; 
+            private String resourceScope; 
 
             private Builder() {
             } 
@@ -208,10 +337,12 @@ public class CreateCredentialRequest extends Request {
                 this.credentialType = model.credentialType;
                 this.description = model.description;
                 this.name = model.name;
+                this.resourceRefs = model.resourceRefs;
+                this.resourceScope = model.resourceScope;
             } 
 
             /**
-             * <p>The credential content. The value is a JSON string. When credentialType is set to apiKey, the JSON string can contain only the apiKey field, and the value cannot be empty. After being written, the content can only be queried in masked form.</p>
+             * <p>The credential content. The value is a JSON string. When credentialType is set to apiKey, the content can contain only the apiKey field, and the value cannot be empty. After being written, the content can only be queried in masked form.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -246,7 +377,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods, underscores, and hyphens. The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -254,6 +385,25 @@ public class CreateCredentialRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required and must be a non-empty array when resourceScope is set to SPECIFIED. Each item contains resourceType and resourceId. resourceName is optional.</p>
+             */
+            public Builder resourceRefs(java.util.List<ResourceRefs> resourceRefs) {
+                this.resourceRefs = resourceRefs;
+                return this;
+            }
+
+            /**
+             * <p>ALL indicates all resources. SPECIFIED indicates that the credential applies only to the resources specified in resourceRefs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
+             */
+            public Builder resourceScope(String resourceScope) {
+                this.resourceScope = resourceScope;
                 return this;
             }
 

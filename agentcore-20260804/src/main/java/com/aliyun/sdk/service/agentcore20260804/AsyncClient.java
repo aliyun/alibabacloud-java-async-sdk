@@ -37,6 +37,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Disables template usage constraints. After the conversion, the MCP retains its source and tags but no longer appears on the usage page.</p>
+     * 
+     * @param request the request parameters of ConvertMcpToFreeEdit  ConvertMcpToFreeEditRequest
+     * @return ConvertMcpToFreeEditResponse
+     */
+    CompletableFuture<ConvertMcpToFreeEditResponse> convertMcpToFreeEdit(ConvertMcpToFreeEditRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</p>
      * 
      * @param request the request parameters of CreateAgentIMChannel  CreateAgentIMChannelRequest
@@ -65,6 +74,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAgentSpecVersionResponse> createAgentSpecVersion(CreateAgentSpecVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates a credential in a workspace for authentication of services such as Connector.</p>
+     * 
      * @param request the request parameters of CreateCredential  CreateCredentialRequest
      * @return CreateCredentialResponse
      */
@@ -189,6 +201,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAgentSpecVersionResponse> deleteAgentSpecVersion(DeleteAgentSpecVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an access credential from a specified workspace. A credential cannot be deleted while it is still bound to an MCP service.</p>
+     * 
      * @param request the request parameters of DeleteCredential  DeleteCredentialRequest
      * @return DeleteCredentialResponse
      */
@@ -217,7 +232,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
      * 
      * @param request the request parameters of DeleteMcp  DeleteMcpRequest
@@ -280,6 +295,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Disables a specified Connector in a workspace.</p>
+     * 
+     * @param request the request parameters of DisableConnector  DisableConnectorRequest
+     * @return DisableConnectorResponse
+     */
+    CompletableFuture<DisableConnectorResponse> disableConnector(DisableConnectorRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</p>
      * 
@@ -297,6 +321,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DownloadSkillVersionViaOssResponse
      */
     CompletableFuture<DownloadSkillVersionViaOssResponse> downloadSkillVersionViaOss(DownloadSkillVersionViaOssRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Enables a Connector in a specified workspace. Credential verification is required before enabling.</p>
+     * 
+     * @param request the request parameters of EnableConnector  EnableConnectorRequest
+     * @return EnableConnectorResponse
+     */
+    CompletableFuture<EnableConnectorResponse> enableConnector(EnableConnectorRequest request);
 
     /**
      * <b>description</b> :
@@ -330,7 +363,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
      * 
      * @param request the request parameters of GetAgentSpecImportFileUrl  GetAgentSpecImportFileUrlRequest
      * @return GetAgentSpecImportFileUrlResponse
@@ -358,6 +391,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAgentSpecVersionResponse> getAgentSpecVersion(GetAgentSpecVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a single credential. Sensitive fields are not returned.</p>
+     * 
      * @param request the request parameters of GetCredential  GetCredentialRequest
      * @return GetCredentialResponse
      */
@@ -396,12 +432,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * @param request the request parameters of GetMcp  GetMcpRequest
      * @return GetMcpResponse
      */
     CompletableFuture<GetMcpResponse> getMcp(GetMcpRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Returns the current template version and installation form schema.</p>
+     * 
+     * @param request the request parameters of GetMcpMarketItem  GetMcpMarketItemRequest
+     * @return GetMcpMarketItemResponse
+     */
+    CompletableFuture<GetMcpMarketItemResponse> getMcpMarketItem(GetMcpMarketItemRequest request);
 
     /**
      * @param request the request parameters of GetModel  GetModelRequest
@@ -477,7 +522,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+     * <h2>Operation description\nQueries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
      * 
      * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
      * @return GetWorkspaceResponse
@@ -492,6 +537,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWorkspacePluginResponse
      */
     CompletableFuture<GetWorkspacePluginResponse> getWorkspacePlugin(GetWorkspacePluginRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Validates input based on the specified template version and creates an MCP in the workspace.</p>
+     * 
+     * @param request the request parameters of InstallMcpMarketItem  InstallMcpMarketItemRequest
+     * @return InstallMcpMarketItemResponse
+     */
+    CompletableFuture<InstallMcpMarketItemResponse> installMcpMarketItem(InstallMcpMarketItemRequest request);
 
     /**
      * <b>description</b> :
@@ -528,6 +582,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAgentTeamsResponse> listAgentTeams(ListAgentTeamsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of available models for a specified connector. Pagination is supported.</p>
+     * 
+     * @param request the request parameters of ListConnectorModels  ListConnectorModelsRequest
+     * @return ListConnectorModelsResponse
+     */
+    CompletableFuture<ListConnectorModelsResponse> listConnectorModels(ListConnectorModelsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of connectors in a specified workspace.</p>
+     * 
+     * @param request the request parameters of ListConnectors  ListConnectorsRequest
+     * @return ListConnectorsResponse
+     */
+    CompletableFuture<ListConnectorsResponse> listConnectors(ListConnectorsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</p>
+     * 
      * @param request the request parameters of ListCredentials  ListCredentialsRequest
      * @return ListCredentialsResponse
      */
@@ -550,12 +625,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * <p>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</p>
      * 
      * @param request the request parameters of ListManagedAgents  ListManagedAgentsRequest
      * @return ListManagedAgentsResponse
      */
     CompletableFuture<ListManagedAgentsResponse> listManagedAgents(ListManagedAgentsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries all online official MCP templates. You can filter results by keyword, usage tag, and MCP type.</p>
+     * 
+     * @param request the request parameters of ListMcpMarketItems  ListMcpMarketItemsRequest
+     * @return ListMcpMarketItemsResponse
+     */
+    CompletableFuture<ListMcpMarketItemsResponse> listMcpMarketItems(ListMcpMarketItemsRequest request);
 
     /**
      * <b>description</b> :
@@ -570,7 +654,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries MCP services and their configurations and statuses in a specified workspace by page.</p>
+     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
      * 
      * @param request the request parameters of ListMcps  ListMcpsRequest
      * @return ListMcpsResponse
@@ -606,6 +690,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Queries the list of active sessions in the Sandbox of a specified managed agent.</p>
+     * 
+     * @param request the request parameters of ListSandboxSessions  ListSandboxSessionsRequest
+     * @return ListSandboxSessionsResponse
+     */
+    CompletableFuture<ListSandboxSessionsResponse> listSandboxSessions(ListSandboxSessionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</p>
+     * 
+     * @param request the request parameters of ListSandboxes  ListSandboxesRequest
+     * @return ListSandboxesResponse
+     */
+    CompletableFuture<ListSandboxesResponse> listSandboxes(ListSandboxesRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
      * 
      * @param request the request parameters of ListServiceEndpoints  ListServiceEndpointsRequest
@@ -637,7 +739,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per page, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+     * <h2>Operation description\nQueries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per paging request, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
      * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -749,6 +851,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAgentSpecResponse> updateAgentSpec(UpdateAgentSpecRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</p>
+     * 
+     * @param request the request parameters of UpdateConnector  UpdateConnectorRequest
+     * @return UpdateConnectorResponse
+     */
+    CompletableFuture<UpdateConnectorResponse> updateConnector(UpdateConnectorRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the metadata or resource scope of a specified credential.</p>
+     * 
      * @param request the request parameters of UpdateCredential  UpdateCredentialRequest
      * @return UpdateCredentialResponse
      */
@@ -787,9 +901,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
-     * Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
-     * A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</p>
+     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</p>
+     * 
+     * @param request the request parameters of UpdateMcpTemplateConfig  UpdateMcpTemplateConfigRequest
+     * @return UpdateMcpTemplateConfigResponse
+     */
+    CompletableFuture<UpdateMcpTemplateConfigResponse> updateMcpTemplateConfig(UpdateMcpTemplateConfigRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This operation supports updating description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+     * Modifying only description does not refresh the model configuration of associated Agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed Agents that reference the model within the same workspace, as well as external Agents whose model source is PLATFORM. External Agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+     * A successful response indicates that the model configuration has been saved. It does not indicate that associated Agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</p>
      * 
      * @param request the request parameters of UpdateModel  UpdateModelRequest
      * @return UpdateModelResponse
@@ -846,7 +969,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> state can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
      * 
      * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
@@ -872,5 +995,23 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadSkillViaOssResponse
      */
     CompletableFuture<UploadSkillViaOssResponse> uploadSkillViaOss(UploadSkillViaOssRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</p>
+     * 
+     * @param request the request parameters of VerifyConnector  VerifyConnectorRequest
+     * @return VerifyConnectorResponse
+     */
+    CompletableFuture<VerifyConnectorResponse> verifyConnector(VerifyConnectorRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</p>
+     * 
+     * @param request the request parameters of VerifyWorkspaceOssMountRamAuthorization  VerifyWorkspaceOssMountRamAuthorizationRequest
+     * @return VerifyWorkspaceOssMountRamAuthorizationResponse
+     */
+    CompletableFuture<VerifyWorkspaceOssMountRamAuthorizationResponse> verifyWorkspaceOssMountRamAuthorization(VerifyWorkspaceOssMountRamAuthorizationRequest request);
 
 }

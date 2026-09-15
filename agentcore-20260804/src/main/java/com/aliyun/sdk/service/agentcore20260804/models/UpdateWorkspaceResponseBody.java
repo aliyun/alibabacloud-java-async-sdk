@@ -272,7 +272,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -329,7 +329,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user VPC network configuration.</p>
+             * <p>The VPC network configuration.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -350,6 +350,12 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
      * <p>UpdateWorkspaceResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authorizationStatus")
+        private String authorizationStatus;
+
+        @com.aliyun.core.annotation.NameInMap("bucketName")
+        private String bucketName;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -362,6 +368,9 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("storageType")
+        private String storageType;
+
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
@@ -369,10 +378,13 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.authorizationStatus = builder.authorizationStatus;
+            this.bucketName = builder.bucketName;
             this.name = builder.name;
             this.networkConfiguration = builder.networkConfiguration;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.storageType = builder.storageType;
             this.tenantId = builder.tenantId;
             this.workspaceId = builder.workspaceId;
         }
@@ -383,6 +395,20 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return authorizationStatus
+         */
+        public String getAuthorizationStatus() {
+            return this.authorizationStatus;
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
         }
 
         /**
@@ -414,6 +440,13 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return tenantId
          */
         public String getTenantId() {
@@ -428,10 +461,13 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authorizationStatus; 
+            private String bucketName; 
             private String name; 
             private NetworkConfiguration networkConfiguration; 
             private String regionId; 
             private String status; 
+            private String storageType; 
             private String tenantId; 
             private String workspaceId; 
 
@@ -439,13 +475,32 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.authorizationStatus = model.authorizationStatus;
+                this.bucketName = model.bucketName;
                 this.name = model.name;
                 this.networkConfiguration = model.networkConfiguration;
                 this.regionId = model.regionId;
                 this.status = model.status;
+                this.storageType = model.storageType;
                 this.tenantId = model.tenantId;
                 this.workspaceId = model.workspaceId;
             } 
+
+            /**
+             * <p>The OSS storage authorization status.</p>
+             */
+            public Builder authorizationStatus(String authorizationStatus) {
+                this.authorizationStatus = authorizationStatus;
+                return this;
+            }
+
+            /**
+             * <p>The name of the private OSS bucket.</p>
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
 
             /**
              * <p>The workspace name.</p>
@@ -459,7 +514,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace network configuration.</p>
+             * <p>The network configuration of the workspace.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
@@ -485,6 +540,14 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The storage type of the workspace.</p>
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

@@ -149,7 +149,7 @@ public class GetTeamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request failed.</p>
+         * <p>The response message. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -206,9 +206,6 @@ public class GetTeamResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("effectiveSpecVersion")
-        private Long effectiveSpecVersion;
-
         @com.aliyun.core.annotation.NameInMap("latestSpecVersion")
         private Long latestSpecVersion;
 
@@ -236,7 +233,6 @@ public class GetTeamResponseBody extends TeaModel {
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
             this.description = builder.description;
-            this.effectiveSpecVersion = builder.effectiveSpecVersion;
             this.latestSpecVersion = builder.latestSpecVersion;
             this.name = builder.name;
             this.runtime = builder.runtime;
@@ -287,13 +283,6 @@ public class GetTeamResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
-        }
-
-        /**
-         * @return effectiveSpecVersion
-         */
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
         }
 
         /**
@@ -351,7 +340,6 @@ public class GetTeamResponseBody extends TeaModel {
             private String createdAt; 
             private String deployType; 
             private String description; 
-            private Long effectiveSpecVersion; 
             private Long latestSpecVersion; 
             private String name; 
             private String runtime; 
@@ -369,7 +357,6 @@ public class GetTeamResponseBody extends TeaModel {
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
                 this.description = model.description;
-                this.effectiveSpecVersion = model.effectiveSpecVersion;
                 this.latestSpecVersion = model.latestSpecVersion;
                 this.name = model.name;
                 this.runtime = model.runtime;
@@ -413,7 +400,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment mode of the agent. MANAGED indicates platform-managed deployment. SELF_HOSTED indicates self-hosted deployment.</p>
+             * <p>The deployment type of the agent. MANAGED indicates platform-managed deployment. SELF_HOSTED indicates self-hosted deployment.</p>
              * 
              * <strong>example:</strong>
              * <p>MANAGED</p>
@@ -435,18 +422,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currently effective specification version number of the agent.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder effectiveSpecVersion(Long effectiveSpecVersion) {
-                this.effectiveSpecVersion = effectiveSpecVersion;
-                return this;
-            }
-
-            /**
-             * <p>The latest specification version number of the agent.</p>
+             * <p>The latest configuration version number of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -501,7 +477,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -712,7 +688,7 @@ public class GetTeamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication method of the user. password indicates local password authentication within the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</p>
+             * <p>The authentication method of the user. password indicates local password authentication in the workspace. dingtalk and feishu indicate synchronization and authentication by the corresponding external identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -767,7 +743,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username. The name must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 32 characters in length.</p>
+             * <p>The username. The name must be unique within the workspace. It can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>user-01</p>
@@ -778,10 +754,10 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The note for the user. The note can be up to 1024 characters in length.</p>
+             * <p>The user note. The note can be up to 1024 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>Agent operations group member</p>
+             * <p>Member of the agent operations group</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -811,7 +787,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -1029,7 +1005,7 @@ public class GetTeamResponseBody extends TeaModel {
              * <p>The team description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A team responsible for intelligent customer service</p>
+             * <p>A team responsible for intelligent customer service operations</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1048,7 +1024,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID where the resource resides.</p>
+             * <p>The region ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1081,7 +1057,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

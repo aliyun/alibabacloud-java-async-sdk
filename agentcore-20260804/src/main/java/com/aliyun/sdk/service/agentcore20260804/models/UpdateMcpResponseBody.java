@@ -131,7 +131,7 @@ public class UpdateMcpResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Request processed successfully</p>
+         * <p>The request was processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;

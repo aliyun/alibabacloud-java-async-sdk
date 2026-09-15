@@ -186,7 +186,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The ID of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -273,9 +273,13 @@ public class CreateWorkspaceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("networkConfiguration")
         private NetworkConfiguration networkConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("storageType")
+        private String storageType;
+
         private CreateWorkspaceRequestBody(Builder builder) {
             this.name = builder.name;
             this.networkConfiguration = builder.networkConfiguration;
+            this.storageType = builder.storageType;
         }
 
         public static Builder builder() {
@@ -300,9 +304,17 @@ public class CreateWorkspaceRequest extends Request {
             return this.networkConfiguration;
         }
 
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
         public static final class Builder {
             private String name; 
             private NetworkConfiguration networkConfiguration; 
+            private String storageType; 
 
             private Builder() {
             } 
@@ -310,6 +322,7 @@ public class CreateWorkspaceRequest extends Request {
             private Builder(CreateWorkspaceRequestBody model) {
                 this.name = model.name;
                 this.networkConfiguration = model.networkConfiguration;
+                this.storageType = model.storageType;
             } 
 
             /**
@@ -329,6 +342,14 @@ public class CreateWorkspaceRequest extends Request {
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
+                return this;
+            }
+
+            /**
+             * storageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

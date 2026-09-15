@@ -206,7 +206,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</p>
+             * <p>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be specified, and all vSwitches must belong to the VPC specified by VpcId.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -214,7 +214,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the user VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -272,7 +272,7 @@ public class UpdateWorkspaceRequest extends Request {
             } 
 
             /**
-             * <p>The user VPC network configuration.</p>
+             * <p>The VPC network configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vpc(Vpc vpc) {
@@ -351,7 +351,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The updated workspace network configuration.</p>
+             * <p>The updated network configuration of the workspace.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;

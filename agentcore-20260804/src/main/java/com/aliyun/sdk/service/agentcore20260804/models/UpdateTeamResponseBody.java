@@ -149,7 +149,7 @@ public class UpdateTeamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. An error description is returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -248,7 +248,12 @@ public class UpdateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the agent in the team. Valid values: LEADER, WORKER. Each team must have exactly one LEADER.</p>
+             * <p>The role of the agent in the team. Valid values:</p>
+             * <ul>
+             * <li>LEADER</li>
+             * <li>WORKER</li>
+             * </ul>
+             * <p>Each team must have exactly one LEADER.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKER</p>
@@ -318,7 +323,12 @@ public class UpdateTeamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</p>
+             * <p>The role of the user in the team. Valid values:</p>
+             * <ul>
+             * <li>ADMIN</li>
+             * <li>MEMBER</li>
+             * </ul>
+             * <p>Each team must have exactly one ADMIN.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -490,7 +500,7 @@ public class UpdateTeamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of agent members in the team.</p>
+             * <p>The agent member list of the team.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -498,7 +508,7 @@ public class UpdateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, in RFC 3339 format.</p>
+             * <p>The creation time in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -512,7 +522,7 @@ public class UpdateTeamResponseBody extends TeaModel {
              * <p>The team description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Team responsible for intelligent customer service</p>
+             * <p>A team responsible for intelligent customer service</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -531,7 +541,15 @@ public class UpdateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, Deleted.</p>
+             * <p>The team status. Valid values:</p>
+             * <ul>
+             * <li>Creating</li>
+             * <li>Active</li>
+             * <li>Updating</li>
+             * <li>Deleting</li>
+             * <li>Failed</li>
+             * <li>Deleted</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -553,7 +571,7 @@ public class UpdateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, in RFC 3339 format.</p>
+             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -564,7 +582,7 @@ public class UpdateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user members in the team.</p>
+             * <p>The user member list of the team.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

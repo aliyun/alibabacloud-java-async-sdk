@@ -119,7 +119,7 @@ public class UpdateModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class UpdateModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class UpdateModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -331,7 +331,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model is able to invoke multiple tool calls in a single response.</p>
+             * <p>Indicates whether the model supports invoking multiple tools in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -347,7 +347,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports streaming tool calling.</p>
+             * <p>Indicates whether the model supports streaming tool invocation.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -355,7 +355,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports tool calling.</p>
+             * <p>Indicates whether the model supports tool invocation.</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -561,7 +561,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The context window size of the model, in tokens. The value must be a positive integer.</p>
+             * <p>The model context window size, in tokens. The value must be a positive integer.</p>
              * 
              * <strong>example:</strong>
              * <p>128000</p>
@@ -594,7 +594,7 @@ public class UpdateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of output tokens supported per generation by the model.</p>
+             * <p>The maximum number of output tokens supported per generation.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>

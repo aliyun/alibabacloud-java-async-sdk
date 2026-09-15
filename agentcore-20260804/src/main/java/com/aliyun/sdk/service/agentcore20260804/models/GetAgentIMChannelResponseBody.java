@@ -119,7 +119,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value SUCCESS is returned if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value 200 is returned if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -576,7 +576,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel credential summary. Only non-sensitive fields and configured secret field names are returned. Secret values are not returned.</p>
+             * <p>The channel credential summary. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</p>
              */
             public Builder credentialSummary(CredentialSummary credentialSummary) {
                 this.credentialSummary = credentialSummary;
@@ -584,7 +584,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the IM channel is enabled. Default value: true.</p>
+             * <p>Indicates whether the IM channel is enabled. Default value upon creation: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -614,7 +614,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
+             * <p>The ID of the associated ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready with a public access URL.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>
@@ -627,12 +627,12 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             /**
              * <p>The IM channel status. Valid values:</p>
              * <ul>
-             * <li>CREATING: Being created.</li>
-             * <li>READY: Ready.</li>
-             * <li>UPDATING: Being updated.</li>
-             * <li>FAILED: Failed.</li>
-             * <li>DELETING: Being deleted.</li>
-             * <li>DELETE_FAILED: Deletion failed.</li>
+             * <li>CREATING: The channel is being created.</li>
+             * <li>READY: The channel is ready.</li>
+             * <li>UPDATING: The channel is being updated.</li>
+             * <li>FAILED: The channel creation or update failed.</li>
+             * <li>DELETING: The channel is being deleted.</li>
+             * <li>DELETE_FAILED: The channel deletion failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

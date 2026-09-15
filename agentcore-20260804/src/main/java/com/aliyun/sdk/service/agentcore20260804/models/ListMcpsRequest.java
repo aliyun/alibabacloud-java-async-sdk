@@ -39,8 +39,16 @@ public class ListMcpsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("officialTag")
+    private String officialTag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("searchType")
     private String searchType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("usageActive")
+    private Boolean usageActive;
 
     private ListMcpsRequest(Builder builder) {
         super(builder);
@@ -49,7 +57,9 @@ public class ListMcpsRequest extends Request {
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
+        this.officialTag = builder.officialTag;
         this.searchType = builder.searchType;
+        this.usageActive = builder.usageActive;
     }
 
     public static Builder builder() {
@@ -101,10 +111,24 @@ public class ListMcpsRequest extends Request {
     }
 
     /**
+     * @return officialTag
+     */
+    public String getOfficialTag() {
+        return this.officialTag;
+    }
+
+    /**
      * @return searchType
      */
     public String getSearchType() {
         return this.searchType;
+    }
+
+    /**
+     * @return usageActive
+     */
+    public Boolean getUsageActive() {
+        return this.usageActive;
     }
 
     public static final class Builder extends Request.Builder<ListMcpsRequest, Builder> {
@@ -113,7 +137,9 @@ public class ListMcpsRequest extends Request {
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
+        private String officialTag; 
         private String searchType; 
+        private Boolean usageActive; 
 
         private Builder() {
             super();
@@ -126,7 +152,9 @@ public class ListMcpsRequest extends Request {
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nextToken = request.nextToken;
+            this.officialTag = request.officialTag;
             this.searchType = request.searchType;
+            this.usageActive = request.usageActive;
         } 
 
         /**
@@ -152,7 +180,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -164,7 +192,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>The MCP service name. Used together with SearchType.</p>
+         * <p>The MCP service name or service ID. Used together with SearchType.</p>
          * 
          * <strong>example:</strong>
          * <p>my-mcp-server</p>
@@ -188,6 +216,18 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
+         * <p>Filters results by official usage tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KNOWLEDGE_BASE</p>
+         */
+        public Builder officialTag(String officialTag) {
+            this.putQueryParameter("officialTag", officialTag);
+            this.officialTag = officialTag;
+            return this;
+        }
+
+        /**
          * <p>The name matching method. Takes effect only when Name is specified. Valid values:</p>
          * <ul>
          * <li>accurate: exact match.</li>
@@ -201,6 +241,15 @@ public class ListMcpsRequest extends Request {
         public Builder searchType(String searchType) {
             this.putQueryParameter("searchType", searchType);
             this.searchType = searchType;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether the service is still bound by the official template usage constraint.</p>
+         */
+        public Builder usageActive(Boolean usageActive) {
+            this.putQueryParameter("usageActive", usageActive);
+            this.usageActive = usageActive;
             return this;
         }
 

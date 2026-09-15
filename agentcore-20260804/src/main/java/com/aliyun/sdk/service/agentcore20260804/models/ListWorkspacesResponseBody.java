@@ -188,7 +188,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page used for this request.</p>
+         * <p>The maximum number of records per page used in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -210,7 +210,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. This value is empty if no more pages exist.</p>
+         * <p>The pagination token for the next page. This parameter is empty if no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>d29ya3NwYWNlLW9mZnNldDo0MA</p>
@@ -533,7 +533,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the workspace.</p>
+             * <p>The time when the workspace was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-06T03:56:56Z</p>
@@ -544,7 +544,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>production-agents</p>

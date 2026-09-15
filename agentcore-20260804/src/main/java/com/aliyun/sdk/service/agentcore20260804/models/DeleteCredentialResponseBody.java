@@ -130,7 +130,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deleted credential information.</p>
+         * <p>The information about the deleted credential.</p>
          */
         public Builder data(Data data) {
             this.data = data;

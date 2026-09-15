@@ -190,6 +190,111 @@ public class UpdateCredentialResponseBody extends TeaModel {
      *
      * <p>UpdateCredentialResponseBody</p>
      */
+    public static class ResourceRefs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("resourceName")
+        private String resourceName;
+
+        @com.aliyun.core.annotation.NameInMap("resourceType")
+        private String resourceType;
+
+        private ResourceRefs(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.resourceName = builder.resourceName;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceRefs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String resourceName; 
+            private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceRefs model) {
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
+            /**
+             * <p>The unique identifier of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-xxxx</p>
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>The resource name. This value is empty if the resource has been deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * <p>The resource type, such as agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public ResourceRefs build() {
+                return new ResourceRefs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCredentialResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCredentialResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
@@ -212,6 +317,12 @@ public class UpdateCredentialResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("resourceRefs")
+        private java.util.List<ResourceRefs> resourceRefs;
+
+        @com.aliyun.core.annotation.NameInMap("resourceScope")
+        private String resourceScope;
+
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
@@ -226,6 +337,8 @@ public class UpdateCredentialResponseBody extends TeaModel {
             this.description = builder.description;
             this.name = builder.name;
             this.regionId = builder.regionId;
+            this.resourceRefs = builder.resourceRefs;
+            this.resourceScope = builder.resourceScope;
             this.updatedAt = builder.updatedAt;
             this.workspaceId = builder.workspaceId;
         }
@@ -288,6 +401,20 @@ public class UpdateCredentialResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceRefs
+         */
+        public java.util.List<ResourceRefs> getResourceRefs() {
+            return this.resourceRefs;
+        }
+
+        /**
+         * @return resourceScope
+         */
+        public String getResourceScope() {
+            return this.resourceScope;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
@@ -309,6 +436,8 @@ public class UpdateCredentialResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String regionId; 
+            private java.util.List<ResourceRefs> resourceRefs; 
+            private String resourceScope; 
             private String updatedAt; 
             private String workspaceId; 
 
@@ -323,12 +452,14 @@ public class UpdateCredentialResponseBody extends TeaModel {
                 this.description = model.description;
                 this.name = model.name;
                 this.regionId = model.regionId;
+                this.resourceRefs = model.resourceRefs;
+                this.resourceScope = model.resourceScope;
                 this.updatedAt = model.updatedAt;
                 this.workspaceId = model.workspaceId;
             } 
 
             /**
-             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * <p>The creation time in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -350,7 +481,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masked credential content. If credentialType is set to apiKey, the apiKey value is returned as asterisks (*) of equal length.</p>
+             * <p>The masked credential content. If credentialType is apiKey, the apiKey value is returned as asterisks (*) of equal length.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
@@ -394,7 +525,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID where the resource resides.</p>
+             * <p>The region ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -405,7 +536,26 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the most recent modification in UTC, formatted according to RFC 3339.</p>
+             * <p>Each item contains resourceType, resourceId, and resourceName. resourceName is empty if the resource has been deleted.</p>
+             */
+            public Builder resourceRefs(java.util.List<ResourceRefs> resourceRefs) {
+                this.resourceRefs = resourceRefs;
+                return this;
+            }
+
+            /**
+             * <p>The credential resource scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
+             */
+            public Builder resourceScope(String resourceScope) {
+                this.resourceScope = resourceScope;
+                return this;
+            }
+
+            /**
+             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

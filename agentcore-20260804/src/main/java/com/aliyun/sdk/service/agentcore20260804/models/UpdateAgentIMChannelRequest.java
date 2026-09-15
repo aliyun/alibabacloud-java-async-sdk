@@ -167,7 +167,7 @@ public class UpdateAgentIMChannelRequest extends Request {
         }
 
         /**
-         * <p>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in this phase.</p>
+         * <p>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -326,7 +326,7 @@ public class UpdateAgentIMChannelRequest extends Request {
             } 
 
             /**
-             * <p>The channel behavior configuration. When provided, the entire configuration is replaced. An empty object restores default values.</p>
+             * <p>The channel behavior configuration. When specified, the entire configuration is replaced. An empty object restores default values.</p>
              */
             public Builder channelConfig(ChannelConfig channelConfig) {
                 this.channelConfig = channelConfig;
@@ -334,7 +334,7 @@ public class UpdateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the IM channel. Default value: true (when created).</p>
+             * <p>Specifies whether to enable the IM channel. Default value upon creation: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -342,7 +342,7 @@ public class UpdateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint address.</p>
+             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>

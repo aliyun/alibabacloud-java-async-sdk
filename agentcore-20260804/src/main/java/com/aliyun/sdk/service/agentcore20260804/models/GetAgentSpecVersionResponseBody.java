@@ -186,7 +186,7 @@ public class GetAgentSpecVersionResponseBody extends TeaModel {
              * <p>The business tags.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample property value</p>
+             * <p>SamplePropertyValue</p>
              */
             public Builder bizTags(String bizTags) {
                 this.bizTags = bizTags;
@@ -197,7 +197,7 @@ public class GetAgentSpecVersionResponseBody extends TeaModel {
              * <p>The content.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample content</p>
+             * <p>SampleContent</p>
              */
             public Builder content(String content) {
                 this.content = content;

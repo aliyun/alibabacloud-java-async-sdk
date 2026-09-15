@@ -102,7 +102,12 @@ public class DeleteIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The type of the external identity provider to unbind. Valid values: DingTalk, Feishu. The value must match the currently bound type.</p>
+         * <p>The type of the external identity provider to unbind. Valid values:</p>
+         * <ul>
+         * <li>DingTalk</li>
+         * <li>Feishu</li>
+         * </ul>
+         * <p>The value must match the type that is currently bound.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

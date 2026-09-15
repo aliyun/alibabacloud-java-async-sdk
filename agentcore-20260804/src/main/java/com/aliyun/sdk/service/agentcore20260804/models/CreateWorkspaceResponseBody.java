@@ -171,7 +171,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -272,7 +272,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The ID of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -349,7 +349,108 @@ public class CreateWorkspaceResponseBody extends TeaModel {
      *
      * <p>CreateWorkspaceResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>environment</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>development</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateWorkspaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aiRegistryNamespaceId")
+        private String aiRegistryNamespaceId;
+
+        @com.aliyun.core.annotation.NameInMap("authorizationStatus")
+        private String authorizationStatus;
+
+        @com.aliyun.core.annotation.NameInMap("bucketName")
+        private String bucketName;
+
+        @com.aliyun.core.annotation.NameInMap("cmsWorkspaceId")
+        private String cmsWorkspaceId;
+
+        @com.aliyun.core.annotation.NameInMap("createTime")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String createTime;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -359,8 +460,21 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("statusReason")
+        private String statusReason;
+
+        @com.aliyun.core.annotation.NameInMap("storageType")
+        private String storageType;
+
+        @com.aliyun.core.annotation.NameInMap("tags")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
@@ -369,10 +483,19 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.aiRegistryNamespaceId = builder.aiRegistryNamespaceId;
+            this.authorizationStatus = builder.authorizationStatus;
+            this.bucketName = builder.bucketName;
+            this.cmsWorkspaceId = builder.cmsWorkspaceId;
+            this.createTime = builder.createTime;
             this.name = builder.name;
             this.networkConfiguration = builder.networkConfiguration;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
+            this.statusReason = builder.statusReason;
+            this.storageType = builder.storageType;
+            this.tags = builder.tags;
             this.tenantId = builder.tenantId;
             this.workspaceId = builder.workspaceId;
         }
@@ -383,6 +506,41 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiRegistryNamespaceId
+         */
+        public String getAiRegistryNamespaceId() {
+            return this.aiRegistryNamespaceId;
+        }
+
+        /**
+         * @return authorizationStatus
+         */
+        public String getAuthorizationStatus() {
+            return this.authorizationStatus;
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        /**
+         * @return cmsWorkspaceId
+         */
+        public String getCmsWorkspaceId() {
+            return this.cmsWorkspaceId;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -407,10 +565,38 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return statusReason
+         */
+        public String getStatusReason() {
+            return this.statusReason;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -428,10 +614,19 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String aiRegistryNamespaceId; 
+            private String authorizationStatus; 
+            private String bucketName; 
+            private String cmsWorkspaceId; 
+            private String createTime; 
             private String name; 
             private NetworkConfiguration networkConfiguration; 
             private String regionId; 
+            private String resourceGroupId; 
             private String status; 
+            private String statusReason; 
+            private String storageType; 
+            private java.util.List<Tags> tags; 
             private String tenantId; 
             private String workspaceId; 
 
@@ -439,13 +634,72 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.aiRegistryNamespaceId = model.aiRegistryNamespaceId;
+                this.authorizationStatus = model.authorizationStatus;
+                this.bucketName = model.bucketName;
+                this.cmsWorkspaceId = model.cmsWorkspaceId;
+                this.createTime = model.createTime;
                 this.name = model.name;
                 this.networkConfiguration = model.networkConfiguration;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.storageType = model.storageType;
+                this.tags = model.tags;
                 this.tenantId = model.tenantId;
                 this.workspaceId = model.workspaceId;
             } 
+
+            /**
+             * <p>The AI Registry namespace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace-0123456789abcdef</p>
+             */
+            public Builder aiRegistryNamespaceId(String aiRegistryNamespaceId) {
+                this.aiRegistryNamespaceId = aiRegistryNamespaceId;
+                return this;
+            }
+
+            /**
+             * <p>The OSS storage authorization status.</p>
+             */
+            public Builder authorizationStatus(String authorizationStatus) {
+                this.authorizationStatus = authorizationStatus;
+                return this;
+            }
+
+            /**
+             * <p>The name of the private OSS bucket.</p>
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * <p>The CloudMonitor workspace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms-ws-0123456789abcdef</p>
+             */
+            public Builder cmsWorkspaceId(String cmsWorkspaceId) {
+                this.cmsWorkspaceId = cmsWorkspaceId;
+                return this;
+            }
+
+            /**
+             * <p>The time when the workspace was created, in ISO-8601 format.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-28T10:00:00+08:00</p>
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
 
             /**
              * <p>The workspace name.</p>
@@ -478,6 +732,17 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The ID of the resource group to which the workspace belongs. This value may be empty if no resource group is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm1234567890</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * <p>The workspace status.</p>
              * 
              * <strong>example:</strong>
@@ -485,6 +750,34 @@ public class CreateWorkspaceResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The supplementary reason for the current workspace status. This value is used to display the specific reason when initialization fails or authorization is pending, and may be empty under normal conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Waiting for OSS RAM authorization</p>
+             */
+            public Builder statusReason(String statusReason) {
+                this.statusReason = statusReason;
+                return this;
+            }
+
+            /**
+             * <p>The storage type of the workspace.</p>
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
+                return this;
+            }
+
+            /**
+             * <p>The list of workspace tags. An empty array is returned if no tags are set.</p>
+             * <p>This parameter is required.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

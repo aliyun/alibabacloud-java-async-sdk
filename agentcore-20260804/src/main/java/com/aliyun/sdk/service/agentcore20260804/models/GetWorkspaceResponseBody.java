@@ -253,7 +253,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the VPC network is enabled.</p>
+             * <p>Indicates whether VPC networking is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -296,10 +296,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
      * <p>GetWorkspaceResponseBody</p>
      */
     public static class NetworkConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("publicEgressIp")
+        private String publicEgressIp;
+
         @com.aliyun.core.annotation.NameInMap("vpc")
         private Vpc vpc;
 
         private NetworkConfiguration(Builder builder) {
+            this.publicEgressIp = builder.publicEgressIp;
             this.vpc = builder.vpc;
         }
 
@@ -312,6 +316,13 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicEgressIp
+         */
+        public String getPublicEgressIp() {
+            return this.publicEgressIp;
+        }
+
+        /**
          * @return vpc
          */
         public Vpc getVpc() {
@@ -319,17 +330,30 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String publicEgressIp; 
             private Vpc vpc; 
 
             private Builder() {
             } 
 
             private Builder(NetworkConfiguration model) {
+                this.publicEgressIp = model.publicEgressIp;
                 this.vpc = model.vpc;
             } 
 
             /**
-             * <p>The user VPC network configuration.</p>
+             * <p>The public egress IP address allocated to the workspace. You can use this IP address to configure IP address whitelists for external services. This field is returned only when the public egress resource is attached and an address is allocated. The field is empty if no address is allocated, the attachment is failed, or the address is being released. This address is independent of whether VPC networking is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.0.113.10</p>
+             */
+            public Builder publicEgressIp(String publicEgressIp) {
+                this.publicEgressIp = publicEgressIp;
+                return this;
+            }
+
+            /**
+             * <p>The VPC network configuration of the user.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -350,6 +374,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
      * <p>GetWorkspaceResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authorizationStatus")
+        private String authorizationStatus;
+
+        @com.aliyun.core.annotation.NameInMap("bucketName")
+        private String bucketName;
+
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
@@ -368,6 +398,9 @@ public class GetWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("statusReason")
         private String statusReason;
 
+        @com.aliyun.core.annotation.NameInMap("storageType")
+        private String storageType;
+
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
@@ -375,12 +408,15 @@ public class GetWorkspaceResponseBody extends TeaModel {
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.authorizationStatus = builder.authorizationStatus;
+            this.bucketName = builder.bucketName;
             this.createTime = builder.createTime;
             this.name = builder.name;
             this.networkConfiguration = builder.networkConfiguration;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
+            this.storageType = builder.storageType;
             this.tenantId = builder.tenantId;
             this.workspaceId = builder.workspaceId;
         }
@@ -391,6 +427,20 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return authorizationStatus
+         */
+        public String getAuthorizationStatus() {
+            return this.authorizationStatus;
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
         }
 
         /**
@@ -436,6 +486,13 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return tenantId
          */
         public String getTenantId() {
@@ -450,12 +507,15 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authorizationStatus; 
+            private String bucketName; 
             private String createTime; 
             private String name; 
             private NetworkConfiguration networkConfiguration; 
             private String regionId; 
             private String status; 
             private String statusReason; 
+            private String storageType; 
             private String tenantId; 
             private String workspaceId; 
 
@@ -463,18 +523,37 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.authorizationStatus = model.authorizationStatus;
+                this.bucketName = model.bucketName;
                 this.createTime = model.createTime;
                 this.name = model.name;
                 this.networkConfiguration = model.networkConfiguration;
                 this.regionId = model.regionId;
                 this.status = model.status;
                 this.statusReason = model.statusReason;
+                this.storageType = model.storageType;
                 this.tenantId = model.tenantId;
                 this.workspaceId = model.workspaceId;
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The OSS storage authorization status.</p>
+             */
+            public Builder authorizationStatus(String authorizationStatus) {
+                this.authorizationStatus = authorizationStatus;
+                return this;
+            }
+
+            /**
+             * <p>The name of the private OSS bucket.</p>
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * <p>The time when the workspace was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-06T03:56:56Z</p>
@@ -496,7 +575,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace network configuration.</p>
+             * <p>The network configuration of the workspace.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
@@ -515,7 +594,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace status. Valid values: Initializing, InitializationFailed, Initialized, Deleting, Deleted.</p>
+             * <p>The workspace status. Valid values:</p>
+             * <ul>
+             * <li>Initializing</li>
+             * <li>InitializationFailed</li>
+             * <li>Initialized</li>
+             * <li>Deleting</li>
+             * <li>Deleted</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Initialized</p>
@@ -533,6 +619,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
+                return this;
+            }
+
+            /**
+             * <p>The storage type of the workspace.</p>
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

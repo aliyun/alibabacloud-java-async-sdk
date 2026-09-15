@@ -243,7 +243,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The environment variable name.</p>
+             * <p>The name of the environment variable.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The environment variable value.</p>
+             * <p>The value of the environment variable.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -354,13 +354,171 @@ public class CreateManagedAgentRequest extends Request {
      *
      * <p>CreateManagedAgentRequest</p>
      */
+    public static class Configuration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("connectorServiceAccountKey")
+        private String connectorServiceAccountKey;
+
+        @com.aliyun.core.annotation.NameInMap("connectorServiceAccountName")
+        private String connectorServiceAccountName;
+
+        private Configuration(Builder builder) {
+            this.connectorServiceAccountKey = builder.connectorServiceAccountKey;
+            this.connectorServiceAccountName = builder.connectorServiceAccountName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Configuration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectorServiceAccountKey
+         */
+        public String getConnectorServiceAccountKey() {
+            return this.connectorServiceAccountKey;
+        }
+
+        /**
+         * @return connectorServiceAccountName
+         */
+        public String getConnectorServiceAccountName() {
+            return this.connectorServiceAccountName;
+        }
+
+        public static final class Builder {
+            private String connectorServiceAccountKey; 
+            private String connectorServiceAccountName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.connectorServiceAccountKey = model.connectorServiceAccountKey;
+                this.connectorServiceAccountName = model.connectorServiceAccountName;
+            } 
+
+            /**
+             * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter is optional when only one key exists, but required when multiple keys exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-xxxx</p>
+             */
+            public Builder connectorServiceAccountKey(String connectorServiceAccountKey) {
+                this.connectorServiceAccountKey = connectorServiceAccountKey;
+                return this;
+            }
+
+            /**
+             * <p>The Connector Key name that is populated during queries. This parameter is not used as a binding reference during writes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-connector-key</p>
+             */
+            public Builder connectorServiceAccountName(String connectorServiceAccountName) {
+                this.connectorServiceAccountName = connectorServiceAccountName;
+                return this;
+            }
+
+            public Configuration build() {
+                return new Configuration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
+    public static class Harness extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("configuration")
+        private Configuration configuration;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Harness(Builder builder) {
+            this.configuration = builder.configuration;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Harness create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configuration
+         */
+        public Configuration getConfiguration() {
+            return this.configuration;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Configuration configuration; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Harness model) {
+                this.configuration = model.configuration;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The Connector binding configuration for the qodercli harness.</p>
+             */
+            public Builder configuration(Configuration configuration) {
+                this.configuration = configuration;
+                return this;
+            }
+
+            /**
+             * <p>The runtime harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qodercli</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Harness build() {
+                return new Harness(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modelConnectionId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String modelConnectionId;
 
         @com.aliyun.core.annotation.NameInMap("modelName")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String modelName;
 
         private Model(Builder builder) {
@@ -416,7 +574,6 @@ public class CreateManagedAgentRequest extends Request {
 
             /**
              * <p>The upstream model name.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-max</p>
@@ -441,7 +598,6 @@ public class CreateManagedAgentRequest extends Request {
      */
     public static class AccessInternet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enabled")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean enabled;
 
         private AccessInternet(Builder builder) {
@@ -474,8 +630,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow access to the Internet.</p>
-             * <p>This parameter is required.</p>
+             * <p>Specifies whether to allow public network access.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -500,7 +655,6 @@ public class CreateManagedAgentRequest extends Request {
      */
     public static class AccessVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enabled")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean enabled;
 
         private AccessVpc(Builder builder) {
@@ -533,8 +687,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow access to the VPC.</p>
-             * <p>This parameter is required.</p>
+             * <p>Specifies whether to allow VPC access.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -632,6 +785,123 @@ public class CreateManagedAgentRequest extends Request {
      *
      * <p>CreateManagedAgentRequest</p>
      */
+    public static class OssMounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bucketName")
+        private String bucketName;
+
+        @com.aliyun.core.annotation.NameInMap("mountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("readOnly")
+        private Boolean readOnly;
+
+        private OssMounts(Builder builder) {
+            this.bucketName = builder.bucketName;
+            this.mountPath = builder.mountPath;
+            this.path = builder.path;
+            this.readOnly = builder.readOnly;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OssMounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return readOnly
+         */
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+        public static final class Builder {
+            private String bucketName; 
+            private String mountPath; 
+            private String path; 
+            private Boolean readOnly; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssMounts model) {
+                this.bucketName = model.bucketName;
+                this.mountPath = model.mountPath;
+                this.path = model.path;
+                this.readOnly = model.readOnly;
+            } 
+
+            /**
+             * <p>The OSS bucket name. This parameter is required for each mount entry as validated by the backend.</p>
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * <p>The absolute mount path in the container. This parameter is required for each mount entry as validated by the backend.</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * <p>The relative object prefix in the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to mount as read-only. Default value: false.</p>
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
+                return this;
+            }
+
+            public OssMounts build() {
+                return new OssMounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
     public static class Compute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("computeClass")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -691,6 +961,146 @@ public class CreateManagedAgentRequest extends Request {
      *
      * <p>CreateManagedAgentRequest</p>
      */
+    public static class Hpa extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("maxConcurrentSessionsPerSandbox")
+        @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
+        private Integer maxConcurrentSessionsPerSandbox;
+
+        @com.aliyun.core.annotation.NameInMap("maxSandboxCount")
+        private Integer maxSandboxCount;
+
+        @com.aliyun.core.annotation.NameInMap("minSandboxCount")
+        private Integer minSandboxCount;
+
+        @com.aliyun.core.annotation.NameInMap("sessionTtlSeconds")
+        @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
+        private Integer sessionTtlSeconds;
+
+        private Hpa(Builder builder) {
+            this.enabled = builder.enabled;
+            this.maxConcurrentSessionsPerSandbox = builder.maxConcurrentSessionsPerSandbox;
+            this.maxSandboxCount = builder.maxSandboxCount;
+            this.minSandboxCount = builder.minSandboxCount;
+            this.sessionTtlSeconds = builder.sessionTtlSeconds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Hpa create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxConcurrentSessionsPerSandbox
+         */
+        public Integer getMaxConcurrentSessionsPerSandbox() {
+            return this.maxConcurrentSessionsPerSandbox;
+        }
+
+        /**
+         * @return maxSandboxCount
+         */
+        public Integer getMaxSandboxCount() {
+            return this.maxSandboxCount;
+        }
+
+        /**
+         * @return minSandboxCount
+         */
+        public Integer getMinSandboxCount() {
+            return this.minSandboxCount;
+        }
+
+        /**
+         * @return sessionTtlSeconds
+         */
+        public Integer getSessionTtlSeconds() {
+            return this.sessionTtlSeconds;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Integer maxConcurrentSessionsPerSandbox; 
+            private Integer maxSandboxCount; 
+            private Integer minSandboxCount; 
+            private Integer sessionTtlSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hpa model) {
+                this.enabled = model.enabled;
+                this.maxConcurrentSessionsPerSandbox = model.maxConcurrentSessionsPerSandbox;
+                this.maxSandboxCount = model.maxSandboxCount;
+                this.minSandboxCount = model.minSandboxCount;
+                this.sessionTtlSeconds = model.sessionTtlSeconds;
+            } 
+
+            /**
+             * <p>Specifies whether to enable auto-scaling. This parameter is required when hpa is present as validated by the backend.</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of active sessions per Sandbox. This parameter is required when hpa is present as validated by the backend.</p>
+             */
+            public Builder maxConcurrentSessionsPerSandbox(Integer maxConcurrentSessionsPerSandbox) {
+                this.maxConcurrentSessionsPerSandbox = maxConcurrentSessionsPerSandbox;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of Sandboxes. This parameter is required when HPA is enabled and must be no less than the minimum value.</p>
+             */
+            public Builder maxSandboxCount(Integer maxSandboxCount) {
+                this.maxSandboxCount = maxSandboxCount;
+                return this;
+            }
+
+            /**
+             * <p>The minimum number of Sandboxes. This parameter is required when HPA is enabled.</p>
+             */
+            public Builder minSandboxCount(Integer minSandboxCount) {
+                this.minSandboxCount = minSandboxCount;
+                return this;
+            }
+
+            /**
+             * <p>The session reclamation time after inactivity, in seconds. This parameter is required when hpa is present as validated by the backend.</p>
+             */
+            public Builder sessionTtlSeconds(Integer sessionTtlSeconds) {
+                this.sessionTtlSeconds = sessionTtlSeconds;
+                return this;
+            }
+
+            public Hpa build() {
+                return new Hpa(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
     public static class SessionPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("headerName")
         private String headerName;
@@ -739,7 +1149,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The HTTP header name used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+             * <p>The HTTP header name used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -779,12 +1189,16 @@ public class CreateManagedAgentRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Compute compute;
 
+        @com.aliyun.core.annotation.NameInMap("hpa")
+        private Hpa hpa;
+
         @com.aliyun.core.annotation.NameInMap("sessionPolicy")
         @com.aliyun.core.annotation.Validation(required = true)
         private SessionPolicy sessionPolicy;
 
         private Runtime(Builder builder) {
             this.compute = builder.compute;
+            this.hpa = builder.hpa;
             this.sessionPolicy = builder.sessionPolicy;
         }
 
@@ -804,6 +1218,13 @@ public class CreateManagedAgentRequest extends Request {
         }
 
         /**
+         * @return hpa
+         */
+        public Hpa getHpa() {
+            return this.hpa;
+        }
+
+        /**
          * @return sessionPolicy
          */
         public SessionPolicy getSessionPolicy() {
@@ -812,6 +1233,7 @@ public class CreateManagedAgentRequest extends Request {
 
         public static final class Builder {
             private Compute compute; 
+            private Hpa hpa; 
             private SessionPolicy sessionPolicy; 
 
             private Builder() {
@@ -819,6 +1241,7 @@ public class CreateManagedAgentRequest extends Request {
 
             private Builder(Runtime model) {
                 this.compute = model.compute;
+                this.hpa = model.hpa;
                 this.sessionPolicy = model.sessionPolicy;
             } 
 
@@ -828,6 +1251,14 @@ public class CreateManagedAgentRequest extends Request {
              */
             public Builder compute(Compute compute) {
                 this.compute = compute;
+                return this;
+            }
+
+            /**
+             * <p>The Sandbox auto-scaling and session configuration.</p>
+             */
+            public Builder hpa(Hpa hpa) {
+                this.hpa = hpa;
                 return this;
             }
 
@@ -989,7 +1420,7 @@ public class CreateManagedAgentRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Please review the code</p>
+             * <p>Review the code</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1027,6 +1458,7 @@ public class CreateManagedAgentRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("version")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String version;
 
         private AiRegistry(Builder builder) {
@@ -1082,6 +1514,7 @@ public class CreateManagedAgentRequest extends Request {
 
             /**
              * <p>The version of the template in the AI registry.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1250,6 +1683,9 @@ public class CreateManagedAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("environment")
         private Environment environment;
 
+        @com.aliyun.core.annotation.NameInMap("harness")
+        private Harness harness;
+
         @com.aliyun.core.annotation.NameInMap("instruction")
         private String instruction;
 
@@ -1263,6 +1699,9 @@ public class CreateManagedAgentRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("network")
         private Network network;
+
+        @com.aliyun.core.annotation.NameInMap("ossMounts")
+        private java.util.List<OssMounts> ossMounts;
 
         @com.aliyun.core.annotation.NameInMap("runtime")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1283,10 +1722,12 @@ public class CreateManagedAgentRequest extends Request {
         private CreateManagedAgentRequestBody(Builder builder) {
             this.description = builder.description;
             this.environment = builder.environment;
+            this.harness = builder.harness;
             this.instruction = builder.instruction;
             this.model = builder.model;
             this.name = builder.name;
             this.network = builder.network;
+            this.ossMounts = builder.ossMounts;
             this.runtime = builder.runtime;
             this.skills = builder.skills;
             this.subAgents = builder.subAgents;
@@ -1317,6 +1758,13 @@ public class CreateManagedAgentRequest extends Request {
         }
 
         /**
+         * @return harness
+         */
+        public Harness getHarness() {
+            return this.harness;
+        }
+
+        /**
          * @return instruction
          */
         public String getInstruction() {
@@ -1342,6 +1790,13 @@ public class CreateManagedAgentRequest extends Request {
          */
         public Network getNetwork() {
             return this.network;
+        }
+
+        /**
+         * @return ossMounts
+         */
+        public java.util.List<OssMounts> getOssMounts() {
+            return this.ossMounts;
         }
 
         /**
@@ -1382,10 +1837,12 @@ public class CreateManagedAgentRequest extends Request {
         public static final class Builder {
             private String description; 
             private Environment environment; 
+            private Harness harness; 
             private String instruction; 
             private Model model; 
             private String name; 
             private Network network; 
+            private java.util.List<OssMounts> ossMounts; 
             private Runtime runtime; 
             private java.util.List<Skills> skills; 
             private java.util.List<SubAgents> subAgents; 
@@ -1398,10 +1855,12 @@ public class CreateManagedAgentRequest extends Request {
             private Builder(CreateManagedAgentRequestBody model) {
                 this.description = model.description;
                 this.environment = model.environment;
+                this.harness = model.harness;
                 this.instruction = model.instruction;
                 this.model = model.model;
                 this.name = model.name;
                 this.network = model.network;
+                this.ossMounts = model.ossMounts;
                 this.runtime = model.runtime;
                 this.skills = model.skills;
                 this.subAgents = model.subAgents;
@@ -1425,6 +1884,14 @@ public class CreateManagedAgentRequest extends Request {
              */
             public Builder environment(Environment environment) {
                 this.environment = environment;
+                return this;
+            }
+
+            /**
+             * <p>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</p>
+             */
+            public Builder harness(Harness harness) {
+                this.harness = harness;
                 return this;
             }
 
@@ -1465,6 +1932,14 @@ public class CreateManagedAgentRequest extends Request {
              */
             public Builder network(Network network) {
                 this.network = network;
+                return this;
+            }
+
+            /**
+             * <p>The OSS mount list. A maximum of 10 entries are supported.</p>
+             */
+            public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
+                this.ossMounts = ossMounts;
                 return this;
             }
 

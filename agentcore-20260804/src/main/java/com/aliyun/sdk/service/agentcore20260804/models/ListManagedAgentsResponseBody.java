@@ -202,7 +202,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>The result message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -213,7 +213,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty value indicates that no more pages are available.</p>
+         * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>
@@ -268,6 +268,165 @@ public class ListManagedAgentsResponseBody extends TeaModel {
      *
      * <p>ListManagedAgentsResponseBody</p>
      */
+    public static class Configuration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("connectorServiceAccountKey")
+        private String connectorServiceAccountKey;
+
+        @com.aliyun.core.annotation.NameInMap("connectorServiceAccountName")
+        private String connectorServiceAccountName;
+
+        private Configuration(Builder builder) {
+            this.connectorServiceAccountKey = builder.connectorServiceAccountKey;
+            this.connectorServiceAccountName = builder.connectorServiceAccountName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Configuration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectorServiceAccountKey
+         */
+        public String getConnectorServiceAccountKey() {
+            return this.connectorServiceAccountKey;
+        }
+
+        /**
+         * @return connectorServiceAccountName
+         */
+        public String getConnectorServiceAccountName() {
+            return this.connectorServiceAccountName;
+        }
+
+        public static final class Builder {
+            private String connectorServiceAccountKey; 
+            private String connectorServiceAccountName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.connectorServiceAccountKey = model.connectorServiceAccountKey;
+                this.connectorServiceAccountName = model.connectorServiceAccountName;
+            } 
+
+            /**
+             * <p>Binds a Service Account Key of the QoderCLI Connector by Key ID. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-xxxx</p>
+             */
+            public Builder connectorServiceAccountKey(String connectorServiceAccountKey) {
+                this.connectorServiceAccountKey = connectorServiceAccountKey;
+                return this;
+            }
+
+            /**
+             * <p>The Connector Key name populated during queries. This parameter is not used as a binding reference during writes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-connector-key</p>
+             */
+            public Builder connectorServiceAccountName(String connectorServiceAccountName) {
+                this.connectorServiceAccountName = connectorServiceAccountName;
+                return this;
+            }
+
+            public Configuration build() {
+                return new Configuration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListManagedAgentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListManagedAgentsResponseBody</p>
+     */
+    public static class Harness extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("configuration")
+        private Configuration configuration;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Harness(Builder builder) {
+            this.configuration = builder.configuration;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Harness create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configuration
+         */
+        public Configuration getConfiguration() {
+            return this.configuration;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Configuration configuration; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Harness model) {
+                this.configuration = model.configuration;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The Connector binding configuration for the qodercli framework.</p>
+             */
+            public Builder configuration(Configuration configuration) {
+                this.configuration = configuration;
+                return this;
+            }
+
+            /**
+             * <p>The runtime framework type. Valid values: qwenpaw and qodercli. The qodercli type binds by configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qodercli</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Harness build() {
+                return new Harness(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListManagedAgentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListManagedAgentsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
@@ -284,8 +443,8 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("effectiveSpecVersion")
-        private Long effectiveSpecVersion;
+        @com.aliyun.core.annotation.NameInMap("harness")
+        private Harness harness;
 
         @com.aliyun.core.annotation.NameInMap("latestSpecVersion")
         private Long latestSpecVersion;
@@ -311,7 +470,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
             this.description = builder.description;
-            this.effectiveSpecVersion = builder.effectiveSpecVersion;
+            this.harness = builder.harness;
             this.latestSpecVersion = builder.latestSpecVersion;
             this.name = builder.name;
             this.runtime = builder.runtime;
@@ -364,10 +523,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * @return effectiveSpecVersion
+         * @return harness
          */
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
+        public Harness getHarness() {
+            return this.harness;
         }
 
         /**
@@ -418,7 +577,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             private String createdAt; 
             private String deployType; 
             private String description; 
-            private Long effectiveSpecVersion; 
+            private Harness harness; 
             private Long latestSpecVersion; 
             private String name; 
             private String runtime; 
@@ -435,7 +594,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
                 this.description = model.description;
-                this.effectiveSpecVersion = model.effectiveSpecVersion;
+                this.harness = model.harness;
                 this.latestSpecVersion = model.latestSpecVersion;
                 this.name = model.name;
                 this.runtime = model.runtime;
@@ -500,13 +659,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective specification version number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * <p>The agent runtime framework.</p>
              */
-            public Builder effectiveSpecVersion(Long effectiveSpecVersion) {
-                this.effectiveSpecVersion = effectiveSpecVersion;
+            public Builder harness(Harness harness) {
+                this.harness = harness;
                 return this;
             }
 
@@ -522,7 +678,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed agent name.</p>
+             * <p>The name of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>
@@ -544,7 +700,15 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the managed agent.</p>
+             * <p>The status of the managed agent. Valid values:</p>
+             * <ul>
+             * <li>Creating: Being created.</li>
+             * <li>Failed: Failed.</li>
+             * <li>Running: Running.</li>
+             * <li>Updating: Being updated.</li>
+             * <li>Deleted: Deleted.</li>
+             * <li>Deleting: Being deleted.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

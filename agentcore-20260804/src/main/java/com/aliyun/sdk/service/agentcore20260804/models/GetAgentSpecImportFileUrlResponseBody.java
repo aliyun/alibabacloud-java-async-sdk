@@ -170,7 +170,7 @@ public class GetAgentSpecImportFileUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Content-Type used for the OSS PUT request.</p>
+             * <p>The Content-Type to use for the OSS PUT request.</p>
              * 
              * <strong>example:</strong>
              * <p>application/zip</p>

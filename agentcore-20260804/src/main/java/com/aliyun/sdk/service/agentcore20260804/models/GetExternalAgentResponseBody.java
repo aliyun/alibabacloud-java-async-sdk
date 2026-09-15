@@ -119,7 +119,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value SUCCESS is returned when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The external agent details.</p>
+         * <p>The details of the external agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value 200 is returned when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The message that indicates the result of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -184,183 +184,6 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
     } 
 
-    /**
-     * 
-     * {@link GetExternalAgentResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetExternalAgentResponseBody</p>
-     */
-    public static class EffectiveResult extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("matrixUserId")
-        private String matrixUserId;
-
-        @com.aliyun.core.annotation.NameInMap("personalRoomId")
-        private String personalRoomId;
-
-        @com.aliyun.core.annotation.NameInMap("runtimeAcceptStatus")
-        private String runtimeAcceptStatus;
-
-        @com.aliyun.core.annotation.NameInMap("runtimeId")
-        private String runtimeId;
-
-        @com.aliyun.core.annotation.NameInMap("runtimeRequestVersion")
-        private Long runtimeRequestVersion;
-
-        @com.aliyun.core.annotation.NameInMap("workspacePrefix")
-        private String workspacePrefix;
-
-        private EffectiveResult(Builder builder) {
-            this.matrixUserId = builder.matrixUserId;
-            this.personalRoomId = builder.personalRoomId;
-            this.runtimeAcceptStatus = builder.runtimeAcceptStatus;
-            this.runtimeId = builder.runtimeId;
-            this.runtimeRequestVersion = builder.runtimeRequestVersion;
-            this.workspacePrefix = builder.workspacePrefix;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static EffectiveResult create() {
-            return builder().build();
-        }
-
-        /**
-         * @return matrixUserId
-         */
-        public String getMatrixUserId() {
-            return this.matrixUserId;
-        }
-
-        /**
-         * @return personalRoomId
-         */
-        public String getPersonalRoomId() {
-            return this.personalRoomId;
-        }
-
-        /**
-         * @return runtimeAcceptStatus
-         */
-        public String getRuntimeAcceptStatus() {
-            return this.runtimeAcceptStatus;
-        }
-
-        /**
-         * @return runtimeId
-         */
-        public String getRuntimeId() {
-            return this.runtimeId;
-        }
-
-        /**
-         * @return runtimeRequestVersion
-         */
-        public Long getRuntimeRequestVersion() {
-            return this.runtimeRequestVersion;
-        }
-
-        /**
-         * @return workspacePrefix
-         */
-        public String getWorkspacePrefix() {
-            return this.workspacePrefix;
-        }
-
-        public static final class Builder {
-            private String matrixUserId; 
-            private String personalRoomId; 
-            private String runtimeAcceptStatus; 
-            private String runtimeId; 
-            private Long runtimeRequestVersion; 
-            private String workspacePrefix; 
-
-            private Builder() {
-            } 
-
-            private Builder(EffectiveResult model) {
-                this.matrixUserId = model.matrixUserId;
-                this.personalRoomId = model.personalRoomId;
-                this.runtimeAcceptStatus = model.runtimeAcceptStatus;
-                this.runtimeId = model.runtimeId;
-                this.runtimeRequestVersion = model.runtimeRequestVersion;
-                this.workspacePrefix = model.workspacePrefix;
-            } 
-
-            /**
-             * <p>The user ID of the agent in Matrix.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>@agent-1:matrix.example.com</p>
-             */
-            public Builder matrixUserId(String matrixUserId) {
-                this.matrixUserId = matrixUserId;
-                return this;
-            }
-
-            /**
-             * <p>The Matrix personal room ID of the agent.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>!room:matrix.example.com</p>
-             */
-            public Builder personalRoomId(String personalRoomId) {
-                this.personalRoomId = personalRoomId;
-                return this;
-            }
-
-            /**
-             * <p>The acceptance status of the runtime for the current request version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ACCEPTED</p>
-             */
-            public Builder runtimeAcceptStatus(String runtimeAcceptStatus) {
-                this.runtimeAcceptStatus = runtimeAcceptStatus;
-                return this;
-            }
-
-            /**
-             * <p>The runtime instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>runtime-123</p>
-             */
-            public Builder runtimeId(String runtimeId) {
-                this.runtimeId = runtimeId;
-                return this;
-            }
-
-            /**
-             * <p>The runtime request version number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
-             */
-            public Builder runtimeRequestVersion(Long runtimeRequestVersion) {
-                this.runtimeRequestVersion = runtimeRequestVersion;
-                return this;
-            }
-
-            /**
-             * <p>The storage prefix of the agent in the workspace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>agents/agent-1</p>
-             */
-            public Builder workspacePrefix(String workspacePrefix) {
-                this.workspacePrefix = workspacePrefix;
-                return this;
-            }
-
-            public EffectiveResult build() {
-                return new EffectiveResult(this);
-            } 
-
-        } 
-
-    }
     /**
      * 
      * {@link GetExternalAgentResponseBody} extends {@link TeaModel}
@@ -453,11 +276,11 @@ public class GetExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The heartbeat status. Valid values:</p>
+             * <p>The heartbeat status. ONLINE indicates that the most recent heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or has an invalid format. Valid values:</p>
              * <ul>
-             * <li>ONLINE: The latest heartbeat has not exceeded the configured timeout threshold.</li>
-             * <li>STALE: The heartbeat has timed out.</li>
-             * <li>UNKNOWN: The heartbeat is missing or has an invalid format.</li>
+             * <li>ONLINE: Online.</li>
+             * <li>STALE: Heartbeat expired.</li>
+             * <li>UNKNOWN: Unknown.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -469,7 +292,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the external agent was last active in RFC 3339 format.</p>
+             * <p>The last active time of the external agent in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -480,7 +303,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last heartbeat from the external agent in RFC 3339 format.</p>
+             * <p>The last heartbeat time of the external agent in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -699,6 +522,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("version")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String version;
 
         private AiRegistry(Builder builder) {
@@ -754,6 +578,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
 
             /**
              * <p>The version of the template in AI Registry.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -934,12 +759,6 @@ public class GetExternalAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("effectiveResult")
-        private EffectiveResult effectiveResult;
-
-        @com.aliyun.core.annotation.NameInMap("effectiveSpecVersion")
-        private Long effectiveSpecVersion;
-
         @com.aliyun.core.annotation.NameInMap("externalAgentStatus")
         private ExternalAgentStatus externalAgentStatus;
 
@@ -991,8 +810,6 @@ public class GetExternalAgentResponseBody extends TeaModel {
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
             this.description = builder.description;
-            this.effectiveResult = builder.effectiveResult;
-            this.effectiveSpecVersion = builder.effectiveSpecVersion;
             this.externalAgentStatus = builder.externalAgentStatus;
             this.instruction = builder.instruction;
             this.latestSpecVersion = builder.latestSpecVersion;
@@ -1051,20 +868,6 @@ public class GetExternalAgentResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
-        }
-
-        /**
-         * @return effectiveResult
-         */
-        public EffectiveResult getEffectiveResult() {
-            return this.effectiveResult;
-        }
-
-        /**
-         * @return effectiveSpecVersion
-         */
-        public Long getEffectiveSpecVersion() {
-            return this.effectiveSpecVersion;
         }
 
         /**
@@ -1178,8 +981,6 @@ public class GetExternalAgentResponseBody extends TeaModel {
             private String createdAt; 
             private String deployType; 
             private String description; 
-            private EffectiveResult effectiveResult; 
-            private Long effectiveSpecVersion; 
             private ExternalAgentStatus externalAgentStatus; 
             private String instruction; 
             private Long latestSpecVersion; 
@@ -1205,8 +1006,6 @@ public class GetExternalAgentResponseBody extends TeaModel {
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
                 this.description = model.description;
-                this.effectiveResult = model.effectiveResult;
-                this.effectiveSpecVersion = model.effectiveSpecVersion;
                 this.externalAgentStatus = model.externalAgentStatus;
                 this.instruction = model.instruction;
                 this.latestSpecVersion = model.latestSpecVersion;
@@ -1269,32 +1068,13 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external agent description.</p>
+             * <p>The description of the external agent.</p>
              * 
              * <strong>example:</strong>
              * <p>A code review agent running in the user environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
-                return this;
-            }
-
-            /**
-             * <p>The runtime result corresponding to the currently effective specification.</p>
-             */
-            public Builder effectiveResult(EffectiveResult effectiveResult) {
-                this.effectiveResult = effectiveResult;
-                return this;
-            }
-
-            /**
-             * <p>The currently effective specification version number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder effectiveSpecVersion(Long effectiveSpecVersion) {
-                this.effectiveSpecVersion = effectiveSpecVersion;
                 return this;
             }
 
@@ -1331,8 +1111,8 @@ public class GetExternalAgentResponseBody extends TeaModel {
             /**
              * <p>The processing status of the latest specification version. Valid values:</p>
              * <ul>
-             * <li>pending: Pending processing.</li>
-             * <li>processing: Being processed.</li>
+             * <li>pending: Pending.</li>
+             * <li>processing: Processing.</li>
              * <li>waiting_retry: Waiting for retry.</li>
              * <li>succeeded: Succeeded.</li>
              * <li>failed: Failed.</li>
@@ -1348,7 +1128,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model configuration. Available only when modelSource is set to PLATFORM.</p>
+             * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -1356,10 +1136,10 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model configuration source. Valid values:</p>
+             * <p>The source of the model configuration. PLATFORM indicates that the model configuration is parsed and delivered by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</p>
              * <ul>
-             * <li>PLATFORM: The model configuration is parsed and delivered by the platform.</li>
-             * <li>RUNTIME: The model is managed by the external runtime. The model parameter cannot be specified at the same time.</li>
+             * <li>PLATFORM: Platform model.</li>
+             * <li>RUNTIME: Runtime model.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1371,7 +1151,7 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external agent name.</p>
+             * <p>The name of the external agent.</p>
              * 
              * <strong>example:</strong>
              * <p>my-external-agent</p>
@@ -1412,14 +1192,14 @@ public class GetExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external agent status. Valid values:</p>
+             * <p>The status of the external agent. Valid values:</p>
              * <ul>
-             * <li>Creating: The agent is being created.</li>
-             * <li>Running: The agent is running.</li>
-             * <li>Failed: The agent has failed.</li>
-             * <li>Updating: The agent is being updated.</li>
-             * <li>Deleting: The agent is being deleted.</li>
-             * <li>Deleted: The agent has been deleted.</li>
+             * <li>Creating: Being created.</li>
+             * <li>Running: Running.</li>
+             * <li>Failed: Failed.</li>
+             * <li>Updating: Being updated.</li>
+             * <li>Deleting: Being deleted.</li>
+             * <li>Deleted: Deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>

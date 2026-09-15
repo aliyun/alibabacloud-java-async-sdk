@@ -130,7 +130,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The binding information of the external identity provider after the unbinding operation is accepted.</p>
+         * <p>The binding information of the external identity provider after the unbinding request is accepted.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. An error description is returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -250,7 +250,11 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
+             * <p>The type of the external identity provider. Valid values:</p>
+             * <ul>
+             * <li>DingTalk</li>
+             * <li>Feishu</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>DingTalk</p>
@@ -269,8 +273,8 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
              * <li>READY: The binding is in effect.</li>
              * <li>SYNC_FAILED: Organization member synchronization failed.</li>
              * <li>UPDATING: The configuration is being updated.</li>
-             * <li>UPDATE_FAILED: Configuration update failed.</li>
-             * <li>DISCONNECTING: The unbinding is in progress.</li>
+             * <li>UPDATE_FAILED: The configuration update failed.</li>
+             * <li>DISCONNECTING: The identity provider is being unbound.</li>
              * <li>DISCONNECT_FAILED: The unbinding failed.</li>
              * </ul>
              * 

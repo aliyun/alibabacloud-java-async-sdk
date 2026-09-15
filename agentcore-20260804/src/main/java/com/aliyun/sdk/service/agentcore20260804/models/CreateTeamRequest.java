@@ -193,11 +193,7 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
-             * <p>The role of the agent in the team. Valid values:</p>
-             * <ul>
-             * <li>LEADER</li>
-             * <li>WORKER</li>
-             * </ul>
+             * <p>The role of the agent in the team. Valid values: LEADER, WORKER.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKER</p>
@@ -267,12 +263,7 @@ public class CreateTeamRequest extends Request {
             } 
 
             /**
-             * <p>The role of the user in the team. Valid values:</p>
-             * <ul>
-             * <li>ADMIN</li>
-             * <li>MEMBER</li>
-             * </ul>
-             * <p>Each team must have exactly one ADMIN.</p>
+             * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must include exactly one ADMIN.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -380,7 +371,7 @@ public class CreateTeamRequest extends Request {
             } 
 
             /**
-             * <p>The list of agent members for the team.</p>
+             * <p>The list of agent members in the team.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -411,7 +402,7 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
-             * <p>The list of user members for the team. The list must include exactly one member with the ADMIN role.</p>
+             * <p>The list of user members in the team. The list must include exactly one member with the ADMIN role.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

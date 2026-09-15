@@ -248,12 +248,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the agent in the team. Valid values:</p>
-             * <ul>
-             * <li>LEADER</li>
-             * <li>WORKER</li>
-             * </ul>
-             * <p>Each team must have exactly one LEADER.</p>
+             * <p>The role of the agent in the team. Valid values: LEADER, WORKER. Each team must include exactly one LEADER.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKER</p>
@@ -323,12 +318,7 @@ public class CreateTeamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The role of the user in the team. Valid values:</p>
-             * <ul>
-             * <li>ADMIN</li>
-             * <li>MEMBER</li>
-             * </ul>
-             * <p>Each team must have exactly one ADMIN.</p>
+             * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must include exactly one ADMIN.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -500,7 +490,7 @@ public class CreateTeamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of agent members for the team.</p>
+             * <p>The list of agent members in the team.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -508,7 +498,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the team was created, in UTC in RFC 3339 format.</p>
+             * <p>The creation time in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -541,15 +531,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team status. Valid values:</p>
-             * <ul>
-             * <li>Creating</li>
-             * <li>Active</li>
-             * <li>Updating</li>
-             * <li>Deleting</li>
-             * <li>Failed</li>
-             * <li>Deleted</li>
-             * </ul>
+             * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -571,7 +553,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the team was last modified, in UTC in RFC 3339 format.</p>
+             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -582,7 +564,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user members for the team.</p>
+             * <p>The list of user members in the team.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;
