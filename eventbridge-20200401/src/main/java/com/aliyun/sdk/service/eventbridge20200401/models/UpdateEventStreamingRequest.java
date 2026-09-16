@@ -234,7 +234,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The generic JSON configurations for the event provider. This parameter is mutually exclusive with Source.</p>
+         * <p>The generic JSON Configurations for the event source. This parameter is mutually exclusive with Source.</p>
          */
         public Builder metadata(String metadata) {
             this.putBodyParameter("Metadata", metadata);
@@ -273,7 +273,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The event transformer configurations.</p>
+         * <p>The transform-related configurations.</p>
          */
         public Builder transforms(java.util.List<Transforms> transforms) {
             String transformsShrink = shrink(transforms, "Transforms", "json");
@@ -342,7 +342,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, the push is triggered when any window meets the threshold.</p>
+             * <p>The maximum number of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, a push is triggered when any one of the windows meets the threshold.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -353,7 +353,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The maximum time range (in seconds) of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, the push is triggered when any window meets the threshold.</p>
+             * <p>The maximum time range (in seconds) of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, a push is triggered when any one of the windows meets the threshold.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -558,7 +558,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
+             * <p>The ARN of the dead-letter queue.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::131733464781****:role/rdstoecsassumekms</p>
@@ -846,7 +846,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The batch window.</p>
+             * <p>The batching window.</p>
              */
             public Builder batchWindow(BatchWindow batchWindow) {
                 this.batchWindow = batchWindow;
@@ -870,7 +870,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The error tolerance policy. Valid values: NONE (no tolerance) and ALL (tolerate all errors).</p>
+             * <p>The error tolerance policy. Valid values: NONE (no tolerance for errors) and ALL (tolerate all errors).</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -892,7 +892,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The retry policy when event delivery fails.</p>
+             * <p>The retry policy when event pushing fails.</p>
              */
             public Builder retryStrategy(RetryStrategy retryStrategy) {
                 this.retryStrategy = retryStrategy;
@@ -981,7 +981,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -1079,7 +1079,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -1177,7 +1177,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -1275,7 +1275,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -1373,7 +1373,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -1457,7 +1457,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>[Required] The KMS resource ARN that stores the SSL private key. Used to locate the KMS instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can view the ARN information of the corresponding key in the KMS console.</p>
+             * <p>[Required] The KMS resource ARN that stores the SSL private key. Used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can obtain this value from the ARN information of the corresponding key in the KMS console.</p>
              */
             public Builder kmsArn(String kmsArn) {
                 this.kmsArn = kmsArn;
@@ -1546,7 +1546,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -1644,7 +1644,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -1742,7 +1742,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -2085,7 +2085,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>Specifies the target Topic routing strategy for messages. If both the Topic parameter and the DynamicTopic parameter are specified, the value of the DynamicTopic parameter takes precedence. The following two configuration modes are supported:
-             *     1. <strong>Static constant mode</strong>: Specify a fixed Topic name string (for example, &quot;order_created&quot;). All messages are sent to this Topic.
+             *     1. <strong>Static constant mode</strong>: Directly specify a fixed Topic name string (for example, &quot;order_created&quot;). All messages are sent to this Topic.
              *     2. <strong>Dynamic extraction mode</strong>: Specify a standard JSONPath expression (for example, &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the value of the matching field as the target Topic name.</p>
              */
             public Builder dynamicTopic(DynamicTopic dynamicTopic) {
@@ -2161,7 +2161,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for encrypted private keys] The password of the Kafka client private key. If the client private key is protected by password encryption (the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; marker), provide the decryption password. Leave this parameter empty if the private key is not encrypted. This password is used only to decrypt the private key and is not related to Kafka authentication.</p>
+             * <p>[Required for encrypted private keys] The password for the Kafka client private key. If the client private key is encrypted with a password (the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; marker), provide the decryption password. Leave this parameter empty if the private key is not encrypted. This password is used only to decrypt the private key and is not related to Kafka authentication.</p>
              */
             public Builder sslKeyPassword(String sslKeyPassword) {
                 this.sslKeyPassword = sslKeyPassword;
@@ -2169,7 +2169,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for mutual authentication] The Kafka client certificate chain. If the Kafka server enables mutual SSL authentication (ssl.client.auth=required), this parameter is required. Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Ensure that each PEM file content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</p>
+             * <p>[Required for mutual authentication] The Kafka client certificate chain. This parameter is required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Ensure that each PEM file begins with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</p>
              */
             public Builder sslKeystoreCertificateChain(String sslKeystoreCertificateChain) {
                 this.sslKeystoreCertificateChain = sslKeystoreCertificateChain;
@@ -2177,7 +2177,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for bidirectional authentication] The SSL private key configuration object. When the Kafka server enables bidirectional SSL authentication, provide the client private key. Only KMS pattern is supported for the key: specify the EPS resource of the Key Management Service that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</p>
+             * <p>[Required for bidirectional authentication] The SSL private key configuration object. When the Kafka server enables bidirectional SSL authentication, you must provide the client private key. Only KMS pattern is supported for the key: specify the Key Management Service EPS resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</p>
              */
             public Builder sslKeystoreKey(SslKeystoreKey sslKeystoreKey) {
                 this.sslKeystoreKey = sslKeystoreKey;
@@ -2185,7 +2185,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for SSL scenarios] The trusted certificate of the Kafka server. This certificate is used to authenticate the validity of the SSL certificate of the Kafka broker and prevent man-in-the-middle attacks. Format requirement: Base64 encoding in PEM format. This typically contains the CA certificate or the server certificate of the Kafka server. Example: Base64-encode the content of the CA certificate PEM file (make sure the content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
+             * <p>[Required for SSL scenarios] The trusted certificate of the Kafka server. This certificate is used to authenticate the validity of the SSL certificate of the Kafka broker and prevent man-in-the-middle attacks. Format requirement: Base64 encoding of PEM format, which typically contains the CA certificate or the server certificate of the Kafka server. Example: Base64-encode the content of the CA signing certificate PEM file (make sure the content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
              */
             public Builder sslTruststoreCertificates(String sslTruststoreCertificates) {
                 this.sslTruststoreCertificates = sslTruststoreCertificates;
@@ -2749,7 +2749,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -4031,7 +4031,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The vector of the DashVector record to insert.</p>
+             * <p>The vector of the record inserted into DashVector.</p>
              */
             public Builder vector(Vector vector) {
                 this.vector = vector;
@@ -4433,7 +4433,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the DataHub project.</p>
+             * <p>The DataHub project name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-project</p>
@@ -4637,7 +4637,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the DataHub topic.</p>
+             * <p>The DataHub topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-topic</p>
@@ -5004,7 +5004,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The key-value pairs of custom logs. This parameter takes effect only when ContentType is set to KeyValue. Each key-value pair is represented by Key_n and Value_n.</p>
+             * <p>The key-value pairs of the custom log. This parameter takes effect only when ContentType is set to KeyValue. Each key-value pair is represented by Key_n and Value_n.</p>
              */
             public Builder contentSchema(ContentSchema contentSchema) {
                 this.contentSchema = contentSchema;
@@ -5012,7 +5012,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The data format. You can select the default format or specify key-value pairs. Valid values:</p>
+             * <p>The data format. You can select the default format or configure a specified key-value pair. Valid values:</p>
              * <ul>
              * <li>JSON</li>
              * <li>KeyValue</li>
@@ -5024,7 +5024,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the DataHub project.</p>
+             * <p>The DataHub project name.</p>
              */
             public Builder project(Project project) {
                 this.project = project;
@@ -5040,7 +5040,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the DataHub topic.</p>
+             * <p>The DataHub topic name.</p>
              */
             public Builder topic(SinkDataHubParametersTopic topic) {
                 this.topic = topic;
@@ -6561,7 +6561,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -7860,7 +7860,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the invocation is synchronous or asynchronous. Valid values:</p>
+             * <p>The invocation type. Valid values:</p>
              * <ul>
              * <li>Sync: Synchronous.</li>
              * <li>Async: Asynchronous.</li>
@@ -8504,11 +8504,11 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The acknowledgment mode for writing to Kafka:</p>
+             * <p>The acknowledgment mode for writing to Kafka. Valid values:</p>
              * <ul>
              * <li>acks=0: No response is required from the server. This mode delivers high performance but has a high risk of data loss.</li>
              * <li>acks=1: A response is returned after the primary node on the server writes the data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
-             * <li>acks=all: A response is returned only after the primary node writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but provides higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
+             * <li>acks=all: A response is returned only after the primary node on the server writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but provides higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -8593,7 +8593,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>The transformation type. Valid values:
-             * CONSTANT: constant value.
+             * CONSTANT: fixed value.
              * JSONPATH: extracts the value from the upstream based on a path.</p>
              */
             public Builder form(String form) {
@@ -9281,11 +9281,11 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The acknowledgment mode for writing to Kafka:</p>
+             * <p>The acknowledgment mode for writing to Kafka. Valid values:</p>
              * <ul>
              * <li>acks=0: No response is required from the server. This mode delivers high performance but has a high risk of data loss.</li>
              * <li>acks=1: A response is returned after the primary node on the server writes the data. This mode delivers moderate performance and has a moderate risk of data loss. Data loss may occur if the primary node goes down.</li>
-             * <li>acks=all: A response is returned only after the primary node writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but provides higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
+             * <li>acks=all: A response is returned only after the primary node on the server writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but provides higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
              * </ul>
              */
             public Builder acks(Acks acks) {
@@ -9303,7 +9303,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             /**
              * <p>Specifies the target Topic routing strategy for messages. If both the Topic parameter and the DynamicTopic parameter are specified, the value of the DynamicTopic parameter takes precedence. The following two configuration modes are supported:
-             *     1. <strong>Static constant mode</strong>: Specify a fixed Topic name string (for example, &quot;order_created&quot;). All messages are sent to this Topic.
+             *     1. <strong>Static constant mode</strong>: Directly specify a fixed Topic name string (for example, &quot;order_created&quot;). All messages are sent to this Topic.
              *     2. <strong>Dynamic extraction mode</strong>: Specify a standard JSONPath expression (for example, &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the value of the matching field as the target Topic name.</p>
              */
             public Builder dynamicTopic(SinkKafkaParametersDynamicTopic dynamicTopic) {
@@ -10417,7 +10417,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The authentication type:</p>
+             * <p>The authentication type. Valid values:</p>
              * <ul>
              * <li>ACL</li>
              * <li>No configuration required</li>
@@ -10470,7 +10470,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
              * <li>PrivateNetwork</li>
              * <li>PublicNetwork</li>
@@ -10534,7 +10534,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The target type for message delivery.</p>
+             * <p>The target type for message delivery. Valid values:</p>
              * <ul>
              * <li><p><strong>Exchange:</strong> Messages are routed through an exchange.</p>
              * </li>
@@ -10874,9 +10874,9 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The transformation format.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>JSONPATH: JSONPATH.</li>
-             * <li>CONSTANT: CONSTANT.</li>
-             * <li>TEMPLATE: TEMPLATE.</li>
+             * <li>JSONPATH</li>
+             * <li>CONSTANT</li>
+             * <li>TEMPLATE</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -10888,7 +10888,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The HTTP request header template. Specify this parameter when Form is set to TEMPLATE. The transformed event content must be in JSON format.</p>
+             * <p>The HTTP request header template. Specify this parameter when Form is set to TEMPLATE. The result after event content transformation must be in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -12073,7 +12073,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the exchange in the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the Exchange in the ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>a_exchange</p>
@@ -12491,7 +12491,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the queue in the instance.</p>
+             * <p>The name of the Queue in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>MyQueue</p>
@@ -12801,7 +12801,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the Vhost in the ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rabbit-host</p>
@@ -13026,7 +13026,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the Vhost in the ApsaraMQ for RabbitMQ instance.</p>
              */
             public Builder virtualHostName(VirtualHostName virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -14414,7 +14414,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -15142,7 +15142,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vbr-8vb835n3zf9shwlvb****</p>
@@ -15458,7 +15458,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -15488,7 +15488,7 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The sharding key of the message.</p>
              * <blockquote>
-             * <p>When DeliveryOrderType is set to Orderly, this parameter specifies the event content transformation rule for the ShardingKey property when writing messages to the downstream. When the source is RocketMQ, ShardingKey can be left empty. In this case, the upstream BrokerName and QueueId are concatenated to generate the message ShardingKey.</p>
+             * <p>If DeliveryOrderType is set to Orderly, this parameter specifies the event content transformation rule for the ShardingKey property when messages are written to the downstream. If the source is RocketMQ, ShardingKey can be left empty. In this case, the upstream BrokerName and QueueId are concatenated to generate the message ShardingKey.</p>
              * </blockquote>
              */
             public Builder shardingKey(ShardingKey shardingKey) {
@@ -15521,7 +15521,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              */
             public Builder vpcId(SinkRocketMQParametersVpcId vpcId) {
                 this.vpcId = vpcId;
@@ -15829,7 +15829,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SLS data format.</p>
+             * <p>The data format of SLS.</p>
              * 
              * <strong>example:</strong>
              * <p>JSON</p>
@@ -16135,7 +16135,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The role used for authorization of the event bus EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role for the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service as the trusted entity, and set the trusted service to event bus.</p>
+             * <p>The role used for authorization of the event bus EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role for the service in the Resource Access Management (RAM) console, set the trusted entity type to Alibaba Cloud Service and set the trusted service to event bus.</p>
              * 
              * <strong>example:</strong>
              * <p>testRole</p>
@@ -16388,7 +16388,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SLS data format. You can select the default format or configure specified key-value pairs. Valid values:</p>
+             * <p>The data format of SLS. You can select the default format or configure specified key-value pairs. Valid values:</p>
              * <ul>
              * <li>JSON</li>
              * <li>KeyValue</li>
@@ -16416,7 +16416,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The role used for authorization of the event bus EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role for the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service as the trusted entity, and set the trusted service to event bus.</p>
+             * <p>The role used for authorization of the event bus EventBridge to read SLS log content. To use this role, the following conditions must be met: when you create the role for the service in the Resource Access Management (RAM) console, set the trusted entity type to Alibaba Cloud Service and set the trusted service to event bus.</p>
              */
             public Builder roleName(SinkSLSParametersRoleName roleName) {
                 this.roleName = roleName;
@@ -16853,7 +16853,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ApiDestination event target parameters.</p>
+             * <p>The ApiDestination target parameters.</p>
              */
             public Builder sinkApiDestinationParameters(SinkApiDestinationParameters sinkApiDestinationParameters) {
                 this.sinkApiDestinationParameters = sinkApiDestinationParameters;
@@ -17112,7 +17112,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>[Required] The KMS resource ARN that stores the SSL private key. Used to locate the KMS instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can view the ARN information of the corresponding key in the KMS console.</p>
+             * <p>[Required] The KMS resource ARN that stores the SSL private key. Used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can obtain this value from the ARN information of the corresponding key in the KMS console.</p>
              */
             public Builder kmsArn(String kmsArn) {
                 this.kmsArn = kmsArn;
@@ -17454,7 +17454,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for encrypted private keys] The password of the Kafka client private key. If the client private key is protected by password encryption (the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; marker), provide the decryption password. Leave this parameter empty if the private key is not encrypted. This password is used only to decrypt the private key and is not related to Kafka authentication.</p>
+             * <p>[Required for encrypted private keys] The password for the Kafka client private key. If the client private key is encrypted with a password (the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; marker), provide the decryption password. Leave this parameter empty if the private key is not encrypted. This password is used only to decrypt the private key and is not related to Kafka authentication.</p>
              */
             public Builder sslKeyPassword(String sslKeyPassword) {
                 this.sslKeyPassword = sslKeyPassword;
@@ -17462,7 +17462,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for mutual authentication] The Kafka client certificate chain. If the Kafka server enables mutual SSL authentication (ssl.client.auth=required), this parameter is required. Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Ensure that each PEM file content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</p>
+             * <p>[Required for mutual authentication] The Kafka client certificate chain. This parameter is required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Ensure that each PEM file begins with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</p>
              */
             public Builder sslKeystoreCertificateChain(String sslKeystoreCertificateChain) {
                 this.sslKeystoreCertificateChain = sslKeystoreCertificateChain;
@@ -17470,7 +17470,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for bidirectional authentication] The SSL private key configuration object. If the Kafka server enables bidirectional SSL authentication, the client private key is required. Only KMS pattern is supported: specify the Key Management Service EPS resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</p>
+             * <p>[Required for bidirectional authentication] The SSL private key configuration object. When the Kafka server enables bidirectional SSL authentication, the client private key is required. Only KMS pattern is supported: specify the Key Management Service EPS resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</p>
              */
             public Builder sslKeystoreKey(SourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey) {
                 this.sslKeystoreKey = sslKeystoreKey;
@@ -17478,7 +17478,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for SSL] The Kafka server trust certificate. Used to authenticate the legitimacy of the Kafka Broker SSL certificate and prevent man-in-the-middle attacks. Format: Base64-encoded PEM format, typically containing the CA certificate of the Kafka server or the server certificate itself. Example: Base64-encode the PEM file content of the CA certificate (ensure it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
+             * <p>[Required for SSL] The Kafka server trust certificate. Used to authenticate the legitimacy of the Kafka Broker SSL certificate and prevent man-in-the-middle attacks. Format: Base64-encoded PEM format, typically containing the CA certificate of the Kafka server or the server certificate itself. Example: Base64-encode the PEM file content of the CA certificate (ensure it begins with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
              */
             public Builder sslTruststoreCertificates(String sslTruststoreCertificates) {
                 this.sslTruststoreCertificates = sslTruststoreCertificates;
@@ -17510,7 +17510,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -17701,7 +17701,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -17738,7 +17738,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic of the Apache RocketMQ instance.</p>
+             * <p>The topics of the Apache RocketMQ instance.</p>
              */
             public Builder topics(java.util.List<String> topics) {
                 this.topics = topics;
@@ -18276,7 +18276,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The name of the event bus.</p>
+             * <p>The event bus name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-event-bus</p>
@@ -18287,7 +18287,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the event rule.</p>
+             * <p>The event rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-event-rule</p>
@@ -18461,7 +18461,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The group ID of the consumer that subscribes to the topic.</p>
+             * <p>The Group ID of the consumer that subscribes to the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -18549,10 +18549,12 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The encoding and decoding parameter. Valid values:
-             *   a. Json: The existing logic. Bytes are decoded to a character string by using UTF-8 and parsed as JSON.
-             *   b. Text: Bytes are decoded to a character string by using UTF-8 and directly placed into the payload.
-             *   c. Binary: Bytes are encoded to a character string by using Base64 encoding and placed into the payload.</p>
+             * <p>The encoding and decoding parameter. Valid values:</p>
+             * <ul>
+             * <li>Json: The existing logic. Bytes are decoded to a character string by using UTF-8 encoding and parsed as JSON.</li>
+             * <li>Text: Bytes are decoded to a character string by using UTF-8 encoding and placed directly into the payload.</li>
+             * <li>Binary: Bytes are encoded to a character string by using Base64 encoding and placed into the payload.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Text</p>
@@ -19308,7 +19310,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -19323,7 +19325,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The password used to connect to the open source RabbitMQ instance.</p>
+             * <p>The password used to connect to the open-source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -19334,7 +19336,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The queue name of the open source RabbitMQ instance.</p>
+             * <p>The queue name of the open-source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -19356,7 +19358,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The username used to connect to the open source RabbitMQ instance.</p>
+             * <p>The username used to connect to the open-source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -19378,7 +19380,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The virtual host name of the open source RabbitMQ instance.</p>
+             * <p>The virtual host name of the open-source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Vhost1</p>
@@ -20332,7 +20334,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -20347,7 +20349,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The consumption offset of messages. Valid values:</p>
+             * <p>The consumption offset of the message. Valid values:</p>
              * <ul>
              * <li>CONSUMEFROMLASTOFFSET: starts consumption from the latest offset.</li>
              * <li>CONSUMEFROMFIRSTOFFSET: starts consumption from the earliest offset.</li>
@@ -20487,7 +20489,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The role that provides authorization for the event bus EventBridge to read SLS log content. When you create the role for the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service as the trusted entity and select event bus as the trusted service.</p>
+             * <p>The name of the role that provides authorization for the event bus EventBridge to read SLS log content. When you create the role in the Resource Access Management (RAM) console, set the trusted entity type to Alibaba Cloud Service and set the trusted service to event bus.</p>
              * 
              * <strong>example:</strong>
              * <p>testRole</p>
@@ -20921,7 +20923,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The Source open source RabbitMQ event source.</p>
+             * <p>The Source open-source RabbitMQ event source.</p>
              */
             public Builder sourceOpenSourceRabbitMQParameters(SourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters) {
                 this.sourceOpenSourceRabbitMQParameters = sourceOpenSourceRabbitMQParameters;
@@ -21006,6 +21008,36 @@ public class UpdateEventStreamingRequest extends Request {
      * <p>UpdateEventStreamingRequest</p>
      */
     public static class Transforms extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiChunkTransformParameters")
+        private AiChunkTransformParameters aiChunkTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiClassifyTransformParameters")
+        private AiClassifyTransformParameters aiClassifyTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiEmbedTransformParameters")
+        private AiEmbedTransformParameters aiEmbedTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiExtractTransformParameters")
+        private AiExtractTransformParameters aiExtractTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiFilterTransformParameters")
+        private AiFilterTransformParameters aiFilterTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiPrepSearchTransformParameters")
+        private AiPrepSearchTransformParameters aiPrepSearchTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiRedactTransformParameters")
+        private AiRedactTransformParameters aiRedactTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiSentimentAnalysisTransformParameters")
+        private AiSentimentAnalysisTransformParameters aiSentimentAnalysisTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiSummarizeTransformParameters")
+        private AiSummarizeTransformParameters aiSummarizeTransformParameters;
+
+        @com.aliyun.core.annotation.NameInMap("AiTranslateTransformParameters")
+        private AiTranslateTransformParameters aiTranslateTransformParameters;
+
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
@@ -21016,6 +21048,16 @@ public class UpdateEventStreamingRequest extends Request {
         private DashScopeTransformParameters dashScopeTransformParameters;
 
         private Transforms(Builder builder) {
+            this.aiChunkTransformParameters = builder.aiChunkTransformParameters;
+            this.aiClassifyTransformParameters = builder.aiClassifyTransformParameters;
+            this.aiEmbedTransformParameters = builder.aiEmbedTransformParameters;
+            this.aiExtractTransformParameters = builder.aiExtractTransformParameters;
+            this.aiFilterTransformParameters = builder.aiFilterTransformParameters;
+            this.aiPrepSearchTransformParameters = builder.aiPrepSearchTransformParameters;
+            this.aiRedactTransformParameters = builder.aiRedactTransformParameters;
+            this.aiSentimentAnalysisTransformParameters = builder.aiSentimentAnalysisTransformParameters;
+            this.aiSummarizeTransformParameters = builder.aiSummarizeTransformParameters;
+            this.aiTranslateTransformParameters = builder.aiTranslateTransformParameters;
             this.arn = builder.arn;
             this.baiLianAgentTransformParameters = builder.baiLianAgentTransformParameters;
             this.dashScopeTransformParameters = builder.dashScopeTransformParameters;
@@ -21027,6 +21069,76 @@ public class UpdateEventStreamingRequest extends Request {
 
         public static Transforms create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiChunkTransformParameters
+         */
+        public AiChunkTransformParameters getAiChunkTransformParameters() {
+            return this.aiChunkTransformParameters;
+        }
+
+        /**
+         * @return aiClassifyTransformParameters
+         */
+        public AiClassifyTransformParameters getAiClassifyTransformParameters() {
+            return this.aiClassifyTransformParameters;
+        }
+
+        /**
+         * @return aiEmbedTransformParameters
+         */
+        public AiEmbedTransformParameters getAiEmbedTransformParameters() {
+            return this.aiEmbedTransformParameters;
+        }
+
+        /**
+         * @return aiExtractTransformParameters
+         */
+        public AiExtractTransformParameters getAiExtractTransformParameters() {
+            return this.aiExtractTransformParameters;
+        }
+
+        /**
+         * @return aiFilterTransformParameters
+         */
+        public AiFilterTransformParameters getAiFilterTransformParameters() {
+            return this.aiFilterTransformParameters;
+        }
+
+        /**
+         * @return aiPrepSearchTransformParameters
+         */
+        public AiPrepSearchTransformParameters getAiPrepSearchTransformParameters() {
+            return this.aiPrepSearchTransformParameters;
+        }
+
+        /**
+         * @return aiRedactTransformParameters
+         */
+        public AiRedactTransformParameters getAiRedactTransformParameters() {
+            return this.aiRedactTransformParameters;
+        }
+
+        /**
+         * @return aiSentimentAnalysisTransformParameters
+         */
+        public AiSentimentAnalysisTransformParameters getAiSentimentAnalysisTransformParameters() {
+            return this.aiSentimentAnalysisTransformParameters;
+        }
+
+        /**
+         * @return aiSummarizeTransformParameters
+         */
+        public AiSummarizeTransformParameters getAiSummarizeTransformParameters() {
+            return this.aiSummarizeTransformParameters;
+        }
+
+        /**
+         * @return aiTranslateTransformParameters
+         */
+        public AiTranslateTransformParameters getAiTranslateTransformParameters() {
+            return this.aiTranslateTransformParameters;
         }
 
         /**
@@ -21051,6 +21163,16 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         public static final class Builder {
+            private AiChunkTransformParameters aiChunkTransformParameters; 
+            private AiClassifyTransformParameters aiClassifyTransformParameters; 
+            private AiEmbedTransformParameters aiEmbedTransformParameters; 
+            private AiExtractTransformParameters aiExtractTransformParameters; 
+            private AiFilterTransformParameters aiFilterTransformParameters; 
+            private AiPrepSearchTransformParameters aiPrepSearchTransformParameters; 
+            private AiRedactTransformParameters aiRedactTransformParameters; 
+            private AiSentimentAnalysisTransformParameters aiSentimentAnalysisTransformParameters; 
+            private AiSummarizeTransformParameters aiSummarizeTransformParameters; 
+            private AiTranslateTransformParameters aiTranslateTransformParameters; 
             private String arn; 
             private BaiLianAgentTransformParameters baiLianAgentTransformParameters; 
             private DashScopeTransformParameters dashScopeTransformParameters; 
@@ -21059,10 +21181,100 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             private Builder(Transforms model) {
+                this.aiChunkTransformParameters = model.aiChunkTransformParameters;
+                this.aiClassifyTransformParameters = model.aiClassifyTransformParameters;
+                this.aiEmbedTransformParameters = model.aiEmbedTransformParameters;
+                this.aiExtractTransformParameters = model.aiExtractTransformParameters;
+                this.aiFilterTransformParameters = model.aiFilterTransformParameters;
+                this.aiPrepSearchTransformParameters = model.aiPrepSearchTransformParameters;
+                this.aiRedactTransformParameters = model.aiRedactTransformParameters;
+                this.aiSentimentAnalysisTransformParameters = model.aiSentimentAnalysisTransformParameters;
+                this.aiSummarizeTransformParameters = model.aiSummarizeTransformParameters;
+                this.aiTranslateTransformParameters = model.aiTranslateTransformParameters;
                 this.arn = model.arn;
                 this.baiLianAgentTransformParameters = model.baiLianAgentTransformParameters;
                 this.dashScopeTransformParameters = model.dashScopeTransformParameters;
             } 
+
+            /**
+             * <p>The AI local text chunking parameters.</p>
+             */
+            public Builder aiChunkTransformParameters(AiChunkTransformParameters aiChunkTransformParameters) {
+                this.aiChunkTransformParameters = aiChunkTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI text classification parameters.</p>
+             */
+            public Builder aiClassifyTransformParameters(AiClassifyTransformParameters aiClassifyTransformParameters) {
+                this.aiClassifyTransformParameters = aiClassifyTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI text embedding parameters.</p>
+             */
+            public Builder aiEmbedTransformParameters(AiEmbedTransformParameters aiEmbedTransformParameters) {
+                this.aiEmbedTransformParameters = aiEmbedTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI information extraction parameters.</p>
+             */
+            public Builder aiExtractTransformParameters(AiExtractTransformParameters aiExtractTransformParameters) {
+                this.aiExtractTransformParameters = aiExtractTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI conditional filtering parameters.</p>
+             */
+            public Builder aiFilterTransformParameters(AiFilterTransformParameters aiFilterTransformParameters) {
+                this.aiFilterTransformParameters = aiFilterTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI semantic chunking parameters.</p>
+             */
+            public Builder aiPrepSearchTransformParameters(AiPrepSearchTransformParameters aiPrepSearchTransformParameters) {
+                this.aiPrepSearchTransformParameters = aiPrepSearchTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI data masking parameters.</p>
+             */
+            public Builder aiRedactTransformParameters(AiRedactTransformParameters aiRedactTransformParameters) {
+                this.aiRedactTransformParameters = aiRedactTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI emotion analysis parameters.</p>
+             */
+            public Builder aiSentimentAnalysisTransformParameters(AiSentimentAnalysisTransformParameters aiSentimentAnalysisTransformParameters) {
+                this.aiSentimentAnalysisTransformParameters = aiSentimentAnalysisTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI summarization parameters.</p>
+             */
+            public Builder aiSummarizeTransformParameters(AiSummarizeTransformParameters aiSummarizeTransformParameters) {
+                this.aiSummarizeTransformParameters = aiSummarizeTransformParameters;
+                return this;
+            }
+
+            /**
+             * <p>The AI translation parameters.</p>
+             */
+            public Builder aiTranslateTransformParameters(AiTranslateTransformParameters aiTranslateTransformParameters) {
+                this.aiTranslateTransformParameters = aiTranslateTransformParameters;
+                return this;
+            }
 
             /**
              * <p>The ARN of the Alibaba Cloud service, such as the ARN of a function in Function Compute.</p>

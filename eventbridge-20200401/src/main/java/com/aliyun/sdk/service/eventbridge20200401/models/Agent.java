@@ -23,6 +23,12 @@ public class Agent extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("McpServerId")
+    private String mcpServerId;
+
+    @com.aliyun.core.annotation.NameInMap("McpServerName")
+    private String mcpServerName;
+
     @com.aliyun.core.annotation.NameInMap("Metadata")
     private Metadata metadata;
 
@@ -38,6 +44,8 @@ public class Agent extends TeaModel {
     private Agent(Builder builder) {
         this.createdAt = builder.createdAt;
         this.description = builder.description;
+        this.mcpServerId = builder.mcpServerId;
+        this.mcpServerName = builder.mcpServerName;
         this.metadata = builder.metadata;
         this.name = builder.name;
         this.prompt = builder.prompt;
@@ -71,6 +79,20 @@ public class Agent extends TeaModel {
     }
 
     /**
+     * @return mcpServerId
+     */
+    public String getMcpServerId() {
+        return this.mcpServerId;
+    }
+
+    /**
+     * @return mcpServerName
+     */
+    public String getMcpServerName() {
+        return this.mcpServerName;
+    }
+
+    /**
      * @return metadata
      */
     public Metadata getMetadata() {
@@ -101,6 +123,8 @@ public class Agent extends TeaModel {
     public static final class Builder {
         private Long createdAt; 
         private String description; 
+        private String mcpServerId; 
+        private String mcpServerName; 
         private Metadata metadata; 
         private String name; 
         private String prompt; 
@@ -112,6 +136,8 @@ public class Agent extends TeaModel {
         private Builder(Agent model) {
             this.createdAt = model.createdAt;
             this.description = model.description;
+            this.mcpServerId = model.mcpServerId;
+            this.mcpServerName = model.mcpServerName;
             this.metadata = model.metadata;
             this.name = model.name;
             this.prompt = model.prompt;
@@ -131,6 +157,22 @@ public class Agent extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * McpServerId.
+         */
+        public Builder mcpServerId(String mcpServerId) {
+            this.mcpServerId = mcpServerId;
+            return this;
+        }
+
+        /**
+         * McpServerName.
+         */
+        public Builder mcpServerName(String mcpServerName) {
+            this.mcpServerName = mcpServerName;
             return this;
         }
 

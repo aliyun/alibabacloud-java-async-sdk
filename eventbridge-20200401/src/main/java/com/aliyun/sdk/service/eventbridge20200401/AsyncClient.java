@@ -492,7 +492,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the knowledge bases bound to a Luma Agent in a specified namespace. Results are returned in pages. To retrieve the next page, pass the NextToken value from the previous response. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than MaxResults. Do not determine whether the last page is reached based on an insufficient number of entries on the current page.</p>
      * 
      * @param request the request parameters of ListLumaKnowledgeBases  ListLumaKnowledgeBasesRequest
      * @return ListLumaKnowledgeBasesResponse
@@ -510,7 +510,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the event tables bound to a Luma Agent in a specified namespace. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine that the last page has been reached.</p>
      * 
      * @param request the request parameters of ListLumaTables  ListLumaTablesRequest
      * @return ListLumaTablesResponse

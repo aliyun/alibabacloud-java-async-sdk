@@ -170,11 +170,23 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
      * <p>ListLumaNamespacesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Limit")
+        private Integer limit;
+
         @com.aliyun.core.annotation.NameInMap("Namespaces")
         private java.util.List<Namespace> namespaces;
 
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
+
         private Data(Builder builder) {
+            this.limit = builder.limit;
             this.namespaces = builder.namespaces;
+            this.nextToken = builder.nextToken;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -186,21 +198,59 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return limit
+         */
+        public Integer getLimit() {
+            return this.limit;
+        }
+
+        /**
          * @return namespaces
          */
         public java.util.List<Namespace> getNamespaces() {
             return this.namespaces;
         }
 
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
         public static final class Builder {
+            private Integer limit; 
             private java.util.List<Namespace> namespaces; 
+            private String nextToken; 
+            private Integer totalCount; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.limit = model.limit;
                 this.namespaces = model.namespaces;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
             } 
+
+            /**
+             * <p>本次请求实际生效的每页数量。未传 Limit 时为服务端默认值，超出上限时为收敛后的值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder limit(Integer limit) {
+                this.limit = limit;
+                return this;
+            }
 
             /**
              * <p>The list of namespaces bound to the Agent.</p>
@@ -210,6 +260,28 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
              */
             public Builder namespaces(java.util.List<Namespace> namespaces) {
                 this.namespaces = namespaces;
+                return this;
+            }
+
+            /**
+             * <p>下一页起始Token，传入下次请求的 NextToken 可获取下一页；为空表示已无更多数据</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
+                return this;
+            }
+
+            /**
+             * <p>Agent 绑定的命名空间总数，与本页返回条数无关</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

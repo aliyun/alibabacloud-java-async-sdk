@@ -106,7 +106,7 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned code. Valid values:</p>
+         * <p>The response code. Valid values:</p>
          * <ul>
          * <li>Success: The request was successful.                                </li>
          * <li>Other values: An error occurred. For more information about error codes, see Error codes.</li>
@@ -151,7 +151,7 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns true if the operation is successful.</p>
+         * <p>Indicates whether the operation was successful. The value true is returned if the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

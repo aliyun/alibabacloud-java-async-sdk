@@ -173,8 +173,20 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Catalogs")
         private java.util.List<Catalog> catalogs;
 
+        @com.aliyun.core.annotation.NameInMap("Limit")
+        private Integer limit;
+
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
+
         private Data(Builder builder) {
             this.catalogs = builder.catalogs;
+            this.limit = builder.limit;
+            this.nextToken = builder.nextToken;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -192,14 +204,41 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
             return this.catalogs;
         }
 
+        /**
+         * @return limit
+         */
+        public Integer getLimit() {
+            return this.limit;
+        }
+
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
         public static final class Builder {
             private java.util.List<Catalog> catalogs; 
+            private Integer limit; 
+            private String nextToken; 
+            private Integer totalCount; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
                 this.catalogs = model.catalogs;
+                this.limit = model.limit;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
             } 
 
             /**
@@ -210,6 +249,39 @@ public class ListLumaCatalogsResponseBody extends TeaModel {
              */
             public Builder catalogs(java.util.List<Catalog> catalogs) {
                 this.catalogs = catalogs;
+                return this;
+            }
+
+            /**
+             * <p>本次请求实际生效的每页数量。未传 Limit 时为服务端默认值，超出上限时为收敛后的值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder limit(Integer limit) {
+                this.limit = limit;
+                return this;
+            }
+
+            /**
+             * <p>下一页起始Token，传入下次请求的 NextToken 可获取下一页；为空表示已无更多数据</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
+                return this;
+            }
+
+            /**
+             * <p>Agent 绑定的数据目录总数，与本页返回条数无关</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

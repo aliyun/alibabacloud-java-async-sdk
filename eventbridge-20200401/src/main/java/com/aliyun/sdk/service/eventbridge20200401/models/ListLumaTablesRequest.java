@@ -28,15 +28,25 @@ public class ListLumaTablesRequest extends Request {
     private String catalog;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
+    private Integer limit;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Namespace")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 127)
     private String namespace;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     private ListLumaTablesRequest(Builder builder) {
         super(builder);
         this.agentName = builder.agentName;
         this.catalog = builder.catalog;
+        this.limit = builder.limit;
         this.namespace = builder.namespace;
+        this.nextToken = builder.nextToken;
     }
 
     public static Builder builder() {
@@ -67,16 +77,32 @@ public class ListLumaTablesRequest extends Request {
     }
 
     /**
+     * @return limit
+     */
+    public Integer getLimit() {
+        return this.limit;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
         return this.namespace;
     }
 
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public static final class Builder extends Request.Builder<ListLumaTablesRequest, Builder> {
         private String agentName; 
         private String catalog; 
+        private Integer limit; 
         private String namespace; 
+        private String nextToken; 
 
         private Builder() {
             super();
@@ -86,11 +112,13 @@ public class ListLumaTablesRequest extends Request {
             super(request);
             this.agentName = request.agentName;
             this.catalog = request.catalog;
+            this.limit = request.limit;
             this.namespace = request.namespace;
+            this.nextToken = request.nextToken;
         } 
 
         /**
-         * <p>The name of the Agent.</p>
+         * <p>The name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +131,7 @@ public class ListLumaTablesRequest extends Request {
         }
 
         /**
-         * <p>The name of the data catalog bound to the Agent. You can call ListLumaCatalogs to obtain this value.</p>
+         * <p>The name of the data catalog bound to the agent. You can call ListLumaCatalogs to obtain the catalog name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +144,19 @@ public class ListLumaTablesRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace bound to the Agent. You can call ListLumaNamespaces to obtain this value.</p>
+         * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 100. Each entry requires a back-to-origin metadata query, so this value also limits the number of back-to-origin queries per call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder limit(Integer limit) {
+            this.putBodyParameter("Limit", limit);
+            this.limit = limit;
+            return this;
+        }
+
+        /**
+         * <p>The name of the namespace bound to the agent. You can call ListLumaNamespaces to obtain the namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +165,18 @@ public class ListLumaTablesRequest extends Request {
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * <p>The starting token for a paging query. Leave this parameter empty or set it to &quot;0&quot; for the first query. For subsequent pages, use the NextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.putBodyParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

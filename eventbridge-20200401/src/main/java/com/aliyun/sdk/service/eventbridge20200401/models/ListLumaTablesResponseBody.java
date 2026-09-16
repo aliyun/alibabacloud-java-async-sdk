@@ -106,7 +106,7 @@ public class ListLumaTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code of the operation. A value of Success indicates success. An error code is returned if the call fails.</p>
+         * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class ListLumaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of event tables bound to the Agent. All results are returned at once without pagination.</p>
+         * <p>The list of event tables bound to the agent, including entries and pagination information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListLumaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned by the operation. The value is Operation success if the call succeeds, or a specific error description if the call fails.</p>
+         * <p>The message returned by the operation. The value Operation success is returned if the call succeeds. A specific error description is returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -136,7 +136,7 @@ public class ListLumaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request, used for troubleshooting and ticket feedback.</p>
+         * <p>The unique identifier of this request, which is used for troubleshooting and ticket submission.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -147,7 +147,7 @@ public class ListLumaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates a successful call.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -170,11 +170,23 @@ public class ListLumaTablesResponseBody extends TeaModel {
      * <p>ListLumaTablesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Limit")
+        private Integer limit;
+
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
         @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List<LumaTable> tables;
 
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
+
         private Data(Builder builder) {
+            this.limit = builder.limit;
+            this.nextToken = builder.nextToken;
             this.tables = builder.tables;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -186,30 +198,90 @@ public class ListLumaTablesResponseBody extends TeaModel {
         }
 
         /**
+         * @return limit
+         */
+        public Integer getLimit() {
+            return this.limit;
+        }
+
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
          * @return tables
          */
         public java.util.List<LumaTable> getTables() {
             return this.tables;
         }
 
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
         public static final class Builder {
+            private Integer limit; 
+            private String nextToken; 
             private java.util.List<LumaTable> tables; 
+            private Integer totalCount; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.limit = model.limit;
+                this.nextToken = model.nextToken;
                 this.tables = model.tables;
+                this.totalCount = model.totalCount;
             } 
 
             /**
-             * <p>The list of event tables bound to the Agent.</p>
+             * <p>The effective page size for this request. If the Limit parameter is not specified, the server default value is used. If the specified value exceeds the upper limit, the value is adjusted to the maximum allowed value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder limit(Integer limit) {
+                this.limit = limit;
+                return this;
+            }
+
+            /**
+             * <p>The token for the next page. Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
+                return this;
+            }
+
+            /**
+             * <p>The list of event tables bound to the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Namespace&quot;:&quot;my_namespace&quot;}]</p>
              */
             public Builder tables(java.util.List<LumaTable> tables) {
                 this.tables = tables;
+                return this;
+            }
+
+            /**
+             * <p>The total number of event tables bound to the agent, regardless of the number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

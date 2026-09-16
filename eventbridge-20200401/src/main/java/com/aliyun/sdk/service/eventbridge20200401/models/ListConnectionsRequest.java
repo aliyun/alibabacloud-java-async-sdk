@@ -22,6 +22,10 @@ public class ListConnectionsRequest extends Request {
     private String connectionNamePrefix;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeType")
+    private String excludeType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
@@ -36,6 +40,7 @@ public class ListConnectionsRequest extends Request {
     private ListConnectionsRequest(Builder builder) {
         super(builder);
         this.connectionNamePrefix = builder.connectionNamePrefix;
+        this.excludeType = builder.excludeType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.type = builder.type;
@@ -62,6 +67,13 @@ public class ListConnectionsRequest extends Request {
     }
 
     /**
+     * @return excludeType
+     */
+    public String getExcludeType() {
+        return this.excludeType;
+    }
+
+    /**
      * @return maxResults
      */
     public Long getMaxResults() {
@@ -84,6 +96,7 @@ public class ListConnectionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListConnectionsRequest, Builder> {
         private String connectionNamePrefix; 
+        private String excludeType; 
         private Long maxResults; 
         private String nextToken; 
         private String type; 
@@ -95,6 +108,7 @@ public class ListConnectionsRequest extends Request {
         private Builder(ListConnectionsRequest request) {
             super(request);
             this.connectionNamePrefix = request.connectionNamePrefix;
+            this.excludeType = request.excludeType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.type = request.type;
@@ -109,6 +123,18 @@ public class ListConnectionsRequest extends Request {
         public Builder connectionNamePrefix(String connectionNamePrefix) {
             this.putBodyParameter("ConnectionNamePrefix", connectionNamePrefix);
             this.connectionNamePrefix = connectionNamePrefix;
+            return this;
+        }
+
+        /**
+         * <p>排除单个连接类型，取值范围与 Type 相同。传入单个类型名称，不支持数组或逗号分隔的多个值。例如传入 Http 可排除 HTTP 类型的连接。未传或传入空字符串时不排除任何类型；与 Type 相同时返回空列表。分页与总数均在过滤后计算。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Http</p>
+         */
+        public Builder excludeType(String excludeType) {
+            this.putBodyParameter("ExcludeType", excludeType);
+            this.excludeType = excludeType;
             return this;
         }
 

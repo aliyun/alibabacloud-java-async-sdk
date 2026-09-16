@@ -26,6 +26,16 @@ public class UpdateAgentRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("McpServerId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String mcpServerId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("McpServerName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
+    private String mcpServerName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Metadata")
     private Metadata metadata;
 
@@ -42,6 +52,8 @@ public class UpdateAgentRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.mcpServerId = builder.mcpServerId;
+        this.mcpServerName = builder.mcpServerName;
         this.metadata = builder.metadata;
         this.name = builder.name;
         this.prompt = builder.prompt;
@@ -75,6 +87,20 @@ public class UpdateAgentRequest extends Request {
     }
 
     /**
+     * @return mcpServerId
+     */
+    public String getMcpServerId() {
+        return this.mcpServerId;
+    }
+
+    /**
+     * @return mcpServerName
+     */
+    public String getMcpServerName() {
+        return this.mcpServerName;
+    }
+
+    /**
      * @return metadata
      */
     public Metadata getMetadata() {
@@ -98,6 +124,8 @@ public class UpdateAgentRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateAgentRequest, Builder> {
         private String clientToken; 
         private String description; 
+        private String mcpServerId; 
+        private String mcpServerName; 
         private Metadata metadata; 
         private String name; 
         private String prompt; 
@@ -110,6 +138,8 @@ public class UpdateAgentRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.mcpServerId = request.mcpServerId;
+            this.mcpServerName = request.mcpServerName;
             this.metadata = request.metadata;
             this.name = request.name;
             this.prompt = request.prompt;
@@ -136,6 +166,24 @@ public class UpdateAgentRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * McpServerId.
+         */
+        public Builder mcpServerId(String mcpServerId) {
+            this.putBodyParameter("McpServerId", mcpServerId);
+            this.mcpServerId = mcpServerId;
+            return this;
+        }
+
+        /**
+         * McpServerName.
+         */
+        public Builder mcpServerName(String mcpServerName) {
+            this.putBodyParameter("McpServerName", mcpServerName);
+            this.mcpServerName = mcpServerName;
             return this;
         }
 
