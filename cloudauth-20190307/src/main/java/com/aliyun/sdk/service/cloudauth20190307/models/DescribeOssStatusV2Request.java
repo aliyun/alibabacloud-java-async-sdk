@@ -73,10 +73,10 @@ public class DescribeOssStatusV2Request extends Request {
         } 
 
         /**
-         * <p>ServiceCode for Real Person Cloud products:</p>
+         * <p>The ServiceCode of the ID Verification product. Valid values:</p>
          * <ul>
-         * <li><strong>antcloudauth</strong>: Financial-grade real person authentication</li>
-         * <li><strong>cloudauthst (discontinued)</strong>: Enhanced real person authentication</li>
+         * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
+         * <li><strong>cloudauthst (discontinued)</strong>: enhanced ID Verification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class DescribeOssStatusV2Request extends Request {
         }
 
         /**
-         * <p>Visitor&quot;s source IP address.</p>
+         * <p>The source IP address of the visitor.</p>
          * 
          * <strong>example:</strong>
          * <p>120.25.41.25</p>

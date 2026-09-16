@@ -59,7 +59,7 @@ public class QueryVerifyDownloadTaskRequest extends Request {
         } 
 
         /**
-         * <p>Download task ID.</p>
+         * <p>The download task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>202411194002618</p>

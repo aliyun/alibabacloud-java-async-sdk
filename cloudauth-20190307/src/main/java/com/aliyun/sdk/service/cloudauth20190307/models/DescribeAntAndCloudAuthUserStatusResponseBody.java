@@ -106,10 +106,10 @@ public class DescribeAntAndCloudAuthUserStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether financial-grade real-person authentication is activated. Values:</p>
+         * <p>Indicates whether financial-grade ID Verification is activated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Activated</li>
-         * <li><strong>false</strong>: Not activated</li>
+         * <li><strong>true</strong>: Activated.</li>
+         * <li><strong>false</strong>: Not activated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,10 +121,10 @@ public class DescribeAntAndCloudAuthUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether real-person authentication is activated. Values:</p>
+         * <p>Indicates whether ID Verification is activated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Activated</li>
-         * <li><strong>false</strong>: Not activated</li>
+         * <li><strong>true</strong>: Activated.</li>
+         * <li><strong>false</strong>: Not activated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,10 +136,10 @@ public class DescribeAntAndCloudAuthUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the enhanced version of real-person authentication is activated. Values:</p>
+         * <p>Indicates whether enhanced ID Verification is activated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Activated</li>
-         * <li><strong>false</strong>: Not activated</li>
+         * <li><strong>true</strong>: Activated.</li>
+         * <li><strong>false</strong>: Not activated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,10 +151,10 @@ public class DescribeAntAndCloudAuthUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether information verification is activated. Values:</p>
+         * <p>Indicates whether information verification is activated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Activated</li>
-         * <li><strong>false</strong>: Not activated</li>
+         * <li><strong>true</strong>: Activated.</li>
+         * <li><strong>false</strong>: Not activated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DescribeAntAndCloudAuthUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of this request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3FE07CCE-DF47-51C2-9D32-CD70ED62C91B</p>

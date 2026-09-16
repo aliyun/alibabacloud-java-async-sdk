@@ -67,7 +67,7 @@ public class DescribeOssStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeOssStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of this request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F2DB870B-EEB7-51BD-9F0A-B5D8D3C79308</p>
@@ -144,7 +144,7 @@ public class DescribeOssStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the OSS bucket for delivering authentication information.</p>
+             * <p>The name of the OSS bucket to which verification information is delivered.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-aliyun-cloudauth-20250516xxxxxx</p>
@@ -155,7 +155,7 @@ public class DescribeOssStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User activation status, SUCCESS indicates activated.</p>
+             * <p>The activation status of the user. A value of SUCCESS indicates that the service is activated.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>

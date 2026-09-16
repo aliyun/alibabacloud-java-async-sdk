@@ -30,6 +30,18 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
     private String checkFileName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DegradeAppScheme")
+    private String degradeAppScheme;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DegradeSubCodes")
+    private String degradeSubCodes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DegradeType")
+    private String degradeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceRiskPlus")
     private String deviceRiskPlus;
 
@@ -66,11 +78,18 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StoreImage")
     private String storeImage;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseDegrade")
+    private String useDegrade;
+
     private UpdateAntCloudAuthSceneRequest(Builder builder) {
         super(builder);
         this.bindMiniProgram = builder.bindMiniProgram;
         this.checkFileBody = builder.checkFileBody;
         this.checkFileName = builder.checkFileName;
+        this.degradeAppScheme = builder.degradeAppScheme;
+        this.degradeSubCodes = builder.degradeSubCodes;
+        this.degradeType = builder.degradeType;
         this.deviceRiskPlus = builder.deviceRiskPlus;
         this.miniProgramName = builder.miniProgramName;
         this.platform = builder.platform;
@@ -80,6 +99,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         this.sceneName = builder.sceneName;
         this.status = builder.status;
         this.storeImage = builder.storeImage;
+        this.useDegrade = builder.useDegrade;
     }
 
     public static Builder builder() {
@@ -114,6 +134,27 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
      */
     public String getCheckFileName() {
         return this.checkFileName;
+    }
+
+    /**
+     * @return degradeAppScheme
+     */
+    public String getDegradeAppScheme() {
+        return this.degradeAppScheme;
+    }
+
+    /**
+     * @return degradeSubCodes
+     */
+    public String getDegradeSubCodes() {
+        return this.degradeSubCodes;
+    }
+
+    /**
+     * @return degradeType
+     */
+    public String getDegradeType() {
+        return this.degradeType;
     }
 
     /**
@@ -179,10 +220,20 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         return this.storeImage;
     }
 
+    /**
+     * @return useDegrade
+     */
+    public String getUseDegrade() {
+        return this.useDegrade;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAntCloudAuthSceneRequest, Builder> {
         private String bindMiniProgram; 
         private String checkFileBody; 
         private String checkFileName; 
+        private String degradeAppScheme; 
+        private String degradeSubCodes; 
+        private String degradeType; 
         private String deviceRiskPlus; 
         private String miniProgramName; 
         private String platform; 
@@ -192,6 +243,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         private String sceneName; 
         private Integer status; 
         private String storeImage; 
+        private String useDegrade; 
 
         private Builder() {
             super();
@@ -202,6 +254,9 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
             this.bindMiniProgram = request.bindMiniProgram;
             this.checkFileBody = request.checkFileBody;
             this.checkFileName = request.checkFileName;
+            this.degradeAppScheme = request.degradeAppScheme;
+            this.degradeSubCodes = request.degradeSubCodes;
+            this.degradeType = request.degradeType;
             this.deviceRiskPlus = request.deviceRiskPlus;
             this.miniProgramName = request.miniProgramName;
             this.platform = request.platform;
@@ -211,10 +266,18 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
             this.sceneName = request.sceneName;
             this.status = request.status;
             this.storeImage = request.storeImage;
+            this.useDegrade = request.useDegrade;
         } 
 
         /**
-         * <p>Update Ant Blockchain Transaction Scenario</p>
+         * <p>Specifies whether to bind a mini program. Valid values:</p>
+         * <ul>
+         * <li><strong>Y</strong>: enabled.</li>
+         * <li><strong>N (default)</strong>: disabled.<blockquote>
+         * <p>Notice: If you enable mini program binding, make sure that you specify all parameters related to the mini program binding.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -226,14 +289,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable binding with a mini program:</p>
-         * <ul>
-         * <li><strong>Y</strong>: Enable</li>
-         * <li><strong>N (default)</strong>: Disable<blockquote>
-         * <p>Notice: If you enable binding with a mini program, please ensure that all parameters for the mini program are passed.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
+         * <p>The content of the uploaded verification file.</p>
          * 
          * <strong>example:</strong>
          * <p>774c4aab45981ff4a86cde9255a11xxx</p>
@@ -245,14 +301,10 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Scenario name.</p>
+         * <p>The name of the uploaded verification file.</p>
          * 
          * <strong>example:</strong>
-         * <p>Whether to enable storing the authentication files generated during the authentication process to the user&quot;s OSS:</p>
-         * <ul>
-         * <li><strong>Y</strong>: Enable</li>
-         * <li><strong>N (default)</strong>: Disable</li>
-         * </ul>
+         * <p>test.txt</p>
          */
         public Builder checkFileName(String checkFileName) {
             this.putQueryParameter("CheckFileName", checkFileName);
@@ -261,7 +313,47 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Name of the uploaded verification file.</p>
+         * <p>The iOS app scheme for degradation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudauth://callback</p>
+         */
+        public Builder degradeAppScheme(String degradeAppScheme) {
+            this.putQueryParameter("DegradeAppScheme", degradeAppScheme);
+            this.degradeAppScheme = degradeAppScheme;
+            return this;
+        }
+
+        /**
+         * <p>The SubCode that triggers degradation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>201,202</p>
+         */
+        public Builder degradeSubCodes(String degradeSubCodes) {
+            this.putQueryParameter("DegradeSubCodes", degradeSubCodes);
+            this.degradeSubCodes = degradeSubCodes;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable degraded authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIPAY</p>
+         */
+        public Builder degradeType(String degradeType) {
+            this.putQueryParameter("DegradeType", degradeType);
+            this.degradeType = degradeType;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable enhanced device risk detection. Valid values:</p>
+         * <ul>
+         * <li><strong>Y</strong>: enabled.</li>
+         * <li><strong>N</strong>: disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -273,10 +365,10 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>System-defined parameter. Value: <strong>UpdateAntCloudAuthScene</strong>.</p>
+         * <p>The name of the mini program.</p>
          * 
          * <strong>example:</strong>
-         * <p>Scenario ID.</p>
+         * <p>TestApp</p>
          */
         public Builder miniProgramName(String miniProgramName) {
             this.putQueryParameter("MiniProgramName", miniProgramName);
@@ -285,7 +377,12 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Currently meaningless, can be omitted.</p>
+         * <p>The mini program platform. Valid values:</p>
+         * <ul>
+         * <li><strong>WECHAT</strong>: WeChat</li>
+         * <li><strong>ALIPAY</strong>: Alipay</li>
+         * <li><strong>TIKTOK</strong>: TikTok</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>IOS</p>
@@ -297,7 +394,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Mini program name.</p>
+         * <p>The number of returned photos (1 to 5). This parameter takes effect after StoreImage is enabled for authentication file retention.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -309,12 +406,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Platform for binding the mini program:</p>
-         * <ul>
-         * <li><strong>WECHAT</strong>: WeChat</li>
-         * <li><strong>ALIPAY</strong>: Alipay</li>
-         * <li><strong>TIKTOK</strong>: TikTok</li>
-         * </ul>
+         * <p>The duration of the returned video (1 to 2 seconds). This parameter takes effect after StoreImage is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -326,7 +418,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Update Financial-Level Authentication Scenario</p>
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -339,11 +431,7 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
-         * <ul>
-         * <li>Service address: cloudauth.aliyuncs.com.</li>
-         * <li>Request method: HTTPS POST.</li>
-         * </ul>
+         * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -355,12 +443,10 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Update Ant Blockchain Transaction Scenario</p>
+         * <p>This parameter has no effect. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -369,10 +455,10 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         }
 
         /**
-         * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
+         * <p>Specifies whether to deliver authentication files generated during the authentication process to your OSS bucket. Valid values:</p>
          * <ul>
-         * <li>Service address: cloudauth.aliyuncs.com.</li>
-         * <li>Request method: HTTPS POST.</li>
+         * <li><strong>Y</strong>: enabled.</li>
+         * <li><strong>N (default)</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -381,6 +467,18 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         public Builder storeImage(String storeImage) {
             this.putQueryParameter("StoreImage", storeImage);
             this.storeImage = storeImage;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable degraded authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
+        public Builder useDegrade(String useDegrade) {
+            this.putQueryParameter("UseDegrade", useDegrade);
+            this.useDegrade = useDegrade;
             return this;
         }
 

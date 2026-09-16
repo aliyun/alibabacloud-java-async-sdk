@@ -93,7 +93,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 for success, others for failure</p>
+         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -126,7 +126,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result information</p>
+         * <p>The result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -192,11 +192,11 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification result:</p>
+             * <p>The verification result. Valid values:</p>
              * <ul>
-             * <li>1: Consistent (billable)</li>
-             * <li>2: Inconsistent (billable)</li>
-             * <li>3: No record found (non-billable)</li>
+             * <li>1: Consistent (billable).</li>
+             * <li>2: Inconsistent (billable).</li>
+             * <li>3: No record found (not billable).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -208,12 +208,12 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operator name:</p>
+             * <p>The carrier name. Valid values:</p>
              * <ul>
              * <li><strong>CMCC</strong>: China Mobile.</li>
              * <li><strong>CUCC</strong>: China Unicom.</li>
              * <li><strong>CTCC</strong>: China Telecom.</li>
-             * <li><strong>CBCC</strong>: China Broadcasting Network.</li>
+             * <li><strong>CBCC</strong>: China Broadnet.</li>
              * </ul>
              * 
              * <strong>example:</strong>

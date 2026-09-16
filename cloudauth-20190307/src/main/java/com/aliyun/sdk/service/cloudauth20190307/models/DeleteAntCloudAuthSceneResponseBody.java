@@ -54,7 +54,7 @@ public class DeleteAntCloudAuthSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>80D1ACD4-1C7D-53CB-8C54-3758FF03C762</p>

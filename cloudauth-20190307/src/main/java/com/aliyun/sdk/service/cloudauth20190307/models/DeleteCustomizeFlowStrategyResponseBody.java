@@ -119,7 +119,7 @@ public class DeleteCustomizeFlowStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -130,7 +130,7 @@ public class DeleteCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -143,7 +143,7 @@ public class DeleteCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,7 +154,7 @@ public class DeleteCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -165,7 +165,7 @@ public class DeleteCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
@@ -176,7 +176,7 @@ public class DeleteCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

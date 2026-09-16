@@ -266,10 +266,10 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Whether cropping is allowed. Default is not allowed, T/F.</p>
+         * <p>Specifies whether cropping is allowed. Default value: F.</p>
          * <ul>
-         * <li>T: Indicates that cropping is required</li>
-         * <li>F: Indicates that cropping is not required (default F)</li>
+         * <li>T: detection is required.</li>
+         * <li>F: detection is required. (Default: F).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,8 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>A unique identifier for the merchant&quot;s request. The value is a 32-character alphanumeric combination, where the first few characters are a custom abbreviation defined by the merchant, followed by a period, and the latter part can be a random or incrementing sequence.</p>
+         * <p>The unique identifier of the merchant request.</p>
+         * <p>The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can be a time segment, and the last part can be a random or incremental sequence.</p>
          * 
          * <strong>example:</strong>
          * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -306,7 +307,7 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Authentication scenario ID.</p>
+         * <p>The verification scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000006</p>
@@ -318,9 +319,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>The CertifyId of a previously successful real-person verification, where the photo taken during that verification is used as the face comparison photo.</p>
+         * <p>The CertifyId from a previous successful ID Verification. The photo captured during that verification is used as the face comparison photo.</p>
          * <blockquote>
-         * <p>Among the four ways to input facial photos (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to provide.</p>
+         * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -333,9 +334,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Base64 encoding of the photo.</p>
+         * <p>The Base64-encoded photo.</p>
          * <blockquote>
-         * <p>Choose one of the four ways to input a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -348,9 +349,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>OSS photo URL, currently only supports authorized OSS photo URLs.</p>
+         * <p>The OSS photo URL. Only authorized OSS photo URLs are supported.</p>
          * <blockquote>
-         * <p>Four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS. Choose one of them to input.</p>
+         * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -363,9 +364,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Name of the authorized OSS bucket.</p>
+         * <p>The bucket name of the authorized OSS space.</p>
          * <blockquote>
-         * <p>Choose one of the four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -378,9 +379,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Filename of the authorized OSS space.</p>
+         * <p>The file name in the authorized OSS space.</p>
          * <blockquote>
-         * <p>Choose one of the four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -393,9 +394,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>CertifyId from a previously successful real-person authentication, where the photo taken during the authentication is used for face comparison.</p>
+         * <p>The CertifyId from a previous successful ID Verification. The photo captured during that verification is used as the face comparison photo.</p>
          * <blockquote>
-         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -408,9 +409,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Base64 encoding of the reference photo.</p>
+         * <p>The Base64-encoded reference photo.</p>
          * <blockquote>
-         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -423,9 +424,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>OSS address of the reference photo. Currently, only authorized OSS addresses are supported.</p>
+         * <p>The OSS URL of the reference photo. Only authorized OSS photo URLs are supported.</p>
          * <blockquote>
-         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -438,9 +439,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>Name of the authorized OSS bucket.</p>
+         * <p>The bucket name of the authorized OSS space.</p>
          * <blockquote>
-         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -453,9 +454,9 @@ public class CompareFaceVerifyRequest extends Request {
         }
 
         /**
-         * <p>File name in the authorized OSS space.</p>
+         * <p>The file name in the authorized OSS space.</p>
          * <blockquote>
-         * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+         * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

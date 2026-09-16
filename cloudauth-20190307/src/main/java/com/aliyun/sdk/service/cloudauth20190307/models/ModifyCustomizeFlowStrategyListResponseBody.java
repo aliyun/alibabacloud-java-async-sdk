@@ -119,7 +119,7 @@ public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code, <strong>200</strong> indicates the interface responded successfully.</p>
+         * <p>The return code. <strong>200</strong> indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result data.</p>
+         * <p>The result data.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -163,7 +163,7 @@ public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
@@ -174,7 +174,7 @@ public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

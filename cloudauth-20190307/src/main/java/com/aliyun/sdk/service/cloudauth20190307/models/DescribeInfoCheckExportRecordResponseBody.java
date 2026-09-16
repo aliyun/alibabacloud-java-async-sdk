@@ -158,7 +158,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -174,7 +180,7 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The result list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +199,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -209,7 +221,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the response is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +232,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -225,7 +243,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -369,7 +390,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * DownloadDate.
+             * <p>The download time. The value is a UNIX timestamp in milliseconds (ms), for example, 1758250979000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1758250979000</p>
              */
             public Builder downloadDate(String downloadDate) {
                 this.downloadDate = downloadDate;
@@ -377,7 +401,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadTaskId.
+             * <p>The ID of the download task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202510189017278</p>
              */
             public Builder downloadTaskId(String downloadTaskId) {
                 this.downloadTaskId = downloadTaskId;
@@ -385,7 +412,12 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -393,7 +425,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>手机号二要素统计202509013975081.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -401,7 +436,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSV</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -409,7 +447,26 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The product type name. Valid values:</p>
+             * <ul>
+             * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+             * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+             * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile number online duration.</li>
+             * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile number online status.</li>
+             * <li><strong>MOBILE_3_META_SIMPLE</strong>: Mobile number three-element verification (simple edition).</li>
+             * <li><strong>MOBILE_3_META</strong>: Mobile number three-element verification (detailed edition).</li>
+             * <li><strong>MOBILE_2_META</strong>: Mobile number two-element verification.</li>
+             * <li><strong>BANK_CARD_N_META</strong>: Bank card verification (detailed edition).</li>
+             * <li><strong>MOBILE_DETECT</strong>: Number detection.</li>
+             * <li><strong>VEHICLE_N_META</strong>: Vehicle element verification (enhanced edition).</li>
+             * <li><strong>VEHICLE_PENTA_INFO</strong>: Vehicle five-element information recognition.</li>
+             * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle information recognition.</li>
+             * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle insurance date query.</li>
+             * <li><strong>VEHICLE_CHECK</strong>: Vehicle element verification.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ID_CARD_2_META</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -417,7 +474,15 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: File is being generated.</li>
+             * <li><strong>2</strong>: File generation is complete.</li>
+             * <li><strong>3</strong>: File generation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -425,7 +490,10 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The task URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/console/xxxxxxxx.xlsx">https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/console/xxxxxxxx.xlsx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

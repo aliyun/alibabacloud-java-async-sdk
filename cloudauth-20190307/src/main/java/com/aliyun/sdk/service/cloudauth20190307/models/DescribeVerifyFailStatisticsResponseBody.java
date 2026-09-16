@@ -67,7 +67,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C2C596D1-B14B-5D79-9672-61D7686912B2</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Authentication result.</p>
+         * <p>The authentication result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -157,7 +157,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error code.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>404</p>
@@ -168,7 +168,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Failure count.</p>
+             * <p>The number of failures.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -179,7 +179,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Date: Date</p>
+             * <p>Date: the date.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16</p>
@@ -249,7 +249,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Column information.</p>
+             * <p>The column information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -257,7 +257,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -340,7 +340,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error code.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>404</p>
@@ -351,7 +351,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Count.</p>
+             * <p>The count.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -362,7 +362,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Date.</p>
+             * <p>The date. Format: YYYY-MM-DD, such as 2025-10-16.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16</p>
@@ -432,7 +432,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Error code.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>404</p>
@@ -443,7 +443,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned quantity data.</p>
+             * <p>The count data returned.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -510,7 +510,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Column information.</p>
+             * <p>The column information.</p>
              */
             public Builder items(java.util.List<LineItems> items) {
                 this.items = items;
@@ -518,7 +518,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -588,7 +588,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Line chart of failure reasons.</p>
+             * <p>The line chart of failure reasons.</p>
              */
             public Builder column(Column column) {
                 this.column = column;
@@ -596,7 +596,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bar chart of failure reasons.</p>
+             * <p>The bar chart of failure reasons.</p>
              */
             public Builder line(Line line) {
                 this.line = line;

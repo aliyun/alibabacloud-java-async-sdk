@@ -119,7 +119,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,7 +152,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>
@@ -163,7 +163,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result information.</p>
+         * <p>The result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -171,7 +171,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -253,7 +253,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Bucket name.</p>
+             * <p>The bucket name.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-aliyun-cloudauth-20250516xxxxxx</p>
@@ -264,7 +264,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -275,7 +275,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User activation status, <strong>SUCCESS</strong> indicates activated.</p>
+             * <p>The activation status of the user. A value of <strong>SUCCESS</strong> indicates that the service is activated.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>

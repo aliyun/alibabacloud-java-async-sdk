@@ -90,11 +90,11 @@ public class CreateSceneConfigRequest extends Request {
         } 
 
         /**
-         * <p>Intention authentication configuration, as a JSON string.</p>
+         * <p>The willingness authentication configuration, in JSON string format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;faceCompareMode&quot;:&quot;AUTHORITY&quot;,&quot;certConfigs&quot;:[{&quot;index&quot;:0,&quot;openVoiceCompare&quot;:true,&quot;openCustomizedContent&quot;:true,&quot;model&quot;:&quot;FOLLOW&quot;}],&quot;screenEvidence&quot;:false}</p>
+         * <p>{\&quot;faceCompareMode\&quot;:\&quot;AUTHORITY\&quot;,\&quot;certConfigs\&quot;:[{\&quot;index\&quot;:0,\&quot;openVoiceCompare\&quot;:true,\&quot;openCustomizedContent\&quot;:true,\&quot;model\&quot;:\&quot;FOLLOW\&quot;}],\&quot;screenEvidence\&quot;:false}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("config", config);
@@ -103,7 +103,7 @@ public class CreateSceneConfigRequest extends Request {
         }
 
         /**
-         * <p>Scene ID.</p>
+         * <p>The scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreateSceneConfigRequest extends Request {
         }
 
         /**
-         * <p>Configuration type.</p>
+         * <p>The configuration type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

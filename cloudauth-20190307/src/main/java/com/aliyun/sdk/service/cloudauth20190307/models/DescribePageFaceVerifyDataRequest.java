@@ -129,7 +129,7 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         } 
 
         /**
-         * <p>Current page number, default is 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * <p>Required, end time, format is yyyy-MM-dd, default is yyyy-MM-dd 00:00:00, the query interval cannot exceed 90 days.</p>
+         * <p>Required. The end time in the format of yyyy-MM-dd. The default time is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-30</p>
@@ -153,7 +153,7 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page, default is 10.</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * <p>Product code.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PLUS</p>
@@ -177,7 +177,7 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * <p>Scene ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36**01</p>
@@ -189,7 +189,7 @@ public class DescribePageFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * <p>Required, start time, format is yyyy-MM-dd, default is yyyy-MM-dd 00:00:00, the query interval cannot exceed 90 days.</p>
+         * <p>Required. The start time in the format of yyyy-MM-dd. The default time is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-10</p>

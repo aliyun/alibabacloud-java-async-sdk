@@ -93,7 +93,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 indicates success, other values indicate failure.</p>
+         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -126,7 +126,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result information</p>
+         * <p>The result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -146,6 +146,9 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
      * <p>DescribeFaceVerifyResponseBody</p>
      */
     public static class ResultObject extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DegradeInfo")
+        private String degradeInfo;
+
         @com.aliyun.core.annotation.NameInMap("DeviceRisk")
         private String deviceRisk;
 
@@ -171,6 +174,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         private String userInfo;
 
         private ResultObject(Builder builder) {
+            this.degradeInfo = builder.degradeInfo;
             this.deviceRisk = builder.deviceRisk;
             this.deviceToken = builder.deviceToken;
             this.identityInfo = builder.identityInfo;
@@ -187,6 +191,13 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
 
         public static ResultObject create() {
             return builder().build();
+        }
+
+        /**
+         * @return degradeInfo
+         */
+        public String getDegradeInfo() {
+            return this.degradeInfo;
         }
 
         /**
@@ -246,6 +257,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String degradeInfo; 
             private String deviceRisk; 
             private String deviceToken; 
             private String identityInfo; 
@@ -259,6 +271,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             } 
 
             private Builder(ResultObject model) {
+                this.degradeInfo = model.degradeInfo;
                 this.deviceRisk = model.deviceRisk;
                 this.deviceToken = model.deviceToken;
                 this.identityInfo = model.identityInfo;
@@ -270,7 +283,18 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Device risk label.</p>
+             * <p>The result of degraded verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;certifyId\&quot;:\&quot;ab110b7bbfea6631b37bc472797ac923\&quot;,\&quot;degradeType\&quot;:\&quot;ALIPAY\&quot;,\&quot;passed\&quot;:\&quot;T\&quot;}</p>
+             */
+            public Builder degradeInfo(String degradeInfo) {
+                this.degradeInfo = degradeInfo;
+                return this;
+            }
+
+            /**
+             * <p>The device risk label.</p>
              * 
              * <strong>example:</strong>
              * <p>ROOT,VPN,HOOK</p>
@@ -281,7 +305,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Device token.</p>
+             * <p>The device token.</p>
              * 
              * <strong>example:</strong>
              * <p>McozS1ZWRcRZStlERcZZo_QOytx5jcgZoZJEoRLOxxxxxxx</p>
@@ -292,7 +316,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Information about the authenticated subject, usually empty in general authentication scenarios.</p>
+             * <p>The identity information of the verification subject. This field is empty for common verification scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -303,7 +327,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attachment information of the authenticated subject, mainly image materials. JSON format, see example below.</p>
+             * <p>The supplementary material information of the verification subject, primarily image-based materials. The value is in JSON format. See the example below.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;faceAttack&quot;: &quot;F&quot;,&quot;facialPictureFront&quot;: {&quot;qualityScore&quot;: 88.3615493774414,&quot;pictureUrl&quot;: &quot;<a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg%22,%22ossBucketName">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg&quot;,&quot;ossBucketName</a>&quot;: &quot;cn-shanghai-aliyun-cloudauth-1260051251634779&quot;,&quot;ossObjectName&quot;: &quot;verify/1260051251634779/6ba7bcfccf33f56cdb44ed086f36ce3e0.jpeg&quot;}}</p>
@@ -314,7 +338,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it passed, T for pass, F for fail.</p>
+             * <p>Indicates whether the verification is passed. A value of T indicates passed. A value of F indicates not passed.</p>
              * 
              * <strong>example:</strong>
              * <p>T</p>
@@ -325,7 +349,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description of the authentication result. For details, see the SubCode explanation below.</p>
+             * <p>The verification result description. For more information, see the SubCode description below.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -336,7 +360,7 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the response was successful.</p>
+             * <p>Indicates whether the response is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -347,13 +371,13 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Records the identity information and corresponding encoding entered by the user under the rare character mode. The returned data is a JSON formatted string, which will be an empty string if there are no rare characters in the name.</p>
+             * <p>Records the identity information and corresponding encoding entered by the user in rare character mode. The return data is a JSON-formatted string. An empty string is returned if the name does not contain rare characters.</p>
              * <ul>
-             * <li><p>name: Refers to the name entered by the user.</p>
+             * <li><p>name: the name entered by the user.</p>
              * </li>
-             * <li><p>verifyName: Refers to the final name encoding after verification. For example, if a rare character is verified through transcoding: “Mr. Wang”, the actual verified name is “Wang Xiansheng”.</p>
+             * <li><p>verifyName: the final name encoding that passed verification. For example, if a rare character is verified through transcoding: &quot;Wang Xiansheng&quot;, the actual verified name is &quot;Wang Xiansheng&quot; (with a different character).</p>
              * </li>
-             * <li><p>number: Refers to the identification number entered by the user.</p>
+             * <li><p>number: the ID card number entered by the user.</p>
              * </li>
              * </ul>
              * 

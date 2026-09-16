@@ -119,7 +119,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The paginated list data.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -135,7 +138,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5176EB42-6EE7-510B-9388-35018DF3175B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -178,7 +193,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
      *
      * <p>DescribeMetaSearchPageListResponseBody</p>
      */
-    public static class Request extends TeaModel {
+    public static class ItemsRequest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VehicleNum")
         private String vehicleNum;
 
@@ -188,7 +203,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VehicleTypeName")
         private String vehicleTypeName;
 
-        private Request(Builder builder) {
+        private ItemsRequest(Builder builder) {
             this.vehicleNum = builder.vehicleNum;
             this.vehicleType = builder.vehicleType;
             this.vehicleTypeName = builder.vehicleTypeName;
@@ -198,7 +213,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Request create() {
+        public static ItemsRequest create() {
             return builder().build();
         }
 
@@ -231,14 +246,17 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Request model) {
+            private Builder(ItemsRequest model) {
                 this.vehicleNum = model.vehicleNum;
                 this.vehicleType = model.vehicleType;
                 this.vehicleTypeName = model.vehicleTypeName;
             } 
 
             /**
-             * VehicleNum.
+             * <p>The vehicle number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙J3H91H</p>
              */
             public Builder vehicleNum(String vehicleNum) {
                 this.vehicleNum = vehicleNum;
@@ -246,7 +264,36 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * VehicleType.
+             * <p>The vehicle type. Valid values:</p>
+             * <ul>
+             * <li><strong>01</strong>: large vehicle.  </li>
+             * <li><strong>02</strong>: small vehicle.  </li>
+             * <li><strong>03</strong>: embassy vehicle.  </li>
+             * <li><strong>04</strong>: consulate vehicle.  </li>
+             * <li><strong>05</strong>: overseas vehicle.  </li>
+             * <li><strong>06</strong>: foreign vehicle.  </li>
+             * <li><strong>07</strong>: standard motorcycle.  </li>
+             * <li><strong>08</strong>: light motorcycle.  </li>
+             * <li><strong>09</strong>: embassy motorcycle.  </li>
+             * <li><strong>10</strong>: consulate motorcycle.  </li>
+             * <li><strong>11</strong>: overseas motorcycle.  </li>
+             * <li><strong>12</strong>: foreign motorcycle.  </li>
+             * <li><strong>13</strong>: low-speed vehicle.  </li>
+             * <li><strong>14</strong>: tractor.  </li>
+             * <li><strong>15</strong>: trailer.  </li>
+             * <li><strong>16</strong>: training vehicle.  </li>
+             * <li><strong>17</strong>: training motorcycle.  </li>
+             * <li><strong>20</strong>: temporary entry vehicle.  </li>
+             * <li><strong>21</strong>: temporary entry motorcycle.  </li>
+             * <li><strong>22</strong>: temporary driving vehicle.  </li>
+             * <li><strong>23</strong>: police vehicle.  </li>
+             * <li><strong>24</strong>: police motorcycle.  </li>
+             * <li><strong>51</strong>: new energy large vehicle.  </li>
+             * <li><strong>52</strong>: new energy small vehicle.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>52</p>
              */
             public Builder vehicleType(String vehicleType) {
                 this.vehicleType = vehicleType;
@@ -254,15 +301,18 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * VehicleTypeName.
+             * <p>The vehicle type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>New energy small vehicle</p>
              */
             public Builder vehicleTypeName(String vehicleTypeName) {
                 this.vehicleTypeName = vehicleTypeName;
                 return this;
             }
 
-            public Request build() {
-                return new Request(this);
+            public ItemsRequest build() {
+                return new ItemsRequest(this);
             } 
 
         } 
@@ -633,7 +683,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovedCount.
+             * <p>The approved number of passengers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder approvedCount(String approvedCount) {
                 this.approvedCount = approvedCount;
@@ -641,7 +694,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovedLoad.
+             * <p>The approved passenger capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder approvedLoad(String approvedLoad) {
                 this.approvedLoad = approvedLoad;
@@ -649,7 +705,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * AxleCount.
+             * <p>The number of axles.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder axleCount(String axleCount) {
                 this.axleCount = axleCount;
@@ -657,7 +716,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * BackWheelDistance.
+             * <p>The rear wheel track.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1630</p>
              */
             public Builder backWheelDistance(String backWheelDistance) {
                 this.backWheelDistance = backWheelDistance;
@@ -665,7 +727,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * BankCard.
+             * <p>The bank card number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>622848001714440xxxx</p>
              */
             public Builder bankCard(String bankCard) {
                 this.bankCard = bankCard;
@@ -673,7 +738,15 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * BizCode.
+             * <p>The authentication status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Authentication passed.</li>
+             * <li><strong>2</strong>: Authentication failed.</li>
+             * <li><strong>3</strong>: No record found.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -681,7 +754,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Brand.
+             * <p>The brand name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mercedes-Benz</p>
              */
             public Builder brand(String brand) {
                 this.brand = brand;
@@ -689,7 +765,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Color.
+             * <p>The vehicle body color.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>White</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -697,7 +776,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Displacement.
+             * <p>The displacement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder displacement(String displacement) {
                 this.displacement = displacement;
@@ -705,7 +787,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * EngineNum.
+             * <p>The engine number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N7YJ113PA</p>
              */
             public Builder engineNum(String engineNum) {
                 this.engineNum = engineNum;
@@ -713,7 +798,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The engine model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CA6GV30TD</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -721,7 +809,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * FrontWheelDistance.
+             * <p>The front wheel track.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1630</p>
              */
             public Builder frontWheelDistance(String frontWheelDistance) {
                 this.frontWheelDistance = frontWheelDistance;
@@ -729,7 +820,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * FuelType.
+             * <p>The fuel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Electric</p>
              */
             public Builder fuelType(String fuelType) {
                 this.fuelType = fuelType;
@@ -737,7 +831,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * InspectionDate.
+             * <p>The inspection validity expiration date. Format: YYYY-MM-DD HH:mm:ss, for example, 2026-07-31 00:00:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-31 00:00:00</p>
              */
             public Builder inspectionDate(String inspectionDate) {
                 this.inspectionDate = inspectionDate;
@@ -745,7 +842,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ModelNum.
+             * <p>The vehicle model number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HQ7002BEV67</p>
              */
             public Builder modelNum(String modelNum) {
                 this.modelNum = modelNum;
@@ -753,7 +853,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Power.
+             * <p>The power.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder power(String power) {
                 this.power = power;
@@ -761,7 +864,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * RegistrationDate.
+             * <p>The initial registration date. Format: YYYY-MM-DD HH:mm:ss, for example, 2015-08-24 00:00:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-08-24 00:00:00</p>
              */
             public Builder registrationDate(String registrationDate) {
                 this.registrationDate = registrationDate;
@@ -769,7 +875,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseDate.
+             * <p>The manufacturing date. Format: YYYY-MM-DD HH:mm:ss, for example, 2022-08-13 00:00:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-13 00:00:00</p>
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;
@@ -777,7 +886,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * RetirementDate.
+             * <p>The mandatory retirement date. Format: YYYY-MM-DD HH:mm:ss, for example, 2099-12-31 00:00:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2099-12-31 00:00:00</p>
              */
             public Builder retirementDate(String retirementDate) {
                 this.retirementDate = retirementDate;
@@ -785,7 +897,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMass.
+             * <p>The total mass.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2350</p>
              */
             public Builder totalMass(String totalMass) {
                 this.totalMass = totalMass;
@@ -793,7 +908,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The vehicle type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Small sedan</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -801,7 +919,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * UnladenMass.
+             * <p>The curb weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1900</p>
              */
             public Builder unladenMass(String unladenMass) {
                 this.unladenMass = unladenMass;
@@ -809,7 +930,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * UseProperty.
+             * <p>The usage property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder useProperty(String useProperty) {
                 this.useProperty = useProperty;
@@ -817,7 +941,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * VehicleState.
+             * <p>The motor vehicle status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder vehicleState(String vehicleState) {
                 this.vehicleState = vehicleState;
@@ -825,7 +952,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Vin.
+             * <p>The vehicle identification number (VIN).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LDC643T44G3667219</p>
              */
             public Builder vin(String vin) {
                 this.vin = vin;
@@ -833,7 +963,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * WheelBase.
+             * <p>The wheelbase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2750</p>
              */
             public Builder wheelBase(String wheelBase) {
                 this.wheelBase = wheelBase;
@@ -853,7 +986,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
      *
      * <p>DescribeMetaSearchPageListResponseBody</p>
      */
-    public static class Response extends TeaModel {
+    public static class ItemsResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
@@ -863,7 +996,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        private Response(Builder builder) {
+        private ItemsResponse(Builder builder) {
             this.code = builder.code;
             this.data = builder.data;
             this.message = builder.message;
@@ -873,7 +1006,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Response create() {
+        public static ItemsResponse create() {
             return builder().build();
         }
 
@@ -906,14 +1039,17 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Response model) {
+            private Builder(ItemsResponse model) {
                 this.code = model.code;
                 this.data = model.data;
                 this.message = model.message;
             } 
 
             /**
-             * Code.
+             * <p>The HTTP return code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -921,7 +1057,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The response data.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -929,15 +1065,18 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
                 return this;
             }
 
-            public Response build() {
-                return new Response(this);
+            public ItemsResponse build() {
+                return new ItemsResponse(this);
             } 
 
         } 
@@ -975,7 +1114,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         private String mobile;
 
         @com.aliyun.core.annotation.NameInMap("Request")
-        private Request request;
+        private ItemsRequest request;
 
         @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
@@ -984,7 +1123,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         private String requestJson;
 
         @com.aliyun.core.annotation.NameInMap("Response")
-        private Response response;
+        private ItemsResponse response;
 
         @com.aliyun.core.annotation.NameInMap("ResponseJson")
         private String responseJson;
@@ -1084,7 +1223,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         /**
          * @return request
          */
-        public Request getRequest() {
+        public ItemsRequest getRequest() {
             return this.request;
         }
 
@@ -1105,7 +1244,7 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
         /**
          * @return response
          */
-        public Response getResponse() {
+        public ItemsResponse getResponse() {
             return this.response;
         }
 
@@ -1146,10 +1285,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             private String identifyNum; 
             private String ispName; 
             private String mobile; 
-            private Request request; 
+            private ItemsRequest request; 
             private String requestId; 
             private String requestJson; 
-            private Response response; 
+            private ItemsResponse response; 
             private String responseJson; 
             private String subCode; 
             private String userName; 
@@ -1178,7 +1317,26 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             } 
 
             /**
-             * Api.
+             * <p>The product API. Valid values:</p>
+             * <ul>
+             * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+             * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+             * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration.</li>
+             * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status.</li>
+             * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition).</li>
+             * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition).</li>
+             * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification.</li>
+             * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition).</li>
+             * <li><strong>MOBILE_DETECT</strong>: phone number detection. </li>
+             * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition).</li>
+             * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition.</li>
+             * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition.</li>
+             * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query.</li>
+             * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ID_CARD_2_META</p>
              */
             public Builder api(String api) {
                 this.api = api;
@@ -1186,7 +1344,26 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The name corresponding to the API. Valid values:</p>
+             * <ul>
+             * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+             * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+             * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile number online duration.</li>
+             * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile number online status.</li>
+             * <li><strong>MOBILE_3_META_SIMPLE</strong>: Mobile number three-element verification (simple edition).</li>
+             * <li><strong>MOBILE_3_META</strong>: Mobile number three-element verification (detailed edition).</li>
+             * <li><strong>MOBILE_2_META</strong>: Mobile number two-element verification.</li>
+             * <li><strong>BANK_CARD_N_META</strong>: Bank card verification (detailed edition).</li>
+             * <li><strong>MOBILE_DETECT</strong>: Number detection. </li>
+             * <li><strong>VEHICLE_N_META</strong>: Vehicle element verification (enhanced edition).</li>
+             * <li><strong>VEHICLE_PENTA_INFO</strong>: Vehicle five-element information recognition.</li>
+             * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle information recognition.</li>
+             * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle insurance date query.</li>
+             * <li><strong>VEHICLE_CHECK</strong>: Vehicle element verification.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ID card two-element verification</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -1194,7 +1371,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * BankCard.
+             * <p>The bank card ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6214837145546986</p>
              */
             public Builder bankCard(String bankCard) {
                 this.bankCard = bankCard;
@@ -1202,7 +1382,15 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * BizCode.
+             * <p>The authentication status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Authentication passed.</li>
+             * <li><strong>2</strong>: Authentication failed.</li>
+             * <li><strong>3</strong>: No record found.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -1210,7 +1398,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * <p>The authentication date. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-17 10:00:11.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-17 10:00:11</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -1218,7 +1409,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifyNum.
+             * <p>The ID card number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4****************X</p>
              */
             public Builder identifyNum(String identifyNum) {
                 this.identifyNum = identifyNum;
@@ -1226,7 +1420,15 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>The telecommunications service provider name. Valid values:</p>
+             * <ul>
+             * <li><strong>CMCC</strong>: China Mobile.</li>
+             * <li><strong>CUCC</strong>: China Unicom.</li>
+             * <li><strong>CTCC</strong>: China Telecom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUCC</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -1234,7 +1436,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500000xxxx</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -1242,15 +1447,18 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Request.
+             * <p>The request parameters.</p>
              */
-            public Builder request(Request request) {
+            public Builder request(ItemsRequest request) {
                 this.request = request;
                 return this;
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B0102BEF-4411-57C3-860D-CFE7DE0A64C0</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -1258,7 +1466,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * RequestJson.
+             * <p>The HTTP request parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;productCode\&quot;:\&quot;cloudauth_infoverify_public_cn\&quot;,\&quot;identifyNum\&quot;:\&quot;4****************X\&quot;,\&quot;userName\&quot;:\&quot;**豪\&quot;,\&quot;userId\&quot;:\&quot;12600512516xxxxx\&quot;}</p>
              */
             public Builder requestJson(String requestJson) {
                 this.requestJson = requestJson;
@@ -1266,15 +1477,18 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Response.
+             * <p>The response content.</p>
              */
-            public Builder response(Response response) {
+            public Builder response(ItemsResponse response) {
                 this.response = response;
                 return this;
             }
 
             /**
-             * ResponseJson.
+             * <p>The response content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;code\&quot;:\&quot;200\&quot;,\&quot;data\&quot;:{\&quot;bizCode\&quot;:\&quot;1\&quot;,\&quot;ispName\&quot;:\&quot;CMCC\&quot;,\&quot;subCode\&quot;:\&quot;101\&quot;},\&quot;message\&quot;:\&quot;Call successful\&quot;}</p>
              */
             public Builder responseJson(String responseJson) {
                 this.responseJson = responseJson;
@@ -1282,7 +1496,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>The result code. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>207</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;
@@ -1290,7 +1507,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**豪</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1298,7 +1518,10 @@ public class DescribeMetaSearchPageListResponseBody extends TeaModel {
             }
 
             /**
-             * VehicleNum.
+             * <p>The vehicle number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙J3H91H</p>
              */
             public Builder vehicleNum(String vehicleNum) {
                 this.vehicleNum = vehicleNum;

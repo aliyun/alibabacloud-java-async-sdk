@@ -93,7 +93,7 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code, <strong>200</strong> indicates successful API response.</p>
+         * <p>The return code. <strong>200</strong> indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5A6229C0-E156-48E4-B6EC-0F528B******</p>
@@ -126,7 +126,7 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result</p>
+         * <p>The returned result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -192,10 +192,10 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification result code:</p>
+             * <p>The verification result code. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Verification consistent.</li>
-             * <li><strong>2</strong>: Verification inconsistent.</li>
+             * <li><strong>1</strong>: Consistent.</li>
+             * <li><strong>2</strong>: Inconsistent.</li>
              * <li><strong>3</strong>: No record found.</li>
              * </ul>
              * 
@@ -208,7 +208,7 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detailed vehicle information.</p>
+             * <p>The vehicle details.</p>
              * 
              * <strong>example:</strong>
              * <p>{

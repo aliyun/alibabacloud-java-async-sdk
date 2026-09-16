@@ -73,7 +73,7 @@ public class QueryControlStrategyRequest extends Request {
         } 
 
         /**
-         * <p>Product type, currently only supports ANT_CLOUD_AUTH (financial-grade real person), all others have been phased out.</p>
+         * <p>The product type. Currently, only ANT_CLOUD_AUTH (financial-grade ID Verification) is supported. All other product types have been discontinued.</p>
          * 
          * <strong>example:</strong>
          * <p>ANT_CLOUD_AUTH</p>
@@ -85,7 +85,7 @@ public class QueryControlStrategyRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

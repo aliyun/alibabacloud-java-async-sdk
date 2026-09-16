@@ -89,7 +89,7 @@ public class CreateCloudauthstSceneRequest extends Request {
         } 
 
         /**
-         * <p>Product code.</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateCloudauthstSceneRequest extends Request {
         }
 
         /**
-         * <p>Scene name.</p>
+         * <p>The scenario name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,10 +115,10 @@ public class CreateCloudauthstSceneRequest extends Request {
         }
 
         /**
-         * <p>Whether to deliver the files generated from the authentication to the customer&quot;s OSS:</p>
+         * <p>Specifies whether to deliver files generated during authentication to the customer\&quot;s OSS. Valid values:</p>
          * <ul>
-         * <li><strong>Y</strong>: Enable</li>
-         * <li><strong>N</strong>: Disable</li>
+         * <li><strong>Y</strong>: Enabled.</li>
+         * <li><strong>N</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

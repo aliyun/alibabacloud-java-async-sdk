@@ -119,7 +119,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The paginated list data.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -135,7 +138,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C379C9E4-4DA0-5D0B-821B-25E2B8693D48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -392,7 +407,26 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The name corresponding to the API. Valid values:</p>
+             * <ul>
+             * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification</li>
+             * <li><strong>ID_PERIOD</strong>: ID card validity period verification</li>
+             * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration</li>
+             * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status</li>
+             * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition)</li>
+             * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition)</li>
+             * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification</li>
+             * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition)</li>
+             * <li><strong>MOBILE_DETECT</strong>: phone number detection</li>
+             * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition)</li>
+             * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
+             * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
+             * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
+             * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>车辆要素核验增强版</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -400,7 +434,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * BillCount.
+             * <p>The number of successful queries (billable).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder billCount(Long billCount) {
                 this.billCount = billCount;
@@ -408,7 +445,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * BillRate.
+             * <p>The query hit rate (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder billRate(String billRate) {
                 this.billRate = billRate;
@@ -416,7 +456,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeCount.
+             * <p>The number of successful phone number queries (exclusive to phone number detection).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chargeCount(Long chargeCount) {
                 this.chargeCount = chargeCount;
@@ -424,7 +467,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * <p>The date. Format: M/d (month/day). For example, 11/8 indicates November 8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11/8</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -432,7 +478,15 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>The carrier name. Valid values:</p>
+             * <ul>
+             * <li><strong>CMCC</strong>: China Mobile</li>
+             * <li><strong>CUCC</strong>: China Unicom</li>
+             * <li><strong>CTCC</strong>: China Telecom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CMCC</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -440,7 +494,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * NoRecordCount.
+             * <p>The number of calls with no education information found.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder noRecordCount(Long noRecordCount) {
                 this.noRecordCount = noRecordCount;
@@ -448,7 +505,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * PassedCount.
+             * <p>The number of authentication-passed transactions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder passedCount(Long passedCount) {
                 this.passedCount = passedCount;
@@ -456,7 +516,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * PassedRate.
+             * <p>The authentication pass rate (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder passedRate(String passedRate) {
                 this.passedRate = passedRate;
@@ -464,7 +527,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successful requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -472,7 +538,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRate.
+             * <p>The call success rate (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder successRate(String successRate) {
                 this.successRate = successRate;
@@ -480,7 +549,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -488,7 +560,10 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * UnpassedCount.
+             * <p>The number of authentication-failed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unpassedCount(Long unpassedCount) {
                 this.unpassedCount = unpassedCount;

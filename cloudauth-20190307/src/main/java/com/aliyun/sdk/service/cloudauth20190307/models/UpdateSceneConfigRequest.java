@@ -90,11 +90,11 @@ public class UpdateSceneConfigRequest extends Request {
         } 
 
         /**
-         * <p>Scene configuration information, in JSON format. For the specific structure definition, please refer to more information about the configuration.</p>
+         * <p>The scenario configuration in JSON format. For the specific structure definition, refer to the additional information about configurations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;faceCompareMode&quot;:&quot;AUTHORITY&quot;,&quot;certConfigs&quot;:[{&quot;index&quot;:0,&quot;model&quot;:&quot;ENROLL&quot;}],&quot;screenEvidence&quot;:false}</p>
+         * <p>{\&quot;faceCompareMode\&quot;:\&quot;AUTHORITY\&quot;,\&quot;certConfigs\&quot;:[{\&quot;index\&quot;:0,\&quot;model\&quot;:\&quot;ENROLL\&quot;}],\&quot;screenEvidence\&quot;:false}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("config", config);
@@ -103,7 +103,7 @@ public class UpdateSceneConfigRequest extends Request {
         }
 
         /**
-         * <p>Willingness configuration ID.</p>
+         * <p>The ID of the intent configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class UpdateSceneConfigRequest extends Request {
         }
 
         /**
-         * <p>Selected authentication scene.</p>
+         * <p>The selected verification scenario.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

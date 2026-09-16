@@ -67,7 +67,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D9821F95-CC18-5439-BB1C-21A0FF0C2003</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
         }
 
         /**
-         * <p>Query result.</p>
+         * <p>The query result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -157,7 +157,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
             } 
 
             /**
-             * <p>Total number of devices in the province.</p>
+             * <p>The total number of devices in the province.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -168,10 +168,10 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
             }
 
             /**
-             * <p>Province name.</p>
+             * <p>The province name.</p>
              * 
              * <strong>example:</strong>
-             * <p>浙江</p>
+             * <p>Zhejiang</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -179,7 +179,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
             }
 
             /**
-             * <p>Percentage of the total for this province.</p>
+             * <p>The percentage of the province relative to the total.</p>
              * 
              * <strong>example:</strong>
              * <p>35.71</p>
@@ -249,7 +249,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
             } 
 
             /**
-             * <p>Total number of devices.</p>
+             * <p>The total number of devices.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -260,7 +260,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
             }
 
             /**
-             * <p>Data items.</p>
+             * <p>The data items.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

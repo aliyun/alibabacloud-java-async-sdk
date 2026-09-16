@@ -246,6 +246,23 @@ public class DescribeMetaSearchPageListRequest extends Request {
         } 
 
         /**
+         * <p>The product API. Valid values:</p>
+         * <ul>
+         * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+         * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration.</li>
+         * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status.</li>
+         * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition).</li>
+         * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition).</li>
+         * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification.</li>
+         * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition).</li>
+         * <li><strong>MOBILE_DETECT</strong>: phone number detection. </li>
+         * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition).</li>
+         * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition.</li>
+         * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition.</li>
+         * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query.</li>
+         * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +275,10 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * BankCard.
+         * <p>The bank card number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>610*************1181</p>
          */
         public Builder bankCard(String bankCard) {
             this.putQueryParameter("BankCard", bankCard);
@@ -267,7 +287,15 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * BizCode.
+         * <p>The authentication status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Authentication passed.</li>
+         * <li><strong>2</strong>: Authentication failed.</li>
+         * <li><strong>3</strong>: No record found.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -276,6 +304,7 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,6 +317,7 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +330,10 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * IdentifyNum.
+         * <p>The ID card number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>522132197411184XXX</p>
          */
         public Builder identifyNum(String identifyNum) {
             this.putQueryParameter("IdentifyNum", identifyNum);
@@ -309,7 +342,15 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * IspName.
+         * <p>The telecommunications service provider name. Valid values:</p>
+         * <ul>
+         * <li><strong>CMCC</strong>: China Mobile.</li>
+         * <li><strong>CUCC</strong>: China Unicom.</li>
+         * <li><strong>CTCC</strong>: China Telecom.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CTCC</p>
          */
         public Builder ispName(String ispName) {
             this.putQueryParameter("IspName", ispName);
@@ -318,7 +359,10 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>The mobile number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19127612221</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -327,6 +371,7 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -339,7 +384,10 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * ReqId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B012DB99-6C10-5740-81E0-B3A8C1C1B9C1</p>
          */
         public Builder reqId(String reqId) {
             this.putQueryParameter("ReqId", reqId);
@@ -348,6 +396,7 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -360,7 +409,10 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * SubCode.
+         * <p>The result code. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>205</p>
          */
         public Builder subCode(String subCode) {
             this.putQueryParameter("SubCode", subCode);
@@ -369,7 +421,10 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Smith</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -378,7 +433,10 @@ public class DescribeMetaSearchPageListRequest extends Request {
         }
 
         /**
-         * VehicleNum.
+         * <p>The license plate number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>陕A9****</p>
          */
         public Builder vehicleNum(String vehicleNum) {
             this.putQueryParameter("VehicleNum", vehicleNum);

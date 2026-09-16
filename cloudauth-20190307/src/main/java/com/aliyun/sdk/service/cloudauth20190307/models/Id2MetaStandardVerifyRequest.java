@@ -110,11 +110,10 @@ public class Id2MetaStandardVerifyRequest extends Request {
         }
 
         /**
-         * <p>ID number:</p>
+         * <p>The ID card number.</p>
          * <ul>
-         * <li>When <code>paramType</code> is normal: enter the plain text of the ID number.</li>
-         * <li>When <code>paramType</code> is md5:
-         * The first 6 digits (plain text) + date of birth (encrypted) + last 4 digits (plain text).</li>
+         * <li>If ParamType is set to normal, enter the ID card number in plaintext.</li>
+         * <li>If ParamType is set to md5, the format is: first 6 digits of the ID card number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID card number (plaintext).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,10 +126,10 @@ public class Id2MetaStandardVerifyRequest extends Request {
         }
 
         /**
-         * <p>Parameter type:</p>
+         * <p>The parameter type. Valid values:</p>
          * <ul>
-         * <li>normal: unencrypted.</li>
-         * <li>md5: md5 encrypted.</li>
+         * <li>normal: not encrypted.</li>
+         * <li>md5: MD5-encrypted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,10 +142,10 @@ public class Id2MetaStandardVerifyRequest extends Request {
         }
 
         /**
-         * <p>Name:</p>
+         * <p>The name.</p>
          * <ul>
-         * <li>When <code>paramType</code> is normal: enter the plain text of the name.</li>
-         * <li>When <code>paramType</code> is md5: the first character of the name (encrypted) + the rest of the name (plain text).</li>
+         * <li>If ParamType is set to normal, enter the name in plaintext.</li>
+         * <li>If ParamType is set to md5, the format is: first character of the name (ciphertext) + remaining characters of the name (plaintext).</li>
          * </ul>
          * 
          * <strong>example:</strong>

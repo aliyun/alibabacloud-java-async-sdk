@@ -87,7 +87,7 @@ public class ModifyControlStrategyRequest extends Request {
         } 
 
         /**
-         * <p>List of security alarm rules.</p>
+         * <p>The list of security alert rules.</p>
          */
         public Builder controlStrategyList(java.util.List<ControlStrategyList> controlStrategyList) {
             String controlStrategyListShrink = shrink(controlStrategyList, "ControlStrategyList", "json");
@@ -97,7 +97,7 @@ public class ModifyControlStrategyRequest extends Request {
         }
 
         /**
-         * <p>Product type, currently only supports <strong>ANT_CLOUD_AUTH</strong> (Financial-grade Real Person), all others are phased out.</p>
+         * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types have been discontinued.</p>
          * 
          * <strong>example:</strong>
          * <p>ANT_CLOUD_AUTH</p>
@@ -109,7 +109,7 @@ public class ModifyControlStrategyRequest extends Request {
         }
 
         /**
-         * <p>Region ID of the intelligent access gateway instance.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -219,7 +219,7 @@ public class ModifyControlStrategyRequest extends Request {
             } 
 
             /**
-             * <p>API name, same as <strong>ProductCode</strong>.</p>
+             * <p>The API name, which is the same as <strong>ProductCode</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>ID_PRO</p>
@@ -230,15 +230,15 @@ public class ModifyControlStrategyRequest extends Request {
             }
 
             /**
-             * <p>Rule configuration type:</p>
+             * <p>The rule configuration type. Valid values:</p>
              * <ul>
              * <li><strong>QPS</strong>: QPS greater than</li>
-             * <li><strong>SUCCESS_RATE_5_MIN</strong>: Success rate in the last 5 minutes less than</li>
-             * <li><strong>RESP_TIME_5_MIN</strong>: Average response time in the last 5 minutes greater than</li>
-             * <li><strong>AMOUNT_RISE</strong>: Call volume growth ratio greater than</li>
-             * <li><strong>AMOUNT_FALL</strong>: Call volume decline ratio less than</li>
-             * <li><strong>PASSED_RATE_1_HOUR</strong>: Verification consistency rate in the last hour less than</li>
-             * <li><strong>PARAM_ERROR_RATE_1_HOUR</strong>: Parameter error rate in the last hour greater than</li>
+             * <li><strong>SUCCESS_RATE_5_MIN</strong>: success rate in the last 5 minutes less than</li>
+             * <li><strong>RESP_TIME_5_MIN</strong>: average response time in the last 5 minutes greater than</li>
+             * <li><strong>AMOUNT_RISE</strong>: call volume increase compared to the previous period greater than</li>
+             * <li><strong>AMOUNT_FALL</strong>: call volume decrease compared to the previous period less than</li>
+             * <li><strong>PASSED_RATE_1_HOUR</strong>: verification consistency rate in the last hour less than</li>
+             * <li><strong>PARAM_ERROR_RATE_1_HOUR</strong>: parameter error rate in the last hour greater than.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class ModifyControlStrategyRequest extends Request {
             }
 
             /**
-             * <p>Rule ID.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>38</p>
@@ -261,10 +261,10 @@ public class ModifyControlStrategyRequest extends Request {
             }
 
             /**
-             * <p>Status:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>disabled</strong>: Disabled</li>
-             * <li><strong>normal</strong>: Enabled</li>
+             * <li><strong>disabled</strong>: Disabled.</li>
+             * <li><strong>normal</strong>: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class ModifyControlStrategyRequest extends Request {
             }
 
             /**
-             * <p>Alarm threshold for the rule.</p>
+             * <p>The alert threshold of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9</p>

@@ -93,7 +93,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 for success, others for failure.</p>
+         * <p>The response code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
@@ -126,7 +126,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result</p>
+         * <p>The result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -192,10 +192,10 @@ public class CredentialVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the call was successful. Valid values:</p>
+             * <p>Indicates whether the Qwen interpretation is successful. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The call was successful.</li>
-             * <li><strong>false</strong>: The call failed.</li>
+             * <li>true: Successful.</li>
+             * <li>false: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -207,16 +207,10 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image understanding result:</p>
-             * <ul>
-             * <li><p>When PromptModel is DEFAULT, the output format refers to the example on the right.</p>
-             * </li>
-             * <li><p>When PromptModel is CUSTOM, the output format follows the agreed format of the Prompt.</p>
-             * </li>
-             * </ul>
+             * <p>The Qwen interpretation content.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;这张图有没有明显的PS特征&quot;:0,&quot;图片是否为正常经营照片&quot;:1,&quot;图片中有没有58、美团、大众点评字样&quot;:0,&quot;这张图有没有网站信息&quot;:0,&quot;图片经营的场景是否为酒店&quot;:0}</p>
+             * <p>{\&quot;这张图有没有明显的PS特征\&quot;:0,\&quot;图片是否为正常经营照片\&quot;:1,\&quot;图片中有没有58、美团、大众点评字样\&quot;:0,\&quot;这张图有没有网站信息\&quot;:0,\&quot;图片经营的场景是否为酒店\&quot;:0}</p>
              */
             public Builder vlContent(String vlContent) {
                 this.vlContent = vlContent;
@@ -361,7 +355,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Additional information in JSON format.</p>
+             * <p>The additional information in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{</p>
@@ -379,7 +373,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OCR recognition result.</p>
+             * <p>The OCR recognition result.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -400,11 +394,11 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk result</p>
+             * <p>The risk result. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Low risk</li>
-             * <li><strong>1</strong>: High risk</li>
-             * <li><strong>2</strong>: Suspicious</li>
+             * <li><strong>0</strong>: Low risk.</li>
+             * <li><strong>1</strong>: High risk.</li>
+             * <li><strong>2</strong>: Suspicious.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -416,7 +410,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk score map.</p>
+             * <p>The risk score map.</p>
              */
             public Builder riskScore(java.util.Map<String, String> riskScore) {
                 this.riskScore = riskScore;
@@ -424,14 +418,16 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk tags, separated by commas (,), including:</p>
+             * <p>The risk tags, separated by commas (,). Valid values:</p>
              * <ul>
-             * <li><strong>PS</strong>: Image manipulation.</li>
-             * <li><strong>SCREEN_PHOTO</strong>: Screen recapture.</li>
-             * <li><strong>SCREENSHOT</strong>: Screenshot.</li>
-             * <li><strong>WATERMARK</strong>: Watermark.</li>
-             * <li><strong>SAME_BACKGROUND</strong>: Similar background.</li>
-             * <li><strong>ORIGINAL_PHOTO</strong>: Not the original image</li>
+             * <li>PS: image manipulation.</li>
+             * <li>SCREEN_PHOTO: screen recapture.</li>
+             * <li>SCREENSHOT: screenshot.</li>
+             * <li>WATERMARK: watermark.</li>
+             * <li>COLOR_PRINT: color print copy.</li>
+             * <li>WEB_IMAGE: web image.</li>
+             * <li>SAME_FACE: similar face.</li>
+             * <li>SAME_BACKGROUND: similar background.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -443,7 +439,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Authority verification details.</p>
+             * <p>The authoritative verification details.</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -454,7 +450,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification result.</p>
+             * <p>The authoritative verification result.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -467,7 +463,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Qwen interpretation.</p>
+             * <p>The Qwen interpretation.</p>
              */
             public Builder vlResult(VlResult vlResult) {
                 this.vlResult = vlResult;

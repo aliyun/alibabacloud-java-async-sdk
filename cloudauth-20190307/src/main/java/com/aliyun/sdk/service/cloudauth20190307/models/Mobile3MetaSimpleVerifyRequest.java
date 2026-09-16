@@ -124,13 +124,13 @@ public class Mobile3MetaSimpleVerifyRequest extends Request {
         }
 
         /**
-         * <p>ID number:</p>
+         * <p>ID card number:</p>
          * <p>Note
-         * Only supports the ID numbers of second-generation resident IDs and Hong Kong, Macao, and Taiwan residence permits.</p>
+         * Only the ID numbers of the second-generation resident ID card and Hong Kong, Macao, and Taiwan residence permits are supported.</p>
          * <ul>
-         * <li><p>When paramType is normal: enter the plaintext ID number.</p>
+         * <li><p>When paramType is set to normal: pass in the ID card number in plaintext.</p>
          * </li>
-         * <li><p>When paramType is md5: enter the encrypted ID number.</p>
+         * <li><p>When paramType is set to md5: pass in the encrypted ID card number.</p>
          * </li>
          * </ul>
          * 
@@ -146,11 +146,11 @@ public class Mobile3MetaSimpleVerifyRequest extends Request {
         }
 
         /**
-         * <p>Mobile phone number:</p>
+         * <p>Mobile number:</p>
          * <ul>
-         * <li><p>When paramType is normal: enter the plaintext mobile phone number.</p>
+         * <li><p>When paramType is set to normal: pass in the mobile number in plaintext.</p>
          * </li>
-         * <li><p>When paramType is md5: enter the encrypted mobile phone number.</p>
+         * <li><p>When paramType is set to md5: pass in the encrypted mobile number.</p>
          * </li>
          * </ul>
          * 
@@ -168,7 +168,7 @@ public class Mobile3MetaSimpleVerifyRequest extends Request {
         /**
          * <p>Encryption method:</p>
          * <ul>
-         * <li><p>normal: plaintext, not encrypted</p>
+         * <li><p>normal: plaintext, no encryption</p>
          * </li>
          * <li><p>md5: MD5 encryption</p>
          * </li>
@@ -186,9 +186,9 @@ public class Mobile3MetaSimpleVerifyRequest extends Request {
         /**
          * <p>Name:</p>
          * <ul>
-         * <li><p>When paramType is normal: enter the plaintext name.</p>
+         * <li><p>When paramType is set to normal: pass in the name in plaintext.</p>
          * </li>
-         * <li><p>When paramType is md5: enter the encrypted name.</p>
+         * <li><p>When paramType is set to md5: pass in the encrypted name.</p>
          * </li>
          * </ul>
          * 

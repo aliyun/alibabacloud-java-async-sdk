@@ -93,7 +93,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 for success, others for failure.</p>
+         * <p>The response code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>
@@ -126,7 +126,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Processing result.</p>
+         * <p>The processing result.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -244,7 +244,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>API name, same as the <strong>ProductCode</strong> of the authentication interface.</p>
+             * <p>The API name, which is the same as the ProductCode of the verification operation.</p>
              * 
              * <strong>example:</strong>
              * <p>ID_PRO</p>
@@ -255,15 +255,15 @@ public class QueryControlStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule configuration type:</p>
+             * <p>The rule configuration type. Valid values:</p>
              * <ul>
              * <li><strong>QPS</strong>: QPS greater than</li>
-             * <li><strong>SUCCESS_RATE_5_MIN</strong>: Success rate in the last 5 minutes less than</li>
-             * <li><strong>RESP_TIME_5_MIN</strong>: Average response time in the last 5 minutes greater than</li>
-             * <li><strong>AMOUNT_RISE</strong>: Call volume growth ratio greater than</li>
-             * <li><strong>AMOUNT_FALL</strong>: Call volume decline ratio less than</li>
-             * <li><strong>PASSED_RATE_1_HOUR</strong>: Verification consistency rate in the last hour less than</li>
-             * <li><strong>PARAM_ERROR_RATE_1_HOUR</strong>: Parameter error rate in the last hour greater than</li>
+             * <li><strong>SUCCESS_RATE_5_MIN</strong>: success rate in the last 5 minutes less than</li>
+             * <li><strong>RESP_TIME_5_MIN</strong>: average response time in the last 5 minutes greater than</li>
+             * <li><strong>AMOUNT_RISE</strong>: call volume increase compared to the previous period greater than</li>
+             * <li><strong>AMOUNT_FALL</strong>: call volume decrease compared to the previous period less than</li>
+             * <li><strong>PASSED_RATE_1_HOUR</strong>: verification consistency rate in the last hour less than</li>
+             * <li><strong>PARAM_ERROR_RATE_1_HOUR</strong>: parameter error rate in the last hour greater than.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule ID.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>234822</p>
@@ -286,10 +286,10 @@ public class QueryControlStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>disabled</strong>: Disabled</li>
-             * <li><strong>normal</strong>: Enabled</li>
+             * <li><strong>disabled</strong>: Disabled.</li>
+             * <li><strong>normal</strong>: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Alarm threshold for rule configuration.</p>
+             * <p>The alert threshold for configure alerting of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9</p>
@@ -312,7 +312,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>126005125163xxxx</p>

@@ -93,7 +93,10 @@ public class InitAuthVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class InitAuthVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class InitAuthVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class InitAuthVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -170,7 +179,11 @@ public class InitAuthVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * CertifyId.
+             * <p>The verification request ID, which is the unique identifier of the verification service authentication request.
+             * You must pass in the verification request ID when querying the authentication result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shif9d1a185b8dde7cd07bf0943a448b</p>
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;

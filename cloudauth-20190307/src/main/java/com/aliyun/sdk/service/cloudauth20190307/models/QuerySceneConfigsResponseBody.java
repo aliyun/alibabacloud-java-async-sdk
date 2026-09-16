@@ -67,7 +67,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -78,7 +78,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Willingness configuration list.</p>
+         * <p>The list of intent verification configurations.</p>
          */
         public Builder sceneConfigs(java.util.List<SceneConfigs> sceneConfigs) {
             this.sceneConfigs = sceneConfigs;
@@ -209,10 +209,10 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specific configuration content, in JSON string format.</p>
+             * <p>The specific configuration content, in JSON string format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;faceCompareMode&quot;:&quot;CUSTOM&quot;,&quot;certConfigs&quot;:[{&quot;index&quot;:0,&quot;openVoiceCompare&quot;:false,&quot;openCustomizedContent&quot;:true,&quot;model&quot;:&quot;QA&quot;}],&quot;screenEvidence&quot;:true}</p>
+             * <p>{\&quot;faceCompareMode\&quot;:\&quot;CUSTOM\&quot;,\&quot;certConfigs\&quot;:[{\&quot;index\&quot;:0,\&quot;openVoiceCompare\&quot;:false,\&quot;openCustomizedContent\&quot;:true,\&quot;model\&quot;:\&quot;QA\&quot;}],\&quot;screenEvidence\&quot;:true}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -220,7 +220,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1760782820000</p>
@@ -231,7 +231,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1760782820000</p>
@@ -242,7 +242,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration ID.</p>
+             * <p>The configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>607</p>
@@ -253,7 +253,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scene ID.</p>
+             * <p>The scenario ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000009045</p>
@@ -264,7 +264,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration type.</p>
+             * <p>The configuration type.</p>
              * 
              * <strong>example:</strong>
              * <p>VOLUNTARY</p>
@@ -275,7 +275,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scene configuration version number.</p>
+             * <p>The version number of the scenario configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

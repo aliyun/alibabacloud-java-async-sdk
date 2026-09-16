@@ -67,7 +67,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B3193814-AE54-50C5-9070-68B69C07287D</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Authentication result.</p>
+         * <p>The verification result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -170,7 +170,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Daily call count.</p>
+             * <p>The number of daily transactions.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -181,7 +181,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Date.</p>
+             * <p>The date. Format: YYYY-MM-DD, such as 2025-10-10.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-10</p>
@@ -192,7 +192,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Abnormal device risk ratio.</p>
+             * <p>The abnormal device risk ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -203,7 +203,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Abnormal identity risk ratio.</p>
+             * <p>The abnormal identity risk ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -338,7 +338,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Suspected fake face percentage: total number of suspected fake faces / total number of risks.</p>
+             * <p>The suspected fake face percentage: total number of suspected fake faces / total number of risks.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -349,7 +349,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of suspected fake identities.</p>
+             * <p>The total number of suspected fake identities.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -360,7 +360,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data items in the response.</p>
+             * <p>The data items of the returned result.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -368,7 +368,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of risks.</p>
+             * <p>The number of risks.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -379,7 +379,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Root percentage: total number of root / total number of risks.</p>
+             * <p>The root percentage: total number of rooted devices / total number of risks.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -390,7 +390,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Simulator percentage: total number of simulators / total number of risks.</p>
+             * <p>The emulator percentage: total number of emulators / total number of risks.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -401,7 +401,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Virtual video percentage: total number of virtual videos / total number of risks.</p>
+             * <p>The virtual video percentage: total number of virtual videos / total number of risks.</p>
              * 
              * <strong>example:</strong>
              * <p>23.2</p>

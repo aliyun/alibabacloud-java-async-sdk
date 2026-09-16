@@ -106,7 +106,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Pagination parameter: current page number, default value is 1.</p>
+         * <p>The current page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of certification details.</p>
+         * <p>The list of certification details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of items per page for pagination.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0B8ACFD2-C5F0-5F9F-8DD4-E44F93E360E8</p>
@@ -147,7 +147,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -333,7 +333,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Certificate number.</p>
+             * <p>The certificate number.</p>
              * 
              * <strong>example:</strong>
              * <p>320321XXXXXXXX701X</p>
@@ -344,7 +344,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate ID.</p>
+             * <p>The certificate ID.</p>
              * 
              * <strong>example:</strong>
              * <p>shad861465f2aaeeb805b519e1a93ab2</p>
@@ -355,7 +355,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16 17:28:03</p>
@@ -366,7 +366,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16 17:28:03</p>
@@ -377,7 +377,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whitelist ID.</p>
+             * <p>The whitelist ID.</p>
              * 
              * <strong>example:</strong>
              * <p>6372003</p>
@@ -388,10 +388,10 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Remark.</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试白名单</p>
+             * <p>Test whitelist</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -399,7 +399,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scene ID.</p>
+             * <p>The scene ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000332</p>
@@ -410,7 +410,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whitelist status:</p>
+             * <p>The whitelist status. Valid values:</p>
              * <ul>
              * <li><strong>VALID</strong>: Valid.</li>
              * <li><strong>INVALID</strong>: Invalid.</li>
@@ -426,7 +426,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Effective end date.</p>
+             * <p>The effective end date. Format: YYYY-MM-DD HH:mm:ss. Example: 2025-10-16 17:28:03.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16 17:28:03</p>
@@ -437,7 +437,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Effective start time.</p>
+             * <p>The effective period.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16 17:28:03</p>
@@ -448,7 +448,10 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistType.
+             * <p>The whitelist type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUPER</p>
              */
             public Builder whitelistType(String whitelistType) {
                 this.whitelistType = whitelistType;

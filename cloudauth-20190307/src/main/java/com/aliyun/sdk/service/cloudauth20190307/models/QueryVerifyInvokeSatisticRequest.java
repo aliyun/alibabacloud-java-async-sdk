@@ -157,7 +157,7 @@ public class QueryVerifyInvokeSatisticRequest extends Request {
         } 
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class QueryVerifyInvokeSatisticRequest extends Request {
         }
 
         /**
-         * <p>End date of the query.</p>
+         * <p>The query end time. Format: UNIX timestamp. Unit: milliseconds. Example: 1761926399999.</p>
          * 
          * <strong>example:</strong>
          * <p>1761926399999</p>
@@ -181,7 +181,7 @@ public class QueryVerifyInvokeSatisticRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -193,7 +193,7 @@ public class QueryVerifyInvokeSatisticRequest extends Request {
         }
 
         /**
-         * <p>List of product codes to query. Please refer to the productCode under the corresponding ProductType.</p>
+         * <p>The list of product codes to query. For specific values, refer to the productCode under the corresponding ProductType.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -205,11 +205,11 @@ public class QueryVerifyInvokeSatisticRequest extends Request {
         }
 
         /**
-         * <p>Product type:</p>
+         * <p>The product type. Valid values:</p>
          * <ul>
-         * <li><strong>FINANCE_VERIFY</strong>: Financial-grade real-person verification</li>
-         * <li><strong>SMART_VERIFY</strong>: Enhanced real-person verification (discontinued)</li>
-         * <li><strong>FACE_VERIFY</strong>: Real-person verification (discontinued)</li>
+         * <li><strong>FINANCE_VERIFY</strong>: Finance-grade ID Verification.</li>
+         * <li><strong>SMART_VERIFY</strong>: Enhanced ID Verification (discontinued).</li>
+         * <li><strong>FACE_VERIFY</strong>: ID Verification (discontinued).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class QueryVerifyInvokeSatisticRequest extends Request {
         }
 
         /**
-         * <p>List of application scenarios.</p>
+         * <p>The list of common scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -234,7 +234,7 @@ public class QueryVerifyInvokeSatisticRequest extends Request {
         }
 
         /**
-         * <p>Start date of the query.</p>
+         * <p>The query start time. Format: UNIX timestamp. Unit: milliseconds. Example: 1743436800000.</p>
          * 
          * <strong>example:</strong>
          * <p>1743436800000</p>
@@ -246,10 +246,10 @@ public class QueryVerifyInvokeSatisticRequest extends Request {
         }
 
         /**
-         * <p>Statistics dimension:</p>
+         * <p>The statistics dimension. Valid values:</p>
          * <ul>
-         * <li><strong>day</strong>: daily</li>
-         * <li><strong>month</strong>: monthly</li>
+         * <li><strong>day</strong>: daily.</li>
+         * <li><strong>month</strong>: monthly.</li>
          * </ul>
          * 
          * <strong>example:</strong>

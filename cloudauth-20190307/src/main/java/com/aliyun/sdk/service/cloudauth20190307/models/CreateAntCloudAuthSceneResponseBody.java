@@ -67,7 +67,7 @@ public class CreateAntCloudAuthSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01D3BDC6-64C0-58E2-8760-3F1B56AAE299</p>
@@ -78,7 +78,7 @@ public class CreateAntCloudAuthSceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000015112</p>

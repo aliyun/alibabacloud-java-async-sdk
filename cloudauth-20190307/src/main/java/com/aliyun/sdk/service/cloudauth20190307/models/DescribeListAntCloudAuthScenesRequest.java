@@ -59,7 +59,7 @@ public class DescribeListAntCloudAuthScenesRequest extends Request {
         } 
 
         /**
-         * <p>Scenario ID.</p>
+         * <p>The scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100000xxxx</p>

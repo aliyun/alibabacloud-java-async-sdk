@@ -173,7 +173,7 @@ public class CreateWhitelistSettingRequest extends Request {
         } 
 
         /**
-         * <p>ID number to be whitelisted.</p>
+         * <p>The ID card number to add to the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>44018219950810XXXX</p>
@@ -185,7 +185,7 @@ public class CreateWhitelistSettingRequest extends Request {
         }
 
         /**
-         * <p>Certificate ID, used for whitelisting this specific authenticated user.</p>
+         * <p>The certificate ID. The user associated with this authentication is added to the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>sha6d0405f42926084e396e76a037d00</p>
@@ -197,7 +197,7 @@ public class CreateWhitelistSettingRequest extends Request {
         }
 
         /**
-         * <p>User language.</p>
+         * <p>The user language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -209,10 +209,10 @@ public class CreateWhitelistSettingRequest extends Request {
         }
 
         /**
-         * <p>Whitelist remarks.</p>
+         * <p>The remarks for the whitelist.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试白名单。</p>
+         * <p>Test whitelist</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -221,7 +221,7 @@ public class CreateWhitelistSettingRequest extends Request {
         }
 
         /**
-         * <p>Scene ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000014526</p>
@@ -233,10 +233,10 @@ public class CreateWhitelistSettingRequest extends Request {
         }
 
         /**
-         * <p>Service type:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
-         * <li><strong>antcloudauth</strong>: Financial-grade real-person authentication.</li>
-         * <li><strong>cloudauthst</strong> (discontinued): Enhanced real-person authentication.</li>
+         * <li><strong>antcloudauth</strong>: Financial-grade ID Verification.</li>
+         * <li><strong>cloudauthst</strong> (discontinued): ID Verification Enhanced Edition.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -250,7 +250,7 @@ public class CreateWhitelistSettingRequest extends Request {
         }
 
         /**
-         * <p>Visitor&quot;s source IP address. No need to fill in, the system will automatically obtain it.</p>
+         * <p>The source IP address of the visitor. You do not need to specify this parameter. The system automatically obtains the value.</p>
          * 
          * <strong>example:</strong>
          * <p>27.115.63.58</p>
@@ -262,7 +262,7 @@ public class CreateWhitelistSettingRequest extends Request {
         }
 
         /**
-         * <p>Number of valid days after creating the whitelist.</p>
+         * <p>The number of valid days after the whitelist is created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,10 @@ public class CreateWhitelistSettingRequest extends Request {
         }
 
         /**
-         * WhitelistType.
+         * <p>The whitelist type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUPER</p>
          */
         public Builder whitelistType(String whitelistType) {
             this.putQueryParameter("WhitelistType", whitelistType);

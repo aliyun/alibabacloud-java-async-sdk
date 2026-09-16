@@ -158,7 +158,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -180,7 +180,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of returned data.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -199,7 +199,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -210,7 +210,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The ID of this request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-A***B-A3DC0DE3C83E</p>
@@ -221,7 +221,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -232,7 +232,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -243,7 +243,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -364,7 +364,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Date.</p>
+             * <p>The date. The value is in ISO 8601/RFC 3339 format, UTC time zone (Z indicates +00:00), with millisecond precision, such as 2024-03-24T00:00:00.000Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-24T00:00:00.000Z</p>
@@ -375,7 +375,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Product scheme code, please refer to the financial-grade real-person help documentation.</p>
+             * <p>The product solution code. For more information, refer to the financial-grade ID Verification documentation.</p>
              * 
              * <strong>example:</strong>
              * <p>ID_PLUS</p>
@@ -386,7 +386,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scene ID.</p>
+             * <p>The scene ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20**40</p>
@@ -397,10 +397,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scene name.</p>
+             * <p>The scene name.</p>
              * 
              * <strong>example:</strong>
-             * <p>****实名认证</p>
+             * <p>****Real-name verification</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -408,7 +408,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful calls.</p>
+             * <p>The number of successful calls.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -419,7 +419,7 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>19</p>

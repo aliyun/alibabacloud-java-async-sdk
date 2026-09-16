@@ -119,7 +119,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 for success, others for failure.</p>
+         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,7 +152,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -163,7 +163,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Processing result.</p>
+         * <p>The processing result.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -171,7 +171,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -344,7 +344,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flow control statistical window, unit: <strong>minutes</strong>.</p>
+             * <p>The rate limiting statistical window. Unit: <strong>minutes</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -355,7 +355,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>API name, same as <strong>ProductCode</strong>.</p>
+             * <p>The API name, which is the same as <strong>ProductCode</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>ID_PRO</p>
@@ -366,12 +366,12 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flow type:</p>
+             * <p>The flow type. Valid values:</p>
              * <ul>
-             * <li><strong>ACCUMULATE</strong>: ID card reappears</li>
-             * <li><strong>PASSED_RATE</strong>: Pass rate less than</li>
-             * <li><strong>SUB_CODE_205</strong>: Authentication failed and liveness attack 205 ratio greater than</li>
-             * <li><strong>SUB_CODE_206</strong>: Authentication failed and liveness attack 206 ratio greater than</li>
+             * <li><strong>ACCUMULATE</strong>: repeated occurrence of an ID card number.</li>
+             * <li><strong>PASSED_RATE</strong>: pass rate less than the threshold.</li>
+             * <li><strong>SUB_CODE_205</strong>: authentication failed and the proportion of liveness attack 205 is greater than the threshold.</li>
+             * <li><strong>SUB_CODE_206</strong>: authentication failed and the proportion of liveness attack 206 is greater than the threshold.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -383,7 +383,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule ID.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>234822</p>
@@ -394,7 +394,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operation.</p>
+             * <p>The operation.</p>
              * 
              * <strong>example:</strong>
              * <p>match</p>
@@ -405,10 +405,10 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>disabled</strong>: Disabled</li>
-             * <li><strong>normal</strong>: Enabled</li>
+             * <li><strong>disabled</strong>: Disabled.</li>
+             * <li><strong>normal</strong>: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -420,7 +420,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Threshold.</p>
+             * <p>The threshold.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -431,7 +431,7 @@ public class QueryCustomizeFlowStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>126005125163xxxx</p>

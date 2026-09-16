@@ -106,7 +106,7 @@ public class DeleteBlackListStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DeleteBlackListStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class DeleteBlackListStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -139,7 +139,7 @@ public class DeleteBlackListStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -150,7 +150,7 @@ public class DeleteBlackListStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -93,7 +93,7 @@ public class VehicleQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 for success, others for failure</p>
+         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class VehicleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class VehicleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D6163397-15C5-419C-9ACC-B7C83*******</p>
@@ -126,7 +126,7 @@ public class VehicleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request result</p>
+         * <p>The request result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -192,11 +192,11 @@ public class VehicleQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification result code:</p>
+             * <p>The verification result code. Valid values:</p>
              * <blockquote>
              * <ul>
-             * <li>1: Found (charged)</li>
-             * <li>3: No record found (not charged)</li>
+             * <li>1: match found (billable).</li>
+             * <li>3: no record found (not billable).</li>
              * </ul>
              * </blockquote>
              * 
@@ -209,7 +209,7 @@ public class VehicleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Vehicle information.</p>
+             * <p>The vehicle information.</p>
              * 
              * <strong>example:</strong>
              * <p>{

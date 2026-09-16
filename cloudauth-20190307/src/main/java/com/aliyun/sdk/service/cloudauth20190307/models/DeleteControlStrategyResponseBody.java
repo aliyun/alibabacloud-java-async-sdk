@@ -106,7 +106,7 @@ public class DeleteControlStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code, <strong>200</strong> indicates successful API response.</p>
+         * <p>The response code. <strong>200</strong> indicates a successful API response.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DeleteControlStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class DeleteControlStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -139,7 +139,7 @@ public class DeleteControlStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D6C1237B-D34B-5126-93AC-36A4B9E819C6</p>
@@ -150,7 +150,7 @@ public class DeleteControlStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

@@ -67,7 +67,7 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of statistics information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -75,7 +75,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F860B3F-76B7-5555-A907-2F4433BF8868</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -297,7 +300,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             } 
 
             /**
-             * Api.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MOBILE_ONLINE_LENGTH</p>
              */
             public Builder api(String api) {
                 this.api = api;
@@ -305,7 +311,26 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The name corresponding to the API. Valid values:</p>
+             * <ul>
+             * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification</li>
+             * <li><strong>ID_PERIOD</strong>: ID card validity period verification</li>
+             * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration</li>
+             * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status</li>
+             * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition)</li>
+             * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition)</li>
+             * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification</li>
+             * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition)</li>
+             * <li><strong>MOBILE_DETECT</strong>: number detection</li>
+             * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition)</li>
+             * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
+             * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
+             * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
+             * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ID card two-element verification</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -313,7 +338,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * BillCount.
+             * <p>The number of successful queries (billable).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder billCount(Long billCount) {
                 this.billCount = billCount;
@@ -321,7 +349,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * BillRate.
+             * <p>The query hit rate (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder billRate(String billRate) {
                 this.billRate = billRate;
@@ -329,7 +360,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeCount.
+             * <p>The number of successful mobile number queries (exclusive to number detection).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder chargeCount(Long chargeCount) {
                 this.chargeCount = chargeCount;
@@ -337,7 +371,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * <p>The date. Format: YYYY-MM-DD, such as 2015-08-24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-08-24</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -345,7 +382,15 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>The carrier name. Valid values:</p>
+             * <ul>
+             * <li><strong>CMCC</strong>: China Mobile</li>
+             * <li><strong>CUCC</strong>: China Unicom</li>
+             * <li><strong>CTCC</strong>: China Telecom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUCC</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -353,7 +398,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * NoRecordCount.
+             * <p>The number of calls with no education record information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder noRecordCount(Long noRecordCount) {
                 this.noRecordCount = noRecordCount;
@@ -361,7 +409,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * PassedCount.
+             * <p>The number of authentication-passed transactions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder passedCount(Long passedCount) {
                 this.passedCount = passedCount;
@@ -369,7 +420,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * PassedRate.
+             * <p>The authentication pass rate (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder passedRate(String passedRate) {
                 this.passedRate = passedRate;
@@ -377,7 +431,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successful calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -385,7 +442,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRate.
+             * <p>The call success rate (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder successRate(String successRate) {
                 this.successRate = successRate;
@@ -393,7 +453,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -401,7 +464,10 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
             }
 
             /**
-             * UnpassedCount.
+             * <p>The number of authentication-failed transactions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unpassedCount(Long unpassedCount) {
                 this.unpassedCount = unpassedCount;

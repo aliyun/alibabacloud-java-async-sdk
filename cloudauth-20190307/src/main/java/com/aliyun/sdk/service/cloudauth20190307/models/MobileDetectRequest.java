@@ -96,7 +96,7 @@ public class MobileDetectRequest extends Request {
         }
 
         /**
-         * <p>List of phone numbers.</p>
+         * <p>The list of phone numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>19833232569</p>
@@ -108,10 +108,10 @@ public class MobileDetectRequest extends Request {
         }
 
         /**
-         * <p>Encryption method:</p>
+         * <p>The encryption method. Valid values:</p>
          * <ul>
-         * <li>normal: plaintext, no encryption</li>
-         * <li>md5: MD5 encryption</li>
+         * <li>normal: plaintext without encryption</li>
+         * <li>md5: MD5 encryption.</li>
          * </ul>
          * 
          * <strong>example:</strong>

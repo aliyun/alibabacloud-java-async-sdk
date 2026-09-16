@@ -119,7 +119,7 @@ public class DescribeProductCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Current query page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of product code information.</p>
+         * <p>The list of product code information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of products per page.</p>
+         * <p>The number of products displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -149,7 +149,7 @@ public class DescribeProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7FBBADA3-9A66-5759-8AF8-2F99F5BE13F7</p>
@@ -160,7 +160,7 @@ public class DescribeProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of returned results.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class DescribeProductCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -240,7 +240,7 @@ public class DescribeProductCodeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Product code.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>ID_PRO</p>
@@ -251,7 +251,7 @@ public class DescribeProductCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name corresponding to the product code.</p>
+             * <p>The name corresponding to the product code.</p>
              * 
              * <strong>example:</strong>
              * <p>APP认证</p>

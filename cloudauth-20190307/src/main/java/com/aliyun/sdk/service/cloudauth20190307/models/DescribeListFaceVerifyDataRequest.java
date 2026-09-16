@@ -101,7 +101,7 @@ public class DescribeListFaceVerifyDataRequest extends Request {
         } 
 
         /**
-         * <p>End time of the query.</p>
+         * <p>The query end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1760630399999</p>
@@ -113,7 +113,7 @@ public class DescribeListFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * <p>Start time of the query.</p>
+         * <p>The query start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1760025600000</p>
@@ -125,7 +125,7 @@ public class DescribeListFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * <p>Product Code, currently deprecated.</p>
+         * <p>The product code. This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>Liveness</p>
@@ -137,7 +137,7 @@ public class DescribeListFaceVerifyDataRequest extends Request {
         }
 
         /**
-         * <p>Scene ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000339</p>

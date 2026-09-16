@@ -93,7 +93,7 @@ public class Mobile2MetaVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 for success, others for failure.</p>
+         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class Mobile2MetaVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class Mobile2MetaVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -126,7 +126,7 @@ public class Mobile2MetaVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result object.</p>
+         * <p>The result object.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -192,11 +192,11 @@ public class Mobile2MetaVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification result:</p>
+             * <p>The verification result. Valid values:</p>
              * <ul>
-             * <li>1: Consistent verification</li>
-             * <li>2: Inconsistent verification</li>
-             * <li>3: No record found</li>
+             * <li>1: Consistent.</li>
+             * <li>2: Inconsistent.</li>
+             * <li>3: No record found.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -208,11 +208,11 @@ public class Mobile2MetaVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operator name:</p>
+             * <p>The carrier name. Valid values:</p>
              * <ul>
              * <li>CMCC: China Mobile</li>
              * <li>CUCC: China Unicom</li>
-             * <li>CTCC: China Telecom</li>
+             * <li>CTCC: China Telecom.</li>
              * </ul>
              * 
              * <strong>example:</strong>

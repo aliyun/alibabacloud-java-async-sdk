@@ -60,8 +60,8 @@ public class DescribeCardVerifyRequest extends Request {
         } 
 
         /**
-         * <p>Authentication request ID.
-         * You must first call the initialization interface InitCardVerify to submit an authentication request in order to get the authentication request ID.</p>
+         * <p>The verification request ID.
+         * You must first call the InitCardVerify operation to submit a verification request before you can obtain the verification request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

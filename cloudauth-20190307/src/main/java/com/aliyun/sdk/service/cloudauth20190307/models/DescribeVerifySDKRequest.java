@@ -60,7 +60,7 @@ public class DescribeVerifySDKRequest extends Request {
         } 
 
         /**
-         * <p>The task ID for generating the SDK.</p>
+         * <p>The ID of the SDK generation task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

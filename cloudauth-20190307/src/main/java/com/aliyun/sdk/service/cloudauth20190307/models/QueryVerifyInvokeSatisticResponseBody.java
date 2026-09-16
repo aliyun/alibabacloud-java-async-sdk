@@ -145,7 +145,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code, <strong>200</strong> indicates a successful response.</p>
+         * <p>The response code. <strong>200</strong> indicates a successful response.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of returned data.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -175,7 +175,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -186,7 +186,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2FA2C773-47DB-4156-B1EE-5B047321A939</p>
@@ -197,7 +197,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -208,7 +208,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -219,7 +219,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -288,7 +288,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of occurrences of the statistic.</p>
+             * <p>The count of the statistics value.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -299,7 +299,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ProductCode。</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>ID_PRO</p>
@@ -369,7 +369,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of statistical data.</p>
+             * <p>The list of statistics data.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -377,7 +377,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Statistics date.</p>
+             * <p>The statistics date. Format: YYYY-MM-DD. Example: 2025-10-16.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16</p>

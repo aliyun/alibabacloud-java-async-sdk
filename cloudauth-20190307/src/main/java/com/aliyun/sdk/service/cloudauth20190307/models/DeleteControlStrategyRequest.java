@@ -101,7 +101,7 @@ public class DeleteControlStrategyRequest extends Request {
         } 
 
         /**
-         * <p>API name, same as <strong>ProductCode</strong>.</p>
+         * <p>The API name, same as <strong>ProductCode</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -113,7 +113,7 @@ public class DeleteControlStrategyRequest extends Request {
         }
 
         /**
-         * <p>Security rule ID.</p>
+         * <p>The security rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>38</p>
@@ -125,7 +125,7 @@ public class DeleteControlStrategyRequest extends Request {
         }
 
         /**
-         * <p>Product type, currently only supports <strong>ANT_CLOUD_AUTH</strong> (Financial-grade Real Person), all others have been phased out.</p>
+         * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade real-person authentication) is supported. All other types have been discontinued.</p>
          * 
          * <strong>example:</strong>
          * <p>ANT_CLOUD_AUTH</p>
@@ -137,7 +137,7 @@ public class DeleteControlStrategyRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

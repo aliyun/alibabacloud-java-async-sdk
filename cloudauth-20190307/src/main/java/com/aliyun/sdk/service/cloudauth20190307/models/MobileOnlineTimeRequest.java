@@ -96,10 +96,10 @@ public class MobileOnlineTimeRequest extends Request {
         }
 
         /**
-         * <p>Mobile number:</p>
+         * <p>The phone number. Valid values:</p>
          * <ul>
-         * <li>When <code>paramType</code> is <code>normal</code>: provide the plaintext mobile number.</li>
-         * <li>When <code>paramType</code> is <code>md5</code>: provide the encrypted mobile number.</li>
+         * <li>If paramType is set to normal, pass in the phone number in plaintext.</li>
+         * <li>If paramType is set to md5, pass in the phone number in ciphertext.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,10 +114,10 @@ public class MobileOnlineTimeRequest extends Request {
         }
 
         /**
-         * <p>Parameter type:</p>
+         * <p>The parameter type. Valid values:</p>
          * <ul>
-         * <li>normal: unencrypted.</li>
-         * <li>md5: md5 encrypted.</li>
+         * <li>normal: not encrypted.</li>
+         * <li>md5: MD5-encrypted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

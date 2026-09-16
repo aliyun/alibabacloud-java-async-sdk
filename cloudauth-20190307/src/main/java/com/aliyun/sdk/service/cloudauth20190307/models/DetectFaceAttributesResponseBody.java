@@ -106,7 +106,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Error.InternalError</p>
@@ -136,7 +136,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -147,7 +147,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,10 +229,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Pitch angle, in degrees.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>-1.5683923959732056</p>
+             * PitchAngle.
              */
             public Builder pitchAngle(Float pitchAngle) {
                 this.pitchAngle = pitchAngle;
@@ -240,10 +237,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Roll angle, in degrees.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7.163370132446289</p>
+             * RollAngle.
              */
             public Builder rollAngle(Float rollAngle) {
                 this.rollAngle = rollAngle;
@@ -251,10 +245,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Yaw angle, in degrees.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>-6.925303936004639</p>
+             * YawAngle.
              */
             public Builder yawAngle(Float yawAngle) {
                 this.yawAngle = yawAngle;
@@ -321,10 +312,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Smile threshold.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>95</p>
+             * Threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -332,10 +320,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Smile score.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>97</p>
+             * Value.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -480,10 +465,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Face blur level, with higher values indicating more blurriness. Typically, a value ≥2.0 is considered quite blurry. It is recommended to adjust based on actual business data testing.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.1419367790222168</p>
+             * Blur.
              */
             public Builder blur(Float blur) {
                 this.blur = blur;
@@ -491,10 +473,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A score ranging from 0 to 100. The higher the score, the better the quality. It is recommended to consider a score of 50 or above as acceptable quality.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * Facequal.
              */
             public Builder facequal(Float facequal) {
                 this.facequal = facequal;
@@ -502,18 +481,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is a human face. Values:</p>
-             * <ul>
-             * <li><strong>None</strong>: Not a human face</li>
-             * <li><strong>Face</strong>: Human face</li>
-             * <li><strong>Profile</strong>: Profile (head turned left or right by more than 30°)</li>
-             * </ul>
-             * <blockquote>
-             * <p>If no face is detected, the <code>faceInfos</code> in the response will be empty; here, <code>None</code> means that a face was detected but is considered to be a cartoon, pet, etc.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>Face</p>
+             * Facetype.
              */
             public Builder facetype(String facetype) {
                 this.facetype = facetype;
@@ -521,15 +489,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether wearing glasses. Values:</p>
-             * <ul>
-             * <li><strong>None</strong>: Not wearing glasses</li>
-             * <li><strong>Wear</strong>: Wearing regular glasses</li>
-             * <li><strong>Sunglass</strong>: Wearing sunglasses</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>None</p>
+             * Glasses.
              */
             public Builder glasses(String glasses) {
                 this.glasses = glasses;
@@ -537,7 +497,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Face pose.</p>
+             * Headpose.
              */
             public Builder headpose(Headpose headpose) {
                 this.headpose = headpose;
@@ -545,10 +505,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A score ranging from 0 to 100. The higher the score, the more complete the face. It is recommended to consider a score of 70 or above as acceptable completeness.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>70</p>
+             * Integrity.
              */
             public Builder integrity(Integer integrity) {
                 this.integrity = integrity;
@@ -556,14 +513,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether wearing a mask. Values:</p>
-             * <ul>
-             * <li>Wear: Wearing a mask.</li>
-             * <li>None: Not wearing a mask.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Wear</p>
+             * Respirator.
              */
             public Builder respirator(String respirator) {
                 this.respirator = respirator;
@@ -571,7 +521,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether smiling.</p>
+             * Smiling.
              */
             public Builder smiling(Smiling smiling) {
                 this.smiling = smiling;
@@ -664,10 +614,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Height of the face rectangle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>473</p>
+             * Height.
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -675,10 +622,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Distance from the top-left corner of the face rectangle to the left edge of the original image, in pixels.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>354</p>
+             * Left.
              */
             public Builder left(Integer left) {
                 this.left = left;
@@ -686,10 +630,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Distance from the top-left corner of the face rectangle to the top edge of the original image, in pixels.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>453</p>
+             * Top.
              */
             public Builder top(Integer top) {
                 this.top = top;
@@ -697,10 +638,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Width of the face rectangle.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>473</p>
+             * Width.
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -767,7 +705,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Face attributes.</p>
+             * FaceAttributes.
              */
             public Builder faceAttributes(FaceAttributes faceAttributes) {
                 this.faceAttributes = faceAttributes;
@@ -775,7 +713,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Position of the face in the original image.</p>
+             * FaceRect.
              */
             public Builder faceRect(FaceRect faceRect) {
                 this.faceRect = faceRect;
@@ -909,7 +847,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Face detection results.</p>
+             * FaceInfos.
              */
             public Builder faceInfos(FaceInfos faceInfos) {
                 this.faceInfos = faceInfos;
@@ -917,7 +855,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Original image height, in pixels.</p>
+             * <p>The height of the original image, in pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>1920</p>
@@ -928,7 +866,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Original image width, in pixels.</p>
+             * <p>The width of the original image, in pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>1080</p>

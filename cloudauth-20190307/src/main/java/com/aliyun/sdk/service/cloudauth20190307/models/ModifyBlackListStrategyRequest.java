@@ -73,7 +73,7 @@ public class ModifyBlackListStrategyRequest extends Request {
         } 
 
         /**
-         * <p>Blacklist rule.</p>
+         * <p>The blacklist rule.</p>
          */
         public Builder blackListStrategy(BlackListStrategy blackListStrategy) {
             String blackListStrategyShrink = shrink(blackListStrategy, "BlackListStrategy", "json");
@@ -83,7 +83,7 @@ public class ModifyBlackListStrategyRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -193,7 +193,7 @@ public class ModifyBlackListStrategyRequest extends Request {
             } 
 
             /**
-             * <p>Blacklist string, with each blacklist entry separated by commas.</p>
+             * <p>The blacklist string. Separate multiple entries with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.0.1,127.0.0.2</p>
@@ -204,12 +204,12 @@ public class ModifyBlackListStrategyRequest extends Request {
             }
 
             /**
-             * <p>List Type:</p>
+             * <p>The blacklist type. Valid values:</p>
              * <ul>
-             * <li><strong>mobile</strong>: Mobile number blacklist</li>
-             * <li><strong>ip</strong>: IP blacklist</li>
-             * <li><strong>identifyNum</strong>: ID number blacklist</li>
-             * <li><strong>bankCard</strong>: Bank card blacklist</li>
+             * <li><strong>mobile</strong>: mobile number blacklist.</li>
+             * <li><strong>ip</strong>: IP blacklist.</li>
+             * <li><strong>identifyNum</strong>: ID card blacklist.</li>
+             * <li><strong>bankCard</strong>: bank card blacklist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -221,10 +221,10 @@ public class ModifyBlackListStrategyRequest extends Request {
             }
 
             /**
-             * <p>Rule ID:</p>
+             * <p>The rule ID. Valid values:</p>
              * <ul>
-             * <li><strong>Empty</strong>: Add a new rule</li>
-             * <li><strong>Non-empty</strong>: Modify an existing rule</li>
+             * <li><strong>Empty</strong>: creates a rule.</li>
+             * <li><strong>Not empty</strong>: modifies a rule.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -236,11 +236,11 @@ public class ModifyBlackListStrategyRequest extends Request {
             }
 
             /**
-             * <p>Product Name:</p>
+             * <p>The product name. Valid values:</p>
              * <ul>
-             * <li><strong>id2meta</strong>: ID card two-factor verification</li>
-             * <li><strong>mobile3Meta</strong>: Mobile number factor verification</li>
-             * <li><strong>bankcardMeta</strong>: Bank card factor verification</li>
+             * <li><strong>id2meta</strong>: ID card two-element verification.</li>
+             * <li><strong>mobile3Meta</strong>: mobile number element verification.</li>
+             * <li><strong>bankcardMeta</strong>: bank card element verification.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -252,10 +252,10 @@ public class ModifyBlackListStrategyRequest extends Request {
             }
 
             /**
-             * <p>Verification Status:</p>
+             * <p>The authentication status. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Verification passed</li>
-             * <li><strong>2</strong>: Verification failed</li>
+             * <li><strong>1</strong>: Authentication passed.</li>
+             * <li><strong>2</strong>: Authentication failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

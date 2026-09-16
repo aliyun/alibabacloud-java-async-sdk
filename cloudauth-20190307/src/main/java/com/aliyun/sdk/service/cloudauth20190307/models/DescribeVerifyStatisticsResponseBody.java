@@ -67,7 +67,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4E27D502-1287-526A-910C-881A3F023914</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Statistical results</p>
+         * <p>The statistics result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -196,7 +196,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Date.</p>
+             * <p>The date.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-11</p>
@@ -207,7 +207,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Client initialization pass rate.</p>
+             * <p>The client-side init pass rate.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -218,7 +218,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of server initializations.</p>
+             * <p>The number of server-side init requests.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -229,7 +229,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Server initialization conversion rate.</p>
+             * <p>The server-side init conversion rate.</p>
              * 
              * <strong>example:</strong>
              * <p>26.67</p>
@@ -240,7 +240,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Server initialization pass rate.</p>
+             * <p>The server-side init pass rate.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -251,7 +251,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pass rate.</p>
+             * <p>The pass rate.</p>
              * 
              * <strong>example:</strong>
              * <p>75</p>
@@ -490,7 +490,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of client initializations.</p>
+             * <p>The number of client-side init attempts.</p>
              * 
              * <strong>example:</strong>
              * <p>73</p>
@@ -501,7 +501,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of identity deduplication client initializations.</p>
+             * <p>The number of identity deduplication client-side init requests.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -512,7 +512,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful identity deduplication client initializations.</p>
+             * <p>The number of successful identity deduplication client-side init requests.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -523,7 +523,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of client initialization calls.</p>
+             * <p>The number of client-side init calls.</p>
              * 
              * <strong>example:</strong>
              * <p>73</p>
@@ -534,7 +534,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of service-side initializations.</p>
+             * <p>The number of server-side init attempts.</p>
              * 
              * <strong>example:</strong>
              * <p>73</p>
@@ -545,7 +545,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of identity deduplication server initialization requests.</p>
+             * <p>The total number of identity deduplication server-side init requests.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -556,7 +556,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful identity deduplication server initializations.</p>
+             * <p>The number of successful identity deduplication server-side init requests.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -567,7 +567,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful service-side initialization authentications.</p>
+             * <p>The number of successful server-side init authentications.</p>
              * 
              * <strong>example:</strong>
              * <p>134</p>
@@ -578,7 +578,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Daily pass/conversion rate (PV).</p>
+             * <p>The daily pass rate and conversion rate statistics (PV).</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -586,7 +586,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of client verifications.</p>
+             * <p>The number of client-side verification attempts.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -597,7 +597,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of identity deduplication client authentications.</p>
+             * <p>The number of identity deduplication client-side authentication attempts.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -608,7 +608,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful identity deduplication client verifications.</p>
+             * <p>The number of successful identity deduplication client-side verifications.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -619,7 +619,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful identity deduplication client authentications.</p>
+             * <p>The number of successful identity deduplication client-side authentications.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -630,7 +630,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful client authentications.</p>
+             * <p>The number of successful client-side authentications.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -641,7 +641,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful client authentications.</p>
+             * <p>The number of successful client-side authentications.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>

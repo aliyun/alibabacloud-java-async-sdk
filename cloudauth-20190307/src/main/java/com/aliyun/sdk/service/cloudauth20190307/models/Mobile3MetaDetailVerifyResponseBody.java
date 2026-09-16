@@ -93,7 +93,7 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code, <strong>200</strong> indicates a successful API response.</p>
+         * <p>The response code. <strong>200</strong> indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
@@ -126,7 +126,7 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result information.</p>
+         * <p>The result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -205,10 +205,10 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification result code:</p>
+             * <p>The verification result code. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Verification consistent.</li>
-             * <li><strong>2</strong>: Verification inconsistent.</li>
+             * <li><strong>1</strong>: Consistent.</li>
+             * <li><strong>2</strong>: Inconsistent.</li>
              * <li><strong>3</strong>: No record found.</li>
              * </ul>
              * 
@@ -221,7 +221,7 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operator name:</p>
+             * <p>The carrier name. Valid values:</p>
              * <ul>
              * <li><strong>CMCC</strong>: China Mobile.</li>
              * <li><strong>CUCC</strong>: China Unicom.</li>
@@ -237,13 +237,13 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detailed verification results:</p>
+             * <p>The detailed verification result. Valid values:</p>
              * <ul>
              * <li><strong>101</strong>: Verification passed.</li>
-             * <li><strong>201</strong>: Mobile number and name do not match, mobile number and ID number do not match.</li>
-             * <li><strong>202</strong>: Mobile number and name match, but mobile number and ID number do not match.</li>
-             * <li><strong>203</strong>: Mobile number and ID number match, but mobile number and name do not match.</li>
-             * <li><strong>204</strong>: Other inconsistencies.</li>
+             * <li><strong>201</strong>: The phone number is inconsistent with the name, and the phone number is inconsistent with the ID card number.</li>
+             * <li><strong>202</strong>: The phone number is consistent with the name, but the phone number is inconsistent with the ID card number.</li>
+             * <li><strong>203</strong>: The phone number is consistent with the ID card number, but the phone number is inconsistent with the name.</li>
+             * <li><strong>204</strong>: Other inconsistency.</li>
              * <li><strong>301</strong>: No record found.</li>
              * </ul>
              * 

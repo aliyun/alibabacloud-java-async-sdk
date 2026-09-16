@@ -78,10 +78,10 @@ public class CreateWhitelistSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result, whether the creation was successful:</p>
+         * <p>The returned result that indicates whether the whitelist is created. Valid values:</p>
          * <ul>
-         * <li>true: Success</li>
-         * <li>false: Failure</li>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

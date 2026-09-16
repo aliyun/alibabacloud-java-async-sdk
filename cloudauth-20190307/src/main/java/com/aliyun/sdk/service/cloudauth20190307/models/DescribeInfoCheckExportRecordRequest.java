@@ -115,7 +115,10 @@ public class DescribeInfoCheckExportRecordRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -124,7 +127,10 @@ public class DescribeInfoCheckExportRecordRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The query end time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-11 21:24:48.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-11 21:24:48</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -133,7 +139,10 @@ public class DescribeInfoCheckExportRecordRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -142,7 +151,26 @@ public class DescribeInfoCheckExportRecordRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type. Valid values:</p>
+         * <ul>
+         * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+         * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile number online duration.</li>
+         * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile number online status.</li>
+         * <li><strong>MOBILE_3_META_SIMPLE</strong>: Mobile number three-element verification (simple edition).</li>
+         * <li><strong>MOBILE_3_META</strong>: Mobile number three-element verification (detailed edition).</li>
+         * <li><strong>MOBILE_2_META</strong>: Mobile number two-element verification.</li>
+         * <li><strong>BANK_CARD_N_META</strong>: Bank card verification (detailed edition).</li>
+         * <li><strong>MOBILE_DETECT</strong>: Number detection.</li>
+         * <li><strong>VEHICLE_N_META</strong>: Vehicle element verification (enhanced edition).</li>
+         * <li><strong>VEHICLE_PENTA_INFO</strong>: Vehicle five-element information recognition.</li>
+         * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle information recognition.</li>
+         * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle insurance date query.</li>
+         * <li><strong>VEHICLE_CHECK</strong>: Vehicle element verification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ID_CARD_2_META</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -151,7 +179,10 @@ public class DescribeInfoCheckExportRecordRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The query start time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-11 21:24:48.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-11 21:24:48</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

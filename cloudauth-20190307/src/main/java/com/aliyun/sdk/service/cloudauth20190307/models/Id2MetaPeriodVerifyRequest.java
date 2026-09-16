@@ -138,11 +138,10 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * <p>ID number:</p>
+         * <p>The ID card number.</p>
          * <ul>
-         * <li>When <code>paramType</code> is <code>normal</code>: Enter the plain text of the ID number.</li>
-         * <li>When <code>paramType</code> is <code>md5</code>:
-         * The first 6 digits (plain text) + date of birth (encrypted) + last 4 digits (plain text).</li>
+         * <li>If paramType is set to normal, enter the ID card number in plaintext.</li>
+         * <li>If paramType is set to md5, the value is in the following format: first 6 digits of the ID card number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID card number (plaintext).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,10 +154,10 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * <p>Parameter type:</p>
+         * <p>The parameter type. Valid values:</p>
          * <ul>
-         * <li>normal: Unencrypted.</li>
-         * <li>md5: MD5 encrypted.</li>
+         * <li>normal: not encrypted.</li>
+         * <li>md5: MD5-encrypted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,10 +170,10 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * <ul>
-         * <li>When <code>paramType</code> = <code>normal</code>: Enter the plain text of the name.</li>
-         * <li>When <code>paramType</code> = <code>md5</code>: The first character of the name MD5 encrypted (32 lowercase MD5) + the rest of the name in plain text.</li>
+         * <li>paramType = normal: enter the name in plaintext.</li>
+         * <li>paramType = md5: the first character of the name is MD5-encrypted (32-bit lowercase MD5) + the remaining characters of the name in plaintext.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +186,7 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * <p>End date of ID validity, format: YYYYMMDD</p>
+         * <p>The expiration date of the ID card validity period. Format: YYYYMMDD.</p>
          * 
          * <strong>example:</strong>
          * <p>20301001</p>
@@ -199,7 +198,7 @@ public class Id2MetaPeriodVerifyRequest extends Request {
         }
 
         /**
-         * <p>Start date of ID validity, format: YYYYMMDD</p>
+         * <p>The start date of the ID card validity period. Format: YYYYMMDD.</p>
          * 
          * <strong>example:</strong>
          * <p>20201001</p>

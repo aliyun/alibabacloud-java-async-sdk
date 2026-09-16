@@ -87,7 +87,7 @@ public class DeleteBlackListStrategyRequest extends Request {
         } 
 
         /**
-         * <p>Rule ID.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>38</p>
@@ -99,11 +99,11 @@ public class DeleteBlackListStrategyRequest extends Request {
         }
 
         /**
-         * <p>Product Name:</p>
+         * <p>The product name. Valid values:</p>
          * <ul>
-         * <li><strong>id2meta</strong>: ID card two-factor verification</li>
-         * <li><strong>mobile3Meta</strong>: Mobile phone number factor verification</li>
-         * <li><strong>bankcardMeta</strong>: Bank card factor verification</li>
+         * <li><strong>id2meta</strong>: ID card two-element verification.</li>
+         * <li><strong>mobile3Meta</strong>: Mobile number element verification.</li>
+         * <li><strong>bankcardMeta</strong>: Bank card element verification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteBlackListStrategyRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

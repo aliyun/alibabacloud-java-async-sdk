@@ -60,7 +60,7 @@ public class DeleteCloudauthstSceneRequest extends Request {
         } 
 
         /**
-         * <p>ID of the scene to be deleted.</p>
+         * <p>The ID of the scene to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

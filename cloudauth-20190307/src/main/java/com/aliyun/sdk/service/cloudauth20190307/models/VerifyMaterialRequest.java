@@ -185,9 +185,9 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * <p>A unique ID that identifies a single authentication task, not exceeding 64 characters. For a single authentication task, the system supports unlimited submissions until the final authentication is passed and the task is completed.</p>
+         * <p>The unique ID that identifies a verification task. The value can be up to 64 characters in length. For a single verification task, the system supports unlimited submissions until the verification is passed and the task is completed.</p>
          * <blockquote>
-         * <p>Different BizIds are required for different authentication tasks.</p>
+         * <p>Use a different BizId for each new verification task.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -201,7 +201,7 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * <p>Identifier for the business scenario using the real-person authentication service. Please refer to <a href="https://help.aliyun.com/document_detail/127885.html">Business Setup</a> and complete the creation in the console first.</p>
+         * <p>The business scenario identifier for the ID Verification service. Create one in the console first. For more information, see <a href="https://help.aliyun.com/document_detail/127885.html">Business settings</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * <p>HTTP or HTTPS link to the frontal face image.</p>
+         * <p>The HTTP or HTTPS URL of the front-facing facial photo.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * <p>HTTP or HTTPS link to the national emblem side of the ID card.</p>
+         * <p>The HTTP or HTTPS URL of the national emblem side of the ID card.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg</a></p>
@@ -239,7 +239,7 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * <p>HTTP or HTTPS link to the portrait side of the ID card image.</p>
+         * <p>The HTTP or HTTPS URL of the portrait side of the ID card.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg</a></p>
@@ -251,7 +251,7 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * <p>ID number.</p>
+         * <p>The ID card number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,7 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

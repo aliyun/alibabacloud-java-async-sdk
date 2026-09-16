@@ -119,7 +119,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data list.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of items displayed per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -149,7 +149,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>96943***4E39F805</p>
@@ -160,7 +160,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>29</p>
@@ -171,7 +171,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -305,7 +305,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Date. Format: <i>month/day</i></p>
+             * <p>The date. Format: <i>month/day</i>.</p>
              * 
              * <strong>example:</strong>
              * <p>11/8</p>
@@ -316,7 +316,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pass rate.</p>
+             * <p>The pass rate.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>
@@ -327,7 +327,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Product solution Code, please refer to the Enhanced Real Person Help Documentation.</p>
+             * <p>The product solution code. For more information, refer to the enhanced ID Verification documentation.</p>
              * 
              * <strong>example:</strong>
              * <p>SMART_VERIFY</p>
@@ -338,7 +338,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scene ID.</p>
+             * <p>The scene ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20**40</p>
@@ -349,7 +349,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scene name.</p>
+             * <p>The scene name.</p>
              * 
              * <strong>example:</strong>
              * <p>****实名认证</p>
@@ -360,7 +360,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful calls.</p>
+             * <p>The number of successful calls.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -371,7 +371,7 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>

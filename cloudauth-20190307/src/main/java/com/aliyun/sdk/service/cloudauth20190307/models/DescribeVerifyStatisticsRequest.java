@@ -118,10 +118,10 @@ public class DescribeVerifyStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>Whether the age is over 14 years old:</p>
+         * <p>Specifies whether the age is older than 14. Valid values:</p>
          * <ul>
-         * <li><strong>T</strong>: Over</li>
-         * <li><strong>F</strong>: Under</li>
+         * <li><strong>T</strong>: older than 14</li>
+         * <li><strong>F</strong>: younger than 14</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class DescribeVerifyStatisticsRequest extends Request {
         }
 
         /**
-         * <p>End date of the query.</p>
+         * <p>The end time of the query. Format: UNIX timestamp. Unit: milliseconds. Example: 1760630399999.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class DescribeVerifyStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Product Code.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -159,11 +159,11 @@ public class DescribeVerifyStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Service type:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
-         * <li><strong>antcloudauth</strong>: Financial-grade real-person authentication.</li>
-         * <li><strong>cloudauthst</strong> (discontinued): Enhanced real-person authentication.</li>
-         * <li><strong>cloudauth</strong> (discontinued): Real-person authentication.</li>
+         * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
+         * <li><strong>cloudauthst</strong> (discontinued): ID Verification - Enhanced Edition.</li>
+         * <li><strong>cloudauth</strong> (discontinued): ID Verification.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -177,7 +177,7 @@ public class DescribeVerifyStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Start date of the query.</p>
+         * <p>The start time of the query. Format: UNIX timestamp. Unit: milliseconds. Example: 1760025600000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

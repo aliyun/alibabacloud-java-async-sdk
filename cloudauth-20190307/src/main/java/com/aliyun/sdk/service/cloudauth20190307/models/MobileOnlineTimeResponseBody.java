@@ -93,7 +93,7 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 for success, others for failure.</p>
+         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>
@@ -126,7 +126,7 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result information</p>
+         * <p>The result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -205,11 +205,11 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification result code.</p>
+             * <p>The verification result code. Valid values:</p>
              * <ul>
-             * <li>1: Verification consistent</li>
-             * <li>2: Verification inconsistent</li>
-             * <li>3: No record found</li>
+             * <li>1: Consistent.</li>
+             * <li>2: Inconsistent.</li>
+             * <li>3: No record found.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -221,11 +221,11 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operator name</p>
+             * <p>The name of the telecommunications service provider. Valid values:</p>
              * <ul>
-             * <li>CMCC: China Mobile </li>
-             * <li>CUCC: China Unicom </li>
-             * <li>CTCC: China Telecom</li>
+             * <li>CMCC: China Mobile. </li>
+             * <li>CUCC: China Unicom. </li>
+             * <li>CTCC: China Telecom.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -237,12 +237,13 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The network duration code. Valid values:</p>
              * <ul>
-             * <li>1: [0,3) indicates the online duration is 0~3 months </li>
-             * <li>2: [3,6) indicates the online duration is 3~6 months </li>
-             * <li>3: [6,12) indicates the online duration is 6~12 months </li>
-             * <li>4: [12,24) indicates the online duration is 12~24 months </li>
-             * <li>5: [24,+) indicates the online duration is more than 24 months</li>
+             * <li>1: [0,3) indicates a network duration of 0 to 3 months.</li>
+             * <li>2: [3,6) indicates a network duration of 3 to 6 months.</li>
+             * <li>3: [6,12) indicates a network duration of 6 to 12 months.</li>
+             * <li>4: [12,24) indicates a network duration of 12 to 24 months.</li>
+             * <li>5: [24,+) indicates a network duration of more than 24 months.</li>
              * </ul>
              * 
              * <strong>example:</strong>

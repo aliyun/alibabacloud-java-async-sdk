@@ -93,7 +93,7 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 for success, others for failure.</p>
+         * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -126,7 +126,7 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result</p>
+         * <p>The returned result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -205,7 +205,7 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Unique real-person authentication identifier.</p>
+             * <p>The unique identifier of the ID Verification.</p>
              * 
              * <strong>example:</strong>
              * <p>91707dc296d469ad38e4c5efa6a0****</p>
@@ -216,9 +216,9 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Authentication result. Values:</p>
-             * <p>● Y: AIGC-generated face.</p>
-             * <p>● N: Not detected</p>
+             * <p>The detection result. Valid values:</p>
+             * <p>●  Y: The face is AIGC-generated.</p>
+             * <p>●  N: No AIGC-generated face is detected.</p>
              * 
              * <strong>example:</strong>
              * <p>Y</p>
@@ -229,7 +229,7 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detection score</p>
+             * <p>The detection score.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0000</p>

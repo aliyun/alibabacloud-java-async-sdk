@@ -59,10 +59,10 @@ public class DescribeOssStatusRequest extends Request {
         } 
 
         /**
-         * <p>Service code:</p>
+         * <p>The service code. Valid values:</p>
          * <ul>
-         * <li>antcloudauth: Financial-grade real-person authentication</li>
-         * <li>cloudauthst (discontinued): Enhanced real-person authentication</li>
+         * <li>antcloudauth: Chinese financial-grade ID Verification.</li>
+         * <li>cloudauthst (discontinued): ID Verification Enhanced Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>

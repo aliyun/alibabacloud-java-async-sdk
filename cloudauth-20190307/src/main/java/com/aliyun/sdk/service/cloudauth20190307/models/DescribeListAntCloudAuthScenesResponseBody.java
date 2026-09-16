@@ -67,7 +67,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CC1AB3F5-22A2-589F-ABDD-B766694AA671</p>
@@ -78,7 +78,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of scenarios.</p>
+         * <p>The list of scenarios.</p>
          */
         public Builder scenes(java.util.List<Scenes> scenes) {
             this.scenes = scenes;
@@ -109,6 +109,15 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
+
+        @com.aliyun.core.annotation.NameInMap("DegradeAppScheme")
+        private String degradeAppScheme;
+
+        @com.aliyun.core.annotation.NameInMap("DegradeSubCodes")
+        private String degradeSubCodes;
+
+        @com.aliyun.core.annotation.NameInMap("DegradeType")
+        private String degradeType;
 
         @com.aliyun.core.annotation.NameInMap("DeviceRiskPlus")
         private String deviceRiskPlus;
@@ -146,11 +155,17 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
+        @com.aliyun.core.annotation.NameInMap("UseDegrade")
+        private String useDegrade;
+
         private Scenes(Builder builder) {
             this.appId = builder.appId;
             this.bindMiniProgram = builder.bindMiniProgram;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
+            this.degradeAppScheme = builder.degradeAppScheme;
+            this.degradeSubCodes = builder.degradeSubCodes;
+            this.degradeType = builder.degradeType;
             this.deviceRiskPlus = builder.deviceRiskPlus;
             this.domain = builder.domain;
             this.miniProgramName = builder.miniProgramName;
@@ -163,6 +178,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             this.status = builder.status;
             this.storeImage = builder.storeImage;
             this.updateTime = builder.updateTime;
+            this.useDegrade = builder.useDegrade;
         }
 
         public static Builder builder() {
@@ -199,6 +215,27 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return degradeAppScheme
+         */
+        public String getDegradeAppScheme() {
+            return this.degradeAppScheme;
+        }
+
+        /**
+         * @return degradeSubCodes
+         */
+        public String getDegradeSubCodes() {
+            return this.degradeSubCodes;
+        }
+
+        /**
+         * @return degradeType
+         */
+        public String getDegradeType() {
+            return this.degradeType;
         }
 
         /**
@@ -285,11 +322,21 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        /**
+         * @return useDegrade
+         */
+        public String getUseDegrade() {
+            return this.useDegrade;
+        }
+
         public static final class Builder {
             private Long appId; 
             private String bindMiniProgram; 
             private String createTime; 
             private String creator; 
+            private String degradeAppScheme; 
+            private String degradeSubCodes; 
+            private String degradeType; 
             private String deviceRiskPlus; 
             private String domain; 
             private String miniProgramName; 
@@ -302,6 +349,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             private Integer status; 
             private String storeImage; 
             private String updateTime; 
+            private String useDegrade; 
 
             private Builder() {
             } 
@@ -311,6 +359,9 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
                 this.bindMiniProgram = model.bindMiniProgram;
                 this.createTime = model.createTime;
                 this.creator = model.creator;
+                this.degradeAppScheme = model.degradeAppScheme;
+                this.degradeSubCodes = model.degradeSubCodes;
+                this.degradeType = model.degradeType;
                 this.deviceRiskPlus = model.deviceRiskPlus;
                 this.domain = model.domain;
                 this.miniProgramName = model.miniProgramName;
@@ -323,10 +374,11 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.storeImage = model.storeImage;
                 this.updateTime = model.updateTime;
+                this.useDegrade = model.useDegrade;
             } 
 
             /**
-             * <p>Application ID.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2a3a13b6-ee85-457e-bd15-b48115cb396e</p>
@@ -337,10 +389,10 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable binding to a mini program:</p>
+             * <p>Specifies whether to enable mini program binding. Valid values:</p>
              * <ul>
-             * <li><strong>Y</strong>: Enabled</li>
-             * <li><strong>N (default)</strong>: Not enabled</li>
+             * <li><strong>Y</strong>: Enabled.</li>
+             * <li><strong>N (default)</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -352,10 +404,10 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds (ms), such as 1740389697000.</p>
              * 
              * <strong>example:</strong>
-             * <p>1260051251634779</p>
+             * <p>1740389697000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +415,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creator.</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>189884094677xxxx</p>
@@ -374,7 +426,44 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Enhanced device detection capability: - <strong>Y</strong>: Enable - <strong>N</strong>: Disable</p>
+             * <p>The iOS scheme for degradation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudauth://callback</p>
+             */
+            public Builder degradeAppScheme(String degradeAppScheme) {
+                this.degradeAppScheme = degradeAppScheme;
+                return this;
+            }
+
+            /**
+             * <p>The list of SubCodes that trigger degradation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201,202</p>
+             */
+            public Builder degradeSubCodes(String degradeSubCodes) {
+                this.degradeSubCodes = degradeSubCodes;
+                return this;
+            }
+
+            /**
+             * <p>The degraded authentication type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIPAY</p>
+             */
+            public Builder degradeType(String degradeType) {
+                this.degradeType = degradeType;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable enhanced device risk detection. Valid values:</p>
+             * <ul>
+             * <li><strong>Y</strong>: Enabled.</li>
+             * <li><strong>N</strong>: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>N</p>
@@ -385,7 +474,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bound domain.</p>
+             * <p>The bound domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.ddos.com">www.ddos.com</a></p>
@@ -396,10 +485,10 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Mini program name.</p>
+             * <p>The mini program name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试APP</p>
+             * <p>TestApp</p>
              */
             public Builder miniProgramName(String miniProgramName) {
                 this.miniProgramName = miniProgramName;
@@ -407,7 +496,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modifier.</p>
+             * <p>The modifier.</p>
              * 
              * <strong>example:</strong>
              * <p>189884094677xxxx</p>
@@ -418,11 +507,11 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bound mini program platform:</p>
+             * <p>The mini program platform. Valid values:</p>
              * <ul>
-             * <li><strong>WECHAT</strong>: WeChat</li>
-             * <li><strong>ALIPAY</strong>: Alipay</li>
-             * <li><strong>TIKTOK</strong>: TikTok</li>
+             * <li><strong>WECHAT</strong>: WeChat.</li>
+             * <li><strong>ALIPAY</strong>: Alipay.</li>
+             * <li><strong>TIKTOK</strong>: TikTok.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +523,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of face photos stored (1-5).</p>
+             * <p>The number of evidence face photos (1-5).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -445,7 +534,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Duration of the stored video (in seconds).</p>
+             * <p>The evidence video duration in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -456,7 +545,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scenario ID.</p>
+             * <p>The scenario ID.</p>
              * 
              * <strong>example:</strong>
              * <p>100001xxxx</p>
@@ -467,10 +556,10 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scenario name.</p>
+             * <p>The scenario name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试场景</p>
+             * <p>TestScenario</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -478,7 +567,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is enabled, with a value of 1 indicating enabled.</p>
+             * <p>Indicates whether the scenario is enabled. The value is 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -489,10 +578,10 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to deliver the files generated from the authentication to the customer&quot;s OSS:</p>
+             * <p>Specifies whether to deliver files generated during authentication to the customer\&quot;s OSS. Valid values:</p>
              * <ul>
-             * <li><strong>Y</strong>: Enabled</li>
-             * <li><strong>N</strong>: Disabled</li>
+             * <li><strong>Y</strong>: Enabled.</li>
+             * <li><strong>N</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -504,13 +593,24 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the instance.</p>
+             * <p>The last update time of the instance. The value is a UNIX timestamp in milliseconds (ms), such as 1740541510000.</p>
              * 
              * <strong>example:</strong>
-             * <p>1260051251634779</p>
+             * <p>1740541510000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable degraded authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
+             */
+            public Builder useDegrade(String useDegrade) {
+                this.useDegrade = useDegrade;
                 return this;
             }
 

@@ -119,7 +119,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of returned data.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -149,7 +149,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>969434DF-926B-4997-9881-4DE94E39F805</p>
@@ -160,7 +160,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the response was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -171,7 +171,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -318,7 +318,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Total amount.</p>
+             * <p>The total capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -329,10 +329,10 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name of the flow package.</p>
+             * <p>The name of the data transfer plan.</p>
              * 
              * <strong>example:</strong>
-             * <p>实人认证流量包</p>
+             * <p>ID Verification data transfer plan</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -340,7 +340,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Remaining amount.</p>
+             * <p>The remaining capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0</p>
@@ -351,7 +351,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of remaining amount.</p>
+             * <p>The ratio of the remaining capacity to the total capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>100%</p>
@@ -362,12 +362,10 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Expiration date.</p>
+             * <p>The expiration time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-10 00:00:00.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>2025-10-10 00:00:00</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -375,7 +373,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance name</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>tf-testacccn-hangzhouapigate84369</p>
@@ -386,7 +384,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -399,12 +397,10 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Effective date.</p>
+             * <p>The effective period. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-10 00:00:00.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>2025-10-10 00:00:00</p>
              */
             public Builder takeEffectDate(String takeEffectDate) {
                 this.takeEffectDate = takeEffectDate;
@@ -523,10 +519,10 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Name of the resource package.</p>
+             * <p>The name of the resource plan.</p>
              * 
              * <strong>example:</strong>
-             * <p>实人认证流量包</p>
+             * <p>ID Verification data transfer plan</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -534,7 +530,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Current available capacity.</p>
+             * <p>The current remaining available capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0</p>
@@ -545,7 +541,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of current remaining capacity to total capacity.</p>
+             * <p>The ratio of the current remaining capacity to the total capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>0%</p>
@@ -556,7 +552,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the flow package.</p>
+             * <p>The details of the data transfer plan.</p>
              */
             public Builder flowDetails(java.util.List<FlowDetails> flowDetails) {
                 this.flowDetails = flowDetails;
@@ -564,7 +560,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total quota.</p>
+             * <p>The total quota.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0</p>
@@ -575,7 +571,7 @@ public class QueryVerifyFlowPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Used capacity.</p>
+             * <p>The used capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0</p>

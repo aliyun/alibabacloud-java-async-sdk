@@ -124,13 +124,14 @@ public class Mobile3MetaDetailVerifyRequest extends Request {
         }
 
         /**
-         * <p>ID number:</p>
-         * <p>Note
-         * Only supports the ID numbers of second-generation resident IDs and Hong Kong, Macao, and Taiwan residence permits.</p>
+         * <p>The ID card number.</p>
+         * <blockquote>
+         * <p>Note: Only second-generation resident ID card numbers and Hong Kong, Macao, or Taiwan residence permit numbers are supported.</p>
+         * </blockquote>
          * <ul>
-         * <li><p>When paramType is normal: enter the plaintext ID number.</p>
+         * <li><p>If ParamType is set to normal, pass in the ID card number in plaintext.</p>
          * </li>
-         * <li><p>When paramType is md5: enter the encrypted ID number.</p>
+         * <li><p>If ParamType is set to md5, pass in the ID card number in ciphertext.</p>
          * </li>
          * </ul>
          * 
@@ -146,11 +147,11 @@ public class Mobile3MetaDetailVerifyRequest extends Request {
         }
 
         /**
-         * <p>Mobile phone number:</p>
+         * <p>The phone number.</p>
          * <ul>
-         * <li><p>When paramType is normal: enter the plaintext mobile phone number.</p>
+         * <li><p>If ParamType is set to normal, pass in the phone number in plaintext.</p>
          * </li>
-         * <li><p>When paramType is md5: enter the encrypted mobile phone number.</p>
+         * <li><p>If ParamType is set to md5, pass in the phone number in ciphertext.</p>
          * </li>
          * </ul>
          * 
@@ -166,11 +167,11 @@ public class Mobile3MetaDetailVerifyRequest extends Request {
         }
 
         /**
-         * <p>Encryption method:</p>
+         * <p>The encryption method. Valid values:</p>
          * <ul>
-         * <li><p>normal: plaintext, unencrypted</p>
+         * <li><p>normal: plaintext without encryption</p>
          * </li>
-         * <li><p>md5: MD5 encryption</p>
+         * <li><p>md5: MD5 encryption.</p>
          * </li>
          * </ul>
          * 
@@ -184,11 +185,11 @@ public class Mobile3MetaDetailVerifyRequest extends Request {
         }
 
         /**
-         * <p>Name:</p>
+         * <p>The name.</p>
          * <ul>
-         * <li><p>When paramType is normal: enter the plaintext name.</p>
+         * <li><p>If ParamType is set to normal, pass in the name in plaintext.</p>
          * </li>
-         * <li><p>When paramType is md5: enter the encrypted name.</p>
+         * <li><p>If ParamType is set to md5, pass in the name in ciphertext.</p>
          * </li>
          * </ul>
          * 

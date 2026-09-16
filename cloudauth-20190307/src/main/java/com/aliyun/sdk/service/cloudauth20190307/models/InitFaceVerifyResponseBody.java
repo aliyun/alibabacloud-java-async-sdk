@@ -93,7 +93,7 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code: 200 indicates success, other values indicate failure.</p>
+         * <p>The response code. 200 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -126,7 +126,7 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result object.</p>
+         * <p>The result object.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -192,7 +192,7 @@ public class InitFaceVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Unique identifier for real-person authentication.</p>
+             * <p>The unique identifier of the ID Verification session.</p>
              * 
              * <strong>example:</strong>
              * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
@@ -203,18 +203,18 @@ public class InitFaceVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>URL for real-person authentication in a Web browser, which will redirect according to the ReturnUrl parameter after authentication.</p>
+             * <p>The URL for performing ID Verification in a web browser. After authentication ends, the page redirects based on the ReturnUrl input parameter.</p>
              * <blockquote>
              * <p>Notice: </p>
              * </blockquote>
              * <ul>
-             * <li><p>The CertifyUrl returned by the initialization interface is valid for <strong>30 minutes and can only be used once</strong>. Please use it within the validity period to avoid reuse.</p>
+             * <li><p>The CertifyUrl returned by the initialization operation is <strong>valid for 30 minutes and can only be submitted once for authentication</strong>. Use it within the validity period and avoid reuse.</p>
              * </li>
-             * <li><p>This parameter requires the correct input of <strong>MetaInfo</strong> to return a CertifyUrl that matches the client. If you cannot obtain it, please check whether <strong>MetaInfo</strong> and other input parameters are correct.</p>
+             * <li><p>This parameter requires the correct <strong>MetaInfo</strong> input to return a CertifyUrl that matches the client. If it cannot be obtained, check whether <strong>MetaInfo</strong> and other input parameters are correct.</p>
              * </li>
-             * <li><p>The domain name of this URL may change with service updates. To ensure normal service availability, it is recommended not to apply access control to this domain name.</p>
+             * <li><p>The domain name of this URL may change with service updates. To ensure normal service availability, do not apply access control to this domain name.</p>
              * </li>
-             * <li><p>When redirecting in the browser, try not to use incognito mode or modify the URL, as this may result in a <strong>signature error</strong>.</p>
+             * <li><p>When redirecting in a browser, do not use incognito mode or modify the URL. Otherwise, a <strong>signature exception</strong> error may occur.</p>
              * </li>
              * </ul>
              * 

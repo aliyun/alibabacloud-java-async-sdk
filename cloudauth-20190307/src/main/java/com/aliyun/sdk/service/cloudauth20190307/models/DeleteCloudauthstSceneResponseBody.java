@@ -67,7 +67,7 @@ public class DeleteCloudauthstSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>969434DF-926B-4997-9881-4DE94E39F805</p>
@@ -78,7 +78,7 @@ public class DeleteCloudauthstSceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

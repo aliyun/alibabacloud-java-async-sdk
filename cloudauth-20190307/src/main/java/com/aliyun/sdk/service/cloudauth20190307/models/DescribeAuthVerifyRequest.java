@@ -98,6 +98,8 @@ public class DescribeAuthVerifyRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for ID Verification.
+         * Obtain this value by calling InitAuthVerify to initiate an OCR request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +112,7 @@ public class DescribeAuthVerifyRequest extends Request {
         }
 
         /**
+         * <p>The authentication scenario ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

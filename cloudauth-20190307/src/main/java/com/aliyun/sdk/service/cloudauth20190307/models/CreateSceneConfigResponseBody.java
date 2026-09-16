@@ -54,7 +54,7 @@ public class CreateSceneConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>

@@ -29,32 +29,9 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Cloudauth";
         this.version = "2019-03-07";
-        this.endpointRule = "regional";
+        this.endpointRule = "central";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("us-east-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("me-east-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("eu-west-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "cloudauth.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "cloudauth.aliyuncs.com"),
-            new TeaPair("cn-beijing", "cloudauth.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-south-1", "cloudauth.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "cloudauth.aliyuncs.com")
+            new TeaPair("cn-beijing", "cloudauth.cn-beijing.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -84,11 +61,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Bank card verification, including: two elements (name + bank card number), three elements (name + ID number + bank card number), and four elements (name + ID number + mobile phone number + bank card number) consistency verification.</p>
+     * <p>Verifies bank card information consistency, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number).</p>
      * <ul>
-     * <li>Service address:<ul>
-     * <li>Beijing region: cloudauth.cn-beijing.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-beijing.aliyuncs.com (IPv6).</li>
-     * <li>Shanghai region: cloudauth.cn-shanghai.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-shanghai.aliyuncs.com (IPv6).</li>
+     * <li>Service endpoint:<ul>
+     * <li>Singapore region: cloudauth.ap-southeast-1.aliyuncs.com (IPv4) or cloudauth-dualstack.ap-southeast-1.aliyuncs.com (IPv6).</li>
+     * <li>Malaysia region: cloudauth.ap-southeast-3.aliyuncs.com (IPv4) or cloudauth-dualstack.ap-southeast-3.aliyuncs.com (IPv6).</li>
      * </ul>
      * </li>
      * <li>Request method: POST and GET.</li>
@@ -115,19 +92,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API Name: CompareFaceVerify.</li>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
-     * <li>API Description: An interface to achieve real-person authentication through server-side integration.</li>
+     * <li>API operation: CompareFaceVerify.</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>Operation description: Implements ID Verification through server-side integration.</li>
      * </ul>
-     * <h4>Photo Format Requirements</h4>
-     * <p>When performing face comparison, please upload 2 facial photos that meet all the following conditions:</p>
+     * <h4>Photo format requirements</h4>
+     * <p>When performing face comparison, submit two face photos that meet all of the following conditions:</p>
      * <ul>
-     * <li>Recent photo/recent database photo, with a complete, clear, unobstructed face, natural expression, and facing the camera directly.</li>
-     * <li>Clear photo with normal exposure, no overly dark, overly bright, or halo effects on the face, and no significant angle deviation.</li>
-     * <li>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended to scale the shorter side to 720 pixels, with a compression ratio greater than 0.9.</li>
-     * <li>Photo size: &lt;1MB.</li>
-     * <li>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</li>
+     * <li>Recent photos or recent reference photos with a complete, clear, and unobstructed face, a natural expression, and the subject facing the camera directly.</li>
+     * <li>Clear photos with normal exposure. The face must not be too dark, too bright, or have lens flare, and the angle must not deviate significantly.</li>
+     * <li>Resolution must not exceed 1920×1080 and must be at least 640×480. The short side is recommended to be scaled to 720 pixels with a compression ratio greater than 0.9.</li>
+     * <li>Photo size: &lt; 1 MB.</li>
+     * <li>Photos rotated 90, 180, and 270 degrees are supported. If multiple faces are detected, the largest face is selected.</li>
      * </ul>
      * 
      * @param request the request parameters of CompareFaceVerify  CompareFaceVerifyRequest
@@ -149,20 +126,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Only supports sending requests via HTTPS POST.
-     * Interface Description: Compares two face images and outputs the similarity score of the faces in the two images as the result.</p>
+     * <p>Request method: Only HTTPS POST requests are supported.
+     * Operation description: Specifies two face images for comparison and returns a similarity score between the faces in the two images.</p>
      * <ul>
-     * <li>At least one of the specified comparison images should be a face photo (FacePic).</li>
-     * <li>If an image contains multiple faces, the algorithm will automatically select the largest face in the image.</li>
-     * <li>If one of the two comparison images does not detect a face, the system will return an error message stating \&quot;No face detected\&quot;.
-     * When uploading images, you need to provide the HTTP address or base64 encoding of the image.</li>
-     * <li>HTTP Address: A publicly accessible HTTP address. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
-     * <li>Base64 Encoding: An image encoded in base64, formatted as <code>base64://&lt;base64 string of the image&gt;</code>.
-     * Image Restrictions</li>
-     * <li>Does not support relative or absolute paths for local images.</li>
-     * <li>Please keep the size of a single image within 2MB to avoid timeout during retrieval by the algorithm.</li>
-     * <li>The body of a single request has a size limit of 8MB; please calculate the total size of all images and other information in the request to ensure it does not exceed this limit.</li>
-     * <li>When using base64 to transmit images, the request method must be changed to POST; the header description such as <code>data:image/png;base64,</code> should be removed from the base64 string of the image.</li>
+     * <li>At least one of the specified comparison images must be of the face photo type (FacePic).</li>
+     * <li>If an image contains multiple faces, the algorithm automatically selects the face that occupies the largest area in the image.</li>
+     * <li>If no face is detected in one of the two comparison images, the system returns a &quot;No face detected&quot; error.
+     * When you submit images, you must provide the corresponding HTTP URL or Base64 encoding of each image.</li>
+     * <li>HTTP URL: A publicly accessible HTTP URL. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>Base64 encoding: A Base64-encoded image in the format <code>base64://&lt;Base64-encoded image string&gt;</code>.
+     * Image limits.</li>
+     * <li>Relative paths or absolute paths of local images are not supported.</li>
+     * <li>Keep the size of each image within 2 MB to avoid algorithm retrieval timeout.</li>
+     * <li>The body of a single request has a size limit of 8 MB. Make sure that the total size of all images and other information in the request does not exceed this limit.</li>
+     * <li>When you use Base64 to transmit images, set the request method to POST. Remove the header description from the Base64 character string, such as <code>data:image/png;base64,</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of CompareFaces  CompareFacesRequest
@@ -184,9 +161,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateAntCloudAuthScene  CreateAntCloudAuthSceneRequest
@@ -208,9 +185,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateAuthKey  CreateAuthKeyRequest
@@ -232,9 +209,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * <p>The authorization code is valid for 30 minutes and cannot be reused. Obtain a new authorization code before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateCloudauthstScene  CreateCloudauthstSceneRequest
@@ -256,10 +233,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST.
-     * Request Address: cloudauth.aliyuncs.com.</p>
+     * <p>Request method: Send requests by using the HTTPS POST method.
+     * Request URL: cloudauth.aliyuncs.com.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateSceneConfig  CreateSceneConfigRequest
@@ -281,7 +258,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
+     * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * @param request the request parameters of CreateVerifySetting  CreateVerifySettingRequest
      * @return CreateVerifySettingResponse
@@ -302,7 +279,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
+     * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * @param request the request parameters of CreateWhitelistSetting  CreateWhitelistSettingRequest
      * @return CreateWhitelistSettingResponse
@@ -322,6 +299,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
+     * <li>Request method: POST and GET.</li>
+     * <li>Transfer protocol: HTTPS.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CredentialVerify  CredentialVerifyRequest
      * @return CredentialVerifyResponse
      */
@@ -342,10 +326,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The Face Deepfake Detection API is currently in the free public beta stage, which will end on August 30, 2024, at 23:59:59. During the public beta, the QPS (Queries Per Second) cannot exceed 3 times/second.</p>
+     * <p>The face deepfake detection operation is currently in free public preview. The free public preview ends at 23:59:59 on August 30, 2024. During the public preview, the QPS cannot exceed 3 queries per second.</p>
      * </blockquote>
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
      * <li>Request method: POST and GET.</li>
      * <li>Transfer protocol: HTTPS.</li>
      * </ul>
@@ -369,9 +353,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using the HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteAllCustomizeFlowStrategy  DeleteAllCustomizeFlowStrategyRequest
@@ -394,8 +378,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteAntCloudAuthScene  DeleteAntCloudAuthSceneRequest
@@ -417,7 +401,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * @param request the request parameters of DeleteBlackListStrategy  DeleteBlackListStrategyRequest
      * @return DeleteBlackListStrategyResponse
@@ -438,9 +422,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests using HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. We recommend that you obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteCloudauthstScene  DeleteCloudauthstSceneRequest
@@ -462,7 +446,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST.
+     * <p>Request method: Supports sending requests using the HTTPS POST method.
      * Request URL: cloudauth.aliyuncs.com.</p>
      * 
      * @param request the request parameters of DeleteControlStrategy  DeleteControlStrategyRequest
@@ -484,9 +468,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteCustomizeFlowStrategy  DeleteCustomizeFlowStrategyRequest
@@ -508,7 +492,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes all personal information fields in the request, including name, ID number, phone number, IP, images, videos, and device information, etc.</p>
+     * <p>Deletes all personal information fields from the request, including name, ID card number, phone number, IP address, images, videos, device information, etc.</p>
      * 
      * @param request the request parameters of DeleteFaceVerifyResult  DeleteFaceVerifyResultRequest
      * @return DeleteFaceVerifyResultResponse
@@ -530,9 +514,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Request method: HTTPS POST and GET methods are supported.</li>
      * <li>Request URL: cloudauth.aliyuncs.com.<blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * <p>The authorization code is valid for 30 minutes and cannot be reused. Obtain a new authorization code before each activation.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -556,7 +540,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * @param request the request parameters of DeleteWhitelistSetting  DeleteWhitelistSettingRequest
      * @return DeleteWhitelistSettingResponse
@@ -577,9 +561,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeAntAndCloudAuthUserStatus  DescribeAntAndCloudAuthUserStatusRequest
@@ -619,7 +603,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</p>
+     * <p>After you receive a callback notification, you can call this operation on the server side to obtain the corresponding verification status and verification materials.</p>
      * 
      * @param request the request parameters of DescribeCardVerify  DescribeCardVerifyRequest
      * @return DescribeCardVerifyResponse
@@ -640,9 +624,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeCloudauthstSceneList  DescribeCloudauthstSceneListRequest
@@ -664,7 +648,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <p>Request method: supports sending requests using HTTPS POST and GET methods.</p>
      * 
      * @param request the request parameters of DescribeDeviceInfo  DescribeDeviceInfoRequest
      * @return DescribeDeviceInfoResponse
@@ -704,8 +688,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeFaceVerify  DescribeFaceVerifyRequest
@@ -726,6 +710,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
+     * 
      * @param request the request parameters of DescribeInfoCheckExportRecord  DescribeInfoCheckExportRecordRequest
      * @return DescribeInfoCheckExportRecordResponse
      */
@@ -745,9 +732,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <p>Request method: Supports sending requests by using HTTPS POST and GET methods.</p>
      * <blockquote>
-     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. Obtain a new key before each activation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeListAntCloudAuthScenes  DescribeListAntCloudAuthScenesRequest
@@ -770,8 +757,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeListFaceVerifyData  DescribeListFaceVerifyDataRequest
@@ -794,7 +781,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
      * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
@@ -816,6 +803,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeMetaSearchPageList  DescribeMetaSearchPageListRequest
      * @return DescribeMetaSearchPageListResponse
      */
@@ -834,6 +827,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request method: Supports sending requests by using HTTPS POST and GET methods.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeMetaStatisticsList  DescribeMetaStatisticsListRequest
      * @return DescribeMetaStatisticsListResponse
      */
@@ -852,6 +851,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request method: HTTPS POST and GET methods are supported.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeMetaStatisticsPageList  DescribeMetaStatisticsPageListRequest
      * @return DescribeMetaStatisticsPageListResponse
      */
@@ -872,8 +877,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET methods are supported.</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeOssStatus  DescribeOssStatusRequest
@@ -896,8 +901,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET methods are supported.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeOssStatusV2  DescribeOssStatusV2Request
@@ -955,7 +960,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * @param request the request parameters of DescribePageSetting  DescribePageSettingRequest
      * @return DescribePageSettingResponse
@@ -976,7 +981,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS GET/POST methods.</p>
+     * <p>Request method: Send requests by using the HTTPS GET or POST method.</p>
      * 
      * @param request the request parameters of DescribeProductCode  DescribeProductCodeRequest
      * @return DescribeProductCodeResponse
@@ -1064,8 +1069,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVerifyPersonasDeviceModelStatistics  DescribeVerifyPersonasDeviceModelStatisticsRequest
@@ -1112,8 +1117,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVerifyPersonasProvinceStatistics  DescribeVerifyPersonasProvinceStatisticsRequest
@@ -1159,12 +1164,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: Before accessing this API, please ensure that you have completed the necessary preparations. For more details, see <a href="https://help.aliyun.com/document_detail/127471.html">Real Person Authentication Server-side Preparation</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Liveness Face Verification Server-side Preparation</a>.</p>
+     * <p>Before you begin: Before calling this API, make sure that you have completed the required preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127471.html">ID Verification server-side integration preparations</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Face liveness verification server-side integration preparations</a>.</p>
      * <blockquote>
-     * <p>Alibaba Cloud Real Person Authentication only stores authentication data for the last 180 days. For any subsequent business use, please call this interface in a timely manner to retrieve and store the data yourself to avoid any impact on usage.
-     * Request Method: HTTPS POST and GET.
-     * Interface Description: After the mobile end of the access party receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.
-     * Applicable Scope: This interface is applicable to the authentication solution with SDK + server-side integration.</p>
+     * <p>Alibaba Cloud ID Verification retains verification data for only the last 180 days. To use verification data for subsequent business purposes, call this operation promptly to retrieve and store the data to avoid data loss.
+     * Request method: HTTPS POST and GET.
+     * Operation description: After the caller\&quot;s mobile client receives a callback, the server can call this operation to obtain the corresponding verification status and verification materials.
+     * Applicable scope: This operation is applicable to the SDK + server-side integration verification solution.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeVerifyResult  DescribeVerifyResultRequest
@@ -1186,8 +1191,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.
-     * Interface Description: Obtain the SDK generation result based on the task ID for generating an offline facial recognition SDK.</p>
+     * <p>Request method: Supports HTTPS POST and GET methods.
+     * Operation description: Retrieves the result of an offline facial recognition SDK generation task based on the task ID.</p>
      * 
      * @param request the request parameters of DescribeVerifySDK  DescribeVerifySDKRequest
      * @return DescribeVerifySDKResponse
@@ -1209,8 +1214,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVerifySearchPageList  DescribeVerifySearchPageListRequest
@@ -1233,8 +1238,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request Method: Supports sending requests using HTTPS POST and GET methods.</li>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET methods are supported.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVerifyStatistics  DescribeVerifyStatisticsRequest
@@ -1256,17 +1261,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
-     * Request Method: HTTPS POST and GET
-     * API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
-     * Applicable Scope: This interface is suitable for wireless SDK integration.
-     * Image Address: Use HTTP or HTTPS addresses that are publicly accessible over the Internet. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.
-     * Image Restrictions:</p>
+     * <p>Preparations: Before calling this operation, make sure that you have completed the required preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of the ID Verification scheme integration process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of the face liveness verification scheme (liveness detection scheme) integration process</a>.
+     * Request method: HTTPS POST and GET.
+     * Operation description: Before each authentication, call this operation to obtain an authentication token (VerifyToken), which is used to connect the various operations in the authentication request.
+     * Scope of application: This operation is applicable to mobile SDK integration.
+     * Image URL: Use a publicly accessible HTTP or HTTPS URL. Example: <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.
+     * Image limits:</p>
      * <ul>
-     * <li>Relative or absolute paths of local images are not supported.</li>
-     * <li>The size of a single image should be controlled within 2 MB to avoid algorithm retrieval timeout.</li>
-     * <li>The face area in the image must be at least 64*64 pixels (px).</li>
-     * <li>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</li>
+     * <li>The relative path or absolute path of local images is not supported.</li>
+     * <li>Keep the size of a single image within 2 MB to avoid algorithm fetch timeout.</li>
+     * <li>The face area in the image must be at least 64 × 64 pixels (px).</li>
+     * <li>The body of a single request has a size limit of 8 MB. Make sure that the total size of all images and other information in the request does not exceed this limit.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVerifyToken  DescribeVerifyTokenRequest
@@ -1288,7 +1293,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * <p>Request method: Only HTTPS POST requests are supported.</p>
      * 
      * @param request the request parameters of DescribeWhitelistSetting  DescribeWhitelistSettingRequest
      * @return DescribeWhitelistSettingResponse
@@ -1309,17 +1314,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Only supports sending requests via HTTPS POST.
-     * Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
-     * Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</p>
+     * <p>Request method: Only HTTPS POST requests are supported.
+     * Operation description: Detects validity-related attributes of faces in an input photo, helping you determine whether the photo meets your business requirements for retention or comparison. Currently supported face validity attributes include: whether a face is present, whether the face is blurry, whether glasses are worn, facial pose, and whether the face is smiling.
+     * Notes on uploading image addresses: When submitting an image, provide its HTTP URL, OSS address, or Base64 encoding.</p>
      * <ul>
-     * <li>HTTP Address: A publicly accessible HTTP address. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
-     * <li>Base64 Encoding: An image encoded through base64, with the format being <code>base64://&lt;image base64 string&gt;</code>.
-     * Image Limitations:</li>
-     * <li>Does not support relative or absolute paths of local images.</li>
-     * <li>Please keep the size of a single image within 2 MB to avoid algorithm timeout.</li>
-     * <li>There is an 8 MB size limit for the Body of a single request; please calculate the total size of all images and other information in the request and do not exceed the limit.</li>
-     * <li>When using Base64 to pass images, the request method needs to be changed to POST; the header description of the image Base64 string, such as <code>data:image/png;base64</code>, should be removed.</li>
+     * <li>HTTP address: A publicly accessible HTTP URL. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>Base64 encoding: A Base64-encoded image in the format <code>base64://&lt;Base64-encoded image string&gt;</code>.
+     * Image limits:</li>
+     * <li>Relative paths or absolute paths of local images are not supported.</li>
+     * <li>Keep the size of a single image within 2 MB to avoid algorithm fetch timeouts.</li>
+     * <li>The request body has a size limit of 8 MB. Make sure the total size of all images and other information in the request does not exceed this limit.</li>
+     * <li>When using Base64 to transmit images, set the request method to POST. Remove the header description from the Base64 character string, such as <code>data:image/png,base64</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of DetectFaceAttributes  DetectFaceAttributesRequest
@@ -1341,11 +1346,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the download link for statistical call data files under the product plan based on query conditions.</p>
+     * <p>Retrieves the download link for the statistical call data file under a product plan based on the specified query conditions.</p>
      * <ul>
      * <li>Method: HTTPS POST</li>
-     * <li>Service Address: cloudauth.aliyuncs.com<blockquote>
-     * <p>Real-person authentication products use CertifyId to count call volumes. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * <li>Endpoint: cloudauth.aliyuncs.com<blockquote>
+     * <p>ID Verification counts call volume by CertifyId. To facilitate reconciliation, retain the CertifyId field in your system.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1406,7 +1411,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
      * <li>Request method: POST and GET.</li>
      * <li>Transfer protocol: HTTPS.</li>
      * </ul>
@@ -1448,7 +1453,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before each authentication, use this interface to obtain the CertifyId, which is used to link various interfaces in the authentication request.</p>
+     * <p>Retrieves a CertifyId before each authentication session. The CertifyId links all API operations within the authentication request.</p>
      * 
      * @param request the request parameters of InitCardVerify  InitCardVerifyRequest
      * @return InitCardVerifyResponse
@@ -1470,18 +1475,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
-     * <li>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>This operation uses different parameters for different product plans. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/product-overview/introduction/">official documentation</a>.</li>
      * </ul>
-     * <h4>Image Format Requirements</h4>
-     * <p>When performing real-person authentication, please provide images that meet all of the following conditions:</p>
+     * <h4>Image format requirements</h4>
+     * <p>When performing ID Verification, submit images that meet all of the following conditions:</p>
      * <ul>
-     * <li>Recent photo with a clear, unobstructed face, natural expression, and facing the camera directly.</li>
-     * <li>Clear photo with normal exposure, no overexposure, underexposure, or halo effects, and no significant angle deviation.</li>
-     * <li>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended short side scaled to 720 pixels, compression ratio greater than 0.9.</li>
-     * <li>Photo size: &lt;1MB.</li>
-     * <li>Supports 90, 180, and 270-degree photos; in the case of multiple faces, the largest face will be selected.</li>
+     * <li>A recent photo with a complete, clear, and unobstructed face, natural expression, and facing the camera directly.</li>
+     * <li>Clear photo with normal exposure. The face must not be too dark, too bright, or have glare, and the angle must not deviate significantly.</li>
+     * <li>Resolution must not exceed 1920×1080, must be at least 640×480. We recommend scaling the short edge to 720 pixels with a compression ratio greater than 0.9.</li>
+     * <li>Photo size: &lt; 1 MB.</li>
+     * <li>Photos rotated 90, 180, and 270 degrees are supported. For multiple faces, the largest face is selected.</li>
      * </ul>
      * 
      * @param request the request parameters of InitFaceVerify  InitFaceVerifyRequest
@@ -1521,7 +1526,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Invoke the LivenessFaceVerify interface to perform liveness detection on a face image.</p>
+     * <p>Calls the LivenessFaceVerify operation to perform liveness detection on a face image.</p>
      * 
      * @param request the request parameters of LivenessFaceVerify  LivenessFaceVerifyRequest
      * @return LivenessFaceVerifyResponse
@@ -1542,7 +1547,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Input the phone number and name, verify their authenticity and consistency through authoritative data sources.</p>
+     * <p>Passes in a mobile phone number and a name, and verifies their authenticity and consistency through an authoritative data source.</p>
      * 
      * @param request the request parameters of Mobile2MetaVerify  Mobile2MetaVerifyRequest
      * @return Mobile2MetaVerifyResponse
@@ -1563,7 +1568,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources. If they do not match, the reason for the mismatch is returned.</p>
+     * <p>Passes in a phone number, name, and ID card number, and verifies their authenticity and consistency through an authoritative data source. If the information is inconsistent, the reason for the inconsistency is returned.</p>
      * 
      * @param request the request parameters of Mobile3MetaDetailStandardVerify  Mobile3MetaDetailStandardVerifyRequest
      * @return Mobile3MetaDetailStandardVerifyResponse
@@ -1585,7 +1590,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</li>
      * <li>Request method: POST and GET.</li>
      * <li>Transfer protocol: HTTPS.</li>
      * </ul>
@@ -1609,7 +1614,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources.</p>
+     * <p>Passes in a phone number, name, and ID card number, and verifies their authenticity and consistency through an authoritative data source.</p>
      * 
      * @param request the request parameters of Mobile3MetaSimpleStandardVerify  Mobile3MetaSimpleStandardVerifyRequest
      * @return Mobile3MetaSimpleStandardVerifyResponse
@@ -1708,6 +1713,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Passes in a phone number and its registration date, and verifies the authenticity and consistency of the information through an authoritative data source.</p>
+     * 
      * @param request the request parameters of MobileRecycledMetaVerify  MobileRecycledMetaVerifyRequest
      * @return MobileRecycledMetaVerifyResponse
      */
@@ -1728,9 +1736,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
-     * <li>Interface Description: Add or modify blacklist rule.</li>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>Operation description: Creates or modifies a blacklist rule.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyBlackListStrategy  ModifyBlackListStrategyRequest
@@ -1753,8 +1761,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request Method: Supports sending requests via HTTPS POST method.</li>
-     * <li>Request Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST.</li>
+     * <li>Request URL: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyControlStrategy  ModifyControlStrategyRequest
@@ -1777,8 +1785,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
-     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET methods are supported.</li>
+     * <li>Endpoint: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyCustomizeFlowStrategyList  ModifyCustomizeFlowStrategyListRequest
@@ -1800,7 +1808,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <p>Request method: You can send requests by using the HTTPS POST and GET methods.</p>
      * 
      * @param request the request parameters of ModifyDeviceInfo  ModifyDeviceInfoRequest
      * @return ModifyDeviceInfoResponse
@@ -1840,10 +1848,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request URL: cloudauth.aliyuncs.com</li>
-     * <li>Request Method: HTTPS POST and GET.<blockquote>
-     * <p>Supports setting blacklists for IP, ID number, phone number, bank card number, etc. When a blacklist is hit, the system rejects the request and returns a fixed error code.
-     * Supports setting blacklists for IP, ID number, phone number, bank card number, etc. When a blacklist is hit, the system rejects the request and returns a fixed error code.</p>
+     * <li>Request endpoint: cloudauth.aliyuncs.com</li>
+     * <li>Request method: HTTPS POST and GET.<blockquote>
+     * <p>You can configure blacklists for IP addresses, ID card numbers, phone numbers, and bank card numbers. When a request matches a blacklist entry, the system rejects the request and returns a fixed error code.
+     * You can configure blacklists for IP addresses, ID card numbers, phone numbers, and bank card numbers. When a request matches a blacklist entry, the system rejects the request and returns a fixed error code.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1868,8 +1876,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
-     * <li>Request Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>Request URL: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryControlStrategy  QueryControlStrategyRequest
@@ -1892,9 +1900,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service Address: cloudauth.aliyuncs.com</li>
-     * <li>Request Method: HTTPS POST and GET.</li>
-     * <li>Security Rules: These are rules to ensure system security, such as monitoring for API abuse, account theft, etc. When a threshold is triggered, the system supports alerting.</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>Security rules: monitoring rules that ensure system security, such as API abuse and abnormal account theft. When a threshold is triggered, the system sends an alert.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryCustomizeFlowStrategy  QueryCustomizeFlowStrategyRequest
@@ -1940,11 +1948,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the download link for statistical call data files under the product plan based on query conditions.</p>
+     * <p>Retrieves the download link of a statistical call data file under a product plan based on query conditions.</p>
      * <ul>
      * <li>Method: HTTPS POST</li>
-     * <li>Service Address: cloudauth.aliyuncs.com<blockquote>
-     * <p>The real-person authentication product uses CertifyId to count the number of calls. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * <li>Endpoint: cloudauth.aliyuncs.com<blockquote>
+     * <p>ID Verification uses CertifyId to calculate the call volume. To facilitate reconciliation, retain the CertifyId field in your system.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1969,9 +1977,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com</li>
+     * <li>Service endpoint: cloudauth.aliyuncs.com</li>
      * <li>Request method: HTTPS POST and GET.</li>
-     * <li>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</li>
+     * <li>This operation uses different parameters for different product plans. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/product-overview/introduction/">official documentation</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryVerifyFlowPackage  QueryVerifyFlowPackageRequest
@@ -1994,9 +2002,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request URL: cloudauth.aliyuncs.com</li>
-     * <li>Request Method: HTTPS POST and GET.<blockquote>
-     * <p>Real-person authentication products use CertifyId to count call volume. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * <li>Request endpoint: cloudauth.aliyuncs.com</li>
+     * <li>Request method: HTTPS POST and GET.<blockquote>
+     * <p>ID Verification products use CertifyId to calculate call volume. To facilitate reconciliation, retain the CertifyId field in your system.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2038,7 +2046,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Content of the uploaded verification file.</p>
+     * <p>Updates the information of a China Finance Certification scenario based on the scenario ID.</p>
+     * <ul>
+     * <li>Service endpoint: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST.</li>
+     * </ul>
      * 
      * @param request the request parameters of UpdateAntCloudAuthScene  UpdateAntCloudAuthSceneRequest
      * @return UpdateAntCloudAuthSceneResponse
@@ -2060,7 +2072,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Request Method: Supports sending requests via HTTPS POST.</li>
+     * <li>Request method: HTTPS POST.</li>
      * <li>Request URL: cloudauth.aliyuncs.com.</li>
      * </ul>
      * 
@@ -2083,7 +2095,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query basic vehicle information through the license plate number and vehicle type.</p>
+     * <p>Queries basic vehicle information by license plate number and vehicle type.</p>
      * 
      * @param request the request parameters of Vehicle5ItemQuery  Vehicle5ItemQueryRequest
      * @return Vehicle5ItemQueryResponse
@@ -2104,7 +2116,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query the vehicle insurance date through the license plate number, vehicle type, and vehicle identification number (VIN).</p>
+     * <p>Queries the insurance date of a vehicle by license plate number, vehicle type, and vehicle identification number (VIN).</p>
      * 
      * @param request the request parameters of VehicleInsureQuery  VehicleInsureQueryRequest
      * @return VehicleInsureQueryResponse
@@ -2125,7 +2137,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Verifies the consistency of name, ID number, vehicle license plate, and vehicle type.</p>
+     * <p>Verifies the consistency of the name, ID card number, license plate number, and vehicle type.</p>
      * 
      * @param request the request parameters of VehicleMetaVerify  VehicleMetaVerifyRequest
      * @return VehicleMetaVerifyResponse
@@ -2146,7 +2158,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Verifies the consistency of name, ID number, license plate number, and vehicle type, and supports returning detailed vehicle information.</p>
+     * <p>Verifies the consistency of the name, ID card number, license plate number, and vehicle type, and supports returning vehicle details.</p>
      * 
      * @param request the request parameters of VehicleMetaVerifyV2  VehicleMetaVerifyV2Request
      * @return VehicleMetaVerifyV2Response
@@ -2167,7 +2179,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query detailed vehicle information through the license plate number and vehicle type.</p>
+     * <p>Queries detailed vehicle information by license plate number and vehicle type.</p>
      * 
      * @param request the request parameters of VehicleQuery  VehicleQueryRequest
      * @return VehicleQueryResponse
@@ -2188,19 +2200,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparatory work has been completed. For details, please refer to <a href="https://help.aliyun.com/document_detail/127471.html">Server-side Access Preparation</a>.
-     * Request Method: HTTPS POST and GET.
-     * API Description: The server of the access party submits the authentication materials to the real-person authentication service for verification and comparison, with the results returned synchronously.
-     * Applicable Scope: This interface is only applicable to pure server-side access authentication solutions.
-     * Image Upload Address Explanation:</p>
+     * <p>Before you begin: Before calling this API, ensure that you have completed the required preparations. For more information, see <a href="https://help.aliyun.com/document_detail/127471.html">Server-side integration preparations</a>.
+     * Request method: HTTPS POST and GET.
+     * Operation description: The caller\&quot;s server submits verification materials to the ID Verification service for comparison and validation. The result is returned synchronously.
+     * Applicable scope: This operation is applicable only to server-side-only verification solutions.
+     * Image URL description:</p>
      * <ul>
-     * <li>HTTP or HTTPS address: Supports publicly accessible HTTP or HTTPS addresses. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
-     * <li>OSS address: If the images from the access party are local files, Alibaba Cloud also provides an upload SDK, supporting the business party to upload the images to the specified OSS bucket of the real-person authentication service, and use the obtained OSS address as the image address parameter in the interface. If your business needs to use the upload SDK, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us for acquisition.
-     * Image Limitations:</li>
-     * <li>Does not support relative or absolute paths of local images.</li>
-     * <li>Please keep the size of a single image within 2 MB to avoid algorithm retrieval timeout.</li>
-     * <li>The face area in the image should be at least 64*64 pixels.</li>
-     * <li>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request, and do not exceed the limit.</li>
+     * <li>HTTP or HTTPS URL: Publicly accessible HTTP or HTTPS URLs are supported. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>OSS URL: If the caller\&quot;s images are local files, Alibaba Cloud provides an upload SDK that allows you to upload images to the OSS bucket designated by the ID Verification service and obtain the corresponding OSS URL to use as the image URL parameter. If your business requires the upload SDK, <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">submit a ticket</a> to contact us.
+     * Image restrictions:</li>
+     * <li>Relative paths or absolute paths of local images are not supported.</li>
+     * <li>Keep each image within 2 MB to avoid algorithm fetch timeouts.</li>
+     * <li>The face area in the image must be at least 64 × 64 pixels.</li>
+     * <li>The request body has an 8 MB size limit. Ensure that the total size of all images and other information in the request does not exceed this limit.</li>
      * </ul>
      * 
      * @param request the request parameters of VerifyMaterial  VerifyMaterialRequest

@@ -103,7 +103,7 @@ public class DescribeVerifyPersonasOsStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>Product code.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -115,7 +115,7 @@ public class DescribeVerifyPersonasOsStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Scene ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000002995</p>
@@ -127,10 +127,10 @@ public class DescribeVerifyPersonasOsStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Service type:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
-         * <li><strong>antcloudauth</strong>: Financial-grade real-person authentication.</li>
-         * <li><strong>cloudauthst</strong> (discontinued): Enhanced real-person authentication.</li>
+         * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
+         * <li><strong>cloudauthst</strong> (discontinued): ID Verification Enhanced Edition.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -144,7 +144,7 @@ public class DescribeVerifyPersonasOsStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Time range for the query, indicating how many days ago.</p>
+         * <p>The time range for the query, indicating the number of preceding days. Format: a numeric string. Unit: days (d). A value of 7 indicates the preceding 7 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

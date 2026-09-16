@@ -67,7 +67,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>026828A3-CC7E-5D85-85B6-08DF245C5A53</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
         }
 
         /**
-         * <p>Query result.</p>
+         * <p>The query result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -157,7 +157,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
             } 
 
             /**
-             * <p>Number of devices.</p>
+             * <p>The number of devices.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -168,7 +168,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
             }
 
             /**
-             * <p>Device model</p>
+             * <p>The device model.</p>
              * 
              * <strong>example:</strong>
              * <p>iPhone15,2</p>
@@ -249,7 +249,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
             } 
 
             /**
-             * <p>Total number of devices.</p>
+             * <p>The total number of devices.</p>
              * 
              * <strong>example:</strong>
              * <p>31</p>
@@ -260,7 +260,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
             }
 
             /**
-             * <p>List of data for different phone models.</p>
+             * <p>The data list of different phone models.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

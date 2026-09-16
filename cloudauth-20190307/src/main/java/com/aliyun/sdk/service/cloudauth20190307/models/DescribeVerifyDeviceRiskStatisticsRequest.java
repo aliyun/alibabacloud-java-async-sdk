@@ -118,7 +118,7 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>End time.</p>
+         * <p>The end time. The value is a UNIX timestamp in milliseconds, such as 1748624399999.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Cloud product code.</p>
+         * <p>The cloud product code.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -143,7 +143,7 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Scene ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100000xxxx</p>
@@ -155,11 +155,11 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Service type:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
-         * <li><strong>antcloudauth</strong>: Financial-grade real-person authentication.</li>
-         * <li><strong>cloudauthst</strong> (discontinued): Enhanced real-person authentication.</li>
-         * <li><strong>cloudauth</strong> (discontinued): Real-person authentication.</li>
+         * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
+         * <li><strong>cloudauthst</strong> (discontinued): ID Verification Enhanced Edition.</li>
+         * <li><strong>cloudauth</strong> (discontinued): ID Verification.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -173,7 +173,7 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Start time of the query, in Unix timestamp format, in milliseconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in milliseconds, such as 1746720000000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

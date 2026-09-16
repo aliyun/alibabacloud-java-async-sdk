@@ -103,7 +103,7 @@ public class DescribeVerifyPersonasSexStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>Product Code.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -115,7 +115,7 @@ public class DescribeVerifyPersonasSexStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Scene ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000002996</p>
@@ -127,10 +127,10 @@ public class DescribeVerifyPersonasSexStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Service type:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
-         * <li><strong>antcloudauth</strong>: Financial-grade real-person authentication.</li>
-         * <li><strong>cloudauthst</strong> (discontinued): Enhanced real-person authentication.</li>
+         * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
+         * <li><strong>cloudauthst</strong> (discontinued): ID Verification enhanced edition.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -144,7 +144,7 @@ public class DescribeVerifyPersonasSexStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Time range, the search range is for the previous N days, TimeRange of 1 indicates the previous 1 day.</p>
+         * <p>The time range. The search range is the previous N days. Format: a numeric string. Unit: days (d). A value of 7 indicates the previous 7 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

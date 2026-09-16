@@ -93,7 +93,17 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates success. Any other value indicates failure.</p>
+         * <blockquote>
+         * <p><strong>Important</strong></p>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter indicates whether the API operation is called correctly. For more information about return codes, see error codes.</li>
+         * <li>Check the business verification result in the fields of ResultObject.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +111,10 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +133,7 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>The returned result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -199,7 +212,14 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
             } 
 
             /**
-             * BizCode.
+             * <p>The query result. Valid values:</p>
+             * <ul>
+             * <li>1: A query result is found.</li>
+             * <li>3: No query result is found.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -207,7 +227,10 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>The carrier name. China Mobile: CMCC. China Unicom: CUCC. China Telecom: CTCC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CMCC</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -215,7 +238,16 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * SubCode.
+             * <p>The detailed verification result. Valid values:</p>
+             * <ul>
+             * <li>101: The registration date is equal to or later than the phone number activation date.</li>
+             * <li>102: The registration date is earlier than the phone number activation date.</li>
+             * <li>103: The new subscriber has not been synchronized yet.</li>
+             * <li>301: Data exception or the subscriber has been deactivated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder subCode(String subCode) {
                 this.subCode = subCode;

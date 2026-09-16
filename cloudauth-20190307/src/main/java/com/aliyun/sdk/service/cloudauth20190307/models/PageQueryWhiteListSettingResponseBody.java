@@ -158,7 +158,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code, <strong>200</strong> indicates a successful API response.</p>
+         * <p>The response code. <strong>200</strong> indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -180,7 +180,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -191,7 +191,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -202,7 +202,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
@@ -213,7 +213,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request result</p>
+         * <p>The request result.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -221,7 +221,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the response was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -232,7 +232,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>28</p>
@@ -243,7 +243,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -429,7 +429,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>ID number.</p>
+             * <p>The certificate number.</p>
              * 
              * <strong>example:</strong>
              * <p>330103xxxxxxxxxxxx</p>
@@ -440,7 +440,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique identifier for real person authentication.</p>
+             * <p>The unique identifier of the ID Verification.</p>
              * 
              * <strong>example:</strong>
              * <p>sha43d9cabd52d370d9f4cca9468f71e</p>
@@ -451,7 +451,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-30 14:00:00</p>
@@ -462,7 +462,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-30 14:00:00</p>
@@ -473,7 +473,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whitelist ID.</p>
+             * <p>The whitelist ID.</p>
              * 
              * <strong>example:</strong>
              * <p>234822</p>
@@ -484,7 +484,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Remark information.</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -495,7 +495,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Authentication scene ID.</p>
+             * <p>The verification scenario ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000332</p>
@@ -506,7 +506,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ServiceCode of the real person cloud product</p>
+             * <p>The ServiceCode of the ID Verification cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>antcloudauth</p>
@@ -517,11 +517,11 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li>DELETE: Deleted</li>
-             * <li>VALID: Not deleted and within the validity period, valid</li>
-             * <li>INVALID: Not deleted but outside the validity period, invalid</li>
+             * <li>DELETE: Deleted.</li>
+             * <li>VALID: Not deleted and within the validity period (valid).</li>
+             * <li>INVALID: Not deleted but not within the validity period (invalid).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -533,7 +533,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>End date of validity</p>
+             * <p>The end date of the validity period. Format: YYYY-MM-DD HH:mm:ss, for example, 2024-09-02 13:57:51.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-02 13:57:51</p>
@@ -544,7 +544,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Start date of validity</p>
+             * <p>The start date of the validity period. Format: YYYY-MM-DD HH:mm:ss, for example, 2024-08-30 13:57:51.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-30 13:57:51</p>

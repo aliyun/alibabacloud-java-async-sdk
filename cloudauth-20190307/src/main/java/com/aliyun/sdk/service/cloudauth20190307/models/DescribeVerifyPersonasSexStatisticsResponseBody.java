@@ -67,7 +67,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>013DA6E1-3F37-5579-B979-2F12B7E92450</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -313,7 +313,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of users under 14 years old.</p>
+             * <p>The number of users aged 14 and under.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -324,7 +324,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of users under 14 years old.</p>
+             * <p>The proportion of users aged 14 and under.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -335,7 +335,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of users between 14 and 18 years old.</p>
+             * <p>The number of users aged 14 to 18.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -346,7 +346,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of users between 14 and 18 years old.</p>
+             * <p>The proportion of users aged 14 to 18.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -357,7 +357,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of authenticated users between 18 and 35 years old.</p>
+             * <p>The number of verified users aged 18 to 35.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -368,7 +368,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of authenticated users between 18 and 35 years old.</p>
+             * <p>The proportion of verified users aged 18 to 35.</p>
              * 
              * <strong>example:</strong>
              * <p>64.29</p>
@@ -379,7 +379,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of authenticated users between 35 and 50 years old.</p>
+             * <p>The number of verified users aged 35 to 50.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -390,7 +390,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of users between 35 and 50 years old.</p>
+             * <p>The proportion of verified users aged 35 to 50.</p>
              * 
              * <strong>example:</strong>
              * <p>35.71</p>
@@ -401,7 +401,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of authenticated users over 50 years old.</p>
+             * <p>The number of verified users aged 50 and over.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -412,7 +412,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of authenticated users over 50 years old.</p>
+             * <p>The number of verified users aged 50 and over.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -423,7 +423,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of authenticated users.</p>
+             * <p>The total number of verified users.</p>
              * 
              * <strong>example:</strong>
              * <p>14</p>
@@ -434,7 +434,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of female users.</p>
+             * <p>The number of female users.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -445,7 +445,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of female authenticated users.</p>
+             * <p>The proportion of female verified users.</p>
              * 
              * <strong>example:</strong>
              * <p>28.57</p>
@@ -456,7 +456,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of male users.</p>
+             * <p>The number of male users.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -467,7 +467,7 @@ public class DescribeVerifyPersonasSexStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proportion of male users.</p>
+             * <p>The proportion of male users.</p>
              * 
              * <strong>example:</strong>
              * <p>71.43</p>

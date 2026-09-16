@@ -60,7 +60,7 @@ public class DeleteSceneConfigRequest extends Request {
         } 
 
         /**
-         * <p>ID of the intent authentication configuration.</p>
+         * <p>The ID of the ID Verification scenario configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

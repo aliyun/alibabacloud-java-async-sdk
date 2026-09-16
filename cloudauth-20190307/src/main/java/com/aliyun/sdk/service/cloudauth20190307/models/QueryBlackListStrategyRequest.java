@@ -59,7 +59,7 @@ public class QueryBlackListStrategyRequest extends Request {
         } 
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

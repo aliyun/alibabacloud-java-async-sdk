@@ -73,7 +73,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
         } 
 
         /**
-         * <p>Product type, currently only supports <strong>ANT_CLOUD_AUTH</strong> (Financial-grade real person), all others have been phased out.</p>
+         * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types have been discontinued.</p>
          * 
          * <strong>example:</strong>
          * <p>ANT_CLOUD_AUTH</p>
@@ -85,7 +85,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
         }
 
         /**
-         * <p>Strategy list.</p>
+         * <p>The policy list.</p>
          */
         public Builder strategyObject(java.util.List<StrategyObject> strategyObject) {
             String strategyObjectShrink = shrink(strategyObject, "StrategyObject", "json");
@@ -261,7 +261,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>Flow control statistical window size, in minutes.</p>
+             * <p>The size of the rate limiting statistical window, in minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -272,7 +272,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>API name, same as <strong>ProductCode</strong>.</p>
+             * <p>The API name, which is the same as <strong>ProductCode</strong>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -284,12 +284,12 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>Flow type:</p>
+             * <p>The flow type. Valid values:</p>
              * <ul>
-             * <li><strong>ACCUMULATE</strong>: Repeated appearance of ID card</li>
-             * <li><strong>PASSED_RATE</strong>: Pass rate less than</li>
-             * <li><strong>SUB_CODE_205</strong>: Authentication failed and liveness attack 205 ratio greater than</li>
-             * <li><strong>SUB_CODE_206</strong>: Authentication failed and liveness attack 206 ratio greater than</li>
+             * <li><strong>ACCUMULATE</strong>: repeated occurrence of an ID card.</li>
+             * <li><strong>PASSED_RATE</strong>: pass rate is less than.</li>
+             * <li><strong>SUB_CODE_205</strong>: authentication failed and the proportion of liveness attack 205 is greater than.</li>
+             * <li><strong>SUB_CODE_206</strong>: authentication failed and the proportion of liveness attack 206 is greater than.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>Rule ID.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>38</p>
@@ -312,7 +312,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>Operation.</p>
+             * <p>The operation.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -325,10 +325,10 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>Status:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>disabled</strong>: Disabled</li>
-             * <li><strong>normal</strong>: Enabled</li>
+             * <li><strong>disabled</strong>: disabled.</li>
+             * <li><strong>normal</strong>: enabled.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -341,7 +341,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>Flow control threshold.</p>
+             * <p>The rate limiting threshold.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -353,7 +353,7 @@ public class ModifyCustomizeFlowStrategyListRequest extends Request {
             }
 
             /**
-             * <p>User ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>126005125163xxxx</p>

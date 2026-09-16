@@ -67,7 +67,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -75,7 +75,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EBD373EA-07FC-50BC-906F-B8950B6ED462</p>
@@ -196,7 +196,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification statistics time.</p>
+             * <p>The authentication statistics time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16T00:00:00.000Z</p>
@@ -207,7 +207,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of failed verifications.</p>
+             * <p>The number of authentication-failed transactions.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -218,7 +218,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Verification scheme.</p>
+             * <p>The authentication solution.</p>
              * 
              * <strong>example:</strong>
              * <p>Liveness</p>
@@ -229,7 +229,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scene ID.</p>
+             * <p>The scene ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000011644</p>
@@ -240,7 +240,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successful verifications.</p>
+             * <p>The number of authentication-passed transactions.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -251,7 +251,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of verifications.</p>
+             * <p>The total number of authentication requests.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -308,7 +308,7 @@ public class DescribeListFaceVerifyDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Face verification data.</p>
+             * <p>The facial recognition data.</p>
              */
             public Builder faceVerifyData(java.util.List<FaceVerifyData> faceVerifyData) {
                 this.faceVerifyData = faceVerifyData;
