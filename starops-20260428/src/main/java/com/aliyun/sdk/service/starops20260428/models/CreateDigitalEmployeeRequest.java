@@ -26,6 +26,10 @@ public class CreateDigitalEmployeeRequest extends Request {
     private java.util.Map<String, String> attributes;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("channel")
+    private String channel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("defaultRule")
     private String defaultRule;
 
@@ -72,6 +76,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.attributes = builder.attributes;
+        this.channel = builder.channel;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
         this.displayName = builder.displayName;
@@ -109,6 +114,13 @@ public class CreateDigitalEmployeeRequest extends Request {
      */
     public java.util.Map<String, String> getAttributes() {
         return this.attributes;
+    }
+
+    /**
+     * @return channel
+     */
+    public String getChannel() {
+        return this.channel;
     }
 
     /**
@@ -184,6 +196,7 @@ public class CreateDigitalEmployeeRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDigitalEmployeeRequest, Builder> {
         private String regionId; 
         private java.util.Map<String, String> attributes; 
+        private String channel; 
         private String defaultRule; 
         private String description; 
         private String displayName; 
@@ -203,6 +216,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.attributes = request.attributes;
+            this.channel = request.channel;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
             this.displayName = request.displayName;
@@ -230,6 +244,18 @@ public class CreateDigitalEmployeeRequest extends Request {
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.putBodyParameter("attributes", attributes);
             this.attributes = attributes;
+            return this;
+        }
+
+        /**
+         * <p>数字员工渠道类型。不填时使用默认渠道。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        public Builder channel(String channel) {
+            this.putBodyParameter("channel", channel);
+            this.channel = channel;
             return this;
         }
 
