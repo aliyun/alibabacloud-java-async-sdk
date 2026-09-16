@@ -164,6 +164,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeWorkModeResponse> changeWorkMode(ChangeWorkModeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
+     * 
+     * @param request the request parameters of CheckBusinessHours  CheckBusinessHoursRequest
+     * @return CheckBusinessHoursResponse
+     */
+    CompletableFuture<CheckBusinessHoursResponse> checkBusinessHours(CheckBusinessHoursRequest request);
+
+    /**
      * @param request the request parameters of ClaimCall  ClaimCallRequest
      * @return ClaimCallResponse
      */

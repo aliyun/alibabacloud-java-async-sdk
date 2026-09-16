@@ -483,6 +483,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
+     * 
+     * @param request the request parameters of CheckBusinessHours  CheckBusinessHoursRequest
+     * @return CheckBusinessHoursResponse
+     */
+    @Override
+    public CompletableFuture<CheckBusinessHoursResponse> checkBusinessHours(CheckBusinessHoursRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckBusinessHours").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckBusinessHoursResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckBusinessHoursResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ClaimCall  ClaimCallRequest
      * @return ClaimCallResponse
      */
