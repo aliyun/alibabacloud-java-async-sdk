@@ -39,7 +39,7 @@ public class ChatMessagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 65536)
+    @com.aliyun.core.annotation.Validation(maxLength = 65536)
     private String query;
 
     private ChatMessagesRequest(Builder builder) {
@@ -130,7 +130,7 @@ public class ChatMessagesRequest extends Request {
         } 
 
         /**
-         * <p>The query content.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fea7bdca-e848-44dd-b1ae-852472b8****</p>
@@ -142,7 +142,10 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * EventMode.
+         * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of the event = message response. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inline</p>
          */
         public Builder eventMode(String eventMode) {
             this.putQueryParameter("EventMode", eventMode);
@@ -161,7 +164,7 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent message.</p>
+         * <p>The task inputs.</p>
          */
         public Builder inputs(Inputs inputs) {
             String inputsShrink = shrink(inputs, "Inputs", "json");
@@ -171,7 +174,7 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the conversation.</p>
+         * <p>The parent message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
@@ -183,8 +186,10 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>ChatMessages</strong>.</p>
-         * <p>This parameter is required.</p>
+         * <p>The query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Check the disk usage of instance rm-bp14as9914vd3**** and whether storage expansion is needed</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -317,11 +322,20 @@ public class ChatMessagesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResumeCallId")
+        private String resumeCallId;
+
         @com.aliyun.core.annotation.NameInMap("ThinkEffort")
         private String thinkEffort;
 
         @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
+
+        @com.aliyun.core.annotation.NameInMap("ToolApprovalMode")
+        private String toolApprovalMode;
+
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+        private String workspaceId;
 
         private Inputs(Builder builder) {
             this.customAgentId = builder.customAgentId;
@@ -329,8 +343,11 @@ public class ChatMessagesRequest extends Request {
             this.language = builder.language;
             this.modelId = builder.modelId;
             this.regionId = builder.regionId;
+            this.resumeCallId = builder.resumeCallId;
             this.thinkEffort = builder.thinkEffort;
             this.timezone = builder.timezone;
+            this.toolApprovalMode = builder.toolApprovalMode;
+            this.workspaceId = builder.workspaceId;
         }
 
         public static Builder builder() {
@@ -377,6 +394,13 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
+         * @return resumeCallId
+         */
+        public String getResumeCallId() {
+            return this.resumeCallId;
+        }
+
+        /**
          * @return thinkEffort
          */
         public String getThinkEffort() {
@@ -390,14 +414,31 @@ public class ChatMessagesRequest extends Request {
             return this.timezone;
         }
 
+        /**
+         * @return toolApprovalMode
+         */
+        public String getToolApprovalMode() {
+            return this.toolApprovalMode;
+        }
+
+        /**
+         * @return workspaceId
+         */
+        public String getWorkspaceId() {
+            return this.workspaceId;
+        }
+
         public static final class Builder {
             private String customAgentId; 
             private String enableThinking; 
             private String language; 
             private String modelId; 
             private String regionId; 
+            private String resumeCallId; 
             private String thinkEffort; 
             private String timezone; 
+            private String toolApprovalMode; 
+            private String workspaceId; 
 
             private Builder() {
             } 
@@ -408,12 +449,18 @@ public class ChatMessagesRequest extends Request {
                 this.language = model.language;
                 this.modelId = model.modelId;
                 this.regionId = model.regionId;
+                this.resumeCallId = model.resumeCallId;
                 this.thinkEffort = model.thinkEffort;
                 this.timezone = model.timezone;
+                this.toolApprovalMode = model.toolApprovalMode;
+                this.workspaceId = model.workspaceId;
             } 
 
             /**
-             * CustomAgentId.
+             * <p>The custom agent ID for the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
@@ -421,7 +468,10 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * EnableThinking.
+             * <p>Specifies whether to enable deep thinking mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableThinking(String enableThinking) {
                 this.enableThinking = enableThinking;
@@ -429,7 +479,10 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * Language.
+             * <p>The conversation language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-cn</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -437,7 +490,10 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * ModelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.7-max</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -445,7 +501,10 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -453,7 +512,21 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * ThinkEffort.
+             * <p>The tool approval call ID for resuming execution. Pass this parameter after all decisions in the current approval round are completed in the console to continue the interrupted ChatMessage Loop. Do not pass this parameter for regular conversations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call-example</p>
+             */
+            public Builder resumeCallId(String resumeCallId) {
+                this.resumeCallId = resumeCallId;
+                return this;
+            }
+
+            /**
+             * <p>The thinking depth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder thinkEffort(String thinkEffort) {
                 this.thinkEffort = thinkEffort;
@@ -461,10 +534,35 @@ public class ChatMessagesRequest extends Request {
             }
 
             /**
-             * Timezone.
+             * <p>The time zone. Default value: <strong>Asia/Shanghai</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
+                return this;
+            }
+
+            /**
+             * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, write tools are rejected), manual (write tools require manual approval), and auto (the approval sub-agent automatically determines the action. If the result is needs_human, the approval is escalated to manual review). When this parameter is passed, the approval mode of the current conversation is updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual</p>
+             */
+            public Builder toolApprovalMode(String toolApprovalMode) {
+                this.toolApprovalMode = toolApprovalMode;
+                return this;
+            }
+
+            /**
+             * <p>The ContextDB workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00000000-0000-4000-8000-000000000001</p>
+             */
+            public Builder workspaceId(String workspaceId) {
+                this.workspaceId = workspaceId;
                 return this;
             }
 

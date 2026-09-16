@@ -130,7 +130,7 @@ public class DescribeEventsListRequest extends Request {
         } 
 
         /**
-         * <p>The start time of the query period.</p>
+         * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-28 18:00:00</p>
@@ -142,10 +142,10 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The instance IDs. You can specify one or more instance IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>r-uf6ce0r08lr7xnriq2</p>
+         * <p>r-uf6ce0r08lr7xn****</p>
          */
         public Builder instanceIdList(String instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -154,7 +154,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of the page to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,7 +166,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query period.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -178,7 +178,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DescribeEventsList</strong>.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * <p>The RDS Supabase instances.</p>
+         * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01 18:00:00</p>

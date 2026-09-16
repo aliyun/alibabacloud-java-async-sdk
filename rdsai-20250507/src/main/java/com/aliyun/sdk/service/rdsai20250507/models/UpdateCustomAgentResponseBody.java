@@ -132,7 +132,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether tools are enabled.</p>
+         * <p>Specifies whether to enable tools.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -143,7 +143,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the agent.</p>
+         * <p>AgentId。</p>
          * 
          * <strong>example:</strong>
          * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
@@ -154,7 +154,10 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the agent.</p>
+         * <p>The name of the dedicated agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QueryInstanceListAgent</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -173,7 +176,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Skills.
+         * <p>The list of associated skill details.</p>
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.skills = skills;
@@ -181,7 +184,10 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The system prompts.</p>
+         * <p>The system prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I am your dedicated agent for querying instance lists</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.systemPrompt = systemPrompt;
@@ -189,7 +195,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the tool.</p>
+         * <p>The tool information.</p>
          */
         public Builder tools(java.util.List<String> tools) {
             this.tools = tools;
@@ -289,7 +295,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the agent.</p>
+             * <p>AgentId。</p>
              * 
              * <strong>example:</strong>
              * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
@@ -300,7 +306,10 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the agent.</p>
+             * <p>The name of the dedicated agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QueryInstanceListAgent</p>
              */
             public Builder name(String name) {
                 this.name = name;

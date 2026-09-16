@@ -132,7 +132,7 @@ public class DescribeMonitorDataRequest extends Request {
         } 
 
         /**
-         * ApiKeyName.
+         * <p>The API key name.</p>
          */
         public Builder apiKeyName(java.util.List<String> apiKeyName) {
             String apiKeyNameShrink = shrink(apiKeyName, "ApiKeyName", "json");
@@ -142,6 +142,7 @@ public class DescribeMonitorDataRequest extends Request {
         }
 
         /**
+         * <p>The end time. Format: Timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +155,10 @@ public class DescribeMonitorDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_copilot***_public_cn-*********6</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -163,7 +167,10 @@ public class DescribeMonitorDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The statistical period. Default value: 15s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -172,6 +179,25 @@ public class DescribeMonitorDataRequest extends Request {
         }
 
         /**
+         * <p>The metric to query.</p>
+         * <ul>
+         * <li><p>pv</p>
+         * </li>
+         * <li><p>uv</p>
+         * </li>
+         * <li><p>qps</p>
+         * </li>
+         * <li><p>success_rate</p>
+         * </li>
+         * <li><p>rt</p>
+         * </li>
+         * <li><p>rate_limited_count</p>
+         * </li>
+         * <li><p>tpm</p>
+         * </li>
+         * <li><p>cache</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +210,7 @@ public class DescribeMonitorDataRequest extends Request {
         }
 
         /**
+         * <p>The start time. Format: Timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

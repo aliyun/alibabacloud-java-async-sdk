@@ -125,7 +125,7 @@ public class ModifyInstanceStorageConfigRequest extends Request {
         }
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which ensures that the request is not repeated.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -137,7 +137,7 @@ public class ModifyInstanceStorageConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The list of storage configurations.</p>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             String configListShrink = shrink(configList, "ConfigList", "json");
@@ -147,7 +147,7 @@ public class ModifyInstanceStorageConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class ModifyInstanceStorageConfigRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceStorageConfig</strong>.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -231,7 +231,19 @@ public class ModifyInstanceStorageConfigRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the configuration item. Valid values:</p>
+             * <ul>
+             * <li><strong>AWS_SESSION_TOKEN</strong> (optional): the temporary access token (Session Token) for OSS. If this parameter is not specified, AccessKey ID and AccessKey Secret are used for authentication.</li>
+             * <li><strong>AWS_ACCESS_KEY_ID</strong>: the AccessKey ID for OSS.</li>
+             * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: the AccessKey Secret for OSS.</li>
+             * <li><strong>GLOBAL_S3_BUCKET</strong>: the bucket name of OSS.</li>
+             * <li><strong>TENANT_ID</strong>: the OSS directory name. You do not need to create it in advance.</li>
+             * <li><strong>GLOBAL_S3_ENDPOINT</strong>: the endpoint of OSS.</li>
+             * <li><strong>REGION</strong>: the region of OSS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TENANT_ID</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -239,7 +251,10 @@ public class ModifyInstanceStorageConfigRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-prefix</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -93,7 +93,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -262,7 +268,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * DailyTokenQuota.
+             * <p>The daily quota of the API key.</p>
              */
             public Builder dailyTokenQuota(Long dailyTokenQuota) {
                 this.dailyTokenQuota = dailyTokenQuota;
@@ -270,7 +276,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The API key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-*****</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -278,7 +287,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LimitRate.
+             * <p>The quota percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder limitRate(Float limitRate) {
                 this.limitRate = limitRate;
@@ -286,7 +298,18 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LimitType.
+             * <p>The quota allocation method. Valid values:</p>
+             * <ul>
+             * <li><p><strong>fixed</strong>: By fixed value.</p>
+             * </li>
+             * <li><p><strong>ratio</strong>: By percentage.</p>
+             * </li>
+             * <li><p><strong>auto</strong>: Automatic allocation.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed</p>
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
@@ -302,7 +325,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * TokenQuota.
+             * <p>The quota limit for the current key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder tokenQuota(Long tokenQuota) {
                 this.tokenQuota = tokenQuota;
@@ -382,7 +408,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * BaseUrl.
+             * <p>The URL for model invocation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -390,7 +419,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * CustomKeyList.
+             * <p>The list of custom API keys.</p>
              */
             public Builder customKeyList(java.util.List<CustomKeyList> customKeyList) {
                 this.customKeyList = customKeyList;
@@ -398,7 +427,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * SystemApiKey.
+             * <p>The system-generated key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-rds-xxx</p>
              */
             public Builder systemApiKey(String systemApiKey) {
                 this.systemApiKey = systemApiKey;

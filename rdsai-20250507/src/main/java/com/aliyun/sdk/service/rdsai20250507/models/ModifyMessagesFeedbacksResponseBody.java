@@ -78,7 +78,7 @@ public class ModifyMessagesFeedbacksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

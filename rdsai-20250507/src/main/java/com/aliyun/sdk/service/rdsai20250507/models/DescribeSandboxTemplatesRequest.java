@@ -168,7 +168,11 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -177,7 +181,10 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -186,7 +193,10 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABo-D-ze1Zog63nWMa8eDDMkqUoBB5-FDsHDUMiNIDSDZeP9g0LwJEozulOPG_LbsGwLRgmDFvTHZeSU90YsukT0pHtnA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -195,7 +205,10 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +217,10 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,6 +229,7 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +242,10 @@ public class DescribeSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The sandbox template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-interpreter</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

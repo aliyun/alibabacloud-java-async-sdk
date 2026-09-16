@@ -93,7 +93,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
@@ -120,7 +123,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +192,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The custom API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-rds-*****</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -194,7 +203,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The name of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-*****</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -274,7 +286,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The new system API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-rds-*****</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -282,7 +297,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * BaseUrl.
+             * <p>The model invocation URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -290,7 +308,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * CustomKeyList.
+             * <p>A list of custom API keys.</p>
              */
             public Builder customKeyList(java.util.List<CustomKeyList> customKeyList) {
                 this.customKeyList = customKeyList;

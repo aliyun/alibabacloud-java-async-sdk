@@ -322,7 +322,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * Components.
+         * <p>List of modules</p>
          */
         public Builder components(java.util.List<Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -542,7 +542,10 @@ public class CreateAppInstanceRequest extends Request {
             } 
 
             /**
-             * Type.
+             * <p>Module type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -623,7 +626,10 @@ public class CreateAppInstanceRequest extends Request {
             } 
 
             /**
-             * DBInstanceClass.
+             * <p>The instance type of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg.n2.2c.1m</p>
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -631,7 +637,10 @@ public class CreateAppInstanceRequest extends Request {
             }
 
             /**
-             * DBInstanceStorage.
+             * <p>The storage capacity of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder DBInstanceStorage(Integer DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
@@ -639,7 +648,10 @@ public class CreateAppInstanceRequest extends Request {
             }
 
             /**
-             * PayType.
+             * <p>The payment type of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;

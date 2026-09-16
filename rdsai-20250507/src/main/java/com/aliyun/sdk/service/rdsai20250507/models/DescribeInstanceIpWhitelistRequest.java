@@ -110,7 +110,10 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -119,7 +122,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -131,7 +134,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceIpWhitelist</strong>.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

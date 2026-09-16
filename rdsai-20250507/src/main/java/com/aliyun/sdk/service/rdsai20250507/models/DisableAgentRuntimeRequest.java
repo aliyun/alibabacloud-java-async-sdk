@@ -111,7 +111,10 @@ public class DisableAgentRuntimeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -120,6 +123,7 @@ public class DisableAgentRuntimeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,10 @@ public class DisableAgentRuntimeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

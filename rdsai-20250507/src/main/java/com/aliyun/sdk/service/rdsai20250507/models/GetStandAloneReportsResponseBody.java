@@ -133,6 +133,9 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
 
         /**
          * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully retrieved the inspection report list</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +143,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +154,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -162,7 +165,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The reports.</p>
+         * <p>The list of reports.</p>
          */
         public Builder reports(java.util.List<Reports> reports) {
             this.reports = reports;
@@ -181,7 +184,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -378,7 +381,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the inspection task.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-22T08:20:31Z</p>
@@ -389,7 +392,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The inspection end time in the format of YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-23T08:20:31Z</p>
@@ -432,7 +435,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The inspection start time in the format of YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-23T08:00:31Z</p>
@@ -443,7 +446,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the inspection task.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -454,7 +457,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the inspection report.</p>
+             * <p>The inspection report ID.</p>
              * 
              * <strong>example:</strong>
              * <p>0f19210c-7bb8-4e38-a099-f94152df****</p>

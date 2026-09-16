@@ -34,6 +34,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChatMessagesTaskStopResponse> chatMessagesTaskStop(ChatMessagesTaskStopRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of CreateApiKey  CreateApiKeyRequest
      * @return CreateApiKeyResponse
      */
@@ -41,12 +45,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Supported Engine</h3>
+     * <p>RDS PostgreSQL  </p>
+     * <h3>Related Function Documentation</h3>
      * <blockquote>
-     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
-     * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <p>Warning: This API operation involves a Fee. Carefully read the related Function Documentation before performing this operation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateAppInstance  CreateAppInstanceRequest
@@ -56,7 +59,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>创建 API Key（返回明文 apiKey）。</p>
+     * <p>Creates an API key and returns the plaintext apiKey.</p>
      * 
      * @param request the request parameters of CreateContextDatabaseApiKey  CreateContextDatabaseApiKeyRequest
      * @return CreateContextDatabaseApiKeyResponse
@@ -65,7 +68,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key（返回明文 apiKey）。</p>
+     * <p>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</p>
      * 
      * @param request the request parameters of CreateContextDatabaseMember  CreateContextDatabaseMemberRequest
      * @return CreateContextDatabaseMemberResponse
@@ -74,7 +77,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</p>
      * 
      * @param request the request parameters of CreateContextDatabaseWorkspace  CreateContextDatabaseWorkspaceRequest
      * @return CreateContextDatabaseWorkspaceResponse
@@ -94,18 +97,37 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInspectionTaskResponse> createInspectionTask(CreateInspectionTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>适用引擎</h3>
+     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * 
      * @param request the request parameters of CreateMOUsageDetailExport  CreateMOUsageDetailExportRequest
      * @return CreateMOUsageDetailExportResponse
      */
     CompletableFuture<CreateMOUsageDetailExportResponse> createMOUsageDetailExport(CreateMOUsageDetailExportRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase</p>
+     * <h3>Related documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of CreateSandboxTemplate  CreateSandboxTemplateRequest
      * @return CreateSandboxTemplateResponse
      */
     CompletableFuture<CreateSandboxTemplateResponse> createSandboxTemplate(CreateSandboxTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>Related documentation</h3>
+     * <blockquote>
+     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+     * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateScheduledTask  CreateScheduledTaskRequest
      * @return CreateScheduledTaskResponse
      */
@@ -118,6 +140,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSkillResponse> createSkill(CreateSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of DeleteApiKey  DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
      */
@@ -125,13 +151,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable DPI engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-     *  If you delete an RDS Supabase instance, the created RDS for PostgreSQL instance and the created NAT gateway are not automatically deleted. You must manually release the instance and delete the Internet NAT gateway and EIP.</p>
+     * Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteAppInstance  DeleteAppInstanceRequest
@@ -141,7 +167,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>删除成员（硬删除，不可恢复）。</p>
+     * <p>Deletes a member (hard delete, not recoverable).</p>
      * 
      * @param request the request parameters of DeleteContextDatabaseMember  DeleteContextDatabaseMemberRequest
      * @return DeleteContextDatabaseMemberResponse
@@ -150,7 +176,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>删除 workspace（硬删除，不可恢复）。</p>
+     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
      * 
      * @param request the request parameters of DeleteContextDatabaseWorkspace  DeleteContextDatabaseWorkspaceRequest
      * @return DeleteContextDatabaseWorkspaceResponse
@@ -164,6 +190,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase</p>
+     * <h3>Related documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DeleteSandboxTemplate  DeleteSandboxTemplateRequest
      * @return DeleteSandboxTemplateResponse
      */
@@ -183,9 +215,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeAppInstanceAttribute  DescribeAppInstanceAttributeRequest
@@ -195,9 +227,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeAppInstances  DescribeAppInstancesRequest
@@ -206,6 +238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAppInstancesResponse> describeAppInstances(DescribeAppInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase</p>
+     * <h3>Related documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeCommonSandboxTemplates  DescribeCommonSandboxTemplatesRequest
      * @return DescribeCommonSandboxTemplatesResponse
      */
@@ -219,9 +257,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeInstanceAuthInfo  DescribeInstanceAuthInfoRequest
@@ -231,9 +269,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeInstanceEndpoints  DescribeInstanceEndpointsRequest
@@ -243,9 +281,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeInstanceIpWhitelist  DescribeInstanceIpWhitelistRequest
@@ -261,9 +299,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of DescribeInstanceSSL  DescribeInstanceSSLRequest
@@ -273,12 +311,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</p>
+     * <p>Currently, only Object Storage Service (OSS) is supported.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeInstanceStorageConfig  DescribeInstanceStorageConfigRequest
@@ -287,60 +325,105 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceStorageConfigResponse> describeInstanceStorageConfig(DescribeInstanceStorageConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of DescribeMOTokenUsageDetail  DescribeMOTokenUsageDetailRequest
      * @return DescribeMOTokenUsageDetailResponse
      */
     CompletableFuture<DescribeMOTokenUsageDetailResponse> describeMOTokenUsageDetail(DescribeMOTokenUsageDetailRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>适用引擎</h3>
+     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * 
      * @param request the request parameters of DescribeMOTokenUsageSummary  DescribeMOTokenUsageSummaryRequest
      * @return DescribeMOTokenUsageSummaryResponse
      */
     CompletableFuture<DescribeMOTokenUsageSummaryResponse> describeMOTokenUsageSummary(DescribeMOTokenUsageSummaryRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>适用引擎</h3>
+     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * 
      * @param request the request parameters of DescribeMOUsageDetailExport  DescribeMOUsageDetailExportRequest
      * @return DescribeMOUsageDetailExportResponse
      */
     CompletableFuture<DescribeMOUsageDetailExportResponse> describeMOUsageDetailExport(DescribeMOUsageDetailExportRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of DescribeModelOperator  DescribeModelOperatorRequest
      * @return DescribeModelOperatorResponse
      */
     CompletableFuture<DescribeModelOperatorResponse> describeModelOperator(DescribeModelOperatorRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of DescribeMonitorData  DescribeMonitorDataRequest
      * @return DescribeMonitorDataResponse
      */
     CompletableFuture<DescribeMonitorDataResponse> describeMonitorData(DescribeMonitorDataRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase</p>
+     * <h3>Related documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeSandboxTemplates  DescribeSandboxTemplatesRequest
      * @return DescribeSandboxTemplatesResponse
      */
     CompletableFuture<DescribeSandboxTemplatesResponse> describeSandboxTemplates(DescribeSandboxTemplatesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Supported engine</h3>
+     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * 
      * @param request the request parameters of DescribeWhitelistIps  DescribeWhitelistIpsRequest
      * @return DescribeWhitelistIpsResponse
      */
     CompletableFuture<DescribeWhitelistIpsResponse> describeWhitelistIps(DescribeWhitelistIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</p>
+     * <blockquote>
+     * <p>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DisableAgentRuntime  DisableAgentRuntimeRequest
      * @return DisableAgentRuntimeResponse
      */
     CompletableFuture<DisableAgentRuntimeResponse> disableAgentRuntime(DisableAgentRuntimeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>During the public preview, the sandbox and Edge Routine features are free of charge.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before using this feature, you must complete <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">service-linked role authorization</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</p>
+     * 
      * @param request the request parameters of EnableAgentRuntime  EnableAgentRuntimeRequest
      * @return EnableAgentRuntimeResponse
      */
     CompletableFuture<EnableAgentRuntimeResponse> enableAgentRuntime(EnableAgentRuntimeRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>适用引擎</h3>
+     * <p>RDS SUPABASE</p>
+     * 
      * @param request the request parameters of GetAvailableLLMModels  GetAvailableLLMModelsRequest
      * @return GetAvailableLLMModelsResponse
      */
@@ -377,6 +460,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMessagesResponse> getMessages(GetMessagesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of GetModelOperatorOrder  GetModelOperatorOrderRequest
      * @return GetModelOperatorOrderResponse
      */
@@ -407,6 +494,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetStandAloneReportsResponse> getStandAloneReports(GetStandAloneReportsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of ListApiKeys  ListApiKeysRequest
      * @return ListApiKeysResponse
      */
@@ -414,7 +505,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>列出成员名下的 API Key。</p>
+     * <p>Lists the API keys under a specified member. The plaintext key values are not returned.</p>
      * 
      * @param request the request parameters of ListContextDatabaseApiKeys  ListContextDatabaseApiKeysRequest
      * @return ListContextDatabaseApiKeysResponse
@@ -423,7 +514,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>列出 workspace 下成员。</p>
+     * <p>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</p>
      * 
      * @param request the request parameters of ListContextDatabaseMembers  ListContextDatabaseMembersRequest
      * @return ListContextDatabaseMembersResponse
@@ -432,13 +523,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该API用于获取指定条件下的工作区列表。</li>
-     * <li><code>workspaceId</code> 和 <code>status</code> 参数均为可选，可以根据需要进行过滤。</li>
-     * <li>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</li>
-     * <li>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</li>
-     * </ul>
+     * <p>Lists ContextDB workspaces.</p>
      * 
      * @param request the request parameters of ListContextDatabaseWorkspaces  ListContextDatabaseWorkspacesRequest
      * @return ListContextDatabaseWorkspacesResponse
@@ -458,6 +543,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCustomAgentToolsResponse> listCustomAgentTools(ListCustomAgentToolsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>适用引擎</h3>
+     * <p>RDS SUPABASE</p>
+     * 
      * @param request the request parameters of ListLLMTokenUsage  ListLLMTokenUsageRequest
      * @return ListLLMTokenUsageResponse
      */
@@ -476,6 +565,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSkillResponse> listSkill(ListSkillRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>Related documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifyAppInstance  ModifyAppInstanceRequest
      * @return ModifyAppInstanceResponse
      */
@@ -483,9 +578,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of ModifyInstanceAuthConfig  ModifyInstanceAuthConfigRequest
@@ -501,9 +596,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of ModifyInstanceIpWhitelist  ModifyInstanceIpWhitelistRequest
@@ -519,9 +614,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of ModifyInstanceSSL  ModifyInstanceSSLRequest
@@ -531,12 +626,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</p>
+     * <p>Currently, only Object Storage Service (OSS) is supported.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceStorageConfig  ModifyInstanceStorageConfigRequest
@@ -546,9 +641,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of ModifyInstancesSSL  ModifyInstancesSSLRequest
@@ -563,6 +658,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMessagesFeedbacksResponse> modifyMessagesFeedbacks(ModifyMessagesFeedbacksRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase</p>
+     * <h3>Related documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifySandboxTemplate  ModifySandboxTemplateRequest
      * @return ModifySandboxTemplateResponse
      */
@@ -575,24 +676,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyScheduledTaskResponse> modifyScheduledTask(ModifyScheduledTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engines</h3>
+     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * 
      * @param request the request parameters of ModifyWhitelistIps  ModifyWhitelistIpsRequest
      * @return ModifyWhitelistIpsResponse
      */
     CompletableFuture<ModifyWhitelistIpsResponse> modifyWhitelistIps(ModifyWhitelistIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of RenameApiKey  RenameApiKeyRequest
      * @return RenameApiKeyResponse
      */
     CompletableFuture<RenameApiKeyResponse> renameApiKey(RenameApiKeyRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engines</h3>
+     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></p>
+     * 
      * @param request the request parameters of ResetApiKey  ResetApiKeyRequest
      * @return ResetApiKeyResponse
      */
     CompletableFuture<ResetApiKeyResponse> resetApiKey(ResetApiKeyRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>Related documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ResetInstanceKeys  ResetInstanceKeysRequest
      * @return ResetInstanceKeysResponse
      */
@@ -600,12 +719,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p> You can only change the password of a RDS Supabase Dashboard user.</p>
+     * <p>Currently, only the password of the RDS Supabase Dashboard user can be reset.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetInstancePassword  ResetInstancePasswordRequest
@@ -615,9 +734,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of RestartInstance  RestartInstanceRequest
@@ -627,7 +746,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>吊销 API Key。</p>
+     * <p>Revokes an API key.</p>
      * 
      * @param request the request parameters of RevokeContextDatabaseApiKey  RevokeContextDatabaseApiKeyRequest
      * @return RevokeContextDatabaseApiKeyResponse
@@ -636,9 +755,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of StartInstance  StartInstanceRequest
@@ -648,9 +767,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3><a href="#"></a>References</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * @param request the request parameters of StopInstance  StopInstanceRequest
@@ -659,6 +778,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Supported engine</h3>
+     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * 
      * @param request the request parameters of UpdateApiKeyQuota  UpdateApiKeyQuotaRequest
      * @return UpdateApiKeyQuotaResponse
      */
@@ -666,7 +789,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>更新 API Key 的展示元数据；<code>Name</code> 与 <code>Description</code> 至少传其一。明文 Key 不重新签发。</p>
+     * <p>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</p>
      * 
      * @param request the request parameters of UpdateContextDatabaseApiKey  UpdateContextDatabaseApiKeyRequest
      * @return UpdateContextDatabaseApiKeyResponse
@@ -675,7 +798,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>更新成员的角色 / 状态。</p>
+     * <p>Updates the role or status of a member.</p>
      * 
      * @param request the request parameters of UpdateContextDatabaseMember  UpdateContextDatabaseMemberRequest
      * @return UpdateContextDatabaseMemberResponse
@@ -684,7 +807,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>修改 workspace 名称。</p>
+     * <p>Modifies the name of a workspace.</p>
      * 
      * @param request the request parameters of UpdateContextDatabaseWorkspace  UpdateContextDatabaseWorkspaceRequest
      * @return UpdateContextDatabaseWorkspaceResponse
@@ -698,6 +821,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCustomAgentResponse> updateCustomAgent(UpdateCustomAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Applicable engines</h3>
+     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * 
      * @param request the request parameters of UpdateMOQuotaAlertThreshold  UpdateMOQuotaAlertThresholdRequest
      * @return UpdateMOQuotaAlertThresholdResponse
      */

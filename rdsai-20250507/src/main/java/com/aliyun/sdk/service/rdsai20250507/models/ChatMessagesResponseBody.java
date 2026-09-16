@@ -20,11 +20,20 @@ public class ChatMessagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Answer")
     private String answer;
 
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
+    private String approvalStatus;
+
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    private String callId;
+
     @com.aliyun.core.annotation.NameInMap("ConversationId")
     private String conversationId;
 
     @com.aliyun.core.annotation.NameInMap("CreatedAt")
     private Long createdAt;
+
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.NameInMap("Event")
     private String event;
@@ -41,19 +50,34 @@ public class ChatMessagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RoundId")
+    private String roundId;
+
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
+    @com.aliyun.core.annotation.NameInMap("ToolArguments")
+    private java.util.Map<String, ?> toolArguments;
+
+    @com.aliyun.core.annotation.NameInMap("ToolName")
+    private String toolName;
+
     private ChatMessagesResponseBody(Builder builder) {
         this.answer = builder.answer;
+        this.approvalStatus = builder.approvalStatus;
+        this.callId = builder.callId;
         this.conversationId = builder.conversationId;
         this.createdAt = builder.createdAt;
+        this.description = builder.description;
         this.event = builder.event;
         this.id = builder.id;
         this.messageId = builder.messageId;
         this.mode = builder.mode;
         this.requestId = builder.requestId;
+        this.roundId = builder.roundId;
         this.taskId = builder.taskId;
+        this.toolArguments = builder.toolArguments;
+        this.toolName = builder.toolName;
     }
 
     public static Builder builder() {
@@ -76,6 +100,20 @@ public class ChatMessagesResponseBody extends TeaModel {
     }
 
     /**
+     * @return approvalStatus
+     */
+    public String getApprovalStatus() {
+        return this.approvalStatus;
+    }
+
+    /**
+     * @return callId
+     */
+    public String getCallId() {
+        return this.callId;
+    }
+
+    /**
      * @return conversationId
      */
     public String getConversationId() {
@@ -87,6 +125,13 @@ public class ChatMessagesResponseBody extends TeaModel {
      */
     public Long getCreatedAt() {
         return this.createdAt;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -125,40 +170,76 @@ public class ChatMessagesResponseBody extends TeaModel {
     }
 
     /**
+     * @return roundId
+     */
+    public String getRoundId() {
+        return this.roundId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
         return this.taskId;
     }
 
+    /**
+     * @return toolArguments
+     */
+    public java.util.Map<String, ?> getToolArguments() {
+        return this.toolArguments;
+    }
+
+    /**
+     * @return toolName
+     */
+    public String getToolName() {
+        return this.toolName;
+    }
+
     public static final class Builder {
         private String answer; 
+        private String approvalStatus; 
+        private String callId; 
         private String conversationId; 
         private Long createdAt; 
+        private String description; 
         private String event; 
         private String id; 
         private String messageId; 
         private String mode; 
         private String requestId; 
+        private String roundId; 
         private String taskId; 
+        private java.util.Map<String, ?> toolArguments; 
+        private String toolName; 
 
         private Builder() {
         } 
 
         private Builder(ChatMessagesResponseBody model) {
             this.answer = model.answer;
+            this.approvalStatus = model.approvalStatus;
+            this.callId = model.callId;
             this.conversationId = model.conversationId;
             this.createdAt = model.createdAt;
+            this.description = model.description;
             this.event = model.event;
             this.id = model.id;
             this.messageId = model.messageId;
             this.mode = model.mode;
             this.requestId = model.requestId;
+            this.roundId = model.roundId;
             this.taskId = model.taskId;
+            this.toolArguments = model.toolArguments;
+            this.toolName = model.toolName;
         } 
 
         /**
-         * <p>The answer.</p>
+         * <p>The answer content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, and storage expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for an instance, let me know your specific requirements!</p>
          */
         public Builder answer(String answer) {
             this.answer = answer;
@@ -166,7 +247,29 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the conversation.</p>
+         * <p>The tool invocation approval status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
+         */
+        public Builder approvalStatus(String approvalStatus) {
+            this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * <p>The tool invocation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>call-example</p>
+         */
+        public Builder callId(String callId) {
+            this.callId = callId;
+            return this;
+        }
+
+        /**
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
@@ -177,13 +280,24 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the conversation.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1763986004</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        /**
+         * <p>The tool invocation description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Search ContextDB records</p>
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 
@@ -222,6 +336,9 @@ public class ChatMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The query mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This field will be deprecated in the future. Ignore it</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -240,13 +357,43 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the asynchronous task.</p>
+         * <p>The tool approval round ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>round-example</p>
+         */
+        public Builder roundId(String roundId) {
+            this.roundId = roundId;
+            return this;
+        }
+
+        /**
+         * <p>The asynchronous task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01c3d43d-9466-4bd5-8196-4cbbce08****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * <p>The tool invocation parameters.</p>
+         */
+        public Builder toolArguments(java.util.Map<String, ?> toolArguments) {
+            this.toolArguments = toolArguments;
+            return this;
+        }
+
+        /**
+         * <p>The tool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contextdb.search</p>
+         */
+        public Builder toolName(String toolName) {
+            this.toolName = toolName;
             return this;
         }
 

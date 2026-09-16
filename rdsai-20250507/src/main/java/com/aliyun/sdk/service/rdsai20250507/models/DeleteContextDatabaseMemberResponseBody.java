@@ -132,7 +132,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedAt.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-28T17:59:55Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -140,7 +143,7 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Keys.
+         * <p>The API key details. An empty array is returned.</p>
          */
         public Builder keys(java.util.List<Keys> keys) {
             this.keys = keys;
@@ -148,7 +151,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         }
 
         /**
-         * MemberId.
+         * <p>The member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mb-cz51tnnp8****</p>
          */
         public Builder memberId(String memberId) {
             this.memberId = memberId;
@@ -156,7 +162,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         }
 
         /**
-         * MemberName.
+         * <p>The member name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder memberName(String memberName) {
             this.memberName = memberName;
@@ -164,7 +173,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The member role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -180,7 +195,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The member status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deleted</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -350,7 +368,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time. This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -358,7 +379,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The API key description. This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +390,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiresAt.
+             * <p>This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder expiresAt(String expiresAt) {
                 this.expiresAt = expiresAt;
@@ -374,7 +401,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * KeyDisplaySuffix.
+             * <p>The API key suffix. This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder keyDisplaySuffix(String keyDisplaySuffix) {
                 this.keyDisplaySuffix = keyDisplaySuffix;
@@ -382,7 +412,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * <p>The key ID. This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder keyId(Long keyId) {
                 this.keyId = keyId;
@@ -390,7 +423,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPrefix.
+             * <p>The API key prefix. This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder keyPrefix(String keyPrefix) {
                 this.keyPrefix = keyPrefix;
@@ -398,7 +434,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * LastUsedAt.
+             * <p>This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder lastUsedAt(String lastUsedAt) {
                 this.lastUsedAt = lastUsedAt;
@@ -406,7 +445,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The API key name. This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,7 +456,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * RevokedAt.
+             * <p>This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder revokedAt(String revokedAt) {
                 this.revokedAt = revokedAt;
@@ -422,7 +467,10 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The API key status. This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder status(String status) {
                 this.status = status;

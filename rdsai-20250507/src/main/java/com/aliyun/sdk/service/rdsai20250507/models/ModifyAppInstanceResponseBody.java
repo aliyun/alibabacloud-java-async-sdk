@@ -101,7 +101,7 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Components.
+         * <p>The list of modules.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -109,7 +109,10 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance ID of the AI application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -186,7 +189,10 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The module status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -194,7 +200,10 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The module type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder type(String type) {
                 this.type = type;

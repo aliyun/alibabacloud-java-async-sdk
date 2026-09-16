@@ -172,7 +172,10 @@ public class CreateApiKeyRequest extends Request {
         } 
 
         /**
-         * DailyTokenQuota.
+         * <p>The daily quota of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000000</p>
          */
         public Builder dailyTokenQuota(Long dailyTokenQuota) {
             this.putQueryParameter("DailyTokenQuota", dailyTokenQuota);
@@ -181,7 +184,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_copilot***_public_cn-*********6</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,7 +196,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * KeyName.
+         * <p>The API key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-*****</p>
          */
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
@@ -199,7 +208,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * LimitRate.
+         * <p>The quota percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder limitRate(Double limitRate) {
             this.putQueryParameter("LimitRate", limitRate);
@@ -208,7 +220,15 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * LimitType.
+         * <p>The quota allocation method. Valid values:</p>
+         * <ul>
+         * <li>ratio: by percentage.</li>
+         * <li>fixed: by fixed value.</li>
+         * <li>auto: automatic allocation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fixed</p>
          */
         public Builder limitType(String limitType) {
             this.putQueryParameter("LimitType", limitType);
@@ -217,7 +237,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * <p>The number of API keys to create. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -244,7 +267,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * TokenQuota.
+         * <p>The quota limit for the current key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder tokenQuota(Long tokenQuota) {
             this.putQueryParameter("TokenQuota", tokenQuota);

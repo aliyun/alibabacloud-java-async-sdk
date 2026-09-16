@@ -88,7 +88,10 @@ public class DisableAgentRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance ID of the AI application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;

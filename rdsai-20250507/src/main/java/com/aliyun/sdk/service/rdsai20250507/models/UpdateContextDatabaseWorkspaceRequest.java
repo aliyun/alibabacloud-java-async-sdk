@@ -75,6 +75,7 @@ public class UpdateContextDatabaseWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the target workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class UpdateContextDatabaseWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The new name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

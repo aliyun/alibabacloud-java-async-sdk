@@ -87,7 +87,10 @@ public class DescribeInstanceEndpointsRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -96,7 +99,7 @@ public class DescribeInstanceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -108,7 +111,7 @@ public class DescribeInstanceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceEndpoints</strong>.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

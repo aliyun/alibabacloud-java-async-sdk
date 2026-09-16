@@ -75,6 +75,7 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>The name of the first member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

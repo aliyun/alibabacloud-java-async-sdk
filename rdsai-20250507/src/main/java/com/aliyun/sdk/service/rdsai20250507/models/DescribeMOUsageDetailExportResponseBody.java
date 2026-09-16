@@ -109,10 +109,7 @@ public class DescribeMOUsageDetailExportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

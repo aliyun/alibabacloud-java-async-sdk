@@ -132,7 +132,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * NextCursor.
+         * <p>The cursor for the next page. An empty value indicates that the current page is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</p>
          */
         public Builder nextCursor(String nextCursor) {
             this.nextCursor = nextCursor;
@@ -140,7 +143,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -148,7 +154,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +165,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The list of records in the response.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -175,7 +184,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the query conditions. This parameter is optional and may not be returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -183,7 +195,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * UsageType.
+         * <p>The usage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder usageType(String usageType) {
             this.usageType = usageType;
@@ -353,7 +368,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CacheTokens.
+             * <p>The number of input tokens that hit the cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder cacheTokens(Double cacheTokens) {
                 this.cacheTokens = cacheTokens;
@@ -361,7 +379,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerName.
+             * <p>The consumer associated with the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16<strong><strong><strong>4_rds_copilot</strong></strong>_public_cn-4</strong>**02</p>
              */
             public Builder consumerName(String consumerName) {
                 this.consumerName = consumerName;
@@ -369,7 +390,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * <p>The additional information passed by the user in the extra_info field during the request. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;label&quot;: &quot;test&quot;}</p>
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -377,7 +401,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The number of input tokens consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder inputTokens(Double inputTokens) {
                 this.inputTokens = inputTokens;
@@ -385,7 +412,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_copilot***_public_cn-*********6</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -393,7 +423,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model that was called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-flash</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -401,7 +434,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The number of output tokens consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder outputTokens(Double outputTokens) {
                 this.outputTokens = outputTokens;
@@ -409,7 +445,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -417,7 +456,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RequestTime.
+             * <p>The request time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-01T01:00:00Z</p>
              */
             public Builder requestTime(String requestTime) {
                 this.requestTime = requestTime;
@@ -425,7 +467,10 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>The total number of tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder totalTokens(Double totalTokens) {
                 this.totalTokens = totalTokens;

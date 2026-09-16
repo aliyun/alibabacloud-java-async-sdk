@@ -103,6 +103,7 @@ public class RevokeContextDatabaseApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The member ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class RevokeContextDatabaseApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -73,7 +73,10 @@ public class UpdateApiKeyQuotaRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_copilot***_public_cn-*********6</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,7 @@ public class UpdateApiKeyQuotaRequest extends Request {
         }
 
         /**
-         * Keys.
+         * <p>A list of API keys.</p>
          */
         public Builder keys(java.util.List<Keys> keys) {
             String keysShrink = shrink(keys, "Keys", "json");
@@ -190,7 +193,7 @@ public class UpdateApiKeyQuotaRequest extends Request {
             } 
 
             /**
-             * <p>API KEY</p>
+             * <p>The API key.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-rds-xxx</p>
@@ -209,7 +212,10 @@ public class UpdateApiKeyQuotaRequest extends Request {
             }
 
             /**
-             * LimitRate.
+             * <p>The limit rate. This parameter is required when <code>LimitType</code> is set to <code>ratio</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder limitRate(Double limitRate) {
                 this.limitRate = limitRate;
@@ -217,7 +223,18 @@ public class UpdateApiKeyQuotaRequest extends Request {
             }
 
             /**
-             * LimitType.
+             * <p>The limit type. Valid values:</p>
+             * <ul>
+             * <li><p><code>ratio</code>: Allocates the quota proportionally.</p>
+             * </li>
+             * <li><p><code>fixed</code>: Allocates a fixed quota.</p>
+             * </li>
+             * <li><p><code>auto</code>: Allocates the quota automatically.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed</p>
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
@@ -225,7 +242,10 @@ public class UpdateApiKeyQuotaRequest extends Request {
             }
 
             /**
-             * TokenQuota.
+             * <p>The token quota. This parameter is required when <code>LimitType</code> is set to <code>fixed</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder tokenQuota(Long tokenQuota) {
                 this.tokenQuota = tokenQuota;

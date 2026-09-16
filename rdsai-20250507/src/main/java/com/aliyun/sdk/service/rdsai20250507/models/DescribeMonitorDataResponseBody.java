@@ -93,7 +93,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +192,10 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774972800</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -194,7 +203,10 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The returned value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -261,7 +273,10 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qps</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -269,7 +284,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The metric details.</p>
              */
             public Builder value(java.util.List<Value> value) {
                 this.value = value;

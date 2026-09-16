@@ -80,7 +80,7 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -91,7 +91,7 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The result list.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -99,7 +99,10 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>A value of <code>true</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +207,7 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>API Key</p>
+             * <p>The API key.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-rds-*****</p>
@@ -215,7 +218,10 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_copilot***_public_cn-o*****1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -223,7 +229,10 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The API key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-*****</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -231,7 +240,10 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * <p>The key type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system / custom</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -239,7 +251,10 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdPercent.
+             * <p>The alert threshold percentage. For example, a value of 80 triggers an alert when usage reaches 80% of the usage quota. The alert is reset after the usage falls below this percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0, 100]，0 会清理告警设置</p>
              */
             public Builder thresholdPercent(Integer thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;

@@ -96,7 +96,7 @@ public class DescribeInstanceAuthInfoRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -108,7 +108,7 @@ public class DescribeInstanceAuthInfoRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceAuthInfo</strong>.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

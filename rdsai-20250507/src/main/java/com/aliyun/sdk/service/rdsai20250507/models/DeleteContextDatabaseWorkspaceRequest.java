@@ -60,6 +60,7 @@ public class DeleteContextDatabaseWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the target workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -101,7 +101,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request result.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -244,7 +244,10 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -252,7 +255,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance end time (format: Timestamp).</p>
+             * <p>The end time of the instance. Format: Timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1775145600000</p>
@@ -263,7 +266,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>instance type</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>xlarge</p>
@@ -285,7 +288,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance start time (format: Timestamp).</p>
+             * <p>The start time of the instance. Format: Timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1772439028000</p>
@@ -377,7 +380,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance list.</p>
+             * <p>The list of instances.</p>
              */
             public Builder instanceList(java.util.List<InstanceList> instanceList) {
                 this.instanceList = instanceList;

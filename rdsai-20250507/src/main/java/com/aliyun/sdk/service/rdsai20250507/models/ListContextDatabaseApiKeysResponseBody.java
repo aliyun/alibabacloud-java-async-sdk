@@ -93,7 +93,7 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * Keys.
+         * <p>The list of API keys.</p>
          */
         public Builder keys(java.util.List<Keys> keys) {
             this.keys = keys;
@@ -101,7 +101,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>This field is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(null)</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>This field is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(null)</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -287,7 +296,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the API key was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-28T17:59:55Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -295,7 +307,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The API key description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for nightly cron</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -303,7 +318,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiresAt.
+             * <p>This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder expiresAt(String expiresAt) {
                 this.expiresAt = expiresAt;
@@ -311,7 +329,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyDisplaySuffix.
+             * <p>The suffix of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33631c</p>
              */
             public Builder keyDisplaySuffix(String keyDisplaySuffix) {
                 this.keyDisplaySuffix = keyDisplaySuffix;
@@ -319,7 +340,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * <p>The key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder keyId(Long keyId) {
                 this.keyId = keyId;
@@ -327,7 +351,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPrefix.
+             * <p>The prefix of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ctxdb-</p>
              */
             public Builder keyPrefix(String keyPrefix) {
                 this.keyPrefix = keyPrefix;
@@ -335,7 +362,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * LastUsedAt.
+             * <p>The time when the API key was last used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-01T08:30:12Z</p>
              */
             public Builder lastUsedAt(String lastUsedAt) {
                 this.lastUsedAt = lastUsedAt;
@@ -343,7 +373,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The API key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -351,7 +384,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * RevokedAt.
+             * <p>This field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(null)</p>
              */
             public Builder revokedAt(String revokedAt) {
                 this.revokedAt = revokedAt;
@@ -359,7 +395,10 @@ public class ListContextDatabaseApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The API key status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

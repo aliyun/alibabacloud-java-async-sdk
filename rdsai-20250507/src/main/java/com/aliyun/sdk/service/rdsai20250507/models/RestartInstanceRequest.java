@@ -97,7 +97,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>RestartInstance</strong>.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

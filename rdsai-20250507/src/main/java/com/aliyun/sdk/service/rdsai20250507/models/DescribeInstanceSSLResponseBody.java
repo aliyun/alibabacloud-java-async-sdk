@@ -153,7 +153,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the certificate. Set the value to <strong>custom</strong>, which indicates that a custom certificate is used.</p>
+         * <p>The certificate type. The value is <strong>custom</strong>, which indicates that a custom certificate is used.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -164,7 +164,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -186,10 +186,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+         * <p>Indicates whether SSL is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enables SSL encryption.</li>
-         * <li><strong>0</strong>: disables SSL encryption.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the custom certificate.</p>
+         * <p>The custom certificate content.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>

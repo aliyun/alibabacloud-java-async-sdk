@@ -26,10 +26,15 @@ public class GetSkillRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String skillId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private GetSkillRequest(Builder builder) {
         super(builder);
         this.language = builder.language;
         this.skillId = builder.skillId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class GetSkillRequest extends Request {
         return this.skillId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<GetSkillRequest, Builder> {
         private String language; 
         private String skillId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -71,10 +84,11 @@ public class GetSkillRequest extends Request {
             super(request);
             this.language = request.language;
             this.skillId = request.skillId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The languages supported by the skill. Valid values:</p>
+         * <p>The supported languages. Valid values:</p>
          * <ul>
          * <li>zh-CN: Simplified Chinese</li>
          * <li>zh-TW: Traditional Chinese</li>
@@ -92,7 +106,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the skill.</p>
+         * <p>The unique identifier of the Skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +115,18 @@ public class GetSkillRequest extends Request {
         public Builder skillId(String skillId) {
             this.putQueryParameter("SkillId", skillId);
             this.skillId = skillId;
+            return this;
+        }
+
+        /**
+         * <p>The ContextDB workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000-0000-4000-8000-000000000001</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -139,7 +139,10 @@ public class EnableAgentRuntimeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -148,6 +151,7 @@ public class EnableAgentRuntimeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +164,10 @@ public class EnableAgentRuntimeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +176,15 @@ public class EnableAgentRuntimeRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID used to create an endpoint.</p>
+         * <p><strong>If not specified</strong>: The system performs automatic creation of a security group named <strong>sg-aliyun-rds-created-supabase-sandbox</strong> in the VPC where the instance resides. No manual operation is required.</p>
+         * <p><strong>If specified</strong>: Make sure that the specified security group allows the CIDR block of the VPC where the Supabase instance resides (both inbound and outbound directions must be allowed). Otherwise, network connectivity issues may occur.</p>
+         * <blockquote>
+         * <p>Notice: The endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine function, the system performs automatic creation of the endpoint. When other Supabase instances in the same VPC enable this capability later, the existing endpoint is reused and no new endpoint is created.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp179qkbvlj8ym*****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -178,7 +193,13 @@ public class EnableAgentRuntimeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID used to create an endpoint. If this parameter is not specified, the vSwitch of the Supabase instance is used by default.</p>
+         * <blockquote>
+         * <p>Notice: The endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine function, the system performs automatic creation of the endpoint. When other Supabase instances in the same VPC enable this capability later, the existing endpoint is reused and no new endpoint is created.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-9dp2hkpm22gxscfgy****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

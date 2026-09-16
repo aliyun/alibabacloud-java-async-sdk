@@ -75,6 +75,7 @@ public class UpdateMOQuotaAlertThresholdRequest extends Request {
         } 
 
         /**
+         * <p>A list of API keys.</p>
          * <p>This parameter is required.</p>
          */
         public Builder apikey(java.util.List<Apikey> apikey) {
@@ -85,6 +86,7 @@ public class UpdateMOQuotaAlertThresholdRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,7 @@ public class UpdateMOQuotaAlertThresholdRequest extends Request {
             } 
 
             /**
-             * <p>ApiKey</p>
+             * <p>The API key.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-rds-*****</p>
@@ -167,7 +169,10 @@ public class UpdateMOQuotaAlertThresholdRequest extends Request {
             }
 
             /**
-             * ThresholdPercent.
+             * <p>The alert threshold percentage. For example, a value of 80 triggers an alert when usage reaches 80% of the usage quota. The alert is reset after the usage falls below this percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0, 100]，0 会清理告警设置</p>
              */
             public Builder thresholdPercent(Integer thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;

@@ -93,7 +93,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled inspection task created successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -123,7 +126,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

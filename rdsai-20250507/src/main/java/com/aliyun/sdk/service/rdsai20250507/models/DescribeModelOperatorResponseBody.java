@@ -93,7 +93,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +192,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             } 
 
             /**
-             * Date.
+             * <p>The date (accurate to the day).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-31</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -194,7 +203,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The token usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder usage(Long usage) {
                 this.usage = usage;
@@ -261,7 +273,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             } 
 
             /**
-             * Date.
+             * <p>The date (accurate to the day).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-31</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -269,7 +284,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The number of tokens used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -412,7 +430,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * DailyUsage.
+             * <p>The daily usage of the API key.</p>
              */
             public Builder dailyUsage(java.util.List<KeyUsageListDailyUsage> dailyUsage) {
                 this.dailyUsage = dailyUsage;
@@ -420,7 +438,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the API key is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fase</p>
              */
             public Builder deleted(Boolean deleted) {
                 this.deleted = deleted;
@@ -428,7 +449,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The API key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-*****</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -436,7 +460,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * <p>The key type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -444,7 +471,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * KeyUsed.
+             * <p>The total token usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder keyUsed(String keyUsed) {
                 this.keyUsed = keyUsed;
@@ -452,7 +482,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * UsedQuota.
+             * <p>The used token quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000000</p>
              */
             public Builder usedQuota(String usedQuota) {
                 this.usedQuota = usedQuota;
@@ -688,10 +721,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>API Key</p>
+             * <p>The system API key.</p>
              * 
              * <strong>example:</strong>
-             * <p>sk-rds-*****</p>
+             * <p>sk-rds-xxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -699,7 +732,14 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenew.
+             * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong> (default): Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -707,7 +747,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * BaseUrl.
+             * <p>The URL for model invocation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -715,7 +758,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY / POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -723,7 +769,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * DailyUsage.
+             * <p>The daily usage list.</p>
              */
             public Builder dailyUsage(java.util.List<DailyUsage> dailyUsage) {
                 this.dailyUsage = dailyUsage;
@@ -731,7 +777,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the instance. Format: Timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1775145600000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -739,7 +788,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xlarge</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -747,7 +799,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_copilot***_public_cn-*********6</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -755,7 +810,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * KeyUsageList.
+             * <p>The usage of each key (including deleted keys).</p>
              */
             public Builder keyUsageList(java.util.List<KeyUsageList> keyUsageList) {
                 this.keyUsageList = keyUsageList;
@@ -763,7 +818,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixCacheEnabled.
+             * <p>Indicates whether the prefix routing persistence feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder prefixCacheEnabled(Boolean prefixCacheEnabled) {
                 this.prefixCacheEnabled = prefixCacheEnabled;
@@ -771,7 +829,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * SessionIds.
+             * <p>The list of headers used for routing persistence. The headers consist of lowercase letters, digits, and hyphens (-).</p>
              */
             public Builder sessionIds(java.util.List<String> sessionIds) {
                 this.sessionIds = sessionIds;
@@ -779,7 +837,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the instance. Format: Timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772439028000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -787,7 +848,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The module status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active/creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -795,7 +859,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuota.
+             * <p>The total quota for the current cycle (such as the monthly total).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000000</p>
              */
             public Builder totalQuota(Long totalQuota) {
                 this.totalQuota = totalQuota;
@@ -803,7 +870,10 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * UsedQuota.
+             * <p>The used quota for the current cycle (such as the monthly usage).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder usedQuota(Long usedQuota) {
                 this.usedQuota = usedQuota;

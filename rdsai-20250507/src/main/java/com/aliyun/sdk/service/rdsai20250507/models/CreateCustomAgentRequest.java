@@ -116,7 +116,7 @@ public class CreateCustomAgentRequest extends Request {
         } 
 
         /**
-         * <p>The system prompts.</p>
+         * <p>Specifies whether to enable tools.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,7 +128,10 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>CreateCustomAgent</strong>.</p>
+         * <p>The name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QueryInstanceListAgent</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -137,7 +140,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * SkillIds.
+         * <p>The list of associated skill IDs.</p>
          */
         public Builder skillIds(java.util.List<String> skillIds) {
             String skillIdsShrink = shrink(skillIds, "SkillIds", "json");
@@ -147,8 +150,11 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The name of the dedicated agent.</p>
+         * <p>The system prompt.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I am your dedicated agent for querying instance lists</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putQueryParameter("SystemPrompt", systemPrompt);
@@ -157,7 +163,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable tools.</p>
+         * <p>The tool information.</p>
          */
         public Builder tools(java.util.List<String> tools) {
             String toolsShrink = shrink(tools, "Tools", "json");

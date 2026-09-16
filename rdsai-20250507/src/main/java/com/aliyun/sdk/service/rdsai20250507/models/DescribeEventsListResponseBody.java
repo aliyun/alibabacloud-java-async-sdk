@@ -145,7 +145,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of events.</p>
+         * <p>The count for each event code.</p>
          * 
          * <strong>example:</strong>
          * <p>OtherException:3,MysqlIOException:1</p>
@@ -156,7 +156,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the events.</p>
+         * <p>A list of events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -164,7 +164,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages.</p>
+         * <p>The number of pages returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,7 +175,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +186,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -200,7 +200,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -208,7 +208,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -219,7 +219,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -364,7 +364,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the event.</p>
+             * <p>The event status.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -375,7 +375,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event.</p>
+             * <p>A list of event times.</p>
              */
             public Builder eventTimeList(java.util.List<String> eventTimeList) {
                 this.eventTimeList = eventTimeList;
@@ -383,7 +383,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试实例</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -394,7 +397,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>rm-2zecnb327gp36e7lh</p>
+             * <p>rm-2zecnb327gp36****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -413,7 +416,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -73,7 +73,7 @@ public class ListCustomAgentRequest extends Request {
         } 
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>ListCustomAgent</strong>.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

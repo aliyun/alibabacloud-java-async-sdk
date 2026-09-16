@@ -103,6 +103,7 @@ public class UpdateContextDatabaseMemberRequest extends Request {
         } 
 
         /**
+         * <p>The member ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class UpdateContextDatabaseMemberRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>The new role. Valid values: owner, admin, and member. If not specified, the current role is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -124,7 +128,10 @@ public class UpdateContextDatabaseMemberRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The new status. Valid values: active, disabled, and deleted. If not specified, the current status is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -133,6 +140,7 @@ public class UpdateContextDatabaseMemberRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

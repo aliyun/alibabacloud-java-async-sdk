@@ -133,6 +133,9 @@ public class GetScheduledReportsResponseBody extends TeaModel {
 
         /**
          * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully retrieved the inspection report list</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +143,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +154,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of reports returned on each page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -162,7 +165,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the report.</p>
+         * <p>The report details.</p>
          */
         public Builder reports(java.util.List<Reports> reports) {
             this.reports = reports;
@@ -181,7 +184,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -192,7 +195,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned reports.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -352,7 +355,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the task.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01T22:59:59Z</p>
@@ -363,7 +366,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The inspection end time (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01T23:59:59Z</p>
@@ -406,7 +409,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The inspection start time (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01T00:00:00Z</p>
@@ -417,7 +420,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -428,7 +431,7 @@ public class GetScheduledReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the report.</p>
+             * <p>The inspection report ID.</p>
              * 
              * <strong>example:</strong>
              * <p>65f0053b-f933-49f5-bf65-4e4593e1****</p>

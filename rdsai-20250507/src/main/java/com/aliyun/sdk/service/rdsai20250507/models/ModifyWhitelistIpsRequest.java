@@ -73,7 +73,10 @@ public class ModifyWhitelistIpsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_copilot***_public_cn-*********6</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class ModifyWhitelistIpsRequest extends Request {
         }
 
         /**
-         * IpWhitelist.
+         * <p>The IP whitelist. Before you modify the IP whitelist, call the DescribeInstanceIpWhitelist operation to query the existing IP whitelist of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1,192.168.1.0/24</p>
          */
         public Builder ipWhitelist(String ipWhitelist) {
             this.putQueryParameter("IpWhitelist", ipWhitelist);

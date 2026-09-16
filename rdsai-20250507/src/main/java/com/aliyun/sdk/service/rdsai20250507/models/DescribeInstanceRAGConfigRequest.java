@@ -97,11 +97,11 @@ public class DescribeInstanceRAGConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ra-supabase-8moov5lxba***</p>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -110,7 +110,7 @@ public class DescribeInstanceRAGConfigRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceRAGConfig</strong>.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

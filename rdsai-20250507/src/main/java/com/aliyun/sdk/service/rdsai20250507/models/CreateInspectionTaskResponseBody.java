@@ -93,7 +93,7 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the result is returned.</p>
+         * <p>The result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task created successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,7 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -176,7 +179,7 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the inspection task.</p>
+             * <p>The inspection task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>9adf8567-b619-4d37-8ff2-01d38a76****</p>

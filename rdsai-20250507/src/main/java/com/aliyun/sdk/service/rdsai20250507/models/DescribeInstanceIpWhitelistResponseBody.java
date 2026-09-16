@@ -122,7 +122,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -133,7 +133,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP address whitelists.</p>
+         * <p>The IP whitelist groups.</p>
          */
         public Builder ipWhiteListGroups(java.util.List<IpWhiteListGroups> ipWhiteListGroups) {
             this.ipWhiteListGroups = ipWhiteListGroups;
@@ -285,7 +285,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address whitelist name.</p>
+             * <p>The group name.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -296,7 +296,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses or CIDR blocks in the whitelist.</p>
+             * <p>The list of IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XXX.XXX/24,10.0.XXX.XXX/24</p>

@@ -159,7 +159,10 @@ public class ModifySandboxTemplateRequest extends Request {
         } 
 
         /**
-         * DefaultCpu.
+         * <p>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultCpu(String defaultCpu) {
             this.putQueryParameter("DefaultCpu", defaultCpu);
@@ -168,7 +171,10 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * DefaultMemory.
+         * <p>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1Gi</p>
          */
         public Builder defaultMemory(String defaultMemory) {
             this.putQueryParameter("DefaultMemory", defaultMemory);
@@ -186,6 +192,7 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +205,10 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -207,7 +217,10 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * <p>The initial number of instances. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder replicas(Long replicas) {
             this.putQueryParameter("Replicas", replicas);
@@ -226,6 +239,7 @@ public class ModifySandboxTemplateRequest extends Request {
         }
 
         /**
+         * <p>The sandbox template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

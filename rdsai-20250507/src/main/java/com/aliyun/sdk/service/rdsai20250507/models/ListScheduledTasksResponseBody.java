@@ -133,6 +133,9 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
         /**
          * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task information queried successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +154,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -181,7 +184,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -192,7 +195,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -417,7 +420,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the task.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-02-04T06:51:24Z</p>
@@ -428,7 +431,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the inspection task.</p>
+             * <p>The inspection description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Automatically inspect production RDS instances at 2 AM every day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -438,16 +444,16 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             /**
              * <p>The new inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</p>
              * <ul>
-             * <li>DAILY</li>
-             * <li>Monday</li>
-             * <li>Tuesday</li>
-             * <li>Wednesday</li>
-             * <li>Thursday</li>
-             * <li>Friday</li>
-             * <li>Saturday</li>
-             * <li>Sunday</li>
+             * <li>DAILY: every day</li>
+             * <li>Monday: Monday</li>
+             * <li>Tuesday: Tuesday</li>
+             * <li>Wednesday: Wednesday</li>
+             * <li>Thursday: Thursday</li>
+             * <li>Friday: Friday</li>
+             * <li>Saturday: Saturday</li>
+             * <li>Sunday: Sunday</li>
              * </ul>
-             * <h3><a href="#daily--dailymonday--daily-"></a>Note: DAILY takes precedence over other values. For example, if you set this parameter to DAILY,Monday, the backend will use DAILY as the inspection frequency.</h3>
+             * <h3>Note: DAILY overrides weekly values. For example, if you specify DAILY,Monday, the backend uses DAILY as the inspection frequency.</h3>
              * 
              * <strong>example:</strong>
              * <p>Monday</p>
@@ -466,7 +472,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances covered by the task.</p>
+             * <p>The number of task instances.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -477,7 +483,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task.</p>
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InspectionTest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -547,7 +556,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection time range. The default value is the latest 24 hours. Valid values: 1 to 168. The maximum value is 7 days.</p>
+             * <p>The inspection time range. Default value: the last 24 hours. Valid values: 1 to 168 (up to 7 days).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24 hours</p>
              */
             public Builder timeRange(String timeRange) {
                 this.timeRange = timeRange;

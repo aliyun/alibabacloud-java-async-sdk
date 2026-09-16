@@ -201,7 +201,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key used for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-rds-*****</p>
          */
         public Builder apiKey(String apiKey) {
             this.putQueryParameter("ApiKey", apiKey);
@@ -210,7 +213,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * ConsumerName.
+         * <p>The consumer associated with the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16<strong><strong><strong>4_rds_copilot</strong></strong>_public_cn-4</strong>**02</p>
          */
         public Builder consumerName(String consumerName) {
             this.putQueryParameter("ConsumerName", consumerName);
@@ -219,7 +225,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * Cursor.
+         * <p>The cursor-based pagination token. This parameter takes priority over Page. Leave this parameter empty for the first request. For subsequent requests, use the NextCursor value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</p>
          */
         public Builder cursor(String cursor) {
             this.putQueryParameter("Cursor", cursor);
@@ -228,7 +237,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-13T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -237,6 +249,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +262,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model that was called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-flash</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -258,7 +274,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -267,7 +286,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,7 +298,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -285,7 +310,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-04T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -294,7 +322,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         }
 
         /**
-         * UsageType.
+         * <p>The type of usage to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder usageType(String usageType) {
             this.putQueryParameter("UsageType", usageType);

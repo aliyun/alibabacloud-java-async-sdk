@@ -114,7 +114,7 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The RAG agent configurations.</p>
+         * <p>The list of RAG Agent configurations.</p>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
@@ -122,7 +122,7 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -144,10 +144,10 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the RAG agent.</p>
+         * <p>The RAG Agent status. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: RAG agent is enabled.</li>
-         * <li><strong>false</strong>: RAG agent is disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

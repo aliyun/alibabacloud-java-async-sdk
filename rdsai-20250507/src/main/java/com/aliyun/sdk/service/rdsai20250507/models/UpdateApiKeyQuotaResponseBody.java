@@ -93,7 +93,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -120,7 +123,10 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +231,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Api Key</p>
+             * <p>The API key.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-rds-xxx</p>
@@ -244,7 +250,10 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * LimitRate.
+             * <p>The limit rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder limitRate(Float limitRate) {
                 this.limitRate = limitRate;
@@ -252,7 +261,18 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * LimitType.
+             * <p>The quota limiting method. Valid values:</p>
+             * <ul>
+             * <li><p><code>ratio</code>: Sets the limit based on a ratio.</p>
+             * </li>
+             * <li><p><code>fixed</code>: Sets the limit to a fixed value.</p>
+             * </li>
+             * <li><p><code>auto</code>: Allocates the limit automatically.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed</p>
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
@@ -260,7 +280,10 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * TokenQuota.
+             * <p>The token quota for the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder tokenQuota(Long tokenQuota) {
                 this.tokenQuota = tokenQuota;
@@ -314,7 +337,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomKeyList.
+             * <p>The list of custom API keys.</p>
              */
             public Builder customKeyList(java.util.List<CustomKeyList> customKeyList) {
                 this.customKeyList = customKeyList;

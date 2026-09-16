@@ -83,7 +83,7 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The scheduled task is deleted.</p>
+         * <p>Scheduled task deleted successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -416,7 +416,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application type. Only <strong>supabase</strong> is supported. For more information, see <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
+         * <p>The application type. Currently, only <strong>supabase</strong> is supported, which indicates <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>supabase</p>
@@ -427,7 +427,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BranchName.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;
@@ -435,7 +438,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BranchingEnabled.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchingEnabled(String branchingEnabled) {
             this.branchingEnabled = branchingEnabled;
@@ -443,7 +449,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Components.
+         * <p>The list of components.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -451,7 +457,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</p>
+         * <p>The ID of the RDS PostgreSQL database instance that the AI application is connected to.</p>
          * 
          * <strong>example:</strong>
          * <p>pgm-2ze49qv594vi****</p>
@@ -462,7 +468,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EipId.
+         * <p>The instance ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9sfo01afag4hxc0utq0</p>
          */
         public Builder eipId(String eipId) {
             this.eipId = eipId;
@@ -470,7 +479,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EipStatus.
+         * <p>The activation status of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder eipStatus(String eipStatus) {
             this.eipStatus = eipStatus;
@@ -478,7 +490,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance type of the RDS Supabase instance.</p>
+         * <p>The instance class of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>rdsai.supabase.basic</p>
@@ -489,7 +501,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceLatestVersion.
+         * <p>The latest minor version of the RDS AI application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20260903</p>
          */
         public Builder instanceLatestVersion(String instanceLatestVersion) {
             this.instanceLatestVersion = instanceLatestVersion;
@@ -497,7 +512,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The minor version number of RDS Supabase instance.</p>
+         * <p>The minor version of the RDS AI application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>20241231</p>
@@ -508,7 +523,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -519,7 +534,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoginToken.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder loginToken(String loginToken) {
             this.loginToken = loginToken;
@@ -527,7 +545,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MinorVersionDetail.
+         * <p>The minor version details of each component of the RDS AI application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;studio\&quot;:\&quot;20260602r1\&quot;,\&quot;storage\&quot;:\&quot;v1.48.9\&quot;,\&quot;auth\&quot;:\&quot;v2.188.1\&quot;,\&quot;kong\&quot;:\&quot;3.9.0\&quot;,\&quot;rest\&quot;:\&quot;v12.2.12\&quot;,\&quot;meta\&quot;:\&quot;v0.89.3\&quot;,\&quot;realtime-dev\&quot;:\&quot;v2.34.47\&quot;,\&quot;postgres\&quot;:\&quot;rds_postgres_1700_20260830\&quot;}</p>
          */
         public Builder minorVersionDetail(String minorVersionDetail) {
             this.minorVersionDetail = minorVersionDetail;
@@ -535,7 +556,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NatCreatedBy.
+         * <p>The creator of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder natCreatedBy(String natCreatedBy) {
             this.natCreatedBy = natCreatedBy;
@@ -543,7 +567,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1l82hw87m2y77ci1hie</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -551,7 +578,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NatStatus.
+         * <p>The activation status of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder natStatus(String natStatus) {
             this.natStatus = natStatus;
@@ -559,7 +589,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public endpoint of the AI application.</p>
+         * <p>The public connection string of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>8.152. XXX.XXX:8000</p>
@@ -592,7 +622,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RetentionHours.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder retentionHours(String retentionHours) {
             this.retentionHours = retentionHours;
@@ -600,7 +633,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SqlExtendMoInstanceId.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder sqlExtendMoInstanceId(String sqlExtendMoInstanceId) {
             this.sqlExtendMoInstanceId = sqlExtendMoInstanceId;
@@ -608,7 +644,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</p>
+         * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status table</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -619,7 +655,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * UploadKey.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder uploadKey(String uploadKey) {
             this.uploadKey = uploadKey;
@@ -627,7 +666,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * UploadKeyList.
+         * <p>Reserved parameter.</p>
          */
         public Builder uploadKeyList(java.util.List<UploadKeyList> uploadKeyList) {
             this.uploadKeyList = uploadKeyList;
@@ -635,7 +674,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2zeaepb8k4ku05ov2****</p>
@@ -646,7 +685,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal endpoint of the AI application.</p>
+         * <p>The internal connection string of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XXX.XXX:8000</p>
@@ -726,10 +765,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</p>
+             * <p>The component status.</p>
              * 
              * <strong>example:</strong>
-             * <p>Running</p>
+             * <p>enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -737,7 +776,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -843,7 +885,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * IsSystemKey.
+             * <p>Reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserved parameter</p>
              */
             public Builder isSystemKey(Boolean isSystemKey) {
                 this.isSystemKey = isSystemKey;
@@ -851,7 +896,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserved parameter</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -859,7 +907,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SlsStorageBytes.
+             * <p>Reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserved parameter</p>
              */
             public Builder slsStorageBytes(Long slsStorageBytes) {
                 this.slsStorageBytes = slsStorageBytes;
@@ -867,10 +918,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</p>
+             * <p>Reserved parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>Running</p>
+             * <p>Reserved parameter</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -878,7 +929,10 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * UploadKey.
+             * <p>Reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserved parameter</p>
              */
             public Builder uploadKey(String uploadKey) {
                 this.uploadKey = uploadKey;

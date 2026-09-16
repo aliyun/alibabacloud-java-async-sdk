@@ -101,7 +101,7 @@ public class DeleteAppInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. The client generates the value of this parameter to prevent duplicate requests from being submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -113,7 +113,7 @@ public class DeleteAppInstanceRequest extends Request {
         }
 
         /**
-         * DeleteDBInstance.
+         * <p>Specifies whether to delete the corresponding database instance.</p>
          */
         public Builder deleteDBInstance(Boolean deleteDBInstance) {
             this.putQueryParameter("DeleteDBInstance", deleteDBInstance);
@@ -122,7 +122,7 @@ public class DeleteAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -134,7 +134,7 @@ public class DeleteAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DeleteAppInstance</strong>.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

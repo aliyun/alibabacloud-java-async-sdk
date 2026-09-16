@@ -93,7 +93,7 @@ public class GetMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned results.</p>
+         * <p>The query result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current page is followed by a page.</p>
+         * <p>Indicates whether there is a next page.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -112,7 +112,7 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -146,6 +146,30 @@ public class GetMessagesResponseBody extends TeaModel {
      * <p>GetMessagesResponseBody</p>
      */
     public static class Events extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
+        private String approvalStatus;
+
+        @com.aliyun.core.annotation.NameInMap("CallId")
+        private String callId;
+
+        @com.aliyun.core.annotation.NameInMap("ConversationId")
+        private String conversationId;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("MessageId")
+        private String messageId;
+
+        @com.aliyun.core.annotation.NameInMap("RoundId")
+        private String roundId;
+
+        @com.aliyun.core.annotation.NameInMap("ToolArguments")
+        private java.util.Map<String, ?> toolArguments;
+
+        @com.aliyun.core.annotation.NameInMap("ToolName")
+        private String toolName;
+
         @com.aliyun.core.annotation.NameInMap("answer")
         private String answer;
 
@@ -153,6 +177,14 @@ public class GetMessagesResponseBody extends TeaModel {
         private String event;
 
         private Events(Builder builder) {
+            this.approvalStatus = builder.approvalStatus;
+            this.callId = builder.callId;
+            this.conversationId = builder.conversationId;
+            this.description = builder.description;
+            this.messageId = builder.messageId;
+            this.roundId = builder.roundId;
+            this.toolArguments = builder.toolArguments;
+            this.toolName = builder.toolName;
             this.answer = builder.answer;
             this.event = builder.event;
         }
@@ -163,6 +195,62 @@ public class GetMessagesResponseBody extends TeaModel {
 
         public static Events create() {
             return builder().build();
+        }
+
+        /**
+         * @return approvalStatus
+         */
+        public String getApprovalStatus() {
+            return this.approvalStatus;
+        }
+
+        /**
+         * @return callId
+         */
+        public String getCallId() {
+            return this.callId;
+        }
+
+        /**
+         * @return conversationId
+         */
+        public String getConversationId() {
+            return this.conversationId;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return messageId
+         */
+        public String getMessageId() {
+            return this.messageId;
+        }
+
+        /**
+         * @return roundId
+         */
+        public String getRoundId() {
+            return this.roundId;
+        }
+
+        /**
+         * @return toolArguments
+         */
+        public java.util.Map<String, ?> getToolArguments() {
+            return this.toolArguments;
+        }
+
+        /**
+         * @return toolName
+         */
+        public String getToolName() {
+            return this.toolName;
         }
 
         /**
@@ -180,6 +268,14 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String approvalStatus; 
+            private String callId; 
+            private String conversationId; 
+            private String description; 
+            private String messageId; 
+            private String roundId; 
+            private java.util.Map<String, ?> toolArguments; 
+            private String toolName; 
             private String answer; 
             private String event; 
 
@@ -187,9 +283,102 @@ public class GetMessagesResponseBody extends TeaModel {
             } 
 
             private Builder(Events model) {
+                this.approvalStatus = model.approvalStatus;
+                this.callId = model.callId;
+                this.conversationId = model.conversationId;
+                this.description = model.description;
+                this.messageId = model.messageId;
+                this.roundId = model.roundId;
+                this.toolArguments = model.toolArguments;
+                this.toolName = model.toolName;
                 this.answer = model.answer;
                 this.event = model.event;
             } 
+
+            /**
+             * <p>The approval status of the tool calling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
+             */
+            public Builder approvalStatus(String approvalStatus) {
+                this.approvalStatus = approvalStatus;
+                return this;
+            }
+
+            /**
+             * <p>The tool calling ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call-example</p>
+             */
+            public Builder callId(String callId) {
+                this.callId = callId;
+                return this;
+            }
+
+            /**
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conversation-example</p>
+             */
+            public Builder conversationId(String conversationId) {
+                this.conversationId = conversationId;
+                return this;
+            }
+
+            /**
+             * <p>The description of the tool calling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Search ContextDB records</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>message-example</p>
+             */
+            public Builder messageId(String messageId) {
+                this.messageId = messageId;
+                return this;
+            }
+
+            /**
+             * <p>The tool approval round ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>round-example</p>
+             */
+            public Builder roundId(String roundId) {
+                this.roundId = roundId;
+                return this;
+            }
+
+            /**
+             * <p>The parameters of the tool calling.</p>
+             */
+            public Builder toolArguments(java.util.Map<String, ?> toolArguments) {
+                this.toolArguments = toolArguments;
+                return this;
+            }
+
+            /**
+             * <p>The tool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contextdb.search</p>
+             */
+            public Builder toolName(String toolName) {
+                this.toolName = toolName;
+                return this;
+            }
 
             /**
              * answer.
@@ -230,10 +419,14 @@ public class GetMessagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("UploadFileId")
+        private String uploadFileId;
+
         private MessageFiles(Builder builder) {
             this.id = builder.id;
             this.previewUrl = builder.previewUrl;
             this.type = builder.type;
+            this.uploadFileId = builder.uploadFileId;
         }
 
         public static Builder builder() {
@@ -265,10 +458,18 @@ public class GetMessagesResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return uploadFileId
+         */
+        public String getUploadFileId() {
+            return this.uploadFileId;
+        }
+
         public static final class Builder {
             private String id; 
             private String previewUrl; 
             private String type; 
+            private String uploadFileId; 
 
             private Builder() {
             } 
@@ -277,6 +478,7 @@ public class GetMessagesResponseBody extends TeaModel {
                 this.id = model.id;
                 this.previewUrl = model.previewUrl;
                 this.type = model.type;
+                this.uploadFileId = model.uploadFileId;
             } 
 
             /**
@@ -300,6 +502,17 @@ public class GetMessagesResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The upload file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file-example</p>
+             */
+            public Builder uploadFileId(String uploadFileId) {
+                this.uploadFileId = uploadFileId;
                 return this;
             }
 
@@ -519,7 +732,10 @@ public class GetMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response to the query.</p>
+             * <p>The answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The disk usage of the instance rm-bp14as9914vd3**** you queried is 23%, and no capacity expansion is needed at this time. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -527,7 +743,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the conversation.</p>
+             * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
@@ -538,7 +754,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the conversation.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1763986004</p>
@@ -620,6 +836,9 @@ public class GetMessagesResponseBody extends TeaModel {
 
             /**
              * <p>The query statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -627,7 +846,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retriever resources.</p>
+             * <p>The retrieval resources.</p>
              */
             public Builder retrieverResources(java.util.List<?> retrieverResources) {
                 this.retrieverResources = retrieverResources;

@@ -171,7 +171,7 @@ public class CreateInspectionTaskRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. By default, the time range of the task is the latest 24 hours.</p>
+         * <p>The end time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the end time of the last 24 hours.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-30T02:10:48Z</p>
@@ -183,21 +183,21 @@ public class CreateInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The inspection items. Separates multiple items with commas (,). If this parameter is empty or not specified, all inspection items are executed.</p>
-         * <h3><a href="#"></a>Valid values:</h3>
+         * <p>The list of inspection items. Separate multiple values with commas (,). If this parameter is left empty or not specified, all inspection items are executed.</p>
+         * <h3>Available inspection items:</h3>
          * <ul>
-         * <li>instance_info</li>
-         * <li>resource_usage</li>
-         * <li>connection_session_management</li>
-         * <li>performance_metrics</li>
-         * <li>slow_query_analysis</li>
-         * <li>error_log_analysis</li>
-         * <li>lock_wait_deadlock_analysis</li>
-         * <li>backup_recovery_analysis</li>
-         * <li>high_availability_disaster_recovery_analysis</li>
-         * <li>security_configuration_analysis</li>
-         * <li>storage_engine_analysis</li>
-         * <li>schema_object_analysis</li>
+         * <li>instance_info (instance information)</li>
+         * <li>resource_usage (resource usage)</li>
+         * <li>connection_session_management (connection and session management)</li>
+         * <li>performance_metrics (performance metrics)</li>
+         * <li>slow_query_analysis (slow query analysis)</li>
+         * <li>error_log_analysis (error log analysis)</li>
+         * <li>lock_wait_deadlock_analysis (lock wait and deadlock analysis)</li>
+         * <li>backup_recovery_analysis (backup and recovery analysis)</li>
+         * <li>high_availability_disaster_recovery_analysis (high availability and disaster recovery inspection)</li>
+         * <li>security_configuration_analysis (security configuration inspection)</li>
+         * <li>storage_engine_analysis (storage engine inspection)</li>
+         * <li>schema_object_analysis (schema and object inspection)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class CreateInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The instances covered by the task. Separates multiple instance IDs with commas (,).</p>
+         * <p>The list of associated instance IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>
@@ -258,7 +258,7 @@ public class CreateInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. By default, the time range of the task is the latest 24 hours.</p>
+         * <p>The start time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the start time of the last 24 hours.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-28T16:00:00Z</p>

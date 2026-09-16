@@ -93,7 +93,7 @@ public class GetConversationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned results.</p>
+         * <p>The request result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current page is followed by a page.</p>
+         * <p>Indicates whether there is a next page.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -112,7 +112,7 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 100.</p>
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -161,6 +161,9 @@ public class GetConversationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("UpdatedAt")
         private String updatedAt;
 
@@ -170,6 +173,7 @@ public class GetConversationsResponseBody extends TeaModel {
             this.introduction = builder.introduction;
             this.isRunning = builder.isRunning;
             this.name = builder.name;
+            this.status = builder.status;
             this.updatedAt = builder.updatedAt;
         }
 
@@ -217,6 +221,13 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return updatedAt
          */
         public String getUpdatedAt() {
@@ -229,6 +240,7 @@ public class GetConversationsResponseBody extends TeaModel {
             private String introduction; 
             private Boolean isRunning; 
             private String name; 
+            private String status; 
             private String updatedAt; 
 
             private Builder() {
@@ -240,11 +252,12 @@ public class GetConversationsResponseBody extends TeaModel {
                 this.introduction = model.introduction;
                 this.isRunning = model.isRunning;
                 this.name = model.name;
+                this.status = model.status;
                 this.updatedAt = model.updatedAt;
             } 
 
             /**
-             * <p>The creation time of the conversation.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1764055092</p>
@@ -255,7 +268,7 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the history conversation.</p>
+             * <p>The historical conversation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>60b335ca-124d-4ee1-864b-de554987****</p>
@@ -266,7 +279,10 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The introduction to the conversation.</p>
+             * <p>The conversation introduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test searching for RDS resources</p>
              */
             public Builder introduction(String introduction) {
                 this.introduction = introduction;
@@ -282,10 +298,30 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the history conversation.</p>
+             * <p>The historical conversation name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Search for RDS resources</p>
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The session status. Valid values:</p>
+             * <ul>
+             * <li>idle: The session is idle.</li>
+             * <li>running: The session is generating a response.</li>
+             * <li>pending_approval: The session is waiting for approval or manual review.</li>
+             * </ul>
+             * <p>If both pending_approval and running conditions are met, pending_approval is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idle</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

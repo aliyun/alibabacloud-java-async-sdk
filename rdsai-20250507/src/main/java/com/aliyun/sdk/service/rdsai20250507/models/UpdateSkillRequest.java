@@ -116,7 +116,10 @@ public class UpdateSkillRequest extends Request {
         } 
 
         /**
-         * <p>The content of the skill.</p>
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MySQL&quot;: &quot;MySQL optimization guide...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL optimization guide...&quot;}</p>
          */
         public Builder content(java.util.Map<String, ?> content) {
             String contentShrink = shrink(content, "Content", "json");
@@ -126,7 +129,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * <p>The list of database engines.</p>
+         * <p>The list of database types.</p>
          */
         public Builder dbtypes(java.util.List<String> dbtypes) {
             String dbtypesShrink = shrink(dbtypes, "Dbtypes", "json");
@@ -136,7 +139,10 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * <p>The description of the Skill. It can be up to 1000 characters in length.</p>
+         * <p>The skill description. The description can be up to 1000 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks about &quot;SQL review&quot;, &quot;SQL audit&quot;, &quot;any risks&quot;, or &quot;how to optimize&quot;</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -145,7 +151,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
+         * <p>The skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
          * 
          * <strong>example:</strong>
          * <p>sql-optimization</p>

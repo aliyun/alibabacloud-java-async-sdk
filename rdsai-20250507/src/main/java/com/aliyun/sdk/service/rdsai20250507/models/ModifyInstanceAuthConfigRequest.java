@@ -110,7 +110,7 @@ public class ModifyInstanceAuthConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The list of authentication configurations.</p>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             String configListShrink = shrink(configList, "ConfigList", "json");
@@ -120,7 +120,7 @@ public class ModifyInstanceAuthConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -132,7 +132,7 @@ public class ModifyInstanceAuthConfigRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceAuthConfig</strong>.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -203,7 +203,23 @@ public class ModifyInstanceAuthConfigRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The configuration item name. Valid values:</p>
+             * <ul>
+             * <li><strong>GOTRUE_EXTERNAL_EMAIL_ENABLED</strong>: specifies whether to allow external email addresses.</li>
+             * <li><strong>GOTRUE_SITE_URL</strong>: the website URL displayed when the AI application sends emails.</li>
+             * <li><strong>GOTRUE_SMTP_PORT</strong>: the port of the SMTP provider.</li>
+             * <li><strong>GOTRUE_SMTP_SENDER_NAME</strong>: the name of the email sender.</li>
+             * <li><strong>GOTRUE_SMTP_USER</strong>: the username of the SMTP provider.</li>
+             * <li><strong>GOTRUE_SMTP_PASS</strong>: the secret key of the SMTP provider.</li>
+             * <li><strong>GOTRUE_SMTP_ADMIN_EMAIL</strong>: the email address of the SMTP provider.</li>
+             * <li><strong>GOTRUE_SMTP_HOST</strong>: the host address of the SMTP provider.</li>
+             * <li><strong>GOTRUE_MAILER_AUTOCONFIRM</strong>: specifies whether to enable automatic confirmation.</li>
+             * <li><strong>GOTRUE_MAILER_OTP_EXP</strong>: the validity period of the one-time password (OTP). Unit: seconds.</li>
+             * <li><strong>GOTRUE_MAILER_OTP_LENGTH</strong>: the length of the one-time password (OTP) verification code. The value must be an integer greater than or equal to 6.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GOTRUE_SITE_URL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -211,7 +227,10 @@ public class ModifyInstanceAuthConfigRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://8.152">http://8.152</a>. XXX.XXX</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -67,7 +67,7 @@ public class DeleteAppInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba***</p>

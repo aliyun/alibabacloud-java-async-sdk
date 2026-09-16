@@ -152,7 +152,10 @@ public class ModifyAppInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -161,7 +164,7 @@ public class ModifyAppInstanceRequest extends Request {
         }
 
         /**
-         * Components.
+         * <p>The list of modules.</p>
          */
         public Builder components(java.util.List<Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -189,7 +192,10 @@ public class ModifyAppInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance ID of the AI application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -198,7 +204,10 @@ public class ModifyAppInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -266,7 +275,10 @@ public class ModifyAppInstanceRequest extends Request {
             } 
 
             /**
-             * Status.
+             * <p>The module status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -274,7 +286,10 @@ public class ModifyAppInstanceRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The module type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder type(String type) {
                 this.type = type;

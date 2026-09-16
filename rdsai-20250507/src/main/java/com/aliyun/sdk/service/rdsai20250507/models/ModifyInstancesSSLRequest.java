@@ -131,9 +131,9 @@ public class ModifyInstancesSSLRequest extends Request {
         } 
 
         /**
-         * <p>The certificate type. Only <strong>custom</strong> is supported.</p>
+         * <p>The certificate type. Currently, only <strong>custom</strong> is supported, which indicates a custom certificate.</p>
          * <blockquote>
-         * <p> This parameter is required if <strong>SSLEnabled</strong> is set to <strong>1</strong>.</p>
+         * <p>This parameter is required when <strong>SSLEnabled</strong> is set to <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class ModifyInstancesSSLRequest extends Request {
         }
 
         /**
-         * <p>The information about the RDS Supabase instances that you want to configure. You can specify up to 10 instances.</p>
+         * <p>The list of instance IDs of AI applications. A maximum of 10 instance IDs are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,10 +175,10 @@ public class ModifyInstancesSSLRequest extends Request {
         }
 
         /**
-         * <p>Enables or disables SSL. Valid values:</p>
+         * <p>Specifies whether to enable or disable SSL. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enable</li>
-         * <li><strong>0</strong>: disable</li>
+         * <li><strong>1</strong>: Enable.</li>
+         * <li><strong>0</strong>: Disable.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -192,9 +192,9 @@ public class ModifyInstancesSSLRequest extends Request {
         }
 
         /**
-         * <p>The content of the custom certificate.</p>
+         * <p>The custom certificate content.</p>
          * <blockquote>
-         * <p> This parameter is required if <strong>CAType</strong> is set to <strong>custom</strong>.</p>
+         * <p>This parameter is required when <strong>CAType</strong> is set to <strong>custom</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class ModifyInstancesSSLRequest extends Request {
         /**
          * <p>The private key of the certificate.</p>
          * <blockquote>
-         * <p> This parameter is required if <strong>CAType</strong> is set to <strong>custom</strong>.</p>
+         * <p>This parameter is required when <strong>CAType</strong> is set to <strong>custom</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

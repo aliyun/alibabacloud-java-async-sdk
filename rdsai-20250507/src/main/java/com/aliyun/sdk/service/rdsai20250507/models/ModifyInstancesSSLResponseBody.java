@@ -80,7 +80,7 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The RDS Supabase instances whose SSL settings are modified.</p>
+         * <p>The list of instance IDs of AI applications that were successfully modified.</p>
          * 
          * <strong>example:</strong>
          * <p>[

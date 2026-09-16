@@ -186,7 +186,10 @@ public class ModifyScheduledTaskRequest extends Request {
         } 
 
         /**
-         * <p>The description of the new inspection configuration.</p>
+         * <p>The new description of the inspection configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled RDS instance inspection task</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -197,16 +200,16 @@ public class ModifyScheduledTaskRequest extends Request {
         /**
          * <p>The new inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</p>
          * <ul>
-         * <li>DAILY</li>
-         * <li>Monday</li>
-         * <li>Tuesday</li>
-         * <li>Wednesday</li>
-         * <li>Thursday</li>
-         * <li>Friday</li>
-         * <li>Saturday</li>
-         * <li>Sunday</li>
+         * <li>DAILY: every day</li>
+         * <li>Monday: Monday</li>
+         * <li>Tuesday: Tuesday</li>
+         * <li>Wednesday: Wednesday</li>
+         * <li>Thursday: Thursday</li>
+         * <li>Friday: Friday</li>
+         * <li>Saturday: Saturday</li>
+         * <li>Sunday: Sunday</li>
          * </ul>
-         * <h3><a href="#daily--dailymonday--daily-"></a>Note: DAILY takes precedence over other values. For example, if you enter DAILY,Monday, the backend will use DAILY as the inspection frequency.</h3>
+         * <h3>Note: DAILY overrides weekly values. For example, if you specify DAILY,Monday, the backend uses DAILY as the inspection frequency.</h3>
          * 
          * <strong>example:</strong>
          * <p>Monday</p>
@@ -227,7 +230,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The new list of related instances. Separate multiple instances with commas (,).</p>
+         * <p>The new list of associated instances. Separate multiple values with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>
@@ -239,7 +242,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the new inspection configuration.</p>
+         * <p>The new name of the inspection configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS inspection task</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -270,7 +276,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The new execution time of the inspection task. Specify the time in the ISO 8601 standard in the HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The new time to execute the inspection task. Format: HH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>02:00:00Z</p>
@@ -291,7 +297,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The inspection time range. The default value is the latest 24 hours. Valid values: 1 to 168. The maximum value is 7 days.</p>
+         * <p>The inspection time range. Default value: the last 24 hours. Valid values: 1 to 168 (up to 7 days).</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>

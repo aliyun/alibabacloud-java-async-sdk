@@ -93,7 +93,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -288,7 +294,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * DailyTokenQuota.
+             * <p>The daily throttling quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000000</p>
              */
             public Builder dailyTokenQuota(Long dailyTokenQuota) {
                 this.dailyTokenQuota = dailyTokenQuota;
@@ -296,7 +305,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * IsRateLimited.
+             * <p>Indicates whether the key is throttled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRateLimited(Boolean isRateLimited) {
                 this.isRateLimited = isRateLimited;
@@ -304,7 +316,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>The API key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-*****</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -312,7 +327,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * LimitRate.
+             * <p>The quota limit ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder limitRate(Float limitRate) {
                 this.limitRate = limitRate;
@@ -320,7 +338,15 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * LimitType.
+             * <p>The quota limit method. Valid values:</p>
+             * <ul>
+             * <li><strong>fixed</strong>: Fixed value.</li>
+             * <li><strong>ratio</strong>: Percentage.</li>
+             * <li><strong>auto</strong>: Automatic allocation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed</p>
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
@@ -336,7 +362,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdPercent.
+             * <p>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder thresholdPercent(Integer thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;
@@ -344,7 +373,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * TokenQuota.
+             * <p>The quota limit of the current key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder tokenQuota(Long tokenQuota) {
                 this.tokenQuota = tokenQuota;
@@ -502,7 +534,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * BaseUrl.
+             * <p>The URL for model invocation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -510,7 +545,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CustomKeyList.
+             * <p>The list of custom API keys.</p>
              */
             public Builder customKeyList(java.util.List<CustomKeyList> customKeyList) {
                 this.customKeyList = customKeyList;
@@ -518,7 +553,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * DailyTokenQuota.
+             * <p>The daily throttling quota for the system API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000000</p>
              */
             public Builder dailyTokenQuota(Long dailyTokenQuota) {
                 this.dailyTokenQuota = dailyTokenQuota;
@@ -526,7 +564,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * IsRateLimited.
+             * <p>Indicates whether the key is throttled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRateLimited(Boolean isRateLimited) {
                 this.isRateLimited = isRateLimited;
@@ -534,7 +575,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -542,7 +586,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -550,7 +597,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * SystemApiKey.
+             * <p>The system-generated key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-rds-xxx</p>
              */
             public Builder systemApiKey(String systemApiKey) {
                 this.systemApiKey = systemApiKey;
@@ -558,7 +608,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * ThresholdPercent.
+             * <p>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder thresholdPercent(Integer thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;
@@ -566,7 +619,10 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

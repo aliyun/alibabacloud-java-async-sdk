@@ -145,7 +145,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation time of the agent.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-27 16:01:28</p>
@@ -156,7 +156,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether tools are enabled.</p>
+         * <p>Specifies whether to enable tools.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -179,6 +179,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
         /**
          * <p>The name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QueryInstanceListAgent</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -205,7 +208,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The system prompts.</p>
+         * <p>The system prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I am your dedicated agent for querying instance lists</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.systemPrompt = systemPrompt;
@@ -213,7 +219,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the tool.</p>
+         * <p>The tool information.</p>
          */
         public Builder tools(java.util.List<String> tools) {
             this.tools = tools;
@@ -325,6 +331,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
             /**
              * <p>The name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QueryInstanceListAgent</p>
              */
             public Builder name(String name) {
                 this.name = name;

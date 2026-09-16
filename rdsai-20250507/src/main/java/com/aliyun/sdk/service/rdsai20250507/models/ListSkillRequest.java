@@ -29,11 +29,16 @@ public class ListSkillRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListSkillRequest(Builder builder) {
         super(builder);
         this.language = builder.language;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListSkillRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListSkillRequest, Builder> {
         private String language; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -84,10 +97,11 @@ public class ListSkillRequest extends Request {
             this.language = request.language;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The languages supported by the skills.</p>
+         * <p>The supported languages. Valid values:</p>
          * <ul>
          * <li>zh-CN: Simplified Chinese</li>
          * <li>zh-TW: Traditional Chinese</li>
@@ -105,7 +119,7 @@ public class ListSkillRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +131,7 @@ public class ListSkillRequest extends Request {
         }
 
         /**
-         * <p>The number of records to return on each page. Default value: 20. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -125,6 +139,18 @@ public class ListSkillRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The ContextDB workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000-0000-4000-8000-000000000001</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

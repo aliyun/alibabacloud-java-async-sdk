@@ -145,7 +145,10 @@ public class UpdateSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The content of the skill.</p>
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MySQL&quot;: &quot;MySQL optimization guide...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL optimization guide...&quot;}</p>
          */
         public Builder content(java.util.Map<String, ?> content) {
             this.content = content;
@@ -153,7 +156,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of database engines.</p>
+         * <p>The list of database types.</p>
          */
         public Builder dbtypes(java.util.List<String> dbtypes) {
             this.dbtypes = dbtypes;
@@ -161,7 +164,10 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the skill. It can be up to 1000 characters in length.</p>
+         * <p>The skill description. The description can be up to 1000 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks about &quot;SQL review&quot;, &quot;SQL audit&quot;, &quot;any risks&quot;, or &quot;how to optimize&quot;</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -180,7 +186,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</p>
+         * <p>The skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
          * 
          * <strong>example:</strong>
          * <p>sql-review</p>
@@ -191,7 +197,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique identifier of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -213,7 +219,7 @@ public class UpdateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The update time of the skill.</p>
+         * <p>The time when the skill was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-04T21:14:45Z</p>

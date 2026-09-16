@@ -81,6 +81,9 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
 
         /**
          * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled task updated successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -99,7 +102,7 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

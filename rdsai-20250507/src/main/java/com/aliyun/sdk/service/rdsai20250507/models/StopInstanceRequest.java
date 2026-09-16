@@ -120,7 +120,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>StopInstance</strong>.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

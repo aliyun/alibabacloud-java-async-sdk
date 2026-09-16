@@ -132,7 +132,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -140,7 +143,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that indicates the position from which the current read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -148,7 +154,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +165,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +187,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * SandboxTemplates.
+         * <p>The list of sandbox templates.</p>
          */
         public Builder sandboxTemplates(java.util.List<SandboxTemplates> sandboxTemplates) {
             this.sandboxTemplates = sandboxTemplates;
@@ -183,7 +195,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the request conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -361,7 +376,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultCpu.
+             * <p>The number of CPUs for the sandbox created with this template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder defaultCpu(String defaultCpu) {
                 this.defaultCpu = defaultCpu;
@@ -369,7 +387,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultMemory.
+             * <p>The memory size of the sandbox created with this template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4Gi</p>
              */
             public Builder defaultMemory(String defaultMemory) {
                 this.defaultMemory = defaultMemory;
@@ -377,7 +398,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The sandbox template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code-interpreter-vpc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -385,7 +409,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableVpcAccess.
+             * <p>Indicates whether the sandbox created with this template can access resources in the VPC where Supabase resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableVpcAccess(String enableVpcAccess) {
                 this.enableVpcAccess = enableVpcAccess;
@@ -401,7 +428,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The sandbox template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code-interpreter</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -425,7 +455,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The sandbox template ID. Specify this ID when creating a sandbox with this template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code-interpreter-asdxxxx</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

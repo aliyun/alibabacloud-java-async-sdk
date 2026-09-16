@@ -90,6 +90,7 @@ public class CreateContextDatabaseApiKeyRequest extends Request {
         } 
 
         /**
+         * <p>The member ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class CreateContextDatabaseApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The API key name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class CreateContextDatabaseApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

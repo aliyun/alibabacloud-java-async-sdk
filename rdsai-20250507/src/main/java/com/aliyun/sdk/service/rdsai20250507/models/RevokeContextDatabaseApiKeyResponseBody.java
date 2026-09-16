@@ -184,7 +184,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedAt.
+         * <p>The time when the API key was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-28T17:59:55Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -192,7 +195,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for nightly cron</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -200,7 +206,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiresAt.
+         * <p>A reserved field. This field is currently empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(null)</p>
          */
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = expiresAt;
@@ -208,7 +217,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyDisplaySuffix.
+         * <p>The suffix of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33631c</p>
          */
         public Builder keyDisplaySuffix(String keyDisplaySuffix) {
             this.keyDisplaySuffix = keyDisplaySuffix;
@@ -216,7 +228,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyId.
+         * <p>The key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder keyId(Long keyId) {
             this.keyId = keyId;
@@ -224,7 +239,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPrefix.
+         * <p>The prefix of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctxdb-</p>
          */
         public Builder keyPrefix(String keyPrefix) {
             this.keyPrefix = keyPrefix;
@@ -232,7 +250,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * LastUsedAt.
+         * <p>The time when the API key was last used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-01T08:30:12Z</p>
          */
         public Builder lastUsedAt(String lastUsedAt) {
             this.lastUsedAt = lastUsedAt;
@@ -240,7 +261,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-key</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -248,7 +272,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +283,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RevokedAt.
+         * <p>The time when the API key was revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-07T10:15:30Z</p>
          */
         public Builder revokedAt(String revokedAt) {
             this.revokedAt = revokedAt;
@@ -264,7 +294,10 @@ public class RevokeContextDatabaseApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the API key. After revocation, the value is revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>revoked</p>
          */
         public Builder status(String status) {
             this.status = status;

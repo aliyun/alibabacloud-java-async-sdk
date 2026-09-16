@@ -184,7 +184,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The plaintext API key. This value is returned only once at creation time. The caller must persist it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctxdb-*****</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -192,7 +195,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * ApiKeyName.
+         * <p>The name of the first API key. The value is fixed as default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -200,7 +206,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * <p>The time when the workspace was created, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-28T17:59:55Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -208,7 +217,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * MemberId.
+         * <p>The ID of the first member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mb-cz51tnnp8****</p>
          */
         public Builder memberId(String memberId) {
             this.memberId = memberId;
@@ -216,7 +228,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * MemberName.
+         * <p>The name of the first member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-member</p>
          */
         public Builder memberName(String memberName) {
             this.memberName = memberName;
@@ -224,7 +239,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +250,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The role of the first member. The value is fixed as owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -240,7 +261,14 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The workspace status. Valid values:</p>
+         * <ul>
+         * <li>Active: running normally.</li>
+         * <li>Locked: locked due to overdue payment or expiration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -248,7 +276,14 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The workspace type. Valid values:</p>
+         * <ul>
+         * <li>personal: individual account.</li>
+         * <li>enterprise: enterprise account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>personal</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -256,7 +291,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the new workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-as1llqmkol****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -264,7 +302,10 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-workspace</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

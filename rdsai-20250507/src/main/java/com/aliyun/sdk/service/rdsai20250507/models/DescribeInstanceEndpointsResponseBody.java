@@ -106,7 +106,10 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchName.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;
@@ -114,7 +117,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the endpoints of the RDS instance.</p>
+         * <p>The list of endpoint information of the database instance.</p>
          */
         public Builder DBInstanceEndpoints(java.util.List<DBInstanceEndpoints> DBInstanceEndpoints) {
             this.DBInstanceEndpoints = DBInstanceEndpoints;
@@ -122,7 +125,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the endpoints of the RDS Supabase instance.</p>
+         * <p>The list of endpoint information of the AI application instance.</p>
          */
         public Builder instanceEndpoints(java.util.List<InstanceEndpoints> instanceEndpoints) {
             this.instanceEndpoints = instanceEndpoints;
@@ -130,7 +133,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the RDS Supabase instance.</p>
+         * <p>The instance ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -223,7 +226,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the RDS instance.</p>
+             * <p>The endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-xxxx.rds.aliyuncs.com</p>
@@ -234,10 +237,10 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the RDS instance. Valid values:</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
-             * <li><strong>public</strong>: Internet</li>
-             * <li><strong>vpc</strong>: VPC</li>
+             * <li><strong>public</strong>: Internet.</li>
+             * <li><strong>vpc</strong>: private network.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -249,7 +252,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port used to access the RDS instance.</p>
+             * <p>The connection port.</p>
              * 
              * <strong>example:</strong>
              * <p>5432</p>
@@ -358,7 +361,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the RDS Supabase instance.</p>
+             * <p>The endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>8.152.XXX.XXX:8000</p>
@@ -369,7 +372,10 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.apsaradb.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -377,7 +383,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address used to access the RDS Supabase instance.</p>
+             * <p>The IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>8.152.XXX.XXX</p>
@@ -388,10 +394,10 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the RDS Supabase instance. Valid values:</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
-             * <li><strong>public</strong>: Internet</li>
-             * <li><strong>vpc</strong>: VPC</li>
+             * <li><strong>public</strong>: Internet.</li>
+             * <li><strong>vpc</strong>: private network.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -403,7 +409,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port used to access the RDS Supabase instance.</p>
+             * <p>The connection port.</p>
              * 
              * <strong>example:</strong>
              * <p>8000</p>

@@ -88,7 +88,10 @@ public class DescribeCommonSandboxTemplatesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -97,7 +100,10 @@ public class DescribeCommonSandboxTemplatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that indicates the position from which the query starts. Set this parameter to empty to start from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -106,6 +112,7 @@ public class DescribeCommonSandboxTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

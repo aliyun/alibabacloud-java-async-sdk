@@ -33,12 +33,17 @@ public class GetMessagesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Limit")
     private Long limit;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private GetMessagesRequest(Builder builder) {
         super(builder);
         this.conversationId = builder.conversationId;
         this.eventMode = builder.eventMode;
         this.firstId = builder.firstId;
         this.limit = builder.limit;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class GetMessagesRequest extends Request {
         return this.limit;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<GetMessagesRequest, Builder> {
         private String conversationId; 
         private String eventMode; 
         private String firstId; 
         private Long limit; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -98,10 +111,11 @@ public class GetMessagesRequest extends Request {
             this.eventMode = request.eventMode;
             this.firstId = request.firstId;
             this.limit = request.limit;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>GetMessages</strong>.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>941c6f59-acf5-4e11-9adc-31e52e1f****</p>
@@ -122,7 +136,7 @@ public class GetMessagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the conversation.</p>
+         * <p>The ID of the first message.</p>
          * 
          * <strong>example:</strong>
          * <p>038866af-a050-4bc5-bfad-b7bfc838****</p>
@@ -134,7 +148,7 @@ public class GetMessagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the first message.</p>
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -142,6 +156,18 @@ public class GetMessagesRequest extends Request {
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
             this.limit = limit;
+            return this;
+        }
+
+        /**
+         * <p>The ContextDB workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000-0000-4000-8000-000000000001</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

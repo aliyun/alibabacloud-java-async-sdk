@@ -73,7 +73,10 @@ public class DescribeModelOperatorRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_copilot***_public_cn-*********6</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class DescribeModelOperatorRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

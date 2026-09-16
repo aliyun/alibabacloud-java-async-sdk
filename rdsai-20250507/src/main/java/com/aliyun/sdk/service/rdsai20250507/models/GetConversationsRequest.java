@@ -33,12 +33,17 @@ public class GetConversationsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private GetConversationsRequest(Builder builder) {
         super(builder);
         this.lastId = builder.lastId;
         this.limit = builder.limit;
         this.pinned = builder.pinned;
         this.sortBy = builder.sortBy;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class GetConversationsRequest extends Request {
         return this.sortBy;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<GetConversationsRequest, Builder> {
         private String lastId; 
         private String limit; 
         private String pinned; 
         private String sortBy; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -98,10 +111,11 @@ public class GetConversationsRequest extends Request {
             this.limit = request.limit;
             this.pinned = request.pinned;
             this.sortBy = request.sortBy;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>GetConversations</strong>.</p>
+         * <p>The ID of the last conversation record.</p>
          * 
          * <strong>example:</strong>
          * <p>77be60cd-237b-4ca9-9c46-48b663cb****</p>
@@ -113,7 +127,7 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the last conversation.</p>
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +139,7 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The pinned bookmark flag for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -137,7 +151,7 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to pin the application.</p>
+         * <p>The sorting criterion.</p>
          * 
          * <strong>example:</strong>
          * <p>CreatedAt</p>
@@ -145,6 +159,18 @@ public class GetConversationsRequest extends Request {
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
             this.sortBy = sortBy;
+            return this;
+        }
+
+        /**
+         * <p>The ContextDB workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000-0000-4000-8000-000000000001</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

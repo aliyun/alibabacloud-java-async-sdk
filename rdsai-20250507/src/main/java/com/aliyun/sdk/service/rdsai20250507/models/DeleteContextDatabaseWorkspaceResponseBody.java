@@ -119,7 +119,10 @@ public class DeleteContextDatabaseWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedAt.
+         * <p>The time when the workspace was created, in ISO-8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-28T17:59:55Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -127,7 +130,10 @@ public class DeleteContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +141,10 @@ public class DeleteContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The workspace status. The value is fixed as Deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deleted</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -143,7 +152,10 @@ public class DeleteContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The workspace type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>personal</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -151,7 +163,10 @@ public class DeleteContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the deleted workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-as1llqmkol****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -159,7 +174,10 @@ public class DeleteContextDatabaseWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The name of the deleted workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-workspace</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;

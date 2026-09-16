@@ -101,7 +101,10 @@ public class ListContextDatabaseWorkspacesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -110,7 +113,10 @@ public class ListContextDatabaseWorkspacesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(null)</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -119,7 +125,10 @@ public class ListContextDatabaseWorkspacesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status used to filter results. Valid values: Active and Locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -128,7 +137,10 @@ public class ListContextDatabaseWorkspacesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID used to filter results. Only the workspace that matches this ID is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-as1llqmkol****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

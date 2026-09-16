@@ -93,7 +93,10 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>This field is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(null)</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>This field is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(null)</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,10 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * Workspaces.
+         * <p>The list of workspaces.</p>
          */
         public Builder workspaces(java.util.List<Workspaces> workspaces) {
             this.workspaces = workspaces;
@@ -222,7 +231,10 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the workspace was created, in ISO-8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-28T17:59:55Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -230,7 +242,10 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The workspace status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +253,10 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The workspace type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>personal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -246,7 +264,10 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-as1llqmkol****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -254,7 +275,10 @@ public class ListContextDatabaseWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

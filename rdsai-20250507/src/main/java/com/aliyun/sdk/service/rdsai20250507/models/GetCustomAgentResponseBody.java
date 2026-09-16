@@ -158,7 +158,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation time of the agent.</p>
+         * <p>The time when the custom agent was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-04T02:25:43Z</p>
@@ -180,7 +180,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the backup set.</p>
+         * <p>The ID of the custom agent.</p>
          * 
          * <strong>example:</strong>
          * <p>17053</p>
@@ -191,7 +191,10 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the dedicated agent.</p>
+         * <p>The name of the custom agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询实例列表Agent</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -202,7 +205,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +221,10 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The system prompts.</p>
+         * <p>The system prompt for the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我是您用来查询实例列表的专属Agent</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.systemPrompt = systemPrompt;
@@ -226,7 +232,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the tools.</p>
+         * <p>A list of tools enabled for the agent.</p>
          */
         public Builder tools(java.util.List<String> tools) {
             this.tools = tools;
@@ -234,7 +240,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The modification time of the agent.</p>
+         * <p>The time when the custom agent was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-27 16:02:28</p>
@@ -337,7 +343,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup set.</p>
+             * <p>The ID of the custom agent.</p>
              * 
              * <strong>example:</strong>
              * <p>17053</p>
@@ -348,7 +354,10 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the dedicated agent.</p>
+             * <p>The name of the custom agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询实例列表Agent</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -93,7 +93,10 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that indicates the position from which the query starts. Set this parameter to empty to start from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -120,7 +126,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>The sandbox templates.</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
@@ -225,7 +231,10 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultCpu.
+             * <p>The default number of CPUs for sandboxes created by using this template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultCpu(String defaultCpu) {
                 this.defaultCpu = defaultCpu;
@@ -233,7 +242,10 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultMemory.
+             * <p>The default memory size for sandboxes created by using this template. The unit ends with Gi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1Gi</p>
              */
             public Builder defaultMemory(String defaultMemory) {
                 this.defaultMemory = defaultMemory;
@@ -241,7 +253,10 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultReplicas.
+             * <p>The default number of prewarmed sandboxes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultReplicas(Long defaultReplicas) {
                 this.defaultReplicas = defaultReplicas;
@@ -249,7 +264,10 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the sandbox template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Execute user-provided Python code in the sandbox environment. Runs any Python script the user provides and returns the output.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -257,7 +275,10 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the sandbox template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desktop</p>
              */
             public Builder name(String name) {
                 this.name = name;

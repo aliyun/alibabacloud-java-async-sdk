@@ -118,7 +118,10 @@ public class UpdateContextDatabaseApiKeyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The new description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for nightly cron</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -140,6 +143,7 @@ public class UpdateContextDatabaseApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The member ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +156,10 @@ public class UpdateContextDatabaseApiKeyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-key</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -161,6 +168,7 @@ public class UpdateContextDatabaseApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

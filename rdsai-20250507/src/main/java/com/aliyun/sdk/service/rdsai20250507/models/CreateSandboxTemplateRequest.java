@@ -173,7 +173,10 @@ public class CreateSandboxTemplateRequest extends Request {
         } 
 
         /**
-         * DefaultCpu.
+         * <p>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultCpu(String defaultCpu) {
             this.putQueryParameter("DefaultCpu", defaultCpu);
@@ -182,7 +185,10 @@ public class CreateSandboxTemplateRequest extends Request {
         }
 
         /**
-         * DefaultMemory.
+         * <p>The memory size for sandboxes created by using this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1Gi</p>
          */
         public Builder defaultMemory(String defaultMemory) {
             this.putQueryParameter("DefaultMemory", defaultMemory);
@@ -191,7 +197,10 @@ public class CreateSandboxTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the sandbox template. The description must be unique within the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-interpreter</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -209,6 +218,7 @@ public class CreateSandboxTemplateRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the AI application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +231,10 @@ public class CreateSandboxTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +243,10 @@ public class CreateSandboxTemplateRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * <p>The number of prewarmed sandboxes. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder replicas(Long replicas) {
             this.putQueryParameter("Replicas", replicas);
@@ -249,6 +265,7 @@ public class CreateSandboxTemplateRequest extends Request {
         }
 
         /**
+         * <p>The name of the sandbox template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

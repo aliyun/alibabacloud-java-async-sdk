@@ -74,7 +74,7 @@ public class ResetApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>Api Key</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-*****</p>
@@ -86,6 +86,7 @@ public class ResetApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
