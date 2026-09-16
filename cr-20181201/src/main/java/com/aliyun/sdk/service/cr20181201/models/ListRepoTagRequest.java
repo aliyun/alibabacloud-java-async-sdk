@@ -36,10 +36,12 @@ public class ListRepoTagRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
+    @Deprecated
     private Integer pageNo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @Deprecated
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
@@ -154,7 +156,7 @@ public class ListRepoTagRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +169,11 @@ public class ListRepoTagRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * <p>Use this parameter together with NextToken. This parameter takes priority over PageNo and PageSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -176,7 +182,11 @@ public class ListRepoTagRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+         * <p>Use this parameter together with MaxResults. This parameter takes priority over PageNo and PageSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -185,7 +195,7 @@ public class ListRepoTagRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +207,7 @@ public class ListRepoTagRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The number of entries per page. A maximum of 100 entries can be returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -209,7 +219,7 @@ public class ListRepoTagRequest extends Request {
         }
 
         /**
-         * <p>The ID of the repository.</p>
+         * <p>The repository ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

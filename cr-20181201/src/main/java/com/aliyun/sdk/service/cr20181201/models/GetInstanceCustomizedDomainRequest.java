@@ -113,6 +113,7 @@ public class GetInstanceCustomizedDomainRequest extends Request {
         }
 
         /**
+         * <p>The custom domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class GetInstanceCustomizedDomainRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class GetInstanceCustomizedDomainRequest extends Request {
         }
 
         /**
+         * <p>The custom module name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

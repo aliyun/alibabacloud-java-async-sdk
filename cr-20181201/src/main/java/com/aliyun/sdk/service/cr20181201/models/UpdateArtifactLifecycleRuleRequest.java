@@ -26,8 +26,16 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
     private Boolean auto;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableDeleteTag")
     private Boolean enableDeleteTag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDeleteUntaggedManifest")
+    private Boolean enableDeleteUntaggedManifest;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -67,7 +75,9 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.auto = builder.auto;
+        this.dryRun = builder.dryRun;
         this.enableDeleteTag = builder.enableDeleteTag;
+        this.enableDeleteUntaggedManifest = builder.enableDeleteUntaggedManifest;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
         this.repoName = builder.repoName;
@@ -106,10 +116,24 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return enableDeleteTag
      */
     public Boolean getEnableDeleteTag() {
         return this.enableDeleteTag;
+    }
+
+    /**
+     * @return enableDeleteUntaggedManifest
+     */
+    public Boolean getEnableDeleteUntaggedManifest() {
+        return this.enableDeleteUntaggedManifest;
     }
 
     /**
@@ -171,7 +195,9 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateArtifactLifecycleRuleRequest, Builder> {
         private String regionId; 
         private Boolean auto; 
+        private Boolean dryRun; 
         private Boolean enableDeleteTag; 
+        private Boolean enableDeleteUntaggedManifest; 
         private String instanceId; 
         private String namespaceName; 
         private String repoName; 
@@ -189,7 +215,9 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.auto = request.auto;
+            this.dryRun = request.dryRun;
             this.enableDeleteTag = request.enableDeleteTag;
+            this.enableDeleteUntaggedManifest = request.enableDeleteUntaggedManifest;
             this.instanceId = request.instanceId;
             this.namespaceName = request.namespaceName;
             this.repoName = request.repoName;
@@ -210,7 +238,7 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically execute the lifecycle management rule.</p>
+         * <p>Specifies whether to automatically execute the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -222,7 +250,20 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable lifecycle management for the artifact.</p>
+         * <p>Specifies whether to enable DryRun mode. If DryRun mode is enabled, only the lifecycle task scan is performed and no actual data cleanup is performed. DryRun mode is disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable lifecycle management.</p>
+         * <p>Only one of this parameter and EnableDeleteUntaggedManifest can be set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -230,6 +271,19 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         public Builder enableDeleteTag(Boolean enableDeleteTag) {
             this.putQueryParameter("EnableDeleteTag", enableDeleteTag);
             this.enableDeleteTag = enableDeleteTag;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable artifact cleanup.</p>
+         * <p>Only one of this parameter and EnableDeleteTag can be set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder enableDeleteUntaggedManifest(Boolean enableDeleteUntaggedManifest) {
+            this.putQueryParameter("EnableDeleteUntaggedManifest", enableDeleteUntaggedManifest);
+            this.enableDeleteUntaggedManifest = enableDeleteUntaggedManifest;
             return this;
         }
 
@@ -247,7 +301,7 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -259,7 +313,7 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The image repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_1</p>
@@ -271,7 +325,7 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of images that you want to retain.</p>
+         * <p>The number of images to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -296,7 +350,7 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The execution cycle of the lifecycle management rule.</p>
+         * <p>The execution cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>WEEK</p>
@@ -308,7 +362,7 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The deletion scope of artifacts.</p>
+         * <p>The cleanup scope.</p>
          * 
          * <strong>example:</strong>
          * <p>REPO</p>
@@ -320,7 +374,7 @@ public class UpdateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
-         * <p>The regular expression that indicates which image tags you want to retain.</p>
+         * <p>The regular expression used to retain image versions.</p>
          * 
          * <strong>example:</strong>
          * <p>.<em>production_.</em></p>

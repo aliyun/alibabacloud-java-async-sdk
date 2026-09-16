@@ -80,7 +80,7 @@ public class UpdateArtifactLifecycleRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -91,10 +91,12 @@ public class UpdateArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API request is successful. Valid values:</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
+         * <li><p><code>true</code>: The API call is successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The API call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

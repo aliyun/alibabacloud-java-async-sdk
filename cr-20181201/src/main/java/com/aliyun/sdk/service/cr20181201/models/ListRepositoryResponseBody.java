@@ -169,7 +169,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -180,7 +180,10 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -188,7 +191,10 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -207,7 +213,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -218,7 +224,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the repositories.</p>
+         * <p>The list of repositories.</p>
          */
         public Builder repositories(java.util.List<Repositories> repositories) {
             this.repositories = repositories;
@@ -237,7 +243,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the queried image repositories.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -447,7 +453,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Container Registry instance to which the repository belongs.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-kmsiwlxxdcv****</p>
@@ -469,10 +475,12 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the repository building. Valid values:</p>
+             * <p>The repository build type. Valid values:</p>
              * <ul>
-             * <li><code>AUTO</code>: The repository is automatically built.</li>
-             * <li><code>MANUAL</code>: The repository is manually built.</li>
+             * <li><p><code>AUTO</code>: Automatically triggered build.</p>
+             * </li>
+             * <li><p><code>MANUAL</code>: Manually triggered build.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -484,7 +492,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the repository.</p>
+             * <p>The repository ID.</p>
              * 
              * <strong>example:</strong>
              * <p>crr-03cuozrsqhkw****</p>
@@ -495,7 +503,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the repository.</p>
+             * <p>The repository name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -506,7 +514,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the namespace to which the repository belongs.</p>
+             * <p>The repository namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -517,7 +525,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the repository.</p>
+             * <p>The repository status.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -528,10 +536,12 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the repository. Valid values:</p>
+             * <p>The repository type. Valid values:</p>
              * <ul>
-             * <li><code>PUBLIC</code></li>
-             * <li><code>PRIVATE</code></li>
+             * <li><p><code>PUBLIC</code>: Public.</p>
+             * </li>
+             * <li><p><code>PRIVATE</code>: Private.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -543,7 +553,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the repository belongs.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfm4n5kzyfxxxx</p>
@@ -554,7 +564,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The summary of the repository.</p>
+             * <p>The summary.</p>
              * 
              * <strong>example:</strong>
              * <p>test OK</p>
@@ -565,7 +575,7 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the feature of image tag immutability is enabled for the repository.</p>
+             * <p>The tag immutability of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

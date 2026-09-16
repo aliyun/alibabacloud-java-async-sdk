@@ -230,6 +230,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The source instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +243,16 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * Override.
+         * <p>Specifies whether to forcibly overwrite existing images. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: Forcibly overwrites existing images.</p>
+         * </li>
+         * <li><p><code>false</code>: Does not forcibly overwrite existing images.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder override(Boolean override) {
             this.putQueryParameter("Override", override);
@@ -251,7 +261,12 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</p>
+         * <p>Valid values: 1 to 5.</p>
+         * <p>Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -260,6 +275,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the image repository in the source instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,6 +288,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The image tag in the source instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,6 +301,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -296,6 +314,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The namespace of the target instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,6 +327,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the target instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,6 +340,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the image repository in the target instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,6 +353,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The image tag in the target instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,7 +366,10 @@ public class CreateRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * TargetUserId.
+         * <p>The UID of the account to which the target instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345***</p>
          */
         public Builder targetUserId(String targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);

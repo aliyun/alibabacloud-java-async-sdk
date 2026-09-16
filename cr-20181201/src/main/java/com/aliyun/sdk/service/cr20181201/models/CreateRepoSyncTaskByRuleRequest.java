@@ -134,9 +134,6 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -145,7 +142,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +155,12 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Synchronization tasks with the same priority are executed in random order.</p>
+         * <p>Valid values: 1 to 5.</p>
+         * <p>Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -167,7 +169,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The image repository ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +182,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization rule.</p>
+         * <p>The synchronization rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +195,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         }
 
         /**
-         * <p>The version of the image to be synchronized.</p>
+         * <p>The image version to be synchronized.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

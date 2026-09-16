@@ -141,7 +141,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically create an image repository in the namespace.</p>
+         * <p>Specifies whether a repository is automatically created when an image is pushed to a repository that does not yet exist in the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,10 +163,12 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The default type of the repositories that are automatically created in the namespace. Valid values:</p>
+         * <p>The default type of automatically created repositories. Valid values:</p>
          * <ul>
-         * <li><code>PUBLIC</code>: public repositories</li>
-         * <li><code>PRIVATE</code>: private repositories.</li>
+         * <li><p><code>PUBLIC</code>: public</p>
+         * </li>
+         * <li><p><code>PRIVATE</code>: private</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +181,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +194,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. The name must be 2 to 120 characters in length, and can contain lowercase letters, digits, and the following delimiters: underscores (_), hyphens (-), and periods (.). The name cannot start or end with a delimiter.</p>
+         * <p>The name of the namespace. The name must be 2 to 120 characters long and can contain only lowercase letters, digits, and the following separators: underscores (_), hyphens (-), and periods (.). A separator cannot be used as the first or last character.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -83,7 +83,11 @@ public class RouteItem extends TeaModel {
         } 
 
         /**
+         * <p>The endpoint type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder endpointType(String endpointType) {
             this.endpointType = endpointType;
@@ -91,7 +95,11 @@ public class RouteItem extends TeaModel {
         }
 
         /**
+         * <p>The instance domain name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-instance-registry-vpc.cn-hangzhou.cr.aliyuncs.com</p>
          */
         public Builder instanceDomain(String instanceDomain) {
             this.instanceDomain = instanceDomain;
@@ -99,7 +107,11 @@ public class RouteItem extends TeaModel {
         }
 
         /**
+         * <p>The OSS domain name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cri-cfafawer***-registry.oss-cn-hangzhou.aliyuncs.com">https://cri-cfafawer***-registry.oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         public Builder storageDomain(String storageDomain) {
             this.storageDomain = storageDomain;

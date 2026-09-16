@@ -124,7 +124,7 @@ public class ListArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class ListArtifactSubscriptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
+         * <p>The number of entries to return on each page. The maximum value is 100. If you specify a value greater than 100, the system either caps the page size at 100 or returns a parameter error.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

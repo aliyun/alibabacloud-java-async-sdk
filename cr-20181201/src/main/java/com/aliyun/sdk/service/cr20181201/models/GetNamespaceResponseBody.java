@@ -185,7 +185,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether a repository is automatically created when an image is pushed to the namespace.</p>
+         * <p>Indicates whether automatic repository creation is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -196,7 +196,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return value.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -215,10 +215,12 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default type of repositories in the namespace. Valid values:</p>
+         * <p>The default repository type. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: public repositories.</li>
-         * <li>PRIVATE: private repositories.</li>
+         * <li><p><code>PUBLIC</code>: a public repository</p>
+         * </li>
+         * <li><p><code>PRIVATE</code>: a private repository</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +232,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Container Registry instance.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-kmsiwlxxdcva****</p>
@@ -241,7 +243,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -274,10 +276,12 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the namespace.</p>
+         * <p>The status of the namespace. Valid values:</p>
          * <ul>
-         * <li>NORMAL</li>
-         * <li>DELETING</li>
+         * <li><p><code>NORMAL</code>: The namespace is running as expected.</p>
+         * </li>
+         * <li><p><code>DELETING</code>: The namespace is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,7 +304,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the namespace belongs.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmv36i4is****</p>

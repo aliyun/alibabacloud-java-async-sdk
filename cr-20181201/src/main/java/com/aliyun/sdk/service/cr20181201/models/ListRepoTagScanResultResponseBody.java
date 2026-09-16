@@ -426,7 +426,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
              * <p>The name of the vulnerability.</p>
              * 
              * <strong>example:</strong>
-             * <p>Vulnerability</p>
+             * <p>漏洞</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;

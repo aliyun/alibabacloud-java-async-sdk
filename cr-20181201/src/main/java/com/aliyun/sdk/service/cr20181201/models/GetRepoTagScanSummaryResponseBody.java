@@ -178,7 +178,10 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * LowSeverity.
+         * <p>Number of low-severity vulnerabilities</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
          */
         public Builder lowSeverity(Integer lowSeverity) {
             this.lowSeverity = lowSeverity;

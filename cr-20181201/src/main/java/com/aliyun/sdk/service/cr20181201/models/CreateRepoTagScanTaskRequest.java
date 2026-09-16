@@ -155,7 +155,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The digest of the image.</p>
+         * <p>The image digest.</p>
          * 
          * <strong>example:</strong>
          * <p>sha256:815386ebbe9a3490f38785ab11bda34ec8dacf4634af77b8912832d4f85dca04</p>
@@ -167,7 +167,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Container Registry instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The image repository ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,10 +193,12 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the scanning engine.</p>
+         * <p>The scan engine type:</p>
          * <ul>
-         * <li><code>SAS_SCAN_SERVICE</code>: Security Center scan engine (paid service)</li>
-         * <li><code>ACR_SCAN_SERVICE</code>: Container Registry scan engine</li>
+         * <li><p><code>SAS_SCAN_SERVICE</code>: The cloud security scan engine. This is a paid service.</p>
+         * </li>
+         * <li><p><code>ACR_SCAN_SERVICE</code>: The ACR scan engine.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,7 +220,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The image version.</p>
+         * <p>The image tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

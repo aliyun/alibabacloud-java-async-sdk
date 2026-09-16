@@ -142,6 +142,7 @@ public class UpdateInstanceCustomizedDomainRequest extends Request {
         }
 
         /**
+         * <p>The certificate ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +155,10 @@ public class UpdateInstanceCustomizedDomainRequest extends Request {
         }
 
         /**
-         * CertRegionId.
+         * <p>The region where the certificate resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder certRegionId(String certRegionId) {
             this.putQueryParameter("CertRegionId", certRegionId);
@@ -163,6 +167,7 @@ public class UpdateInstanceCustomizedDomainRequest extends Request {
         }
 
         /**
+         * <p>The custom domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +180,7 @@ public class UpdateInstanceCustomizedDomainRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +193,7 @@ public class UpdateInstanceCustomizedDomainRequest extends Request {
         }
 
         /**
+         * <p>The modified domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -241,7 +241,7 @@ public class UpdateRepoTriggerRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>TAG_LIST</p>
+         * <p>ALL</p>
          */
         public Builder triggerType(String triggerType) {
             this.putQueryParameter("TriggerType", triggerType);

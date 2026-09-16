@@ -132,6 +132,7 @@ public class DiagnosisTarget extends TeaModel {
         } 
 
         /**
+         * <p>The end of the diagnostic time window, in ISO 8601 format. Must be after <code>StartTime</code>.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * Extra.
+         * <p>A map of key-value pairs providing additional context for the diagnosis.</p>
          */
         public Builder extra(java.util.Map<String, String> extra) {
             this.extra = extra;
@@ -151,7 +152,10 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace that contains the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_namespace</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -159,7 +163,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * RelatedId.
+         * <p>The ID of a related operation, such as a previous diagnostic task.</p>
          */
         public Builder relatedId(String relatedId) {
             this.relatedId = relatedId;
@@ -167,7 +171,10 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * Repository.
+         * <p>The name of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_repo</p>
          */
         public Builder repository(String repository) {
             this.repository = repository;
@@ -175,6 +182,7 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
+         * <p>The start of the diagnostic time window, in ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +194,10 @@ public class DiagnosisTarget extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>The container image tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;

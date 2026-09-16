@@ -168,7 +168,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the endpoint. Set the value to Internet.</p>
+         * <p>The endpoint type. Only Internet is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The CIDR block that is accessible.</p>
+         * <p>The IP address range that is allowed to access the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1/32</p>
@@ -203,7 +203,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,10 +216,12 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the module that you want to access. Valid values:</p>
+         * <p>The module for which you want to set the access policy. Valid values:</p>
          * <ul>
-         * <li><code>Registry</code>: the image repository.</li>
-         * <li><code>Chart</code>: a Helm chart.</li>
+         * <li><p><code>Registry</code>: access the image repository</p>
+         * </li>
+         * <li><p><code>Chart</code>: access Helm Chart</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

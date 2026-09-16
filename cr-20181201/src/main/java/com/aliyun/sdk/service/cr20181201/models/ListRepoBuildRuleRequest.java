@@ -118,9 +118,6 @@ public class ListRepoBuildRuleRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -142,7 +139,7 @@ public class ListRepoBuildRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +151,7 @@ public class ListRepoBuildRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

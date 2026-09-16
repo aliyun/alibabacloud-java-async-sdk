@@ -199,10 +199,10 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of namespaces.</p>
+         * <p>The collection of namespaces.</p>
          * <ul>
-         * <li>When the scan scope is NAMESPACE, this parameter cannot be empty.</li>
-         * <li>If the scan scope is REPO, you must specify a unique Namespace for this parameter.</li>
+         * <li>If the scan scope is set to NAMESPACE, this parameter is required.</li>
+         * <li>If the scan scope is set to REPO, specify exactly one namespace for this parameter.</li>
          * </ul>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
@@ -215,8 +215,8 @@ public class UpdateScanRuleRequest extends Request {
         /**
          * <p>The list of repositories.</p>
          * <ul>
-         * <li>When the scan scope is NAMESPACE, this parameter must be empty.</li>
-         * <li>When the scan scope is REPO, this parameter cannot be empty.</li>
+         * <li>If the scan scope is set to NAMESPACE, this parameter must be empty.</li>
+         * <li>If the scan scope is set to REPO, this parameter is required.</li>
          * </ul>
          */
         public Builder repoNames(java.util.List<String> repoNames) {
@@ -227,7 +227,7 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
-         * <p>The tag filtering rules.</p>
+         * <p>The tag filtering rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,10 +266,9 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
-         * <p>The scan scope.</p>
-         * <p>Valid values:</p>
+         * <p>The scan scope. Valid values:</p>
          * <ul>
-         * <li>NAMESPACE: namespace.</li>
+         * <li>NAMESPACE: namespace</li>
          * <li>REPO: repository.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -284,11 +283,10 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
-         * <p>The trigger type.</p>
-         * <p>Valid values:</p>
+         * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>AUTO: automatically triggers.</li>
-         * <li>MANUAL: manually triggers.</li>
+         * <li>AUTO: Automatically triggered upon push.</li>
+         * <li>MANUAL: Manually triggered.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

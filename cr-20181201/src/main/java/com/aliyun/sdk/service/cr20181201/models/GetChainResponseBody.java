@@ -210,7 +210,7 @@ public class GetChainResponseBody extends TeaModel {
         } 
 
         /**
-         * ChainConfig.
+         * <p>Delivery chain configuration description</p>
          */
         public Builder chainConfig(ChainConfig chainConfig) {
             this.chainConfig = chainConfig;
@@ -218,7 +218,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * ChainId.
+         * <p>Delivery chain ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chi-0ops0gsmw5x2****</p>
          */
         public Builder chainId(String chainId) {
             this.chainId = chainId;
@@ -226,7 +229,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -234,7 +240,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Delivery chain creation time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638255427000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -242,7 +251,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Delivery chain description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -250,7 +262,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-4cdrlqmhn4gm****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -258,7 +273,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the operation succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -266,7 +284,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * <p>Updated At of the delivery chain description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638259914000</p>
          */
         public Builder modifiedTime(Long modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -274,7 +295,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Delivery chain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -282,7 +306,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C87993B5-7D61-5CAC-8D64-1AC732DD69FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +317,7 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * ScopeExclude.
+         * <p>Collection of repositories excluded from delivery chain execution</p>
          */
         public Builder scopeExclude(java.util.List<String> scopeExclude) {
             this.scopeExclude = scopeExclude;
@@ -298,7 +325,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * ScopeId.
+         * <p>Delivery chain scope ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-nyrh2oko32xb****</p>
          */
         public Builder scopeId(String scopeId) {
             this.scopeId = scopeId;
@@ -306,7 +336,10 @@ public class GetChainResponseBody extends TeaModel {
         }
 
         /**
-         * ScopeType.
+         * <p>Delivery chain scope type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REPOSITORY</p>
          */
         public Builder scopeType(String scopeType) {
             this.scopeType = scopeType;
@@ -437,7 +470,18 @@ public class GetChainResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>Deny action. Valid values:</p>
+             * <ul>
+             * <li><p><code>BLOCK</code>: Block further execution of the delivery chain</p>
+             * </li>
+             * <li><p><code>BLOCK_RETAG</code>: Block overwriting and pushing image tags</p>
+             * </li>
+             * <li><p><code>BLOCK_DELETE_TAG</code>: Block deleting image tags</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BLOCK</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -445,7 +489,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineList.
+             * <p>Collection of baseline samples to block. Separate multiple baseline sample names with commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification,hc_image_exploit</p>
              */
             public Builder baselineList(String baselineList) {
                 this.baselineList = baselineList;
@@ -453,7 +500,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * IssueCount.
+             * <p>Number of scanned vulnerabilities that triggers a block</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder issueCount(String issueCount) {
                 this.issueCount = issueCount;
@@ -461,7 +511,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * IssueLevel.
+             * <p>The vulnerability Level at which blocking is triggered during a scan</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HIGH</p>
              */
             public Builder issueLevel(String issueLevel) {
                 this.issueLevel = issueLevel;
@@ -469,7 +522,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * IssueList.
+             * <p>Collection of CVE vulnerabilities to block. Separate multiple CVE vulnerability names with commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2020-8286,CVE-2020-8285</p>
              */
             public Builder issueList(String issueList) {
                 this.issueList = issueList;
@@ -477,7 +533,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * <p>The logic that triggers blocking upon scan detection</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder logic(String logic) {
                 this.logic = logic;
@@ -485,7 +544,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousList.
+             * <p>The collection of malicious samples to block, with multiple sample names separated by commas</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mutate_cockhorse,abnormal_program</p>
              */
             public Builder maliciousList(String maliciousList) {
                 this.maliciousList = maliciousList;
@@ -578,7 +640,7 @@ public class GetChainResponseBody extends TeaModel {
             } 
 
             /**
-             * DenyPolicy.
+             * <p>Deny rules for scan nodes in the delivery chain</p>
              */
             public Builder denyPolicy(DenyPolicy denyPolicy) {
                 this.denyPolicy = denyPolicy;
@@ -586,7 +648,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * Retry.
+             * <p>Retry Count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder retry(Integer retry) {
                 this.retry = retry;
@@ -594,7 +659,14 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * ScanEngine.
+             * <p>Scan engine for the delivery chain node  </p>
+             * <ul>
+             * <li><code>SAS_SCAN_SERVICE</code>, Security Center scan engine (requires paid activation)  </li>
+             * <li><code>ACR_SCAN_SERVICE</code>, ACR scan engine</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACR_SCAN_SERVICE</p>
              */
             public Builder scanEngine(String scanEngine) {
                 this.scanEngine = scanEngine;
@@ -602,7 +674,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>Timeout (in seconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -682,7 +757,16 @@ public class GetChainResponseBody extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>Indicates whether to enable the delivery chain edge zone. Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: Enable the delivery chain edge zone.</p>
+             * </li>
+             * <li><p><code>false</code>: Do not enable the delivery chain edge zone.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -690,7 +774,7 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * NodeConfig.
+             * <p>Delivery chain edge zone configuration</p>
              */
             public Builder nodeConfig(NodeConfig nodeConfig) {
                 this.nodeConfig = nodeConfig;
@@ -698,7 +782,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>Delivery chain edge zone name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VULNERABILITY_SCANNING</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -752,7 +839,10 @@ public class GetChainResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeName.
+             * <p>source edge zone name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOCKER_IMAGE_BUILD</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -806,7 +896,10 @@ public class GetChainResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeName.
+             * <p>destination edge zone name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOCKER_IMAGE_PUSH</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -873,7 +966,7 @@ public class GetChainResponseBody extends TeaModel {
             } 
 
             /**
-             * From.
+             * <p>source edge zone</p>
              */
             public Builder from(From from) {
                 this.from = from;
@@ -881,7 +974,7 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>destination edge zone</p>
              */
             public Builder to(To to) {
                 this.to = to;
@@ -987,7 +1080,10 @@ public class GetChainResponseBody extends TeaModel {
             } 
 
             /**
-             * ChainConfigId.
+             * <p>Delivery chain configuration ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cci-lz3ycgo69ukt****</p>
              */
             public Builder chainConfigId(String chainConfigId) {
                 this.chainConfigId = chainConfigId;
@@ -995,7 +1091,16 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * IsActive.
+             * <p>Indicates whether the delivery chain configuration is active. Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: The configuration is active.</p>
+             * </li>
+             * <li><p><code>false</code>: The configuration is not active.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isActive(Boolean isActive) {
                 this.isActive = isActive;
@@ -1003,7 +1108,7 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * <p>Each edge zone in the delivery chain</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -1011,7 +1116,7 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * Routers.
+             * <p>Execution order relationships between edge zones in the delivery chain</p>
              */
             public Builder routers(java.util.List<Routers> routers) {
                 this.routers = routers;
@@ -1019,7 +1124,10 @@ public class GetChainResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Delivery chain version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;

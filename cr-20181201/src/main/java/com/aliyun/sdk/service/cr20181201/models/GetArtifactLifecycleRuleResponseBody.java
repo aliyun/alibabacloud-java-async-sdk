@@ -26,8 +26,14 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
     @com.aliyun.core.annotation.NameInMap("EnableDeleteTag")
     private Boolean enableDeleteTag;
+
+    @com.aliyun.core.annotation.NameInMap("EnableDeleteUntaggedManifest")
+    private Boolean enableDeleteUntaggedManifest;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -72,7 +78,9 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         this.auto = builder.auto;
         this.code = builder.code;
         this.createTime = builder.createTime;
+        this.dryRun = builder.dryRun;
         this.enableDeleteTag = builder.enableDeleteTag;
+        this.enableDeleteUntaggedManifest = builder.enableDeleteUntaggedManifest;
         this.instanceId = builder.instanceId;
         this.isSuccess = builder.isSuccess;
         this.modifiedTime = builder.modifiedTime;
@@ -122,10 +130,24 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return enableDeleteTag
      */
     public Boolean getEnableDeleteTag() {
         return this.enableDeleteTag;
+    }
+
+    /**
+     * @return enableDeleteUntaggedManifest
+     */
+    public Boolean getEnableDeleteUntaggedManifest() {
+        return this.enableDeleteUntaggedManifest;
     }
 
     /**
@@ -223,7 +245,9 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         private Boolean auto; 
         private String code; 
         private Long createTime; 
+        private Boolean dryRun; 
         private Boolean enableDeleteTag; 
+        private Boolean enableDeleteUntaggedManifest; 
         private String instanceId; 
         private Boolean isSuccess; 
         private Long modifiedTime; 
@@ -245,7 +269,9 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
             this.auto = model.auto;
             this.code = model.code;
             this.createTime = model.createTime;
+            this.dryRun = model.dryRun;
             this.enableDeleteTag = model.enableDeleteTag;
+            this.enableDeleteUntaggedManifest = model.enableDeleteUntaggedManifest;
             this.instanceId = model.instanceId;
             this.isSuccess = model.isSuccess;
             this.modifiedTime = model.modifiedTime;
@@ -262,7 +288,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the lifecycle management rule is automatically executed.</p>
+         * <p>Indicates whether automatic execution is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -284,7 +310,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the lifecycle management rule was created.</p>
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1571926439000</p>
@@ -295,13 +321,30 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether lifecycle management is enabled for the artifact.</p>
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether lifecycle management is enabled.</p>
+         * <p>Only one of this parameter and EnableDeleteUntaggedManifest can be set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         public Builder enableDeleteTag(Boolean enableDeleteTag) {
             this.enableDeleteTag = enableDeleteTag;
+            return this;
+        }
+
+        /**
+         * EnableDeleteUntaggedManifest.
+         */
+        public Builder enableDeleteUntaggedManifest(Boolean enableDeleteUntaggedManifest) {
+            this.enableDeleteUntaggedManifest = enableDeleteUntaggedManifest;
             return this;
         }
 
@@ -317,10 +360,12 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API request is successful. Valid values:</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
+         * <li><p><code>true</code>: The API call is successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The API call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,7 +377,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the lifecycle management rule was last modified.</p>
+         * <p>The last modification time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1638259914000</p>
@@ -343,7 +388,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-namespace</p>
@@ -354,7 +399,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the lifecycle management rule is next executed.</p>
+         * <p>The next execution time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1701878400000</p>
@@ -365,7 +410,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Policies.
+         * <p>The list of lifecycle policies.</p>
          */
         public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
@@ -373,7 +418,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The image repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>
@@ -395,7 +440,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of retained images.</p>
+         * <p>The number of images to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -417,7 +462,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution cycle of the lifecycle management rule.</p>
+         * <p>The execution cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>WEEK</p>
@@ -428,7 +473,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deletion scope of artifacts.</p>
+         * <p>The cleanup scope.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
@@ -439,7 +484,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The regular expression that indicates which image tags are retained.</p>
+         * <p>The regular expression used to match image versions to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>.*-alpine</p>
@@ -521,7 +566,10 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * LastPullOlderThanDays.
+             * <p>The number of days since the last pull.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lastPullOlderThanDays(Integer lastPullOlderThanDays) {
                 this.lastPullOlderThanDays = lastPullOlderThanDays;
@@ -529,7 +577,10 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LastPushOlderThanDays.
+             * <p>The number of days since the last push.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lastPushOlderThanDays(Integer lastPushOlderThanDays) {
                 this.lastPushOlderThanDays = lastPushOlderThanDays;
@@ -537,7 +588,10 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LatestTagCount.
+             * <p>The number of latest image versions to retain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder latestTagCount(Integer latestTagCount) {
                 this.latestTagCount = latestTagCount;
@@ -591,7 +645,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * TagWildcard.
+             * <p>The wildcard used to match image versions.</p>
              */
             public Builder tagWildcard(String tagWildcard) {
                 this.tagWildcard = tagWildcard;
@@ -671,7 +725,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * Condition.
+             * <p>The trigger condition of the lifecycle policy.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -679,7 +733,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Filter.
+             * <p>The image version filter condition.</p>
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -687,7 +741,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The lifecycle policy type.</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -26,8 +26,16 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
     private Boolean auto;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableDeleteTag")
     private Boolean enableDeleteTag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDeleteUntaggedManifest")
+    private Boolean enableDeleteUntaggedManifest;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -62,7 +70,9 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.auto = builder.auto;
+        this.dryRun = builder.dryRun;
         this.enableDeleteTag = builder.enableDeleteTag;
+        this.enableDeleteUntaggedManifest = builder.enableDeleteUntaggedManifest;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
         this.repoName = builder.repoName;
@@ -100,10 +110,24 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return enableDeleteTag
      */
     public Boolean getEnableDeleteTag() {
         return this.enableDeleteTag;
+    }
+
+    /**
+     * @return enableDeleteUntaggedManifest
+     */
+    public Boolean getEnableDeleteUntaggedManifest() {
+        return this.enableDeleteUntaggedManifest;
     }
 
     /**
@@ -158,7 +182,9 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
     public static final class Builder extends Request.Builder<CreateArtifactLifecycleRuleRequest, Builder> {
         private String regionId; 
         private Boolean auto; 
+        private Boolean dryRun; 
         private Boolean enableDeleteTag; 
+        private Boolean enableDeleteUntaggedManifest; 
         private String instanceId; 
         private String namespaceName; 
         private String repoName; 
@@ -175,7 +201,9 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.auto = request.auto;
+            this.dryRun = request.dryRun;
             this.enableDeleteTag = request.enableDeleteTag;
+            this.enableDeleteUntaggedManifest = request.enableDeleteUntaggedManifest;
             this.instanceId = request.instanceId;
             this.namespaceName = request.namespaceName;
             this.repoName = request.repoName;
@@ -207,6 +235,15 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         }
 
         /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * <p>Specify whether to enable lifecycle management for the artifact.</p>
          * 
          * <strong>example:</strong>
@@ -215,6 +252,15 @@ public class CreateArtifactLifecycleRuleRequest extends Request {
         public Builder enableDeleteTag(Boolean enableDeleteTag) {
             this.putQueryParameter("EnableDeleteTag", enableDeleteTag);
             this.enableDeleteTag = enableDeleteTag;
+            return this;
+        }
+
+        /**
+         * EnableDeleteUntaggedManifest.
+         */
+        public Builder enableDeleteUntaggedManifest(Boolean enableDeleteUntaggedManifest) {
+            this.putQueryParameter("EnableDeleteUntaggedManifest", enableDeleteUntaggedManifest);
+            this.enableDeleteUntaggedManifest = enableDeleteUntaggedManifest;
             return this;
         }
 

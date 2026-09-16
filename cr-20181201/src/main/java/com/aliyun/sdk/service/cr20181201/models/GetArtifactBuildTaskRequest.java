@@ -89,11 +89,7 @@ public class GetArtifactBuildTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -102,7 +98,7 @@ public class GetArtifactBuildTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the artifact building task.</p>
+         * <p>The ID of the artifact build task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +111,7 @@ public class GetArtifactBuildTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

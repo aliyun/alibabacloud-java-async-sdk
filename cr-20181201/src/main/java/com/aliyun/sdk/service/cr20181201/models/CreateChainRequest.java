@@ -168,7 +168,7 @@ public class CreateChainRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the delivery chain in the JSON format.</p>
+         * <p>The JSON-serialized entity object that describes the delivery chain.</p>
          * 
          * <strong>example:</strong>
          * <p>chainconfig</p>
@@ -192,7 +192,7 @@ public class CreateChainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class CreateChainRequest extends Request {
         }
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>repo1</p>
@@ -230,7 +230,7 @@ public class CreateChainRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>ns1</p>
@@ -242,7 +242,7 @@ public class CreateChainRequest extends Request {
         }
 
         /**
-         * <p>Repositories in which the delivery chain does not take effect.</p>
+         * <p>The collection of repositories excluded from the delivery chain execution.</p>
          */
         public Builder scopeExclude(java.util.List<String> scopeExclude) {
             this.putQueryParameter("ScopeExclude", scopeExclude);

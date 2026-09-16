@@ -192,7 +192,7 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -228,13 +228,13 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task record, which is the same as SyncBatchTaskId in the response.</p>
+         * <p>The synchronization task record ID, which corresponds to the SyncBatchTaskId (batch synchronization task ID for images) in the response.</p>
          * <blockquote>
-         * <p> If an image meets multiple synchronization rules and multiple synchronization tasks are generated for the image, these synchronization tasks use the same SyncBatchTaskId.</p>
+         * <p>When an image matches multiple synchronization rules and generates multiple synchronization tasks, these tasks share the same SyncBatchTaskId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>crsr-7lph66uloi6h****</p>
+         * <p>9d8ac4f6-8138-4c15-a2e3-60624ad3****</p>
          */
         public Builder syncRecordId(String syncRecordId) {
             this.putQueryParameter("SyncRecordId", syncRecordId);
@@ -243,7 +243,7 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The image tag.</p>
+         * <p>The image version.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx</p>

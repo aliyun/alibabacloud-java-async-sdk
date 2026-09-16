@@ -222,7 +222,7 @@ public class ListChartRepositoryRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ALL</p>
+         * <p>NORMAL</p>
          */
         public Builder repoStatus(String repoStatus) {
             this.putQueryParameter("RepoStatus", repoStatus);

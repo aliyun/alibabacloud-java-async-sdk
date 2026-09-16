@@ -41,6 +41,9 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NamespaceUsage")
     private String namespaceUsage;
 
+    @com.aliyun.core.annotation.NameInMap("PerformanceUnits")
+    private Integer performanceUnits;
+
     @com.aliyun.core.annotation.NameInMap("RepoQuota")
     private String repoQuota;
 
@@ -65,6 +68,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         this.isSuccess = builder.isSuccess;
         this.namespaceQuota = builder.namespaceQuota;
         this.namespaceUsage = builder.namespaceUsage;
+        this.performanceUnits = builder.performanceUnits;
         this.repoQuota = builder.repoQuota;
         this.repoUsage = builder.repoUsage;
         this.requestId = builder.requestId;
@@ -141,6 +145,13 @@ public class GetInstanceUsageResponseBody extends TeaModel {
     }
 
     /**
+     * @return performanceUnits
+     */
+    public Integer getPerformanceUnits() {
+        return this.performanceUnits;
+    }
+
+    /**
      * @return repoQuota
      */
     public String getRepoQuota() {
@@ -184,6 +195,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         private Boolean isSuccess; 
         private String namespaceQuota; 
         private String namespaceUsage; 
+        private Integer performanceUnits; 
         private String repoQuota; 
         private String repoUsage; 
         private String requestId; 
@@ -202,6 +214,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
             this.isSuccess = model.isSuccess;
             this.namespaceQuota = model.namespaceQuota;
             this.namespaceUsage = model.namespaceUsage;
+            this.performanceUnits = model.performanceUnits;
             this.repoQuota = model.repoQuota;
             this.repoUsage = model.repoUsage;
             this.requestId = model.requestId;
@@ -210,7 +223,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The quota of chart namespaces.</p>
+         * <p>The quota of Chart namespaces.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -221,7 +234,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of chart namespaces that are created in the instance.</p>
+         * <p>The number of Chart namespaces created.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -232,7 +245,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota of chart repositories for the instance.</p>
+         * <p>The quota of Chart repositories.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -243,7 +256,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of chart repositories that are created.</p>
+         * <p>The number of Chart repositories created.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -265,10 +278,12 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request is successful.</li>
-         * <li><code>false</code>: The request fails.</li>
+         * <li><p><code>true</code>: The call was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,7 +295,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota of image namespaces for the instance.</p>
+         * <p>The quota of image namespaces.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -291,7 +306,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of image namespaces that are created in the instance.</p>
+         * <p>The number of image namespaces used.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -302,7 +317,18 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota of image repositories for the instance.</p>
+         * <p>The number of performance units, which indicates the additional instance capacity purchased on top of the Advanced Edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder performanceUnits(Integer performanceUnits) {
+            this.performanceUnits = performanceUnits;
+            return this;
+        }
+
+        /**
+         * <p>The quota of image repositories.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -313,7 +339,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of image repositories that are created in the instance.</p>
+         * <p>The number of image repositories used.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -324,7 +350,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A726E801-7FCF-43F9-AF1C-51B3E65D3E7A</p>
@@ -335,7 +361,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>VPC quota</p>
+         * <p>The VPC quota.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -346,7 +372,7 @@ public class GetInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of bound VPCs</p>
+         * <p>The number of bound VPCs.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

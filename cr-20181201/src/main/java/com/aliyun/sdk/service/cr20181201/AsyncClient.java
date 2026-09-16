@@ -193,7 +193,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * @param request the request parameters of CreateStorageDomainRoutingRule  CreateStorageDomainRoutingRuleRequest
      * @return CreateStorageDomainRoutingRuleResponse
@@ -311,7 +311,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a scan rule.</p>
+     * <p>删除扫描规则。</p>
      * 
      * @param request the request parameters of DeleteScanRule  DeleteScanRuleRequest
      * @return DeleteScanRuleResponse
@@ -320,7 +320,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * @param request the request parameters of DeleteStorageDomainRoutingRule  DeleteStorageDomainRoutingRuleRequest
      * @return DeleteStorageDomainRoutingRuleResponse
@@ -365,11 +365,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</p>
+     * <p>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password equals the validity period of the STS token used in the request.</p>
      * <ul>
-     * <li>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</li>
-     * <li>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</li>
-     * <li>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</li>
+     * <li>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as those granted when logging on to the instance with the username and password of the Alibaba Cloud account.</li>
+     * <li>The permissions granted by a temporary token obtained through a RAM user are the same as those granted when logging on to the instance with the username and password of the RAM user.</li>
+     * <li>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</li>
      * </ul>
      * 
      * @param request the request parameters of GetAuthorizationToken  GetAuthorizationTokenRequest
@@ -490,7 +490,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Get scan rule.</p>
+     * <p>Retrieves a scan rule.</p>
      * 
      * @param request the request parameters of GetScanRule  GetScanRuleRequest
      * @return GetScanRuleResponse
@@ -499,7 +499,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</p>
+     * <p>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</p>
      * 
      * @param request the request parameters of GetStorageDomainRoutingRule  GetStorageDomainRoutingRuleRequest
      * @return GetStorageDomainRoutingRuleResponse
@@ -670,7 +670,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Lists the scan rules.</p>
+     * <p>列举扫描规则。</p>
      * 
      * @param request the request parameters of ListScanRule  ListScanRuleRequest
      * @return ListScanRuleResponse
@@ -678,6 +678,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListScanRuleResponse> listScanRule(ListScanRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</li>
+     * <li>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</li>
+     * <li>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -690,6 +697,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetLoginPasswordResponse> resetLoginPassword(ResetLoginPasswordRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</p>
+     * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -781,7 +791,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</p>
      * 
      * @param request the request parameters of UpdateScanRule  UpdateScanRuleRequest
      * @return UpdateScanRuleResponse
@@ -790,7 +800,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * @param request the request parameters of UpdateStorageDomainRoutingRule  UpdateStorageDomainRoutingRuleRequest
      * @return UpdateStorageDomainRoutingRuleResponse

@@ -98,7 +98,7 @@ public class GetRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task.</p>
+         * <p>The synchronization task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

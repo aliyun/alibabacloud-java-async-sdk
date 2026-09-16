@@ -93,7 +93,7 @@ public class GetScanRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return value</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -104,11 +104,11 @@ public class GetScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call was successful, valid values:</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The API call was successful</p>
+         * <li><p><code>true</code>: The API call is successful.</p>
          * </li>
-         * <li><p><code>false</code>: The API call failed</p>
+         * <li><p><code>false</code>: The API call failed.</p>
          * </li>
          * </ul>
          * 
@@ -337,7 +337,7 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Names of namespaces where the event is effective.</p>
+             * <p>The namespace names for which the event takes effect.</p>
              */
             public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
@@ -345,7 +345,7 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Names of repositories where the event is effective.</p>
+             * <p>The repository names for which the event takes effect.</p>
              */
             public Builder repoNames(java.util.List<String> repoNames) {
                 this.repoNames = repoNames;
@@ -353,7 +353,7 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tag filter pattern for event triggering.</p>
+             * <p>The tag filtering rule that triggers the event.</p>
              * 
              * <strong>example:</strong>
              * <p>.*</p>
@@ -364,7 +364,7 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event rule name.</p>
+             * <p>The name of the event rule.</p>
              * 
              * <strong>example:</strong>
              * <p>protection</p>
@@ -397,11 +397,11 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vulnerability type: </p>
+             * <p>The vulnerability type. Valid values:</p>
              * <ul>
-             * <li><p><code>cve</code>: System vulnerability</p>
+             * <li><p><code>cve</code>: system vulnerability</p>
              * </li>
-             * <li><p><code>sca</code>: Application vulnerability</p>
+             * <li><p><code>sca</code>: application vulnerability</p>
              * </li>
              * </ul>
              * 
@@ -414,13 +414,13 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger type, valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li><p><code>ALL</code>: All triggers</p>
+             * <li><p><code>ALL</code>: all triggers</p>
              * </li>
-             * <li><p><code>TAG_LISTTAG</code>: Trigger</p>
+             * <li><p><code>TAG_LISTTAG</code>: tag trigger</p>
              * </li>
-             * <li><p><code>TAG_REG_EXP</code>: Expression trigger</p>
+             * <li><p><code>TAG_REG_EXP</code>: expression trigger</p>
              * </li>
              * </ul>
              * 

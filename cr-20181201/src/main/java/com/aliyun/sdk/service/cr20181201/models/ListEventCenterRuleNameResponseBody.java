@@ -129,7 +129,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
          * <p>The list of names of event notification rules.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;RuleName&quot;: &quot;mlf&quot;, &quot;RuleId&quot;: &quot;crecr-73q93pgljm1pc2fp&quot;}]</p>
+         * <p>[{\&quot;RuleName\&quot;: \&quot;mlf\&quot;, \&quot;RuleId\&quot;: \&quot;crecr-73q93pgljm1pc2fp\&quot;}]</p>
          */
         public Builder ruleNames(java.util.List<RuleNames> ruleNames) {
             this.ruleNames = ruleNames;

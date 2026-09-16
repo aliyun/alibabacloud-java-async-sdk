@@ -36,10 +36,12 @@ public class ListRepositoryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
+    @Deprecated
     private Integer pageNo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @Deprecated
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
@@ -181,7 +183,7 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Container Registry instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +196,11 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * <p>Use this parameter together with NextToken. This parameter takes priority over PageNo and PageSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -203,7 +209,11 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+         * <p>Use this parameter together with MaxResults. This parameter takes priority over PageNo and PageSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -224,7 +234,7 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100. If you specify a value larger than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
+         * <p>The number of entries per page. The maximum value is 100. If the specified value exceeds 100, the system returns a parameter error or uses 100 as the actual maximum number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -236,7 +246,7 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>repo-test</p>
@@ -248,7 +258,7 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace to which the repository belongs.</p>
+         * <p>The repository namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>repo-namespace-test</p>
@@ -260,7 +270,20 @@ public class ListRepositoryRequest extends Request {
         }
 
         /**
-         * RepoStatus.
+         * <p>The repository status. Valid values:</p>
+         * <ul>
+         * <li><p><code>NORMAL</code>: Normal.</p>
+         * </li>
+         * <li><p><code>DELETING</code>: Being deleted.</p>
+         * </li>
+         * <li><p><code>DELETED</code>: Deleted.</p>
+         * </li>
+         * <li><p><code>ALL</code>: All repository statuses.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder repoStatus(String repoStatus) {
             this.putQueryParameter("RepoStatus", repoStatus);

@@ -118,9 +118,6 @@ public class CreateChartNamespaceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -130,8 +127,8 @@ public class CreateChartNamespaceRequest extends Request {
 
         /**
          * <p>Specifies whether to automatically create repositories in the namespace. Valid values:</p>
-         * <p>-<code> true</code>: automatically creates repositories in the namespace.</p>
-         * <p>-<code> false</code>: does not automatically create repositories in the namespace.</p>
+         * <p>\-<code> true</code>: automatically creates repositories in the namespace.</p>
+         * <p>\-<code> false</code>: does not automatically create repositories in the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

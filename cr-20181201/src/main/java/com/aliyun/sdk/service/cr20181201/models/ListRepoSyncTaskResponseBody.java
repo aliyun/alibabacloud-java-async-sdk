@@ -132,7 +132,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The return value.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -165,7 +165,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -187,7 +187,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried synchronization tasks.</p>
+         * <p>The list of synchronization tasks.</p>
          */
         public Builder syncTasks(java.util.List<SyncTasks> syncTasks) {
             this.syncTasks = syncTasks;
@@ -195,7 +195,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the queried synchronization tasks.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -347,7 +347,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the repository belongs.</p>
+             * <p>The repository namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -500,7 +500,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the repository belongs.</p>
+             * <p>The repository namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -753,7 +753,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the synchronization task was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1572839126000</p>
@@ -764,12 +764,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the synchronization task is performed across Alibaba Cloud accounts. Valid values:</p>
+             * <p>Indicates whether the image is synchronized across accounts. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: The image synchronization task is performed across accounts.</li>
-             * <li><code>false</code>: The image synchronization task is performed within the same account.</li>
+             * <li><p><code>true</code>: The image is synchronized across accounts.</p>
+             * </li>
+             * <li><p><code>false</code>: The image is synchronized within the same account.</p>
+             * </li>
              * </ul>
-             * <p>Default value: <code>false</code>.</p>
+             * <p>Default value: <code>false</code></p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -791,7 +793,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the source image.</p>
+             * <p>The source image.</p>
              */
             public Builder imageFrom(ImageFrom imageFrom) {
                 this.imageFrom = imageFrom;
@@ -799,7 +801,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the destination image.</p>
+             * <p>The destination image.</p>
              */
             public Builder imageTo(ImageTo imageTo) {
                 this.imageTo = imageTo;
@@ -807,7 +809,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * LinkId.
+             * <p>The custom synchronization link ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stl-b3fpik5nq6oy7***</p>
              */
             public Builder linkId(String linkId) {
                 this.linkId = linkId;
@@ -815,7 +820,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the synchronization task was last modified.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1572839133000</p>
@@ -826,7 +831,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572839133000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -834,7 +842,12 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</p>
+             * <p>Valid values: 1 to 5.</p>
+             * <p>Default value: 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -842,13 +855,13 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image synchronization batch tasks, which is the same as the value of SyncRecordId in the request.</p>
+             * <p>The batch synchronization task ID for images, which corresponds to the SyncRecordId (synchronization task record ID) in the request parameters.</p>
              * <blockquote>
-             * <p> If an image meets multiple synchronization rules and multiple synchronization tasks are generated for the image, these synchronization tasks use the same SyncBatchTaskId.</p>
+             * <p>When an image matches multiple synchronization rules and generates multiple synchronization tasks, these tasks share the same SyncBatchTaskId.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>15DEEB56-9271-4FDD-AC4D-C3A5CC2C****</p>
+             * <p>9d8ac4f6-8138-4c15-a2e3-60624ad3****</p>
              */
             public Builder syncBatchTaskId(String syncBatchTaskId) {
                 this.syncBatchTaskId = syncBatchTaskId;
@@ -856,7 +869,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the synchronization rule.</p>
+             * <p>The synchronization rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>crsr-7lph66uloi6h****</p>
@@ -867,7 +880,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the synchronization task.</p>
+             * <p>The synchronization task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rst-4kfd7fk6pohk****</p>
@@ -878,7 +891,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the synchronization transfer acceleration feature is enabled for the synchronization task.</p>
+             * <p>The synchronization transfer acceleration status.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -889,19 +902,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that is returned if the synchronization task fails.</p>
+             * <p>The task failure information.</p>
              * <blockquote>
-             * <p> The system uses this parameter to return an error message if the synchronization task fails.</p>
+             * <p>When a synchronization task fails, this field returns information about the failure.</p>
              * </blockquote>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to access Object Storage Service (OSS).</li>
-             * <li>TAG_CONFLICT: The destination repository contains an image that has the same tag as the source image, and image tag immutability is enabled for the destination repository.</li>
-             * <li>UNSUPPORTED_FORMAT: The manifest or config format of the image to be synchronized is not supported.</li>
-             * <li>INTERNAL_ERROR: The synchronization task failed due to internal issues on the server.</li>
-             * <li>NETWORK_ERROR: The synchronization task failed due to unstable network connection.</li>
-             * <li>DATA_LENGTH_EXCEEDED: The manifest or config of the image is oversized.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NETWORK_ERROR</p>
@@ -912,10 +916,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the synchronization task.</p>
+             * <p>The task status.</p>
              * 
              * <strong>example:</strong>
-             * <p>SUCCESS</p>
+             * <p>ERROR</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -923,12 +927,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy that is configured to trigger the synchronization task. Valid values:</p>
+             * <p>The trigger policy. Valid values:</p>
              * <ul>
-             * <li><code>PASSIVE</code>: automatically triggers the synchronization task.</li>
-             * <li><code>INITIATIVE</code>: manually triggers the synchronization task.</li>
+             * <li><p><code>PASSIVE</code>: Synchronization is automatically triggered.</p>
+             * </li>
+             * <li><p><code>INITIATIVE</code>: Synchronization is manually triggered.</p>
+             * </li>
              * </ul>
-             * <p>Default value: <code>PASSIVE</code>.</p>
+             * <p>Default value: <code>PASSIVE</code></p>
              * 
              * <strong>example:</strong>
              * <p>PASSIVE</p>

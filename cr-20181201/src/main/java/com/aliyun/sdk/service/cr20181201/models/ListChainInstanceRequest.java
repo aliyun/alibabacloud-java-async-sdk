@@ -139,7 +139,7 @@ public class ListChainInstanceRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set this parameter to <strong>ListChainInstance</strong>.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class ListChainInstanceRequest extends Request {
         }
 
         /**
-         * <p>The time when the delivery chain started.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,7 +164,7 @@ public class ListChainInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -176,7 +176,7 @@ public class ListChainInstanceRequest extends Request {
         }
 
         /**
-         * <p>The time when the delivery chain is completed.</p>
+         * <p>The image repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>
@@ -188,7 +188,7 @@ public class ListChainInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the delivery chain.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-namespace</p>

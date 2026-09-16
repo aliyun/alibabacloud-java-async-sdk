@@ -132,7 +132,10 @@ public class DiagnosisIssue extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>A unique code that identifies the issue type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RepoNumOverLimit</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * Extra.
+         * <p>An object that contains additional, unstructured key-value information about the issue.</p>
          */
         public Builder extra(java.util.Map<String, String> extra) {
             this.extra = extra;
@@ -148,6 +151,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
+         * <p>The time, in ISO 8601 format, when the issue was first detected.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +163,7 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
+         * <p>The time, in ISO 8601 format, when the issue was last detected.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +175,10 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * Level.
+         * <p>Specifies the severity of the issue. Valid values are <code>INFO</code>, <code>WARN</code>, and <code>ERROR</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder level(String level) {
             this.level = level;
@@ -178,7 +186,10 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * OccurrenceCount.
+         * <p>The total number of times the issue has occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder occurrenceCount(Long occurrenceCount) {
             this.occurrenceCount = occurrenceCount;
@@ -186,7 +197,10 @@ public class DiagnosisIssue extends TeaModel {
         }
 
         /**
-         * Solution.
+         * <p>The recommended action to resolve the issue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Buy repository quota</p>
          */
         public Builder solution(String solution) {
             this.solution = solution;

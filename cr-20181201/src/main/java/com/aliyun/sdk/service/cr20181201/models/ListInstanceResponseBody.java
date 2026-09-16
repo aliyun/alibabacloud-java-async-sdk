@@ -143,7 +143,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried instances.</p>
+         * <p>The instance information.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -151,7 +151,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -173,7 +173,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 30.</p>
+         * <p>The page size. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -195,7 +195,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>12121</p>
@@ -449,7 +449,7 @@ public class ListInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1562849679000</p>
@@ -471,10 +471,14 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The issue occurs on the instance.</p>
+             * <p>The instance issue.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss bucket already exists</p>
+             * <p>实例问题，取值：
+             * OSS_TOO_MANY_BUCKETS：OSS Bucket 数量超限</p>
+             * <p>OSS_BUCKET_ALREADY_EXISTS：同名 OSS Bucket 已存在</p>
+             * <p>OSS_SERVICE_ROLE_UNAUTHORIZED：OSS 权限未授权</p>
+             * <p>USER_NOT_REGISTERED_BY_REAL_NAME：国际站账号在购买中国站 OSS Bucket 时未进行实名认证</p>
              */
             public Builder instanceIssue(String instanceIssue) {
                 this.instanceIssue = instanceIssue;
@@ -482,7 +486,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -493,7 +497,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of the Container Registry Enterprise Edition instance.</p>
+             * <p>The Enterprise Edition specification.</p>
              * 
              * <strong>example:</strong>
              * <p>Enterprise_Basic</p>
@@ -504,7 +508,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance.</p>
+             * <p>The instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -515,7 +519,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was last modified.</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1562849760000</p>
@@ -526,7 +530,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -537,7 +541,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the instance belongs.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aek2h3aexpy****</p>

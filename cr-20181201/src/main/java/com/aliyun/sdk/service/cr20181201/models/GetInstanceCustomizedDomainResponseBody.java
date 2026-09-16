@@ -197,7 +197,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * CertId.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24858802</p>
          */
         public Builder certId(String certId) {
             this.certId = certId;
@@ -205,7 +208,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -213,7 +219,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571926439000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -221,7 +230,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Domain.
+         * <p>The custom domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker-images.qu-in.club</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -229,7 +241,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DomainType.
+         * <p>The domain type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder domainType(String domainType) {
             this.domainType = domainType;
@@ -237,7 +252,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointType.
+         * <p>The custom endpoint type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder endpointType(String endpointType) {
             this.endpointType = endpointType;
@@ -245,7 +263,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-4ec5xvj4j0l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -253,7 +274,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -261,7 +285,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638259914000</p>
          */
         public Builder modifiedTime(Long modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -269,7 +296,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleName.
+         * <p>The custom module name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chart</p>
          */
         public Builder moduleName(String moduleName) {
             this.moduleName = moduleName;
@@ -277,7 +307,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -285,7 +318,10 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

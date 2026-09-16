@@ -93,7 +93,10 @@ public class CreateRepoSyncTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,16 @@ public class CreateRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The call was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -109,7 +121,10 @@ public class CreateRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F8A0BA6-7F06-4BAE-B147-10BD6A25****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class CreateRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SyncTaskId.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rst-gbch330f0c****</p>
          */
         public Builder syncTaskId(String syncTaskId) {
             this.syncTaskId = syncTaskId;

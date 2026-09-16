@@ -85,7 +85,7 @@ public class ListInstanceRegionRequest extends Request {
          * <p>The language used for response parameters. Set this parameter to <code>zh-CN</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>zh-CN</p>
+         * <p>zh_CN</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

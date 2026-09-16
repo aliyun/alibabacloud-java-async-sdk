@@ -169,7 +169,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The images.</p>
+         * <p>The list of images.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.images = images;
@@ -177,7 +177,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -188,7 +188,10 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -196,7 +199,10 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -204,7 +210,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,7 +221,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -226,7 +232,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
@@ -237,7 +243,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -371,7 +377,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The digest of the image.</p>
+             * <p>The digest value.</p>
              * 
              * <strong>example:</strong>
              * <p>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1****</p>
@@ -393,7 +399,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</p>
@@ -404,7 +410,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the image.</p>
+             * <p>The image size, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>27107966</p>
@@ -426,7 +432,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the image.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -437,7 +443,7 @@ public class ListRepoTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the image.</p>
+             * <p>The image tag.</p>
              * 
              * <strong>example:</strong>
              * <p>v0.1</p>

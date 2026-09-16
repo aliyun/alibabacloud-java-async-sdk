@@ -104,7 +104,8 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request is successful.<br>Other status codes indicate that the request failed.</p>
+         * <p>The HTTP status code. The status code 200 indicates that the request is successful.\
+         * Other status codes indicate that the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

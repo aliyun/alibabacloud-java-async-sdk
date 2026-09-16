@@ -132,7 +132,7 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -195,7 +195,7 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>The request status identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

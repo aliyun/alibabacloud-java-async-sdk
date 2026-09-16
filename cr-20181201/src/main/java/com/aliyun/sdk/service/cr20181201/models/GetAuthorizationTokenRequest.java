@@ -101,7 +101,10 @@ public class GetAuthorizationTokenRequest extends Request {
         }
 
         /**
-         * ExpiresInHours.
+         * <p>The validity period of the temporary credential in hours. Valid values: 1 to 24. When you use STS to call this operation, the actual validity period is the minimum of the STS token validity period and this parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder expiresInHours(Integer expiresInHours) {
             this.putQueryParameter("ExpiresInHours", expiresInHours);
@@ -110,7 +113,7 @@ public class GetAuthorizationTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The repository instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -207,7 +207,7 @@ public class ListScanMaliciousFileByTaskRequest extends Request {
          * <p>The severity of the malicious file.</p>
          * 
          * <strong>example:</strong>
-         * <p>High</p>
+         * <p>serious、suspicious、remind</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);

@@ -199,7 +199,7 @@ public class ListInstanceRegionResponseBody extends TeaModel {
              * <p>The name of the region.</p>
              * 
              * <strong>example:</strong>
-             * <p>China (Shenzhen)</p>
+             * <p>华南1（深圳）</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;

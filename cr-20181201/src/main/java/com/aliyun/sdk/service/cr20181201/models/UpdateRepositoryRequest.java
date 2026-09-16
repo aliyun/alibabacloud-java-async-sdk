@@ -183,7 +183,10 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
-         * Detail.
+         * <p>The repository description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo-for-test</p>
          */
         public Builder detail(String detail) {
             this.putQueryParameter("Detail", detail);
@@ -192,6 +195,7 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +208,10 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * <p>The repository ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-tquyps22md8p****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -213,7 +220,10 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * <p>The repository name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsp/domain-microapp</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -222,7 +232,10 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * <p>The name of the repository namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ejiayou-other</p>
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -231,6 +244,13 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
+         * <p>The repository type. Valid values:</p>
+         * <ul>
+         * <li><p><code>PUBLIC</code>: public repository</p>
+         * </li>
+         * <li><p><code>PRIVATE</code>: private repository.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +263,7 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
+         * <p>The summary.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +276,16 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
-         * TagImmutability.
+         * <p>Specifies whether image tag immutability is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: enabled</p>
+         * </li>
+         * <li><p><code>false</code>: disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tagImmutability(Boolean tagImmutability) {
             this.putQueryParameter("TagImmutability", tagImmutability);

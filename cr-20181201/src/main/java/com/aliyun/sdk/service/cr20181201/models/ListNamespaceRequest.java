@@ -139,7 +139,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the Container Registry (ACR) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The namespace name.</p>
+         * <p>The name of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test-namespace</p>
@@ -166,8 +166,10 @@ public class ListNamespaceRequest extends Request {
         /**
          * <p>The status of the namespace. Valid values:</p>
          * <ul>
-         * <li><code>NORMAL</code></li>
-         * <li><code>DELETING</code></li>
+         * <li><p><code>NORMAL</code>: The namespace is normal.</p>
+         * </li>
+         * <li><p><code>DELETING</code>: The namespace is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +194,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

@@ -141,7 +141,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the endpoint. Set the value to Internet.</p>
+         * <p>The endpoint type. Only Internet is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The CIDR block.</p>
+         * <p>The IP CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1/32</p>
@@ -176,7 +176,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,10 +189,12 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the module that you want to access. Valid values:</p>
+         * <p>The module for which the access policy is set. Valid values:</p>
          * <ul>
-         * <li><code>Registry</code>: the image repository.</li>
-         * <li><code>Chart</code>: a Helm chart.</li>
+         * <li><p><code>Registry</code>: access to the image repository</p>
+         * </li>
+         * <li><p><code>Chart</code>: access to Helm Chart</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

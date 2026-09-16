@@ -20,6 +20,9 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ArtifactBuildType")
     private String artifactBuildType;
 
+    @com.aliyun.core.annotation.NameInMap("ArtifactCompression")
+    private ArtifactCompression artifactCompression;
+
     @com.aliyun.core.annotation.NameInMap("BuildTaskId")
     private String buildTaskId;
 
@@ -34,6 +37,9 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
+
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -52,11 +58,13 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     private GetArtifactBuildTaskResponseBody(Builder builder) {
         this.artifactBuildType = builder.artifactBuildType;
+        this.artifactCompression = builder.artifactCompression;
         this.buildTaskId = builder.buildTaskId;
         this.code = builder.code;
         this.endTime = builder.endTime;
         this.instructions = builder.instructions;
         this.isSuccess = builder.isSuccess;
+        this.priority = builder.priority;
         this.requestId = builder.requestId;
         this.sourceArtifact = builder.sourceArtifact;
         this.startTime = builder.startTime;
@@ -81,6 +89,13 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
      */
     public String getArtifactBuildType() {
         return this.artifactBuildType;
+    }
+
+    /**
+     * @return artifactCompression
+     */
+    public ArtifactCompression getArtifactCompression() {
+        return this.artifactCompression;
     }
 
     /**
@@ -116,6 +131,13 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
      */
     public Boolean getIsSuccess() {
         return this.isSuccess;
+    }
+
+    /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
     }
 
     /**
@@ -155,11 +177,13 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     public static final class Builder {
         private String artifactBuildType; 
+        private ArtifactCompression artifactCompression; 
         private String buildTaskId; 
         private String code; 
         private Integer endTime; 
         private java.util.List<String> instructions; 
         private Boolean isSuccess; 
+        private Integer priority; 
         private String requestId; 
         private SourceArtifact sourceArtifact; 
         private Integer startTime; 
@@ -171,11 +195,13 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
         private Builder(GetArtifactBuildTaskResponseBody model) {
             this.artifactBuildType = model.artifactBuildType;
+            this.artifactCompression = model.artifactCompression;
             this.buildTaskId = model.buildTaskId;
             this.code = model.code;
             this.endTime = model.endTime;
             this.instructions = model.instructions;
             this.isSuccess = model.isSuccess;
+            this.priority = model.priority;
             this.requestId = model.requestId;
             this.sourceArtifact = model.sourceArtifact;
             this.startTime = model.startTime;
@@ -184,10 +210,12 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The type of the artifact building task. Valid values:</p>
+         * <p>The artifact build type. Valid values:</p>
          * <ul>
-         * <li><code>IMAGE_TO_ACCELERATED_IMAGE</code>: builds accelerated images for Container Service for Kubernetes (ACK) clusters.</li>
-         * <li><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: builds accelerated images for elastic container instances.</li>
+         * <li><p><code>IMAGE_TO_ACCELERATED_IMAGE</code>: Accelerated image creation optimized for ACK scenarios.</p>
+         * </li>
+         * <li><p><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: Accelerated image artifact optimized for ECI scenarios.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +227,15 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the artifact building task.</p>
+         * <p>The artifact compression parameters.</p>
+         */
+        public Builder artifactCompression(ArtifactCompression artifactCompression) {
+            this.artifactCompression = artifactCompression;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the artifact build task.</p>
          * 
          * <strong>example:</strong>
          * <p>i2a-1yu****</p>
@@ -210,7 +246,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return value.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -221,10 +257,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the artifact building task ends.</p>
+         * <p>The end time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>156871880</p>
+         * <p>1685415871</p>
          */
         public Builder endTime(Integer endTime) {
             this.endTime = endTime;
@@ -232,7 +268,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Instructions.
+         * <p>The reserved field list of the artifact build task. The list elements should be empty.</p>
          */
         public Builder instructions(java.util.List<String> instructions) {
             this.instructions = instructions;
@@ -251,7 +287,15 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C4C7DD0C-C9D6-437A-A7EE-121EFD70D002</p>
@@ -262,7 +306,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the source artifact.</p>
+         * <p>The source artifact.</p>
          */
         public Builder sourceArtifact(SourceArtifact sourceArtifact) {
             this.sourceArtifact = sourceArtifact;
@@ -270,10 +314,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the artifact building task starts.</p>
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>156871881</p>
+         * <p>1685437471</p>
          */
         public Builder startTime(Integer startTime) {
             this.startTime = startTime;
@@ -281,7 +325,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The artifact that is built in the task.</p>
+         * <p>The target artifact.</p>
          */
         public Builder targetArtifact(TargetArtifact targetArtifact) {
             this.targetArtifact = targetArtifact;
@@ -289,12 +333,16 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the artifact that is built in the task. Valid values:</p>
+         * <p>The artifact build status. Valid values:</p>
          * <ul>
-         * <li><code>PENDING</code>: The artifact is being scheduled.</li>
-         * <li><code>BUILDING</code>: The artifact is being built.</li>
-         * <li><code>SUCCESS</code>: The artifact is built.</li>
-         * <li><code>FAILED</code>: The artifact fails to be built.</li>
+         * <li><p><code>PENDING</code>: Scheduling in progress.</p>
+         * </li>
+         * <li><p><code>BUILDING</code>: Building in progress.</p>
+         * </li>
+         * <li><p><code>SUCCESS</code>: Build succeeded.</p>
+         * </li>
+         * <li><p><code>FAILED</code>: Build failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,19 +365,132 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
      *
      * <p>GetArtifactBuildTaskResponseBody</p>
      */
+    public static class ArtifactCompression extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
+        @com.aliyun.core.annotation.NameInMap("SquashKeepLayers")
+        private Integer squashKeepLayers;
+
+        @com.aliyun.core.annotation.NameInMap("StartLayerDigest")
+        private String startLayerDigest;
+
+        private ArtifactCompression(Builder builder) {
+            this.platform = builder.platform;
+            this.squashKeepLayers = builder.squashKeepLayers;
+            this.startLayerDigest = builder.startLayerDigest;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ArtifactCompression create() {
+            return builder().build();
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
+         * @return squashKeepLayers
+         */
+        public Integer getSquashKeepLayers() {
+            return this.squashKeepLayers;
+        }
+
+        /**
+         * @return startLayerDigest
+         */
+        public String getStartLayerDigest() {
+            return this.startLayerDigest;
+        }
+
+        public static final class Builder {
+            private String platform; 
+            private Integer squashKeepLayers; 
+            private String startLayerDigest; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArtifactCompression model) {
+                this.platform = model.platform;
+                this.squashKeepLayers = model.squashKeepLayers;
+                this.startLayerDigest = model.startLayerDigest;
+            } 
+
+            /**
+             * <p>The operating system and architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux/arm64</p>
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * <p>The number of layers to retain after compression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder squashKeepLayers(Integer squashKeepLayers) {
+                this.squashKeepLayers = squashKeepLayers;
+                return this;
+            }
+
+            /**
+             * <p>The digest of the starting layer for compression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha256:xxxxx</p>
+             */
+            public Builder startLayerDigest(String startLayerDigest) {
+                this.startLayerDigest = startLayerDigest;
+                return this;
+            }
+
+            public ArtifactCompression build() {
+                return new ArtifactCompression(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetArtifactBuildTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactBuildTaskResponseBody</p>
+     */
     public static class SourceArtifact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
 
+        @com.aliyun.core.annotation.NameInMap("LayerCount")
+        private Integer layerCount;
+
         @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private SourceArtifact(Builder builder) {
             this.artifactType = builder.artifactType;
+            this.layerCount = builder.layerCount;
             this.repoId = builder.repoId;
+            this.size = builder.size;
             this.version = builder.version;
         }
 
@@ -349,10 +510,24 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return layerCount
+         */
+        public Integer getLayerCount() {
+            return this.layerCount;
+        }
+
+        /**
          * @return repoId
          */
         public String getRepoId() {
             return this.repoId;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
         }
 
         /**
@@ -364,7 +539,9 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String artifactType; 
+            private Integer layerCount; 
             private String repoId; 
+            private Long size; 
             private String version; 
 
             private Builder() {
@@ -372,12 +549,14 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
             private Builder(SourceArtifact model) {
                 this.artifactType = model.artifactType;
+                this.layerCount = model.layerCount;
                 this.repoId = model.repoId;
+                this.size = model.size;
                 this.version = model.version;
             } 
 
             /**
-             * <p>The type of the artifact that is built in the task. The value can only be IMAGE.</p>
+             * <p>The artifact type. Only IMAGE is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>IMAGE</p>
@@ -388,7 +567,18 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the repository to which the source artifact belongs. The repository can only be an image repository.</p>
+             * <p>The number of artifact layers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder layerCount(Integer layerCount) {
+                this.layerCount = layerCount;
+                return this;
+            }
+
+            /**
+             * <p>The repository ID. Only image repositories are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-shac42yvqzvq****</p>
@@ -399,7 +589,18 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the artifact. The artifact can only be an image.</p>
+             * <p>The artifact size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * <p>The artifact version. Only image versions are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -426,15 +627,23 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
 
+        @com.aliyun.core.annotation.NameInMap("LayerCount")
+        private Integer layerCount;
+
         @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private TargetArtifact(Builder builder) {
             this.artifactType = builder.artifactType;
+            this.layerCount = builder.layerCount;
             this.repoId = builder.repoId;
+            this.size = builder.size;
             this.version = builder.version;
         }
 
@@ -454,10 +663,24 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return layerCount
+         */
+        public Integer getLayerCount() {
+            return this.layerCount;
+        }
+
+        /**
          * @return repoId
          */
         public String getRepoId() {
             return this.repoId;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
         }
 
         /**
@@ -469,7 +692,9 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String artifactType; 
+            private Integer layerCount; 
             private String repoId; 
+            private Long size; 
             private String version; 
 
             private Builder() {
@@ -477,12 +702,14 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
             private Builder(TargetArtifact model) {
                 this.artifactType = model.artifactType;
+                this.layerCount = model.layerCount;
                 this.repoId = model.repoId;
+                this.size = model.size;
                 this.version = model.version;
             } 
 
             /**
-             * <p>The type of the artifact that is built in the task. The value can only be IMAGE.</p>
+             * <p>The artifact type. Only IMAGE is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>IMAGE</p>
@@ -493,7 +720,18 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the repository to which the artifact that is built in the task belongs. The repository can only be an image repository. The value is the same as the ID of the repository to which the source artifact belongs.</p>
+             * <p>The number of artifact layers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder layerCount(Integer layerCount) {
+                this.layerCount = layerCount;
+                return this;
+            }
+
+            /**
+             * <p>The repository ID. Only image repositories are supported. The repository ID of the target artifact must be the same as that of the source artifact.</p>
              * 
              * <strong>example:</strong>
              * <p>crr-1234567</p>
@@ -504,7 +742,18 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the artifact that is built in the task. The artifact can only be an image.</p>
+             * <p>The artifact size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * <p>The artifact version. Only images are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>latest_accelerated</p>

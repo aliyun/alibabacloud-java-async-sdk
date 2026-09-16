@@ -148,11 +148,7 @@ public class CreateRepoTriggerRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

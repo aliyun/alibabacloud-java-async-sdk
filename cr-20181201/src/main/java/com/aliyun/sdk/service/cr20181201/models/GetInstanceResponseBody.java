@@ -197,7 +197,10 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -230,7 +233,11 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The issue occurs on the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>The issue occurs on the instance. Valid values: OSS_TOO_MANY_BUCKETS: The number of Object Storage Service (OSS) buckets exceeds the upper limit. OSS_BUCKET_ALREADY_EXISTS: An OSS bucket that has the duplicate name already exists. OSS_SERVICE_ROLE_UNAUTHORIZED: The OSS service-linked role is not granted permissions. USER_NOT_REGISTERED_BY_REAL_NAME: The Alibaba Cloud account has not passed a real name verification.</p>
+         * <p>实例问题，取值：
+         * OSS_TOO_MANY_BUCKETS：OSS Bucket 数量超限</p>
+         * <p>OSS_BUCKET_ALREADY_EXISTS：同名 OSS Bucket 已存在</p>
+         * <p>OSS_SERVICE_ROLE_UNAUTHORIZED：OSS 权限未授权</p>
+         * <p>USER_NOT_REGISTERED_BY_REAL_NAME：国际站账号在购买中国站 OSS Bucket 时未进行实名认证</p>
          */
         public Builder instanceIssue(String instanceIssue) {
             this.instanceIssue = instanceIssue;

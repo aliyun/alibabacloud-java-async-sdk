@@ -165,7 +165,7 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The ID of the repository.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-uf082u9dg8do****</p>

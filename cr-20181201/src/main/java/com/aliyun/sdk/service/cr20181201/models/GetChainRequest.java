@@ -98,6 +98,7 @@ public class GetChainRequest extends Request {
         }
 
         /**
+         * <p>Delivery chain ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetChainRequest extends Request {
         }
 
         /**
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
