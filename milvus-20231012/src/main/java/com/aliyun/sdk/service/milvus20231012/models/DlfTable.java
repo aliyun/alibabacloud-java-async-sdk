@@ -106,7 +106,10 @@ public class DlfTable extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>A description of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test table</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -114,7 +117,10 @@ public class DlfTable extends TeaModel {
         }
 
         /**
-         * location.
+         * <p>The location of the table data, specified as an Object Storage Service (OSS) URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -122,7 +128,10 @@ public class DlfTable extends TeaModel {
         }
 
         /**
-         * tableFormat.
+         * <p>The table format, such as <code>PAIMON</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAIMON</p>
          */
         public Builder tableFormat(String tableFormat) {
             this.tableFormat = tableFormat;
@@ -130,7 +139,10 @@ public class DlfTable extends TeaModel {
         }
 
         /**
-         * tableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_table</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -138,7 +150,10 @@ public class DlfTable extends TeaModel {
         }
 
         /**
-         * tableType.
+         * <p>The table type. For example, <code>MANAGED</code> indicates that DLF manages the data and metadata lifecycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGED</p>
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;

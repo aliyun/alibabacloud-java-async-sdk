@@ -173,7 +173,10 @@ public class ListInstancesV2Request extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +185,10 @@ public class ListInstancesV2Request extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-123xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -191,7 +197,10 @@ public class ListInstancesV2Request extends Request {
         }
 
         /**
-         * instanceName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>milvus-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instanceName", instanceName);
@@ -200,7 +209,10 @@ public class ListInstancesV2Request extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -209,7 +221,10 @@ public class ListInstancesV2Request extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next request (not currently enabled).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -218,7 +233,10 @@ public class ListInstancesV2Request extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -227,7 +245,10 @@ public class ListInstancesV2Request extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -236,7 +257,10 @@ public class ListInstancesV2Request extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123xxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -245,7 +269,7 @@ public class ListInstancesV2Request extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of tags in JSON format.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -314,7 +338,10 @@ public class ListInstancesV2Request extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -322,7 +349,10 @@ public class ListInstancesV2Request extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

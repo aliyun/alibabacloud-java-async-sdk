@@ -80,7 +80,10 @@ public class RamBindingEntry extends TeaModel {
         } 
 
         /**
-         * boundUid.
+         * <p>The unique identifier (UID) of the bound RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder boundUid(String boundUid) {
             this.boundUid = boundUid;
@@ -88,7 +91,10 @@ public class RamBindingEntry extends TeaModel {
         }
 
         /**
-         * boundUserName.
+         * <p>The bound RAM username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-user</p>
          */
         public Builder boundUserName(String boundUserName) {
             this.boundUserName = boundUserName;
@@ -96,7 +102,10 @@ public class RamBindingEntry extends TeaModel {
         }
 
         /**
-         * milvusUsername.
+         * <p>The Milvus username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder milvusUsername(String milvusUsername) {
             this.milvusUsername = milvusUsername;

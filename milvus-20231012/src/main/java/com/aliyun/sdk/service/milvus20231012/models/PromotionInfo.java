@@ -132,7 +132,7 @@ public class PromotionInfo extends TeaModel {
         } 
 
         /**
-         * canPromFee.
+         * <p>The fee that can be covered by the promotion.</p>
          */
         public Builder canPromFee(String canPromFee) {
             this.canPromFee = canPromFee;
@@ -140,7 +140,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * isSelected.
+         * <p>Indicates whether the promotion is selected.</p>
          */
         public Builder isSelected(Boolean isSelected) {
             this.isSelected = isSelected;
@@ -148,7 +148,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * promotionDesc.
+         * <p>The description of the promotion.</p>
          */
         public Builder promotionDesc(String promotionDesc) {
             this.promotionDesc = promotionDesc;
@@ -156,7 +156,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * promotionName.
+         * <p>The name of the promotion.</p>
          */
         public Builder promotionName(String promotionName) {
             this.promotionName = promotionName;
@@ -164,7 +164,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * promotionOptionCode.
+         * <p>The code of the promotion option.</p>
          */
         public Builder promotionOptionCode(String promotionOptionCode) {
             this.promotionOptionCode = promotionOptionCode;
@@ -172,7 +172,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * promotionOptionNo.
+         * <p>The number of the promotion option.</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.promotionOptionNo = promotionOptionNo;
@@ -180,7 +180,7 @@ public class PromotionInfo extends TeaModel {
         }
 
         /**
-         * selected.
+         * <p>Indicates whether the promotion is selected.</p>
          */
         public Builder selected(Boolean selected) {
             this.selected = selected;

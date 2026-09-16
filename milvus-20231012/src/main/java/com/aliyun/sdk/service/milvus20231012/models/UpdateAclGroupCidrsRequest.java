@@ -110,7 +110,7 @@ public class UpdateAclGroupCidrsRequest extends Request {
         }
 
         /**
-         * groupName.
+         * <p>The name of the allow list group.</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("groupName", groupName);
@@ -119,7 +119,10 @@ public class UpdateAclGroupCidrsRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -128,7 +131,10 @@ public class UpdateAclGroupCidrsRequest extends Request {
         }
 
         /**
-         * newCidrs.
+         * <p>The new CIDR blocks for the allow list group. To specify multiple CIDR blocks, separate them with a comma.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140.205.11.0/24,140.205.11.2</p>
          */
         public Builder newCidrs(String newCidrs) {
             this.putQueryParameter("newCidrs", newCidrs);

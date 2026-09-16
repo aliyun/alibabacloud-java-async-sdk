@@ -119,7 +119,10 @@ public class ListInstancesV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCD-1234-5678-EFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -127,7 +130,7 @@ public class ListInstancesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * instances.
+         * <p>The list of instances.</p>
          */
         public Builder instances(java.util.List<InstanceDetail> instances) {
             this.instances = instances;
@@ -135,7 +138,10 @@ public class ListInstancesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -143,7 +149,10 @@ public class ListInstancesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token (not currently enabled).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -151,7 +160,10 @@ public class ListInstancesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +171,10 @@ public class ListInstancesV2ResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder total(Integer total) {
             this.total = total;

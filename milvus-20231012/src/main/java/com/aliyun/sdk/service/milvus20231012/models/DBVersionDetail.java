@@ -80,7 +80,7 @@ public class DBVersionDetail extends TeaModel {
         } 
 
         /**
-         * specs.
+         * <p>The specifications supported by the version.</p>
          */
         public Builder specs(java.util.List<Specs> specs) {
             this.specs = specs;
@@ -88,7 +88,7 @@ public class DBVersionDetail extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the version.</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -96,7 +96,7 @@ public class DBVersionDetail extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version number.</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -227,7 +227,7 @@ public class DBVersionDetail extends TeaModel {
             } 
 
             /**
-             * defaultReplicas.
+             * <p>The default number of replicas for the component.</p>
              */
             public Builder defaultReplicas(Integer defaultReplicas) {
                 this.defaultReplicas = defaultReplicas;
@@ -235,7 +235,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * maxReplicas.
+             * <p>The maximum number of replicas for the component.</p>
              */
             public Builder maxReplicas(Integer maxReplicas) {
                 this.maxReplicas = maxReplicas;
@@ -243,7 +243,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * minReplicas.
+             * <p>The minimum number of replicas for the component.</p>
              */
             public Builder minReplicas(Integer minReplicas) {
                 this.minReplicas = minReplicas;
@@ -251,7 +251,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the component.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +259,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * specs.
+             * <p>The available specifications for the component.</p>
              */
             public Builder specs(java.util.List<String> specs) {
                 this.specs = specs;
@@ -267,7 +267,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * step.
+             * <p>The step size for scaling the number of replicas.</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -275,7 +275,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the component.</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -381,7 +381,7 @@ public class DBVersionDetail extends TeaModel {
             } 
 
             /**
-             * componentSpecs.
+             * <p>The component specifications.</p>
              */
             public Builder componentSpecs(java.util.List<ComponentSpecs> componentSpecs) {
                 this.componentSpecs = componentSpecs;
@@ -389,7 +389,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * isHA.
+             * <p>Indicates whether the high availability (HA) edition is supported.</p>
              */
             public Builder isHA(Boolean isHA) {
                 this.isHA = isHA;
@@ -397,7 +397,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * isStandalone.
+             * <p>Indicates whether the Standalone edition is supported.</p>
              */
             public Builder isStandalone(Boolean isStandalone) {
                 this.isStandalone = isStandalone;
@@ -405,7 +405,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * isStandalonePro.
+             * <p>Indicates whether the Standalone Pro edition is supported.</p>
              */
             public Builder isStandalonePro(Boolean isStandalonePro) {
                 this.isStandalonePro = isStandalonePro;
@@ -413,7 +413,7 @@ public class DBVersionDetail extends TeaModel {
             }
 
             /**
-             * zoneMode.
+             * <p>The zone mode of the specification.</p>
              */
             public Builder zoneMode(String zoneMode) {
                 this.zoneMode = zoneMode;

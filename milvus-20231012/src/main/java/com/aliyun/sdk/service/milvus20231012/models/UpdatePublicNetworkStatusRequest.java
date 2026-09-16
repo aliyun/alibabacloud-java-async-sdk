@@ -127,7 +127,10 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * <p>The CIDR blocks.</p>
+         * <p>The CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>192.168.**.**</code>/24,<code>172.1.**.**</code>/16</p>
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -136,7 +139,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * <p>The component type. Valid values:</p>
+         * <p>The component type. Valid value:</p>
          * <ul>
          * <li>Proxy</li>
          * </ul>
@@ -152,7 +155,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +168,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * <p>Enable /disable the Internet.</p>
+         * <p>Specifies whether to enable public network access.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

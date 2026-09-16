@@ -132,7 +132,10 @@ public class CreateAclGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * accessDeniedDetail.
+         * <p>Details about the access denial. This parameter is returned only if a request is denied due to insufficient RAM permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,10 @@ public class CreateAclGroupResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;instanceId\&quot;: \&quot;c-fa521a2393de4623\&quot;, \&quot;orderId\&quot;: \&quot;271129670950939\&quot;}</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class CreateAclGroupResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -156,7 +165,10 @@ public class CreateAclGroupResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[%60wget Nds0v6lx.popscan.xaliyun.com%60]</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -164,7 +176,10 @@ public class CreateAclGroupResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -172,7 +187,10 @@ public class CreateAclGroupResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID generated for the request. Use this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE7E95C4-10DE-5EA7-9D10-2D3E0FCCE68C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +198,10 @@ public class CreateAclGroupResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates if the request succeeded, where a value of <code>true</code> means success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

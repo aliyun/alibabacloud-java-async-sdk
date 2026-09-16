@@ -145,7 +145,7 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed information about the failed permission verification.</p>
+         * <p>Details for an access denial error.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -156,7 +156,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>An array of instance objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -164,7 +164,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance.NotFound</p>
@@ -197,7 +197,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABCD-1234-5678-EFGH</p>
@@ -219,7 +219,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number.</p>
+         * <p>The total number of instances found.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -327,14 +327,20 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the component. Valid values:</p>
+             * <p>The component type. Valid values:</p>
              * <ul>
-             * <li>standalone</li>
-             * <li>proxy</li>
-             * <li>mix_coordinator</li>
-             * <li>query</li>
-             * <li>index</li>
-             * <li>data</li>
+             * <li><p><code>standalone</code></p>
+             * </li>
+             * <li><p><code>proxy</code></p>
+             * </li>
+             * <li><p><code>mix_coordinator</code></p>
+             * </li>
+             * <li><p><code>query</code></p>
+             * </li>
+             * <li><p><code>index</code></p>
+             * </li>
+             * <li><p><code>data</code></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -357,7 +363,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size.</p>
+             * <p>The disk size in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -514,7 +520,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The port of the Attu component.</p>
+             * <p>The Attu port.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -525,7 +531,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address.</p>
+             * <p>The public endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>c-123xxx.milvus.aliyuncs.com</p>
@@ -547,7 +553,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource details.</p>
+             * <p>A list of resource details for the instance\&quot;s components.</p>
              */
             public Builder milvusResourceInfoList(java.util.List<MilvusResourceInfoList> milvusResourceInfoList) {
                 this.milvusResourceInfoList = milvusResourceInfoList;
@@ -566,7 +572,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs.</p>
+             * <p>The total number of CUs.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -577,7 +583,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total capacity of the disk.</p>
+             * <p>The total disk size in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -647,7 +653,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -655,7 +664,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -982,7 +994,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoBackup.
+             * <p>Indicates whether automatic backup is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoBackup(Boolean autoBackup) {
                 this.autoBackup = autoBackup;
@@ -990,7 +1005,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The creation time of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1718608505000</p>
@@ -1020,7 +1035,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The expiration time of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1721232000000</p>
@@ -1031,7 +1046,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c-123xxx</p>
@@ -1042,14 +1057,20 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the bastion host. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>creating.</li>
-             * <li>running.</li>
-             * <li>updating. Cluster scaling (up/down), configuration changes, and enabling/disabling public network access.</li>
-             * <li>disable. The cluster has expired and needs to be renewed for activation.</li>
-             * <li>deleting.</li>
-             * <li>deleted.</li>
+             * <li><p><code>creating</code>: The instance is being created.</p>
+             * </li>
+             * <li><p><code>running</code>: The instance is running.</p>
+             * </li>
+             * <li><p><code>updating</code>: The instance is being updated. This includes scaling the instance, changing configurations, or modifying public network access.</p>
+             * </li>
+             * <li><p><code>disable</code>: The instance is unavailable because it has expired and requires renewal.</p>
+             * </li>
+             * <li><p><code>deleting</code>: The instance is being deleted.</p>
+             * </li>
+             * <li><p><code>deleted</code>: The instance has been deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1061,7 +1082,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>perf</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -1069,7 +1093,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Internet access is enabled.</p>
+             * <p>Indicates whether public network access is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1080,10 +1104,12 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification details. Valid values:</p>
+             * <p>The instance edition. Valid values:</p>
              * <ul>
-             * <li>trial.</li>
-             * <li>standard.</li>
+             * <li><p><code>trial</code>: Trial Edition.</p>
+             * </li>
+             * <li><p><code>standard</code>: Standard Edition.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1095,10 +1121,12 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>0: pay-as-you-go</li>
-             * <li>1: subscription</li>
+             * <li><p><code>0</code>: pay-as-you-go.</p>
+             * </li>
+             * <li><p><code>1</code>: subscription.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1110,7 +1138,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The commodity code.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>milvus_milvuspre_public_cn</p>
@@ -1121,7 +1149,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region code.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -1143,7 +1171,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime.</p>
+             * <p>The duration the instance has been running.</p>
              * 
              * <strong>example:</strong>
              * <p>536611</p>
@@ -1165,7 +1193,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags attached to the instance.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1173,7 +1201,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * <p>The template version.</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -1181,7 +1209,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The instance version.</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1189,7 +1217,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-123xxx</p>
@@ -1200,7 +1228,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-123xxx</p>
@@ -1211,7 +1239,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-g</p>

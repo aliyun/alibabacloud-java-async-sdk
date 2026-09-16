@@ -340,7 +340,10 @@ public class InstanceDetail extends TeaModel {
         } 
 
         /**
-         * autoBackup.
+         * <p>The automatic backup configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoBackup(Boolean autoBackup) {
             this.autoBackup = autoBackup;
@@ -348,7 +351,7 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * components.
+         * <p>The component information.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -356,7 +359,12 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * configuration.
+         * <p>The configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rootCoord:
+         *     maxDatabaseNum: 64 # Maximum number of database
+         *     maxPartitionNum: 4096</p>
          */
         public Builder configuration(String configuration) {
             this.configuration = configuration;
@@ -364,7 +372,11 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-27T02:04:25Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -372,7 +384,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * dbVersion.
+         * <p>The instance version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.5</p>
          */
         public Builder dbVersion(String dbVersion) {
             this.dbVersion = dbVersion;
@@ -380,7 +395,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * encrypted.
+         * <p>Indicates whether data encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = encrypted;
@@ -388,7 +406,11 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
+         * <p>The expiration time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-27T02:04:25Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -396,7 +418,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * ha.
+         * <p>Indicates whether high availability is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ha(Boolean ha) {
             this.ha = ha;
@@ -404,7 +429,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -412,7 +440,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * instanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>milvus-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -420,7 +451,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * kmsKeyId.
+         * <p>kms key Id。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxx</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
@@ -428,7 +462,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * multiZoneMode.
+         * <p>The multi-zone deployment mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         public Builder multiZoneMode(String multiZoneMode) {
             this.multiZoneMode = multiZoneMode;
@@ -436,7 +473,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4751</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -444,7 +484,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * paymentType.
+         * <p>The billing method. Valid values: PayAsYouGo: pay-as-you-go billing method. Subscription: subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -452,7 +495,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -460,7 +506,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3dcgyq7pnqwa</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -468,7 +517,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * runningTime.
+         * <p>The running time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder runningTime(Long runningTime) {
             this.runningTime = runningTime;
@@ -476,7 +528,7 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * securityGroupIds.
+         * <p>The security group IDs.</p>
          */
         public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
@@ -484,7 +536,18 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li>creating: Being created.</li>
+         * <li>running: Running.</li>
+         * <li>updating: Being upgraded. This includes specification changes, configuration changes, and public network access changes.</li>
+         * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
+         * <li>deleting: Being deleted.</li>
+         * <li>deleted: Deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -492,7 +555,7 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -500,7 +563,7 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * vSwitchIds.
+         * <p>The vSwitch IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<VSwitchIds> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -508,7 +571,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -516,7 +582,10 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
-         * zoneId.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -852,7 +921,10 @@ public class InstanceDetail extends TeaModel {
             } 
 
             /**
-             * cuNum.
+             * <p>The number of CUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cuNum(Integer cuNum) {
                 this.cuNum = cuNum;
@@ -860,7 +932,10 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * cuType.
+             * <p>The CU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder cuType(String cuType) {
                 this.cuType = cuType;
@@ -876,7 +951,10 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * diskSizeType.
+             * <p>The disk size type for the Query Node. Set this parameter to Large for storage-optimized configurations, and to Normal for other configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder diskSizeType(String diskSizeType) {
                 this.diskSizeType = diskSizeType;
@@ -900,7 +978,10 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>The number of replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -908,7 +989,10 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -975,7 +1059,10 @@ public class InstanceDetail extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -983,7 +1070,10 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1050,7 +1140,10 @@ public class InstanceDetail extends TeaModel {
             } 
 
             /**
-             * vswId.
+             * <p>The vSwitch IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -1058,7 +1151,10 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -145,7 +145,7 @@ public class PriceInfo extends TeaModel {
         } 
 
         /**
-         * currency.
+         * <p>The currency of the price.</p>
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -153,7 +153,7 @@ public class PriceInfo extends TeaModel {
         }
 
         /**
-         * discountAmount.
+         * <p>The discount amount.</p>
          */
         public Builder discountAmount(String discountAmount) {
             this.discountAmount = discountAmount;
@@ -161,7 +161,7 @@ public class PriceInfo extends TeaModel {
         }
 
         /**
-         * optionalPromotions.
+         * <p>The optional promotions.</p>
          */
         public Builder optionalPromotions(java.util.List<PromotionInfo> optionalPromotions) {
             this.optionalPromotions = optionalPromotions;
@@ -169,7 +169,7 @@ public class PriceInfo extends TeaModel {
         }
 
         /**
-         * originalAmount.
+         * <p>The original price.</p>
          */
         public Builder originalAmount(String originalAmount) {
             this.originalAmount = originalAmount;
@@ -177,7 +177,7 @@ public class PriceInfo extends TeaModel {
         }
 
         /**
-         * priceModules.
+         * <p>The price modules.</p>
          */
         public Builder priceModules(java.util.List<PriceModules> priceModules) {
             this.priceModules = priceModules;
@@ -185,7 +185,7 @@ public class PriceInfo extends TeaModel {
         }
 
         /**
-         * rules.
+         * <p>The pricing rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -193,7 +193,7 @@ public class PriceInfo extends TeaModel {
         }
 
         /**
-         * taxAmount.
+         * <p>The tax amount.</p>
          */
         public Builder taxAmount(String taxAmount) {
             this.taxAmount = taxAmount;
@@ -201,7 +201,7 @@ public class PriceInfo extends TeaModel {
         }
 
         /**
-         * tradeAmount.
+         * <p>The actual trade price.</p>
          */
         public Builder tradeAmount(String tradeAmount) {
             this.tradeAmount = tradeAmount;
@@ -267,7 +267,7 @@ public class PriceInfo extends TeaModel {
             } 
 
             /**
-             * originalAmount.
+             * <p>The original amount of the price module.</p>
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -275,7 +275,7 @@ public class PriceInfo extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the price module.</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -355,7 +355,7 @@ public class PriceInfo extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The amount associated with the pricing rule.</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -363,7 +363,7 @@ public class PriceInfo extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the pricing rule.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +371,7 @@ public class PriceInfo extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>The ID of the pricing rule.</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

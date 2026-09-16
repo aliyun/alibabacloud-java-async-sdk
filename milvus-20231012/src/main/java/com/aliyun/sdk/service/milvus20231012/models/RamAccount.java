@@ -93,7 +93,10 @@ public class RamAccount extends TeaModel {
         } 
 
         /**
-         * bindable.
+         * <p>Specifies whether the RamAccount can be bound to other resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder bindable(Boolean bindable) {
             this.bindable = bindable;
@@ -101,7 +104,10 @@ public class RamAccount extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>The display name for the RamAccount, which appears in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test User</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -109,7 +115,10 @@ public class RamAccount extends TeaModel {
         }
 
         /**
-         * uid.
+         * <p>The unique identifier for the RamAccount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder uid(String uid) {
             this.uid = uid;
@@ -117,7 +126,10 @@ public class RamAccount extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>The user name for the RamAccount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-user</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

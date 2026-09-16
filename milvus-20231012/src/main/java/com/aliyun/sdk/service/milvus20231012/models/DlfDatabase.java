@@ -80,7 +80,10 @@ public class DlfDatabase extends TeaModel {
         } 
 
         /**
-         * databaseName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_database</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -88,7 +91,10 @@ public class DlfDatabase extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test database</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -96,7 +102,10 @@ public class DlfDatabase extends TeaModel {
         }
 
         /**
-         * tableCount.
+         * <p>The number of tables in the database. Read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder tableCount(Integer tableCount) {
             this.tableCount = tableCount;

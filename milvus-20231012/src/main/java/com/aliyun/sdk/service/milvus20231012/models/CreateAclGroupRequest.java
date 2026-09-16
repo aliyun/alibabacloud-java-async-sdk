@@ -101,7 +101,10 @@ public class CreateAclGroupRequest extends Request {
         } 
 
         /**
-         * cidrs.
+         * <p>Specify one or more CIDR blocks, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140.205.11.0/24,140.205.11.2</p>
          */
         public Builder cidrs(String cidrs) {
             this.putQueryParameter("cidrs", cidrs);
@@ -110,7 +113,10 @@ public class CreateAclGroupRequest extends Request {
         }
 
         /**
-         * groupName.
+         * <p>The name of the ACL group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("groupName", groupName);
@@ -119,7 +125,10 @@ public class CreateAclGroupRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -128,7 +137,10 @@ public class CreateAclGroupRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

@@ -87,6 +87,10 @@ public class CreateInstanceRequest extends Request {
     private String multiZoneMode;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeType")
+    private String nodeType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("paymentDuration")
     private Integer paymentDuration;
 
@@ -148,6 +152,7 @@ public class CreateInstanceRequest extends Request {
         this.kmsKeyId = builder.kmsKeyId;
         this.loadReplicas = builder.loadReplicas;
         this.multiZoneMode = builder.multiZoneMode;
+        this.nodeType = builder.nodeType;
         this.paymentDuration = builder.paymentDuration;
         this.paymentDurationUnit = builder.paymentDurationUnit;
         this.paymentType = builder.paymentType;
@@ -293,6 +298,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
      * @return paymentDuration
      */
     public Integer getPaymentDuration() {
@@ -380,6 +392,7 @@ public class CreateInstanceRequest extends Request {
         private String kmsKeyId; 
         private Integer loadReplicas; 
         private String multiZoneMode; 
+        private String nodeType; 
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
         private String paymentType; 
@@ -414,6 +427,7 @@ public class CreateInstanceRequest extends Request {
             this.kmsKeyId = request.kmsKeyId;
             this.loadReplicas = request.loadReplicas;
             this.multiZoneMode = request.multiZoneMode;
+            this.nodeType = request.nodeType;
             this.paymentDuration = request.paymentDuration;
             this.paymentDurationUnit = request.paymentDurationUnit;
             this.paymentType = request.paymentType;
@@ -427,7 +441,10 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -436,7 +453,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * aiFunction.
+         * <p>Specifies whether to enable AI function.</p>
          */
         public Builder aiFunction(Boolean aiFunction) {
             this.putBodyParameter("aiFunction", aiFunction);
@@ -445,7 +462,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * autoBackup.
+         * <p>Specifies whether to enable automatic backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoBackup(Boolean autoBackup) {
             this.putBodyParameter("autoBackup", autoBackup);
@@ -454,7 +474,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * autoPay.
+         * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true: Automatic payment is enabled.</li>
+         * <li>false: Only an order is generated. No payment is made.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("autoPay", autoPay);
@@ -463,7 +490,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * autoRenew.
+         * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the billing method of the instance is Subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("autoRenew", autoRenew);
@@ -472,7 +502,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * backupRestoreInfo.
+         * <p>The backup and restoration information.</p>
          */
         public Builder backupRestoreInfo(BackupRestoreInfo backupRestoreInfo) {
             this.putBodyParameter("backupRestoreInfo", backupRestoreInfo);
@@ -481,7 +511,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * components.
+         * <p>The component information.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.putBodyParameter("components", components);
@@ -490,7 +520,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * configuration.
+         * <p>The configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rootCoord:
+         *     maxDatabaseNum: 64 # Maximum number of database
+         *     maxPartitionNum: 4096</p>
          */
         public Builder configuration(String configuration) {
             this.putBodyParameter("configuration", configuration);
@@ -499,7 +534,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * dbAdminPassword.
+         * <p>The database password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test12</p>
          */
         public Builder dbAdminPassword(String dbAdminPassword) {
             this.putBodyParameter("dbAdminPassword", dbAdminPassword);
@@ -508,6 +546,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The Milvus version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -520,7 +559,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * encrypted.
+         * <p>Specifies whether to enable OSS encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putBodyParameter("encrypted", encrypted);
@@ -529,7 +571,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ha.
+         * <p>Specifies whether to enable high availability (HA).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ha(Boolean ha) {
             this.putBodyParameter("ha", ha);
@@ -538,7 +583,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * instanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>milvus-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);
@@ -547,7 +595,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * isMultiAzStorage.
+         * <p>Specifies whether to enable multi-zone storage.</p>
          */
         public Builder isMultiAzStorage(Boolean isMultiAzStorage) {
             this.putBodyParameter("isMultiAzStorage", isMultiAzStorage);
@@ -556,7 +604,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * kmsKeyId.
+         * <p>The ID of the KMS key used for encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxx</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putBodyParameter("kmsKeyId", kmsKeyId);
@@ -565,7 +616,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * loadReplicas.
+         * <p>The number of load replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder loadReplicas(Integer loadReplicas) {
             this.putBodyParameter("loadReplicas", loadReplicas);
@@ -574,7 +628,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * multiZoneMode.
+         * <p>The zone configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         public Builder multiZoneMode(String multiZoneMode) {
             this.putBodyParameter("multiZoneMode", multiZoneMode);
@@ -583,7 +640,22 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * paymentDuration.
+         * <p>The node type. Valid values for Milvus standalone: perf, enhanced, and cap. Default value: perf.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>perf</p>
+         */
+        public Builder nodeType(String nodeType) {
+            this.putBodyParameter("nodeType", nodeType);
+            this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
+         * <p>The payment duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder paymentDuration(Integer paymentDuration) {
             this.putBodyParameter("paymentDuration", paymentDuration);
@@ -592,7 +664,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * paymentDurationUnit.
+         * <p>The unit of the payment duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.putBodyParameter("paymentDurationUnit", paymentDurationUnit);
@@ -601,6 +676,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The payment type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -613,7 +689,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * promotionNo.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22120151****</p>
          */
         public Builder promotionNo(String promotionNo) {
             this.putBodyParameter("promotionNo", promotionNo);
@@ -622,7 +701,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -631,7 +713,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The instance tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -640,7 +722,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * vSwitchIds.
+         * <p>The vSwitches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vsw-123xxx&quot;]</p>
          */
         public Builder vSwitchIds(java.util.List<VSwitchIds> vSwitchIds) {
             this.putBodyParameter("vSwitchIds", vSwitchIds);
@@ -649,6 +734,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -661,6 +747,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The primary zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -673,7 +760,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -754,7 +844,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * backupId.
+             * <p>The backup ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bt-xxxxx</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -762,7 +855,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * backupName.
+             * <p>The backup name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Backup1</p>
              */
             public Builder backupName(String backupName) {
                 this.backupName = backupName;
@@ -770,7 +866,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * sourceClusterId.
+             * <p>The ID of the source cluster for the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-xxxxxxx</p>
              */
             public Builder sourceClusterId(String sourceClusterId) {
                 this.sourceClusterId = sourceClusterId;
@@ -863,7 +962,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable the QueryNode data cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -871,7 +973,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * performanceLevel.
+             * <p>The ESSD performance level (PL). Valid values: PL0, PL1, PL2, and PL3. If StorageClass is not specified, this parameter is used for parsing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -879,7 +984,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>The data cloud disk capacity. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -887,7 +995,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * storageClass.
+             * <p>The StorageClass of the data cloud disk. Valid values: alicloud-disk-essd-pl0, alicloud-disk-essd-pl1, alicloud-disk-essd-pl2, and alicloud-disk-essd-pl3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud-disk-essd-pl1</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -1009,6 +1120,7 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
+             * <p>The number of compute units (CUs).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1020,7 +1132,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * cuType.
+             * <p>The CU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder cuType(String cuType) {
                 this.cuType = cuType;
@@ -1028,7 +1143,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * dataDisk.
+             * <p>The QueryNode data cloud disk configuration. This parameter is supported only when type is set to query.</p>
              */
             public Builder dataDisk(DataDisk dataDisk) {
                 this.dataDisk = dataDisk;
@@ -1036,7 +1151,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * diskSizeType.
+             * <p>The disk size type for the Query Node. Set this parameter to Large for storage-optimized instances, and to Normal for compute-optimized and other instance types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder diskSizeType(String diskSizeType) {
                 this.diskSizeType = diskSizeType;
@@ -1044,6 +1162,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
+             * <p>The number of replicas.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1055,6 +1174,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
+             * <p>The component type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1125,7 +1245,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The key of the resource tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1133,7 +1256,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the resource tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1200,7 +1326,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * vswId.
+             * <p>The vSwitch ID configuration in the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -1208,10 +1337,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-beijing-g</p>
+             * <p>cn-shanghai-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

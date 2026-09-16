@@ -132,7 +132,10 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
         } 
 
         /**
-         * accessDeniedDetail.
+         * <p>Details about why access was denied. Returned only when RAM denies access due to insufficient permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,10 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>A value of <code>true</code> indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -148,7 +154,10 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -156,7 +165,10 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[RDS%22]</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -164,7 +176,10 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -172,7 +187,10 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB356AEE-6B3F-5FC8-9C2C-7B2D881EA9E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +198,10 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

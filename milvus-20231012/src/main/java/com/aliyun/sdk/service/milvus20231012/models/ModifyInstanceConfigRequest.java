@@ -112,7 +112,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The reason for the update.</p>
+         * <p>The reason for the modification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>User-defined configuration.</p>
+         * <p>The custom user configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>

@@ -106,7 +106,10 @@ public class DlfInstance extends TeaModel {
         } 
 
         /**
-         * instanceId.
+         * <p>The unique ID of the DLF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlf-cn-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -114,7 +117,10 @@ public class DlfInstance extends TeaModel {
         }
 
         /**
-         * instanceName.
+         * <p>The name of the DLF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-dlf-instance</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -122,7 +128,10 @@ public class DlfInstance extends TeaModel {
         }
 
         /**
-         * instanceType.
+         * <p>The type of the DLF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DLF_2_0</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -130,7 +139,10 @@ public class DlfInstance extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The ID of the region where the DLF instance is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -138,7 +150,10 @@ public class DlfInstance extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The current status of the DLF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;

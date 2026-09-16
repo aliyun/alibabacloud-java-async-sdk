@@ -171,7 +171,10 @@ public class DlfFieldSchema extends TeaModel {
         } 
 
         /**
-         * comment.
+         * <p>A comment for the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary key field</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -179,7 +182,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * dimension.
+         * <p>The dimension of the vector field. This parameter applies only when <code>isVectorField</code> is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder dimension(Integer dimension) {
             this.dimension = dimension;
@@ -187,7 +193,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * dlfFieldType.
+         * <p>The DLF field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGINT</p>
          */
         public Builder dlfFieldType(String dlfFieldType) {
             this.dlfFieldType = dlfFieldType;
@@ -195,7 +204,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * fieldName.
+         * <p>The field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder fieldName(String fieldName) {
             this.fieldName = fieldName;
@@ -203,7 +215,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * isPrimaryKey.
+         * <p>Indicates whether the field is a primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPrimaryKey(Boolean isPrimaryKey) {
             this.isPrimaryKey = isPrimaryKey;
@@ -211,7 +226,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * isSupported.
+         * <p>Indicates whether the DLF field type can be mapped to a Milvus field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSupported(Boolean isSupported) {
             this.isSupported = isSupported;
@@ -219,7 +237,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * isVectorField.
+         * <p>Indicates whether the field is a vector field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isVectorField(Boolean isVectorField) {
             this.isVectorField = isVectorField;
@@ -227,7 +248,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * milvusFieldType.
+         * <p>The corresponding Milvus field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Int64</p>
          */
         public Builder milvusFieldType(String milvusFieldType) {
             this.milvusFieldType = milvusFieldType;
@@ -235,7 +259,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * nullable.
+         * <p>Indicates whether the field can be null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nullable(Boolean nullable) {
             this.nullable = nullable;
@@ -243,7 +270,10 @@ public class DlfFieldSchema extends TeaModel {
         }
 
         /**
-         * unsupportedReason.
+         * <p>The reason the DLF field type is unsupported. This field is present only when <code>isSupported</code> is <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unsupported type</p>
          */
         public Builder unsupportedReason(String unsupportedReason) {
             this.unsupportedReason = unsupportedReason;

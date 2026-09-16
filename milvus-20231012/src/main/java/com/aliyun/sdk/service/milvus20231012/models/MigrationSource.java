@@ -80,7 +80,7 @@ public class MigrationSource extends TeaModel {
         } 
 
         /**
-         * authInfo.
+         * <p>The authentication information of the migration source.</p>
          */
         public Builder authInfo(AuthInfo authInfo) {
             this.authInfo = authInfo;
@@ -88,7 +88,7 @@ public class MigrationSource extends TeaModel {
         }
 
         /**
-         * database.
+         * <p>The name of the database to migrate.</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -96,7 +96,7 @@ public class MigrationSource extends TeaModel {
         }
 
         /**
-         * endpoint.
+         * <p>The endpoint information of the migration source.</p>
          */
         public Builder endpoint(Endpoint endpoint) {
             this.endpoint = endpoint;
@@ -188,7 +188,7 @@ public class MigrationSource extends TeaModel {
             } 
 
             /**
-             * authType.
+             * <p>The authentication type.</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -196,7 +196,7 @@ public class MigrationSource extends TeaModel {
             }
 
             /**
-             * password.
+             * <p>The password used for authentication.</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -204,7 +204,7 @@ public class MigrationSource extends TeaModel {
             }
 
             /**
-             * token.
+             * <p>The token used for authentication.</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -212,7 +212,7 @@ public class MigrationSource extends TeaModel {
             }
 
             /**
-             * username.
+             * <p>The username used for authentication.</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -279,7 +279,7 @@ public class MigrationSource extends TeaModel {
             } 
 
             /**
-             * endpoint.
+             * <p>The endpoint address of the migration source.</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -287,7 +287,7 @@ public class MigrationSource extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The port number of the migration source.</p>
              */
             public Builder port(String port) {
                 this.port = port;

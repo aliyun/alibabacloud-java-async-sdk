@@ -93,7 +93,10 @@ public class ListAclGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * accessDeniedDetail.
+         * <p>Details about the access denial. Returned only for requests denied due to insufficient RAM permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -101,7 +104,7 @@ public class ListAclGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListAclGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -117,7 +123,10 @@ public class ListAclGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A13C31-473A-5B3A-8974-0B07A40649CF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +244,7 @@ public class ListAclGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * cidrs.
+             * <p>The CIDR blocks in the group.</p>
              */
             public Builder cidrs(java.util.List<String> cidrs) {
                 this.cidrs = cidrs;
@@ -243,7 +252,10 @@ public class ListAclGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The timestamp of the group\&quot;s creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-17T13:53:27Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -251,7 +263,10 @@ public class ListAclGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -259,7 +274,10 @@ public class ListAclGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>376774</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -267,7 +285,10 @@ public class ListAclGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-xxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -275,7 +296,10 @@ public class ListAclGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * uid.
+             * <p>The ID of the Alibaba Cloud account. This parameter is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50832118</p>
              */
             public Builder uid(Long uid) {
                 this.uid = uid;

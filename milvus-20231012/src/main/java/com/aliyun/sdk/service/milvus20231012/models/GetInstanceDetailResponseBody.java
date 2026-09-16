@@ -132,7 +132,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed information about the failed permission verification.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -143,7 +143,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance.NotFound</p>
@@ -184,7 +184,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABCD-1234-5678-EFGH</p>
@@ -480,7 +480,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>QueryNode</p>
+             * <p>standalone</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -488,7 +488,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs.</p>
+             * <p>The number of compute units (CUs).</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -499,7 +499,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CuRatio.
+             * <p>The CU specification. Valid values:</p>
+             * <ul>
+             * <li>4: 1 core corresponds to 4 GB.</li>
+             * <li>8: 1 core corresponds to 8 GB.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cuRatio(Integer cuRatio) {
                 this.cuRatio = cuRatio;
@@ -556,7 +563,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * dataDiskEnabled.
+             * <p>Indicates whether the data cloud disk is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataDiskEnabled(Boolean dataDiskEnabled) {
                 this.dataDiskEnabled = dataDiskEnabled;
@@ -564,7 +574,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * dataDiskSize.
+             * <p>The data cloud disk capacity, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -572,7 +585,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * dataDiskStorageClass.
+             * <p>The StorageClass of the data cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud-disk-essd-pl1</p>
              */
             public Builder dataDiskStorageClass(String dataDiskStorageClass) {
                 this.dataDiskStorageClass = dataDiskStorageClass;
@@ -604,6 +620,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttuPort")
         private Integer attuPort;
 
+        @com.aliyun.core.annotation.NameInMap("CaCertUrl")
+        private String caCertUrl;
+
+        @com.aliyun.core.annotation.NameInMap("CertificateTrust")
+        private String certificateTrust;
+
         @com.aliyun.core.annotation.NameInMap("InternetUrl")
         private String internetUrl;
 
@@ -622,6 +644,15 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyPort")
         private Integer proxyPort;
 
+        @com.aliyun.core.annotation.NameInMap("SecureInternetUrl")
+        private String secureInternetUrl;
+
+        @com.aliyun.core.annotation.NameInMap("SecureIntranetUrl")
+        private String secureIntranetUrl;
+
+        @com.aliyun.core.annotation.NameInMap("SecureProxyPort")
+        private Integer secureProxyPort;
+
         @com.aliyun.core.annotation.NameInMap("TotalCuNum")
         private Integer totalCuNum;
 
@@ -630,12 +661,17 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
         private ClusterInfo(Builder builder) {
             this.attuPort = builder.attuPort;
+            this.caCertUrl = builder.caCertUrl;
+            this.certificateTrust = builder.certificateTrust;
             this.internetUrl = builder.internetUrl;
             this.intranetUrl = builder.intranetUrl;
             this.milvusResourceInfoList = builder.milvusResourceInfoList;
             this.ossStorageSize = builder.ossStorageSize;
             this.ossStorageTimestamp = builder.ossStorageTimestamp;
             this.proxyPort = builder.proxyPort;
+            this.secureInternetUrl = builder.secureInternetUrl;
+            this.secureIntranetUrl = builder.secureIntranetUrl;
+            this.secureProxyPort = builder.secureProxyPort;
             this.totalCuNum = builder.totalCuNum;
             this.totalDiskSize = builder.totalDiskSize;
         }
@@ -653,6 +689,20 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         public Integer getAttuPort() {
             return this.attuPort;
+        }
+
+        /**
+         * @return caCertUrl
+         */
+        public String getCaCertUrl() {
+            return this.caCertUrl;
+        }
+
+        /**
+         * @return certificateTrust
+         */
+        public String getCertificateTrust() {
+            return this.certificateTrust;
         }
 
         /**
@@ -698,6 +748,27 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return secureInternetUrl
+         */
+        public String getSecureInternetUrl() {
+            return this.secureInternetUrl;
+        }
+
+        /**
+         * @return secureIntranetUrl
+         */
+        public String getSecureIntranetUrl() {
+            return this.secureIntranetUrl;
+        }
+
+        /**
+         * @return secureProxyPort
+         */
+        public Integer getSecureProxyPort() {
+            return this.secureProxyPort;
+        }
+
+        /**
          * @return totalCuNum
          */
         public Integer getTotalCuNum() {
@@ -713,12 +784,17 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer attuPort; 
+            private String caCertUrl; 
+            private String certificateTrust; 
             private String internetUrl; 
             private String intranetUrl; 
             private java.util.List<MilvusResourceInfoList> milvusResourceInfoList; 
             private String ossStorageSize; 
             private Long ossStorageTimestamp; 
             private Integer proxyPort; 
+            private String secureInternetUrl; 
+            private String secureIntranetUrl; 
+            private Integer secureProxyPort; 
             private Integer totalCuNum; 
             private Integer totalDiskSize; 
 
@@ -727,18 +803,23 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
             private Builder(ClusterInfo model) {
                 this.attuPort = model.attuPort;
+                this.caCertUrl = model.caCertUrl;
+                this.certificateTrust = model.certificateTrust;
                 this.internetUrl = model.internetUrl;
                 this.intranetUrl = model.intranetUrl;
                 this.milvusResourceInfoList = model.milvusResourceInfoList;
                 this.ossStorageSize = model.ossStorageSize;
                 this.ossStorageTimestamp = model.ossStorageTimestamp;
                 this.proxyPort = model.proxyPort;
+                this.secureInternetUrl = model.secureInternetUrl;
+                this.secureIntranetUrl = model.secureIntranetUrl;
+                this.secureProxyPort = model.secureProxyPort;
                 this.totalCuNum = model.totalCuNum;
                 this.totalDiskSize = model.totalDiskSize;
             } 
 
             /**
-             * <p>The port of the Attu component.</p>
+             * <p>The Attu component port.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -749,7 +830,29 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address.</p>
+             * <p>The HTTPS download URL of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/ca.pem">https://example.com/ca.pem</a></p>
+             */
+            public Builder caCertUrl(String caCertUrl) {
+                this.caCertUrl = caCertUrl;
+                return this;
+            }
+
+            /**
+             * <p>The certificate trust type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>privateCA</p>
+             */
+            public Builder certificateTrust(String certificateTrust) {
+                this.certificateTrust = certificateTrust;
+                return this;
+            }
+
+            /**
+             * <p>The public endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>c-123xxx-.milvus.aliyuncs.com</p>
@@ -760,7 +863,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal IP address.</p>
+             * <p>The internal endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>c-123xxx-internal.milvus.aliyuncs.com</p>
@@ -779,7 +882,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data stored in OSS.</p>
+             * <p>The OSS storage data size.</p>
              * 
              * <strong>example:</strong>
              * <p>125.15 GB</p>
@@ -790,7 +893,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the OSS metric is stored.</p>
+             * <p>The OSS storage metric timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1718604000000</p>
@@ -812,6 +915,39 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The TLS public domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-example.secure.milvus.aliyuncs.com</p>
+             */
+            public Builder secureInternetUrl(String secureInternetUrl) {
+                this.secureInternetUrl = secureInternetUrl;
+                return this;
+            }
+
+            /**
+             * <p>The TLS internal domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-example-internal.secure.milvus.aliyuncs.com</p>
+             */
+            public Builder secureIntranetUrl(String secureIntranetUrl) {
+                this.secureIntranetUrl = secureIntranetUrl;
+                return this;
+            }
+
+            /**
+             * <p>The TLS connection port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
+             */
+            public Builder secureProxyPort(Integer secureProxyPort) {
+                this.secureProxyPort = secureProxyPort;
+                return this;
+            }
+
+            /**
              * <p>The total number of CUs.</p>
              * 
              * <strong>example:</strong>
@@ -823,7 +959,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of disks.</p>
+             * <p>The total disk size.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -1114,7 +1250,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * DataNodeCuNum.
+             * <p>The number of CUs for data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder dataNodeCuNum(Integer dataNodeCuNum) {
                 this.dataNodeCuNum = dataNodeCuNum;
@@ -1122,7 +1261,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataNodeReplica.
+             * <p>The number of replicas for data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder dataNodeReplica(Integer dataNodeReplica) {
                 this.dataNodeReplica = dataNodeReplica;
@@ -1130,7 +1272,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IndexNodeCuNum.
+             * <p>The number of CUs for index nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder indexNodeCuNum(Integer indexNodeCuNum) {
                 this.indexNodeCuNum = indexNodeCuNum;
@@ -1138,7 +1283,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IndexNodeReplica.
+             * <p>The number of replicas for index nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder indexNodeReplica(Integer indexNodeReplica) {
                 this.indexNodeReplica = indexNodeReplica;
@@ -1146,7 +1294,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MixCoodinatorNodeCuNum.
+             * <p>The number of CUs for MixCoordinator nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder mixCoodinatorNodeCuNum(Integer mixCoodinatorNodeCuNum) {
                 this.mixCoodinatorNodeCuNum = mixCoodinatorNodeCuNum;
@@ -1154,7 +1305,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MixCoodinatorNodeReplica.
+             * <p>The number of replicas for MixCoordinator nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder mixCoodinatorNodeReplica(Integer mixCoodinatorNodeReplica) {
                 this.mixCoodinatorNodeReplica = mixCoodinatorNodeReplica;
@@ -1162,7 +1316,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyNodeCuNum.
+             * <p>The number of CUs for proxy nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder proxyNodeCuNum(Integer proxyNodeCuNum) {
                 this.proxyNodeCuNum = proxyNodeCuNum;
@@ -1170,7 +1327,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyNodeReplica.
+             * <p>The number of replicas for proxy nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder proxyNodeReplica(Integer proxyNodeReplica) {
                 this.proxyNodeReplica = proxyNodeReplica;
@@ -1178,7 +1338,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QueryNodeCuNum.
+             * <p>The number of CUs for query nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder queryNodeCuNum(Integer queryNodeCuNum) {
                 this.queryNodeCuNum = queryNodeCuNum;
@@ -1186,7 +1349,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QueryNodeReplica.
+             * <p>The number of replicas for query nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder queryNodeReplica(Integer queryNodeReplica) {
                 this.queryNodeReplica = queryNodeReplica;
@@ -1253,7 +1419,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1261,7 +1430,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1819,7 +1991,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AclId for Public Network Access Control.</p>
+             * <p>The public network access control ACL ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acl-123xxx</p>
@@ -1841,7 +2013,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the bucket.</p>
+             * <p>The bucket name.</p>
              * 
              * <strong>example:</strong>
              * <p>milvus-test</p>
@@ -1852,7 +2024,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the bucket.</p>
+             * <p>The bucket path.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oss.console.aliyun.com/bucket/oss-cn-beijing/xxxx/object?spm=a2cug.25127996.0.0.577990370Ebsqt&path=milvus-c-123xxxx">https://oss.console.aliyun.com/bucket/oss-cn-beijing/xxxx/object?spm=a2cug.25127996.0.0.577990370Ebsqt&amp;path=milvus-c-123xxxx</a></p>
@@ -1882,7 +2054,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnableHa.
+             * <p>Indicates whether high availability (HA) is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHa(Boolean enableHa) {
                 this.enableHa = enableHa;
@@ -1917,7 +2092,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c-123xxx</p>
@@ -1930,12 +2105,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             /**
              * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>creating.</li>
-             * <li>running.</li>
-             * <li>updating. Cluster scaling (up/down), configuration changes, and enabling/disabling public network access.</li>
-             * <li>disable. The cluster has expired and needs to be renewed for activation.</li>
-             * <li>deleting.</li>
-             * <li>deleted.</li>
+             * <li>creating: Being created.</li>
+             * <li>running: Running.</li>
+             * <li>updating: Being upgraded. This includes specification changes, configuration changes, and public network access toggling.</li>
+             * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
+             * <li>deleting: Being deleted.</li>
+             * <li>deleted: Deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1963,7 +2138,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureConfig.
+             * <p>The configuration information.</p>
              */
             public Builder measureConfig(MeasureConfig measureConfig) {
                 this.measureConfig = measureConfig;
@@ -1971,7 +2146,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MultiZoneMode.
+             * <p>Single,Two,Three</p>
              */
             public Builder multiZoneMode(String multiZoneMode) {
                 this.multiZoneMode = multiZoneMode;
@@ -1979,7 +2154,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li>perf: compute-optimized instance.</li>
+             * <li>cap: storage-optimized.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>perf</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -1987,7 +2169,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Internet access is enabled.</p>
+             * <p>Indicates whether public network access is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1998,10 +2180,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification details. Valid values:</p>
+             * <p>The edition. Valid values:</p>
              * <ul>
-             * <li>trial.</li>
-             * <li>standard.</li>
+             * <li>trial: Trial Edition.</li>
+             * <li>standard: Standard Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2013,10 +2195,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
+             * <p>The billing type. Valid values:</p>
              * <ul>
-             * <li>0: pay-as-you-go</li>
-             * <li>1: subscription</li>
+             * <li>0: pay-as-you-go.</li>
+             * <li>1: subscription.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2039,7 +2221,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region code.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -2061,7 +2243,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime.</p>
+             * <p>The running time.</p>
              * 
              * <strong>example:</strong>
              * <p>1743679</p>
@@ -2083,7 +2265,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -2091,7 +2273,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the software stack.</p>
+             * <p>The software stack version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.4.1-1.0-0.0.1</p>
@@ -2102,7 +2284,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User-defined configuration.</p>
+             * <p>The user-defined configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>
@@ -2121,7 +2303,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The kernel version.</p>
+             * <p>The Milvus version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.4</p>
@@ -2132,7 +2314,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-123xxx</p>
@@ -2143,7 +2325,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-123xxx</p>
@@ -2154,7 +2336,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-g</p>
