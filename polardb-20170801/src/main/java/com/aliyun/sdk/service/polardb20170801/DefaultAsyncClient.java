@@ -1845,6 +1845,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAIDBClusterCustomModel  DeleteAIDBClusterCustomModelRequest
+     * @return DeleteAIDBClusterCustomModelResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAIDBClusterCustomModelResponse> deleteAIDBClusterCustomModel(DeleteAIDBClusterCustomModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAIDBClusterCustomModel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAIDBClusterCustomModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAIDBClusterCustomModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAIDBClusterDataset  DeleteAIDBClusterDatasetRequest
      * @return DeleteAIDBClusterDatasetResponse
      */
@@ -6757,6 +6775,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyAIDBClusterModel  ModifyAIDBClusterModelRequest
+     * @return ModifyAIDBClusterModelResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAIDBClusterModelResponse> modifyAIDBClusterModel(ModifyAIDBClusterModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAIDBClusterModel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAIDBClusterModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAIDBClusterModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
      */
@@ -8213,6 +8249,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RefreshDBClusterStorageUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RegisterAIDBClusterCustomModel  RegisterAIDBClusterCustomModelRequest
+     * @return RegisterAIDBClusterCustomModelResponse
+     */
+    @Override
+    public CompletableFuture<RegisterAIDBClusterCustomModelResponse> registerAIDBClusterCustomModel(RegisterAIDBClusterCustomModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RegisterAIDBClusterCustomModel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RegisterAIDBClusterCustomModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RegisterAIDBClusterCustomModelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

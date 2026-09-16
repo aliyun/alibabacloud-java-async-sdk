@@ -728,6 +728,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAIDBClusterApiKeyResponse> deleteAIDBClusterApiKey(DeleteAIDBClusterApiKeyRequest request);
 
     /**
+     * @param request the request parameters of DeleteAIDBClusterCustomModel  DeleteAIDBClusterCustomModelRequest
+     * @return DeleteAIDBClusterCustomModelResponse
+     */
+    CompletableFuture<DeleteAIDBClusterCustomModelResponse> deleteAIDBClusterCustomModel(DeleteAIDBClusterCustomModelRequest request);
+
+    /**
      * @param request the request parameters of DeleteAIDBClusterDataset  DeleteAIDBClusterDatasetRequest
      * @return DeleteAIDBClusterDatasetResponse
      */
@@ -2572,6 +2578,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAIDBClusterDescriptionResponse> modifyAIDBClusterDescription(ModifyAIDBClusterDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyAIDBClusterModel  ModifyAIDBClusterModelRequest
+     * @return ModifyAIDBClusterModelResponse
+     */
+    CompletableFuture<ModifyAIDBClusterModelResponse> modifyAIDBClusterModel(ModifyAIDBClusterModelRequest request);
+
+    /**
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
      */
@@ -3108,6 +3120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RefreshDBClusterStorageUsageResponse
      */
     CompletableFuture<RefreshDBClusterStorageUsageResponse> refreshDBClusterStorageUsage(RefreshDBClusterStorageUsageRequest request);
+
+    /**
+     * @param request the request parameters of RegisterAIDBClusterCustomModel  RegisterAIDBClusterCustomModelRequest
+     * @return RegisterAIDBClusterCustomModelResponse
+     */
+    CompletableFuture<RegisterAIDBClusterCustomModelResponse> registerAIDBClusterCustomModel(RegisterAIDBClusterCustomModelRequest request);
 
     /**
      * @param request the request parameters of RegisterKnowledgeBaseFile  RegisterKnowledgeBaseFileRequest
