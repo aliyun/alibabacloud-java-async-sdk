@@ -1776,6 +1776,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApsWebhookResponse> listApsWebhook(ListApsWebhookRequest request);
 
     /**
+     * @param request the request parameters of ListKnowledgeFiles  ListKnowledgeFilesRequest
+     * @return ListKnowledgeFilesResponse
+     */
+    CompletableFuture<ListKnowledgeFilesResponse> listKnowledgeFiles(ListKnowledgeFilesRequest request);
+
+    /**
      * @param request the request parameters of ListKnowledgeTags  ListKnowledgeTagsRequest
      * @return ListKnowledgeTagsResponse
      */
