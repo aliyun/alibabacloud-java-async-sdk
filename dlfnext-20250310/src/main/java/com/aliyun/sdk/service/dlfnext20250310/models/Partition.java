@@ -35,6 +35,9 @@ public class Partition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("lastFileCreationTime")
     private Long lastFileCreationTime;
 
+    @com.aliyun.core.annotation.NameInMap("options")
+    private java.util.Map<String, String> options;
+
     @com.aliyun.core.annotation.NameInMap("recordCount")
     private Long recordCount;
 
@@ -66,6 +69,7 @@ public class Partition extends TeaModel {
         this.fileCount = builder.fileCount;
         this.fileSizeInBytes = builder.fileSizeInBytes;
         this.lastFileCreationTime = builder.lastFileCreationTime;
+        this.options = builder.options;
         this.recordCount = builder.recordCount;
         this.spec = builder.spec;
         this.storageAction = builder.storageAction;
@@ -131,6 +135,13 @@ public class Partition extends TeaModel {
     }
 
     /**
+     * @return options
+     */
+    public java.util.Map<String, String> getOptions() {
+        return this.options;
+    }
+
+    /**
      * @return recordCount
      */
     public Long getRecordCount() {
@@ -193,6 +204,7 @@ public class Partition extends TeaModel {
         private Long fileCount; 
         private Long fileSizeInBytes; 
         private Long lastFileCreationTime; 
+        private java.util.Map<String, String> options; 
         private Long recordCount; 
         private java.util.Map<String, ?> spec; 
         private String storageAction; 
@@ -212,6 +224,7 @@ public class Partition extends TeaModel {
             this.fileCount = model.fileCount;
             this.fileSizeInBytes = model.fileSizeInBytes;
             this.lastFileCreationTime = model.lastFileCreationTime;
+            this.options = model.options;
             this.recordCount = model.recordCount;
             this.spec = model.spec;
             this.storageAction = model.storageAction;
@@ -285,6 +298,14 @@ public class Partition extends TeaModel {
          */
         public Builder lastFileCreationTime(Long lastFileCreationTime) {
             this.lastFileCreationTime = lastFileCreationTime;
+            return this;
+        }
+
+        /**
+         * options.
+         */
+        public Builder options(java.util.Map<String, String> options) {
+            this.options = options;
             return this;
         }
 

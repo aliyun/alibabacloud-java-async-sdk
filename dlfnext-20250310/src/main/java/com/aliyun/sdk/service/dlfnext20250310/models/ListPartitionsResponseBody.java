@@ -67,7 +67,7 @@ public class ListPartitionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token that is used to retrieve the next page of results.</p>
+         * <p>The pagination token used to retrieve the next page of data.</p>
          * 
          * <strong>example:</strong>
          * <p>E8ABEB1C3DB893D16576269017992F57</p>
@@ -78,7 +78,7 @@ public class ListPartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The partitions.</p>
+         * <p>The list of partitions.</p>
          */
         public Builder partitions(java.util.List<Partition> partitions) {
             this.partitions = partitions;

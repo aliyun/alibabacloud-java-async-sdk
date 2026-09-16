@@ -129,7 +129,7 @@ public class ListPartitionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the catalog.</p>
+         * <p>The ID of the data catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>clg-paimon-xxx</p>
@@ -153,7 +153,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The name of the data table.</p>
          * 
          * <strong>example:</strong>
          * <p>table_name</p>
@@ -165,7 +165,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return in a single request.</p>
+         * <p>The maximum number of records to retrieve in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -177,7 +177,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token used to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+         * <p>The pagination token used to retrieve the next page of data. If the response does not include this token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
