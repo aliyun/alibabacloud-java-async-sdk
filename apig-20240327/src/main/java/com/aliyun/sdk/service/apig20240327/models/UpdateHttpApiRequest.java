@@ -76,6 +76,11 @@ public class UpdateHttpApiRequest extends Request {
     private HttpApiVersionConfig versionConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
@@ -95,6 +100,7 @@ public class UpdateHttpApiRequest extends Request {
         this.protocols = builder.protocols;
         this.removeBasePathOnForward = builder.removeBasePathOnForward;
         this.versionConfig = builder.versionConfig;
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
     }
 
@@ -210,6 +216,13 @@ public class UpdateHttpApiRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -231,6 +244,7 @@ public class UpdateHttpApiRequest extends Request {
         private java.util.List<String> protocols; 
         private Boolean removeBasePathOnForward; 
         private HttpApiVersionConfig versionConfig; 
+        private String clientToken; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -253,6 +267,7 @@ public class UpdateHttpApiRequest extends Request {
             this.protocols = request.protocols;
             this.removeBasePathOnForward = request.removeBasePathOnForward;
             this.versionConfig = request.versionConfig;
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
         } 
 
@@ -364,7 +379,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only modify the configuration. If set to true, only the configuration is modified without triggering a redeployment.</p>
+         * <p>Specifies whether to only modify the configuration. If this parameter is set to true, only the configuration is modified without triggering redeployment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -406,7 +421,19 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to an actual update are performed, but no configurations are modified and no side effects are produced. If set to false or left empty, the behavior is the same as the existing version.</p>
+         * <p>The idempotent request identifier. If you call this operation for the same HTTP API with the same clientToken value and request parameters, the result of the first successful call is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update-http-api-client-token-001</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run. If this parameter is set to true, all synchronous validations identical to an actual update are performed, but no configurations are updated and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

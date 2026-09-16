@@ -27,6 +27,7 @@ public class CreateMigrationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("environmentId")
+    @Deprecated
     private String environmentId;
 
     @com.aliyun.core.annotation.Body
