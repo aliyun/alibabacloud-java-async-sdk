@@ -119,7 +119,7 @@ public class CreateClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,9 +127,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +135,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -145,7 +143,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +151,8 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request.
+         * You can use this ID for troubleshooting.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +160,11 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The status of the request. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,7 +230,7 @@ public class CreateClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -235,7 +238,7 @@ public class CreateClusterResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

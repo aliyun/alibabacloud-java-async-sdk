@@ -106,7 +106,10 @@ public class GetLogEventResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code. A value of <code>200</code> indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -124,7 +127,10 @@ public class GetLogEventResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message that is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter check error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +138,10 @@ public class GetLogEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique, server-generated ID for the request. This ID is used for troubleshooting purposes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +149,16 @@ public class GetLogEventResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -310,7 +328,10 @@ public class GetLogEventResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>portal-dev</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -318,7 +339,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello word</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -326,7 +350,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * Event.
+             * <p>The severity level of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -334,7 +361,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The type of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JOB</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -342,7 +372,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * JobExecutionId.
+             * <p>The job execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder jobExecutionId(String jobExecutionId) {
                 this.jobExecutionId = jobExecutionId;
@@ -350,7 +383,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -358,7 +394,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the log was recorded. The time is in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-31 16:43:51</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -366,7 +405,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerAddr.
+             * <p>The address of the worker that runs the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:030225016025_9357_60125@127.0.0.1">030225016025_9357_60125@127.0.0.1</a>:51363</p>
              */
             public Builder workerAddr(String workerAddr) {
                 this.workerAddr = workerAddr;
@@ -374,7 +416,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowExecutionId.
+             * <p>The workflow execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1450568762586578000</p>
              */
             public Builder workflowExecutionId(String workflowExecutionId) {
                 this.workflowExecutionId = workflowExecutionId;
@@ -382,7 +427,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowName.
+             * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>工作流0001</p>
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;
@@ -475,7 +523,10 @@ public class GetLogEventResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -483,7 +534,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -501,7 +555,10 @@ public class GetLogEventResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder total(Long total) {
                 this.total = total;

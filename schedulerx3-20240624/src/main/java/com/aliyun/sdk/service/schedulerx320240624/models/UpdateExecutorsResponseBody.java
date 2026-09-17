@@ -106,7 +106,10 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -115,7 +118,7 @@ public class UpdateExecutorsResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li></li>
+         * <li>The returned data.</li>
          * </ul>
          */
         public Builder data(Data data) {
@@ -124,7 +127,10 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +138,7 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -143,7 +149,16 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,7 +276,10 @@ public class UpdateExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppGroupId.
+             * <p>The Application Group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appGroupId(Long appGroupId) {
                 this.appGroupId = appGroupId;
@@ -269,7 +287,10 @@ public class UpdateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The Application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appType(Integer appType) {
                 this.appType = appType;
@@ -277,7 +298,10 @@ public class UpdateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedService.
+             * <p>The Kubernetes services that failed to import.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
              */
             public Builder failedService(String failedService) {
                 this.failedService = failedService;
@@ -285,7 +309,10 @@ public class UpdateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkId.
+             * <p>The Worker ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder workId(Integer workId) {
                 this.workId = workId;
@@ -293,7 +320,10 @@ public class UpdateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerType.
+             * <p>The Worker type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s_service</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;
@@ -301,7 +331,10 @@ public class UpdateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Workers.
+             * <p>A JSON-formatted string that contains a list of Workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
              */
             public Builder workers(String workers) {
                 this.workers = workers;

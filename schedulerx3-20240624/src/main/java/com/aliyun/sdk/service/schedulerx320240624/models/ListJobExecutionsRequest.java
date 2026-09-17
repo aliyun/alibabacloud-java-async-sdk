@@ -223,7 +223,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -232,6 +235,7 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +248,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-12 20:50:56</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -253,7 +260,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * JobExecutionId.
+         * <p>The job execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310630367761285120</p>
          */
         public Builder jobExecutionId(String jobExecutionId) {
             this.putQueryParameter("JobExecutionId", jobExecutionId);
@@ -262,7 +272,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -271,7 +284,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-job</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -280,7 +296,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -289,7 +308,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -298,7 +320,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-12 20:50:55</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -307,7 +332,25 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The job execution status. Valid values:</p>
+         * <ul>
+         * <li>0: <strong>UNKNOWN</strong>.</li>
+         * <li>1: <strong>WAITING</strong>.</li>
+         * <li>2: <strong>READY</strong>.</li>
+         * <li>3: <strong>RUNNING</strong>.</li>
+         * <li>4: <strong>SUCCESS</strong>.</li>
+         * <li>5: <strong>FAILED</strong>.</li>
+         * <li>6: <strong>PAUSED</strong>.</li>
+         * <li>7: <strong>SUBMITTED</strong>.</li>
+         * <li>8: <strong>REJECTED</strong>.</li>
+         * <li>9: <strong>ACCEPTED</strong>.</li>
+         * <li>10: <strong>PARTIAL_FAILED</strong>.</li>
+         * <li>11: <strong>SKIPPED</strong>.</li>
+         * <li>12: <strong>REMOVED</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -316,7 +359,10 @@ public class ListJobExecutionsRequest extends Request {
         }
 
         /**
-         * WorkflowExecutionId.
+         * <p>The workflow instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder workflowExecutionId(Long workflowExecutionId) {
             this.putQueryParameter("WorkflowExecutionId", workflowExecutionId);

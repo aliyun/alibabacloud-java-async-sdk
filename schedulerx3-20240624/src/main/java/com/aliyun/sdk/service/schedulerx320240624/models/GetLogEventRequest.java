@@ -265,7 +265,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxl-job-executor-perf-test-241</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -274,6 +277,7 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +290,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the query\&quot;s time range, specified as a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721636220</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -295,7 +302,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * Event.
+         * <p>The severity level for filtering events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder event(String event) {
             this.putQueryParameter("Event", event);
@@ -304,7 +314,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * EventType.
+         * <p>The type of event to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JOB</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -313,7 +326,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * JobExecutionId.
+         * <p>The unique identifier for the job execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder jobExecutionId(Long jobExecutionId) {
             this.putQueryParameter("JobExecutionId", jobExecutionId);
@@ -322,7 +338,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -331,7 +350,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>A keyword to search for in log events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_partition_tbl</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -340,7 +362,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -349,7 +374,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -358,7 +386,16 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Specifies the sort order of events.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Sorts events in descending order.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Sorts events in ascending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -367,7 +404,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the query\&quot;s time range, specified as a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721268302000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -376,7 +416,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * WorkflowExecutionId.
+         * <p>The unique identifier for the workflow execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1450568762586578000</p>
          */
         public Builder workflowExecutionId(Long workflowExecutionId) {
             this.putQueryParameter("WorkflowExecutionId", workflowExecutionId);
@@ -385,7 +428,10 @@ public class GetLogEventRequest extends Request {
         }
 
         /**
-         * WorkflowName.
+         * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>流程001</p>
          */
         public Builder workflowName(String workflowName) {
             this.putQueryParameter("WorkflowName", workflowName);

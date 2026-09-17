@@ -237,7 +237,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -246,6 +249,7 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +262,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for filtering executions. The time must be in <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-13 16:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -267,7 +274,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return. Defaults to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -276,7 +286,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. For the first request, do not specify this parameter. If the response does not include a <code>NextToken</code>, no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -285,7 +298,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -294,7 +310,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -303,7 +322,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range for filtering executions. The time must be in <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-27 02:15:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -312,7 +334,32 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The workflow execution status. Use this parameter to filter executions by status. Valid values:</p>
+         * <ul>
+         * <li><p>0: unknown</p>
+         * </li>
+         * <li><p>1: waiting</p>
+         * </li>
+         * <li><p>2: queued</p>
+         * </li>
+         * <li><p>3: running</p>
+         * </li>
+         * <li><p>4: success</p>
+         * </li>
+         * <li><p>5: failed</p>
+         * </li>
+         * <li><p>6: killed</p>
+         * </li>
+         * <li><p>7: held</p>
+         * </li>
+         * <li><p>8: mark_success</p>
+         * </li>
+         * <li><p>9: skipped</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -321,7 +368,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * WorkflowExecutionId.
+         * <p>The workflow execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder workflowExecutionId(Long workflowExecutionId) {
             this.putQueryParameter("WorkflowExecutionId", workflowExecutionId);
@@ -330,7 +380,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);
@@ -339,7 +392,10 @@ public class ListWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * WorkflowName.
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myWorkflow</p>
          */
         public Builder workflowName(String workflowName) {
             this.putQueryParameter("WorkflowName", workflowName);

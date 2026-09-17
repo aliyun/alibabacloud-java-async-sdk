@@ -171,6 +171,7 @@ public class OperateDesignateExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The address list.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addressList(java.util.List<String> addressList) {
@@ -190,6 +191,7 @@ public class OperateDesignateExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +204,7 @@ public class OperateDesignateExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +217,11 @@ public class OperateDesignateExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The type of the designated machine. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: designated worker.</li>
+         * <li><strong>2</strong>: designated label.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +234,7 @@ public class OperateDesignateExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +247,10 @@ public class OperateDesignateExecutorsRequest extends Request {
         }
 
         /**
-         * Transferable.
+         * <p>Specifies whether to enable failover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder transferable(Boolean transferable) {
             this.putBodyParameter("Transferable", transferable);

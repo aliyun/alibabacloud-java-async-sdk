@@ -127,6 +127,7 @@ public class DeleteWorkflowsRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class DeleteWorkflowsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +153,10 @@ public class DeleteWorkflowsRequest extends Request {
         }
 
         /**
-         * DeleteJobs.
+         * <p>If set to <code>true</code>, all jobs within the specified workflows are also deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteJobs(Boolean deleteJobs) {
             this.putBodyParameter("DeleteJobs", deleteJobs);
@@ -160,6 +165,7 @@ public class DeleteWorkflowsRequest extends Request {
         }
 
         /**
+         * <p>A list of workflow IDs to delete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder workflowIds(java.util.List<Long> workflowIds) {

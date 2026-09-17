@@ -26,6 +26,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates a custom calendar for SchedulerX.</p>
+     * 
      * @param request the request parameters of CreateCalendar  CreateCalendarRequest
      * @return CreateCalendarResponse
      */
@@ -38,6 +41,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>创建自定义联系人</p>
+     * 
      * @param request the request parameters of CreateContact  CreateContactRequest
      * @return CreateContactResponse
      */
@@ -50,12 +56,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasourceResponse> createDatasource(CreateDatasourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>手动导入执行器</p>
+     * 
      * @param request the request parameters of CreateExecutorGroup  CreateExecutorGroupRequest
      * @return CreateExecutorGroupResponse
      */
     CompletableFuture<CreateExecutorGroupResponse> createExecutorGroup(CreateExecutorGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Imports one or more executors.</p>
+     * 
      * @param request the request parameters of CreateExecutors  CreateExecutorsRequest
      * @return CreateExecutorsResponse
      */
@@ -92,6 +104,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>删除自定义联系人</p>
+     * 
      * @param request the request parameters of DeleteContact  DeleteContactRequest
      * @return DeleteContactResponse
      */
@@ -164,6 +179,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDesigateInfoResponse> getDesigateInfo(GetDesigateInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to extend the Executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>before</strong> the <code>xxl-job-core</code> dependency in the <code>pom.xml</code> file.
+     * <strong>For more information, see</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Documentation</a></p>
+     * 
      * @param request the request parameters of GetExecutorConfig  GetExecutorConfigRequest
      * @return GetExecutorConfigResponse
      */
@@ -176,12 +197,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobExecutionResponse> getJobExecution(GetJobExecutionRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>Import the enhanced plugin</h1>
+     * <p>Add the enhanced plugin to the <code>pom.xml</code> file to improve the capabilities of the Executor.
+     * <strong>Note</strong>: Make sure this plugin is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom file.
+     * <strong>For more information, refer to</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></p>
+     * 
      * @param request the request parameters of GetJobExecutionProgress  GetJobExecutionProgressRequest
      * @return GetJobExecutionProgressResponse
      */
     CompletableFuture<GetJobExecutionProgressResponse> getJobExecutionProgress(GetJobExecutionProgressRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to extend the executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency.
+     * <strong>For more information, see</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin versioning documentation</a></p>
+     * 
      * @param request the request parameters of GetJobExecutionThreadDump  GetJobExecutionThreadDumpRequest
      * @return GetJobExecutionThreadDumpResponse
      */
@@ -200,6 +233,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLogEventResponse> getLogEvent(GetLogEventRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * @param request the request parameters of GetPageLog  GetPageLogRequest
      * @return GetPageLogResponse
      */
@@ -230,6 +269,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkflowExecutionDAGResponse> getWorkflowExecutionDAG(GetWorkflowExecutionDAGRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</p>
+     * 
      * @param request the request parameters of ImportAgentJobs  ImportAgentJobsRequest
      * @return ImportAgentJobsResponse
      */
@@ -292,6 +334,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查看联系人</p>
+     * 
      * @param request the request parameters of ListContacts  ListContactsRequest
      * @return ListContactsResponse
      */
@@ -304,6 +349,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatasourcesResponse> listDatasources(ListDatasourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * @param request the request parameters of ListExecutorGroup  ListExecutorGroupRequest
      * @return ListExecutorGroupResponse
      */
@@ -334,6 +385,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to your <code>pom.xml</code> file to extend the Executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in your pom.xml file.
+     * <strong>For more information:</strong> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version release notes</a></p>
+     * 
      * @param request the request parameters of ListK8sResource  ListK8sResourceRequest
      * @return ListK8sResourceResponse
      */
@@ -412,6 +469,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateDisableJobsResponse> operateDisableJobs(OperateDisableJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Disables one or more specified workflows.</p>
+     * 
      * @param request the request parameters of OperateDisableWorkflows  OperateDisableWorkflowsRequest
      * @return OperateDisableWorkflowsResponse
      */
@@ -436,6 +496,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateExecuteJobResponse> operateExecuteJob(OperateExecuteJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation starts a new workflow instance.</p>
+     * 
      * @param request the request parameters of OperateExecuteWorkflow  OperateExecuteWorkflowRequest
      * @return OperateExecuteWorkflowResponse
      */
@@ -544,6 +607,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>更新通知联系人</p>
+     * 
      * @param request the request parameters of UpdateContact  UpdateContactRequest
      * @return UpdateContactResponse
      */
@@ -556,12 +622,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDatasourceResponse> updateDatasource(UpdateDatasourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * @param request the request parameters of UpdateExecutorGroup  UpdateExecutorGroupRequest
      * @return UpdateExecutorGroupResponse
      */
     CompletableFuture<UpdateExecutorGroupResponse> updateExecutorGroup(UpdateExecutorGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to the <code>pom.xml</code> file to extend the capabilities of the Executor.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom.xml file.
+     * <strong>For more information, see the</strong> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Description Document</a>.</p>
+     * 
      * @param request the request parameters of UpdateExecutors  UpdateExecutorsRequest
      * @return UpdateExecutorsResponse
      */

@@ -128,6 +128,7 @@ public class UpdateWorkflowDAGVersionRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class UpdateWorkflowDAGVersionRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class UpdateWorkflowDAGVersionRequest extends Request {
         }
 
         /**
+         * <p>The Workflow DAG version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class UpdateWorkflowDAGVersionRequest extends Request {
         }
 
         /**
+         * <p>The Workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

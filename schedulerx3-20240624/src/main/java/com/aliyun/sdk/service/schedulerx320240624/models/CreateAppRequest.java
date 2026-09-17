@@ -184,7 +184,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * AccessToken.
+         * <p>The access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ltk1ZXHv6LvibZypFkPHzRA</p>
          */
         public Builder accessToken(String accessToken) {
             this.putBodyParameter("AccessToken", accessToken);
@@ -193,6 +196,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
+         * <p>The app name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +209,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>The app type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder appType(Integer appType) {
             this.putBodyParameter("AppType", appType);
@@ -214,6 +221,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +234,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * EnableLog.
+         * <p>Indicates whether to enable logging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableLog(Boolean enableLog) {
             this.putBodyParameter("EnableLog", enableLog);
@@ -235,7 +246,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * LabelRouteStrategy.
+         * <p>The label routing strategy.</p>
          */
         public Builder labelRouteStrategy(Integer labelRouteStrategy) {
             this.putBodyParameter("LabelRouteStrategy", labelRouteStrategy);
@@ -244,7 +255,13 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * <p>The maximum concurrency.</p>
+         * <blockquote>
+         * <p>This parameter specifies the maximum number of task instances that can run concurrently for the app. Task instances that exceed this limit are not discarded. They are queued for execution.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putBodyParameter("MaxConcurrency", maxConcurrency);
@@ -253,7 +270,11 @@ public class CreateAppRequest extends Request {
         }
 
         /**
+         * <p>The title of the app.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

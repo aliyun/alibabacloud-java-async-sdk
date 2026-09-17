@@ -112,6 +112,7 @@ public class ListLablesRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class ListLablesRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class ListLablesRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);

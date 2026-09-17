@@ -127,6 +127,7 @@ public class OperateRetryWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class OperateRetryWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +153,10 @@ public class OperateRetryWorkflowExecutionRequest extends Request {
         }
 
         /**
-         * OnlyFailed.
+         * <p>Set to <code>true</code> to rerun only failed nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onlyFailed(Boolean onlyFailed) {
             this.putBodyParameter("OnlyFailed", onlyFailed);
@@ -160,6 +165,7 @@ public class OperateRetryWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The workflow execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

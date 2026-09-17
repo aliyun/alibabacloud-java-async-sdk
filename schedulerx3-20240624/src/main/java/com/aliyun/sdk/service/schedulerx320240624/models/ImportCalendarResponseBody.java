@@ -106,7 +106,10 @@ public class ImportCalendarResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,9 +117,7 @@ public class ImportCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The data returned by the call.</p>
          */
         public Builder data(java.util.List<String> data) {
             this.data = data;
@@ -124,7 +125,10 @@ public class ImportCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +136,10 @@ public class ImportCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID generated for the request. Use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +147,16 @@ public class ImportCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

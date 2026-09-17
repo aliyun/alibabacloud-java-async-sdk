@@ -126,6 +126,7 @@ public class ExportJobsRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,7 @@ public class ExportJobsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +152,10 @@ public class ExportJobsRequest extends Request {
         }
 
         /**
-         * ExportJobType.
+         * <p>The type of jobs to export. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder exportJobType(Integer exportJobType) {
             this.putBodyParameter("ExportJobType", exportJobType);
@@ -159,9 +164,7 @@ public class ExportJobsRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>A list of job IDs.</p>
          */
         public Builder jobIds(java.util.List<Long> jobIds) {
             String jobIdsShrink = shrink(jobIds, "JobIds", "json");

@@ -150,6 +150,7 @@ public class OperateStopJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +163,7 @@ public class OperateStopJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +176,7 @@ public class OperateStopJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The job execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +189,7 @@ public class OperateStopJobExecutionRequest extends Request {
         }
 
         /**
-         * TaskList.
+         * <p>The subtask IDs.</p>
          */
         public Builder taskList(java.util.List<String> taskList) {
             String taskListShrink = shrink(taskList, "TaskList", "json");

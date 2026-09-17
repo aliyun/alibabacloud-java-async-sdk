@@ -106,7 +106,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,7 @@ public class CreateExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F131C3E0-3FAA-5FA4-A6F3-E974D69EF3C5</p>
@@ -141,7 +147,16 @@ public class CreateExecutorsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * <ul>
+         * <li><p>true: The request succeeded.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -259,7 +274,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppGroupId.
+             * <p>The App Group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appGroupId(Long appGroupId) {
                 this.appGroupId = appGroupId;
@@ -267,7 +285,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appType(Integer appType) {
                 this.appType = appType;
@@ -275,7 +296,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedService.
+             * <p>A list of Kubernetes Services that failed to import.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
              */
             public Builder failedService(String failedService) {
                 this.failedService = failedService;
@@ -283,7 +307,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerId.
+             * <p>The ID of the worker. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ins-95mfvqrtg6fkijt1uko000</p>
              */
             public Builder workerId(Long workerId) {
                 this.workerId = workerId;
@@ -291,7 +318,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerType.
+             * <p>The worker type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s_service</p>
              */
             public Builder workerType(String workerType) {
                 this.workerType = workerType;
@@ -299,7 +329,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
             }
 
             /**
-             * Workers.
+             * <p>A JSON string that represents the list of imported workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
              */
             public Builder workers(String workers) {
                 this.workers = workers;

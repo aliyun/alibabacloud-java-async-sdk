@@ -109,10 +109,7 @@ public class ImportAgentJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -223,7 +223,20 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * AlarmChannel.
+         * <p>The channel for sending alarm notifications. Valid values:</p>
+         * <ul>
+         * <li><p><code>sms</code>: SMS</p>
+         * </li>
+         * <li><p><code>mail</code>: Email</p>
+         * </li>
+         * <li><p><code>phone</code>: Phone call</p>
+         * </li>
+         * <li><p><code>webhook</code>: Webhook</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>webhook</p>
          */
         public Builder alarmChannel(String alarmChannel) {
             this.putQueryParameter("AlarmChannel", alarmChannel);
@@ -232,7 +245,16 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * AlarmStatus.
+         * <p>The delivery status of the alarm notification. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The notification delivery succeeded.</p>
+         * </li>
+         * <li><p><code>false</code>: The notification delivery failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder alarmStatus(String alarmStatus) {
             this.putQueryParameter("AlarmStatus", alarmStatus);
@@ -241,7 +263,24 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * AlarmType.
+         * <p>The type of the alarm. Valid values:</p>
+         * <ul>
+         * <li><p><strong><code>schedulerx3_no_designate_machine_alarm</code></strong>: The Designated Machine is unavailable.</p>
+         * </li>
+         * <li><p><strong><code>schedulerx3_all_busy_alarm</code></strong>: All available machines are busy.</p>
+         * </li>
+         * <li><p><strong><code>schedulerx3_no_machine_alarm</code></strong>: No machines are available to run the job.</p>
+         * </li>
+         * <li><p><strong><code>schedulerx3_timeout_alarm</code></strong>: The job timed out.</p>
+         * </li>
+         * <li><p><strong><code>schedulerx3_fail_alarm</code></strong>: The job failed to run.</p>
+         * </li>
+         * <li><p><strong><code>schedulerx3_job_success_notice</code></strong>: The job ran successfully.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx3_fail_alarm</p>
          */
         public Builder alarmType(String alarmType) {
             this.putQueryParameter("AlarmType", alarmType);
@@ -250,7 +289,10 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -259,6 +301,7 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,7 +314,10 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for querying events. This value is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731636011558</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -280,7 +326,10 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-job</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -289,7 +338,10 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -298,7 +350,10 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -307,7 +362,10 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Set to true to return results in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -316,7 +374,10 @@ public class ListAlarmEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range for querying events. This value is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1690419316000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

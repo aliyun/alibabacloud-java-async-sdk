@@ -113,6 +113,7 @@ public class OperateUnholdWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class OperateUnholdWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class OperateUnholdWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The workflow execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

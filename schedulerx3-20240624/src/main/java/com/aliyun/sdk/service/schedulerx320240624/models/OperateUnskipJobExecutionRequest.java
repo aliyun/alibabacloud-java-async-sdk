@@ -112,6 +112,7 @@ public class OperateUnskipJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class OperateUnskipJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class OperateUnskipJobExecutionRequest extends Request {
         }
 
         /**
-         * JobExecutionId.
+         * <p>The ID of the job execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310630367761285120</p>
          */
         public Builder jobExecutionId(String jobExecutionId) {
             this.putQueryParameter("JobExecutionId", jobExecutionId);

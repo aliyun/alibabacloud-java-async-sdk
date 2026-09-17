@@ -106,7 +106,10 @@ public class GetDesigateInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,9 +117,7 @@ public class GetDesigateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -124,7 +125,10 @@ public class GetDesigateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter check error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +136,10 @@ public class GetDesigateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1DF6732E-15D8-5E1F-95E3-C10077F556B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +147,14 @@ public class GetDesigateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +220,14 @@ public class GetDesigateInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DesignateType.
+             * <p>The type of the specified machine. Valid values:</p>
+             * <ul>
+             * <li>1: worker.</li>
+             * <li>2: label.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder designateType(Integer designateType) {
                 this.designateType = designateType;
@@ -214,7 +235,10 @@ public class GetDesigateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Transferable.
+             * <p>Indicates whether failover is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder transferable(Boolean transferable) {
                 this.transferable = transferable;

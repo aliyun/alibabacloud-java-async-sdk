@@ -93,7 +93,10 @@ public class UpdateDatasourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter format error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,14 @@ public class UpdateDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the invocation succeeded.  </p>
+         * <ul>
+         * <li>true: The invocation succeeded.  </li>
+         * <li>false: The invocation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

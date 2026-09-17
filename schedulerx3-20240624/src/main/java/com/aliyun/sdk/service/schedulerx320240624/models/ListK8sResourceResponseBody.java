@@ -106,7 +106,10 @@ public class ListK8sResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -115,7 +118,7 @@ public class ListK8sResourceResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li></li>
+         * <li>An array of k8s resources.</li>
          * </ul>
          */
         public Builder data(java.util.List<Data> data) {
@@ -124,7 +127,10 @@ public class ListK8sResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +138,7 @@ public class ListK8sResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</p>
@@ -143,7 +149,16 @@ public class ListK8sResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -209,7 +224,10 @@ public class ListK8sResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The ID of the k8s resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxljob-01632622cda2f</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -217,7 +235,10 @@ public class ListK8sResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The name of the k8s resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>q_ecs_enterprise_spot_c</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;

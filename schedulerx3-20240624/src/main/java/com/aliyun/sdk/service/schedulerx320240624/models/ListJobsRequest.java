@@ -223,7 +223,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -232,6 +235,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +248,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job01 standalone task</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -253,7 +260,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * JobHandler.
+         * <p>The <code>jobhandler</code> name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobDemoHandler</p>
          */
         public Builder jobHandler(String jobHandler) {
             this.putQueryParameter("JobHandler", jobHandler);
@@ -262,7 +272,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -271,7 +284,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job01</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -280,7 +296,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The task label filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{key:value}</p>
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -289,7 +308,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -298,7 +320,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -307,7 +332,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -316,7 +344,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

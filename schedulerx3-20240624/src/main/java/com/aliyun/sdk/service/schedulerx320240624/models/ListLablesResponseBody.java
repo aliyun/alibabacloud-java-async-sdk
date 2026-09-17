@@ -106,7 +106,10 @@ public class ListLablesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,9 +117,7 @@ public class ListLablesResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The returned list of labels.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -124,7 +125,10 @@ public class ListLablesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter check error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +136,10 @@ public class ListLablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>A unique identifier for the request. Use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9079A828-9138-50F1-801E-F2BC3D222A06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +147,16 @@ public class ListLablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -232,7 +248,10 @@ public class ListLablesResponseBody extends TeaModel {
             } 
 
             /**
-             * IsDesignated.
+             * <p>Indicates whether the label is designated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDesignated(Boolean isDesignated) {
                 this.isDesignated = isDesignated;
@@ -240,7 +259,10 @@ public class ListLablesResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -248,7 +270,10 @@ public class ListLablesResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * <p>Indicates whether the Executor is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -256,7 +281,10 @@ public class ListLablesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of machines with this label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder size(Integer size) {
                 this.size = size;

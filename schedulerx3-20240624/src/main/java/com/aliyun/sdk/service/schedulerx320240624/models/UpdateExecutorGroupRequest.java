@@ -287,7 +287,6 @@ public class UpdateExecutorGroupRequest extends Request {
         }
 
         /**
-         * <p>ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

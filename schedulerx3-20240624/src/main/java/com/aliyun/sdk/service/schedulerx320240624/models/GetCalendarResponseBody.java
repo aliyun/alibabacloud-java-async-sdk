@@ -106,7 +106,10 @@ public class GetCalendarResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -115,7 +118,7 @@ public class GetCalendarResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li></li>
+         * <li>The data returned.</li>
          * </ul>
          */
         public Builder data(Data data) {
@@ -124,7 +127,10 @@ public class GetCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +138,7 @@ public class GetCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
@@ -143,7 +149,16 @@ public class GetCalendarResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +237,10 @@ public class GetCalendarResponseBody extends TeaModel {
             } 
 
             /**
-             * CalendarName.
+             * <p>The name of the calendar.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workday</p>
              */
             public Builder calendarName(String calendarName) {
                 this.calendarName = calendarName;
@@ -230,7 +248,23 @@ public class GetCalendarResponseBody extends TeaModel {
             }
 
             /**
-             * Months.
+             * <p>A JSON string that represents an array of objects. Each object specifies the days for a particular month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *   {&quot;month&quot;:1,&quot;days&quot;:[1,2,3,6,7,8,9,10,13,14,15,16,17,20,21,22,23,24,27,28,29,30,31]},
+             *   {&quot;month&quot;:2,&quot;days&quot;:[3,4,5,6,7,10,11,12,13,14,17,18,19,20,21,24,25,26,27,28]},
+             *   {&quot;month&quot;:3,&quot;days&quot;:[3,4,5,6,7,10,11,12,13,14,17,18,19,20,21,24,25,26,27,28,31]},
+             *   {&quot;month&quot;:4,&quot;days&quot;:[1,2,3,4,7,8,9,10,11,14,15,16,17,18,21,22,23,24,25,28,29,30]},
+             *   {&quot;month&quot;:5,&quot;days&quot;:[1,2,5,6,7,8,9,12,13,14,15,16,19,20,21,22,23,26,27,28,29,30]},
+             *   {&quot;month&quot;:6,&quot;days&quot;:[2,3,4,5,6,9,10,11,12,13,16,17,18,19,20,23,24,25,26,27,30]},
+             *   {&quot;month&quot;:7,&quot;days&quot;:[1,2,3,4,7,8,9,10,11,14,15,16,17,18,21,22,23,24,25,28,29,30,31]},
+             *   {&quot;month&quot;:8,&quot;days&quot;:[1,4,5,6,7,8,11,12,13,14,15,18,19,20,21,22,25,26,27,28,29]},
+             *   {&quot;month&quot;:9,&quot;days&quot;:[1,2,3,4,5,8,9,10,11,12,15,16,17,18,19,22,23,24,25,26,29,30]},
+             *   {&quot;month&quot;:10,&quot;days&quot;:[1,2,3,6,7,8,9,10,13,14,15,16,17,20,21,22,23,24,27,28,29,30,31]},
+             *   {&quot;month&quot;:11,&quot;days&quot;:[3,4,5,6,7,10,11,12,13,14,17,18,19,20,21,24,25,26,27,28]},
+             *   {&quot;month&quot;:12,&quot;days&quot;:[1,2,3,4,5,8,9,10,11,12,15,16,17,18,19,22,23,24,25,26,29,30,31]}
+             * ]</p>
              */
             public Builder months(String months) {
                 this.months = months;
@@ -238,7 +272,10 @@ public class GetCalendarResponseBody extends TeaModel {
             }
 
             /**
-             * Year.
+             * <p>The year.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2030</p>
              */
             public Builder year(Integer year) {
                 this.year = year;

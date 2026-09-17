@@ -142,6 +142,7 @@ public class UpdateWorkflowDAGRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class UpdateWorkflowDAGRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class UpdateWorkflowDAGRequest extends Request {
         }
 
         /**
+         * <p>The directed acyclic graph (DAG) of the workflow.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dag(Dag dag) {
@@ -176,7 +179,10 @@ public class UpdateWorkflowDAGRequest extends Request {
         }
 
         /**
-         * DagVersion.
+         * <p>The version of the DAG. To obtain this value, call the <a href="https://help.aliyun.com/document_detail/465989.html">ListDAGVersions</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1137005</p>
          */
         public Builder dagVersion(String dagVersion) {
             this.putBodyParameter("DagVersion", dagVersion);
@@ -185,6 +191,7 @@ public class UpdateWorkflowDAGRequest extends Request {
         }
 
         /**
+         * <p>The workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +263,10 @@ public class UpdateWorkflowDAGRequest extends Request {
             } 
 
             /**
-             * Source.
+             * <p>The job ID of the source node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder source(Long source) {
                 this.source = source;
@@ -264,7 +274,10 @@ public class UpdateWorkflowDAGRequest extends Request {
             }
 
             /**
-             * Target.
+             * <p>The job ID of the target node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder target(Long target) {
                 this.target = target;
@@ -357,7 +370,10 @@ public class UpdateWorkflowDAGRequest extends Request {
             } 
 
             /**
-             * Height.
+             * <p>Optional. The height of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -365,7 +381,10 @@ public class UpdateWorkflowDAGRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>Optional. The width of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -373,7 +392,10 @@ public class UpdateWorkflowDAGRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The x-coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -381,7 +403,10 @@ public class UpdateWorkflowDAGRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The y-coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -461,7 +486,62 @@ public class UpdateWorkflowDAGRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The logical expression of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;logicType&quot;: &quot;status_branch&quot;,
+             *     &quot;conditionResult&quot;: {
+             *         &quot;successList&quot;: [
+             *             {
+             *                 &quot;jobName&quot;: &quot;status-job4&quot;,
+             *                 &quot;jobId&quot;: &quot;269&quot;
+             *             }
+             *         ],
+             *         &quot;failedList&quot;: [
+             *             {
+             *                 &quot;jobName&quot;: &quot;status-job5&quot;,
+             *                 &quot;jobId&quot;: &quot;270&quot;
+             *             }
+             *         ]
+             *     },
+             *     &quot;dependence&quot;: {
+             *         &quot;relation&quot;: &quot;AND&quot;,
+             *         &quot;dependList&quot;: [
+             *             {
+             *                 &quot;relation&quot;: &quot;AND&quot;,
+             *                 &quot;dependItemList&quot;: [
+             *                     {
+             *                         &quot;jobName&quot;: &quot;status-job1&quot;,
+             *                         &quot;jobId&quot;: 265,
+             *                         &quot;status&quot;: [
+             *                             4
+             *                         ]
+             *                     },
+             *                     {
+             *                         &quot;jobName&quot;: &quot;status-job2&quot;,
+             *                         &quot;jobId&quot;: 266,
+             *                         &quot;status&quot;: [
+             *                             5
+             *                         ]
+             *                     }
+             *                 ]
+             *             },
+             *             {
+             *                 &quot;relation&quot;: &quot;AND&quot;,
+             *                 &quot;dependItemList&quot;: [
+             *                     {
+             *                         &quot;jobName&quot;: &quot;status-job3&quot;,
+             *                         &quot;jobId&quot;: 267,
+             *                         &quot;status&quot;: [
+             *                             4
+             *                         ]
+             *                     }
+             *                 ]
+             *             }
+             *         ]
+             *     }
+             * }</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -469,7 +549,7 @@ public class UpdateWorkflowDAGRequest extends Request {
             }
 
             /**
-             * Coordinate.
+             * <p>The coordinates of the node.</p>
              */
             public Builder coordinate(Coordinate coordinate) {
                 this.coordinate = coordinate;
@@ -477,7 +557,10 @@ public class UpdateWorkflowDAGRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -544,7 +627,7 @@ public class UpdateWorkflowDAGRequest extends Request {
             } 
 
             /**
-             * Edges.
+             * <p>A list of edges in the workflow.</p>
              */
             public Builder edges(java.util.List<Edges> edges) {
                 this.edges = edges;
@@ -552,7 +635,7 @@ public class UpdateWorkflowDAGRequest extends Request {
             }
 
             /**
-             * Nodes.
+             * <p>A list of nodes in the workflow.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

@@ -118,6 +118,7 @@ public class ListJobScriptHistoryRequest extends Request {
         } 
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ListJobScriptHistoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class ListJobScriptHistoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,10 @@ public class ListJobScriptHistoryRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -163,7 +169,10 @@ public class ListJobScriptHistoryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. You do not need to set this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

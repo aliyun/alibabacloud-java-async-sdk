@@ -106,7 +106,10 @@ public class GetWorkflowResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -124,7 +127,10 @@ public class GetWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +138,10 @@ public class GetWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. This ID is unique to each request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27B1345D-5F71-5972-8E4C-AABA6C6232F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +149,16 @@ public class GetWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -349,7 +367,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -357,7 +378,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Calendar.
+             * <p>The custom calendar.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workday</p>
              */
             public Builder calendar(String calendar) {
                 this.calendar = calendar;
@@ -365,7 +389,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user who created the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18582193685027xx</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -373,7 +400,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The workflow description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first workflow</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -381,7 +411,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrency.
+             * <p>The maximum concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxConcurrency(Integer maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -389,7 +422,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The workflow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myWorkflow</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -397,7 +433,16 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The workflow status.</p>
+             * <ul>
+             * <li><p>0: disabled</p>
+             * </li>
+             * <li><p>1: enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -405,7 +450,18 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * TimeExpression.
+             * <p>The time expression. The value of this parameter depends on the schedule type.</p>
+             * <ul>
+             * <li><p><strong>None</strong>: No expression is required.</p>
+             * </li>
+             * <li><p><strong>cron</strong>: A standard cron expression.</p>
+             * </li>
+             * <li><p><strong>API</strong>: No expression is required.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 12 * * ?</p>
              */
             public Builder timeExpression(String timeExpression) {
                 this.timeExpression = timeExpression;
@@ -413,7 +469,18 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * TimeType.
+             * <p>The schedule type.</p>
+             * <ul>
+             * <li><p>-1: None</p>
+             * </li>
+             * <li><p>1: cron</p>
+             * </li>
+             * <li><p>100: API</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeType(Integer timeType) {
                 this.timeType = timeType;
@@ -421,7 +488,13 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Timezone.
+             * <p>The time zone.</p>
+             * <blockquote>
+             * <p>If this parameter is omitted, the time zone of the server in the current region is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>GMT+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -429,7 +502,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Updater.
+             * <p>The user who last updated the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18582193685027xx</p>
              */
             public Builder updater(String updater) {
                 this.updater = updater;
@@ -437,7 +513,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -445,7 +524,13 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Xattrs.
+             * <p>The extended attributes.</p>
+             * <blockquote>
+             * <p>This parameter is not supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder xattrs(String xattrs) {
                 this.xattrs = xattrs;

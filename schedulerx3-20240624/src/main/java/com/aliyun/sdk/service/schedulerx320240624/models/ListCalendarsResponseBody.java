@@ -106,7 +106,10 @@ public class ListCalendarsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -115,7 +118,7 @@ public class ListCalendarsResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li></li>
+         * <li>The returned data.</li>
          * </ul>
          */
         public Builder data(Data data) {
@@ -124,7 +127,10 @@ public class ListCalendarsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +138,7 @@ public class ListCalendarsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -143,7 +149,16 @@ public class ListCalendarsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +237,10 @@ public class ListCalendarsResponseBody extends TeaModel {
             } 
 
             /**
-             * CalendarName.
+             * <p>The name of the calendar.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workday</p>
              */
             public Builder calendarName(String calendarName) {
                 this.calendarName = calendarName;
@@ -230,7 +248,23 @@ public class ListCalendarsResponseBody extends TeaModel {
             }
 
             /**
-             * Months.
+             * <p>A JSON string that represents an array of months and their corresponding days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *   {&quot;month&quot;:1,&quot;days&quot;:[1,2,3,6,7,8,9,10,13,14,15,16,17,20,21,22,23,24,27,28,29,30,31]},
+             *   {&quot;month&quot;:2,&quot;days&quot;:[3,4,5,6,7,10,11,12,13,14,17,18,19,20,21,24,25,26,27,28]},
+             *   {&quot;month&quot;:3,&quot;days&quot;:[3,4,5,6,7,10,11,12,13,14,17,18,19,20,21,24,25,26,27,28,31]},
+             *   {&quot;month&quot;:4,&quot;days&quot;:[1,2,3,4,7,8,9,10,11,14,15,16,17,18,21,22,23,24,25,28,29,30]},
+             *   {&quot;month&quot;:5,&quot;days&quot;:[1,2,5,6,7,8,9,12,13,14,15,16,19,20,21,22,23,26,27,28,29,30]},
+             *   {&quot;month&quot;:6,&quot;days&quot;:[2,3,4,5,6,9,10,11,12,13,16,17,18,19,20,23,24,25,26,27,30]},
+             *   {&quot;month&quot;:7,&quot;days&quot;:[1,2,3,4,7,8,9,10,11,14,15,16,17,18,21,22,23,24,25,28,29,30,31]},
+             *   {&quot;month&quot;:8,&quot;days&quot;:[1,4,5,6,7,8,11,12,13,14,15,18,19,20,21,22,25,26,27,28,29]},
+             *   {&quot;month&quot;:9,&quot;days&quot;:[1,2,3,4,5,8,9,10,11,12,15,16,17,18,19,22,23,24,25,26,29,30]},
+             *   {&quot;month&quot;:10,&quot;days&quot;:[1,2,3,6,7,8,9,10,13,14,15,16,17,20,21,22,23,24,27,28,29,30,31]},
+             *   {&quot;month&quot;:11,&quot;days&quot;:[3,4,5,6,7,10,11,12,13,14,17,18,19,20,21,24,25,26,27,28]},
+             *   {&quot;month&quot;:12,&quot;days&quot;:[1,2,3,4,5,8,9,10,11,12,15,16,17,18,19,22,23,24,25,26,29,30,31]}
+             * ]</p>
              */
             public Builder months(String months) {
                 this.months = months;
@@ -238,7 +272,10 @@ public class ListCalendarsResponseBody extends TeaModel {
             }
 
             /**
-             * Year.
+             * <p>The year.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025</p>
              */
             public Builder year(Integer year) {
                 this.year = year;
@@ -331,7 +368,10 @@ public class ListCalendarsResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -339,7 +379,10 @@ public class ListCalendarsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -347,7 +390,7 @@ public class ListCalendarsResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * <p>A list of calendars.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -355,7 +398,10 @@ public class ListCalendarsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(Long total) {
                 this.total = total;

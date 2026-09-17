@@ -167,6 +167,7 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
+         * <p>Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +180,10 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Maximum data volume to read in this request. Default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -188,7 +192,10 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Job Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>修正券统计数据</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -197,7 +204,10 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the current read position returned by the call. An empty value means all data has been read. This parameter is not required for the first query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -206,7 +216,10 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -215,7 +228,10 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +240,10 @@ public class ListDatasourcesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Grafana dashboard type, including: dash-db: Dashboard; dash-folder: Folder (which can contain dashboards).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REDIS</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

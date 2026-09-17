@@ -149,6 +149,7 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +162,7 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,10 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -182,7 +187,10 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);

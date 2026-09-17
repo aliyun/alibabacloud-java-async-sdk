@@ -224,7 +224,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -233,10 +236,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * <p>The name of the cluster.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>qianxi-test-0812</p>
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
@@ -245,7 +246,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterSpec.
+         * <p>The cluster specification. Valid values:</p>
+         * <ul>
+         * <li>scx.dev.x1</li>
+         * <li>scx.small.x1</li>
+         * <li>scx.small.x2</li>
+         * <li>scx.medium.x1</li>
+         * <li>scx.medium.x2.</li>
+         * </ul>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("ClusterSpec", clusterSpec);
@@ -254,7 +262,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * <p>The cluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clusterType(Integer clusterType) {
             this.putBodyParameter("ClusterType", clusterType);
@@ -263,7 +274,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -272,7 +286,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The engine type. Valid values: xxljob.</p>
          */
         public Builder engineType(String engineType) {
             this.putBodyParameter("EngineType", engineType);
@@ -281,7 +295,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The pricing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
@@ -290,7 +307,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);
@@ -299,7 +319,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags. A maximum of 20 tags are supported.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -308,7 +328,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * VSwitches.
+         * <p>The information about the vSwitches.</p>
          */
         public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             String vSwitchesShrink = shrink(vSwitches, "VSwitches", "json");
@@ -318,10 +338,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>VPC id</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-aa1a18236n90rqhuhhnhh</p>
+         * <p>The ID of the VPC.</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -389,7 +406,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -397,7 +414,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -464,7 +481,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch.</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -472,7 +489,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the vSwitch.</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

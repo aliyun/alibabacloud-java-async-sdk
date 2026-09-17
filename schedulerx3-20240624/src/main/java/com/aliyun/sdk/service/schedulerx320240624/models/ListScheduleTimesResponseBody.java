@@ -106,7 +106,10 @@ public class ListScheduleTimesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. <code>200</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListScheduleTimesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>A list of the scheduled times.</p>
          */
         public Builder data(java.util.List<String> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListScheduleTimesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. The value is <code>success</code> if the request succeeds, or an error message if it fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter check error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListScheduleTimesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request. Use this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A48E22F-F30A-5CE5-AC7A-E0FED1B6942E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,16 @@ public class ListScheduleTimesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

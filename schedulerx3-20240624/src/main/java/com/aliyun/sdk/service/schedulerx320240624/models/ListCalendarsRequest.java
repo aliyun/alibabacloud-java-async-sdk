@@ -153,7 +153,10 @@ public class ListCalendarsRequest extends Request {
         }
 
         /**
-         * CalendarName.
+         * <p>The name of the calendar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workday</p>
          */
         public Builder calendarName(String calendarName) {
             this.putQueryParameter("CalendarName", calendarName);
@@ -162,6 +165,7 @@ public class ListCalendarsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +178,16 @@ public class ListCalendarsRequest extends Request {
         }
 
         /**
-         * FetchCalendarDetail.
+         * <p>Specifies whether to return calendar details. The default value is <code>false</code>.</p>
+         * <ul>
+         * <li><p><code>false</code>: Does not return the detailed list of days for each month. Only basic information is returned.</p>
+         * </li>
+         * <li><p><code>true</code>: Returns the detailed list of days for each month.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fetchCalendarDetail(Boolean fetchCalendarDetail) {
             this.putQueryParameter("FetchCalendarDetail", fetchCalendarDetail);
@@ -183,7 +196,10 @@ public class ListCalendarsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned per page. The default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -192,7 +208,10 @@ public class ListCalendarsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. Set this parameter to the <code>NextToken</code> value from the previous response. Omit this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -201,7 +220,10 @@ public class ListCalendarsRequest extends Request {
         }
 
         /**
-         * Year.
+         * <p>The year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         public Builder year(Integer year) {
             this.putQueryParameter("Year", year);

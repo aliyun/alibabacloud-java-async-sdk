@@ -103,6 +103,7 @@ public class UpdateExecutorsRequest extends Request {
         } 
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateExecutorsRequest extends Request {
         }
 
         /**
+         * <p>The Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class UpdateExecutorsRequest extends Request {
         }
 
         /**
-         * WorkerType.
+         * <p>The Worker type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s_service</p>
          */
         public Builder workerType(String workerType) {
             this.putBodyParameter("WorkerType", workerType);
@@ -136,7 +141,10 @@ public class UpdateExecutorsRequest extends Request {
         }
 
         /**
-         * Workers.
+         * <p>A JSON-formatted string that contains a list of Workers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
          */
         public Builder workers(String workers) {
             this.putBodyParameter("Workers", workers);

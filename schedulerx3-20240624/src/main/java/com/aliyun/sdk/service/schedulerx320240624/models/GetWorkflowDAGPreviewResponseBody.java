@@ -106,7 +106,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,7 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique identifier for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B8733786-C045-59F1-8D79-99A52863F62D</p>
@@ -141,7 +147,16 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +222,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             } 
 
             /**
-             * Source.
+             * <p>The ID of the source node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder source(Long source) {
                 this.source = source;
@@ -215,7 +233,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The ID of the target node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder target(Long target) {
                 this.target = target;
@@ -308,7 +329,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             } 
 
             /**
-             * Height.
+             * <p>The node height. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -316,7 +340,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The node width. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -324,7 +351,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The x-coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -332,7 +362,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -464,7 +497,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>settle-job</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -472,7 +508,7 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * Coordinate.
+             * <p>The node coordinates.</p>
              */
             public Builder coordinate(Coordinate coordinate) {
                 this.coordinate = coordinate;
@@ -480,7 +516,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * DependentStrategy.
+             * <p>The dependency strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all_success</p>
              */
             public Builder dependentStrategy(Integer dependentStrategy) {
                 this.dependentStrategy = dependentStrategy;
@@ -488,7 +527,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -496,7 +538,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The job type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>script_shell</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -504,7 +549,10 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -512,7 +560,16 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li><p><code>0</code>: Disabled</p>
+             * </li>
+             * <li><p><code>1</code>: Enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -579,7 +636,7 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             } 
 
             /**
-             * Edges.
+             * <p>The workflow edges.</p>
              */
             public Builder edges(java.util.List<Edges> edges) {
                 this.edges = edges;
@@ -587,7 +644,7 @@ public class GetWorkflowDAGPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * <p>The workflow nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

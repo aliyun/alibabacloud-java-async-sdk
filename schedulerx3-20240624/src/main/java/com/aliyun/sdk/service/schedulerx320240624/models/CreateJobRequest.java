@@ -482,6 +482,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -494,7 +495,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * AttemptInterval.
+         * <p>The retry interval upon failure. Unit: seconds. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder attemptInterval(Integer attemptInterval) {
             this.putBodyParameter("AttemptInterval", attemptInterval);
@@ -503,7 +507,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Calendar.
+         * <p>The custom calendar. This parameter is optional for the cron time type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workday</p>
          */
         public Builder calendar(String calendar) {
             this.putBodyParameter("Calendar", calendar);
@@ -512,7 +519,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * ChildJobId.
+         * <p>The child node IDs. Separate multiple IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder childJobId(String childJobId) {
             this.putBodyParameter("ChildJobId", childJobId);
@@ -521,6 +531,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -533,7 +544,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Coordinate.
+         * <p>The node coordinate in the workflow.</p>
          */
         public Builder coordinate(Coordinate coordinate) {
             String coordinateShrink = shrink(coordinate, "Coordinate", "json");
@@ -543,7 +554,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * DependentStrategy.
+         * <p>The dependency strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dependentStrategy(Integer dependentStrategy) {
             this.putBodyParameter("DependentStrategy", dependentStrategy);
@@ -552,7 +566,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The node description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -561,7 +578,15 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * ExecutorBlockStrategy.
+         * <p>The client blocking strategy. Valid values:</p>
+         * <ul>
+         * <li>1: serial execution on a single machine</li>
+         * <li>2: ignore subsequent scheduling</li>
+         * <li>3: override previous scheduling</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder executorBlockStrategy(Integer executorBlockStrategy) {
             this.putBodyParameter("ExecutorBlockStrategy", executorBlockStrategy);
@@ -570,7 +595,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * JobHandler.
+         * <p>The jobhandler name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testJobVoidHandler</p>
          */
         public Builder jobHandler(String jobHandler) {
             this.putBodyParameter("JobHandler", jobHandler);
@@ -579,6 +607,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The node type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -591,7 +620,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The node label information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{key:value}</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -600,7 +632,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * MaxAttempt.
+         * <p>The maximum number of retry attempts upon failure. Set this parameter based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxAttempt(Integer maxAttempt) {
             this.putBodyParameter("MaxAttempt", maxAttempt);
@@ -609,7 +644,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * <p>The maximum number of concurrent instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putBodyParameter("MaxConcurrency", maxConcurrency);
@@ -618,6 +656,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The node name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -630,7 +669,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * NoticeConfig.
+         * <p>The notification configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder noticeConfig(NoticeConfig noticeConfig) {
             String noticeConfigShrink = shrink(noticeConfig, "NoticeConfig", "json");
@@ -640,7 +682,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * NoticeContacts.
+         * <p>The notification contact configuration.</p>
          */
         public Builder noticeContacts(java.util.List<NoticeContacts> noticeContacts) {
             String noticeContactsShrink = shrink(noticeContacts, "NoticeContacts", "json");
@@ -650,7 +692,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The node parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);
@@ -659,7 +704,16 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority. Valid values:</p>
+         * <ul>
+         * <li>1: low</li>
+         * <li>5: medium</li>
+         * <li>10: high</li>
+         * <li>15: very high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -668,7 +722,20 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * RouteStrategy.
+         * <p>The routing strategy. Valid values:</p>
+         * <ul>
+         * <li>1: round robin</li>
+         * <li>2: random</li>
+         * <li>3: first</li>
+         * <li>4: last</li>
+         * <li>5: least frequently used</li>
+         * <li>6: least recently used</li>
+         * <li>7: consistent hashing</li>
+         * <li>8: shard broadcast</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder routeStrategy(Integer routeStrategy) {
             this.putBodyParameter("RouteStrategy", routeStrategy);
@@ -677,7 +744,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Script.
+         * <p>The script content for non-BEAN node types. Use this field to pass the script content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo &quot;hello world&quot;</p>
          */
         public Builder script(String script) {
             this.putBodyParameter("Script", script);
@@ -686,7 +756,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1701310327000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -695,7 +768,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * StartTimeType.
+         * <p>The start time type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder startTimeType(Integer startTimeType) {
             this.putBodyParameter("StartTimeType", startTimeType);
@@ -704,7 +780,14 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The node status. Default value: enabled. Valid values:</p>
+         * <ul>
+         * <li>0: disabled</li>
+         * <li>1: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -713,7 +796,17 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * TimeExpression.
+         * <p>The time expression. Set this parameter based on the selected time type.</p>
+         * <ul>
+         * <li><strong>none</strong>: No value is required.</li>
+         * <li><strong>cron</strong>: Specify a standard cron expression. Online verification is supported.</li>
+         * <li><strong>api</strong>: No value is required.</li>
+         * <li><strong>fixed_rate</strong>: Specify a fixed frequency value in seconds. For example, 200 indicates that the node is triggered every 200 seconds.</li>
+         * <li><strong>one_time</strong>: Specify a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 4 ? * Mon/1</p>
          */
         public Builder timeExpression(String timeExpression) {
             this.putBodyParameter("TimeExpression", timeExpression);
@@ -722,6 +815,14 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The time type. Valid values:</p>
+         * <ul>
+         * <li>-1: none<br/></li>
+         * <li>1: cron<br/></li>
+         * <li>3: fix_rate<br/></li>
+         * <li>5: one_time<br/></li>
+         * <li>100: api</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -734,7 +835,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Timezone.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GMT+8</p>
          */
         public Builder timezone(String timezone) {
             this.putBodyParameter("Timezone", timezone);
@@ -743,7 +847,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * Weight.
+         * <p>The node weight.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder weight(Integer weight) {
             this.putBodyParameter("Weight", weight);
@@ -752,7 +859,12 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * XAttrs.
+         * <p>The configuration for K8s node types. This parameter is required for K8s node types.
+         * Job node: {&quot;resource&quot;:&quot;job&quot;}
+         * Shell node: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;resource&quot;:&quot;job&quot;}</p>
          */
         public Builder xAttrs(String xAttrs) {
             this.putBodyParameter("XAttrs", xAttrs);
@@ -846,7 +958,10 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.0</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -854,7 +969,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -862,7 +980,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -870,7 +991,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y coordinate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -1041,7 +1165,10 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * EndEarly.
+             * <p>The early completion threshold. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder endEarly(Integer endEarly) {
                 this.endEarly = endEarly;
@@ -1049,7 +1176,7 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * EndEarlyEnable.
+             * <p>Specifies whether to enable the early completion alert.</p>
              */
             public Builder endEarlyEnable(Boolean endEarlyEnable) {
                 this.endEarlyEnable = endEarlyEnable;
@@ -1057,7 +1184,14 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * FailEnable.
+             * <p>Specifies whether to enable the failure alert. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder failEnable(Boolean failEnable) {
                 this.failEnable = failEnable;
@@ -1065,7 +1199,13 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * FailLimitTimes.
+             * <p>The number of consecutive failures.</p>
+             * <blockquote>
+             * <p>An alert is sent only when the number of consecutive failures exceeds the configured value.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failLimitTimes(Integer failLimitTimes) {
                 this.failLimitTimes = failLimitTimes;
@@ -1073,7 +1213,14 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * MissWorkerEnable.
+             * <p>Specifies whether to enable the no-available-machine alert. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder missWorkerEnable(Boolean missWorkerEnable) {
                 this.missWorkerEnable = missWorkerEnable;
@@ -1081,7 +1228,19 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * SendChannel.
+             * <p>The notification channel. Valid values:</p>
+             * <ul>
+             * <li>sms: SMS</li>
+             * <li>phone: phone call</li>
+             * <li>mail: email</li>
+             * <li>webhook: webhook<blockquote>
+             * <p>Separate multiple notification channels with commas.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mail</p>
              */
             public Builder sendChannel(String sendChannel) {
                 this.sendChannel = sendChannel;
@@ -1089,7 +1248,14 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * SuccessNotice.
+             * <p>Specifies whether to enable the success notification. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder successNotice(Boolean successNotice) {
                 this.successNotice = successNotice;
@@ -1097,7 +1263,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1105,7 +1274,16 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * TimeoutEnable.
+             * <p>Specifies whether to enable the timeout alert. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder timeoutEnable(Boolean timeoutEnable) {
                 this.timeoutEnable = timeoutEnable;
@@ -1113,7 +1291,14 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * TimeoutKillEnable.
+             * <p>Specifies whether to enable the timeout termination. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder timeoutKillEnable(Boolean timeoutKillEnable) {
                 this.timeoutKillEnable = timeoutKillEnable;
@@ -1180,7 +1365,16 @@ public class CreateJobRequest extends Request {
             } 
 
             /**
-             * ContactType.
+             * <p>The Notification Recipient type. Valid values:</p>
+             * <ul>
+             * <li><p>1: alert contact</p>
+             * </li>
+             * <li><p>2: alert contact group</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder contactType(Integer contactType) {
                 this.contactType = contactType;
@@ -1188,10 +1382,10 @@ public class CreateJobRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the alert contact or alert contact group.</p>
              * 
              * <strong>example:</strong>
-             * <p>test-job</p>
+             * <p>xiaoming</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -140,6 +140,7 @@ public class ListK8sResourceRequest extends Request {
         }
 
         /**
+         * <p>The Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class ListK8sResourceRequest extends Request {
         }
 
         /**
-         * K8sClusterId.
+         * <p>The ID of the Kubernetes cluster used for synchronizing namespaces. The cluster is added to the service mesh specified by ServiceMeshId. This parameter is required when you query a k8s namespace or a k8s service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cadb451ed7af04b0297f4be396a2196fc</p>
          */
         public Builder k8sClusterId(String k8sClusterId) {
             this.putQueryParameter("K8sClusterId", k8sClusterId);
@@ -161,7 +165,10 @@ public class ListK8sResourceRequest extends Request {
         }
 
         /**
-         * K8sNamespace.
+         * <p>The name of the namespace in the k8s cluster. This parameter is required when you query a k8s service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder k8sNamespace(String k8sNamespace) {
             this.putQueryParameter("K8sNamespace", k8sNamespace);
@@ -170,6 +177,7 @@ public class ListK8sResourceRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +190,10 @@ public class ListK8sResourceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID. This parameter is required if ResourceType is set to \&quot;cluster\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-aa1a18236n90rqhuhhnhh</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

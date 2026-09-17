@@ -178,6 +178,7 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +191,7 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +204,10 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
-         * InstanceParameters.
+         * <p>The instance parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name=zhangsan</p>
          */
         public Builder instanceParameters(String instanceParameters) {
             this.putBodyParameter("InstanceParameters", instanceParameters);
@@ -211,6 +216,7 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +229,10 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The label of the specified machine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -232,7 +241,10 @@ public class OperateExecuteJobRequest extends Request {
         }
 
         /**
-         * Worker.
+         * <p>The workerAddr of the specified machine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://192.168.***.5:9999/">http://192.168.***.5:9999/</a></p>
          */
         public Builder worker(String worker) {
             this.putBodyParameter("Worker", worker);

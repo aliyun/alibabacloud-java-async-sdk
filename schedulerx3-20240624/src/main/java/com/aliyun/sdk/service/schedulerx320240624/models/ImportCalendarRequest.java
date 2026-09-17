@@ -128,6 +128,7 @@ public class ImportCalendarRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class ImportCalendarRequest extends Request {
         }
 
         /**
+         * <p>The days of each month, in JSON format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class ImportCalendarRequest extends Request {
         }
 
         /**
+         * <p>The name of the calendar.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class ImportCalendarRequest extends Request {
         }
 
         /**
+         * <p>The year.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

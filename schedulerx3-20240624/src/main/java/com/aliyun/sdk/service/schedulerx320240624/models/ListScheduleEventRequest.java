@@ -265,7 +265,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -274,6 +277,7 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
+         * <p>The Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +290,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query events. This is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1728872796295</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -295,7 +302,26 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * Event.
+         * <p>The event status to filter by. Valid values:</p>
+         * <ul>
+         * <li><p>Scheduled</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Succeeded</p>
+         * </li>
+         * <li><p>Failed</p>
+         * </li>
+         * <li><p>Failing_Auto_Retry</p>
+         * </li>
+         * <li><p>Skip_Schedule</p>
+         * </li>
+         * <li><p>Execute_Log</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed</p>
          */
         public Builder event(String event) {
             this.putQueryParameter("Event", event);
@@ -304,7 +330,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * EventType.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JOB | WORKFLOW</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -313,7 +342,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * JobExecutionId.
+         * <p>The job execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310630367761285120</p>
          */
         public Builder jobExecutionId(String jobExecutionId) {
             this.putQueryParameter("JobExecutionId", jobExecutionId);
@@ -322,7 +354,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-job</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -331,7 +366,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello word</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -340,7 +378,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -349,7 +390,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of events to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -358,7 +402,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Specifies whether to sort the results in descending order. Set to <code>true</code> for descending order or <code>false</code> for ascending order. Default is <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -367,7 +414,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query events. This is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581317873000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -376,7 +426,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * WorkflowExecutionId.
+         * <p>The workflow execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1450568762586578000</p>
          */
         public Builder workflowExecutionId(Long workflowExecutionId) {
             this.putQueryParameter("WorkflowExecutionId", workflowExecutionId);
@@ -385,7 +438,10 @@ public class ListScheduleEventRequest extends Request {
         }
 
         /**
-         * WorkflowName.
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>流程001</p>
          */
         public Builder workflowName(String workflowName) {
             this.putQueryParameter("WorkflowName", workflowName);

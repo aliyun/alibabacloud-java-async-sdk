@@ -113,6 +113,7 @@ public class OperateDisableWorkflowsRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class OperateDisableWorkflowsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class OperateDisableWorkflowsRequest extends Request {
         }
 
         /**
+         * <p>A list of workflow IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder workflowIds(java.util.List<Long> workflowIds) {

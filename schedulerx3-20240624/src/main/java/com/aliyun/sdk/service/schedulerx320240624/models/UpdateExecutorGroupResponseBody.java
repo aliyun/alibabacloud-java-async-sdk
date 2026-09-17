@@ -114,9 +114,7 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -132,10 +130,7 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>C78E2AD2-5985-515B-BAD2-31A248AFC263</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

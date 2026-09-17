@@ -133,7 +133,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of <code>200</code> indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -151,7 +154,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -159,6 +165,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The response message. If the request fails, this parameter provides details about the error.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +177,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -178,7 +188,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique request ID. Use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</p>
@@ -189,7 +199,16 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -359,7 +378,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -367,7 +389,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * DataTime.
+             * <p>The data time of the workflow execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-12 14:52:42</p>
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -375,7 +400,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the workflow execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-12 14:52:42</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -383,7 +411,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Executor.
+             * <p>The executor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1827811800526000</p>
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -391,7 +422,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * <p>The schedule time of the workflow execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-12 14:52:42</p>
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -399,7 +433,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the workflow execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-04 01:09:27</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -407,7 +444,38 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the workflow execution. Valid values:</p>
+             * <ul>
+             * <li><p>0: UNKNOWN</p>
+             * </li>
+             * <li><p>1: WAITING</p>
+             * </li>
+             * <li><p>2: READY</p>
+             * </li>
+             * <li><p>3: RUNNING</p>
+             * </li>
+             * <li><p>4: SUCCESS</p>
+             * </li>
+             * <li><p>5: FAILED</p>
+             * </li>
+             * <li><p>6: PAUSED</p>
+             * </li>
+             * <li><p>7: SUBMITTED</p>
+             * </li>
+             * <li><p>8: REJECTED</p>
+             * </li>
+             * <li><p>9: ACCEPTED</p>
+             * </li>
+             * <li><p>10: PARTIAL_FAILED</p>
+             * </li>
+             * <li><p>11: SKIPPED</p>
+             * </li>
+             * <li><p>12: REMOVED</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -415,7 +483,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowExecutionId.
+             * <p>The workflow execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder workflowExecutionId(String workflowExecutionId) {
                 this.workflowExecutionId = workflowExecutionId;
@@ -423,7 +494,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder workflowId(String workflowId) {
                 this.workflowId = workflowId;
@@ -431,7 +505,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowName.
+             * <p>The workflow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myWorkflow</p>
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;
@@ -524,7 +601,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -532,7 +612,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -550,7 +633,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of matching workflow executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

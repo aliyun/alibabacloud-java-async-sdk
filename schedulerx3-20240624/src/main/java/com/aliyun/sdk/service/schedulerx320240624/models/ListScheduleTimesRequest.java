@@ -156,6 +156,7 @@ public class ListScheduleTimesRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +169,10 @@ public class ListScheduleTimesRequest extends Request {
         }
 
         /**
-         * Calendar.
+         * <p>The name of the calendar to use for scheduling, such as a business day calendar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workday</p>
          */
         public Builder calendar(String calendar) {
             this.putQueryParameter("Calendar", calendar);
@@ -177,6 +181,7 @@ public class ListScheduleTimesRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +194,7 @@ public class ListScheduleTimesRequest extends Request {
         }
 
         /**
+         * <p>The time expression, such as a cron expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,6 +207,10 @@ public class ListScheduleTimesRequest extends Request {
         }
 
         /**
+         * <p>The time type. The only supported type is cron.</p>
+         * <ul>
+         * <li>1: cron</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +223,10 @@ public class ListScheduleTimesRequest extends Request {
         }
 
         /**
-         * TimeZone.
+         * <p>The time zone used to evaluate the time expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Beijing</p>
          */
         public Builder timeZone(String timeZone) {
             this.putQueryParameter("TimeZone", timeZone);

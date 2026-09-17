@@ -112,7 +112,11 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxljob-c20f7ec9a78</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -121,7 +125,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx-test-1107</p>
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);

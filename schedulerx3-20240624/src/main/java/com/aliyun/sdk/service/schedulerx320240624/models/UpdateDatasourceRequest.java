@@ -154,6 +154,7 @@ public class UpdateDatasourceRequest extends Request {
         }
 
         /**
+         * <p>Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,10 @@ public class UpdateDatasourceRequest extends Request {
         }
 
         /**
-         * ConnectionParams.
+         * <p>Data source connection parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;host&quot;:&quot;rm-bp1f03mxxxxx.mysql.rds.aliyuncs.com&quot;,&quot;port&quot;:3306,&quot;userName&quot;:&quot;test01&quot;,&quot;database&quot;:&quot;test01&quot;,&quot;other&quot;:{&quot;useSSL&quot;:&quot;false&quot;}}</p>
          */
         public Builder connectionParams(String connectionParams) {
             this.putBodyParameter("ConnectionParams", connectionParams);
@@ -175,6 +179,7 @@ public class UpdateDatasourceRequest extends Request {
         }
 
         /**
+         * <p>DataSource ID, which can be obtained by calling the ListDatasources API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +192,10 @@ public class UpdateDatasourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Data source description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -196,7 +204,10 @@ public class UpdateDatasourceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Datasource Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>账单拉取-支付宝团购</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -205,7 +216,10 @@ public class UpdateDatasourceRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>Database password</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F9e9@a69c!e18b569c8</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);

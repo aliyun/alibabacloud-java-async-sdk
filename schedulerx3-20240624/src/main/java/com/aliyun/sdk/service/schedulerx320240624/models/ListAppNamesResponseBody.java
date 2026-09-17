@@ -106,7 +106,10 @@ public class ListAppNamesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +125,10 @@ public class ListAppNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListAppNamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID. Use this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3881C59F-59F1-5B2E-8110-7D689CA9B207</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,16 @@ public class ListAppNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates if the request succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +274,10 @@ public class ListAppNamesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppGroupId.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appGroupId(String appGroupId) {
                 this.appGroupId = appGroupId;
@@ -264,7 +285,10 @@ public class ListAppNamesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -272,7 +296,10 @@ public class ListAppNamesResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * <p>The app type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appType(Integer appType) {
                 this.appType = appType;
@@ -280,7 +307,10 @@ public class ListAppNamesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -288,7 +318,10 @@ public class ListAppNamesResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The application title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试应用</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -296,7 +329,10 @@ public class ListAppNamesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerRegistry.
+             * <p>The registry type for manually registered workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s_service</p>
              */
             public Builder workerRegistry(String workerRegistry) {
                 this.workerRegistry = workerRegistry;

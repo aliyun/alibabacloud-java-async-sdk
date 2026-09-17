@@ -135,6 +135,7 @@ public class OperateEnableJobsRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +148,7 @@ public class OperateEnableJobsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,9 +161,7 @@ public class OperateEnableJobsRequest extends Request {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * JobIds.
          */
         public Builder jobIds(java.util.List<Long> jobIds) {
             String jobIdsShrink = shrink(jobIds, "JobIds", "json");

@@ -127,6 +127,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The Application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +153,10 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
-         * DeleteJobs.
+         * <p>Specifies whether to delete all Jobs in the Workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteJobs(Boolean deleteJobs) {
             this.putBodyParameter("DeleteJobs", deleteJobs);
@@ -160,6 +165,7 @@ public class DeleteWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The Workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

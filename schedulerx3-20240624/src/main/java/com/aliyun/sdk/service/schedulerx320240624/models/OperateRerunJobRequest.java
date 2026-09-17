@@ -181,6 +181,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +194,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,6 +207,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
+         * <p>The data timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +220,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +233,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +246,7 @@ public class OperateRerunJobRequest extends Request {
         }
 
         /**
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

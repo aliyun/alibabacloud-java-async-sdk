@@ -209,7 +209,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -218,6 +221,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +234,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my first workflow</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -239,7 +246,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. The default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -248,7 +258,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myWorkflow</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -257,7 +270,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If the return value is empty, no more data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -266,7 +282,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -275,7 +294,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -284,7 +306,16 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the workflow. If this parameter is not specified, workflows in the <code>disabled</code> state are returned by default. Valid values:</p>
+         * <ul>
+         * <li><p><code>0</code>: disabled</p>
+         * </li>
+         * <li><p><code>1</code>: enabled</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -293,7 +324,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

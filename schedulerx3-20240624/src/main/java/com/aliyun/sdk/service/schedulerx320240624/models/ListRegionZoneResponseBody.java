@@ -119,7 +119,10 @@ public class ListRegionZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -137,7 +140,10 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IllegalRequest</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -145,7 +151,10 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter check error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +162,10 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>438737AC-760A-57D9-B646-B7EF79426243</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +173,14 @@ public class ListRegionZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the invocation succeeded.</p>
+         * <ul>
+         * <li><strong>true</strong>: The invocation succeeded.</li>
+         * <li><strong>false</strong>: Failed to invoke.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,7 +246,10 @@ public class ListRegionZoneResponseBody extends TeaModel {
             } 
 
             /**
-             * LocalName.
+             * <p>Local name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;

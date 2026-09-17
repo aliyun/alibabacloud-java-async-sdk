@@ -128,6 +128,9 @@ public class CreateContactRequest extends Request {
         /**
          * <p>联系人名称（用户自定义，用于展示），同一用户下不可重名</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>陈睿</p>
          */
         public Builder contactName(String contactName) {
             this.putBodyParameter("ContactName", contactName);

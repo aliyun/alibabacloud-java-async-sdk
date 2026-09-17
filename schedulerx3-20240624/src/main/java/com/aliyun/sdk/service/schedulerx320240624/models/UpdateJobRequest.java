@@ -469,7 +469,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * AppGroupId.
+         * <p>The application ID.</p>
          */
         public Builder appGroupId(Long appGroupId) {
             this.putBodyParameter("AppGroupId", appGroupId);
@@ -478,6 +478,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -490,7 +491,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * AttemptInterval.
+         * <p>The retry interval upon node failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder attemptInterval(Integer attemptInterval) {
             this.putBodyParameter("AttemptInterval", attemptInterval);
@@ -499,7 +503,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Calendar.
+         * <p>The custom calendar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workday</p>
          */
         public Builder calendar(String calendar) {
             this.putBodyParameter("Calendar", calendar);
@@ -508,7 +515,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * ChildJobId.
+         * <p>The child node IDs, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder childJobId(String childJobId) {
             this.putBodyParameter("ChildJobId", childJobId);
@@ -517,6 +527,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -529,7 +540,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * DependentStrategy.
+         * <p>The dependency strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dependentStrategy(Integer dependentStrategy) {
             this.putBodyParameter("DependentStrategy", dependentStrategy);
@@ -538,7 +552,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The node description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -547,7 +564,15 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * ExecutorBlockStrategy.
+         * <p>The client blocking strategy. Valid values:</p>
+         * <ul>
+         * <li>1: serial execution on a single machine</li>
+         * <li>2: ignore subsequent scheduling</li>
+         * <li>3: override previous scheduling</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder executorBlockStrategy(Integer executorBlockStrategy) {
             this.putBodyParameter("ExecutorBlockStrategy", executorBlockStrategy);
@@ -556,7 +581,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * JobHandler.
+         * <p>The jobhandler name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testJobVoidHandler</p>
          */
         public Builder jobHandler(String jobHandler) {
             this.putBodyParameter("JobHandler", jobHandler);
@@ -565,6 +593,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -577,7 +606,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The node label information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{key:value}</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -586,7 +618,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * MaxAttempt.
+         * <p>The maximum number of retry attempts upon node failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxAttempt(Integer maxAttempt) {
             this.putBodyParameter("MaxAttempt", maxAttempt);
@@ -595,7 +630,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * <p>The maximum concurrency of the node.</p>
+         * <blockquote>
+         * <p>The maximum number of instances that can run simultaneously for the same node. A value of 1 indicates that repeated execution is not allowed. If the concurrency limit is exceeded, the current scheduling is skipped.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putBodyParameter("MaxConcurrency", maxConcurrency);
@@ -604,7 +645,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-job</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -613,7 +657,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * NoticeConfig.
+         * <p>The notification configuration.</p>
          */
         public Builder noticeConfig(NoticeConfig noticeConfig) {
             String noticeConfigShrink = shrink(noticeConfig, "NoticeConfig", "json");
@@ -623,7 +667,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * NoticeContacts.
+         * <p>The notification contact configuration.</p>
          */
         public Builder noticeContacts(java.util.List<NoticeContacts> noticeContacts) {
             String noticeContactsShrink = shrink(noticeContacts, "NoticeContacts", "json");
@@ -633,7 +677,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The node parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);
@@ -642,7 +689,16 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The execution priority of the node. Valid values:</p>
+         * <ul>
+         * <li>1: low</li>
+         * <li>5: medium</li>
+         * <li>10: high</li>
+         * <li>15: very high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -651,7 +707,20 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * RouteStrategy.
+         * <p>The routing strategy. Valid values:</p>
+         * <ul>
+         * <li>1: round robin</li>
+         * <li>2: random</li>
+         * <li>3: first</li>
+         * <li>4: last</li>
+         * <li>5: least frequently used</li>
+         * <li>6: least recently used</li>
+         * <li>7: consistent hashing</li>
+         * <li>8: shard broadcast</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder routeStrategy(Integer routeStrategy) {
             this.putBodyParameter("RouteStrategy", routeStrategy);
@@ -660,7 +729,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Script.
+         * <p>The script configured for non-BEAN nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo &quot;hello world&quot;</p>
          */
         public Builder script(String script) {
             this.putBodyParameter("Script", script);
@@ -669,7 +741,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The scheduling start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1716902187</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -678,7 +753,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * StartTimeType.
+         * <p>The start time type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder startTimeType(String startTimeType) {
             this.putBodyParameter("StartTimeType", startTimeType);
@@ -687,7 +765,17 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * TimeExpression.
+         * <p>The time expression. Set the time expression based on the selected time type.</p>
+         * <ul>
+         * <li>none: No value is required.</li>
+         * <li>cron: Enter a standard cron expression. Online verification is supported.</li>
+         * <li>api: No value is required.</li>
+         * <li>fixed_rate: Enter a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
+         * <li>one_time: Enter a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 4 ? * Mon/1</p>
          */
         public Builder timeExpression(String timeExpression) {
             this.putBodyParameter("TimeExpression", timeExpression);
@@ -696,7 +784,17 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * TimeType.
+         * <p>The time type. Valid values:</p>
+         * <ul>
+         * <li>-1: none</li>
+         * <li>1: cron</li>
+         * <li>3: fix_rate</li>
+         * <li>5: one_time</li>
+         * <li>100: api</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeType(Integer timeType) {
             this.putBodyParameter("TimeType", timeType);
@@ -705,7 +803,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Timezone.
+         * <p>The time zone.</p>
+         * <blockquote>
+         * <p>Default value: the time zone of the SchedulerX server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Hongkong</p>
          */
         public Builder timezone(String timezone) {
             this.putBodyParameter("Timezone", timezone);
@@ -714,7 +818,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Weight.
+         * <p>The node weight.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder weight(Integer weight) {
             this.putBodyParameter("Weight", weight);
@@ -723,7 +830,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * XAttrs.
+         * <p>The extended properties of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;reponseMode&quot;:&quot;streaming&quot;}</p>
          */
         public Builder xAttrs(String xAttrs) {
             this.putBodyParameter("XAttrs", xAttrs);
@@ -895,7 +1005,10 @@ public class UpdateJobRequest extends Request {
             } 
 
             /**
-             * EndEarly.
+             * <p>The early completion threshold, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder endEarly(Integer endEarly) {
                 this.endEarly = endEarly;
@@ -903,7 +1016,7 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * EndEarlyEnable.
+             * <p>Specifies whether to enable the early completion alert.</p>
              */
             public Builder endEarlyEnable(Boolean endEarlyEnable) {
                 this.endEarlyEnable = endEarlyEnable;
@@ -911,7 +1024,14 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * FailEnable.
+             * <p>Specifies whether to enable the failure alert. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enables the failure alert.</li>
+             * <li><strong>false</strong>: Disables the failure alert.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder failEnable(Boolean failEnable) {
                 this.failEnable = failEnable;
@@ -919,7 +1039,13 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * FailLimitTimes.
+             * <p>The number of consecutive failures.</p>
+             * <blockquote>
+             * <p>An alert is sent only when the number of consecutive failures exceeds the configured value.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder failLimitTimes(Integer failLimitTimes) {
                 this.failLimitTimes = failLimitTimes;
@@ -927,7 +1053,14 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * MissWorkerEnable.
+             * <p>Specifies whether to enable the no-available-machine alert. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enables the no-available-machine alert.</li>
+             * <li><strong>false</strong>: Disables the no-available-machine alert.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder missWorkerEnable(Boolean missWorkerEnable) {
                 this.missWorkerEnable = missWorkerEnable;
@@ -935,7 +1068,19 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * SendChannel.
+             * <p>The notification channel. Valid values:</p>
+             * <ul>
+             * <li>sms: SMS</li>
+             * <li>phone: phone call</li>
+             * <li>mail: email</li>
+             * <li>webhook: webhook<blockquote>
+             * <p>Separate multiple notification channels with commas.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>webhook,sms,mail,phone</p>
              */
             public Builder sendChannel(String sendChannel) {
                 this.sendChannel = sendChannel;
@@ -943,7 +1088,14 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * SuccessNotice.
+             * <p>Specifies whether to enable the success notification. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder successNotice(Boolean successNotice) {
                 this.successNotice = successNotice;
@@ -951,7 +1103,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>The node execution timeout period, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -959,7 +1114,16 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * TimeoutEnable.
+             * <p>Specifies whether to enable the timeout alert. Valid values:</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder timeoutEnable(Boolean timeoutEnable) {
                 this.timeoutEnable = timeoutEnable;
@@ -967,7 +1131,14 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * TimeoutKillEnable.
+             * <p>Specifies whether to enable the timeout termination for the current trigger. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enables the timeout termination.</li>
+             * <li><strong>false</strong>: Disables the timeout termination.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder timeoutKillEnable(Boolean timeoutKillEnable) {
                 this.timeoutKillEnable = timeoutKillEnable;
@@ -1034,7 +1205,13 @@ public class UpdateJobRequest extends Request {
             } 
 
             /**
-             * ContactType.
+             * <p>The contact type. </p>
+             * <blockquote>
+             * <p>Default configurations: 1.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder contactType(Integer contactType) {
                 this.contactType = contactType;
@@ -1042,7 +1219,10 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaoming</p>
              */
             public Builder name(String name) {
                 this.name = name;

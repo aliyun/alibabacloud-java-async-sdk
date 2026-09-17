@@ -158,6 +158,7 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
+         * <p>Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +171,7 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
+         * <p>Connection parameters of the data source, in JSON format</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +184,10 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Datasource Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my first datasource</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -191,6 +196,7 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
+         * <p>Datasource Name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +209,7 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
+         * <p>Database password</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,6 +222,11 @@ public class CreateDatasourceRequest extends Request {
         }
 
         /**
+         * <p>Data Source Type  </p>
+         * <ul>
+         * <li>0: MySQL  </li>
+         * <li>1: PostgreSQL</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

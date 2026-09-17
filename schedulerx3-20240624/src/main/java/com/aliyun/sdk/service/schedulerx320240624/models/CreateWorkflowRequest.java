@@ -225,6 +225,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +238,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * Calendar.
+         * <p>The custom calendar. This parameter applies only when <code>TimeType</code> is <code>cron</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workday</p>
          */
         public Builder calendar(String calendar) {
             this.putBodyParameter("Calendar", calendar);
@@ -246,7 +250,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A unique client token to ensure request idempotence. The token must contain only ASCII characters. If you omit this parameter, the system uses the RequestId as the ClientToken. The RequestId is unique to each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -255,6 +262,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +275,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The workflow description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my first workflow for data analyse</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -276,7 +287,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * <p>The maximum concurrency for the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putBodyParameter("MaxConcurrency", maxConcurrency);
@@ -285,6 +299,7 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The workflow name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +312,16 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the workflow. By default, the workflow is disabled. Valid values:</p>
+         * <ul>
+         * <li><p>0: Disabled</p>
+         * </li>
+         * <li><p>1: Enabled</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -306,7 +330,18 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * TimeExpression.
+         * <p>The time expression, which depends on the <code>TimeType</code> parameter.</p>
+         * <ul>
+         * <li><p><strong>none</strong>: This parameter is not required.</p>
+         * </li>
+         * <li><p><strong>cron</strong>: Enter a standard cron expression. Online validation is supported.</p>
+         * </li>
+         * <li><p><strong>api</strong>: This parameter is not required.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 4 ? * Mon/1</p>
          */
         public Builder timeExpression(String timeExpression) {
             this.putBodyParameter("TimeExpression", timeExpression);
@@ -315,7 +350,18 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * TimeType.
+         * <p>The schedule type. Valid values:</p>
+         * <ul>
+         * <li><p>-1: none<br></p>
+         * </li>
+         * <li><p>1: cron<br></p>
+         * </li>
+         * <li><p>100: api</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeType(Integer timeType) {
             this.putBodyParameter("TimeType", timeType);
@@ -324,7 +370,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * Timezone.
+         * <p>The time zone for the schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GMT+8</p>
          */
         public Builder timezone(String timezone) {
             this.putBodyParameter("Timezone", timezone);

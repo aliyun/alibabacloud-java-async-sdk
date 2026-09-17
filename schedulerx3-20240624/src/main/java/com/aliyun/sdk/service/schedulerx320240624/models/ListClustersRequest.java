@@ -152,7 +152,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxljob-d6a5243b6fa</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -161,7 +164,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -179,7 +185,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -188,7 +197,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

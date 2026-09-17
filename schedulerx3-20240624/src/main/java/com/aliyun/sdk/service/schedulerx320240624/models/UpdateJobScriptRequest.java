@@ -142,6 +142,7 @@ public class UpdateJobScriptRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class UpdateJobScriptRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class UpdateJobScriptRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +181,17 @@ public class UpdateJobScriptRequest extends Request {
         }
 
         /**
-         * ScriptContent.
+         * <p>The script content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/bash
+         * echo &quot;xxl-job: hello shell&quot;</p>
+         * <p>echo &quot;脚本位置: $0&quot;
+         * echo &quot;任务参数: $1&quot;
+         * echo &quot;分片序号 = $2&quot;
+         * echo &quot;分片总数 = $3&quot;</p>
+         * <p>echo &quot;Good bye!&quot;
+         * exit 0</p>
          */
         public Builder scriptContent(String scriptContent) {
             this.putBodyParameter("ScriptContent", scriptContent);
@@ -187,6 +200,7 @@ public class UpdateJobScriptRequest extends Request {
         }
 
         /**
+         * <p>The description of the script version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

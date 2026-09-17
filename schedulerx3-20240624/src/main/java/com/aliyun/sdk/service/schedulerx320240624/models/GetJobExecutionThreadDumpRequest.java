@@ -124,7 +124,10 @@ public class GetJobExecutionThreadDumpRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxl-job-executor-sample</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -133,7 +136,10 @@ public class GetJobExecutionThreadDumpRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxljob-b6ec1xxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -142,7 +148,10 @@ public class GetJobExecutionThreadDumpRequest extends Request {
         }
 
         /**
-         * ExecutorAddr.
+         * <p>The executor address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://192.168.0.215:9966/">http://192.168.0.215:9966/</a></p>
          */
         public Builder executorAddr(String executorAddr) {
             this.putQueryParameter("ExecutorAddr", executorAddr);
@@ -151,7 +160,10 @@ public class GetJobExecutionThreadDumpRequest extends Request {
         }
 
         /**
-         * JobExecutionId.
+         * <p>The job execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310630367761285120</p>
          */
         public Builder jobExecutionId(String jobExecutionId) {
             this.putQueryParameter("JobExecutionId", jobExecutionId);

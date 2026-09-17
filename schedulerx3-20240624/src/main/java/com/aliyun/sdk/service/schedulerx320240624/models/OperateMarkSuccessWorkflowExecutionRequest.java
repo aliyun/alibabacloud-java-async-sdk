@@ -113,6 +113,7 @@ public class OperateMarkSuccessWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class OperateMarkSuccessWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class OperateMarkSuccessWorkflowExecutionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workflow execution.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

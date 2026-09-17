@@ -251,7 +251,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -260,6 +263,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +276,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721636220</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -281,7 +288,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * JobExecutionId.
+         * <p>The job execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310630367761285120</p>
          */
         public Builder jobExecutionId(String jobExecutionId) {
             this.putQueryParameter("JobExecutionId", jobExecutionId);
@@ -290,7 +300,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword to search for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello word</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -299,7 +312,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Level.
+         * <p>The log level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -308,7 +324,7 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * <p>LineNum</p>
+         * <p>The number of log entries to return.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -320,7 +336,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * LogId.
+         * <p>The log ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>344008</p>
          */
         public Builder logId(Long logId) {
             this.putQueryParameter("LogId", logId);
@@ -329,7 +348,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Offset.
+         * <p>The offset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("Offset", offset);
@@ -338,7 +360,16 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Specifies whether to sort the results in descending order.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: sorts the results in descending order.</p>
+         * </li>
+         * <li><p><strong>false</strong>: sorts the results in ascending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -347,7 +378,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * ScheduleTime.
+         * <p>The time when the job was scheduled. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-01 12:00:00</p>
          */
         public Builder scheduleTime(Long scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);
@@ -356,7 +390,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721636220</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -365,7 +402,10 @@ public class GetLogRequest extends Request {
         }
 
         /**
-         * WorkerAddr.
+         * <p>The worker address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.100</p>
          */
         public Builder workerAddr(String workerAddr) {
             this.putQueryParameter("WorkerAddr", workerAddr);

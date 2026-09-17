@@ -111,7 +111,10 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -120,7 +123,7 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>A short description of struct</p>
+         * <p>The ID of the cluster where the Workflow is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +136,7 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>An array of Workflow IDs to export.</p>
          */
         public Builder workflowId(java.util.List<Long> workflowId) {
             String workflowIdShrink = shrink(workflowId, "WorkflowId", "json");

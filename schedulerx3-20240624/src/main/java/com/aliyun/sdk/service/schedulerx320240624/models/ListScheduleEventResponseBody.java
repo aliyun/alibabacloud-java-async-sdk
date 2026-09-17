@@ -106,7 +106,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,9 +117,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -124,7 +125,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter check error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +136,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier for the request, which is used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B880122A-B0E4-52E8-8F54-87DB7779EB74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +147,16 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The call succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -310,7 +326,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -318,7 +337,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The event content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello word</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -326,7 +348,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * Event.
+             * <p>The event status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -334,7 +359,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JOB</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -342,7 +370,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>130</p>
+             * <p>The job execution ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1310630367761285120</p>
@@ -353,7 +381,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-job</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -361,7 +392,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The timestamp of the event. The time is in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-31 16:43:51</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -369,7 +403,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerAddr.
+             * <p>The worker address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://192.168.1.5:9999/">http://192.168.1.5:9999/</a></p>
              */
             public Builder workerAddr(String workerAddr) {
                 this.workerAddr = workerAddr;
@@ -377,7 +414,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowExecutionId.
+             * <p>The workflow execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1450568762586578000</p>
              */
             public Builder workflowExecutionId(String workflowExecutionId) {
                 this.workflowExecutionId = workflowExecutionId;
@@ -385,7 +425,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowName.
+             * <p>The workflow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>工作流0001</p>
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;
@@ -478,7 +521,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -486,7 +532,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -494,7 +543,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * <p>The array of event records.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -502,7 +551,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Long total) {
                 this.total = total;

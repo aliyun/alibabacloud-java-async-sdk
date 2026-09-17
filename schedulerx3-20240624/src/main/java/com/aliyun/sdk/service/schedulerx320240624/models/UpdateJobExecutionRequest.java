@@ -127,6 +127,7 @@ public class UpdateJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>AppName</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class UpdateJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +153,7 @@ public class UpdateJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>Job execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +166,10 @@ public class UpdateJobExecutionRequest extends Request {
         }
 
         /**
-         * ScheduleTime.
+         * <p>Schedule time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-01 12:00:00</p>
          */
         public Builder scheduleTime(Long scheduleTime) {
             this.putBodyParameter("ScheduleTime", scheduleTime);

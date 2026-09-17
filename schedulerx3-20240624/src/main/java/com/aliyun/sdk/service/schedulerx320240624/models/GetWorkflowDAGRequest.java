@@ -112,6 +112,7 @@ public class GetWorkflowDAGRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class GetWorkflowDAGRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class GetWorkflowDAGRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

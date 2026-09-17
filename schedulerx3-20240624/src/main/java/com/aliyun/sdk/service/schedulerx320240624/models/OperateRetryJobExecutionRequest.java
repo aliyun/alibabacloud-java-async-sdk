@@ -164,6 +164,7 @@ public class OperateRetryJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +177,7 @@ public class OperateRetryJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +190,7 @@ public class OperateRetryJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The job execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +203,10 @@ public class OperateRetryJobExecutionRequest extends Request {
         }
 
         /**
-         * TaskList.
+         * <p>The list of subtask execution IDs (for broadcast jobs).</p>
+         * <blockquote>
+         * <p>To rerun a subtask of a broadcast job, set this field to the execution ID of the corresponding subtask.</p>
+         * </blockquote>
          */
         public Builder taskList(java.util.List<String> taskList) {
             String taskListShrink = shrink(taskList, "TaskList", "json");
@@ -210,7 +216,7 @@ public class OperateRetryJobExecutionRequest extends Request {
         }
 
         /**
-         * TriggerChild.
+         * <p>Specifies whether to trigger downstream nodes.</p>
          */
         public Builder triggerChild(Boolean triggerChild) {
             this.putQueryParameter("TriggerChild", triggerChild);

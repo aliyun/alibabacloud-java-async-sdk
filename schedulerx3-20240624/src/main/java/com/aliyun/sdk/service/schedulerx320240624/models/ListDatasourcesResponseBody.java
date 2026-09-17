@@ -106,7 +106,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListDatasourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,7 @@ public class ListDatasourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</p>
@@ -141,7 +147,14 @@ public class ListDatasourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the invocation succeeded.</p>
+         * <ul>
+         * <li><strong>true</strong>: The invocation succeeded.</li>
+         * <li><strong>false</strong>: Failed to invoke.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -259,7 +272,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionParams.
+             * <p>Data source connection parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;host&quot;:&quot;rm-bp1f03mxxxxx.mysql.rds.aliyuncs.com&quot;,&quot;port&quot;:3306,&quot;userName&quot;:&quot;test01&quot;,&quot;database&quot;:&quot;test01&quot;,&quot;other&quot;:{&quot;useSSL&quot;:&quot;false&quot;}}</p>
              */
             public Builder connectionParams(String connectionParams) {
                 this.connectionParams = connectionParams;
@@ -267,7 +283,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * <p>DataSource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>145</p>
              */
             public Builder datasourceId(Long datasourceId) {
                 this.datasourceId = datasourceId;
@@ -275,7 +294,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Job description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first workflow</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +305,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +316,13 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Specific pronunciation rule Type. Options:</p>
+             * <ul>
+             * <li>replacement: A rule that directly replaces Word with Pronunciation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>target</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -299,7 +330,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Updater.
+             * <p>Updater.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1827811800555555</p>
              */
             public Builder updater(String updater) {
                 this.updater = updater;
@@ -418,7 +452,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>Maximum Data Volume to read in this request. Default Value is 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -426,7 +463,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>When the data matching the query conditions has not been fully read, the server returns a nextToken. You can use this nextToken to continue reading subsequent data. This parameter is not required for the first query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -434,7 +474,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -442,7 +485,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -460,7 +506,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

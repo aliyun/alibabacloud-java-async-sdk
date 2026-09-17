@@ -120,7 +120,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of <code>200</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -129,7 +132,7 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li></li>
+         * <li>The response data.</li>
          * </ul>
          */
         public Builder data(Data data) {
@@ -138,7 +141,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -146,6 +152,7 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The response message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +164,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>A unique ID for the request. Use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,7 +175,16 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -257,7 +276,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the script version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-29 15:56:36</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -265,7 +287,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator of the script version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1963096506470832</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -273,7 +298,17 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptContent.
+             * <p>The content of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#!/bin/bash
+             * echo &quot;xxl-job: hello shell&quot;</p>
+             * <p>echo &quot;脚本位置: $0&quot;
+             * echo &quot;任务参数: $1&quot;
+             * echo &quot;分片序号 = $2&quot;
+             * echo &quot;分片总数 = $3&quot;</p>
+             * <p>echo &quot;Good bye!&quot;
+             * exit 0</p>
              */
             public Builder scriptContent(String scriptContent) {
                 this.scriptContent = scriptContent;
@@ -281,7 +316,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * VersionDescription.
+             * <p>The script version description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init version</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -361,7 +399,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * NextToken.
+             * <p>The token to retrieve the next page of results. If this parameter is empty, no more data is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -370,7 +411,7 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
 
             /**
              * <ul>
-             * <li></li>
+             * <li>A list of script history records.</li>
              * </ul>
              */
             public Builder records(java.util.List<Records> records) {
@@ -379,7 +420,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total count of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder total(String total) {
                 this.total = total;

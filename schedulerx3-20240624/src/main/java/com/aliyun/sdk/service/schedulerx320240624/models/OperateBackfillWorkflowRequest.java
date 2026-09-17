@@ -143,6 +143,7 @@ public class OperateBackfillWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class OperateBackfillWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +169,7 @@ public class OperateBackfillWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The end date of the backfill, in YYYY-MM-DD format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +182,7 @@ public class OperateBackfillWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The start date of the backfill, in YYYY-MM-DD format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +195,7 @@ public class OperateBackfillWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

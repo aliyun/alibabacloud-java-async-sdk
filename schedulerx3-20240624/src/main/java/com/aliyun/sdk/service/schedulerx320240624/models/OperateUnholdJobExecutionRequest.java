@@ -112,6 +112,7 @@ public class OperateUnholdJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The Application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class OperateUnholdJobExecutionRequest extends Request {
         }
 
         /**
+         * <p>The Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class OperateUnholdJobExecutionRequest extends Request {
         }
 
         /**
-         * JobExecutionId.
+         * <p>The Job Execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310630367761285120</p>
          */
         public Builder jobExecutionId(String jobExecutionId) {
             this.putQueryParameter("JobExecutionId", jobExecutionId);

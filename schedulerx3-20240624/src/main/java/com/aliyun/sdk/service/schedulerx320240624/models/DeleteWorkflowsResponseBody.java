@@ -93,7 +93,10 @@ public class DeleteWorkflowsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the request. A value of <code>200</code> indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID for the request. Use it to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27B1345D-5F71-5972-8E4C-AABA6C6232F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,16 @@ public class DeleteWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

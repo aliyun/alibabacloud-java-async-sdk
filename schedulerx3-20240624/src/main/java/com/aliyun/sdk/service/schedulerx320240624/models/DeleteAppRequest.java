@@ -98,6 +98,7 @@ public class DeleteAppRequest extends Request {
         }
 
         /**
+         * <p>The name of the App Group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteAppRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

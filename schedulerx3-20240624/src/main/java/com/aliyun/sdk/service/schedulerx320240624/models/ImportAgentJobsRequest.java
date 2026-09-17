@@ -89,8 +89,10 @@ public class ImportAgentJobsRequest extends Request {
         } 
 
         /**
-         * <p>agentname</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称</p>
          */
         public Builder agentName(String agentName) {
             this.putBodyParameter("AgentName", agentName);

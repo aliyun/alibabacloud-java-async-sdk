@@ -106,7 +106,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -124,7 +127,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error: content is null.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +138,7 @@ public class GetJobExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>39938688-0BAB-5AD8-BF02-F4910FAC7589</p>
@@ -143,7 +149,16 @@ public class GetJobExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -430,7 +445,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -438,7 +456,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * Attempt.
+             * <p>The number of execution attempts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attempt(Integer attempt) {
                 this.attempt = attempt;
@@ -446,7 +467,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * DataTime.
+             * <p>The data timestamp for the job instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-11 00:06:10</p>
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -454,7 +478,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the job execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -462,7 +489,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the job execution ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-29 15:56:36</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -470,7 +500,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * Executor.
+             * <p>Details of the executor that ran the job. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Status\&quot;: \&quot;NORMAL\&quot;, \&quot;ActiveCount\&quot;: 4, \&quot;UnavailableCount\&quot;: 0, \&quot;ExpectedCount\&quot;: 4, \&quot;RiskCount\&quot;: 0}</p>
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -478,7 +511,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * JobExecutionId.
+             * <p>The ID of the job execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1310630367761285120</p>
              */
             public Builder jobExecutionId(String jobExecutionId) {
                 this.jobExecutionId = jobExecutionId;
@@ -486,7 +522,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -494,7 +533,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>天猫-自动审单</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -502,7 +544,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The type of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxljob</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -510,7 +555,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The parameters of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/avatar/system/services/biz/payment/crontab/monitorpayment.php</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -518,7 +566,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The result of the job execution. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -526,7 +577,28 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * RouteStrategy.
+             * <p>The routing strategy. Valid values:</p>
+             * <ul>
+             * <li><p><code>1</code>: <code>Round Robin</code></p>
+             * </li>
+             * <li><p><code>2</code>: <code>Random</code></p>
+             * </li>
+             * <li><p><code>3</code>: <code>First</code></p>
+             * </li>
+             * <li><p><code>4</code>: <code>Last</code></p>
+             * </li>
+             * <li><p><code>5</code>: <code>Least Frequently Used</code></p>
+             * </li>
+             * <li><p><code>6</code>: <code>Least Recently Used</code></p>
+             * </li>
+             * <li><p><code>7</code>: <code>Consistent Hashing</code></p>
+             * </li>
+             * <li><p><code>8</code>: <code>Shard Broadcasting</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routeStrategy(Integer routeStrategy) {
                 this.routeStrategy = routeStrategy;
@@ -534,7 +606,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * <p>The scheduled time for the job execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-11 00:06:10</p>
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -542,7 +617,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * ServerIp.
+             * <p>The IP address of the scheduling server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.3.27.76</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -550,7 +628,10 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the job execution started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-11 00:06:10</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -558,7 +639,24 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job execution status. Valid values:</p>
+             * <ul>
+             * <li><p><code>0</code>: <code>UNKNOWN</code></p>
+             * </li>
+             * <li><p><code>1</code>: <code>WAITING</code></p>
+             * </li>
+             * <li><p><code>2</code>: <code>READY</code></p>
+             * </li>
+             * <li><p><code>3</code>: <code>RUNNING</code></p>
+             * </li>
+             * <li><p><code>4</code>: <code>SUCCESS</code></p>
+             * </li>
+             * <li><p><code>5</code>: <code>FAILED</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -566,7 +664,24 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * TimeType.
+             * <p>The scheduling type of the job. Valid values:</p>
+             * <ul>
+             * <li><p><code>-1</code>: <code>none</code></p>
+             * </li>
+             * <li><p><code>1</code>: <code>cron</code></p>
+             * </li>
+             * <li><p><code>2</code>: <code>fixed_delay</code></p>
+             * </li>
+             * <li><p><code>3</code>: <code>fixed_rate</code></p>
+             * </li>
+             * <li><p><code>5</code>: <code>one_time</code></p>
+             * </li>
+             * <li><p><code>100</code>: <code>api</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeType(Integer timeType) {
                 this.timeType = timeType;
@@ -574,7 +689,26 @@ public class GetJobExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>Indicates how the job was triggered. Valid values:</p>
+             * <ul>
+             * <li><p><code>0</code>: <code>unknown</code></p>
+             * </li>
+             * <li><p><code>1</code>: <code>timer_schedule</code></p>
+             * </li>
+             * <li><p><code>2</code>: <code>rerun</code></p>
+             * </li>
+             * <li><p><code>3</code>: <code>api_run</code></p>
+             * </li>
+             * <li><p><code>4</code>: <code>user_retry</code></p>
+             * </li>
+             * <li><p><code>5</code>: <code>system_retry</code></p>
+             * </li>
+             * <li><p><code>6</code>: <code>manual</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>timer_schedule</p>
              */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;

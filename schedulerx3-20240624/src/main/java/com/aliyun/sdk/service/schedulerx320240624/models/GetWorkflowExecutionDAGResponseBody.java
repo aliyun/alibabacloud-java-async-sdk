@@ -106,7 +106,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned for the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter format error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,7 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -141,7 +147,16 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><p><code>true</code>: The call succeeded.</p>
+         * </li>
+         * <li><p><code>false</code>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +222,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             } 
 
             /**
-             * Source.
+             * <p>The ID of the source node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -215,7 +233,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The ID of the target node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -308,7 +329,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             } 
 
             /**
-             * Height.
+             * <p>The height of the node. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -316,7 +340,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the node. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -324,7 +351,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The x-coordinate of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -332,7 +362,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-coordinate of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -464,7 +497,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cua-xxl-job-executor</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -472,7 +508,7 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * Coordinate.
+             * <p>The coordinates of the node.</p>
              */
             public Builder coordinate(Coordinate coordinate) {
                 this.coordinate = coordinate;
@@ -480,7 +516,7 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID。</p>
+             * <p>The unique ID for the job execution (node).</p>
              * 
              * <strong>example:</strong>
              * <p>7491777526619542799</p>
@@ -491,7 +527,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -499,7 +538,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The job type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>script_shell</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -507,7 +549,10 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -515,7 +560,32 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The execution status of the job. Valid values:</p>
+             * <ul>
+             * <li><p>0: Unknown</p>
+             * </li>
+             * <li><p>1: Waiting</p>
+             * </li>
+             * <li><p>2: Queued</p>
+             * </li>
+             * <li><p>3: Running</p>
+             * </li>
+             * <li><p>4: Succeeded</p>
+             * </li>
+             * <li><p>5: Failed</p>
+             * </li>
+             * <li><p>6: Killed</p>
+             * </li>
+             * <li><p>7: Held</p>
+             * </li>
+             * <li><p>8: Marked as successful</p>
+             * </li>
+             * <li><p>9: Skipped</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -582,7 +652,7 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             } 
 
             /**
-             * Edges.
+             * <p>A list of edges in the workflow DAG.</p>
              */
             public Builder edges(java.util.List<Edges> edges) {
                 this.edges = edges;
@@ -590,7 +660,7 @@ public class GetWorkflowExecutionDAGResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * <p>A list of nodes in the workflow DAG.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
