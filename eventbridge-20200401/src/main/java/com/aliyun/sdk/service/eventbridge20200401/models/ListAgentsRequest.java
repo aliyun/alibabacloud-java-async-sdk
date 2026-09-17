@@ -87,7 +87,7 @@ public class ListAgentsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the agent from which the next page of results starts.</p>
+         * <p>The name of the agent from which to start querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -99,7 +99,7 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
+         * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -114,7 +114,7 @@ public class ListAgentsRequest extends Request {
          * <p>The sort order. Valid values:</p>
          * <ul>
          * <li>desc</li>
-         * <li>asc.</li>
+         * <li>asc</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -108,8 +108,8 @@ public class UpdateAgentResponseBody extends TeaModel {
         /**
          * <p>The response code. Valid values:</p>
          * <ul>
-         * <li>Success: The operation was successful.                                 </li>
-         * <li>Other values: An error code was returned. For more information, see error codes.</li>
+         * <li>Success: The request was successful.                                 </li>
+         * <li>Other values: An error occurred. For more information, see Error codes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns true if the operation is successful.</p>
+         * <p>Returns true if the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
  * 
- * {@link ListLumaNamespacesResponseBody} extends {@link TeaModel}
+ * {@link SearchKnowledgeBaseResponseBody} extends {@link TeaModel}
  *
- * <p>ListLumaNamespacesResponseBody</p>
+ * <p>SearchKnowledgeBaseResponseBody</p>
  */
-public class ListLumaNamespacesResponseBody extends TeaModel {
+public class SearchKnowledgeBaseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ListLumaNamespacesResponseBody(Builder builder) {
+    private SearchKnowledgeBaseResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListLumaNamespacesResponseBody create() {
+    public static SearchKnowledgeBaseResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ListLumaNamespacesResponseBody model) {
+        private Builder(SearchKnowledgeBaseResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,7 +106,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of Success indicates a successful operation. If the operation fails, a specific error code is returned.</p>
+         * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of namespaces bound to the agent, including entries and pagination information.</p>
+         * <p>The search results, including the list of matched chunks and the time spent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of Operation success is returned if the operation succeeds. A specific error description is returned if the operation fails.</p>
+         * <p>The response message. A value of Operation success is returned for a successful call. A specific error description is returned for a failed call.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -136,7 +136,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. Use this ID for troubleshooting and when submitting a ticket.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -147,7 +147,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates success.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -157,36 +157,28 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
             return this;
         }
 
-        public ListLumaNamespacesResponseBody build() {
-            return new ListLumaNamespacesResponseBody(this);
+        public SearchKnowledgeBaseResponseBody build() {
+            return new SearchKnowledgeBaseResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListLumaNamespacesResponseBody} extends {@link TeaModel}
+     * {@link SearchKnowledgeBaseResponseBody} extends {@link TeaModel}
      *
-     * <p>ListLumaNamespacesResponseBody</p>
+     * <p>SearchKnowledgeBaseResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Limit")
-        private Integer limit;
+        @com.aliyun.core.annotation.NameInMap("Chunks")
+        private java.util.List<KnowledgeBaseSearchChunk> chunks;
 
-        @com.aliyun.core.annotation.NameInMap("Namespaces")
-        private java.util.List<Namespace> namespaces;
-
-        @com.aliyun.core.annotation.NameInMap("NextToken")
-        private String nextToken;
-
-        @com.aliyun.core.annotation.NameInMap("TotalCount")
-        private Integer totalCount;
+        @com.aliyun.core.annotation.NameInMap("TimeSpent")
+        private Long timeSpent;
 
         private Data(Builder builder) {
-            this.limit = builder.limit;
-            this.namespaces = builder.namespaces;
-            this.nextToken = builder.nextToken;
-            this.totalCount = builder.totalCount;
+            this.chunks = builder.chunks;
+            this.timeSpent = builder.timeSpent;
         }
 
         public static Builder builder() {
@@ -198,90 +190,50 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * @return limit
+         * @return chunks
          */
-        public Integer getLimit() {
-            return this.limit;
+        public java.util.List<KnowledgeBaseSearchChunk> getChunks() {
+            return this.chunks;
         }
 
         /**
-         * @return namespaces
+         * @return timeSpent
          */
-        public java.util.List<Namespace> getNamespaces() {
-            return this.namespaces;
-        }
-
-        /**
-         * @return nextToken
-         */
-        public String getNextToken() {
-            return this.nextToken;
-        }
-
-        /**
-         * @return totalCount
-         */
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public Long getTimeSpent() {
+            return this.timeSpent;
         }
 
         public static final class Builder {
-            private Integer limit; 
-            private java.util.List<Namespace> namespaces; 
-            private String nextToken; 
-            private Integer totalCount; 
+            private java.util.List<KnowledgeBaseSearchChunk> chunks; 
+            private Long timeSpent; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.limit = model.limit;
-                this.namespaces = model.namespaces;
-                this.nextToken = model.nextToken;
-                this.totalCount = model.totalCount;
+                this.chunks = model.chunks;
+                this.timeSpent = model.timeSpent;
             } 
 
             /**
-             * <p>The effective page size for this request. If the Limit parameter is not specified, the server default value is used. If the specified value exceeds the upper limit, the value is adjusted to the maximum allowed value.</p>
+             * <p>The list of matched chunks, sorted by relevance.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;ChunkSeq&quot;:3,&quot;Content&quot;:&quot;EventBridge supports event routing&quot;}]</p>
              */
-            public Builder limit(Integer limit) {
-                this.limit = limit;
+            public Builder chunks(java.util.List<KnowledgeBaseSearchChunk> chunks) {
+                this.chunks = chunks;
                 return this;
             }
 
             /**
-             * <p>The list of namespaces bound to the agent.</p>
+             * <p>The server-side processing duration of this search. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;Name&quot;:&quot;my_namespace&quot;}]</p>
+             * <p>128</p>
              */
-            public Builder namespaces(java.util.List<Namespace> namespaces) {
-                this.namespaces = namespaces;
-                return this;
-            }
-
-            /**
-             * <p>The token for the next page. Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
-             */
-            public Builder nextToken(String nextToken) {
-                this.nextToken = nextToken;
-                return this;
-            }
-
-            /**
-             * <p>The total number of namespaces bound to the agent, regardless of the number of entries returned on the current page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
-             */
-            public Builder totalCount(Integer totalCount) {
-                this.totalCount = totalCount;
+            public Builder timeSpent(Long timeSpent) {
+                this.timeSpent = timeSpent;
                 return this;
             }
 

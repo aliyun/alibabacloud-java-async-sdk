@@ -161,7 +161,10 @@ public class Agent extends TeaModel {
         }
 
         /**
-         * McpServerId.
+         * <p>The ID of the MCP server associated with the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8vHW4mDRxxxxx</p>
          */
         public Builder mcpServerId(String mcpServerId) {
             this.mcpServerId = mcpServerId;
@@ -169,7 +172,10 @@ public class Agent extends TeaModel {
         }
 
         /**
-         * McpServerName.
+         * <p>The name of the MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-analyze-agent</p>
          */
         public Builder mcpServerName(String mcpServerName) {
             this.mcpServerName = mcpServerName;

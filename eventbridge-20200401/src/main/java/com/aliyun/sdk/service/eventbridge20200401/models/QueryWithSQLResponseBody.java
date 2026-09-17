@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
  * 
- * {@link ListAgentsResponseBody} extends {@link TeaModel}
+ * {@link QueryWithSQLResponseBody} extends {@link TeaModel}
  *
- * <p>ListAgentsResponseBody</p>
+ * <p>QueryWithSQLResponseBody</p>
  */
-public class ListAgentsResponseBody extends TeaModel {
+public class QueryWithSQLResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class ListAgentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ListAgentsResponseBody(Builder builder) {
+    private QueryWithSQLResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ListAgentsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListAgentsResponseBody create() {
+    public static QueryWithSQLResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class ListAgentsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ListAgentsResponseBody model) {
+        private Builder(QueryWithSQLResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,7 +106,13 @@ public class ListAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API status or POP error code. Valid values: Success: The operation was successful.</p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><p>Success: The request was successful.    </p>
+         * </li>
+         * <li><p>Other values: An error occurred. For more information, see error codes.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +123,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The event trace information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -128,7 +134,7 @@ public class ListAgentsResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Failed to list agents</p>
+         * <p>Operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,10 +142,10 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Alibaba Cloud generates a unique identifier for the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>7DA60DED-CD36-5837-B848-C01A23D2****</p>
+         * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,7 +153,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns true if the operation is successful.</p>
+         * <p>Indicates whether the operation was successful. A value of true indicates success. A value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -157,36 +163,28 @@ public class ListAgentsResponseBody extends TeaModel {
             return this;
         }
 
-        public ListAgentsResponseBody build() {
-            return new ListAgentsResponseBody(this);
+        public QueryWithSQLResponseBody build() {
+            return new QueryWithSQLResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListAgentsResponseBody} extends {@link TeaModel}
+     * {@link QueryWithSQLResponseBody} extends {@link TeaModel}
      *
-     * <p>ListAgentsResponseBody</p>
+     * <p>QueryWithSQLResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Agents")
-        private java.util.List<Agent> agents;
+        @com.aliyun.core.annotation.NameInMap("Rows")
+        private java.util.List<Row> rows;
 
-        @com.aliyun.core.annotation.NameInMap("FirstId")
-        private String firstId;
-
-        @com.aliyun.core.annotation.NameInMap("HasMore")
-        private String hasMore;
-
-        @com.aliyun.core.annotation.NameInMap("LastId")
-        private String lastId;
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Integer total;
 
         private Data(Builder builder) {
-            this.agents = builder.agents;
-            this.firstId = builder.firstId;
-            this.hasMore = builder.hasMore;
-            this.lastId = builder.lastId;
+            this.rows = builder.rows;
+            this.total = builder.total;
         }
 
         public static Builder builder() {
@@ -198,93 +196,47 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * @return agents
+         * @return rows
          */
-        public java.util.List<Agent> getAgents() {
-            return this.agents;
+        public java.util.List<Row> getRows() {
+            return this.rows;
         }
 
         /**
-         * @return firstId
+         * @return total
          */
-        public String getFirstId() {
-            return this.firstId;
-        }
-
-        /**
-         * @return hasMore
-         */
-        public String getHasMore() {
-            return this.hasMore;
-        }
-
-        /**
-         * @return lastId
-         */
-        public String getLastId() {
-            return this.lastId;
+        public Integer getTotal() {
+            return this.total;
         }
 
         public static final class Builder {
-            private java.util.List<Agent> agents; 
-            private String firstId; 
-            private String hasMore; 
-            private String lastId; 
+            private java.util.List<Row> rows; 
+            private Integer total; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.agents = model.agents;
-                this.firstId = model.firstId;
-                this.hasMore = model.hasMore;
-                this.lastId = model.lastId;
+                this.rows = model.rows;
+                this.total = model.total;
             } 
 
             /**
-             * <p>The list of agents.</p>
+             * <p>The query result rows.</p>
              */
-            public Builder agents(java.util.List<Agent> agents) {
-                this.agents = agents;
+            public Builder rows(java.util.List<Row> rows) {
+                this.rows = rows;
                 return this;
             }
 
             /**
-             * <p>The ID of the first entry.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
-             * <p>uat-agent</p>
+             * <p>1</p>
              */
-            public Builder firstId(String firstId) {
-                this.firstId = firstId;
-                return this;
-            }
-
-            /**
-             * <p>Indicates whether there is a next page. Valid values:</p>
-             * <ul>
-             * <li><p>true: There is a next page.</p>
-             * </li>
-             * <li><p>false: There is no next page.</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder hasMore(String hasMore) {
-                this.hasMore = hasMore;
-                return this;
-            }
-
-            /**
-             * <p>The ID of the last conversation record.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>last-agent</p>
-             */
-            public Builder lastId(String lastId) {
-                this.lastId = lastId;
+            public Builder total(Integer total) {
+                this.total = total;
                 return this;
             }
 

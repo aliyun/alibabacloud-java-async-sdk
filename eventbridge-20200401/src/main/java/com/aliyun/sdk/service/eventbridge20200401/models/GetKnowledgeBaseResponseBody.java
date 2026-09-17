@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
  * 
- * {@link GetAgentResponseBody} extends {@link TeaModel}
+ * {@link GetKnowledgeBaseResponseBody} extends {@link TeaModel}
  *
- * <p>GetAgentResponseBody</p>
+ * <p>GetKnowledgeBaseResponseBody</p>
  */
-public class GetAgentResponseBody extends TeaModel {
+public class GetKnowledgeBaseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Agent data;
+    private KnowledgeBase data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,7 +32,7 @@ public class GetAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private GetAgentResponseBody(Builder builder) {
+    private GetKnowledgeBaseResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class GetAgentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetAgentResponseBody create() {
+    public static GetKnowledgeBaseResponseBody create() {
         return builder().build();
     }
 
@@ -62,7 +62,7 @@ public class GetAgentResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Agent getData() {
+    public KnowledgeBase getData() {
         return this.data;
     }
 
@@ -89,7 +89,7 @@ public class GetAgentResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Agent data; 
+        private KnowledgeBase data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,7 +97,7 @@ public class GetAgentResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetAgentResponseBody model) {
+        private Builder(GetKnowledgeBaseResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,7 +106,7 @@ public class GetAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API status or POP error code. Valid values: Success: The operation was successful.</p>
+         * <p>The response code. Success indicates a successful call. If the call fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,21 +117,18 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * <p>The knowledge base details, including basic information, metadata schema, and chunking and retrieval configurations.</p>
          */
-        public Builder data(Agent data) {
+        public Builder data(KnowledgeBase data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The response message. Operation success is returned for a successful call. A specific error description is returned for a failed call.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
+         * <p>Operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +139,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>E0FFAB67-XXXXXX-CAD4D37448C4</p>
+         * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +147,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns true if the operation is successful.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -160,8 +157,8 @@ public class GetAgentResponseBody extends TeaModel {
             return this;
         }
 
-        public GetAgentResponseBody build() {
-            return new GetAgentResponseBody(this);
+        public GetKnowledgeBaseResponseBody build() {
+            return new GetKnowledgeBaseResponseBody(this);
         } 
 
     } 

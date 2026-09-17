@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
  * 
- * {@link ListLumaNamespacesResponseBody} extends {@link TeaModel}
+ * {@link ListChunksResponseBody} extends {@link TeaModel}
  *
- * <p>ListLumaNamespacesResponseBody</p>
+ * <p>ListChunksResponseBody</p>
  */
-public class ListLumaNamespacesResponseBody extends TeaModel {
+public class ListChunksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ListLumaNamespacesResponseBody(Builder builder) {
+    private ListChunksResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListLumaNamespacesResponseBody create() {
+    public static ListChunksResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ListLumaNamespacesResponseBody model) {
+        private Builder(ListChunksResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,7 +106,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of Success indicates a successful operation. If the operation fails, a specific error code is returned.</p>
+         * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of namespaces bound to the agent, including entries and pagination information.</p>
+         * <p>The chunk list query result, which contains chunk entries and pagination information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of Operation success is returned if the operation succeeds. A specific error description is returned if the operation fails.</p>
+         * <p>The message returned by the operation. The value is Operation success if the call succeeds, or a specific error description if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -136,7 +136,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. Use this ID for troubleshooting and when submitting a ticket.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -147,7 +147,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates success.</p>
+         * <p>Indicates whether the call was successful. A value of true indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -157,24 +157,24 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
             return this;
         }
 
-        public ListLumaNamespacesResponseBody build() {
-            return new ListLumaNamespacesResponseBody(this);
+        public ListChunksResponseBody build() {
+            return new ListChunksResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListLumaNamespacesResponseBody} extends {@link TeaModel}
+     * {@link ListChunksResponseBody} extends {@link TeaModel}
      *
-     * <p>ListLumaNamespacesResponseBody</p>
+     * <p>ListChunksResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Limit")
-        private Integer limit;
+        @com.aliyun.core.annotation.NameInMap("Chunks")
+        private java.util.List<KnowledgeBaseChunk> chunks;
 
-        @com.aliyun.core.annotation.NameInMap("Namespaces")
-        private java.util.List<Namespace> namespaces;
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
+        private Integer maxResults;
 
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -183,8 +183,8 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         private Integer totalCount;
 
         private Data(Builder builder) {
-            this.limit = builder.limit;
-            this.namespaces = builder.namespaces;
+            this.chunks = builder.chunks;
+            this.maxResults = builder.maxResults;
             this.nextToken = builder.nextToken;
             this.totalCount = builder.totalCount;
         }
@@ -198,17 +198,17 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * @return limit
+         * @return chunks
          */
-        public Integer getLimit() {
-            return this.limit;
+        public java.util.List<KnowledgeBaseChunk> getChunks() {
+            return this.chunks;
         }
 
         /**
-         * @return namespaces
+         * @return maxResults
          */
-        public java.util.List<Namespace> getNamespaces() {
-            return this.namespaces;
+        public Integer getMaxResults() {
+            return this.maxResults;
         }
 
         /**
@@ -226,8 +226,8 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Integer limit; 
-            private java.util.List<Namespace> namespaces; 
+            private java.util.List<KnowledgeBaseChunk> chunks; 
+            private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
 
@@ -235,39 +235,39 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
-                this.limit = model.limit;
-                this.namespaces = model.namespaces;
+                this.chunks = model.chunks;
+                this.maxResults = model.maxResults;
                 this.nextToken = model.nextToken;
                 this.totalCount = model.totalCount;
             } 
 
             /**
-             * <p>The effective page size for this request. If the Limit parameter is not specified, the server default value is used. If the specified value exceeds the upper limit, the value is adjusted to the maximum allowed value.</p>
+             * <p>The list of chunk entries.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;ChunkSeq&quot;:1,&quot;Content&quot;:&quot;EventBridge supports event routing&quot;}]</p>
              */
-            public Builder limit(Integer limit) {
-                this.limit = limit;
+            public Builder chunks(java.util.List<KnowledgeBaseChunk> chunks) {
+                this.chunks = chunks;
                 return this;
             }
 
             /**
-             * <p>The list of namespaces bound to the agent.</p>
+             * <p>The maximum number of results per page that took effect for this request.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;Name&quot;:&quot;my_namespace&quot;}]</p>
+             * <p>20</p>
              */
-            public Builder namespaces(java.util.List<Namespace> namespaces) {
-                this.namespaces = namespaces;
+            public Builder maxResults(Integer maxResults) {
+                this.maxResults = maxResults;
                 return this;
             }
 
             /**
-             * <p>The token for the next page. Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
+             * <p>The pagination token for the next page (an opaque string). Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>ca1eb85f5d99c7d6a97e6****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -275,10 +275,10 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of namespaces bound to the agent, regardless of the number of entries returned on the current page.</p>
+             * <p>The total number of chunks in the specified document when DocumentId is specified. In full knowledge base mode (when DocumentId is not specified), this field is not returned. Pagination ends when NextToken is empty.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>120</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
  * 
- * {@link ListLumaNamespacesResponseBody} extends {@link TeaModel}
+ * {@link ListDocumentsResponseBody} extends {@link TeaModel}
  *
- * <p>ListLumaNamespacesResponseBody</p>
+ * <p>ListDocumentsResponseBody</p>
  */
-public class ListLumaNamespacesResponseBody extends TeaModel {
+public class ListDocumentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ListLumaNamespacesResponseBody(Builder builder) {
+    private ListDocumentsResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListLumaNamespacesResponseBody create() {
+    public static ListDocumentsResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ListLumaNamespacesResponseBody model) {
+        private Builder(ListDocumentsResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -117,7 +117,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of namespaces bound to the agent, including entries and pagination information.</p>
+         * <p>The document list query result, which contains document entries and pagination information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of Operation success is returned if the operation succeeds. A specific error description is returned if the operation fails.</p>
+         * <p>The message returned by the operation. The value is Operation success if the operation succeeds, or a specific error description if the operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation success</p>
@@ -136,7 +136,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. Use this ID for troubleshooting and when submitting a ticket.</p>
+         * <p>The unique ID of the request. Use this ID for troubleshooting and when you submit a ticket.</p>
          * 
          * <strong>example:</strong>
          * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -157,24 +157,24 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
             return this;
         }
 
-        public ListLumaNamespacesResponseBody build() {
-            return new ListLumaNamespacesResponseBody(this);
+        public ListDocumentsResponseBody build() {
+            return new ListDocumentsResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListLumaNamespacesResponseBody} extends {@link TeaModel}
+     * {@link ListDocumentsResponseBody} extends {@link TeaModel}
      *
-     * <p>ListLumaNamespacesResponseBody</p>
+     * <p>ListDocumentsResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Limit")
-        private Integer limit;
+        @com.aliyun.core.annotation.NameInMap("Documents")
+        private java.util.List<KnowledgeBaseDocument> documents;
 
-        @com.aliyun.core.annotation.NameInMap("Namespaces")
-        private java.util.List<Namespace> namespaces;
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
+        private Integer maxResults;
 
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -183,8 +183,8 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         private Integer totalCount;
 
         private Data(Builder builder) {
-            this.limit = builder.limit;
-            this.namespaces = builder.namespaces;
+            this.documents = builder.documents;
+            this.maxResults = builder.maxResults;
             this.nextToken = builder.nextToken;
             this.totalCount = builder.totalCount;
         }
@@ -198,17 +198,17 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * @return limit
+         * @return documents
          */
-        public Integer getLimit() {
-            return this.limit;
+        public java.util.List<KnowledgeBaseDocument> getDocuments() {
+            return this.documents;
         }
 
         /**
-         * @return namespaces
+         * @return maxResults
          */
-        public java.util.List<Namespace> getNamespaces() {
-            return this.namespaces;
+        public Integer getMaxResults() {
+            return this.maxResults;
         }
 
         /**
@@ -226,8 +226,8 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Integer limit; 
-            private java.util.List<Namespace> namespaces; 
+            private java.util.List<KnowledgeBaseDocument> documents; 
+            private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
 
@@ -235,39 +235,39 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
-                this.limit = model.limit;
-                this.namespaces = model.namespaces;
+                this.documents = model.documents;
+                this.maxResults = model.maxResults;
                 this.nextToken = model.nextToken;
                 this.totalCount = model.totalCount;
             } 
 
             /**
-             * <p>The effective page size for this request. If the Limit parameter is not specified, the server default value is used. If the specified value exceeds the upper limit, the value is adjusted to the maximum allowed value.</p>
+             * <p>The list of document entries in the knowledge base. Each entry contains information such as the document ID, file name, processing status, size, number of chunks, and metadata.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;FileName&quot;:&quot;manual.pdf&quot;,&quot;Status&quot;:&quot;COMPLETED&quot;,&quot;ChunkCount&quot;:120}]</p>
              */
-            public Builder limit(Integer limit) {
-                this.limit = limit;
+            public Builder documents(java.util.List<KnowledgeBaseDocument> documents) {
+                this.documents = documents;
                 return this;
             }
 
             /**
-             * <p>The list of namespaces bound to the agent.</p>
+             * <p>The maximum number of results per page that took effect for this request.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;Name&quot;:&quot;my_namespace&quot;}]</p>
+             * <p>20</p>
              */
-            public Builder namespaces(java.util.List<Namespace> namespaces) {
-                this.namespaces = namespaces;
+            public Builder maxResults(Integer maxResults) {
+                this.maxResults = maxResults;
                 return this;
             }
 
             /**
-             * <p>The token for the next page. Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
+             * <p>The pagination token for the next page (an opaque string). Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>ca1eb85f5d99c7d6a97e6****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -275,7 +275,7 @@ public class ListLumaNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of namespaces bound to the agent, regardless of the number of entries returned on the current page.</p>
+             * <p>The total number of documents that match the filter conditions. Use an empty NextToken value as the termination condition for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

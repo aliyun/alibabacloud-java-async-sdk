@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEventStreamingResponse> createEventStreaming(CreateEventStreamingRequest request);
 
     /**
+     * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     */
+    CompletableFuture<CreateKnowledgeBaseResponse> createKnowledgeBase(CreateKnowledgeBaseRequest request);
+
+    /**
      * @param request the request parameters of CreateNamespace  CreateNamespaceRequest
      * @return CreateNamespaceResponse
      */
@@ -180,6 +186,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEventStreamingResponse
      */
     CompletableFuture<DeleteEventStreamingResponse> deleteEventStreaming(DeleteEventStreamingRequest request);
+
+    /**
+     * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     */
+    CompletableFuture<DeleteKnowledgeBaseResponse> deleteKnowledgeBase(DeleteKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of DeleteNamespace  DeleteNamespaceRequest
@@ -278,6 +290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCatalogResponse> getCatalog(GetCatalogRequest request);
 
     /**
+     * @param request the request parameters of GetChunk  GetChunkRequest
+     * @return GetChunkResponse
+     */
+    CompletableFuture<GetChunkResponse> getChunk(GetChunkRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Queries the configuration of a single connection.</p>
      * 
@@ -285,6 +303,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetConnectionResponse
      */
     CompletableFuture<GetConnectionResponse> getConnection(GetConnectionRequest request);
+
+    /**
+     * @param request the request parameters of GetDocument  GetDocumentRequest
+     * @return GetDocumentResponse
+     */
+    CompletableFuture<GetDocumentResponse> getDocument(GetDocumentRequest request);
+
+    /**
+     * @param request the request parameters of GetDocumentDownloadUrl  GetDocumentDownloadUrlRequest
+     * @return GetDocumentDownloadUrlResponse
+     */
+    CompletableFuture<GetDocumentDownloadUrlResponse> getDocumentDownloadUrl(GetDocumentDownloadUrlRequest request);
 
     /**
      * <b>description</b> :
@@ -315,6 +345,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetGenerateAgentDataSemanticsProgressResponse
      */
     CompletableFuture<GetGenerateAgentDataSemanticsProgressResponse> getGenerateAgentDataSemanticsProgress(GetGenerateAgentDataSemanticsProgressRequest request);
+
+    /**
+     * @param request the request parameters of GetKnowledgeBase  GetKnowledgeBaseRequest
+     * @return GetKnowledgeBaseResponse
+     */
+    CompletableFuture<GetKnowledgeBaseResponse> getKnowledgeBase(GetKnowledgeBaseRequest request);
 
     /**
      * <b>description</b> :
@@ -431,6 +467,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCatalogsResponse> listCatalogs(ListCatalogsRequest request);
 
     /**
+     * @param request the request parameters of ListChunks  ListChunksRequest
+     * @return ListChunksResponse
+     */
+    CompletableFuture<ListChunksResponse> listChunks(ListChunksRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Retrieves a list of connection configurations.</p>
      * 
@@ -438,6 +480,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListConnectionsResponse
      */
     CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
+
+    /**
+     * @param request the request parameters of ListDocuments  ListDocumentsRequest
+     * @return ListDocumentsResponse
+     */
+    CompletableFuture<ListDocumentsResponse> listDocuments(ListDocumentsRequest request);
 
     /**
      * <b>description</b> :
@@ -464,8 +512,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEventStreamingsResponse> listEventStreamings(ListEventStreamingsRequest request);
 
     /**
+     * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
+     * @return ListKnowledgeBasesResponse
+     */
+    CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>Lists all data catalogs bound to a Luma Agent. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the data catalogs bound to a Luma Agent. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient page count to determine whether the last page has been reached.</p>
      * 
      * @param request the request parameters of ListLumaCatalogs  ListLumaCatalogsRequest
      * @return ListLumaCatalogsResponse
@@ -501,7 +555,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Lists all namespaces bound to a Luma Agent under a specified data catalog. Returns the complete set of bindings without pagination.</p>
+     * <p>Lists the namespaces bound to a Luma Agent under a specified data catalog. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine whether the last page has been reached.</p>
      * 
      * @param request the request parameters of ListLumaNamespaces  ListLumaNamespacesRequest
      * @return ListLumaNamespacesResponse
@@ -653,10 +707,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryTracedEventsResponse> queryTracedEvents(QueryTracedEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries event content.</p>
+     * 
+     * @param request the request parameters of QueryWithSQL  QueryWithSQLRequest
+     * @return QueryWithSQLResponse
+     */
+    CompletableFuture<QueryWithSQLResponse> queryWithSQL(QueryWithSQLRequest request);
+
+    /**
      * @param request the request parameters of SaveAgentDataSemantics  SaveAgentDataSemanticsRequest
      * @return SaveAgentDataSemanticsResponse
      */
     CompletableFuture<SaveAgentDataSemanticsResponse> saveAgentDataSemantics(SaveAgentDataSemanticsRequest request);
+
+    /**
+     * @param request the request parameters of SearchKnowledgeBase  SearchKnowledgeBaseRequest
+     * @return SearchKnowledgeBaseResponse
+     */
+    CompletableFuture<SearchKnowledgeBaseResponse> searchKnowledgeBase(SearchKnowledgeBaseRequest request);
 
     /**
      * <b>description</b> :
@@ -759,6 +828,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEventStreamingBusinessOptionResponse
      */
     CompletableFuture<UpdateEventStreamingBusinessOptionResponse> updateEventStreamingBusinessOption(UpdateEventStreamingBusinessOptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of UpdateNamespace  UpdateNamespaceRequest
