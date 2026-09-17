@@ -193,7 +193,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The end time for querying consumption record details, in UNIX timestamp format (seconds). If only this parameter is specified, the system automatically calculates startTime based on the rule cycle.</p>
+         * <p>The end time for querying consumption record details. Specify a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates startTime based on the rule cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>1788425220</p>
@@ -229,7 +229,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The number of detailed consumption (request) records per page for the subject within the cycle. Maximum value: 10.</p>
+         * <p>The number of entries per page for the detailed consumption (request) records of the subject within the cycle. Maximum value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -241,7 +241,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The start time for querying consumption record details, in UNIX timestamp format (seconds). If only this parameter is specified, the system automatically calculates endTime based on the rule cycle.</p>
+         * <p>The start time for querying consumption record details. Specify a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates endTime based on the rule cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>1788338820</p>

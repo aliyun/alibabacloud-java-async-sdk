@@ -102,7 +102,7 @@ public class UpdateConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C67DED2B-F19B-5BEC-88C1-D6EB854CD0D4</p>

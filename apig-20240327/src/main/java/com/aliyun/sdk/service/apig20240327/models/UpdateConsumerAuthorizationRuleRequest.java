@@ -115,7 +115,8 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The consumer ID.
+         * Note: This parameter is a required path parameter in the URL path /v1/consumers/{consumerId}/authorization-rules/{consumerAuthorizationRuleId}. If this parameter is omitted, the SDK reports an &quot;Illegal character in path&quot; error because the path template is not replaced.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-cvs7kbem1hkiit4ivhu0</p>
@@ -127,7 +128,8 @@ public class UpdateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The consumer authorization rule ID used to filter the API operation list. The response includes only the authorized API operations.</p>
+         * <p>The consumer authorization rule ID. The API list in the response contains only the authorized APIs that match the specified consumer authorization rule ID.
+         * Note: This parameter is a required path parameter in the URL path /v1/consumers/{consumerId}/authorization-rules/{consumerAuthorizationRuleId}. If this parameter is omitted, the SDK reports an &quot;Illegal character in path&quot; error because the path template is not replaced.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>

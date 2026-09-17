@@ -126,7 +126,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -336,7 +336,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exact value of cached consumption. Supports decimals in credit scenarios.</p>
+             * <p>The exact value of cached consumption. Decimals are supported in credit scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>10.5</p>
@@ -369,7 +369,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exact value of input consumption. Supports decimals in credit scenarios.</p>
+             * <p>The exact value of input consumption. Decimals are supported in credit scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>120.5</p>
@@ -402,7 +402,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exact value of output consumption. Supports decimals in credit scenarios.</p>
+             * <p>The exact value of output consumption. Decimals are supported in credit scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>80.5</p>
@@ -446,7 +446,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exact value of total consumption. Supports decimals in credit scenarios.</p>
+             * <p>The exact value of total consumption. Decimals are supported in credit scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>210.5</p>
@@ -799,7 +799,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exact value of total cached consumption. Supports decimals in credit scenarios.</p>
+             * <p>The exact value of total cached consumption. Decimals are supported in credit scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>20.5</p>
@@ -832,7 +832,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exact value of total input consumption. Supports decimals in credit scenarios.</p>
+             * <p>The exact value of total input consumption. Decimals are supported in credit scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>300.5</p>
@@ -854,7 +854,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exact value of total output consumption. Supports decimals in credit scenarios.</p>
+             * <p>The exact value of total output consumption. Decimals are supported in credit scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>180.5</p>
@@ -920,7 +920,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exact value of the total used amount of the subject. Supports decimals in credit scenarios.</p>
+             * <p>The exact value of the total used amount of the subject. Decimals are supported in credit scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>500.5</p>

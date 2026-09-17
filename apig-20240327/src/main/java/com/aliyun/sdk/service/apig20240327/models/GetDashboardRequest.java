@@ -185,7 +185,7 @@ public class GetDashboardRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the gateway. Before calling this operation, make sure that the target gateway has enabled the Simple Log Service (SLS) log delivery feature by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</p>
+         * <p>The unique ID of the gateway. Before calling this operation, make sure that the target gateway has enabled the Simple Log Service (SLS) log delivery feature by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-co370icmjeu****</p>
@@ -197,7 +197,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>The language. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -235,11 +235,14 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>The dashboard name. Valid values:</p>
+         * <p>The name of the dashboard. Valid values:</p>
          * <ul>
-         * <li>LOG: access log</li>
-         * <li>PLUGIN: plugin log</li>
+         * <li>LOG: Access log.</li>
+         * <li>PLUGIN: Plugin log.</li>
          * </ul>
+         * <blockquote>
+         * <p>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>PLUGIN</p>
@@ -287,10 +290,13 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>The dashboard source. Valid values:</p>
+         * <p>The source of the dashboard. Valid values:</p>
          * <ul>
-         * <li>SLS: log dashboard</li>
+         * <li>SLS: Log dashboard.</li>
          * </ul>
+         * <blockquote>
+         * <p>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>SLS</p>

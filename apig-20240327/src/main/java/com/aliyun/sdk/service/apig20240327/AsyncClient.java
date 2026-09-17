@@ -536,12 +536,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
+     * <p>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
+     * Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</p>
      * 
      * @param request the request parameters of GetGatewayQuotaRuleSubjectUsage  GetGatewayQuotaRuleSubjectUsageRequest
      * @return GetGatewayQuotaRuleSubjectUsageResponse
      */
     CompletableFuture<GetGatewayQuotaRuleSubjectUsageResponse> getGatewayQuotaRuleSubjectUsage(GetGatewayQuotaRuleSubjectUsageRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</p>
+     * 
+     * @param request the request parameters of GetGatewayResourceQuotaUsage  GetGatewayResourceQuotaUsageRequest
+     * @return GetGatewayResourceQuotaUsageResponse
+     */
+    CompletableFuture<GetGatewayResourceQuotaUsageResponse> getGatewayResourceQuotaUsage(GetGatewayResourceQuotaUsageRequest request);
 
     /**
      * @param request the request parameters of GetHttpApi  GetHttpApiRequest
@@ -1164,7 +1174,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</p>
+     * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</p>
      * <blockquote>
      * <p> Recommended call sequence:</p>
      * <ul>
@@ -1174,10 +1184,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains conflictHash.</li>
+     * <li>The response contains a conflict preview with a conflictHash value.</li>
      * </ul>
      * </li>
-     * <li>Step 2: Confirm and submit the request.</li>
+     * <li>Step 2: Confirm and submit the changes.</li>
      * <li><ul>
      * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
