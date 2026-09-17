@@ -107,6 +107,9 @@ public class ListAppConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomConfig")
         private java.util.Map<String, ?> customConfig;
 
+        @com.aliyun.core.annotation.NameInMap("CustomOrderNum")
+        private Integer customOrderNum;
+
         @com.aliyun.core.annotation.NameInMap("DeployStatus")
         private String deployStatus;
 
@@ -132,6 +135,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.classify = builder.classify;
             this.customConfig = builder.customConfig;
+            this.customOrderNum = builder.customOrderNum;
             this.deployStatus = builder.deployStatus;
             this.gmtModified = builder.gmtModified;
             this.name = builder.name;
@@ -168,6 +172,13 @@ public class ListAppConfigsResponseBody extends TeaModel {
          */
         public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
+        }
+
+        /**
+         * @return customOrderNum
+         */
+        public Integer getCustomOrderNum() {
+            return this.customOrderNum;
         }
 
         /**
@@ -223,6 +234,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
             private String appId; 
             private String classify; 
             private java.util.Map<String, ?> customConfig; 
+            private Integer customOrderNum; 
             private String deployStatus; 
             private String gmtModified; 
             private String name; 
@@ -238,6 +250,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
                 this.appId = model.appId;
                 this.classify = model.classify;
                 this.customConfig = model.customConfig;
+                this.customOrderNum = model.customOrderNum;
                 this.deployStatus = model.deployStatus;
                 this.gmtModified = model.gmtModified;
                 this.name = model.name;
@@ -281,6 +294,17 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The sort number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder customOrderNum(Integer customOrderNum) {
+                this.customOrderNum = customOrderNum;
+                return this;
+            }
+
+            /**
              * <p>The publish status.</p>
              * 
              * <strong>example:</strong>
@@ -292,7 +316,7 @@ public class ListAppConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The last modified time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-15 10:17:49</p>

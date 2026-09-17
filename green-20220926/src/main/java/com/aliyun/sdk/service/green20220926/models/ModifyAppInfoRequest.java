@@ -22,6 +22,10 @@ public class ModifyAppInfoRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomOrderNum")
+    private Integer customOrderNum;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -36,6 +40,7 @@ public class ModifyAppInfoRequest extends Request {
     private ModifyAppInfoRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.customOrderNum = builder.customOrderNum;
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
@@ -62,6 +67,13 @@ public class ModifyAppInfoRequest extends Request {
     }
 
     /**
+     * @return customOrderNum
+     */
+    public Integer getCustomOrderNum() {
+        return this.customOrderNum;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -84,6 +96,7 @@ public class ModifyAppInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyAppInfoRequest, Builder> {
         private String appId; 
+        private Integer customOrderNum; 
         private String name; 
         private String regionId; 
         private String resourceType; 
@@ -95,6 +108,7 @@ public class ModifyAppInfoRequest extends Request {
         private Builder(ModifyAppInfoRequest request) {
             super(request);
             this.appId = request.appId;
+            this.customOrderNum = request.customOrderNum;
             this.name = request.name;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
@@ -109,6 +123,18 @@ public class ModifyAppInfoRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * <p>The sort number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder customOrderNum(Integer customOrderNum) {
+            this.putQueryParameter("CustomOrderNum", customOrderNum);
+            this.customOrderNum = customOrderNum;
             return this;
         }
 
