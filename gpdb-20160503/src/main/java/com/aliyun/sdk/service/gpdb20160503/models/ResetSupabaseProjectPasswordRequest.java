@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ResetSupabaseProjectPasswordRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountPassword")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String accountPassword;
 
     @com.aliyun.core.annotation.Query
@@ -106,10 +105,9 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
          * <p>The password of the database account.</p>
          * <ul>
          * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>The following special characters are supported: <code>!@#$%^&amp;*()_+-=</code></li>
+         * <li>The supported special characters are: <code>!@#$%^&amp;*()_+-=</code></li>
          * <li>The password must be 8 to 32 characters in length.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Pw123456</p>
@@ -121,7 +119,10 @@ public class ResetSupabaseProjectPasswordRequest extends Request {
         }
 
         /**
-         * DashboardPassword.
+         * <p>The Supabase Dashboard password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zaQBjed6d4ubV4o</p>
          */
         public Builder dashboardPassword(String dashboardPassword) {
             this.putQueryParameter("DashboardPassword", dashboardPassword);

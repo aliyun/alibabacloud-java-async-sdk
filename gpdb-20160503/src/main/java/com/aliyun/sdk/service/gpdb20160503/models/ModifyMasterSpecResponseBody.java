@@ -104,8 +104,8 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * <p>This parameter is returned only if the request fails.</p>
+         * <p>The error message.</p>
+         * <p>This parameter is returned only when the API call fails.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -127,10 +127,10 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the operation. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: The operation failed.</li>
+         * <li><strong>true</strong>: The operation succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>

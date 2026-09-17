@@ -23,6 +23,10 @@ public class UpgradeDBVersionRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
+    private String effectiveTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MajorVersion")
     private String majorVersion;
 
@@ -49,6 +53,7 @@ public class UpgradeDBVersionRequest extends Request {
     private UpgradeDBVersionRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.effectiveTime = builder.effectiveTime;
         this.majorVersion = builder.majorVersion;
         this.minorVersion = builder.minorVersion;
         this.ownerId = builder.ownerId;
@@ -75,6 +80,13 @@ public class UpgradeDBVersionRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return effectiveTime
+     */
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     /**
@@ -121,6 +133,7 @@ public class UpgradeDBVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeDBVersionRequest, Builder> {
         private String DBInstanceId; 
+        private String effectiveTime; 
         private String majorVersion; 
         private String minorVersion; 
         private Long ownerId; 
@@ -135,6 +148,7 @@ public class UpgradeDBVersionRequest extends Request {
         private Builder(UpgradeDBVersionRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.effectiveTime = request.effectiveTime;
             this.majorVersion = request.majorVersion;
             this.minorVersion = request.minorVersion;
             this.ownerId = request.ownerId;
@@ -144,7 +158,10 @@ public class UpgradeDBVersionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +174,23 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used and does not need to be specified.</p>
+         * <p>The effective period. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediate</strong> (default): The upgrade takes effect immediately.</li>
+         * <li><strong>MaintainTime</strong>: The upgrade takes effect during the O&amp;M window. For more information, see ModifyDBInstanceMaintainTime.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Immediate</p>
+         */
+        public Builder effectiveTime(String effectiveTime) {
+            this.putQueryParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
+            return this;
+        }
+
+        /**
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -169,7 +202,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * <p>The minor version of the instance.</p>
+         * <p>The minor version.</p>
          * 
          * <strong>example:</strong>
          * <p>6.3.6.1-202112012048</p>
@@ -190,7 +223,10 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -202,7 +238,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used and does not need to be specified.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -214,7 +250,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used and does not need to be specified.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

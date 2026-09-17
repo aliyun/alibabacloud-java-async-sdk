@@ -103,10 +103,11 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable <strong>automatic start and stop</strong>. Valid values:</p>
+         * <p>Specifies whether to enable <strong>auto start/stop</strong>.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</li>
-         * <li>false: Disabled. After this feature is disabled, the automatic start and stop feature of Supabase is turned off.</li>
+         * <li>false: Disabled. After this feature is disabled, the auto start/stop feature of Supabase is turned off.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -120,7 +121,10 @@ public class ModifySupabaseAutoScalePolicyRequest extends Request {
         }
 
         /**
-         * IdleTimeHours.
+         * <p>The idle time before auto stop, in hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder idleTimeHours(String idleTimeHours) {
             this.putQueryParameter("IdleTimeHours", idleTimeHours);

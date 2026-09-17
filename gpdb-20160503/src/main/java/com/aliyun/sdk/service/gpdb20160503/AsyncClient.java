@@ -1848,8 +1848,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not available for instances in reserved storage mode.
-     * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</p>
+     * <p>This operation does not support instances in storage reservation mode.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * @param request the request parameters of ModifyMasterSpec  ModifyMasterSpecRequest
      * @return ModifyMasterSpecResponse
@@ -1926,7 +1926,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Only ADBPG Supabase instances are supported.</li>
+     * <li>Only AnalyticDB for PostgreSQL Supabase instances are supported.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifySupabaseAutoScalePolicy  ModifySupabaseAutoScalePolicyRequest

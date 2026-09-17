@@ -405,7 +405,10 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * AppliedIdleTimeHours.
+         * <p>The auto-pause duration in hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder appliedIdleTimeHours(String appliedIdleTimeHours) {
             this.appliedIdleTimeHours = appliedIdleTimeHours;
@@ -413,10 +416,11 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether <strong>auto start and stop</strong> is enabled. Valid values:</p>
+         * <p>Specifies whether <strong>auto start/stop</strong> is enabled.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</li>
-         * <li>false: Disabled. After this feature is disabled, the auto start and stop feature of Supabase is turned off.</li>
+         * <li>false: Disabled. After this feature is disabled, the auto start/stop feature of Supabase is turned off.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -450,7 +454,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Supabase Dashboard password. This parameter is not in use.</p>
+         * <p>The Supabase Dashboard password (not currently used).</p>
          * 
          * <strong>example:</strong>
          * <p>xxpassword</p>
@@ -461,7 +465,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Supabase Dashboard username. This parameter is not in use.</p>
+         * <p>The Supabase Dashboard username (not currently used).</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -472,7 +476,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The performance level of the cloud disk. Valid values:</p>
+         * <p>The cloud disk performance level. Valid values:</p>
          * <ul>
          * <li>PL0</li>
          * <li>PL1</li>
@@ -498,7 +502,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The database DPI engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -509,7 +513,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The elastic network interface (ENI) ID. The network interface controller (NIC) ID of the instance.</p>
+         * <p>The elastic network interface controller (NIC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-xxxxxx</p>
@@ -542,7 +546,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billing type. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
          * <li><p>POSTPAY: pay-as-you-go.</p>
          * </li>
@@ -559,7 +563,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal network connection string of the Supabase Dashboard.</p>
+         * <p>The Supabase Dashboard internal network connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.11</p>
@@ -614,7 +618,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public network connection string of the Supabase Dashboard.</p>
+         * <p>The Supabase Dashboard public network connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>10.154.11.10</p>
@@ -650,7 +654,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of IP addresses in the IP whitelist group, separated by commas (,).</p>
+         * <p>The list of IP addresses in the IP whitelist group, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -672,7 +676,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage size. Unit: GB.</p>
+         * <p>The storage size, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

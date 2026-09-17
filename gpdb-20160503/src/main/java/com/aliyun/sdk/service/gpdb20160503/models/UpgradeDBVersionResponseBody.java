@@ -93,10 +93,10 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>This parameter is no longer returned.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. No value is returned for this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-wz9kmr708m155j***</p>
+         * <p>null</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -104,7 +104,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-wz9kmr708m155j***</p>
@@ -115,7 +115,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25C11EE5-B7E8-481A-A07C-BD619971A570</p>
@@ -126,7 +126,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>101450956</p>

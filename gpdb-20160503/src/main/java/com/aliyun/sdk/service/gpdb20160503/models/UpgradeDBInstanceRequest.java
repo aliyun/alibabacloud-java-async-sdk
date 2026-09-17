@@ -35,6 +35,10 @@ public class UpgradeDBInstanceRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
+    private String effectiveTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceSpec")
     private String instanceSpec;
 
@@ -88,6 +92,7 @@ public class UpgradeDBInstanceRequest extends Request {
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceGroupCount = builder.DBInstanceGroupCount;
         this.DBInstanceId = builder.DBInstanceId;
+        this.effectiveTime = builder.effectiveTime;
         this.instanceSpec = builder.instanceSpec;
         this.masterNodeNum = builder.masterNodeNum;
         this.ownerId = builder.ownerId;
@@ -141,6 +146,13 @@ public class UpgradeDBInstanceRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return effectiveTime
+     */
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     /**
@@ -232,6 +244,7 @@ public class UpgradeDBInstanceRequest extends Request {
         private String DBInstanceClass; 
         private String DBInstanceGroupCount; 
         private String DBInstanceId; 
+        private String effectiveTime; 
         private String instanceSpec; 
         private String masterNodeNum; 
         private Long ownerId; 
@@ -255,6 +268,7 @@ public class UpgradeDBInstanceRequest extends Request {
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceGroupCount = request.DBInstanceGroupCount;
             this.DBInstanceId = request.DBInstanceId;
+            this.effectiveTime = request.effectiveTime;
             this.instanceSpec = request.instanceSpec;
             this.masterNodeNum = request.masterNodeNum;
             this.ownerId = request.ownerId;
@@ -321,6 +335,15 @@ public class UpgradeDBInstanceRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * EffectiveTime.
+         */
+        public Builder effectiveTime(String effectiveTime) {
+            this.putQueryParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
             return this;
         }
 
