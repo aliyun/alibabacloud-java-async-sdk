@@ -96,7 +96,7 @@ public class UpdateExperimentRunResponseBody extends TeaModel {
          * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Experiment record updated successfully.</p>
+         * <p>Experiment record updated successfully</p>
          */
         public Builder message(String message) {
             this.message = message;

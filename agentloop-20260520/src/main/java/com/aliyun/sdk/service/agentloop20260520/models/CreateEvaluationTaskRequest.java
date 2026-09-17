@@ -237,7 +237,7 @@ public class CreateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The data source and execution configuration. When <code>dataType=trace</code>, the backend automatically populates the SLS Project and sets <code>storeName=logstore-tracing</code>. For trace-level evaluation, set <code>dataScope=trace</code>.</p>
+         * <p>The data source and execution configuration. When <code>dataType=trace</code>, the backend automatically populates the SLS Project and <code>storeName=logstore-tracing</code>. For trace-level Trace evaluation, set <code>dataScope=trace</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dataScope&quot;:&quot;trace&quot;}</p>
@@ -261,7 +261,7 @@ public class CreateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The data source type of the evaluation target. Use <code>trace</code> for trace-based evaluation.</p>
+         * <p>The data source type of the evaluation object. Use <code>trace</code> for trace-based evaluation.</p>
          * 
          * <strong>example:</strong>
          * <p>trace</p>
@@ -273,7 +273,7 @@ public class CreateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The evaluation task description.</p>
+         * <p>The description of the evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>Evaluate the task completion of online Agent traces</p>
@@ -285,7 +285,7 @@ public class CreateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The evaluator configuration list. This parameter cannot be empty. Within the same task, <code>evaluatorRef</code> takes precedence as the unique identifier. Otherwise, <code>name</code> is used.</p>
+         * <p>The list of evaluator configurations. This parameter cannot be empty. Within the same task, <code>evaluatorRef</code> takes precedence. Otherwise, <code>name</code> is used as the unique identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;,&quot;resultName&quot;:&quot;agent_task_completion&quot;,&quot;resultType&quot;:&quot;score&quot;,&quot;variableMapping&quot;:{&quot;input&quot;:&quot;trace.input&quot;,&quot;output&quot;:&quot;trace.output&quot;,&quot;agent_trajectory&quot;:&quot;trace.agent_trajectory&quot;}}]</p>
@@ -297,7 +297,7 @@ public class CreateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The task execution strategies. Supports a JSON object or JSON string. <code>backfill</code> is used for historical data backfill, and <code>continuous</code> is used for continuous evaluation of new data.</p>
+         * <p>The task execution strategies. Supports a JSON object or JSON string. <code>backfill</code> is used for historical data backfill. <code>continuous</code> is used for continuous evaluation of new data.</p>
          */
         public Builder runStrategies(RunStrategies runStrategies) {
             this.putBodyParameter("runStrategies", runStrategies);
@@ -306,7 +306,7 @@ public class CreateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The task tag key-value pairs. You do not need to specify this parameter by default. Specify this parameter only when you need to associate or filter tasks by business tags.</p>
+         * <p>The task tag key-value pairs. No tags need to be specified by default. Specify tags only when you need to associate or filter tasks by business tags.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;env&quot;:&quot;prod&quot;,&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;planId&quot;:&quot;plan-20260703&quot;}</p>
@@ -342,7 +342,7 @@ public class CreateEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. This query parameter is declared in CloudSpec, but the backend does not currently perform idempotency comparison.</p>
+         * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</p>
          * 
          * <strong>example:</strong>
          * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>

@@ -106,7 +106,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page that was specified in the request. This value is echoed back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. An empty string indicates that the current page is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg5MA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * pipelines.
+         * <p>The list of pipelines.</p>
          */
         public Builder pipelines(java.util.List<Pipelines> pipelines) {
             this.pipelines = pipelines;
@@ -130,7 +136,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of pipelines that match the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * fromTime.
+             * <p>The start of the time slice, in UNIX millisecond timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735660800000</p>
              */
             public Builder fromTime(Long fromTime) {
                 this.fromTime = fromTime;
@@ -212,7 +227,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * toTime.
+             * <p>The end of the time slice, in UNIX millisecond timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735747200000</p>
              */
             public Builder toTime(Long toTime) {
                 this.toTime = toTime;
@@ -279,7 +297,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * fromTime.
+             * <p>The scheduling start time, in UNIX millisecond timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735660800000</p>
              */
             public Builder fromTime(Long fromTime) {
                 this.fromTime = fromTime;
@@ -287,7 +308,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * interval.
+             * <p>The scheduling interval, such as 1h or 30m.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1h</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -367,7 +391,14 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * mode.
+             * <p>The scheduling mode. Valid values:</p>
+             * <ul>
+             * <li>RunOnce: one-time execution.</li>
+             * <li>Scheduled: periodic scheduling.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RunOnce</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -375,7 +406,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * runOnce.
+             * <p>The parameters for one-time execution. This parameter has a value only when mode is set to RunOnce.</p>
              */
             public Builder runOnce(RunOnce runOnce) {
                 this.runOnce = runOnce;
@@ -383,7 +414,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * scheduled.
+             * <p>The parameters for periodic scheduling. This parameter has a value only when mode is set to Scheduled.</p>
              */
             public Builder scheduled(Scheduled scheduled) {
                 this.scheduled = scheduled;
@@ -450,7 +481,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The name of the AgentSpace to which the default destination dataset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-space</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -458,7 +492,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * dataset.
+             * <p>The name of the default destination dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other-result</p>
              */
             public Builder dataset(String dataset) {
                 this.dataset = dataset;
@@ -525,7 +562,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * dataset.
+             * <p>The default destination dataset.</p>
              */
             public Builder dataset(Dataset dataset) {
                 this.dataset = dataset;
@@ -533,7 +570,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the default destination. Currently, only dataset is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -600,7 +640,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The name of the AgentSpace to which the destination dataset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-space</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -608,7 +651,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * dataset.
+             * <p>The name of the destination dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>refund-result</p>
              */
             public Builder dataset(String dataset) {
                 this.dataset = dataset;
@@ -675,7 +721,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * dataset.
+             * <p>The destination dataset of the route.</p>
              */
             public Builder dataset(SinkDataset dataset) {
                 this.dataset = dataset;
@@ -683,7 +729,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the route destination. Currently, only dataset is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -763,7 +812,12 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * expression.
+             * <p>The route expression in SPL. Only where, project, and extend are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>| where intent = \&quot;refund\&quot;</li>
+             * </ul>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -771,7 +825,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>refund</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -779,7 +836,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * sink.
+             * <p>The write destination of the route.</p>
              */
             public Builder sink(Sink sink) {
                 this.sink = sink;
@@ -859,7 +916,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * defaultSink.
+             * <p>The default write destination that is used when no condition route is matched.</p>
              */
             public Builder defaultSink(DefaultSink defaultSink) {
                 this.defaultSink = defaultSink;
@@ -867,7 +924,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * matchMode.
+             * <p>The route matching mode. Currently, only all is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder matchMode(String matchMode) {
                 this.matchMode = matchMode;
@@ -875,7 +935,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * routes.
+             * <p>The list of condition routes.</p>
              */
             public Builder routes(java.util.List<Routes> routes) {
                 this.routes = routes;
@@ -942,7 +1002,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpace.
+             * <p>The name of the AgentSpace to which the destination dataset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-space</p>
              */
             public Builder agentSpace(String agentSpace) {
                 this.agentSpace = agentSpace;
@@ -950,7 +1013,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * dataset.
+             * <p>The name of the destination dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-dataset</p>
              */
             public Builder dataset(String dataset) {
                 this.dataset = dataset;
@@ -1030,7 +1096,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * condition.
+             * <p>The conditional routing configuration. This parameter is used only when sink.type is set to condition.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -1038,7 +1104,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * dataset.
+             * <p>The destination dataset configuration for the dataset sink. This parameter is used only when sink.type is set to dataset.</p>
              */
             public Builder dataset(PipelinesSinkDataset dataset) {
                 this.dataset = dataset;
@@ -1046,7 +1112,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The destination type. Valid values: dataset or condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>condition</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1113,7 +1182,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * dataset.
+             * <p>The name of the source dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-dataset</p>
              */
             public Builder dataset(String dataset) {
                 this.dataset = dataset;
@@ -1121,7 +1193,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * filter.
+             * <p>The data filter condition for the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status = \&quot;pending\&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -1201,7 +1276,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * logstore.
+             * <p>The name of the SLS Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-sls-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -1209,7 +1287,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * project.
+             * <p>The name of the SLS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-sls-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -1217,7 +1298,12 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * query.
+             * <p>The data filtered query statement in SLS query/analysis syntax.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>| SELECT *</li>
+             * </ul>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -1297,7 +1383,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * dataset.
+             * <p>The dataset datasource config in the current AgentSpace.</p>
              */
             public Builder dataset(SourceDataset dataset) {
                 this.dataset = dataset;
@@ -1305,7 +1391,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * logstore.
+             * <p>The Simple Log Service (SLS) Logstore datasource config.</p>
              */
             public Builder logstore(Logstore logstore) {
                 this.logstore = logstore;
@@ -1313,7 +1399,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The data source type. Valid values: logstore or dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1497,6 +1586,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The time when the pipeline was created, in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -1508,7 +1598,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My pipeline</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1516,7 +1609,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * executePolicy.
+             * <p>The execution policy.</p>
              */
             public Builder executePolicy(ExecutePolicy executePolicy) {
                 this.executePolicy = executePolicy;
@@ -1524,7 +1617,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineName.
+             * <p>The name of the pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-pipeline</p>
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;
@@ -1532,7 +1628,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1540,7 +1639,16 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleStatus.
+             * <p>The scheduling status. Valid values:</p>
+             * <ul>
+             * <li>None: no scheduling. This value is returned for RunOnce pipelines.</li>
+             * <li>Active: active.</li>
+             * <li>Paused: paused.</li>
+             * <li>Terminated: terminated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder scheduleStatus(String scheduleStatus) {
                 this.scheduleStatus = scheduleStatus;
@@ -1548,7 +1656,14 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleType.
+             * <p>The scheduling type. Valid values:</p>
+             * <ul>
+             * <li>RunOnce: one-time execution.</li>
+             * <li>Scheduled: periodic scheduling.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RunOnce</p>
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -1556,7 +1671,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * sink.
+             * <p>The pipeline sink (data write destination).</p>
              */
             public Builder sink(PipelinesSink sink) {
                 this.sink = sink;
@@ -1564,7 +1679,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The pipeline data source.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -1572,6 +1687,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the pipeline was last updated, in ISO 8601 UTC format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -1583,7 +1699,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace associated with the pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-workspace</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

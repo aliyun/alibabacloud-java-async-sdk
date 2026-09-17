@@ -85,7 +85,7 @@ public class DeleteEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>The evaluation task ID.</p>
+         * <p>The model evaluation task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>

@@ -239,7 +239,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The ID of the experiment plan.</p>
+         * <p>The experiment plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-plan-e95bff54685a4ae29ff3a834c1008a71</p>
@@ -287,7 +287,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The list of evaluators. Omitting this field indicates no modification. Passing an empty array clears the list.</p>
+         * <p>The list of evaluators. Omitting this field means no modification. Passing an empty array clears the list.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</p>
@@ -311,7 +311,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The list of experiment configurations. When specified, the entire list is replaced. The number of configurations must be 1 to 5.</p>
+         * <p>The list of experiment configurations. When provided, the entire list is replaced. The number of configurations must be 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;baseline&quot;, &quot;modelName&quot;: &quot;qwen-max&quot;}]</p>
@@ -335,7 +335,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The name of the associated data processing pipeline. This parameter is optional. If not specified, the value is not updated. If an empty character string is specified, the association is dissociated. After association, when an experiment under this plan finishes execution and writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace and calls PreviewPipeline. The pipeline-processed results are then written together.</p>
+         * <p>The name of the associated data processing pipeline. This parameter is optional. If not specified, the value is not updated. If an empty character string is specified, the association is dissociated. After association, when an experiment under this plan completes execution and writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace and invokes PreviewPipeline. The pipeline-processed results are then written together.</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putBodyParameter("pipelineName", pipelineName);

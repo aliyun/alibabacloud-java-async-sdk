@@ -182,10 +182,10 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file remarks.</p>
+             * <p>The file remark.</p>
              * 
              * <strong>example:</strong>
-             * <p>主技能说明</p>
+             * <p>Main skill description</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -265,7 +265,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the version was created. This value is a UNIX timestamp in seconds.</p>
+             * <p>The version creation time, in seconds-level UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -290,7 +290,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
              * <p>The version description.</p>
              * 
              * <strong>example:</strong>
-             * <p>首次发布版本</p>
+             * <p>Initial release version</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -461,7 +461,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the skill was created. This value is a UNIX timestamp in seconds.</p>
+             * <p>The creation time, in seconds-level UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -486,7 +486,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
              * <p>The skill description.</p>
              * 
              * <strong>example:</strong>
-             * <p>读取链路上下文辅助评估</p>
+             * <p>Read trace context to assist evaluation</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -497,7 +497,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Trace 上下文读取</p>
+             * <p>Trace Context Loader</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -519,7 +519,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
              * <p>The list of skill files.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;主技能说明&quot;}]</p>
+             * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Main skill description&quot;}]</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -549,7 +549,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the skill was last updated. This value is a UNIX timestamp in seconds.</p>
+             * <p>The update time, in seconds-level UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816600</p>
@@ -563,7 +563,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
              * <p>The list of skill versions.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;首次发布版本&quot;}]</p>
+             * <p>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;Initial release version&quot;}]</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;

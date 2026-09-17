@@ -102,7 +102,7 @@ public class DeleteExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deletion result. The value is deleted if the operation is successful.</p>
+         * <p>The deletion result. The value is deleted if the operation succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>deleted</p>

@@ -160,7 +160,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the version was created. The value is a UNIX timestamp in seconds.</p>
+             * <p>The version creation time, in seconds-level UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -185,7 +185,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
              * <p>The version description.</p>
              * 
              * <strong>example:</strong>
-             * <p>初始版本</p>
+             * <p>Initial version</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -433,7 +433,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
              * <p>The configuration of the current version.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;prompt&quot;:&quot;请评估任务完成度&quot;}</p>
+             * <p>{&quot;prompt&quot;:&quot;Please evaluate the task completion&quot;}</p>
              */
             public Builder config(java.util.Map<String, ?> config) {
                 this.config = config;
@@ -441,7 +441,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the evaluator was created. The value is a UNIX timestamp in seconds.</p>
+             * <p>The creation time, in seconds-level UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -466,7 +466,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
              * <p>The evaluator description.</p>
              * 
              * <strong>example:</strong>
-             * <p>判断 Agent 是否完成用户任务</p>
+             * <p>Determines whether the Agent has completed the user task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -477,7 +477,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>链路任务完成度</p>
+             * <p>Trace task completion</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -540,7 +540,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the evaluator was last updated. The value is a UNIX timestamp in seconds.</p>
+             * <p>The update time, in seconds-level UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816600</p>

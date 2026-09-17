@@ -236,7 +236,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation time, in millisecond-level UNIX timestamp.</p>
+         * <p>The creation time. The value is a millisecond-level UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000000</p>
@@ -261,7 +261,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Compare the checkout Agent baseline with the optimized version</p>
+         * <p>Compare checkout Agent baseline with optimized version</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -365,7 +365,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of data item IDs selected in partial dataset mode.</p>
+         * <p>The list of selected data item IDs in partial dataset mode.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;]</p>
@@ -387,7 +387,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The update time, in millisecond-level UNIX timestamp.</p>
+         * <p>The update time. The value is a millisecond-level UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816600000</p>

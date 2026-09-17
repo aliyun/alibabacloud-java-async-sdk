@@ -57,7 +57,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
      * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
      * 
      * @param request the request parameters of CreateEvaluationTask  CreateEvaluationTaskRequest
@@ -79,7 +79,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
      * 
      * @param request the request parameters of CreateExperimentPlan  CreateExperimentPlanRequest
      * @return CreateExperimentPlanResponse
@@ -88,7 +88,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you need to pass <code>offlineExperiments</code> (1 to 5 items).</p>
+     * <p>Calls CreateExperimentRun to initiate an experiment run based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you must pass <code>offlineExperiments</code> (1 to 5).</p>
      * 
      * @param request the request parameters of CreateExperimentRun  CreateExperimentRunRequest
      * @return CreateExperimentRunResponse
@@ -160,7 +160,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</p>
+     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting a record does not delete the experiment plan to which it belongs.</p>
      * 
      * @param request the request parameters of DeleteExperimentRun  DeleteExperimentRunRequest
      * @return DeleteExperimentRunResponse
@@ -326,7 +326,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <code>offset</code>/<code>limit</code>.</p>
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code>/<code>limit</code>.</p>
      * 
      * @param request the request parameters of ListExperimentPlans  ListExperimentPlansRequest
      * @return ListExperimentPlansResponse
@@ -453,7 +453,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</p>
+     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for an offline experiment: running → progress writeback → completed.</p>
      * 
      * @param request the request parameters of UpdateExperimentRun  UpdateExperimentRunRequest
      * @return UpdateExperimentRunResponse

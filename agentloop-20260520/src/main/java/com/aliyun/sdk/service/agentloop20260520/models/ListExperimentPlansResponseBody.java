@@ -154,7 +154,7 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number information.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -198,7 +198,7 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the filter criteria.</p>
+         * <p>The total number of records that match the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

@@ -126,7 +126,7 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation result. A value of <code>created</code> indicates success.</p>
+         * <p>The creation result. The value <code>created</code> indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>created</p>
