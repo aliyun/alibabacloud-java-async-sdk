@@ -311,6 +311,39 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</p>
+     * <ul>
+     * <li><code>PENDING</code>: Waiting to be generated.</li>
+     * <li><code>RUNNING</code>: Being generated.<blockquote>
+     * <ul>
+     * <li>Only reports with <code>CancelAvailable</code> set to <code>true</code> can be canceled.</li>
+     * <li>Reports that are completed, failed, or expired cannot be canceled.</li>
+     * <li>When you cancel an already canceled report again, <code>Canceled</code> still returns <code>true</code>, and <code>CancelTime</code> retains the time of the first cancellation.</li>
+     * <li>Reports are isolated by instance and Alibaba Cloud account.</li>
+     * </ul>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of CancelSqlPatternCompareReport  CancelSqlPatternCompareReportRequest
+     * @return CancelSqlPatternCompareReportResponse
+     */
+    @Override
+    public CompletableFuture<CancelSqlPatternCompareReportResponse> cancelSqlPatternCompareReport(CancelSqlPatternCompareReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelSqlPatternCompareReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelSqlPatternCompareReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelSqlPatternCompareReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of CheckBindRamUser  CheckBindRamUserRequest
@@ -805,6 +838,35 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateSparkTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Compares two time windows and asynchronously generates a SQL pattern comparison report.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</li>
+     * <li>The returned <code>ReportId</code> only indicates that the request has been accepted. Call <code>DescribeSqlPatternCompareReports</code> to query the report status, and query the details when <code>DetailEnabled</code> is <code>true</code>.</li>
+     * <li>Only one report can be generated for an instance at a time.</li>
+     * <li>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateSqlPatternCompareReport  CreateSqlPatternCompareReportRequest
+     * @return CreateSqlPatternCompareReportResponse
+     */
+    @Override
+    public CompletableFuture<CreateSqlPatternCompareReportResponse> createSqlPatternCompareReport(CreateSqlPatternCompareReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSqlPatternCompareReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSqlPatternCompareReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSqlPatternCompareReportResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2941,6 +3003,80 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeSqlPatternResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query of SQL Pattern comparison report details based on <code>MetricType</code> by using paging. Report type descriptions:</p>
+     * <ul>
+     * <li>NEW: Returns Patterns that are new in time window 2. <code>MetricValues</code> returns <code>Time2</code>.</li>
+     * <li>CHANGED: Returns Patterns that exist in both time windows and have increased average values for the current metric. <code>MetricValues</code> returns <code>Avg</code>, <code>Sum</code>, and <code>Max</code>.
+     * Metric calculation methods:</li>
+     * <li><code>Sum</code>: The sum of metric values across valid query minute buckets.</li>
+     * <li><code>Avg</code>: The average of metric values across valid query minute buckets.</li>
+     * <li><code>Max</code>: The peak metric value within a single minute bucket.
+     * Metric units:</li>
+     * <li><code>QUERY_COUNT</code>: count.</li>
+     * <li><code>CPU_COST</code>: seconds.</li>
+     * <li><code>SHUFFLE_SIZE</code>, <code>PEAK_MEMORY</code>, <code>SCAN_SIZE</code>: GB.<blockquote>
+     * <ul>
+     * <li>Only reports with <code>DetailEnabled</code> set to <code>true</code> can be queried for details. Reports that are incomplete, canceled, or expired cannot be queried.</li>
+     * <li>Fields ending with <code>Percent</code> are already expressed as percentages. When the time window 1 metric value is 0, <code>ChangeRatePercent</code> may not be returned and should not be treated as 0%.</li>
+     * <li>Reports are isolated by instance and Alibaba Cloud account.</li>
+     * </ul>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSqlPatternCompareReport  DescribeSqlPatternCompareReportRequest
+     * @return DescribeSqlPatternCompareReportResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSqlPatternCompareReportResponse> describeSqlPatternCompareReport(DescribeSqlPatternCompareReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSqlPatternCompareReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSqlPatternCompareReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSqlPatternCompareReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the SQL Pattern comparison reports created by the current Alibaba Cloud account for a specified instance. RAM users can query reports that belong to their parent Alibaba Cloud account.
+     * The following pagination methods are supported:</p>
+     * <ul>
+     * <li>Page number-based pagination (recommended): Use <code>PageNumber</code> and <code>PageSize</code>.</li>
+     * <li>Token-based pagination: Use <code>MaxResults</code> and <code>NextToken</code>.<blockquote>
+     * <ul>
+     * <li>The two pagination methods cannot be used together. When you use page number-based pagination, the <code>MaxResults</code> parameter that is automatically included by the platform does not take effect.</li>
+     * <li>The list returns only unexpired reports in the <code>PENDING</code>, <code>RUNNING</code>, or <code>SUCCESS</code> state.</li>
+     * <li>Use <code>DetailEnabled</code> to determine whether report details can be queried. Use <code>CancelAvailable</code> to determine whether a report can be canceled.</li>
+     * <li>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</li>
+     * </ul>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSqlPatternCompareReports  DescribeSqlPatternCompareReportsRequest
+     * @return DescribeSqlPatternCompareReportsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSqlPatternCompareReportsResponse> describeSqlPatternCompareReports(DescribeSqlPatternCompareReportsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSqlPatternCompareReports").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSqlPatternCompareReportsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSqlPatternCompareReportsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

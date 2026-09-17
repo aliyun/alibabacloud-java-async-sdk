@@ -67,7 +67,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the file was added to the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-09 10:27:35</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -266,7 +272,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The ID of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>137</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -274,7 +283,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSizeBytes.
+             * <p>The size of the file, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder fileSizeBytes(Long fileSizeBytes) {
                 this.fileSizeBytes = fileSizeBytes;
@@ -282,7 +294,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucketName/path/to/file</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -290,7 +305,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -298,7 +316,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDirectory.
+             * <p>Indicates whether the file is a directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDirectory(Boolean isDirectory) {
                 this.isDirectory = isDirectory;
@@ -306,7 +327,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerFileId.
+             * <p>The file_id of the content host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder ownerFileId(Long ownerFileId) {
                 this.ownerFileId = ownerFileId;
@@ -314,7 +338,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageCount.
+             * <p>The total number of pages in the file, such as the number of pages in a PDF file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageCount(Integer pageCount) {
                 this.pageCount = pageCount;
@@ -322,7 +349,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessMessage.
+             * <p>The processing message of the knowledge base file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder processMessage(String processMessage) {
                 this.processMessage = processMessage;
@@ -330,7 +360,16 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessStatus.
+             * <p>The status of the file in the knowledge base. Valid values:</p>
+             * <ul>
+             * <li><p>Processing: The file is being processed.</p>
+             * </li>
+             * <li><p>Finished: The file has been processed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder processStatus(String processStatus) {
                 this.processStatus = processStatus;
@@ -338,7 +377,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The time when the file was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-10 10:23:46</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -457,7 +499,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Files.
+             * <p>The list of file information.</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -465,7 +507,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message returned by the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -473,7 +518,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -481,7 +529,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -489,7 +540,14 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The request was successful.</li>
+             * <li><strong>false</strong>: The request failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -497,7 +555,10 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Long total) {
                 this.total = total;
