@@ -67,7 +67,10 @@ public class SlsQueryJoin extends TeaModel {
         } 
 
         /**
-         * <p>The list of join conditions.</p>
+         * <p>The list of join conditions for SLS query result sets. The conditions define the matching rules between multiple SLS query results for cross-Logstore data correlation analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;leftField&quot;:&quot;traceId&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;rightField&quot;:&quot;trace_id&quot;}]</p>
          */
         public Builder conditions(java.util.List<SlsJoinCondition> conditions) {
             this.conditions = conditions;

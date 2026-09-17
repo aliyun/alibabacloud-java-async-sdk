@@ -67,7 +67,10 @@ public class QueryAlertRulesRelationTypeFilter extends TeaModel {
         } 
 
         /**
-         * in.
+         * <p>Matches any value in the set with OR semantics. Valid values: ALL, UMODEL_ENTITY, CLOUD_INSTANCE, GROUP_V1, GROUP_V2, and TAG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ALL&quot;,&quot;CLOUD_INSTANCE&quot;]</p>
          */
         public Builder in(java.util.List<String> in) {
             this.in = in;
@@ -75,7 +78,10 @@ public class QueryAlertRulesRelationTypeFilter extends TeaModel {
         }
 
         /**
-         * notIn.
+         * <p>Excludes any value in the set with NOT IN semantics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;TAG&quot;,&quot;GROUP_V1&quot;]</p>
          */
         public Builder notIn(java.util.List<String> notIn) {
             this.notIn = notIn;

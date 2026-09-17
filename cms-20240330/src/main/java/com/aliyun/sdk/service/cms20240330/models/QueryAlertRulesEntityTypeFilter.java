@@ -67,7 +67,10 @@ public class QueryAlertRulesEntityTypeFilter extends TeaModel {
         } 
 
         /**
-         * in.
+         * <p>Matches any value in the set (OR semantics).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;UMODEL_ENTITY&quot;,&quot;CLOUD_INSTANCE&quot;]</p>
          */
         public Builder in(java.util.List<String> in) {
             this.in = in;
@@ -75,7 +78,10 @@ public class QueryAlertRulesEntityTypeFilter extends TeaModel {
         }
 
         /**
-         * notIn.
+         * <p>Excludes any value in the set (NOT IN semantics).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;TAG&quot;]</p>
          */
         public Builder notIn(java.util.List<String> notIn) {
             this.notIn = notIn;

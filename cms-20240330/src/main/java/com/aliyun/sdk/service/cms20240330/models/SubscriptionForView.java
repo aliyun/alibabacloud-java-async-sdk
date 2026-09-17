@@ -318,7 +318,7 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: Subscribed. false or null: Not subscribed.</p>
+         * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values: true: Subscribe. false or null: Do not subscribe.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -340,7 +340,7 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the subscription.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

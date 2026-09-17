@@ -67,7 +67,10 @@ public class DisplayNameFilter extends TeaModel {
         } 
 
         /**
-         * <p>Returns only resources whose display name contains the specified string. The match is case-sensitive.</p>
+         * <p>The inclusion keyword for the display name. Only alert rules whose display names contain this keyword are returned. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU monitoring</p>
          */
         public Builder contains(String contains) {
             this.contains = contains;
@@ -75,7 +78,10 @@ public class DisplayNameFilter extends TeaModel {
         }
 
         /**
-         * <p>Returns only resources whose display name does not contain the specified string. The match is case-sensitive.</p>
+         * <p>The exclusion keyword for the display name. Alert rules whose display names contain this keyword are excluded. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ARM</p>
          */
         public Builder notContains(String notContains) {
             this.notContains = notContains;

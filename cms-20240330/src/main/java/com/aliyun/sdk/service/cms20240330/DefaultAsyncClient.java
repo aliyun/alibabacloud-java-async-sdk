@@ -176,6 +176,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAlertRobot  CreateAlertRobotRequest
+     * @return CreateAlertRobotResponse
+     */
+    @Override
+    public CompletableFuture<CreateAlertRobotResponse> createAlertRobot(CreateAlertRobotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAlertRobot").setMethod(HttpMethod.POST).setPathRegex("/robot").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAlertRobotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAlertRobotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Creates a webhook notification recipient.</p>
      * 
@@ -656,6 +674,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAggTaskGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAlertRobots  DeleteAlertRobotsRequest
+     * @return DeleteAlertRobotsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAlertRobotsResponse> deleteAlertRobots(DeleteAlertRobotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlertRobots").setMethod(HttpMethod.DELETE).setPathRegex("/robots").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlertRobotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlertRobotsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2124,8 +2160,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation can only query alert history from the last year.
-     * This topic provides an example of querying the alert history of Elastic Computing Service from the <code>product</code> dimension of a cloud service.</p>
+     * <p>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</p>
      * 
      * @param request the request parameters of ListAlertRobots  ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
@@ -2960,6 +2995,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAggTaskGroupStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAlertRobot  UpdateAlertRobotRequest
+     * @return UpdateAlertRobotResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAlertRobotResponse> updateAlertRobot(UpdateAlertRobotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAlertRobot").setMethod(HttpMethod.PATCH).setPathRegex("/robot/{robotId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAlertRobotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAlertRobotResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

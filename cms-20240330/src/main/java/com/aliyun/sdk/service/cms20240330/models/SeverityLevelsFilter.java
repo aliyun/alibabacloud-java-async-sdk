@@ -54,7 +54,10 @@ public class SeverityLevelsFilter extends TeaModel {
         } 
 
         /**
-         * <p>Matches a log entry if its severity level appears in this array of strings.</p>
+         * <p>The hit condition: the set of severity levels covered by the rule contains at least one level in the array (OR semantics).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;CRITICAL&quot;,&quot;ERROR&quot;]</p>
          */
         public Builder contains(java.util.List<String> contains) {
             this.contains = contains;

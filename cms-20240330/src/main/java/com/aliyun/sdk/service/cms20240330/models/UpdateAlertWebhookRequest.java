@@ -180,12 +180,10 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * <p>The content type of the data. Supported values:</p>
+         * <p>The content type. Valid values:</p>
          * <ul>
-         * <li><p>JSON</p>
-         * </li>
-         * <li><p>FORM</p>
-         * </li>
+         * <li>JSON</li>
+         * <li>FORM</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +196,7 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * <p>The headers.</p>
+         * <p>headers</p>
          */
         public Builder headers(java.util.Map<String, String> headers) {
             this.putBodyParameter("headers", headers);
@@ -207,12 +205,10 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * <p>The language. Supported values:</p>
+         * <p>The language. Valid values:</p>
          * <ul>
-         * <li><p>zh_CN</p>
-         * </li>
-         * <li><p>en_US</p>
-         * </li>
+         * <li>zh_CN</li>
+         * <li>en_US</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,12 +221,10 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * <p>The request method. Supported values:</p>
+         * <p>The request method. Valid values:</p>
          * <ul>
-         * <li><p>GET</p>
-         * </li>
-         * <li><p>POST</p>
-         * </li>
+         * <li>GET</li>
+         * <li>POST</li>
          * </ul>
          * 
          * <strong>example:</strong>

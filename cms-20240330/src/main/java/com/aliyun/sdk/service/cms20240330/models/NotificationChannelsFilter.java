@@ -132,7 +132,10 @@ public class NotificationChannelsFilter extends TeaModel {
         } 
 
         /**
-         * containsContacts.
+         * <p>The alert contact list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.contacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;John&quot;,&quot;Jane&quot;]</p>
          */
         public Builder containsContacts(java.util.List<String> containsContacts) {
             this.containsContacts = containsContacts;
@@ -140,7 +143,10 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * containsCustomWebhooks.
+         * <p>The custom webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.customWebhooks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="https://my-service.example.com/webhook/alert%22%5D">https://my-service.example.com/webhook/alert&quot;]</a></p>
          */
         public Builder containsCustomWebhooks(java.util.List<String> containsCustomWebhooks) {
             this.containsCustomWebhooks = containsCustomWebhooks;
@@ -148,7 +154,10 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * containsDingWebhooks.
+         * <p>The DingTalk webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.dingWebhooks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="https://oapi.dingtalk.com/robot/send?access_token=abc123%22%5D">https://oapi.dingtalk.com/robot/send?access_token=abc123&quot;]</a></p>
          */
         public Builder containsDingWebhooks(java.util.List<String> containsDingWebhooks) {
             this.containsDingWebhooks = containsDingWebhooks;
@@ -156,7 +165,10 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * containsFsWebhooks.
+         * <p>The Lark webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.fsWebhooks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/abc123%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/abc123&quot;]</a></p>
          */
         public Builder containsFsWebhooks(java.util.List<String> containsFsWebhooks) {
             this.containsFsWebhooks = containsFsWebhooks;
@@ -164,7 +176,10 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * containsGroups.
+         * <p>The alert contact group list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;OpsTeam&quot;,&quot;SRETeam&quot;]</p>
          */
         public Builder containsGroups(java.util.List<String> containsGroups) {
             this.containsGroups = containsGroups;
@@ -172,7 +187,10 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * containsSlackWebhooks.
+         * <p>The Slack webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.slackWebhooks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXX%22%5D">https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXX&quot;]</a></p>
          */
         public Builder containsSlackWebhooks(java.util.List<String> containsSlackWebhooks) {
             this.containsSlackWebhooks = containsSlackWebhooks;
@@ -180,7 +198,10 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * containsWxWebhooks.
+         * <p>The WeCom webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.wxWebhooks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=abc123%22%5D">https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=abc123&quot;]</a></p>
          */
         public Builder containsWxWebhooks(java.util.List<String> containsWxWebhooks) {
             this.containsWxWebhooks = containsWxWebhooks;

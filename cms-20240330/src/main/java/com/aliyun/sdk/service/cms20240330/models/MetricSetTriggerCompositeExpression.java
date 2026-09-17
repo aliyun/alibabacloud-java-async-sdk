@@ -81,6 +81,9 @@ public class MetricSetTriggerCompositeExpression extends TeaModel {
 
         /**
          * <p>The list of sub-conditions. Each item is a simple comparison expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;metric&quot;:&quot;cpu_usage&quot;,&quot;operator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;90&quot;},{&quot;metric&quot;:&quot;mem_usage&quot;,&quot;operator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;85&quot;}]</p>
          */
         public Builder conditions(java.util.List<MetricSetTriggerSimpleExpression> conditions) {
             this.conditions = conditions;

@@ -69,6 +69,7 @@ public class DirectNotifyChannel extends TeaModel {
         } 
 
         /**
+         * <p>The list of Notification Recipient identifiers.</p>
          * <p>This parameter is required.</p>
          */
         public Builder identifiers(java.util.List<String> identifiers) {
@@ -77,7 +78,11 @@ public class DirectNotifyChannel extends TeaModel {
         }
 
         /**
+         * <p>The notification channel type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTACT</p>
          */
         public Builder type(String type) {
             this.type = type;

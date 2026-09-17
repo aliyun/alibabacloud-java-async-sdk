@@ -53,6 +53,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAggTaskGroupResponse> createAggTaskGroup(CreateAggTaskGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateAlertRobot  CreateAlertRobotRequest
+     * @return CreateAlertRobotResponse
+     */
+    CompletableFuture<CreateAlertRobotResponse> createAlertRobot(CreateAlertRobotRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Creates a webhook notification recipient.</p>
      * 
@@ -237,6 +243,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAggTaskGroupResponse
      */
     CompletableFuture<DeleteAggTaskGroupResponse> deleteAggTaskGroup(DeleteAggTaskGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAlertRobots  DeleteAlertRobotsRequest
+     * @return DeleteAlertRobotsResponse
+     */
+    CompletableFuture<DeleteAlertRobotsResponse> deleteAlertRobots(DeleteAlertRobotsRequest request);
 
     /**
      * @param request the request parameters of DeleteAlertWebhooks  DeleteAlertWebhooksRequest
@@ -801,8 +813,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation can only query alert history from the last year.
-     * This topic provides an example of querying the alert history of Elastic Computing Service from the <code>product</code> dimension of a cloud service.</p>
+     * <p>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</p>
      * 
      * @param request the request parameters of ListAlertRobots  ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
@@ -1125,6 +1136,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAggTaskGroupStatusResponse
      */
     CompletableFuture<UpdateAggTaskGroupStatusResponse> updateAggTaskGroupStatus(UpdateAggTaskGroupStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAlertRobot  UpdateAlertRobotRequest
+     * @return UpdateAlertRobotResponse
+     */
+    CompletableFuture<UpdateAlertRobotResponse> updateAlertRobot(UpdateAlertRobotRequest request);
 
     /**
      * @param request the request parameters of UpdateAlertWebhook  UpdateAlertWebhookRequest

@@ -67,7 +67,10 @@ public class LabelMatcher extends TeaModel {
         } 
 
         /**
-         * <p>The label key to match.</p>
+         * <p>The key name of the label matcher. This parameter specifies the label dimension identity to match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_cms_workspace</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -75,7 +78,10 @@ public class LabelMatcher extends TeaModel {
         }
 
         /**
-         * <p>The label value to match.</p>
+         * <p>The match value of the label matcher. This parameter is used together with key to specify the value that the label key must match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-123</p>
          */
         public Builder value(String value) {
             this.value = value;

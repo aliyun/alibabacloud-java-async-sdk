@@ -165,7 +165,7 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * <p>The list of enabled sub-channels.</p>
+             * <p>The list of enabled subchannels.</p>
              */
             public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;

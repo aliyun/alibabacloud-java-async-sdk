@@ -271,7 +271,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description</p>
+         * <p>SampleDescription</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -309,7 +309,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether recovery notifications are sent.</p>
+         * <p>Indicates whether to send a notification upon recovery.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -320,7 +320,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the associated response plan, which equals notifyStrategyId.</p>
+         * <p>The associated response plan UUID, which equals notifyStrategyId.</p>
          * 
          * <strong>example:</strong>
          * <p>example-id-001</p>
@@ -334,7 +334,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
          * <p>The lifecycle mode. Within SNS, this value is always BundleStrategy.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample value</p>
+         * <p>SampleValue</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -356,7 +356,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample name</p>
+         * <p>SampleName</p>
          */
         public Builder notifyStrategyName(String notifyStrategyName) {
             this.notifyStrategyName = notifyStrategyName;
@@ -372,7 +372,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * <p>The synchronization source. For SNS creation, this value is always OBS.</p>
+         * <p>The sync source. For SNS creation, this value is always OBS.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -408,7 +408,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
          * <p>The workspace identifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample value</p>
+         * <p>SampleValue</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -808,7 +808,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             } 
 
             /**
-             * <p>The effective days, from Monday to Sunday.</p>
+             * <p>The effective days (Monday to Sunday).</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -816,7 +816,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * <p>The start time in minutes.</p>
+             * <p>The start time (in minutes).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -827,7 +827,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * <p>The start time in minutes.</p>
+             * <p>The start time (in minutes).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -971,7 +971,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
              * <p>The digital employee name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample name</p>
+             * <p>SampleName</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;

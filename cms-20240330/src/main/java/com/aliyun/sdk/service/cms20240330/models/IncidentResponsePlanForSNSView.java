@@ -265,7 +265,7 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample response plan</p>
+         * <p>SampleResponsePlan</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -281,7 +281,7 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
         }
 
         /**
-         * <p>The repeat notification configuration.</p>
+         * <p>The repeat notification settings.</p>
          */
         public Builder repeatNotifySetting(RepeatNotifySetting repeatNotifySetting) {
             this.repeatNotifySetting = repeatNotifySetting;
@@ -289,7 +289,7 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
         }
 
         /**
-         * <p>The source. The value must be CUSTOM within SNS.</p>
+         * <p>The source. This value must be CUSTOM within SNS.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -311,7 +311,7 @@ public class IncidentResponsePlanForSNSView extends TeaModel {
         }
 
         /**
-         * <p>The response plan type. The value must be NOTIFY_STRATEGY_DEFINED within SNS.</p>
+         * <p>The response plan type. This value must be NOTIFY_STRATEGY_DEFINED within SNS.</p>
          * 
          * <strong>example:</strong>
          * <p>NOTIFY_STRATEGY_DEFINED</p>

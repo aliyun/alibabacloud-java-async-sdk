@@ -67,7 +67,10 @@ public class Pagination extends TeaModel {
         } 
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -75,7 +78,10 @@ public class Pagination extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of records per page. This parameter controls the amount of data returned in a single request. Recommended value range: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;

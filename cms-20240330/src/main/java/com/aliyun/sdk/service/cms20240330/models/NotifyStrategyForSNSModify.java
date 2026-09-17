@@ -160,7 +160,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to send a notification when the alert is recovered.</p>
+         * <p>Specifies whether to send a notification when the alert is restored.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -238,7 +238,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not take effect. The actual purpose of the template is determined by the type field of the template object referenced by templateUuid.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not take effect. The actual purpose of the template is determined by the type of the template object referenced by templateUuid.</p>
              * 
              * <strong>example:</strong>
              * <p>DING</p>
@@ -809,7 +809,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, the system uses relation (AND or OR) to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-separated nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the match value).</p>
+             * <p>If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, the relation (AND or OR) is used to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-separated nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the match value).</p>
              * 
              * <strong>example:</strong>
              * <p>(1 AND 2 )OR 3</p>
@@ -951,6 +951,9 @@ public class NotifyStrategyForSNSModify extends TeaModel {
 
             /**
              * <p>The digital employee name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apsara-ops</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -966,7 +969,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable root cause analysis (RCA).</p>
+             * <p>Specifies whether to enable Root Cause Analysis (RCA).</p>
              */
             public Builder enableRca(Boolean enableRca) {
                 this.enableRca = enableRca;
@@ -974,7 +977,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>The route-level filter. This is different from the top-level subscription.filterSetting.</p>
+             * <p>The route-level filter. This is at a different level from the top-level subscription.filterSetting.</p>
              */
             public Builder filterSetting(FilterSetting filterSetting) {
                 this.filterSetting = filterSetting;

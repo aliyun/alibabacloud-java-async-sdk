@@ -173,7 +173,7 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the notification policy.</p>
+         * <p>The UUID of the notification strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -192,11 +192,7 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</p>
-         * <ul>
-         * <li>true: Subscribe.</li>
-         * <li>false or null: Do not subscribe.</li>
-         * </ul>
+         * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values: true: Subscribe. false or null: Do not subscribe.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

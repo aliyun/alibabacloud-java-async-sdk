@@ -152,7 +152,7 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * <p>The robot name. Supports prefix fuzzy match.</p>
+         * <p>The robot name. Prefix fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -188,7 +188,7 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * <p>The robot ID.</p>
+         * <p>The robot IDs.</p>
          */
         public Builder robotIds(java.util.List<String> robotIds) {
             String robotIdsShrink = shrink(robotIds, "robotIds", "json");
@@ -198,7 +198,7 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * <p>The robot type.</p>
+         * <p>The robot types.</p>
          */
         public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "types", "json");

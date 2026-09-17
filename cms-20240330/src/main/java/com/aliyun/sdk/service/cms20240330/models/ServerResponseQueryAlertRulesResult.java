@@ -158,7 +158,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code of the API response. A value of 200 indicates a successful request. Other values indicate an exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The business data returned by the API, including the list of alert rule query results and pagination information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;alertRules&quot;:[],&quot;totalCount&quot;:0}</p>
          */
         public Builder data(QueryAlertRulesResult data) {
             this.data = data;
@@ -174,7 +180,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The detailed error description returned when the request fails. This parameter is empty when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +191,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. A value of null indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -190,7 +202,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number of the current response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +213,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of records per page in the current response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +224,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the API request, used for troubleshooting and server-side log tracing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +235,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +246,10 @@ public class ServerResponseQueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of alert rules that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;

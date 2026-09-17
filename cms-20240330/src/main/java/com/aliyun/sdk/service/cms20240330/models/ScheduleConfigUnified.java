@@ -68,7 +68,10 @@ public class ScheduleConfigUnified extends TeaModel {
         } 
 
         /**
-         * <p>The interval between scheduled runs, in seconds.</p>
+         * <p>The scheduling interval in seconds. This parameter is used when type is set to FIXED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder intervalSecs(Integer intervalSecs) {
             this.intervalSecs = intervalSecs;
@@ -76,8 +79,11 @@ public class ScheduleConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>The type of the schedule.</p>
+         * <p>The type of the scheduling configuration. FIXED indicates fixed-interval scheduling, which executes periodically based on the interval specified by intervalSecs.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FIXED</p>
          */
         public Builder type(String type) {
             this.type = type;

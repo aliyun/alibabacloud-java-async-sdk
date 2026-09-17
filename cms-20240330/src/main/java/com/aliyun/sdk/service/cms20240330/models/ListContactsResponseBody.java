@@ -333,7 +333,7 @@ public class ListContactsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the on-duty contact.</p>
+             * <p>The ID of the alert contact.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

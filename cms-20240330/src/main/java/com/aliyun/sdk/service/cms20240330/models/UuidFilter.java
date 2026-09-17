@@ -67,7 +67,10 @@ public class UuidFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match condition for the alert rule UUID. Only the alert rule whose UUID equals the specified value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4-e5f6-7890-abcd-ef1234567890</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;
@@ -75,7 +78,10 @@ public class UuidFilter extends TeaModel {
         }
 
         /**
-         * in.
+         * <p>The set match condition for alert rule UUIDs. All alert rules whose UUIDs are in the specified list are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,&quot;b2c3d4e5-f6a7-8901-bcde-f12345678901&quot;]</p>
          */
         public Builder in(java.util.List<String> in) {
             this.in = in;

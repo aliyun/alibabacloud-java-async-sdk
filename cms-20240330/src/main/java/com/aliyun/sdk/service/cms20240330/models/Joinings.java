@@ -67,7 +67,10 @@ public class Joinings extends TeaModel {
         } 
 
         /**
-         * <p>The list of join conditions.</p>
+         * <p>The list of join conditions for result sets. The conditions define the matching rules between multiple result sets and are used to merge query results from different data sources based on specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;leftField&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;rightField&quot;:&quot;instance_id&quot;}]</p>
          */
         public Builder conditions(java.util.List<JoinConditions> conditions) {
             this.conditions = conditions;
@@ -75,7 +78,7 @@ public class Joinings extends TeaModel {
         }
 
         /**
-         * <p>The set operation type. Valid values: InnerJoin, LeftJoin, RightJoin, FullJoin, LeftExclude, RightExclude, CrossJoin, NoJoin, and Concat.</p>
+         * <p>The set operation type: InnerJoin / LeftJoin / RightJoin / FullJoin / LeftExclude / RightExclude / CrossJoin / NoJoin / Concat.</p>
          * 
          * <strong>example:</strong>
          * <p>INNER</p>

@@ -139,7 +139,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The robot ID.</p>
+         * <p>The robot IDs.</p>
          */
         public Builder robots(java.util.List<Robots> robots) {
             this.robots = robots;
@@ -338,7 +338,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signature key of the robot.</p>
+             * <p>The signing key of the robot.</p>
              * 
              * <strong>example:</strong>
              * <p>abc123</p>
@@ -349,7 +349,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The robot type.</p>
+             * <p>The robot types.</p>
              * 
              * <strong>example:</strong>
              * <p>DING</p>

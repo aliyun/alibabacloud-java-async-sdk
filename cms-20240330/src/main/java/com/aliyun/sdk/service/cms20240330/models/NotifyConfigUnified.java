@@ -210,7 +210,7 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>The list of notification policy IDs (type=NOTIFY_POLICY, currently a maximum of 1 is supported. Mutually exclusive with the DIRECT_NOTIFY fields channels/silenceTimeSecs/activeDays/activeStartTime/activeEndTime/utcOffset).</p>
+         * <p>The list of notification policy IDs (type=NOTIFY_POLICY, currently a maximum of 1 per service. Mutually exclusive with channels/silenceTimeSecs/activeDays/activeStartTime/activeEndTime/utcOffset of DIRECT_NOTIFY).</p>
          */
         public Builder notifyStrategies(java.util.List<String> notifyStrategies) {
             this.notifyStrategies = notifyStrategies;

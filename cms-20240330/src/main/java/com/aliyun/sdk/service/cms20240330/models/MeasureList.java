@@ -82,7 +82,10 @@ public class MeasureList extends TeaModel {
         } 
 
         /**
-         * <p>The grouping dimension.</p>
+         * <p>The list of grouping dimensions for metric data. Specifies the dimension keys by which metric results are computed through grouping and aggregation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;host.name&quot;, &quot;region&quot;]</p>
          */
         public Builder groupBy(java.util.List<String> groupBy) {
             this.groupBy = groupBy;

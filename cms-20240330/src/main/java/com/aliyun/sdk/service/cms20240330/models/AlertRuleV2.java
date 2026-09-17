@@ -444,10 +444,10 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The business source (read-only), such as managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, or sls.</p>
+         * <p>The business source (read-only, such as managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, or sls).</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Sample value</p>
          */
         public Builder bizSource(String bizSource) {
             this.bizSource = bizSource;
@@ -485,7 +485,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The datasource config aggregation (PROMETHEUS, UMODEL, and APM share a single object. Fields are selected based on the type).</p>
+         * <p>The datasource config aggregation (PROMETHEUS, UMODEL, and APM share a single object, with fields selected based on type).</p>
          */
         public Builder datasourceConfig(DatasourceConfigUnified datasourceConfig) {
             this.datasourceConfig = datasourceConfig;
@@ -515,7 +515,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the alert rule is enabled.</p>
+         * <p>Indicates whether the alert rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -553,7 +553,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The notification policy ID (read-only, derived). The value is the first entry in the notification policy list.</p>
+         * <p>The notification policy ID (read-only, derived, the first entry in the notification policy list).</p>
          * 
          * <strong>example:</strong>
          * <p>example-id-001</p>
@@ -572,7 +572,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> Specifies whether the rule takes effect on all resources of this type (read-only, derived). For new integrations, use observeResourceConfig.relationType and check whether the value is ALL for equivalent semantics.</p>
+         * <p><strong>[Deprecated]</strong> Indicates whether the rule takes effect on all resources of this type (read-only, derived). For new integrations, use observeResourceConfig.relationType to check whether the value is ALL for equivalent semantics.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -602,10 +602,10 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The partition key (read-only). Maintained by the system for rule routing and sharding.</p>
+         * <p>The partition key (read-only, maintained by the system for rule routing and sharding).</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Sample value</p>
          */
         public Builder partitionKey(String partitionKey) {
             this.partitionKey = partitionKey;
@@ -621,7 +621,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The root cause analysis (RCA) configuration.</p>
+         * <p>The Root Cause Analysis (RCA) configuration.</p>
          */
         public Builder rcaConfig(AlertRuleRcaConfig rcaConfig) {
             this.rcaConfig = rcaConfig;
@@ -629,7 +629,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The region ID, aligned with V1 AlertRule.regionId. Priority: regionId in the request body takes precedence over callerRegionId from the gateway.</p>
+         * <p>The region ID (aligned with V1 AlertRule.regionId. Priority: regionId in the request body &gt; callerRegionId from the gateway).</p>
          * 
          * <strong>example:</strong>
          * <p>example-id-001</p>
@@ -648,7 +648,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>The severity levels covered by this rule, separated by commas (read-only, derived). The format is consistent with the filter.severityLevels query parameter.</p>
+         * <p>The severity levels covered by this rule, comma-separated (read-only, derived. Same format as the filter.severityLevels query parameter).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
