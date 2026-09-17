@@ -101,7 +101,7 @@ public class FraudResultCallBackRequest extends Request {
         } 
 
         /**
-         * <p>Unique identifier for real-person authentication, corresponding to Ant&quot;s verifyId.</p>
+         * <p>The unique identifier for identity verification, which corresponds to the verifyId of Ant.</p>
          * 
          * <strong>example:</strong>
          * <p>shs2b27333914876c01de4cb22f5841f</p>
@@ -113,7 +113,7 @@ public class FraudResultCallBackRequest extends Request {
         }
 
         /**
-         * <p>Extended parameters, in JSON string format.</p>
+         * <p>The extended parameters, in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -125,10 +125,10 @@ public class FraudResultCallBackRequest extends Request {
         }
 
         /**
-         * <p>Whether the anti-fraud check passed</p>
+         * <p>Indicates whether the anti-spoofing check is passed. Valid values:</p>
          * <ul>
-         * <li>PASS (Passed)</li>
-         * <li>REJECT (Rejected)</li>
+         * <li>PASS: Passed.</li>
+         * <li>REJECT: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,10 +141,10 @@ public class FraudResultCallBackRequest extends Request {
         }
 
         /**
-         * <p>Environment routing parameter</p>
+         * <p>The environment routing parameter. Valid values:</p>
          * <ul>
-         * <li>staging (Staging environment)</li>
-         * <li>production (Production environment)</li>
+         * <li>staging: staging environment</li>
+         * <li>production: production environment.</li>
          * </ul>
          * 
          * <strong>example:</strong>

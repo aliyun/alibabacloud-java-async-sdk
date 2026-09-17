@@ -93,7 +93,9 @@ public class FaceCompareResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/facecompare?spm=a3c0i.23458820.2359477120.28.21167d3fzUmXQC#c43fd16d07mae">response code</a>.</p>
+         * <p>Response code.</p>
+         * <p>200: Success.
+         * Other: Error code. For error code details, see Error Codes.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +106,7 @@ public class FaceCompareResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed description of the response code.</p>
+         * <p>Response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +128,7 @@ public class FaceCompareResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result object</p>
+         * <p>Response result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -296,7 +298,10 @@ public class FaceCompareResponseBody extends TeaModel {
             } 
 
             /**
-             * FaceQualityScore.
+             * <p>Overall quality score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.04</p>
              */
             public Builder faceQualityScore(Double faceQualityScore) {
                 this.faceQualityScore = faceQualityScore;
@@ -304,7 +309,10 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * IlluminationScore.
+             * <p>Illumination score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder illuminationScore(Double illuminationScore) {
                 this.illuminationScore = illuminationScore;
@@ -312,7 +320,10 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * KaOcclusionScore.
+             * <p>Key area occlusion score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder kaOcclusionScore(Double kaOcclusionScore) {
                 this.kaOcclusionScore = kaOcclusionScore;
@@ -320,7 +331,10 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * OcclusionScore.
+             * <p>Occlusion score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.26</p>
              */
             public Builder occlusionScore(Double occlusionScore) {
                 this.occlusionScore = occlusionScore;
@@ -328,7 +342,10 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * SharpnessScore.
+             * <p>Sharpness score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86.47</p>
              */
             public Builder sharpnessScore(Double sharpnessScore) {
                 this.sharpnessScore = sharpnessScore;
@@ -461,7 +478,7 @@ public class FaceCompareResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtFaceInfo.
+             * <p>Related result information</p>
              */
             public Builder extFaceInfo(ExtFaceInfo extFaceInfo) {
                 this.extFaceInfo = extFaceInfo;
@@ -469,7 +486,7 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The face comparison score. The value ranges from 0 to 100.</p>
+             * <p>The comparison score between the submitted face photo and the reference face image during the authentication process. Value range: <strong>0</strong> to <strong>100</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>98</p>
@@ -480,12 +497,10 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final authentication result. Valid values:</p>
+             * <p>Whether the authentication passed.</p>
              * <ul>
-             * <li><p><strong>Y</strong>: The authentication is passed.</p>
-             * </li>
-             * <li><p><strong>N</strong>: The authentication failed.</p>
-             * </li>
+             * <li>Y: Passed.</li>
+             * <li>N: Not passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -497,7 +512,7 @@ public class FaceCompareResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction ID.</p>
+             * <p>The unique identifier of the authentication request.</p>
              * 
              * <strong>example:</strong>
              * <p>08573be80f944d95ac812e019e3655a8</p>

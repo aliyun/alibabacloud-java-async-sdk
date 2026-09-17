@@ -97,7 +97,10 @@ public class DeleteFaceRecordV2Request extends Request {
         }
 
         /**
-         * FaceGroupCode.
+         * <p>The face group code. If this parameter is not specified, the face data of the user is deleted from all face groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgl****7uc</p>
          */
         public Builder faceGroupCode(String faceGroupCode) {
             this.putQueryParameter("FaceGroupCode", faceGroupCode);
@@ -106,6 +109,7 @@ public class DeleteFaceRecordV2Request extends Request {
         }
 
         /**
+         * <p>The unique user identifier, which must be consistent with the one used when calling AddFaceRecord. If this parameter was not specified during registration, you can use the default image name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class FraudResultCallBackResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class FraudResultCallBackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class FraudResultCallBackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4EB35****87EBA1</p>
@@ -126,10 +126,10 @@ public class FraudResultCallBackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the call was successful.</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Call succeeded.</li>
-         * <li><strong>false</strong>: Call failed.</li>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

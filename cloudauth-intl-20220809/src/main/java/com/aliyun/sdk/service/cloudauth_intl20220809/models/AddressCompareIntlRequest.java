@@ -128,14 +128,14 @@ public class AddressCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>Country name</p>
+         * <p>The country name. Valid values:</p>
          * <ul>
-         * <li>China</li>
+         * <li>China.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>fixed value：中国</p>
+         * <p>固定值：中国</p>
          */
         public Builder defaultCountry(String defaultCountry) {
             this.putQueryParameter("DefaultCountry", defaultCountry);
@@ -144,11 +144,11 @@ public class AddressCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>ADD_VERIFY</p>
+         * <p>ADD_VERIFY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>fixed value：ADD_VERIFY</p>
+         * <p>固定值：ADD_VERIFY</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -157,7 +157,7 @@ public class AddressCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>Address 1</p>
+         * <p>Address 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class AddressCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>Address 2</p>
+         * <p>Address 2.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

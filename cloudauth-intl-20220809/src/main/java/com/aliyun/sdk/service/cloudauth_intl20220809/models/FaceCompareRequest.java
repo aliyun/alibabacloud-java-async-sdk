@@ -143,7 +143,7 @@ public class FaceCompareRequest extends Request {
         } 
 
         /**
-         * <p>是否开启传入人脸图片质量检测</p>
+         * <p>Whether to enable quality detection for the input face image&gt;Danger: Deprecated</p>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -155,7 +155,10 @@ public class FaceCompareRequest extends Request {
         }
 
         /**
-         * FaceQualityCheck.
+         * <p>Face quality check</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder faceQualityCheck(String faceQualityCheck) {
             this.putQueryParameter("FaceQualityCheck", faceQualityCheck);
@@ -164,7 +167,7 @@ public class FaceCompareRequest extends Request {
         }
 
         /**
-         * <p>A custom unique business ID used for troubleshooting. It can be a combination of up to 32 letters and digits. Make sure that the ID is unique.</p>
+         * <p>A unique business identifier customized by the merchant, used for subsequent troubleshooting. Supports a combination of letters and numbers with a maximum length of 32 characters. Ensure it is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -176,7 +179,15 @@ public class FaceCompareRequest extends Request {
         }
 
         /**
-         * SourceFacePicture.
+         * <p>Base64-encoded face photo.</p>
+         * <p>Note</p>
+         * <ul>
+         * <li>If you choose this method to pass in the photo, check the photo size and do not pass in an oversized photo.</li>
+         * <li>Either SourceFacePicture or SourceFacePictureUrl must be specified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder sourceFacePicture(String sourceFacePicture) {
             this.putBodyParameter("SourceFacePicture", sourceFacePicture);
@@ -185,10 +196,7 @@ public class FaceCompareRequest extends Request {
         }
 
         /**
-         * <p>The URL of the portrait photo. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
-         * <blockquote>
-         * <p>You must specify either SourceFacePicture or SourceFacePictureUrl.</p>
-         * </blockquote>
+         * <p>The HTTPS or HTTP URL of the face image.</p>
          * 
          * <strong>example:</strong>
          * <p>https://***face1.jpeg</p>
@@ -200,7 +208,15 @@ public class FaceCompareRequest extends Request {
         }
 
         /**
-         * TargetFacePicture.
+         * <p>Base64-encoded reference photo.</p>
+         * <p>Note</p>
+         * <ul>
+         * <li>If you choose this method to pass in the photo, check the photo size and do not pass in an oversized photo.</li>
+         * <li>Either TargetFacePicture or TargetFacePictureUrl must be specified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>base64</p>
          */
         public Builder targetFacePicture(String targetFacePicture) {
             this.putBodyParameter("TargetFacePicture", targetFacePicture);
@@ -209,10 +225,7 @@ public class FaceCompareRequest extends Request {
         }
 
         /**
-         * <p>The URL of the base portrait photo. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
-         * <blockquote>
-         * <p>You must specify either TargetFacePicture or TargetFacePictureUrl.</p>
-         * </blockquote>
+         * <p>The HTTPS or HTTP URL of the reference face image.</p>
          * 
          * <strong>example:</strong>
          * <p>https://***face2.jpeg</p>

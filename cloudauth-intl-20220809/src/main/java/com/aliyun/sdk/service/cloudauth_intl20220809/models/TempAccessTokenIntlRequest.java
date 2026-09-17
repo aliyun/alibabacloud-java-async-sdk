@@ -82,7 +82,7 @@ public class TempAccessTokenIntlRequest extends Request {
         }
 
         /**
-         * <p>Type.</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>

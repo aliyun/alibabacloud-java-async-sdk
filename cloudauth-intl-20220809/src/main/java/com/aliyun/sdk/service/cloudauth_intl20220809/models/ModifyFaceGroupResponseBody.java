@@ -93,7 +93,10 @@ public class ModifyFaceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class ModifyFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class ModifyFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

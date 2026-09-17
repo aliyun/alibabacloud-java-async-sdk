@@ -93,7 +93,7 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -126,7 +126,7 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result information.</p>
+         * <p>The result information.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -231,7 +231,7 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Address verification details.</p>
+             * <p>The address verification details.</p>
              * 
              * <strong>example:</strong>
              * <p>0-3000</p>
@@ -242,11 +242,11 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operator name:</p>
+             * <p>The telecommunications service provider name. Valid values:</p>
              * <ul>
              * <li>CMCC: China Mobile</li>
              * <li>CTCC: China Telecom</li>
-             * <li>CUCC: China Unicom</li>
+             * <li>CUCC: China Unicom.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -258,10 +258,10 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Verification result, values:</p>
+             * <p>The verification result. Valid values:</p>
              * <ul>
-             * <li>Y: Yes, the verified address distance is less than or equal to 10KM.</li>
-             * <li>N: No, the verified address distance is greater than 10KM.</li>
+             * <li>Y: The verified address is within 10 km of the residential address.</li>
+             * <li>N: The verified address is more than 10 km from the residential address.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -273,7 +273,7 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Authentication result description.</p>
+             * <p>The description of the verification result.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -284,7 +284,7 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique identifier for the authentication request.</p>
+             * <p>The unique identifier of the verification request.</p>
              * 
              * <strong>example:</strong>
              * <p>hksb7ba1b28130d24e015d69********</p>

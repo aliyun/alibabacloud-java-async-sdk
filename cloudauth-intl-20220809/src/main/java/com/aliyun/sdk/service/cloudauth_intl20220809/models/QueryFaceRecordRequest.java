@@ -183,7 +183,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * <p>Current Page.</p>
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * <p>Face Group Code.</p>
+         * <p>The face library code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * <p>Face ID.</p>
+         * <p>The face ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5006538</p>
@@ -221,7 +221,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * <p>Number of rows per page for paginated queries.</p>
+         * <p>The maximum number of entries per page for a paginated query.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -233,7 +233,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * <p>Merchant User ID.</p>
+         * <p>The merchant user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CuN6hiD08qr</p>
@@ -245,7 +245,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * <p>Used to request the next page of search results.</p>
+         * <p>The token used to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh0OP1yH8z+7FV4KKGUw4X32</p>
@@ -257,7 +257,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class QueryFaceRecordRequest extends Request {
         }
 
         /**
-         * <p>Registration Type.</p>
+         * <p>The registration type.</p>
          * 
          * <strong>example:</strong>
          * <p>MANUAL</p>

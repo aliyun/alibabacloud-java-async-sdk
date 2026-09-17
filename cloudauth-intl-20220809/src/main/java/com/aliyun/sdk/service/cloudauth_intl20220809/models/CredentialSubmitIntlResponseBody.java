@@ -93,7 +93,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
@@ -126,7 +126,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -179,7 +179,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Unique identifier of the authentication request.</p>
+             * <p>The unique identifier of the authentication request.</p>
              * 
              * <strong>example:</strong>
              * <p>4ab0b***cbde97</p>

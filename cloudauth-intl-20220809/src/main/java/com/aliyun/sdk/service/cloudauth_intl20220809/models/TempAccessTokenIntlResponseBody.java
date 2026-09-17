@@ -93,7 +93,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -244,7 +244,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AccessKeyId for temporary file upload credentials.</p>
+             * <p>The AccessKeyId of the temporary credential for file upload.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -255,7 +255,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Temporary authorization secret.</p>
+             * <p>The temporary authorization secret.</p>
              * 
              * <strong>example:</strong>
              * <p>3hxuRpEJ3Jv2Rtzyg4HooFCYqps762XcNtzhn19wQymk</p>
@@ -266,7 +266,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bucket name.</p>
+             * <p>The bucket name.</p>
              * 
              * <strong>example:</strong>
              * <p>liyi</p>
@@ -277,7 +277,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File prefix.</p>
+             * <p>The file name prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>test001</p>
@@ -288,7 +288,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS endpoint.</p>
+             * <p>OssEndPoint。</p>
              * 
              * <strong>example:</strong>
              * <p>ossEndPoint</p>
@@ -299,7 +299,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Security token for temporary file upload credentials.</p>
+             * <p>The security token of the temporary credential for file upload.</p>
              * 
              * <strong>example:</strong>
              * <hr>

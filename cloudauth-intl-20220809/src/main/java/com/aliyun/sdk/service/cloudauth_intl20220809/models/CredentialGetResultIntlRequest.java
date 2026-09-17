@@ -83,7 +83,7 @@ public class CredentialGetResultIntlRequest extends Request {
         }
 
         /**
-         * <p>Unique identifier for the authentication request</p>
+         * <p>The unique identifier of the authentication request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

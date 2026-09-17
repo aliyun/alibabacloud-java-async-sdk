@@ -93,7 +93,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -126,7 +126,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -231,10 +231,10 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A to B comparison score, range 0～100.</p>
+             * <p>The comparison score between A and B. Value range: 0 to 1.</p>
              * 
              * <strong>example:</strong>
-             * <p>99</p>
+             * <p>0.9999999999999999</p>
              */
             public Builder faceComparisonScoreA2B(Double faceComparisonScoreA2B) {
                 this.faceComparisonScoreA2B = faceComparisonScoreA2B;
@@ -242,10 +242,10 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>B to C comparison score, range 0～100.</p>
+             * <p>The comparison score between B and C. Value range: 0 to 1.</p>
              * 
              * <strong>example:</strong>
-             * <p>99</p>
+             * <p>0.9999999999999999</p>
              */
             public Builder faceComparisonScoreB2C(Double faceComparisonScoreB2C) {
                 this.faceComparisonScoreB2C = faceComparisonScoreB2C;
@@ -253,10 +253,10 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>C to A comparison score, range 0～100.</p>
+             * <p>The comparison score between C and A. Value range: 0 to 1.</p>
              * 
              * <strong>example:</strong>
-             * <p>99</p>
+             * <p>0.9999999999999999</p>
              */
             public Builder faceComparisonScoreC2A(Double faceComparisonScoreC2A) {
                 this.faceComparisonScoreC2A = faceComparisonScoreC2A;
@@ -264,10 +264,10 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Final verification result, values:</p>
+             * <p>The final verification result. Valid values:</p>
              * <ul>
-             * <li>Y: Pass</li>
-             * <li>N: Fail</li>
+             * <li>Y: Passed.</li>
+             * <li>N: Not passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -279,7 +279,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique identifier for the authentication request.</p>
+             * <p>The unique identifier of the verification request.</p>
              * 
              * <strong>example:</strong>
              * <p>4ab0b***cbde97</p>

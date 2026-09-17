@@ -93,7 +93,7 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p><a href="https://www.alibabacloud.com/help/en/ekyc/latest/ok4bwxwmu1n94o76?spm=a2c63.p38356.0.i54#942707fca218x">Status codes</a>.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed description of the response code.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result</p>
+         * <p>The verification result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -179,14 +179,11 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The verification result:</p>
+             * <p>The verification result code. Valid values:</p>
              * <ul>
-             * <li><p>1: The information is consistent. This result is billable.</p>
-             * </li>
-             * <li><p>2: The information is inconsistent. This result is billable.</p>
-             * </li>
-             * <li><p>3: No record is found. This result is not billable.</p>
-             * </li>
+             * <li>1: Consistent.</li>
+             * <li>2: Inconsistent.</li>
+             * <li>3: No record found.</li>
              * </ul>
              * 
              * <strong>example:</strong>

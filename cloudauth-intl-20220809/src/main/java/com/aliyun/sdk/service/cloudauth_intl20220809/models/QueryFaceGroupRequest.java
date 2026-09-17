@@ -154,6 +154,7 @@ public class QueryFaceGroupRequest extends Request {
         }
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,10 @@ public class QueryFaceGroupRequest extends Request {
         }
 
         /**
-         * GroupCode.
+         * <p>The code of the face library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>groupCode001</p>
          */
         public Builder groupCode(String groupCode) {
             this.putQueryParameter("GroupCode", groupCode);
@@ -175,7 +179,10 @@ public class QueryFaceGroupRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -184,7 +191,10 @@ public class QueryFaceGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the face library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test008</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -193,7 +203,10 @@ public class QueryFaceGroupRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WpY9RBGa5Vrzxi3+mp2Cdw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -202,6 +215,7 @@ public class QueryFaceGroupRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

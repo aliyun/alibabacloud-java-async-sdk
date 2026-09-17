@@ -93,7 +93,7 @@ public class CardOcrResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class CardOcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class CardOcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4EB356FE-BB6A-5DCC-B4C5-E8051787EBA1</p>
@@ -126,7 +126,7 @@ public class CardOcrResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -231,7 +231,7 @@ public class CardOcrResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Document recognition result</p>
+             * <p>The ID card and certificate recognition result.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -261,7 +261,7 @@ public class CardOcrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Additional result information</p>
+             * <p>The additional result information.</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -272,7 +272,7 @@ public class CardOcrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the authentication passed.</p>
+             * <p>Indicates whether the authentication is passed. Valid values:</p>
              * <ul>
              * <li>Y: Passed.</li>
              * <li>N: Not passed.</li>
@@ -287,7 +287,7 @@ public class CardOcrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Sub-result code.</p>
+             * <p>The sub-result code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -298,7 +298,7 @@ public class CardOcrResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique identifier for the authentication request</p>
+             * <p>The unique ID of the authentication request.</p>
              * 
              * <strong>example:</strong>
              * <p>08573be80f944d95ac812e019e3655a8</p>

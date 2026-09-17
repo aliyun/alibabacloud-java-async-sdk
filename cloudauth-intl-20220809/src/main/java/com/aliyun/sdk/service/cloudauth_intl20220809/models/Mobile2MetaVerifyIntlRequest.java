@@ -128,13 +128,11 @@ public class Mobile2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The mobile number.</p>
-         * <blockquote>
+         * <p>The phone number.</p>
          * <ul>
-         * <li>If <strong>paramType</strong> is set to <strong>normal</strong>, enter the plaintext value.</li>
-         * <li>If <strong>paramType</strong> is set to <strong>md5</strong>, enter the 32-bit lowercase MD5 string.</li>
+         * <li>If ParamType is set to normal, pass in the phone number in plaintext.</li>
+         * <li>If ParamType is set to md5, pass in the phone number in ciphertext as a 32-character lowercase MD5 string.</li>
          * </ul>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,12 +145,10 @@ public class Mobile2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The parameter type:</p>
+         * <p>The parameter type. Valid values:</p>
          * <ul>
-         * <li><p><strong>normal</strong>: plaintext</p>
-         * </li>
-         * <li><p><strong>md5</strong>: MD5-encrypted</p>
-         * </li>
+         * <li>normal: not encrypted</li>
+         * <li>md5: MD5-encrypted.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -166,7 +162,7 @@ public class Mobile2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The product to use. Set this parameter to the static value <strong>MOBILE_2META</strong>.</p>
+         * <p>The product code. Set this parameter to MOBILE_2META.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,17 +175,15 @@ public class Mobile2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The name.</p>
-         * <blockquote>
+         * <p>The name. Valid values:</p>
          * <ul>
-         * <li>If <strong>paramType</strong> is set to <strong>normal</strong>, enter the plaintext value.</li>
-         * <li>If <strong>paramType</strong> is set to <strong>md5</strong>, enter the 32-bit lowercase MD5 string.</li>
+         * <li>If ParamType is set to normal, pass in the name in plaintext.</li>
+         * <li>If ParamType is set to md5, pass in the name in ciphertext as a 32-character lowercase MD5 string.</li>
          * </ul>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhang*</p>
+         * <p>张*</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

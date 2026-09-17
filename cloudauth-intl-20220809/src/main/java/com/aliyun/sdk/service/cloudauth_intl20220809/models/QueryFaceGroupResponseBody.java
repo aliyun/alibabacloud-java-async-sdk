@@ -171,7 +171,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -179,7 +182,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -187,7 +193,7 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of returned entries.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -195,7 +201,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -203,7 +212,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +223,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/zmQeG/x9TDWmaB/pbfBQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -219,7 +234,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -238,7 +256,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +267,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -338,7 +362,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The code of the face library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>faceGroup001</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -346,7 +373,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -354,7 +384,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162261</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -362,7 +395,10 @@ public class QueryFaceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the face library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-888</p>
              */
             public Builder name(String name) {
                 this.name = name;

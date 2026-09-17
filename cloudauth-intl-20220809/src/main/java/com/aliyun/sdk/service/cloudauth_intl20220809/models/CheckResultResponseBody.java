@@ -93,7 +93,7 @@ public class CheckResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4EB35****87EBA1</p>
@@ -126,7 +126,7 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -283,7 +283,7 @@ public class CheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Authentication result.</p>
+             * <p>The verification result.</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -294,7 +294,7 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Extended basic information.</p>
+             * <p>The extended basic information.</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -305,7 +305,7 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Face information.</p>
+             * <p>The face information.</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -316,7 +316,7 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID information.</p>
+             * <p>The ID information.</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -327,7 +327,7 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Extended information, in JSON string format.</p>
+             * <p>The extended information, in JSON string format.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -338,7 +338,7 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk information.</p>
+             * <p>The risk information.</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -349,12 +349,12 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detailed verification results from the data source (example using Indonesian data sources):</p>
+             * <p>The data source verification details are described as follows (using the Indonesian data source as an example):</p>
              * <ul>
-             * <li><strong>govId, fullName, dob</strong>: A comparison score of 1.0 indicates complete consistency with the official data source; less than 1.0 indicates inconsistency. </li>
-             * <li><strong>selfiePhoto</strong>: A comparison score greater than 0.8 indicates consistency with the official data source; less than or equal to 0.8 indicates inconsistency. </li>
-             * <li><strong>liveness</strong>: A score higher than 0.95 indicates a risk of liveness detection. </li>
-             * <li><strong>imgManipulationScore</strong>: A score higher than 0.95 indicates a risk of image manipulation.</li>
+             * <li><strong>govId, fullName, dob</strong>: A comparison score equal to 1.0 indicates a complete match with the official data source. A score lower than 1.0 indicates a mismatch. </li>
+             * <li><strong>selfiePhoto</strong>: A comparison score greater than 0.8 indicates a match with the official data source. A score equal to or lower than 0.8 indicates a mismatch. </li>
+             * <li><strong>liveness</strong>: A score higher than 0.95 indicates a liveness detection risk. </li>
+             * <li><strong>imgManipulationScore</strong>: A score higher than 0.95 indicates an image tampering risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -373,10 +373,10 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the authentication is passed.</p>
+             * <p>Indicates whether the verification is passed. Valid values:</p>
              * <ul>
-             * <li>Y: Passed</li>
-             * <li>N: Not passed</li>
+             * <li>Y: Passed.</li>
+             * <li>N: Not passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -388,7 +388,7 @@ public class CheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Sub-result code.</p>
+             * <p>The sub-result code.</p>
              * 
              * <strong>example:</strong>
              * <hr>

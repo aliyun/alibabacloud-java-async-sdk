@@ -155,7 +155,7 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>DeviceToken obtained via the client SDK</p>
+         * <p>The device token, which is used for risk identification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>Supported: Chinese mobile phone numbers</p>
+         * <p>The China mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1872334****</p>
@@ -180,7 +180,7 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>Fixed value: ADD_VERIFY_PRO</p>
+         * <p>The product code. Set this parameter to ADD_VERIFY_PRO.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,11 +193,11 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>List of prohibited countries or regions</p>
+         * <p>The list of prohibited countries.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Currently supported: USA</p>
+         * <p>目前仅支持：USA</p>
          */
         public Builder regCountry(String regCountry) {
             this.putQueryParameter("RegCountry", regCountry);
@@ -206,10 +206,10 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>Detailed address text content</p>
+         * <p>The detailed address text.</p>
          * 
          * <strong>example:</strong>
-         * <p>浙江省杭州市西湖区灯彩街云谷园区</p>
+         * <p>江苏省常州市*******小区</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -218,12 +218,10 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>Address verification method:</p>
+         * <p>The address verification method. Valid values:</p>
          * <ul>
-         * <li><p><strong>HOME</strong>: Home address verification</p>
-         * </li>
-         * <li><p><strong>WORK</strong>: Work address verification</p>
-         * </li>
+         * <li>HOME: home address verification.</li>
+         * <li>WORK: work address verification.</li>
          * </ul>
          * 
          * <strong>example:</strong>

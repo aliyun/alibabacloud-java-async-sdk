@@ -338,14 +338,14 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to automatically register the face to the specified face library if no duplicate face is found.</p>
+         * <p>Specifies whether to automatically register the face to the specified face library when no duplicate face is found during the search. Valid values:</p>
          * <ul>
-         * <li>0- Auto-register (default)</li>
-         * <li>1- Do not register</li>
+         * <li>0: automatic registration</li>
+         * <li>1: no registration (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         public Builder autoRegistration(String autoRegistration) {
             this.putBodyParameter("AutoRegistration", autoRegistration);
@@ -363,7 +363,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>The face library code created through the console, supporting up to 10 face libraries simultaneously. When multiple face library codes are passed, they should be separated by commas.</p>
+         * <p>The face library codes created by the customer through the console. A maximum of 10 face libraries can be queried simultaneously. Separate multiple face library codes with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>1232344，23444</p>
@@ -375,7 +375,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * FaceQualityCheck.
+         * <p>The face quality check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder faceQualityCheck(String faceQualityCheck) {
             this.putBodyParameter("FaceQualityCheck", faceQualityCheck);
@@ -384,7 +387,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Face registration library.</p>
+         * <p>The face library for registration.</p>
          * 
          * <strong>example:</strong>
          * <p>0e0c34a77f</p>
@@ -396,7 +399,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Face matching threshold.</p>
+         * <p>The face matching threshold.&gt;Warning: This is a reserved field and is not currently enabled.</warning></p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -408,10 +411,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable silent liveness detection</p>
+         * <p>Specifies whether to enable passive liveness detection. Valid values:</p>
          * <ul>
-         * <li>0- Disabled</li>
-         * <li>1- Enabled</li>
+         * <li>0: disabled</li>
+         * <li>1: enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,7 +427,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>A unique business identifier for troubleshooting purposes. It supports a combination of 32 alphanumeric characters, please ensure its uniqueness.</p>
+         * <p>The custom unique business identifier used for subsequent troubleshooting. The value supports a combination of letters and numbers with a length of 32 characters. Ensure that the value is unique.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,7 +440,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Your custom user ID or other identifiers that can uniquely identify a specific user, such as a phone number or email address. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</p>
+         * <p>The custom user ID or other identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, such as by hashing the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -450,7 +453,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Product code</p>
+         * <p>The product code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -463,10 +466,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>When there are multiple faces above the matching threshold, you can use this parameter to customize the number of returned faces</p>
+         * <p>Specifies the number of faces to return when multiple faces above the matching threshold exist. You can customize the return quantity through this parameter.</p>
          * <ul>
-         * <li>Default returns 1</li>
-         * <li>Maximum support 5</li>
+         * <li>Default value: 1</li>
+         * <li>Maximum value: 5</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -479,10 +482,13 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Distinguishes between saving the face image and features</p>
+         * <p>Specifies the type of face data to save. Valid values:</p>
          * <ul>
-         * <li>0- Face (default)</li>
-         * <li>1- Features</li>
+         * <li>0: face image (default)</li>
+         * <li>1: feature<blockquote>
+         * <p>Warning: This is a reserved field and is not currently enabled.</warning></p>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -495,7 +501,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Your custom authentication scenario ID.</p>
+         * <p>The custom verification scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -507,7 +513,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Base64 encoded portrait photo.</p>
+         * <p>The Base64-encoded face photo.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -519,7 +525,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Portrait image URL, accessible via public HTTP or HTTPS link.</p>
+         * <p>The URL of the face image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
          * 
          * <strong>example:</strong>
          * <p>https://***face1.jpeg</p>
@@ -531,7 +537,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Base64 encoded portrait photo.</p>
+         * <p>The Base64-encoded face photo.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -543,7 +549,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Portrait image URL, accessible via public HTTP or HTTPS link.</p>
+         * <p>The URL of the face image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
          * 
          * <strong>example:</strong>
          * <p>https://***face2.jpeg</p>
@@ -555,7 +561,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * UpdateFaceIfUserExists.
+         * <p>Specifies whether to overwrite the existing face with the current face when MerchantUserId already exists during automatic registration. Valid values: Y: overwrite. N: do not overwrite and return that the UserId already exists.</p>
          */
         public Builder updateFaceIfUserExists(String updateFaceIfUserExists) {
             this.putBodyParameter("UpdateFaceIfUserExists", updateFaceIfUserExists);
@@ -564,16 +570,37 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         }
 
         /**
-         * <p>Verification type</p>
+         * <p>The verification type. Valid values:</p>
          * <ul>
-         * <li>0- 1:N (default)</li>
-         * <li>1- 1:1</li>
-         * <li>2- 1:N + 1:1</li>
+         * <li><p>0: retrieve pattern</p>
+         * <blockquote>
+         * <ul>
+         * <li>Feature: Submits a face library and a user face image (sourceFacePicture). The system automatically retrieves the face library to determine whether the specified face image (sourceFacePicture) already exists. Passive liveness detection can be enabled for the face image (sourceFacePicture).</li>
+         * <li>Recommended scenario: Real-person create an account where duplicate registration is not allowed.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li><p>1 (default): authenticate pattern</p>
+         * <blockquote>
+         * <ul>
+         * <li>Feature: Submits a specified face image (sourceFacePicture) and a retained face image (TargetFacePicture). The system automatically authenticates whether the faces match. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</li>
+         * <li>Recommended scenario: Authenticating whether the operation is performed by the account owner when modifying logon credentials or account information.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * <li><p>2: comprehensive pattern</p>
+         * <blockquote>
+         * <ul>
+         * <li>Feature: Submits a face library, a specified face image (sourceFacePicture), and a retained face image (TargetFacePicture). The system automatically retrieves the face library to determine whether the specified face image (sourceFacePicture) exists, authenticates whether it matches the retained face, and supports enabling passive liveness detection for the specified face image (sourceFacePicture).</li>
+         * <li>Recommended scenario: Authenticating that the user is new and the operation is performed by the user.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         public Builder verifyModel(String verifyModel) {
             this.putBodyParameter("VerifyModel", verifyModel);

@@ -93,7 +93,7 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message for the returned information.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4EB35****87EBA1</p>
@@ -126,7 +126,7 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -205,7 +205,7 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Identified key information in JSON format.</p>
+             * <p>The recognized key information, in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -219,7 +219,7 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Authentication result description</p>
+             * <p>The description of the authentication result.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -230,10 +230,10 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Extraction result. Values:</p>
+             * <p>The extraction result. Valid values:</p>
              * <ul>
-             * <li>S: Success.</li>
-             * <li>F: Failure.</li>
+             * <li>S: Succeeded.</li>
+             * <li>F: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

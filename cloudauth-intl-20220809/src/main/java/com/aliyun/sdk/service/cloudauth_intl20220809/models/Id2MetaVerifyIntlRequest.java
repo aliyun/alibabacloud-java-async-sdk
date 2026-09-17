@@ -101,10 +101,7 @@ public class Id2MetaVerifyIntlRequest extends Request {
         } 
 
         /**
-         * <p>The ID card number.</p>
-         * <blockquote>
-         * <p>Only ID cards of residents in the Chinese mainland are supported.</p>
-         * </blockquote>
+         * <p>The ID card number (in plaintext).</p>
          * 
          * <strong>example:</strong>
          * <p>429001********8211</p>
@@ -116,11 +113,11 @@ public class Id2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The parameter type.</p>
-         * <p><strong>normal</strong>: The original value in plaintext.</p>
-         * <blockquote>
-         * <p>Due to limitations of the authoritative data source, two-factor ID verification does not support MD5 encryption.</p>
-         * </blockquote>
+         * <p>The parameter type. Valid values:</p>
+         * <ul>
+         * <li>normal: original value (plaintext).</li>
+         * <li>Note: Due to authoritative data source restrictions, two-factor identity verification does not support MD5 encryption.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -132,7 +129,7 @@ public class Id2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The product plan. This is a static field. Set the value to <strong>ID_2META</strong>.</p>
+         * <p>The product solution code. Set this parameter to ID_2META.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_2META</p>
@@ -144,10 +141,10 @@ public class Id2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The name.</p>
+         * <p>The name (in plaintext).</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhang*</p>
+         * <p>张*</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

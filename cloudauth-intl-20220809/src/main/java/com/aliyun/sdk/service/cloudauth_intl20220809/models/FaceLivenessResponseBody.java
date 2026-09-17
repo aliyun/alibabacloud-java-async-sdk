@@ -93,7 +93,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p><a href="https://www.alibabacloud.com/help/en/ekyc/latest/cadqvlft48igbpdc?spm=a2c63.p38356.0.i54#3d0ed52f967g6">The response code.</a></p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A detailed description of the response code.</p>
+         * <p>The description of the return result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID that Alibaba Cloud generates for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>42EA58CA-5DF4-55D5-82C4-5E7A40DA62BA</p>
@@ -126,7 +126,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result object</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -296,7 +296,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The predicted age of the person in the image. The prediction may fail, resulting in an empty value.</p>
+             * <p>The predicted reference age based on the face image. The prediction may fail, in which case no value is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -307,7 +307,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a presentation attack was detected on the captured face. Y means an attack was detected. N means no attack was detected.</p>
+             * <p>The liveness detection result. Valid values: Y (attack detected) and N (normal).</p>
              * 
              * <strong>example:</strong>
              * <p>Y</p>
@@ -326,12 +326,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The predicted gender of the person in the image. The prediction may fail, resulting in an empty value.</p>
+             * <p>The predicted gender based on the face image. The prediction may fail, in which case no value is returned. Valid values:</p>
              * <ul>
-             * <li><p><strong>M</strong>: Male</p>
-             * </li>
-             * <li><p><strong>F</strong>: Female</p>
-             * </li>
+             * <li>M: male.</li>
+             * <li>F: female.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -343,7 +341,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Optional. The quality score of the live face. The value ranges from 0 to 100.</p>
+             * <p>The face quality score (0 to 100). This value is returned only when the face quality score switch is enabled in the request parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>87.19</p>
@@ -354,7 +352,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * IlluminationScore.
+             * <p>The illumination score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder illuminationScore(Double illuminationScore) {
                 this.illuminationScore = illuminationScore;
@@ -362,7 +363,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * KaOcclusionScore.
+             * <p>The key area occlusion score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder kaOcclusionScore(Double kaOcclusionScore) {
                 this.kaOcclusionScore = kaOcclusionScore;
@@ -370,7 +374,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Optional. Indicates whether the face is occluded. Y means the face is occluded. N means the face is not occluded.</p>
+             * <p>The occlusion detection result. Valid values: Y (occluded) and N (not occluded). This value is returned only when the occlusion detection switch is enabled in the request parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>Y</p>
@@ -381,7 +385,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * OcclusionScore.
+             * <p>The occlusion score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.26</p>
              */
             public Builder occlusionScore(Double occlusionScore) {
                 this.occlusionScore = occlusionScore;
@@ -389,7 +396,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * SharpnessScore.
+             * <p>The sharpness score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86.47</p>
              */
             public Builder sharpnessScore(Double sharpnessScore) {
                 this.sharpnessScore = sharpnessScore;
@@ -482,7 +492,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The results of the passive liveness detection. The value is in the JSON format. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/cadqvlft48igbpdc?spm=a2c63.p38356.0.i54#5ff42f7274agz">ExtFaceInfo</a>.</p>
+             * <p>The face result information.</p>
              */
             public Builder extFaceInfo(ExtFaceInfo extFaceInfo) {
                 this.extFaceInfo = extFaceInfo;
@@ -490,12 +500,10 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication result. Valid values:</p>
+             * <p>Indicates whether the authentication passed. Valid values:</p>
              * <ul>
-             * <li><p>Y: The authentication is passed.</p>
-             * </li>
-             * <li><p>N: The authentication is not passed.</p>
-             * </li>
+             * <li>Y: passed.</li>
+             * <li>N: not passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -507,7 +515,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code that corresponds to the verification result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/cadqvlft48igbpdc?spm=a2c63.p38356.0.i54#5ff3e16174tl2">ResultObject.SubCode error codes</a>.</p>
+             * <p>The sub-result code.</p>
              * 
              * <strong>example:</strong>
              * <p>205</p>
@@ -518,7 +526,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction ID.</p>
+             * <p>The unique ID of the authentication request.</p>
              * 
              * <strong>example:</strong>
              * <p>08573be80f944d95ac812e019e3655a8</p>

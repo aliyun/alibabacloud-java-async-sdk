@@ -39,6 +39,10 @@ public class CredentialSubmitIntlRequest extends Request {
     private String docType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileInputType")
+    private String fileInputType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FraudCheck")
     @com.aliyun.core.annotation.Validation(required = true)
     private String fraudCheck;
@@ -82,6 +86,7 @@ public class CredentialSubmitIntlRequest extends Request {
         this.credentialOcrPictureBase64 = builder.credentialOcrPictureBase64;
         this.credentialOcrPictureUrl = builder.credentialOcrPictureUrl;
         this.docType = builder.docType;
+        this.fileInputType = builder.fileInputType;
         this.fraudCheck = builder.fraudCheck;
         this.idQuality = builder.idQuality;
         this.merchantBizId = builder.merchantBizId;
@@ -138,6 +143,13 @@ public class CredentialSubmitIntlRequest extends Request {
      */
     public String getDocType() {
         return this.docType;
+    }
+
+    /**
+     * @return fileInputType
+     */
+    public String getFileInputType() {
+        return this.fileInputType;
     }
 
     /**
@@ -202,6 +214,7 @@ public class CredentialSubmitIntlRequest extends Request {
         private String credentialOcrPictureBase64; 
         private String credentialOcrPictureUrl; 
         private String docType; 
+        private String fileInputType; 
         private String fraudCheck; 
         private String idQuality; 
         private String merchantBizId; 
@@ -222,6 +235,7 @@ public class CredentialSubmitIntlRequest extends Request {
             this.credentialOcrPictureBase64 = request.credentialOcrPictureBase64;
             this.credentialOcrPictureUrl = request.credentialOcrPictureUrl;
             this.docType = request.docType;
+            this.fileInputType = request.fileInputType;
             this.fraudCheck = request.fraudCheck;
             this.idQuality = request.idQuality;
             this.merchantBizId = request.merchantBizId;
@@ -242,7 +256,14 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * CheckRuleConfig.
+         * <p>The field validation rule configuration in JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;address_rule&quot;: &quot;Includes Address Hangzhou***&quot;,
+         *     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
+         *     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
+         * }</p>
          */
         public Builder checkRuleConfig(String checkRuleConfig) {
             this.putBodyParameter("CheckRuleConfig", checkRuleConfig);
@@ -251,7 +272,7 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * <p>Base64 encoding of the image. If you choose to upload the photo this way, please check the photo size and avoid uploading overly large photos.</p>
+         * <p>The Base64-encoded image. If you use this method to submit a photo, check the photo size and do not submit an excessively large photo.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -263,7 +284,7 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * <p>Image URL, accessible via HTTP or HTTPS on the public network.</p>
+         * <p>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
          * 
          * <strong>example:</strong>
          * <p>https://***</p>
@@ -275,9 +296,9 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * <p>Credential type:</p>
+         * <p>The credential type. Valid values:</p>
          * <ul>
-         * <li>02: Vehicle registration certificate</li>
+         * <li>02: vehicle registration certificate.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -291,10 +312,28 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable tampering detection</p>
+         * <p>The input file type. Valid values:</p>
          * <ul>
-         * <li>true: Enable</li>
-         * <li>false: Disable</li>
+         * <li><p>IMAGE (default): image.</p>
+         * </li>
+         * <li><p>PDF: PDF format.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
+         */
+        public Builder fileInputType(String fileInputType) {
+            this.putQueryParameter("FileInputType", fileInputType);
+            this.fileInputType = fileInputType;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable tampering detection. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -308,7 +347,14 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * IdQuality.
+         * <p>Specifies whether to enable quality detection. Valid values:</p>
+         * <ul>
+         * <li>Y: Enabled.</li>
+         * <li>N: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder idQuality(String idQuality) {
             this.putQueryParameter("IdQuality", idQuality);
@@ -317,7 +363,7 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * <p>A unique business identifier defined on the merchant side, used for troubleshooting issues later. Supports a combination of letters and digits, with a maximum length of 32 characters. Ensure uniqueness.</p>
+         * <p>The custom business unique identifier on the merchant side, used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,9 +376,9 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * <p>Extraction type:</p>
+         * <p>The extraction type. Valid values:</p>
          * <ul>
-         * <li>0201: Thai vehicle registration certificate</li>
+         * <li>0201: Thailand vehicle registration certificate.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -346,7 +392,14 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * OcrTranslation.
+         * <p>Specifies whether to enable translation. Valid values:</p>
+         * <ul>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ocrTranslation(String ocrTranslation) {
             this.putQueryParameter("OcrTranslation", ocrTranslation);
@@ -355,7 +408,14 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * OcrValueStandard.
+         * <p>Specifies whether to enable OCR result standardization. Valid values:</p>
+         * <ul>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ocrValueStandard(String ocrValueStandard) {
             this.putQueryParameter("OcrValueStandard", ocrValueStandard);
@@ -364,7 +424,7 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * <p>The product solution to be integrated. Value: CREDENTIAL_RECOGNITION.</p>
+         * <p>The product solution to use. Set this parameter to CREDENTIAL_RECOGNITION.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,7 +437,7 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
-         * <p>Your custom authentication scenario ID, used for querying related records by entering this scenario ID in the console later. Supports a combination of 10 characters, digits, or underscores.</p>
+         * <p>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be a combination of letters, digits, or underscores with a maximum length of 10 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result.</p>
+         * <p>The result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>EFA11401-C961-5E89-A2D3-BF9883E5CC3D</p>
@@ -179,7 +179,7 @@ public class TempOssUrlIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>File URL</p>
+             * <p>The file URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://bzxh.cdn.weijin365.com/assets/index-55338127.png">http://bzxh.cdn.weijin365.com/assets/index-55338127.png</a></p>

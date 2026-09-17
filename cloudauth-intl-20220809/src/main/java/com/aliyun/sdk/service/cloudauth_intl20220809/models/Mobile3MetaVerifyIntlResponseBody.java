@@ -93,7 +93,7 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D241532C-4EE9-5A2A-A5A5-C1FD98CE2EDD</p>
@@ -126,7 +126,7 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result</p>
+         * <p>The verification result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -205,11 +205,11 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification result code.</p>
+             * <p>The verification result code. Valid values:</p>
              * <ul>
-             * <li>1: Verification consistent</li>
-             * <li>2: Verification inconsistent</li>
-             * <li>3: No record found</li>
+             * <li>1: Consistent.</li>
+             * <li>2: Inconsistent.</li>
+             * <li>3: No record found.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -221,11 +221,11 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ISP name</p>
+             * <p>The carrier name. Valid values:</p>
              * <ul>
              * <li>CMCC: China Mobile</li>
              * <li>CUCC: China Unicom</li>
-             * <li>CTCC: China Telecom</li>
+             * <li>CTCC: China Telecom.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -237,14 +237,14 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detailed verification results</p>
+             * <p>The detailed verification result. Valid values:</p>
              * <ul>
-             * <li>101: Verification passed </li>
-             * <li>201: Mobile number and name do not match, mobile number and ID number do not match </li>
-             * <li>202: Mobile number and name match, but mobile number and ID number do not match </li>
-             * <li>203: Mobile number and ID number match, but mobile number and name do not match </li>
-             * <li>204: Other inconsistencies</li>
-             * <li>301: No record found</li>
+             * <li>101: Verification passed. </li>
+             * <li>201: The phone number is inconsistent with the name, and the phone number is inconsistent with the ID card number. </li>
+             * <li>202: The phone number is consistent with the name, but the phone number is inconsistent with the ID card number. </li>
+             * <li>203: The phone number is consistent with the ID card number, but the phone number is inconsistent with the name. </li>
+             * <li>204: Other inconsistency.</li>
+             * <li>301: No record found.</li>
              * </ul>
              * 
              * <strong>example:</strong>

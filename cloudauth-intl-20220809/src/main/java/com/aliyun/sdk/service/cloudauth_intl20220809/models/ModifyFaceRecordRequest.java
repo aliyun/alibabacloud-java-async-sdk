@@ -98,6 +98,7 @@ public class ModifyFaceRecordRequest extends Request {
         }
 
         /**
+         * <p>The face library code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class ModifyFaceRecordRequest extends Request {
         }
 
         /**
+         * <p>The OSS information of the image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,10 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,7 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The response result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -186,7 +192,14 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * Deleted.
+             * <p>The deletion result. Valid values:</p>
+             * <ul>
+             * <li>Y: Succeeded.</li>
+             * <li>N: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder deleted(String deleted) {
                 this.deleted = deleted;
@@ -194,7 +207,10 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedGroupCodes.
+             * <p>The list of face group codes from which the face data was actually deleted (comma-separated). This parameter is returned with all deleted group codes when FaceGroupCode is not specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wqe***,dsa***</p>
              */
             public Builder deletedGroupCodes(String deletedGroupCodes) {
                 this.deletedGroupCodes = deletedGroupCodes;

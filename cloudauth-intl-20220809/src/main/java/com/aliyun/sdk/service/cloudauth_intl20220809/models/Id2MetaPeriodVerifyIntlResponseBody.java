@@ -93,7 +93,7 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p><a href="https://www.alibabacloud.com/help/en/ekyc/latest/dateverify?spm=a2c63.p38356.0.i32#22facb6ab6ui1">Return to Code</a>.</p>
+         * <p>The response code. For more information about response codes, see the description of response codes and messages.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -104,7 +104,7 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A detailed description of the response code.</p>
+         * <p>The response message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -194,9 +194,9 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
             /**
              * <p>The final authentication result. Valid values:</p>
              * <ul>
-             * <li><p><strong>Y</strong>, via</p>
+             * <li><p>Y: Passed.</p>
              * </li>
-             * <li><p><strong>N</strong>: The authentication is not passed.</p>
+             * <li><p>N: Not passed.</p>
              * </li>
              * </ul>
              * 
@@ -209,7 +209,7 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A description of the authentication result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/dateverify?spm=a2c63.p38356.0.i32#d1f36d445az8i">ResultObject.SubCode error codes</a>.</p>
+             * <p>The description of the authentication result. For more information, see the ResultObject.SubCode error code description.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>

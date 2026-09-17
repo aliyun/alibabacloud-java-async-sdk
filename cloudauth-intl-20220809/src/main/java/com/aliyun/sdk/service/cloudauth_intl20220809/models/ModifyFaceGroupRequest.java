@@ -111,7 +111,10 @@ public class ModifyFaceGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -120,7 +123,10 @@ public class ModifyFaceGroupRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65c030cd54b23283ceb27b4ade5da49d</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -129,6 +135,7 @@ public class ModifyFaceGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the face library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

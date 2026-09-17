@@ -93,7 +93,7 @@ public class InitializeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class InitializeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class InitializeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4EB35****87EBA1</p>
@@ -126,7 +126,7 @@ public class InitializeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -218,7 +218,7 @@ public class InitializeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Client configuration</p>
+             * <p>The client configuration.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -229,10 +229,7 @@ public class InitializeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Standard encryption protocol for authentication.</p>
-             * <blockquote>
-             * <p>Required when integrating with H5 web pages using iframe embedding.</p>
-             * </blockquote>
+             * <p>The standard encryption protocol for authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>hksb7ba1b28130d24e015d*********</p>
@@ -243,7 +240,7 @@ public class InitializeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Authentication ID</p>
+             * <p>The authentication ID.</p>
              * 
              * <strong>example:</strong>
              * <p>08573be80f944d95ac812e019e3655a8</p>
@@ -254,7 +251,7 @@ public class InitializeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Web authentication URL</p>
+             * <p>The web authentication URL.</p>
              * 
              * <strong>example:</strong>
              * <p>http****</p>
