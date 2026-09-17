@@ -143,10 +143,10 @@ public class CreateTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * <p>The disk size. Unit: GB.</p>
+         * <p>The disk size. Unit: MB.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>10240</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
