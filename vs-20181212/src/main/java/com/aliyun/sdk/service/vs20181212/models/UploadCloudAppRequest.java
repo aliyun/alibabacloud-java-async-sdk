@@ -54,6 +54,14 @@ public class UploadCloudAppRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PkgType")
     private String pkgType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostCommandPath")
+    private String postCommandPath;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostCommandTimeoutSec")
+    private Integer postCommandTimeoutSec;
+
     private UploadCloudAppRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
@@ -64,6 +72,8 @@ public class UploadCloudAppRequest extends Request {
         this.pkgFormat = builder.pkgFormat;
         this.pkgLabels = builder.pkgLabels;
         this.pkgType = builder.pkgType;
+        this.postCommandPath = builder.postCommandPath;
+        this.postCommandTimeoutSec = builder.postCommandTimeoutSec;
     }
 
     public static Builder builder() {
@@ -135,6 +145,20 @@ public class UploadCloudAppRequest extends Request {
         return this.pkgType;
     }
 
+    /**
+     * @return postCommandPath
+     */
+    public String getPostCommandPath() {
+        return this.postCommandPath;
+    }
+
+    /**
+     * @return postCommandTimeoutSec
+     */
+    public Integer getPostCommandTimeoutSec() {
+        return this.postCommandTimeoutSec;
+    }
+
     public static final class Builder extends Request.Builder<UploadCloudAppRequest, Builder> {
         private String appName; 
         private String appVersion; 
@@ -144,6 +168,8 @@ public class UploadCloudAppRequest extends Request {
         private String pkgFormat; 
         private java.util.List<String> pkgLabels; 
         private String pkgType; 
+        private String postCommandPath; 
+        private Integer postCommandTimeoutSec; 
 
         private Builder() {
             super();
@@ -159,18 +185,17 @@ public class UploadCloudAppRequest extends Request {
             this.pkgFormat = request.pkgFormat;
             this.pkgLabels = request.pkgLabels;
             this.pkgType = request.pkgType;
+            this.postCommandPath = request.postCommandPath;
+            this.postCommandTimeoutSec = request.postCommandTimeoutSec;
         } 
 
         /**
-         * <p>The application name. For Android apps, use the package name, such as com.aaa.bbb.</p>
-         * <p>Value requirements:</p>
+         * <p>The application name. For Android applications, use the package name, such as com.aaa.bbb.</p>
+         * <p>Value rules:</p>
          * <ol>
-         * <li><p>Length: 4–50 characters</p>
-         * </li>
-         * <li><p>Allowed characters: lowercase letters, digits, underscores (_), hyphens (-), and dots (.)</p>
-         * </li>
-         * <li><p>The first and last characters must be a letter or digit</p>
-         * </li>
+         * <li>Length: 4 to 50 characters.</li>
+         * <li>Lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</li>
+         * <li>The first and last characters must be letters or digits.</li>
          * </ol>
          * <p>This parameter is required.</p>
          * 
@@ -184,14 +209,12 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * <p>Value requirements:</p>
+         * <p>The application version. For Android applications, use the VersionName, such as 1.1.1.</p>
+         * <p>Value rules:</p>
          * <ol>
-         * <li><p>Length: 1–50 characters</p>
-         * </li>
-         * <li><p>Allowed characters: lowercase letters, digits, underscores (_), hyphens (-), and dots (.)</p>
-         * </li>
-         * <li><p>The first and last characters must be a letter or digit</p>
-         * </li>
+         * <li>Length: 1 to 50 characters.</li>
+         * <li>Lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</li>
+         * <li>The first and last characters must be letters or digits.</li>
          * </ol>
          * <p>This parameter is required.</p>
          * 
@@ -205,10 +228,10 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * <p>A description of the application.</p>
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试应用包</p>
+         * <p>Test application package</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -230,7 +253,7 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * <p>The MD5 hash of the application package, used to verify package integrity.</p>
+         * <p>The MD5 checksum of the application package, used to verify package integrity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,18 +266,13 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * <p>The package format. By default, this is inferred from the file extension in the DownloadUrl. Valid values:</p>
+         * <p>The package format. The default value is the file extension of the download URL. Valid values:</p>
          * <ol>
-         * <li><p>apk</p>
-         * </li>
-         * <li><p>tar.gz</p>
-         * </li>
-         * <li><p>tar</p>
-         * </li>
-         * <li><p>zip</p>
-         * </li>
-         * <li><p>rar</p>
-         * </li>
+         * <li>apk</li>
+         * <li>tar.gz</li>
+         * <li>tar</li>
+         * <li>zip</li>
+         * <li>rar</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -267,14 +285,11 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * <p>Cloud application labels. You can select multiple. Valid values:</p>
+         * <p>The cloud application labels. You can select multiple values. Valid values:</p>
          * <ol>
-         * <li><p>hot</p>
-         * </li>
-         * <li><p>game</p>
-         * </li>
-         * <li><p>app</p>
-         * </li>
+         * <li>hot</li>
+         * <li>game</li>
+         * <li>app</li>
          * </ol>
          */
         public Builder pkgLabels(java.util.List<String> pkgLabels) {
@@ -288,24 +303,18 @@ public class UploadCloudAppRequest extends Request {
          * <p>The package type.</p>
          * <h2>Valid values:</h2>
          * <ol>
-         * <li><p>android</p>
-         * </li>
-         * <li><p>win</p>
-         * </li>
-         * <li><p>android_appmarket: for Android app marketplace scenarios. This scenario enforces real APK PackageName restrictions:
-         * a. PackageNames must be unique across different AppNames.
-         * b. The same AppName with different AppVersions can map to different PackageNames.</p>
-         * </li>
+         * <li>android</li>
+         * <li>win</li>
+         * <li>android_appmarket: corresponds to the Android app marketplace scenario. In this scenario, the actual APK PackageName is restricted:
+         * a. Different AppName values cannot share the same PackageName.
+         * b. The same AppName with different AppVersion values can be associated with different PackageName values.</li>
          * </ol>
-         * <h2>Default behavior:</h2>
-         * <p>If not specified, the system automatically maps the package type based on PkgFormat (or infers PkgFormat from the DownloadUrl file extension). The default mapping is:</p>
+         * <h2>Default value:</h2>
+         * <p>If not specified, the package type is automatically mapped based on PkgFormat (or the file extension of DownloadUrl). Default mappings between PkgFormat and package type:</p>
          * <ol>
-         * <li><p>android: apk</p>
-         * </li>
-         * <li><p>win: tar.gz, tar, zip, rar</p>
-         * </li>
-         * <li><p>android_appmarket: apk</p>
-         * </li>
+         * <li>android: apk (the apk format is mapped to android by default).</li>
+         * <li>win: tar.gz, tar, zip, rar.</li>
+         * <li>android_appmarket: apk.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -314,6 +323,30 @@ public class UploadCloudAppRequest extends Request {
         public Builder pkgType(String pkgType) {
             this.putQueryParameter("PkgType", pkgType);
             this.pkgType = pkgType;
+            return this;
+        }
+
+        /**
+         * <p>The relative path of the post-installation command within the application package. Only supported for win type applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>install.ps1</p>
+         */
+        public Builder postCommandPath(String postCommandPath) {
+            this.putQueryParameter("PostCommandPath", postCommandPath);
+            this.postCommandPath = postCommandPath;
+            return this;
+        }
+
+        /**
+         * <p>The timeout period (in seconds) for the post-installation command. Only supported for win type applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder postCommandTimeoutSec(Integer postCommandTimeoutSec) {
+            this.putQueryParameter("PostCommandTimeoutSec", postCommandTimeoutSec);
+            this.postCommandTimeoutSec = postCommandTimeoutSec;
             return this;
         }
 

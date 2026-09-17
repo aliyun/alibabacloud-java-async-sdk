@@ -117,7 +117,7 @@ public class UpdateCloudAppInfoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud application, which corresponds to a unique application package.</p>
+         * <p>The cloud application ID, which corresponds to a unique application package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class UpdateCloudAppInfoRequest extends Request {
          * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>用于测试使用</p>
+         * <p>For testing purposes</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -142,12 +142,10 @@ public class UpdateCloudAppInfoRequest extends Request {
         }
 
         /**
-         * <p>Information about the patch package to upload.</p>
+         * <p>The information about the patch package to upload.</p>
          * <ol>
-         * <li><p>This parameter is not supported when PkgType is android.</p>
-         * </li>
-         * <li><p>For the same AppId, only one patch can be in the process of uploading at a time. This means only one patch can be in a state other than its desired state.</p>
-         * </li>
+         * <li>Not supported when PkgType is set to android.</li>
+         * <li>Only one patch can be in the uploading state at a time for the same AppId (only one patch in a non-final state is allowed per AppId).</li>
          * </ol>
          */
         public Builder patch(Patch patch) {
@@ -158,14 +156,14 @@ public class UpdateCloudAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The tags for the cloud application. You can select multiple tags. This action resets all existing tags for the cloud application.</p>
+         * <p>The cloud application labels. You can select multiple labels. This operation resets the cloud application labels.</p>
          * <ol>
-         * <li><p>Valid values:
-         * hot, game, and app.</p>
-         * </li>
-         * <li><p>Special case:
-         * To delete all tags, enter [&quot;NULL&quot;].</p>
-         * </li>
+         * <li>Valid values:
+         *   a. hot
+         *   b. game
+         *   c. app</li>
+         * <li>Special cases:
+         *   a. To delete all labels, set this parameter to [&quot;NULL&quot;].</li>
          * </ol>
          */
         public Builder pkgLabels(java.util.List<String> pkgLabels) {
@@ -176,10 +174,10 @@ public class UpdateCloudAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the stable patch. This patch is used by default if you do not specify a PatchId when the application is in use, such as during a session startup. This parameter is not supported when PkgType is android.
-         * Special value:</p>
+         * <p>The stable PatchId. When a PatchId is not specified during business operations (such as session startup), this PatchId is used by default. Not supported when PkgType is set to android.
+         * Special values:</p>
          * <ol>
-         * <li>If you set this parameter to origin, the patch version is removed and the initial version is used.</li>
+         * <li>origin: cancels the patch version and uses the initial version by default.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -221,6 +219,12 @@ public class UpdateCloudAppInfoRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PkgFormat")
         private String pkgFormat;
 
+        @com.aliyun.core.annotation.NameInMap("PostCommandPath")
+        private String postCommandPath;
+
+        @com.aliyun.core.annotation.NameInMap("PostCommandTimeoutSec")
+        private Integer postCommandTimeoutSec;
+
         @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
         private String renderingInstanceId;
 
@@ -230,6 +234,8 @@ public class UpdateCloudAppInfoRequest extends Request {
             this.md5 = builder.md5;
             this.patchName = builder.patchName;
             this.pkgFormat = builder.pkgFormat;
+            this.postCommandPath = builder.postCommandPath;
+            this.postCommandTimeoutSec = builder.postCommandTimeoutSec;
             this.renderingInstanceId = builder.renderingInstanceId;
         }
 
@@ -277,6 +283,20 @@ public class UpdateCloudAppInfoRequest extends Request {
         }
 
         /**
+         * @return postCommandPath
+         */
+        public String getPostCommandPath() {
+            return this.postCommandPath;
+        }
+
+        /**
+         * @return postCommandTimeoutSec
+         */
+        public Integer getPostCommandTimeoutSec() {
+            return this.postCommandTimeoutSec;
+        }
+
+        /**
          * @return renderingInstanceId
          */
         public String getRenderingInstanceId() {
@@ -289,6 +309,8 @@ public class UpdateCloudAppInfoRequest extends Request {
             private String md5; 
             private String patchName; 
             private String pkgFormat; 
+            private String postCommandPath; 
+            private Integer postCommandTimeoutSec; 
             private String renderingInstanceId; 
 
             private Builder() {
@@ -300,11 +322,13 @@ public class UpdateCloudAppInfoRequest extends Request {
                 this.md5 = model.md5;
                 this.patchName = model.patchName;
                 this.pkgFormat = model.pkgFormat;
+                this.postCommandPath = model.postCommandPath;
+                this.postCommandTimeoutSec = model.postCommandTimeoutSec;
                 this.renderingInstanceId = model.renderingInstanceId;
             } 
 
             /**
-             * <p>Specifies whether to automatically set the patch as the stable version after it is successfully uploaded. The default value is false.</p>
+             * <p>Specifies whether to automatically set the patch as the stable patch after a successful upload. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -315,9 +339,8 @@ public class UpdateCloudAppInfoRequest extends Request {
             }
 
             /**
-             * <p>The download URL for the patch package.
-             * You must specify either RenderingInstanceId or DownloadURL.
-             * DownloadURL takes precedence.</p>
+             * <p>The download URL of the patch package.
+             * Either RenderingInstanceId or DownloadURL is required. DownloadURL takes priority.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://test_host/app/test-tar-pkg.tar">https://test_host/app/test-tar-pkg.tar</a></p>
@@ -328,7 +351,7 @@ public class UpdateCloudAppInfoRequest extends Request {
             }
 
             /**
-             * <p>The MD5 hash of the patch package, used to verify integrity. This parameter is valid only if DownloadURL is not empty. It is required if DownloadURL is not empty.</p>
+             * <p>The MD5 hash of the patch package, used for integrity verification. Valid only when DownloadURL is not empty. Required when DownloadURL is not empty.</p>
              * 
              * <strong>example:</strong>
              * <p>346f6404395adfg5bae1e45g4e943bf7</p>
@@ -339,17 +362,13 @@ public class UpdateCloudAppInfoRequest extends Request {
             }
 
             /**
-             * <p>The name or description of the patch package. This is a unique identifier under the AppId.
-             * Default naming conventions:</p>
+             * <p>The name or description of the patch package, which serves as a unique identifier under the AppId.
+             * Naming conventions:</p>
              * <ol>
-             * <li><p>Cannot be origin or all.</p>
-             * </li>
-             * <li><p>Must be 1 to 50 characters in length.</p>
-             * </li>
-             * <li><p>Can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</p>
-             * </li>
-             * <li><p>The first and last characters must be a letter or a digit.</p>
-             * </li>
+             * <li>Cannot be set to origin or all.</li>
+             * <li>Must be 1 to 50 characters in length.</li>
+             * <li>Can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</li>
+             * <li>Must start and end with a letter or digit.</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -361,16 +380,12 @@ public class UpdateCloudAppInfoRequest extends Request {
             }
 
             /**
-             * <p>The format of the installation package. By default, the system uses the file extension from the download URL. This parameter is valid only if DownloadURL is not empty. Valid values:</p>
+             * <p>The format of the installation package. The default value is the file extension of the download URL. Valid only when DownloadURL is not empty. Valid values:</p>
              * <ol>
-             * <li><p>tar.gz</p>
-             * </li>
-             * <li><p>tar</p>
-             * </li>
-             * <li><p>zip</p>
-             * </li>
-             * <li><p>rar</p>
-             * </li>
+             * <li>tar.gz</li>
+             * <li>tar</li>
+             * <li>zip</li>
+             * <li>rar</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -382,7 +397,29 @@ public class UpdateCloudAppInfoRequest extends Request {
             }
 
             /**
-             * <p>The instance ID required to create the patch package. This parameter is valid only in the Android application marketplace scenario (PkgType=andrpid_appmarket). Specify either RenderingInstanceId or DownloadURL. DownloadURL takes precedence.</p>
+             * <p>The relative path of the post-command within the application package. Only supported for Windows applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>install.ps1</p>
+             */
+            public Builder postCommandPath(String postCommandPath) {
+                this.postCommandPath = postCommandPath;
+                return this;
+            }
+
+            /**
+             * <p>The timeout period for the post-command execution, in seconds. Only supported for Windows applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder postCommandTimeoutSec(Integer postCommandTimeoutSec) {
+                this.postCommandTimeoutSec = postCommandTimeoutSec;
+                return this;
+            }
+
+            /**
+             * <p>The instance ID of the instance used to create the patch package. Valid only for Android application marketplace scenarios (PkgType=andrpid_appmarket). Either RenderingInstanceId or DownloadURL is required. DownloadURL takes priority.</p>
              * 
              * <strong>example:</strong>
              * <p>render-d7ec79fe47ce47aca2d8d7500d25a28a</p>

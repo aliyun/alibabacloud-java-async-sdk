@@ -12,39 +12,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RebootRenderingServerResponseBody} extends {@link TeaModel}
+ * {@link UpgradeRenderingInstanceImageResponseBody} extends {@link TeaModel}
  *
- * <p>RebootRenderingServerResponseBody</p>
+ * <p>UpgradeRenderingInstanceImageResponseBody</p>
  */
-public class RebootRenderingServerResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("FailedInstanceCount")
-    private Integer failedInstanceCount;
+public class UpgradeRenderingInstanceImageResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("FailedCount")
+    private Long failedCount;
 
-    @com.aliyun.core.annotation.NameInMap("FailedInstances")
-    private java.util.List<FailedInstances> failedInstances;
+    @com.aliyun.core.annotation.NameInMap("FailedItems")
+    private java.util.List<FailedItems> failedItems;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("SuccessInstanceCount")
-    private Integer successInstanceCount;
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
+    private Long successCount;
 
-    @com.aliyun.core.annotation.NameInMap("SuccessInstances")
-    private java.util.List<SuccessInstances> successInstances;
+    @com.aliyun.core.annotation.NameInMap("SuccessItems")
+    private java.util.List<SuccessItems> successItems;
 
-    private RebootRenderingServerResponseBody(Builder builder) {
-        this.failedInstanceCount = builder.failedInstanceCount;
-        this.failedInstances = builder.failedInstances;
+    private UpgradeRenderingInstanceImageResponseBody(Builder builder) {
+        this.failedCount = builder.failedCount;
+        this.failedItems = builder.failedItems;
         this.requestId = builder.requestId;
-        this.successInstanceCount = builder.successInstanceCount;
-        this.successInstances = builder.successInstances;
+        this.successCount = builder.successCount;
+        this.successItems = builder.successItems;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RebootRenderingServerResponseBody create() {
+    public static UpgradeRenderingInstanceImageResponseBody create() {
         return builder().build();
     }
 
@@ -53,17 +53,17 @@ public class RebootRenderingServerResponseBody extends TeaModel {
     }
 
     /**
-     * @return failedInstanceCount
+     * @return failedCount
      */
-    public Integer getFailedInstanceCount() {
-        return this.failedInstanceCount;
+    public Long getFailedCount() {
+        return this.failedCount;
     }
 
     /**
-     * @return failedInstances
+     * @return failedItems
      */
-    public java.util.List<FailedInstances> getFailedInstances() {
-        return this.failedInstances;
+    public java.util.List<FailedItems> getFailedItems() {
+        return this.failedItems;
     }
 
     /**
@@ -74,53 +74,53 @@ public class RebootRenderingServerResponseBody extends TeaModel {
     }
 
     /**
-     * @return successInstanceCount
+     * @return successCount
      */
-    public Integer getSuccessInstanceCount() {
-        return this.successInstanceCount;
+    public Long getSuccessCount() {
+        return this.successCount;
     }
 
     /**
-     * @return successInstances
+     * @return successItems
      */
-    public java.util.List<SuccessInstances> getSuccessInstances() {
-        return this.successInstances;
+    public java.util.List<SuccessItems> getSuccessItems() {
+        return this.successItems;
     }
 
     public static final class Builder {
-        private Integer failedInstanceCount; 
-        private java.util.List<FailedInstances> failedInstances; 
+        private Long failedCount; 
+        private java.util.List<FailedItems> failedItems; 
         private String requestId; 
-        private Integer successInstanceCount; 
-        private java.util.List<SuccessInstances> successInstances; 
+        private Long successCount; 
+        private java.util.List<SuccessItems> successItems; 
 
         private Builder() {
         } 
 
-        private Builder(RebootRenderingServerResponseBody model) {
-            this.failedInstanceCount = model.failedInstanceCount;
-            this.failedInstances = model.failedInstances;
+        private Builder(UpgradeRenderingInstanceImageResponseBody model) {
+            this.failedCount = model.failedCount;
+            this.failedItems = model.failedItems;
             this.requestId = model.requestId;
-            this.successInstanceCount = model.successInstanceCount;
-            this.successInstances = model.successInstances;
+            this.successCount = model.successCount;
+            this.successItems = model.successItems;
         } 
 
         /**
-         * <p>The number of cloud application service instances that failed to restart.</p>
+         * <p>The number of failed instances.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
-        public Builder failedInstanceCount(Integer failedInstanceCount) {
-            this.failedInstanceCount = failedInstanceCount;
+        public Builder failedCount(Long failedCount) {
+            this.failedCount = failedCount;
             return this;
         }
 
         /**
-         * <p>The cloud application service instance IDs and the associated failure information.</p>
+         * <p>The information about failed instances.</p>
          */
-        public Builder failedInstances(java.util.List<FailedInstances> failedInstances) {
-            this.failedInstances = failedInstances;
+        public Builder failedItems(java.util.List<FailedItems> failedItems) {
+            this.failedItems = failedItems;
             return this;
         }
 
@@ -136,39 +136,39 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of cloud application service instances that were successfully restarted.</p>
+         * <p>The number of successful instances.</p>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>1</p>
          */
-        public Builder successInstanceCount(Integer successInstanceCount) {
-            this.successInstanceCount = successInstanceCount;
+        public Builder successCount(Long successCount) {
+            this.successCount = successCount;
             return this;
         }
 
         /**
-         * <p>The cloud application service instance IDs and the associated result descriptions.</p>
+         * <p>The information about successful instances.</p>
          */
-        public Builder successInstances(java.util.List<SuccessInstances> successInstances) {
-            this.successInstances = successInstances;
+        public Builder successItems(java.util.List<SuccessItems> successItems) {
+            this.successItems = successItems;
             return this;
         }
 
-        public RebootRenderingServerResponseBody build() {
-            return new RebootRenderingServerResponseBody(this);
+        public UpgradeRenderingInstanceImageResponseBody build() {
+            return new UpgradeRenderingInstanceImageResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RebootRenderingServerResponseBody} extends {@link TeaModel}
+     * {@link UpgradeRenderingInstanceImageResponseBody} extends {@link TeaModel}
      *
-     * <p>RebootRenderingServerResponseBody</p>
+     * <p>UpgradeRenderingInstanceImageResponseBody</p>
      */
-    public static class FailedInstances extends TeaModel {
+    public static class FailedItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrCode")
-        private Integer errCode;
+        private String errCode;
 
         @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
@@ -176,7 +176,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
         private String renderingInstanceId;
 
-        private FailedInstances(Builder builder) {
+        private FailedItems(Builder builder) {
             this.errCode = builder.errCode;
             this.errMessage = builder.errMessage;
             this.renderingInstanceId = builder.renderingInstanceId;
@@ -186,14 +186,14 @@ public class RebootRenderingServerResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static FailedInstances create() {
+        public static FailedItems create() {
             return builder().build();
         }
 
         /**
          * @return errCode
          */
-        public Integer getErrCode() {
+        public String getErrCode() {
             return this.errCode;
         }
 
@@ -212,14 +212,14 @@ public class RebootRenderingServerResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Integer errCode; 
+            private String errCode; 
             private String errMessage; 
             private String renderingInstanceId; 
 
             private Builder() {
             } 
 
-            private Builder(FailedInstances model) {
+            private Builder(FailedItems model) {
                 this.errCode = model.errCode;
                 this.errMessage = model.errMessage;
                 this.renderingInstanceId = model.renderingInstanceId;
@@ -229,9 +229,9 @@ public class RebootRenderingServerResponseBody extends TeaModel {
              * <p>The error code of the failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>300000</p>
+             * <p>200302</p>
              */
-            public Builder errCode(Integer errCode) {
+            public Builder errCode(String errCode) {
                 this.errCode = errCode;
                 return this;
             }
@@ -240,7 +240,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
              * <p>The error message of the failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>Rejected due to timeout</p>
+             * <p>Not Applied</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -248,18 +248,18 @@ public class RebootRenderingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the cloud application service instance.</p>
+             * <p>The cloud application service instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>render-421cd2a1125947c19fcd5c7dd2c7d31e</p>
+             * <p>render-072da95539d3402da90353b244191722</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
                 return this;
             }
 
-            public FailedInstances build() {
-                return new FailedInstances(this);
+            public FailedItems build() {
+                return new FailedItems(this);
             } 
 
         } 
@@ -267,15 +267,15 @@ public class RebootRenderingServerResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RebootRenderingServerResponseBody} extends {@link TeaModel}
+     * {@link UpgradeRenderingInstanceImageResponseBody} extends {@link TeaModel}
      *
-     * <p>RebootRenderingServerResponseBody</p>
+     * <p>UpgradeRenderingInstanceImageResponseBody</p>
      */
-    public static class SuccessInstances extends TeaModel {
+    public static class SuccessItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
         private String renderingInstanceId;
 
-        private SuccessInstances(Builder builder) {
+        private SuccessItems(Builder builder) {
             this.renderingInstanceId = builder.renderingInstanceId;
         }
 
@@ -283,7 +283,7 @@ public class RebootRenderingServerResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SuccessInstances create() {
+        public static SuccessItems create() {
             return builder().build();
         }
 
@@ -300,23 +300,23 @@ public class RebootRenderingServerResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(SuccessInstances model) {
+            private Builder(SuccessItems model) {
                 this.renderingInstanceId = model.renderingInstanceId;
             } 
 
             /**
-             * <p>The instance ID of the cloud application service instance.</p>
+             * <p>The cloud application service instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>render-e6cf423c787e4e43b460a788da254fe3</p>
+             * <p>render-1ada8cd82783407b99fa202826fc6447</p>
              */
             public Builder renderingInstanceId(String renderingInstanceId) {
                 this.renderingInstanceId = renderingInstanceId;
                 return this;
             }
 
-            public SuccessInstances build() {
-                return new SuccessInstances(this);
+            public SuccessItems build() {
+                return new SuccessItems(this);
             } 
 
         } 

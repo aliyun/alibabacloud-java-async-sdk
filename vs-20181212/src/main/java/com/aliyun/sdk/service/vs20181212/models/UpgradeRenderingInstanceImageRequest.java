@@ -12,23 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RebootRenderingServerRequest} extends {@link RequestModel}
+ * {@link UpgradeRenderingInstanceImageRequest} extends {@link RequestModel}
  *
- * <p>RebootRenderingServerRequest</p>
+ * <p>UpgradeRenderingInstanceImageRequest</p>
  */
-public class RebootRenderingServerRequest extends Request {
+public class UpgradeRenderingInstanceImageRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Precheck")
-    private Boolean precheck;
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String imageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> renderingInstanceIds;
 
-    private RebootRenderingServerRequest(Builder builder) {
+    private UpgradeRenderingInstanceImageRequest(Builder builder) {
         super(builder);
-        this.precheck = builder.precheck;
+        this.imageId = builder.imageId;
         this.renderingInstanceIds = builder.renderingInstanceIds;
     }
 
@@ -36,7 +37,7 @@ public class RebootRenderingServerRequest extends Request {
         return new Builder();
     }
 
-    public static RebootRenderingServerRequest create() {
+    public static UpgradeRenderingInstanceImageRequest create() {
         return builder().build();
     }
 
@@ -46,10 +47,10 @@ public class RebootRenderingServerRequest extends Request {
     }
 
     /**
-     * @return precheck
+     * @return imageId
      */
-    public Boolean getPrecheck() {
-        return this.precheck;
+    public String getImageId() {
+        return this.imageId;
     }
 
     /**
@@ -59,34 +60,35 @@ public class RebootRenderingServerRequest extends Request {
         return this.renderingInstanceIds;
     }
 
-    public static final class Builder extends Request.Builder<RebootRenderingServerRequest, Builder> {
-        private Boolean precheck; 
+    public static final class Builder extends Request.Builder<UpgradeRenderingInstanceImageRequest, Builder> {
+        private String imageId; 
         private java.util.List<String> renderingInstanceIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RebootRenderingServerRequest request) {
+        private Builder(UpgradeRenderingInstanceImageRequest request) {
             super(request);
-            this.precheck = request.precheck;
+            this.imageId = request.imageId;
             this.renderingInstanceIds = request.renderingInstanceIds;
         } 
 
         /**
-         * <p>Specifies whether to perform only an admission check without actually restarting the hosts. Default value: false.</p>
+         * <p>The image ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>m-bp15om9lg9zb20magg86</p>
          */
-        public Builder precheck(Boolean precheck) {
-            this.putQueryParameter("Precheck", precheck);
-            this.precheck = precheck;
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
             return this;
         }
 
         /**
-         * <p>The list of cloud application service instance IDs.</p>
+         * <p>The list of cloud application service instance IDs. A maximum of 100 IDs can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder renderingInstanceIds(java.util.List<String> renderingInstanceIds) {
@@ -97,8 +99,8 @@ public class RebootRenderingServerRequest extends Request {
         }
 
         @Override
-        public RebootRenderingServerRequest build() {
-            return new RebootRenderingServerRequest(this);
+        public UpgradeRenderingInstanceImageRequest build() {
+            return new UpgradeRenderingInstanceImageRequest(this);
         } 
 
     } 

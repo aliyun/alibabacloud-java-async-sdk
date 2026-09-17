@@ -145,7 +145,7 @@ public class ListCloudAppPatchesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud application. This ID corresponds to a unique application package.</p>
+         * <p>The cloud application ID, which corresponds to a unique application package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * <p>The time range for filtering. The time must be in UTC and in the ISO 8601 standard format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-10T21:00:00Z</p>
@@ -170,7 +170,7 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list to return. The value starts from 1.
+         * <p>The page number of the list to query. Minimum value: 1.
          * Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. The maximum value is 100.
+         * <p>The number of entries per page for a paged query. Maximum value: 100.
          * Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class ListCloudAppPatchesRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. The time is in UTC and follows the ISO 8601 standard. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-11-29T00:00:00Z</p>

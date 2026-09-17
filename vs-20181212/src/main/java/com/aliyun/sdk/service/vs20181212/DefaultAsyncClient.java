@@ -2601,7 +2601,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least one of the template ID or the template type.</p>
+     * <p>You must specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListCloudAppPatches  ListCloudAppPatchesRequest
@@ -2760,6 +2760,31 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListRenderingDataPackagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</li>
+     * <li>You must specify at least one of the <code>SessionId</code> and <code>ClientId</code> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListRenderingImages  ListRenderingImagesRequest
+     * @return ListRenderingImagesResponse
+     */
+    @Override
+    public CompletableFuture<ListRenderingImagesResponse> listRenderingImages(ListRenderingImagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRenderingImages").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRenderingImagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRenderingImagesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4017,6 +4042,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateVsPullStreamInfoConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpgradeRenderingInstanceImage  UpgradeRenderingInstanceImageRequest
+     * @return UpgradeRenderingInstanceImageResponse
+     */
+    @Override
+    public CompletableFuture<UpgradeRenderingInstanceImageResponse> upgradeRenderingInstanceImage(UpgradeRenderingInstanceImageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeRenderingInstanceImage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeRenderingInstanceImageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradeRenderingInstanceImageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

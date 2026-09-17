@@ -271,7 +271,7 @@ public class ListSpecificationsResponseBody extends TeaModel {
              * <p>The specification family.</p>
              * 
              * <strong>example:</strong>
-             * <p>4090CU</p>
+             * <p>G49\G59</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -301,7 +301,7 @@ public class ListSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cards per single load.</p>
+             * <p>The number of cards per workload.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -312,10 +312,10 @@ public class ListSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p><code>RenderingSpec</code></p>
+             * <p>The specification.</p>
              * 
              * <strong>example:</strong>
-             * <p>crs.xic.s1</p>
+             * <p>ew.gn8t6xlarge-rb.x1p</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;

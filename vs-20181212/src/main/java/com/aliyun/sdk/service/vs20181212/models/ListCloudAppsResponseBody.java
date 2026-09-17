@@ -106,7 +106,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of cloud application information.</p>
+         * <p>The list of cloud application information.</p>
          */
         public Builder cloudApps(java.util.List<CloudApps> cloudApps) {
             this.cloudApps = cloudApps;
@@ -114,7 +114,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page number of the query list.</p>
+         * <p>The page number of the query list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of rows per page for paged queries.</p>
+         * <p>The number of entries per page for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -147,7 +147,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of matching cloud application entries.</p>
+         * <p>The total number of matched cloud applications.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -188,6 +188,12 @@ public class ListCloudAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PkgType")
         private String pkgType;
 
+        @com.aliyun.core.annotation.NameInMap("PostCommandPath")
+        private String postCommandPath;
+
+        @com.aliyun.core.annotation.NameInMap("PostCommandTimeoutSec")
+        private Integer postCommandTimeoutSec;
+
         @com.aliyun.core.annotation.NameInMap("StablePatchId")
         private String stablePatchId;
 
@@ -210,6 +216,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
             this.description = builder.description;
             this.pkgFormat = builder.pkgFormat;
             this.pkgType = builder.pkgType;
+            this.postCommandPath = builder.postCommandPath;
+            this.postCommandTimeoutSec = builder.postCommandTimeoutSec;
             this.stablePatchId = builder.stablePatchId;
             this.status = builder.status;
             this.statusDescription = builder.statusDescription;
@@ -268,6 +276,20 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return postCommandPath
+         */
+        public String getPostCommandPath() {
+            return this.postCommandPath;
+        }
+
+        /**
+         * @return postCommandTimeoutSec
+         */
+        public Integer getPostCommandTimeoutSec() {
+            return this.postCommandTimeoutSec;
+        }
+
+        /**
          * @return stablePatchId
          */
         public String getStablePatchId() {
@@ -309,6 +331,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
             private String description; 
             private String pkgFormat; 
             private String pkgType; 
+            private String postCommandPath; 
+            private Integer postCommandTimeoutSec; 
             private String stablePatchId; 
             private String status; 
             private String statusDescription; 
@@ -325,6 +349,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.pkgFormat = model.pkgFormat;
                 this.pkgType = model.pkgType;
+                this.postCommandPath = model.postCommandPath;
+                this.postCommandTimeoutSec = model.postCommandTimeoutSec;
                 this.stablePatchId = model.stablePatchId;
                 this.status = model.status;
                 this.statusDescription = model.statusDescription;
@@ -333,7 +359,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Application ID.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
@@ -344,7 +370,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application name.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>com.aaa.bbb</p>
@@ -355,7 +381,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application version.</p>
+             * <p>The application version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.5.0</p>
@@ -366,7 +392,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application description.</p>
+             * <p>The application description.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -377,7 +403,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Package format.</p>
+             * <p>The installation package format.</p>
              * 
              * <strong>example:</strong>
              * <p>apk</p>
@@ -388,7 +414,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Package type: android/win.</p>
+             * <p>The installation package type. Valid values: android and win.</p>
              * 
              * <strong>example:</strong>
              * <p>android</p>
@@ -399,7 +425,29 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Stable patch package ID.</p>
+             * <p>The relative path of the post-command within the application package. Only win type applications are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>install.ps1</p>
+             */
+            public Builder postCommandPath(String postCommandPath) {
+                this.postCommandPath = postCommandPath;
+                return this;
+            }
+
+            /**
+             * <p>The timeout period for post-command execution, in seconds. Only win type applications are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder postCommandTimeoutSec(Integer postCommandTimeoutSec) {
+                this.postCommandTimeoutSec = postCommandTimeoutSec;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the stable version patch package.</p>
              * 
              * <strong>example:</strong>
              * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
@@ -412,14 +460,12 @@ public class ListCloudAppsResponseBody extends TeaModel {
             /**
              * <p>The application upload status. Valid values:</p>
              * <ol>
-             * <li><p>Created</p>
-             * </li>
-             * <li><p>Doing</p>
-             * </li>
-             * <li><p>Success: The desired state.</p>
-             * </li>
-             * <li><p>Failed: The desired state.</p>
-             * </li>
+             * <li>Created</li>
+             * <li>Doing</li>
+             * <li>Success: desired state.</li>
+             * <li>Failed: desired state.</li>
+             * <li>Deleting</li>
+             * <li>DeleteFailed: desired state.</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -431,7 +477,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status description.</p>
+             * <p>The status description.</p>
              * 
              * <strong>example:</strong>
              * <p>upload success</p>
@@ -442,7 +488,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Latest status update time.</p>
+             * <p>The latest status update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-28T14:48:34+08:00</p>
@@ -453,7 +499,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application upload time.</p>
+             * <p>The application upload time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-28T14:28:14+08:00</p>

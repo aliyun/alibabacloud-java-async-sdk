@@ -973,7 +973,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least one of the template ID or the template type.</p>
+     * <p>You must specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListCloudAppPatches  ListCloudAppPatchesRequest
@@ -1040,6 +1040,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRenderingDataPackagesResponse
      */
     CompletableFuture<ListRenderingDataPackagesResponse> listRenderingDataPackages(ListRenderingDataPackagesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</li>
+     * <li>You must specify at least one of the <code>SessionId</code> and <code>ClientId</code> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListRenderingImages  ListRenderingImagesRequest
+     * @return ListRenderingImagesResponse
+     */
+    CompletableFuture<ListRenderingImagesResponse> listRenderingImages(ListRenderingImagesRequest request);
 
     /**
      * <b>description</b> :
@@ -1517,6 +1530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateVsPullStreamInfoConfigResponse
      */
     CompletableFuture<UpdateVsPullStreamInfoConfigResponse> updateVsPullStreamInfoConfig(UpdateVsPullStreamInfoConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeRenderingInstanceImage  UpgradeRenderingInstanceImageRequest
+     * @return UpgradeRenderingInstanceImageResponse
+     */
+    CompletableFuture<UpgradeRenderingInstanceImageResponse> upgradeRenderingInstanceImage(UpgradeRenderingInstanceImageRequest request);
 
     /**
      * @param request the request parameters of UploadCloudApp  UploadCloudAppRequest
