@@ -158,7 +158,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the request is a dry run.</p>
+         * <p>Indicates whether the request is a dry-run request.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,7 +235,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of affected model service instances.</p>
+         * <p>The number of affected model serving instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -246,7 +246,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The change warnings returned by the upstream service. The caller must display these warnings.</p>
+         * <p>The change warnings returned by the upstream. The caller must display these warnings.</p>
          */
         public Builder warnings(java.util.List<String> warnings) {
             this.warnings = warnings;

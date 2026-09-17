@@ -76,6 +76,11 @@ public class CreateKBSyncLinkRequest extends Request {
     private String tenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAccessToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 4096)
+    private String userAccessToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
     @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String userId;
@@ -94,6 +99,7 @@ public class CreateKBSyncLinkRequest extends Request {
         this.sourceType = builder.sourceType;
         this.syncIntervalMinutes = builder.syncIntervalMinutes;
         this.tenantId = builder.tenantId;
+        this.userAccessToken = builder.userAccessToken;
         this.userId = builder.userId;
     }
 
@@ -195,6 +201,13 @@ public class CreateKBSyncLinkRequest extends Request {
     }
 
     /**
+     * @return userAccessToken
+     */
+    public String getUserAccessToken() {
+        return this.userAccessToken;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -214,6 +227,7 @@ public class CreateKBSyncLinkRequest extends Request {
         private String sourceType; 
         private Integer syncIntervalMinutes; 
         private String tenantId; 
+        private String userAccessToken; 
         private String userId; 
 
         private Builder() {
@@ -234,6 +248,7 @@ public class CreateKBSyncLinkRequest extends Request {
             this.sourceType = request.sourceType;
             this.syncIntervalMinutes = request.syncIntervalMinutes;
             this.tenantId = request.tenantId;
+            this.userAccessToken = request.userAccessToken;
             this.userId = request.userId;
         } 
 
@@ -276,7 +291,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the knowledge base.</p>
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +317,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The DingTalk document MCP Server endpoint.</p>
+         * <p>The MCP Server address for DingTalk documents.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
@@ -327,7 +342,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The DingTalk spreadsheet MCP Server endpoint.</p>
+         * <p>The MCP Server address for DingTalk sheets.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
@@ -389,7 +404,19 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The DingTalk operator user ID.</p>
+         * <p>The Lark user access token. This token is used only when the application identity cannot expand group members because the bot is not in the group chat.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
+        public Builder userAccessToken(String userAccessToken) {
+            this.putQueryParameter("UserAccessToken", userAccessToken);
+            this.userAccessToken = userAccessToken;
+            return this;
+        }
+
+        /**
+         * <p>The DingTalk user ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>123***56</p>

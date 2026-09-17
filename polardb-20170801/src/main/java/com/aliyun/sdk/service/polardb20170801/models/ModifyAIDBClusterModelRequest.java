@@ -41,6 +41,14 @@ public class ModifyAIDBClusterModelRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestartMode")
+    private String restartMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkerBatchSize")
+    private Long workerBatchSize;
+
     private ModifyAIDBClusterModelRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -48,6 +56,8 @@ public class ModifyAIDBClusterModelRequest extends Request {
         this.dryRun = builder.dryRun;
         this.modelName = builder.modelName;
         this.regionId = builder.regionId;
+        this.restartMode = builder.restartMode;
+        this.workerBatchSize = builder.workerBatchSize;
     }
 
     public static Builder builder() {
@@ -98,12 +108,28 @@ public class ModifyAIDBClusterModelRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return restartMode
+     */
+    public String getRestartMode() {
+        return this.restartMode;
+    }
+
+    /**
+     * @return workerBatchSize
+     */
+    public Long getWorkerBatchSize() {
+        return this.workerBatchSize;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAIDBClusterModelRequest, Builder> {
         private String DBClusterId; 
         private String displayModelName; 
         private Boolean dryRun; 
         private String modelName; 
         private String regionId; 
+        private String restartMode; 
+        private Long workerBatchSize; 
 
         private Builder() {
             super();
@@ -116,6 +142,8 @@ public class ModifyAIDBClusterModelRequest extends Request {
             this.dryRun = request.dryRun;
             this.modelName = request.modelName;
             this.regionId = request.regionId;
+            this.restartMode = request.restartMode;
+            this.workerBatchSize = request.workerBatchSize;
         } 
 
         /**
@@ -132,7 +160,7 @@ public class ModifyAIDBClusterModelRequest extends Request {
         }
 
         /**
-         * <p>The new customer-facing invocation name. If this parameter is not specified, the existing invocation name is retained.</p>
+         * <p>The new client-facing invocation name. If this parameter is not specified, the existing invocation name is retained.</p>
          * 
          * <strong>example:</strong>
          * <p>my-flagship-chat</p>
@@ -144,7 +172,7 @@ public class ModifyAIDBClusterModelRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only preview the change.</p>
+         * <p>Specifies whether to only preview the change without actually performing it.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -178,6 +206,34 @@ public class ModifyAIDBClusterModelRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The restart mode for workers. Valid values:</p>
+         * <ul>
+         * <li>inPlace</li>
+         * <li>recreate</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>inPlace</p>
+         */
+        public Builder restartMode(String restartMode) {
+            this.putQueryParameter("RestartMode", restartMode);
+            this.restartMode = restartMode;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of workers to restart per batch within a single MSD. Valid values: 1 to 30. This parameter takes effect only when RestartMode is set to inPlace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        public Builder workerBatchSize(Long workerBatchSize) {
+            this.putQueryParameter("WorkerBatchSize", workerBatchSize);
+            this.workerBatchSize = workerBatchSize;
             return this;
         }
 

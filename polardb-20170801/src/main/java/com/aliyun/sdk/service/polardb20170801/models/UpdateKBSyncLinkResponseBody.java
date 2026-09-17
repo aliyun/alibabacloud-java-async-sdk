@@ -102,7 +102,7 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scheduling time of the synchronization task.</p>
+         * <p>The scheduled time of the synchronization task.</p>
          */
         public Builder syncSchedule(String syncSchedule) {
             this.syncSchedule = syncSchedule;
