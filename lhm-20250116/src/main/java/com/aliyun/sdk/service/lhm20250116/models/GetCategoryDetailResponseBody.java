@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDataCheckTemplateResponseBody} extends {@link TeaModel}
+ * {@link GetCategoryDetailResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateDataCheckTemplateResponseBody</p>
+ * <p>GetCategoryDetailResponseBody</p>
  */
-public class UpdateDataCheckTemplateResponseBody extends TeaModel {
+public class GetCategoryDetailResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("data")
+    private String data;
+
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
 
@@ -29,7 +32,8 @@ public class UpdateDataCheckTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private UpdateDataCheckTemplateResponseBody(Builder builder) {
+    private GetCategoryDetailResponseBody(Builder builder) {
+        this.data = builder.data;
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
         this.requestId = builder.requestId;
@@ -40,12 +44,19 @@ public class UpdateDataCheckTemplateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateDataCheckTemplateResponseBody create() {
+    public static GetCategoryDetailResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return data
+     */
+    public String getData() {
+        return this.data;
     }
 
     /**
@@ -77,6 +88,7 @@ public class UpdateDataCheckTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String data; 
         private String errCode; 
         private String errMessage; 
         private String requestId; 
@@ -85,12 +97,24 @@ public class UpdateDataCheckTemplateResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateDataCheckTemplateResponseBody model) {
+        private Builder(GetCategoryDetailResponseBody model) {
+            this.data = model.data;
             this.errCode = model.errCode;
             this.errMessage = model.errMessage;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
+
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;taskId\&quot;: 1699}</p>
+         */
+        public Builder data(String data) {
+            this.data = data;
+            return this;
+        }
 
         /**
          * <p>The error code. An empty string is returned if the call is successful.</p>
@@ -115,7 +139,7 @@ public class UpdateDataCheckTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues of this call.</p>
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
@@ -126,15 +150,18 @@ public class UpdateDataCheckTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure. If the call fails, check errCode and errMessage for troubleshooting.</p>
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public UpdateDataCheckTemplateResponseBody build() {
-            return new UpdateDataCheckTemplateResponseBody(this);
+        public GetCategoryDetailResponseBody build() {
+            return new GetCategoryDetailResponseBody(this);
         } 
 
     } 

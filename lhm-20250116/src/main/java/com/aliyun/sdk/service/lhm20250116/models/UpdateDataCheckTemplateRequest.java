@@ -213,7 +213,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
         } 
 
         /**
-         * basicMetricRules.
+         * <p>The list of metric check rules for basic data types. This field is required when checkType is set to 1 (metric comparison).</p>
          */
         public Builder basicMetricRules(java.util.List<BasicMetricRules> basicMetricRules) {
             this.putBodyParameter("basicMetricRules", basicMetricRules);
@@ -222,7 +222,18 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * checkType.
+         * <p>The check rule type. Valid values:</p>
+         * <ul>
+         * <li>0: data volume comparison.</li>
+         * <li>1: metric comparison.</li>
+         * <li>2: weak content comparison.</li>
+         * <li>3: custom comparison.</li>
+         * <li>4: full-text comparison.</li>
+         * <li>5: null rate comparison.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkType(Integer checkType) {
             this.putBodyParameter("checkType", checkType);
@@ -231,7 +242,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * complexMetricRules.
+         * <p>The list of complex data type metric check rules. Used when checkType is set to 1 (metric comparison).</p>
          */
         public Builder complexMetricRules(java.util.List<ComplexMetricRules> complexMetricRules) {
             this.putBodyParameter("complexMetricRules", complexMetricRules);
@@ -240,7 +251,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * dsEngineRels.
+         * <p>The list of datasource engine relationships (datasource engines associated with the template).</p>
          */
         public Builder dsEngineRels(java.util.List<DsEngineRels> dsEngineRels) {
             this.putBodyParameter("dsEngineRels", dsEngineRels);
@@ -249,7 +260,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * fulltextRule.
+         * <p>The full-text comparison rule. This parameter has a value when checkType is set to 4 (full-text comparison). Refer to the child fields for the field structure.</p>
          */
         public Builder fulltextRule(FulltextRule fulltextRule) {
             this.putBodyParameter("fulltextRule", fulltextRule);
@@ -258,7 +269,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * metricRules.
+         * <p>The list of metric check rules. This parameter has a value when checkType is set to 1 (metric comparison).</p>
          */
         public Builder metricRules(java.util.List<MetricRules> metricRules) {
             this.putBodyParameter("metricRules", metricRules);
@@ -267,7 +278,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * nullRules.
+         * <p>The list of null value rate check rules. This parameter has a value when checkType is set to 5 (null value rate comparison).</p>
          */
         public Builder nullRules(java.util.List<NullRules> nullRules) {
             this.putBodyParameter("nullRules", nullRules);
@@ -276,7 +287,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues of this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("requestId", requestId);
@@ -285,7 +299,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * templateDesc.
+         * <p>The template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description of the data volume check template</p>
          */
         public Builder templateDesc(String templateDesc) {
             this.putBodyParameter("templateDesc", templateDesc);
@@ -294,7 +311,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * templateId.
+         * <p>The check template ID (logical foreign key) that uniquely identifies a check template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("templateId", templateId);
@@ -303,7 +323,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * templateName.
+         * <p>The check template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data volume check template</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("templateName", templateName);
@@ -312,7 +335,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
         }
 
         /**
-         * weakContentRule.
+         * <p>The weak content check rule. This parameter has a value and is required when checkType is set to 2 (weak content comparison). For the field structure, see the child field descriptions.</p>
          */
         public Builder weakContentRule(WeakContentRule weakContentRule) {
             this.putBodyParameter("weakContentRule", weakContentRule);
@@ -627,7 +650,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             } 
 
             /**
-             * checkMethods.
+             * <p>The check methods (metric calculation methods). Separate multiple values with commas, such as SUM,AVG,MIN,MAX. The values must be within the range allowed by the templatetype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUM,AVG</p>
              */
             public Builder checkMethods(String checkMethods) {
                 this.checkMethods = checkMethods;
@@ -635,7 +661,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * controlFloatPrecision.
+             * <p>Specifies whether to control floating-point precision. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder controlFloatPrecision(Integer controlFloatPrecision) {
                 this.controlFloatPrecision = controlFloatPrecision;
@@ -643,7 +672,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeClassify.
+             * <p>The data type category. Valid values: 0 (native data type) and 1 (complex data type).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataTypeClassify(Integer dataTypeClassify) {
                 this.dataTypeClassify = dataTypeClassify;
@@ -651,7 +683,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeGroup.
+             * <p>The data type group that identifies the data type category to which the check rule applies. Valid values: integers from 0 to 7. For the description of each value, see the enumeration values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataTypeGroup(Integer dataTypeGroup) {
                 this.dataTypeGroup = dataTypeGroup;
@@ -659,7 +694,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeList.
+             * <p>The list of data types to which the check rule applies. Configure this field as needed.</p>
              */
             public Builder dataTypeList(java.util.List<String> dataTypeList) {
                 this.dataTypeList = dataTypeList;
@@ -667,7 +702,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypes.
+             * <p>The data types. Configure this field as needed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder dataTypes(String dataTypes) {
                 this.dataTypes = dataTypes;
@@ -675,7 +713,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * diffTolerateType.
+             * <p>The difference tolerance type. Valid values: 0 (unified) and 1 (custom). Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder diffTolerateType(Integer diffTolerateType) {
                 this.diffTolerateType = diffTolerateType;
@@ -683,7 +724,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * diffTolerateValues.
+             * <p>The difference tolerance values. For the unified type, this is a single value, such as {&quot;SAME&quot;: 0}. For the custom type, values are set separately for each configured tolerance type, such as {&quot;SUM&quot;: 0.01, &quot;AVG&quot;: 0.001}.</p>
              */
             public Builder diffTolerateValues(java.util.Map<String, ?> diffTolerateValues) {
                 this.diffTolerateValues = diffTolerateValues;
@@ -691,7 +732,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * enableDecimalScale.
+             * <p>Specifies whether to enable decimal scale control for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enableDecimalScale(Integer enableDecimalScale) {
                 this.enableDecimalScale = enableDecimalScale;
@@ -699,7 +743,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * filterColumnName.
+             * <p>The filter column names, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder filterColumnName(String filterColumnName) {
                 this.filterColumnName = filterColumnName;
@@ -707,7 +754,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * filterColumns.
+             * <p><strong>[Deprecated]</strong> Use the filterColumnName field instead. This field was retained because the previous platform could not be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder filterColumns(String filterColumns) {
                 this.filterColumns = filterColumns;
@@ -715,7 +765,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * floatPrecision.
+             * <p>The number of decimal places for floating-point values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder floatPrecision(Integer floatPrecision) {
                 this.floatPrecision = floatPrecision;
@@ -723,7 +776,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreDecimalDiff.
+             * <p>Specifies whether to ignore trailing zero differences in the decimal part. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreDecimalDiff(Integer ignoreDecimalDiff) {
                 this.ignoreDecimalDiff = ignoreDecimalDiff;
@@ -731,7 +787,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreDecimalScaleSuffixZero.
+             * <p>Specifies whether to ignore trailing zeros in the decimal scale for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreDecimalScaleSuffixZero(Integer ignoreDecimalScaleSuffixZero) {
                 this.ignoreDecimalScaleSuffixZero = ignoreDecimalScaleSuffixZero;
@@ -739,7 +798,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreEmptyDiff.
+             * <p>Specifies whether to ignore the difference between null values and empty strings. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreEmptyDiff(Integer ignoreEmptyDiff) {
                 this.ignoreEmptyDiff = ignoreEmptyDiff;
@@ -747,7 +809,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreNumericZero.
+             * <p>Specifies whether to ignore zero values for numeric types. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreNumericZero(Integer ignoreNumericZero) {
                 this.ignoreNumericZero = ignoreNumericZero;
@@ -755,7 +820,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreStringEmpty.
+             * <p>Specifies whether to ignore empty strings and null values for string types. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreStringEmpty(Integer ignoreStringEmpty) {
                 this.ignoreStringEmpty = ignoreStringEmpty;
@@ -763,7 +831,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreZeroDiff.
+             * <p>Specifies whether to ignore the difference between null values and zero values. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreZeroDiff(Integer ignoreZeroDiff) {
                 this.ignoreZeroDiff = ignoreZeroDiff;
@@ -771,7 +842,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * isCountCheck.
+             * <p>Specifies whether to enable count (data volume) check. Valid values: 0 (no) and 1 (yes). Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isCountCheck(Integer isCountCheck) {
                 this.isCountCheck = isCountCheck;
@@ -779,7 +853,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID that uniquely identifies a check rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -787,7 +864,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * setDecimalScale.
+             * <p>The specific decimal scale value for DECIMAL type comparison.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder setDecimalScale(Integer setDecimalScale) {
                 this.setDecimalScale = setDecimalScale;
@@ -1101,7 +1181,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             } 
 
             /**
-             * checkMethods.
+             * <p>The check methods (metric calculation methods). Separate multiple values with commas, such as SUM,AVG,MIN,MAX. The values must be within the range allowed by the templatetype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUM,AVG</p>
              */
             public Builder checkMethods(String checkMethods) {
                 this.checkMethods = checkMethods;
@@ -1109,7 +1192,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * controlFloatPrecision.
+             * <p>Specifies whether to control floating-point precision. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder controlFloatPrecision(Integer controlFloatPrecision) {
                 this.controlFloatPrecision = controlFloatPrecision;
@@ -1117,7 +1203,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeClassify.
+             * <p>The data type category. Valid values: 0 (native data type) and 1 (complex data type).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataTypeClassify(Integer dataTypeClassify) {
                 this.dataTypeClassify = dataTypeClassify;
@@ -1125,7 +1214,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeGroup.
+             * <p>The data type group that identifies the data type category to which the check rule applies. Valid values: integers from 0 to 7. For the description of each value, see the enumeration values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataTypeGroup(Integer dataTypeGroup) {
                 this.dataTypeGroup = dataTypeGroup;
@@ -1133,7 +1225,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeList.
+             * <p>The list of data types to which the check rule applies. Configure this field as needed.</p>
              */
             public Builder dataTypeList(java.util.List<String> dataTypeList) {
                 this.dataTypeList = dataTypeList;
@@ -1141,7 +1233,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypes.
+             * <p>The data types. Configure this field as needed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder dataTypes(String dataTypes) {
                 this.dataTypes = dataTypes;
@@ -1149,7 +1244,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * diffTolerateType.
+             * <p>The difference tolerance type. Valid values: 0 (unified) and 1 (custom). Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder diffTolerateType(Integer diffTolerateType) {
                 this.diffTolerateType = diffTolerateType;
@@ -1157,7 +1255,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * diffTolerateValues.
+             * <p>The difference tolerance values. For the unified type, this is a single value, such as {&quot;SAME&quot;: 0}. For the custom type, values are set separately for each configured tolerance type, such as {&quot;SUM&quot;: 0.01, &quot;AVG&quot;: 0.001}.</p>
              */
             public Builder diffTolerateValues(java.util.Map<String, ?> diffTolerateValues) {
                 this.diffTolerateValues = diffTolerateValues;
@@ -1165,7 +1263,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * enableDecimalScale.
+             * <p>Specifies whether to enable decimal scale control for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enableDecimalScale(Integer enableDecimalScale) {
                 this.enableDecimalScale = enableDecimalScale;
@@ -1173,7 +1274,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * filterColumnName.
+             * <p>The filter column names, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder filterColumnName(String filterColumnName) {
                 this.filterColumnName = filterColumnName;
@@ -1181,7 +1285,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * filterColumns.
+             * <p><strong>[Deprecated]</strong> Use the filterColumnName field instead. This field was retained because the previous platform could not be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder filterColumns(String filterColumns) {
                 this.filterColumns = filterColumns;
@@ -1189,7 +1296,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * floatPrecision.
+             * <p>The number of decimal places for floating-point values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder floatPrecision(Integer floatPrecision) {
                 this.floatPrecision = floatPrecision;
@@ -1197,7 +1307,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreDecimalDiff.
+             * <p>Specifies whether to ignore trailing zero differences in the decimal part. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreDecimalDiff(Integer ignoreDecimalDiff) {
                 this.ignoreDecimalDiff = ignoreDecimalDiff;
@@ -1205,7 +1318,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreDecimalScaleSuffixZero.
+             * <p>Specifies whether to ignore trailing zeros in the decimal scale for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreDecimalScaleSuffixZero(Integer ignoreDecimalScaleSuffixZero) {
                 this.ignoreDecimalScaleSuffixZero = ignoreDecimalScaleSuffixZero;
@@ -1213,7 +1329,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreEmptyDiff.
+             * <p>Specifies whether to ignore the difference between null values and empty strings. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreEmptyDiff(Integer ignoreEmptyDiff) {
                 this.ignoreEmptyDiff = ignoreEmptyDiff;
@@ -1221,7 +1340,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreNumericZero.
+             * <p>Specifies whether to ignore zero values for numeric types. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreNumericZero(Integer ignoreNumericZero) {
                 this.ignoreNumericZero = ignoreNumericZero;
@@ -1229,7 +1351,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreStringEmpty.
+             * <p>Specifies whether to ignore empty strings and null values for string types. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreStringEmpty(Integer ignoreStringEmpty) {
                 this.ignoreStringEmpty = ignoreStringEmpty;
@@ -1237,7 +1362,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreZeroDiff.
+             * <p>Specifies whether to ignore the difference between null values and zero values. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreZeroDiff(Integer ignoreZeroDiff) {
                 this.ignoreZeroDiff = ignoreZeroDiff;
@@ -1245,7 +1373,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * isCountCheck.
+             * <p>Specifies whether to enable count (data volume) check. Valid values: 0 (no) and 1 (yes). Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isCountCheck(Integer isCountCheck) {
                 this.isCountCheck = isCountCheck;
@@ -1253,7 +1384,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID that uniquely identifies a check rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1261,7 +1395,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * setDecimalScale.
+             * <p>The specific decimal scale value for DECIMAL type comparison.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder setDecimalScale(Integer setDecimalScale) {
                 this.setDecimalScale = setDecimalScale;
@@ -1341,7 +1478,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             } 
 
             /**
-             * dsEngineId.
+             * <p>The datasource engine configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder dsEngineId(String dsEngineId) {
                 this.dsEngineId = dsEngineId;
@@ -1349,7 +1489,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dsType.
+             * <p>The datasource type, such as Hive or MaxCompute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hive</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -1357,7 +1500,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * engineTypes.
+             * <p>The list of covered check engine types, such as Tez or MapReduce. When specified as a string, separate multiple values with commas.</p>
              */
             public Builder engineTypes(java.util.List<String> engineTypes) {
                 this.engineTypes = engineTypes;
@@ -1632,7 +1775,15 @@ public class UpdateDataCheckTemplateRequest extends Request {
             } 
 
             /**
-             * checkMode.
+             * <p>The check mode. Valid values:</p>
+             * <ul>
+             * <li>0: row-by-row overall comparison.</li>
+             * <li>1: row-by-row column-by-column comparison.</li>
+             * <li>2: both row-by-row overall comparison and row-by-row column-by-column comparison.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder checkMode(Integer checkMode) {
                 this.checkMode = checkMode;
@@ -1640,7 +1791,16 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnEqualCmpType.
+             * <p>The equality comparison type for row-by-row column-by-column comparison. Valid values:</p>
+             * <ul>
+             * <li>0: all field types.</li>
+             * <li>1: native primitive data types.</li>
+             * <li>2: complex data types.</li>
+             * <li>3: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder columnEqualCmpType(Integer columnEqualCmpType) {
                 this.columnEqualCmpType = columnEqualCmpType;
@@ -1648,7 +1808,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnEqualCmpValues.
+             * <p>The custom type list for equality comparison during row-by-row column-by-column comparison. Separate multiple values with commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ARRAY,MAP</p>
              */
             public Builder columnEqualCmpValues(String columnEqualCmpValues) {
                 this.columnEqualCmpValues = columnEqualCmpValues;
@@ -1656,7 +1819,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnIsCosine.
+             * <p>Specifies whether to enable cosine similarity during row-by-row column-by-column comparison. Valid values:</p>
+             * <ul>
+             * <li>0: Disabled.</li>
+             * <li>1: Enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder columnIsCosine(Integer columnIsCosine) {
                 this.columnIsCosine = columnIsCosine;
@@ -1664,7 +1834,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnIsIgnoreNull.
+             * <p>Specifies whether to ignore differences between null values and empty strings during row-by-row column-by-column comparison. Valid values:</p>
+             * <ul>
+             * <li>0: Not ignored.</li>
+             * <li>1: Ignored.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder columnIsIgnoreNull(Integer columnIsIgnoreNull) {
                 this.columnIsIgnoreNull = columnIsIgnoreNull;
@@ -1672,7 +1849,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnIsIgnoreZero.
+             * <p>Specifies whether to ignore differences between null values and 0 values during row-by-row column-by-column comparison. Valid values:</p>
+             * <ul>
+             * <li>0: Not ignored.</li>
+             * <li>1: Ignored.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder columnIsIgnoreZero(Integer columnIsIgnoreZero) {
                 this.columnIsIgnoreZero = columnIsIgnoreZero;
@@ -1680,7 +1864,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnIsSamples.
+             * <p>Specifies whether to enable sampling during row-by-row column-by-column comparison. Valid values:</p>
+             * <ul>
+             * <li>0: Disabled.</li>
+             * <li>1: Enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder columnIsSamples(Integer columnIsSamples) {
                 this.columnIsSamples = columnIsSamples;
@@ -1688,7 +1879,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnSamplesType.
+             * <p>The sampling method for row-by-row column-by-column comparison. Valid values:</p>
+             * <ul>
+             * <li>0: by row.</li>
+             * <li>1: by percentage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder columnSamplesType(Integer columnSamplesType) {
                 this.columnSamplesType = columnSamplesType;
@@ -1696,7 +1894,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnSamplesValue.
+             * <p>The sampling value for row-by-row column-by-column comparison. The meaning depends on the sampling method: the number of rows when sampling by row, or the percentage value when sampling by percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder columnSamplesValue(Integer columnSamplesValue) {
                 this.columnSamplesValue = columnSamplesValue;
@@ -1704,7 +1905,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnSizeCmpType.
+             * <p>The size comparison type for row-by-row column-by-column comparison. Valid values:</p>
+             * <ul>
+             * <li>0: all complex data types.</li>
+             * <li>1: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder columnSizeCmpType(Integer columnSizeCmpType) {
                 this.columnSizeCmpType = columnSizeCmpType;
@@ -1712,7 +1920,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * columnSizeCmpValues.
+             * <p>The custom type list for size comparison during row-by-row column-by-column comparison. Separate multiple values with commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ARRAY,MAP</p>
              */
             public Builder columnSizeCmpValues(String columnSizeCmpValues) {
                 this.columnSizeCmpValues = columnSizeCmpValues;
@@ -1720,7 +1931,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * isPrimaryKeyCheck.
+             * <p>Specifies whether to enable primary key or composite primary key existence check. Valid values:</p>
+             * <ul>
+             * <li>0: Disabled.</li>
+             * <li>1: Enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isPrimaryKeyCheck(Integer isPrimaryKeyCheck) {
                 this.isPrimaryKeyCheck = isPrimaryKeyCheck;
@@ -1728,7 +1946,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * lineCheckType.
+             * <p>The row-by-row comparison method. Valid values:</p>
+             * <ul>
+             * <li>0: md5.</li>
+             * <li>1: crc32.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lineCheckType(Integer lineCheckType) {
                 this.lineCheckType = lineCheckType;
@@ -1736,7 +1961,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * lineIsPrintAll.
+             * <p>Specifies whether to print all columns in the difference details during row-by-row comparison. Valid values:</p>
+             * <ul>
+             * <li>0: Not printed.</li>
+             * <li>1: Printed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lineIsPrintAll(Integer lineIsPrintAll) {
                 this.lineIsPrintAll = lineIsPrintAll;
@@ -1744,7 +1976,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * lineIsSamples.
+             * <p>Specifies whether to enable sampling during row-by-row comparison. Valid values:</p>
+             * <ul>
+             * <li>0: Disabled.</li>
+             * <li>1: Enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lineIsSamples(Integer lineIsSamples) {
                 this.lineIsSamples = lineIsSamples;
@@ -1752,7 +1991,14 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * lineSamplesType.
+             * <p>The sampling method for row-by-row comparison. Valid values:</p>
+             * <ul>
+             * <li>0: by row.</li>
+             * <li>1: by percentage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lineSamplesType(Integer lineSamplesType) {
                 this.lineSamplesType = lineSamplesType;
@@ -1760,7 +2006,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * lineSamplesValue.
+             * <p>The sampling value for row-by-row comparison. The meaning depends on the sampling method: the number of rows when sampling by row, or the percentage value when sampling by percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder lineSamplesValue(Integer lineSamplesValue) {
                 this.lineSamplesValue = lineSamplesValue;
@@ -1768,7 +2017,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID that uniquely identifies a check rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -2082,7 +2334,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             } 
 
             /**
-             * checkMethods.
+             * <p>The check methods (metric calculation methods). Separate multiple values with commas (,), such as SUM,AVG,MIN,MAX. The values must be within the range allowed by the templatetype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUM,AVG</p>
              */
             public Builder checkMethods(String checkMethods) {
                 this.checkMethods = checkMethods;
@@ -2090,7 +2345,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * controlFloatPrecision.
+             * <p>Specifies whether to control floating-point precision. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder controlFloatPrecision(Integer controlFloatPrecision) {
                 this.controlFloatPrecision = controlFloatPrecision;
@@ -2098,7 +2356,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeClassify.
+             * <p>The data type category. Valid values: 0 (native data type) and 1 (complex data type).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataTypeClassify(Integer dataTypeClassify) {
                 this.dataTypeClassify = dataTypeClassify;
@@ -2106,7 +2367,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeGroup.
+             * <p>The data type group that identifies the data type category to which the check rule applies. Valid values: integers from 0 to 7. For the description of each value, see the enumeration values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataTypeGroup(Integer dataTypeGroup) {
                 this.dataTypeGroup = dataTypeGroup;
@@ -2114,7 +2378,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypeList.
+             * <p>The list of data types to which the check rule applies. Configure this field as needed.</p>
              */
             public Builder dataTypeList(java.util.List<String> dataTypeList) {
                 this.dataTypeList = dataTypeList;
@@ -2122,7 +2386,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * dataTypes.
+             * <p>The data types. Configure this field as needed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder dataTypes(String dataTypes) {
                 this.dataTypes = dataTypes;
@@ -2130,7 +2397,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * diffTolerateType.
+             * <p>The difference tolerance type. Valid values: 0 (unified) and 1 (custom). Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder diffTolerateType(Integer diffTolerateType) {
                 this.diffTolerateType = diffTolerateType;
@@ -2138,7 +2408,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * diffTolerateValues.
+             * <p>The difference tolerance values. For the unified type, this is a single value, such as {&quot;SAME&quot;: 0}. For the custom type, values are set separately for each configured tolerance type, such as {&quot;SUM&quot;: 0.01, &quot;AVG&quot;: 0.001}.</p>
              */
             public Builder diffTolerateValues(java.util.Map<String, ?> diffTolerateValues) {
                 this.diffTolerateValues = diffTolerateValues;
@@ -2146,7 +2416,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * enableDecimalScale.
+             * <p>Specifies whether to enable decimal scale control for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enableDecimalScale(Integer enableDecimalScale) {
                 this.enableDecimalScale = enableDecimalScale;
@@ -2154,7 +2427,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * filterColumnName.
+             * <p>The filter column names, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder filterColumnName(String filterColumnName) {
                 this.filterColumnName = filterColumnName;
@@ -2162,7 +2438,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * filterColumns.
+             * <p><strong>[Deprecated]</strong> Use the filterColumnName field instead. This field was retained because the previous platform could not be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder filterColumns(String filterColumns) {
                 this.filterColumns = filterColumns;
@@ -2170,7 +2449,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * floatPrecision.
+             * <p>The number of decimal places for floating-point values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder floatPrecision(Integer floatPrecision) {
                 this.floatPrecision = floatPrecision;
@@ -2178,7 +2460,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreDecimalDiff.
+             * <p>Specifies whether to ignore trailing zero differences in the decimal part. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreDecimalDiff(Integer ignoreDecimalDiff) {
                 this.ignoreDecimalDiff = ignoreDecimalDiff;
@@ -2186,7 +2471,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreDecimalScaleSuffixZero.
+             * <p>Specifies whether to ignore trailing zeros in the decimal scale for DECIMAL type comparison. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreDecimalScaleSuffixZero(Integer ignoreDecimalScaleSuffixZero) {
                 this.ignoreDecimalScaleSuffixZero = ignoreDecimalScaleSuffixZero;
@@ -2194,7 +2482,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreEmptyDiff.
+             * <p>Specifies whether to ignore the difference between null values and empty strings. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreEmptyDiff(Integer ignoreEmptyDiff) {
                 this.ignoreEmptyDiff = ignoreEmptyDiff;
@@ -2202,7 +2493,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreNumericZero.
+             * <p>Specifies whether to ignore zero values for numeric types. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreNumericZero(Integer ignoreNumericZero) {
                 this.ignoreNumericZero = ignoreNumericZero;
@@ -2210,7 +2504,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreStringEmpty.
+             * <p>Specifies whether to ignore empty strings and null values for string types. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreStringEmpty(Integer ignoreStringEmpty) {
                 this.ignoreStringEmpty = ignoreStringEmpty;
@@ -2218,7 +2515,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ignoreZeroDiff.
+             * <p>Specifies whether to ignore the difference between null values and zero values. Valid values: 0 (no) and 1 (yes).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ignoreZeroDiff(Integer ignoreZeroDiff) {
                 this.ignoreZeroDiff = ignoreZeroDiff;
@@ -2226,7 +2526,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * isCountCheck.
+             * <p>Specifies whether to enable count (data volume) check. Valid values: 0 (no) and 1 (yes). Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isCountCheck(Integer isCountCheck) {
                 this.isCountCheck = isCountCheck;
@@ -2234,7 +2537,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID that uniquely identifies a check rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -2242,7 +2548,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * setDecimalScale.
+             * <p>The specific decimal scale value for DECIMAL type comparison.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder setDecimalScale(Integer setDecimalScale) {
                 this.setDecimalScale = setDecimalScale;
@@ -2322,7 +2631,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             } 
 
             /**
-             * dataTypeGroup.
+             * <p>The data type group that identifies the data type category to which the check rule applies. Valid values: integers from 0 to 7. For the description of each value, see the enumeration values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataTypeGroup(Integer dataTypeGroup) {
                 this.dataTypeGroup = dataTypeGroup;
@@ -2330,7 +2642,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * nullValues.
+             * <p>The null values, stored in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder nullValues(String nullValues) {
                 this.nullValues = nullValues;
@@ -2338,7 +2653,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID that uniquely identifies a check rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -2431,7 +2749,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             } 
 
             /**
-             * filterColumnExpression.
+             * <p>The filter column name expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^col_.*$</p>
              */
             public Builder filterColumnExpression(String filterColumnExpression) {
                 this.filterColumnExpression = filterColumnExpression;
@@ -2439,7 +2760,7 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * filterColumnTypes.
+             * <p>The filter column types, separated by vertical bars (|).</p>
              */
             public Builder filterColumnTypes(java.util.List<String> filterColumnTypes) {
                 this.filterColumnTypes = filterColumnTypes;
@@ -2447,7 +2768,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * ruleId.
+             * <p>The rule ID that uniquely identifies a check rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -2455,7 +2779,10 @@ public class UpdateDataCheckTemplateRequest extends Request {
             }
 
             /**
-             * weakContentAlgorithm.
+             * <p>The weak content algorithm name: md5 or crc32.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>md5</p>
              */
             public Builder weakContentAlgorithm(String weakContentAlgorithm) {
                 this.weakContentAlgorithm = weakContentAlgorithm;

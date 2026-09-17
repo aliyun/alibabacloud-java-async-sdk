@@ -106,7 +106,10 @@ public class PostInnerReaderResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The business data returned by the operation (in string format). The specific content varies by operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class PostInnerReaderResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code. This value is an empty string if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -122,7 +128,10 @@ public class PostInnerReaderResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message. This value is an empty string if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -130,7 +139,10 @@ public class PostInnerReaderResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which uniquely identifies this call. Provide this value when troubleshooting issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class PostInnerReaderResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed. Troubleshoot by using errCode and errMessage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

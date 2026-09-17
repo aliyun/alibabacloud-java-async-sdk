@@ -106,7 +106,7 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
         } 
 
         /**
-         * data.
+         * <p>The data body returned by the operation. For the field structure, see the child field descriptions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
         }
 
         /**
-         * errCode.
+         * <p>The error code. An empty string is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -122,7 +125,10 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
         }
 
         /**
-         * errMessage.
+         * <p>The error message. An empty string is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -130,7 +136,10 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues with this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,7 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call is successful. Valid values: true and false. If the call fails, use errCode and errMessage to troubleshoot the issue.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +200,10 @@ public class SyntaxCheckAndTransformSqlConversionTaskResponseBody extends TeaMod
             } 
 
             /**
-             * taskId.
+             * <p>The task ID that uniquely identifies a task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

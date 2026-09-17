@@ -73,7 +73,7 @@ public class PostInnerReaderRequest extends Request {
         } 
 
         /**
-         * dataSourceDescriptor.
+         * <p>The fallback description used when the data source is missing. Use this parameter to pass the complete data source description information in the request parameters (Plan B).</p>
          */
         public Builder dataSourceDescriptor(DataSourceDescriptor dataSourceDescriptor) {
             this.putBodyParameter("dataSourceDescriptor", dataSourceDescriptor);
@@ -82,7 +82,10 @@ public class PostInnerReaderRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * <p>The data source name. The discovery task uses this field as the dimension identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_dolphin_prod</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -137,7 +140,10 @@ public class PostInnerReaderRequest extends Request {
             } 
 
             /**
-             * dsName.
+             * <p>The data source name. Exact match and fuzzy match are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_ds318_hangzhou_0428</p>
              */
             public Builder dsName(String dsName) {
                 this.dsName = dsName;

@@ -145,7 +145,7 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data list returned by the operation. For the element structure, see the child field descriptions.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code. An empty string is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +164,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message. An empty string is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +175,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -177,7 +186,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The page size, which is the number of records returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,7 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure. If the call fails, check errCode and errMessage for details.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +216,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records that match the query conditions. This value is used for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -722,7 +740,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * algorithm.
+             * <p>The check algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder algorithm(Integer algorithm) {
                 this.algorithm = algorithm;
@@ -730,7 +751,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * batchSize.
+             * <p>The batch size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder batchSize(Integer batchSize) {
                 this.batchSize = batchSize;
@@ -738,7 +762,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * checkType.
+             * <p>The check type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -746,7 +773,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * comparator.
+             * <p>The compare type. Valid values: =, !=, &gt;, &lt;, &gt;=, &lt;=, contains, not contains, and ==.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder comparator(String comparator) {
                 this.comparator = comparator;
@@ -754,7 +784,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * extra.
+             * <p>The reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -762,7 +795,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * groupCountThreshold.
+             * <p>The group data volume compare threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder groupCountThreshold(Float groupCountThreshold) {
                 this.groupCountThreshold = groupCountThreshold;
@@ -770,7 +806,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -778,7 +817,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * isFullTableCount.
+             * <p>Indicates whether a full table count is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isFullTableCount(Integer isFullTableCount) {
                 this.isFullTableCount = isFullTableCount;
@@ -786,7 +828,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * isSkipped.
+             * <p>Indicates whether the check is skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isSkipped(Integer isSkipped) {
                 this.isSkipped = isSkipped;
@@ -794,7 +839,15 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * metricType.
+             * <p>The metric type. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM_METRIC_NUM: built-in NUM mode.</li>
+             * <li>CUSTOM_METRIC_LEN: built-in LEN mode.</li>
+             * <li>CUSTOM_METRIC_MIX: built-in MIX mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM_METRIC_MIX</p>
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
@@ -802,7 +855,14 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceCheckAllColumn.
+             * <p>Indicates whether all columns of the source are checked. Valid values:</p>
+             * <ul>
+             * <li>0: No.</li>
+             * <li>1: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sourceCheckAllColumn(Integer sourceCheckAllColumn) {
                 this.sourceCheckAllColumn = sourceCheckAllColumn;
@@ -810,7 +870,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceColumns.
+             * <p>The source table fields. You can specify multiple fields separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder sourceColumns(String sourceColumns) {
                 this.sourceColumns = sourceColumns;
@@ -818,7 +881,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceCompareKey.
+             * <p>The source compare key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder sourceCompareKey(String sourceCompareKey) {
                 this.sourceCompareKey = sourceCompareKey;
@@ -826,7 +892,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceDataSource.
+             * <p>The name of the source data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_demo</p>
              */
             public Builder sourceDataSource(String sourceDataSource) {
                 this.sourceDataSource = sourceDataSource;
@@ -834,7 +903,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceGroupClause.
+             * <p>The GROUP BY clause for the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder sourceGroupClause(String sourceGroupClause) {
                 this.sourceGroupClause = sourceGroupClause;
@@ -842,7 +914,7 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceHint.
+             * <p>The hint for the source.</p>
              */
             public Builder sourceHint(String sourceHint) {
                 this.sourceHint = sourceHint;
@@ -850,7 +922,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The ID of the source data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -858,7 +933,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourcePartition.
+             * <p>The source partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20260116</p>
              */
             public Builder sourcePartition(String sourcePartition) {
                 this.sourcePartition = sourcePartition;
@@ -866,7 +944,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceSql.
+             * <p>The SQL statement for the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM t;</p>
              */
             public Builder sourceSql(String sourceSql) {
                 this.sourceSql = sourceSql;
@@ -874,7 +955,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceTable.
+             * <p>The source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_demo</p>
              */
             public Builder sourceTable(String sourceTable) {
                 this.sourceTable = sourceTable;
@@ -882,7 +966,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The type of the source data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hive</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -890,7 +977,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sourceWhereClause.
+             * <p>The WHERE clause for the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a &gt; 0 and col_b = \&quot;x\&quot;</p>
              */
             public Builder sourceWhereClause(String sourceWhereClause) {
                 this.sourceWhereClause = sourceWhereClause;
@@ -898,7 +988,14 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetCheckAllColumn.
+             * <p>Indicates whether all columns of the target are checked. Valid values:</p>
+             * <ul>
+             * <li>0: No.</li>
+             * <li>1: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder targetCheckAllColumn(Integer targetCheckAllColumn) {
                 this.targetCheckAllColumn = targetCheckAllColumn;
@@ -906,7 +1003,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetColumns.
+             * <p>The target table fields. You can specify multiple fields separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder targetColumns(String targetColumns) {
                 this.targetColumns = targetColumns;
@@ -914,7 +1014,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetCompareKey.
+             * <p>The target compare key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder targetCompareKey(String targetCompareKey) {
                 this.targetCompareKey = targetCompareKey;
@@ -922,7 +1025,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetDataSource.
+             * <p>The target data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_demo</p>
              */
             public Builder targetDataSource(String targetDataSource) {
                 this.targetDataSource = targetDataSource;
@@ -930,7 +1036,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetGroupClause.
+             * <p>The GROUP BY clause for the target table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder targetGroupClause(String targetGroupClause) {
                 this.targetGroupClause = targetGroupClause;
@@ -938,7 +1047,7 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetHint.
+             * <p>The hint for the target.</p>
              */
             public Builder targetHint(String targetHint) {
                 this.targetHint = targetHint;
@@ -946,7 +1055,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetId.
+             * <p>The ID of the target data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -954,7 +1066,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetPartition.
+             * <p>The target partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20260116</p>
              */
             public Builder targetPartition(String targetPartition) {
                 this.targetPartition = targetPartition;
@@ -962,7 +1077,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetSql.
+             * <p>The SQL statement for the target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM t;</p>
              */
             public Builder targetSql(String targetSql) {
                 this.targetSql = targetSql;
@@ -970,7 +1088,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetTable.
+             * <p>The target table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_demo</p>
              */
             public Builder targetTable(String targetTable) {
                 this.targetTable = targetTable;
@@ -978,7 +1099,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetType.
+             * <p>The type of the target data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hive</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -986,7 +1110,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * targetWhereClause.
+             * <p>The WHERE clause for the target table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a &gt; 0 and col_b = \&quot;x\&quot;</p>
              */
             public Builder targetWhereClause(String targetWhereClause) {
                 this.targetWhereClause = targetWhereClause;
@@ -994,7 +1121,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * taskConfigInfo.
+             * <p>The configuration details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lhm|lhm_dw|*</p>
              */
             public Builder taskConfigInfo(String taskConfigInfo) {
                 this.taskConfigInfo = taskConfigInfo;
@@ -1002,7 +1132,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The batch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -1010,7 +1143,10 @@ public class ListDataCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * totalCountThreshold.
+             * <p>The total data volume compare threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder totalCountThreshold(Float totalCountThreshold) {
                 this.totalCountThreshold = totalCountThreshold;

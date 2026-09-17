@@ -60,6 +60,7 @@ public class SyntaxCheckAndTransformSqlConversionTaskRequest extends Request {
         } 
 
         /**
+         * <p>The task ID that uniquely identifies a task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

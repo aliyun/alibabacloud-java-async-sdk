@@ -145,7 +145,7 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data list returned by the operation. For the structure of each element, see the child field descriptions.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code. An empty string is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +164,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message. An empty string is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +175,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -177,7 +186,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The page size, which is the number of records returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues with this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,7 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure. If the call fails, check errCode and errMessage for details.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +216,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records that match the query conditions. This value is used for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -904,7 +922,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             } 
 
             /**
-             * batchId.
+             * <p>The validation job (batch) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20001</p>
              */
             public Builder batchId(Long batchId) {
                 this.batchId = batchId;
@@ -912,7 +933,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * checkColumCount.
+             * <p>The number of columns checked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder checkColumCount(Long checkColumCount) {
                 this.checkColumCount = checkColumCount;
@@ -920,7 +944,15 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * checkResult.
+             * <p>The check result. Valid values:</p>
+             * <ul>
+             * <li>0: No records.</li>
+             * <li>1: Passed.</li>
+             * <li>2: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkResult(Integer checkResult) {
                 this.checkResult = checkResult;
@@ -928,7 +960,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * compareRowCount.
+             * <p>The number of rows compared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder compareRowCount(Long compareRowCount) {
                 this.compareRowCount = compareRowCount;
@@ -936,7 +971,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * completionRate.
+             * <p>The job completion rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95.00%</p>
              */
             public Builder completionRate(String completionRate) {
                 this.completionRate = completionRate;
@@ -944,7 +982,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * diffRate.
+             * <p>The difference rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00%</p>
              */
             public Builder diffRate(String diffRate) {
                 this.diffRate = diffRate;
@@ -952,7 +993,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * dstCompareColumn.
+             * <p>The primary key or composite primary key of the destination. This is the comparison column on the destination used during row-by-row, column-by-column comparison.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder dstCompareColumn(String dstCompareColumn) {
                 this.dstCompareColumn = dstCompareColumn;
@@ -968,7 +1012,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * dstMetricName.
+             * <p>The metric field of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amount</p>
              */
             public Builder dstMetricName(String dstMetricName) {
                 this.dstMetricName = dstMetricName;
@@ -976,7 +1023,7 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * dstSqlList.
+             * <p>The SQL list of the destination.</p>
              */
             public Builder dstSqlList(java.util.List<String> dstSqlList) {
                 this.dstSqlList = dstSqlList;
@@ -984,7 +1031,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * errorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connection timeout</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -992,7 +1042,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * execTime.
+             * <p>The execution time of this check report detail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-16 10:00:00</p>
              */
             public Builder execTime(String execTime) {
                 this.execTime = execTime;
@@ -1000,7 +1053,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * expDiffCount.
+             * <p>The expected number of different rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expDiffCount(String expDiffCount) {
                 this.expDiffCount = expDiffCount;
@@ -1008,7 +1064,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * finishTime.
+             * <p>The completion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-16T10:00:00Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -1016,7 +1075,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * isSkipped.
+             * <p>Indicates whether the check is skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isSkipped(Integer isSkipped) {
                 this.isSkipped = isSkipped;
@@ -1024,7 +1086,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * jobId.
+             * <p>The ID of the check sub-job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1032,7 +1097,19 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * jobStatus.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>0: INIT (pending).</li>
+             * <li>1: RUNNING (running).</li>
+             * <li>2: FINISHED (completed).</li>
+             * <li>3: STOPPED (stopped).</li>
+             * <li>4: FAIL (failed).</li>
+             * <li>6: READY (ready).</li>
+             * <li>7: SKIPPED (skipped).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder jobStatus(Integer jobStatus) {
                 this.jobStatus = jobStatus;
@@ -1040,7 +1117,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * metricColumCount.
+             * <p>The number of metrics checked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder metricColumCount(Long metricColumCount) {
                 this.metricColumCount = metricColumCount;
@@ -1048,7 +1128,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * metricPassColumCount.
+             * <p>The number of metrics that passed the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder metricPassColumCount(Long metricPassColumCount) {
                 this.metricPassColumCount = metricPassColumCount;
@@ -1056,7 +1139,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * onlyDstCount.
+             * <p>The number of rows that exist only on the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onlyDstCount(Long onlyDstCount) {
                 this.onlyDstCount = onlyDstCount;
@@ -1064,7 +1150,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * onlySrcCount.
+             * <p>The number of rows that exist only on the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onlySrcCount(Long onlySrcCount) {
                 this.onlySrcCount = onlySrcCount;
@@ -1072,7 +1161,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * passColumCount.
+             * <p>The number of columns that passed the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder passColumCount(Long passColumCount) {
                 this.passColumCount = passColumCount;
@@ -1080,7 +1172,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * realDiffCount.
+             * <p>The actual number of different rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder realDiffCount(Long realDiffCount) {
                 this.realDiffCount = realDiffCount;
@@ -1088,7 +1183,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * realSameCount.
+             * <p>The actual number of identical rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder realSameCount(Long realSameCount) {
                 this.realSameCount = realSameCount;
@@ -1096,7 +1194,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * resultId.
+             * <p>The ID of the check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001</p>
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;
@@ -1104,7 +1205,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourceColumn.
+             * <p>The name of the source column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amount</p>
              */
             public Builder sourceColumn(String sourceColumn) {
                 this.sourceColumn = sourceColumn;
@@ -1112,7 +1216,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourceCount.
+             * <p>The number of rows in the source data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder sourceCount(String sourceCount) {
                 this.sourceCount = sourceCount;
@@ -1120,7 +1227,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourceDataSource.
+             * <p>The source data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_demo</p>
              */
             public Builder sourceDataSource(String sourceDataSource) {
                 this.sourceDataSource = sourceDataSource;
@@ -1128,7 +1238,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourceError.
+             * <p>The error message of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Table \&quot;src_db.src_table\&quot; doesn\&quot;t exist</p>
              */
             public Builder sourceError(String sourceError) {
                 this.sourceError = sourceError;
@@ -1136,7 +1249,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourceGroupClause.
+             * <p>The GROUP BY clause of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder sourceGroupClause(String sourceGroupClause) {
                 this.sourceGroupClause = sourceGroupClause;
@@ -1144,7 +1260,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourcePartition.
+             * <p>The source partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20260116</p>
              */
             public Builder sourcePartition(String sourcePartition) {
                 this.sourcePartition = sourcePartition;
@@ -1152,7 +1271,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourceTable.
+             * <p>The name of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_demo</p>
              */
             public Builder sourceTable(String sourceTable) {
                 this.sourceTable = sourceTable;
@@ -1160,7 +1282,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The data type of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hive</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1168,7 +1293,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * sourceWhereClause.
+             * <p>The WHERE clause of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a &gt; 0 and col_b = \&quot;x\&quot;</p>
              */
             public Builder sourceWhereClause(String sourceWhereClause) {
                 this.sourceWhereClause = sourceWhereClause;
@@ -1176,7 +1304,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * srcCompareColumn.
+             * <p>The primary key or composite primary key of the source. This is the comparison column on the source used during row-by-row, column-by-column comparison.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder srcCompareColumn(String srcCompareColumn) {
                 this.srcCompareColumn = srcCompareColumn;
@@ -1192,7 +1323,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * srcMetricName.
+             * <p>The metric field of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amount</p>
              */
             public Builder srcMetricName(String srcMetricName) {
                 this.srcMetricName = srcMetricName;
@@ -1200,7 +1334,7 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * srcSqlList.
+             * <p>The SQL list of the source.</p>
              */
             public Builder srcSqlList(java.util.List<String> srcSqlList) {
                 this.srcSqlList = srcSqlList;
@@ -1208,7 +1342,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetColumn.
+             * <p>The column of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amount</p>
              */
             public Builder targetColumn(String targetColumn) {
                 this.targetColumn = targetColumn;
@@ -1216,7 +1353,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetCount.
+             * <p>The number of rows in the destination data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder targetCount(String targetCount) {
                 this.targetCount = targetCount;
@@ -1224,7 +1364,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetDataSource.
+             * <p>The data source of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_demo</p>
              */
             public Builder targetDataSource(String targetDataSource) {
                 this.targetDataSource = targetDataSource;
@@ -1232,7 +1375,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetError.
+             * <p>The error message of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Table \&quot;dst_db.dst_table\&quot; doesn\&quot;t exist</p>
              */
             public Builder targetError(String targetError) {
                 this.targetError = targetError;
@@ -1240,7 +1386,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetGroupClause.
+             * <p>The GROUP BY clause of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a,col_b</p>
              */
             public Builder targetGroupClause(String targetGroupClause) {
                 this.targetGroupClause = targetGroupClause;
@@ -1248,7 +1397,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetPartition.
+             * <p>The destination partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20260116</p>
              */
             public Builder targetPartition(String targetPartition) {
                 this.targetPartition = targetPartition;
@@ -1256,7 +1408,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetTable.
+             * <p>The destination table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_demo</p>
              */
             public Builder targetTable(String targetTable) {
                 this.targetTable = targetTable;
@@ -1264,7 +1419,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetType.
+             * <p>The destination data source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hive</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -1272,7 +1430,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * targetWhereClause.
+             * <p>The destination WHERE clause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col_a &gt; 0 and col_b = \&quot;x\&quot;</p>
              */
             public Builder targetWhereClause(String targetWhereClause) {
                 this.targetWhereClause = targetWhereClause;
@@ -1280,7 +1441,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * taskConfigId.
+             * <p>The ID of the validation task configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder taskConfigId(Long taskConfigId) {
                 this.taskConfigId = taskConfigId;
@@ -1288,7 +1452,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * templateName.
+             * <p>The validation template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Volume Validation Template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1296,7 +1463,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * threshold.
+             * <p>The threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -1304,7 +1474,10 @@ public class ListDataCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * totalCountThreshold.
+             * <p>The threshold for comparing grouped data volumes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder totalCountThreshold(String totalCountThreshold) {
                 this.totalCountThreshold = totalCountThreshold;

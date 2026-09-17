@@ -102,7 +102,10 @@ public class ListDataCheckConfigRequest extends Request {
         } 
 
         /**
-         * pageIndex.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -111,7 +114,10 @@ public class ListDataCheckConfigRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -120,7 +126,10 @@ public class ListDataCheckConfigRequest extends Request {
         }
 
         /**
-         * srcTable.
+         * <p>The source table name for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_demo</p>
          */
         public Builder srcTable(String srcTable) {
             this.putQueryParameter("srcTable", srcTable);
@@ -129,6 +138,7 @@ public class ListDataCheckConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data validation task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

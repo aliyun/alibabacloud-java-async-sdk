@@ -145,7 +145,7 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data list returned by the operation. For the element structure, see the child field descriptions.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -153,7 +153,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code. An empty string is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -161,7 +164,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message. An empty string is returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -169,7 +175,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -177,7 +186,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The page size, which is the number of records returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues with this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-4477-9B0B-6963D83B4E72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,7 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure. If the call fails, check errCode and errMessage for troubleshooting.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +216,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records that meet the query conditions. This value is used for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -488,7 +506,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             } 
 
             /**
-             * boundary.
+             * <p>The shard boundary information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R[1-&gt;1000)</p>
              */
             public Builder boundary(String boundary) {
                 this.boundary = boundary;
@@ -496,7 +517,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * checkColumCount.
+             * <p>The number of verified fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder checkColumCount(Long checkColumCount) {
                 this.checkColumCount = checkColumCount;
@@ -504,7 +528,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * dstCount.
+             * <p>The destination data volume. For single SQL verification, this indicates the data volume of the destination result set. For data volume verification and full verification, this indicates the total data volume on the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder dstCount(String dstCount) {
                 this.dstCount = dstCount;
@@ -512,7 +539,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * dstSql.
+             * <p>The SQL statement executed on the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM dst_table;</p>
              */
             public Builder dstSql(String dstSql) {
                 this.dstSql = dstSql;
@@ -520,7 +550,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * errMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -528,7 +561,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * extra.
+             * <p>The reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -536,7 +572,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * gmtEnd.
+             * <p>The job end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-16T10:00:00Z</p>
              */
             public Builder gmtEnd(String gmtEnd) {
                 this.gmtEnd = gmtEnd;
@@ -544,7 +583,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * gmtStart.
+             * <p>The job start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-16T10:00:00Z</p>
              */
             public Builder gmtStart(String gmtStart) {
                 this.gmtStart = gmtStart;
@@ -552,7 +594,14 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * isConsistent.
+             * <p>Indicates whether the data is consistent. Valid values:</p>
+             * <ul>
+             * <li>0: Inconsistent.</li>
+             * <li>1: Consistent.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isConsistent(Integer isConsistent) {
                 this.isConsistent = isConsistent;
@@ -560,7 +609,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * metricColumCount.
+             * <p>The number of verified metrics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder metricColumCount(Long metricColumCount) {
                 this.metricColumCount = metricColumCount;
@@ -568,7 +620,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * metricPassColumCount.
+             * <p>The number of metrics that passed verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder metricPassColumCount(Long metricPassColumCount) {
                 this.metricPassColumCount = metricPassColumCount;
@@ -576,7 +631,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * passColumCount.
+             * <p>The number of fields that passed verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder passColumCount(Long passColumCount) {
                 this.passColumCount = passColumCount;
@@ -584,7 +642,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * resultId.
+             * <p>The unique ID of the verification result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001</p>
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;
@@ -592,7 +653,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * sourcePtName.
+             * <p>The source partition name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20260116</p>
              */
             public Builder sourcePtName(String sourcePtName) {
                 this.sourcePtName = sourcePtName;
@@ -600,7 +664,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * srcCount.
+             * <p>The source data volume. For single SQL verification, this indicates the data volume of the source result set. For data volume verification and full verification, this indicates the total data volume on the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder srcCount(String srcCount) {
                 this.srcCount = srcCount;
@@ -608,7 +675,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * srcSql.
+             * <p>The SQL statement executed on the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM src_table;</p>
              */
             public Builder srcSql(String srcSql) {
                 this.srcSql = srcSql;
@@ -616,7 +686,17 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>0: Created.</li>
+             * <li>1: Running.</li>
+             * <li>2: Completed.</li>
+             * <li>3: Stopped.</li>
+             * <li>4: Canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -624,7 +704,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * stepId.
+             * <p>The step ID, which uniquely identifies an execution step within the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder stepId(String stepId) {
                 this.stepId = stepId;
@@ -632,7 +715,10 @@ public class ListDataCheckReportStepByJobIdResponseBody extends TeaModel {
             }
 
             /**
-             * targetPtName.
+             * <p>The destination partition name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20260116</p>
              */
             public Builder targetPtName(String targetPtName) {
                 this.targetPtName = targetPtName;
