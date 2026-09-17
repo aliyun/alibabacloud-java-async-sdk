@@ -233,7 +233,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, specify the nextToken value returned in the previous response.</p>
+         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</p>

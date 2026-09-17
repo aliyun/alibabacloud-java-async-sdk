@@ -346,7 +346,14 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * storageType.
+             * <p>The storage type of the workspace. Valid values:</p>
+             * <ul>
+             * <li>PLATFORM: Platform-managed storage.</li>
+             * <li>PRIVATE: User-owned private OSS storage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

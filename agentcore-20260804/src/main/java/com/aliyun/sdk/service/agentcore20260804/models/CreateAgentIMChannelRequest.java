@@ -139,7 +139,7 @@ public class CreateAgentIMChannelRequest extends Request {
         }
 
         /**
-         * <p>A reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</p>
+         * <p>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -352,7 +352,7 @@ public class CreateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * <p>The channel credentials. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
+             * <p>The channel credential. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
              * <p>This parameter is required.</p>
              */
             public Builder credential(java.util.Map<String, String> credential) {
@@ -361,7 +361,7 @@ public class CreateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the IM channel. Default value: true.</p>
+             * <p>Specifies whether to enable the IM channel. Default value during creation: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -369,7 +369,7 @@ public class CreateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * <p>The ID of the ServiceEndpoint to bind. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
+             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

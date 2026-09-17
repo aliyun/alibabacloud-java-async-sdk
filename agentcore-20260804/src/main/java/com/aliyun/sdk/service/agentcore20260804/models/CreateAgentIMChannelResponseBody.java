@@ -119,7 +119,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -584,7 +584,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the IM channel. Default value: true.</p>
+             * <p>Specifies whether to enable the IM channel. Default value during creation: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -614,7 +614,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ServiceEndpoint to bind. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
+             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>
@@ -644,7 +644,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the current IM channel status.</p>
+             * <p>The reason for the current status of the IM channel.</p>
              * 
              * <strong>example:</strong>
              * <p>AppFlow creation failed</p>

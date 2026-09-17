@@ -88,7 +88,7 @@ public class DisableConnectorRequest extends Request {
         }
 
         /**
-         * <p>The Connector name.</p>
+         * <p>The Connector name. Currently, only qodercli is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

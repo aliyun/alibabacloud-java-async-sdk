@@ -199,7 +199,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. An error description is returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. This parameter is empty if no more pages are available.</p>
+         * <p>The pagination token for the next page. This value is empty if no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVhbS1vZmZzZXQ6MTA</p>
@@ -627,7 +627,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the team was created, in UTC and RFC 3339 format.</p>
+             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -641,7 +641,7 @@ public class ListTeamsResponseBody extends TeaModel {
              * <p>The team description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Team responsible for the intelligent customer service business</p>
+             * <p>A team responsible for intelligent customer service</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -690,7 +690,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the team was last modified, in UTC and RFC 3339 format.</p>
+             * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

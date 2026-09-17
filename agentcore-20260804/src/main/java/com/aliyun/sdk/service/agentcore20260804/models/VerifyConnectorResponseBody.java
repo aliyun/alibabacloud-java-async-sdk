@@ -240,7 +240,7 @@ public class VerifyConnectorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of Service Account Key names that failed validation. Each element is a key name string. This list is empty if all keys pass validation.</p>
+             * <p>The list of Service Account Key labels that failed validation or returned indeterminate results.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -251,7 +251,7 @@ public class VerifyConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the credentials are valid.</p>
+             * <p>Indicates whether all validated Service Account Keys are valid.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

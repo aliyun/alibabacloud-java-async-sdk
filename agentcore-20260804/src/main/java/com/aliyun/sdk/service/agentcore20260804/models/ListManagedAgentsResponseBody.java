@@ -213,7 +213,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
+         * <p>The token for the next page. An empty value indicates the last page.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>
@@ -326,7 +326,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Connector Key name populated during queries. This parameter is not used as a binding reference during writes.</p>
+             * <p>The Connector Key name populated during queries. This value is not used as a binding reference during writes.</p>
              * 
              * <strong>example:</strong>
              * <p>my-connector-key</p>
@@ -700,15 +700,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the managed agent. Valid values:</p>
-             * <ul>
-             * <li>Creating: Being created.</li>
-             * <li>Failed: Failed.</li>
-             * <li>Running: Running.</li>
-             * <li>Updating: Being updated.</li>
-             * <li>Deleted: Deleted.</li>
-             * <li>Deleting: Being deleted.</li>
-             * </ul>
+             * <p>The status of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

@@ -459,7 +459,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+             * <p>The connector service account key.</p>
              * 
              * <strong>example:</strong>
              * <p>key-xxxx</p>
@@ -470,7 +470,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Connector Key name that is populated during queries. This parameter is not used as a binding criterion during writes.</p>
+             * <p>The connector service account name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-connector-key</p>
@@ -540,7 +540,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Connector binding configuration for the qodercli harness.</p>
+             * <p>The harness configuration.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -548,7 +548,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+             * <p>The harness type.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -683,7 +683,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the quota is enabled. This parameter is not returned if no quota is configured.</p>
+             * <p>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -705,7 +705,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</p>
+             * <p>Indicates whether the quota has been exceeded in the current period. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -716,7 +716,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota statistical period. A value of day indicates a daily period. A value of month indicates a monthly period.</p>
+             * <p>The quota statistical period. The value day indicates a daily period, and the value month indicates a monthly period.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -727,7 +727,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway quota rule status. This is a read-only field returned by the backend.</p>
+             * <p>The gateway quota rule status. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -738,7 +738,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of tokens that can be consumed within a single cycle.</p>
+             * <p>The maximum number of tokens that can be consumed within a single period.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -749,7 +749,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</p>
+             * <p>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -854,7 +854,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model token quota configuration and the quota usage status in the current cycle. This parameter is empty if no quota is configured.</p>
+             * <p>The model token quota configuration and the quota usage status in the current period. This field is empty if no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -1137,6 +1137,9 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
             /**
              * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket-001</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -1144,7 +1147,10 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute mount path inside the container. This parameter is required by backend validation for each mount entry.</p>
+             * <p>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/oss/datasets</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1152,7 +1158,10 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+             * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datasets</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1215,7 +1224,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute class.</p>
+             * <p>The compute specification.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1336,6 +1345,9 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
             /**
              * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is present.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxConcurrentSessionsPerSandbox(Integer maxConcurrentSessionsPerSandbox) {
                 this.maxConcurrentSessionsPerSandbox = maxConcurrentSessionsPerSandbox;
@@ -1344,6 +1356,9 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
             /**
              * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxSandboxCount(Integer maxSandboxCount) {
                 this.maxSandboxCount = maxSandboxCount;
@@ -1352,6 +1367,9 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
             /**
              * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minSandboxCount(Integer minSandboxCount) {
                 this.minSandboxCount = minSandboxCount;
@@ -1359,7 +1377,10 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is present.</p>
+             * <p>The time in seconds before an inactive session is reclaimed. This parameter is required by backend validation when hpa is present.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder sessionTtlSeconds(Integer sessionTtlSeconds) {
                 this.sessionTtlSeconds = sessionTtlSeconds;
@@ -2350,7 +2371,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The harness for the managed agent. Valid values: qwenpaw and qodercli.</p>
+             * <p>The agent harness.</p>
              */
             public Builder harness(Harness harness) {
                 this.harness = harness;
@@ -2418,7 +2439,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of OSS mounts. A maximum of 10 entries are supported.</p>
+             * <p>The OSS mount list. A maximum of 10 entries are supported.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -2445,7 +2466,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of managed agent instances grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), and FAILED (runtime failure). Only phases that actually occur are returned. Missing keys are treated as 0. This field is a dynamic mapping, and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
+             * <p>The number of managed agent instances grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), and FAILED (runtime failure). Only phases that actually occur are returned. Missing keys should be treated as 0. This field is a dynamic map, and new keys may be added in the future. You can use FAILED &gt; 0 to determine whether any instances have failed.</p>
              */
             public Builder sandboxPhaseCounts(java.util.Map<String, Long> sandboxPhaseCounts) {
                 this.sandboxPhaseCounts = sandboxPhaseCounts;
@@ -2488,7 +2509,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool configuration list.</p>
+             * <p>The list of tool configurations.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;

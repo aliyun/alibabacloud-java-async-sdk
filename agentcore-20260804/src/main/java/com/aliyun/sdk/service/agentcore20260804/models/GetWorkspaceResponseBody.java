@@ -253,7 +253,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether VPC networking is enabled.</p>
+             * <p>Indicates whether the VPC network is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -272,7 +272,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user VPC.</p>
+             * <p>The user VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -342,7 +342,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The public egress IP address allocated to the workspace. You can use this IP address to configure IP address whitelists for external services. This field is returned only when the public egress resource is attached and an address is allocated. The field is empty if no address is allocated, the attachment is failed, or the address is being released. This address is independent of whether VPC networking is active.</p>
+             * <p>The public egress IP address of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>203.0.113.10</p>
@@ -353,7 +353,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC network configuration of the user.</p>
+             * <p>The user VPC network configuration.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -538,6 +538,9 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
             /**
              * <p>The OSS storage authorization status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTHORIZED</p>
              */
             public Builder authorizationStatus(String authorizationStatus) {
                 this.authorizationStatus = authorizationStatus;
@@ -546,6 +549,9 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
             /**
              * <p>The name of the private OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket-001</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -575,7 +581,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network configuration of the workspace.</p>
+             * <p>The workspace network configuration.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
@@ -594,14 +600,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace status. Valid values:</p>
-             * <ul>
-             * <li>Initializing</li>
-             * <li>InitializationFailed</li>
-             * <li>Initialized</li>
-             * <li>Deleting</li>
-             * <li>Deleted</li>
-             * </ul>
+             * <p>The workspace status. Valid values: Initializing, InitializationFailed, Initialized, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Initialized</p>
@@ -623,7 +622,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the workspace.</p>
+             * <p>The workspace storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

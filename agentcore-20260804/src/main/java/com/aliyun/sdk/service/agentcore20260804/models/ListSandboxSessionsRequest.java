@@ -119,7 +119,11 @@ public class ListSandboxSessionsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-1</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -128,7 +132,11 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
+         * <p>The managed agent ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-1</p>
          */
         public Builder agentId(String agentId) {
             this.putPathParameter("agentId", agentId);
@@ -137,7 +145,11 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
+         * <p>The sandbox ID. You can call ListSandboxes to query the sandbox ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbx-2</p>
          */
         public Builder sandboxId(String sandboxId) {
             this.putPathParameter("sandboxId", sandboxId);
@@ -158,7 +170,10 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
-         * <p>The cursor used to query the next page.</p>
+         * <p>The pagination token for querying the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

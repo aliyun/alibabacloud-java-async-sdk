@@ -158,7 +158,10 @@ public class ListSandboxesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of sandboxes that match the filter conditions.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. The value success is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. An empty value indicates that no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,11 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +244,10 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -353,7 +378,10 @@ public class ListSandboxesResponseBody extends TeaModel {
             } 
 
             /**
-             * activeSessionCount.
+             * <p>The number of active sessions for this sandbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder activeSessionCount(Integer activeSessionCount) {
                 this.activeSessionCount = activeSessionCount;
@@ -361,7 +389,10 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The time when the sandbox was created, in RFC 3339 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-29T00:00:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -369,7 +400,10 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * lastActiveAt.
+             * <p>The time of the last activity on the sandbox, in RFC 3339 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-29T00:02:00Z</p>
              */
             public Builder lastActiveAt(String lastActiveAt) {
                 this.lastActiveAt = lastActiveAt;
@@ -377,7 +411,10 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * lastHeartbeatAt.
+             * <p>The time of the last heartbeat from the sandbox, in RFC 3339 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-29T00:01:00Z</p>
              */
             public Builder lastHeartbeatAt(String lastHeartbeatAt) {
                 this.lastHeartbeatAt = lastHeartbeatAt;
@@ -385,7 +422,10 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * maxConcurrentSessions.
+             * <p>The maximum number of concurrent sessions allowed for this sandbox, derived from the auto scaling configuration in effect at runtime. This value is empty if auto scaling is not enabled or the configuration is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder maxConcurrentSessions(Integer maxConcurrentSessions) {
                 this.maxConcurrentSessions = maxConcurrentSessions;
@@ -393,7 +433,10 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * phase.
+             * <p>The current running phase of the sandbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -401,7 +444,10 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * sandboxId.
+             * <p>The sandbox ID. You can call the ListSandboxes operation to query sandbox IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sbx-2</p>
              */
             public Builder sandboxId(String sandboxId) {
                 this.sandboxId = sandboxId;

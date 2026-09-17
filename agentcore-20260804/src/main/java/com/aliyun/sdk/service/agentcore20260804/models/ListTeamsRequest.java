@@ -115,7 +115,7 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The maximum number of records per page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, specify the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVhbS1vZmZzZXQ6MTA</p>

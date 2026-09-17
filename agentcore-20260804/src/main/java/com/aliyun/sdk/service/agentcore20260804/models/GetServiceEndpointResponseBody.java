@@ -149,7 +149,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. An error description is returned when the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -285,7 +285,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the access URL status. A specific reason is returned when the status is degraded.</p>
+             * <p>The reason for the access URL status. A specific reason is returned when the status is abnormal.</p>
              * 
              * <strong>example:</strong>
              * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -353,11 +353,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication method. Valid values:</p>
-             * <ul>
-             * <li>NONE: no authentication required.</li>
-             * <li>API_KEY: authentication by passing an API key through the x-api-key request header.</li>
-             * </ul>
+             * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that an API key is passed through the x-api-key request header for authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>API_KEY</p>
@@ -710,7 +706,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The access URL list of the service endpoint.</p>
+             * <p>The list of access URLs for the service endpoint.</p>
              */
             public Builder accessUrls(java.util.List<AccessUrls> accessUrls) {
                 this.accessUrls = accessUrls;
@@ -737,11 +733,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint type. Valid values:</p>
-             * <ul>
-             * <li>DEFAULT: a default endpoint created and maintained by the platform.</li>
-             * <li>NAMED: a named endpoint explicitly created by the user.</li>
-             * </ul>
+             * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
              * 
              * <strong>example:</strong>
              * <p>NAMED</p>
@@ -752,7 +744,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint name. The name is unique within the workspace and is 1 to 128 characters in length.</p>
+             * <p>The service endpoint name. The name must be unique within the workspace and can be 1 to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-endpoint</p>
@@ -763,7 +755,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID where the service endpoint resides.</p>
+             * <p>The region ID of the service endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -815,7 +807,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

@@ -132,7 +132,11 @@ public class ListSandboxesRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-1</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -141,7 +145,11 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
+         * <p>The managed agent ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-1</p>
          */
         public Builder agentId(String agentId) {
             this.putPathParameter("agentId", agentId);
@@ -162,7 +170,10 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page. When paginating, keep workspaceId, agentId, searchText, sessionId, and maxResults unchanged.</p>
+         * <p>The pagination token for querying the next page. When paginating, keep workspaceId, agentId, searchText, sessionId, and maxResults unchanged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -171,7 +182,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>When explicitly specified, this parameter cannot be empty or consist entirely of whitespace. The value can contain up to 36 characters and allows only hexadecimal characters and hyphens. This parameter can be used together with sessionId, combined with AND logic.</p>
+         * <p>Performs a case-insensitive fuzzy search by sandbox ID fragment.</p>
          * 
          * <strong>example:</strong>
          * <p>2f360</p>
@@ -183,7 +194,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>When explicitly specified, this parameter cannot be empty or consist entirely of whitespace. The value must be valid UTF-8 of 1 to 128 bytes and cannot contain forward slashes (/), vertical bars (|), control characters, or format characters. The original case and leading/trailing spaces are preserved. This parameter can be used together with searchText, combined with AND logic.</p>
+         * <p>Performs a case-insensitive fuzzy search by active session ID fragment.</p>
          * 
          * <strong>example:</strong>
          * <p>session-a</p>

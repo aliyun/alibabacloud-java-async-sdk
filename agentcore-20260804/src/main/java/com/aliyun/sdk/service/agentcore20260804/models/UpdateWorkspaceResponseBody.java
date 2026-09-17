@@ -272,7 +272,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The VPC ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -329,7 +329,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The VPC network configuration.</p>
+             * <p>The VPC network configuration of the user.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -488,6 +488,9 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
             /**
              * <p>The OSS storage authorization status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTHORIZED</p>
              */
             public Builder authorizationStatus(String authorizationStatus) {
                 this.authorizationStatus = authorizationStatus;
@@ -496,6 +499,9 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
             /**
              * <p>The name of the private OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket-001</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -533,7 +539,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, Deleted.</p>
+             * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Initialized</p>
@@ -545,6 +551,9 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
             /**
              * <p>The storage type of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -552,7 +561,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant to which the workspace belongs.</p>
+             * <p>The tenant ID to which the workspace belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant-123456</p>

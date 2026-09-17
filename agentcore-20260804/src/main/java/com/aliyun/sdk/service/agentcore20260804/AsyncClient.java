@@ -66,7 +66,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</p>
      * 
      * @param request the request parameters of CreateAgentSpecVersion  CreateAgentSpecVersionRequest
      * @return CreateAgentSpecVersionResponse
@@ -93,7 +93,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * <p>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</p>
      * 
      * @param request the request parameters of CreateExternalAgentBootstrapToken  CreateExternalAgentBootstrapTokenRequest
      * @return CreateExternalAgentBootstrapTokenResponse
@@ -158,7 +158,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. Use <code>Enabled</code> in the network configuration to specify whether to enable VPC networking. If VPC networking is enabled, you must provide a <code>VpcId</code> and at least one entry in <code>VSwitchIds</code>.\n.</h2>
      * 
      * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
@@ -295,7 +295,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Disables a specified Connector in a workspace.</p>
+     * <p>Disables a Connector in a specified workspace.</p>
      * 
      * @param request the request parameters of DisableConnector  DisableConnectorRequest
      * @return DisableConnectorResponse
@@ -324,7 +324,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Enables a Connector in a specified workspace. Credential verification is required before enabling.</p>
+     * <p>Enables a Connector in a specified workspace. Credential verification is required before the Connector can be enabled.</p>
      * 
      * @param request the request parameters of EnableConnector  EnableConnectorRequest
      * @return EnableConnectorResponse
@@ -531,6 +531,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>ACR and user OSS mounts share the same workspace role. If no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. If a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. The response contains the backend-resolved role and the authorization URL for the target repository. This operation does not create ACR or Agent execution versions or deliver runtime configurations. After authorization is complete, you can call Verify, and then create or update an Agent without calling a separate Ensure operation.</p>
+     * 
+     * @param request the request parameters of GetWorkspaceAcrRamAuthorizeUrl  GetWorkspaceAcrRamAuthorizeUrlRequest
+     * @return GetWorkspaceAcrRamAuthorizeUrlResponse
+     */
+    CompletableFuture<GetWorkspaceAcrRamAuthorizeUrlResponse> getWorkspaceAcrRamAuthorizeUrl(GetWorkspaceAcrRamAuthorizeUrlRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
      * 
      * @param request the request parameters of GetWorkspacePlugin  GetWorkspacePluginRequest
@@ -558,7 +567,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the IM channel list of a specified agent.</p>
+     * <p>Queries the list of IM channels for a specified agent.</p>
      * 
      * @param request the request parameters of ListAgentIMChannels  ListAgentIMChannelsRequest
      * @return ListAgentIMChannelsResponse
@@ -583,7 +592,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of available models for a specified connector. Pagination is supported.</p>
+     * <p>Queries the list of available models for a specified Connector. Pagination is supported.</p>
      * 
      * @param request the request parameters of ListConnectorModels  ListConnectorModelsRequest
      * @return ListConnectorModelsResponse
@@ -601,7 +610,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</p>
+     * <p>Queries credentials in a workspace with paging. Supports filtering by type and name.</p>
      * 
      * @param request the request parameters of ListCredentials  ListCredentialsRequest
      * @return ListCredentialsResponse
@@ -625,7 +634,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</p>
+     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
      * 
      * @param request the request parameters of ListManagedAgents  ListManagedAgentsRequest
      * @return ListManagedAgentsResponse
@@ -690,7 +699,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of active sessions in the Sandbox of a specified managed agent.</p>
+     * <p>Queries the list of active sessions in the sandbox of a specified managed agent.</p>
      * 
      * @param request the request parameters of ListSandboxSessions  ListSandboxSessionsRequest
      * @return ListSandboxSessionsResponse
@@ -699,7 +708,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</p>
+     * <p>Queries the list of sandboxes for a specified managed agent. The searchText parameter performs a fuzzy match on sandbox ID fragments, and the sessionId parameter performs a fuzzy match on active session ID fragments. Both parameters are case-insensitive and can be used together with AND logic.</p>
      * 
      * @param request the request parameters of ListSandboxes  ListSandboxesRequest
      * @return ListSandboxesResponse
@@ -708,7 +717,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+     * <h2>Operation description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page and nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
      * 
      * @param request the request parameters of ListServiceEndpoints  ListServiceEndpointsRequest
      * @return ListServiceEndpointsResponse
@@ -852,7 +861,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</p>
+     * <p>Updates the sensitive configuration of a specified Connector and aligns Service Account Keys by ID.</p>
      * 
      * @param request the request parameters of UpdateConnector  UpdateConnectorRequest
      * @return UpdateConnectorResponse
@@ -969,7 +978,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> state can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. The <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> fields are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide a <code>VpcId</code> and at least one entry in <code>VSwitchIds</code>.\n.</h2>
      * 
      * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
@@ -1007,7 +1016,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</p>
+     * <p>ACR and user OSS mounts share the same workspace role. When no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. When a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. This operation performs a read-only check to verify whether the custom policies corresponding to the target instance, namespace, and repository are attached to the shared role, and checks the workspace prerequisite status. It does not create execution versions or trigger configuration delivery. AUTHORIZED only indicates that the custom policy for the target name is attached. It does not parse policy content or simulate final permissions. ELIGIBLE does not indicate that RuntimeManager capacity or template admission is complete, nor does it require that ACR configurations have been delivered. Creating or updating an Agent re-verifies permissions and processes ACR dependencies on the backend. Configuration waiting, failures, and retries are reported through Agent details.</p>
+     * 
+     * @param request the request parameters of VerifyWorkspaceAcrRamAuthorization  VerifyWorkspaceAcrRamAuthorizationRequest
+     * @return VerifyWorkspaceAcrRamAuthorizationResponse
+     */
+    CompletableFuture<VerifyWorkspaceAcrRamAuthorizationResponse> verifyWorkspaceAcrRamAuthorization(VerifyWorkspaceAcrRamAuthorizationRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries whether the workspace OSS mount role is bound to the custom RAM policy corresponding to the target bucket, and returns AUTHORIZED or UNAUTHORIZED. When bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. When bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks. Alibaba Cloud Container Registry (ACR) and user OSS mounts share the workspace role. If no existing role is available, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are only appended without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not recreated or renamed due to new naming templates.</p>
      * 
      * @param request the request parameters of VerifyWorkspaceOssMountRamAuthorization  VerifyWorkspaceOssMountRamAuthorizationRequest
      * @return VerifyWorkspaceOssMountRamAuthorizationResponse

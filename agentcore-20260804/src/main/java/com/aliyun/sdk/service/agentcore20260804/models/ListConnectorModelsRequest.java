@@ -130,7 +130,7 @@ public class ListConnectorModelsRequest extends Request {
         }
 
         /**
-         * <p>The connector name.</p>
+         * <p>The Connector name. Currently, only qodercli is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListConnectorModelsRequest extends Request {
         }
 
         /**
-         * <p>The ID of a service account key. This parameter is required when multiple keys exist. You can leave this parameter empty if only one key exists.</p>
+         * <p>The Connector Key ID. This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>ckey-xxxx</p>
@@ -155,7 +155,7 @@ public class ListConnectorModelsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size. This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +167,7 @@ public class ListConnectorModelsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The next page token. This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdA==</p>

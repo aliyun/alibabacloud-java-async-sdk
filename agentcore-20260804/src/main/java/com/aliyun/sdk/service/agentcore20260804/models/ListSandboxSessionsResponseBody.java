@@ -158,7 +158,10 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of active sessions in the sandbox.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. The value success is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. An empty value indicates that no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,11 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +244,10 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -302,6 +327,9 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
 
             /**
              * <p>The external channel type, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DINGTALK</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -309,7 +337,10 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>The unique identifier of the active session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess-2</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -317,7 +348,16 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The session source type. Valid values:</p>
+             * <ul>
+             * <li>API: API call.</li>
+             * <li>CONSOLE_DEBUG: Console debugging.</li>
+             * <li>EXTERNAL_CHANNEL: External channel.</li>
+             * <li>UNKNOWN: Unknown source.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXTERNAL_CHANNEL</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

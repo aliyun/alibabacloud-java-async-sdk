@@ -101,7 +101,7 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size. The current version does not support this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,7 +113,7 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The next page token. The current version does not support this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdA==</p>

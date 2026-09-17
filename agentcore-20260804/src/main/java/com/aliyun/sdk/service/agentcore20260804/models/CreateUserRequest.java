@@ -223,7 +223,7 @@ public class CreateUserRequest extends Request {
             } 
 
             /**
-             * <p>The display name of the user. The display name must be 1 to 32 characters in length.</p>
+             * <p>The display name of the user. The name must be 1 to 32 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -235,7 +235,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * <p>The email address of the user. The email address can be up to 256 characters in length.</p>
+             * <p>The email address of the user. The address can be up to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
@@ -246,7 +246,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * <p>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or digit and be 1 to 32 characters in length. Reserved names such as manager, admin, or names starting with worker- cannot be used.</p>
+             * <p>The username. The name must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or digit and must be 1 to 32 characters in length. Reserved names such as manager, admin, or names starting with worker- cannot be used.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * <p>The initial password of the user. The password must be 8 to 32 characters in length and contain uppercase letters, lowercase letters, digits, and special characters. The password cannot contain the username. If this parameter is not specified, the server generates a random password and returns it in the initialPassword field of the response.</p>
+             * <p>The initial password of the user. The password must be 8 to 32 characters in length and must contain uppercase letters, lowercase letters, digits, and special characters. The password cannot contain the username. If this parameter is not specified, the server generates a random password and returns it in the initialPassword field of the response.</p>
              * 
              * <strong>example:</strong>
              * <p>Example@2026</p>

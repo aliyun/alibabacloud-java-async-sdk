@@ -139,7 +139,7 @@ public class UpdateManagedAgentRequest extends Request {
         }
 
         /**
-         * <p>The reserved idempotency token. The backend does not guarantee idempotence in the current phase.</p>
+         * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -429,7 +429,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+             * <p>The connector service account key.</p>
              * 
              * <strong>example:</strong>
              * <p>key-xxxx</p>
@@ -440,7 +440,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The Connector Key name that is populated during queries. This value is not used as a binding reference during writes.</p>
+             * <p>The connector service account name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-connector-key</p>
@@ -510,7 +510,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The Connector binding configuration for the qodercli harness.</p>
+             * <p>The harness configuration.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -518,7 +518,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The type of the runtime harness. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+             * <p>The harness type.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -614,7 +614,10 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the token quota is disabled and existing quota rules are deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -622,7 +625,10 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * limitType.
+             * <p>The quota limit type. This parameter is required by backend validation when the quota is enabled. Fixed value: token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token</p>
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
@@ -630,7 +636,14 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * periodType.
+             * <p>The quota statistical period. This parameter is required by backend validation when the quota is enabled. Valid values:</p>
+             * <ul>
+             * <li>day: daily.</li>
+             * <li>month: monthly.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder periodType(String periodType) {
                 this.periodType = periodType;
@@ -638,7 +651,10 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * usageLimit.
+             * <p>The maximum number of tokens that can be consumed within a single period. This parameter is required by backend validation when the quota is enabled. The value must be greater than 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder usageLimit(Long usageLimit) {
                 this.usageLimit = usageLimit;
@@ -742,7 +758,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * quota.
+             * <p>The model token quota configuration. If this parameter is not specified, no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -796,7 +812,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether public network access is allowed.</p>
+             * <p>Specifies whether to allow public network access.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -853,7 +869,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether VPC access is allowed.</p>
+             * <p>Specifies whether to allow VPC access.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1024,7 +1040,10 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The OSS bucket name. Each mount item is validated as required by the backend.</p>
+             * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket-001</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -1032,7 +1051,10 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The absolute mount path in the container. Each mount item is validated as required by the backend.</p>
+             * <p>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/oss/datasets</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1040,7 +1062,10 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+             * <p>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datasets</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1048,7 +1073,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to mount as read-only. Default value: false.</p>
+             * <p>Specifies whether to mount in read-only mode. Default value: false.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1215,7 +1240,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable auto scaling. Required when hpa is present as validated by the backend.</p>
+             * <p>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is specified.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1223,7 +1248,10 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of active sessions per Sandbox. Required when hpa is present as validated by the backend.</p>
+             * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxConcurrentSessionsPerSandbox(Integer maxConcurrentSessionsPerSandbox) {
                 this.maxConcurrentSessionsPerSandbox = maxConcurrentSessionsPerSandbox;
@@ -1231,7 +1259,10 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of Sandboxes. Required when HPA is enabled and must be no less than the minimum value.</p>
+             * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxSandboxCount(Integer maxSandboxCount) {
                 this.maxSandboxCount = maxSandboxCount;
@@ -1239,7 +1270,10 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of Sandboxes. Required when HPA is enabled.</p>
+             * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minSandboxCount(Integer minSandboxCount) {
                 this.minSandboxCount = minSandboxCount;
@@ -1247,7 +1281,10 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The session reclamation time after inactivity, in seconds. Required when hpa is present as validated by the backend.</p>
+             * <p>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder sessionTtlSeconds(Integer sessionTtlSeconds) {
                 this.sessionTtlSeconds = sessionTtlSeconds;
@@ -1315,7 +1352,7 @@ public class UpdateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+             * <p>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -1421,7 +1458,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The Sandbox auto scaling and session configuration.</p>
+             * <p>The sandbox auto scaling and session configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -2051,7 +2088,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</p>
+             * <p>The agent harness configuration.</p>
              */
             public Builder harness(Harness harness) {
                 this.harness = harness;
@@ -2097,7 +2134,7 @@ public class UpdateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The OSS mount list. A maximum of 10 items are supported. Pass an empty array to clear existing mounts.</p>
+             * <p>The list of OSS mounts. A maximum of 10 entries are supported. Pass an empty array to clear existing mounts.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;

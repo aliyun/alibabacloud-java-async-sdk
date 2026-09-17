@@ -199,7 +199,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. An error description is returned when the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. This value is empty if no more pages exist.</p>
+         * <p>The pagination token for the next page. This value is empty when no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</p>
@@ -534,7 +534,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The target agent ID. This parameter is returned when the target type is AGENT_VERSION.</p>
+             * <p>The target agent ID. Returned when the target type is AGENT_VERSION.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-123456</p>
@@ -545,7 +545,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target agent version number. This parameter is returned when the target type is AGENT_VERSION.</p>
+             * <p>The target agent version number. Returned when the target type is AGENT_VERSION.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -556,7 +556,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collaboration component type. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+             * <p>The collaboration component type. Returned when the target type is TEAM_COLLABORATION.</p>
              * 
              * <strong>example:</strong>
              * <p>ELEMENT_WEB</p>
@@ -567,7 +567,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace resource binding ID associated with the target collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+             * <p>The workspace resource binding ID associated with the target collaboration component. Returned when the target type is TEAM_COLLABORATION.</p>
              * 
              * <strong>example:</strong>
              * <p>wrb-123456</p>
@@ -794,7 +794,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * <p>The creation time in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -827,7 +827,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID where the service endpoint is located.</p>
+             * <p>The region ID of the service endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -879,7 +879,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time in UTC, formatted according to RFC 3339.</p>
+             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

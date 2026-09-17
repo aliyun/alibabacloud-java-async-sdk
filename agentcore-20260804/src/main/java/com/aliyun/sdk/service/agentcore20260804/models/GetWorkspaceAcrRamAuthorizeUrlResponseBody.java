@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DisableConnectorResponseBody} extends {@link TeaModel}
+ * {@link GetWorkspaceAcrRamAuthorizeUrlResponseBody} extends {@link TeaModel}
  *
- * <p>DisableConnectorResponseBody</p>
+ * <p>GetWorkspaceAcrRamAuthorizeUrlResponseBody</p>
  */
-public class DisableConnectorResponseBody extends TeaModel {
+public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -35,7 +35,7 @@ public class DisableConnectorResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private DisableConnectorResponseBody(Builder builder) {
+    private GetWorkspaceAcrRamAuthorizeUrlResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
@@ -48,7 +48,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DisableConnectorResponseBody create() {
+    public static GetWorkspaceAcrRamAuthorizeUrlResponseBody create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DisableConnectorResponseBody model) {
+        private Builder(GetWorkspaceAcrRamAuthorizeUrlResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
@@ -130,7 +130,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Connector details.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -163,7 +163,7 @@ public class DisableConnectorResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>request-123456</p>
+         * <p>12345678-1234-1234-1234-123456789012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,40 +181,40 @@ public class DisableConnectorResponseBody extends TeaModel {
             return this;
         }
 
-        public DisableConnectorResponseBody build() {
-            return new DisableConnectorResponseBody(this);
+        public GetWorkspaceAcrRamAuthorizeUrlResponseBody build() {
+            return new GetWorkspaceAcrRamAuthorizeUrlResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link DisableConnectorResponseBody} extends {@link TeaModel}
+     * {@link GetWorkspaceAcrRamAuthorizeUrlResponseBody} extends {@link TeaModel}
      *
-     * <p>DisableConnectorResponseBody</p>
+     * <p>GetWorkspaceAcrRamAuthorizeUrlResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("boundAgentCount")
-        private Long boundAgentCount;
+        @com.aliyun.core.annotation.NameInMap("acrInstanceId")
+        private String acrInstanceId;
 
-        @com.aliyun.core.annotation.NameInMap("enabledAt")
-        private String enabledAt;
+        @com.aliyun.core.annotation.NameInMap("authorizeUrl")
+        private String authorizeUrl;
 
-        @com.aliyun.core.annotation.NameInMap("metadata")
-        private String metadata;
+        @com.aliyun.core.annotation.NameInMap("roleName")
+        private String roleName;
 
-        @com.aliyun.core.annotation.NameInMap("name")
-        private String name;
+        @com.aliyun.core.annotation.NameInMap("roleSource")
+        private String roleSource;
 
-        @com.aliyun.core.annotation.NameInMap("status")
-        private String status;
+        @com.aliyun.core.annotation.NameInMap("workspaceId")
+        private String workspaceId;
 
         private Data(Builder builder) {
-            this.boundAgentCount = builder.boundAgentCount;
-            this.enabledAt = builder.enabledAt;
-            this.metadata = builder.metadata;
-            this.name = builder.name;
-            this.status = builder.status;
+            this.acrInstanceId = builder.acrInstanceId;
+            this.authorizeUrl = builder.authorizeUrl;
+            this.roleName = builder.roleName;
+            this.roleSource = builder.roleSource;
+            this.workspaceId = builder.workspaceId;
         }
 
         public static Builder builder() {
@@ -226,110 +226,110 @@ public class DisableConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * @return boundAgentCount
+         * @return acrInstanceId
          */
-        public Long getBoundAgentCount() {
-            return this.boundAgentCount;
+        public String getAcrInstanceId() {
+            return this.acrInstanceId;
         }
 
         /**
-         * @return enabledAt
+         * @return authorizeUrl
          */
-        public String getEnabledAt() {
-            return this.enabledAt;
+        public String getAuthorizeUrl() {
+            return this.authorizeUrl;
         }
 
         /**
-         * @return metadata
+         * @return roleName
          */
-        public String getMetadata() {
-            return this.metadata;
+        public String getRoleName() {
+            return this.roleName;
         }
 
         /**
-         * @return name
+         * @return roleSource
          */
-        public String getName() {
-            return this.name;
+        public String getRoleSource() {
+            return this.roleSource;
         }
 
         /**
-         * @return status
+         * @return workspaceId
          */
-        public String getStatus() {
-            return this.status;
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
         public static final class Builder {
-            private Long boundAgentCount; 
-            private String enabledAt; 
-            private String metadata; 
-            private String name; 
-            private String status; 
+            private String acrInstanceId; 
+            private String authorizeUrl; 
+            private String roleName; 
+            private String roleSource; 
+            private String workspaceId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.boundAgentCount = model.boundAgentCount;
-                this.enabledAt = model.enabledAt;
-                this.metadata = model.metadata;
-                this.name = model.name;
-                this.status = model.status;
+                this.acrInstanceId = model.acrInstanceId;
+                this.authorizeUrl = model.authorizeUrl;
+                this.roleName = model.roleName;
+                this.roleSource = model.roleSource;
+                this.workspaceId = model.workspaceId;
             } 
 
             /**
-             * <p>The number of Agents bound to the Connector.</p>
+             * <p>The ACR Enterprise instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>3</p>
+             * <p>cri-1234567890abcdef</p>
              */
-            public Builder boundAgentCount(Long boundAgentCount) {
-                this.boundAgentCount = boundAgentCount;
+            public Builder acrInstanceId(String acrInstanceId) {
+                this.acrInstanceId = acrInstanceId;
                 return this;
             }
 
             /**
-             * <p>The time when the Connector was enabled.</p>
+             * <p>The RAM authorization URL used to create or append ACR permissions for the shared role on the target repository.</p>
              * 
              * <strong>example:</strong>
-             * <p>2026-09-01T08:00:00Z</p>
+             * <p><a href="https://ram.console.aliyun.com/authorize?request=%7B%22referrer%22%3A%22AgentCore%22%2C%22payloads%22%3A%5B%7B%22missionId%22%3A%22AgentCore.CustomRoleForOSSObjectRestore%22%2C%22roleName%22%3A%22AliyunAgentCoreWorkspace-ws-1234567890abcdef12345%22%2C%22rolePolicies%22%3A%5B%7B%22policyName%22%3A%22AgentCoreAcrPull-63373f3802583663d49465d8061e410a899d8f2936b8fc0cb9ec905b71f273c6%22%2C%22policyType%22%3A%22Custom%22%2C%22templateId%22%3A%22CrPullInstanceImage%22%2C%22templateValue%22%3A%7B%22crInstance%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Ainstance%2Fcri-1234567890abcdef%22%2C%22crRepository%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Arepository%2Fcri-1234567890abcdef%2Fexample%2Fagent-image%22%7D%7D%5D%7D%5D%7D">https://ram.console.aliyun.com/authorize?request=%7B%22referrer%22%3A%22AgentCore%22%2C%22payloads%22%3A%5B%7B%22missionId%22%3A%22AgentCore.CustomRoleForOSSObjectRestore%22%2C%22roleName%22%3A%22AliyunAgentCoreWorkspace-ws-1234567890abcdef12345%22%2C%22rolePolicies%22%3A%5B%7B%22policyName%22%3A%22AgentCoreAcrPull-63373f3802583663d49465d8061e410a899d8f2936b8fc0cb9ec905b71f273c6%22%2C%22policyType%22%3A%22Custom%22%2C%22templateId%22%3A%22CrPullInstanceImage%22%2C%22templateValue%22%3A%7B%22crInstance%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Ainstance%2Fcri-1234567890abcdef%22%2C%22crRepository%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Arepository%2Fcri-1234567890abcdef%2Fexample%2Fagent-image%22%7D%7D%5D%7D%5D%7D</a></p>
              */
-            public Builder enabledAt(String enabledAt) {
-                this.enabledAt = enabledAt;
+            public Builder authorizeUrl(String authorizeUrl) {
+                this.authorizeUrl = authorizeUrl;
                 return this;
             }
 
             /**
-             * <p>The Connector configuration JSON string before the Connector was disabled. This is sensitive data.</p>
+             * <p>The shared role name selected by the backend. This value is not editable on the frontend.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>
+             * <p>AliyunAgentCoreWorkspace-ws-1234567890abcdef12345</p>
              */
-            public Builder metadata(String metadata) {
-                this.metadata = metadata;
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
                 return this;
             }
 
             /**
-             * <p>The Connector name. Currently, the value is qodercli.</p>
+             * <p>The source of the shared role. This value does not indicate that authorization is complete.</p>
              * 
              * <strong>example:</strong>
-             * <p>qodercli</p>
+             * <p>WORKSPACE_SHARED</p>
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder roleSource(String roleSource) {
+                this.roleSource = roleSource;
                 return this;
             }
 
             /**
-             * <p>The Connector status.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ENABLED</p>
+             * <p>ws-1234567890abcdef12345</p>
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder workspaceId(String workspaceId) {
+                this.workspaceId = workspaceId;
                 return this;
             }
 

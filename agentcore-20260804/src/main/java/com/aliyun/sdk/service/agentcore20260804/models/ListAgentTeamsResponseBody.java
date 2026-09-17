@@ -199,7 +199,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request fails.</p>
+         * <p>The response message. An error description is returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cursor used to retrieve the next page. An empty value indicates that no more data is available.</p>
+         * <p>The cursor used to retrieve the next page. An empty value indicates that no more data exists.</p>
          * 
          * <strong>example:</strong>
          * <p>dXNlci1vZmZzZXQ6MTA</p>
@@ -240,7 +240,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the conditions.</p>
+         * <p>The total number of records that match the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

@@ -214,7 +214,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The VPC ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -272,7 +272,7 @@ public class UpdateWorkspaceRequest extends Request {
             } 
 
             /**
-             * <p>The VPC network configuration.</p>
+             * <p>The VPC network configuration of the user.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vpc(Vpc vpc) {

@@ -115,7 +115,7 @@ public class DownloadAgentSpecViaOssRequest extends Request {
         }
 
         /**
-         * <p>The version number. If not specified, the version corresponding to the latest label is downloaded.</p>
+         * <p>The version number. If this parameter is not specified, the version corresponding to the latest label is downloaded.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

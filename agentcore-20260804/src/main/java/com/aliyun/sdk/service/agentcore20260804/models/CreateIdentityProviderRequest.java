@@ -230,7 +230,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Required. The secret of the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</p>
+             * <p>Required. The secret of the external identity provider application. This parameter is write-only and is not returned by query operations.</p>
              * 
              * <strong>example:</strong>
              * <p>example-app-secret</p>
@@ -241,7 +241,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
+             * <p>The CorpId of the DingTalk organization. This parameter is required when the binding type is DingTalk.</p>
              * 
              * <strong>example:</strong>
              * <p>dingexamplecorpid01</p>
@@ -252,7 +252,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</p>
+             * <p>The data encryption key for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</p>
              * 
              * <strong>example:</strong>
              * <p>example-encrypt-key</p>
@@ -263,7 +263,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</p>
+             * <p>The verification token for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</p>
              * 
              * <strong>example:</strong>
              * <p>example-verification-token</p>
@@ -360,7 +360,11 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
+             * <p>The type of the external identity provider. Valid values:</p>
+             * <ul>
+             * <li>DingTalk</li>
+             * <li>Feishu</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

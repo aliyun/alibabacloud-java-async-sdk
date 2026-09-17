@@ -116,6 +116,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -137,7 +141,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The filter condition for exact match by username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-01</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -146,7 +153,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>The filter condition for fuzzy match by username. The value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -155,7 +165,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dXNlci1vZmZzZXQ6MTA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

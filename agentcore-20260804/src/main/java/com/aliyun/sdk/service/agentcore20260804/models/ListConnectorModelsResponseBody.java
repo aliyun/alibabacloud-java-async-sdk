@@ -188,7 +188,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned in this request.</p>
+         * <p>The number of models returned in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -210,7 +210,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The next page token. This field is not returned in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdA==</p>
@@ -243,7 +243,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of models.</p>
+         * <p>The total number of models returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -367,7 +367,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
              * <p>The description of the model.</p>
              * 
              * <strong>example:</strong>
-             * <p>通义千问旗舰模型</p>
+             * <p>Qwen flagship model</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -386,7 +386,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Key ID</p>
+             * <p>The associated Connector Key ID. This field is not returned in the current version.</p>
              * 
              * <strong>example:</strong>
              * <p>ckey-xxxx</p>
@@ -397,7 +397,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key name.</p>
+             * <p>The associated Connector Key name. This field is not returned in the current version.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -419,11 +419,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the model. Valid values:</p>
-             * <ul>
-             * <li>official: an official model.</li>
-             * <li>enterprise: an enterprise-specific model.</li>
-             * </ul>
+             * <p>The source of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>official</p>

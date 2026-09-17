@@ -87,7 +87,10 @@ public class VerifyWorkspaceOssMountRamAuthorizationRequest extends Request {
         }
 
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The OSS bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-001</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("bucketName", bucketName);

@@ -171,7 +171,7 @@ public class EnableConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -279,7 +279,7 @@ public class EnableConnectorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of agents attached to the Connector.</p>
+             * <p>The number of bound agents.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -301,7 +301,7 @@ public class EnableConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A JSON string. For qodercli: {&quot;site&quot;:&quot;global|cn&quot;,&quot;organizationId&quot;:&quot;...&quot;,&quot;apiKey&quot;:&quot;...&quot;,&quot;serviceAccountKeys&quot;:[{&quot;id&quot;:&quot;ckey-xxx&quot;,&quot;name&quot;:&quot;default&quot;,&quot;serviceAccountKey&quot;:&quot;...&quot;}]}. This field is empty when the Connector is not enabled.</p>
+             * <p>The Connector configuration JSON string. This is sensitive information.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>
@@ -312,7 +312,7 @@ public class EnableConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Connector name.</p>
+             * <p>The Connector name. The current value is qodercli.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>

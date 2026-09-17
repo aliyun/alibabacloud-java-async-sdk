@@ -119,7 +119,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value SUCCESS is returned if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Bootstrap Token and CMS configuration required for connecting the external agent.</p>
+         * <p>The bootstrap token and CMS configuration required for connecting the external agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value 200 is returned if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message indicating the request processing result.</p>
+         * <p>The message that indicates the result of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -405,7 +405,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Bootstrap Token used for connecting the external agent.</p>
+             * <p>The bootstrap token used for connecting the external agent.</p>
              * 
              * <strong>example:</strong>
              * <p>bootstrap-token</p>
@@ -439,7 +439,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint of the Bootstrap Token.</p>
+             * <p>The fingerprint of the bootstrap token.</p>
              * 
              * <strong>example:</strong>
              * <p>fingerprint</p>
