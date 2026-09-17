@@ -125,7 +125,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -136,7 +136,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -191,6 +191,9 @@ public class ListCertificatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
+        @com.aliyun.core.annotation.NameInMap("DeploymentDesc")
+        private String deploymentDesc;
+
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
@@ -232,6 +235,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             this.certificateSource = builder.certificateSource;
             this.certificateStatus = builder.certificateStatus;
             this.commonName = builder.commonName;
+            this.deploymentDesc = builder.deploymentDesc;
             this.domain = builder.domain;
             this.existPrivateKey = builder.existPrivateKey;
             this.fingerPrint = builder.fingerPrint;
@@ -300,6 +304,13 @@ public class ListCertificatesResponseBody extends TeaModel {
          */
         public String getCommonName() {
             return this.commonName;
+        }
+
+        /**
+         * @return deploymentDesc
+         */
+        public String getDeploymentDesc() {
+            return this.deploymentDesc;
         }
 
         /**
@@ -387,6 +398,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             private String certificateSource; 
             private String certificateStatus; 
             private String commonName; 
+            private String deploymentDesc; 
             private String domain; 
             private Boolean existPrivateKey; 
             private String fingerPrint; 
@@ -410,6 +422,7 @@ public class ListCertificatesResponseBody extends TeaModel {
                 this.certificateSource = model.certificateSource;
                 this.certificateStatus = model.certificateStatus;
                 this.commonName = model.commonName;
+                this.deploymentDesc = model.deploymentDesc;
                 this.domain = model.domain;
                 this.existPrivateKey = model.existPrivateKey;
                 this.fingerPrint = model.fingerPrint;
@@ -424,14 +437,11 @@ public class ListCertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The encryption algorithm of the certificate. Valid values:</p>
+             * <p>The encryption algorithm type of the certificate. Valid values:</p>
              * <ul>
-             * <li><p><strong>RSA</strong></p>
-             * </li>
-             * <li><p><strong>ECC</strong></p>
-             * </li>
-             * <li><p><strong>SM2</strong></p>
-             * </li>
+             * <li><strong>RSA</strong>: RSA algorithm.</li>
+             * <li><strong>ECC</strong>: ECC algorithm.</li>
+             * <li><strong>SM2</strong>: SM2 algorithm.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -443,14 +453,12 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The global ID of the certificate. This ID is used across Alibaba Cloud services and is in the <code>Certificate ID-Region ID</code> format. For example, if a certificate ID is <code>123</code>, the <code>CertIdentifier</code> is <code>123-cn-hangzhou</code> for the Alibaba Cloud China site and <code>123-ap-southeast-1</code> for the Alibaba Cloud International site (www\.alibabacloud.com).</p>
+             * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
              * <ul>
-             * <li><p>For the Alibaba Cloud China website, the format is certificate ID + &quot;-cn-hangzhou&quot;.</p>
-             * </li>
-             * <li><p>For the Alibaba Cloud International website (www\.alibabacloud.com), the format is certificate ID + &quot;-ap-southeast-1&quot;.</p>
-             * </li>
+             * <li>For the China site, the format is certificate ID + &quot;-cn-hangzhou&quot;.</li>
+             * <li>For the China site, the format is certificate ID + &quot;-ap-southeast-1&quot;.</li>
              * </ul>
-             * <p>For example, if the certificate ID is 123, the CertIdentifier is &quot;123-cn-hangzhou&quot; for the China site and &quot;123-ap-southeast-1&quot; for the International site.</p>
+             * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</p>
              * 
              * <strong>example:</strong>
              * <p>21589515-cn-hangzhou</p>
@@ -483,14 +491,11 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the certificate.</p>
+             * <p>The source of the certificate. Valid values:</p>
              * <ul>
-             * <li><p>BUY: A purchased certificate.</p>
-             * </li>
-             * <li><p>TEST: A test certificate.</p>
-             * </li>
-             * <li><p>UPLOAD: An uploaded certificate.</p>
-             * </li>
+             * <li>BUY: a formal certificate.</li>
+             * <li>TEST: a test certificate.</li>
+             * <li>UPLOAD: an uploaded certificate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -502,16 +507,12 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the certificate.</p>
+             * <p>The status of the certificate. Valid values:</p>
              * <ul>
-             * <li><p><strong>issued</strong>: The certificate is issued.</p>
-             * </li>
-             * <li><p><strong>revoked</strong>: The certificate is revoked.</p>
-             * </li>
-             * <li><p><strong>willExpire</strong>: The certificate is about to expire.</p>
-             * </li>
-             * <li><p><strong>expired</strong>: The certificate has expired.</p>
-             * </li>
+             * <li><strong>issued</strong>: Issued.</li>
+             * <li><strong>revoked</strong>: Revoked.</li>
+             * <li><strong>willExpire</strong>: About to expire.</li>
+             * <li><strong>expired</strong>: Expired.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -534,7 +535,15 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain names that are bound to the certificate. Multiple domain names are separated by commas.</p>
+             * DeploymentDesc.
+             */
+            public Builder deploymentDesc(String deploymentDesc) {
+                this.deploymentDesc = deploymentDesc;
+                return this;
+            }
+
+            /**
+             * <p>The domain names bound to the certificate. Multiple domain names are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -545,12 +554,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a private key is available. Valid values:</p>
+             * <p>Indicates whether the certificate has a private key. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: A private key is available.</p>
-             * </li>
-             * <li><p><strong>false</strong>: A private key is not available.</p>
-             * </li>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -562,7 +569,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint of the public key.</p>
+             * <p>The public key fingerprint.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -573,7 +580,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate instance.</p>
+             * <p>The certificate instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cas-cn-v***</p>
@@ -584,7 +591,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certification authority.</p>
+             * <p>The certification authority that issued the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>DigiCert</p>
@@ -595,12 +602,10 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key size, in bits.</p>
+             * <p>The key algorithm length.</p>
              * <ul>
-             * <li><p>For RSA keys, typical sizes are 2048, 3072, or 4096.</p>
-             * </li>
-             * <li><p>For ECC or SM2 keys, the typical size is 256.</p>
-             * </li>
+             * <li>The RSA algorithm length is typically 2048, 3072, or 4096.</li>
+             * <li>The ECC and SM2 algorithm length is typically 256.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -612,7 +617,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the certificate validity period.</p>
+             * <p>The end time of the certificate validity period.</p>
              * 
              * <strong>example:</strong>
              * <p>1749580567000</p>
@@ -623,7 +628,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the certificate validity period.</p>
+             * <p>The start time of the certificate validity period.</p>
              * 
              * <strong>example:</strong>
              * <p>1760745600000</p>
@@ -634,7 +639,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the certificate.</p>
+             * <p>The certificate sequence number.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -645,7 +650,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that contains the alternative domain names of the certificate. This parameter corresponds to the <code>Subject Alternative Name</code> field of the certificate.</p>
+             * <p>The list of subject alternative names (SANs) of the certificate. This corresponds to the <code>Subject Alternative Name</code> field of the certificate. The value is in array format.</p>
              */
             public Builder subjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
                 this.subjectAlternativeNames = subjectAlternativeNames;
@@ -653,7 +658,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of Alibaba Cloud products in which the certificate is deployed.</p>
+             * <p>The list of Alibaba Cloud services to which the certificate is currently deployed.</p>
              */
             public Builder usingProductList(java.util.List<String> usingProductList) {
                 this.usingProductList = usingProductList;

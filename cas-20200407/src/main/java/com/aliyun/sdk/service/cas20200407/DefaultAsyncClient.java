@@ -856,6 +856,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The per-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API calls are throttled, which may affect your business. Use this operation as appropriate.</p>
+     * 
      * @param request the request parameters of GetCertificateDetail  GetCertificateDetailRequest
      * @return GetCertificateDetailResponse
      */
@@ -1146,6 +1149,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the operation logs of CA certificates, including root CA certificates and subordinate CA certificates. For example, you can query the creation logs and status change logs of CA certificates.
+     * The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;, and the China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;. The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;.
+     * The China site CertIdentifier is certificate ID + &quot;-cn-hangzhou&quot;.
+     * This operation has a rate limit of 10 queries per second (QPS) per user. If the rate limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * 
      * @param request the request parameters of ListCertificates  ListCertificatesRequest
      * @return ListCertificatesResponse
      */
@@ -1828,13 +1837,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms. The China SM certificate includes an encryption certificate and a signing certificate. The China SM certificate is used in China to comply with the national cryptographic standards.
-     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
-     * The China SM certificate includes an encryption certificate and a signing certificate.
-     * The China SM certificate is used in China to comply with the national cryptographic standards.
-     * The China SM certificate refers to a certificate that uses the ShangMi (SM) cryptographic algorithms.
-     * The China SM certificate includes an encryption certificate and a signing certificate.
-     * The throttling limit for this API is 100 queries per second (QPS) per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.</p>
+     * <p>The maximum number of calls per user is 100 per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of UploadUserCertificate  UploadUserCertificateRequest
      * @return UploadUserCertificateResponse

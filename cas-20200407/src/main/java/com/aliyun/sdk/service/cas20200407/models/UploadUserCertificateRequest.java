@@ -186,7 +186,7 @@ public class UploadUserCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The non-China SM certificate content in PEM format.</p>
+         * <p>The content of the non-SM certificate in PEM format.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
@@ -198,7 +198,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>XXX</p>
@@ -210,7 +210,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The encryption certificate content of the China SM certificate in PEM format. This field is invalid when Cert and Key are not empty.</p>
+         * <p>The content of the SM encryption certificate in PEM format. This field is ignored if Cert and Key are not empty.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -224,7 +224,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The private key content of the encryption certificate of the China SM certificate in PEM format. This field is invalid when Cert and Key are not empty.</p>
+         * <p>The private key of the SM encryption certificate in PEM format. This field is ignored if Cert and Key are not empty.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN EC PRIVATE KEY-----
@@ -238,11 +238,11 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The private key content of the non-China SM certificate in PEM format.</p>
+         * <p>The private key of the non-SM certificate in PEM format.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
-         * MIICDzCCAbagAw****
+         * MIICDzCCAbagAw
          * -----END CERTIFICATE-----</p>
          */
         public Builder key(String key) {
@@ -252,9 +252,9 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The custom certificate name. Maximum length: 63 characters. All character types are supported, including letters, digits, and underscores.</p>
+         * <p>The custom name of the certificate. Maximum length: 63 characters. Supports all character types, including letters, digits, and underscores.</p>
          * <blockquote>
-         * <p>Certificate names must be unique within the same user account.</p>
+         * <p>Certificate names must be unique within the same account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -280,7 +280,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The signing certificate content of the China SM certificate in PEM format. This field is invalid when Cert and Key are not empty.</p>
+         * <p>The content of the SM signing certificate in PEM format. This field is ignored if Cert and Key are not empty.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -294,7 +294,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The private key content of the signing certificate of the China SM certificate in PEM format. This field is invalid when Cert and Key are not empty.</p>
+         * <p>The private key of the SM signing certificate in PEM format. This field is ignored if Cert and Key are not empty.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN EC PRIVATE KEY-----
