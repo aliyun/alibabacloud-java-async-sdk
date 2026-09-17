@@ -29,11 +29,16 @@ public class ModifyMessagesFeedbacksRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Rating")
     private String rating;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ModifyMessagesFeedbacksRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
         this.messageId = builder.messageId;
         this.rating = builder.rating;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ModifyMessagesFeedbacksRequest extends Request {
         return this.rating;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyMessagesFeedbacksRequest, Builder> {
         private String content; 
         private String messageId; 
         private String rating; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ModifyMessagesFeedbacksRequest extends Request {
             this.content = request.content;
             this.messageId = request.messageId;
             this.rating = request.rating;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -119,6 +133,18 @@ public class ModifyMessagesFeedbacksRequest extends Request {
         public Builder rating(String rating) {
             this.putQueryParameter("Rating", rating);
             this.rating = rating;
+            return this;
+        }
+
+        /**
+         * <p>The ContextDB workspace ID. Required only for ContextDB Manager App requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000-0000-4000-8000-000000000001</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
