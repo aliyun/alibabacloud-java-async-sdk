@@ -116,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of CreateWorkspaceQueue  CreateWorkspaceQueueRequest
+     * @return CreateWorkspaceQueueResponse
+     */
+    CompletableFuture<CreateWorkspaceQueueResponse> createWorkspaceQueue(CreateWorkspaceQueueRequest request);
+
+    /**
      * @param request the request parameters of DeleteKyuubiService  DeleteKyuubiServiceRequest
      * @return DeleteKyuubiServiceResponse
      */

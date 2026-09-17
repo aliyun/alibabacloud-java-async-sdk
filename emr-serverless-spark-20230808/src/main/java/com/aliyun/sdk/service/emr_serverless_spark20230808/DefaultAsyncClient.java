@@ -328,6 +328,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateWorkspaceQueue  CreateWorkspaceQueueRequest
+     * @return CreateWorkspaceQueueResponse
+     */
+    @Override
+    public CompletableFuture<CreateWorkspaceQueueResponse> createWorkspaceQueue(CreateWorkspaceQueueRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWorkspaceQueue").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/queues").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWorkspaceQueueResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWorkspaceQueueResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteKyuubiService  DeleteKyuubiServiceRequest
      * @return DeleteKyuubiServiceResponse
      */
