@@ -67,7 +67,7 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The task creation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -183,7 +183,10 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMsg.
+             * <p>The error message returned when the file fails to be uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Network error.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -191,7 +194,10 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             }
 
             /**
-             * FileHash.
+             * <p>The SHA256 hash of the uploaded file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>514f44ebed1d0c1df5e16a116080b64b</p>
              */
             public Builder fileHash(String fileHash) {
                 this.fileHash = fileHash;
@@ -199,7 +205,10 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-file</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -207,7 +216,10 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifyId.
+             * <p>The unique ID of the uploaded file. You can use this ID to query the task result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1824jcadg01bsl10b</p>
              */
             public Builder identifyId(String identifyId) {
                 this.identifyId = identifyId;
@@ -215,7 +227,14 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation is successful. Valid values:</p>
+             * <ul>
+             * <li>true: Successful.</li>
+             * <li>false: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -308,7 +327,10 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             } 
 
             /**
-             * FailCount.
+             * <p>The number of files that failed to be uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -316,7 +338,10 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             }
 
             /**
-             * RootTaskId.
+             * <p>The root task ID returned after the task is submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c6e7fa8a77df6e182ac3fcf1478ab83a</p>
              */
             public Builder rootTaskId(String rootTaskId) {
                 this.rootTaskId = rootTaskId;
@@ -324,7 +349,10 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of files that are uploaded successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -332,7 +360,7 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             }
 
             /**
-             * <p>逐文件接收结果</p>
+             * <p>The upload results.</p>
              */
             public Builder uploadResults(java.util.List<UploadResults> uploadResults) {
                 this.uploadResults = uploadResults;

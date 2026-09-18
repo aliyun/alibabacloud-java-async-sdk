@@ -80,7 +80,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of task results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -191,7 +191,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The detected content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>allowed-tools: Bash(agent-browser:*)</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -199,7 +202,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The skill configuration allows Bash execution via agent-browser:* pattern without requiring user confirmation. This enables potentially dangerous command execution through the browser automation CLI.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -207,7 +213,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ItemName.
+             * <p>The check item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dangerous Tools Without Confirmation</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -215,7 +224,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Line.
+             * <p>The line number of the detected content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2555</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -269,7 +281,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Detail.
+             * <p>The list of risk details.</p>
              */
             public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
@@ -362,7 +374,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>The confidence score. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -370,7 +385,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The result description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Suspicious attacks.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -378,7 +396,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attack</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -386,7 +407,16 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong>: High risk.</li>
+             * <li><strong>medium</strong>: Medium risk.</li>
+             * <li><strong>low</strong>: Low risk.</li>
+             * <li><strong>none</strong>: No risk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -479,7 +509,16 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Level.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong>: High risk.</li>
+             * <li><strong>medium</strong>: Medium risk.</li>
+             * <li><strong>low</strong>: Low risk.</li>
+             * <li><strong>none</strong>: No risk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -487,7 +526,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The list of result details.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -495,7 +534,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The processing suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -503,7 +545,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The risk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>promptAttack</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -570,7 +615,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Detail.
+             * <p>The list of risk details.</p>
              */
             public Builder detail(java.util.List<GuardrailDetail> detail) {
                 this.detail = detail;
@@ -578,7 +623,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The processing suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -645,7 +693,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Desc.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_ak_24</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -653,7 +704,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The list of sensitive information.</p>
              */
             public Builder result(java.util.List<String> result) {
                 this.result = result;
@@ -707,7 +758,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Detail.
+             * <p>The list of risk details.</p>
              */
             public Builder detail(java.util.List<SensitiveDetail> detail) {
                 this.detail = detail;
@@ -787,7 +838,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>The extended information field. This is a reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -795,7 +849,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The risk score. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -803,7 +860,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The virus type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Backdoor</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -896,7 +956,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The configuration detection risks.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -904,7 +964,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Guardrail.
+             * <p>The safety guardrail detection risks.</p>
              */
             public Builder guardrail(Guardrail guardrail) {
                 this.guardrail = guardrail;
@@ -912,7 +972,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitive.
+             * <p>The sensitive information risks.</p>
              */
             public Builder sensitive(Sensitive sensitive) {
                 this.sensitive = sensitive;
@@ -920,7 +980,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Virus.
+             * <p>The virus detection risks.</p>
              */
             public Builder virus(java.util.List<Virus> virus) {
                 this.virus = virus;
@@ -1000,7 +1060,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>The file detection risk list.</p>
              */
             public Builder ext(Ext ext) {
                 this.ext = ext;
@@ -1008,7 +1068,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/97e55e6af371836f/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1016,7 +1079,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResultType.
+             * <p>The result type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder resultType(String resultType) {
                 this.resultType = resultType;
@@ -1070,7 +1136,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * RiskInfo.
+             * <p>The file detection risk information.</p>
              */
             public Builder riskInfo(java.util.List<RiskInfo> riskInfo) {
                 this.riskInfo = riskInfo;
@@ -1124,7 +1190,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * SkillCheckResult.
+             * <p>The skill check task result.</p>
              */
             public Builder skillCheckResult(SkillCheckResult skillCheckResult) {
                 this.skillCheckResult = skillCheckResult;
@@ -1230,7 +1296,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * FileHash.
+             * <p>The hash value of the uploaded file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03d1f08455e965cac0351eaa59256fd9</p>
              */
             public Builder fileHash(String fileHash) {
                 this.fileHash = fileHash;
@@ -1238,7 +1307,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4190063324899520</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1246,7 +1318,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The detection target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c7acb2f1264e4467887ef8f4c36c44ca1</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -1254,7 +1329,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskResultMessage.
+             * <p>The task result information.</p>
              */
             public Builder taskResultMessage(TaskResultMessage taskResultMessage) {
                 this.taskResultMessage = taskResultMessage;
@@ -1262,7 +1337,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -1355,7 +1433,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of data entries displayed on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -1363,7 +1444,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1371,7 +1455,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1379,7 +1466,10 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records in the query result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

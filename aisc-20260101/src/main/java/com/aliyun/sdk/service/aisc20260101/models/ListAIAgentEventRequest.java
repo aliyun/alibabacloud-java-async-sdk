@@ -66,6 +66,10 @@ public class ListAIAgentEventRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevel")
     private String riskLevel;
 
@@ -103,6 +107,7 @@ public class ListAIAgentEventRequest extends Request {
         this.order = builder.order;
         this.orderBy = builder.orderBy;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.riskLevel = builder.riskLevel;
         this.riskName = builder.riskName;
         this.source = builder.source;
@@ -209,6 +214,13 @@ public class ListAIAgentEventRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return riskLevel
      */
     public String getRiskLevel() {
@@ -263,6 +275,7 @@ public class ListAIAgentEventRequest extends Request {
         private String order; 
         private String orderBy; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private String riskLevel; 
         private String riskName; 
         private String source; 
@@ -288,6 +301,7 @@ public class ListAIAgentEventRequest extends Request {
             this.order = request.order;
             this.orderBy = request.orderBy;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.riskLevel = request.riskLevel;
             this.riskName = request.riskName;
             this.source = request.source;
@@ -297,7 +311,10 @@ public class ListAIAgentEventRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the agent application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99f30e6b-8374-4a45-8830-439f178c5463</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -306,7 +323,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>Filters the agent list by application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>erH</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -315,7 +335,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * AssetName.
+         * <p>The asset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13.115.192.70</p>
          */
         public Builder assetName(String assetName) {
             this.putQueryParameter("AssetName", assetName);
@@ -324,7 +347,20 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * AssetType.
+         * <p>The type of the agent asset. Valid values:</p>
+         * <ol>
+         * <li>rag</li>
+         * <li>internet</li>
+         * <li>datasets</li>
+         * <li>tool</li>
+         * <li>model</li>
+         * <li>skill</li>
+         * <li>app</li>
+         * <li>identity</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>identity</p>
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -333,7 +369,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -342,7 +381,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * InfraInstanceId.
+         * <p>The infrastructure instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-test</p>
          */
         public Builder infraInstanceId(String infraInstanceId) {
             this.putQueryParameter("InfraInstanceId", infraInstanceId);
@@ -351,7 +393,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * InfraName.
+         * <p>The infrastructure name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder infraName(String infraName) {
             this.putQueryParameter("InfraName", infraName);
@@ -360,7 +405,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * InfraRegionId.
+         * <p>The infrastructure region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder infraRegionId(String infraRegionId) {
             this.putQueryParameter("InfraRegionId", infraRegionId);
@@ -369,7 +417,14 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -378,7 +433,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * <p>Sort direction</p>
+         * <p>The sort order. Valid values: asc indicates ascending order. desc indicates descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -387,7 +445,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * <p>Sort field, currently supports CheckTime</p>
+         * <p>The field by which to sort results. Currently, only sorting by check time is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CheckTime</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -396,7 +457,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -405,7 +469,24 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The risk level of the check item to query. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong>: High.</li>
+         * <li><strong>medium</strong>: Medium.</li>
+         * <li><strong>low</strong>: Low.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -414,7 +495,10 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * RiskName.
+         * <p>The risk name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         public Builder riskName(String riskName) {
             this.putQueryParameter("RiskName", riskName);
@@ -423,7 +507,17 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The event source. Valid values:</p>
+         * <ol>
+         * <li>cspm</li>
+         * <li>aiguard</li>
+         * <li>SASE</li>
+         * <li>SAS </li>
+         * <li>Agent-Runtime-Guard</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>CSPM</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -432,7 +526,17 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The event status. Valid values:</p>
+         * <ol>
+         * <li>unhandled: Pending.</li>
+         * <li>handling: Being processed.</li>
+         * <li>fixed: Fixed.</li>
+         * <li>ignored: Ignored.</li>
+         * <li>rescanned: Rescanned.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>fixed</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -441,7 +545,7 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The list of statuses.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -450,7 +554,18 @@ public class ListAIAgentEventRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * <p>The cloud asset vendor. Valid values:</p>
+         * <ul>
+         * <li>** DIFY**: DIFY</li>
+         * <li>** BAILIAN**: BAILIAN</li>
+         * <li>** VOLCAI**: VOLCAI</li>
+         * <li>** AGENTRUN**: AGENTRUN</li>
+         * <li>** PAI**: PAI</li>
+         * <li>** OpenClaw**: OpenClaw</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DIFY</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

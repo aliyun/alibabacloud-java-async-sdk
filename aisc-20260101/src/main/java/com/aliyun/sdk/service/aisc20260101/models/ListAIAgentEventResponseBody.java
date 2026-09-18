@@ -80,7 +80,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of event information returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -399,7 +399,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5zuzvcfe</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -407,7 +410,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-chagee-bc-activity-elespin</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -415,7 +421,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * AssetName.
+             * <p>The asset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.2.2.83</p>
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -423,7 +432,20 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The type of the risky asset. Valid values:</p>
+             * <ol>
+             * <li>rag</li>
+             * <li>internet</li>
+             * <li>datasets</li>
+             * <li>tool</li>
+             * <li>model</li>
+             * <li>skill</li>
+             * <li>app</li>
+             * <li>identity</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>tool</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -431,7 +453,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * CheckTime.
+             * <p>The check time, in UNIX timestamp format. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1763949968</p>
              */
             public Builder checkTime(String checkTime) {
                 this.checkTime = checkTime;
@@ -439,7 +464,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * HandleTime.
+             * <p>The event handling time, in UNIX timestamp format. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1763949968</p>
              */
             public Builder handleTime(String handleTime) {
                 this.handleTime = handleTime;
@@ -447,7 +475,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17616</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -455,7 +486,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * InfraInstanceId.
+             * <p>The infrastructure instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-test</p>
              */
             public Builder infraInstanceId(String infraInstanceId) {
                 this.infraInstanceId = infraInstanceId;
@@ -463,7 +497,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * InfraInternetIp.
+             * <p>The public IP address of the infrastructure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.3.4</p>
              */
             public Builder infraInternetIp(String infraInternetIp) {
                 this.infraInternetIp = infraInternetIp;
@@ -471,7 +508,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * InfraIntranetIp.
+             * <p>The private IP address of the infrastructure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.3</p>
              */
             public Builder infraIntranetIp(String infraIntranetIp) {
                 this.infraIntranetIp = infraIntranetIp;
@@ -479,7 +519,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * InfraName.
+             * <p>The infrastructure name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder infraName(String infraName) {
                 this.infraName = infraName;
@@ -487,7 +530,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * InfraRegionId.
+             * <p>The infrastructure region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder infraRegionId(String infraRegionId) {
                 this.infraRegionId = infraRegionId;
@@ -495,7 +541,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * InfraType.
+             * <p>The infrastructure type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder infraType(String infraType) {
                 this.infraType = infraType;
@@ -503,7 +552,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * RiskDesc.
+             * <p>The risk description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The workflow does not have AI security guardrails enabled, which may lead to compliance violations, prompt injection and bypass, sensitive data leaks, and other risks</p>
              */
             public Builder riskDesc(String riskDesc) {
                 this.riskDesc = riskDesc;
@@ -511,7 +563,15 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level of the detected alert. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong>: High.</li>
+             * <li><strong>medium</strong>: Medium.</li>
+             * <li><strong>low</strong>: Low.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -519,7 +579,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * RiskName.
+             * <p>The risk name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weak password</p>
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -527,7 +590,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * SkillId.
+             * <p>The associated skill ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder skillId(Long skillId) {
                 this.skillId = skillId;
@@ -535,7 +601,17 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The event source. Valid values:</p>
+             * <ol>
+             * <li>cspm</li>
+             * <li>aiguard</li>
+             * <li>SASE</li>
+             * <li>SAS </li>
+             * <li>Agent-Runtime-Guard</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>SASE</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -543,7 +619,17 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ol>
+             * <li>unhandled: Pending.</li>
+             * <li>handling: Being processed.</li>
+             * <li>fixed: Fixed.</li>
+             * <li>ignored: Ignored.</li>
+             * <li>rescanned: Rescanned.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>unhandled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -551,7 +637,18 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * <p>The cloud asset vendor. Valid values:</p>
+             * <ul>
+             * <li>** DIFY**: DIFY</li>
+             * <li>** BAILIAN**: BAILIAN</li>
+             * <li>** VOLCAI**: VOLCAI</li>
+             * <li>** AGENTRUN**: AGENTRUN</li>
+             * <li>** PAI**: PAI</li>
+             * <li>** OpenClaw**: OpenClaw</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DIFY</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -644,7 +741,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -652,7 +752,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The NextToken value returned when the NextToken-based pagination method is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d6yVpGGP9cH8f9AWtqEXqOawJdolFvFeqJJSIPnYLoGc7/XPd5nbDfZcn1mJCj66Ep3Gbr55tl4NuBtNwsc0A0qvqC2Onfm9h2QmtG8HhaulnPkGmBnhntKqJmpRptTU</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -660,7 +763,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -668,7 +774,10 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records in the query result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

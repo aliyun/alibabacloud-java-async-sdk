@@ -73,7 +73,7 @@ public class CreateSkillFileCheckRequest extends Request {
         } 
 
         /**
-         * Files.
+         * <p>The file information.</p>
          */
         public Builder files(java.util.List<Files> files) {
             this.putQueryParameter("Files", files);
@@ -82,7 +82,7 @@ public class CreateSkillFileCheckRequest extends Request {
         }
 
         /**
-         * <p>上传来源；为空默认user_upload，安全运营Agent使用sec_ops_agent</p>
+         * <p>The upload source. If left empty, user_upload is used by default. Security operations agents use sec_ops_agent.</p>
          * 
          * <strong>example:</strong>
          * <p>sec_ops_agent</p>
@@ -166,7 +166,7 @@ public class CreateSkillFileCheckRequest extends Request {
             } 
 
             /**
-             * <p>公网下载地址；与UploadKey二选一</p>
+             * <p>The public URL for downloading the file. The downloaded file must be a compressed package in tar.gz or zip format.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://test.oss-cn-hangzhou.aliyuncs.com/xxxx">https://test.oss-cn-hangzhou.aliyuncs.com/xxxx</a></p>
@@ -177,7 +177,10 @@ public class CreateSkillFileCheckRequest extends Request {
             }
 
             /**
-             * FileName.
+             * <p>The file name. If not specified, the file name is parsed from DownloadUrl.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-file</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -185,7 +188,7 @@ public class CreateSkillFileCheckRequest extends Request {
             }
 
             /**
-             * <p>GenerateSkillOssUploadCredential返回的租户隔离OSS临时对象Key；与DownloadUrl二选一</p>
+             * <p>The tenant-isolated OSS temporary object key returned by GenerateSkillOssUploadCredential. Specify either this parameter or DownloadUrl.</p>
              * 
              * <strong>example:</strong>
              * <p>user-upload/staging/123456789/550e8400-e29b-41d4-a716-446655440000</p>

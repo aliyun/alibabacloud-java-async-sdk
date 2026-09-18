@@ -101,7 +101,10 @@ public class ListSubTasksRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -110,7 +113,10 @@ public class ListSubTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -119,7 +125,10 @@ public class ListSubTasksRequest extends Request {
         }
 
         /**
-         * RootTaskId.
+         * <p>The main task ID returned upon task submission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110146ac282314fe4f7cd11afc7540eb</p>
          */
         public Builder rootTaskId(String rootTaskId) {
             this.putQueryParameter("RootTaskId", rootTaskId);
@@ -128,7 +137,10 @@ public class ListSubTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SKILL_CHECK</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
