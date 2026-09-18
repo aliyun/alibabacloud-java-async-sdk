@@ -261,6 +261,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>An authorized member collects a document to a physical folder in the collaborative share. Uses the fixed ALI_DING/Vacuum channel and processes the request asynchronously. Query the resource status after submission.</p>
+     * 
+     * @param request the request parameters of CreateGroupAliDingDoc  CreateGroupAliDingDocRequest
+     * @return CreateGroupAliDingDocResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupAliDingDocResponse> createGroupAliDingDoc(CreateGroupAliDingDocRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroupAliDingDoc").setMethod(HttpMethod.POST).setPathRegex("/openapi/createGroupAliDingDoc").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupAliDingDocResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupAliDingDocResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
      * <li>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</li>
@@ -289,6 +310,48 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</p>
+     * 
+     * @param request the request parameters of CreateGroupDirectory  CreateGroupDirectoryRequest
+     * @return CreateGroupDirectoryResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupDirectoryResponse> createGroupDirectory(CreateGroupDirectoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroupDirectory").setMethod(HttpMethod.POST).setPathRegex("/openapi/createGroupDirectory").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupDirectoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupDirectoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</p>
+     * 
+     * @param request the request parameters of CreateGroupFeishuChat  CreateGroupFeishuChatRequest
+     * @return CreateGroupFeishuChatResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupFeishuChatResponse> createGroupFeishuChat(CreateGroupFeishuChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroupFeishuChat").setMethod(HttpMethod.POST).setPathRegex("/openapi/createGroupFeishuChat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupFeishuChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupFeishuChatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description\n\nFixed as <code>ONLINE_DOC + FEISHU + GROUP</code>. <code>groupId</code> is required. If <code>directoryId</code> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
      * 
      * @param request the request parameters of CreateGroupFeishuDoc  CreateGroupFeishuDocRequest
@@ -303,6 +366,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateGroupFeishuDocResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</p>
+     * 
+     * @param request the request parameters of CreateGroupFile  CreateGroupFileRequest
+     * @return CreateGroupFileResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupFileResponse> createGroupFile(CreateGroupFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroupFile").setMethod(HttpMethod.POST).setPathRegex("/openapi/createGroupFile").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</p>
+     * 
+     * @param request the request parameters of CreateGroupPublicUrl  CreateGroupPublicUrlRequest
+     * @return CreateGroupPublicUrlResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupPublicUrlResponse> createGroupPublicUrl(CreateGroupPublicUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroupPublicUrl").setMethod(HttpMethod.POST).setPathRegex("/openapi/createGroupPublicUrl").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupPublicUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupPublicUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</p>
+     * 
+     * @param request the request parameters of CreateGroupText  CreateGroupTextRequest
+     * @return CreateGroupTextResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupTextResponse> createGroupText(CreateGroupTextRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroupText").setMethod(HttpMethod.POST).setPathRegex("/openapi/createGroupText").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupTextResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupTextResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -412,6 +538,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateKnowledgeBaseFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\n\nFixed to <code>PUBLIC_URL + TENANT</code>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <code>directoryId</code> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+     * 
+     * @param request the request parameters of CreateKnowledgeBasePublicUrl  CreateKnowledgeBasePublicUrlRequest
+     * @return CreateKnowledgeBasePublicUrlResponse
+     */
+    @Override
+    public CompletableFuture<CreateKnowledgeBasePublicUrlResponse> createKnowledgeBasePublicUrl(CreateKnowledgeBasePublicUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateKnowledgeBasePublicUrl").setMethod(HttpMethod.POST).setPathRegex("/openapi/createKnowledgeBasePublicUrl").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKnowledgeBasePublicUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKnowledgeBasePublicUrlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -765,10 +912,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
      * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
-     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</li>
-     * <li>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</li>
-     * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.
-     * To invoke this operation, you can use AK, BearerToken, or APP authentication.</li>
+     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</li>
+     * <li>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</li>
+     * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
      * @param request the request parameters of CreatePersonalFile  CreatePersonalFileRequest
@@ -790,13 +936,34 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <h2>Request description\n\nFixed to <code>PUBLIC_URL + PERSONAL</code>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Use getSource to query the background collection status. If <code>directoryId</code> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+     * 
+     * @param request the request parameters of CreatePersonalPublicUrl  CreatePersonalPublicUrlRequest
+     * @return CreatePersonalPublicUrlResponse
+     */
+    @Override
+    public CompletableFuture<CreatePersonalPublicUrlResponse> createPersonalPublicUrl(CreatePersonalPublicUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePersonalPublicUrl").setMethod(HttpMethod.POST).setPathRegex("/openapi/createPersonalPublicUrl").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePersonalPublicUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePersonalPublicUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li>This API is used to add plain text content to the personal resources of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>TEXT</code>, and <code>scope</code> is fixed to <code>PERSONAL</code>.</li>
      * <li>If <code>directoryId</code> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</li>
-     * <li><code>tenant_id</code> and <code>user_id</code> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</li>
-     * <li>The call initiates metering and generates a corresponding <code>billing_id</code>.</li>
+     * <li><code>tenant_id</code> and <code>user_id</code> can only be obtained from the authentication identity information. These parameters are ignored if passed through the request body.</li>
+     * <li>A metering process is initiated during the call, and a corresponding <code>billing_id</code> is generated.</li>
      * <li>The text content is written to <code>unstructured_docs</code>, and an initial resource record is generated.</li>
      * <li>Any validation or execution failure throws a <code>RobjectException</code>, which is converted to a POP error code by the global middleware and returned to the caller.</li>
      * </ul>
@@ -1258,6 +1425,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</p>
+     * 
+     * @param request the request parameters of GetGroupSource  GetGroupSourceRequest
+     * @return GetGroupSourceResponse
+     */
+    @Override
+    public CompletableFuture<GetGroupSourceResponse> getGroupSource(GetGroupSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGroupSource").setMethod(HttpMethod.POST).setPathRegex("/openapi/getGroupSource").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGroupSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGroupSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li>This API operation queries the expiration time of the most recently created standard package instance for a specified tenant.</li>
@@ -1316,15 +1504,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Description</h2>
      * <ul>
      * <li>This operation uploads a file to an enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this API operation.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this operation.</li>
      * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
-     * <li>You can add tags to the resource by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</li>
+     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</li>
+     * <li>You can use <code>sourceTags</code> to add tags to resources for subsequent management and retrieval.</li>
+     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * @param request the request parameters of GetScheduledTaskExecutionDetail  GetScheduledTaskExecutionDetailRequest
@@ -1425,13 +1613,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</p>
      * <ul>
      * <li><strong>TenantId</strong>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</li>
      * <li><strong>SkillCode</strong>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</li>
      * <li><strong>SkillName</strong>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <code>ERR.SkillHub.SkillNameAmbiguous</code> is returned.</li>
-     * <li><strong>ViewMode</strong>: Optional. Valid values: <code>draft</code> (draft/editing view) or <code>published</code> (published view, default).</li>
+     * <li><strong>ViewMode</strong>: Optional. Set to <code>draft</code> (draft/editing view) or <code>published</code> (published view, default).</li>
      * <li><strong>IncludeSkillFiles</strong>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <code>false</code>.</li>
      * </ul>
      * 
@@ -1484,9 +1672,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li><code>tenant_id</code> is derived from the authenticated identity only. Any value passed in the body is ignored.</li>
-     * <li>Response parameters do not expose audit fields such as <code>creator</code> or <code>modifier</code>. The <code>unstructured_docs[ ].content</code> field is not returned by default to avoid large responses.</li>
-     * <li>Set the <code>includeDetails</code> parameter to <code>True</code> to retrieve additional details including <code>settings</code>, <code>notes</code>, <code>structuredTables</code>, and <code>unstructuredDocs</code>.</li>
+     * <li><code>tenant_id</code> is derived from the authenticated identity only. Any value passed in the request body is ignored.</li>
+     * <li>Response elements do not expose audit fields such as <code>creator</code> or <code>modifier</code>. The <code>unstructured_docs[ ].content</code> field is not returned by default to avoid large responses.</li>
+     * <li>Set the <code>includeDetails</code> parameter to <code>True</code> to retrieve additional details, including <code>settings</code>, <code>notes</code>, <code>structuredTables</code>, and <code>unstructuredDocs</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of GetSource  GetSourceRequest
@@ -1514,7 +1702,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li><strong>Security constraint</strong>: <code>tenant_id</code>/<code>user_id</code> are derived only from the authenticated identity. Values provided in the request body are ignored.</li>
      * <li><strong>Default value</strong>: If the <code>expires</code> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</li>
      * <li><strong>Content-Type</strong>: If <code>contentType</code> is not provided, the system attempts to automatically infer the file type.</li>
-     * <li><strong>Scope</strong>: The <code>scope</code> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</li>
+     * <li><strong>Scope</strong>: The <code>scope</code> parameter defines whether the data source belongs to a personal or enterprise knowledge base. By default, this parameter may not need to be set.</li>
      * </ul>
      * 
      * @param request the request parameters of GetSourceUploadSignature  GetSourceUploadSignatureRequest
@@ -1595,7 +1783,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>Queries user details through OpenAPI.
      *     Business orchestration:
      *     1. Locate the user by wnUserId or accountId.
-     *     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+     *     2. Query the mapping information of the user in the current tenant, including status, join time, and last logon time.
      *     3. Query the role list of the user in the current tenant.
      *     4. Query the user group list of the user in the current tenant.
      *     5. Assemble the response.
@@ -1652,11 +1840,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</li>
-     * <li><code>userGroupId</code> is a required parameter that must be provided in the request body.</li>
+     * <li><code>userGroupId</code> is a required parameter and must be provided in the request body.</li>
      * <li><code>tenantId</code> is an optional parameter that can be passed through the query string.</li>
      * <li>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</li>
      * <li>The content type for both requests and responses is <code>application/json</code>.</li>
-     * <li>Ensure that you have the required permissions (such as <code>winnexo:GetUserGroup</code>) before calling this operation.</li>
+     * <li>Make sure you have the required permissions (such as <code>winnexo:GetUserGroup</code>) before calling this operation.</li>
      * </ul>
      * 
      * @param request the request parameters of GetUserGroup  GetUserGroupRequest
@@ -1735,7 +1923,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</p>
+     * <p>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user who has the announcement viewing permission in the system O&amp;M tenant.</p>
      * 
      * @param request the request parameters of ListActiveAnnouncements  ListActiveAnnouncementsRequest
      * @return ListActiveAnnouncementsResponse
@@ -1864,11 +2052,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+     * <p>Queries the list of digital human names for which the current caller (or a specified target user) has the specified permission (USE/MANAGE).
      *     Business logic:
      *     1. Constructs an AuthContext from the identity.
      *     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
-     *     3. When skip_permission=True, returns all active agents for the tenant.
+     *     3. When skip_permission=True, returns all active agents of the tenant.
      *     4. Regular users are filtered based on authorization records and auth_mode.
      *     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</p>
      * 
@@ -1896,7 +2084,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      *     1. Constructs an AuthContext from the identity.
      *     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
      *     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
-     *     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</p>
+     *     4. When auth_mode is set to ALL_USERS, only records with the MANAGE permission are displayed.</p>
      * 
      * @param request the request parameters of ListAuthorizedUsers  ListAuthorizedUsersRequest
      * @return ListAuthorizedUsersResponse
@@ -1974,9 +2162,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</li>
+     * <li>This API operation supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</li>
      * <li>By default, results are sorted in descending order by the <code>UpdatedAt</code> field.</li>
-     * <li>If an invalid <code>NextToken</code> is provided or <code>PageSize</code> exceeds the allowed range (1-100), the API returns a 400 error.</li>
+     * <li>If an invalid <code>NextToken</code> is provided or <code>PageSize</code> exceeds the allowed range (1-100), the API operation returns a 400 error.</li>
      * </ul>
      * 
      * @param request the request parameters of ListChatSessions  ListChatSessionsRequest
@@ -2028,10 +2216,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>OpenAPI 管理视角图谱列表（含草稿/发布中状态）。
-     *     返回租户级 active 图谱；graphStatus 三态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/
-     *     PUBLISHING（当前用户发布中）；部署/系统级 Token 无个人身份，hasDraft 恒 false。
-     *     keyword 匹配 graphName / displayName（忽略大小写）；semanticTags 命中任一标签即保留。</p>
+     * <p>Queries the list of semantic graphs from the management perspective through OpenAPI, including graphs in draft or publishing status.
+     *     Returns tenant-level active graphs. graphStatus has three states: PUBLISHED, DEVELOPING (the current user has an active draft), and
+     *     PUBLISHING (the current user is publishing). Deploy-level or system-level tokens have no personal identity, so hasDraft is always false.
+     *     keyword matches graphName or displayName (case-insensitive). semanticTags retains a graph if any tag matches.</p>
      * 
      * @param request the request parameters of ListGraphSchemas  ListGraphSchemasRequest
      * @return ListGraphSchemasResponse
@@ -2076,12 +2264,54 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <p>Valid members can list the query root itself and all its descendant directories, including visible referenced directories marked as readOnly. The results are not paginated and do not return resources. The first query reuses the existing service-initialized internal root.</p>
+     * 
+     * @param request the request parameters of ListGroupDirectories  ListGroupDirectoriesRequest
+     * @return ListGroupDirectoriesResponse
+     */
+    @Override
+    public CompletableFuture<ListGroupDirectoriesResponse> listGroupDirectories(ListGroupDirectoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListGroupDirectories").setMethod(HttpMethod.POST).setPathRegex("/openapi/listGroupDirectories").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGroupDirectoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListGroupDirectoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Corresponds to the space list-resources operation. Active members can query immediate subdirectories and resources based on directory visibility scope. Results are paginated with directories listed first and include read-only references. If the directory is omitted or set to root, the existing root initialization is used. If sourceTypes has values, only resources are returned. sourceStatus follows the existing behavior where physical directories are retained and immediate reference directories are not returned.</p>
+     * 
+     * @param request the request parameters of ListGroupDirectory  ListGroupDirectoryRequest
+     * @return ListGroupDirectoryResponse
+     */
+    @Override
+    public CompletableFuture<ListGroupDirectoryResponse> listGroupDirectory(ListGroupDirectoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListGroupDirectory").setMethod(HttpMethod.POST).setPathRegex("/openapi/listGroupDirectory").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGroupDirectoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListGroupDirectoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</li>
-     * <li>If the <code>directoryId</code> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <code>directoryId</code> is provided, the API returns the subdirectory tree rooted at the specified directory.</li>
-     * <li>You can sort results by using the <code>sortField</code> and <code>sortOrder</code> parameters. By default, results are sorted by creation time in descending order.</li>
-     * <li>Security constraints: <code>tenant_id</code> and <code>user_id</code> are derived only from the authenticated identity, and the caller must have the <code>DEVELOPMENT_KB_VIEW</code> feature permission.</li>
+     * <li>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</li>
+     * <li>If the <code>directoryId</code> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <code>directoryId</code> is specified, the subdirectory tree rooted at the specified directory is returned.</li>
+     * <li>You can use the <code>sortField</code> and <code>sortOrder</code> parameters to sort the results. By default, results are sorted by creation time in descending order.</li>
+     * <li>Security constraint: <code>tenant_id</code> and <code>user_id</code> are derived only from the authenticated identity, and the caller must have the <code>DEVELOPMENT_KB_VIEW</code> feature permission.</li>
      * </ul>
      * 
      * @param request the request parameters of ListKnowledgeBaseDirectories  ListKnowledgeBaseDirectoriesRequest
@@ -2128,11 +2358,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>This API operation queries the output list of the current logged-in user.</li>
      * <li><code>tenantId</code> is a common parameter. If not specified, the default tenant of the caller is used.</li>
-     * <li>Supports filtering by parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
+     * <li>Filtering is supported through parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
      * <li>Set <code>sharedOnly</code> to <code>true</code> to display only outputs with sharing enabled.</li>
-     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of items per page). By default, results start from page 1 with 20 records per page.</li>
+     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of items per page). By default, the first page is returned with 20 records per page.</li>
      * <li>Results are sorted by update time in descending order by default.</li>
-     * <li>The <code>tenant_id</code> or <code>user_id</code> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</li>
+     * <li>The <code>tenant_id</code> or <code>user_id</code> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</li>
      * </ul>
      * 
      * @param request the request parameters of ListOutputFiles  ListOutputFilesRequest
@@ -2185,8 +2415,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Queries the list of system built-in roles.
      *     Business logic:
-     *     1. Constructs AuthContext from identity.
-     *     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+     *     1. Constructs an AuthContext from the identity.
+     *     2. Delegates to UserManagementAuthorizedService.list_system_roles to perform permission verification (PLATFORM_USER_VIEW).
      *     3. Renders role names and descriptions based on the request Accept-Language header.
      *     4. Returns a fixed set of 7 system built-in roles.
      *     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</p>
@@ -2212,12 +2442,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation uploads a file to an enterprise knowledge base.</li>
-     * <li>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</li>
-     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
+     * <li>This operation is used to upload files to an enterprise knowledge base.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this operation.</li>
+     * <li>Provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
      * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
      * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
-     * <li>You can add tags to the resource by using <code>sourceTags</code> for subsequent management and retrieval.</li>
+     * <li>You can use <code>sourceTags</code> to add tags to resources for subsequent management and retrieval.</li>
      * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</li>
      * </ul>
      * 
@@ -2275,12 +2505,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</li>
-     * <li>Multiple parameters are supported for filtering and sorting, such as <code>directoryId</code>, <code>page</code>, <code>pageSize</code>, <code>sortField</code>, <code>sortOrder</code>, and others.</li>
+     * <li>This API is used for paging query of folder content and resources in an enterprise knowledge base.</li>
+     * <li>Multiple parameters are supported for filtering and sorting, such as <code>directoryId</code>, <code>page</code>, <code>pageSize</code>, <code>sortField</code>, <code>sortOrder</code>, and more.</li>
      * <li>The <code>sourceTypes</code> parameter allows you to filter by resource type. Separate multiple types with commas.</li>
-     * <li>When <code>directoryId</code> is not specified or set to <code>root</code>, the root folder list of the knowledge base is queried by default.</li>
+     * <li>If <code>directoryId</code> is not specified or is set to <code>root</code>, the root folder list of the knowledge base is queried by default.</li>
      * <li>The default sort field is <code>name</code>, and the default sort order is ascending (<code>asc</code>).</li>
      * </ul>
      * 
@@ -2462,6 +2692,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</p>
+     * 
+     * @param request the request parameters of MoveGroupResource  MoveGroupResourceRequest
+     * @return MoveGroupResourceResponse
+     */
+    @Override
+    public CompletableFuture<MoveGroupResourceResponse> moveGroupResource(MoveGroupResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MoveGroupResource").setMethod(HttpMethod.POST).setPathRegex("/openapi/moveGroupResource").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MoveGroupResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MoveGroupResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li><strong>Authentication flow</strong>:<ol>
@@ -2548,6 +2799,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OfflineAnnouncementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Active members can preview physical or referenced resources in a specified workspace. Requests to read resources that are cross-workspace, de-referenced, or invisible are rejected.</p>
+     * 
+     * @param request the request parameters of PreviewGroupSource  PreviewGroupSourceRequest
+     * @return PreviewGroupSourceResponse
+     */
+    @Override
+    public CompletableFuture<PreviewGroupSourceResponse> previewGroupSource(PreviewGroupSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PreviewGroupSource").setMethod(HttpMethod.POST).setPathRegex("/openapi/previewGroupSource").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreviewGroupSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PreviewGroupSourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2832,6 +3104,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</p>
+     * 
+     * @param request the request parameters of ReparseGroupSource  ReparseGroupSourceRequest
+     * @return ReparseGroupSourceResponse
+     */
+    @Override
+    public CompletableFuture<ReparseGroupSourceResponse> reparseGroupSource(ReparseGroupSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ReparseGroupSource").setMethod(HttpMethod.POST).setPathRegex("/openapi/reparseGroupSource").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReparseGroupSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReparseGroupSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>This API operation re-parses a specified data source. You can choose synchronous or asynchronous execution. You must provide the data source ID in the request. You can optionally specify whether to synchronously wait for parsing to complete. By default, the request is processed asynchronously by being added to a queue. You can also use the <code>tenantId</code> parameter to specify a tenant ID, but this parameter is optional.</p>
      * <ul>
@@ -2851,6 +3144,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReparseSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</p>
+     * 
+     * @param request the request parameters of ReplaceGroupSourceFile  ReplaceGroupSourceFileRequest
+     * @return ReplaceGroupSourceFileResponse
+     */
+    @Override
+    public CompletableFuture<ReplaceGroupSourceFileResponse> replaceGroupSourceFile(ReplaceGroupSourceFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ReplaceGroupSourceFile").setMethod(HttpMethod.POST).setPathRegex("/openapi/replaceGroupSourceFile").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReplaceGroupSourceFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReplaceGroupSourceFileResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3148,17 +3462,51 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>OpenAPI 保存单个语义资源草稿（仅个人 Token）。
-     *     业务编排：
-     *     1. 草稿域身份校验（仅个人 Token；部署/系统级 Token 被拒绝）
-     *        与语义管理权限校验
-     *     2. 委托个人草稿服务保存（来源固定 YAML），底层含资源级写权限校验；
-     *        内容与在线完全一致时跳过落库，摘要字段返回 null
-     *     错误码：
-     *     - ERR.User.TokenUserOnly: 个人草稿仅支持用户 Token
-     *     - ERR.Robject.Global.InvalidParameter: resourceType/elementType 组合不合法
-     *     - ERR.GraphSchema.*: 图谱不存在 / 资源命名与归属校验失败
-     *     - ERR.Robject.Global.ResourceNotFound: 资源不存在等底层校验失败</p>
+     * <p>Batch saves personal semantic drafts through OpenAPI (personal token only).
+     *     Business orchestration:
+     *     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+     *        and semantic management permission verification.
+     *     2. saveMode dispatch: FULL_YAML (default) performs full-graph YAML differential save,
+     *        including invalidated draft discard and order collection write permission verification.
+     *        PARTIAL_YAML performs partial YAML save scoped by draftChangeIds.
+     *     3. The diff baseline is always read from the online active version by the backend (the base input parameter is not trusted).
+     *     Error codes:
+     *     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+     *     - ERR.Robject.Global.InvalidParameter: Invalid saveMode / draftChangeIds not provided for PARTIAL_YAML.
+     *     - ERR.GraphSchema.<em>: Graph does not exist / YAML structure validation failed / Custom physical table contract is invalid.
+     *     - ERR.Robject.Global.BusinessStateConflict: Related resources are being published.
+     *     - ERR.Robject.Permission.</em>: Order collection write permission verification failed.</p>
+     * 
+     * @param request the request parameters of SaveGraphDraftBatchDefine  SaveGraphDraftBatchDefineRequest
+     * @return SaveGraphDraftBatchDefineResponse
+     */
+    @Override
+    public CompletableFuture<SaveGraphDraftBatchDefineResponse> saveGraphDraftBatchDefine(SaveGraphDraftBatchDefineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SaveGraphDraftBatchDefine").setMethod(HttpMethod.POST).setPathRegex("/openapi/saveGraphDraftBatchDefine").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveGraphDraftBatchDefineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SaveGraphDraftBatchDefineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Saves a single semantic resource draft through OpenAPI (personal token only).
+     *     Business orchestration:
+     *     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+     *        and semantic management permission verification.
+     *     2. Delegates to the personal draft service for saving (source is fixed YAML). The underlying layer includes resource-level write permission verification.
+     *        If the content is identical to the online version, the database write is skipped and the summary field returns null.
+     *     Error codes:
+     *     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+     *     - ERR.Robject.Global.InvalidParameter: The resourceType/elementType combination is invalid.
+     *     - ERR.GraphSchema.*: The graph does not exist, or resource naming and ownership verification failed.
+     *     - ERR.Robject.Global.ResourceNotFound: The resource does not exist or other underlying verification failed.</p>
      * 
      * @param request the request parameters of SaveGraphDraftResource  SaveGraphDraftResourceRequest
      * @return SaveGraphDraftResourceResponse
@@ -3208,13 +3556,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</li>
-     * <li>Supports two modes: <code>link</code> (maintains output association) and <code>copy</code> (creates an independent snapshot).</li>
-     * <li>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</li>
-     * <li>If <code>directoryId</code> is not specified, the current operator\&quot;s default personal directory is used.</li>
-     * <li>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</li>
+     * <li>Saves specified group outputs to the personal knowledge base of the current operator.</li>
+     * <li>Two modes are supported: <code>link</code> (maintains the association with the output) and <code>copy</code> (creates an independent snapshot).</li>
+     * <li>The caller must be a member of the target group who is associated with a platform user. Regular members can archive only outputs they created. Group administrators can archive visible outputs of other members. The personal ownership is always derived from the gateway authentication identity.</li>
+     * <li>If <code>directoryId</code> is not specified, the default personal directory of the current operator is used.</li>
+     * <li>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</li>
      * <li>After unified validation passes, entries are saved one by one. The response results maintain the same order as <code>itemIds</code>. A failure to save a single entry does not affect other entries.</li>
      * </ul>
      * 
@@ -3239,10 +3587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API saves a batch of output details as personal resources for the user.</li>
+     * <li>This API saves a batch of output details as personal resources for a user.</li>
      * <li>Two save modes are supported: <code>link</code> and <code>copy</code>. When <code>link</code> is selected, edits to the output are synchronized to the resource. When <code>copy</code> is selected, a snapshot is created with no limit on the number of copies.</li>
      * <li><code>tenant_id</code> and <code>user_id</code> are derived only from the authenticated identity.</li>
-     * <li>If <code>operating_object</code> values are inconsistent within the batch and <code>directoryId</code> is not specified, the entire batch fails with a pre-check error.</li>
+     * <li>If the <code>operating_object</code> values within the batch are inconsistent and <code>directoryId</code> is not specified, the entire batch fails with a pre-check error.</li>
      * <li>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</li>
      * <li>A maximum of 50 records are supported per batch operation.</li>
      * <li>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</li>
@@ -3293,7 +3641,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Asynchronously sends a session message.</p>
+     * <p>Sends a session message asynchronously.</p>
      * 
      * @param request the request parameters of SendAsyncChatMessage  SendAsyncChatMessageRequest
      * @return SendAsyncChatMessageResponse
@@ -3316,12 +3664,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API operation is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
+     * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
-     * <li>A persistent OSS address (<code>filePath</code>) must be provided for the file. Other information such as the public access URL and original file name is optional.</li>
-     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the invoker.</li>
-     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</li>
-     * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
+     * <li>You must provide an OSS persistent address (<code>filePath</code>) for the file. Other information such as the public access URL and original file name is optional.</li>
+     * <li>If you do not specify a target folder ID (<code>directoryId</code>), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure the folder belongs to the invoker\&quot;s personal folder.</li>
+     * <li>Multiple authentication methods (AK, BearerToken, and APP) are supported for security authentication.</li>
+     * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
      * @param request the request parameters of SendChatMessage  SendChatMessageRequest
@@ -3577,13 +3925,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>OpenAPI 快更图谱元信息（displayName / businessProfile），同步更新 active 记录。
-     *     displayName 与 businessProfile 至少传其一，否则返回 ERR.GraphSchema.QuickUpdateNoFieldsToUpdate。
-     *     错误码：
-     *     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: 未传任何可更新字段
-     *     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-     *     - ERR.GraphSchema.GraphSchemaNotFound: 图谱不存在
-     *     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复</p>
+     * <p>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
+     *     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+     *     Error codes:
+     *     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
+     *     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
+     *     - ERR.GraphSchema.GraphSchemaNotFound: The graph does not exist.
+     *     - ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicate.</p>
      * 
      * @param request the request parameters of UpdateGraphInfo  UpdateGraphInfoRequest
      * @return UpdateGraphInfoResponse
@@ -3597,6 +3945,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateGraphInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</p>
+     * 
+     * @param request the request parameters of UpdateGroupDirectory  UpdateGroupDirectoryRequest
+     * @return UpdateGroupDirectoryResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGroupDirectoryResponse> updateGroupDirectory(UpdateGroupDirectoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateGroupDirectory").setMethod(HttpMethod.POST).setPathRegex("/openapi/updateGroupDirectory").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGroupDirectoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGroupDirectoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</p>
+     * 
+     * @param request the request parameters of UpdateGroupSourceContent  UpdateGroupSourceContentRequest
+     * @return UpdateGroupSourceContentResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGroupSourceContentResponse> updateGroupSourceContent(UpdateGroupSourceContentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateGroupSourceContent").setMethod(HttpMethod.POST).setPathRegex("/openapi/updateGroupSourceContent").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGroupSourceContentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGroupSourceContentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

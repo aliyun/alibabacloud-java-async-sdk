@@ -157,7 +157,7 @@ public class CreatePersonalTextRequest extends Request {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -194,10 +194,10 @@ public class CreatePersonalTextRequest extends Request {
         }
 
         /**
-         * <p>资源标签 JSON 字符串列表</p>
+         * <p>The list of resource tag JSON strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;重点&quot;,&quot;文本&quot;]</p>
+         * <p>[&quot;Key&quot;,&quot;Text&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.putBodyParameter("sourceTags", sourceTags);

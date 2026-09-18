@@ -423,7 +423,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code description.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -549,7 +549,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The visibility scope of the execution record, which is always equal to the visibility scope of the associated task. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC. This field is empty for personal task executions.</p>
+         * <p>The visibility scope of the execution record, which is always the same as the visibility scope of the associated task. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC. This value is empty for personal task executions.</p>
          * 
          * <strong>example:</strong>
          * <p>COLLABORATIVE</p>
@@ -767,7 +767,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user identifier that triggered the execution.</p>
+             * <p>The identifier of the user who triggered the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>user_10001</p>

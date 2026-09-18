@@ -31,6 +31,10 @@ public class GetSourceUploadSignatureRequest extends Request {
     private String filename;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    private String groupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
@@ -47,6 +51,7 @@ public class GetSourceUploadSignatureRequest extends Request {
         this.contentType = builder.contentType;
         this.expires = builder.expires;
         this.filename = builder.filename;
+        this.groupId = builder.groupId;
         this.operatingObjectName = builder.operatingObjectName;
         this.scope = builder.scope;
         this.tenantId = builder.tenantId;
@@ -87,6 +92,13 @@ public class GetSourceUploadSignatureRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return operatingObjectName
      */
     public String getOperatingObjectName() {
@@ -111,6 +123,7 @@ public class GetSourceUploadSignatureRequest extends Request {
         private String contentType; 
         private Long expires; 
         private String filename; 
+        private String groupId; 
         private String operatingObjectName; 
         private String scope; 
         private String tenantId; 
@@ -124,13 +137,18 @@ public class GetSourceUploadSignatureRequest extends Request {
             this.contentType = request.contentType;
             this.expires = request.expires;
             this.filename = request.filename;
+            this.groupId = request.groupId;
             this.operatingObjectName = request.operatingObjectName;
             this.scope = request.scope;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>The content type. Valid values: Text and Markdown.</p>
+         * <p>The content type. Valid values:</p>
+         * <ul>
+         * <li>Text</li>
+         * <li>Markdown</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -167,7 +185,19 @@ public class GetSourceUploadSignatureRequest extends Request {
         }
 
         /**
-         * <p>The name of the digital employee (operating object name). This parameter is optional.</p>
+         * <p>The collaboration space ID passed from the frontend. This parameter is required when scope is set to group. The value must be a space accessible to the current user and is used in the OSS path for locating. The value must be 1 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). This parameter is not used for other scope values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_example</p>
+         */
+        public Builder groupId(String groupId) {
+            this.putBodyParameter("groupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

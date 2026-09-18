@@ -66,6 +66,10 @@ public class SendChatMessageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workMode")
+    private String workMode;
+
     private SendChatMessageRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
@@ -80,6 +84,7 @@ public class SendChatMessageRequest extends Request {
         this.stream = builder.stream;
         this.taskExecution = builder.taskExecution;
         this.tenantId = builder.tenantId;
+        this.workMode = builder.workMode;
     }
 
     public static Builder builder() {
@@ -179,6 +184,13 @@ public class SendChatMessageRequest extends Request {
         return this.tenantId;
     }
 
+    /**
+     * @return workMode
+     */
+    public String getWorkMode() {
+        return this.workMode;
+    }
+
     public static final class Builder extends Request.Builder<SendChatMessageRequest, Builder> {
         private String content; 
         private String contentType; 
@@ -192,6 +204,7 @@ public class SendChatMessageRequest extends Request {
         private Boolean stream; 
         private TaskExecution taskExecution; 
         private String tenantId; 
+        private String workMode; 
 
         private Builder() {
             super();
@@ -211,6 +224,7 @@ public class SendChatMessageRequest extends Request {
             this.stream = request.stream;
             this.taskExecution = request.taskExecution;
             this.tenantId = request.tenantId;
+            this.workMode = request.workMode;
         } 
 
         /**
@@ -252,7 +266,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable direct connection mode. If set to true, the regular scenario routing is skipped and the direct conversation scenario is entered.</p>
+         * <p>Specifies whether to enable direct connection mode. If set to true, the standard scenario routing is skipped and the direct conversation scenario is entered directly.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -264,7 +278,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable web search. Default value: False. In task execution scenarios (when taskExecution is passed), the task configuration takes precedence.</p>
+         * <p>Specifies whether to enable web search. Default value: False. In task execution scenarios (when taskExecution is provided), the task configuration takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -298,7 +312,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to reuse the most recent session of the digital employee when sessionId is not passed (CLI scenario). Default value: false, which creates a new session.</p>
+         * <p>Specifies whether to reuse the most recent session of the digital employee when sessionId is not provided (CLI scenario). Default value: false, which creates a new session.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -352,6 +366,24 @@ public class SendChatMessageRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>The session work mode. Valid values:</p>
+         * <ul>
+         * <li>ask: Quick Q&amp;A. Tools, skills, and connectors are trimmed, and single-turn direct answers are provided.</li>
+         * <li>work: Deep work. This is the default value.</li>
+         * <li>direct: Direct connection mode (request-level). The sandbox is not started and no context pollution occurs. This is equivalent to directChat=true.</li>
+         * </ul>
+         * <p>The ask and work modes are session-level: the mode is selected and fixed when a session is created. By default, follow-up messages inherit the session mode. If an explicitly provided value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the existing one. In multi-digital-employee or task execution scenarios, if ask is provided, work takes effect instead. When directChat=true, this parameter is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work</p>
+         */
+        public Builder workMode(String workMode) {
+            this.putBodyParameter("workMode", workMode);
+            this.workMode = workMode;
             return this;
         }
 

@@ -38,6 +38,9 @@ public class SendChatMessageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
+    @com.aliyun.core.annotation.NameInMap("workMode")
+    private String workMode;
+
     private SendChatMessageResponseBody(Builder builder) {
         this.code = builder.code;
         this.content = builder.content;
@@ -45,6 +48,7 @@ public class SendChatMessageResponseBody extends TeaModel {
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.type = builder.type;
+        this.workMode = builder.workMode;
     }
 
     public static Builder builder() {
@@ -101,6 +105,13 @@ public class SendChatMessageResponseBody extends TeaModel {
         return this.type;
     }
 
+    /**
+     * @return workMode
+     */
+    public String getWorkMode() {
+        return this.workMode;
+    }
+
     public static final class Builder {
         private String code; 
         private String content; 
@@ -108,6 +119,7 @@ public class SendChatMessageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String type; 
+        private String workMode; 
 
         private Builder() {
         } 
@@ -119,6 +131,7 @@ public class SendChatMessageResponseBody extends TeaModel {
             this.message = model.message;
             this.requestId = model.requestId;
             this.type = model.type;
+            this.workMode = model.workMode;
         } 
 
         /**
@@ -184,6 +197,23 @@ public class SendChatMessageResponseBody extends TeaModel {
          */
         public Builder type(String type) {
             this.type = type;
+            return this;
+        }
+
+        /**
+         * <p>The session work mode that takes effect for the current turn. Valid values:</p>
+         * <ul>
+         * <li>ask: Quick Q&amp;A.</li>
+         * <li>work: Deep work.</li>
+         * <li>direct: Direct connection (request-level).</li>
+         * </ul>
+         * <p>In multi-digital-employee or task execution scenarios, if ask is provided, work takes effect instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work</p>
+         */
+        public Builder workMode(String workMode) {
+            this.workMode = workMode;
             return this;
         }
 

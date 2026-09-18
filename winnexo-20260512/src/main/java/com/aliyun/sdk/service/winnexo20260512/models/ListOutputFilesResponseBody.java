@@ -195,7 +195,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of outputs that match the specified conditions.</p>
+         * <p>The total number of outputs that meet the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -301,7 +301,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content type, such as MARKDOWN/JSONML/HTML.</p>
+             * <p>The content type, such as MARKDOWN, JSONML, or HTML.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -831,7 +831,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email information. This field is present when the output type is email.</p>
+             * <p>The email information. This field is present only when the output type is email.</p>
              */
             public Builder emailInfo(EmailInfo emailInfo) {
                 this.emailInfo = emailInfo;
@@ -839,7 +839,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file information. This field is present when the output type is file.</p>
+             * <p>The file information. This field is present only when the output type is file.</p>
              */
             public Builder fileInfo(FileInfo fileInfo) {
                 this.fileInfo = fileInfo;
@@ -935,7 +935,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The share token that is present when sharing is enabled. You can use this token to access the public share preview API.</p>
+             * <p>The share token. This field is present only when sharing is enabled. You can use this token to access the public share preview endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>example_share_token</p>
@@ -957,7 +957,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slides information. This field is present when the output type is slides.</p>
+             * <p>The slides information. This field is present only when the output type is slides.</p>
              */
             public Builder slidesInfo(SlidesInfo slidesInfo) {
                 this.slidesInfo = slidesInfo;
@@ -1152,7 +1152,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The conversation ID.</p>
+             * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleConversationId</p>
@@ -1226,7 +1226,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output type: <code>conversation/skill/task</code>.</p>
+             * <p>The output type. Valid values: <code>conversation/skill/task</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>conversation</p>
@@ -1259,7 +1259,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>string_example_value</p>

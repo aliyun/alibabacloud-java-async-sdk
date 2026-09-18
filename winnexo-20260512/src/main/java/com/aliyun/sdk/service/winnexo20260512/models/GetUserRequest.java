@@ -99,7 +99,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * <p>The WINNEXO logon account. This is a unique identifier and cannot be empty.</p>
+         * <p>The WINNEXO logon account. This parameter is a unique identifier and cannot be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleAccountId</p>

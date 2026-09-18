@@ -87,7 +87,7 @@ public class ListGraphSchemasRequest extends Request {
         } 
 
         /**
-         * <p>关键词，匹配 graphName / displayName（可选，忽略大小写）</p>
+         * <p>The keyword for fuzzy match of component data in the form.</p>
          * 
          * <strong>example:</strong>
          * <p>crm</p>
@@ -99,10 +99,10 @@ public class ListGraphSchemasRequest extends Request {
         }
 
         /**
-         * <p>语义标签过滤（可选，命中任一标签即保留）</p>
+         * <p>The semantic tags used for filtering. A graph is retained if any tag matches.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;销售&quot;]</p>
+         * <p>[&quot;Sales&quot;]</p>
          */
         public Builder semanticTags(java.util.List<String> semanticTags) {
             String semanticTagsShrink = shrink(semanticTags, "semanticTags", "json");
@@ -112,7 +112,7 @@ public class ListGraphSchemasRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

@@ -215,7 +215,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

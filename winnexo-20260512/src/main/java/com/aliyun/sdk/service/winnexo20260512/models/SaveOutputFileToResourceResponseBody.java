@@ -93,7 +93,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
+         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* or InvalidParameter.*).</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error description. This value is empty on success.</p>
+         * <p>The error description. This value is empty when the operation succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -126,7 +126,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The per-record results in the same order as the input itemIds. A single record failure does not affect other records.</p>
+         * <p>The per-record results, in the same order as the input itemIds. A failure of a single record does not affect other records.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -231,7 +231,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business error code (i18n key). Returned on failure.</p>
+             * <p>The business error code (i18n key) returned on failure.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -242,7 +242,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error description, localized based on the request Accept-Language header. Returned on failure.</p>
+             * <p>The error description returned on failure, localized based on the request locale.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -264,7 +264,7 @@ public class SaveOutputFileToResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sourceId of the newly created resource. Returned on success.</p>
+             * <p>The sourceId of the newly created resource, returned on success.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleSourceId</p>

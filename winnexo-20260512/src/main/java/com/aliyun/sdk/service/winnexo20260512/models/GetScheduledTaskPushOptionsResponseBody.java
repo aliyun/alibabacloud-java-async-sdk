@@ -125,10 +125,10 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt displayed when no third-party accounts are bound.</p>
+         * <p>The hint displayed when no third-party accounts are bound.</p>
          * 
          * <strong>example:</strong>
-         * <p>No push channels available</p>
+         * <p>No push channels are available</p>
          */
         public Builder emptyHint(String emptyHint) {
             this.emptyHint = emptyHint;
@@ -136,7 +136,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -246,7 +246,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
              * <p>The external IM group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Project collaboration group</p>
+             * <p>Project Collaboration Group</p>
              */
             public Builder imGroupName(String imGroupName) {
                 this.imGroupName = imGroupName;
@@ -365,7 +365,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature switch. This parameter is optional when type is set to web_search.</p>
+             * <p>Specifies whether the feature is enabled. This parameter is optional when type is set to web_search.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -393,7 +393,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Group chatbot</p>
+             * <p>Group Chatbot</p>
              */
             public Builder name(String name) {
                 this.name = name;

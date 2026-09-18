@@ -132,7 +132,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p><strong>The list of direct child user groups.</strong></p>
+         * <p><strong>Direct child user group list</strong></p>
          */
         public Builder childGroups(java.util.List<?> childGroups) {
             this.childGroups = childGroups;
@@ -151,7 +151,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>The list of direct members in the current user group.</strong></p>
+         * <p><strong>Direct member list of the current user group</strong></p>
          */
         public Builder members(java.util.List<?> members) {
             this.members = members;
@@ -170,7 +170,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>The parent user group information. This is empty for the root node.</strong></p>
+         * <p><strong>Parent user group information. This value is empty for the root node.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;userGroupId&quot;:&quot;b07fb0a4-0b7d-44a7-a3d5-a43a5964c8f0&quot;,&quot;userGroupName&quot;:&quot;Sales Center&quot;,&quot;parentId&quot;:null,&quot;level&quot;:1,&quot;description&quot;:&quot;Sales organization&quot;,&quot;childGroupCount&quot;:1,&quot;directMemberCount&quot;:0,&quot;sourceType&quot;:&quot;internal&quot;,&quot;externalSyncStatus&quot;:null,&quot;gmtCreate&quot;:&quot;2026-08-27T08:00:00Z&quot;,&quot;gmtModified&quot;:&quot;2026-08-27T08:00:00Z&quot;}</p>
@@ -192,10 +192,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>The target user group information.</strong></p>
+         * <p><strong>Target user group information</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;userGroupId&quot;:&quot;7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11&quot;,&quot;userGroupName&quot;:&quot;South China Sales&quot;,&quot;parentId&quot;:&quot;b07fb0a4-0b7d-44a7-a3d5-a43a5964c8f0&quot;,&quot;level&quot;:2,&quot;description&quot;:&quot;South China Sales organization&quot;,&quot;childGroupCount&quot;:0,&quot;directMemberCount&quot;:2,&quot;sourceType&quot;:&quot;internal&quot;,&quot;externalSyncStatus&quot;:null,&quot;gmtCreate&quot;:&quot;2026-08-27T09:00:00Z&quot;,&quot;gmtModified&quot;:&quot;2026-08-27T10:00:00Z&quot;}</p>
+         * <p>{&quot;userGroupId&quot;:&quot;7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11&quot;,&quot;userGroupName&quot;:&quot;South China Sales&quot;,&quot;parentId&quot;:&quot;b07fb0a4-0b7d-44a7-a3d5-a43a5964c8f0&quot;,&quot;level&quot;:2,&quot;description&quot;:&quot;South China sales organization&quot;,&quot;childGroupCount&quot;:0,&quot;directMemberCount&quot;:2,&quot;sourceType&quot;:&quot;internal&quot;,&quot;externalSyncStatus&quot;:null,&quot;gmtCreate&quot;:&quot;2026-08-27T09:00:00Z&quot;,&quot;gmtModified&quot;:&quot;2026-08-27T10:00:00Z&quot;}</p>
          */
         public Builder userGroup(Object userGroup) {
             this.userGroup = userGroup;

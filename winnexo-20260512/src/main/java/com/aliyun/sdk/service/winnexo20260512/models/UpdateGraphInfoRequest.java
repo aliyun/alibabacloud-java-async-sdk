@@ -102,10 +102,10 @@ public class UpdateGraphInfoRequest extends Request {
         } 
 
         /**
-         * <p>业务说明（可选；传空串表示清空；与 displayName 至少传其一）</p>
+         * <p>The business description of the knowledge graph. If not configured, the value is an empty string.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户域语义图谱</p>
+         * <p>Customer domain knowledge graph</p>
          */
         public Builder businessProfile(String businessProfile) {
             this.putBodyParameter("businessProfile", businessProfile);
@@ -114,10 +114,10 @@ public class UpdateGraphInfoRequest extends Request {
         }
 
         /**
-         * <p>图谱展示名（可选，最多200字；传空串或纯空白会被拒绝；与 businessProfile 至少传其一）</p>
+         * <p>The display name of the knowledge graph.</p>
          * 
          * <strong>example:</strong>
-         * <p>CRM 图谱</p>
+         * <p>CRM Graph</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -126,7 +126,7 @@ public class UpdateGraphInfoRequest extends Request {
         }
 
         /**
-         * <p>图谱名称</p>
+         * <p>The name of the knowledge graph.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class UpdateGraphInfoRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

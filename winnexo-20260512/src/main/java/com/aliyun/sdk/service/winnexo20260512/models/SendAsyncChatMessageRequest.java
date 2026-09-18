@@ -66,6 +66,10 @@ public class SendAsyncChatMessageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workMode")
+    private String workMode;
+
     private SendAsyncChatMessageRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
@@ -80,6 +84,7 @@ public class SendAsyncChatMessageRequest extends Request {
         this.stream = builder.stream;
         this.taskExecution = builder.taskExecution;
         this.tenantId = builder.tenantId;
+        this.workMode = builder.workMode;
     }
 
     public static Builder builder() {
@@ -179,6 +184,13 @@ public class SendAsyncChatMessageRequest extends Request {
         return this.tenantId;
     }
 
+    /**
+     * @return workMode
+     */
+    public String getWorkMode() {
+        return this.workMode;
+    }
+
     public static final class Builder extends Request.Builder<SendAsyncChatMessageRequest, Builder> {
         private String content; 
         private String contentType; 
@@ -192,6 +204,7 @@ public class SendAsyncChatMessageRequest extends Request {
         private Boolean stream; 
         private TaskExecution taskExecution; 
         private String tenantId; 
+        private String workMode; 
 
         private Builder() {
             super();
@@ -211,6 +224,7 @@ public class SendAsyncChatMessageRequest extends Request {
             this.stream = request.stream;
             this.taskExecution = request.taskExecution;
             this.tenantId = request.tenantId;
+            this.workMode = request.workMode;
         } 
 
         /**
@@ -239,7 +253,7 @@ public class SendAsyncChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The list of digital employee names. A single string can be passed for backward compatibility with the legacy format.</p>
+         * <p>The list of digital employee names. A single string is also accepted for backward compatibility with the legacy format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -252,7 +266,7 @@ public class SendAsyncChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable direct chat mode. If set to true, the regular scenario routing is skipped and the direct chat scenario is entered.</p>
+         * <p>Specifies whether to enable direct connection mode. If set to true, the regular scenario routing is skipped and the direct conversation scenario is entered.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -264,7 +278,7 @@ public class SendAsyncChatMessageRequest extends Request {
         }
 
         /**
-         * <p>是否启用联网搜索，默认 False；任务执行场景（传 taskExecution）下以任务配置为准</p>
+         * <p>Specifies whether to enable web search. Default value: False. In task execution scenarios where taskExecution is specified, the task configuration takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -322,7 +336,7 @@ public class SendAsyncChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use streaming generation. This operation always generates backend content in streaming mode and writes it to the message stream. The value does not change the response structure.</p>
+         * <p>Specifies whether to use streaming generation. This operation always generates backend content in streaming mode and writes it to the message stream. The value of this parameter does not change the response structure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -334,7 +348,7 @@ public class SendAsyncChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The task execution metadata returned by executeScheduledTask. When provided, the request is processed through the task execution pipeline.</p>
+         * <p>The task execution metadata returned by executeScheduledTask. If specified, the request is processed through the task execution pipeline.</p>
          */
         public Builder taskExecution(TaskExecution taskExecution) {
             String taskExecutionShrink = shrink(taskExecution, "taskExecution", "json");
@@ -352,6 +366,24 @@ public class SendAsyncChatMessageRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>The session work mode. Valid values:</p>
+         * <ul>
+         * <li>ask: Quick Q&amp;A. Tools, skills, and connectors are trimmed, and a single-turn direct answer is returned.</li>
+         * <li>work: Deep work. This is the default value.</li>
+         * <li>direct: Direct connection mode at the request level. No sandbox is started and no context pollution occurs. This is equivalent to setting directChat to true.</li>
+         * </ul>
+         * <p>The ask and work modes are session-level settings. The mode is fixed when a session is created. By default, follow-up messages in the same session inherit the session mode. If an explicit value conflicts with the session mode, a parameter error is returned. To switch modes, create a new session or fork the existing one. In multi-digital-employee or task execution scenarios, specifying ask causes the work mode to take effect. If directChat is set to true, this parameter is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work</p>
+         */
+        public Builder workMode(String workMode) {
+            this.putBodyParameter("workMode", workMode);
+            this.workMode = workMode;
             return this;
         }
 

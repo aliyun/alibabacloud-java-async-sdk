@@ -132,10 +132,10 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>更新后的业务说明，未设置时为空</p>
+         * <p>The business description of the knowledge graph. If not configured, the value is an empty string.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户域语义图谱</p>
+         * <p>Customer domain knowledge graph</p>
          */
         public Builder businessProfile(String businessProfile) {
             this.businessProfile = businessProfile;
@@ -143,7 +143,7 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>SUCCESS indicates success. In failure cases, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,10 +154,10 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>更新后的图谱展示名，未设置时为空</p>
+         * <p>The display name of the knowledge graph.</p>
          * 
          * <strong>example:</strong>
-         * <p>CRM 图谱</p>
+         * <p>CRM Graph</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -165,7 +165,7 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>图谱名称</p>
+         * <p>The name of the knowledge graph.</p>
          * 
          * <strong>example:</strong>
          * <p>crm_graph</p>
@@ -176,7 +176,7 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -187,7 +187,7 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -198,7 +198,7 @@ public class UpdateGraphInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否更新成功</p>
+         * <p>The updated items.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

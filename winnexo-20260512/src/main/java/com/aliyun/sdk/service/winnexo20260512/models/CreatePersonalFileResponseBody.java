@@ -169,7 +169,7 @@ public class CreatePersonalFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The directory ID.</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>

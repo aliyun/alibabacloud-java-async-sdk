@@ -169,7 +169,7 @@ public class CreatePersonalTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -224,7 +224,7 @@ public class CreatePersonalTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The travel scale of the integration partner.</p>
+         * <p>The travel scale of the partner.</p>
          * 
          * <strong>example:</strong>
          * <p>read:user,read:repo,write:repo,read:org,read:group</p>
@@ -248,13 +248,13 @@ public class CreatePersonalTextResponseBody extends TeaModel {
         /**
          * <p>The filter status.</p>
          * <ul>
-         * <li><p>0: All</p>
+         * <li><p>0: All.</p>
          * </li>
-         * <li><p>1: Unconfirmed</p>
+         * <li><p>1: Unconfirmed.</p>
          * </li>
-         * <li><p>3: Ignored</p>
+         * <li><p>3: Ignored.</p>
          * </li>
-         * <li><p>4: Rejected</p>
+         * <li><p>4: Rejected.</p>
          * </li>
          * </ul>
          * 

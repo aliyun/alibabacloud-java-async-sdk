@@ -184,7 +184,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>草稿变更 ID；内容与在线完全一致被跳过时为 null</p>
+         * <p>The draft change ID (the draftChangeId returned by listGraphDraftResources).</p>
          * 
          * <strong>example:</strong>
          * <p>401001</p>
@@ -206,7 +206,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>草稿内容哈希；被跳过时为 null</p>
+         * <p>The online content hash on which the draft save is based (draft starting point), a 64-character SHA-256 hexadecimal string.</p>
          * 
          * <strong>example:</strong>
          * <p>sha256:abc123</p>
@@ -217,7 +217,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源小类：resourceType=object 时固定 object_type；resourceType=element 时为 indicator / logic / process / rule / analysis 之一</p>
+         * <p>The element type. Currently, only text is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>object_type</p>
@@ -228,7 +228,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>最后修改时间（ISO8601）；被跳过时为 null</p>
+         * <p>The last modified time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-08T10:30:00+00:00</p>
@@ -239,7 +239,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>图谱名称</p>
+         * <p>The graph name.</p>
          * 
          * <strong>example:</strong>
          * <p>crm_graph</p>
@@ -250,7 +250,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -261,7 +261,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作类型：CREATE / UPDATE（由底层判定）；被跳过时为 null</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATE</p>
@@ -272,7 +272,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -283,7 +283,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源名</p>
+         * <p>The resource name.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -294,7 +294,7 @@ public class SaveGraphDraftResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源大类：object（对象）/ element（业务元素）</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>object</p>

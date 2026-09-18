@@ -104,7 +104,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The MCP card list.</p>
+         * <p>The list of MCP cards.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -251,7 +251,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the enable/disable operation is allowed. Super administrators and application users cannot be switched.</p>
+             * <p>Indicates whether the enable/disable operation is allowed. Super administrators and application users cannot be toggled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
