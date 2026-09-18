@@ -116,7 +116,10 @@ public class KopilotFeedbackRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The user feedback comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>good</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -125,7 +128,15 @@ public class KopilotFeedbackRequest extends Request {
         }
 
         /**
-         * Feedback.
+         * <p>The user satisfaction level. Valid values:</p>
+         * <ul>
+         * <li>1: satisfied</li>
+         * <li>-1: not satisfied</li>
+         * <li>0: cancel the evaluation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder feedback(String feedback) {
             this.putQueryParameter("Feedback", feedback);
@@ -134,6 +145,7 @@ public class KopilotFeedbackRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +158,10 @@ public class KopilotFeedbackRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e356c91c-8220-425c-9d86-********</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -155,7 +170,10 @@ public class KopilotFeedbackRequest extends Request {
         }
 
         /**
-         * TurnId.
+         * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5243231*****</p>
          */
         public Builder turnId(String turnId) {
             this.putQueryParameter("TurnId", turnId);

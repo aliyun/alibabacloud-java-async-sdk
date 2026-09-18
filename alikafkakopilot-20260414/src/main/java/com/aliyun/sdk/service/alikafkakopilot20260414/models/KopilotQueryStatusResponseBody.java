@@ -93,7 +93,10 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The status information returned when the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DF166F2-F581-5254-AAB6-B482083FA7B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +231,10 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * ActivateTime.
+             * <p>The UNIX timestamp when the instance was activated, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17346565678778</p>
              */
             public Builder activateTime(Long activateTime) {
                 this.activateTime = activateTime;
@@ -230,7 +242,10 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -238,7 +253,10 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LifeStatus.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NotActivated</p>
              */
             public Builder lifeStatus(String lifeStatus) {
                 this.lifeStatus = lifeStatus;
@@ -246,7 +264,10 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,7 +275,10 @@ public class KopilotQueryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>The UID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>206022063004684756</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

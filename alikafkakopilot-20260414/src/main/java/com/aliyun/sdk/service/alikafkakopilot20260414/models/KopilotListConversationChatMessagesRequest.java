@@ -34,12 +34,22 @@ public class KopilotListConversationChatMessagesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskCursor")
+    private String taskCursor;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskPageSize")
+    private Integer taskPageSize;
+
     private KopilotListConversationChatMessagesRequest(Builder builder) {
         super(builder);
         this.beforeTurnId = builder.beforeTurnId;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
+        this.taskCursor = builder.taskCursor;
+        this.taskPageSize = builder.taskPageSize;
     }
 
     public static Builder builder() {
@@ -83,11 +93,27 @@ public class KopilotListConversationChatMessagesRequest extends Request {
         return this.sessionId;
     }
 
+    /**
+     * @return taskCursor
+     */
+    public String getTaskCursor() {
+        return this.taskCursor;
+    }
+
+    /**
+     * @return taskPageSize
+     */
+    public Integer getTaskPageSize() {
+        return this.taskPageSize;
+    }
+
     public static final class Builder extends Request.Builder<KopilotListConversationChatMessagesRequest, Builder> {
         private Integer beforeTurnId; 
         private Integer pageSize; 
         private String regionId; 
         private String sessionId; 
+        private String taskCursor; 
+        private Integer taskPageSize; 
 
         private Builder() {
             super();
@@ -99,10 +125,18 @@ public class KopilotListConversationChatMessagesRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
+            this.taskCursor = request.taskCursor;
+            this.taskPageSize = request.taskPageSize;
         } 
 
         /**
-         * BeforeTurnId.
+         * <p>The cursor.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified, the last pageSize turn IDs are returned. If this parameter is specified, the turn IDs before the specified turn ID are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2345</p>
          */
         public Builder beforeTurnId(Integer beforeTurnId) {
             this.putQueryParameter("BeforeTurnId", beforeTurnId);
@@ -111,7 +145,10 @@ public class KopilotListConversationChatMessagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -120,6 +157,7 @@ public class KopilotListConversationChatMessagesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,11 +170,38 @@ public class KopilotListConversationChatMessagesRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e356c91c-8220-425c-9d86-********</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * <p>The pagination cursor. Do not specify this parameter for the first query. For subsequent queries, pass in the value of Data.ScheduledTaskInfo.NextTaskCursor from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
+        public Builder taskCursor(String taskCursor) {
+            this.putQueryParameter("TaskCursor", taskCursor);
+            this.taskCursor = taskCursor;
+            return this;
+        }
+
+        /**
+         * <p>The number of scheduled tasks per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        public Builder taskPageSize(Integer taskPageSize) {
+            this.putQueryParameter("TaskPageSize", taskPageSize);
+            this.taskPageSize = taskPageSize;
             return this;
         }
 

@@ -184,7 +184,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The actual content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -192,7 +195,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Delta.
+         * <p>The streaming incremental content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder delta(String delta) {
             this.delta = delta;
@@ -200,7 +206,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -208,7 +217,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The unique message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4b209618fd066c4354037b4b0634ffc9</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -216,7 +228,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76E1F1AA-6046-5074-96E2-79A37AFBD2FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -224,7 +239,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The role identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assistant</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -232,7 +250,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * RunId.
+         * <p>The run task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5737d000********</p>
          */
         public Builder runId(String runId) {
             this.runId = runId;
@@ -240,7 +261,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * ThreadId.
+         * <p>The session thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thread_abc123xyz</p>
          */
         public Builder threadId(String threadId) {
             this.threadId = threadId;
@@ -248,7 +272,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * ToolCallId.
+         * <p>The unique tool calling invoke ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>call_xyz789012</p>
          */
         public Builder toolCallId(String toolCallId) {
             this.toolCallId = toolCallId;
@@ -256,7 +283,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * ToolCallName.
+         * <p>The tool or function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search_knowledge_base</p>
          */
         public Builder toolCallName(String toolCallName) {
             this.toolCallName = toolCallName;
@@ -264,7 +294,10 @@ public class KopilotChatStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The event or message type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>delta</p>
          */
         public Builder type(String type) {
             this.type = type;

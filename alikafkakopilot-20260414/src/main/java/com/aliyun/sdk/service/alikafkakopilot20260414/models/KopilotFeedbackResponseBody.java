@@ -93,7 +93,10 @@ public class KopilotFeedbackResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class KopilotFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned when the call is successful.</p>
          */
         public Builder data(java.util.Map<String, Long> data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class KopilotFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E522C7AB-AA99-53B1-BEE7-8BA83ED678F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class KopilotFeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
