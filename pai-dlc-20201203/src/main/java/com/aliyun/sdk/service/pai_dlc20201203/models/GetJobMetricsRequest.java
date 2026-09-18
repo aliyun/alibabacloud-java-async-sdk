@@ -131,7 +131,7 @@ public class GetJobMetricsRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. You can call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to query all job IDs.</p>
+         * <p>The node ID. You can call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the IDs of all nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the time range to query monitoring data. The time is displayed in UTC. The default value is the current time.</p>
+         * <p>The end time (UTC) of the time range for querying monitoring data. Default value: the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-09T16:00:00Z</p>
@@ -156,16 +156,24 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * <p>The type of the monitoring metrics. Valid values:</p>
+         * <p>The metric type of the monitoring data to query. Valid values:</p>
          * <ul>
-         * <li>GpuCoreUsage: GPU utilization</li>
-         * <li>GpuMemoryUsage: GPU memory utilization</li>
-         * <li>CpuCoreUsage: CPU utilization</li>
-         * <li>MemoryUsage: memory utilization</li>
-         * <li>NetworkInputRate: the network write in rate.</li>
-         * <li>NetworkOutputRate: the network write out rate</li>
-         * <li>DiskReadRate: the disk read rate</li>
-         * <li>DiskWriteRate: the disk write rate</li>
+         * <li><p>GpuCoreUsage: GPU utilization.</p>
+         * </li>
+         * <li><p>GpuMemoryUsage: GPU memory usage.</p>
+         * </li>
+         * <li><p>CpuCoreUsage: CPU utilization.</p>
+         * </li>
+         * <li><p>MemoryUsage: memory usage.</p>
+         * </li>
+         * <li><p>NetworkInputRate: network input rate.</p>
+         * </li>
+         * <li><p>NetworkOutputRate: network output rate.</p>
+         * </li>
+         * <li><p>DiskReadRate: disk read rate.</p>
+         * </li>
+         * <li><p>DiskWriteRate: disk write rate.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -179,7 +187,7 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query monitoring data. The time is displayed in UTC. The default value is the time 1 hour before the current time.</p>
+         * <p>The start time (UTC) of the time range for querying monitoring data. Default value: one hour before the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-08T16:00:00Z</p>
@@ -191,7 +199,7 @@ public class GetJobMetricsRequest extends Request {
         }
 
         /**
-         * <p>The interval at which monitoring data is returned. Default value: 5. Unit: minutes.</p>
+         * <p>The time interval at which monitoring data is returned. Default value: 5 minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>

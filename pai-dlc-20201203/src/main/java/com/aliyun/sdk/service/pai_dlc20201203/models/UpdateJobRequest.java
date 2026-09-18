@@ -191,6 +191,9 @@ public class UpdateJobRequest extends Request {
 
         /**
          * <p>The user command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sleep 1d</p>
          */
         public Builder userCommand(String userCommand) {
             this.putBodyParameter("UserCommand", userCommand);

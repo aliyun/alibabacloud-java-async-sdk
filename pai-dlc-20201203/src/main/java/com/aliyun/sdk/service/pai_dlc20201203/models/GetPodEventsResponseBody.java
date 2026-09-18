@@ -107,7 +107,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The events returned.</p>
+         * <p>The list of events.</p>
          */
         public Builder events(java.util.List<String> events) {
             this.events = events;
@@ -138,7 +138,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node UID.</p>
+         * <p>The instance UID.</p>
          * 
          * <strong>example:</strong>
          * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>
@@ -149,7 +149,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used for troubleshooting.</p>
+         * <p>The request ID, which is used for diagnostics and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

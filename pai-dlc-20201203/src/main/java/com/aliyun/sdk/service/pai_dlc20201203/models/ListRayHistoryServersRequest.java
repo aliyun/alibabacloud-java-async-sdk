@@ -283,7 +283,7 @@ public class ListRayHistoryServersRequest extends Request {
         } 
 
         /**
-         * <p>The display name of the job.</p>
+         * <p>The display name of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -295,7 +295,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query range. The job creation time is used for filtering.</p>
+         * <p>The end time of the query range. The node creation time is used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-09T16:00:00Z</p>
@@ -310,7 +310,7 @@ public class ListRayHistoryServersRequest extends Request {
          * <p>The ID prefix.</p>
          * 
          * <strong>example:</strong>
-         * <p>按ID前缀过滤</p>
+         * <p>Filter by ID prefix</p>
          */
         public Builder idPrefix(String idPrefix) {
             this.putQueryParameter("IdPrefix", idPrefix);
@@ -319,7 +319,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>Filters results by the time after which they were modified.</p>
+         * <p>Filters results by the time after which the resource was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-09T16:00:00Z</p>
@@ -333,8 +333,8 @@ public class ListRayHistoryServersRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>desc: descending order.</li>
-         * <li>asc: ascending order.</li>
+         * <li>desc: descending order</li>
+         * <li>asc: ascending order</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,7 +347,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return in a paged query. Paging starts from page 1.</p>
+         * <p>The page number for a paging query. Paging starts from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -359,7 +359,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The number of RayHistoryServer entries to return on each page in a paged query. Paging is used to return results in batches.</p>
+         * <p>The number of RayHistoryServers to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -371,10 +371,10 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The payment method. Valid values:</p>
          * <ul>
          * <li>PrePaid</li>
-         * <li>PostPaid.</li>
+         * <li>PostPaid</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +387,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. For information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
+         * <p>The resource group ID. To query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>quotaxxx</p>
@@ -399,7 +399,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return only the RayHistoryServer entries created by the current user.</p>
+         * <p>Specifies whether to return only the RayHistoryServers created by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -411,14 +411,14 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the returned results. Valid values:</p>
+         * <p>The field by which to sort the results. Valid values:</p>
          * <ul>
          * <li>DisplayName</li>
          * <li>GmtCreateTime</li>
          * <li>UserId</li>
          * <li>ResourceId</li>
          * <li>Status</li>
-         * <li>GmtModifyTime.</li>
+         * <li>GmtModifyTime</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -443,13 +443,13 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The RayHistoryServer status. Valid values:</p>
+         * <p>The status of the RayHistoryServer. Valid values:</p>
          * <ul>
-         * <li>Creating: being created.</li>
-         * <li>Queuing: waiting in queue.</li>
-         * <li>Running: running.</li>
-         * <li>Stopped: stopped.</li>
-         * <li>Failed: failed.</li>
+         * <li>Creating: The RayHistoryServer is being created.</li>
+         * <li>Queuing: The RayHistoryServer is queuing.</li>
+         * <li>Running: The RayHistoryServer is running.</li>
+         * <li>Stopped: The RayHistoryServer is stopped.</li>
+         * <li>Failed: The RayHistoryServer has failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -462,7 +462,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The storage path of Ray logs.</p>
+         * <p>The storage path for Ray logs.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket-test-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/tmp</p>
@@ -498,7 +498,7 @@ public class ListRayHistoryServersRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>..</p>
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>268</p>

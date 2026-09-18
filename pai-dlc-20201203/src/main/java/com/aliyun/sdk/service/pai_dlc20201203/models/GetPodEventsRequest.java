@@ -131,7 +131,7 @@ public class GetPodEventsRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</p>
+         * <p>The job ID. You can call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * <p>The node ID. Call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to get the node ID.</p>
+         * <p>The node ID. You can call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to obtain the node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * <p>The end time (UTC).</p>
+         * <p>The end time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-09T16:00:00Z</p>
@@ -169,7 +169,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of events that can be returned.</p>
+         * <p>The maximum number of events to return.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -181,7 +181,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * <p>The node UID. Call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to get the node UID.</p>
+         * <p>The node UID. You can call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to obtain the node UID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-20210126170216-*****-chief-0</p>
@@ -193,7 +193,7 @@ public class GetPodEventsRequest extends Request {
         }
 
         /**
-         * <p>The start time (UTC).</p>
+         * <p>The start time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-08T16:00:00Z</p>

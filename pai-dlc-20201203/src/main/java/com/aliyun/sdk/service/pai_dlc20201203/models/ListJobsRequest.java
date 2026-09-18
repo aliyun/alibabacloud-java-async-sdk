@@ -617,7 +617,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job name. Supports fuzzy search. Case-insensitive. Wildcards are not supported.
+         * <p>The job name. Supports fuzzy match and is case-insensitive. Wildcards are not supported.
          * For example, entering test matches test-job1, job-test, job-test2, or job-Test, but does not match job-t1.
          * Default value: empty, which indicates all job names.</p>
          * 
@@ -631,7 +631,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The search mode for DisplayName. Default value: wildcard matching.</p>
+         * <p>The search mode for DisplayName. Default value: wildcard match.</p>
          * 
          * <strong>example:</strong>
          * <p>wildcard</p>
@@ -643,7 +643,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Filters jobs based on whether assigned-node execution is enabled.</p>
+         * <p>Specifies whether to filter jobs that have assigned node execution enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -667,7 +667,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retrieve jobs across all workspaces. Use this parameter together with <code>ShowOwn=true</code> to query the jobs recently submitted by the current user.</p>
+         * <p>Specifies whether to retrieve jobs across all workspaces. This parameter must be used together with <code>ShowOwn=true</code> to query the jobs recently submitted by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -679,7 +679,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Performs a full-text search in the image (images) field. Supports Chinese and English word segmentation.</p>
+         * <p>Performs a full-text index retrieve on the image (images) field. Supports Chinese and English tokenization.</p>
          * 
          * <strong>example:</strong>
          * <p>pytorch</p>
@@ -691,7 +691,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job ID. Fuzzy search is not supported. Case-insensitive. Wildcards are not supported.
+         * <p>The job ID. Fuzzy match is not supported. Case-insensitive. Wildcards are not supported.
          * Default value: empty, which indicates all job IDs.</p>
          * 
          * <strong>example:</strong>
@@ -704,7 +704,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The list of job IDs, separated by commas (,). If both JobIds and JobId are specified, JobId takes precedence.</p>
+         * <p>A list of job IDs separated by commas. If both JobIds and JobId are specified, JobId takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc123abc</p>
@@ -735,7 +735,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The field name for numeric range filtering. Use this parameter together with NumericRangeMin/NumericRangeMax.</p>
+         * <p>The field name for numeric range filtering. Must be used together with NumericRangeMin or NumericRangeMax.</p>
          * 
          * <strong>example:</strong>
          * <p>RequestGPU</p>
@@ -747,7 +747,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The maximum value (inclusive) for numeric range filtering. Use this parameter together with NumericRangeField.</p>
+         * <p>The maximum value (inclusive) for numeric range filtering. Must be used together with NumericRangeField.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -759,7 +759,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The minimum value (inclusive) for numeric range filtering. Use this parameter together with NumericRangeField.</p>
+         * <p>The minimum value (inclusive) for numeric range filtering. Must be used together with NumericRangeField.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -805,7 +805,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number to return. Minimum value: 1. Default value: 1.</p>
+         * <p>The page number to return in a paged query. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -831,9 +831,9 @@ public class ListJobsRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>PrePaid: Resource quota.</li>
-         * <li>Spot: Spot resource.</li>
-         * <li>PostPaid: Public resource.</li>
+         * <li>PrePaid: resource quota.</li>
+         * <li>Spot: preemptible resources.</li>
+         * <li>PostPaid: public resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -846,7 +846,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Filters jobs created by the specified pipeline ID.</p>
+         * <p>Filters jobs created by the specified workflow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>flow-*******</p>
@@ -858,7 +858,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Performs a full-text search in the job failure reason (reason) field. Supports Chinese and English word segmentation.</p>
+         * <p>Performs a full-text index retrieve on the node failed reason (reason) field. Supports Chinese and English tokenization.</p>
          * 
          * <strong>example:</strong>
          * <p>OOM</p>
@@ -891,7 +891,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The resource quota name, used to filter the job list. Supports fuzzy search. Wildcards are not supported. Default value: empty, which indicates no filtering by resource quota.</p>
+         * <p>The name of the resource quota, used to filter the job list. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>quota***</p>
@@ -1007,7 +1007,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Performs a full-text search in the user command (user_command) field. Supports Chinese and English word segmentation.</p>
+         * <p>Performs a full-text index retrieve on the user command (user_command) field. Supports Chinese and English tokenization.</p>
          * 
          * <strong>example:</strong>
          * <p>python train.py</p>
@@ -1031,7 +1031,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The username of the job submitter, used to filter the job list. Supports fuzzy search. Wildcards are not supported. Default value: empty, which indicates no filtering by username.</p>
+         * <p>The username of the job submitter, used to filter the job list. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by username.</p>
          * 
          * <strong>example:</strong>
          * <p>test***</p>

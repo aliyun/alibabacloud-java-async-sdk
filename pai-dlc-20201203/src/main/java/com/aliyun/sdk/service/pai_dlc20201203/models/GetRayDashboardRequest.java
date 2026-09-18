@@ -87,7 +87,7 @@ public class GetRayDashboardRequest extends Request {
         } 
 
         /**
-         * <p>Job ID</p>
+         * <p>The ID of the DLC job.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc1k7426goc7bvy</p>
@@ -99,7 +99,7 @@ public class GetRayDashboardRequest extends Request {
         }
 
         /**
-         * <p>Set to true to generate a shareable link. If you set this parameter to true, you must also specify the token parameter.</p>
+         * <p>Specifies whether the link is a shared link. If set to true, the token parameter is also required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -111,7 +111,7 @@ public class GetRayDashboardRequest extends Request {
         }
 
         /**
-         * <p>The token returned by GetToken</p>
+         * <p>The token obtained from the GetToken operation.</p>
          * 
          * <strong>example:</strong>
          * <p>some_token_value</p>

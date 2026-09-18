@@ -141,7 +141,7 @@ public class ListSignalsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -366,7 +366,7 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message returned with the result.</p>
+             * <p>The message of the returned result.</p>
              * 
              * <strong>example:</strong>
              * <p>signal delivered to 1 pods</p>
@@ -404,7 +404,7 @@ public class ListSignalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery scope.</p>
+             * <p>The sending scope.</p>
              * 
              * <strong>example:</strong>
              * <p>pods</p>

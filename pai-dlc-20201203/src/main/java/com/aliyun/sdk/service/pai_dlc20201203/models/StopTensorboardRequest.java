@@ -74,7 +74,7 @@ public class StopTensorboardRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the TensorBoard instance. For more information about how to query the Tensorboard instance ID, see <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a>.</p>
+         * <p>The TensorBoard ID. For information about how to obtain the TensorBoard ID, see <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class StopTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>380</p>

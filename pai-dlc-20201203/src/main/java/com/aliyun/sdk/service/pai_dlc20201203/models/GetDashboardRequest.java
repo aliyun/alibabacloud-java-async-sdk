@@ -87,7 +87,7 @@ public class GetDashboardRequest extends Request {
         } 
 
         /**
-         * <p>Job ID</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc1k7426goc7bvy</p>
@@ -99,7 +99,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether this is a shared link. If it is, the \<code>token\\</code> parameter is also required.</p>
+         * <p>Specifies whether the link is a shared link. If set to true, the token parameter is also required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -111,7 +111,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>The token obtained from GetToken.</p>
+         * <p>The token obtained from the GetToken operation.</p>
          * 
          * <strong>example:</strong>
          * <p>some_token_value</p>

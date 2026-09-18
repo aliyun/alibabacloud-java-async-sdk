@@ -87,7 +87,7 @@ public class GetTensorboardSharedUrlRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the shareable link. Unit: seconds. Maximum value: 604800.</p>
+         * <p>The validity period of the sharing link. Unit: seconds. Maximum value: 604800.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>

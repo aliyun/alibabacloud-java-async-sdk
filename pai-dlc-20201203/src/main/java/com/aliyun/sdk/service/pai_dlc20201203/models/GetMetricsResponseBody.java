@@ -143,7 +143,7 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The monitoring metric data.</p>
+         * <p>The monitoring metrics data.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;Content\&quot;: \&quot;\&quot;, \&quot;OperationName\&quot;: \&quot;purchase\&quot;, \&quot;Success\&quot;: 1, \&quot;Id\&quot;: \&quot;217\&quot;, \&quot;LogDatetime\&quot;: 1687679582923}]</p>
@@ -154,7 +154,7 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detailed result message.</p>
+         * <p>The detailed information about the detection result.</p>
          * 
          * <strong>example:</strong>
          * <p>Success.</p>
@@ -176,7 +176,7 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistical period for monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds. If you do not specify a statistical period, the system uses the reporting period registered for the metric. Each cloud service metric (MetricName) may have a different statistical period. For more information, see cloud service monitoring metrics.</p>
+         * <p>The statistical period of the monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds. If you do not set the statistical period, monitoring data is queried based on the reporting period that was specified when the monitoring metric was registered. The statistical period varies for each monitoring metric (MetricName) of each cloud service. For more information, see cloud service monitoring items.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -198,7 +198,11 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation succeeded. Valid values: true (success) and false (failure).</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>True</p>

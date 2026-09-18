@@ -59,7 +59,7 @@ public class StopJobRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. For more information about how to query the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The job ID. To obtain the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-20210126170216-xxxxxx</p>

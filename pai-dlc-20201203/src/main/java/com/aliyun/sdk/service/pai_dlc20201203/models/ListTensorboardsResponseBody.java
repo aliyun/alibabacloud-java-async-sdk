@@ -99,7 +99,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of Tensorboard instances that match the specified conditions.</p>
+         * <p>The total number of data sources that match the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

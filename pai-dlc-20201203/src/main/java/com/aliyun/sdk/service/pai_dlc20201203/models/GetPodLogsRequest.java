@@ -159,7 +159,7 @@ public class GetPodLogsRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. For information about how to obtain the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
+         * <p>The job ID. To obtain the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * <p>The node ID. For information about how to obtain the node ID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+         * <p>The node ID. To obtain the node ID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class GetPodLogsRequest extends Request {
         }
 
         /**
-         * <p>The node UID. For information about how to obtain the node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+         * <p>The node UID. To obtain the node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>fe846462-af2c-4521-bd6f-96787a57****</p>

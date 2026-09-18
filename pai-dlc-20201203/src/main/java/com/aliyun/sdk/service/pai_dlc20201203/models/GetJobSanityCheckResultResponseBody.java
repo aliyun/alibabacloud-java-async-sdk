@@ -102,7 +102,7 @@ public class GetJobSanityCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job sanity check result.</p>
+         * <p>The result of the computing power health check.</p>
          */
         public Builder sanityCheckResult(java.util.List<SanityCheckResultItem> sanityCheckResult) {
             this.sanityCheckResult = sanityCheckResult;

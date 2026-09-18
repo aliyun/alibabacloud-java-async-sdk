@@ -74,7 +74,7 @@ public class ListJobSanityCheckResultsRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</p>
+         * <p>The job ID. You can call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListJobSanityCheckResultsRequest extends Request {
         }
 
         /**
-         * <p>The sorting order:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
          * <li>desc: descending order</li>
          * <li>asc: ascending order</li>

@@ -98,8 +98,17 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
+    @com.aliyun.core.annotation.NameInMap("RequestCPU")
+    private Integer requestCPU;
+
+    @com.aliyun.core.annotation.NameInMap("RequestGPU")
+    private Double requestGPU;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("RequestMemory")
+    private Double requestMemory;
 
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
@@ -189,7 +198,10 @@ public class GetJobResponseBody extends TeaModel {
         this.priority = builder.priority;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
+        this.requestCPU = builder.requestCPU;
+        this.requestGPU = builder.requestGPU;
         this.requestId = builder.requestId;
+        this.requestMemory = builder.requestMemory;
         this.resourceId = builder.resourceId;
         this.resourceLevel = builder.resourceLevel;
         this.resourceType = builder.resourceType;
@@ -414,10 +426,31 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestCPU
+     */
+    public Integer getRequestCPU() {
+        return this.requestCPU;
+    }
+
+    /**
+     * @return requestGPU
+     */
+    public Double getRequestGPU() {
+        return this.requestGPU;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return requestMemory
+     */
+    public Double getRequestMemory() {
+        return this.requestMemory;
     }
 
     /**
@@ -588,7 +621,10 @@ public class GetJobResponseBody extends TeaModel {
         private Integer priority; 
         private String reasonCode; 
         private String reasonMessage; 
+        private Integer requestCPU; 
+        private Double requestGPU; 
         private String requestId; 
+        private Double requestMemory; 
         private String resourceId; 
         private String resourceLevel; 
         private String resourceType; 
@@ -641,7 +677,10 @@ public class GetJobResponseBody extends TeaModel {
             this.priority = model.priority;
             this.reasonCode = model.reasonCode;
             this.reasonMessage = model.reasonMessage;
+            this.requestCPU = model.requestCPU;
+            this.requestGPU = model.requestGPU;
             this.requestId = model.requestId;
+            this.requestMemory = model.requestMemory;
             this.resourceId = model.resourceId;
             this.resourceLevel = model.resourceLevel;
             this.resourceType = model.resourceType;
@@ -665,10 +704,10 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The visibility of the task. Valid values:</p>
+         * <p>The visibility of the job. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: Visible to all users in the workspace.</li>
-         * <li>PRIVATE (default): Visible only to you and administrators in the workspace.</li>
+         * <li>PUBLIC: The job is visible to all users in the workspace.</li>
+         * <li>PRIVATE (default): The job is visible only to you and administrators in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -742,7 +781,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job duration, in seconds.</p>
+         * <p>The job duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3602</p>
@@ -802,7 +841,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the task finished (UTC).</p>
+         * <p>The time when the job finished (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T15:36:08Z</p>
@@ -914,7 +953,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status detail code, which categorizes the sub-status under the current status (Status).</p>
+         * <p>The status detail code, which categorizes the substatus under the current status (Status).</p>
          * 
          * <strong>example:</strong>
          * <p>JobStoppedByUser</p>
@@ -936,7 +975,29 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, used for diagnostics and troubleshooting.</p>
+         * <p>The amount of CPU resources required by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder requestCPU(Integer requestCPU) {
+            this.requestCPU = requestCPU;
+            return this;
+        }
+
+        /**
+         * <p>The amount of GPU resources required by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder requestGPU(Double requestGPU) {
+            this.requestGPU = requestGPU;
+            return this;
+        }
+
+        /**
+         * <p>The request ID, which is used for diagnostics and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxxx</p>
@@ -947,7 +1008,18 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group where the job runs.</p>
+         * <p>The amount of memory resources required by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder requestMemory(Double requestMemory) {
+            this.requestMemory = requestMemory;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group in which the job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>r******</p>
@@ -958,7 +1030,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource level used when the job runs.</p>
+         * <p>The resource level used by the job at runtime.</p>
          * 
          * <strong>example:</strong>
          * <p>L0</p>
@@ -988,7 +1060,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of restarts used and the maximum number of restarts allowed for the job.</p>
+         * <p>The number of retries used by the job and the maximum number of retries.</p>
          * 
          * <strong>example:</strong>
          * <p>0/10</p>
@@ -1018,7 +1090,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional parameter settings for the job.</p>
+         * <p>The additional parameter settings of the job.</p>
          */
         public Builder settings(JobSettings settings) {
             this.settings = settings;
@@ -1026,7 +1098,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job status. Valid values:</p>
+         * <p>The running status of the job. Valid values:</p>
          * <ul>
          * <li>Creating</li>
          * <li>Queuing</li>
@@ -1052,7 +1124,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status history.</p>
+         * <p>The historical statuses.</p>
          */
         public Builder statusHistory(java.util.List<StatusTransitionItem> statusHistory) {
             this.statusHistory = statusHistory;
@@ -1060,7 +1132,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job substatus, such as preemption retry status.</p>
+         * <p>The sub-status of the job, such as the preemption retry status.</p>
          * 
          * <strong>example:</strong>
          * <p>Restarting</p>
@@ -1153,7 +1225,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of supported profiling types, comma-separated, such as sysom. An empty string indicates that profiling is not supported.</p>
+         * <p>The list of supported profiling types, separated by commas, such as sysom. An empty string indicates that profiling is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom</p>
@@ -1471,7 +1543,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local mount path. This is an optional parameter. The default value is empty, which indicates that the mount path specified in the data source is used.</p>
+             * <p>The local mount path. This is an optional parameter. If left empty, the mount path specified in the data source is used.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/data/</p>
@@ -1716,7 +1788,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod creation time (UTC).</p>
+             * <p>The time when the pod was created (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -1727,7 +1799,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod finish time (UTC).</p>
+             * <p>The time when the pod ended (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -1738,7 +1810,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod start time (UTC).</p>
+             * <p>The time when the pod started (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -1798,7 +1870,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod resource usage type.</p>
+             * <p>The resource usage type of the pod.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -1820,7 +1892,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod substatus, such as preemption status. Valid values:</p>
+             * <p>The pod substatus, such as the preemption status. Valid values:</p>
              * <ul>
              * <li>Normal</li>
              * <li>Evicted</li>
@@ -1846,7 +1918,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of supported profiling types, comma-separated, such as sysom. An empty string indicates that profiling is not supported.</p>
+             * <p>The list of supported profiling types, separated by commas, such as sysom. An empty string indicates that profiling is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>sysom</p>
@@ -2093,7 +2165,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod creation time (UTC).</p>
+             * <p>The time when the pod was created (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -2104,7 +2176,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod finish time (UTC).</p>
+             * <p>The time when the pod finished (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T15:36:05Z</p>
@@ -2115,7 +2187,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod start time (UTC).</p>
+             * <p>The time when the pod started (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -2134,7 +2206,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network IP address of the pod.</p>
+             * <p>The network IP address of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.1.2</p>
@@ -2153,7 +2225,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events for the pod.</p>
+             * <p>The node ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>Worker</p>
@@ -2183,7 +2255,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod resource usage type.</p>
+             * <p>The resource usage type of the pod.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -2194,7 +2266,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod status. Valid values:</p>
+             * <p>The node status. Valid values:</p>
              * <ul>
              * <li>Pending</li>
              * <li>Running</li>
@@ -2212,7 +2284,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod substatus, such as preemption status. Valid values:</p>
+             * <p>The pod substatus, such as the preemption status. Valid values:</p>
              * <ul>
              * <li>Normal</li>
              * <li>Evicted</li>
@@ -2227,7 +2299,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod type, which corresponds to a specific JobSpec in the JobSpecs parameter of CreateJob.</p>
+             * <p>The node type, which corresponds to a specific JobSpec in the JobSpecs parameter of the CreateJob operation.</p>
              * 
              * <strong>example:</strong>
              * <p>Worker</p>
@@ -2238,7 +2310,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of supported profiling types, comma-separated, such as sysom. An empty string indicates that profiling is not supported.</p>
+             * <p>The list of supported profiling types, separated by commas, such as sysom. An empty string indicates that profiling is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>sysom</p>
@@ -2399,7 +2471,7 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The job blacklist.</p>
+             * <p>The job-level blacklist.</p>
              */
             public Builder addJobLevelBlacklist(Boolean addJobLevelBlacklist) {
                 this.addJobLevelBlacklist = addJobLevelBlacklist;
@@ -2431,7 +2503,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error information.</p>
+             * <p>The fault error message.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -2455,7 +2527,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pod.</p>
+             * <p>The instance.</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -2634,7 +2706,7 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error information list.</p>
+             * <p>The list of fault error messages.</p>
              */
             public Builder detailErrorInfoList(java.util.List<DetailErrorInfoList> detailErrorInfoList) {
                 this.detailErrorInfoList = detailErrorInfoList;
@@ -2658,7 +2730,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the event occurred.</p>
+             * <p>The time when the event occurred.</p>
              */
             public Builder occurTime(String occurTime) {
                 this.occurTime = occurTime;
@@ -2666,7 +2738,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason.</p>
+             * <p>The reason for the restart.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -2812,9 +2884,9 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The default route. This parameter is valid only for general-purpose computing resources. Valid values:</p>
-             * <p>eth0: uses the default network interface card (NIC) to access external networks through the public gateway.
-             * eth1: uses the user elastic network interface (ENI) to access external networks through the private gateway.</p>
+             * <p>The default route. This parameter is valid only for general computing resources. Valid values:</p>
+             * <p>eth0: uses the default network interface controller (NIC) to access external networks through the public gateway.
+             * eth1: uses the user elastic network interfaces (ENIs) to access external networks through the private gateway.</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;

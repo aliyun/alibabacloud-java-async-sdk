@@ -103,7 +103,7 @@ public class GetJobEventsRequest extends Request {
         } 
 
         /**
-         * <p>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</p>
+         * <p>The job ID. To obtain the job ID, refer to <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetJobEventsRequest extends Request {
         }
 
         /**
-         * <p>The end time (UTC) of the time range for querying events. The default value is the current time.</p>
+         * <p>The end time (UTC) of the event query interval. Default value: current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-08T18:00:00Z</p>
@@ -128,7 +128,7 @@ public class GetJobEventsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of events that can be returned. Default value: 2000.</p>
+         * <p>The maximum number of events to retrieve. Default value: 2000.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -140,7 +140,7 @@ public class GetJobEventsRequest extends Request {
         }
 
         /**
-         * <p>The start time (UTC) of the time range for querying events. The default value is 7 days ago.</p>
+         * <p>The start time (UTC) of the event query interval. Default value: 7 days ago.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-08T16:00:00Z</p>

@@ -91,7 +91,7 @@ public class ListJobSanityCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sanity check results.</p>
+         * <p>All computing power health check results.</p>
          */
         public Builder sanityCheckResults(java.util.List<java.util.List<SanityCheckResultItem>> sanityCheckResults) {
             this.sanityCheckResults = sanityCheckResults;
@@ -99,7 +99,7 @@ public class ListJobSanityCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of results that meet the filter conditions.</p>
+         * <p>The total number of check results that match the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

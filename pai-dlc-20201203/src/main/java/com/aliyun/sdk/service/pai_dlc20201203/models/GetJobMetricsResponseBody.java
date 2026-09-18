@@ -80,7 +80,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-20210126170216-*******</p>
@@ -91,7 +91,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The monitoring metrics of the job.</p>
+         * <p>The list of node monitoring data.</p>
          */
         public Builder podMetrics(java.util.List<PodMetric> podMetrics) {
             this.podMetrics = podMetrics;
@@ -99,7 +99,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can troubleshoot issues based on the request ID.</p>
+         * <p>The request ID of this call, used for diagnostics and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

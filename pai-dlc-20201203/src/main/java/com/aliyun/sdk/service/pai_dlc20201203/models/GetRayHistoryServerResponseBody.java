@@ -288,7 +288,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The visibility of the job.</p>
+         * <p>The visibility.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -310,7 +310,10 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The specifications of the public resource group. For a list of supported instance types, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Pricing varies based on the specifications.</p>
+         * <p>The hardware specifications of the public resource group. For the detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.</p>
+         * <blockquote>
+         * <p>Notice: Prices vary depending on the specifications.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.large</p>
@@ -321,7 +324,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job was created. The time is in UTC.</p>
+         * <p>The creation time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:35:01Z</p>
@@ -332,7 +335,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job is complete. The time is in UTC.</p>
+         * <p>The end time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T15:36:08Z</p>
@@ -343,7 +346,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job was last modified. The time is in UTC.</p>
+         * <p>The modification time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:00Z</p>
@@ -354,7 +357,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum running time. Unit: minutes.</p>
+         * <p>The maximum runtime duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -365,7 +368,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Ray history server.</p>
+         * <p>The ID of the RayHistoryServer.</p>
          * 
          * <strong>example:</strong>
          * <p>rhsxxx</p>
@@ -376,7 +379,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL of the Ray dashboard.</p>
+         * <p>Ray Dashboard URL。</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/">https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/</a></p>
@@ -387,7 +390,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The code of the job status.</p>
+         * <p>The status detail code.</p>
          * 
          * <strong>example:</strong>
          * <p>NotFound</p>
@@ -398,7 +401,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that describes the job status.</p>
+         * <p>The status details.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -409,7 +412,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the job belongs.</p>
+         * <p>The ID of the resource group in which the job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>quotaxxx</p>
@@ -420,7 +423,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the resource on which the job runs.</p>
+         * <p>The name of the resource in which the job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>my-resource-name</p>
@@ -431,7 +434,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the job.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -464,7 +467,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the user who creates the job.</p>
+         * <p>The user ID used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -475,7 +478,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The username of the user who creates the job.</p>
+         * <p>The username used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>myusername</p>

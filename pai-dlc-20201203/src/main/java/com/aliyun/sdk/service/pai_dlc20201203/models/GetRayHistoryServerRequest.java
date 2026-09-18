@@ -60,7 +60,7 @@ public class GetRayHistoryServerRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Ray history server.</p>
+         * <p>The ID of the RayHistoryServer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
