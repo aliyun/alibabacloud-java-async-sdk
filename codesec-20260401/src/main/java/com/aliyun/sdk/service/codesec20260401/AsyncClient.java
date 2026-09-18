@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateScanResponse> createScan(CreateScanRequest request);
 
     /**
+     * @param request the request parameters of CreateScanSbomExport  CreateScanSbomExportRequest
+     * @return CreateScanSbomExportResponse
+     */
+    CompletableFuture<CreateScanSbomExportResponse> createScanSbomExport(CreateScanSbomExportRequest request);
+
+    /**
      * @param request the request parameters of DescribeProjects  DescribeProjectsRequest
      * @return DescribeProjectsResponse
      */

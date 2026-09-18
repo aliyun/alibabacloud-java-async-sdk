@@ -158,7 +158,10 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         } 
 
         /**
-         * bundleVersion.
+         * <p>The version identifier of the function code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bundleVersion(String bundleVersion) {
             this.bundleVersion = bundleVersion;
@@ -166,7 +169,10 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         }
 
         /**
-         * codeBundleId.
+         * <p>The function code package ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder codeBundleId(Long codeBundleId) {
             this.codeBundleId = codeBundleId;
@@ -174,7 +180,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>代码包创建时间（RFC3339）</p>
+         * <p>The time when the function code package was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-27T00:53:46.774Z</p>
@@ -185,7 +191,10 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         }
 
         /**
-         * filename.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cases.zip</p>
          */
         public Builder filename(String filename) {
             this.filename = filename;
@@ -193,7 +202,10 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         }
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.projectId = projectId;
@@ -201,7 +213,10 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +224,10 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the function code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -217,7 +235,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>代码包更新时间（RFC3339）</p>
+         * <p>The time when the function code package was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-27T00:53:46.774Z</p>
@@ -228,7 +246,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
         }
 
         /**
-         * upload.
+         * <p>The upload credential. See the following fields for details.</p>
          */
         public Builder upload(Upload upload) {
             this.upload = upload;
@@ -320,7 +338,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>凭证过期时间（RFC3339）</p>
+             * <p>The expiration time of the credential in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-03T05:58:47.88987539Z</p>
@@ -331,7 +349,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>HTTP method for the presigned URL.</p>
+             * <p>The HTTP method of the pre-signed URL. Valid values: PUT.</p>
              * 
              * <strong>example:</strong>
              * <p>PUT</p>
@@ -342,7 +360,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Presigned OSS PUT URL.</p>
+             * <p>The pre-signed OSS PUT upload URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://codesec-beijing.oss-cn-beijing.aliyuncs.com/87766767%2F1001667%2F1004171.zip">https://codesec-beijing.oss-cn-beijing.aliyuncs.com/87766767%2F1001667%2F1004171.zip</a></p>
@@ -353,7 +371,7 @@ public class CreateCodeBundleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Clients MUST send this <strong><code>Content-Type</code></strong> on PUT when <strong><code>put_url</code></strong> is set.</p>
+             * <p>The Content-Type header that the client must include when performing the PUT request. This field is returned when putUrl is present.</p>
              * 
              * <strong>example:</strong>
              * <p>application/octet-stream</p>

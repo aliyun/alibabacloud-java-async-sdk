@@ -275,7 +275,10 @@ public class DescribeScanResponseBody extends TeaModel {
         } 
 
         /**
-         * codeBundleId.
+         * <p>The function code package ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder codeBundleId(Long codeBundleId) {
             this.codeBundleId = codeBundleId;
@@ -283,7 +286,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-27T00:53:46.774Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -291,7 +297,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The user ID of the task creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3221</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -299,7 +308,17 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * currentPhase.
+         * <p>The scan phase. Valid values:</p>
+         * <ul>
+         * <li>threat_model: threat modeling.</li>
+         * <li>discovery: vulnerability discovery.</li>
+         * <li>panel: vulnerability review.</li>
+         * <li>adversarial: adversarial verification.</li>
+         * <li>finalize: report compilation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>discovery</p>
          */
         public Builder currentPhase(String currentPhase) {
             this.currentPhase = currentPhase;
@@ -307,7 +326,7 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * engineSnapshot.
+         * <p>The supported engine types.</p>
          */
         public Builder engineSnapshot(EngineSnapshot engineSnapshot) {
             this.engineSnapshot = engineSnapshot;
@@ -315,7 +334,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * finishedAt.
+         * <p>The time when the scan finished.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-27T00:53:46.774Z</p>
          */
         public Builder finishedAt(String finishedAt) {
             this.finishedAt = finishedAt;
@@ -323,7 +345,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -331,7 +356,14 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * kind.
+         * <p>The scan type. Valid values:</p>
+         * <ul>
+         * <li>full: full</li>
+         * <li>incremental: incremental</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>full</p>
          */
         public Builder kind(String kind) {
             this.kind = kind;
@@ -339,7 +371,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder projectId(Long projectId) {
             this.projectId = projectId;
@@ -347,7 +382,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -355,7 +393,7 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * scanMetrics.
+         * <p>The scan results.</p>
          */
         public Builder scanMetrics(ScanMetrics scanMetrics) {
             this.scanMetrics = scanMetrics;
@@ -363,7 +401,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * scanProgress.
+         * <p>The task progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder scanProgress(Long scanProgress) {
             this.scanProgress = scanProgress;
@@ -371,7 +412,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * securityCredits.
+         * <p><strong>[Deprecated]</strong> This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder securityCredits(Float securityCredits) {
             this.securityCredits = securityCredits;
@@ -379,7 +423,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * startedAt.
+         * <p>The time when the task started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-27T00:53:46.774Z</p>
          */
         public Builder startedAt(String startedAt) {
             this.startedAt = startedAt;
@@ -387,7 +434,17 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>running: Running.</li>
+         * <li>completed: Completed.</li>
+         * <li>failed: Failed.</li>
+         * <li>canceling: Being canceled.</li>
+         * <li>canceled: Canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -395,7 +452,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * taskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -403,7 +463,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the task was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-27T00:53:46.774Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -411,7 +474,10 @@ public class DescribeScanResponseBody extends TeaModel {
         }
 
         /**
-         * workerId.
+         * <p><strong>[Deprecated]</strong> This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workerId(String workerId) {
             this.workerId = workerId;
@@ -477,7 +543,10 @@ public class DescribeScanResponseBody extends TeaModel {
             } 
 
             /**
-             * sast.
+             * <p>Indicates whether Static Application Security Testing (SAST) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sast(Boolean sast) {
                 this.sast = sast;
@@ -485,7 +554,10 @@ public class DescribeScanResponseBody extends TeaModel {
             }
 
             /**
-             * sca.
+             * <p>Indicates whether Software Composition Analysis (SCA) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sca(Boolean sca) {
                 this.sca = sca;
@@ -578,7 +650,10 @@ public class DescribeScanResponseBody extends TeaModel {
             } 
 
             /**
-             * credit.
+             * <p>The number of credits consumed by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder credit(Float credit) {
                 this.credit = credit;
@@ -586,7 +661,10 @@ public class DescribeScanResponseBody extends TeaModel {
             }
 
             /**
-             * fileCount.
+             * <p>The number of files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73894</p>
              */
             public Builder fileCount(Long fileCount) {
                 this.fileCount = fileCount;
@@ -594,7 +672,10 @@ public class DescribeScanResponseBody extends TeaModel {
             }
 
             /**
-             * linesOfCode.
+             * <p>The number of lines of code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder linesOfCode(Long linesOfCode) {
                 this.linesOfCode = linesOfCode;
@@ -602,7 +683,10 @@ public class DescribeScanResponseBody extends TeaModel {
             }
 
             /**
-             * tokenTotal.
+             * <p><strong>[Deprecated]</strong> This parameter is no longer used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tokenTotal(Long tokenTotal) {
                 this.tokenTotal = tokenTotal;

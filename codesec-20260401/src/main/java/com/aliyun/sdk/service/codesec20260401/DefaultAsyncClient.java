@@ -112,6 +112,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateScanSbomExport  CreateScanSbomExportRequest
+     * @return CreateScanSbomExportResponse
+     */
+    @Override
+    public CompletableFuture<CreateScanSbomExportResponse> createScanSbomExport(CreateScanSbomExportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateScanSbomExport").setMethod(HttpMethod.POST).setPathRegex("/v1/projects/{projectId}/scans/{scanId}/reports/sbomExports").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateScanSbomExportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateScanSbomExportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeProjects  DescribeProjectsRequest
      * @return DescribeProjectsResponse
      */

@@ -119,7 +119,7 @@ public class CompleteCodeBundleRequest extends Request {
         } 
 
         /**
-         * <p>Numeric primary key (<code>projects.id</code>).</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class CompleteCodeBundleRequest extends Request {
         }
 
         /**
-         * <p>Numeric primary key (<code>code_bundles.id</code>).</p>
+         * <p>The code bundle ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CompleteCodeBundleRequest extends Request {
         }
 
         /**
-         * <p>Declared uploaded object size; should match OSS <strong><code>Content-Length</code></strong>.</p>
+         * <p>The declared size of the uploaded object. This value must match the OSS Content-Length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class CompleteCodeBundleRequest extends Request {
         }
 
         /**
-         * <p>MIME type stored on the bundle (often <strong><code>application/octet-stream</code></strong> for presigned PUT).</p>
+         * <p>The MIME type of the stored code bundle. This is typically application/octet-stream for pre-signed PUT operations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

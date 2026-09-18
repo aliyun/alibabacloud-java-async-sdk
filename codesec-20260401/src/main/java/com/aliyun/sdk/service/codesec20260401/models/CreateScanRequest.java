@@ -119,6 +119,7 @@ public class CreateScanRequest extends Request {
         } 
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class CreateScanRequest extends Request {
         }
 
         /**
+         * <p>The code package ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,11 @@ public class CreateScanRequest extends Request {
         }
 
         /**
+         * <p>The type. Valid values:</p>
+         * <ul>
+         * <li>full: full data</li>
+         * <li>incremental: incremental</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +171,7 @@ public class CreateScanRequest extends Request {
         }
 
         /**
+         * <p>The task name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

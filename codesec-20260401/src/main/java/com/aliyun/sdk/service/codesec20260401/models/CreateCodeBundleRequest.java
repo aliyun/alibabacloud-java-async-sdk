@@ -103,7 +103,7 @@ public class CreateCodeBundleRequest extends Request {
         } 
 
         /**
-         * <p>Numeric primary key (<code>projects.id</code>).</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,10 +125,7 @@ public class CreateCodeBundleRequest extends Request {
         }
 
         /**
-         * <p>Optional CI/CD metadata JSON, stored as-is on the <code>code_bundles</code> row.
-         * Used by downstream scan creation for incremental diff, branch tracking, and audit.
-         * Typical structure: <code>{&quot;scan_mode&quot;: {&quot;type&quot;: &quot;full&quot;|&quot;incremental&quot;, &quot;base_ref&quot;: &quot;...&quot;, &quot;base_commit&quot;: &quot;...&quot;, &quot;head_commit&quot;: &quot;...&quot;}, &quot;context&quot;: {&quot;repository&quot;: &quot;...&quot;, &quot;branch&quot;: &quot;...&quot;, &quot;commit&quot;: &quot;...&quot;, &quot;pipeline_source&quot;: &quot;...&quot;, &quot;merge_request_iid&quot;: 123, &quot;default_branch&quot;: &quot;main&quot;}, &quot;client&quot;: {&quot;name&quot;: &quot;krypton-cli&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;os&quot;: &quot;linux&quot;, &quot;arch&quot;: &quot;amd64&quot;}}</code>.
-         * Backend does not validate internal fields; clients may add arbitrary keys.</p>
+         * <p>An optional CI/CD metadata JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;region&quot;:&quot;cn-beijing&quot;}</p>
@@ -140,7 +137,7 @@ public class CreateCodeBundleRequest extends Request {
         }
 
         /**
-         * <p>Original archive file name; used to derive OSS key suffix (e.g. <code>.zip</code>, <code>.tar.gz</code>).</p>
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

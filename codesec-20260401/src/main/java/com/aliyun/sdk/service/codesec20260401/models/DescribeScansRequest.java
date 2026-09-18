@@ -130,6 +130,7 @@ public class DescribeScansRequest extends Request {
         } 
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,10 @@ public class DescribeScansRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -160,7 +164,10 @@ public class DescribeScansRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Do not specify this parameter or set it to an empty string for the first page. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -169,7 +176,15 @@ public class DescribeScansRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>running: Running.</li>
+         * <li>completed: Completed.</li>
+         * <li>failed: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -178,7 +193,10 @@ public class DescribeScansRequest extends Request {
         }
 
         /**
-         * taskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("taskName", taskName);

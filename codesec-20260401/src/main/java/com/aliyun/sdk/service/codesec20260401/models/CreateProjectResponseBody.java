@@ -184,7 +184,10 @@ public class CreateProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * configRevision.
+         * <p>The project configuration version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configRevision(Long configRevision) {
             this.configRevision = configRevision;
@@ -192,7 +195,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-27T00:53:46.774Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -200,7 +206,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The user ID of the project creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3221</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -208,7 +217,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is default function description by fc-deploy component</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -216,7 +228,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * engines.
+         * <p>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</p>
          */
         public Builder engines(Engines engines) {
             this.engines = engines;
@@ -224,7 +236,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -232,7 +247,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * instructionPrompt.
+         * <p>The natural language prompt that describes scanning or result processing preferences, such as ignoring low-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>such as ignoring low-severity vulnerabilities, etc.</p>
          */
         public Builder instructionPrompt(String instructionPrompt) {
             this.instructionPrompt = instructionPrompt;
@@ -240,7 +258,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -248,7 +269,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +280,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The project source.</p>
          */
         public Builder source(Source source) {
             this.source = source;
@@ -264,7 +288,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-27T00:53:46.774Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -330,7 +357,10 @@ public class CreateProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * sast.
+             * <p>Specifies whether SAST is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sast(Boolean sast) {
                 this.sast = sast;
@@ -338,7 +368,10 @@ public class CreateProjectResponseBody extends TeaModel {
             }
 
             /**
-             * sca.
+             * <p>Specifies whether SCA is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sca(Boolean sca) {
                 this.sca = sca;
@@ -392,7 +425,10 @@ public class CreateProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The project type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder type(String type) {
                 this.type = type;

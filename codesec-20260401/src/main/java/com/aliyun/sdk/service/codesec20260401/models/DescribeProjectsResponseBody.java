@@ -106,7 +106,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * items.
+         * <p>The list of projects.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,13 @@ public class DescribeProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The page size.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified, all projects are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +128,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. An empty value indicates the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
@@ -141,7 +150,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -160,16 +172,132 @@ public class DescribeProjectsResponseBody extends TeaModel {
      *
      * <p>DescribeProjectsResponseBody</p>
      */
+    public static class SastConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("remediation")
+        private Boolean remediation;
+
+        private SastConfig(Builder builder) {
+            this.remediation = builder.remediation;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SastConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return remediation
+         */
+        public Boolean getRemediation() {
+            return this.remediation;
+        }
+
+        public static final class Builder {
+            private Boolean remediation; 
+
+            private Builder() {
+            } 
+
+            private Builder(SastConfig model) {
+                this.remediation = model.remediation;
+            } 
+
+            /**
+             * <p>Specifies whether to generate remediation suggestions.</p>
+             */
+            public Builder remediation(Boolean remediation) {
+                this.remediation = remediation;
+                return this;
+            }
+
+            public SastConfig build() {
+                return new SastConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectsResponseBody</p>
+     */
+    public static class ScaConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("remediation")
+        private Boolean remediation;
+
+        private ScaConfig(Builder builder) {
+            this.remediation = builder.remediation;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return remediation
+         */
+        public Boolean getRemediation() {
+            return this.remediation;
+        }
+
+        public static final class Builder {
+            private Boolean remediation; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaConfig model) {
+                this.remediation = model.remediation;
+            } 
+
+            /**
+             * <p>Specifies whether to generate remediation suggestions.</p>
+             */
+            public Builder remediation(Boolean remediation) {
+                this.remediation = remediation;
+                return this;
+            }
+
+            public ScaConfig build() {
+                return new ScaConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectsResponseBody</p>
+     */
     public static class Engines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sast")
         private Boolean sast;
 
+        @com.aliyun.core.annotation.NameInMap("sastConfig")
+        private SastConfig sastConfig;
+
         @com.aliyun.core.annotation.NameInMap("sca")
         private Boolean sca;
 
+        @com.aliyun.core.annotation.NameInMap("scaConfig")
+        private ScaConfig scaConfig;
+
         private Engines(Builder builder) {
             this.sast = builder.sast;
+            this.sastConfig = builder.sastConfig;
             this.sca = builder.sca;
+            this.scaConfig = builder.scaConfig;
         }
 
         public static Builder builder() {
@@ -188,26 +316,47 @@ public class DescribeProjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sastConfig
+         */
+        public SastConfig getSastConfig() {
+            return this.sastConfig;
+        }
+
+        /**
          * @return sca
          */
         public Boolean getSca() {
             return this.sca;
         }
 
+        /**
+         * @return scaConfig
+         */
+        public ScaConfig getScaConfig() {
+            return this.scaConfig;
+        }
+
         public static final class Builder {
             private Boolean sast; 
+            private SastConfig sastConfig; 
             private Boolean sca; 
+            private ScaConfig scaConfig; 
 
             private Builder() {
             } 
 
             private Builder(Engines model) {
                 this.sast = model.sast;
+                this.sastConfig = model.sastConfig;
                 this.sca = model.sca;
+                this.scaConfig = model.scaConfig;
             } 
 
             /**
-             * sast.
+             * <p>Indicates whether SAST is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sast(Boolean sast) {
                 this.sast = sast;
@@ -215,10 +364,29 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * sca.
+             * <p>The engine-level configuration.</p>
+             */
+            public Builder sastConfig(SastConfig sastConfig) {
+                this.sastConfig = sastConfig;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether SCA is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sca(Boolean sca) {
                 this.sca = sca;
+                return this;
+            }
+
+            /**
+             * <p>The engine-level configuration.</p>
+             */
+            public Builder scaConfig(ScaConfig scaConfig) {
+                this.scaConfig = scaConfig;
                 return this;
             }
 
@@ -269,7 +437,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The project type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual_upload</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -453,7 +624,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * configRevision.
+             * <p>The project configuration version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configRevision(Long configRevision) {
                 this.configRevision = configRevision;
@@ -461,7 +635,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扫描项目创建时间（RFC3339）</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-28T03:36:31.573Z</p>
@@ -472,7 +646,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The user ID of the project creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -480,7 +657,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -488,7 +668,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * engines.
+             * <p>The engine switches in the project or scan snapshot. Only SAST and SCA are supported.</p>
              */
             public Builder engines(Engines engines) {
                 this.engines = engines;
@@ -496,7 +676,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>934</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -504,7 +687,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * instructionPrompt.
+             * <p>The natural language prompt provided by the user that describes scanning or result processing preferences, such as ignoring low-severity vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder instructionPrompt(String instructionPrompt) {
                 this.instructionPrompt = instructionPrompt;
@@ -512,7 +698,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time of the most recent scan under this project, or null if the project has no scans.</p>
+             * <p>The time when a task was last created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-28T03:36:31.573Z</p>
              */
             public Builder lastScanTime(String lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -520,7 +709,10 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual-hDecBn</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -528,7 +720,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The project source.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -536,7 +728,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扫描项目更新时间（RFC3339）</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-28T03:36:31.573Z</p>

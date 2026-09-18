@@ -139,7 +139,10 @@ public class DescribeProjectsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -148,7 +151,10 @@ public class DescribeProjectsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Do not specify this parameter or set it to an empty string for the first page. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -157,7 +163,10 @@ public class DescribeProjectsRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>The keyword used for fuzzy match by project name or prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -166,7 +175,16 @@ public class DescribeProjectsRequest extends Request {
         }
 
         /**
-         * <p>Project list sort key. Defaults to <strong><code>updated_at</code></strong> (project last update time). <strong><code>created_at</code></strong> sorts by project creation time. <strong><code>last_scan_time</code></strong> sorts by the creation time of the project&quot;s most recent scan; projects with no scans are placed at the end regardless of order. Invalid values → <strong>400</strong> with <strong><code>subCode</code></strong> <strong><code>InvalidSortBy</code></strong>.</p>
+         * <p>The field by which to sort the results. Default value: last_scan_time.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>last_scan_time: the time when a task was last created.</li>
+         * <li>created_at: the time when the project was created.</li>
+         * <li>updated_at: the time when the project was last modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>last_scan_time</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("sortBy", sortBy);
@@ -175,7 +193,15 @@ public class DescribeProjectsRequest extends Request {
         }
 
         /**
-         * <p>Sort direction. Defaults to <strong><code>desc</code></strong>. Invalid values → <strong>400</strong> with <strong><code>subCode</code></strong> <strong><code>InvalidSortOrder</code></strong>.</p>
+         * <p>The sort order. Default value: desc.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("sortOrder", sortOrder);

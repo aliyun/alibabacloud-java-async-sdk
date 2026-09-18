@@ -106,7 +106,7 @@ public class DescribeScansResponseBody extends TeaModel {
         } 
 
         /**
-         * items.
+         * <p>The task list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeScansResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class DescribeScansResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. An empty value indicates the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -141,7 +147,10 @@ public class DescribeScansResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -207,7 +216,10 @@ public class DescribeScansResponseBody extends TeaModel {
             } 
 
             /**
-             * sast.
+             * <p>Indicates whether SAST is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sast(Boolean sast) {
                 this.sast = sast;
@@ -215,7 +227,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * sca.
+             * <p>Indicates whether SCA is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sca(Boolean sca) {
                 this.sca = sca;
@@ -308,7 +323,10 @@ public class DescribeScansResponseBody extends TeaModel {
             } 
 
             /**
-             * credit.
+             * <p>The number of credits consumed by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.25</p>
              */
             public Builder credit(Float credit) {
                 this.credit = credit;
@@ -316,7 +334,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * fileCount.
+             * <p>The number of files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>459</p>
              */
             public Builder fileCount(Long fileCount) {
                 this.fileCount = fileCount;
@@ -324,7 +345,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * linesOfCode.
+             * <p>The number of lines of code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder linesOfCode(Long linesOfCode) {
                 this.linesOfCode = linesOfCode;
@@ -332,7 +356,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * tokenTotal.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tokenTotal(Long tokenTotal) {
                 this.tokenTotal = tokenTotal;
@@ -581,7 +608,10 @@ public class DescribeScansResponseBody extends TeaModel {
             } 
 
             /**
-             * codeBundleId.
+             * <p>The code bundle ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder codeBundleId(Long codeBundleId) {
                 this.codeBundleId = codeBundleId;
@@ -589,7 +619,7 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扫描任务创建时间（RFC3339）</p>
+             * <p>The time when the task was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-28T03:36:31.573Z</p>
@@ -600,7 +630,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The user ID of the task creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -608,7 +641,17 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * currentPhase.
+             * <p>The scan phase. Valid values:</p>
+             * <ul>
+             * <li>threat_model: Threat modeling.</li>
+             * <li>discovery: Vulnerability discovery.</li>
+             * <li>panel: Vulnerability review.</li>
+             * <li>adversarial: Adversarial verification.</li>
+             * <li>finalize: Report generation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>finalize</p>
              */
             public Builder currentPhase(String currentPhase) {
                 this.currentPhase = currentPhase;
@@ -616,7 +659,7 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * engineSnapshot.
+             * <p>The supported scan types.</p>
              */
             public Builder engineSnapshot(EngineSnapshot engineSnapshot) {
                 this.engineSnapshot = engineSnapshot;
@@ -624,7 +667,7 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扫描结束时间（RFC3339）</p>
+             * <p>The time when the scan finished.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-28T03:36:31.573Z</p>
@@ -635,7 +678,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>934</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -643,7 +689,14 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * kind.
+             * <p>The scan type. Valid values:</p>
+             * <ul>
+             * <li>full: Full scan.</li>
+             * <li>incremental: Incremental scan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>full</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -651,7 +704,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-n72k9yrkq81ny7z</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -659,7 +715,7 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * scanMetrics.
+             * <p>The scan result statistics information.</p>
              */
             public Builder scanMetrics(ScanMetrics scanMetrics) {
                 this.scanMetrics = scanMetrics;
@@ -667,7 +723,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * scanProgress.
+             * <p>The task progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder scanProgress(Long scanProgress) {
                 this.scanProgress = scanProgress;
@@ -675,7 +734,7 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扫描开始时间（RFC3339）</p>
+             * <p>The time when the task started.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-28T03:36:31.573Z</p>
@@ -686,7 +745,17 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>running: Running.</li>
+             * <li>completed: Completed.</li>
+             * <li>failed: Failed.</li>
+             * <li>canceling: Being canceled. </li>
+             * <li>canceled: Canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -694,7 +763,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * taskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648622222394847-ha-cn-lm64p7tby01_dsl_kb_video_1773817008236_full</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -702,7 +774,7 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扫描任务更新时间（RFC3339）</p>
+             * <p>The time when the task was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-28T03:36:31.573Z</p>
@@ -713,7 +785,10 @@ public class DescribeScansResponseBody extends TeaModel {
             }
 
             /**
-             * workerId.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder workerId(String workerId) {
                 this.workerId = workerId;

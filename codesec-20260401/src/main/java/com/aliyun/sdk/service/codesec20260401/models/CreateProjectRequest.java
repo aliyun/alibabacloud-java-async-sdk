@@ -140,7 +140,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is default function description by fc-deploy component</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -149,7 +152,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * engines.
+         * <p>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</p>
          */
         public Builder engines(Engines engines) {
             String enginesShrink = shrink(engines, "engines", "json");
@@ -159,7 +162,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * instructionPrompt.
+         * <p>The natural language prompt that describes scanning or result processing preferences, such as ignoring low-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>such as ignoring low-severity vulnerabilities, etc.</p>
          */
         public Builder instructionPrompt(String instructionPrompt) {
             this.putQueryParameter("instructionPrompt", instructionPrompt);
@@ -168,6 +174,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * <p>The project name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +187,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The project source.</p>
          */
         public Builder source(Source source) {
             String sourceShrink = shrink(source, "source", "json");
@@ -202,16 +209,132 @@ public class CreateProjectRequest extends Request {
      *
      * <p>CreateProjectRequest</p>
      */
+    public static class SastConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("remediation")
+        private Boolean remediation;
+
+        private SastConfig(Builder builder) {
+            this.remediation = builder.remediation;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SastConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return remediation
+         */
+        public Boolean getRemediation() {
+            return this.remediation;
+        }
+
+        public static final class Builder {
+            private Boolean remediation; 
+
+            private Builder() {
+            } 
+
+            private Builder(SastConfig model) {
+                this.remediation = model.remediation;
+            } 
+
+            /**
+             * <p>Specifies whether to generate remediation suggestions.</p>
+             */
+            public Builder remediation(Boolean remediation) {
+                this.remediation = remediation;
+                return this;
+            }
+
+            public SastConfig build() {
+                return new SastConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateProjectRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectRequest</p>
+     */
+    public static class ScaConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("remediation")
+        private Boolean remediation;
+
+        private ScaConfig(Builder builder) {
+            this.remediation = builder.remediation;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return remediation
+         */
+        public Boolean getRemediation() {
+            return this.remediation;
+        }
+
+        public static final class Builder {
+            private Boolean remediation; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaConfig model) {
+                this.remediation = model.remediation;
+            } 
+
+            /**
+             * <p>Specifies whether to generate remediation suggestions.</p>
+             */
+            public Builder remediation(Boolean remediation) {
+                this.remediation = remediation;
+                return this;
+            }
+
+            public ScaConfig build() {
+                return new ScaConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateProjectRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectRequest</p>
+     */
     public static class Engines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sast")
         private Boolean sast;
 
+        @com.aliyun.core.annotation.NameInMap("sastConfig")
+        private SastConfig sastConfig;
+
         @com.aliyun.core.annotation.NameInMap("sca")
         private Boolean sca;
 
+        @com.aliyun.core.annotation.NameInMap("scaConfig")
+        private ScaConfig scaConfig;
+
         private Engines(Builder builder) {
             this.sast = builder.sast;
+            this.sastConfig = builder.sastConfig;
             this.sca = builder.sca;
+            this.scaConfig = builder.scaConfig;
         }
 
         public static Builder builder() {
@@ -230,26 +353,47 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * @return sastConfig
+         */
+        public SastConfig getSastConfig() {
+            return this.sastConfig;
+        }
+
+        /**
          * @return sca
          */
         public Boolean getSca() {
             return this.sca;
         }
 
+        /**
+         * @return scaConfig
+         */
+        public ScaConfig getScaConfig() {
+            return this.scaConfig;
+        }
+
         public static final class Builder {
             private Boolean sast; 
+            private SastConfig sastConfig; 
             private Boolean sca; 
+            private ScaConfig scaConfig; 
 
             private Builder() {
             } 
 
             private Builder(Engines model) {
                 this.sast = model.sast;
+                this.sastConfig = model.sastConfig;
                 this.sca = model.sca;
+                this.scaConfig = model.scaConfig;
             } 
 
             /**
-             * sast.
+             * <p>Specifies whether SAST is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sast(Boolean sast) {
                 this.sast = sast;
@@ -257,10 +401,29 @@ public class CreateProjectRequest extends Request {
             }
 
             /**
-             * sca.
+             * <p>The engine-level configuration.</p>
+             */
+            public Builder sastConfig(SastConfig sastConfig) {
+                this.sastConfig = sastConfig;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether SCA is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sca(Boolean sca) {
                 this.sca = sca;
+                return this;
+            }
+
+            /**
+             * <p>The engine-level configuration.</p>
+             */
+            public Builder scaConfig(ScaConfig scaConfig) {
+                this.scaConfig = scaConfig;
                 return this;
             }
 
@@ -311,7 +474,10 @@ public class CreateProjectRequest extends Request {
             } 
 
             /**
-             * type.
+             * <p>The project type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder type(String type) {
                 this.type = type;
