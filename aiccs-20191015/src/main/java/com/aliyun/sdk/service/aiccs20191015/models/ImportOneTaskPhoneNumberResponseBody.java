@@ -119,7 +119,10 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6A51251-F7C4-596A-9F45-3C3219A5450D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +231,10 @@ public class ImportOneTaskPhoneNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * DetailId.
+             * <p>The task detail ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92304322323*****</p>
              */
             public Builder detailId(Long detailId) {
                 this.detailId = detailId;

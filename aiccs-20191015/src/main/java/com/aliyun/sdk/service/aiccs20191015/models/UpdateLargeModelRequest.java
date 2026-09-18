@@ -199,10 +199,10 @@ public class UpdateLargeModelRequest extends Request {
         } 
 
         /**
-         * <p>授权码</p>
+         * <p>The authorization code.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>sk-sxxxxx*********xx</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -211,7 +211,7 @@ public class UpdateLargeModelRequest extends Request {
         }
 
         /**
-         * <p>基础模型</p>
+         * <p>A list of base models.</p>
          */
         public Builder baseModel(java.util.List<String> baseModel) {
             String baseModelShrink = shrink(baseModel, "BaseModel", "json");
@@ -221,7 +221,7 @@ public class UpdateLargeModelRequest extends Request {
         }
 
         /**
-         * <p>模型编码</p>
+         * <p>The model code.</p>
          * 
          * <strong>example:</strong>
          * <p>Test Model Name</p>
@@ -233,10 +233,10 @@ public class UpdateLargeModelRequest extends Request {
         }
 
         /**
-         * <p>模型名称</p>
+         * <p>The model name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Test model</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -245,10 +245,10 @@ public class UpdateLargeModelRequest extends Request {
         }
 
         /**
-         * <p>模型地址</p>
+         * <p>The model URL.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p><a href="https://xxxxxxxxx">https://xxxxxxxxx</a></p>
          */
         public Builder modelUrl(String modelUrl) {
             this.putQueryParameter("ModelUrl", modelUrl);
@@ -284,10 +284,10 @@ public class UpdateLargeModelRequest extends Request {
         }
 
         /**
-         * <p>温度</p>
+         * <p>Controls the randomness of the model\&quot;s output. A higher value increases randomness, and a lower value makes the output more deterministic.</p>
          * 
          * <strong>example:</strong>
-         * <p>49.29</p>
+         * <p>0.1</p>
          */
         public Builder temperature(Double temperature) {
             this.putQueryParameter("Temperature", temperature);
@@ -296,10 +296,10 @@ public class UpdateLargeModelRequest extends Request {
         }
 
         /**
-         * <p>topK</p>
+         * <p>Restricts token selection to the top k most probable tokens.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>2</p>
          */
         public Builder topK(Long topK) {
             this.putQueryParameter("TopK", topK);
@@ -308,10 +308,10 @@ public class UpdateLargeModelRequest extends Request {
         }
 
         /**
-         * <p>topP</p>
+         * <p>Controls output diversity by using nucleus sampling. It defines a cumulative probability threshold for token selection, considering only the most likely tokens.</p>
          * 
          * <strong>example:</strong>
-         * <p>84.38427</p>
+         * <p>0.1</p>
          */
         public Builder topP(Double topP) {
             this.putQueryParameter("TopP", topP);

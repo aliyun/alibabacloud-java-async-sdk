@@ -106,7 +106,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Skill group information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ListSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +259,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelType.
+             * <p>Channel type of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channelType(Integer channelType) {
                 this.channelType = channelType;
@@ -251,7 +270,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Skill group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自动化技能组</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -259,7 +281,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Display name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自动化技能组</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -267,7 +292,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自动化技能组</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -275,7 +303,10 @@ public class ListSkillGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder skillGroupId(Long skillGroupId) {
                 this.skillGroupId = skillGroupId;

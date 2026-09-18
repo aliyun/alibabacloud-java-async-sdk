@@ -129,10 +129,11 @@ public class CancelTaskRequest extends Request {
         }
 
         /**
+         * <p>The unique job ID of the robot calling task. You can view it in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or obtain it by using the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

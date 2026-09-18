@@ -74,6 +74,7 @@ public class GetAudioNoteUploadUrlRequest extends Request {
         } 
 
         /**
+         * <p>The name of the file to upload.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetAudioNoteUploadUrlRequest extends Request {
         }
 
         /**
-         * FileType.
+         * <p>The file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wav</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);

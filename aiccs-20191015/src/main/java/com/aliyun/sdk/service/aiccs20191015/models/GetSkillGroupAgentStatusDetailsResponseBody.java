@@ -106,7 +106,10 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -230,7 +246,10 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -238,7 +257,10 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -246,7 +268,10 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>A JSON string of type List<Map>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tenant_id&quot;: &quot;905&quot;, &quot;tenant_name&quot;: &quot;非单元测试化BU&quot;, &quot;department_id&quot;: &quot;-1&quot;, &quot;svc_avai_capacity&quot;: 7,      &quot;svc_current_capacity&quot;: 0, &quot;department_name&quot;: &quot;-1&quot;,  &quot;svc_online_cnt&quot;: 3, &quot;svc_ask_offline_servicer_num&quot;: 0,  &quot;date_id&quot;: &quot;20210401&quot;,  &quot;svc_max_capacity&quot;: 7, &quot;svc_rest_cnt&quot;: 0, &quot;current_speci_ability_num&quot;: 0, &quot;servicer_rest_cnt&quot;: 122, &quot;max_speci_ability_num&quot;: 3,      &quot;svc_offline_cnt&quot;: 0,  &quot;svc_no_client_cnt&quot;: 3, &quot;svc_ask_rest_servicer_num&quot;: 0}</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -254,7 +279,10 @@ public class GetSkillGroupAgentStatusDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

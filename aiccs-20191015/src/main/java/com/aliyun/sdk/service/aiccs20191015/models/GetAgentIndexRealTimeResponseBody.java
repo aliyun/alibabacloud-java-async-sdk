@@ -106,7 +106,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.  </li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +220,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服ID</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +231,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>servicerId</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -318,7 +340,7 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             } 
 
             /**
-             * Columns.
+             * <p>Description of returned columns.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -326,7 +348,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -334,7 +359,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -342,7 +370,7 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>Returned data results.</p>
              */
             public Builder rows(java.util.List<java.util.Map<String, ?>> rows) {
                 this.rows = rows;
@@ -350,7 +378,10 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

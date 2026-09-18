@@ -119,7 +119,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Information about the number list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Description of the caller number (geographic location information).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙江省杭州市</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +264,14 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Caller number type. Valid values:  </p>
+             * <ul>
+             * <li><strong>1</strong>: Number.  </li>
+             * <li><strong>2</strong>: Number group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -254,7 +279,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07512234****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -334,7 +362,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Number group description (number group name).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jella</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -342,7 +373,14 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Number group type. Valid values:  </p>
+             * <ul>
+             * <li><strong>1</strong>: Number.  </li>
+             * <li><strong>2</strong>: Number group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -350,7 +388,10 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Number group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7688****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -417,7 +458,7 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             } 
 
             /**
-             * Num.
+             * <p>Caller number information.</p>
              */
             public Builder num(java.util.List<Num> num) {
                 this.num = num;
@@ -425,7 +466,7 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             }
 
             /**
-             * NumGroup.
+             * <p>Number group information.</p>
              */
             public Builder numGroup(java.util.List<NumGroup> numGroup) {
                 this.numGroup = numGroup;

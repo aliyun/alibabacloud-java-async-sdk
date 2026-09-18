@@ -119,7 +119,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The reason for the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The detailed data of the agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that is associated with the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>742C9243-2870-B8D6-0C68-C12345AABBCC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful. Possible values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The operation was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +298,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * CallAssistantHangup.
+             * <p>Specifies whether to disconnect the call when an answering machine is detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder callAssistantHangup(Boolean callAssistantHangup) {
                 this.callAssistantHangup = callAssistantHangup;
@@ -285,7 +309,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CallAssistantRecognize.
+             * <p>Specifies whether to enable answering machine detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder callAssistantRecognize(Boolean callAssistantRecognize) {
                 this.callAssistantRecognize = callAssistantRecognize;
@@ -293,7 +320,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MuteActive.
+             * <p>Specifies whether to wake up the model upon the first mute event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder muteActive(Boolean muteActive) {
                 this.muteActive = muteActive;
@@ -301,7 +331,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MuteDuration.
+             * <p>The mute duration. Unit: seconds. Valid values: 3 to 15.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder muteDuration(Long muteDuration) {
                 this.muteDuration = muteDuration;
@@ -309,7 +342,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MuteHangupNum.
+             * <p>The number of consecutive mute events that trigger an automatic disconnection. Valid values: 1 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder muteHangupNum(Long muteHangupNum) {
                 this.muteHangupNum = muteHangupNum;
@@ -317,7 +353,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * SessionTimeout.
+             * <p>The maximum call duration. Unit: seconds. Valid values: 600 to 3600. The call is automatically disconnected if this duration is exceeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder sessionTimeout(Long sessionTimeout) {
                 this.sessionTimeout = sessionTimeout;
@@ -540,7 +579,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * CalledNumber.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123111122222</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -548,7 +590,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CallerNumber.
+             * <p>The caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123111122222</p>
              */
             public Builder callerNumber(String callerNumber) {
                 this.callerNumber = callerNumber;
@@ -556,7 +601,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CallerNumberType.
+             * <p>The type of the caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder callerNumberType(Long callerNumberType) {
                 this.callerNumberType = callerNumberType;
@@ -564,7 +612,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>The destination number for the transfer, such as the phone number of a customer service agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123111122222</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -572,7 +623,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumberType.
+             * <p>The type of the called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callingNumberType(Long callingNumberType) {
                 this.callingNumberType = callingNumberType;
@@ -580,7 +634,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerRouteCode.
+             * <p>The customer route code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder customerRouteCode(String customerRouteCode) {
                 this.customerRouteCode = customerRouteCode;
@@ -588,7 +645,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable call transfer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -596,7 +656,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * <p>The supplementary information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Additional information for the agent</p>
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -604,7 +667,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * FailureContent.
+             * <p>The prompt that is played when the transfer to a manual agent fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>失败说明</p>
              */
             public Builder failureContent(String failureContent) {
                 this.failureContent = failureContent;
@@ -612,7 +678,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * SeatRouteCode.
+             * <p>The agent route code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEAT_CTI_A_NET</p>
              */
             public Builder seatRouteCode(String seatRouteCode) {
                 this.seatRouteCode = seatRouteCode;
@@ -620,7 +689,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * SeatRouteName.
+             * <p>The name of the agent route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>人工座席</p>
              */
             public Builder seatRouteName(String seatRouteName) {
                 this.seatRouteName = seatRouteName;
@@ -628,7 +700,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * TransferBizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder transferBizId(String transferBizId) {
                 this.transferBizId = transferBizId;
@@ -636,7 +711,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * TransferContent.
+             * <p>The prompt that is played when the call is transferred to a manual agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>提示语</p>
              */
             public Builder transferContent(String transferContent) {
                 this.transferContent = transferContent;
@@ -644,7 +722,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * TransferType.
+             * <p>The agent transfer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73</p>
              */
             public Builder transferType(Long transferType) {
                 this.transferType = transferType;
@@ -841,7 +922,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * BackgroundEnabled.
+             * <p>Specifies whether to enable background sound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder backgroundEnabled(Boolean backgroundEnabled) {
                 this.backgroundEnabled = backgroundEnabled;
@@ -849,7 +933,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * BackgroundSound.
+             * <p>The ID of the background sound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder backgroundSound(Long backgroundSound) {
                 this.backgroundSound = backgroundSound;
@@ -857,7 +944,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * BackgroundVolume.
+             * <p>The volume of the background sound. Valid values: <code>0</code> (low), <code>1</code> (medium), and <code>2</code> (high).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder backgroundVolume(Long backgroundVolume) {
                 this.backgroundVolume = backgroundVolume;
@@ -865,7 +955,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerAccountId.
+             * <p>The account of the third-party voice platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75</p>
              */
             public Builder customerAccountId(Long customerAccountId) {
                 this.customerAccountId = customerAccountId;
@@ -873,7 +966,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MixingEnabled.
+             * <p>Specifies whether to enable audio mixing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mixingEnabled(Boolean mixingEnabled) {
                 this.mixingEnabled = mixingEnabled;
@@ -881,7 +977,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MixingTemplate.
+             * <p>The ID of the audio mixing template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mixingTemplate(Long mixingTemplate) {
                 this.mixingTemplate = mixingTemplate;
@@ -889,7 +988,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID. This parameter is required only for third-party voices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>voice-12345</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -897,7 +999,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * TtsSpeed.
+             * <p>The speech rate for TTS playback. Valid values: -200 to 200. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ttsSpeed(Long ttsSpeed) {
                 this.ttsSpeed = ttsSpeed;
@@ -905,7 +1010,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * TtsStyle.
+             * <p>The voice style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>longxiaoxia_v2p1</p>
              */
             public Builder ttsStyle(String ttsStyle) {
                 this.ttsStyle = ttsStyle;
@@ -913,7 +1021,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * TtsVolume.
+             * <p>The volume of TTS playback. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder ttsVolume(Long ttsVolume) {
                 this.ttsVolume = ttsVolume;
@@ -921,7 +1032,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceCode.
+             * <p>The voice code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V123ABC00</p>
              */
             public Builder voiceCode(String voiceCode) {
                 this.voiceCode = voiceCode;
@@ -929,7 +1043,16 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceType.
+             * <p>The type of the TTS voice. Valid values:</p>
+             * <p><code>VOICE_TYPE_SYSTEM</code>: a system voice.</p>
+             * <p><code>VOICE_TYPE_CLONE</code>: a cloned voice.</p>
+             * <p><code>VOICE_TYPE_DOUBAO</code>: a Doubao voice.</p>
+             * <p><code>VOICE_TYPE_MINIMAX</code>: a Minimax voice.</p>
+             * <p><code>VOICE_TYPE_OPENTTS</code>: an open voice.</p>
+             * <p><code>VOICE_TYPE_BL_CUSTOM</code>: a high-quality custom cloned voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VOICE_TYPE_SYSTEM</p>
              */
             public Builder voiceType(Boolean voiceType) {
                 this.voiceType = voiceType;
@@ -1061,7 +1184,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * EventConfig.
+             * <p>The event configuration.</p>
              */
             public Builder eventConfig(EventConfig eventConfig) {
                 this.eventConfig = eventConfig;
@@ -1069,7 +1192,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Prologue.
+             * <p>The prologue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好，这里是******。</p>
              */
             public Builder prologue(String prologue) {
                 this.prologue = prologue;
@@ -1077,7 +1203,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingFile.
+             * <p>The URL of the audio file for the prologue. This parameter is returned only when <code>StartWordType</code> is set to <code>1</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/oss-file-key</p>
              */
             public Builder recordingFile(String recordingFile) {
                 this.recordingFile = recordingFile;
@@ -1085,7 +1214,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * StartWordType.
+             * <p>The type of the prologue. Valid values: <code>0</code> (text) and <code>1</code> (recording).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startWordType(Long startWordType) {
                 this.startWordType = startWordType;
@@ -1093,7 +1225,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * TransferConfig.
+             * <p>The configuration for transferring the call to a manual agent.</p>
              */
             public Builder transferConfig(TransferConfig transferConfig) {
                 this.transferConfig = transferConfig;
@@ -1101,7 +1233,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * TtsConfig.
+             * <p>The Text-to-Speech (TTS) configuration.</p>
              */
             public Builder ttsConfig(TtsConfig ttsConfig) {
                 this.ttsConfig = ttsConfig;
@@ -1109,7 +1241,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * VocabId.
+             * <p>The ID of the hotword vocabulary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>afb2c43**********83e6df30551c11f7</p>
              */
             public Builder vocabId(String vocabId) {
                 this.vocabId = vocabId;
@@ -1228,7 +1363,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * AiGenerate.
+             * <p>Specifies whether the agent was built with AI assistance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder aiGenerate(Boolean aiGenerate) {
                 this.aiGenerate = aiGenerate;
@@ -1236,7 +1374,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * BasicTaskDescription.
+             * <p>The basic task configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>进行产品营销，介绍优势特点</p>
              */
             public Builder basicTaskDescription(String basicTaskDescription) {
                 this.basicTaskDescription = basicTaskDescription;
@@ -1244,7 +1385,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessType.
+             * <p>The business scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder businessType(Long businessType) {
                 this.businessType = businessType;
@@ -1252,7 +1396,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CoreTarget.
+             * <p>The core objective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>销售线索转化</p>
              */
             public Builder coreTarget(String coreTarget) {
                 this.coreTarget = coreTarget;
@@ -1260,7 +1407,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * SysRole.
+             * <p>The system role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>销售</p>
              */
             public Builder sysRole(String sysRole) {
                 this.sysRole = sysRole;
@@ -1268,7 +1418,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * UserRole.
+             * <p>The user role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>潜在客户</p>
              */
             public Builder userRole(String userRole) {
                 this.userRole = userRole;
@@ -1335,7 +1488,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * KnowledgeId.
+             * <p>The ID of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder knowledgeId(Long knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -1343,7 +1499,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeName.
+             * <p>The name of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>产品知识库</p>
              */
             public Builder knowledgeName(String knowledgeName) {
                 this.knowledgeName = knowledgeName;
@@ -1410,7 +1569,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>RAG retrieval description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>知识库检索</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1418,7 +1580,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Enable RAG retrieval</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1485,7 +1650,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * KnowledgeIds.
+             * <p>The collection of knowledge bases.</p>
              */
             public Builder knowledgeIds(java.util.List<KnowledgeIds> knowledgeIds) {
                 this.knowledgeIds = knowledgeIds;
@@ -1493,7 +1658,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * RagConfig.
+             * <p>The Retrieval-Augmented Generation (RAG) configuration.</p>
              */
             public Builder ragConfig(RagConfig ragConfig) {
                 this.ragConfig = ragConfig;
@@ -1573,7 +1738,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gender</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1581,7 +1749,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1589,7 +1760,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>male</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1721,7 +1895,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the call variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1729,7 +1906,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneTagEnum.
+             * <p>The enumerated values for the call variable.</p>
              */
             public Builder phoneTagEnum(java.util.List<PhoneTagEnum> phoneTagEnum) {
                 this.phoneTagEnum = phoneTagEnum;
@@ -1737,7 +1914,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneTagKey.
+             * <p>The key of the call variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gender</p>
              */
             public Builder phoneTagKey(String phoneTagKey) {
                 this.phoneTagKey = phoneTagKey;
@@ -1745,7 +1925,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneTagName.
+             * <p>The description of the call variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用户性别</p>
              */
             public Builder phoneTagName(String phoneTagName) {
                 this.phoneTagName = phoneTagName;
@@ -1753,7 +1936,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneTagRequired.
+             * <p>Specifies whether the call variable is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder phoneTagRequired(Boolean phoneTagRequired) {
                 this.phoneTagRequired = phoneTagRequired;
@@ -1761,7 +1947,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneTagSource.
+             * <p>The source of the call variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL_CREATE</p>
              */
             public Builder phoneTagSource(String phoneTagSource) {
                 this.phoneTagSource = phoneTagSource;
@@ -1769,7 +1958,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneTagType.
+             * <p>The type of the call variable. Valid values: <code>TEXT</code> and <code>ENUM</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENUM</p>
              */
             public Builder phoneTagType(String phoneTagType) {
                 this.phoneTagType = phoneTagType;
@@ -1836,7 +2028,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * Desc.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标签说明</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -1844,7 +2039,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标签1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1911,7 +2109,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultTag.
+             * <p>The default fallback tag information.</p>
              */
             public Builder defaultTag(DefaultTag defaultTag) {
                 this.defaultTag = defaultTag;
@@ -1919,7 +2117,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MappingTag.
+             * <p>The mapping of call results to tags.</p>
              */
             public Builder mappingTag(java.util.Map<String, String> mappingTag) {
                 this.mappingTag = mappingTag;
@@ -1999,7 +2197,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description of the tag value</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2007,7 +2208,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_12345</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2015,7 +2219,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tag value example</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2121,7 +2328,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the main intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2129,7 +2339,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MainPurposeDescription.
+             * <p>The description of the main intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description of the main intent</p>
              */
             public Builder mainPurposeDescription(String mainPurposeDescription) {
                 this.mainPurposeDescription = mainPurposeDescription;
@@ -2137,7 +2350,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MainPurposeEnum.
+             * <p>The enumerated values for the main intent.</p>
              */
             public Builder mainPurposeEnum(java.util.List<MainPurposeEnum> mainPurposeEnum) {
                 this.mainPurposeEnum = mainPurposeEnum;
@@ -2145,7 +2358,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MainPurposeName.
+             * <p>The name of the main intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customer inquiry handling</p>
              */
             public Builder mainPurposeName(String mainPurposeName) {
                 this.mainPurposeName = mainPurposeName;
@@ -2153,7 +2369,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MainPurposeType.
+             * <p>The value type of the main intent. Valid values: <code>TEXT</code> and <code>ENUM</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENUM</p>
              */
             public Builder mainPurposeType(String mainPurposeType) {
                 this.mainPurposeType = mainPurposeType;
@@ -2233,7 +2452,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用户有较高购买意愿</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2241,7 +2463,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2249,7 +2474,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The enumerated value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>高意愿</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2355,7 +2583,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the output tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2363,7 +2594,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTagDescription.
+             * <p>The description of the output tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用户购买产品的意愿</p>
              */
             public Builder outputTagDescription(String outputTagDescription) {
                 this.outputTagDescription = outputTagDescription;
@@ -2371,7 +2605,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTagEnum.
+             * <p>The enumerated values for the output tag.</p>
              */
             public Builder outputTagEnum(java.util.List<OutputTagEnum> outputTagEnum) {
                 this.outputTagEnum = outputTagEnum;
@@ -2379,7 +2613,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTagName.
+             * <p>The name of the output tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>购买意愿</p>
              */
             public Builder outputTagName(String outputTagName) {
                 this.outputTagName = outputTagName;
@@ -2387,7 +2624,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTagType.
+             * <p>The value type of the output tag. Valid values: <code>TEXT</code> and <code>ENUM</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENUM</p>
              */
             public Builder outputTagType(String outputTagType) {
                 this.outputTagType = outputTagType;
@@ -2467,7 +2707,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * CallResultTagConfig.
+             * <p>The configuration for mapping call results to tags.</p>
              */
             public Builder callResultTagConfig(CallResultTagConfig callResultTagConfig) {
                 this.callResultTagConfig = callResultTagConfig;
@@ -2475,7 +2715,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MainPurpose.
+             * <p>The main intent.</p>
              */
             public Builder mainPurpose(MainPurpose mainPurpose) {
                 this.mainPurpose = mainPurpose;
@@ -2483,7 +2723,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTagConfig.
+             * <p>The output tag configuration.</p>
              */
             public Builder outputTagConfig(java.util.List<OutputTagConfig> outputTagConfig) {
                 this.outputTagConfig = outputTagConfig;
@@ -2771,7 +3011,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentCallConfig.
+             * <p>The voice configuration for intelligent outbound calls.</p>
              */
             public Builder agentCallConfig(AgentCallConfig agentCallConfig) {
                 this.agentCallConfig = agentCallConfig;
@@ -2779,7 +3019,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * AgentDemandConfig.
+             * <p>The business requirement configuration for the agent.</p>
              */
             public Builder agentDemandConfig(AgentDemandConfig agentDemandConfig) {
                 this.agentDemandConfig = agentDemandConfig;
@@ -2787,7 +3027,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * AgentDesc.
+             * <p>The agent description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>日常测试使用。</p>
              */
             public Builder agentDesc(String agentDesc) {
                 this.agentDesc = agentDesc;
@@ -2795,7 +3038,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * AgentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3021893791</p>
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -2803,7 +3049,16 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * AgentMode.
+             * <p>The build mode. Valid values:</p>
+             * <ul>
+             * <li><p><code>0</code>: prompt-based mode.</p>
+             * </li>
+             * <li><p><code>1</code>: dialog flow mode.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentMode(Long agentMode) {
                 this.agentMode = agentMode;
@@ -2811,7 +3066,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试智能体</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -2819,7 +3077,16 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * BranchDeployStatus.
+             * <p>The deployment status. Valid values:</p>
+             * <ul>
+             * <li><p><code>0</code>: Inactive (NOT_EFFECT).</p>
+             * </li>
+             * <li><p><code>1</code>: Active (EFFECT).</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder branchDeployStatus(Long branchDeployStatus) {
                 this.branchDeployStatus = branchDeployStatus;
@@ -2827,7 +3094,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * BranchDesc.
+             * <p>The branch description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认分支</p>
              */
             public Builder branchDesc(String branchDesc) {
                 this.branchDesc = branchDesc;
@@ -2835,7 +3105,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * BranchId.
+             * <p>The branch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder branchId(Long branchId) {
                 this.branchId = branchId;
@@ -2843,7 +3116,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * BranchName.
+             * <p>The branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认版本</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -2851,7 +3127,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeConfig.
+             * <p>The knowledge base configuration.</p>
              */
             public Builder knowledgeConfig(KnowledgeConfig knowledgeConfig) {
                 this.knowledgeConfig = knowledgeConfig;
@@ -2859,7 +3135,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneTagConfig.
+             * <p>The call variable configuration.</p>
              */
             public Builder phoneTagConfig(java.util.List<PhoneTagConfig> phoneTagConfig) {
                 this.phoneTagConfig = phoneTagConfig;
@@ -2867,7 +3143,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>个人客户线索转化</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -2875,7 +3154,7 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * SummaryConfig.
+             * <p>The call summary configuration.</p>
              */
             public Builder summaryConfig(SummaryConfig summaryConfig) {
                 this.summaryConfig = summaryConfig;
@@ -2883,7 +3162,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * VersionDesc.
+             * <p>Version Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试第一个版本</p>
              */
             public Builder versionDesc(String versionDesc) {
                 this.versionDesc = versionDesc;
@@ -2891,7 +3173,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>Version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89</p>
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;
@@ -2899,7 +3184,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>Version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试版本1</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -2907,7 +3195,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * VersionPublishStatus.
+             * <p>The release status of the version. 0 indicates Unreleased, 1 indicates Released, and 2 indicates Draft.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder versionPublishStatus(Long versionPublishStatus) {
                 this.versionPublishStatus = versionPublishStatus;
@@ -2915,7 +3206,10 @@ public class QueryAiVoiceAgentDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * VersionPublishTime.
+             * <p>The most recent release time of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-15 10:30:00</p>
              */
             public Builder versionPublishTime(String versionPublishTime) {
                 this.versionPublishTime = versionPublishTime;

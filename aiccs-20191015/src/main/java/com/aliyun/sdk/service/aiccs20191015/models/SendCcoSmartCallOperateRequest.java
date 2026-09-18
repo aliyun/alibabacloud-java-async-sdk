@@ -145,6 +145,7 @@ public class SendCcoSmartCallOperateRequest extends Request {
         } 
 
         /**
+         * <p>Unique receipt ID of the call. This can be obtained from the response of the <a href="https://help.aliyun.com/document_detail/311247.html">SendCcoSmartCall</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,10 @@ public class SendCcoSmartCallOperateRequest extends Request {
         }
 
         /**
+         * <p>Specifies the action to be performed for the called number during an Intelligent Outbound Call.  </p>
+         * <blockquote>
+         * <p>Currently, only the <strong>parallelBridge</strong> parameter is supported, which indicates bridging the called number with a call center agent.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +183,10 @@ public class SendCcoSmartCallOperateRequest extends Request {
         }
 
         /**
-         * Param.
+         * <p>Extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -187,7 +195,10 @@ public class SendCcoSmartCallOperateRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aiccs</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);

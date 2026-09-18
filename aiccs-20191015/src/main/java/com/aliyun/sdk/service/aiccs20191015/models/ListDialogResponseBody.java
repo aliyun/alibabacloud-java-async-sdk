@@ -106,7 +106,10 @@ public class ListDialogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListDialogResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Call interaction content.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListDialogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListDialogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ListDialogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API invocation succeeded. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.  </li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +259,10 @@ public class ListDialogResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Dialogue content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -251,7 +270,10 @@ public class ListDialogResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>File Type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -259,7 +281,16 @@ public class ListDialogResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Speaking role. Valid values:</p>
+             * <ul>
+             * <li><p>robot: Bot.</p>
+             * </li>
+             * <li><p>user: User.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>robot</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -267,7 +298,10 @@ public class ListDialogResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>Intent label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>肯定</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -275,7 +309,10 @@ public class ListDialogResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>Start Time. UNIX timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1619763900718</p>
              */
             public Builder time(String time) {
                 this.time = time;

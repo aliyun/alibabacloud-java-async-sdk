@@ -119,7 +119,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE339D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -342,7 +357,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessKeyId.
+             * <p>The AccessKey ID used for signing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NYMxfDw3GkXfvEmZHXXXXXX</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -350,7 +368,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Expire.
+             * <p>The expiration time of the authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-13T12:19:13Z</p>
              */
             public Builder expire(String expire) {
                 this.expire = expire;
@@ -358,7 +379,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>The storage path of the OSS file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio/file/sample1</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -366,7 +390,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The host address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>//alicom-voice-ai-agent-xxxx.oss-cn-xxxx.aliyuncs.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -374,7 +401,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The key of the OSS file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audio/file/sample1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -382,7 +412,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * MaxFileSize.
+             * <p>The maximum file size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2560000</p>
              */
             public Builder maxFileSize(Long maxFileSize) {
                 this.maxFileSize = maxFileSize;
@@ -390,7 +423,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The HTTP method used for upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -398,7 +434,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The upload policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -406,7 +445,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The authorization licensing key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -414,7 +456,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>The signature of the temporary upload credential, used to verify legitimacy during upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss sig text</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -422,7 +467,10 @@ public class GetAudioNoteUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * UploadUrl.
+             * <p>The upload URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>//alicom-voice-ai-agent-xxxx.oss-cn-xxxx.aliyuncs.com</p>
              */
             public Builder uploadUrl(String uploadUrl) {
                 this.uploadUrl = uploadUrl;

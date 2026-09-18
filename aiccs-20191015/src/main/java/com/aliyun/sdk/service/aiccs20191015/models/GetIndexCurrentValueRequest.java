@@ -87,7 +87,18 @@ public class GetIndexCurrentValueRequest extends Request {
         } 
 
         /**
-         * DepIds.
+         * <p>The list of department IDs. Separate multiple IDs with commas (,).</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> operation and check the <strong>DepartmentId</strong> parameter in the response to obtain the department ID.</p>
+         * <blockquote>
+         * <p>When this parameter is not empty:</p>
+         * <ul>
+         * <li>If GroupIds is not empty, the query is performed based on the skill group list corresponding to GroupIds.</li>
+         * <li>If GroupIds is empty, the query is performed based on the department list corresponding to this parameter.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2332****,2334****</p>
          */
         public Builder depIds(String depIds) {
             this.putQueryParameter("DepIds", depIds);
@@ -96,7 +107,14 @@ public class GetIndexCurrentValueRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * <p>The list of skill group IDs. Separate multiple IDs with commas (,).</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2717970.html">QuerySkillGroups</a> operation and check the <strong>SkillGroupId</strong> parameter in the response to obtain the skill group ID.</p>
+         * <blockquote>
+         * <p>When this parameter is not empty, the query is performed based on the skill group list corresponding to this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2323****,2324****</p>
          */
         public Builder groupIds(String groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -105,7 +123,13 @@ public class GetIndexCurrentValueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The AICCS instance ID. You can obtain the instance ID from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+         * <blockquote>
+         * <p>The AICCS instance ID is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

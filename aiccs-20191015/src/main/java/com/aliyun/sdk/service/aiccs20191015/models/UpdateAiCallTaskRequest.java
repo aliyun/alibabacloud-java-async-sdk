@@ -373,6 +373,7 @@ public class UpdateAiCallTaskRequest extends Request {
         } 
 
         /**
+         * <p>The available call days.</p>
          * <p>This parameter is required.</p>
          */
         public Builder callDay(java.util.List<String> callDay) {
@@ -383,7 +384,10 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * CallExpireDate.
+         * <p>The expiration date of outbound call details (the specific deadline).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-30 20:00:20</p>
          */
         public Builder callExpireDate(String callExpireDate) {
             this.putQueryParameter("CallExpireDate", callExpireDate);
@@ -392,7 +396,10 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * CallExpireMinutes.
+         * <p>The expiration duration of outbound call details. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder callExpireMinutes(Long callExpireMinutes) {
             this.putQueryParameter("CallExpireMinutes", callExpireMinutes);
@@ -401,7 +408,13 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * CallExpireType.
+         * <p>The outbound call validity type. Valid values:</p>
+         * <p>0: permanently valid.
+         * 1: valid for a specified duration after import.
+         * 2: valid until a specified date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder callExpireType(Long callExpireType) {
             this.putQueryParameter("CallExpireType", callExpireType);
@@ -410,7 +423,10 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * CallRetryInterval.
+         * <p>The retry interval. Unit: minutes. The maximum value is 120 minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder callRetryInterval(Long callRetryInterval) {
             this.putQueryParameter("CallRetryInterval", callRetryInterval);
@@ -419,7 +435,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * CallRetryReason.
+         * <p>The reasons for retry upon failure.</p>
          */
         public Builder callRetryReason(java.util.List<String> callRetryReason) {
             String callRetryReasonShrink = shrink(callRetryReason, "CallRetryReason", "json");
@@ -429,7 +445,10 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * CallRetryTimes.
+         * <p>The number of retries. The maximum value is 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder callRetryTimes(Long callRetryTimes) {
             this.putQueryParameter("CallRetryTimes", callRetryTimes);
@@ -438,6 +457,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
+         * <p>The available call time periods.</p>
          * <p>This parameter is required.</p>
          */
         public Builder callTime(java.util.List<String> callTime) {
@@ -458,7 +478,10 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * LineEncoding.
+         * <p>The line encoding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JILIANG_***_***_NET</p>
          */
         public Builder lineEncoding(String lineEncoding) {
             this.putQueryParameter("LineEncoding", lineEncoding);
@@ -467,7 +490,10 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * LinePhoneNum.
+         * <p>The customer-provided line number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>152****3120</p>
          */
         public Builder linePhoneNum(String linePhoneNum) {
             this.putQueryParameter("LinePhoneNum", linePhoneNum);
@@ -476,7 +502,16 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * MissCallRetry.
+         * <p>Specifies whether to enable retry. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false (default): Disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder missCallRetry(Boolean missCallRetry) {
             this.putQueryParameter("MissCallRetry", missCallRetry);
@@ -494,7 +529,12 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * PhoneType.
+         * <p>The number type. This parameter is used when the creation source is engine-based.</p>
+         * <p>0: Alibaba Cloud number.</p>
+         * <p>1: Customer-provided line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder phoneType(Long phoneType) {
             this.putQueryParameter("PhoneType", phoneType);
@@ -521,7 +561,12 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The creation source. Valid values:</p>
+         * <p>0: created by agent.</p>
+         * <p>1: created by engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cannot be modified. Leave this parameter empty</p>
          */
         public Builder source(Long source) {
             this.putQueryParameter("Source", source);
@@ -530,6 +575,13 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
+         * <p>The start mode. Valid values:</p>
+         * <ul>
+         * <li><p>IMMEDIATE: starts immediately.</p>
+         * </li>
+         * <li><p>SCHEDULE: starts at a scheduled time.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -542,6 +594,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
+         * <p>The task concurrency. The maximum value is 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -554,10 +607,11 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the task to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1152311212312***</p>
+         * <p>1187**************</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -566,10 +620,11 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
+         * <p>The task name. The name must be unique within the same account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>TestTask</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -578,7 +633,10 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * TaskStartTime.
+         * <p>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when the StartType parameter is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1748923429000</p>
          */
         public Builder taskStartTime(Long taskStartTime) {
             this.putQueryParameter("TaskStartTime", taskStartTime);
@@ -587,7 +645,10 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * VirtualNumber.
+         * <p>The service instance used for outbound calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0537022*****</p>
          */
         public Builder virtualNumber(String virtualNumber) {
             this.putQueryParameter("VirtualNumber", virtualNumber);

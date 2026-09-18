@@ -75,7 +75,11 @@ public class CreateDepartmentRequest extends Request {
         } 
 
         /**
+         * <p>Department name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>部门A</p>
          */
         public Builder departmentName(String departmentName) {
             this.putQueryParameter("DepartmentName", departmentName);
@@ -84,6 +88,7 @@ public class CreateDepartmentRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

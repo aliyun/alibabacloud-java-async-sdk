@@ -119,7 +119,10 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,14 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Current agent status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Offline</li>
+         * <li><strong>3</strong>: On break</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +145,10 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +156,10 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +167,10 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF6A3FB7-A5AA-43BE-A65B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +178,10 @@ public class ChangeChatAgentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

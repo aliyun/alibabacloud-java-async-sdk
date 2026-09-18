@@ -117,6 +117,7 @@ public class GetCallDialogContentRequest extends Request {
         } 
 
         /**
+         * <p>The outbound call date, in yyyy-MM-dd format. You can only query data from the last 30 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,10 @@ public class GetCallDialogContentRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for a call.</p>
+         * <blockquote>
+         * <p>The LlmSmartCall API returns this ID in the CallId parameter of its response.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

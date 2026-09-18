@@ -119,7 +119,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Agent service data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +309,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2235****</p>
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -298,7 +320,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AgentStatus.
+             * <p>Agent status. Valid values: <strong>1~6</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentStatus(Integer agentStatus) {
                 this.agentStatus = agentStatus;
@@ -306,7 +331,17 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AgentStatusCode.
+             * <p>Agent status code. Valid values:  </p>
+             * <ul>
+             * <li><strong>AgentCheckout</strong>: Agent logged off.  </li>
+             * <li><strong>AgentReady</strong>: Agent idle.  </li>
+             * <li><strong>AgentBreak</strong>: Agent on break.  </li>
+             * <li><strong>AgentAcw</strong>: Post-processing after a call.  </li>
+             * <li><strong>AgentBusyForCall</strong>: In a call.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AgentCheckout</p>
              */
             public Builder agentStatusCode(String agentStatusCode) {
                 this.agentStatusCode = agentStatusCode;
@@ -314,7 +349,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Assigned.
+             * <p>Indicates whether the agent is assigned. Valid values:<br><strong>false</strong>: Not assigned (no call).<br><strong>true</strong>: Assigned (in a call).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder assigned(Boolean assigned) {
                 this.assigned = assigned;
@@ -322,7 +360,17 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RestType.
+             * <p>Break type. Valid values:  </p>
+             * <ul>
+             * <li><strong>1</strong>: Short break.  </li>
+             * <li><strong>2</strong>: Meal break.  </li>
+             * <li><strong>3</strong>: Meeting.  </li>
+             * <li><strong>4</strong>: Coaching.  </li>
+             * <li><strong>5</strong>: Training.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder restType(Integer restType) {
                 this.restType = restType;
@@ -330,7 +378,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>Tenant ID to which the agent belongs, corresponding to the instance ID in the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccc_xp_pre-cn-***</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -338,7 +389,10 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>Heartbeat signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dnthF_oinHg7JMJDmKqex3Ux****</p>
              */
             public Builder token(String token) {
                 this.token = token;

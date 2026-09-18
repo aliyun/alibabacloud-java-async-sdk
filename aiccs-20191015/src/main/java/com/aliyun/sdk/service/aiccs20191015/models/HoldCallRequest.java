@@ -131,6 +131,7 @@ public class HoldCallRequest extends Request {
         } 
 
         /**
+         * <p>Agent account name (agent logon name)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * CallId.
+         * <p>acid in WebSocket after an inbound call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719786</p>
          */
         public Builder callId(String callId) {
             this.putBodyParameter("CallId", callId);
@@ -152,7 +156,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique ID of the customer request, used for idempotency validation; can be generated using UUID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -161,7 +168,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * ConnectionId.
+         * <p>connId in WebSocket after an inbound call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719788</p>
          */
         public Builder connectionId(String connectionId) {
             this.putBodyParameter("ConnectionId", connectionId);
@@ -170,6 +180,7 @@ public class HoldCallRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID, visible in the Artificial Intelligence Cloud Call Service console</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +193,10 @@ public class HoldCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>jobId in WebSocket after an inbound call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719787</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);

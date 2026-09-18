@@ -188,7 +188,10 @@ public class ListTaskDetailRequest extends Request {
         } 
 
         /**
-         * Called.
+         * <p>The called number. You can view the called number on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186****0000</p>
          */
         public Builder called(String called) {
             this.putQueryParameter("Called", called);
@@ -197,7 +200,10 @@ public class ListTaskDetailRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The detail ID. You can view the detail ID on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -215,7 +221,10 @@ public class ListTaskDetailRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -224,7 +233,10 @@ public class ListTaskDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -251,7 +263,15 @@ public class ListTaskDetailRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The detail status. Valid values:</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong>: The outbound call succeeded.</li>
+         * <li><strong>FAIL</strong>: The outbound call failed.</li>
+         * <li><strong>INIT</strong>: The outbound call has not been made.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -260,7 +280,10 @@ public class ListTaskDetailRequest extends Request {
         }
 
         /**
-         * StatusCode.
+         * <p>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call status codes</a> in Voice Messaging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200100</p>
          */
         public Builder statusCode(String statusCode) {
             this.putQueryParameter("StatusCode", statusCode);
@@ -269,10 +292,11 @@ public class ListTaskDetailRequest extends Request {
         }
 
         /**
+         * <p>The task ID. You can view the task ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2718008.html">ListTask</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

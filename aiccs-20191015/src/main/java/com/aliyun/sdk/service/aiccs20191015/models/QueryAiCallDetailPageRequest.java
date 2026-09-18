@@ -327,7 +327,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         } 
 
         /**
-         * BatchId.
+         * <p>The batch ID. On the <strong>Call Task Management</strong> page, click Details to view the batch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1183**************</p>
          */
         public Builder batchId(String batchId) {
             this.putQueryParameter("BatchId", batchId);
@@ -336,7 +339,27 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * CallResult.
+         * <p>The call result. Valid values:</p>
+         * <ul>
+         * <li>CALL_FORWARDING: call forwarding.</li>
+         * <li>INCOMING_CALL_BARRED: incoming call barred.</li>
+         * <li>CALL_REJECTED: call rejected.</li>
+         * <li>ANSWERED: answered.</li>
+         * <li>USER_BUSY: user busy.</li>
+         * <li>POWERED_OFF: powered off.</li>
+         * <li>NO_USER_RESPONSE: out of service area.</li>
+         * <li>OPERATOR_BLOCK: blocked by carrier.</li>
+         * <li>OTHERS: other status.</li>
+         * <li>SUSPEND: suspended.</li>
+         * <li>CANCEL: canceled by caller.</li>
+         * <li>INVALID_NUMBER: invalid number.</li>
+         * <li>UNAVAILABLE: temporarily unavailable.</li>
+         * <li>NETWORK_BUSY: network busy.</li>
+         * <li>NO_ANSWER: no answer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ANSWERED</p>
          */
         public Builder callResult(String callResult) {
             this.putQueryParameter("CallResult", callResult);
@@ -345,7 +368,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>The called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>053714454****</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -354,7 +380,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * DetailIds.
+         * <p>The list of task detail IDs. A maximum of 100 IDs can be specified.</p>
          */
         public Builder detailIds(java.util.List<Long> detailIds) {
             String detailIdsShrink = shrink(detailIds, "DetailIds", "json");
@@ -364,7 +390,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * EncryptionType.
+         * <p>The encryption type. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder encryptionType(Long encryptionType) {
             this.putQueryParameter("EncryptionType", encryptionType);
@@ -373,7 +402,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * EndCallingTime.
+         * <p>The end calling time. This value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1748948749000</p>
          */
         public Builder endCallingTime(Long endCallingTime) {
             this.putQueryParameter("EndCallingTime", endCallingTime);
@@ -382,7 +414,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * EndImportedTime.
+         * <p>The end import time. This value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1748948749000</p>
          */
         public Builder endImportedTime(Long endImportedTime) {
             this.putQueryParameter("EndImportedTime", endImportedTime);
@@ -391,7 +426,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * MajorIntent.
+         * <p>The major intent. On the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page, click agent details to view the major intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder majorIntent(String majorIntent) {
             this.putQueryParameter("MajorIntent", majorIntent);
@@ -400,7 +438,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * MaxConversationDuration.
+         * <p>The maximum conversation duration. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxConversationDuration(Long maxConversationDuration) {
             this.putQueryParameter("MaxConversationDuration", maxConversationDuration);
@@ -409,7 +450,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * MinConversationDuration.
+         * <p>The minimum conversation duration. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minConversationDuration(Long minConversationDuration) {
             this.putQueryParameter("MinConversationDuration", minConversationDuration);
@@ -418,7 +462,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The ID reserved for the caller. This ID is returned to the caller in the receipt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94ba739b-c01a-ef91-335d-4be006c34899</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -436,7 +483,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -445,7 +495,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -472,7 +525,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * StartCallingTime.
+         * <p>The start calling time. This value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1748948749000</p>
          */
         public Builder startCallingTime(Long startCallingTime) {
             this.putQueryParameter("StartCallingTime", startCallingTime);
@@ -481,7 +537,10 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * StartImportedTime.
+         * <p>The start import time. This value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1748948749000</p>
          */
         public Builder startImportedTime(Long startImportedTime) {
             this.putQueryParameter("StartImportedTime", startImportedTime);
@@ -490,6 +549,15 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><p>0: pending.</p>
+         * </li>
+         * <li><p>1: completed.</p>
+         * </li>
+         * <li><p>2: failed.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -502,10 +570,11 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1212131231****</p>
+         * <p>1187**************</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

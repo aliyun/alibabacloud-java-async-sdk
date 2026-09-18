@@ -129,10 +129,11 @@ public class StartAiCallTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the call task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>121212121****</p>
+         * <p>1187**************</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

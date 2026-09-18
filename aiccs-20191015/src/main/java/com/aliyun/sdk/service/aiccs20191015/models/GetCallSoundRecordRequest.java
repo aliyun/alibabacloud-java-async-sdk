@@ -117,6 +117,8 @@ public class GetCallSoundRecordRequest extends Request {
         } 
 
         /**
+         * <p>Unique call ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API and check the <strong>Data</strong> field in the response parameters to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,8 @@ public class GetCallSoundRecordRequest extends Request {
         }
 
         /**
+         * <p>Call creation time. Format: YYYY-MM-DD hh:mm:ss.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API and check the <strong>date</strong> parameter in the <strong>Response Header</strong> to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

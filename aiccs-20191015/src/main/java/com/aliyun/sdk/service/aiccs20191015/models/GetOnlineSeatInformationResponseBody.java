@@ -106,7 +106,10 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -230,7 +246,10 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNum.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -238,7 +257,10 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -246,7 +268,10 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>The information is a JSON string of the List<Map> type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tenant_id&quot;:&quot;905&quot;,&quot;max_service_num&quot;:&quot;3&quot;,&quot;servicer_id&quot;:&quot;36****&quot;,&quot;tenant_name&quot;:&quot;非单元测试化BU&quot;,&quot;record_gmt_modified&quot;:&quot;2021-04-01 23:20:03&quot;,&quot;pk_id&quot;:&quot;3690012021****&quot;,&quot;record_gmt_create&quot;:&quot;2021-04-01 23:19:55&quot;,&quot;department_id&quot;:&quot;10****&quot;}</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -254,7 +279,10 @@ public class GetOnlineSeatInformationResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;

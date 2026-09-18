@@ -119,7 +119,10 @@ public class AddInboundNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details about why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class AddInboundNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class AddInboundNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class AddInboundNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class AddInboundNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6A51251-F7C4-596A-9F45-3C3219A5450D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class AddInboundNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The call succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +259,10 @@ public class AddInboundNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * InboundNumber.
+             * <p>The inbound number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234234238**33</p>
              */
             public Builder inboundNumber(String inboundNumber) {
                 this.inboundNumber = inboundNumber;
@@ -246,7 +270,10 @@ public class AddInboundNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>号码不合法</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -254,7 +281,10 @@ public class AddInboundNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Indicates whether the number was added successfully. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder result(Boolean result) {
                 this.result = result;

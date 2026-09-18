@@ -106,7 +106,10 @@ public class StartTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Request status code. A value of OK indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,14 @@ public class StartTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the operation succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -122,7 +132,10 @@ public class StartTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +143,10 @@ public class StartTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +154,14 @@ public class StartTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

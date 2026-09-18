@@ -119,7 +119,10 @@ public class StartAiCallTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class StartAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code. OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,16 @@ public class StartAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the task was successfully started. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Success.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -143,7 +158,10 @@ public class StartAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +169,10 @@ public class StartAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58A32FFF-86EE-5CF0-B365-97E8C574C7F4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +180,16 @@ public class StartAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Success.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

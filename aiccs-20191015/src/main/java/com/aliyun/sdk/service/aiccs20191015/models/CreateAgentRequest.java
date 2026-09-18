@@ -132,6 +132,7 @@ public class CreateAgentRequest extends Request {
         } 
 
         /**
+         * <p>Agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique ID of the customer request. Used for idempotency validation. It can be generated using UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -153,7 +157,11 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
+         * <p>Display name of the agent.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX测试</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -162,6 +170,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +183,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>ID of the skill group to which the agent belongs.</p>
          */
         public Builder skillGroupId(java.util.List<Long> skillGroupId) {
             this.putBodyParameter("SkillGroupId", skillGroupId);
@@ -183,7 +192,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>List of skill group IDs to which the agent belongs.</p>
          */
         public Builder skillGroupIdList(java.util.List<Long> skillGroupIdList) {
             this.putBodyParameter("SkillGroupIdList", skillGroupIdList);

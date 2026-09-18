@@ -106,7 +106,10 @@ public class ListRobotNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListRobotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>List of robot nodes.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListRobotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListRobotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ListRobotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the API invocation succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +259,14 @@ public class ListRobotNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * IsOutput.
+             * <p>Whether it is an output. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isOutput(Integer isOutput) {
                 this.isOutput = isOutput;
@@ -251,7 +274,10 @@ public class ListRobotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>Model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模型一</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -259,7 +285,10 @@ public class ListRobotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIdentifier.
+             * <p>Output ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder nodeIdentifier(String nodeIdentifier) {
                 this.nodeIdentifier = nodeIdentifier;
@@ -267,7 +296,10 @@ public class ListRobotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>Node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>理财</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -275,7 +307,10 @@ public class ListRobotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * <p>Flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>开场白</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;

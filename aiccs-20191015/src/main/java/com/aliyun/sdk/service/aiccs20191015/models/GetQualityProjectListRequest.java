@@ -147,6 +147,7 @@ public class GetQualityProjectListRequest extends Request {
         } 
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +160,10 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -168,7 +172,10 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,7 +184,10 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>Quality inspection job ID (supports fuzzy search).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -186,7 +196,10 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>Quality inspection job name (supports fuzzy search).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>质检</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -195,7 +208,14 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Quality inspection job status. Valid values:  </p>
+         * <ul>
+         * <li><strong>0</strong>: Start  </li>
+         * <li><strong>1</strong>: Shutdown</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -204,7 +224,14 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * checkFreqType.
+         * <p>The check frequency type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Periodic quality inspection</li>
+         * <li><strong>4</strong>: Temporary quality inspection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkFreqType(Long checkFreqType) {
             this.putQueryParameter("checkFreqType", checkFreqType);

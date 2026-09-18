@@ -89,6 +89,7 @@ public class ListHotlineRecordRequest extends Request {
         } 
 
         /**
+         * <p>Session ID. This corresponds to the acid in WebSocket after an inbound call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class ListHotlineRecordRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique customer request ID. Used for idempotency validation. You can generate it using UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -110,6 +114,7 @@ public class ListHotlineRecordRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

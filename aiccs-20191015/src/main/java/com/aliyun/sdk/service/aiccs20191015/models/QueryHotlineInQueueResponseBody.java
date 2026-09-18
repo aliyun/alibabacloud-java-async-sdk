@@ -106,7 +106,10 @@ public class QueryHotlineInQueueResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class QueryHotlineInQueueResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Hotline agent data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;n_online_now&quot;:10,&quot;n_idle_now&quot;:3,&quot;n_resttype_now&quot;:3,&quot;n_acw_now&quot;:1}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class QueryHotlineInQueueResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class QueryHotlineInQueueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class QueryHotlineInQueueResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -143,7 +143,10 @@ public class AiccsSmartCallOperateRequest extends Request {
         } 
 
         /**
-         * CallId.
+         * <p>Unique receipt ID of the call. You can obtain it by invoking <a href="https://help.aliyun.com/document_detail/311247.html">SendCcoSmartCall</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116012854210^102814279****</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -152,7 +155,13 @@ public class AiccsSmartCallOperateRequest extends Request {
         }
 
         /**
-         * Command.
+         * <p>Specifies the action to be initiated for the called number during an Intelligent outbound call.</p>
+         * <blockquote>
+         * <p>Currently, only the <strong>parallelBridge</strong> parameter is supported, which indicates bridging the called number with a call center agent.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>parallelBridge</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -170,7 +179,10 @@ public class AiccsSmartCallOperateRequest extends Request {
         }
 
         /**
-         * Param.
+         * <p>Extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -179,7 +191,10 @@ public class AiccsSmartCallOperateRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aiccs</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);

@@ -106,7 +106,10 @@ public class QueryTouchListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class QueryTouchListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class QueryTouchListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>865658FD-80DE-5D49-ABEB-F3CC9863F4F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         }
 
         /**
-         * ResultData.
+         * <p>Data result.</p>
          */
         public Builder resultData(ResultData resultData) {
             this.resultData = resultData;
@@ -138,7 +147,14 @@ public class QueryTouchListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.  </li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +311,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             } 
 
             /**
-             * Ani.
+             * <p>Inbound call caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>187****0000</p>
              */
             public Builder ani(String ani) {
                 this.ani = ani;
@@ -303,7 +322,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * Dnis.
+             * <p>For outbound calls, this is the called number. For inbound calls, this is also the called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05712688****</p>
              */
             public Builder dnis(String dnis) {
                 this.dnis = dnis;
@@ -311,7 +333,16 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationLevel.
+             * <p>Satisfaction Level. Valid values:  </p>
+             * <ul>
+             * <li><strong>2</strong>: Level 2 satisfaction.  </li>
+             * <li><strong>3</strong>: Level 3 satisfaction.  </li>
+             * <li><strong>4</strong>: Level 4 satisfaction.  </li>
+             * <li><strong>5</strong>: Level 5 satisfaction.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder evaluationLevel(Integer evaluationLevel) {
                 this.evaluationLevel = evaluationLevel;
@@ -319,7 +350,17 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationScore.
+             * <p>Satisfaction rating. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Very dissatisfied.</li>
+             * <li><strong>2</strong>: Dissatisfied.</li>
+             * <li><strong>3</strong>: Neutral.</li>
+             * <li><strong>4</strong>: Satisfied.</li>
+             * <li><strong>5</strong>: Very satisfied.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder evaluationScore(Integer evaluationScore) {
                 this.evaluationScore = evaluationScore;
@@ -327,7 +368,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationSolution.
+             * <p>Evaluation solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder evaluationSolution(Integer evaluationSolution) {
                 this.evaluationSolution = evaluationSolution;
@@ -335,7 +379,15 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationStatus.
+             * <p>Evaluation status. Valid values:</p>
+             * <ul>
+             * <li><strong>-1</strong>: Evaluation not initiated.</li>
+             * <li><strong>0</strong>: Not evaluated.</li>
+             * <li><strong>1</strong>: Evaluated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder evaluationStatus(Integer evaluationStatus) {
                 this.evaluationStatus = evaluationStatus;
@@ -343,7 +395,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineJoinRespInterval.
+             * <p>Duration until first response (unit: seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineJoinRespInterval(Integer onlineJoinRespInterval) {
                 this.onlineJoinRespInterval = onlineJoinRespInterval;
@@ -351,7 +406,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineSessionSource.
+             * <p>Online session source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onlineSessionSource(Integer onlineSessionSource) {
                 this.onlineSessionSource = onlineSessionSource;
@@ -359,7 +417,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * OutCallRouteNumber.
+             * <p>Outbound call caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05712688****</p>
              */
             public Builder outCallRouteNumber(String outCallRouteNumber) {
                 this.outCallRouteNumber = outCallRouteNumber;
@@ -764,7 +825,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             } 
 
             /**
-             * BuId.
+             * <p>Tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>905</p>
              */
             public Builder buId(Long buId) {
                 this.buId = buId;
@@ -772,7 +836,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4f8807a9de024507a3090b5b66a8****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -780,7 +847,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelType.
+             * <p>Contact channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder channelType(Integer channelType) {
                 this.channelType = channelType;
@@ -788,7 +858,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * CloseTime.
+             * <p>Session end time. UNIX timestamp format (unit: milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611207976000</p>
              */
             public Builder closeTime(Long closeTime) {
                 this.closeTime = closeTime;
@@ -796,7 +869,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * CommonQueueName.
+             * <p>Skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试1</p>
              */
             public Builder commonQueueName(String commonQueueName) {
                 this.commonQueueName = commonQueueName;
@@ -804,7 +880,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * DepId.
+             * <p>Department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder depId(Long depId) {
                 this.depId = depId;
@@ -812,7 +891,7 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * ExtAttrs.
+             * <p>Extension fields.</p>
              */
             public Builder extAttrs(ExtAttrs extAttrs) {
                 this.extAttrs = extAttrs;
@@ -820,7 +899,7 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * ExtAttrsString.
+             * <p>Large object.</p>
              */
             public Builder extAttrsString(java.util.Map<String, ?> extAttrsString) {
                 this.extAttrsString = extAttrsString;
@@ -828,7 +907,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * Feedback.
+             * <p>Feedback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder feedback(String feedback) {
                 this.feedback = feedback;
@@ -836,7 +918,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * <p>Conversation pickup time, in UNIX timestamp format (unit: milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611209971000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -844,7 +929,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * FromId.
+             * <p>Conversation initiator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6400665****</p>
              */
             public Builder fromId(Long fromId) {
                 this.fromId = fromId;
@@ -852,7 +940,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation Time, in UNIX timestamp format (unit: milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611209971000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -860,7 +951,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Update Time. UNIX timestamp format (unit: milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611207979000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -868,7 +962,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * <p>Membership ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6400665****</p>
              */
             public Builder memberId(Long memberId) {
                 this.memberId = memberId;
@@ -876,7 +973,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * MemberName.
+             * <p>Membership name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>访客</p>
              */
             public Builder memberName(String memberName) {
                 this.memberName = memberName;
@@ -884,7 +984,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTouchId.
+             * <p>Parent contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentTouchId(Long parentTouchId) {
                 this.parentTouchId = parentTouchId;
@@ -892,7 +995,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * QueueId.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder queueId(Long queueId) {
                 this.queueId = queueId;
@@ -900,7 +1006,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerId.
+             * <p>Service agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67****</p>
              */
             public Builder servicerId(Long servicerId) {
                 this.servicerId = servicerId;
@@ -908,7 +1017,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerName.
+             * <p>Service agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder servicerName(String servicerName) {
                 this.servicerName = servicerName;
@@ -916,7 +1028,16 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Contact status. Valid values:  </p>
+             * <ul>
+             * <li><strong>1</strong>: Incoming call received.  </li>
+             * <li><strong>2</strong>: Agent has joined.  </li>
+             * <li><strong>3</strong>: In conversation.  </li>
+             * <li><strong>4</strong>: Ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -924,7 +1045,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchUser.
+             * <p>Change owner list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder switchUser(String switchUser) {
                 this.switchUser = switchUser;
@@ -932,7 +1056,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * ToId.
+             * <p>Conversation recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67****</p>
              */
             public Builder toId(Long toId) {
                 this.toId = toId;
@@ -940,7 +1067,19 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * TouchContent.
+             * <p>The reason why the session ended. Valid values:  </p>
+             * <ul>
+             * <li><strong>0</strong>: Unknown.  </li>
+             * <li><strong>1</strong>: Contact failed.  </li>
+             * <li><strong>2</strong>: Terminated by customer.  </li>
+             * <li><strong>3</strong>: Terminated by agent.  </li>
+             * <li><strong>4</strong>: Call abnormally interrupted.  </li>
+             * <li><strong>5</strong>: Terminated due to change owner.  </li>
+             * <li><strong>6</strong>: Terminated by system.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder touchContent(String touchContent) {
                 this.touchContent = touchContent;
@@ -948,7 +1087,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * TouchEndReason.
+             * <p>End reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder touchEndReason(Integer touchEndReason) {
                 this.touchEndReason = touchEndReason;
@@ -956,7 +1098,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * TouchId.
+             * <p>Touch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1386****</p>
              */
             public Builder touchId(String touchId) {
                 this.touchId = touchId;
@@ -964,7 +1109,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * TouchTime.
+             * <p>Conversation duration (unit: seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder touchTime(String touchTime) {
                 this.touchTime = touchTime;
@@ -972,7 +1120,14 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * TouchType.
+             * <p>Touch type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Active touch.</li>
+             * <li><strong>2</strong>: Passive touch.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder touchType(Integer touchType) {
                 this.touchType = touchType;
@@ -980,7 +1135,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * UserTouchId.
+             * <p>User touch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1386****</p>
              */
             public Builder userTouchId(Long userTouchId) {
                 this.userTouchId = userTouchId;
@@ -1125,7 +1283,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1133,7 +1294,7 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>Data.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -1141,7 +1302,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * Empty.
+             * <p>Indicates whether the result is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder empty(Boolean empty) {
                 this.empty = empty;
@@ -1149,7 +1313,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>The page number of the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nextPage(Integer nextPage) {
                 this.nextPage = nextPage;
@@ -1157,7 +1324,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * OnePageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder onePageSize(Integer onePageSize) {
                 this.onePageSize = onePageSize;
@@ -1165,7 +1335,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousPage.
+             * <p>Previous page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder previousPage(Integer previousPage) {
                 this.previousPage = previousPage;
@@ -1173,7 +1346,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPage.
+             * <p>Total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalPage(Integer totalPage) {
                 this.totalPage = totalPage;
@@ -1181,7 +1357,10 @@ public class QueryTouchListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResults.
+             * <p>Total number of query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalResults(Integer totalResults) {
                 this.totalResults = totalResults;

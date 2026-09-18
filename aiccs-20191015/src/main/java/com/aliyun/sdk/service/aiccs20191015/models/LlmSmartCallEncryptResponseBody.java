@@ -119,7 +119,10 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details about the access denied error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code. A value of \&quot;ok\&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F92F9749-105E-518F-8B08-CF16EF36A0E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The API call was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The API call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +233,10 @@ public class LlmSmartCallEncryptResponseBody extends TeaModel {
             } 
 
             /**
-             * CallId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149******206</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;

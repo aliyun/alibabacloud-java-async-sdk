@@ -106,7 +106,10 @@ public class ListTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>List of job data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ListTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API was invoked successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +311,10 @@ public class ListTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CompleteCount.
+             * <p>Number of completed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder completeCount(Integer completeCount) {
                 this.completeCount = completeCount;
@@ -303,7 +322,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FireTime.
+             * <p>Job start time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1618477232000</p>
              */
             public Builder fireTime(String fireTime) {
                 this.fireTime = fireTime;
@@ -311,7 +333,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation Time of the job. Format: UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1618477232000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -319,7 +344,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique job ID for the robot calling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -327,7 +355,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RobotId.
+             * <p>The ID of the specified robot, which is the script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder robotId(Long robotId) {
                 this.robotId = robotId;
@@ -335,7 +366,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RobotName.
+             * <p>Robot Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>机器人</p>
              */
             public Builder robotName(String robotName) {
                 this.robotName = robotName;
@@ -343,7 +377,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Task Status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,7 +388,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>Task Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试任务</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -359,7 +399,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of processed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -452,7 +495,10 @@ public class ListTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNo.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -460,7 +506,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -468,7 +517,7 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Record.
+             * <p>List of job information.</p>
              */
             public Builder record(java.util.List<Record> record) {
                 this.record = record;
@@ -476,7 +525,10 @@ public class ListTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder total(Long total) {
                 this.total = total;

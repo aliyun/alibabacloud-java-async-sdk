@@ -106,7 +106,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Outbound call job details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API was invoked successfully.  </p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.  </li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +220,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>Number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -212,7 +231,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>Recall interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -435,7 +457,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ConcurrentRate.
+             * <p>Concurrency for automated outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrentRate(Integer concurrentRate) {
                 this.concurrentRate = concurrentRate;
@@ -443,7 +468,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Job description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>房产销售</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -451,7 +479,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionTime.
+             * <p>Task execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;TUESDAY&quot;:[{&quot;start&quot;:&quot;06:00&quot;,&quot;end&quot;:&quot;06:05&quot;}],&quot;MONDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;},{&quot;start&quot;:&quot;20:30&quot;,&quot;end&quot;:&quot;21:45&quot;},{&quot;start&quot;:&quot;22:30&quot;,&quot;end&quot;:&quot;22:50&quot;}],&quot;WEDNESDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;THURSDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;FRIDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SATURDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SUNDAY&quot;:[{&quot;start&quot;:&quot;17:00&quot;,&quot;end&quot;:&quot;23:45&quot;}]}</p>
              */
             public Builder executionTime(String executionTime) {
                 this.executionTime = executionTime;
@@ -459,7 +490,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ForecastCallRate.
+             * <p>Fixed outbound call ratio for predictive dialing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder forecastCallRate(Float forecastCallRate) {
                 this.forecastCallRate = forecastCallRate;
@@ -467,7 +501,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerId.
+             * <p>Skill group ID (for predictive outbound calls) or IVR ID (for automated outbound calls).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder handlerId(Long handlerId) {
                 this.handlerId = handlerId;
@@ -475,7 +512,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerName.
+             * <p>Skill group name or IVR name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>热线技能组</p>
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -483,7 +523,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx外呼</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -491,7 +534,14 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NumRepeated.
+             * <p>Called number deduplication policy.</p>
+             * <ul>
+             * <li><strong>0</strong>: Remove duplicates.</li>
+             * <li><strong>1</strong>: Do not remove duplicates.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder numRepeated(Integer numRepeated) {
                 this.numRepeated = numRepeated;
@@ -499,7 +549,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundNums.
+             * <p>Outbound caller numbers.</p>
              */
             public Builder outboundNums(java.util.List<String> outboundNums) {
                 this.outboundNums = outboundNums;
@@ -507,7 +557,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RecallRule.
+             * <p>Failed-call retry policy.</p>
              */
             public Builder recallRule(RecallRule recallRule) {
                 this.recallRule = recallRule;
@@ -515,7 +565,18 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Job status. Valid values:  </p>
+             * <ul>
+             * <li><strong>0</strong>: Not started.  </li>
+             * <li><strong>1</strong>: In progress.  </li>
+             * <li><strong>2</strong>: System paused.  </li>
+             * <li><strong>3</strong>: Manually paused.  </li>
+             * <li><strong>4</strong>: Completed.  </li>
+             * <li><strong>5</strong>: Stopped.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -523,7 +584,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * <p>Task status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>未开始</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -531,7 +595,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -539,7 +606,14 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Task Type. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: Predictive outbound call.</li>
+             * <li><strong>3</strong>: Automated outbound call.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

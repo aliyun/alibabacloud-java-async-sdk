@@ -101,7 +101,10 @@ public class QueryAiVoiceAgentDetailRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123********</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);

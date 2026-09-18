@@ -88,10 +88,11 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345678</p>
+         * <p>1234***5678</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -100,7 +101,10 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
         }
 
         /**
-         * BranchId.
+         * <p>The ID of the branch. If you do not specify this parameter, the active branch is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder branchId(String branchId) {
             this.putQueryParameter("BranchId", branchId);
@@ -109,7 +113,10 @@ public class QueryAiVoiceAgentDetailNewRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * <p>The ID of the version. If you do not specify this parameter, the system uses the latest published version for the specified branch. You must specify BranchId when you use this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

@@ -188,6 +188,7 @@ public class RobotCallRequest extends Request {
         } 
 
         /**
+         * <p>The called number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,10 +201,11 @@ public class RobotCallRequest extends Request {
         }
 
         /**
+         * <p>The caller number for the outbound call. You can view this number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of the voice messaging service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0571****5678</p>
+         * <p>132****0849</p>
          */
         public Builder calledShowNumber(String calledShowNumber) {
             this.putQueryParameter("CalledShowNumber", calledShowNumber);
@@ -212,7 +214,17 @@ public class RobotCallRequest extends Request {
         }
 
         /**
-         * EarlyMediaAsr.
+         * <p>Specifies whether to enable the number status identification feature. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): Disabled.</li>
+         * <li><strong>true</strong>: Enabled.<blockquote>
+         * <p>After this feature is enabled, the reason why a call is not answered is recorded.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder earlyMediaAsr(Boolean earlyMediaAsr) {
             this.putQueryParameter("EarlyMediaAsr", earlyMediaAsr);
@@ -221,7 +233,10 @@ public class RobotCallRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The ID reserved for the caller. This ID is returned to the caller through a receipt message. The value is 1 to 15 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222356****</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -239,7 +254,13 @@ public class RobotCallRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The parameter list of the robot in JSON format. The total length cannot exceed 512 bytes. You can view the parameters on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> &gt; <strong>Details</strong> &gt; <strong>Input/Output Parameters</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2717999.html">ListRobotParams</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;name&quot;: &quot;Zhang San&quot;,
+         *   &quot;age&quot;: &quot;25&quot;
+         * }</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -248,7 +269,14 @@ public class RobotCallRequest extends Request {
         }
 
         /**
-         * RecordFlag.
+         * <p>Specifies whether to record the call. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): Do not record.</li>
+         * <li><strong>true</strong>: Record.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder recordFlag(Boolean recordFlag) {
             this.putQueryParameter("RecordFlag", recordFlag);
@@ -275,10 +303,11 @@ public class RobotCallRequest extends Request {
         }
 
         /**
+         * <p>The robot ID, which is the script ID. You can view approved script IDs on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>350000****</p>
+         * <p>1000035******</p>
          */
         public Builder robotId(Long robotId) {
             this.putQueryParameter("RobotId", robotId);

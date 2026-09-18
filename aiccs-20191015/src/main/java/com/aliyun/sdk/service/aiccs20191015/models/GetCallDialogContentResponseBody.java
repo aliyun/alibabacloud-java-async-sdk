@@ -119,7 +119,10 @@ public class GetCallDialogContentResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details about the access denial. Returned only when RAM authentication fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Access Denied</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class GetCallDialogContentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class GetCallDialogContentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class GetCallDialogContentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetCallDialogContentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FB0B0481-F13E-16E0-8A7A-1AD2FXXXEF55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class GetCallDialogContentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +259,10 @@ public class GetCallDialogContentResponseBody extends TeaModel {
             } 
 
             /**
-             * CallId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456^123478</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -246,7 +270,21 @@ public class GetCallDialogContentResponseBody extends TeaModel {
             }
 
             /**
-             * CallStatus.
+             * <p>The call status.</p>
+             * <blockquote>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p><code>0</code>: Not connected</p>
+             * </li>
+             * <li><p><code>1</code>: Connected</p>
+             * </li>
+             * <li><p><code>2</code>: Disconnected</p>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder callStatus(Long callStatus) {
                 this.callStatus = callStatus;
@@ -254,7 +292,10 @@ public class GetCallDialogContentResponseBody extends TeaModel {
             }
 
             /**
-             * DialogContent.
+             * <p>The dialog content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;content\&quot;:\&quot;您好。\&quot;,\&quot;role\&quot;:\&quot;assistant\&quot;},{\&quot;content\&quot;:\&quot;不用了。\&quot;,\&quot;role\&quot;:\&quot;user\&quot;},{\&quot;content\&quot;:\&quot;呃，不用了，再见，谢谢。\&quot;,\&quot;role\&quot;:\&quot;user\&quot;}]</p>
              */
             public Builder dialogContent(String dialogContent) {
                 this.dialogContent = dialogContent;

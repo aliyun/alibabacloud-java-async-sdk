@@ -119,7 +119,10 @@ public class StartHotlineServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of Success indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class StartHotlineServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The token required to initiate a heartbeat. This parameter is returned when the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0079e7a845e373****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class StartHotlineServiceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class StartHotlineServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class StartHotlineServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,14 @@ public class StartHotlineServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -106,7 +106,10 @@ public class ListRobotParamsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListRobotParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Parameter information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListRobotParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListRobotParamsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FF67D4D5-4E90-1DF5-BB8F-060BBFAD72DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ListRobotParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +233,16 @@ public class ListRobotParamsResponseBody extends TeaModel {
             } 
 
             /**
-             * IsEmpty.
+             * <p>Indicates whether the parameter is required. Valid values:</p>
+             * <ul>
+             * <li><p>0: Not required.</p>
+             * </li>
+             * <li><p>1: Required.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isEmpty(Integer isEmpty) {
                 this.isEmpty = isEmpty;
@@ -225,7 +250,10 @@ public class ListRobotParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamCode.
+             * <p>Parameter ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder paramCode(String paramCode) {
                 this.paramCode = paramCode;
@@ -233,7 +261,10 @@ public class ListRobotParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>Parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>名称</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;

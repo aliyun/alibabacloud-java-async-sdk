@@ -131,7 +131,10 @@ public class UpdateSkillGroupRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>Unique ID of the customer request. Used for idempotency validation. You can generate it by using a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-****-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,7 +143,13 @@ public class UpdateSkillGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Skill group description.  </p>
+         * <blockquote>
+         * <p>This parameter can be updated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化测试</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -149,7 +158,13 @@ public class UpdateSkillGroupRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>Display name of the skill group.  </p>
+         * <blockquote>
+         * <p>This parameter can be updated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化测试</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -158,6 +173,7 @@ public class UpdateSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +186,11 @@ public class UpdateSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID.  </p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API and check the <strong>SkillGroupId</strong> field in the response to obtain the skill group ID.  </p>
+         * <blockquote>
+         * <p>This parameter cannot be updated.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +203,13 @@ public class UpdateSkillGroupRequest extends Request {
         }
 
         /**
-         * SkillGroupName.
+         * <p>Skill group name.  </p>
+         * <blockquote>
+         * <p>This parameter cannot be updated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>自动化测试</p>
          */
         public Builder skillGroupName(String skillGroupName) {
             this.putQueryParameter("SkillGroupName", skillGroupName);

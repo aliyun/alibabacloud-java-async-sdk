@@ -119,7 +119,10 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The ID of the created agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +174,10 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

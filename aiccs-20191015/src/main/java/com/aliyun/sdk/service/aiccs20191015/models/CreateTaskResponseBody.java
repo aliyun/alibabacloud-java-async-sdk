@@ -106,7 +106,10 @@ public class CreateTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Request status code. A return value of &quot;OK&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Unique job ID of the robot outbound calling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.  </p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.  </li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

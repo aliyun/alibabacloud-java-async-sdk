@@ -106,7 +106,10 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Hotline runtime information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;buId&quot;:905,&quot;phoneToken&quot;:&quot;roESVzzgD1ytmG0W6nMkWinI6fbpKovm14fBhA0NsYPyi/srX/G0SvNB2z96AYiqy1vxQHiaFOdZSxtsAubdgr2kjs2yas7COO5dukQpsOLq9iNI4U6sKlcvaBi8xsyUr/hyqCdTVZDcYCOq0lH6eeNIQK/f7/gWqIw****=&quot;,&quot;isNeedWorkShift&quot;:false,&quot;servicerId&quot;:741018,&quot;accConfigUrl&quot;:&quot;pre-acc-cs-public.alibaba-inc.com&quot;,&quot;agentBasicCode&quot;:&quot;AgentCheckout&quot;,&quot;startWorkToReady&quot;:true,&quot;servicerDn&quot;:&quot;2000000001904123&quot;,&quot;isMaster&quot;:&quot;1&quot;,&quot;tenantId&quot;:2001,&quot;depId&quot;:1139139,&quot;accTenantId&quot;:2001,&quot;phoneData&quot;:&quot;{\&quot;timeStamp\&quot;:164240****,\&quot;expireTime\&quot;:164257****,\&quot;dn\&quot;:\&quot;200000000190****\&quot;,\&quot;source\&quot;:\&quot;xspace\&quot;,\&quot;serviceId\&quot;:741018}&quot;,&quot;agentBasicDesc&quot;:&quot;坐席签出状态&quot;}</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -74,10 +74,11 @@ public class HangupOperateRequest extends Request {
         } 
 
         /**
+         * <p>The call ID. Obtain this ID from the response of the <a href="https://help.aliyun.com/document_detail/2862828.html">LlmSmartCall</a> or <a href="https://help.aliyun.com/document_detail/2881065.html">LlmSmartCallEncrypt</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>147776727911^134522727911</p>
+         * <p>14777672<strong><strong>^13452272</strong></strong></p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -86,7 +87,16 @@ public class HangupOperateRequest extends Request {
         }
 
         /**
-         * ImmediateHangup.
+         * <p>Specifies whether to hang up the call immediately. Valid values:</p>
+         * <ul>
+         * <li><p>true (default): Hangs up the call immediately.</p>
+         * </li>
+         * <li><p>false: Hangs up the call after the current playback finishes.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder immediateHangup(Boolean immediateHangup) {
             this.putQueryParameter("ImmediateHangup", immediateHangup);

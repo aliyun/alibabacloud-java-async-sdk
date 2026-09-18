@@ -106,7 +106,10 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>IP information. The value is a JSON string of the List type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;xmculvs&quot;:[ 0:{ &quot;port&quot;:00 &quot;ip&quot;:&quot;0.0.0.0&quot; &quot;name&quot;:&quot;lvs1&quot; } ]}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

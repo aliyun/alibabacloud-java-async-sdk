@@ -119,7 +119,10 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1213123123*****</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -143,7 +152,10 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C93B345-F702-5449-BA7E-7D110D4BF798</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,14 @@ public class CreateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: successful.</li>
+         * <li><strong>false</strong>: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

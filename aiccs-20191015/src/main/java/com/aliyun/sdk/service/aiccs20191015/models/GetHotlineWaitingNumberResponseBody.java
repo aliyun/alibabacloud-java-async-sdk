@@ -106,7 +106,10 @@ public class GetHotlineWaitingNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error encoding</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetHotlineWaitingNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Queue length of hotline members</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetHotlineWaitingNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Fault description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetHotlineWaitingNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, used to trail the cause of an error</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class GetHotlineWaitingNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the API call succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

@@ -144,7 +144,7 @@ public class GetOnlineSeatInformationRequest extends Request {
         } 
 
         /**
-         * AgentIds.
+         * <p>List of agent IDs.</p>
          */
         public Builder agentIds(java.util.List<Long> agentIds) {
             String agentIdsShrink = shrink(agentIds, "AgentIds", "simple");
@@ -154,7 +154,10 @@ public class GetOnlineSeatInformationRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -163,7 +166,7 @@ public class GetOnlineSeatInformationRequest extends Request {
         }
 
         /**
-         * DepIds.
+         * <p>List of department IDs.</p>
          */
         public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "DepIds", "simple");
@@ -173,7 +176,10 @@ public class GetOnlineSeatInformationRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End date UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1617761765000</p>
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -182,6 +188,7 @@ public class GetOnlineSeatInformationRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +201,10 @@ public class GetOnlineSeatInformationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,7 +213,10 @@ public class GetOnlineSeatInformationRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start date UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615083365000</p>
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);

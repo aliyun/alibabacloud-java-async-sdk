@@ -103,6 +103,7 @@ public class SubmitAudioNoteRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the notes agent. Specify the ID of a published recording notes agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class SubmitAudioNoteRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>The custom task ID defined by the business side. This ID is used to associate external business records during callbacks or troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>biz-001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -124,6 +128,7 @@ public class SubmitAudioNoteRequest extends Request {
         }
 
         /**
+         * <p>The storage path of the recording file in OSS. Use the FilePath returned by the upload address retrieval operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class SubmitAudioNoteRequest extends Request {
         }
 
         /**
-         * LlmModelId.
+         * <p>The ID of the LLM model used for notes inference. If this parameter is not specified, the default model configuration of the agent is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88</p>
          */
         public Builder llmModelId(Long llmModelId) {
             this.putQueryParameter("LlmModelId", llmModelId);

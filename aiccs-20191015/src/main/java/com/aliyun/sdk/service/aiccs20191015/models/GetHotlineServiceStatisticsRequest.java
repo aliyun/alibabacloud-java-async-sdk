@@ -214,7 +214,7 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         } 
 
         /**
-         * AgentIds.
+         * <p>List of agent IDs.</p>
          */
         public Builder agentIds(java.util.List<Long> agentIds) {
             String agentIdsShrink = shrink(agentIds, "AgentIds", "simple");
@@ -224,7 +224,10 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -233,7 +236,7 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * DepIds.
+         * <p>List of department IDs.</p>
          */
         public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "DepIds", "simple");
@@ -243,7 +246,10 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End Datetime Variable as a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1617761765000</p>
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -252,7 +258,14 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * ExistAgentGrouping.
+         * <p>Specifies whether to query by agent group. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Yes  </li>
+         * <li><strong>false</strong>: No</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder existAgentGrouping(Boolean existAgentGrouping) {
             this.putQueryParameter("ExistAgentGrouping", existAgentGrouping);
@@ -261,7 +274,14 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * ExistDepartmentGrouping.
+         * <p>Specifies whether to query by department group. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Yes  </li>
+         * <li><strong>false</strong>: No</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder existDepartmentGrouping(Boolean existDepartmentGrouping) {
             this.putQueryParameter("ExistDepartmentGrouping", existDepartmentGrouping);
@@ -270,7 +290,14 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * ExistSkillGroupGrouping.
+         * <p>Indicates whether to query by skill group grouping. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder existSkillGroupGrouping(Boolean existSkillGroupGrouping) {
             this.putQueryParameter("ExistSkillGroupGrouping", existSkillGroupGrouping);
@@ -279,7 +306,7 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * <p>List of skill group IDs.</p>
          */
         public Builder groupIds(java.util.List<Long> groupIds) {
             String groupIdsShrink = shrink(groupIds, "GroupIds", "simple");
@@ -289,6 +316,7 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +329,10 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -310,7 +341,10 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start date UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615083365000</p>
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -319,7 +353,14 @@ public class GetHotlineServiceStatisticsRequest extends Request {
         }
 
         /**
-         * TimeLatitudeType.
+         * <p>Time latitude type for grouped queries. Valid values:  </p>
+         * <ul>
+         * <li><strong>minute</strong>: minute  </li>
+         * <li><strong>hour</strong>: hour</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>minute</p>
          */
         public Builder timeLatitudeType(String timeLatitudeType) {
             this.putQueryParameter("TimeLatitudeType", timeLatitudeType);

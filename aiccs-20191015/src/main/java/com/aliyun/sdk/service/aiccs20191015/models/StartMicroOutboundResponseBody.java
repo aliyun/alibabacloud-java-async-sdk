@@ -119,7 +119,10 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         }
 
         /**
-         * CustomerInfo.
+         * <p>Customer information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;caseId\&quot;:2323****}</p>
          */
         public Builder customerInfo(String customerInfo) {
             this.customerInfo = customerInfo;
@@ -135,7 +141,10 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         }
 
         /**
-         * InvokeCmdId.
+         * <p>Command ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8883f165-4a0d-4da2-a2d2</p>
          */
         public Builder invokeCmdId(String invokeCmdId) {
             this.invokeCmdId = invokeCmdId;
@@ -143,7 +152,10 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         }
 
         /**
-         * InvokeCreateTime.
+         * <p>Creation Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-23 17:30:32.525</p>
          */
         public Builder invokeCreateTime(String invokeCreateTime) {
             this.invokeCreateTime = invokeCreateTime;
@@ -151,7 +163,10 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -159,7 +174,10 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

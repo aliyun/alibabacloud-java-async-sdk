@@ -106,7 +106,10 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Agent information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +259,10 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>Account name of the agent, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -251,7 +270,10 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * AgentId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>666666</p>
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -259,7 +281,10 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Display name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>刘测试</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -267,7 +292,15 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Agent status. Only agents with a Normal status can perform Business Activities. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Normal</li>
+             * <li><strong>1</strong>: Frozen</li>
+             * <li><strong>2</strong>: Deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -275,7 +308,10 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>Tenant ID to which the agent belongs. This corresponds to the instance ID provided in the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

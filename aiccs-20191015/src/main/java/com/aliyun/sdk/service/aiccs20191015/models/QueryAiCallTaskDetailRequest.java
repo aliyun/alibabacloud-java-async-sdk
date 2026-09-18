@@ -129,10 +129,11 @@ public class QueryAiCallTaskDetailRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>112123123******</p>
+         * <p>1187**************</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

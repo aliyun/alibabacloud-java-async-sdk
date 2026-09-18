@@ -93,7 +93,10 @@ public class HangupOperateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of \&quot;OK\&quot; indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class HangupOperateResponseBody extends TeaModel {
         }
 
         /**
-         * Mesage.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder mesage(String mesage) {
             this.mesage = mesage;
@@ -109,7 +115,10 @@ public class HangupOperateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFD543DD-E087-54A2-AC0B-54E0656511D7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,16 @@ public class HangupOperateResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of the operation. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The hang-up was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The hang-up operation failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

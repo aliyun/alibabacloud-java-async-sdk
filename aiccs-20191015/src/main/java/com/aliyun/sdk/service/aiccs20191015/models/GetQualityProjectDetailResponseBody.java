@@ -106,7 +106,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Quality inspection job information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -334,7 +346,14 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckFreqType.
+             * <p>Inspection frequency type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Periodic quality inspection</li>
+             * <li><strong>4</strong>: Ad hoc quality inspection</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkFreqType(Integer checkFreqType) {
                 this.checkFreqType = checkFreqType;
@@ -342,7 +361,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-07 18:07:18</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -350,7 +372,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DepList.
+             * <p>Quality inspection sampling scope.</p>
              */
             public Builder depList(java.util.List<Long> depList) {
                 this.depList = depList;
@@ -358,7 +380,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupList.
+             * <p>Quality inspection sampling scope.</p>
              */
             public Builder groupList(java.util.List<Long> groupList) {
                 this.groupList = groupList;
@@ -366,7 +388,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Quality inspection job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15977801</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -374,7 +399,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>Updated At.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-07 18:07:19</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -382,7 +410,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>Quality inspection job name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自动化质检任务</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -390,7 +421,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QualityRuleIds.
+             * <p>Quality inspection rule IDs.</p>
              */
             public Builder qualityRuleIds(java.util.List<Long> qualityRuleIds) {
                 this.qualityRuleIds = qualityRuleIds;
@@ -398,7 +429,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QualityType.
+             * <p>Quality inspection type. Fixed value: <strong>1</strong> (Consultation).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder qualityType(Integer qualityType) {
                 this.qualityType = qualityType;
@@ -406,7 +440,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerList.
+             * <p>Quality inspection sampling scope.</p>
              */
             public Builder servicerList(java.util.List<Long> servicerList) {
                 this.servicerList = servicerList;
@@ -414,7 +448,14 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Quality inspection job status. Valid values:  </p>
+             * <ul>
+             * <li><strong>0</strong>: Start  </li>
+             * <li><strong>1</strong>: Shutdown</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -422,7 +463,10 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Quality inspection job version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

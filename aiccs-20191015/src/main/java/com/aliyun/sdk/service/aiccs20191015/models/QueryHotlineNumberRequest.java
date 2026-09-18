@@ -132,6 +132,7 @@ public class QueryHotlineNumberRequest extends Request {
         } 
 
         /**
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,10 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
-         * DepartmentId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2256****</p>
          */
         public Builder departmentId(Long departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -153,7 +157,7 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * <p>The list of skill groups.</p>
          */
         public Builder groupIds(java.util.List<Long> groupIds) {
             String groupIdsShrink = shrink(groupIds, "GroupIds", "json");
@@ -163,7 +167,10 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
-         * HotlineNumber.
+         * <p>The hotline number. Fuzzy query is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571****2211</p>
          */
         public Builder hotlineNumber(String hotlineNumber) {
             this.putQueryParameter("HotlineNumber", hotlineNumber);
@@ -172,6 +179,8 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.
+         * You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +193,7 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Acid.
+         * <p>Session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1004849****</p>
          */
         public Builder acid(String acid) {
             this.acid = acid;
@@ -127,7 +130,10 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         }
 
         /**
-         * AgentId.
+         * <p>Agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1212****</p>
          */
         public Builder agentId(String agentId) {
             this.agentId = agentId;
@@ -135,7 +141,10 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -143,7 +152,10 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         }
 
         /**
-         * OssLink.
+         * <p>Recording file link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://****</p>
          */
         public Builder ossLink(String ossLink) {
             this.ossLink = ossLink;
@@ -159,7 +174,10 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

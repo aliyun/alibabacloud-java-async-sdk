@@ -161,6 +161,7 @@ public class CreateThirdSsoAgentRequest extends Request {
         } 
 
         /**
+         * <p>Account ID to synchronize.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +174,7 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
+         * <p>Account name to synchronize.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +187,7 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
+         * <p>The client ID issued to the tenant instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +200,10 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique ID for the customer request. Used for idempotency validation and can be generated using UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -206,7 +212,10 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>Agent display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -215,6 +224,7 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +237,7 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * RoleIds.
+         * <p>List of role IDs.</p>
          */
         public Builder roleIds(java.util.List<Long> roleIds) {
             this.putBodyParameter("RoleIds", roleIds);
@@ -236,7 +246,7 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * SkillGroupIds.
+         * <p>List of skill group IDs.</p>
          */
         public Builder skillGroupIds(java.util.List<Long> skillGroupIds) {
             this.putBodyParameter("SkillGroupIds", skillGroupIds);

@@ -106,7 +106,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of Success indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The call data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE339D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -555,7 +567,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * Acid.
+             * <p>The session ID. The acid in the websocket after an inbound call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7719786</p>
              */
             public Builder acid(String acid) {
                 this.acid = acid;
@@ -563,7 +578,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * ActiveTransferId.
+             * <p>The agent ID.</p>
+             * <blockquote>
+             * <p>This value is Null in non-transfer scenarios.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder activeTransferId(String activeTransferId) {
                 this.activeTransferId = activeTransferId;
@@ -571,7 +592,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * CallContinueTime.
+             * <p>The call duration. Unit: seconds.</p>
+             * <blockquote>
+             * <p>No call duration is available for unanswered calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>37</p>
              */
             public Builder callContinueTime(Integer callContinueTime) {
                 this.callContinueTime = callContinueTime;
@@ -579,7 +606,21 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * CallResult.
+             * <p>The call result. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: The call ended normally.</li>
+             * <li><strong>touchRouteError</strong>: The call was terminated in the queue.</li>
+             * <li><strong>touchInQueue</strong>: The call was terminated in the queue.</li>
+             * <li><strong>touchInLoss</strong>: The call was terminated in the queue.</li>
+             * <li><strong>userHangup</strong>: The user hung up or the call was terminated in the IVR.</li>
+             * <li><strong>sysHangup</strong>: The system hung up or the call was terminated in the IVR.</li>
+             * <li><strong>transferAgent</strong>: The user hung up or the call was terminated in the IVR.</li>
+             * <li><strong>dailing</strong>: The agent hung up or the call was terminated during ringing.</li>
+             * <li><strong>TouchRingCallLoss</strong>: The call was terminated in the queue or during ringing.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder callResult(String callResult) {
                 this.callResult = callResult;
@@ -587,7 +628,15 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * CallType.
+             * <p>The call type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: outbound call</li>
+             * <li><strong>2</strong>: inbound call</li>
+             * <li><strong>3</strong>: transferred call</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callType(Integer callType) {
                 this.callType = callType;
@@ -595,7 +644,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135615*****</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -603,7 +655,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * CallingNumber.
+             * <p>The number of the caller. For example, a mobile phone number, an agent number, or a robot number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571773</p>
              */
             public Builder callingNumber(String callingNumber) {
                 this.callingNumber = callingNumber;
@@ -611,7 +666,18 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the call was created.</p>
+             * <blockquote>
+             * <ul>
+             * <li>For outbound calls, this is the time when the outbound call was initiated.</li>
+             * </ul>
+             * </blockquote>
+             * <ul>
+             * <li>For inbound calls, this is the time when the call entered the ACC system.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-02 22:32:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -619,7 +685,19 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationLevel.
+             * <p>The satisfaction rating level. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: level-2 satisfaction</li>
+             * <li><strong>3</strong>: level-3 satisfaction</li>
+             * <li><strong>4</strong>: level-4 satisfaction</li>
+             * <li><strong>5</strong>: level-5 satisfaction</li>
+             * </ul>
+             * <blockquote>
+             * <p>No data is available for outbound calls or unanswered calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder evaluationLevel(Integer evaluationLevel) {
                 this.evaluationLevel = evaluationLevel;
@@ -627,7 +705,20 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationScore.
+             * <p>The satisfaction score. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Very dissatisfied.</li>
+             * <li><strong>2</strong>: Dissatisfied.</li>
+             * <li><strong>3</strong>: Average.</li>
+             * <li><strong>4</strong>: Satisfied.</li>
+             * <li><strong>5</strong>: Very satisfied.</li>
+             * </ul>
+             * <blockquote>
+             * <p>No data is available for outbound calls or unanswered calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder evaluationScore(Integer evaluationScore) {
                 this.evaluationScore = evaluationScore;
@@ -635,7 +726,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The skill group ID.</p>
+             * <blockquote>
+             * <p>When CallType is set to <strong>1</strong>, no skill group information is available for outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -643,7 +740,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The skill group name.</p>
+             * <blockquote>
+             * <p>When CallType is set to <strong>1</strong>, no skill group information is available for outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>AutomationSkillGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -651,7 +754,16 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * HangUpRole.
+             * <p>The party that hung up. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: System hung up.</li>
+             * <li><strong>2</strong>: Customer hung up.</li>
+             * <li><strong>3</strong>: Agent hung up.</li>
+             * <li><strong>null</strong>: Unknown.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hangUpRole(String hangUpRole) {
                 this.hangUpRole = hangUpRole;
@@ -659,7 +771,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * HangUpTime.
+             * <p>The hang-up time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-02 22:33:46</p>
              */
             public Builder hangUpTime(String hangUpTime) {
                 this.hangUpTime = hangUpTime;
@@ -667,7 +782,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The globally unique ID of the call details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc1c58dab4a4dd280e3813c66</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -675,7 +793,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * InQueueTime.
+             * <p>The time when the call entered the queue for hotline assignment.</p>
+             * <blockquote>
+             * <p>No queue entry time is available for outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-02 22:32:55</p>
              */
             public Builder inQueueTime(String inQueueTime) {
                 this.inQueueTime = inQueueTime;
@@ -683,7 +807,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * <p>The member ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7856876</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -691,7 +818,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * MemberName.
+             * <p>The member name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AnonymousMember</p>
              */
             public Builder memberName(String memberName) {
                 this.memberName = memberName;
@@ -699,7 +829,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * OutQueueTime.
+             * <p>The time when the call left the queue for hotline assignment.</p>
+             * <blockquote>
+             * <p>No queue exit time is available for outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-02 22:32:59</p>
              */
             public Builder outQueueTime(String outQueueTime) {
                 this.outQueueTime = outQueueTime;
@@ -707,7 +843,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * PassiveTransferId.
+             * <p>The agent ID or transferred phone number.</p>
+             * <blockquote>
+             * <p>This value is Null in non-transfer scenarios.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder passiveTransferId(String passiveTransferId) {
                 this.passiveTransferId = passiveTransferId;
@@ -715,7 +857,17 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * PassiveTransferIdType.
+             * <p>The type of the party to which the session was transferred. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Agent ID.</li>
+             * <li><strong>2</strong>: Transferred phone number.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This value is Null in non-transfer scenarios.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passiveTransferIdType(String passiveTransferIdType) {
                 this.passiveTransferIdType = passiveTransferIdType;
@@ -723,7 +875,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * PickUpTime.
+             * <p>The time when the call was answered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-02 22:33:09</p>
              */
             public Builder pickUpTime(String pickUpTime) {
                 this.pickUpTime = pickUpTime;
@@ -731,7 +886,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * QueueUpContinueTime.
+             * <p>The queue wait duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder queueUpContinueTime(Integer queueUpContinueTime) {
                 this.queueUpContinueTime = queueUpContinueTime;
@@ -739,7 +897,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RingContinueTime.
+             * <p>The ringing duration. Unit: seconds.</p>
+             * <blockquote>
+             * <p>No ringing duration is available for outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ringContinueTime(Integer ringContinueTime) {
                 this.ringContinueTime = ringContinueTime;
@@ -747,7 +911,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RingEndTime.
+             * <p>The time when ringing ended.</p>
+             * <blockquote>
+             * <p>No ringing end time is available for outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-02 22:33:09</p>
              */
             public Builder ringEndTime(String ringEndTime) {
                 this.ringEndTime = ringEndTime;
@@ -755,7 +925,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RingStartTime.
+             * <p>The time when ringing started.</p>
+             * <blockquote>
+             * <p>No ringing start time is available for outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-02 22:32:59</p>
              */
             public Builder ringStartTime(String ringStartTime) {
                 this.ringStartTime = ringStartTime;
@@ -763,7 +939,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerId.
+             * <p>The agent ID.</p>
+             * <blockquote>
+             * <p>No agent information is available before an agent is assigned for inbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>555555</p>
              */
             public Builder servicerId(String servicerId) {
                 this.servicerId = servicerId;
@@ -771,7 +953,13 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerName.
+             * <p>The agent name.</p>
+             * <blockquote>
+             * <p>No agent information is available before an agent is assigned for inbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestAgent</p>
              */
             public Builder servicerName(String servicerName) {
                 this.servicerName = servicerName;
@@ -779,7 +967,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * TrunkCall.
+             * <p>The long-distance call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1861111****</p>
              */
             public Builder trunkCall(String trunkCall) {
                 this.trunkCall = trunkCall;
@@ -872,7 +1063,7 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * CallDetailRecord.
+             * <p>The call detail records.</p>
              */
             public Builder callDetailRecord(java.util.List<CallDetailRecord> callDetailRecord) {
                 this.callDetailRecord = callDetailRecord;
@@ -880,7 +1071,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -888,7 +1082,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -896,7 +1093,10 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

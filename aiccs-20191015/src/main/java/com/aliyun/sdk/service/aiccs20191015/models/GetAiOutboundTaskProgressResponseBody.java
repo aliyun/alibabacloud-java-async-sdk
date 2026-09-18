@@ -106,7 +106,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Job progress.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +311,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             } 
 
             /**
-             * CallLossCount.
+             * <p>Call loss count.  </p>
+             * <blockquote>
+             * <p>A parameter specific to predictive outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callLossCount(Integer callLossCount) {
                 this.callLossCount = callLossCount;
@@ -303,7 +325,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * CallLossRate.
+             * <p>Call Loss Rate.  </p>
+             * <blockquote>
+             * <p>A parameter exclusive to predictive outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder callLossRate(Float callLossRate) {
                 this.callLossRate = callLossRate;
@@ -311,7 +339,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * CallOutConnectCount.
+             * <p>Number of successful outbound call connections.  </p>
+             * <blockquote>
+             * <p>This parameter is specific to automatic outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder callOutConnectCount(Integer callOutConnectCount) {
                 this.callOutConnectCount = callOutConnectCount;
@@ -319,7 +353,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * CallOutConnectRate.
+             * <p>Outbound Call Connection Rate.  </p>
+             * <blockquote>
+             * <p>A parameter exclusive to automated outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder callOutConnectRate(Float callOutConnectRate) {
                 this.callOutConnectRate = callOutConnectRate;
@@ -327,7 +367,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * CallOutCount.
+             * <p>Number of outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder callOutCount(Integer callOutCount) {
                 this.callOutCount = callOutCount;
@@ -335,7 +378,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * CallOutServicerPickupCount.
+             * <p>Agent Pickup Count.  </p>
+             * <blockquote>
+             * <p>A parameter exclusive to predictive outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder callOutServicerPickupCount(Integer callOutServicerPickupCount) {
                 this.callOutServicerPickupCount = callOutServicerPickupCount;
@@ -343,7 +392,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * CallOutServicerPickupRate.
+             * <p>Agent pickup rate.  </p>
+             * <blockquote>
+             * <p>A parameter specific to predictive outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.4</p>
              */
             public Builder callOutServicerPickupRate(Float callOutServicerPickupRate) {
                 this.callOutServicerPickupRate = callOutServicerPickupRate;
@@ -351,7 +406,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * CallOutUserPickupCount.
+             * <p>Customer Pickup Count.  </p>
+             * <blockquote>
+             * <p>A parameter exclusive to predictive outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder callOutUserPickupCount(Integer callOutUserPickupCount) {
                 this.callOutUserPickupCount = callOutUserPickupCount;
@@ -359,7 +420,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * CallOutUserPickupRate.
+             * <p>Customer Pickup Rate.  </p>
+             * <blockquote>
+             * <p>A parameter exclusive to predictive outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder callOutUserPickupRate(Float callOutUserPickupRate) {
                 this.callOutUserPickupRate = callOutUserPickupRate;
@@ -569,7 +636,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             } 
 
             /**
-             * CallingCount.
+             * <p>Number of jobs in calling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder callingCount(Integer callingCount) {
                 this.callingCount = callingCount;
@@ -577,7 +647,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectCount.
+             * <p>Number of connected jobs.</p>
+             * <blockquote>
+             * <p>Parameter specific to auto dialing.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder connectCount(Integer connectCount) {
                 this.connectCount = connectCount;
@@ -585,7 +661,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectRate.
+             * <p>Job connection rate.  </p>
+             * <blockquote>
+             * <p>A parameter specific to automatic outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder connectRate(Float connectRate) {
                 this.connectRate = connectRate;
@@ -593,7 +675,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * FinishCount.
+             * <p>Number of completed jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -601,7 +686,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * FinishRate.
+             * <p>Job completion rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.20</p>
              */
             public Builder finishRate(Float finishRate) {
                 this.finishRate = finishRate;
@@ -609,7 +697,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerPickupCount.
+             * <p>Number of agent pickups.</p>
+             * <blockquote>
+             * <p>Parameter specific to predictive dialing.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder servicerPickupCount(Integer servicerPickupCount) {
                 this.servicerPickupCount = servicerPickupCount;
@@ -617,7 +711,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerPickupRate.
+             * <p>Agent pickup rate.</p>
+             * <blockquote>
+             * <p>Exclusive parameter for predictive outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder servicerPickupRate(Float servicerPickupRate) {
                 this.servicerPickupRate = servicerPickupRate;
@@ -625,7 +725,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TerminateCount.
+             * <p>Number of stopped jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder terminateCount(Integer terminateCount) {
                 this.terminateCount = terminateCount;
@@ -633,7 +736,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -641,7 +747,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * UserPickupCount.
+             * <p>Number of customer pickups.</p>
+             * <blockquote>
+             * <p>Parameter specific to predictive dialing.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userPickupCount(Integer userPickupCount) {
                 this.userPickupCount = userPickupCount;
@@ -649,7 +761,13 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * UserPickupRate.
+             * <p>Customer pickup rate.</p>
+             * <blockquote>
+             * <p>Exclusive parameter for predictive outbound calls.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder userPickupRate(Float userPickupRate) {
                 this.userPickupRate = userPickupRate;
@@ -657,7 +775,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingCallCount.
+             * <p>Number of pending call jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder waitingCallCount(Integer waitingCallCount) {
                 this.waitingCallCount = waitingCallCount;
@@ -665,7 +786,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingRecallCount.
+             * <p>Number of jobs pending redial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder waitingRecallCount(Integer waitingRecallCount) {
                 this.waitingRecallCount = waitingRecallCount;
@@ -758,7 +882,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             } 
 
             /**
-             * CalloutProgress.
+             * <p>Progress by outbound call dimension.</p>
              */
             public Builder calloutProgress(CalloutProgress calloutProgress) {
                 this.calloutProgress = calloutProgress;
@@ -766,7 +890,10 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -774,7 +901,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TaskProgress.
+             * <p>Job dimension progress.</p>
              */
             public Builder taskProgress(TaskProgress taskProgress) {
                 this.taskProgress = taskProgress;
@@ -782,7 +909,14 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Task Type. Valid values:  </p>
+             * <ul>
+             * <li><strong>2</strong>: Predictive.  </li>
+             * <li><strong>3</strong>: Automatic.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

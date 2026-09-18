@@ -119,7 +119,10 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code. <code>OK</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The import batch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123497836486******</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -143,7 +152,10 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CFC2F07E-F763-7C48-1A32-6EFFB6EA344E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,16 @@ public class ImportTaskNumberDatasResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

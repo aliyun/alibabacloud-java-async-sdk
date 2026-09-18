@@ -142,10 +142,10 @@ public class ListAvailableTtsRequest extends Request {
         }
 
         /**
-         * <p>复刻音色编码</p>
+         * <p>The voice code for a custom voice. You can find it on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>V123456789</p>
+         * <p>V9A******</p>
          */
         public Builder ttsVoiceCode(String ttsVoiceCode) {
             this.putQueryParameter("TtsVoiceCode", ttsVoiceCode);
@@ -154,7 +154,13 @@ public class ListAvailableTtsRequest extends Request {
         }
 
         /**
-         * VoiceType.
+         * <p>The type of the TTS voice. Valid values:</p>
+         * <p><code>SYSTEM</code>: system voice.</p>
+         * <p><code>COSYCLONE</code>: cloned voice.</p>
+         * <p><code>BL-CUSTOM</code>: premium custom voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder voiceType(String voiceType) {
             this.putQueryParameter("VoiceType", voiceType);

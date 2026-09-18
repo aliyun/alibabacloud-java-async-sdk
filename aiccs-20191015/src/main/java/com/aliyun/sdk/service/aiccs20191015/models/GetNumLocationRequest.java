@@ -89,7 +89,10 @@ public class GetNumLocationRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>Unique ID for the customer request. Used for idempotency validation and can be generated using a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -98,6 +101,7 @@ public class GetNumLocationRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it in the <b>Instance Management</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class GetNumLocationRequest extends Request {
         }
 
         /**
+         * <p>Phone number to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

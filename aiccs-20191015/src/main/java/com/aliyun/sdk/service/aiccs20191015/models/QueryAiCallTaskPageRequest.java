@@ -199,7 +199,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         } 
 
         /**
-         * AgentName.
+         * <p>The agent name. The system performs a fuzzy match based on the agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAgent.</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -208,7 +211,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * ApplicationCode.
+         * <p>The application code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>025****C98</p>
          */
         public Builder applicationCode(String applicationCode) {
             this.putQueryParameter("ApplicationCode", applicationCode);
@@ -226,7 +232,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -235,7 +244,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in paging. Settings for the number of rows per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,7 +274,12 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The creation source. Valid values:</p>
+         * <p>0: created by agent.</p>
+         * <p>1: created by engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder source(Long source) {
             this.putQueryParameter("Source", source);
@@ -271,7 +288,16 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>INIT: init (not started).</li>
+         * <li>FAILED: startup failed.</li>
+         * <li>RUNNING: running.</li>
+         * <li>STOPPED: stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -280,7 +306,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1187**************</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -289,7 +318,10 @@ public class QueryAiCallTaskPageRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name. The system performs a fuzzy match based on the task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestTask.</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

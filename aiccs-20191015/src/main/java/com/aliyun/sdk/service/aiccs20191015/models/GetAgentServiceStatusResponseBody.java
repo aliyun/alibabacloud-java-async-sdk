@@ -106,7 +106,10 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.  </li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +246,10 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNum.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -238,7 +257,10 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -246,7 +268,10 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>Information provided as a JSON string of type List<Map>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;online_40s_transfer_ready_cnt&quot;:81,&quot;minute_id&quot;:&quot;-1&quot;,&quot;online_unsatis_cnt&quot;:0,&quot;online_simple_cnt&quot;:0,&quot;average_queue_time&quot;:-1,&quot;service_pickup&quot;:&quot;2086&quot;,&quot;total_waiting_time&quot;:&quot;981&quot;,&quot;online_service_time_len&quot;:58208,&quot;online_direct_give_up_len&quot;:0,&quot;break_ratio&quot;:&quot;2%&quot;}</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -254,7 +279,10 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

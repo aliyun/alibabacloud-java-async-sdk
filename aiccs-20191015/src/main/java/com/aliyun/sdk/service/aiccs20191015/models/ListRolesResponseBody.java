@@ -106,7 +106,7 @@ public class ListRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Role information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +125,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +294,10 @@ public class ListRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * BuId.
+             * <p>Tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder buId(Long buId) {
                 this.buId = buId;
@@ -290,7 +305,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>Role code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -298,7 +316,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation Time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-03T20:25:33Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -306,7 +327,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Role description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +338,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleGroupId.
+             * <p>ID of the group to which the role belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder roleGroupId(Long roleGroupId) {
                 this.roleGroupId = roleGroupId;
@@ -322,7 +349,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleGroupName.
+             * <p>Name of the role group to which the role belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>角色组名称</p>
              */
             public Builder roleGroupName(String roleGroupName) {
                 this.roleGroupName = roleGroupName;
@@ -330,7 +360,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>Role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder roleId(Long roleId) {
                 this.roleId = roleId;
@@ -338,7 +371,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>Role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>企业管理员</p>
              */
             public Builder title(String title) {
                 this.title = title;

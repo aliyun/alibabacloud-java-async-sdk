@@ -106,7 +106,10 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the Request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>List of data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API invoke succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -230,7 +246,10 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNum.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -238,7 +257,10 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -246,7 +268,10 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>Information as a JSON string of type List<Map>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;minute_id&quot;:&quot;-1&quot;,&quot;call_out_intervene_servicer_cnt&quot;:26,&quot;call_out_servicer_cnt&quot;:35,&quot;call_out_intervene_60s_cnt&quot;:155,&quot;servicer_real_name&quot;:&quot;--&quot;,&quot;call_in_sep_normal_cnt&quot;:0,&quot;call_out_intervene_30s_cnt&quot;:235,&quot;servicer_id&quot;:&quot;-1&quot;,&quot;tenant_name&quot;:&quot;非单元测试化BU&quot;,&quot;call_out_sep_sat_cnt&quot;:1}</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -254,7 +279,10 @@ public class GetSkillGroupStatusTotalResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

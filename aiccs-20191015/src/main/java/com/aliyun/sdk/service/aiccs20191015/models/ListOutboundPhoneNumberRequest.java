@@ -88,7 +88,10 @@ public class ListOutboundPhoneNumberRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>Agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -97,7 +100,10 @@ public class ListOutboundPhoneNumberRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique customer request ID. Used for idempotency validation. You can generate it using UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,6 +112,7 @@ public class ListOutboundPhoneNumberRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it in the <b>Instance Management</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

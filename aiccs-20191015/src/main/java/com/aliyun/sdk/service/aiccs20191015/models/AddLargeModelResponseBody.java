@@ -119,7 +119,10 @@ public class AddLargeModelResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The reason for the authentication failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class AddLargeModelResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code. A value of <code>OK</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class AddLargeModelResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -143,7 +152,10 @@ public class AddLargeModelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class AddLargeModelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1B8E483-372F-5AA8-A4B2-CA82EC967B0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,16 @@ public class AddLargeModelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

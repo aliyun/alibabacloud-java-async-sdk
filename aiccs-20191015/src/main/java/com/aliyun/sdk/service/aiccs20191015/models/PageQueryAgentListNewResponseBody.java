@@ -119,7 +119,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied detail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Access denied due to insufficient permissions</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that describes the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Specifies whether the request succeeded.</p>
+         * <ul>
+         * <li><p><strong><code>true</code></strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong><code>false</code></strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -381,7 +402,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51</p>
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -389,7 +413,11 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * AgentMode.
+             * <p>The agent creation mode. Valid values:<br>
+             * <code>0</code>: Prompt mode (<code>PROMPT</code>). <code>1</code>: Conversation flow mode (<code>CONVERSATION</code>).<br></p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder agentMode(Long agentMode) {
                 this.agentMode = agentMode;
@@ -397,7 +425,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>智能客服助手</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -405,7 +436,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationCode.
+             * <p>The application code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aicc_demo_app</p>
              */
             public Builder applicationCode(String applicationCode) {
                 this.applicationCode = applicationCode;
@@ -413,7 +447,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-20 12:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -421,7 +458,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * DeployBranchId.
+             * <p>The deployment branch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder deployBranchId(Long deployBranchId) {
                 this.deployBranchId = deployBranchId;
@@ -429,7 +469,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * DeployBranchName.
+             * <p>The effective branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder deployBranchName(String deployBranchName) {
                 this.deployBranchName = deployBranchName;
@@ -437,7 +480,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The agent description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>智能客服助手，提供自动化的客户服务支持</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -445,7 +491,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveVersionId.
+             * <p>The effective version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71</p>
              */
             public Builder effectiveVersionId(Long effectiveVersionId) {
                 this.effectiveVersionId = effectiveVersionId;
@@ -453,7 +502,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveVersionName.
+             * <p>The effective version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0.0</p>
              */
             public Builder effectiveVersionName(String effectiveVersionName) {
                 this.effectiveVersionName = effectiveVersionName;
@@ -461,7 +513,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvailable.
+             * <p>Specifies whether the agent can be used for outbound calls. A value of <code>true</code> means the agent\&quot;s current deployment branch has a published version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAvailable(Boolean isAvailable) {
                 this.isAvailable = isAvailable;
@@ -469,7 +524,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * LatestPublishTime.
+             * <p>The most recent publish time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-20 12:00:00</p>
              */
             public Builder latestPublishTime(String latestPublishTime) {
                 this.latestPublishTime = latestPublishTime;
@@ -477,7 +535,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-15 10:30:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -485,7 +546,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>个人线索转化</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -578,7 +642,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The data list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -586,7 +650,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -594,7 +661,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -602,7 +672,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder total(Long total) {
                 this.total = total;

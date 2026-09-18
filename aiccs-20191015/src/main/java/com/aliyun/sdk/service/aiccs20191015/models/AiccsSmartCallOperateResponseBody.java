@@ -93,7 +93,10 @@ public class AiccsSmartCallOperateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Request status code. A return value of OK indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,14 @@ public class AiccsSmartCallOperateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Result of the command execution.  </p>
+         * <ul>
+         * <li><strong>true</strong>: The command executed successfully.  </li>
+         * <li><strong>false</strong>: The command failed to execute.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -109,7 +119,10 @@ public class AiccsSmartCallOperateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +130,10 @@ public class AiccsSmartCallOperateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

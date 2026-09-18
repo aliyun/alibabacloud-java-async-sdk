@@ -129,7 +129,7 @@ public class PageQueryAgentListNewRequest extends Request {
         } 
 
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -141,7 +141,10 @@ public class PageQueryAgentListNewRequest extends Request {
         }
 
         /**
-         * AgentName.
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>智能客服助手</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -150,7 +153,10 @@ public class PageQueryAgentListNewRequest extends Request {
         }
 
         /**
-         * IsAvailable.
+         * <p>Indicates whether the agent is available for outbound calls. The value is <code>true</code> if the agent\&quot;s current deployment branch has a published version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAvailable(Boolean isAvailable) {
             this.putQueryParameter("IsAvailable", isAvailable);
@@ -159,7 +165,10 @@ public class PageQueryAgentListNewRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page index. This parameter is deprecated. Use <code>PageNo</code> instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -168,7 +177,10 @@ public class PageQueryAgentListNewRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -177,7 +189,10 @@ public class PageQueryAgentListNewRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

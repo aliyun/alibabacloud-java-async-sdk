@@ -132,10 +132,14 @@ public class UpdateAgentRequest extends Request {
         } 
 
         /**
+         * <p>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.  </p>
+         * <blockquote>
+         * <p>Update is not supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="mailto:123@123.com">123@123.com</a></p>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -144,7 +148,10 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -153,7 +160,11 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
+         * <p>Agent\&quot;s display name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX测试</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -162,6 +173,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +186,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>Skill groups to which the agent belongs.</p>
          */
         public Builder skillGroupId(java.util.List<Long> skillGroupId) {
             this.putBodyParameter("SkillGroupId", skillGroupId);
@@ -183,7 +195,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * SkillGroupIdList.
+         * <p>List of skill groups to which the agent belongs.</p>
          */
         public Builder skillGroupIdList(java.util.List<Long> skillGroupIdList) {
             this.putBodyParameter("SkillGroupIdList", skillGroupIdList);

@@ -144,7 +144,10 @@ public class QueryConversationDetailInfoNewRequest extends Request {
         } 
 
         /**
-         * CallId.
+         * <p>The unique ID of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1552<strong><strong><strong><strong>^1420</strong></strong></strong></strong></p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -153,7 +156,10 @@ public class QueryConversationDetailInfoNewRequest extends Request {
         }
 
         /**
-         * DetailId.
+         * <p>The task detail ID. View the task detail ID in the upper-left corner of the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> console, or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9662*************</p>
          */
         public Builder detailId(String detailId) {
             this.putQueryParameter("DetailId", detailId);
@@ -162,7 +168,10 @@ public class QueryConversationDetailInfoNewRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The external business serial number reserved for external input. You can use a unique ID for business association.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123******</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -198,6 +207,7 @@ public class QueryConversationDetailInfoNewRequest extends Request {
         }
 
         /**
+         * <p>The task ID. View the task ID in the <strong>Call Task Management</strong> console or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

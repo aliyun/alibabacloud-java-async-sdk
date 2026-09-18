@@ -106,7 +106,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE339D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -399,7 +415,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionId.
+             * <p>Customer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8999****</p>
              */
             public Builder actionId(Long actionId) {
                 this.actionId = actionId;
@@ -407,7 +426,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * BuId.
+             * <p>Tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2367****</p>
              */
             public Builder buId(Long buId) {
                 this.buId = buId;
@@ -415,7 +437,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * CalloutId.
+             * <p>Callout ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1122****</p>
              */
             public Builder calloutId(Long calloutId) {
                 this.calloutId = calloutId;
@@ -423,7 +448,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * CalloutName.
+             * <p>Call name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>王XX</p>
              */
             public Builder calloutName(String calloutName) {
                 this.calloutName = calloutName;
@@ -431,7 +459,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * CaseId.
+             * <p>Ticket ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1138902****</p>
              */
             public Builder caseId(Long caseId) {
                 this.caseId = caseId;
@@ -439,7 +470,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2377****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -447,7 +481,14 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelType.
+             * <p>Channel Type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Hotline.</li>
+             * <li><strong>2</strong>: Online.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channelType(Long channelType) {
                 this.channelType = channelType;
@@ -455,7 +496,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * DepId.
+             * <p>Department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1223****</p>
              */
             public Builder depId(Long depId) {
                 this.depId = depId;
@@ -463,7 +507,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * IsTransfer.
+             * <p>Indicates whether the call is transferred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTransfer(String isTransfer) {
                 this.isTransfer = isTransfer;
@@ -471,7 +518,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * <p>Membership ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7856876****</p>
              */
             public Builder memberId(Long memberId) {
                 this.memberId = memberId;
@@ -479,7 +529,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * MemberList.
+             * <p>Membership List.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8900****</p>
              */
             public Builder memberList(String memberList) {
                 this.memberList = memberList;
@@ -487,7 +540,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * MemberName.
+             * <p>Membership name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>匿名会员</p>
              */
             public Builder memberName(String memberName) {
                 this.memberName = memberName;
@@ -495,7 +551,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerId.
+             * <p>Agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1332****</p>
              */
             public Builder servicerId(Long servicerId) {
                 this.servicerId = servicerId;
@@ -503,7 +562,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerName.
+             * <p>Agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX测试</p>
              */
             public Builder servicerName(String servicerName) {
                 this.servicerName = servicerName;
@@ -511,7 +573,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * SubTouchId.
+             * <p>Sub-touch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3423****</p>
              */
             public Builder subTouchId(Long subTouchId) {
                 this.subTouchId = subTouchId;
@@ -519,7 +584,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345****</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -527,7 +595,10 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             }
 
             /**
-             * TouchId.
+             * <p>Touch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2235****</p>
              */
             public Builder touchId(Long touchId) {
                 this.touchId = touchId;

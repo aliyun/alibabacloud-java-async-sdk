@@ -119,7 +119,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denial details. This field is returned only when RAM authentication fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is not returned for successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23822ECB-8CAA-5C52-9C9E-807FD82A5A7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +244,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -233,7 +255,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -300,7 +325,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -308,7 +336,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -661,7 +692,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The ID of the published agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1180**************</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -669,7 +703,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestAgent</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -693,7 +730,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CallDays.
+             * <p>The list of callable days.</p>
              */
             public Builder callDays(java.util.List<String> callDays) {
                 this.callDays = callDays;
@@ -701,7 +738,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CallExpireDate.
+             * <p>The expiration date of outbound call details (specific deadline).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-30 20:00:20</p>
              */
             public Builder callExpireDate(String callExpireDate) {
                 this.callExpireDate = callExpireDate;
@@ -709,7 +749,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CallExpireMinutes.
+             * <p>The expiration duration of outbound call details, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder callExpireMinutes(Long callExpireMinutes) {
                 this.callExpireMinutes = callExpireMinutes;
@@ -717,7 +760,13 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CallExpireType.
+             * <p>The outbound call validity type. Valid values:</p>
+             * <p>0: Permanently valid.
+             * 1: Valid for a period of time after import.
+             * 2: Valid until a specified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callExpireType(Long callExpireType) {
                 this.callExpireType = callExpireType;
@@ -725,7 +774,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CallTimes.
+             * <p>The allowed call time periods.</p>
              */
             public Builder callTimes(java.util.List<CallTimes> callTimes) {
                 this.callTimes = callTimes;
@@ -733,7 +782,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CallableTimes.
+             * <p>The callable time periods for the current outbound call instance.</p>
              */
             public Builder callableTimes(java.util.List<CallableTimes> callableTimes) {
                 this.callableTimes = callableTimes;
@@ -741,7 +790,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CallerNumber.
+             * <p>The caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05370124****</p>
              */
             public Builder callerNumber(String callerNumber) {
                 this.callerNumber = callerNumber;
@@ -749,7 +801,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConcurrentCount.
+             * <p>The task concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrentCount(Long concurrentCount) {
                 this.concurrentCount = concurrentCount;
@@ -781,7 +836,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RealStartTime.
+             * <p>The actual start time of the task. This value is a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748932499000</p>
              */
             public Builder realStartTime(Long realStartTime) {
                 this.realStartTime = realStartTime;
@@ -789,7 +847,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RetryCount.
+             * <p>The number of retry attempts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder retryCount(Long retryCount) {
                 this.retryCount = retryCount;
@@ -797,7 +858,14 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RetryEnable.
+             * <p>Indicates whether call retry is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retryEnable(Boolean retryEnable) {
                 this.retryEnable = retryEnable;
@@ -805,7 +873,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RetryInterval.
+             * <p>The retry interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder retryInterval(Long retryInterval) {
                 this.retryInterval = retryInterval;
@@ -813,7 +884,7 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RetryReasons.
+             * <p>The list of reasons that allow retry on failure.</p>
              */
             public Builder retryReasons(java.util.List<String> retryReasons) {
                 this.retryReasons = retryReasons;
@@ -821,7 +892,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The scheduled start time of the task. This value is a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748932499000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -829,7 +903,16 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartType.
+             * <p>The start type. Valid values:</p>
+             * <ul>
+             * <li><p>IMMEDIATE: Start immediately.</p>
+             * </li>
+             * <li><p>SCHEDULE: Start at a scheduled time.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IMMEDIATE</p>
              */
             public Builder startType(String startType) {
                 this.startType = startType;
@@ -837,7 +920,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1187**************</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -845,7 +931,10 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestTask</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

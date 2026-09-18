@@ -119,7 +119,10 @@ public class AddModelApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for the access denied error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code. A value of OK indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned application code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>325****2D2</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -143,7 +152,10 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that explains the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C93B345-F702-5449-BA7E-7D110D4BF798</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

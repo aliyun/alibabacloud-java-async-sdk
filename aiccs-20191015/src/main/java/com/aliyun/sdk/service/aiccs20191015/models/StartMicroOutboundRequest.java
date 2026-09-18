@@ -199,7 +199,10 @@ public class StartMicroOutboundRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>Account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223457****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -208,7 +211,10 @@ public class StartMicroOutboundRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * <p>Account type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUC_TYPE</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -217,7 +223,10 @@ public class StartMicroOutboundRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>Custom AppName for the business.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -226,7 +235,10 @@ public class StartMicroOutboundRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>Called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571456****</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -235,7 +247,10 @@ public class StartMicroOutboundRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>Calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1367123****</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -244,7 +259,10 @@ public class StartMicroOutboundRequest extends Request {
         }
 
         /**
-         * CommandCode.
+         * <p>Instruction code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outBound_Call</p>
          */
         public Builder commandCode(String commandCode) {
             this.putQueryParameter("CommandCode", commandCode);
@@ -253,7 +271,10 @@ public class StartMicroOutboundRequest extends Request {
         }
 
         /**
-         * ExtInfo.
+         * <p>Business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;caseId&quot;:23232****}</p>
          */
         public Builder extInfo(String extInfo) {
             this.putQueryParameter("ExtInfo", extInfo);
@@ -271,7 +292,10 @@ public class StartMicroOutboundRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aiccs</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);

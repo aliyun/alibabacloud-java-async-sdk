@@ -208,7 +208,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         } 
 
         /**
-         * ConcurrentRate.
+         * <p>The concurrent rate for automated outbound calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder concurrentRate(Integer concurrentRate) {
             this.putQueryParameter("ConcurrentRate", concurrentRate);
@@ -217,7 +220,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The job description. It can contain 0 to 100 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>房产销售</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -226,6 +232,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The job execution time.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +248,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * ForecastCallRate.
+         * <p>Fixed dialing ratio for predictive outbound calls. Valid values: <strong>≥1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2</p>
          */
         public Builder forecastCallRate(Float forecastCallRate) {
             this.putQueryParameter("ForecastCallRate", forecastCallRate);
@@ -247,6 +260,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The skill group ID (for predictive outbound calls) or IVR ID (for automated outbound calls).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,6 +273,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,10 +286,11 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>Job name. Length: 1 to 15 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx外呼任务</p>
+         * <p>xxxx外呼</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -283,6 +299,11 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The policy for handling duplicate callee numbers.</p>
+         * <ul>
+         * <li><strong>0</strong>: Remove duplicates within the job.</li>
+         * <li><strong>1</strong>: Do not remove duplicates within the job.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,6 +316,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>Outbound caller numbers.</p>
          * <p>This parameter is required.</p>
          */
         public Builder outboundNums(java.util.List<String> outboundNums) {
@@ -305,7 +327,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * RecallRule.
+         * <p>Failed-call retry policy.</p>
+         * <blockquote>
+         * <p>If empty, no retry is performed when an outbound call fails.</p>
+         * </blockquote>
          */
         public Builder recallRule(RecallRule recallRule) {
             String recallRuleShrink = shrink(recallRule, "RecallRule", "json");
@@ -315,6 +340,8 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API and check the <strong>Data</strong> field in the response, or invoke the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API and check the <strong>TaskId</strong> field in the response.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -388,7 +415,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
             } 
 
             /**
-             * Count.
+             * <p>Number of retries after a failed call. Valid values: <strong>1 to 3</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -396,7 +426,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>Time interval between retries after a failed call. Valid values: <strong>1 to 60</strong>, unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;

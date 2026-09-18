@@ -106,7 +106,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The request status code. OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The robot scripts.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +259,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
             } 
 
             /**
-             * AtProfession.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RealEstate</p>
              */
             public Builder atProfession(String atProfession) {
                 this.atProfession = atProfession;
@@ -251,7 +270,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
             }
 
             /**
-             * AtSence.
+             * <p>The associated business.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NewHomeSales</p>
              */
             public Builder atSence(String atSence) {
                 this.atSence = atSence;
@@ -259,7 +281,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The robot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -267,7 +292,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
             }
 
             /**
-             * RobotName.
+             * <p>The robot name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestRobot</p>
              */
             public Builder robotName(String robotName) {
                 this.robotName = robotName;
@@ -275,7 +303,10 @@ public class ListAiccsRobotResponseBody extends TeaModel {
             }
 
             /**
-             * RobotType.
+             * <p>The robot type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder robotType(String robotType) {
                 this.robotType = robotType;

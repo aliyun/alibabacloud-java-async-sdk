@@ -145,6 +145,7 @@ public class FetchCallRequest extends Request {
         } 
 
         /**
+         * <p>Agent account name (agent logon name)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class FetchCallRequest extends Request {
         }
 
         /**
-         * CallId.
+         * <p>The acid from WebSocket after an inbound call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719786</p>
          */
         public Builder callId(String callId) {
             this.putBodyParameter("CallId", callId);
@@ -166,7 +170,10 @@ public class FetchCallRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique ID of the customer request, used for idempotency validation; can be generated using UUID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -175,7 +182,10 @@ public class FetchCallRequest extends Request {
         }
 
         /**
-         * ConnectionId.
+         * <p>The connId from WebSocket after an inbound call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719788</p>
          */
         public Builder connectionId(String connectionId) {
             this.putBodyParameter("ConnectionId", connectionId);
@@ -184,7 +194,10 @@ public class FetchCallRequest extends Request {
         }
 
         /**
-         * HoldConnectionId.
+         * <p>The holdConnId from WebSocket after an inbound call (only provided during two-step transfer)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder holdConnectionId(String holdConnectionId) {
             this.putBodyParameter("HoldConnectionId", holdConnectionId);
@@ -193,6 +206,7 @@ public class FetchCallRequest extends Request {
         }
 
         /**
+         * <p>AICCS instance ID, visible in the Artificial Intelligence Cloud Call Service console</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +219,10 @@ public class FetchCallRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The jobId from WebSocket after an inbound call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719787</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);

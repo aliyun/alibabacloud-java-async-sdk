@@ -119,7 +119,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status code message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2051E18-FF3F-5C08-8D24-6F150D2AF757</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +272,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9ca2*****************************</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -259,7 +283,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTagDescription.
+             * <p>The tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>评估客户对车型的兴趣和购买可能性</p>
              */
             public Builder outputTagDescription(String outputTagDescription) {
                 this.outputTagDescription = outputTagDescription;
@@ -267,7 +294,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户意向度</p>
              */
             public Builder outputTagName(String outputTagName) {
                 this.outputTagName = outputTagName;
@@ -275,7 +305,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;高（非常积极，大概率转化）&quot;]</p>
              */
             public Builder outputTagValue(String outputTagValue) {
                 this.outputTagValue = outputTagValue;
@@ -394,7 +427,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The variable ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -402,7 +438,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The variable key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -410,7 +449,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The variable name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>姓名</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -418,7 +460,16 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the variable is required. Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: The variable is required.</p>
+             * </li>
+             * <li><p><code>false</code>: The variable is optional.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -434,7 +485,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The variable value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -722,7 +776,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CallId.
+             * <p>The unique call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231231231213^11231231231</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -730,7 +787,42 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CallResult.
+             * <p>The call result. Valid values:</p>
+             * <ul>
+             * <li><p><code>CALL_FORWARDING</code>: Call forwarding.</p>
+             * </li>
+             * <li><p><code>INCOMING_CALL_BARRED</code>: Incoming call barred.</p>
+             * </li>
+             * <li><p><code>CALL_REJECTED</code>: Call rejected.</p>
+             * </li>
+             * <li><p><code>ANSWERED</code>: Answered by user.</p>
+             * </li>
+             * <li><p><code>USER_BUSY</code>: Called party busy.</p>
+             * </li>
+             * <li><p><code>POWERED_OFF</code>: Powered off.</p>
+             * </li>
+             * <li><p><code>NO_USER_RESPONSE</code>: Out of service area.</p>
+             * </li>
+             * <li><p><code>OPERATOR_BLOCK</code>: Blocked by carrier.</p>
+             * </li>
+             * <li><p><code>OTHERS</code>: Other.</p>
+             * </li>
+             * <li><p><code>SUSPEND</code>: Suspended.</p>
+             * </li>
+             * <li><p><code>CANCEL</code>: Canceled by caller.</p>
+             * </li>
+             * <li><p><code>INVALID_NUMBER</code>: Invalid number.</p>
+             * </li>
+             * <li><p><code>UNAVAILABLE</code>: Temporarily unavailable.</p>
+             * </li>
+             * <li><p><code>NETWORK_BUSY</code>: Network busy.</p>
+             * </li>
+             * <li><p><code>NO_ANSWER</code>: No answer.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ANSWERED</p>
              */
             public Builder callResult(String callResult) {
                 this.callResult = callResult;
@@ -738,7 +830,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CalledPhone.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>186******</p>
              */
             public Builder calledPhone(String calledPhone) {
                 this.calledPhone = calledPhone;
@@ -746,7 +841,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CallerPhone.
+             * <p>The caller number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571*******</p>
              */
             public Builder callerPhone(String callerPhone) {
                 this.callerPhone = callerPhone;
@@ -754,7 +852,66 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationRecord.
+             * <p>The conversation record. The structure is a JSON array in which entries are sorted by time. Example:</p>
+             * <pre><code class="language-json">[
+             *     {
+             *         &quot;content&quot;:&quot;Conversation content&quot;,
+             *         &quot;role&quot;:&quot;Role&quot;, // Valid values: user, assistant
+             *     }
+             * ]
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *   {
+             *     &quot;content&quot;: &quot;111您好，年龄222，性别男，我这边是<strong>汽车的官方顾问，我们新出了一款车型为</strong>；<strong>已经上市了，售价</strong>万元起，<strong>分钟破*台，您看要不了解一下？&quot;,
+             *     &quot;role&quot;: &quot;assistant&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;&lt;客户打断&gt;哎，你是谁？&quot;,
+             *     &quot;role&quot;: &quot;user&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;&lt;客户打断&gt;你再说一遍。&quot;,
+             *     &quot;role&quot;: &quot;user&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;哎，我没听清。&quot;,
+             *     &quot;role&quot;: &quot;user&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;你在说什么？&quot;,
+             *     &quot;role&quot;: &quot;user&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;您好，&quot;,
+             *     &quot;role&quot;: &quot;assistant&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;我是</strong>汽车总部销售服务顾问。&quot;,
+             *     &quot;role&quot;: &quot;assistant&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;我们最近推出了一款新车**，想了解一下您是否对这款车型感兴趣？&quot;,
+             *     &quot;role&quot;: &quot;assistant&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;&lt;客户打断&gt;哎，那我是谁？&quot;,
+             *     &quot;role&quot;: &quot;user&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;你在说什么呢？&quot;,
+             *     &quot;role&quot;: &quot;user&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;抱歉打扰了，111先生。&quot;,
+             *     &quot;role&quot;: &quot;assistant&quot;
+             *   },
+             *   {
+             *     &quot;content&quot;: &quot;祝您生活愉快！再见！&quot;,
+             *     &quot;role&quot;: &quot;assistant&quot;
+             *   }
+             * ]</p>
              */
             public Builder conversationRecord(String conversationRecord) {
                 this.conversationRecord = conversationRecord;
@@ -762,7 +919,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the call, in seconds. If the call was not connected, the value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -778,7 +938,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FailedReason.
+             * <p>The failure reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>主动取消</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -786,7 +949,16 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HangupDirection.
+             * <p>The party that hung up. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: user.</p>
+             * </li>
+             * <li><p><strong>1</strong>: assistant.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>用户</p>
              */
             public Builder hangupDirection(String hangupDirection) {
                 this.hangupDirection = hangupDirection;
@@ -794,7 +966,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MajorIntent.
+             * <p>The primary intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>D</p>
              */
             public Builder majorIntent(String majorIntent) {
                 this.majorIntent = majorIntent;
@@ -802,7 +977,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutId.
+             * <p>The business-specific ID that is passed in. You can use this unique ID to associate the call with your business.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb3bc32d-54b8-49c4-80d3-61583417d22e</p>
              */
             public Builder outId(String outId) {
                 this.outId = outId;
@@ -810,7 +988,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTags.
+             * <p>A list of output tags.</p>
              */
             public Builder outputTags(java.util.List<OutputTags> outputTags) {
                 this.outputTags = outputTags;
@@ -818,7 +996,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PickUpTime.
+             * <p>The timestamp when the call was answered, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1754617273000</p>
              */
             public Builder pickUpTime(Long pickUpTime) {
                 this.pickUpTime = pickUpTime;
@@ -826,7 +1007,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingFileDownloadUrl.
+             * <p>The download URL for the recording file. This parameter is returned only after the recording file is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://********</p>
              */
             public Builder recordingFileDownloadUrl(String recordingFileDownloadUrl) {
                 this.recordingFileDownloadUrl = recordingFileDownloadUrl;
@@ -834,7 +1018,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * <p>The timestamp when the call ended, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -842,7 +1029,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartCallTime.
+             * <p>The timestamp when the call was initiated, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123123123123</p>
              */
             public Builder startCallTime(Long startCallTime) {
                 this.startCallTime = startCallTime;
@@ -850,7 +1040,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call status codes</a> for the voice service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200005</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -858,7 +1051,10 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMsg.
+             * <p>The status message returned by the carrier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>呼叫结束（双呼）</p>
              */
             public Builder statusMsg(String statusMsg) {
                 this.statusMsg = statusMsg;
@@ -866,7 +1062,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Variables.
+             * <p>A list of variables associated with the call task.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;

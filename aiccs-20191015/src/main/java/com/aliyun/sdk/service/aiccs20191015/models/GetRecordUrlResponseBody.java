@@ -93,7 +93,7 @@ public class GetRecordUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class GetRecordUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class GetRecordUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class GetRecordUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +192,10 @@ public class GetRecordUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * Acid.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001067****</p>
              */
             public Builder acid(String acid) {
                 this.acid = acid;
@@ -191,7 +203,10 @@ public class GetRecordUrlResponseBody extends TeaModel {
             }
 
             /**
-             * OssLink.
+             * <p>The recording link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav</a>?***</p>
              */
             public Builder ossLink(String ossLink) {
                 this.ossLink = ossLink;

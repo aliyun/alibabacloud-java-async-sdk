@@ -158,7 +158,10 @@ public class CancelAiCallDetailsRequest extends Request {
         } 
 
         /**
-         * BatchId.
+         * <p>The batch ID. This ID is returned when you import callee data. You can find the task batch ID on the <strong>Call Task Management</strong>&gt;<strong>Details</strong>&gt;<strong>Execution Record</strong> page, or use the import batch ID that is returned by the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> API operation. If DetailIdList is specified, this parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4253331213*****</p>
          */
         public Builder batchId(String batchId) {
             this.putQueryParameter("BatchId", batchId);
@@ -167,7 +170,7 @@ public class CancelAiCallDetailsRequest extends Request {
         }
 
         /**
-         * DetailIdList.
+         * <p>A list of detail IDs. If you specify this parameter, <code>BatchId</code> and <code>PhoneNumbers</code> are ignored.</p>
          */
         public Builder detailIdList(java.util.List<String> detailIdList) {
             String detailIdListShrink = shrink(detailIdList, "DetailIdList", "json");
@@ -195,7 +198,7 @@ public class CancelAiCallDetailsRequest extends Request {
         }
 
         /**
-         * PhoneNumbers.
+         * <p>A list of phone numbers. This parameter takes effect only when <code>BatchId</code> is also specified.</p>
          */
         public Builder phoneNumbers(java.util.List<String> phoneNumbers) {
             String phoneNumbersShrink = shrink(phoneNumbers, "PhoneNumbers", "json");
@@ -223,10 +226,11 @@ public class CancelAiCallDetailsRequest extends Request {
         }
 
         /**
+         * <p>The task ID. You can view the task ID on the <strong>Call Task Management</strong> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1223123123****</p>
+         * <p>138************</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

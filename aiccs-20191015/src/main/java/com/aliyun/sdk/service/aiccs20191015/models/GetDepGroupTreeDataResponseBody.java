@@ -106,7 +106,10 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of Success indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Department information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -204,7 +220,10 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the skill group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自动化技能组</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,7 +231,10 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55****</p>
              */
             public Builder skillGroupId(Long skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -292,7 +314,10 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             } 
 
             /**
-             * DepGroupId.
+             * <p>The department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10****</p>
              */
             public Builder depGroupId(String depGroupId) {
                 this.depGroupId = depGroupId;
@@ -300,7 +325,10 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             }
 
             /**
-             * DepGroupName.
+             * <p>The department name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>部门A</p>
              */
             public Builder depGroupName(String depGroupName) {
                 this.depGroupName = depGroupName;
@@ -308,7 +336,7 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             }
 
             /**
-             * GroupDTOS.
+             * <p>Skill group data.</p>
              */
             public Builder groupDTOS(java.util.List<GroupDTOS> groupDTOS) {
                 this.groupDTOS = groupDTOS;

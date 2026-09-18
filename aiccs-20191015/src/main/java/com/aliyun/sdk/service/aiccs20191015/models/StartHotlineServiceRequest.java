@@ -89,6 +89,7 @@ public class StartHotlineServiceRequest extends Request {
         } 
 
         /**
+         * <p>The name of the agent account, which is the mobile number or email address specified during account registration. The name must be unique within the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class StartHotlineServiceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The unique ID of the client request. Used for idempotency checks. You can use a UUID to generate this ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -110,6 +114,8 @@ public class StartHotlineServiceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
+         * You can obtain the instance ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">AICCS console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

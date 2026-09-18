@@ -106,7 +106,10 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business information associated with this call.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +246,10 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             } 
 
             /**
-             * BizData.
+             * <p>Custom business information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;customer&quot;:123}</p>
              */
             public Builder bizData(String bizData) {
                 this.bizData = bizData;
@@ -238,7 +257,10 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             }
 
             /**
-             * CaseId.
+             * <p>The Activity ID associated with this outbound call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder caseId(Long caseId) {
                 this.caseId = caseId;
@@ -246,7 +268,10 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNum.
+             * <p>The outbound phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>158****0000</p>
              */
             public Builder phoneNum(String phoneNum) {
                 this.phoneNum = phoneNum;
@@ -254,7 +279,10 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

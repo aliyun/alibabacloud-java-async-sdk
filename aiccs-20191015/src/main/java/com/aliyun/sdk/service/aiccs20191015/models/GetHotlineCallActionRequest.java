@@ -145,7 +145,10 @@ public class GetHotlineCallActionRequest extends Request {
         } 
 
         /**
-         * Acc.
+         * <p>Hotline Custom Parameter in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;time&quot;:1}</p>
          */
         public Builder acc(String acc) {
             this.putBodyParameter("Acc", acc);
@@ -154,7 +157,10 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * <p>Agent account name, which is the phone number or mailbox specified during account registration. It is unique within the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -163,7 +169,15 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
-         * Act.
+         * <p>Operation Type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Hotline.</li>
+         * <li><strong>2</strong>: Online.</li>
+         * <li><strong>3</strong>: Ticket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder act(Integer act) {
             this.putBodyParameter("Act", act);
@@ -172,7 +186,10 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
-         * Biz.
+         * <p>Business Custom Parameter in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:123}</p>
          */
         public Builder biz(String biz) {
             this.putBodyParameter("Biz", biz);
@@ -181,7 +198,10 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique ID of the customer request. Used for idempotency validation. You can generate it by using a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d9****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -190,7 +210,15 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
-         * FromSource.
+         * <p>Source type. Valid values:</p>
+         * <ul>
+         * <li><strong>hotlinebs_out</strong>: Hotline.</li>
+         * <li><strong>ticket_out</strong>: Ticket.</li>
+         * <li><strong>other_system_out</strong>: Other system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hotlinebs_out</p>
          */
         public Builder fromSource(String fromSource) {
             this.putBodyParameter("FromSource", fromSource);
@@ -199,6 +227,8 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.
+         * You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

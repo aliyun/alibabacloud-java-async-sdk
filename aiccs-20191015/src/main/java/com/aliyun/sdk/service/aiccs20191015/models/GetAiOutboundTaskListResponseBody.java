@@ -106,7 +106,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Job list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -334,7 +350,13 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             } 
 
             /**
-             * ConcurrentRate.
+             * <p>Concurrent outbound calls.</p>
+             * <blockquote>
+             * <p>Parameter specific to auto dialing.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder concurrentRate(Integer concurrentRate) {
                 this.concurrentRate = concurrentRate;
@@ -342,7 +364,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The deadline for job creation. UNIX timestamp format, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615083365000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -350,7 +375,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Job description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>房产销售</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -358,7 +386,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * FinishCount.
+             * <p>The number of completed tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -366,7 +397,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * FinishRate.
+             * <p>Job completion rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7</p>
              */
             public Builder finishRate(Float finishRate) {
                 this.finishRate = finishRate;
@@ -374,7 +408,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerId.
+             * <p>Skill group ID (for predictive dialing) or IVR ID (for auto dialing).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2468****</p>
              */
             public Builder handlerId(Long handlerId) {
                 this.handlerId = handlerId;
@@ -382,7 +419,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerName.
+             * <p>Skill group name or IVR name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>热线技能组</p>
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -390,7 +430,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx外呼任务</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -398,7 +441,18 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Task Status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Not started.</li>
+             * <li><strong>1</strong>: In progress.</li>
+             * <li><strong>2</strong>: System paused.</li>
+             * <li><strong>3</strong>: Manually paused.</li>
+             * <li><strong>4</strong>: Completed.</li>
+             * <li><strong>5</strong>: Stopped.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -406,7 +460,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * <p>Task status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>未开始</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -414,7 +471,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1763****</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -422,7 +482,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -528,7 +591,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -536,7 +602,14 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * HasNextPage.
+             * <p>Indicates whether there is a next page. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasNextPage(Boolean hasNextPage) {
                 this.hasNextPage = hasNextPage;
@@ -544,7 +617,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * <p>Job information.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -552,7 +625,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -560,7 +636,10 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResults.
+             * <p>Total number of data entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalResults(Integer totalResults) {
                 this.totalResults = totalResults;

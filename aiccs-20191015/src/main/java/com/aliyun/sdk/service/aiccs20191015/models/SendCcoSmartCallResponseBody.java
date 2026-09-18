@@ -93,7 +93,10 @@ public class SendCcoSmartCallResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The request status code. OK indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class SendCcoSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The unique receipt ID for this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16012854210^10281427****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class SendCcoSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class SendCcoSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

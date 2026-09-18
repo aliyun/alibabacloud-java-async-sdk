@@ -157,7 +157,10 @@ public class DescribeRecordDataRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>AccountId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2235****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -166,7 +169,10 @@ public class DescribeRecordDataRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * <p>Account type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUC_TYPE</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -175,7 +181,10 @@ public class DescribeRecordDataRequest extends Request {
         }
 
         /**
-         * Acid.
+         * <p>Session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1004849****</p>
          */
         public Builder acid(String acid) {
             this.putQueryParameter("Acid", acid);
@@ -193,7 +202,10 @@ public class DescribeRecordDataRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * <p>Product name. Default value: <strong>aiccs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aiccs</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -220,7 +232,10 @@ public class DescribeRecordDataRequest extends Request {
         }
 
         /**
-         * SecLevel.
+         * <p>Recording desensitization level. Valid values: <strong>1–4</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder secLevel(Integer secLevel) {
             this.putQueryParameter("SecLevel", secLevel);

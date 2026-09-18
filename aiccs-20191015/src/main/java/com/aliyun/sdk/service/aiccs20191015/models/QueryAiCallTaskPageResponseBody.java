@@ -119,7 +119,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B99C5955-5664-573D-97BE-A7CC1AFD8401</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: successful.</li>
+         * <li><strong>false</strong>: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -524,7 +543,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1180**************</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -532,7 +554,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestAgent.</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -580,7 +605,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * CallingCount.
+             * <p>The number of ongoing calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder callingCount(Long callingCount) {
                 this.callingCount = callingCount;
@@ -588,7 +616,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteRate.
+             * <p>The task completion rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70%</p>
              */
             public Builder completeRate(String completeRate) {
                 this.completeRate = completeRate;
@@ -596,7 +627,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * ConcurrentCount.
+             * <p>The task concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrentCount(Long concurrentCount) {
                 this.concurrentCount = concurrentCount;
@@ -604,7 +638,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748932499000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -612,7 +649,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * DayCallCount.
+             * <p>The number of calls made on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder dayCallCount(Long dayCallCount) {
                 this.dayCallCount = dayCallCount;
@@ -620,7 +660,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * DayConnectRate.
+             * <p>The daily connection rate. Daily connection rate = number of connections on the current day ÷ number of calls on the current day (DayCallCount).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74.14%</p>
              */
             public Builder dayConnectRate(String dayConnectRate) {
                 this.dayConnectRate = dayConnectRate;
@@ -628,7 +671,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * DayImportCount.
+             * <p>The amount of data imported on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder dayImportCount(Long dayImportCount) {
                 this.dayImportCount = dayImportCount;
@@ -636,7 +682,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCount.
+             * <p>The total number of failed task executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -644,7 +693,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryConnectRate.
+             * <p>The historical connection rate. Historical connection rate = historical number of connections ÷ total number of calls (TotalCallCount).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95.89%</p>
              */
             public Builder historyConnectRate(String historyConnectRate) {
                 this.historyConnectRate = historyConnectRate;
@@ -652,7 +704,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * RealStartTime.
+             * <p>The actual start time of the task. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748932499000</p>
              */
             public Builder realStartTime(Long realStartTime) {
                 this.realStartTime = realStartTime;
@@ -660,7 +715,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * StartFailedReason.
+             * <p>The reason for startup failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent is offline.</p>
              */
             public Builder startFailedReason(String startFailedReason) {
                 this.startFailedReason = startFailedReason;
@@ -668,7 +726,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The scheduled start time of the task. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748932499000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -676,7 +737,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -684,7 +748,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * SucceedCount.
+             * <p>The total number of successful task executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder succeedCount(Long succeedCount) {
                 this.succeedCount = succeedCount;
@@ -692,7 +759,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1187**************</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -700,7 +770,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestTask.</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -708,7 +781,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCallCount.
+             * <p>The total number of calls made by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder totalCallCount(Long totalCallCount) {
                 this.totalCallCount = totalCallCount;
@@ -716,7 +792,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of task items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -809,7 +888,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The task data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -817,7 +896,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -825,7 +907,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -833,7 +918,10 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -185,10 +185,10 @@ public class AddLargeModelRequest extends Request {
         } 
 
         /**
-         * <p>授权码</p>
+         * <p>The authorization code.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>sk-xxxxxxxxxxx*******xx</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -197,7 +197,7 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>基础模型</p>
+         * <p>The base model.</p>
          */
         public Builder baseModel(java.util.List<String> baseModel) {
             String baseModelShrink = shrink(baseModel, "BaseModel", "json");
@@ -207,7 +207,7 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>模型名称</p>
+         * <p>The model name.</p>
          * 
          * <strong>example:</strong>
          * <p>Test Model Name</p>
@@ -219,10 +219,10 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>模型地址</p>
+         * <p>The model URL.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p><a href="https://xxxxxxxxxxx">https://xxxxxxxxxxx</a></p>
          */
         public Builder modelUrl(String modelUrl) {
             this.putQueryParameter("ModelUrl", modelUrl);
@@ -258,10 +258,10 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>温度</p>
+         * <p>The temperature.</p>
          * 
          * <strong>example:</strong>
-         * <p>16.46</p>
+         * <p>0.1</p>
          */
         public Builder temperature(Double temperature) {
             this.putQueryParameter("Temperature", temperature);
@@ -270,10 +270,10 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>topK</p>
+         * <p>The <code>top-k</code> value.</p>
          * 
          * <strong>example:</strong>
-         * <p>87</p>
+         * <p>1</p>
          */
         public Builder topK(Long topK) {
             this.putQueryParameter("TopK", topK);
@@ -282,10 +282,10 @@ public class AddLargeModelRequest extends Request {
         }
 
         /**
-         * <p>topP</p>
+         * <p>The <code>top-p</code> value.</p>
          * 
          * <strong>example:</strong>
-         * <p>73.64386</p>
+         * <p>0.1</p>
          */
         public Builder topP(Double topP) {
             this.putQueryParameter("TopP", topP);

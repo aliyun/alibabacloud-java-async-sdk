@@ -93,7 +93,13 @@ public class LlmSmartCallFullDuplexResponseBody extends TeaModel {
         } 
 
         /**
-         * CallId.
+         * <p>The call record ID that identifies a call record.</p>
+         * <blockquote>
+         * <p>When you call the LlmSmartCall operation to initiate an LLM-based outbound call, this call record ID (CallId) is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>153955119976^140696759976</p>
          */
         public Builder callId(String callId) {
             this.callId = callId;
@@ -101,7 +107,10 @@ public class LlmSmartCallFullDuplexResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +118,10 @@ public class LlmSmartCallFullDuplexResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;

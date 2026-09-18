@@ -119,7 +119,10 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,16 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The update result. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Updated.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failed to update.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -143,7 +158,10 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is returned only when an exception occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +169,10 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCD94A7F-316D-54D1-9BFC-814006CB1C34</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +180,14 @@ public class UpdateAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

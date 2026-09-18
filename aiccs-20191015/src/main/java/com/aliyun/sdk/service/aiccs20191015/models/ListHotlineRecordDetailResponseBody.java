@@ -119,7 +119,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ResultData.
+         * <p>Returned data.</p>
          */
         public Builder resultData(ResultData resultData) {
             this.resultData = resultData;
@@ -159,7 +171,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +266,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>Hotline End Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614578410000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -259,7 +277,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OssUrl.
+             * <p>OSS URL of the hotline call recording.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.xxxxx/xx.wav">http://xxx.xxxxx/xx.wav</a></p>
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -267,7 +288,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServicerName.
+             * <p>Servicer Account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@123.com">123@123.com</a></p>
              */
             public Builder servicerName(String servicerName) {
                 this.servicerName = servicerName;
@@ -275,7 +299,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start Time of the hotline call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614578400000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -381,7 +408,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>Current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -389,7 +419,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>Query result data.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -397,7 +427,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OnePageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder onePageSize(Long onePageSize) {
                 this.onePageSize = onePageSize;
@@ -405,7 +438,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPage.
+             * <p>Total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalPage(Long totalPage) {
                 this.totalPage = totalPage;
@@ -413,7 +449,10 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResults.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>945</p>
              */
             public Builder totalResults(Long totalResults) {
                 this.totalResults = totalResults;

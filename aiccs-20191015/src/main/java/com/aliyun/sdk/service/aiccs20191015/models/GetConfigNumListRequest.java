@@ -88,7 +88,10 @@ public class GetConfigNumListRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>The agent account name. It is unique within the instance (logon name).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@123.com">123@123.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -97,7 +100,10 @@ public class GetConfigNumListRequest extends Request {
         }
 
         /**
-         * DepartmentId.
+         * <p>The department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder departmentId(Long departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -106,6 +112,7 @@ public class GetConfigNumListRequest extends Request {
         }
 
         /**
+         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

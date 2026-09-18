@@ -119,7 +119,10 @@ public class GetAllDepartmentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetAllDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Department information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetAllDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetAllDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetAllDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98B032F5-6473-4EAC-8BA8-C28993513A1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class GetAllDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API invocation succeeded. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.  </li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +244,10 @@ public class GetAllDepartmentResponseBody extends TeaModel {
             } 
 
             /**
-             * DepartmentId.
+             * <p>Department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder departmentId(Long departmentId) {
                 this.departmentId = departmentId;
@@ -233,7 +255,10 @@ public class GetAllDepartmentResponseBody extends TeaModel {
             }
 
             /**
-             * DepartmentName.
+             * <p>Department name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>部门A</p>
              */
             public Builder departmentName(String departmentName) {
                 this.departmentName = departmentName;

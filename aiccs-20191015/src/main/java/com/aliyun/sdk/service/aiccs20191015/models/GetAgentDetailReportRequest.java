@@ -186,7 +186,7 @@ public class GetAgentDetailReportRequest extends Request {
         } 
 
         /**
-         * AgentIds.
+         * <p>A list of agent IDs.</p>
          */
         public Builder agentIds(java.util.List<Long> agentIds) {
             String agentIdsShrink = shrink(agentIds, "AgentIds", "simple");
@@ -196,7 +196,10 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -205,7 +208,7 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
-         * DepIds.
+         * <p>A list of department IDs.</p>
          */
         public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "DepIds", "simple");
@@ -215,7 +218,10 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>End UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1617761765000</p>
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -224,7 +230,14 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
-         * ExistAgentGrouping.
+         * <p>Specifies whether to query by agent group. Default value: <strong>false</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder existAgentGrouping(Boolean existAgentGrouping) {
             this.putQueryParameter("ExistAgentGrouping", existAgentGrouping);
@@ -233,7 +246,14 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
-         * ExistDepartmentGrouping.
+         * <p>Specifies whether to query by department group. Default value: <strong>false</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder existDepartmentGrouping(Boolean existDepartmentGrouping) {
             this.putQueryParameter("ExistDepartmentGrouping", existDepartmentGrouping);
@@ -242,6 +262,7 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
+         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +275,10 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +287,10 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date as a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615083365000</p>
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -272,7 +299,15 @@ public class GetAgentDetailReportRequest extends Request {
         }
 
         /**
-         * TimeLatitudeType.
+         * <p>The time latitude type. Valid values:</p>
+         * <ul>
+         * <li><strong>minute</strong>: Minute.</li>
+         * <li><strong>hour</strong>: Hour.</li>
+         * <li><strong>day</strong>: Day.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder timeLatitudeType(String timeLatitudeType) {
             this.putQueryParameter("TimeLatitudeType", timeLatitudeType);

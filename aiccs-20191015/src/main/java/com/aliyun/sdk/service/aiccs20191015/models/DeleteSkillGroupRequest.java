@@ -73,7 +73,10 @@ public class DeleteSkillGroupRequest extends Request {
         } 
 
         /**
-         * OuterGroupId.
+         * <p>External skill group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outerGroupId(String outerGroupId) {
             this.putQueryParameter("OuterGroupId", outerGroupId);
@@ -82,7 +85,10 @@ public class DeleteSkillGroupRequest extends Request {
         }
 
         /**
-         * OuterGroupType.
+         * <p>External skill group type. Valid enumeration values are: 1: Hotline, 2: Online, 4: Ticket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder outerGroupType(String outerGroupType) {
             this.putQueryParameter("OuterGroupType", outerGroupType);

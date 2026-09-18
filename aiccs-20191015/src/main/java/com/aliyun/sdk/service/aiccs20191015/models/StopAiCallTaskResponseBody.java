@@ -119,7 +119,10 @@ public class StopAiCallTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class StopAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code. A value of <code>OK</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,16 @@ public class StopAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the task was stopped successfully. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The operation was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The operation failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -143,7 +158,10 @@ public class StopAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +169,10 @@ public class StopAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7124F972-BAB8-5D1E-90FC-01CB10713B29</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +180,16 @@ public class StopAiCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

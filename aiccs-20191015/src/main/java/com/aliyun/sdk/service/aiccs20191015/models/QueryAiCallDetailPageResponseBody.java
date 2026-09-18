@@ -119,7 +119,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A57441B2-8EB6-5B93-9F37-0A51B8E2C9F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: successful.</li>
+         * <li><strong>false</strong>: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -511,7 +530,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             } 
 
             /**
-             * BatchId.
+             * <p>The batch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1183**************</p>
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
@@ -519,7 +541,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * BranchId.
+             * <p>The branch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49</p>
              */
             public Builder branchId(Long branchId) {
                 this.branchId = branchId;
@@ -527,7 +552,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * BranchName.
+             * <p>The branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default branch</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -535,7 +563,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * BranchVersionId.
+             * <p>The version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder branchVersionId(Long branchVersionId) {
                 this.branchVersionId = branchVersionId;
@@ -543,7 +574,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * CallExpireTime.
+             * <p>The expiration time of the outbound call detail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-30 20:00:20</p>
              */
             public Builder callExpireTime(Long callExpireTime) {
                 this.callExpireTime = callExpireTime;
@@ -551,7 +585,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * CallId.
+             * <p>The call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123<em><strong><strong>456^123</strong></strong></em>456</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -559,7 +596,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * CallResult.
+             * <p>The call result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Answered</p>
              */
             public Builder callResult(String callResult) {
                 this.callResult = callResult;
@@ -567,7 +607,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * CalledNumber.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0537101****</p>
              */
             public Builder calledNumber(String calledNumber) {
                 this.calledNumber = calledNumber;
@@ -575,7 +618,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * CallingTime.
+             * <p>The calling time. This value is a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748948749000</p>
              */
             public Builder callingTime(Long callingTime) {
                 this.callingTime = callingTime;
@@ -583,7 +629,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationDuration.
+             * <p>The conversation duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder conversationDuration(Long conversationDuration) {
                 this.conversationDuration = conversationDuration;
@@ -591,7 +640,66 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationRecord.
+             * <p>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The format is as follows:</p>
+             * <pre><code class="language-json">[
+             *     {
+             *         &quot;content&quot;:&quot;Chat content&quot;,
+             *         &quot;role&quot;:&quot;Role&quot;,//Valid values: user, assistant (bot)
+             *     }
+             * ]
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;content&quot;: &quot;111您好，年龄222，性别男，我这边是<strong>汽车的官方顾问，我们新出了一款车型为</strong>；<strong>已经上市了，售价</strong>万元起，<strong>分钟破*台，您看要不了解一下？&quot;,
+             *         &quot;role&quot;: &quot;assistant&quot;
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;&lt;客户打断&gt;哎，你是谁？&quot;,
+             *         &quot;role&quot;: &quot;user&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;&lt;客户打断&gt;你再说一遍。&quot;,
+             *         &quot;role&quot;: &quot;user&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;哎，我没听清。&quot;,
+             *         &quot;role&quot;: &quot;user&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;你在说什么？&quot;,
+             *         &quot;role&quot;: &quot;user&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;您好，&quot;,
+             *         &quot;role&quot;: &quot;assistant&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;我是</strong>汽车总部销售服务顾问。&quot;,
+             *         &quot;role&quot;: &quot;assistant&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;我们最近推出了一款新车**，想了解一下您是否对这款车型感兴趣？&quot;,
+             *         &quot;role&quot;: &quot;assistant&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;&lt;客户打断&gt;哎，那我是谁？&quot;,
+             *         &quot;role&quot;: &quot;user&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;你在说什么呢？&quot;,
+             *         &quot;role&quot;: &quot;user&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;抱歉打扰了，111先生。&quot;,
+             *         &quot;role&quot;: &quot;assistant&quot;,
+             *     },
+             *     {
+             *         &quot;content&quot;: &quot;祝您生活愉快！再见！&quot;,
+             *         &quot;role&quot;: &quot;assistant&quot;,
+             *     }
+             * ]</p>
              */
             public Builder conversationRecord(String conversationRecord) {
                 this.conversationRecord = conversationRecord;
@@ -599,7 +707,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationTurnCount.
+             * <p>The number of conversation turns.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder conversationTurnCount(Long conversationTurnCount) {
                 this.conversationTurnCount = conversationTurnCount;
@@ -607,7 +718,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * DetailId.
+             * <p>The task detail ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9662*************</p>
              */
             public Builder detailId(String detailId) {
                 this.detailId = detailId;
@@ -615,7 +729,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionType.
+             * <p>The encryption type. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder encryptionType(Long encryptionType) {
                 this.encryptionType = encryptionType;
@@ -623,7 +740,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * FailedReason.
+             * <p>The reason for call failure. This field is available only when the call fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Account suspended</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -631,7 +751,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * ImportedTime.
+             * <p>The import time. This value is a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748948749000</p>
              */
             public Builder importedTime(Long importedTime) {
                 this.importedTime = importedTime;
@@ -639,7 +762,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * MajorIntent.
+             * <p>The major intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder majorIntent(String majorIntent) {
                 this.majorIntent = majorIntent;
@@ -647,7 +773,18 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * <p>The variable information used at runtime, stored in this field as key-value pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;date&quot;: &quot;666&quot;,
+             *   &quot;phoneNumber&quot;: &quot;777&quot;,
+             *   &quot;distance&quot;: &quot;555&quot;,
+             *   &quot;mendian&quot;: &quot;444&quot;,
+             *   &quot;sex&quot;: &quot;male&quot;,
+             *   &quot;name&quot;: &quot;111&quot;,
+             *   &quot;age&quot;: &quot;222&quot;
+             * }</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -655,7 +792,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * OutId.
+             * <p>The external business serial number reserved for external input. A unique ID can be used for business association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>outId</p>
              */
             public Builder outId(String outId) {
                 this.outId = outId;
@@ -663,7 +803,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingFilePath.
+             * <p>The download path of the recording file. This field is available only after the recording file is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://*******</p>
              */
             public Builder recordingFilePath(String recordingFilePath) {
                 this.recordingFilePath = recordingFilePath;
@@ -671,7 +814,19 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task detail status. Valid values:</p>
+             * <ul>
+             * <li>0: initialized.</li>
+             * <li>1: waiting to call.</li>
+             * <li>2: waiting to retry.</li>
+             * <li>3: calling.</li>
+             * <li>4: call ended.</li>
+             * <li>5: call failed.</li>
+             * </ul>
+             * <p>Only 4 and 5 are desired states.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -679,7 +834,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1187**************</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -687,7 +845,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default version</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -695,7 +856,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * VersionNo.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder versionNo(Long versionNo) {
                 this.versionNo = versionNo;
@@ -788,7 +952,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The list of task detail data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -796,7 +960,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -804,7 +971,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -812,7 +982,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Long total) {
                 this.total = total;

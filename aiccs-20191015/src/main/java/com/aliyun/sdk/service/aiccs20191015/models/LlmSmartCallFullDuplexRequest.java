@@ -176,6 +176,7 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         } 
 
         /**
+         * <p><strong>ApplicationCode</strong><br>The application code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +189,7 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         }
 
         /**
+         * <p><strong>CalledNumber</strong><br>The phone number that receives the intelligent outbound call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +202,7 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         }
 
         /**
+         * <p><strong>CallerNumber</strong><br>The calling number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +215,10 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p><strong>OutId</strong><br>The external ID. The value must be 1 to 15 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out123</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -221,7 +227,10 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         }
 
         /**
-         * SessionTimeout.
+         * <p><strong>SessionTimeout</strong><br>The maximum call duration. The call is automatically ended when the specified duration is exceeded. Unit: seconds. Maximum value: 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder sessionTimeout(Integer sessionTimeout) {
             this.putQueryParameter("SessionTimeout", sessionTimeout);
@@ -230,7 +239,10 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         }
 
         /**
-         * StartWordParam.
+         * <p><strong>StartWordParam</strong><br>The opening greeting variable. Format: JSON. Specify the variable name and parameter, for example, <code>{&quot;custom&quot;:&quot;XXX&quot;}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;tailnumber\&quot;:\&quot;7898\&quot;,\&quot;platformOrder\&quot;:\&quot;\&quot;,\&quot;signatory\&quot;:\&quot;客户\&quot;}</p>
          */
         public Builder startWordParam(java.util.Map<String, ?> startWordParam) {
             String startWordParamShrink = shrink(startWordParam, "StartWordParam", "json");
@@ -240,7 +252,10 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         }
 
         /**
-         * TtsSpeed.
+         * <p>The voice speed. Valid values: 0 to 100. If this parameter is not specified, the value configured in the application is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder ttsSpeed(Integer ttsSpeed) {
             this.putQueryParameter("TtsSpeed", ttsSpeed);
@@ -249,7 +264,10 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         }
 
         /**
-         * TtsVoiceCode.
+         * <p>The voice code from the personalized voice interface. If this parameter is not specified, the value configured in the application is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V745A7CED</p>
          */
         public Builder ttsVoiceCode(String ttsVoiceCode) {
             this.putQueryParameter("TtsVoiceCode", ttsVoiceCode);
@@ -258,7 +276,10 @@ public class LlmSmartCallFullDuplexRequest extends Request {
         }
 
         /**
-         * TtsVolume.
+         * <p>The volume. Valid values: -200 to 200. If this parameter is not specified, the value configured in the application is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder ttsVolume(Integer ttsVolume) {
             this.putQueryParameter("TtsVolume", ttsVolume);

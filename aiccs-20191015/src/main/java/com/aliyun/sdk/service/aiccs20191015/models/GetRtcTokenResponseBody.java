@@ -106,7 +106,10 @@ public class GetRtcTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cleansession&quot;:true,&quot;clientId&quot;:&quot;GID_VOIP@@@ClientId_2000000001271771_100685295007&quot;,&quot;conferenceTopic&quot;:&quot;cs_alicom_voip_conference_pre&quot;,&quot;dataTopic&quot;:&quot;alicom_voip_data_pre&quot;,&quot;host&quot;:&quot;mqtt-cn-4590mdhb901.mqtt.aliyuncs.com&quot;,&quot;meetingEventKeepAliveInterval&quot;:0,&quot;phoneTopic&quot;:&quot;alicom_voip_phone&quot;,&quot;port&quot;:0,&quot;reconnectTimeout&quot;:2000,&quot;registerTime&quot;:0,&quot;sdkClientPort&quot;:8883,&quot;serverId&quot;:&quot;GID_VOIP@@@MTEuMjIuMTQ1Ljgy&quot;,&quot;sgwServerTopic&quot;:&quot;alicom_voip_server_pre&quot;,&quot;tlsport&quot;:443,&quot;tokenData&quot;:&quot;LzMT+XLFl5s/YWJ/MlDz4t/Lq5HC1iGU1P28HAMaxYzmBSHQsWXgdISJ1ZJ+2cxaU0jwYsoyG8Q8cCIbLZTwwaFHf7gc7pPXbJGYgJWUr5ooKsoHaVvvG34cww7W8woWE1OsmZGFDODvooOIjF1CZSorVrR8OwRdprW99yqhMhkJKh7r5f3HfiQgoJWL8b3A85RrRGCSP057skgQ5rIqVAlx7jDFrOTdLtz+krken8qYvpaVBO9wRfFyWQLvxAgNJNx3Oql/hpzc2o3+xbKGTA/P2siLn6Nee1FYk5ClpXcnvfSTM4BAauuWR+oES10VblKEKTU5R/pfjXj3UKOlZ1+OdGO93WA16BR/l1uRb3cOLqya5pjWM+oSmo0sOR7B0ATLz6K1xA0Pc+p6Mu8hZl+OdGO93WA1kj1L0h9Z6CAZG4ol/BNdIg9z6noy7yFmX450Y73dYDWSPUvSH1noIBkbiiX8E10iT0a6ypXxupQdyyrhh8j1yw6otqnw5AT5Tj5VsVWVfflXeZ8nPt1ydXC9nWeHX7K80O6vtOU9M8Qn5VrhkP0F1umbOoYs3NfM+WYZIQx4pkViQo6qqkxgbEg1l6oHJbmOVzrxYRrDTIxqgE/pb0YVJQ==&quot;,&quot;useTLS&quot;:false,&quot;username&quot;:&quot;LTAI27GqAW1VrcQA&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +236,10 @@ public class GetRtcTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>Account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139000000</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -225,7 +247,10 @@ public class GetRtcTokenResponseBody extends TeaModel {
             }
 
             /**
-             * RtcId.
+             * <p>The identity of the endpoint that accesses through the Internet domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000000*******</p>
              */
             public Builder rtcId(String rtcId) {
                 this.rtcId = rtcId;
@@ -233,7 +258,10 @@ public class GetRtcTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>Token information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{“cleansession”:true,”clientId”:”GID_VOIP@@@ClientId_****”,”conferenceTopic”:”cs_alicom_voip_conference”,”host”:”mqtt-cn-4590mdhb901.mqtt.aliyuncs.com”,”meetingEventKeepAliveInterval”:0,”phoneTopic”:”alicom_voip_phone”,”port”:0,”reconnectTimeout”:2000,”registerTime”:0,”sdkClientPort”:8883,”serverId”:”GID_VOIP@@@MTEuMTMuMTM2LjExOA==”,”sgwServerTopic”:”alicom_voip_server_pre”,”tlsport”:443,”tokenData”:”abcdef”,”useTLS”:false}</p>
              */
             public Builder token(String token) {
                 this.token = token;

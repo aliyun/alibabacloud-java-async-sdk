@@ -75,6 +75,7 @@ public class StartChatWorkRequest extends Request {
         } 
 
         /**
+         * <p>Agent logon name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class StartChatWorkRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

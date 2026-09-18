@@ -93,7 +93,10 @@ public class LlmSmartCallResponseBody extends TeaModel {
         } 
 
         /**
-         * CallId.
+         * <p>Unique receipt ID for this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125165515<em><strong>^11195613</strong></em>*</p>
          */
         public Builder callId(String callId) {
             this.callId = callId;
@@ -101,7 +104,10 @@ public class LlmSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Request status code. A return value of &quot;OK&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +115,10 @@ public class LlmSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +129,7 @@ public class LlmSmartCallResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>EE338D98-9BD3-XX13-B165</p>
+         * <p>D6A51251-F7C4-596A-9F45-3C3219A5450D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

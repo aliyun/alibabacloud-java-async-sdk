@@ -128,7 +128,10 @@ public class ListAiccsRobotRequest extends Request {
         }
 
         /**
-         * RobotName.
+         * <p>The robot name. View the robot name on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestRobot</p>
          */
         public Builder robotName(String robotName) {
             this.putQueryParameter("RobotName", robotName);

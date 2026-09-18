@@ -146,6 +146,12 @@ public class CreateSkillGroupRequest extends Request {
         } 
 
         /**
+         * <p>Channel type of the skill group. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Hotline.</li>
+         * <li><strong>2</strong>: Online.</li>
+         * <li><strong>3</strong>: Ticket.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +164,10 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique ID of the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-****-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -167,7 +176,10 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * DepartmentId.
+         * <p>Department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder departmentId(Long departmentId) {
             this.putBodyParameter("DepartmentId", departmentId);
@@ -176,7 +188,10 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Skill group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>在线自动化技能组</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -185,7 +200,10 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>External display name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>在线自动化技能组</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -194,6 +212,7 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +225,11 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>在线自动化技能组</p>
          */
         public Builder skillGroupName(String skillGroupName) {
             this.putBodyParameter("SkillGroupName", skillGroupName);

@@ -119,7 +119,10 @@ public class DeleteDepartmentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,14 @@ public class DeleteDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the operation succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -135,7 +145,10 @@ public class DeleteDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +156,10 @@ public class DeleteDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>seccessful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +167,10 @@ public class DeleteDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98B032F5-6473-4EAC-8BA8-C28993513A1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +178,14 @@ public class DeleteDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API was invoked successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

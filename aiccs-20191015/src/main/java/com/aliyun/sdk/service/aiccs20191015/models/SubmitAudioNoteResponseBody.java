@@ -119,7 +119,10 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The recording notes task ID returned after successful submission. This value corresponds to the CallId in the subsequent asynchronous notes result callback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000000000001_100000000000000002</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -143,7 +152,10 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class SubmitAudioNoteResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -119,7 +119,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why the access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46C98E28-9239-5D95-AC76-648B8FD4889A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +285,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * FailedCount.
+             * <p>The number of calls that could not be canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -272,7 +296,12 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedDetails.
+             * <p>Details about the failed cancellations. This is a map where the key is the failed detail ID or phone number, and the value is the reason for the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;176********&quot;: &quot;明细记录当前状态不可取消&quot;
+             * }</p>
              */
             public Builder failedDetails(java.util.Map<String, ?> failedDetails) {
                 this.failedDetails = failedDetails;
@@ -280,7 +309,18 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCode.
+             * <p>The result code of the cancellation. Valid values:</p>
+             * <ul>
+             * <li><p>ALL_FAILED: All cancellations failed.</p>
+             * </li>
+             * <li><p>ALL_SUCCEED: All cancellations succeeded.</p>
+             * </li>
+             * <li><p>PART_FAILED: Some cancellations failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PART_FAILED</p>
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -288,7 +328,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SucceedCount.
+             * <p>The number of calls that were successfully canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder succeedCount(Long succeedCount) {
                 this.succeedCount = succeedCount;
@@ -296,7 +339,10 @@ public class CancelAiCallDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

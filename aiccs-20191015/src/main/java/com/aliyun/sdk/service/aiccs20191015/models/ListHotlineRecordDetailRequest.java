@@ -130,7 +130,10 @@ public class ListHotlineRecordDetailRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A unique ID for the customer request. Used for idempotency validation and can be generated using UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -139,7 +142,10 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * CloseTimeEnd.
+         * <p>The start time when the hotline call ends. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614582000000</p>
          */
         public Builder closeTimeEnd(Long closeTimeEnd) {
             this.putQueryParameter("CloseTimeEnd", closeTimeEnd);
@@ -148,7 +154,10 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * CloseTimeStart.
+         * <p>The end time when the hotline call ends. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614578400000</p>
          */
         public Builder closeTimeStart(Long closeTimeStart) {
             this.putQueryParameter("CloseTimeStart", closeTimeStart);
@@ -157,7 +166,10 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -166,6 +178,7 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +191,10 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Default value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

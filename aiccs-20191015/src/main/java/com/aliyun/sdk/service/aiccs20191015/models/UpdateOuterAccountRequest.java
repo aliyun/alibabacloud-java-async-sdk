@@ -187,7 +187,10 @@ public class UpdateOuterAccountRequest extends Request {
         } 
 
         /**
-         * Avatar.
+         * <p>Profile picture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://****</p>
          */
         public Builder avatar(String avatar) {
             this.putQueryParameter("Avatar", avatar);
@@ -196,7 +199,10 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
-         * Ext.
+         * <p>Extension field. A JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;备注&quot;:&quot;临时技能组&quot;}</p>
          */
         public Builder ext(String ext) {
             this.putQueryParameter("Ext", ext);
@@ -205,6 +211,7 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
+         * <p>External account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +224,10 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
-         * OuterAccountName.
+         * <p>External account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder outerAccountName(String outerAccountName) {
             this.putQueryParameter("OuterAccountName", outerAccountName);
@@ -226,6 +236,7 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
+         * <p>External account type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +249,10 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
-         * OuterDepartmentId.
+         * <p>External department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder outerDepartmentId(String outerDepartmentId) {
             this.putQueryParameter("OuterDepartmentId", outerDepartmentId);
@@ -247,7 +261,10 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
-         * OuterDepartmentType.
+         * <p>External department type: invalid department type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type_invalid</p>
          */
         public Builder outerDepartmentType(String outerDepartmentType) {
             this.putQueryParameter("OuterDepartmentType", outerDepartmentType);
@@ -256,7 +273,10 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
-         * OuterGroupIds.
+         * <p>List of external skill group IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;222&quot;,&quot;333&quot;,&quot;444&quot;]</p>
          */
         public Builder outerGroupIds(String outerGroupIds) {
             this.putQueryParameter("OuterGroupIds", outerGroupIds);
@@ -265,7 +285,10 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
-         * OuterGroupType.
+         * <p>Skill group type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mybank</p>
          */
         public Builder outerGroupType(String outerGroupType) {
             this.putQueryParameter("OuterGroupType", outerGroupType);
@@ -274,7 +297,10 @@ public class UpdateOuterAccountRequest extends Request {
         }
 
         /**
-         * RealName.
+         * <p>Real name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder realName(String realName) {
             this.putQueryParameter("RealName", realName);

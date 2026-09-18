@@ -238,7 +238,10 @@ public class QueryTicketsRequest extends Request {
         } 
 
         /**
-         * CaseId.
+         * <p>Ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223468****</p>
          */
         public Builder caseId(Long caseId) {
             this.putBodyParameter("CaseId", caseId);
@@ -247,7 +250,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * CaseStatus.
+         * <p>Ticket status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder caseStatus(Integer caseStatus) {
             this.putBodyParameter("CaseStatus", caseStatus);
@@ -256,7 +262,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * CaseType.
+         * <p>Ticket type code (assigned by the system).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1223</p>
          */
         public Builder caseType(Integer caseType) {
             this.putBodyParameter("CaseType", caseType);
@@ -265,7 +274,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>Channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02acfefd3fa14049826ac1a89e1xxxxx</p>
          */
         public Builder channelId(String channelId) {
             this.putBodyParameter("ChannelId", channelId);
@@ -274,7 +286,15 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * ChannelType.
+         * <p>Channel Type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not filled in</li>
+         * <li><strong>1</strong>: Hotline</li>
+         * <li><strong>2</strong>: Online</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder channelType(Integer channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -283,7 +303,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page. Default Value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -292,7 +315,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * DealId.
+         * <p>Assignee ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder dealId(Long dealId) {
             this.putBodyParameter("DealId", dealId);
@@ -301,7 +327,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * Extra.
+         * <p>Additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder extra(java.util.Map<String, ?> extra) {
             String extraShrink = shrink(extra, "Extra", "json");
@@ -311,6 +340,8 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
+         * <p>Log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> and view the instance ID in <strong>Instance Management</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +354,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size. Default Value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -332,7 +366,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * SrType.
+         * <p>Template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29506</p>
          */
         public Builder srType(Long srType) {
             this.putBodyParameter("SrType", srType);
@@ -341,7 +378,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>Job status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder taskStatus(Integer taskStatus) {
             this.putBodyParameter("TaskStatus", taskStatus);
@@ -350,7 +390,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * TouchId.
+         * <p>Touch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15030609</p>
          */
         public Builder touchId(Long touchId) {
             this.putBodyParameter("TouchId", touchId);

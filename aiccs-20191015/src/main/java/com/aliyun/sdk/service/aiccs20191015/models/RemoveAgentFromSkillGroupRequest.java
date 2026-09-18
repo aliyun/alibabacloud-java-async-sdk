@@ -90,6 +90,7 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
         } 
 
         /**
+         * <p>A list of agent IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder agentIds(java.util.List<Long> agentIds) {
@@ -100,10 +101,11 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent_***</p>
+         * <p>ccc_xp_pre-cn-78v1gnp97002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -112,6 +114,8 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID.  </p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API and view the <strong>SkillGroupId</strong> in the response parameters to obtain the skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

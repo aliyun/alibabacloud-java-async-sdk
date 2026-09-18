@@ -634,11 +634,11 @@ public class UpdateModelApplicationRequest extends Request {
         } 
 
         /**
-         * <p>应用编码</p>
+         * <p>The application code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>DKSDLSA</p>
          */
         public Builder applicationCode(String applicationCode) {
             this.putQueryParameter("ApplicationCode", applicationCode);
@@ -647,7 +647,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>应用并发请求数</p>
+         * <p>The number of concurrent requests for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -659,10 +659,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>模型应用名称</p>
+         * <p>The name of the model application.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>测试应用</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -671,7 +671,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * CallAssistantHangup.
+         * <p>Specifies whether to hang up when an intelligent answering service is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder callAssistantHangup(Boolean callAssistantHangup) {
             this.putQueryParameter("CallAssistantHangup", callAssistantHangup);
@@ -680,10 +683,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>通话助手识别</p>
+         * <p>Specifies whether to enable call assistant recognition.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>true</p>
          */
         public Builder callAssistantRecognize(Boolean callAssistantRecognize) {
             this.putQueryParameter("CallAssistantRecognize", callAssistantRecognize);
@@ -692,7 +695,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * CallConnectedTriggerModel.
+         * <p>Specifies whether to enable call-connected event push. Disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder callConnectedTriggerModel(Boolean callConnectedTriggerModel) {
             this.putQueryParameter("CallConnectedTriggerModel", callConnectedTriggerModel);
@@ -701,7 +707,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * DtmfAllowedDigits.
+         * <p>The enumeration of allowed key digits, separated by commas, such as 1,2,3. Maximum of 20 values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dtmfAllowedDigits(String dtmfAllowedDigits) {
             this.putQueryParameter("DtmfAllowedDigits", dtmfAllowedDigits);
@@ -710,7 +719,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * DtmfAutoValidateEnable.
+         * <p>Specifies whether to enable automatic validation of key values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dtmfAutoValidateEnable(Boolean dtmfAutoValidateEnable) {
             this.putQueryParameter("DtmfAutoValidateEnable", dtmfAutoValidateEnable);
@@ -719,7 +731,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * DtmfDigitCount.
+         * <p>The number of DTMF key digits. Valid values: 1 to 12.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dtmfDigitCount(Long dtmfDigitCount) {
             this.putQueryParameter("DtmfDigitCount", dtmfDigitCount);
@@ -728,7 +743,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * DtmfInputTimeout.
+         * <p>The DTMF input timeout period in seconds. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dtmfInputTimeout(Long dtmfInputTimeout) {
             this.putQueryParameter("DtmfInputTimeout", dtmfInputTimeout);
@@ -737,7 +755,14 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * DtmfOutOfRangeAction.
+         * <p>The action to take when the input is out of range. Valid values:</p>
+         * <ul>
+         * <li>RETURN_MODEL: return to the model</li>
+         * <li>AUTO_RETRY: automatically retry</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RETURN_MODEL</p>
          */
         public Builder dtmfOutOfRangeAction(String dtmfOutOfRangeAction) {
             this.putQueryParameter("DtmfOutOfRangeAction", dtmfOutOfRangeAction);
@@ -746,7 +771,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * DtmfRetryPlayTimes.
+         * <p>The number of retry attempts (PlayTimes). Valid values: 1 to 3. Takes effect only when DtmfOutOfRangeAction is set to AUTO_RETRY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dtmfRetryPlayTimes(Long dtmfRetryPlayTimes) {
             this.putQueryParameter("DtmfRetryPlayTimes", dtmfRetryPlayTimes);
@@ -755,7 +783,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * DtmfRetryPromptText.
+         * <p>The custom retry prompt text. Maximum length: 50 characters. If left empty, the default message is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文本</p>
          */
         public Builder dtmfRetryPromptText(String dtmfRetryPromptText) {
             this.putQueryParameter("DtmfRetryPromptText", dtmfRetryPromptText);
@@ -782,10 +813,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>场景名称</p>
+         * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>测试场景</p>
          */
         public Builder dyvmsSceneName(String dyvmsSceneName) {
             this.putQueryParameter("DyvmsSceneName", dyvmsSceneName);
@@ -794,7 +825,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * EnableDtmfReceive.
+         * <p>Specifies whether to enable DTMF key collection. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDtmfReceive(Boolean enableDtmfReceive) {
             this.putQueryParameter("EnableDtmfReceive", enableDtmfReceive);
@@ -812,7 +846,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * EnableMorse.
+         * <p>Specifies whether to enable Morse code configuration. Disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableMorse(Boolean enableMorse) {
             this.putQueryParameter("EnableMorse", enableMorse);
@@ -821,7 +858,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>打断配置</p>
+         * <p>The interruption configuration.</p>
          */
         public Builder interruptConfig(InterruptConfig interruptConfig) {
             String interruptConfigShrink = shrink(interruptConfig, "InterruptConfig", "json");
@@ -831,10 +868,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>模型编码</p>
+         * <p>The model code.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>1231</p>
          */
         public Builder modelCode(String modelCode) {
             this.putQueryParameter("ModelCode", modelCode);
@@ -843,10 +880,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>模型版本</p>
+         * <p>The model version.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>1</p>
          */
         public Builder modelVersion(String modelVersion) {
             this.putQueryParameter("ModelVersion", modelVersion);
@@ -855,7 +892,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>静音事件是否唤起模型</p>
+         * <p>Specifies whether the first mute event triggers the model.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -867,7 +904,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>静音时长</p>
+         * <p>The mute duration.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -879,7 +916,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>连续多少个静音事件主动挂机</p>
+         * <p>The number of consecutive mute events after which the system proactively hangs up.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -891,7 +928,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>静音事件推送模式</p>
+         * <p>The push mode for mute events.</p>
          * 
          * <strong>example:</strong>
          * <p>FIRST_ONLY</p>
@@ -912,7 +949,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>asr识别停顿时长</p>
+         * <p>The ASR recognition pause duration.</p>
          * 
          * <strong>example:</strong>
          * <p>350</p>
@@ -924,10 +961,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>提示词</p>
+         * <p>The prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>测试提示词</p>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
@@ -936,7 +973,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>资质ID</p>
+         * <p>The qualification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>61</p>
@@ -948,10 +985,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>资质名称</p>
+         * <p>The qualification name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>测试质检</p>
          */
         public Builder qualificationName(String qualificationName) {
             this.putQueryParameter("QualificationName", qualificationName);
@@ -960,7 +997,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * RecordingFile.
+         * <p>The URL of the recording audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxxxxxxxxx.wav">https://xxxxxxxxxxxxxxx.wav</a></p>
          */
         public Builder recordingFile(String recordingFile) {
             this.putQueryParameter("RecordingFile", recordingFile);
@@ -987,7 +1027,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>最大通话时长</p>
+         * <p>The maximum call duration.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -999,10 +1039,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>来源</p>
+         * <p>The source. Fixed value: USER.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>USER</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -1011,10 +1051,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>话术内容</p>
+         * <p>The speech script content.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>测试话术</p>
          */
         public Builder speechContent(String speechContent) {
             this.putQueryParameter("SpeechContent", speechContent);
@@ -1023,7 +1063,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>话束id</p>
+         * <p>The speech script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -1035,10 +1075,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>开场白</p>
+         * <p>The opening statement.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>你好，这是个测试开场白</p>
          */
         public Builder startWord(String startWord) {
             this.putQueryParameter("StartWord", startWord);
@@ -1047,7 +1087,11 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * StartWordType.
+         * <p>The type of the opening statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0：文本
+         * 1：录音</p>
          */
         public Builder startWordType(Long startWordType) {
             this.putQueryParameter("StartWordType", startWordType);
@@ -1056,7 +1100,7 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>tts配置，包括音色、音量、音速等。</p>
+         * <p>The text-to-speech (TTS) configuration, including voice, volume, and speed.</p>
          */
         public Builder ttsConfig(TtsConfig ttsConfig) {
             String ttsConfigShrink = shrink(ttsConfig, "TtsConfig", "json");
@@ -1066,10 +1110,10 @@ public class UpdateModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>用途</p>
+         * <p>The usage description.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>测试用途</p>
          */
         public Builder usageDesc(String usageDesc) {
             this.putQueryParameter("UsageDesc", usageDesc);
@@ -1137,7 +1181,10 @@ public class UpdateModelApplicationRequest extends Request {
             } 
 
             /**
-             * InterruptNum.
+             * <p>The number of consecutive interruptions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder interruptNum(Long interruptNum) {
                 this.interruptNum = interruptNum;
@@ -1145,7 +1192,10 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * InterruptProtectDuration.
+             * <p>The interruption protection duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.417547</p>
              */
             public Builder interruptProtectDuration(Double interruptProtectDuration) {
                 this.interruptProtectDuration = interruptProtectDuration;
@@ -1264,7 +1314,7 @@ public class UpdateModelApplicationRequest extends Request {
             } 
 
             /**
-             * <p>防止连续抢话功能配置</p>
+             * <p>The configuration for consecutive interruption prevention.</p>
              */
             public Builder avoidInterruptDTO(AvoidInterruptDTO avoidInterruptDTO) {
                 this.avoidInterruptDTO = avoidInterruptDTO;
@@ -1272,7 +1322,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>防止连续抢话功能是否开启</p>
+             * <p>Specifies whether to enable consecutive interruption prevention.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1283,7 +1333,10 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * EnableInterruptBackchannel.
+             * <p>Specifies whether to enable the interruption filler word configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableInterruptBackchannel(Boolean enableInterruptBackchannel) {
                 this.enableInterruptBackchannel = enableInterruptBackchannel;
@@ -1291,7 +1344,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>开场白全程不打断</p>
+             * <p>Specifies whether to prevent interruption during the entire opening statement.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1302,7 +1355,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>开场白不打断配置是否开启</p>
+             * <p>Specifies whether to enable the no-interruption configuration for the opening statement.</p>
              */
             public Builder enableStartwordNotInterrupt(Boolean enableStartwordNotInterrupt) {
                 this.enableStartwordNotInterrupt = enableStartwordNotInterrupt;
@@ -1310,7 +1363,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>开场白保护时长</p>
+             * <p>The protection duration for the opening statement.</p>
              * 
              * <strong>example:</strong>
              * <p>1.4699</p>
@@ -1510,7 +1563,10 @@ public class UpdateModelApplicationRequest extends Request {
             } 
 
             /**
-             * BackgroundEnabled.
+             * <p>Specifies whether to enable background sound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder backgroundEnabled(Boolean backgroundEnabled) {
                 this.backgroundEnabled = backgroundEnabled;
@@ -1518,7 +1574,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>背景音id</p>
+             * <p>The background sound ID.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -1529,7 +1585,12 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>背景音音量(id)</p>
+             * <p>The background sound volume. Valid values:</p>
+             * <ul>
+             * <li>0: low</li>
+             * <li>1: medium</li>
+             * <li>2: high</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1540,7 +1601,10 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * CustomerAccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47</p>
              */
             public Builder customerAccountId(Long customerAccountId) {
                 this.customerAccountId = customerAccountId;
@@ -1548,7 +1612,10 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * MixingEnabled.
+             * <p>Specifies whether to enable audio mixing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mixingEnabled(Boolean mixingEnabled) {
                 this.mixingEnabled = mixingEnabled;
@@ -1556,7 +1623,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>混音模版id</p>
+             * <p>The mixing template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -1567,7 +1634,10 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -1575,7 +1645,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>TTS 变量播放时的声音速度。取值范围：-200~200，默认值为 0。</p>
+             * <p>The speed for TTS variable playback. Valid values: -200 to 200. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -1586,7 +1656,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>声音风格</p>
+             * <p>The voice style.</p>
              * 
              * <strong>example:</strong>
              * <p>voice</p>
@@ -1597,7 +1667,7 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>TTS 变量播放的音量。取值范围：0~100，默认值为 0。</p>
+             * <p>The volume for TTS variable playback. Valid values: 0 to 100. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -1608,10 +1678,10 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>声音编码</p>
+             * <p>The voice code.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值</p>
+             * <p>12123213123</p>
              */
             public Builder voiceCode(String voiceCode) {
                 this.voiceCode = voiceCode;
@@ -1619,10 +1689,15 @@ public class UpdateModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>声音类型</p>
+             * <p>The voice type. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM: system voice</li>
+             * <li>COSYCLONE: cloned voice</li>
+             * <li>BL-CUSTOM: custom premium cloned voice</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值</p>
+             * <p>SYSTEM</p>
              */
             public Builder voiceType(String voiceType) {
                 this.voiceType = voiceType;

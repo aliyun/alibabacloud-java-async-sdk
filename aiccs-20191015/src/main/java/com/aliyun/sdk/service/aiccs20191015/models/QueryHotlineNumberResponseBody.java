@@ -106,7 +106,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of Success indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Hotline number configuration information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE339D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +220,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupId.
+             * <p>The skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6083****</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -212,7 +231,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>技能组A</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -292,7 +314,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * DepartmentId.
+             * <p>Department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2256****</p>
              */
             public Builder departmentId(Long departmentId) {
                 this.departmentId = departmentId;
@@ -300,7 +325,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * DepartmentName.
+             * <p>The department name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>部门A</p>
              */
             public Builder departmentName(String departmentName) {
                 this.departmentName = departmentName;
@@ -308,7 +336,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * GroupDOList.
+             * <p>The skill group list.</p>
              */
             public Builder groupDOList(java.util.List<GroupDOList> groupDOList) {
                 this.groupDOList = groupDOList;
@@ -492,7 +520,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * CalloutAllDepartment.
+             * <p>Outbound calls apply to all departments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder calloutAllDepartment(Boolean calloutAllDepartment) {
                 this.calloutAllDepartment = calloutAllDepartment;
@@ -500,7 +531,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * CalloutRangeList.
+             * <p>List of departments for which outbound calls are effective.</p>
              */
             public Builder calloutRangeList(java.util.List<CalloutRangeList> calloutRangeList) {
                 this.calloutRangeList = calloutRangeList;
@@ -508,7 +539,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Number description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -516,7 +550,16 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationStatus.
+             * <p>Satisfaction status. Valid values:  </p>
+             * <ul>
+             * <li><strong>0</strong>: Neither inbound nor outbound calls are enabled.  </li>
+             * <li><strong>1</strong>: Inbound calls are enabled.  </li>
+             * <li><strong>2</strong>: Outbound calls are enabled.  </li>
+             * <li><strong>3</strong>: Both inbound and outbound calls are enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder evaluationStatus(Integer evaluationStatus) {
                 this.evaluationStatus = evaluationStatus;
@@ -524,7 +567,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * FlowId.
+             * <p>Incoming call flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder flowId(Long flowId) {
                 this.flowId = flowId;
@@ -532,7 +578,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * <p>Inbound flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试流程</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -540,7 +589,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * HotlineNumber.
+             * <p>Hotline number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571****2211</p>
              */
             public Builder hotlineNumber(String hotlineNumber) {
                 this.hotlineNumber = hotlineNumber;
@@ -548,7 +600,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * InBoundEnabled.
+             * <p>Indicates whether the number is used for inbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder inBoundEnabled(Boolean inBoundEnabled) {
                 this.inBoundEnabled = inBoundEnabled;
@@ -556,7 +611,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>Number location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙江杭州</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -564,7 +622,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundEnabled.
+             * <p>Indicates whether the number is used for outbound calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder outboundEnabled(Boolean outboundEnabled) {
                 this.outboundEnabled = outboundEnabled;
@@ -572,7 +633,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Sp.
+             * <p>Carrier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>电信</p>
              */
             public Builder sp(String sp) {
                 this.sp = sp;
@@ -665,7 +729,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>Current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -673,7 +740,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * HotlineNumList.
+             * <p>Number list.</p>
              */
             public Builder hotlineNumList(java.util.List<HotlineNumList> hotlineNumList) {
                 this.hotlineNumList = hotlineNumList;
@@ -681,7 +748,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -689,7 +759,10 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total amount of data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

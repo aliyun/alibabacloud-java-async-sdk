@@ -276,7 +276,22 @@ public class CreateTaskRequest extends Request {
         } 
 
         /**
-         * CallString.
+         * <p>Call string (callee information and parameter list). Valid values:</p>
+         * <ul>
+         * <li><strong>LIST</strong>: <code>05715678****,05715679****</code></li>
+         * <li><strong>JSON</strong>: <code>{&quot;ParamNames&quot;:[&quot;name&quot;,&quot;age&quot;],&quot;CalleeList&quot;:[{&quot;Callee&quot;:&quot;1810000****&quot;,&quot;Params&quot;:[&quot;Zhang San&quot;,&quot;20&quot;]},{&quot;Callee&quot;:&quot;1810001****&quot;,&quot;Params&quot;:[&quot;Li Si&quot;,&quot;21&quot;]}]}</code>. In this example, ParamNames represents the List of Parameter Names; Params represents the List of parameter values.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>The order of the Parameter Name List and the parameter value List must correspond.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>A maximum of 1 000 callee numbers is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ParamNames&quot;:[&quot;name&quot;,&quot;age&quot;],&quot;CalleeList&quot;:[{&quot;Callee&quot;:&quot;1810000****&quot;,&quot;Params&quot;:[&quot;张三&quot;,&quot;20&quot;]},{&quot;Callee&quot;:&quot;1810001****&quot;,&quot;Params&quot;:[&quot;李四&quot;,&quot;21&quot;]}]}</p>
          */
         public Builder callString(String callString) {
             this.putQueryParameter("CallString", callString);
@@ -285,6 +300,11 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>Call string type. Valid values:  </p>
+         * <ul>
+         * <li><strong>LIST</strong>  </li>
+         * <li><strong>JSON</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,6 +317,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>Outbound caller number.</p>
+         * <blockquote>
+         * <p>The number must be a purchased number. Separate multiple numbers with commas (,).</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +360,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * RetryCount.
+         * <p>Retry Count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder retryCount(Integer retryCount) {
             this.putQueryParameter("RetryCount", retryCount);
@@ -345,7 +372,14 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * RetryFlag.
+         * <p>Whether to enable automatic retry. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Retry.</li>
+         * <li><strong>0</strong>: No retry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder retryFlag(Integer retryFlag) {
             this.putQueryParameter("RetryFlag", retryFlag);
@@ -354,7 +388,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * RetryInterval.
+         * <p>Retry interval. Unit: minute. Must be greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder retryInterval(Integer retryInterval) {
             this.putQueryParameter("RetryInterval", retryInterval);
@@ -363,7 +400,18 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * RetryStatusCode.
+         * <p>Call statuses that require redialing. Separate multiple statuses with commas (,). Valid values:  </p>
+         * <ul>
+         * <li><strong>200010</strong>: Power off  </li>
+         * <li><strong>200011</strong>: Service suspended  </li>
+         * <li><strong>200002</strong>: Busy  </li>
+         * <li><strong>200012</strong>: Call failed  </li>
+         * <li><strong>200005</strong>: Unable to connect  </li>
+         * <li><strong>200003</strong>: No acknowledgement</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200010,200011</p>
          */
         public Builder retryStatusCode(String retryStatusCode) {
             this.putQueryParameter("RetryStatusCode", retryStatusCode);
@@ -372,10 +420,12 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>ID of the specified robot (script ID), indicating which robot script to use for initiating calls.  </p>
+         * <p>You can obtain the script ID on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12****</p>
          */
         public Builder robotId(String robotId) {
             this.putQueryParameter("RobotId", robotId);
@@ -384,6 +434,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>Concurrency (number of agents).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -396,7 +447,14 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * StartNow.
+         * <p>Indicates whether to start immediately.  </p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.  </li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>是</p>
          */
         public Builder startNow(Boolean startNow) {
             this.putQueryParameter("StartNow", startNow);
@@ -405,7 +463,11 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>Task Name. Supports Chinese and English characters. Length: 0 to 30 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试任务</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -414,6 +476,16 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>Work day. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Monday.</li>
+         * <li><strong>2</strong>: Tuesday.</li>
+         * <li><strong>3</strong>: Wednesday.</li>
+         * <li><strong>4</strong>: Thursday.</li>
+         * <li><strong>5</strong>: Friday.</li>
+         * <li><strong>6</strong>: Saturday.</li>
+         * <li><strong>7</strong>: Sunday.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -426,6 +498,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>List of working hours (accurate to the minute).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

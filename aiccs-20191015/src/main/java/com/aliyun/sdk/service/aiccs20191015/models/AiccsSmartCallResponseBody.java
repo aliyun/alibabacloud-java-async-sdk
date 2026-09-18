@@ -93,7 +93,10 @@ public class AiccsSmartCallResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Unique receipt ID for this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116012854210^10281427****</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class AiccsSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Request status code. A return value of &quot;OK&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class AiccsSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class AiccsSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

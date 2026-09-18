@@ -119,7 +119,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Query result data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API was invoked successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -225,7 +244,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>realName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +255,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>Metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客服姓名</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -339,7 +364,7 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Columns.
+             * <p>Description of returned columns.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -347,7 +372,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>Current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -355,7 +383,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -363,7 +394,7 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>The returned data result.</p>
              */
             public Builder rows(java.util.List<java.util.Map<String, ?>> rows) {
                 this.rows = rows;
@@ -371,7 +402,10 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

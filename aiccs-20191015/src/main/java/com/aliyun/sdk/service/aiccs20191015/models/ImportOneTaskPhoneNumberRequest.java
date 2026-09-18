@@ -22,6 +22,10 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
     private Long encryptionType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extension")
+    private String extension;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
@@ -54,6 +58,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
     private ImportOneTaskPhoneNumberRequest(Builder builder) {
         super(builder);
         this.encryptionType = builder.encryptionType;
+        this.extension = builder.extension;
         this.outId = builder.outId;
         this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
@@ -81,6 +86,13 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
      */
     public Long getEncryptionType() {
         return this.encryptionType;
+    }
+
+    /**
+     * @return extension
+     */
+    public String getExtension() {
+        return this.extension;
     }
 
     /**
@@ -134,6 +146,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
 
     public static final class Builder extends Request.Builder<ImportOneTaskPhoneNumberRequest, Builder> {
         private Long encryptionType; 
+        private String extension; 
         private String outId; 
         private Long ownerId; 
         private String phoneNumber; 
@@ -149,6 +162,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
         private Builder(ImportOneTaskPhoneNumberRequest request) {
             super(request);
             this.encryptionType = request.encryptionType;
+            this.extension = request.extension;
             this.outId = request.outId;
             this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
@@ -168,7 +182,22 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The extension number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        public Builder extension(String extension) {
+            this.putQueryParameter("Extension", extension);
+            this.extension = extension;
+            return this;
+        }
+
+        /**
+         * <p>The external serial number. We recommend that you use a unique ID. The value cannot exceed 128 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94ba739b-xxxx-ef91-335d-4be006c34899</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -186,6 +215,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
         }
 
         /**
+         * <p>The called phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +246,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +259,17 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
         }
 
         /**
-         * Variables.
+         * <p>The variable list in Map format.</p>
+         * <blockquote>
+         * <p>Variable format for engine-based voice call tasks:</p>
+         * <ul>
+         * <li>{&quot;startWordParam.VariableKey1&quot;:&quot;VariableValue1&quot;,&quot;promptParam.VariableKey2&quot;:&quot;VariableValue2&quot;,&quot;bizParam.VariableKey3&quot;:&quot;VariableValue3&quot;}</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;VariableKey1&quot;:&quot;VariableValue1&quot;,&quot;VariableKey2&quot;:&quot;VariableValue2&quot;}
+         * For example values of engine-based voice call tasks, refer to the description on the left</p>
          */
         public Builder variables(java.util.Map<String, ?> variables) {
             String variablesShrink = shrink(variables, "Variables", "json");

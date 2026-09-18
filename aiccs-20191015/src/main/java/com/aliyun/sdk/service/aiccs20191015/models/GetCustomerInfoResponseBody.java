@@ -106,7 +106,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Membership information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF6A3FB7-A5AA-43BE-A65B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +268,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomizeFields.
+             * <p>Custom fields.</p>
              */
             public Builder customizeFields(java.util.Map<String, ?> customizeFields) {
                 this.customizeFields = customizeFields;
@@ -264,7 +276,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Nick.
+             * <p>Nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试会员</p>
              */
             public Builder nick(String nick) {
                 this.nick = nick;
@@ -272,7 +287,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OuterId.
+             * <p>External ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6666666</p>
              */
             public Builder outerId(String outerId) {
                 this.outerId = outerId;
@@ -280,7 +298,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Photo.
+             * <p>Profile picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ">https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ</a></p>
              */
             public Builder photo(String photo) {
                 this.photo = photo;
@@ -288,7 +309,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RealName.
+             * <p>Real name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>刘测试</p>
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -296,7 +320,10 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Membership ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>823456789023</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

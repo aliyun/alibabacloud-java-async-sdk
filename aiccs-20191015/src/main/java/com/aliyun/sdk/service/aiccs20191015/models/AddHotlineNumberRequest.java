@@ -207,10 +207,11 @@ public class AddHotlineNumberRequest extends Request {
         } 
 
         /**
+         * <p>Description of the number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>desc</p>
+         * <p>热线号码</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -219,6 +220,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether the number is used for inbound calls.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +233,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>Whether inbound satisfaction evaluation is enabled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +246,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>Whether it is used for outbound calls.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,6 +259,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether outbound call satisfaction evaluation is enabled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +272,16 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * EvaluationLevel.
+         * <p>Satisfaction Level. Valid values:  </p>
+         * <ul>
+         * <li><strong>2</strong>: Two-level (Satisfied, Not satisfied)  </li>
+         * <li><strong>3</strong>: Three-level (Satisfied, Neutral, Not satisfied)  </li>
+         * <li><strong>4</strong>: Four-level (Very satisfied, Satisfied, Neutral, Not satisfied)  </li>
+         * <li><strong>5</strong>: Five-level (Very satisfied, Satisfied, Neutral, Not satisfied, Very poor)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder evaluationLevel(Integer evaluationLevel) {
             this.putBodyParameter("EvaluationLevel", evaluationLevel);
@@ -276,6 +290,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>Hotline number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,7 +303,10 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * InboundFlowId.
+         * <p>The IVR flow ID for inbound calls. You can obtain it on the SaaS Workbench &gt; Channel Integration &gt; IVR Flow Management page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder inboundFlowId(Long inboundFlowId) {
             this.putBodyParameter("InboundFlowId", inboundFlowId);
@@ -297,6 +315,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it in the Intelligent Contact Center console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -309,6 +328,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
+         * <p>Whether outbound calls apply to all departments under the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,7 +341,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * OutboundRangeList.
+         * <p>Outbound call effective scope.</p>
          */
         public Builder outboundRangeList(java.util.List<OutboundRangeList> outboundRangeList) {
             String outboundRangeListShrink = shrink(outboundRangeList, "OutboundRangeList", "json");
@@ -390,7 +410,10 @@ public class AddHotlineNumberRequest extends Request {
             } 
 
             /**
-             * DepartmentId.
+             * <p>Effective department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder departmentId(Long departmentId) {
                 this.departmentId = departmentId;
@@ -398,7 +421,10 @@ public class AddHotlineNumberRequest extends Request {
             }
 
             /**
-             * GroupIdList.
+             * <p>List of effective skill groups.  </p>
+             * <blockquote>
+             * <p>If the skill group list is empty, the setting applies to the entire department. Otherwise, it applies only to the specified skill groups under the department.</p>
+             * </blockquote>
              */
             public Builder groupIdList(java.util.List<Long> groupIdList) {
                 this.groupIdList = groupIdList;

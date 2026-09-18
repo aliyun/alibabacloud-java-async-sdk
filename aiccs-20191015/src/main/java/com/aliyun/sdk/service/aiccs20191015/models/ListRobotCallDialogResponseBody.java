@@ -106,7 +106,10 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The request status code. OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The conversation records.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +259,10 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The script content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I am a customer service representative from XX. I noticed that you previously looked for a job with us. I am doing a follow-up. How is your work going?</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -251,7 +270,10 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Opening</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -259,7 +281,10 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role in the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>robot</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -267,7 +292,10 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The intent label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rejection</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -275,7 +303,10 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The start time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621483557000</p>
              */
             public Builder time(String time) {
                 this.time = time;

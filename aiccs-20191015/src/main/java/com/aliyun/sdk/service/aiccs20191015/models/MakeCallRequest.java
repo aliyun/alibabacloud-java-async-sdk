@@ -134,6 +134,7 @@ public class MakeCallRequest extends Request {
         } 
 
         /**
+         * <p>Called number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
+         * <p>Calling number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
+         * <p>Operation code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +173,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * ExtInfo.
+         * <p>Pass-through business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bizId&quot;: 23323}</p>
          */
         public Builder extInfo(String extInfo) {
             this.putQueryParameter("ExtInfo", extInfo);
@@ -179,6 +185,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
+         * <p>External account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +198,7 @@ public class MakeCallRequest extends Request {
         }
 
         /**
+         * <p>External account type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

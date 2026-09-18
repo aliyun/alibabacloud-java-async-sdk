@@ -73,7 +73,10 @@ public class HangUpDoubleCallRequest extends Request {
         } 
 
         /**
-         * Acid.
+         * <p>Session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68255155****</p>
          */
         public Builder acid(String acid) {
             this.putQueryParameter("Acid", acid);
@@ -82,7 +85,10 @@ public class HangUpDoubleCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Artificial Intelligence Cloud Call Service instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

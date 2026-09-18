@@ -148,7 +148,10 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -157,7 +160,7 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
-         * DepIds.
+         * <p>The list of department IDs.</p>
          */
         public Builder depIds(java.util.List<Long> depIds) {
             this.putQueryParameter("DepIds", depIds);
@@ -166,6 +169,7 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
+         * <p>The UNIX timestamp of the end date. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +182,7 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * <p>The list of skill group IDs.</p>
          */
         public Builder groupIds(java.util.List<Long> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -187,6 +191,8 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
+         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.</p>
+         * <p>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +205,10 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -208,6 +217,7 @@ public class GetHotlineAgentDetailReportRequest extends Request {
         }
 
         /**
+         * <p>The UNIX timestamp of the start date. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

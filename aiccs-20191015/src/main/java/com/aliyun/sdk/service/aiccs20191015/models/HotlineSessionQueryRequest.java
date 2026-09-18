@@ -426,7 +426,10 @@ public class HotlineSessionQueryRequest extends Request {
         } 
 
         /**
-         * Acid.
+         * <p>The session ID. The acid in the websocket after an inbound call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719786****</p>
          */
         public Builder acid(String acid) {
             this.putQueryParameter("Acid", acid);
@@ -435,7 +438,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * AcidList.
+         * <p>The list of session IDs.</p>
          */
         public Builder acidList(java.util.List<String> acidList) {
             this.putQueryParameter("AcidList", acidList);
@@ -444,7 +447,21 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * CallResult.
+         * <p>The call result. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong>: The call ended normally.</li>
+         * <li><strong>touchRouteError</strong>: The call was terminated in the queue.</li>
+         * <li><strong>touchInQueue</strong>: The call was terminated in the queue.</li>
+         * <li><strong>touchInLoss</strong>: The call was terminated in the queue.</li>
+         * <li><strong>userHangup</strong>: The user hung up or the call was terminated in the IVR.</li>
+         * <li><strong>sysHangup</strong>: The system hung up or the call was terminated in the IVR.</li>
+         * <li><strong>transferAgent</strong>: The user hung up or the call was terminated in the IVR.</li>
+         * <li><strong>dailing</strong>: The agent hung up or the call was terminated during ringing.</li>
+         * <li><strong>TouchRingCallLoss</strong>: The call was terminated in the queue or during ringing.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder callResult(String callResult) {
             this.putQueryParameter("CallResult", callResult);
@@ -453,7 +470,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * CallResultList.
+         * <p>The list of call results.</p>
          */
         public Builder callResultList(java.util.List<String> callResultList) {
             this.putQueryParameter("CallResultList", callResultList);
@@ -462,7 +479,15 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * CallType.
+         * <p>The call type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: outbound call.</li>
+         * <li><strong>2</strong>: inbound call.</li>
+         * <li><strong>3</strong>: transferred call.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder callType(Integer callType) {
             this.putQueryParameter("CallType", callType);
@@ -471,7 +496,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * CallTypeList.
+         * <p>The list of call types.</p>
          */
         public Builder callTypeList(java.util.List<Integer> callTypeList) {
             this.putQueryParameter("CallTypeList", callTypeList);
@@ -480,7 +505,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>The number of the caller. For example, a mobile phone number, an agent number, or a robot number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135615****</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -489,7 +517,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * CalledNumberList.
+         * <p>The list of called numbers.</p>
          */
         public Builder calledNumberList(java.util.List<String> calledNumberList) {
             this.putQueryParameter("CalledNumberList", calledNumberList);
@@ -498,7 +526,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>The number of the callee. For example, a mobile phone number, an agent number, or a robot number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>057177****</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -507,7 +538,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * CallingNumberList.
+         * <p>The list of calling numbers.</p>
          */
         public Builder callingNumberList(java.util.List<String> callingNumberList) {
             this.putQueryParameter("CallingNumberList", callingNumberList);
@@ -516,7 +547,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -525,7 +559,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * GroupIdList.
+         * <p>The list of skill group IDs.</p>
          */
         public Builder groupIdList(java.util.List<Long> groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
@@ -534,7 +568,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AutomationSkillGroup</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -543,7 +580,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The globally unique ID of the call details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acc1c58dab4a4****0e3813c66</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -552,6 +592,8 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
+         * You can obtain the instance ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -564,7 +606,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * MemberId.
+         * <p>The member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7856****</p>
          */
         public Builder memberId(String memberId) {
             this.putQueryParameter("MemberId", memberId);
@@ -573,7 +618,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * MemberIdList.
+         * <p>The list of member IDs.</p>
          */
         public Builder memberIdList(java.util.List<String> memberIdList) {
             this.putQueryParameter("MemberIdList", memberIdList);
@@ -582,7 +627,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * MemberName.
+         * <p>The member name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AnonymousMember</p>
          */
         public Builder memberName(String memberName) {
             this.putQueryParameter("MemberName", memberName);
@@ -591,7 +639,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -600,7 +651,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -609,7 +663,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The extended parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -618,7 +675,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * QueryEndTime.
+         * <p>The end timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614829721</p>
          */
         public Builder queryEndTime(Long queryEndTime) {
             this.putQueryParameter("QueryEndTime", queryEndTime);
@@ -627,7 +687,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * QueryStartTime.
+         * <p>The start timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614828721</p>
          */
         public Builder queryStartTime(Long queryStartTime) {
             this.putQueryParameter("QueryStartTime", queryStartTime);
@@ -636,7 +699,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -645,7 +711,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * ServicerId.
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>555555</p>
          */
         public Builder servicerId(String servicerId) {
             this.putQueryParameter("ServicerId", servicerId);
@@ -654,7 +723,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * ServicerIdList.
+         * <p>The list of agent IDs.</p>
          */
         public Builder servicerIdList(java.util.List<String> servicerIdList) {
             this.putQueryParameter("ServicerIdList", servicerIdList);
@@ -663,7 +732,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * ServicerName.
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAgent</p>
          */
         public Builder servicerName(String servicerName) {
             this.putQueryParameter("ServicerName", servicerName);

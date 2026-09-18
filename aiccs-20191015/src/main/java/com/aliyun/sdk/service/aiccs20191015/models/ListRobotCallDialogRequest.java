@@ -117,10 +117,11 @@ public class ListRobotCallDialogRequest extends Request {
         } 
 
         /**
+         * <p>The unique ID of the call. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and obtain the value from the <strong>Data</strong> field in the response.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>125165515022^11195613****</p>
+         * <p>12516551<strong><strong>^11195613</strong></strong></p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -129,6 +130,7 @@ public class ListRobotCallDialogRequest extends Request {
         }
 
         /**
+         * <p>The creation time. Format: YYYY-MM-DD hh:mm:ss. The time must be specified precisely. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and obtain the value from the <strong>date</strong> parameter in the <strong>Response Header</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

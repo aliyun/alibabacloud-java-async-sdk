@@ -119,7 +119,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -127,7 +130,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * OnePageSize.
+         * <p>Number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder onePageSize(Integer onePageSize) {
             this.onePageSize = onePageSize;
@@ -143,7 +149,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -159,7 +171,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalResults.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76</p>
          */
         public Builder totalResults(Integer totalResults) {
             this.totalResults = totalResults;
@@ -264,7 +279,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelType.
+             * <p>Skill group channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channelType(Integer channelType) {
                 this.channelType = channelType;
@@ -272,7 +290,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Skill group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自动化技能组</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -280,7 +301,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>Skill group display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自动化技能组</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -288,7 +312,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupId.
+             * <p>Skill group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder skillGroupId(Long skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -296,7 +323,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillGroupName.
+             * <p>Skill group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>自动化技能组</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;

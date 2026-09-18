@@ -181,7 +181,10 @@ public class ListTaskRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -190,7 +193,10 @@ public class ListTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of items per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,7 +223,10 @@ public class ListTaskRequest extends Request {
         }
 
         /**
-         * RobotName.
+         * <p>The robot name, which is the script name. You can view the names of scripts that have passed Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>机器人</p>
          */
         public Builder robotName(String robotName) {
             this.putQueryParameter("RobotName", robotName);
@@ -226,7 +235,21 @@ public class ListTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Job Status. Valid values:</p>
+         * <ul>
+         * <li><strong>INIT</strong>: Not started.</li>
+         * <li><strong>RELEASE</strong>: Parsing.</li>
+         * <li><strong>RUNNING</strong>: Executing.</li>
+         * <li><strong>STOP</strong>: Paused manually.</li>
+         * <li><strong>SYSTEM_STOP</strong>: Paused by the system.</li>
+         * <li><strong>READY</strong>: Pending execution.</li>
+         * <li><strong>CANCEL</strong>: Stopped manually.</li>
+         * <li><strong>SYSTEM_CANCEL</strong>: Stopped by the system.</li>
+         * <li><strong>DONE</strong>: Completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STOP</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -235,7 +258,10 @@ public class ListTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The unique job ID of the robot calling job. You can view it in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or obtain it by using the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -244,7 +270,10 @@ public class ListTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The job name. You can view the names of created jobs in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务测试</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

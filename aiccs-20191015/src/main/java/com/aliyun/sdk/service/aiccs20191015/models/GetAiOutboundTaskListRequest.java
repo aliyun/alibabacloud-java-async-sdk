@@ -161,7 +161,10 @@ public class GetAiOutboundTaskListRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * <p>The end time for job creation. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1617761765000</p>
          */
         public Builder createTimeEnd(Long createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -170,7 +173,10 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * <p>The start time for job creation. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615083365000</p>
          */
         public Builder createTimeStart(Long createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -179,6 +185,7 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
+         * <p>The page number to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +198,7 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +211,7 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
+         * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +224,13 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>Filter condition.</p>
+         * <blockquote>
+         * <p>Matches job ID or performs fuzzy matching on job name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1763****</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -224,7 +239,18 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Job status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not started.</li>
+         * <li><strong>1</strong>: In progress.</li>
+         * <li><strong>2</strong>: Paused by the system.</li>
+         * <li><strong>3</strong>: Manually paused.</li>
+         * <li><strong>4</strong>: Completed.</li>
+         * <li><strong>5</strong>: Stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -233,6 +259,11 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
+         * <p>Task Type. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Predictive outbound call.</li>
+         * <li><strong>3</strong>: Automated outbound call.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

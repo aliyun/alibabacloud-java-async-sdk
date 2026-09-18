@@ -189,6 +189,7 @@ public class TransferCallToSkillGroupRequest extends Request {
         } 
 
         /**
+         * <p>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +202,10 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
-         * CallId.
+         * <p>Hotline session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719786</p>
          */
         public Builder callId(String callId) {
             this.putBodyParameter("CallId", callId);
@@ -210,7 +214,10 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -219,7 +226,10 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
-         * ConnectionId.
+         * <p>The connId in the WebSocket after an inbound call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719788</p>
          */
         public Builder connectionId(String connectionId) {
             this.putBodyParameter("ConnectionId", connectionId);
@@ -228,7 +238,10 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
-         * HoldConnectionId.
+         * <p>The holdConnId in the WebSocket after an inbound call (required only for two-step transfer).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder holdConnectionId(String holdConnectionId) {
             this.putBodyParameter("HoldConnectionId", holdConnectionId);
@@ -237,6 +250,8 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.
+         * You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +264,14 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
-         * IsSingleTransfer.
+         * <p>Default value: <strong>true</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Single-step transfer.</li>
+         * <li><strong>false</strong>: Two-step transfer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSingleTransfer(Boolean isSingleTransfer) {
             this.putBodyParameter("IsSingleTransfer", isSingleTransfer);
@@ -258,7 +280,10 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The jobId in the WebSocket after an inbound call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7719787</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -267,6 +292,7 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
+         * <p>Skill group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +305,14 @@ public class TransferCallToSkillGroupRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Default value: <strong>1</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Single-step transfer.</li>
+         * <li><strong>2</strong>: Two-step transfer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putBodyParameter("Type", type);

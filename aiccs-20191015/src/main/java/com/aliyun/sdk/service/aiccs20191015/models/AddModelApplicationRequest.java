@@ -372,7 +372,7 @@ public class AddModelApplicationRequest extends Request {
         } 
 
         /**
-         * <p>应用并发请求数</p>
+         * <p>The number of concurrent requests per second (CPS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -385,11 +385,11 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>模型应用名称</p>
+         * <p>The name of the model application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>测试应用</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -398,7 +398,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * CallConnectedTriggerModel.
+         * <p>Specifies whether to push an event notification when a call is connected. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder callConnectedTriggerModel(Boolean callConnectedTriggerModel) {
             this.putQueryParameter("CallConnectedTriggerModel", callConnectedTriggerModel);
@@ -407,10 +410,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>场景名称</p>
+         * <p>The scene name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>测试场景</p>
          */
         public Builder dyvmsSceneName(String dyvmsSceneName) {
             this.putQueryParameter("DyvmsSceneName", dyvmsSceneName);
@@ -419,11 +422,11 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>模型编码</p>
+         * <p>The model code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>1234</p>
          */
         public Builder modelCode(String modelCode) {
             this.putQueryParameter("ModelCode", modelCode);
@@ -432,10 +435,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>模型版本</p>
+         * <p>The model version.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>1</p>
          */
         public Builder modelVersion(String modelVersion) {
             this.putQueryParameter("ModelVersion", modelVersion);
@@ -444,7 +447,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>第一个静音是否唤起模型</p>
+         * <p>Specifies whether the first mute event triggers the model.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -456,7 +459,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>静音时长</p>
+         * <p>The mute duration.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -468,7 +471,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>连续多少个静音事件主动挂机</p>
+         * <p>The number of consecutive mute events that trigger an automatic hang-up.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -489,10 +492,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>提示词</p>
+         * <p>The prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>测试提示词。</p>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
@@ -501,7 +504,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>资质ID</p>
+         * <p>The qualification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -513,10 +516,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>资质名称</p>
+         * <p>The name of the qualification.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>测试资质</p>
          */
         public Builder qualificationName(String qualificationName) {
             this.putQueryParameter("QualificationName", qualificationName);
@@ -525,7 +528,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * RecordingFile.
+         * <p>The URL of the audio file for the opening line. This parameter is required if <code>StartWordType</code> is set to <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxx.wav">https://xxxxxxxx.wav</a></p>
          */
         public Builder recordingFile(String recordingFile) {
             this.putQueryParameter("RecordingFile", recordingFile);
@@ -552,7 +558,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>来源</p>
+         * <p>The source. The value must be <code>USER</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -564,10 +570,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>话术内容</p>
+         * <p>The speech script content.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>测试话术。</p>
          */
         public Builder speechContent(String speechContent) {
             this.putQueryParameter("SpeechContent", speechContent);
@@ -576,7 +582,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>话束id</p>
+         * <p>The speech script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>88</p>
@@ -588,11 +594,11 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>开场白</p>
+         * <p>The opening line.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>你好，这是一句开场白。</p>
          */
         public Builder startWord(String startWord) {
             this.putQueryParameter("StartWord", startWord);
@@ -601,7 +607,11 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * StartWordType.
+         * <p>The type of the opening line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0：文本
+         * 1：录音</p>
          */
         public Builder startWordType(Long startWordType) {
             this.putQueryParameter("StartWordType", startWordType);
@@ -610,7 +620,7 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>tts配置，包括音色、音量、音速等。</p>
+         * <p>The TTS configuration, including voice, volume, speech speed, and more.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ttsConfig(TtsConfig ttsConfig) {
@@ -621,10 +631,10 @@ public class AddModelApplicationRequest extends Request {
         }
 
         /**
-         * <p>用途</p>
+         * <p>The purpose of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>测试用途</p>
          */
         public Builder usageDesc(String usageDesc) {
             this.putQueryParameter("UsageDesc", usageDesc);
@@ -822,7 +832,10 @@ public class AddModelApplicationRequest extends Request {
             } 
 
             /**
-             * BackgroundEnabled.
+             * <p>Specifies whether to enable background sound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder backgroundEnabled(Boolean backgroundEnabled) {
                 this.backgroundEnabled = backgroundEnabled;
@@ -830,7 +843,10 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * BackgroundSound.
+             * <p>The background sound ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder backgroundSound(Long backgroundSound) {
                 this.backgroundSound = backgroundSound;
@@ -838,7 +854,12 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * BackgroundVolume.
+             * <p>The background sound volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0：low
+             * 1：medium
+             * 2：high</p>
              */
             public Builder backgroundVolume(Long backgroundVolume) {
                 this.backgroundVolume = backgroundVolume;
@@ -846,7 +867,10 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * CustomerAccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder customerAccountId(Long customerAccountId) {
                 this.customerAccountId = customerAccountId;
@@ -854,7 +878,10 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * MixingEnabled.
+             * <p>Specifies whether to enable mixing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mixingEnabled(Boolean mixingEnabled) {
                 this.mixingEnabled = mixingEnabled;
@@ -862,7 +889,10 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * MixingTemplate.
+             * <p>The mixing template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder mixingTemplate(Long mixingTemplate) {
                 this.mixingTemplate = mixingTemplate;
@@ -870,7 +900,10 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -878,7 +911,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>TTS 变量播放时的声音速度。取值范围：-200~200，默认值为 0。</p>
+             * <p>The speech speed for TTS playback. Valid values: -200–200. The default value is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>13</p>
@@ -889,10 +922,10 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>声音风格</p>
+             * <p>The voice style.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值示例值</p>
+             * <p>龙小夏</p>
              */
             public Builder ttsStyle(String ttsStyle) {
                 this.ttsStyle = ttsStyle;
@@ -900,7 +933,7 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>TTS 变量播放的音量。取值范围：0~100，默认值为 0。</p>
+             * <p>The volume for TTS playback. Valid values: 0–100. The default value is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>55</p>
@@ -911,10 +944,10 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>音色code</p>
+             * <p>The voice code.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值示例值</p>
+             * <p>ddddfd</p>
              */
             public Builder voiceCode(String voiceCode) {
                 this.voiceCode = voiceCode;
@@ -922,10 +955,14 @@ public class AddModelApplicationRequest extends Request {
             }
 
             /**
-             * <p>声音类型</p>
+             * <p>The voice type.</p>
+             * <pre><code>SYSTEM: System voice
+             * COSYCLONE: Cloned voice
+             * BL-CUSTOM: Premium custom cloned voice
+             * </code></pre>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值示例值</p>
+             * <p>SYSTEM</p>
              */
             public Builder voiceType(String voiceType) {
                 this.voiceType = voiceType;

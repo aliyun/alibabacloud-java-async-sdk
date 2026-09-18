@@ -159,6 +159,17 @@ public class ImportTaskNumberDatasRequest extends Request {
         } 
 
         /**
+         * <p>The data type. Valid values:</p>
+         * <ul>
+         * <li><p>EXCEL</p>
+         * </li>
+         * <li><p>JSON</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>API calls currently support only the JSON data type.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +191,13 @@ public class ImportTaskNumberDatasRequest extends Request {
         }
 
         /**
-         * OssFileName.
+         * <p>The OSS file path. This parameter is optional.</p>
+         * <blockquote>
+         * <p>Importing data by specifying an OSS file path is not available because API calls currently support only the JSON data type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123dsdfsdfsdf.xlsx</p>
          */
         public Builder ossFileName(String ossFileName) {
             this.putQueryParameter("OssFileName", ossFileName);
@@ -198,7 +215,7 @@ public class ImportTaskNumberDatasRequest extends Request {
         }
 
         /**
-         * PhoneNumberList.
+         * <p>If <code>DataType</code> is set to <code>JSON</code>, you must use this parameter to upload the data. You can import up to 1,000 records per request.</p>
          */
         public Builder phoneNumberList(java.util.List<java.util.Map<String, ?>> phoneNumberList) {
             String phoneNumberListShrink = shrink(phoneNumberList, "PhoneNumberList", "json");
@@ -226,10 +243,11 @@ public class ImportTaskNumberDatasRequest extends Request {
         }
 
         /**
+         * <p>The ID of the call task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>12131213132123*****</p>
+         * <p>119181071278******</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

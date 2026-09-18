@@ -106,7 +106,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of Success indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Hotline session information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +255,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * CallId.
+             * <p>Session ID. This corresponds to the acid in WebSocket after an inbound call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100365558</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -251,7 +266,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionId.
+             * <p>Connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100365548</p>
              */
             public Builder connectionId(String connectionId) {
                 this.connectionId = connectionId;
@@ -259,7 +277,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>Recording end UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16128694810</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -267,7 +288,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Recording start UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16128694110</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -275,7 +299,10 @@ public class ListHotlineRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>Recording file URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

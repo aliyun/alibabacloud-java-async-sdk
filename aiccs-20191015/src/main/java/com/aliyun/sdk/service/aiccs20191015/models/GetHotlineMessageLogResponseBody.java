@@ -106,7 +106,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Voice messages.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +268,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Acid.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100****2077</p>
              */
             public Builder acid(String acid) {
                 this.acid = acid;
@@ -264,7 +279,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The session content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好。</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -272,7 +290,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623738027480</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -280,7 +301,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * Mid.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11deca999****</p>
              */
             public Builder mid(String mid) {
                 this.mid = mid;
@@ -288,7 +312,14 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * SenderType.
+             * <p>The sender type. Valid values:  </p>
+             * <ul>
+             * <li><strong>1</strong>: Membership  </li>
+             * <li><strong>2</strong>: Agent</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder senderType(Integer senderType) {
                 this.senderType = senderType;
@@ -296,7 +327,10 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623738026460</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

@@ -106,7 +106,10 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of &quot;Success&quot; indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE338D98-9BD3-4413-B165</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API invocation succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +207,10 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * SuccessCount.
+             * <p>The number of agents successfully removed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;

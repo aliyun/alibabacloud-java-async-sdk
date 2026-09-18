@@ -89,10 +89,11 @@ public class FinishHotlineServiceRequest extends Request {
         } 
 
         /**
+         * <p>The agent account name, which is the mobile phone number or email address specified during account registration. This value is unique within the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123@****.com</p>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -101,7 +102,10 @@ public class FinishHotlineServiceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The unique client request ID. Used for idempotence verification. You can use a UUID to generate this ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -110,6 +114,8 @@ public class FinishHotlineServiceRequest extends Request {
         }
 
         /**
+         * <p>The AICCS instance ID.
+         * You can obtain this ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
