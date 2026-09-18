@@ -101,7 +101,7 @@ public class CreateMmsDataSourceRequest extends Request {
         } 
 
         /**
-         * <p>The configurations of the data source.</p>
+         * <p>The data source configurations. Call ListMmsDataSourceConfigItems first to retrieve the valid and required configuration items for the target data source type, and then construct this object accordingly.</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("config", config);

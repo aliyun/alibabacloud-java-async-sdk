@@ -87,7 +87,7 @@ public class GetStorageAmountSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The date for which the statistics are collected. The statistics are collected on a daily basis. Specify the date in the YYYYMMDD format.</p>
+         * <p>The date for statistics collection. The value is at the day level and must be in the YYYYMMdd format.</p>
          * 
          * <strong>example:</strong>
          * <p>20241205</p>
@@ -111,7 +111,7 @@ public class GetStorageAmountSummaryRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. You can log on to the MaxCompute console and choose <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong> in the navigation pane on the left to view the tenant ID.</p>
+         * <p>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong> in the left-side navigation pane.</p>
          * 
          * <strong>example:</strong>
          * <p>478403690625249</p>

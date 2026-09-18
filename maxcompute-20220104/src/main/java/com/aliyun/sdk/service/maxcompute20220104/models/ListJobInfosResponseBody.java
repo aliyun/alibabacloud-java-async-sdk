@@ -80,7 +80,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. If this parameter is not empty and is not 200, the business processing failed.</p>
+         * <p>The HTTP status code. If the value is not empty and is not 200, the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -800,7 +800,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * extNodeName.
+             * <p>The name of the external scheduling platform that submitted the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_wfq_company_industry_di</p>
              */
             public Builder extNodeName(String extNodeName) {
                 this.extNodeName = extNodeName;
@@ -808,7 +811,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The person responsible for execution.</p>
+             * <p>The person responsible for the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>duty_2</p>
@@ -830,7 +833,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * extPlatformId.
+             * <p>The identifier of the external scheduling platform that submitted the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks</p>
              */
             public Builder extPlatformId(String extPlatformId) {
                 this.extPlatformId = extPlatformId;
@@ -871,7 +877,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of job types.</p>
+             * <p>The job types.</p>
              * 
              * <strong>example:</strong>
              * <p>SQL</p>
@@ -926,7 +932,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota nickname used by the job.</p>
+             * <p>The nickname of the quota used by the job.</p>
              * 
              * <strong>example:</strong>
              * <p>my_quota</p>
@@ -959,7 +965,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * roleSessionName.
+             * <p>The role session name of the entity that submitted the job through role assumption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyunservicerole</p>
              */
             public Builder roleSessionName(String roleSessionName) {
                 this.roleSessionName = roleSessionName;
@@ -978,7 +987,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running duration.</p>
+             * <p>The running time.</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>
@@ -1052,7 +1061,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * taskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>console_query_task_1788796813532</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

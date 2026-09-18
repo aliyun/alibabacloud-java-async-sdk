@@ -67,7 +67,7 @@ public class CreateMmsDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned results.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,7 @@ public class CreateMmsDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the data source.</p>
+             * <p>The data source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>

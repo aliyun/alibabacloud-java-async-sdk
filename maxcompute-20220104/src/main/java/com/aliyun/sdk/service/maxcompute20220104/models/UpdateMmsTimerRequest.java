@@ -36,6 +36,14 @@ public class UpdateMmsTimerRequest extends Request {
     private Boolean stopped;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tableBlackList")
+    private java.util.List<String> tableBlackList;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tableWhiteList")
+    private java.util.List<String> tableWhiteList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("value")
     private String value;
 
@@ -45,6 +53,8 @@ public class UpdateMmsTimerRequest extends Request {
         this.timerId = builder.timerId;
         this.scheduleType = builder.scheduleType;
         this.stopped = builder.stopped;
+        this.tableBlackList = builder.tableBlackList;
+        this.tableWhiteList = builder.tableWhiteList;
         this.value = builder.value;
     }
 
@@ -90,6 +100,20 @@ public class UpdateMmsTimerRequest extends Request {
     }
 
     /**
+     * @return tableBlackList
+     */
+    public java.util.List<String> getTableBlackList() {
+        return this.tableBlackList;
+    }
+
+    /**
+     * @return tableWhiteList
+     */
+    public java.util.List<String> getTableWhiteList() {
+        return this.tableWhiteList;
+    }
+
+    /**
      * @return value
      */
     public String getValue() {
@@ -101,6 +125,8 @@ public class UpdateMmsTimerRequest extends Request {
         private Long timerId; 
         private String scheduleType; 
         private Boolean stopped; 
+        private java.util.List<String> tableBlackList; 
+        private java.util.List<String> tableWhiteList; 
         private String value; 
 
         private Builder() {
@@ -113,11 +139,13 @@ public class UpdateMmsTimerRequest extends Request {
             this.timerId = request.timerId;
             this.scheduleType = request.scheduleType;
             this.stopped = request.stopped;
+            this.tableBlackList = request.tableBlackList;
+            this.tableWhiteList = request.tableWhiteList;
             this.value = request.value;
         } 
 
         /**
-         * <p>The ID of the data source.</p>
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +158,7 @@ public class UpdateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scheduled task.</p>
+         * <p>The scheduled task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +171,7 @@ public class UpdateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>The scheduling type of the task. Valid values: <code>Daily</code> and <code>Hourly</code>.</p>
+         * <p>The scheduling type of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>Daily</p>
@@ -155,7 +183,7 @@ public class UpdateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the scheduled task is stopped.</p>
+         * <p>Indicates whether the scheduled task is stopped.</p>
          */
         public Builder stopped(Boolean stopped) {
             this.putBodyParameter("stopped", stopped);
@@ -164,7 +192,25 @@ public class UpdateMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>The execution time of the scheduled task. If <code>scheduleType</code> is set to <code>Daily</code>, specify the time in the HH:mm format. If <code>scheduleType</code> is set to <code>Hourly</code>, specify the minute in the mm format.</p>
+         * <p>The tables to exclude when type is set to Database.</p>
+         */
+        public Builder tableBlackList(java.util.List<String> tableBlackList) {
+            this.putBodyParameter("tableBlackList", tableBlackList);
+            this.tableBlackList = tableBlackList;
+            return this;
+        }
+
+        /**
+         * <p>The tables to migrate when type is set to Database.</p>
+         */
+        public Builder tableWhiteList(java.util.List<String> tableWhiteList) {
+            this.putBodyParameter("tableWhiteList", tableWhiteList);
+            this.tableWhiteList = tableWhiteList;
+            return this;
+        }
+
+        /**
+         * <p>The scheduling time of the scheduled task. If scheduleType is set to Daily, the value is in the HH:MM format. If scheduleType is set to Hourly, the value is in the MM format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-20</p>

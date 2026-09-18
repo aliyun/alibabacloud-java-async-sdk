@@ -367,7 +367,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of upstream node IDs.</p>
+         * <p>The upstream node IDs.</p>
          */
         public Builder extNodeIdList(java.util.List<String> extNodeIdList) {
             this.putBodyParameter("extNodeIdList", extNodeIdList);
@@ -376,7 +376,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * extNodeNameList.
+         * <p>The upstream node names.</p>
          */
         public Builder extNodeNameList(java.util.List<String> extNodeNameList) {
             this.putBodyParameter("extNodeNameList", extNodeNameList);
@@ -398,7 +398,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of job instance IDs.</p>
+         * <p>The job instance IDs.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("instanceIdList", instanceIdList);
@@ -407,7 +407,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of job owners.</p>
+         * <p>The job owners.</p>
          */
         public Builder jobOwnerList(java.util.List<String> jobOwnerList) {
             this.putBodyParameter("jobOwnerList", jobOwnerList);
@@ -416,7 +416,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of job priorities.</p>
+         * <p>The job priorities.</p>
          */
         public Builder priorityList(java.util.List<Long> priorityList) {
             this.putBodyParameter("priorityList", priorityList);
@@ -425,7 +425,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of project names.</p>
+         * <p>The project names.</p>
          */
         public Builder projectList(java.util.List<String> projectList) {
             this.putBodyParameter("projectList", projectList);
@@ -446,7 +446,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of intelligent diagnostics tags.</p>
+         * <p>The intelligent diagnosis labels.</p>
          */
         public Builder sceneTagList(java.util.List<String> sceneTagList) {
             this.putBodyParameter("sceneTagList", sceneTagList);
@@ -455,7 +455,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of job signatures.</p>
+         * <p>The job signatures.</p>
          */
         public Builder signatureList(java.util.List<String> signatureList) {
             this.putBodyParameter("signatureList", signatureList);
@@ -464,7 +464,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of columns for multi-column sorting.</p>
+         * <p>The fields used for multi-column sorting.</p>
          */
         public Builder sortByList(java.util.List<String> sortByList) {
             this.putBodyParameter("sortByList", sortByList);
@@ -473,7 +473,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of sort orders for multi-column sorting.</p>
+         * <p>The sort orders for multi-column sorting.</p>
          */
         public Builder sortOrderList(java.util.List<String> sortOrderList) {
             this.putBodyParameter("sortOrderList", sortOrderList);
@@ -482,7 +482,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of job statuses.</p>
+         * <p>The job statuses.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putBodyParameter("statusList", statusList);
@@ -491,7 +491,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * taskNameList.
+         * <p>The job names.</p>
          */
         public Builder taskNameList(java.util.List<String> taskNameList) {
             this.putBodyParameter("taskNameList", taskNameList);
@@ -513,7 +513,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The list of job types.</p>
+         * <p>The job types.</p>
          */
         public Builder typeList(java.util.List<String> typeList) {
             this.putBodyParameter("typeList", typeList);

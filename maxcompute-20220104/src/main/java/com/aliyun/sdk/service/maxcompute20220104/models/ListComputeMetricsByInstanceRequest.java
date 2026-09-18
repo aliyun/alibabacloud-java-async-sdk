@@ -185,7 +185,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The end of the query time range, specified as a UNIX timestamp in milliseconds.</p>
+         * <p>The end date. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1718590596556</p>
@@ -197,7 +197,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20240730****ddlr</p>
@@ -233,7 +233,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The default value is 10.</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -245,7 +245,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The names of the projects.</p>
+         * <p>The project name.</p>
          */
         public Builder projectNames(java.util.List<String> projectNames) {
             this.putBodyParameter("projectNames", projectNames);
@@ -275,7 +275,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The start of the query time range, specified as a UNIX timestamp in milliseconds.</p>
+         * <p>The start date. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1715393576201</p>

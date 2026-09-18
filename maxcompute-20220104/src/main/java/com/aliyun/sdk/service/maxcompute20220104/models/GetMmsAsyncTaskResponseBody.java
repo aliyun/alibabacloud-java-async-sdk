@@ -274,7 +274,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:00</p>
@@ -285,7 +285,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task stopped running.</p>
+             * <p>The end time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 17:44:17</p>
@@ -329,7 +329,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the task.</p>
+             * <p>The running progress.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -340,7 +340,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of the task.</p>
+             * <p>The running result.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -373,7 +373,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task started to run.</p>
+             * <p>The start time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:17</p>
@@ -384,7 +384,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the asynchronous task.</p>
+             * <p>The asynchronous task status.</p>
              * 
              * <strong>example:</strong>
              * <p>DONE</p>
@@ -395,7 +395,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the asynchronous task.</p>
+             * <p>The asynchronous task type.</p>
              * 
              * <strong>example:</strong>
              * <p>TASK_CREATE</p>

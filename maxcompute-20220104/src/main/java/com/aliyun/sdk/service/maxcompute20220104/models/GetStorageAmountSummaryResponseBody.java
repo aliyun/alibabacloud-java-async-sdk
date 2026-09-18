@@ -114,10 +114,12 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business error code or an empty value.</p>
+         * <p>The business error code, or an empty value.</p>
          * <ul>
-         * <li>If success is false, a business error code is returned.</li>
-         * <li>If success is true, an empty value is returned.</li>
+         * <li><p>If success is false, a business error code is returned.</p>
+         * </li>
+         * <li><p>If success is true, an empty value is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +142,7 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the business is successful. If this parameter is not empty and the value is not 200, the business processing failed.</p>
+         * <p>The HTTP status code that indicates whether the business request was successful. A non-empty value other than 200 indicates a business processing failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -246,7 +248,7 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date of the statistics.</p>
+             * <p>The date for statistics collection, in the YYYYMMdd format.</p>
              * 
              * <strong>example:</strong>
              * <p>20241205</p>
@@ -257,7 +259,7 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp. This API does not return this parameter.</p>
+             * <p>The timestamp. This API operation does not return this field.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -270,7 +272,7 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the storage metrics. This API does not return this parameter.</p>
+             * <p>The unit of the storage metric. This API operation does not return this field.</p>
              */
             public Builder unit(java.util.Map<String, String> unit) {
                 this.unit = unit;
@@ -278,7 +280,7 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage metrics. The metrics include the following:</p>
+             * <p>The storage metrics. Valid values:</p>
              * <ul>
              * <li>projectAmount</li>
              * <li>schemaAmount</li>

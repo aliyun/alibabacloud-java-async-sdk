@@ -67,7 +67,7 @@ public class UpdateMmsTimerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of the operation.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -78,7 +78,7 @@ public class UpdateMmsTimerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier for the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EA1320AB-7766-5EC7-B0F6-8B20E2298567</p>

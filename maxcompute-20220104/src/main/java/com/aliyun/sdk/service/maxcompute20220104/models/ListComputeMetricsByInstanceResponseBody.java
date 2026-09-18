@@ -80,7 +80,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,18 +88,13 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><p>1xx: Informational - The request has been received and is being processed.</p>
-         * </li>
-         * <li><p>2xx: Success - The request was successfully received, understood, and accepted.</p>
-         * </li>
-         * <li><p>3xx: Redirection - Further action is required to complete the request.</p>
-         * </li>
-         * <li><p>4xx: Client Error - The request contains invalid syntax or cannot be fulfilled.</p>
-         * </li>
-         * <li><p>5xx: Server Error - The server failed to fulfill a valid request.</p>
-         * </li>
+         * <li>1xx: Informational response. The request has been received and is being processed.</li>
+         * <li>2xx: Success. The request has been successfully received, understood, and accepted by the server.</li>
+         * <li>3xx: Redirection. The request is redirected, and further action is required to complete the request.</li>
+         * <li>4xx: Client error. The request contains invalid parameters, bad syntax, or specific request conditions cannot be fulfilled.</li>
+         * <li>5xx: Server error. The server cannot fulfill the request due to other reasons.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,7 +279,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The job completion time, as a UNIX timestamp in milliseconds.</p>
+             * <p>The job end time. This value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -295,7 +290,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20240730****ddlr</p>
@@ -306,7 +301,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the job.</p>
+             * <p>The job owner.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN$7632***@aliyun.com</p>
@@ -317,7 +312,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the project.</p>
+             * <p>The project name.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_porject</p>
@@ -328,7 +323,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signature of the SQL job.</p>
+             * <p>The SQL job signature.</p>
              * 
              * <strong>example:</strong>
              * <p>pqrs12345tuv</p>
@@ -339,12 +334,10 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification type.</p>
+             * <p>The specification type. Valid values:</p>
              * <ul>
-             * <li><p><code>OdpsStandard</code>: Standard pay-as-you-go specification.</p>
-             * </li>
-             * <li><p><code>OdpsSpot</code>: Spot pay-as-you-go specification.</p>
-             * </li>
+             * <li>OdpsStandard: the pay-as-you-go billing method Standard Edition.</li>
+             * <li>OdpsSpot: the pay-as-you-go billing method Off-peak Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -356,7 +349,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job submission time, as a UNIX timestamp in milliseconds.</p>
+             * <p>The job submit time. This value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1610432000000</p>
@@ -367,19 +360,19 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metering type.</p>
+             * <p>The metering type. Valid values:</p>
              * <ul>
-             * <li><p><code>ComputationSql</code>: Metrics for SQL jobs on internal tables.</p>
+             * <li><p>ComputationSql: metering data of SQL jobs that operate on internal tables.</p>
              * </li>
-             * <li><p><code>ComputationSqlOTS</code>: Metrics for SQL jobs on Tablestore external tables.</p>
+             * <li><p>ComputationSqlOTS: metering data of SQL jobs that operate on OTS external tables.</p>
              * </li>
-             * <li><p><code>ComputationSqlOSS</code>: Metrics for SQL jobs on OSS external tables.</p>
+             * <li><p>ComputationSqlOSS: metering data of SQL jobs that operate on OSS external tables.</p>
              * </li>
-             * <li><p><code>MapReduce</code>: Metrics for MapReduce jobs.</p>
+             * <li><p>MapReduce: metering data of MapReduce jobs.</p>
              * </li>
-             * <li><p><code>spark</code>: Metrics for Spark jobs.</p>
+             * <li><p>spark: metering data of Spark jobs.</p>
              * </li>
-             * <li><p><code>mars</code>: Metrics for Mars jobs.</p>
+             * <li><p>mars: metering data of Mars jobs.</p>
              * </li>
              * </ul>
              * 
@@ -405,9 +398,9 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             /**
              * <p>The compute usage.</p>
              * <ul>
-             * <li><p>For jobs billed by the amount of data scanned, such as <code>ComputationSql</code>, <code>ComputationSqlOTS</code>, and <code>ComputationSqlOSS</code> jobs, the unit is GB. The usage is calculated as: Amount of scanned data × Complexity. The complexity factor for <code>ComputationSqlOTS</code> and <code>ComputationSqlOSS</code> jobs is 1.</p>
+             * <li><p>For scan-based billing types, the unit is GB. This includes the ComputationSql, ComputationSqlOTS, and ComputationSqlOSS billing types, which are billed based on the amount of data scanned. The compute usage is calculated as the scan volume × complexity for each job. The complexity for ComputationSqlOTS and ComputationSqlOSS types is fixed at 1.</p>
              * </li>
-             * <li><p>For jobs billed by CU-hours (such as <code>MapReduce</code>, <code>spark</code>, and <code>mars</code> jobs), the unit is CU-hour.</p>
+             * <li><p>For CU-hour-based billing types, the unit is CU-hours. This includes the MapReduce, spark, and mars billing types, which are billed based on CU-hours.</p>
              * </li>
              * </ul>
              * 
@@ -505,7 +498,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Usage metrics for pay-as-you-go jobs.</p>
+             * <p>The list of pay-as-you-go job compute usage.</p>
              */
             public Builder instanceComputeMetrics(java.util.List<InstanceComputeMetrics> instanceComputeMetrics) {
                 this.instanceComputeMetrics = instanceComputeMetrics;
@@ -513,7 +506,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned page number.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
