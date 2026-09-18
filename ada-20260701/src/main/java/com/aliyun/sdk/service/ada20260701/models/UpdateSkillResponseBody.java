@@ -1,0 +1,169 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ada20260701.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link UpdateSkillResponseBody} extends {@link TeaModel}
+ *
+ * <p>UpdateSkillResponseBody</p>
+ */
+public class UpdateSkillResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("SkillId")
+    private String skillId;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    @com.aliyun.core.annotation.NameInMap("UpdatedAt")
+    private Long updatedAt;
+
+    private UpdateSkillResponseBody(Builder builder) {
+        this.name = builder.name;
+        this.requestId = builder.requestId;
+        this.skillId = builder.skillId;
+        this.success = builder.success;
+        this.updatedAt = builder.updatedAt;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static UpdateSkillResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return skillId
+     */
+    public String getSkillId() {
+        return this.skillId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return updatedAt
+     */
+    public Long getUpdatedAt() {
+        return this.updatedAt;
+    }
+
+    public static final class Builder {
+        private String name; 
+        private String requestId; 
+        private String skillId; 
+        private Boolean success; 
+        private Long updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateSkillResponseBody model) {
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.skillId = model.skillId;
+            this.success = model.success;
+            this.updatedAt = model.updatedAt;
+        } 
+
+        /**
+         * <p>The Skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-review</p>
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>Skill ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skill_example123</p>
+         */
+        public Builder skillId(String skillId) {
+            this.skillId = skillId;
+            return this;
+        }
+
+        /**
+         * <p>Returns <code>true</code> when the Skill update and optional bundle replacement have been fully committed and confirmed by read-back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * <p>The time when the Skill was updated, in UNIX millisecond timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1760000200000</p>
+         */
+        public Builder updatedAt(Long updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+
+        public UpdateSkillResponseBody build() {
+            return new UpdateSkillResponseBody(this);
+        } 
+
+    } 
+
+}
