@@ -1733,6 +1733,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SaveSkillAuditRecord  SaveSkillAuditRecordRequest
+     * @return SaveSkillAuditRecordResponse
+     */
+    @Override
+    public CompletableFuture<SaveSkillAuditRecordResponse> saveSkillAuditRecord(SaveSkillAuditRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SaveSkillAuditRecord").setMethod(HttpMethod.POST).setPathRegex("/api/bigdata/sql-translator/open/skill-audit/save").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveSkillAuditRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SaveSkillAuditRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Performs a Dry Run validation on a single SQL statement against a specified data source. This operation verifies whether the syntax can be parsed and whether the required execution permissions are granted, without actually writing data. Use this operation to validate individual SQL statements before batch execution of converted SQL, reducing the risk of failures during formal execution.</p>

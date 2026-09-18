@@ -1029,6 +1029,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PostInnerUploadConvertPackageResponse> postInnerUploadConvertPackage(PostInnerUploadConvertPackageRequest request);
 
     /**
+     * @param request the request parameters of SaveSkillAuditRecord  SaveSkillAuditRecordRequest
+     * @return SaveSkillAuditRecordResponse
+     */
+    CompletableFuture<SaveSkillAuditRecordResponse> saveSkillAuditRecord(SaveSkillAuditRecordRequest request);
+
+    /**
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Performs a Dry Run validation on a single SQL statement against a specified data source. This operation verifies whether the syntax can be parsed and whether the required execution permissions are granted, without actually writing data. Use this operation to validate individual SQL statements before batch execution of converted SQL, reducing the risk of failures during formal execution.</p>
