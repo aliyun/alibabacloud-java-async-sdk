@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
 
     /**
+     * @param request the request parameters of CreateTemplateCache  CreateTemplateCacheRequest
+     * @return CreateTemplateCacheResponse
+     */
+    CompletableFuture<CreateTemplateCacheResponse> createTemplateCache(CreateTemplateCacheRequest request);
+
+    /**
      * @param request the request parameters of CreateVolume  CreateVolumeRequest
      * @return CreateVolumeResponse
      */
@@ -68,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
 
     /**
+     * @param request the request parameters of DeleteTemplateCache  DeleteTemplateCacheRequest
+     * @return DeleteTemplateCacheResponse
+     */
+    CompletableFuture<DeleteTemplateCacheResponse> deleteTemplateCache(DeleteTemplateCacheRequest request);
+
+    /**
      * @param request the request parameters of DeleteVolume  DeleteVolumeRequest
      * @return DeleteVolumeResponse
      */
@@ -84,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeQuotaResponse
      */
     CompletableFuture<DescribeQuotaResponse> describeQuota(DescribeQuotaRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTemplateCache  DescribeTemplateCacheRequest
+     * @return DescribeTemplateCacheResponse
+     */
+    CompletableFuture<DescribeTemplateCacheResponse> describeTemplateCache(DescribeTemplateCacheRequest request);
 
     /**
      * @param request the request parameters of GetTeam  GetTeamRequest
@@ -120,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTeamsResponse
      */
     CompletableFuture<ListTeamsResponse> listTeams(ListTeamsRequest request);
+
+    /**
+     * @param request the request parameters of ListTemplateCache  ListTemplateCacheRequest
+     * @return ListTemplateCacheResponse
+     */
+    CompletableFuture<ListTemplateCacheResponse> listTemplateCache(ListTemplateCacheRequest request);
 
     /**
      * @param request the request parameters of ListTemplates  ListTemplatesRequest
