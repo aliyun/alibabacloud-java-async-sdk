@@ -160,7 +160,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot requests.</p>
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -272,7 +272,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
              * <p>The access control mode. Valid values:</p>
              * <ul>
              * <li>ANONYMOUS: anonymous access.</li>
-             * <li>CREDENTIAL: uses AgentCore access credentials.</li>
+             * <li>CREDENTIAL: AgentCore credential-based access.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -377,7 +377,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the credential provider.</p>
+             * <p>The ARN of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -388,7 +388,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential provider type.</p>
+             * <p>The type of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>oauth2</p>
@@ -490,7 +490,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full startup command, with each argument passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and remaining arguments.</p>
+             * <p>The full startup command, with each argument passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and the remaining arguments.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -682,7 +682,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom containers must expose a standard MCP endpoint on their own. Set this parameter to SELF_HOSTED.</p>
+             * <p>The MCP runtime mode for the custom container. The custom container must expose a standard MCP endpoint on its own. Set this parameter to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -693,7 +693,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Currently fixed to CONTAINER_IMAGE.</p>
+             * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -842,7 +842,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
              * <p>The hook description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Log MCP tool invocations</p>
+             * <p>Log MCP tool calls</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -877,7 +877,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period, in milliseconds.</p>
+             * <p>The timeout period. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -945,7 +945,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in array order.</p>
+             * <p>The hooks executed in array order: PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1067,7 +1067,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log splitting begin rule for Function Compute (FC).</p>
+             * <p>The log segmentation start rule for Function Compute.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1089,7 +1089,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service project name.</p>
+             * <p>The Log Service project name.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-logs</p>
@@ -1185,7 +1185,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP endpoint path, such as /mcp or /sse.</p>
+             * <p>For example, /mcp or /sse.</p>
              * 
              * <strong>example:</strong>
              * <p>/mcp</p>
@@ -1196,7 +1196,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of concurrent sessions per instance. Currently fixed to 1.</p>
+             * <p>Currently fixed to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1207,7 +1207,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
+             * <p>The session idle timeout. Unit: seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -2056,7 +2056,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of vCPUs. Default value: 0.25.</p>
+             * <p>The CPU specification. Unit: cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2097,7 +2097,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
+             * <p>Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2108,7 +2108,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size. Unit: MB. Default value: 512.</p>
+             * <p>Unit: MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2119,7 +2119,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service port. Default value: 9000.</p>
+             * <p>Default value: 9000.</p>
              * 
              * <strong>example:</strong>
              * <p>9000</p>
@@ -2130,7 +2130,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function timeout period. Unit: seconds. Default value: 300.</p>
+             * <p>Unit: seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2356,7 +2356,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP ingress access control configuration.</p>
+             * <p>The MCP ingress access control settings.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2372,7 +2372,11 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Valid values: Code (ZIP code package) and Container (custom container).</p>
+             * <p>The artifact type. Valid values:</p>
+             * <ul>
+             * <li>Code: ZIP code package.</li>
+             * <li>Container: custom container.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Code</p>
@@ -2626,7 +2630,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The template version that is currently applied to the MCP service.</p>
+             * <p>The template version currently applied to the MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -2670,7 +2674,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a template version update is available.</p>
+             * <p>Indicates whether a newer template version is available for update.</p>
              */
             public Builder updateAvailable(Boolean updateAvailable) {
                 this.updateAvailable = updateAvailable;
@@ -2943,10 +2947,10 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the MCP service.</p>
+             * <p>The MCP service description.</p>
              * 
              * <strong>example:</strong>
-             * <p>An MCP service for querying the knowledge base</p>
+             * <p>An MCP service for querying knowledge bases</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2954,7 +2958,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP service endpoint.</p>
+             * <p>The MCP service access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
@@ -2965,7 +2969,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Function Compute function name that corresponds to the code deployment MCP.</p>
+             * <p>The Function Compute function name corresponding to the code-deployed MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-example</p>
@@ -2976,7 +2980,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The marketplace template from which the MCP service originates.</p>
+             * <p>The marketplace template from which the MCP originates.</p>
              */
             public Builder marketSource(MarketSource marketSource) {
                 this.marketSource = marketSource;
@@ -3050,7 +3054,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template version and input schema bound to the MCP service.</p>
+             * <p>The template version and input schema bound to the MCP.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -3074,7 +3078,7 @@ public class UpdateMcpTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the MCP service is still bound by the usage constraints of the official template.</p>
+             * <p>Indicates whether the MCP is still subject to the usage constraints of the official template.</p>
              */
             public Builder usageActive(Boolean usageActive) {
                 this.usageActive = usageActive;

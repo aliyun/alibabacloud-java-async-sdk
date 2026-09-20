@@ -152,7 +152,7 @@ public class GetMcpResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Request processing succeeded</p>
+         * <p>Request processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -701,7 +701,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates the use of AgentCore access credentials.</p>
+             * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates that AgentCore access credentials are used.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -918,7 +918,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and remaining arguments.</p>
+             * <p>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and the remaining arguments.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -1270,7 +1270,7 @@ public class GetMcpResponseBody extends TeaModel {
              * <p>The hook description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Log MCP tool calling invokes</p>
+             * <p>Log MCP tool invocations</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1305,7 +1305,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period, in milliseconds.</p>
+             * <p>The timeout period. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -1479,7 +1479,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether instance metrics are collected.</p>
+             * <p>Indicates whether instance metrics collection is enabled.</p>
              */
             public Builder enableInstanceMetrics(Boolean enableInstanceMetrics) {
                 this.enableInstanceMetrics = enableInstanceMetrics;
@@ -1487,7 +1487,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether request metrics are collected.</p>
+             * <p>Indicates whether request metrics collection is enabled.</p>
              */
             public Builder enableRequestMetrics(Boolean enableRequestMetrics) {
                 this.enableRequestMetrics = enableRequestMetrics;
@@ -1495,7 +1495,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log splitting begin rule for Function Compute (FC).</p>
+             * <p>The log segmentation begin rule for Function Compute (FC).</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1613,7 +1613,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP endpoint path, such as /mcp or /sse.</p>
+             * <p>The MCP endpoint path. For example, /mcp or /sse.</p>
              * 
              * <strong>example:</strong>
              * <p>/mcp</p>
@@ -1635,7 +1635,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session idle timeout period, in seconds. Default value: 1800.</p>
+             * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -1646,7 +1646,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session lifetime, in seconds. Default value: 21600.</p>
+             * <p>The maximum session lifetime. Unit: seconds. Default value: 21600.</p>
              * 
              * <strong>example:</strong>
              * <p>21600</p>
@@ -2495,7 +2495,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary disk size. Unit: MB. Valid values: 512 and 10240.</p>
+             * <p>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2514,7 +2514,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
+             * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -2525,7 +2525,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
+             * <p>The number of concurrent requests per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2945,7 +2945,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP marketplace template ID.</p>
+             * <p>The marketplace template ID for the MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>market-1</p>
@@ -3098,7 +3098,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an updated template version is available.</p>
+             * <p>Indicates whether a template version update is available.</p>
              */
             public Builder updateAvailable(Boolean updateAvailable) {
                 this.updateAvailable = updateAvailable;
@@ -3452,7 +3452,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom tags. Multiple values are supported.</p>
+             * <p>The custom tags. Multiple tags are supported.</p>
              */
             public Builder customTags(java.util.List<String> customTags) {
                 this.customTags = customTags;
@@ -3501,7 +3501,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The marketplace source template of the MCP.</p>
+             * <p>The marketplace source template for the MCP.</p>
              */
             public Builder marketSource(MarketSource marketSource) {
                 this.marketSource = marketSource;
@@ -3520,7 +3520,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP service ID.</p>
+             * <p>The MCP server ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-1234567890abcdef</p>
@@ -3616,7 +3616,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last updated time of the MCP, in ISO 8601 UTC format.</p>
+             * <p>The last updated time of the MCP in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-23T01:00:00Z</p>

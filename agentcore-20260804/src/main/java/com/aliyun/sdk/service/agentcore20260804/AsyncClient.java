@@ -432,7 +432,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</p>
+     * <p>Queries the details of a specified MCP server, including the address, type, status, authentication configuration, and protocol.</p>
      * 
      * @param request the request parameters of GetMcp  GetMcpRequest
      * @return GetMcpResponse
@@ -549,7 +549,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Validates input based on the specified template version and creates an MCP in the workspace.</p>
+     * <p>Validates the input based on the specified template version and creates an MCP in the workspace.</p>
      * 
      * @param request the request parameters of InstallMcpMarketItem  InstallMcpMarketItemRequest
      * @return InstallMcpMarketItemResponse
@@ -910,7 +910,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</p>
+     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created, without upgrading the template version.</p>
      * 
      * @param request the request parameters of UpdateMcpTemplateConfig  UpdateMcpTemplateConfigRequest
      * @return UpdateMcpTemplateConfigResponse

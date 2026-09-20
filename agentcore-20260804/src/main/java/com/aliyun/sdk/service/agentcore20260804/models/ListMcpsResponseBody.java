@@ -754,7 +754,7 @@ public class ListMcpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>References an AgentCore Credential when mode is set to CREDENTIAL.</p>
+             * <p>The AgentCore Credential referenced when mode is set to CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -773,7 +773,7 @@ public class ListMcpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates using an AgentCore access credential.</p>
+             * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates using AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -990,7 +990,7 @@ public class ListMcpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and remaining arguments.</p>
+             * <p>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass in supergateway, --stdio, the full subcommand, and the remaining arguments.</p>
              */
             public Builder command(java.util.List<String> command) {
                 this.command = command;
@@ -1342,7 +1342,7 @@ public class ListMcpsResponseBody extends TeaModel {
              * <p>The hook description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Record MCP tool invocations</p>
+             * <p>Record MCP tool calling invokes</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1567,7 +1567,7 @@ public class ListMcpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log splitting begin rule for Function Compute (FC).</p>
+             * <p>The log segmentation begin rule for Function Compute (FC).</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1589,7 +1589,7 @@ public class ListMcpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service project name.</p>
+             * <p>The Log Service project name.</p>
              * 
              * <strong>example:</strong>
              * <p>agentcore-mcp-logs</p>
@@ -1685,7 +1685,7 @@ public class ListMcpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The MCP endpoint path. For example, /mcp or /sse.</p>
+             * <p>The MCP endpoint path, such as /mcp or /sse.</p>
              * 
              * <strong>example:</strong>
              * <p>/mcp</p>

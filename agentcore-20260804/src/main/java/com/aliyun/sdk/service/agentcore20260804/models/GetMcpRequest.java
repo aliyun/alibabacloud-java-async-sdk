@@ -102,7 +102,7 @@ public class GetMcpRequest extends Request {
         }
 
         /**
-         * <p>The MCP service ID.</p>
+         * <p>The MCP server ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

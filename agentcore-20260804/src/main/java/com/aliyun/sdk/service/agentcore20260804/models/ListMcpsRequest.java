@@ -27,6 +27,10 @@ public class ListMcpsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("customTag")
+    private String customTag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
@@ -54,6 +58,7 @@ public class ListMcpsRequest extends Request {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
+        this.customTag = builder.customTag;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
@@ -87,6 +92,13 @@ public class ListMcpsRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return customTag
+     */
+    public String getCustomTag() {
+        return this.customTag;
     }
 
     /**
@@ -134,6 +146,7 @@ public class ListMcpsRequest extends Request {
     public static final class Builder extends Request.Builder<ListMcpsRequest, Builder> {
         private String workspaceId; 
         private String regionId; 
+        private String customTag; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -149,6 +162,7 @@ public class ListMcpsRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
+            this.customTag = request.customTag;
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nextToken = request.nextToken;
@@ -176,6 +190,18 @@ public class ListMcpsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Filters results by custom tag. The tag must be an exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBase</p>
+         */
+        public Builder customTag(String customTag) {
+            this.putQueryParameter("customTag", customTag);
+            this.customTag = customTag;
             return this;
         }
 
@@ -245,7 +271,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the service is still bound by the official template usage constraint.</p>
+         * <p>Specifies whether the service is still bound by the official template usage.</p>
          */
         public Builder usageActive(Boolean usageActive) {
             this.putQueryParameter("usageActive", usageActive);

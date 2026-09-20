@@ -134,7 +134,7 @@ public class CreateMcpRequest extends Request {
         }
 
         /**
-         * <p>The client token that ensures idempotency of the request.</p>
+         * <p>The client token that is used to ensure the idempotency of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -546,7 +546,7 @@ public class CreateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The API key authentication configuration for callers of code-deployed MCP.</p>
+             * <p>The API key authentication configuration for code-deployed MCP callers.</p>
              */
             public Builder codePackage(CodePackage codePackage) {
                 this.codePackage = codePackage;
@@ -1301,7 +1301,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The hook timeout period. Unit: milliseconds.</p>
+             * <p>The timeout period. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -1972,7 +1972,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-example</p>
@@ -2510,7 +2510,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
+             * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -3067,7 +3067,7 @@ public class CreateMcpRequest extends Request {
             }
 
             /**
-             * <p>Custom tags. Multiple tags are supported.</p>
+             * <p>The custom tags. Multiple tags are supported.</p>
              */
             public Builder customTags(java.util.List<String> customTags) {
                 this.customTags = customTags;
