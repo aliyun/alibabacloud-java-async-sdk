@@ -93,7 +93,15 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * BackupStatus.
+         * <p>The enabling status of backup. Valid values:</p>
+         * <ul>
+         * <li>closed: not enabled.</li>
+         * <li>opened: enabled.</li>
+         * <li>opening: being enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         public Builder backupStatus(String backupStatus) {
             this.backupStatus = backupStatus;
@@ -101,7 +109,10 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * BdsClusterId.
+         * <p>The instance ID of the BDS instance used for backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bds-m5e54q06ceyhxxxx</p>
          */
         public Builder bdsClusterId(String bdsClusterId) {
             this.bdsClusterId = bdsClusterId;
@@ -109,7 +120,10 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the backup cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-m5eznlga4k5bcxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -117,7 +131,10 @@ public class DescribeBackupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7E71430-A825-470A-B40B-DF3F3AAC9BEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

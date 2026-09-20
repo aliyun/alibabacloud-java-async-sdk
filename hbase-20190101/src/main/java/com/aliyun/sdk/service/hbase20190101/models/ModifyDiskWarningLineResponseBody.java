@@ -54,7 +54,10 @@ public class ModifyDiskWarningLineResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC4A930D-3AEE-4C9D-BC70-C0F2EEEAA174</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

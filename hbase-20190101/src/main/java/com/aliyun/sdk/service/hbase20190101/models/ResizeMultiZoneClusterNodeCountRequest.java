@@ -162,7 +162,10 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         } 
 
         /**
-         * ArbiterVSwitchId.
+         * <p>The vSwitch ID of the arbitration node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxb*****</p>
          */
         public Builder arbiterVSwitchId(String arbiterVSwitchId) {
             this.putQueryParameter("ArbiterVSwitchId", arbiterVSwitchId);
@@ -171,6 +174,7 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         }
 
         /**
+         * <p>The ID of the multi-zone cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +187,10 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         }
 
         /**
-         * CoreNodeCount.
+         * <p>The number of core nodes. The minimum value is 4, and the increment must be a multiple of 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder coreNodeCount(Integer coreNodeCount) {
             this.putQueryParameter("CoreNodeCount", coreNodeCount);
@@ -192,7 +199,10 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         }
 
         /**
-         * LogNodeCount.
+         * <p>The number of log nodes. The minimum value is 4, and the value must be a multiple of 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder logNodeCount(Integer logNodeCount) {
             this.putQueryParameter("LogNodeCount", logNodeCount);
@@ -201,7 +211,10 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         }
 
         /**
-         * PrimaryCoreNodeCount.
+         * <p>The number of core nodes in the primary zone instance. The minimum value is 4, and the increment must be a multiple of 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder primaryCoreNodeCount(Integer primaryCoreNodeCount) {
             this.putQueryParameter("PrimaryCoreNodeCount", primaryCoreNodeCount);
@@ -210,7 +223,10 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         }
 
         /**
-         * PrimaryVSwitchId.
+         * <p>The vSwitch ID of the instance in the primary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxe*****</p>
          */
         public Builder primaryVSwitchId(String primaryVSwitchId) {
             this.putQueryParameter("PrimaryVSwitchId", primaryVSwitchId);
@@ -219,7 +235,10 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         }
 
         /**
-         * StandbyCoreNodeCount.
+         * <p>The number of core nodes in the secondary zone instance. The minimum value is 4, and the increment must be a multiple of 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder standbyCoreNodeCount(Integer standbyCoreNodeCount) {
             this.putQueryParameter("StandbyCoreNodeCount", standbyCoreNodeCount);
@@ -228,7 +247,10 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         }
 
         /**
-         * StandbyVSwitchId.
+         * <p>The vSwitch ID of the instance in the secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxf****</p>
          */
         public Builder standbyVSwitchId(String standbyVSwitchId) {
             this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);

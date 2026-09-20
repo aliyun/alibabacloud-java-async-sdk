@@ -93,7 +93,10 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The instance ID of the HBase Serverless instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sh-bp1a969y7681****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -101,7 +104,10 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23232453233*****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -109,7 +115,10 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * PassWord.
+         * <p>The password used to access the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder passWord(String passWord) {
             this.passWord = passWord;
@@ -117,7 +126,10 @@ public class CreateServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E19E345-101D-4014-946C-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

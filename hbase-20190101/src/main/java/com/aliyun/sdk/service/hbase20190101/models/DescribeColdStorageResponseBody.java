@@ -145,7 +145,10 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1uoihlf82e8****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -153,7 +156,13 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         }
 
         /**
-         * ColdStorageSize.
+         * <p>The total storage capacity of cold storage, in GB.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>OpenStatus</strong> is <strong>open</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder coldStorageSize(String coldStorageSize) {
             this.coldStorageSize = coldStorageSize;
@@ -161,7 +170,10 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         }
 
         /**
-         * ColdStorageType.
+         * <p>The cold storage type. For newly created BDS instances, the cold storage type is <strong>BdsColdStorage</strong>. This parameter is not returned for other instances by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BdsColdStorage</p>
          */
         public Builder coldStorageType(String coldStorageType) {
             this.coldStorageType = coldStorageType;
@@ -169,7 +181,13 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         }
 
         /**
-         * ColdStorageUseAmount.
+         * <p>The amount of cold storage space used, in GB.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>OpenStatus</strong> is <strong>open</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20.00</p>
          */
         public Builder coldStorageUseAmount(String coldStorageUseAmount) {
             this.coldStorageUseAmount = coldStorageUseAmount;
@@ -177,7 +195,13 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         }
 
         /**
-         * ColdStorageUsePercent.
+         * <p>The usage of the cold storage space, in percentage (%).</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>OpenStatus</strong> is <strong>open</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20.00</p>
          */
         public Builder coldStorageUsePercent(String coldStorageUsePercent) {
             this.coldStorageUsePercent = coldStorageUsePercent;
@@ -185,7 +209,14 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         }
 
         /**
-         * OpenStatus.
+         * <p>The enabling status of cold storage. Valid values:</p>
+         * <ul>
+         * <li><strong>open</strong>: Cold storage is enabled.</li>
+         * <li><strong>close</strong>: Cold storage is not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder openStatus(String openStatus) {
             this.openStatus = openStatus;
@@ -193,7 +224,14 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription.</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -201,7 +239,10 @@ public class DescribeColdStorageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DCB9479E-F05F-4D1C-AFB7-C639B87764B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

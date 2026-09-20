@@ -75,6 +75,7 @@ public class ModifySecurityGroupsRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ModifySecurityGroupsRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the security groups, separated by commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,10 @@ public class DescribeMultiZoneAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2EEBBA9-C627-4415-81A0-B77BC54F1D52</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

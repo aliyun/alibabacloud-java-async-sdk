@@ -80,7 +80,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. An empty value of NextToken indicates that no more pages exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e68****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +91,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74F02441-9A8D-48F6-933F-E317AEB28DBF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0FE2717-E194-465A-B27B-7373F96E580B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreIncrDetail.
+         * <p>The incremental restoration details.</p>
          */
         public Builder restoreIncrDetail(RestoreIncrDetail restoreIncrDetail) {
             this.restoreIncrDetail = restoreIncrDetail;
@@ -206,7 +209,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T06:45:44Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -214,7 +220,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/0</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -222,7 +231,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreDelay.
+             * <p>The synchronization latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 ms</p>
              */
             public Builder restoreDelay(String restoreDelay) {
                 this.restoreDelay = restoreDelay;
@@ -230,7 +242,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreStartTs.
+             * <p>The synchronization start point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-02T18:00:00Z</p>
              */
             public Builder restoreStartTs(String restoreStartTs) {
                 this.restoreStartTs = restoreStartTs;
@@ -238,7 +253,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RestoredTs.
+             * <p>The synchronization point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>\&quot;\&quot;</p>
              */
             public Builder restoredTs(String restoredTs) {
                 this.restoredTs = restoredTs;
@@ -246,7 +264,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T06:45:44Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -254,7 +275,10 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder state(String state) {
                 this.state = state;

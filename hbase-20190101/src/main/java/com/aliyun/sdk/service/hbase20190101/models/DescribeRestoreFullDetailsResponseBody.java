@@ -67,7 +67,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CFE525CF-C691-4140-A981-D004DAA7A840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreFull.
+         * <p>The full restoration details.</p>
          */
         public Builder restoreFull(RestoreFull restoreFull) {
             this.restoreFull = restoreFull;
@@ -474,7 +477,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataSize.
+             * <p>The total data size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2 kB</p>
              */
             public Builder dataSize(String dataSize) {
                 this.dataSize = dataSize;
@@ -482,7 +488,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Fail.
+             * <p>The number of failed restorations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fail(Integer fail) {
                 this.fail = fail;
@@ -490,7 +499,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -498,7 +510,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -514,7 +529,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * <p>The total restoration speed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00 MB/s</p>
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -522,7 +540,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Succeed.
+             * <p>The number of successful restorations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder succeed(Integer succeed) {
                 this.succeed = succeed;
@@ -530,7 +551,10 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

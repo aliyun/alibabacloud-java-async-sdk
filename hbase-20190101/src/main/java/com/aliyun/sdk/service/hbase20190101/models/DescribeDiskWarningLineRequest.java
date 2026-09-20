@@ -60,6 +60,7 @@ public class DescribeDiskWarningLineRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cluster to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

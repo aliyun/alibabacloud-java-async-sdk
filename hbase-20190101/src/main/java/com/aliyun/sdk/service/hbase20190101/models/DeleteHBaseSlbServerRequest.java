@@ -75,6 +75,7 @@ public class DeleteHBaseSlbServerRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,9 @@ public class DeleteHBaseSlbServerRequest extends Request {
         }
 
         /**
+         * <p>The load balancing service. Valid values:
+         * thrift
+         * rest.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

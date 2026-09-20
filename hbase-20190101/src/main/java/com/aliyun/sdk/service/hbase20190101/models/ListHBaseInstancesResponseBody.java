@@ -75,7 +75,10 @@ public class ListHBaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89F81C30-320B-4550-91DB-C37C81D2358F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

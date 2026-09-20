@@ -75,7 +75,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA76F208-E334-592A-A0C6-41E15EC87ED0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

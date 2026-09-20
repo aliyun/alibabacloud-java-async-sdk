@@ -90,6 +90,7 @@ public class ModifyUIAccountPasswordRequest extends Request {
         } 
 
         /**
+         * <p>The username of the cluster management system to be reset. If no user has been created for the HBase instance, the default username is <strong>root</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ModifyUIAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The new password for the target username of the cluster management system. The password must be 2 to 30 characters in length and must contain one or more of the following character types: uppercase letters, lowercase letters, special characters, and digits. Supported special characters are underscores (_) and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ModifyUIAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The ID of the target instance. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

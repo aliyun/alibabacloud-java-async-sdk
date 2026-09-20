@@ -67,7 +67,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC7E27FC-58F8-4722-89CF-D1B6B0971956</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TypeList.
+         * <p>The task list.</p>
          */
         public Builder typeList(java.util.List<TypeList> typeList) {
             this.typeList = typeList;
@@ -167,7 +170,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of pending tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -175,7 +181,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type. The return value <strong>rds_apsaradb_upgrade</strong> indicates a minor engine version update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_apsaradb_upgrade</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -183,7 +192,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeInfoEn.
+             * <p>The task type in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_apsaradb_upgrade</p>
              */
             public Builder taskTypeInfoEn(String taskTypeInfoEn) {
                 this.taskTypeInfoEn = taskTypeInfoEn;
@@ -191,7 +203,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeInfoZh.
+             * <p>The task type in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>小版本升级</p>
              */
             public Builder taskTypeInfoZh(String taskTypeInfoZh) {
                 this.taskTypeInfoZh = taskTypeInfoZh;

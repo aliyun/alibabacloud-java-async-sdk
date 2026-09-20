@@ -102,7 +102,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. If the amount of data exceeds the limit, this parameter is returned for you to query the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NextToken</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -111,6 +114,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of resource N. In this context, the resource ID is the cluster ID. You can query multiple resources at a time by specifying ResourceId.2, ResourceId.3, and so on. N is a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bds-bp15e022622f****</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -132,7 +139,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -200,7 +207,10 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag to query. You can specify multiple keys. N is a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -208,7 +218,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag to query. You can specify multiple values. N is a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

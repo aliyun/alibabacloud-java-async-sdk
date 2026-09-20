@@ -74,6 +74,7 @@ public class DeleteInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the instance to be released.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,14 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * ImmediateDeleteFlag.
+         * <p>Specifies whether to immediately release the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance is immediately released.</li>
+         * <li><strong>false</strong>: The instance is not immediately released and is stored in the recycle bin. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder immediateDeleteFlag(Boolean immediateDeleteFlag) {
             this.putQueryParameter("ImmediateDeleteFlag", immediateDeleteFlag);

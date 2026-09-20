@@ -80,7 +80,10 @@ public class DescribeRecoverableTimeRangeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1A51D18-96DC-465C-9F1B-47180CA22524</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class DescribeRecoverableTimeRangeResponseBody extends TeaModel {
         }
 
         /**
-         * TimeBegin.
+         * <p>The start time of the recoverable time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-26T18:02:03Z</p>
          */
         public Builder timeBegin(String timeBegin) {
             this.timeBegin = timeBegin;
@@ -96,7 +102,10 @@ public class DescribeRecoverableTimeRangeResponseBody extends TeaModel {
         }
 
         /**
-         * TimeEnd.
+         * <p>The end time of the recoverable time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-05T01:20:31Z</p>
          */
         public Builder timeEnd(String timeEnd) {
             this.timeEnd = timeEnd;

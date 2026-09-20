@@ -127,7 +127,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * EnableStatus.
+         * <p>The backup enabling status. Valid values:</p>
+         * <ul>
+         * <li>enable: Enabled.</li>
+         * <li>disable: Not enabled.</li>
+         * <li>opening: Being enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder enableStatus(String enableStatus) {
             this.enableStatus = enableStatus;
@@ -135,7 +143,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -143,7 +154,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +165,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A93CE373-0FDE-4CCB-9DBA-6700906825ED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +176,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

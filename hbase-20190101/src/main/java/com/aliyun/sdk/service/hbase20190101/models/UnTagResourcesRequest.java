@@ -103,7 +103,10 @@ public class UnTagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Specifies whether to delete all tags. If TagKey is specified, tags are deleted only by TagKey. Valid values: true and false. If this parameter is set to true and TagKey is not specified, all tags are deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -112,6 +115,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +128,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The ID of resource N to untag. The resource ID is the cluster ID. You can specify multiple resource IDs, such as ResourceId.2 and ResourceId.3. N is a positive integer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The key of tag N to delete. You can specify multiple tag keys, such as TagKey.2 and TagKey.3. N is a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

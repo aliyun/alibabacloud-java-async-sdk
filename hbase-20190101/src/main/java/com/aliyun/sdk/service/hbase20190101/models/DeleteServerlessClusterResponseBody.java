@@ -54,7 +54,10 @@ public class DeleteServerlessClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46950E74-59C4-4E3E-9B38-A33B*********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

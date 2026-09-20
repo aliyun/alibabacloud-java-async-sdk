@@ -184,7 +184,15 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * DbType.
+         * <p>The database engine type. Valid values:</p>
+         * <ul>
+         * <li><strong>hbaseue</strong>: ApsaraDB for HBase Performance-enhanced Edition.</li>
+         * <li><strong>hbase</strong>: ApsaraDB for HBase Standard Edition or ApsaraDB for HBase single-node edition.</li>
+         * <li><strong>bds</strong>: a BDS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hbaseue</p>
          */
         public Builder dbType(String dbType) {
             this.dbType = dbType;
@@ -192,7 +200,14 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * IsMultimod.
+         * <p>Indicates whether multi-model management is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Multi-model management is enabled.</li>
+         * <li><strong>false</strong>: Multi-model management is not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isMultimod(String isMultimod) {
             this.isMultimod = isMultimod;
@@ -200,7 +215,14 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * NetType.
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC).</li>
+         * <li><strong>CLASSIC</strong>: classic network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder netType(String netType) {
             this.netType = netType;
@@ -208,7 +230,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70220050-A465-5DCC-8C0C-C38C6E3DB24D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +257,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ThriftConn.
+         * <p>The Thrift endpoint information list.</p>
+         * <blockquote>
+         * <p>This parameter list is returned only when the database DPI engine type is <strong>hbase</strong>.</p>
+         * </blockquote>
          */
         public Builder thriftConn(ThriftConn thriftConn) {
             this.thriftConn = thriftConn;
@@ -240,7 +268,7 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * UiProxyConnAddrInfo.
+         * <p>The WebUI connection information list.</p>
          */
         public Builder uiProxyConnAddrInfo(UiProxyConnAddrInfo uiProxyConnAddrInfo) {
             this.uiProxyConnAddrInfo = uiProxyConnAddrInfo;
@@ -248,7 +276,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1foll427ze3d4ps****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -256,7 +287,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15s22y1a7sff5gj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -359,7 +393,14 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: Virtual Private Cloud (VPC).</li>
+             * <li><strong>CLASSIC</strong>: classic network.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -584,7 +625,14 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: Virtual Private Cloud (VPC).</li>
+             * <li><strong>CLASSIC</strong>: classic network.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -793,7 +841,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnAddr.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hb-bp1u0639js2h7****-proxy-thrift.hbase.rds.aliyuncs.com</p>
              */
             public Builder connAddr(String connAddr) {
                 this.connAddr = connAddr;
@@ -801,7 +852,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * ConnAddrPort.
+             * <p>The connection port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9099</p>
              */
             public Builder connAddrPort(String connAddrPort) {
                 this.connAddrPort = connAddrPort;
@@ -809,7 +863,14 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The access type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: internal network access.</li>
+             * <li><strong>0</strong>: public network access.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -889,7 +950,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnAddr.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ld-bp150tns0sjxs****-master1-001.hbaseue.rds.aliyuncs.com</p>
              */
             public Builder connAddr(String connAddr) {
                 this.connAddr = connAddr;
@@ -897,7 +961,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * ConnAddrPort.
+             * <p>The connection port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder connAddrPort(String connAddrPort) {
                 this.connAddrPort = connAddrPort;
@@ -905,7 +972,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The access type of the endpoint, which is public network access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -985,7 +1055,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnAddr.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ld-bp150tns0sjxs****-master1-001.hbaseue.rds.aliyuncs.com</p>
              */
             public Builder connAddr(String connAddr) {
                 this.connAddr = connAddr;
@@ -993,7 +1066,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * ConnAddrPort.
+             * <p>The connection port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder connAddrPort(String connAddrPort) {
                 this.connAddrPort = connAddrPort;
@@ -1001,7 +1077,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The access type of the endpoint, which is public network access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;

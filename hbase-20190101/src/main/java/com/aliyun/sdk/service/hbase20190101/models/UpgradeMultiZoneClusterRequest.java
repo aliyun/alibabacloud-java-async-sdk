@@ -131,6 +131,7 @@ public class UpgradeMultiZoneClusterRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the multi-zone instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class UpgradeMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The component names. You can specify multiple component names separated by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class UpgradeMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * RestartComponents.
+         * <p>The names of the components that need to be restarted after the upgrade. You can specify multiple component names separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LPROXY</p>
          */
         public Builder restartComponents(String restartComponents) {
             this.putQueryParameter("RestartComponents", restartComponents);
@@ -164,7 +169,14 @@ public class UpgradeMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * RunMode.
+         * <p>The execution mode. If UpgradeInsName is not empty, the mode is forcibly set to single. If UpgradeInsName is empty and RunMode is not specified, the default value is serial. Valid values:</p>
+         * <ul>
+         * <li>serial: all sub-instances are upgraded.</li>
+         * <li>single: only the specified sub-instance is upgraded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>serial</p>
          */
         public Builder runMode(String runMode) {
             this.putQueryParameter("RunMode", runMode);
@@ -173,7 +185,10 @@ public class UpgradeMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * UpgradeInsName.
+         * <p>The name of the sub-instance to upgrade. You can obtain this value from the MultiZoneInstanceModels field in the response of the <a href="~~DescribeMultiZoneCluster~~">DescribeMultiZoneCluster</a> operation. This parameter is optional. If you do not specify this parameter, all sub-instances are upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-t4n40m3171t4******-az-b</p>
          */
         public Builder upgradeInsName(String upgradeInsName) {
             this.putQueryParameter("UpgradeInsName", upgradeInsName);
@@ -182,7 +197,10 @@ public class UpgradeMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * Versions.
+         * <p>The RPM version to upgrade to. If you do not specify this parameter, the components are upgraded to the latest version. If you specify multiple values for Components, you must also specify the same number of values for Versions, separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-apsara-lindorm-2.1.20-20200518175539.alios7.x86_64</p>
          */
         public Builder versions(String versions) {
             this.putQueryParameter("Versions", versions);

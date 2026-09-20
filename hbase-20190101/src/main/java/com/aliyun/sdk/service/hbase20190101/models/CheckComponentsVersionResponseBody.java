@@ -75,7 +75,10 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3537EB4-1100-41CA-A147-C74CCC8BB12C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

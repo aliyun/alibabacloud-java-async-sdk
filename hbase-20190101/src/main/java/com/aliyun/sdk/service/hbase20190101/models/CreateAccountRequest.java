@@ -90,6 +90,13 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
+         * <p>The account name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>Starts with a lowercase letter and ends with a letter or digit.</li>
+         * <li>Contains only lowercase letters, digits, or underscores.</li>
+         * <li>Is 2 to 16 characters in length.</li>
+         * <li>Cannot be a reserved username such as root or admin.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,10 +109,16 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The password of the database account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>The supported special characters are <code>!@#$%^&amp;*()_+-=</code>.</li>
+         * <li>Is 8 to 32 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>test*****</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -114,6 +127,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

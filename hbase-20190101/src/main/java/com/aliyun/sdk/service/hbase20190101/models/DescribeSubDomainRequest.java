@@ -73,7 +73,10 @@ public class DescribeSubDomainRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,10 @@ public class DescribeSubDomainRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

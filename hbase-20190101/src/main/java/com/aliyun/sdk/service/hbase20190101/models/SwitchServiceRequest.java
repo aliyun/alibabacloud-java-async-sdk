@@ -90,6 +90,7 @@ public class SwitchServiceRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,10 @@ public class SwitchServiceRequest extends Request {
         }
 
         /**
+         * <ul>
+         * <li>open: Enable  </li>
+         * <li>close: Shutdown</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +119,7 @@ public class SwitchServiceRequest extends Request {
         }
 
         /**
+         * <p>Service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

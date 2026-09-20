@@ -73,7 +73,15 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The supported language. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese (default)</li>
+         * <li><strong>en-US</strong>: English</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -82,7 +90,16 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The data engine type. Valid values:</p>
+         * <ul>
+         * <li><strong>hbase</strong>: ApsaraDB for HBase Standard Edition or ApsaraDB for HBase single-node edition.</li>
+         * <li><strong>hbaseue</strong>: ApsaraDB for HBase Performance-enhanced Edition.</li>
+         * <li><strong>serverlesshbase</strong>: ApsaraDB for HBase Serverless edition.</li>
+         * <li><strong>bds</strong>: BDS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);

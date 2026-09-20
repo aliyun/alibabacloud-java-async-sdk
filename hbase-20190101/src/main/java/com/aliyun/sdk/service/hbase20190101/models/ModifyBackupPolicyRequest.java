@@ -118,6 +118,7 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupEndTimeUTC.
+         * <p>The UTC time when the backup ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00Z</p>
          */
         public Builder preferredBackupEndTimeUTC(String preferredBackupEndTimeUTC) {
             this.putQueryParameter("PreferredBackupEndTimeUTC", preferredBackupEndTimeUTC);
@@ -139,6 +143,16 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
+         * <p>The backup cycle. Valid values:</p>
+         * <ul>
+         * <li>Monday: performs backup every Monday.</li>
+         * <li>Tuesday: performs backup every Tuesday.</li>
+         * <li>Wednesday: performs backup every Wednesday.</li>
+         * <li>Thursday: performs backup every Thursday.</li>
+         * <li>Friday: performs backup every Friday.</li>
+         * <li>Saturday: performs backup every Saturday.</li>
+         * <li>Sunday: performs backup every Sunday.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +165,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupStartTimeUTC.
+         * <p>The UTC time when the backup starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17:00Z</p>
          */
         public Builder preferredBackupStartTimeUTC(String preferredBackupStartTimeUTC) {
             this.putQueryParameter("PreferredBackupStartTimeUTC", preferredBackupStartTimeUTC);
@@ -160,6 +177,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
+         * <p>The backup time range in the current time zone. The interval is 1 hour.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

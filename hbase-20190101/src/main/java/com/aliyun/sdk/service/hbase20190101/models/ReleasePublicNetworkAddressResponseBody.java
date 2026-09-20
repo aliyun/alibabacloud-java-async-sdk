@@ -54,7 +54,10 @@ public class ReleasePublicNetworkAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B18D4390-A968-4444-B323-4360B8E5DA3E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

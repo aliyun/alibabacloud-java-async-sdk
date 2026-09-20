@@ -67,7 +67,10 @@ public class ListTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36D1BE9B-3C4A-425B-947A-69E3D77999C4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

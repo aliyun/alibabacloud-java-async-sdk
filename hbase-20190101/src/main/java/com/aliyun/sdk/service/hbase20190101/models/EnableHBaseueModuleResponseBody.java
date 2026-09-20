@@ -80,7 +80,10 @@ public class EnableHBaseueModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the extension cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****-m1-ps</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class EnableHBaseueModuleResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21474915573****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +102,10 @@ public class EnableHBaseueModuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407075EA-47F5-5A2D-888F-C1F90B8F3FCA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

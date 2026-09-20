@@ -102,6 +102,7 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the multi-zone instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends Request {
         }
 
         /**
-         * CoreInstanceType.
+         * <p>The node specifications of the core node. For valid values, refer to DescribeInstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.large</p>
          */
         public Builder coreInstanceType(String coreInstanceType) {
             this.putQueryParameter("CoreInstanceType", coreInstanceType);
@@ -123,7 +127,10 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends Request {
         }
 
         /**
-         * LogInstanceType.
+         * <p>The node specifications of the log node. For valid values, refer to DescribeInstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.2xlarge</p>
          */
         public Builder logInstanceType(String logInstanceType) {
             this.putQueryParameter("LogInstanceType", logInstanceType);
@@ -132,7 +139,10 @@ public class ModifyMultiZoneClusterNodeTypeRequest extends Request {
         }
 
         /**
-         * MasterInstanceType.
+         * <p>The node specifications of the master node. For valid values, refer to DescribeInstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.8xlarge</p>
          */
         public Builder masterInstanceType(String masterInstanceType) {
             this.putQueryParameter("MasterInstanceType", masterInstanceType);

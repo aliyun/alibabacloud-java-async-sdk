@@ -54,7 +54,10 @@ public class ModifySecurityGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4AD2E65-482B-46B6-942E-765989B1C8A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

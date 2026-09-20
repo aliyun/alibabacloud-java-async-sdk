@@ -347,6 +347,7 @@ public class RelateDbForHBaseHaRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the BDS cluster. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -359,6 +360,7 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the primary instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -371,7 +373,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActiveClusterKey.
+         * <p>The ZooKeeper address of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-t4naqsay5gn******-master1-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master3-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master2-001.hbase.singapore.rds.aliyuncs.com:2181:/hbase</p>
          */
         public Builder haActiveClusterKey(String haActiveClusterKey) {
             this.putQueryParameter("HaActiveClusterKey", haActiveClusterKey);
@@ -380,6 +385,7 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
+         * <p>The cluster type of the primary instance. Valid values: <strong>HBase</strong> and <strong>HBaseue</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -392,7 +398,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActiveHbaseFsDir.
+         * <p>The HDFS directory of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/hbase</p>
          */
         public Builder haActiveHbaseFsDir(String haActiveHbaseFsDir) {
             this.putQueryParameter("HaActiveHbaseFsDir", haActiveHbaseFsDir);
@@ -401,7 +410,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActiveHdfsUri.
+         * <p>The HDFS URI of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs://hb-t4naqsay5gn******-master1-001.hbase.rds.aliyuncs.com:8020,hb-t4naqsay5gn******-master2-001.hbase.rds.aliyuncs.com:8020</p>
          */
         public Builder haActiveHdfsUri(String haActiveHdfsUri) {
             this.putQueryParameter("HaActiveHdfsUri", haActiveHdfsUri);
@@ -410,7 +422,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActivePassword.
+         * <p>The password that corresponds to the username of the primary instance. This parameter is required when the primary instance is <strong>HBaseue</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder haActivePassword(String haActivePassword) {
             this.putQueryParameter("HaActivePassword", haActivePassword);
@@ -419,7 +434,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActiveUser.
+         * <p>The username of the primary instance. This parameter is required when the primary instance is <strong>HBaseue</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder haActiveUser(String haActiveUser) {
             this.putQueryParameter("HaActiveUser", haActiveUser);
@@ -428,7 +446,15 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActiveVersion.
+         * <p>The database engine version of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false). Valid values:</p>
+         * <ul>
+         * <li><strong>HBase1x</strong>: HBase 1.x.</li>
+         * <li><strong>HBase2x</strong>: HBase 2.x.</li>
+         * <li><strong>HBaseUE</strong>: HBaseue.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HBase2x</p>
          */
         public Builder haActiveVersion(String haActiveVersion) {
             this.putQueryParameter("HaActiveVersion", haActiveVersion);
@@ -437,6 +463,12 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
+         * <p>The synchronization type. Valid values:</p>
+         * <ul>
+         * <li><strong>CLUSTER</strong>: instance-level synchronization.</li>
+         * <li><strong>TABLE</strong>: table-level synchronization.</li>
+         * <li><strong>SKIP</strong>: no synchronization required.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,6 +481,7 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
+         * <p>The ID of the secondary instance cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -461,7 +494,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandbyClusterKey.
+         * <p>The ZooKeeper address of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp1w6krp539******-master1-001.hbase.singapore.rds.aliyuncs.com,hb-bp1w6krp539******-master3-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master2-001.hbase.singapore.rds.aliyuncs.com:2181:/hbase</p>
          */
         public Builder haStandbyClusterKey(String haStandbyClusterKey) {
             this.putQueryParameter("HaStandbyClusterKey", haStandbyClusterKey);
@@ -470,6 +506,7 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
+         * <p>The cluster type of the secondary instance. Valid values: <strong>HBase</strong> and <strong>HBaseue</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -482,7 +519,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandbyHbaseFsDir.
+         * <p>The HDFS directory of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/hbase</p>
          */
         public Builder haStandbyHbaseFsDir(String haStandbyHbaseFsDir) {
             this.putQueryParameter("HaStandbyHbaseFsDir", haStandbyHbaseFsDir);
@@ -491,7 +531,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandbyHdfsUri.
+         * <p>The HDFS URI of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs://hb-bp1w6krp539******-master1-001.hbase.rds.aliyuncs.com:8020,hb-bp1w6krp539******-master2-001.hbase.rds.aliyuncs.com:8020</p>
          */
         public Builder haStandbyHdfsUri(String haStandbyHdfsUri) {
             this.putQueryParameter("HaStandbyHdfsUri", haStandbyHdfsUri);
@@ -500,7 +543,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandbyPassword.
+         * <p>The password that corresponds to the username of the secondary instance. This parameter is required when the secondary instance is <strong>hbaseue</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder haStandbyPassword(String haStandbyPassword) {
             this.putQueryParameter("HaStandbyPassword", haStandbyPassword);
@@ -509,7 +555,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandbyUser.
+         * <p>The username of the secondary instance. This parameter is required when the secondary instance is <strong>hbaseue</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder haStandbyUser(String haStandbyUser) {
             this.putQueryParameter("HaStandbyUser", haStandbyUser);
@@ -518,7 +567,15 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandbyVersion.
+         * <p>The database engine version of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false). Valid values:</p>
+         * <ul>
+         * <li><strong>HBase1x</strong>: HBase 1.x.</li>
+         * <li><strong>HBase2x</strong>: HBase 2.x.</li>
+         * <li><strong>HBaseUE</strong>: HBaseue.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HBase2x</p>
          */
         public Builder haStandbyVersion(String haStandbyVersion) {
             this.putQueryParameter("HaStandbyVersion", haStandbyVersion);
@@ -527,7 +584,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaTables.
+         * <p>The tables to synchronize. This parameter is required when HaMigrateType is set to TABLE. Separate multiple tables with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test,test1</p>
          */
         public Builder haTables(String haTables) {
             this.putQueryParameter("HaTables", haTables);
@@ -536,6 +596,7 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the primary instance is a standard instance. Set this parameter to <strong>true</strong> for a standard instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -548,6 +609,7 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the secondary instance is a standard instance. Set this parameter to <strong>true</strong> for a standard instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,10 @@ public class GetMultimodeCmsUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-t4naqsay5gn******</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class GetMultimodeCmsUrlResponseBody extends TeaModel {
         }
 
         /**
-         * MultimodCmsUrl.
+         * <p>The CloudMonitor URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>htpp://***********</p>
          */
         public Builder multimodCmsUrl(String multimodCmsUrl) {
             this.multimodCmsUrl = multimodCmsUrl;
@@ -96,7 +102,10 @@ public class GetMultimodeCmsUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44183B05-852E-4716-B902-52977140190F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -54,7 +54,10 @@ public class ModifyBackupPlanConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50F4A8C2-076F-4703-9813-2FCD7FBB91C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

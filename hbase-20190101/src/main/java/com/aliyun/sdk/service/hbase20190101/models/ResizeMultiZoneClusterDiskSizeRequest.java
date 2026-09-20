@@ -90,6 +90,7 @@ public class ResizeMultiZoneClusterDiskSizeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the multi-zone instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +103,10 @@ public class ResizeMultiZoneClusterDiskSizeRequest extends Request {
         }
 
         /**
-         * CoreDiskSize.
+         * <p>The disk size of core nodes. The value must be greater than the current disk size and must be a multiple of 40. Unit: GB. Maximum value: 64000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>480</p>
          */
         public Builder coreDiskSize(Integer coreDiskSize) {
             this.putQueryParameter("CoreDiskSize", coreDiskSize);
@@ -111,7 +115,10 @@ public class ResizeMultiZoneClusterDiskSizeRequest extends Request {
         }
 
         /**
-         * LogDiskSize.
+         * <p>The disk size of log nodes. The value must be greater than the current disk size of log nodes and must be a multiple of 40. Unit: GB. Maximum value: 8000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440</p>
          */
         public Builder logDiskSize(Integer logDiskSize) {
             this.putQueryParameter("LogDiskSize", logDiskSize);

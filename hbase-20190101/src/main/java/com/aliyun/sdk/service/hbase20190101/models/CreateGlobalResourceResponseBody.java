@@ -54,7 +54,10 @@ public class CreateGlobalResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AB9ABDF-7E1E-44AD-8610-70A005115DD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

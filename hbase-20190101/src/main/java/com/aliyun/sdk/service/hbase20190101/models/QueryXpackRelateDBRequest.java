@@ -89,6 +89,7 @@ public class QueryXpackRelateDBRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the current Spark instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,16 @@ public class QueryXpackRelateDBRequest extends Request {
         }
 
         /**
-         * HasSingleNode.
+         * <p>This parameter is valid only when bds queries associated HBase instances.</p>
+         * <ul>
+         * <li><p>true: Single-node HBase instances are included.</p>
+         * </li>
+         * <li><p>false: Single-node HBase instances are not included. This parameter is optional. For backward compatibility, single-node HBase instances are included when this parameter is left empty.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hasSingleNode(Boolean hasSingleNode) {
             this.putQueryParameter("HasSingleNode", hasSingleNode);
@@ -110,6 +120,11 @@ public class QueryXpackRelateDBRequest extends Request {
         }
 
         /**
+         * <p>The type of database to query for association.</p>
+         * <ul>
+         * <li>spark can be associated with hdfs, hbase, mongodb, mysql, polardb_mysql, redis, and geomesa.</li>
+         * <li>bds can be associated with hbase, spark, and hbaseue.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

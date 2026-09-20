@@ -54,7 +54,10 @@ public class SwitchHbaseHaSlbResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C9D568D9-A59C-4AF2-8FBB-F086A841D58E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

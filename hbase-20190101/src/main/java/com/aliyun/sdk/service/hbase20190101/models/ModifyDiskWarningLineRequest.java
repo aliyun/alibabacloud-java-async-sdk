@@ -75,6 +75,7 @@ public class ModifyDiskWarningLineRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ModifyDiskWarningLineRequest extends Request {
         }
 
         /**
+         * <p>The alert threshold. Valid values: 50 to 90.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

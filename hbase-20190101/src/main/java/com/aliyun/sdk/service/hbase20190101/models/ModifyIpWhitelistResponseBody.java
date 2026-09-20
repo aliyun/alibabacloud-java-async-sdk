@@ -54,7 +54,10 @@ public class ModifyIpWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101CFA8A-FB88-5014-A10C-3A0DA9AD8B0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -54,7 +54,10 @@ public class ModifyAccountPasswordResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AFAA617B-3268-5883-982B-DB8EC8C*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

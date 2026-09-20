@@ -67,7 +67,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>211235614240728</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -75,7 +78,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>729CB2A7-3065-53A9-B27C-7033CA4881D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

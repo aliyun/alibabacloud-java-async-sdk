@@ -80,7 +80,10 @@ public class EnableHBaseueBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID of the activated BDS backup service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bds-m5e54q06ceyhxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class EnableHBaseueBackupResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449xxx</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +102,10 @@ public class EnableHBaseueBackupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15272D5D-46E8-4400-9CC8-A7E7B589F575</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

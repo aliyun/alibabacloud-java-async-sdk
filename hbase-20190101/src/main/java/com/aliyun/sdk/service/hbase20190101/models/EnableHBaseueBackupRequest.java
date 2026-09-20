@@ -103,7 +103,10 @@ public class EnableHBaseueBackupRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -112,7 +115,10 @@ public class EnableHBaseueBackupRequest extends Request {
         }
 
         /**
-         * ColdStorageSize.
+         * <p>The cold storage size for the backup service. The minimum value is 800 GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder coldStorageSize(Integer coldStorageSize) {
             this.putQueryParameter("ColdStorageSize", coldStorageSize);
@@ -121,6 +127,7 @@ public class EnableHBaseueBackupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the HBaseue cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,7 @@ public class EnableHBaseueBackupRequest extends Request {
         }
 
         /**
+         * <p>The number of backup nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

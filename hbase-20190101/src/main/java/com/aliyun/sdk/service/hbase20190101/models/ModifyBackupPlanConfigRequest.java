@@ -120,6 +120,7 @@ public class ModifyBackupPlanConfigRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,7 @@ public class ModifyBackupPlanConfigRequest extends Request {
         }
 
         /**
+         * <p>The full backup cycle, in days. Valid values: 3 to 9.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +146,7 @@ public class ModifyBackupPlanConfigRequest extends Request {
         }
 
         /**
+         * <p>The number of full backups to retain. Valid values: 3 to 8.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class ModifyBackupPlanConfigRequest extends Request {
         }
 
         /**
+         * <p>The time of the next full backup. The specified time must be at least 6 minutes later than the current time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class ModifyBackupPlanConfigRequest extends Request {
         }
 
         /**
+         * <p>The tables to back up. Specify one table name per line. Wildcards are supported. An asterisk (*) indicates all tables.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

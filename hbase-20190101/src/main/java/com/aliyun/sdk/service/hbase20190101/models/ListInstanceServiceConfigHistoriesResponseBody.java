@@ -114,7 +114,10 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>658C1549-2C02-4FD9-9490-EB3B285F9DCA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;

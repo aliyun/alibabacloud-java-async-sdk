@@ -103,6 +103,7 @@ public class ResizeNodeCountRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,8 @@ public class ResizeNodeCountRequest extends Request {
         }
 
         /**
+         * <p>The number of core nodes in the cluster.</p>
+         * <p>You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +130,10 @@ public class ResizeNodeCountRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp191otqj1ssyl****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -136,7 +142,10 @@ public class ResizeNodeCountRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

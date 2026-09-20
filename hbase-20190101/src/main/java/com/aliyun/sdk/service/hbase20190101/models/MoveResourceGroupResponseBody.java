@@ -54,7 +54,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CD9BFBC-D575-5FCC-BA7E-956BF0D0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -54,7 +54,10 @@ public class DeleteHBaseHaDBResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B409CF51-E01F-4551-BE40-123678FA9026</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

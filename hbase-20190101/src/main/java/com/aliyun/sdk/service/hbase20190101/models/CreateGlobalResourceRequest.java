@@ -118,7 +118,10 @@ public class CreateGlobalResourceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>This parameter is automatically populated when the request is sent. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx-xxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -127,6 +130,7 @@ public class CreateGlobalResourceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the target instance. You can call the DescribeInstances operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +143,10 @@ public class CreateGlobalResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,6 +155,19 @@ public class CreateGlobalResourceRequest extends Request {
         }
 
         /**
+         * <p>The resource name. Valid values:</p>
+         * <ul>
+         * <li><p>HbaseSLBThriftVip: Thrift SLB EPS resource.</p>
+         * </li>
+         * <li><p>SolrSlbVip: Solr SLB EPS resource.</p>
+         * </li>
+         * <li><p>PhoenixSLBQueryServerVip: Phoenix SLB EPS resource.</p>
+         * </li>
+         * <li><p>PubHbaseSLBThriftVip: Thrift SLB public network resource.</p>
+         * </li>
+         * <li><p>PubPhoenixSLBQueryServerVip: Phoenix SLB public network resource.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +180,7 @@ public class CreateGlobalResourceRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Set the value to <strong>GLOBAL_VIP</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

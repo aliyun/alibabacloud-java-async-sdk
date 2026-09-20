@@ -157,7 +157,10 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of target instance. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to query target instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp1u0639js2h7****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -166,7 +169,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The name of the ApsaraDB for HBase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -175,7 +181,15 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * DbType.
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><strong>hbase</strong>: ApsaraDB for HBase Standard Edition or ApsaraDB for HBase single-node.</li>
+         * <li><strong>hbaseue</strong>: ApsaraDB for HBase Performance-enhanced Edition.</li>
+         * <li><strong>bds</strong>: BDS data synchronization service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -184,7 +198,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the instance list. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +210,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of rows to display per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +222,13 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <blockquote>
+         * <p>If you specify the <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong> parameters, this parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +237,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group. You can query the resource group ID in the Resource Group console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4f51d54g5****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -220,7 +249,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -288,7 +317,10 @@ public class DescribeInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag. The tag key and tag value form a key-value pair in the format of {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -296,7 +328,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag key. The tag value and tag key form a key-value pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

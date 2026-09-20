@@ -67,7 +67,10 @@ public class ConvertInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54124548879</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -75,7 +78,10 @@ public class ConvertInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50373857-C47B-4B64-9332-D0B5280B59EA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

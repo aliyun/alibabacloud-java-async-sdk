@@ -84,6 +84,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExpireTimeUTC")
     private String expireTimeUTC;
 
+    @com.aliyun.core.annotation.NameInMap("InitialRootPassword")
+    private String initialRootPassword;
+
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -159,6 +162,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("SingleZoneRiskAlert")
+    private SingleZoneRiskAlert singleZoneRiskAlert;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -203,6 +209,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.engine = builder.engine;
         this.expireTime = builder.expireTime;
         this.expireTimeUTC = builder.expireTimeUTC;
+        this.initialRootPassword = builder.initialRootPassword;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.isDeletionProtection = builder.isDeletionProtection;
@@ -228,6 +235,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.singleZoneRiskAlert = builder.singleZoneRiskAlert;
         this.status = builder.status;
         this.tags = builder.tags;
         this.taskProgress = builder.taskProgress;
@@ -401,6 +409,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
      */
     public String getExpireTimeUTC() {
         return this.expireTimeUTC;
+    }
+
+    /**
+     * @return initialRootPassword
+     */
+    public String getInitialRootPassword() {
+        return this.initialRootPassword;
     }
 
     /**
@@ -579,6 +594,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return singleZoneRiskAlert
+     */
+    public SingleZoneRiskAlert getSingleZoneRiskAlert() {
+        return this.singleZoneRiskAlert;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -650,6 +672,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String engine; 
         private String expireTime; 
         private String expireTimeUTC; 
+        private String initialRootPassword; 
         private String instanceId; 
         private String instanceName; 
         private Boolean isDeletionProtection; 
@@ -675,6 +698,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
+        private SingleZoneRiskAlert singleZoneRiskAlert; 
         private String status; 
         private Tags tags; 
         private String taskProgress; 
@@ -709,6 +733,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.engine = model.engine;
             this.expireTime = model.expireTime;
             this.expireTimeUTC = model.expireTimeUTC;
+            this.initialRootPassword = model.initialRootPassword;
             this.instanceId = model.instanceId;
             this.instanceName = model.instanceName;
             this.isDeletionProtection = model.isDeletionProtection;
@@ -734,6 +759,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
+            this.singleZoneRiskAlert = model.singleZoneRiskAlert;
             this.status = model.status;
             this.tags = model.tags;
             this.taskProgress = model.taskProgress;
@@ -744,7 +770,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AutoRenewal.
+         * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong>: Auto-renewal is not enabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only when PayType is set to Prepaid (subscription).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.autoRenewal = autoRenewal;
@@ -752,7 +788,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * BackupStatus.
+         * <p>Indicates whether the backup feature is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>open</strong>: The backup feature is supported.</li>
+         * <li><strong>close</strong>: The backup feature is not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder backupStatus(String backupStatus) {
             this.backupStatus = backupStatus;
@@ -760,7 +803,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -768,7 +814,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testhbase</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -776,7 +825,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterType.
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><strong>cluster</strong>: Cluster Edition.</li>
+         * <li><strong>single</strong>: single-node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -784,7 +840,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ColdStorageSize.
+         * <p>The cold storage size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder coldStorageSize(Integer coldStorageSize) {
             this.coldStorageSize = coldStorageSize;
@@ -792,7 +851,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ColdStorageStatus.
+         * <p>Indicates whether the cold storage feature is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>open</strong>: The cold storage feature is supported.</li>
+         * <li><strong>close</strong>: The cold storage feature is not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder coldStorageStatus(String coldStorageStatus) {
             this.coldStorageStatus = coldStorageStatus;
@@ -800,7 +866,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ConfirmMaintainTime.
+         * <p>Indicates whether the O&amp;M window of the instance has been confirmed for the first time. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Confirmed.</li>
+         * <li><strong>false</strong>: Not confirmed.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The <strong>Confirm the O&amp;M window for the first time</strong> dialog box appears only when you access the <strong>Basic Information</strong> page of the instance for the first time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder confirmMaintainTime(String confirmMaintainTime) {
             this.confirmMaintainTime = confirmMaintainTime;
@@ -808,7 +884,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CoreDiskCount.
+         * <p>The number of core node disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder coreDiskCount(String coreDiskCount) {
             this.coreDiskCount = coreDiskCount;
@@ -816,7 +895,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CoreDiskSize.
+         * <p>The disk capacity of core nodes. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder coreDiskSize(Integer coreDiskSize) {
             this.coreDiskSize = coreDiskSize;
@@ -824,7 +906,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CoreDiskType.
+         * <p>The disk type of core nodes. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>local_hdd</strong>: local HDD.</li>
+         * <li><strong>local__ssd</strong>: local SSD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder coreDiskType(String coreDiskType) {
             this.coreDiskType = coreDiskType;
@@ -832,7 +923,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CoreInstanceType.
+         * <p>The node specifications of core nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn2.2xlarge</p>
          */
         public Builder coreInstanceType(String coreInstanceType) {
             this.coreInstanceType = coreInstanceType;
@@ -840,7 +934,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CoreNodeCount.
+         * <p>The number of core nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder coreNodeCount(Integer coreNodeCount) {
             this.coreNodeCount = coreNodeCount;
@@ -848,7 +945,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-19T11:23:22</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -856,7 +956,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTimeUTC.
+         * <p>The time when the instance was created, in UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-19T03:23:22Z</p>
          */
         public Builder createdTimeUTC(String createdTimeUTC) {
             this.createdTimeUTC = createdTimeUTC;
@@ -864,7 +967,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The Unified Auto Renewal Cycle.</p>
+         * <ul>
+         * <li>Monthly subscription: The auto-renewal epoch is 1 month.</li>
+         * <li>Yearly subscription: The auto-renewal epoch is 1 year (12 months).</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only when PayType is set to Prepaid (subscription).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder duration(Integer duration) {
             this.duration = duration;
@@ -872,6 +985,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Indicates whether access from the HBase open source client is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Access is supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Access is not supported.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -883,7 +1003,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKey.
+         * <p>The encryption key.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the encryption type is <strong>CloudDisk</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0d2470df-da7b-4786-b981-9a164dae****</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -891,7 +1017,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionType.
+         * <p>The encryption type. Valid values:</p>
+         * <ul>
+         * <li><strong>NoEncryption</strong>: Encryption is not enabled.</li>
+         * <li><strong>CloudDisk</strong>: Cloud disk encryption is enabled.</li>
+         * <li><strong>EncryptionKey</strong>: The encryption key specified by the parameter.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Cloud disk encryption cannot be disabled after it is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NoEncryption</p>
          */
         public Builder encryptionType(String encryptionType) {
             this.encryptionType = encryptionType;
@@ -899,7 +1036,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * <p>The database engine type. Valid values:</p>
+         * <ul>
+         * <li><strong>hbase</strong>: ApsaraDB for HBase Standard Edition or ApsaraDB for HBase single-node.</li>
+         * <li><strong>hbaseue</strong>: ApsaraDB for HBase Performance-enhanced Edition.</li>
+         * <li><strong>serverlesshbase</strong>: ApsaraDB for HBase Serverless Edition.</li>
+         * <li><strong>bds</strong>: BDS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hbaseue</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -907,7 +1053,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-24T00:00:00</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -915,7 +1064,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTimeUTC.
+         * <p>The time when the instance expires, in UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-23T16:00:00Z</p>
          */
         public Builder expireTimeUTC(String expireTimeUTC) {
             this.expireTimeUTC = expireTimeUTC;
@@ -923,7 +1075,21 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The initial default password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LFuVlAvSKsbo</p>
+         */
+        public Builder initialRootPassword(String initialRootPassword) {
+            this.initialRootPassword = initialRootPassword;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -931,7 +1097,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testhbase</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -939,7 +1108,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsDeletionProtection.
+         * <p>Indicates whether deletion protection is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDeletionProtection(Boolean isDeletionProtection) {
             this.isDeletionProtection = isDeletionProtection;
@@ -947,7 +1123,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsHa.
+         * <p>Indicates whether the instance is configured for high availability. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Configured for high availability.</li>
+         * <li><strong>false</strong>: Not configured for high availability.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Cluster Edition instances are configured for high availability with default configurations and use 2 master nodes.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Single-node instances are configured with the actual active capacity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isHa(Boolean isHa) {
             this.isHa = isHa;
@@ -955,7 +1146,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsLatestVersion.
+         * <p>Indicates whether the instance is the latest version. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance is the latest version.</li>
+         * <li><strong>false</strong>: The instance is not the latest version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isLatestVersion(Boolean isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
@@ -963,7 +1161,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsMultiModel.
+         * <p>Indicates whether the instance is a multi-model Cluster Edition instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance is a multi-model Cluster Edition instance.</li>
+         * <li><strong>false</strong>: The instance is not a multi-model Cluster Edition instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isMultiModel(Boolean isMultiModel) {
             this.isMultiModel = isMultiModel;
@@ -971,7 +1176,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * LproxyMinorVersion.
+         * <p>The minor version of the LPROXY service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.3.2</p>
          */
         public Builder lproxyMinorVersion(String lproxyMinorVersion) {
             this.lproxyMinorVersion = lproxyMinorVersion;
@@ -979,7 +1187,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>The end time of the O&amp;M window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.maintainEndTime = maintainEndTime;
@@ -987,7 +1198,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>The start time of the O&amp;M window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.maintainStartTime = maintainStartTime;
@@ -995,7 +1209,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MajorVersion.
+         * <p>The major version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder majorVersion(String majorVersion) {
             this.majorVersion = majorVersion;
@@ -1003,7 +1220,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MasterDiskSize.
+         * <p>The disk capacity of master nodes. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder masterDiskSize(Integer masterDiskSize) {
             this.masterDiskSize = masterDiskSize;
@@ -1011,7 +1231,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MasterDiskType.
+         * <p>The disk type of master nodes. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned for single-node instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder masterDiskType(String masterDiskType) {
             this.masterDiskType = masterDiskType;
@@ -1019,7 +1249,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MasterInstanceType.
+         * <p>The node specifications of master nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn2.large</p>
          */
         public Builder masterInstanceType(String masterInstanceType) {
             this.masterInstanceType = masterInstanceType;
@@ -1027,7 +1260,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MasterNodeCount.
+         * <p>The master node type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The master node is a single node.</li>
+         * <li><strong>2</strong>: The master node is in Cluster Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder masterNodeCount(Integer masterNodeCount) {
             this.masterNodeCount = masterNodeCount;
@@ -1035,7 +1275,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * MinorVersion.
+         * <p>The minor version number of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.9.1</p>
          */
         public Builder minorVersion(String minorVersion) {
             this.minorVersion = minorVersion;
@@ -1043,7 +1286,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleId.
+         * <p>The module ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder moduleId(Integer moduleId) {
             this.moduleId = moduleId;
@@ -1051,7 +1297,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleStackVersion.
+         * <p>The module type version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phoenxi:4.0</p>
          */
         public Builder moduleStackVersion(String moduleStackVersion) {
             this.moduleStackVersion = moduleStackVersion;
@@ -1059,7 +1308,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NeedUpgrade.
+         * <p>Indicates whether the instance components need to be upgraded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Upgrade is required.</li>
+         * <li><strong>false</strong>: Upgrade is not required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needUpgrade(Boolean needUpgrade) {
             this.needUpgrade = needUpgrade;
@@ -1075,7 +1331,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: Virtual Private Cloud. If the network type is VPC, the VswitchId and VpcId parameters are returned.</li>
+         * <li><strong>CLASSIC</strong>: classic network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -1083,7 +1346,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ParentId.
+         * <p>The parent instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-uf699153o1m2l****</p>
          */
         public Builder parentId(String parentId) {
             this.parentId = parentId;
@@ -1091,7 +1357,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -1099,7 +1372,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -1107,7 +1383,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F429923-B6F6-52C5-9C2A-5B8A8C6BBA66</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -1115,7 +1394,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -1123,7 +1405,25 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The single-zone risk alert information.</p>
+         */
+        public Builder singleZoneRiskAlert(SingleZoneRiskAlert singleZoneRiskAlert) {
+            this.singleZoneRiskAlert = singleZoneRiskAlert;
+            return this;
+        }
+
+        /**
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>CREATING</strong>: The instance is being created.</li>
+         * <li><strong>ACTIVATION</strong>: The instance is running.</li>
+         * <li><strong>DELETING</strong>: The instance is being deleted.</li>
+         * <li><strong>RESTARTING</strong>: The instance is being restarted.</li>
+         * <li><strong>MINOR_VERSION_TRANSING</strong>: A minor engine version update is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -1139,7 +1439,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskProgress.
+         * <p>The task progress of the instance, in percentage (%). Tasks initiated from the ApsaraDB for HBase console include specification changes, node scale-out, node scale-in, instance restart, and minor engine version updates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25.00</p>
          */
         public Builder taskProgress(String taskProgress) {
             this.taskProgress = taskProgress;
@@ -1147,7 +1450,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>running: The task is running.</li>
+         * <li>pause: The task is paused.</li>
+         * <li>fail: The task is interrupted.</li>
+         * <li>finish: The task is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -1155,7 +1467,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID. This parameter is returned when <strong>NetworkType</strong> is <strong>2</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15s22y1a7sff5gj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -1163,7 +1478,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * VswitchId.
+         * <p>The vSwitch ID. This parameter is returned when <strong>NetworkType</strong> is <strong>2</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1foll427ze3d4ps****</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.vswitchId = vswitchId;
@@ -1171,7 +1489,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -1233,6 +1554,137 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
             public NeedUpgradeComps build() {
                 return new NeedUpgradeComps(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
+    public static class SingleZoneRiskAlert extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfirmDate")
+        private String confirmDate;
+
+        @com.aliyun.core.annotation.NameInMap("DispositionType")
+        private String dispositionType;
+
+        @com.aliyun.core.annotation.NameInMap("NeedAlert")
+        private Boolean needAlert;
+
+        @com.aliyun.core.annotation.NameInMap("PlannedCompletionDate")
+        private String plannedCompletionDate;
+
+        private SingleZoneRiskAlert(Builder builder) {
+            this.confirmDate = builder.confirmDate;
+            this.dispositionType = builder.dispositionType;
+            this.needAlert = builder.needAlert;
+            this.plannedCompletionDate = builder.plannedCompletionDate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SingleZoneRiskAlert create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confirmDate
+         */
+        public String getConfirmDate() {
+            return this.confirmDate;
+        }
+
+        /**
+         * @return dispositionType
+         */
+        public String getDispositionType() {
+            return this.dispositionType;
+        }
+
+        /**
+         * @return needAlert
+         */
+        public Boolean getNeedAlert() {
+            return this.needAlert;
+        }
+
+        /**
+         * @return plannedCompletionDate
+         */
+        public String getPlannedCompletionDate() {
+            return this.plannedCompletionDate;
+        }
+
+        public static final class Builder {
+            private String confirmDate; 
+            private String dispositionType; 
+            private Boolean needAlert; 
+            private String plannedCompletionDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(SingleZoneRiskAlert model) {
+                this.confirmDate = model.confirmDate;
+                this.dispositionType = model.dispositionType;
+                this.needAlert = model.needAlert;
+                this.plannedCompletionDate = model.plannedCompletionDate;
+            } 
+
+            /**
+             * <p>The confirmation date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-01</p>
+             */
+            public Builder confirmDate(String confirmDate) {
+                this.confirmDate = confirmDate;
+                return this;
+            }
+
+            /**
+             * <p>The disposition type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NO_SET: Not set.
+             * PLAN_MIGRATION: Plan to migrate to Lindorm multi-zone edition.
+             * EXTERNAL_BIZ_HA: Business-level disaster recovery</p>
+             */
+            public Builder dispositionType(String dispositionType) {
+                this.dispositionType = dispositionType;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether an alert is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder needAlert(Boolean needAlert) {
+                this.needAlert = needAlert;
+                return this;
+            }
+
+            /**
+             * <p>The planned completion date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2027-01-01</p>
+             */
+            public Builder plannedCompletionDate(String plannedCompletionDate) {
+                this.plannedCompletionDate = plannedCompletionDate;
+                return this;
+            }
+
+            public SingleZoneRiskAlert build() {
+                return new SingleZoneRiskAlert(this);
             } 
 
         } 

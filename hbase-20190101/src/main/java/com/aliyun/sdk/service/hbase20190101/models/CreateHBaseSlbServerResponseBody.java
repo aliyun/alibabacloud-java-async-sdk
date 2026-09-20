@@ -54,7 +54,10 @@ public class CreateHBaseSlbServerResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61FC5B21-87B0-41BC-9686-9DA395EB40B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

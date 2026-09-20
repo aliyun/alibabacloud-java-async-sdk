@@ -67,7 +67,10 @@ public class ResizeMultiZoneClusterDiskSizeResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123412341****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -75,7 +78,10 @@ public class ResizeMultiZoneClusterDiskSizeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>568339C4-9F71-43D0-994E-E039CD826E56</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

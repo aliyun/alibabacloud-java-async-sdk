@@ -60,6 +60,7 @@ public class DescribeMultiZoneClusterRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the multi-zone instance. You can call <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> to obtain the list. The multi-zone instance has <strong>DbType</strong> set to hbaseue and <strong>ModuleStackVersion</strong> set to 2.0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

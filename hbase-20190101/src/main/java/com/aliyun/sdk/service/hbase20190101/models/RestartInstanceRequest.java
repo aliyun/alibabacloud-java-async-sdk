@@ -74,6 +74,7 @@ public class RestartInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of target instance. You can call <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> to obtain target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,17 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * Components.
+         * <p>The name of the component in the target instance. Valid values:</p>
+         * <ul>
+         * <li><strong>HBASE</strong></li>
+         * <li><strong>HADOOP</strong></li>
+         * <li><strong>PHOENIX</strong></li>
+         * <li><strong>SOLR</strong></li>
+         * <li><strong>THRIFT</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>THRIFT</p>
          */
         public Builder components(String components) {
             this.putQueryParameter("Components", components);

@@ -54,7 +54,10 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17E3AC63-300D-4B69-9108-45EC20E50E85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

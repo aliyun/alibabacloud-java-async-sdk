@@ -75,6 +75,7 @@ public class ResizeColdStorageSizeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the HBase instance. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ResizeColdStorageSizeRequest extends Request {
         }
 
         /**
+         * <p>The cold storage capacity after the change. Unit: GB. Valid values: <strong>800</strong> to <strong>1000000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

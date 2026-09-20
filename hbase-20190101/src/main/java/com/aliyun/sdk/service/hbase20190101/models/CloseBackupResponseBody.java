@@ -54,7 +54,10 @@ public class CloseBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1A11940-0C34-4385-864F-A01E29B55F6A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

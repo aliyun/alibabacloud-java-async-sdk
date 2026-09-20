@@ -74,6 +74,9 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExpireTimeUTC")
     private String expireTimeUTC;
 
+    @com.aliyun.core.annotation.NameInMap("InitialRootPassword")
+    private String initialRootPassword;
+
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -196,6 +199,7 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         this.engine = builder.engine;
         this.expireTime = builder.expireTime;
         this.expireTimeUTC = builder.expireTimeUTC;
+        this.initialRootPassword = builder.initialRootPassword;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.isDeletionProtection = builder.isDeletionProtection;
@@ -375,6 +379,13 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
      */
     public String getExpireTimeUTC() {
         return this.expireTimeUTC;
+    }
+
+    /**
+     * @return initialRootPassword
+     */
+    public String getInitialRootPassword() {
+        return this.initialRootPassword;
     }
 
     /**
@@ -635,6 +646,7 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         private String engine; 
         private String expireTime; 
         private String expireTimeUTC; 
+        private String initialRootPassword; 
         private String instanceId; 
         private String instanceName; 
         private Boolean isDeletionProtection; 
@@ -693,6 +705,7 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
             this.engine = model.engine;
             this.expireTime = model.expireTime;
             this.expireTimeUTC = model.expireTimeUTC;
+            this.initialRootPassword = model.initialRootPassword;
             this.instanceId = model.instanceId;
             this.instanceName = model.instanceName;
             this.isDeletionProtection = model.isDeletionProtection;
@@ -730,7 +743,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * ArbiterVSwitchIds.
+         * <p>The vSwitch ID of the arbiter zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-t4nax9mp3wk0czn****</p>
          */
         public Builder arbiterVSwitchIds(String arbiterVSwitchIds) {
             this.arbiterVSwitchIds = arbiterVSwitchIds;
@@ -738,7 +754,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ArbiterZoneId.
+         * <p>The zone ID of the arbiter zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1c</p>
          */
         public Builder arbiterZoneId(String arbiterZoneId) {
             this.arbiterZoneId = arbiterZoneId;
@@ -746,7 +765,14 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * AutoRenewal.
+         * <p>Indicates whether auto-renewal is enabled for the multi-zone instance when PayType is set to Prepaid. Valid values:</p>
+         * <ul>
+         * <li>True: Auto-renewal is enabled.</li>
+         * <li>False: Auto-renewal is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.autoRenewal = autoRenewal;
@@ -754,7 +780,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-t4nn71xa0yn****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -762,7 +791,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mz_test</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -770,7 +802,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ColdStorageSize.
+         * <p>The cold storage size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder coldStorageSize(Integer coldStorageSize) {
             this.coldStorageSize = coldStorageSize;
@@ -778,7 +813,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CoreDiskCount.
+         * <p>The number of core node disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder coreDiskCount(String coreDiskCount) {
             this.coreDiskCount = coreDiskCount;
@@ -786,7 +824,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CoreDiskSize.
+         * <p>The disk size of a core node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder coreDiskSize(Integer coreDiskSize) {
             this.coreDiskSize = coreDiskSize;
@@ -794,7 +835,16 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CoreDiskType.
+         * <p>The disk type of core nodes. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra cloud disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>local_hdd_pro: throughput-intensive local disk.</li>
+         * <li>local_ssd_pro: I/O-intensive local disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder coreDiskType(String coreDiskType) {
             this.coreDiskType = coreDiskType;
@@ -802,7 +852,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CoreInstanceType.
+         * <p>The node specifications of core nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.large</p>
          */
         public Builder coreInstanceType(String coreInstanceType) {
             this.coreInstanceType = coreInstanceType;
@@ -810,7 +863,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CoreNodeCount.
+         * <p>The number of core nodes. The minimum value is 4, and the increment is a multiple of 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder coreNodeCount(Integer coreNodeCount) {
             this.coreNodeCount = coreNodeCount;
@@ -818,7 +874,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The creation time in the current time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-15T18:04:52</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -826,7 +885,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTimeUTC.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-15T10:04:52Z</p>
          */
         public Builder createdTimeUTC(String createdTimeUTC) {
             this.createdTimeUTC = createdTimeUTC;
@@ -834,7 +896,14 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The Unified Auto Renewal Cycle. This parameter is not returned for pay-as-you-go instances.</p>
+         * <ul>
+         * <li>Monthly subscription: The auto-renewal epoch is 1 month.</li>
+         * <li>Yearly subscription: The auto-renewal epoch is 1 year (12 months).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.duration = duration;
@@ -842,7 +911,13 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKey.
+         * <p>The ID of the encryption key. This parameter is empty if encryption is not enabled.</p>
+         * <blockquote>
+         * <p>Cloud disk encryption cannot be disabled after it is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2a****</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -850,7 +925,16 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionType.
+         * <p>The encryption type. Valid values:</p>
+         * <ul>
+         * <li><p>NULL: Encryption is not enabled. This is the default value.</p>
+         * </li>
+         * <li><p>CloudDisk: Cloud disk encryption. The encryption key is specified by the <strong>EncryptionKey</strong> parameter.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudDisk</p>
          */
         public Builder encryptionType(String encryptionType) {
             this.encryptionType = encryptionType;
@@ -858,7 +942,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * <p>The service type. Currently, only hbaseue is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbaseue</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -866,7 +953,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time in the current time zone. This parameter is returned only when PayType is set to Prepaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-16T08:00:00</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -874,7 +964,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTimeUTC.
+         * <p>The expiration time in UTC. This parameter is returned only when PayType is set to Prepaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-16T00:00:00Z</p>
          */
         public Builder expireTimeUTC(String expireTimeUTC) {
             this.expireTimeUTC = expireTimeUTC;
@@ -882,7 +975,21 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The initial default password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yKcYVkFsULmC</p>
+         */
+        public Builder initialRootPassword(String initialRootPassword) {
+            this.initialRootPassword = initialRootPassword;
+            return this;
+        }
+
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-t4nn71xa0yn****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -890,7 +997,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mz_test</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -898,7 +1008,14 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * IsDeletionProtection.
+         * <p>Indicates whether deletion protection is enabled. Valid values:</p>
+         * <ul>
+         * <li>True: Deletion protection is enabled. The instance cannot be deleted. An error message is returned if you attempt to delete the instance.</li>
+         * <li>False: Deletion protection is disabled. The instance can be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDeletionProtection(Boolean isDeletionProtection) {
             this.isDeletionProtection = isDeletionProtection;
@@ -906,7 +1023,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * LogDiskCount.
+         * <p>The number of disks per log node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder logDiskCount(String logDiskCount) {
             this.logDiskCount = logDiskCount;
@@ -914,7 +1034,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * LogDiskSize.
+         * <p>The size of a single disk on a log node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder logDiskSize(Integer logDiskSize) {
             this.logDiskSize = logDiskSize;
@@ -922,7 +1045,16 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * LogDiskType.
+         * <p>The disk type of log nodes. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra cloud disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>local_hdd_pro: throughput-intensive local disk.</li>
+         * <li>local_ssd_pro: I/O-intensive local disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder logDiskType(String logDiskType) {
             this.logDiskType = logDiskType;
@@ -930,7 +1062,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * LogInstanceType.
+         * <p>The node specifications of log nodes. You can call <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> to query the exact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.large</p>
          */
         public Builder logInstanceType(String logInstanceType) {
             this.logInstanceType = logInstanceType;
@@ -938,7 +1073,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * LogNodeCount.
+         * <p>The number of log nodes. The minimum value is 4, and the value must be a multiple of 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder logNodeCount(Integer logNodeCount) {
             this.logNodeCount = logNodeCount;
@@ -946,7 +1084,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>The end time of the O&amp;M window. The format is HH:MMZ, such as 20:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06:00:00</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.maintainEndTime = maintainEndTime;
@@ -954,7 +1095,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>The start time of the O&amp;M window. The format is HH:MMZ, such as 20:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.maintainStartTime = maintainStartTime;
@@ -962,7 +1106,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MajorVersion.
+         * <p>The major version based on the engine type. Currently, only version 2.0 of hbaseue is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder majorVersion(String majorVersion) {
             this.majorVersion = majorVersion;
@@ -970,7 +1117,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MasterDiskSize.
+         * <p>The disk size of master nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder masterDiskSize(Integer masterDiskSize) {
             this.masterDiskSize = masterDiskSize;
@@ -978,7 +1128,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MasterDiskType.
+         * <p>The disk type of master nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder masterDiskType(String masterDiskType) {
             this.masterDiskType = masterDiskType;
@@ -986,7 +1139,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MasterInstanceType.
+         * <p>The node specifications of master nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.large</p>
          */
         public Builder masterInstanceType(String masterInstanceType) {
             this.masterInstanceType = masterInstanceType;
@@ -994,7 +1150,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MasterNodeCount.
+         * <p>The number of master nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder masterNodeCount(Integer masterNodeCount) {
             this.masterNodeCount = masterNodeCount;
@@ -1002,7 +1161,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleId.
+         * <p>The module ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder moduleId(Integer moduleId) {
             this.moduleId = moduleId;
@@ -1010,7 +1172,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleStackVersion.
+         * <p>The module software stack version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder moduleStackVersion(String moduleStackVersion) {
             this.moduleStackVersion = moduleStackVersion;
@@ -1018,7 +1183,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MultiZoneCombination.
+         * <p>The zone combination of the multi-zone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1-abc-aliyun</p>
          */
         public Builder multiZoneCombination(String multiZoneCombination) {
             this.multiZoneCombination = multiZoneCombination;
@@ -1034,7 +1202,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type. Currently, only VPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -1042,7 +1213,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ParentId.
+         * <p>The instance ID of the primary instance. This parameter is returned only when the instance is a component instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-fls1gf31y5s35****</p>
          */
         public Builder parentId(String parentId) {
             this.parentId = parentId;
@@ -1050,7 +1224,14 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Prepaid: subscription.</li>
+         * <li>Postpaid: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -1058,7 +1239,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * PrimaryVSwitchIds.
+         * <p>The vSwitch ID of the primary zone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-t4n3s1zd2gtidg****</p>
          */
         public Builder primaryVSwitchIds(String primaryVSwitchIds) {
             this.primaryVSwitchIds = primaryVSwitchIds;
@@ -1066,7 +1250,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * PrimaryZoneId.
+         * <p>The zone ID of the primary zone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1a</p>
          */
         public Builder primaryZoneId(String primaryZoneId) {
             this.primaryZoneId = primaryZoneId;
@@ -1074,7 +1261,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -1082,7 +1272,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A02C0E6D-3A47-4FA0-BA7E-60793CE256DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -1090,7 +1283,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-lk51f5fer315e****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -1098,7 +1294,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * StandbyVSwitchIds.
+         * <p>The vSwitch ID of the secondary zone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-t4nvvk7xur3rdi****</p>
          */
         public Builder standbyVSwitchIds(String standbyVSwitchIds) {
             this.standbyVSwitchIds = standbyVSwitchIds;
@@ -1106,7 +1305,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * StandbyZoneId.
+         * <p>The zone ID of the secondary zone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1b</p>
          */
         public Builder standbyZoneId(String standbyZoneId) {
             this.standbyZoneId = standbyZoneId;
@@ -1114,7 +1316,16 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The cluster status. Valid values:</p>
+         * <ul>
+         * <li>CREATING: The cluster is being created.</li>
+         * <li>ACTIVATION: The cluster is running.</li>
+         * <li>DELETING: The cluster is being deleted.</li>
+         * <li>RESTARTING: The cluster is being restarted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -1130,7 +1341,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * TaskProgress.
+         * <p>The progress of the task running on the instance, in percentage (%). Tasks initiated from the ApsaraDB for HBase console include specification changes, node scale-out, node scale-in, instance restart, and minor engine version update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder taskProgress(String taskProgress) {
             this.taskProgress = taskProgress;
@@ -1138,7 +1352,16 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>running: The task is running.</li>
+         * <li>pause: The task is paused.</li>
+         * <li>fail: The task is interrupted.</li>
+         * <li>finish: The task is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -1146,7 +1369,10 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4nx81tmlixcq5****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -1367,7 +1593,16 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The cluster status. Valid values:</p>
+             * <ul>
+             * <li>CREATING: The cluster is being created.</li>
+             * <li>ACTIVATION: The cluster is running.</li>
+             * <li>DELETING: The cluster is being deleted.</li>
+             * <li>RESTARTING: The cluster is being restarted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
              */
             public Builder status(String status) {
                 this.status = status;

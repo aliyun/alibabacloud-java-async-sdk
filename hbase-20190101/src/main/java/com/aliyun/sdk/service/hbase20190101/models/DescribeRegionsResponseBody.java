@@ -75,7 +75,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14D3924C-4FD8-4EE9-9B34-DA949D104F42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

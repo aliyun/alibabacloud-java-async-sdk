@@ -90,6 +90,7 @@ public class ModifyAccountPasswordRequest extends Request {
         } 
 
         /**
+         * <p>The name of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The ID of target instance. You can call the DescribeInstances operation to obtain target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,10 +116,16 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The new password of the account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Is 8 to 32 characters in length.</li>
+         * <li>Special characters include <code>!@#$%^&amp;*()_+-=</code>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>test*****</p>
          */
         public Builder newAccountPassword(String newAccountPassword) {
             this.putQueryParameter("NewAccountPassword", newAccountPassword);

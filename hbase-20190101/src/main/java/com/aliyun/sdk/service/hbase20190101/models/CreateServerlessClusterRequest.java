@@ -304,7 +304,14 @@ public class CreateServerlessClusterRequest extends Request {
         } 
 
         /**
-         * AutoRenewPeriod.
+         * <p>The auto-renewal period of the instance. Unit: months.</p>
+         * <blockquote>
+         * <ul><li>The default value of the auto-renewal period is 0, which indicates that the instance is not automatically renewed after the instance expires.</li>
+         * </blockquote>
+         * <li>For example, if the auto-renewal period is set to 2, the instance is automatically renewed for two months after the instance expires.</li></ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -313,7 +320,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -322,7 +332,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * ClientType.
+         * <p>The parameter that identifies the source of the creation request. For public cloud, leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -331,7 +344,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serverless-name</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -340,7 +356,17 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The disk type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>local_hdd_pro</strong>: local HDD.</li>
+         * <li><strong>local_ssd_pro</strong>: local SSD.</li>
+         * <li><strong>cloud_essd_pl1</strong>: ESSD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -349,7 +375,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The engine type of the HBase Serverless instance. Set the value to <strong>serverlesshbase</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serverlesshbase</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -358,7 +387,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The DPI engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -367,6 +399,11 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -379,7 +416,17 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration of the subscription instance. Valid values:</p>
+         * <ul>
+         * <li>If PeriodUnit is set to year, valid values are <strong>1</strong> to <strong>3</strong>.</li>
+         * <li>If PeriodUnit is set to month, valid values are <strong>1</strong> to <strong>9</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required only when the billing method of the instance is <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -388,7 +435,17 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription duration for the subscription instance. Valid values:</p>
+         * <ul>
+         * <li><strong>year</strong>: year.</li>
+         * <li><strong>month</strong>: month.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required only when the billing method of the instance is <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -397,6 +454,7 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -409,7 +467,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-j4d53glb3****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -418,7 +479,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * ServerlessCapability.
+         * <p>The processing capability per unit. Unit: CU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder serverlessCapability(Integer serverlessCapability) {
             this.putQueryParameter("ServerlessCapability", serverlessCapability);
@@ -427,7 +491,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * ServerlessSpec.
+         * <p>The specification type. Valid values: leave empty or <strong>serverless.small</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serverless.small</p>
          */
         public Builder serverlessSpec(String serverlessSpec) {
             this.putQueryParameter("ServerlessSpec", serverlessSpec);
@@ -436,7 +503,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * ServerlessStorage.
+         * <p>The storage size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder serverlessStorage(Integer serverlessStorage) {
             this.putQueryParameter("ServerlessStorage", serverlessStorage);
@@ -445,7 +515,10 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID within the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp191ipotqj1ssyl*****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -454,7 +527,13 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <blockquote>
+         * <p>If both this parameter and the VswitchId parameter are left empty, the network type of the instance is classic network.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp120k6ixs4eog****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -463,6 +542,7 @@ public class CreateServerlessClusterRequest extends Request {
         }
 
         /**
+         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

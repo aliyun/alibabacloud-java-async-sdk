@@ -102,6 +102,7 @@ public class ConvertInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,14 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The subscription duration. Valid values:</p>
+         * <ul>
+         * <li>If PricingCycle is set to year, the value ranges from 1 to 3.</li>
+         * <li>If PricingCycle is set to month, the value ranges from 1 to 9.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -123,7 +131,14 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -132,7 +147,14 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The unit of the subscription period. Valid values:</p>
+         * <ul>
+         * <li>year: year.</li>
+         * <li>month: month.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);

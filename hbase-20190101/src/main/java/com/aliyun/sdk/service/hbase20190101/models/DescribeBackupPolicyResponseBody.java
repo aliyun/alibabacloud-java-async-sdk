@@ -119,7 +119,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * BackupRetentionPeriod.
+         * <p>The number of days for which backups are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -127,7 +130,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupEndTimeUTC.
+         * <p>The UTC time when the backup ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00Z</p>
          */
         public Builder preferredBackupEndTimeUTC(String preferredBackupEndTimeUTC) {
             this.preferredBackupEndTimeUTC = preferredBackupEndTimeUTC;
@@ -135,7 +141,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * <p>The backup cycle. For example, Friday indicates that the backup is performed every Friday.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Friday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -143,7 +152,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupStartTimeUTC.
+         * <p>The UTC time when the backup starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17:00Z</p>
          */
         public Builder preferredBackupStartTimeUTC(String preferredBackupStartTimeUTC) {
             this.preferredBackupStartTimeUTC = preferredBackupStartTimeUTC;
@@ -151,7 +163,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupTime.
+         * <p>The backup time range in the current time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00-02:00</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -159,7 +174,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94AC38B6-7C6D-45B2-BC03-B8750071A482</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

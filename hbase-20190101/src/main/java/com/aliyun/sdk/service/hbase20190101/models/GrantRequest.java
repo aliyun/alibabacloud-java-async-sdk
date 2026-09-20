@@ -120,6 +120,7 @@ public class GrantRequest extends Request {
         } 
 
         /**
+         * <p>The name of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,13 @@ public class GrantRequest extends Request {
         }
 
         /**
+         * <p>The permission list. Separate multiple permissions with commas (,). Valid values:</p>
+         * <ul>
+         * <li>READ: read permission.</li>
+         * <li>WRITE: write permission.</li>
+         * <li>ADMIN: admin permission.</li>
+         * <li>TRASH: purge permission.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +152,7 @@ public class GrantRequest extends Request {
         }
 
         /**
+         * <p>The ID of target instance. You can call the DescribeInstances operation to obtain target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +165,7 @@ public class GrantRequest extends Request {
         }
 
         /**
+         * <p>The namespace. An asterisk (*) indicates global, which means all namespaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +178,7 @@ public class GrantRequest extends Request {
         }
 
         /**
+         * <p>The table name. An asterisk (*) indicates global, which means all tables.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

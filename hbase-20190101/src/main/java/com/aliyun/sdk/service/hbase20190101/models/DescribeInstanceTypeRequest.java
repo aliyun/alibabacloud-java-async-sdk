@@ -59,7 +59,13 @@ public class DescribeInstanceTypeRequest extends Request {
         } 
 
         /**
-         * InstanceType.
+         * <p>The instance specification name. For more information, see <a href="https://help.aliyun.com/document_detail/194870.html">Instance node specifications</a>.</p>
+         * <blockquote>
+         * <p>If InstanceType is left empty, all instance specifications are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.n2.4xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

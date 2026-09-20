@@ -119,7 +119,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18D9CC47-D913-48BF-AB6B-4FA9B28FBDB1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -127,7 +130,7 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreFull.
+         * <p>The full restore details.</p>
          */
         public Builder restoreFull(RestoreFull restoreFull) {
             this.restoreFull = restoreFull;
@@ -135,7 +138,7 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreIncrDetail.
+         * <p>The incremental restore details.</p>
          */
         public Builder restoreIncrDetail(RestoreIncrDetail restoreIncrDetail) {
             this.restoreIncrDetail = restoreIncrDetail;
@@ -143,7 +146,7 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreSchema.
+         * <p>The schema restore details.</p>
          */
         public Builder restoreSchema(RestoreSchema restoreSchema) {
             this.restoreSchema = restoreSchema;
@@ -151,7 +154,7 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreSummary.
+         * <p>The restore summary.</p>
          */
         public Builder restoreSummary(RestoreSummary restoreSummary) {
             this.restoreSummary = restoreSummary;
@@ -558,7 +561,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * DataSize.
+             * <p>The total data size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2 kB</p>
              */
             public Builder dataSize(String dataSize) {
                 this.dataSize = dataSize;
@@ -566,7 +572,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Fail.
+             * <p>The number of failed full restores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fail(Integer fail) {
                 this.fail = fail;
@@ -574,7 +583,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -582,7 +594,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -598,7 +613,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * <p>The total speed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00 MB/s</p>
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -606,7 +624,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Succeed.
+             * <p>The number of successful restores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder succeed(Integer succeed) {
                 this.succeed = succeed;
@@ -614,7 +635,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -746,7 +770,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T06:45:44Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -754,7 +781,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The completion progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/0</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -762,7 +792,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreDelay.
+             * <p>The synchronization latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 ms</p>
              */
             public Builder restoreDelay(String restoreDelay) {
                 this.restoreDelay = restoreDelay;
@@ -770,7 +803,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreStartTs.
+             * <p>The synchronization start position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-02T18:00:00Z</p>
              */
             public Builder restoreStartTs(String restoreStartTs) {
                 this.restoreStartTs = restoreStartTs;
@@ -778,7 +814,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RestoredTs.
+             * <p>The synchronization position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder restoredTs(String restoredTs) {
                 this.restoredTs = restoredTs;
@@ -786,7 +825,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T06:45:44Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -794,7 +836,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -900,7 +945,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T06:45:44Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -916,7 +964,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T06:45:44Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -924,7 +975,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1105,7 +1159,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * Fail.
+             * <p>The number of failed restores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fail(Integer fail) {
                 this.fail = fail;
@@ -1113,7 +1170,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1121,7 +1181,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1137,7 +1200,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Succeed.
+             * <p>The number of successful restores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder succeed(Integer succeed) {
                 this.succeed = succeed;
@@ -1145,7 +1211,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -1264,7 +1333,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The completion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T06:45:51Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1272,7 +1344,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20201105144514</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -1280,7 +1355,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreToDate.
+             * <p>The point in time to which data is restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-04T05:15:00Z</p>
              */
             public Builder restoreToDate(String restoreToDate) {
                 this.restoreToDate = restoreToDate;
@@ -1288,7 +1366,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The restore start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T06:45:14Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1296,7 +1377,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1304,7 +1388,10 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetCluster.
+             * <p>The target cluster for the restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ld-m5e2t34kr54wgxxxx</p>
              */
             public Builder targetCluster(String targetCluster) {
                 this.targetCluster = targetCluster;

@@ -89,7 +89,10 @@ public class AddUserHdfsInfoRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -98,6 +101,7 @@ public class AddUserHdfsInfoRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,12 @@ public class AddUserHdfsInfoRequest extends Request {
         }
 
         /**
+         * <p>dfs.nameservices specifies the nameservices name of DFS. dfs.ha.namenodes specifies the DFS nodes, such as nn1 and nn2.
+         * dfs.namenode.http-address.{dfs.nameservices}.nn1 specifies the port 50070 connection of HDFS nn1.
+         * dfs.namenode.http-address.{dfs.nameservices}.nn2 specifies the port 50070 connection of HDFS nn2.
+         * dfs.namenode.rpc-address.{dfs.nameservices}.nn1 specifies the port 8020 connection of HDFS nn1.
+         * dfs.namenode.rpc-address.{dfs.nameservices}.nn2 specifies the port 8020 connection of HDFS nn2.
+         * Port 50070 connections and port 8020 connections exist on each HDFS node. The number of port 50070 and port 8020 connection pairs equals the number of HDFS nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

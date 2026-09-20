@@ -54,7 +54,10 @@ public class DeleteMultiZoneClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169A3910-A39E-4BC2-AA9F-E7AD8D473527</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

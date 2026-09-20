@@ -114,7 +114,10 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963355AD-A3B1-4654-AFFC-B5186EB8F889</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -401,10 +413,7 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>bdsId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bds-t4n3496whj23ia4k</p>
+             * BdsName.
              */
             public Builder bdsName(String bdsName) {
                 this.bdsName = bdsName;

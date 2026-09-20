@@ -67,7 +67,10 @@ public class DescribeDBInstanceUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2D841CE-D066-53E8-B9AC-3731DCC85397</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,15 @@ public class DescribeDBInstanceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The disk usage of the instance, which includes the following parameters:</p>
+         * <ul>
+         * <li>disk_used: the disk usage amount.</li>
+         * <li>disk_total: the total disk capacity.</li>
+         * <li>usage_rate: the disk usage rate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;disk_usage_record\&quot;:{\&quot;disk_used\&quot;:\&quot;0.9GB\&quot;,\&quot;disk_total\&quot;:\&quot;1156.1GB\&quot;,\&quot;usage_rate\&quot;:\&quot;1%\&quot;}}</p>
          */
         public Builder result(String result) {
             this.result = result;

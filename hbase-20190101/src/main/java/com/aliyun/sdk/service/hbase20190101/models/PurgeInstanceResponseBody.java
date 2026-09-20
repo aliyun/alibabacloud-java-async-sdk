@@ -54,7 +54,10 @@ public class PurgeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>276F899F-E952-496F-81B8-BD46D86854E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

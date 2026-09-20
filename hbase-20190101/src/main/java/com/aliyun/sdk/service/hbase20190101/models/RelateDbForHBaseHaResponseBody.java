@@ -54,7 +54,10 @@ public class RelateDbForHBaseHaResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC654531-0799-4502-AFA5-80EE1C16829A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

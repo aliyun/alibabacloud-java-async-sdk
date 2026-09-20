@@ -60,6 +60,7 @@ public class ListTagsRequest extends Request {
         } 
 
         /**
+         * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

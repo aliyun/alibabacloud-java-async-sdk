@@ -80,7 +80,10 @@ public class CreateMultiZoneClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The instance ID of the ApsaraDB for HBase multi-zone database instance that is active.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-t4nn71xa0yn56****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class CreateMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23232453****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +102,10 @@ public class CreateMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F68E8F5-0377-4CF8-8B1D-FFFD6F5804D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

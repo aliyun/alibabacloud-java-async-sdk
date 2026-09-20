@@ -80,7 +80,7 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * Full.
+         * <p>The details of the full backup.</p>
          */
         public Builder full(Full full) {
             this.full = full;
@@ -88,7 +88,7 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Incr.
+         * <p>The details of the incremental backup.</p>
          */
         public Builder incr(Incr incr) {
             this.incr = incr;
@@ -96,7 +96,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168793CB-7B31-43E7-ADAB-FE3E8D584D6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -448,7 +451,14 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * HasMore.
+             * <p>Indicates whether there is a next page. Valid values:</p>
+             * <ul>
+             * <li>true: There is a next page.</li>
+             * <li>false: There is no next page.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasMore(String hasMore) {
                 this.hasMore = hasMore;
@@ -456,7 +466,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * NextFullBackupDate.
+             * <p>The time of the next full backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-09T18:00:00Z</p>
              */
             public Builder nextFullBackupDate(String nextFullBackupDate) {
                 this.nextFullBackupDate = nextFullBackupDate;
@@ -464,7 +477,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -472,7 +488,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -488,7 +507,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -607,7 +629,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupLogSize.
+             * <p>The data size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>266 B</p>
              */
             public Builder backupLogSize(String backupLogSize) {
                 this.backupLogSize = backupLogSize;
@@ -615,7 +640,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Pos.
+             * <p>The synchronization point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-05T01:20:31Z</p>
              */
             public Builder pos(String pos) {
                 this.pos = pos;
@@ -623,7 +651,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * QueueLogNum.
+             * <p>The number of logs in the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queueLogNum(String queueLogNum) {
                 this.queueLogNum = queueLogNum;
@@ -631,7 +662,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RunningLogNum.
+             * <p>The number of logs being backed up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder runningLogNum(String runningLogNum) {
                 this.runningLogNum = runningLogNum;
@@ -639,7 +673,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * <p>The current write speed of the incremental backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00 MB/s</p>
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -647,7 +684,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the incremental backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;

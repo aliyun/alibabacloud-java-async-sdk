@@ -67,7 +67,10 @@ public class ModifyMultiZoneClusterNodeTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12341234123****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -75,7 +78,10 @@ public class ModifyMultiZoneClusterNodeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06CF7A6F-A81C-431D-BACD-793F24A67C54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -106,7 +106,10 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * FullBackupCycle.
+         * <p>The full backup cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder fullBackupCycle(Integer fullBackupCycle) {
             this.fullBackupCycle = fullBackupCycle;
@@ -114,7 +117,10 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MinHFileBackupCount.
+         * <p>The number of full backups to retain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minHFileBackupCount(Integer minHFileBackupCount) {
             this.minHFileBackupCount = minHFileBackupCount;
@@ -122,7 +128,10 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * NextFullBackupDate.
+         * <p>The date of the next full backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-09T18:00:00Z</p>
          */
         public Builder nextFullBackupDate(String nextFullBackupDate) {
             this.nextFullBackupDate = nextFullBackupDate;
@@ -130,7 +139,10 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33A23201-6038-4A6A-B76A-61047EA04E6A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

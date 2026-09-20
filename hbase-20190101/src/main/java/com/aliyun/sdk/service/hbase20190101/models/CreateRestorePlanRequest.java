@@ -134,6 +134,7 @@ public class CreateRestorePlanRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ApsaraDB for HBase Performance-enhanced Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,14 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to restore all tables. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Restores all tables in the ApsaraDB for HBase Performance-enhanced Edition cluster.</li>
+         * <li><strong>false</strong>: Does not restore all tables in the ApsaraDB for HBase Performance-enhanced Edition cluster.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If this parameter is set to <strong>true</strong>, the <strong>Tables</strong> parameter is invalid. If this parameter is set to <strong>false</strong>, the <strong>Tables</strong> parameter is required.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +167,7 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to restore data by using the copy method. Set the value to <strong>true</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +180,7 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
+         * <p>The point in time to which you want to restore data. The point in time must be within the recoverable time range. You can call the <a href="https://help.aliyun.com/document_detail/188365.html">DescribeRecoverableTimeRange</a> operation to query the recoverable time range.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +193,14 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
-         * Tables.
+         * <p>The table names. Specify one table name per line. Wildcards (*) are not supported.</p>
+         * <ul>
+         * <li>To restore to the current table, use the format: <code>namespace:table</code>. Example: <code>default:testTable</code>.</li>
+         * <li>To restore to a different table, use the format: <code>namespace:table/namespace:table2</code>. Example: <code>default:testTable/default:testTable2</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test_ns:test_table/test_ns:test_table2</p>
          */
         public Builder tables(String tables) {
             this.putQueryParameter("Tables", tables);
@@ -191,6 +209,14 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
+         * <p>The ID of the ApsaraDB for HBase Performance-enhanced Edition cluster to which data is restored. You can also restore data to the cluster that is currently backed up.</p>
+         * <blockquote>
+         * <p>The specified ApsaraDB for HBase Performance-enhanced Edition cluster and the backed-up ApsaraDB for HBase Performance-enhanced Edition cluster must meet the following requirements:<ul></p>
+         * </blockquote>
+         * <li>They are of the same version.</li>
+         * <li>They are in the same region.</li>
+         * <li>They are associated with the BDS cluster.</li></ul>.
+         * 
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,10 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD23BBB4-64C2-42A4-B2E2-7E56C7AA815A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

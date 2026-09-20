@@ -104,6 +104,7 @@ public class DeleteGlobalResourceRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class DeleteGlobalResourceRequest extends Request {
         }
 
         /**
+         * <p>The resource name. PubPhoenixSLBQueryServerVip releases the public endpoint of the HBase SQL service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class DeleteGlobalResourceRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

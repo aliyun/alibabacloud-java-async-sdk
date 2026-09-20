@@ -130,6 +130,10 @@ public class CancelActiveOperationTasksRequest extends Request {
         } 
 
         /**
+         * <p>The O&amp;M task IDs. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/414458.html">DescribeActiveOperationTasks</a> to obtain O&amp;M task IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

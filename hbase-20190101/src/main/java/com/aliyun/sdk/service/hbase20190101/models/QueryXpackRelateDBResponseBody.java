@@ -75,7 +75,10 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>288E9010-36DD-499C-B4DA-61E4362DA4CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -165,6 +165,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: This operation can be called only when payType is set to Postpaid.</p>
+     * 
      * @param request the request parameters of ConvertInstance  ConvertInstanceRequest
      * @return ConvertInstanceResponse
      */
@@ -183,6 +186,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only ApsaraDB for HBase Performance-enhanced Edition is supported.</p>
+     * 
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -201,6 +207,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, this operation supports only HBaseue clusters. The EnableHBaseueBackup operation is compatible with this operation and performs automatic creation of a backup plan after a BDS cluster is created.</p>
+     * 
      * @param request the request parameters of CreateBackupPlan  CreateBackupPlanRequest
      * @return CreateBackupPlanResponse
      */
@@ -291,6 +300,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only version 2.0 of the HBaseue engine is supported.</p>
+     * 
      * @param request the request parameters of CreateMultiZoneCluster  CreateMultiZoneClusterRequest
      * @return CreateMultiZoneClusterResponse
      */
@@ -309,6 +321,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and restore feature is enabled for the ApsaraDB for HBase Performance-enhanced Edition cluster and that the target ApsaraDB for HBase Performance-enhanced Edition cluster is associated with the corresponding BDS.</p>
+     * 
      * @param request the request parameters of CreateRestorePlan  CreateRestorePlanRequest
      * @return CreateRestorePlanResponse
      */
@@ -345,6 +360,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only supported for HBase Enhanced Edition (HBaseue).</p>
+     * 
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
      * @return DeleteAccountResponse
      */
@@ -435,6 +453,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the instance must meet the following conditions:</p>
+     * <ul>
+     * <li>The instance status is <strong>Running</strong>.</li>
+     * <li>The billing method of the instance is <strong>pay-as-you-go</strong>.<blockquote>
+     * <p>Subscription instances cannot be deleted by calling this operation. They are automatically released upon expiration. To release a subscription instance in advance, submit a ticket.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
      * @return DeleteInstanceResponse
      */
@@ -579,6 +607,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation currently supports only HBaseue. Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue instance.</p>
+     * 
      * @param request the request parameters of DescribeBackupPlanConfig  DescribeBackupPlanConfigRequest
      * @return DescribeBackupPlanConfigResponse
      */
@@ -633,6 +664,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The backup and restore feature of the HBase Enhanced Edition instance is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/145767.html">Enable backup and restore</a>.</p>
+     * 
      * @param request the request parameters of DescribeBackupSummary  DescribeBackupSummaryRequest
      * @return DescribeBackupSummaryResponse
      */
@@ -651,6 +685,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that backup records exist. You can call the DescribeBackupSummary operation to obtain backup records.</p>
+     * 
      * @param request the request parameters of DescribeBackupTables  DescribeBackupTablesRequest
      * @return DescribeBackupTablesResponse
      */
@@ -741,6 +778,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, cluster resources are fully cleaned up 7 days after deletion. If you have called the PurgeInstance operation or set ImmediateDeleteFlag to true when calling the delete operation, the resources have already been fully cleaned up.</p>
+     * 
      * @param request the request parameters of DescribeDeletedInstances  DescribeDeletedInstancesRequest
      * @return DescribeDeletedInstancesResponse
      */
@@ -813,6 +853,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The complete specification mapping table is based on the list returned by this operation.
+     * If the response returns an &quot;instanceType is not found&quot; error, the specification has been deprecated. If you have a strong dependency on this specification, contact the Alibaba Cloud HBase management team.</p>
+     * 
      * @param request the request parameters of DescribeInstanceType  DescribeInstanceTypeRequest
      * @return DescribeInstanceTypeResponse
      */
@@ -921,6 +965,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</p>
+     * 
      * @param request the request parameters of DescribeRecoverableTimeRange  DescribeRecoverableTimeRangeRequest
      * @return DescribeRecoverableTimeRangeResponse
      */
@@ -957,6 +1004,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call DescribeRestoreSummary to obtain restoration records.</p>
+     * 
      * @param request the request parameters of DescribeRestoreFullDetails  DescribeRestoreFullDetailsRequest
      * @return DescribeRestoreFullDetailsResponse
      */
@@ -975,6 +1025,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call the DescribeRestoreSummary operation to obtain restoration records.</p>
+     * 
      * @param request the request parameters of DescribeRestoreIncrDetail  DescribeRestoreIncrDetailRequest
      * @return DescribeRestoreIncrDetailResponse
      */
@@ -993,6 +1046,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist.</p>
+     * 
      * @param request the request parameters of DescribeRestoreSchemaDetails  DescribeRestoreSchemaDetailsRequest
      * @return DescribeRestoreSchemaDetailsResponse
      */
@@ -1011,6 +1067,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that backup and recovery is enabled for the HBaseue cluster.</p>
+     * 
      * @param request the request parameters of DescribeRestoreSummary  DescribeRestoreSummaryRequest
      * @return DescribeRestoreSummaryResponse
      */
@@ -1029,6 +1088,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restore records exist. You can call DescribeRestoreSummary to obtain restore records.</p>
+     * 
      * @param request the request parameters of DescribeRestoreTables  DescribeRestoreTablesRequest
      * @return DescribeRestoreTablesResponse
      */
@@ -1155,6 +1217,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>CloudMonitor has been migrated. This operation is no longer in use. Access monitoring from the Monitoring and Alerts page in cluster management.</p>
+     * 
      * @param request the request parameters of GetMultimodeCmsUrl  GetMultimodeCmsUrlRequest
      * @return GetMultimodeCmsUrlResponse
      */
@@ -1245,6 +1310,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must specify at least one of the ResourceId and Tag parameters. Otherwise, an error is returned.</p>
+     * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -1299,6 +1367,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In addition to notifications sent by text message, phone call, email, or internal message, O&amp;M events of ApsaraDB for HBase (such as minor engine version updates) are also displayed in the console. In addition to calling this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/405057.html">Query or manage pending events</a>.</p>
+     * 
      * @param request the request parameters of ModifyActiveOperationTasks  ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse
      */
@@ -1317,6 +1388,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</p>
+     * 
      * @param request the request parameters of ModifyBackupPlanConfig  ModifyBackupPlanConfigRequest
      * @return ModifyBackupPlanConfigResponse
      */
@@ -1659,6 +1733,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation applies only to subscription HBase instances.</p>
+     * 
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
      * @return RenewInstanceResponse
      */
@@ -1749,6 +1826,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Scales up the number of core nodes in a cluster. You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</p>
+     * 
      * @param request the request parameters of ResizeNodeCount  ResizeNodeCountRequest
      * @return ResizeNodeCountResponse
      */
@@ -1821,6 +1901,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Extension service<br>For example: the Lindorm service compatible with the HBaseProxy protocol.</p>
+     * 
      * @param request the request parameters of SwitchService  SwitchServiceRequest
      * @return SwitchServiceResponse
      */

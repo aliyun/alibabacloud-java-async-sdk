@@ -158,7 +158,10 @@ public class DescribeBackupsRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * <p>The ID of the backup to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-xxxx</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -167,6 +170,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +183,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the backup query. Format: yyyy-MM-dd HH:mm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-23 23:59:59</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +195,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * EndTimeUTC.
+         * <p>The end time of the backup query in UTC. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mmZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-23T15:59:59Z</p>
          */
         public Builder endTimeUTC(String endTimeUTC) {
             this.putQueryParameter("EndTimeUTC", endTimeUTC);
@@ -197,7 +207,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -206,7 +219,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +231,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the backup query. Format: yyyy-MM-dd HH:mm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-13 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -224,7 +243,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * StartTimeUTC.
+         * <p>The start time of the backup query in UTC. Format: yyyy-MM-ddTHH:mmZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-12T16:00:00Z</p>
          */
         public Builder startTimeUTC(String startTimeUTC) {
             this.putQueryParameter("StartTimeUTC", startTimeUTC);

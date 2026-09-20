@@ -119,6 +119,7 @@ public class CreateHbaseHaSlbRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the BDS cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +132,10 @@ public class CreateHbaseHaSlbRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value cannot exceed 64 printable ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,6 +144,7 @@ public class CreateHbaseHaSlbRequest extends Request {
         }
 
         /**
+         * <p>The high-availability ID in the BDS active-active management.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,11 @@ public class CreateHbaseHaSlbRequest extends Request {
         }
 
         /**
+         * <p>The high-availability type. Valid values:</p>
+         * <ul>
+         * <li>thrift</li>
+         * <li>phoenix.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +174,11 @@ public class CreateHbaseHaSlbRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the high-availability type is on the primary or secondary instance. Valid values:</p>
+         * <ul>
+         * <li>Active: The high-availability type is on the primary instance.</li>
+         * <li>Standby: The high-availability type is on the secondary instance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

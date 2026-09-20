@@ -118,6 +118,7 @@ public class ModifyInstanceServiceConfigRequest extends Request {
         } 
 
         /**
+         * <p>The ID of target instance. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,11 @@ public class ModifyInstanceServiceConfigRequest extends Request {
         }
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;The name of the configuration item to modify. You can call the <a href="https://help.aliyun.com/document_detail/201980.html">ListInstanceServiceConfigurations</a> operation to query the configuration item name.
+         * &lt;props=&quot;intl&quot;&gt;The name of the configuration item to modify.</p>
+         * <blockquote>
+         * <p>If you want to modify multiple configuration items, specify the Parameters parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +148,11 @@ public class ModifyInstanceServiceConfigRequest extends Request {
         }
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;The value of the configuration item to modify. You can call the <a href="https://help.aliyun.com/document_detail/201980.html">ListInstanceServiceConfigurations</a> operation to query the configuration item value.
+         * &lt;props=&quot;intl&quot;&gt;The value of the configuration item to modify.</p>
+         * <blockquote>
+         * <p>If you want to modify multiple configuration items, specify the Parameters parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +165,10 @@ public class ModifyInstanceServiceConfigRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The JSON-formatted parameters for modifying multiple configuration items. The key specifies the name of the configuration item, and the value specifies the value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1=value1&quot;, &quot;key2=value2&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -163,7 +177,14 @@ public class ModifyInstanceServiceConfigRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the instance after the configuration is modified. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Restart the instance.</li>
+         * <li><strong>false</strong>: Do not restart the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

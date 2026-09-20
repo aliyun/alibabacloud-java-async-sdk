@@ -127,7 +127,10 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01262E9C-B0CC-4663-82FA-D50173649F92</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +168,10 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;

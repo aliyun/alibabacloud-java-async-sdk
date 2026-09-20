@@ -74,6 +74,7 @@ public class UpgradeMinorVersionRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * Components.
+         * <p>The names of the components to upgrade. Separate multiple component names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HADOOP</p>
          */
         public Builder components(String components) {
             this.putQueryParameter("Components", components);

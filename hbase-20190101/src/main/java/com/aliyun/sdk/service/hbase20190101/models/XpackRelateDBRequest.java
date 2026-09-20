@@ -90,6 +90,7 @@ public class XpackRelateDBRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the current Spark instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class XpackRelateDBRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the cluster to associate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,16 @@ public class XpackRelateDBRequest extends Request {
         }
 
         /**
+         * <p>The type of database to associate. Valid values:</p>
+         * <ul>
+         * <li><strong>hdfs</strong></li>
+         * <li><strong>hbase</strong></li>
+         * <li><strong>mongodb</strong></li>
+         * <li><strong>mysql</strong></li>
+         * <li><strong>polardb_mysql</strong></li>
+         * <li><strong>redis</strong></li>
+         * <li><strong>geomesa</strong>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

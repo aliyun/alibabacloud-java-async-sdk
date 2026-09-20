@@ -75,6 +75,7 @@ public class DeleteUserHdfsInfoRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteUserHdfsInfoRequest extends Request {
         }
 
         /**
+         * <p>The value of dfs.nameservices in addUserHdfsInfo. This value is returned when you call the <a href="https://help.aliyun.com/document_detail/144509.html">QueryXpackRelateDB</a> operation with relateDB set to hdfs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,10 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC682A80-7677-4294-975C-CFEA425381DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreSchema.
+         * <p>The schema restoration details.</p>
          */
         public Builder restoreSchema(RestoreSchema restoreSchema) {
             this.restoreSchema = restoreSchema;
@@ -385,7 +388,10 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * Fail.
+             * <p>The number of failed restorations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fail(Integer fail) {
                 this.fail = fail;
@@ -393,7 +399,10 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -401,7 +410,10 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -417,7 +429,10 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Succeed.
+             * <p>The number of successful restorations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder succeed(Integer succeed) {
                 this.succeed = succeed;
@@ -425,7 +440,10 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

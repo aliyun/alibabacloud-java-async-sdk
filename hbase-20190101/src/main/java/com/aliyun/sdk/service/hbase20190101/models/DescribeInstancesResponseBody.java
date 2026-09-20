@@ -114,7 +114,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the instance list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of rows displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EBECBF12-2E34-41BE-8DE9-FC3700D4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

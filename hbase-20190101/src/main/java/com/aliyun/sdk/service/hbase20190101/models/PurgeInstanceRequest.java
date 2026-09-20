@@ -60,6 +60,7 @@ public class PurgeInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the deleted cluster to be cleaned up. You can call the DescribeDeletedInstances operation to obtain the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

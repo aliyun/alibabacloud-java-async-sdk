@@ -75,6 +75,7 @@ public class DescribeRestoreTablesRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DescribeRestoreTablesRequest extends Request {
         }
 
         /**
+         * <p>The restore record ID. You can call the DescribeRestoreSummary operation to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

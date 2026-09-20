@@ -67,7 +67,10 @@ public class UpgradeMultiZoneClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C532A4D4-9451-4460-BB3E-300FEC852D3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpgradeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradingComponents.
+         * <p>The components that triggered the upgrade among the multiple components to be upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LINDORM</p>
          */
         public Builder upgradingComponents(String upgradingComponents) {
             this.upgradingComponents = upgradingComponents;

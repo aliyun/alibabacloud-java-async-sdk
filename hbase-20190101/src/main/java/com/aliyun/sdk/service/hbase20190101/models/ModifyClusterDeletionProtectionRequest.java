@@ -75,6 +75,7 @@ public class ModifyClusterDeletionProtectionRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,11 @@ public class ModifyClusterDeletionProtectionRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable deletion protection. Valid values:</p>
+         * <ul>
+         * <li>true: Enables deletion protection. The cluster cannot be deleted when deletion protection is enabled.</li>
+         * <li>false: Disables deletion protection. The cluster can be deleted.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

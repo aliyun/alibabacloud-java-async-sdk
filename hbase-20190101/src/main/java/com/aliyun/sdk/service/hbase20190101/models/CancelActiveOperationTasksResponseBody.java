@@ -67,7 +67,10 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Ids.
+         * <p>The O&amp;M task IDs. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111,22222</p>
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -75,7 +78,10 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE4F6C34-065F-45AA-F5BN-4B8D816F6305</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

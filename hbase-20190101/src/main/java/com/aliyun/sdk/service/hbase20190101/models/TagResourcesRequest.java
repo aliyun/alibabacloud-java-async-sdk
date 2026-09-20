@@ -90,6 +90,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of instance IDs. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to query instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -182,7 +185,15 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * <blockquote>
+             * <p>N specifies the sequence number of the tag key. For example:<ul></p>
+             * </blockquote>
+             * <li>Tag.1.Key specifies the key of the first tag.</li>
+             * <li>Tag.2.Key specifies the key of the second tag.</li></ul>.
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -190,7 +201,15 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * <blockquote>
+             * <p>N specifies the sequence number of the tag value. For example:<ul></p>
+             * </blockquote>
+             * <li>Tag.1.Value specifies the value of the first tag.</li>
+             * <li>Tag.2.Value specifies the value of the second tag.</li></ul>.
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

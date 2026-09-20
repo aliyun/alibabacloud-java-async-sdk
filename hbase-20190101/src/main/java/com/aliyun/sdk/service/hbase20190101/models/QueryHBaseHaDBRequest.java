@@ -60,6 +60,7 @@ public class QueryHBaseHaDBRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the BDS cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

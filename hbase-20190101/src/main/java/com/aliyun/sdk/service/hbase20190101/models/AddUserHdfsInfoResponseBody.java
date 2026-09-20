@@ -54,7 +54,10 @@ public class AddUserHdfsInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FB0B7918-198C-46A8-AB9B-FE15403B1F0A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

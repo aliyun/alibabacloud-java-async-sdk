@@ -119,7 +119,10 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * HasMoreRestoreRecord.
+         * <p>Indicates whether there is a next page. This parameter is currently not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder hasMoreRestoreRecord(Integer hasMoreRestoreRecord) {
             this.hasMoreRestoreRecord = hasMoreRestoreRecord;
@@ -127,7 +130,10 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +141,10 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +152,10 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE639ED7-F0F3-4A71-911E-CF8EC088816E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;

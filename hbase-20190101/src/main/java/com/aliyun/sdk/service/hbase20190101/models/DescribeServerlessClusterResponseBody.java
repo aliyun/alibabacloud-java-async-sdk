@@ -379,7 +379,14 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * AutoRenew.
+         * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong>: Auto-renewal is not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.autoRenew = autoRenew;
@@ -387,7 +394,14 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterType.
+         * <p>The cluster type. Valid values:</p>
+         * <ul>
+         * <li><strong>Cluster</strong>: Cluster Edition.</li>
+         * <li><strong>Single</strong>: single-node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>single</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -395,7 +409,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-12T14:40:46</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -403,7 +420,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CuSize.
+         * <p>The compute unit (CU) size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder cuSize(String cuSize) {
             this.cuSize = cuSize;
@@ -411,7 +431,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * DiskSize.
+         * <p>The disk size of the node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder diskSize(String diskSize) {
             this.diskSize = diskSize;
@@ -419,7 +442,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-12T14:40:46</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -427,7 +453,14 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * HaType.
+         * <p>Indicates whether high availability (HA) is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: HA is enabled.</li>
+         * <li><strong>false</strong>: HA is not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder haType(String haType) {
             this.haType = haType;
@@ -435,7 +468,14 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * HasUser.
+         * <p>Indicates whether the cluster has users. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The cluster has users.</li>
+         * <li><strong>false</strong>: The cluster does not have users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hasUser(String hasUser) {
             this.hasUser = hasUser;
@@ -443,7 +483,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * InnerEndpoint.
+         * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://sh-wz91452kg946i****-lindorm-serverless-in.lindorm.rds.aliyuncs.com:443">https://sh-wz91452kg946i****-lindorm-serverless-in.lindorm.rds.aliyuncs.com:443</a></p>
          */
         public Builder innerEndpoint(String innerEndpoint) {
             this.innerEndpoint = innerEndpoint;
@@ -451,7 +494,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp16f1441y6p2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -459,7 +505,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -467,7 +516,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * IsDeletionProtection.
+         * <p>Indicates whether deletion protection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDeletionProtection(String isDeletionProtection) {
             this.isDeletionProtection = isDeletionProtection;
@@ -475,7 +527,13 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * LockMode.
+         * <p>The lock type of the cluster.</p>
+         * <blockquote>
+         * <p>This parameter does not return a value.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>过期</p>
          */
         public Builder lockMode(String lockMode) {
             this.lockMode = lockMode;
@@ -483,7 +541,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MainVersion.
+         * <p>The major version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.8</p>
          */
         public Builder mainVersion(String mainVersion) {
             this.mainVersion = mainVersion;
@@ -491,7 +552,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OuterEndpoint.
+         * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://sh-wz91452kg946i****-lindorm-serverless.lindorm.rds.aliyuncs.com:443">https://sh-wz91452kg946i****-lindorm-serverless.lindorm.rds.aliyuncs.com:443</a></p>
          */
         public Builder outerEndpoint(String outerEndpoint) {
             this.outerEndpoint = outerEndpoint;
@@ -499,7 +563,14 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -507,7 +578,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -515,7 +589,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89F81C30-320B-4550-91DB-C37C81D2358F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -523,7 +600,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ReserverMaxQpsNum.
+         * <p>The maximum reserved QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder reserverMaxQpsNum(String reserverMaxQpsNum) {
             this.reserverMaxQpsNum = reserverMaxQpsNum;
@@ -531,7 +611,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ReserverMinQpsNum.
+         * <p>The minimum reserved QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder reserverMinQpsNum(String reserverMinQpsNum) {
             this.reserverMinQpsNum = reserverMinQpsNum;
@@ -539,7 +622,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-fjm2d4v7sf****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -547,7 +633,16 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The current status. Valid values:</p>
+         * <ul>
+         * <li><strong>CREATING</strong>: being created.</li>
+         * <li><strong>ACTIVATION</strong>: running.</li>
+         * <li><strong>DELETING</strong>: being deleted.</li>
+         * <li><strong>RESTARTING</strong>: being restarted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -555,7 +650,15 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateStatus.
+         * <p>The minor version upgrade status. Valid values:</p>
+         * <ul>
+         * <li><strong>YES</strong>: An upgrade is available.</li>
+         * <li><strong>NO</strong>: No upgrade is available.</li>
+         * <li><strong>PENDING</strong>: An upgrade is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         public Builder updateStatus(String updateStatus) {
             this.updateStatus = updateStatus;
@@ -563,7 +666,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp191ipotqf****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -571,7 +677,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp120k6ixs4eoghz****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -579,7 +688,10 @@ public class DescribeServerlessClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

@@ -80,7 +80,10 @@ public class CreateClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp1hy2sjf8gd****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23232069786****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +102,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E19E345-101D-4014-946C-A205</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

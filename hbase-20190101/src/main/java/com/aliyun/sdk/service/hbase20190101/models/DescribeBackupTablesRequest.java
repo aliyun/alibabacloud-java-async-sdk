@@ -103,6 +103,7 @@ public class DescribeBackupTablesRequest extends Request {
         } 
 
         /**
+         * <p>The backup record ID. You can call the DescribeBackupSummary operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class DescribeBackupTablesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the backup cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class DescribeBackupTablesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -136,7 +141,10 @@ public class DescribeBackupTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

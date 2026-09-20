@@ -103,6 +103,7 @@ public class DescribeRestoreFullDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class DescribeRestoreFullDetailsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +128,10 @@ public class DescribeRestoreFullDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -133,6 +140,7 @@ public class DescribeRestoreFullDetailsRequest extends Request {
         }
 
         /**
+         * <p>The restoration record ID. You can call DescribeRestoreSummary to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

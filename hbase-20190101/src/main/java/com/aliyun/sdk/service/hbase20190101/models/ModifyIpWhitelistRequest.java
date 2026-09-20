@@ -104,6 +104,7 @@ public class ModifyIpWhitelistRequest extends Request {
         } 
 
         /**
+         * <p>The ID of target instance. You can call <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> to obtain target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ModifyIpWhitelistRequest extends Request {
         }
 
         /**
+         * <p>The name of the whitelist group for the target instance. You can invoke <a href="https://help.aliyun.com/document_detail/144606.html">DescribeIpWhitelist</a> to obtain the whitelist group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class ModifyIpWhitelistRequest extends Request {
         }
 
         /**
-         * IpList.
+         * <p>The IP addresses in the whitelist group after modification. Separate multiple IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.120.XX.XX</p>
          */
         public Builder ipList(String ipList) {
             this.putQueryParameter("IpList", ipList);
@@ -137,6 +142,11 @@ public class ModifyIpWhitelistRequest extends Request {
         }
 
         /**
+         * <p>The version of the IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>4</strong>: IPv4.</li>
+         * <li><strong>6</strong>: IPv6.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,10 +75,11 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
+         * <p>The name of the existing account to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test01</p>
+         * <p>test01****</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -87,6 +88,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -74,6 +74,7 @@ public class DeleteMultiZoneClusterRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the multi-zone cluster to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,14 @@ public class DeleteMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * ImmediateDeleteFlag.
+         * <p>Specifies whether to immediately delete the instance. By default, the instance is moved to the recycle bin and permanently deleted after 7 days. Valid values:</p>
+         * <ul>
+         * <li>true: Immediately deletes the instance without moving it to the recycle bin. Use this option with caution.</li>
+         * <li>false: Moves the instance to the recycle bin. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder immediateDeleteFlag(Boolean immediateDeleteFlag) {
             this.putQueryParameter("ImmediateDeleteFlag", immediateDeleteFlag);

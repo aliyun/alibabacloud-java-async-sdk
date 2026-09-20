@@ -67,7 +67,10 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8EC240-BB13-4DBC-B955-F90170E82609</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradingComponents.
+         * <p>The components that were successfully upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HADOOP</p>
          */
         public Builder upgradingComponents(String upgradingComponents) {
             this.upgradingComponents = upgradingComponents;

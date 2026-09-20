@@ -54,7 +54,10 @@ public class ModifyClusterDeletionProtectionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24C80BD8-C710-4138-893A-D2AFED4FC13D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

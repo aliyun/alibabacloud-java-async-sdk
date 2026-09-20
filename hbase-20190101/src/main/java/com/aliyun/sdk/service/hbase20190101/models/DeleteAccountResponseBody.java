@@ -54,7 +54,10 @@ public class DeleteAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>729CB2A7-3065-53A9-B27C-7033CA4*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

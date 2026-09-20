@@ -473,6 +473,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         } 
 
         /**
+         * <p>The vSwitch ID of the arbiter zone. The vSwitch must be in the zone specified by ArbiterZoneId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -485,6 +486,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The zone ID of the arbiter zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -497,6 +499,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The version of the deployment architecture. Currently, only the hbaseue engine type is supported. Set the value to <strong>2.0</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -509,7 +512,14 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * AutoRenewPeriod.
+         * <p>The Unified Auto Renewal Cycle. Unit: months.</p>
+         * <blockquote>
+         * <ul><li>Default value: 0, which indicates that auto-renewal is disabled.</li>
+         * </blockquote>
+         * <li>If AutoRenewPeriod is set to 2, the instance is automatically renewed for two epochs upon expiration.</li></ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -518,7 +528,10 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfh3sf5gslfksfk****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -527,7 +540,15 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The name of the instance. The following rules apply:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with an uppercase letter, a lowercase letter, or a Chinese character.</li>
+         * <li>The name can contain digits or special characters, including periods (.), hyphens (-), and underscores (_).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hbaseue_test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -536,6 +557,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The disk size of the node. Valid values: 400 to 64000. Unit: GB. The value must be a multiple of 40.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -548,6 +570,13 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The disk type of the core node. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>local_hdd_pro</strong>: throughput-intensive local disk.</li>
+         * <li><strong>local_ssd_pro</strong>: I/O-intensive local disk.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -560,6 +589,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The node specifications of the core node. You can invoke the <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> operation to query the node specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -572,6 +602,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The number of core nodes. Valid values: 2 to 20. The value must be an even number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -584,6 +615,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The service type. Currently, only ApsaraDB for HBase Performance-enhanced Edition is supported. Set the value to <strong>hbaseue</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -596,6 +628,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The version number of the engine type. Set the value to <strong>2.0</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -608,6 +641,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The disk size of the log node. Valid values: 400 to 64000. Unit: GB. The value must be a multiple of 40.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -620,6 +654,13 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The disk type of the log node. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>local_hdd_pro</strong>: throughput-intensive local disk.</li>
+         * <li><strong>local_ssd_pro</strong>: I/O-intensive local disk.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -632,6 +673,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The node specifications of the log node. You can invoke the <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> operation to query the node specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -644,6 +686,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The number of log nodes. Valid values: 4 to 400. The value must be a multiple of 4.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -656,6 +699,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The node specifications of the master node. You can invoke the <a href="https://help.aliyun.com/document_detail/145796.html">DescribeInstanceType</a> operation to query the node specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -668,6 +712,8 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;The zone combination. You can go to the buy page or call the <a href="https://help.aliyun.com/document_detail/203039.html">DescribeMultiZoneAvailableRegions</a> operation to view the supported zone combinations.
+         * &lt;props=&quot;intl&quot;&gt;The zone combination. You can go to the buy page to view the supported zone combinations..</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -680,6 +726,11 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -692,7 +743,17 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription period of the subscription instance. Valid values:</p>
+         * <ul>
+         * <li>If PeriodUnit is set to year, valid values are 1 to 3.</li>
+         * <li>If PeriodUnit is set to month, valid values are 1 to 9.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required only when PayType is set to Prepaid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -701,7 +762,17 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription period for the subscription instance. Valid values:</p>
+         * <ul>
+         * <li><strong>year</strong>: year.</li>
+         * <li><strong>month</strong>: month.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required only when PayType is set to Prepaid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -710,6 +781,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID of the primary zone instance. The vSwitch must be in the zone specified by PrimaryZoneId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -722,6 +794,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The zone ID of the primary zone instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -734,6 +807,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/144489.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -746,7 +820,10 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group. You can query the resource group ID in the resource group console. If you do not specify this parameter, the instance is added to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-gg3f4f5d5g5w****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -755,7 +832,13 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
+         * <blockquote>
+         * <p>If the IP address is set to 127.0.0.1, no IP addresses are allowed to access the instance. For example, 192.168.0.0/24 indicates that all IP addresses in the 192.168.0.XX range are allowed to access the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -764,6 +847,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID of the secondary zone instance. The vSwitch must be in the zone specified by StandbyZoneId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -776,6 +860,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The zone ID of the secondary zone instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -788,6 +873,7 @@ public class CreateMultiZoneClusterRequest extends Request {
         }
 
         /**
+         * <p>The ID of the virtual private cloud (VPC). The VPC must be in the region specified by RegionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

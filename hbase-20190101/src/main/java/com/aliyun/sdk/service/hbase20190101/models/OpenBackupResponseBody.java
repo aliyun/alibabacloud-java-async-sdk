@@ -54,7 +54,10 @@ public class OpenBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C977DF60-7D06-4E34-A27D-8BC696C5112A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

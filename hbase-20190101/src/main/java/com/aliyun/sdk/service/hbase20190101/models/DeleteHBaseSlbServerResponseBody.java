@@ -54,7 +54,10 @@ public class DeleteHBaseSlbServerResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7242130A-82CF-49BF-AB32-30DCB819EBA6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

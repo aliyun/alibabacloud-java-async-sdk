@@ -90,6 +90,7 @@ public class ModifyInstanceMaintainTimeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance for which you want to modify the O&amp;M window. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ModifyInstanceMaintainTimeRequest extends Request {
         }
 
         /**
+         * <p>The end time of the instance O&amp;M window. Specify the time in the HH:mmZ format in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ModifyInstanceMaintainTimeRequest extends Request {
         }
 
         /**
+         * <p>The start time of the instance O&amp;M window. Specify the time in the HH:mmZ format in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

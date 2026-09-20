@@ -67,7 +67,10 @@ public class DescribeSubDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4208C83-B9BC-4A64-A739-8F88E98DA469</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class DescribeSubDomainResponseBody extends TeaModel {
         }
 
         /**
-         * SubDomain.
+         * <p>The available subdomain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h-aliyun</p>
          */
         public Builder subDomain(String subDomain) {
             this.subDomain = subDomain;
