@@ -138,7 +138,7 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>test**</p>
@@ -150,7 +150,7 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,7 +162,7 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -174,15 +174,19 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * <p>The service type. Valid values:</p>
+         * <p>The applicable product type. Valid values:</p>
          * <ul>
-         * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
-         * <li><strong>slb</strong>: Server Load Balancer (SLB).</li>
-         * <li><strong>eip</strong>: Elastic IP Address (EIP).</li>
-         * <li><strong>gf-eip</strong>: EIP with Anti-DDoS (Enhanced) enabled.</li>
+         * <li><p><strong>ecs</strong>: queries the default policy applicable to ECS.</p>
+         * </li>
+         * <li><p><strong>slb</strong>: queries the default policy applicable to SLB.</p>
+         * </li>
+         * <li><p><strong>eip</strong>: queries the default policy applicable to EIP.</p>
+         * </li>
+         * <li><p><strong>gf-eip</strong>: queries the default policy applicable to elastic IP addresses (EIPs) with Anti-DDoS Proxy Enabled.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only if Type is set to <code>default</code>.</p>
+         * <p>This parameter takes effect only when the policy type is <code>default</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -195,11 +199,14 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the policy. Valid values:</p>
+         * <p>The policy type. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: the default mitigation policy.</li>
-         * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
-         * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+         * <li><p><strong>default</strong>: the default mitigation policy.</p>
+         * </li>
+         * <li><p><strong>l3</strong>: the IP-specific mitigation policy.</p>
+         * </li>
+         * <li><p><strong>l4</strong>: the port-specific mitigation policy.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

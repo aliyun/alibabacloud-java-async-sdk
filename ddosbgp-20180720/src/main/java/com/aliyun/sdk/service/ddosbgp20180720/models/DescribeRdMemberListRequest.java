@@ -114,7 +114,7 @@ public class DescribeRdMemberListRequest extends Request {
          * <p>The ID of the resource directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>rd-x9bLhd</p>
+         * <p>rd-x9bL**</p>
          */
         public Builder resourceDirectoryId(String resourceDirectoryId) {
             this.putQueryParameter("ResourceDirectoryId", resourceDirectoryId);

@@ -37,6 +37,10 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InterceptModule")
+    private String interceptModule;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkProtocol")
     private String networkProtocol;
 
@@ -72,6 +76,7 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         this.destinationPort = builder.destinationPort;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.interceptModule = builder.interceptModule;
         this.networkProtocol = builder.networkProtocol;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
@@ -120,6 +125,13 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return interceptModule
+     */
+    public String getInterceptModule() {
+        return this.interceptModule;
     }
 
     /**
@@ -176,6 +188,7 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         private Long destinationPort; 
         private Long endTime; 
         private String instanceId; 
+        private String interceptModule; 
         private String networkProtocol; 
         private Long page; 
         private Long pageSize; 
@@ -194,6 +207,7 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
             this.destinationPort = request.destinationPort;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.interceptModule = request.interceptModule;
             this.networkProtocol = request.networkProtocol;
             this.page = request.page;
             this.pageSize = request.pageSize;
@@ -204,7 +218,10 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         } 
 
         /**
-         * DestinationIp.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.118.170.18</p>
          */
         public Builder destinationIp(String destinationIp) {
             this.putQueryParameter("DestinationIp", destinationIp);
@@ -213,7 +230,10 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
-         * DestinationPort.
+         * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder destinationPort(Long destinationPort) {
             this.putQueryParameter("DestinationPort", destinationPort);
@@ -222,6 +242,7 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the DDoS attack event to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,6 +255,7 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the Anti-DDoS Origin instance to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +268,22 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
-         * NetworkProtocol.
+         * <p>The interception module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src</p>
+         */
+        public Builder interceptModule(String interceptModule) {
+            this.putQueryParameter("InterceptModule", interceptModule);
+            this.interceptModule = interceptModule;
+            return this;
+        }
+
+        /**
+         * <p>The network protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder networkProtocol(String networkProtocol) {
             this.putQueryParameter("NetworkProtocol", networkProtocol);
@@ -255,7 +292,10 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -264,7 +304,10 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of interception log entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -273,7 +316,10 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
-         * ProtocolNumber.
+         * <p>The network protocol number. This is a standard network protocol number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder protocolNumber(Long protocolNumber) {
             this.putQueryParameter("ProtocolNumber", protocolNumber);
@@ -282,7 +328,10 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
-         * SourcePort.
+         * <p>The source port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder sourcePort(Long sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
@@ -291,7 +340,10 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37.60.241.154</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -300,6 +352,7 @@ public class DescribeNetworkLayerInterceptsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the DDoS attack event to query. The value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

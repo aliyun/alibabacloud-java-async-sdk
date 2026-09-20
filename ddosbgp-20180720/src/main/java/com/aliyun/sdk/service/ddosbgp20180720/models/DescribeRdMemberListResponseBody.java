@@ -195,7 +195,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
              * <p>The name of the member.</p>
              * 
              * <strong>example:</strong>
-             * <p>test1</p>
+             * <p>tes***</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -206,7 +206,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
              * <p>The Alibaba Cloud account ID of the member.</p>
              * 
              * <strong>example:</strong>
-             * <p>1960279802016267</p>
+             * <p>196027980201****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

@@ -131,7 +131,7 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         /**
          * <p>The ID of the instance to query.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         /**
          * <p>The ID of the region in which the instance resides.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -197,8 +197,10 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         /**
          * <p>The type of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>waf</strong>: WAF instance</li>
-         * <li><strong>ga</strong>: Global Accelerator (GA) instance</li>
+         * <li><p><strong>waf</strong>: WAF instance</p>
+         * </li>
+         * <li><p><strong>ga</strong>: Global Accelerator (GA) instance</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

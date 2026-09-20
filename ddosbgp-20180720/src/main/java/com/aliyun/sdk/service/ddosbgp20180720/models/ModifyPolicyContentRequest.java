@@ -135,7 +135,7 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo**</p>
@@ -160,7 +160,17 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
-         * PortVersion.
+         * <p>The version of the port-specific mitigation policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Not specified</strong>: modifies the default surf mitigation engine policy.</li>
+         * <li><strong>2</strong>: modifies the new stream mitigation engine policy.<blockquote>
+         * <p>Only port-specific mitigation policies are supported.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder portVersion(String portVersion) {
             this.putQueryParameter("PortVersion", portVersion);
@@ -434,7 +444,10 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>The rule comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -442,7 +455,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The end value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>65535</p>
@@ -453,7 +466,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The start of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The start value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -464,7 +477,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The ID of the rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>83967609-7ea5-4f6d-a6ea-380b09e****</p>
@@ -475,12 +488,12 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The action triggered if the rule is matched. Valid values:</p>
+             * <p>The action to take when the fingerprint is matched. Valid values:</p>
              * <ul>
-             * <li><strong>permit</strong>: allows the traffic that matches the conditions in the byte-match filter rule.</li>
-             * <li><strong>drop</strong>: discards the traffic that matches the conditions in the byte-match filter rule.</li>
-             * <li><strong>ip_rate</strong>: limits rates on the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by <strong>RateValue</strong>.</li>
-             * <li><strong>session_rate</strong>: limits the number of sessions from the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by <strong>RateValue</strong>.</li>
+             * <li><strong>permit</strong>: allows traffic that matches the fingerprint.</li>
+             * <li><strong>drop</strong>: drops traffic that matches the fingerprint.</li>
+             * <li><strong>ip_rate</strong>: rate-limits the source IP address of traffic that matches the fingerprint. The rate limit is specified by the <strong>RateValue</strong> parameter.</li>
+             * <li><strong>session_rate</strong>: rate-limits the source session of traffic that matches the fingerprint. The rate limit is specified by the <strong>RateValue</strong> parameter.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -515,7 +528,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The rule mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -534,7 +550,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The payload. The value is a hexadecimal string.</p>
+             * <p>The detection payload. The value is in hexadecimal string format.</p>
              * 
              * <strong>example:</strong>
              * <p>abcd</p>
@@ -547,8 +563,8 @@ public class ModifyPolicyContentRequest extends Request {
             /**
              * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
+             * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+             * <li><strong>udp</strong>: User Datagram Protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -562,7 +578,7 @@ public class ModifyPolicyContentRequest extends Request {
             /**
              * <p>The rate limit. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
              * <blockquote>
-             * <p> This parameter is required when <strong>MatchAction</strong> is set to <strong>ip_rate</strong> or <strong>session_rate</strong>.</p>
+             * <p>This parameter is required when the match action is source IP rate limiting or source session rate limiting (<strong>MatchAction</strong> is set to <strong>ip_rate</strong> or <strong>session_rate</strong>).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -574,7 +590,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(ip.version == 4)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -582,9 +601,9 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The sequence number that indicates the order for the rule to take effect. The value is an integer.</p>
+             * <p>The priority of the rule, represented as an integer.</p>
              * <blockquote>
-             * <p> A smaller number indicates a higher priority.</p>
+             * <p>A smaller value indicates a higher priority.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -597,7 +616,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The end of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The end value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>65535</p>
@@ -608,7 +627,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The start of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The start value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -619,7 +638,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -686,7 +708,13 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * End.
+             * <p>The end position. Valid values: <strong>0</strong> to <strong>1499</strong>.</p>
+             * <blockquote>
+             * <p>The end position must be greater than or equal to the start position.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1499</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -694,7 +722,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Start.
+             * <p>The start position. Valid values: <strong>0</strong> to <strong>1499</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder start(Integer start) {
                 this.start = start;
@@ -829,9 +860,9 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * <p>The term that is used for matching.</p>
+             * <p>The detection content.</p>
              * <blockquote>
-             * <p> If Method is set to <strong>char</strong>, the value of this parameter must be ASCII strings. If Method is set to <strong>hex</strong>, the value of this parameter must be hexadecimal strings. Maximum length: 2,048.</p>
+             * <p>If the rule type is <strong>char</strong>, the value must be an ASCII string. If the rule type is <strong>hex</strong>, the value must be a hexadecimal string. Maximum length: 2048.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -843,7 +874,32 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The policy content.</p>
+             * <p>The matching content.</p>
+             * <ol>
+             * <li>When <strong>Encode</strong> is set to <strong>str</strong>, the following requirements must be met:</li>
+             * </ol>
+             * <ul>
+             * <li><p>The length of <strong>Content</strong> must not exceed 1500.</p>
+             * </li>
+             * <li><p><strong>End</strong> - <strong>Start</strong> &gt;= length of <strong>Content</strong>.</p>
+             * </li>
+             * </ul>
+             * <ol start="2">
+             * <li>When <strong>Encode</strong> is set to <strong>hex</strong>, the following requirements must be met:</li>
+             * </ol>
+             * <ul>
+             * <li><p><strong>Content</strong> must be hexadecimal characters.</p>
+             * </li>
+             * <li><p>The length of <strong>Content</strong> must be an even number.</p>
+             * </li>
+             * <li><p>The length of <strong>Content</strong> must not exceed 3000.</p>
+             * </li>
+             * <li><p><strong>End</strong> - <strong>Start</strong> + 1 &gt;= length of <strong>Content</strong> / 2.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test**</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -851,7 +907,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The number of bytes from the start position for matching. Valid values: <strong>1</strong> to <strong>2048</strong>.</p>
+             * <p>The detection window length. Valid values: <strong>1</strong> to <strong>2048</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1200</p>
@@ -862,7 +918,16 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Encode.
+             * <p>The character type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>str</strong>: string.</p>
+             * </li>
+             * <li><p><strong>hex</strong>: hexadecimal.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>str</p>
              */
             public Builder encode(String encode) {
                 this.encode = encode;
@@ -870,10 +935,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The offset. Valid values: <strong>0</strong> to <strong>1500</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * <p>The matching range.</p>
              */
             public Builder offset(Offset offset) {
                 this.offset = offset;
@@ -881,7 +943,16 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Pattern.
+             * <p>The matching pattern. Valid values:</p>
+             * <ul>
+             * <li><p><strong>contain</strong>: contains.</p>
+             * </li>
+             * <li><p><strong>not_contain</strong>: does not contain.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>contain</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -889,7 +960,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The start position for matching. Valid values: <strong>0</strong> to <strong>2047</strong>.</p>
+             * <p>The detection start position. Valid values: <strong>0</strong> to <strong>2047</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1027,13 +1098,10 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * <p>The action that is specified in the rule. Valid value:</p>
-             * <ul>
-             * <li><strong>2</strong>: The traffic is discarded.</li>
-             * </ul>
+             * <p>The action.</p>
              * 
              * <strong>example:</strong>
-             * <p>2</p>
+             * <p>block</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1041,7 +1109,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The match conditions.</p>
+             * <p>The list of detection conditions.</p>
              */
             public Builder conditionList(java.util.List<ConditionList> conditionList) {
                 this.conditionList = conditionList;
@@ -1049,7 +1117,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of bytes in a session to trigger matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
+             * <p>The minimum number of bytes in a session flow to trigger rule matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1060,10 +1128,12 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The condition based on which an action is performed. Valid values:</p>
+             * <p>The logical operator. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: If the rule is matched, the action specified in the rule is performed.</li>
-             * <li><strong>1</strong>: If the rule is not matched, the action specified in the rule is performed.</li>
+             * <li><p><strong>0</strong>: executes the action when the rule is matched.</p>
+             * </li>
+             * <li><p><strong>1</strong>: executes the action when the rule is not matched.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1075,10 +1145,12 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The type of the rule. Valid values:</p>
+             * <p>The rule type. Valid values:</p>
              * <ul>
-             * <li><strong>char</strong>: string match.</li>
-             * <li><strong>hex</strong>: hexadecimal string match.</li>
+             * <li><p><strong>char</strong>: string matching.</p>
+             * </li>
+             * <li><p><strong>hex</strong>: hexadecimal matching.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1090,7 +1162,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The name of the rule.</p>
+             * <p>The rule name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1102,9 +1174,9 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The priority of the rule. Valid values: 1 to 100.</p>
+             * <p>The rule priority. Valid values: 1 to 100.</p>
              * <blockquote>
-             * <p> A smaller value indicates a higher priority.</p>
+             * <p>A smaller value indicates a higher priority.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1260,7 +1332,7 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The end value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1272,7 +1344,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The start of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The start value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1284,7 +1356,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The ID of the rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>412a7312-58ff-4e32-a202-0ab0*******</p>
@@ -1295,9 +1367,9 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The action triggered if the rule is matched. Valid values:</p>
+             * <p>The match action. Valid values:</p>
              * <ul>
-             * <li><strong>drop</strong>: The traffic is discarded.</li>
+             * <li><strong>drop</strong>: Drop.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1312,8 +1384,8 @@ public class ModifyPolicyContentRequest extends Request {
             /**
              * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
+             * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+             * <li><strong>udp</strong>: User Datagram Protocol.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1326,9 +1398,9 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The sequence number that indicates the order for the rule to take effect. The value is an integer.</p>
+             * <p>The priority of the rule, represented as an integer.</p>
              * <blockquote>
-             * <p> A smaller number indicates a higher priority.</p>
+             * <p>A smaller value indicates a higher priority.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -1341,7 +1413,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The end of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The end value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1353,7 +1425,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The start of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The start value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1518,7 +1590,14 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable SIP protection. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1526,7 +1605,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * Level.
+             * <p>The SIP protection level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1534,7 +1616,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * SipDefend.
+             * <p>Specifies whether to enable SIP defense mode.</p>
              */
             public Builder sipDefend(Boolean sipDefend) {
                 this.sipDefend = sipDefend;
@@ -1542,7 +1624,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * SipLearn.
+             * <p>Specifies whether to enable SIP learning mode.</p>
              */
             public Builder sipLearn(Boolean sipLearn) {
                 this.sipLearn = sipLearn;
@@ -1550,7 +1632,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * SipModule.
+             * <p>Specifies whether to enable the SIP source rate limiting module.</p>
              */
             public Builder sipModule(Boolean sipModule) {
                 this.sipModule = sipModule;
@@ -1558,7 +1640,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * SipPort.
+             * <p>The SIP protection port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5060</p>
              */
             public Builder sipPort(String sipPort) {
                 this.sipPort = sipPort;
@@ -1566,7 +1651,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * SipRate.
+             * <p>The SIP source rate limit (PPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder sipRate(Long sipRate) {
                 this.sipRate = sipRate;
@@ -1574,7 +1662,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * SipStartMbps.
+             * <p>The SIP activation threshold (Mbps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sipStartMbps(Long sipStartMbps) {
                 this.sipStartMbps = sipStartMbps;
@@ -1582,7 +1673,10 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * SipStartPps.
+             * <p>The SIP activation threshold (PPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder sipStartPps(Long sipStartPps) {
                 this.sipStartPps = sipStartPps;
@@ -1679,7 +1773,7 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * <p>The validity period of the blacklist to which the source IP address is added. Unit: seconds.</p>
+             * <p>The duration for which the source IP address is added to the blacklist. Unit: seconds.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1691,7 +1785,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The statistical period during which the system collects data on source IP addresses to determine whether to add the source IP addresses to the blacklist. Unit: seconds.</p>
+             * <p>The statistical period for source rate limiting blacklisting. Unit: seconds.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1703,7 +1797,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The number of times that the source IP address exceeds a limit in a statistical period.</p>
+             * <p>The number of times the source IP address exceeds the rate limit within one statistical period.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1715,12 +1809,12 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The type of the source rate limit. Valid values:</p>
+             * <p>The source rate limiting type. Valid values:</p>
              * <ul>
-             * <li><strong>3</strong>: the pps limit on source IP addresses.</li>
-             * <li><strong>4</strong>: the bandwidth limit on source IP addresses.</li>
-             * <li><strong>5</strong>: the pps limit on source SYN packets.</li>
-             * <li><strong>6</strong>: the bandwidth limit on source SYN packets.</li>
+             * <li><strong>3</strong>: Source PPS rate limiting.</li>
+             * <li><strong>4</strong>: Source bandwidth throttling.</li>
+             * <li><strong>5</strong>: Source SYN PPS rate limiting.</li>
+             * <li><strong>6</strong>: Source SYN bandwidth throttling.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1822,7 +1916,7 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * <p>The bandwidth limit on source IP addresses. Unit: bytes per second.</p>
+             * <p>The source bandwidth throttling value, in bytes per second (byte/s).</p>
              * 
              * <strong>example:</strong>
              * <p>2048</p>
@@ -1833,7 +1927,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The packets per second (pps) limit on source IP addresses.</p>
+             * <p>The source PPS rate limit, in packets per second (packet/s).</p>
              * 
              * <strong>example:</strong>
              * <p>64</p>
@@ -1844,7 +1938,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The bandwidth limit on source SYN packets. Unit: bytes per second.</p>
+             * <p>The source SYN bandwidth throttling value, in bytes per second (byte/s).</p>
              * 
              * <strong>example:</strong>
              * <p>2048</p>
@@ -1855,7 +1949,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The pps limit on source SYN packets.</p>
+             * <p>The source SYN PPS rate limit, in packets per second (packet/s).</p>
              * 
              * <strong>example:</strong>
              * <p>64</p>
@@ -2094,7 +2188,7 @@ public class ModifyPolicyContentRequest extends Request {
             } 
 
             /**
-             * <p>The validity period of the IP address blacklist. The value is a UNIX timestamp.</p>
+             * <p>The expiration time of the IP blacklist (UNIX timestamp).</p>
              * 
              * <strong>example:</strong>
              * <p>1716878000</p>
@@ -2105,7 +2199,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable ICMP blocking.</p>
+             * <p>Specifies whether to disable the ICMP protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2116,7 +2210,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable intelligent protection.</p>
+             * <p>Specifies whether to enable AI-based intelligent analysis.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2138,7 +2232,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The byte-match filter rules.</p>
+             * <p>The list of Byte-Match Filter rules.</p>
              */
             public Builder fingerPrintRuleList(java.util.List<FingerPrintRuleList> fingerPrintRuleList) {
                 this.fingerPrintRuleList = fingerPrintRuleList;
@@ -2146,11 +2240,11 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The level of intelligent protection. Valid values:</p>
+             * <p>The protection level of AI-based intelligent analysis. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: normal.</li>
-             * <li><strong>hard</strong>: strict.</li>
-             * <li><strong>weak</strong>: loose.</li>
+             * <li><strong>default</strong>: Normal.</li>
+             * <li><strong>hard</strong>: Strict.</li>
+             * <li><strong>weak</strong>: Loose.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2162,7 +2256,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The port-specific mitigation rules.</p>
+             * <p>The list of port-specific mitigation rules.</p>
              */
             public Builder l4RuleList(java.util.List<L4RuleList> l4RuleList) {
                 this.l4RuleList = l4RuleList;
@@ -2170,7 +2264,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The port blocking rules.</p>
+             * <p>The list of port blocking rules.</p>
              */
             public Builder portRuleList(java.util.List<PortRuleList> portRuleList) {
                 this.portRuleList = portRuleList;
@@ -2178,7 +2272,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The ports whose traffic is filtered out by the filtering policies for UDP reflection attacks.</p>
+             * <p>The list of ports filtered by the reflection attack prevention feature.</p>
              */
             public Builder reflectBlockUdpPortList(java.util.List<Integer> reflectBlockUdpPortList) {
                 this.reflectBlockUdpPortList = reflectBlockUdpPortList;
@@ -2186,7 +2280,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The countries in the location blacklist.</p>
+             * <p>The list of countries for location blacklist.</p>
              */
             public Builder regionBlockCountryList(java.util.List<Integer> regionBlockCountryList) {
                 this.regionBlockCountryList = regionBlockCountryList;
@@ -2194,7 +2288,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The provinces in the location blacklist.</p>
+             * <p>The list of provinces for location blacklist.</p>
              */
             public Builder regionBlockProvinceList(java.util.List<Integer> regionBlockProvinceList) {
                 this.regionBlockProvinceList = regionBlockProvinceList;
@@ -2202,7 +2296,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * SipDefense.
+             * <p>The SIP Protection Settings.</p>
              */
             public Builder sipDefense(SipDefense sipDefense) {
                 this.sipDefense = sipDefense;
@@ -2210,7 +2304,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The source IP addresses that are added to the blacklist.</p>
+             * <p>The source rate limiting blacklist.</p>
              */
             public Builder sourceBlockList(java.util.List<SourceBlockList> sourceBlockList) {
                 this.sourceBlockList = sourceBlockList;
@@ -2218,7 +2312,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>The settings for source rate limiting.</p>
+             * <p>The source rate limiting configuration.</p>
              */
             public Builder sourceLimit(SourceLimit sourceLimit) {
                 this.sourceLimit = sourceLimit;
@@ -2226,7 +2320,7 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to add back-to-origin CIDR blocks of Anti-DDoS Proxy to the whitelist.</p>
+             * <p>Specifies whether to whitelist the back-to-origin IP addresses of Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland and outside the Chinese mainland).</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

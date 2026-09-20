@@ -152,7 +152,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The protected objects.</p>
+         * <p>The list of protected objects.</p>
          */
         public Builder ipPortProtocolList(java.util.List<IpPortProtocolList> ipPortProtocolList) {
             String ipPortProtocolListShrink = shrink(ipPortProtocolList, "IpPortProtocolList", "json");
@@ -162,7 +162,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -174,7 +174,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -186,7 +186,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f38f6520-92b7-451e-b520-9ab3********</p>
@@ -198,11 +198,11 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The type of the policy. Valid values:</p>
+         * <p>The policy type. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: the default mitigation policies.</li>
-         * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
-         * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+         * <li><strong>default</strong>: default mitigation policy.</li>
+         * <li><strong>l3</strong>: IP-specific mitigation policy.</li>
+         * <li><strong>l4</strong>: port-specific mitigation policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,14 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * PortVersion.
+         * <p>The version of the port-specific mitigation policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Not specified</strong>: queries the policy associations of the default surf DPI engine.</li>
+         * <li><strong>2</strong>: queries the policy associations of the new stream DPI engine.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder portVersion(String portVersion) {
             this.putQueryParameter("PortVersion", portVersion);
@@ -334,7 +341,10 @@ public class ListPolicyAttachmentRequest extends Request {
             }
 
             /**
-             * PortRange.
+             * <p>The port number range of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8*-9*</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -344,8 +354,8 @@ public class ListPolicyAttachmentRequest extends Request {
             /**
              * <p>The protocol type of the protected object. Valid values:</p>
              * <ul>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
+             * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+             * <li><strong>udp</strong>: User Datagram Protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -93,7 +93,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
         } 
 
         /**
-         * InterceptionRecordCount.
+         * <p>The number of interception log records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder interceptionRecordCount(Long interceptionRecordCount) {
             this.interceptionRecordCount = interceptionRecordCount;
@@ -101,7 +104,7 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
         }
 
         /**
-         * InterceptionRecords.
+         * <p>The interception record details.</p>
          */
         public Builder interceptionRecords(java.util.List<InterceptionRecords> interceptionRecords) {
             this.interceptionRecords = interceptionRecords;
@@ -120,7 +123,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCnt.
+         * <p>The total number of interception log entries that match the current filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
          */
         public Builder totalCnt(String totalCnt) {
             this.totalCnt = totalCnt;
@@ -303,7 +309,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             } 
 
             /**
-             * DestinationIp.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.254.56.252</p>
              */
             public Builder destinationIp(String destinationIp) {
                 this.destinationIp = destinationIp;
@@ -311,7 +320,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationPort.
+             * <p>The destination port in the interception log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder destinationPort(String destinationPort) {
                 this.destinationPort = destinationPort;
@@ -319,7 +331,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptAction.
+             * <p>The interception action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drop</p>
              */
             public Builder interceptAction(String interceptAction) {
                 this.interceptAction = interceptAction;
@@ -327,7 +342,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptCount.
+             * <p>The number of interceptions within the specified time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder interceptCount(Long interceptCount) {
                 this.interceptCount = interceptCount;
@@ -335,7 +353,13 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptEndTime.
+             * <p>The interception end time.</p>
+             * <blockquote>
+             * <p>The value is a Unix/POSIX timestamp. Unit: seconds.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1778830500</p>
              */
             public Builder interceptEndTime(Long interceptEndTime) {
                 this.interceptEndTime = interceptEndTime;
@@ -343,7 +367,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptModule.
+             * <p>The packet interception module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dip_blacklist</p>
              */
             public Builder interceptModule(String interceptModule) {
                 this.interceptModule = interceptModule;
@@ -351,7 +378,13 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptStartTime.
+             * <p>The interception start time.</p>
+             * <blockquote>
+             * <p>The value is a Unix/POSIX timestamp. Unit: seconds.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1778830500</p>
              */
             public Builder interceptStartTime(Long interceptStartTime) {
                 this.interceptStartTime = interceptStartTime;
@@ -359,7 +392,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkProtocol.
+             * <p>The network protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder networkProtocol(String networkProtocol) {
                 this.networkProtocol = networkProtocol;
@@ -367,7 +403,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolNumber.
+             * <p>The network protocol number. This is a standard network protocol number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder protocolNumber(String protocolNumber) {
                 this.protocolNumber = protocolNumber;
@@ -375,7 +414,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIp.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183.224.38.37</p>
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;
@@ -383,7 +425,10 @@ public class DescribeNetworkLayerInterceptsResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePort.
+             * <p>The source port in the interception log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9998</p>
              */
             public Builder sourcePort(String sourcePort) {
                 this.sourcePort = sourcePort;

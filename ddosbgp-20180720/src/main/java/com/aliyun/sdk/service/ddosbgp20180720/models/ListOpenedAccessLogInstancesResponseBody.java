@@ -80,7 +80,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4DB64811-70A1-41C9-A0CE-CD8B260ED551</p>
@@ -91,7 +91,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration of log analysis for the Anti-DDoS Origin instances.</p>
+         * <p>The log analysis configurations of Anti-DDoS Origin instances.</p>
          */
         public Builder slsConfigStatus(java.util.List<SlsConfigStatus> slsConfigStatus) {
             this.slsConfigStatus = slsConfigStatus;
@@ -99,7 +99,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the Anti-DDoS Origin instances for which log analysis was enabled.</p>
+         * <p>The number of results returned, which is the number of Anti-DDoS Origin instances that have log analysis enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,10 +168,10 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:</p>
+             * <p>Indicates whether log analysis is enabled for the instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Anti-DDoS Origin instance.</p>
+             * <p>The instance ID of Anti-DDoS Origin.</p>
              * 
              * <strong>example:</strong>
              * <p>ddosbgp-cn-m7r1zce2****</p>

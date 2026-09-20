@@ -112,7 +112,7 @@ public class AttachToPolicyRequest extends Request {
         }
 
         /**
-         * <p>The protected objects.</p>
+         * <p>The list of protection objects.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ipPortProtocolList(java.util.List<IpPortProtocolList> ipPortProtocolList) {
@@ -136,7 +136,17 @@ public class AttachToPolicyRequest extends Request {
         }
 
         /**
-         * PortVersion.
+         * <p>The version of the port-specific mitigation policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Not specified</strong>: Binds the default surf protection engine policy.</li>
+         * <li><strong>2</strong>: Binds the new stream protection engine policy.<blockquote>
+         * <p>Only port-specific mitigation policies support this parameter.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder portVersion(String portVersion) {
             this.putQueryParameter("PortVersion", portVersion);
@@ -232,7 +242,10 @@ public class AttachToPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The IP address of the protected object.</p>
+             * <p>The IP address of the protection object.</p>
+             * <blockquote>
+             * <p>Prerequisite: The IP address must be added to the Anti-DDoS Origin instance by calling the AddIp operation in advance, and you must call the DescribeInstanceList operation to verify that the IP address has been added to the Anti-DDoS Origin instance.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -244,9 +257,9 @@ public class AttachToPolicyRequest extends Request {
             }
 
             /**
-             * <p>The port number of the protected object.</p>
+             * <p>The port number of the protection object.</p>
              * <blockquote>
-             * <p> This parameter is available for only port-specific mitigation policies.</p>
+             * <p>Only port-specific mitigation policies support this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -258,7 +271,13 @@ public class AttachToPolicyRequest extends Request {
             }
 
             /**
-             * PortRange.
+             * <p>The port range of the protection object.</p>
+             * <blockquote>
+             * <p>Only port-specific mitigation policies support this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>8*-9*</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -266,14 +285,14 @@ public class AttachToPolicyRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the protected object. Valid values:</p>
+             * <p>The protocol type of the protection object. Valid values:</p>
              * <ul>
-             * <li><strong>tcp</strong></li>
-             * <li><strong>udp</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is available for only port-specific mitigation policies.</p>
+             * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+             * <li><strong>udp</strong>: User Datagram Protocol.<blockquote>
+             * <p>Only port-specific mitigation policies support this parameter.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>tcp</p>

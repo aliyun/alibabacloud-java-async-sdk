@@ -54,7 +54,7 @@ public class ModifyPolicyContentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>3777EF25-940B-51F4-BB1D-99B5********</p>

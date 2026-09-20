@@ -67,10 +67,10 @@ public class CheckAccessLogAuthResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether Anti-DDoS Origin was authorized to access Simple Log Service. Valid values:</p>
+         * <p>Indicates whether Anti-DDoS Origin is authorized to access Simple Log Service. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Authorized.</li>
+         * <li><strong>false</strong>: Not authorized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class CheckAccessLogAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>864FE2F4-CB2E-4024-B9EF-D59FD08ABD41</p>

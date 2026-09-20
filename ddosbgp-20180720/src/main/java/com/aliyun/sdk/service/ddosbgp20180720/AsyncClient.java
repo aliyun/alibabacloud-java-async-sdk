@@ -41,6 +41,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachAssetGroupToInstanceResponse> attachAssetGroupToInstance(AttachAssetGroupToInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>A mitigation policy that is associated with protection objects cannot be deleted.</p>
+     * 
      * @param request the request parameters of AttachToPolicy  AttachToPolicyRequest
      * @return AttachToPolicyResponse
      */
@@ -64,6 +67,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckGrantResponse> checkGrant(CheckGrantRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>A mitigation policy that is associated with protected objects cannot be deleted.</p>
+     * 
      * @param request the request parameters of CreatePolicy  CreatePolicyRequest
      * @return CreatePolicyResponse
      */
@@ -82,9 +88,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBlackholeResponse> deleteBlackhole(DeleteBlackholeRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.</p>
-     * 
      * @param request the request parameters of DeleteIp  DeleteIpRequest
      * @return DeleteIpResponse
      */
@@ -132,6 +135,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDdosEventResponse> describeDdosEvent(DescribeDdosEventRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to perform a paged query of the billing details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account. The billing details include instance IDs, validity periods, and statuses. Paging is supported for this query.</p>
+     * 
      * @param request the request parameters of DescribeDdosOriginInstanceBill  DescribeDdosOriginInstanceBillRequest
      * @return DescribeDdosOriginInstanceBillResponse
      */
@@ -149,7 +155,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of all Anti-DDoS Origin instances.</p>
+     * <p>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</p>
      * 
      * @param request the request parameters of DescribeInstanceList  DescribeInstanceListRequest
      * @return DescribeInstanceListResponse
@@ -163,6 +171,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceSpecsResponse> describeInstanceSpecs(DescribeInstanceSpecsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to query the details of Layer 3 and Layer 4 packet interception records for all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by using paging.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
+     * 
      * @param request the request parameters of DescribeNetworkLayerIntercepts  DescribeNetworkLayerInterceptsRequest
      * @return DescribeNetworkLayerInterceptsResponse
      */
@@ -181,9 +194,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribePackIpList operation to query the details about each IP address that is protected by a specific Anti-DDoS Origin instance by page. The details include the IP address and the type of the cloud asset to which the IP address belongs. The details also include the status of the IP address, such as whether blackhole filtering is triggered for the IP address.  </p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can call this operation to query a paginated list of protected IP addresses for an Anti-DDoS Origin instance. The query returns details such as the IP addresses, the types of cloud assets to which the IP addresses belong, and their current status, such as whether they are under blackhole filtering.</p>
+     * <h3>QPS limit</h3>
+     * <p>This operation has a queries per second (QPS) limit of 10 for each user. Calls that exceed this limit are throttled, which may affect your business. We recommend that you call this operation within this limit.</p>
      * 
      * @param request the request parameters of DescribePackIpList  DescribePackIpListRequest
      * @return DescribePackIpListResponse
@@ -210,12 +223,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeTraffic operation to query traffic statistics of an Anti-DDoS Origin instance within a specific time period.  </p>
+     * <p>Queries the traffic statistics of a specified Anti-DDoS Origin instance within a specified time range.</p>
      * <blockquote>
-     * <p> When you call this operation, you must configure the <strong>InstanceId</strong> parameter to specify the Anti-DDoS Origin instance whose traffic statistics you want to query.  </p>
+     * <p>When calling this operation, you must set the <strong>InstanceId</strong> parameter to specify the Anti-DDoS Origin instance to query.</p>
      * </blockquote>
-     * <h2>Limits</h2>
-     * <p>You can call this operation once per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this operation is 1 call per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</p>
      * 
      * @param request the request parameters of DescribeTraffic  DescribeTrafficRequest
      * @return DescribeTrafficResponse
@@ -286,7 +299,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that all request parameters are configured when you call this operation. If any parameter is left empty, the configuration is deleted.</p>
+     * <p>Ensure that all parameters are specified when you call this operation. If a parameter is not specified, the corresponding configuration is deleted.</p>
      * 
      * @param request the request parameters of ModifyPolicyContent  ModifyPolicyContentRequest
      * @return ModifyPolicyContentResponse
@@ -295,9 +308,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.</p>
-     * <h3><a href="#qps-"></a>Limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Sets a remark for a single Anti-DDoS Origin instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</p>
      * 
      * @param request the request parameters of ModifyRemark  ModifyRemarkRequest
      * @return ModifyRemarkResponse

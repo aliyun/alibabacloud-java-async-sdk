@@ -229,7 +229,7 @@ public class DescribeInstanceListRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The IDs of the Anti-DDoS Origin instances to query. Specify the value in the <code>[&quot;&lt;Instance ID 1&gt;&quot;,&quot;&lt;Instance ID 2&gt;&quot;,……]</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ddosbgp-cn-oew1pjrk****&quot;]</p>
@@ -241,8 +241,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to sort the Anti-DDoS Origin instances. Set the value to <strong>expireTime</strong>, which indicates that the instances are sorted based on the expiration time.</p>
-         * <p>You can set the <strong>Orderdire</strong> parameter to specify the sorting method.</p>
+         * <p>The mitigation plan type of the Anti-DDoS Origin instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Professional.</li>
+         * <li><strong>1</strong>: Enterprise.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -254,7 +257,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The total number of Anti-DDoS Origin instances.</p>
+         * <p>The mitigation plan types of the Anti-DDoS Origin instances to query.</p>
          */
         public Builder instanceTypeList(java.util.List<String> instanceTypeList) {
             this.putQueryParameter("InstanceTypeList", instanceTypeList);
@@ -263,11 +266,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The sorting method. Valid values:</p>
-         * <ul>
-         * <li><strong>desc</strong>: the descending order. This is the default value.</li>
-         * <li><strong>asc</strong>: the ascending order.</li>
-         * </ul>
+         * <p>The protected IP address of the Anti-DDoS Origin instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>47.89.XX.XX</p>
@@ -279,7 +278,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the object that is protected by the Anti-DDoS Origin instance to query.</p>
+         * <p>The protocol type of the IP assets protected by the Anti-DDoS Origin instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong>: IPv4 protocol.</li>
+         * <li><strong>IPv6</strong>: IPv6 protocol.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -291,10 +294,8 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the Anti-DDoS Origin instance to query resides.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
-         * </blockquote>
+         * <p>The sort field for the Anti-DDoS Origin instance list. The value is fixed as <strong>expireTime</strong>, which indicates sorting by instance expiration time.</p>
+         * <p>You can use the <strong>Orderdire</strong> parameter to specify the sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>expireTime</p>
@@ -306,7 +307,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to the Anti-DDoS Origin instance.</p>
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><strong>desc</strong> (default): descending order by expiration time.</li>
+         * <li><strong>asc</strong>: ascending order by expiration time.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -318,11 +323,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The protocol type of the IP address asset that is protected by the Anti-DDoS Origin instance to query. Valid values:</p>
-         * <ul>
-         * <li><strong>Ipv4</strong>: IPv4</li>
-         * <li><strong>Ipv6</strong>: IPv6</li>
-         * </ul>
+         * <p>The page number of the current page in a paging query. Settings the current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,11 +336,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: the Professional mitigation plan</li>
-         * <li><strong>1</strong>: the Enterprise mitigation plan</li>
-         * </ul>
+         * <p>The number of instances on each page in a paging query. Settings the number of instances per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +349,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The tag that is added to the Anti-DDoS Origin instance.</p>
+         * <p>The region ID of the Anti-DDoS Origin instance to query.</p>
+         * <blockquote>
+         * <h2>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</h2>
+         * <p>Notice: This parameter is required. If it is not specified, the API returns DDosBgp.CheckError.InvalidRegion(400).</notice></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -364,7 +365,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The remark of the Anti-DDoS Origin instance to query. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -376,7 +377,8 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The remarks of the Anti-DDoS Origin instance to query. Fuzzy match is supported.</p>
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the default resource group is used.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2pz25js****</p>
@@ -388,7 +390,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The key of the tag that is added to the Anti-DDoS Origin instance.</p>
+         * <p>The tags bound to the Anti-DDoS Origin instances to query.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -456,7 +458,7 @@ public class DescribeInstanceListRequest extends Request {
             } 
 
             /**
-             * <p>The mitigation plan of the Anti-DDoS Origin instance.</p>
+             * <p>The key of the tag bound to the Anti-DDoS Origin instance to query.</p>
              * 
              * <strong>example:</strong>
              * <p>test-key</p>
@@ -467,11 +469,7 @@ public class DescribeInstanceListRequest extends Request {
             }
 
             /**
-             * <p>The mitigation plan of the Anti-DDoS Origin instance. Valid values:</p>
-             * <ul>
-             * <li>0: the Professional mitigation plan.</li>
-             * <li>1: the Enterprise mitigation plan.</li>
-             * </ul>
+             * <p>The value of the tag bound to the Anti-DDoS Origin instance to query.</p>
              * 
              * <strong>example:</strong>
              * <p>test-value</p>
