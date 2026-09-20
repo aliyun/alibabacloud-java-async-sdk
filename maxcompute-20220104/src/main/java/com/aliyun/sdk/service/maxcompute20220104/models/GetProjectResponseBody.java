@@ -106,7 +106,7 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response result.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -141,8 +141,8 @@ public class GetProjectResponseBody extends TeaModel {
          * <li>1xx: Informational response - The request has been received and is being processed.</li>
          * <li>2xx: Success - The request has been successfully received, understood, and accepted by the server.</li>
          * <li>3xx: Redirection - The request has been redirected. Further action is required to complete the request.</li>
-         * <li>4xx: Client error - The request contains incorrect parameters, syntax errors, or specific request conditions cannot be met.</li>
-         * <li>5xx: Server error - The server is unable to fulfill the request due to other reasons.</li>
+         * <li>4xx: Client error - The request contains invalid parameters, syntax errors, or specific request conditions that cannot be met.</li>
+         * <li>5xx: Server error - The server cannot fulfill the request due to other reasons.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,9 +223,9 @@ public class GetProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP whitelist for public network and cloud product interconnection network.</p>
+             * <p>The IP whitelist for the Internet and cloud service interconnection network.</p>
              * <blockquote>
-             * <p>If only the public network and cloud product interconnection network IP whitelist is configured, access through the public network and cloud product interconnection network is restricted by the configuration, and all VPC network access is prohibited.</p>
+             * <p>If only the Internet and cloud service interconnection network IP whitelist is configured, access from the Internet and cloud service interconnection network is restricted by the configuration, and all VPC network access is prohibited.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -237,9 +237,9 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC network IP whitelist.</p>
+             * <p>The IP whitelist for VPC networks.</p>
              * <blockquote>
-             * <p>If only the VPC network IP whitelist is configured, VPC network access is restricted by the configuration, and all public network and cloud product interconnection network access is prohibited.</p>
+             * <p>If only the VPC network IP whitelist is configured, VPC network access is restricted by the configuration, and all access from the Internet and cloud service interconnection network is prohibited.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class GetProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data encryption algorithm. Supported encryption algorithms include AES256, AESCTR, and RC4.</p>
+             * <p>The data encryption algorithm. The supported encryption algorithms include AES256, AESCTR, and RC4.</p>
              * 
              * <strong>example:</strong>
              * <p>AES256</p>
@@ -334,9 +334,9 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether data encryption is enabled for the project. For more information about data encryption, see
-             * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/security-and-compliance/storage-encryption">Storage Encryption</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage Encryption</a>.</p>
+             * <p>Specifies whether data encryption is enabled for the project. For more information about data encryption, see
+             * &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -347,7 +347,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key type used for data encryption, including the default key (MaxCompute Default Key) and Bring Your Own Key (BYOK). The default key (MaxCompute Default Key) is created internally by MaxCompute.</p>
+             * <p>The type of key used for data encryption, including the default key (MaxCompute Default Key) and Bring Your Own Key (BYOK). The default key (MaxCompute Default Key) is a default key created internally by MaxCompute.</p>
              * 
              * <strong>example:</strong>
              * <p>dafault</p>
@@ -493,8 +493,8 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether this is a &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Lakehouse 2.0</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Lakehouse 2.0</a> external project.</p>
+             * <p>Indicates whether this is a &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Data Lakehouse Solution 2.0</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Data Lakehouse Solution 2.0</a> external project.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -604,7 +604,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The infrequent access storage usage.</p>
+             * <p>The low-frequency storage usage.</p>
              * 
              * <strong>example:</strong>
              * <p>767693</p>
@@ -720,7 +720,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/tiered-storage">tiered storage</a>
+             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/tiered-storage">tiered storage</a>
              * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">tiered storage</a> information.</p>
              */
             public Builder storageTierSize(StorageTierSize storageTierSize) {
@@ -790,9 +790,9 @@ public class GetProjectResponseBody extends TeaModel {
             /**
              * <p>The lifecycle type. Valid values:</p>
              * <ul>
-             * <li><strong>mandatory</strong>: The Lifecycle clause is mandatory. Users must set the table lifecycle.</li>
-             * <li><strong>optional</strong>: The Lifecycle clause is optional when creating a table. If the table lifecycle is not set, the table is permanently valid.</li>
-             * <li><strong>inherit</strong>: If the table lifecycle is not set when creating a table, the table lifecycle defaults to the value of odps.table.lifecycle.value.</li>
+             * <li><strong>mandatory</strong>: The Lifecycle clause is required. You must set the lifecycle of the table.</li>
+             * <li><strong>optional</strong>: The Lifecycle clause is optional when you create a table. If the lifecycle is not set, the table is permanently valid.</li>
+             * <li><strong>inherit</strong>: If the lifecycle is not set when you create a table, the lifecycle of the table is the value of odps.table.lifecycle.value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -804,7 +804,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table lifecycle in days. Valid values: 1 to 37231. Default value: 37231.</p>
+             * <p>The lifecycle of the table. Unit: days. Valid values: 1 to 37231. Default value: 37231.</p>
              * 
              * <strong>example:</strong>
              * <p>37231</p>
@@ -887,12 +887,12 @@ public class GetProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of days after the last data access before automatic conversion, corresponding to the <code>LastAccessTime</code> of the table or partition.</p>
+             * <p>The number of days after the last access time of the data before the setting is automatically applied. This corresponds to the <code>LastAccessTime</code> of the table or partition.</p>
              * <blockquote>
              * <p>If the LastAccessTime of the table or partition is empty:</p>
              * <ul>
-             * <li>For tables or partitions created before October 1, 2023, the default time is 2023.10.01 00:00:00 in the UTC+0 timezone.</li>
-             * <li>For tables or partitions created after October 1, 2023, if the data has not been accessed, the CreateTime is used for calculation.</li>
+             * <li>For tables or partitions created before October 1, 2023, the calculation defaults to 2023.10.01 00:00:00 in the UTC+0 time zone.</li>
+             * <li>For tables or partitions created after October 1, 2023, if the data has not been accessed, the calculation is based on the CreateTime.</li>
              * </ul>
              * </blockquote>
              * 
@@ -905,7 +905,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days after the last data modification before automatic conversion, corresponding to the <code>LastModifiedTime</code> of the table or partition.</p>
+             * <p>The number of days after the last modification time of the data before the setting is automatically applied. This corresponds to the <code>LastModifiedTime</code> of the table or partition.</p>
              * 
              * <strong>example:</strong>
              * <p>180</p>
@@ -999,12 +999,12 @@ public class GetProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of days after the last data access before automatic conversion, corresponding to the <code>LastAccessTime</code> of the table or partition.</p>
+             * <p>The number of days after the last access time of the data before the setting is automatically applied. This corresponds to the <code>LastAccessTime</code> of the table or partition.</p>
              * <blockquote>
              * <p>If the LastAccessTime of the table or partition is empty:</p>
              * <ul>
-             * <li>For tables or partitions created before October 1, 2023, the default time is 2023.10.01 00:00:00 in the UTC+0 timezone.</li>
-             * <li>For tables or partitions created after October 1, 2023, if the data has not been accessed, the CreateTime is used for calculation.</li>
+             * <li>For tables or partitions created before October 1, 2023, the calculation defaults to 2023.10.01 00:00:00 in the UTC+0 time zone.</li>
+             * <li>For tables or partitions created after October 1, 2023, if the data has not been accessed, the calculation is based on the CreateTime.</li>
              * </ul>
              * </blockquote>
              * 
@@ -1017,7 +1017,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days after the last data modification before automatic conversion, corresponding to the <code>LastModifiedTime</code> of the table or partition.</p>
+             * <p>The number of days after the last modification time of the data before the setting is automatically applied. This corresponds to the <code>LastModifiedTime</code> of the table or partition.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1106,7 +1106,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The infrequent access storage identifier.</p>
+             * <p>The low-frequency storage identifier.</p>
              */
             public Builder tierToLowFrequency(TierToLowFrequency tierToLowFrequency) {
                 this.tierToLowFrequency = tierToLowFrequency;
@@ -1420,7 +1420,7 @@ public class GetProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether full table scans are allowed in the project. Full table scans consume significant resources, so this feature is disabled by default to improve processing efficiency.</p>
+             * <p>Specifies whether full table scans are allowed in the project. Full table scans consume a large amount of resources. To improve processing efficiency, this feature is disabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1439,7 +1439,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent group of the Data Transfer Service resource group bound to the project (can be ignored).</p>
+             * <p>The parent group of the data transfer EPS resource group attached to the project. You can ignore this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>Default_p</p>
@@ -1466,7 +1466,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the MaxCompute 2.0 Decimal data type is enabled for the project.</p>
+             * <p>Specifies whether the Decimal data type of MaxCompute 2.0 is enabled for the project.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1485,7 +1485,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to force enable external table caching.</p>
+             * <p>Specifies whether to forcibly enable external table caching.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1496,7 +1496,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/tiered-storage">tiered storage</a>
+             * <p>Specifies whether &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/tiered-storage">tiered storage</a>
              * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">tiered storage</a> is enabled.</p>
              * 
              * <strong>example:</strong>
@@ -1508,10 +1508,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the Data Transfer Service resource group routing is enabled.</p>
+             * <p>Specifies whether data transfer EPS resource group routing is enabled.</p>
              * <ul>
-             * <li>true: Data Transfer Service tasks submitted by this project will use the bound Data Transfer Service resource group by default.</li>
-             * <li>false: Data Transfer Service tasks submitted by this project will use the Data Transfer Service shared resource group by default.</li>
+             * <li>true: Data transfer tasks submitted by this project use the bound data transfer EPS resource group by default.</li>
+             * <li>false: Data transfer tasks submitted by this project use the shared data transfer EPS resource group by default.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1550,8 +1550,8 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days to retain backup data. During this period, you can restore the current version to any backed-up data version.
-             * Valid values: [0, 30]. Default value: 1. A value of 0 indicates that the backup feature is disabled.</p>
+             * <p>The number of days that backup data is retained. During this period, you can restore the current version to any backed-up data version.
+             * Valid values: 0 to 30. Default value: 1. A value of 0 indicates that the backup feature is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1562,7 +1562,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum threshold for single SQL consumption.
+             * <p>The maximum threshold for a single SQL statement.
              * Unit: scan volume (GB) × complexity.</p>
              * 
              * <strong>example:</strong>
@@ -1574,7 +1574,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/tiered-storage">tiered storage</a>
+             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/tiered-storage">tiered storage</a>
              * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">tiered storage</a> information.</p>
              */
             public Builder storageTierInfo(StorageTierInfo storageTierInfo) {
@@ -1583,7 +1583,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle properties of tables.</p>
+             * <p>The lifecycle properties of the table.</p>
              */
             public Builder tableLifecycle(TableLifecycle tableLifecycle) {
                 this.tableLifecycle = tableLifecycle;
@@ -1591,8 +1591,8 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/tiered-storage#f61fc9db76nna">tiered storage lifecycle rules</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage#f61fc9db76nna">tiered storage lifecycle rules</a> properties. After configuration, the system will trigger automatic storage tier conversion based on these rules.</p>
+             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/tiered-storage#f61fc9db76nna">tiered storage lifecycle rules</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage#f61fc9db76nna">tiered storage lifecycle rules</a> properties. After configuration, the system automatically triggers storage tier conversion based on these rules.</p>
              */
             public Builder tableLifecycleConfig(TableLifecycleConfig tableLifecycleConfig) {
                 this.tableLifecycleConfig = tableLifecycleConfig;
@@ -1600,7 +1600,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project timezone, which is the <code>odps.sql.timezone</code> property.</p>
+             * <p>The project time zone, which is the <code>odps.sql.timezone</code> property.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -1611,12 +1611,12 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/overview-of-dts">Data Transfer Service</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Data Transfer Service</a> resource group bound to the project.</p>
+             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/overview-of-dts">data transfer service</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">data transfer service</a> resource group bound to the project.</p>
              * <ul>
-             * <li><p>Default (Data Transfer Service shared resource group): This project is not allowed to use the Data Transfer Service (subscription) resource group. Regardless of the default Data Transfer Service resource group setting, Data Transfer Service tasks submitted by this project will automatically use the Default resource group.</p>
+             * <li><p>Default (shared data transfer EPS resource group): The project is not allowed to use a data transfer service (subscription) resource group. Regardless of the default data transfer EPS resource group setting, data transfer tasks submitted by this project automatically use the Default resource group.</p>
              * </li>
-             * <li><p>Data Transfer Service (subscription) resource group: This project is allowed to use the Data Transfer Service (subscription) resource group.</p>
+             * <li><p>Data transfer service (subscription) resource group: The project is allowed to use a data transfer service (subscription) resource group.</p>
              * </li>
              * </ul>
              * 
@@ -1629,14 +1629,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type edition. Valid values:</p>
+             * <p>The data type version. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Edition 1.0.</li>
-             * <li><strong>2</strong>: Edition 2.0.</li>
-             * <li><strong>hive</strong>: Hive-compatible type.</li>
+             * <li><strong>1</strong>: version 1.0</li>
+             * <li><strong>2</strong>: version 2.0</li>
+             * <li><strong>hive</strong>: Hive-compatible type</li>
              * </ul>
-             * <p>For differences among the three data type editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/data-type-editions">Data Type Editions</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data Type Editions</a>.</p>
+             * <p>For differences among the three data type versions, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/data-type-editions">Data type editions</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type editions</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>
@@ -1787,7 +1787,7 @@ public class GetProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>If project data protection is enabled, you can set exceptions or trusted projects to allow specified users to export data of specified objects to specified projects. All scenarios described in the Exception Policy can override the data protection mechanism.</p>
+             * <p>If project data protection is enabled, you can set exceptions or trusted projects to allow specified users to export data of specified objects to specified projects. All scenarios described in the exception policy can override the data protection mechanism.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -1817,8 +1817,8 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the project &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> is enabled to prohibit or allow data to flow out of the project. It is disabled by default.</p>
+             * <p>Indicates the enabling status of the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/project-data-protection">data protection</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection</a> mechanism for the project, which prohibits or allows the data stream to flow out of the project. This is disabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1845,6 +1845,9 @@ public class GetProjectResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableDownloadPrivilege")
         private Boolean enableDownloadPrivilege;
 
+        @com.aliyun.core.annotation.NameInMap("enableNamespacePrivilege")
+        private Boolean enableNamespacePrivilege;
+
         @com.aliyun.core.annotation.NameInMap("labelSecurity")
         private Boolean labelSecurity;
 
@@ -1865,6 +1868,7 @@ public class GetProjectResponseBody extends TeaModel {
 
         private SecurityProperties(Builder builder) {
             this.enableDownloadPrivilege = builder.enableDownloadPrivilege;
+            this.enableNamespacePrivilege = builder.enableNamespacePrivilege;
             this.labelSecurity = builder.labelSecurity;
             this.objectCreatorHasAccessPermission = builder.objectCreatorHasAccessPermission;
             this.objectCreatorHasGrantPermission = builder.objectCreatorHasGrantPermission;
@@ -1886,6 +1890,13 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public Boolean getEnableDownloadPrivilege() {
             return this.enableDownloadPrivilege;
+        }
+
+        /**
+         * @return enableNamespacePrivilege
+         */
+        public Boolean getEnableNamespacePrivilege() {
+            return this.enableNamespacePrivilege;
         }
 
         /**
@@ -1932,6 +1943,7 @@ public class GetProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enableDownloadPrivilege; 
+            private Boolean enableNamespacePrivilege; 
             private Boolean labelSecurity; 
             private Boolean objectCreatorHasAccessPermission; 
             private Boolean objectCreatorHasGrantPermission; 
@@ -1944,6 +1956,7 @@ public class GetProjectResponseBody extends TeaModel {
 
             private Builder(SecurityProperties model) {
                 this.enableDownloadPrivilege = model.enableDownloadPrivilege;
+                this.enableNamespacePrivilege = model.enableNamespacePrivilege;
                 this.labelSecurity = model.labelSecurity;
                 this.objectCreatorHasAccessPermission = model.objectCreatorHasAccessPermission;
                 this.objectCreatorHasGrantPermission = model.objectCreatorHasGrantPermission;
@@ -1953,8 +1966,8 @@ public class GetProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/download-control">download control</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature is enabled. It is disabled by default.</p>
+             * <p>Specifies whether the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/download-control">Download permission control</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">Download permission control</a> feature is enabled. This feature is disabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1965,8 +1978,16 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a> feature is enabled. It is disabled by default.</p>
+             * <p>Specifies whether to enable IAM permissions.</p>
+             */
+            public Builder enableNamespacePrivilege(Boolean enableNamespacePrivilege) {
+                this.enableNamespacePrivilege = enableNamespacePrivilege;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">Label-based access control</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">Label-based access control</a> feature is enabled. This feature is disabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1977,7 +1998,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the object creator is allowed to have access permissions on the object. This is allowed by default.</p>
+             * <p>Specifies whether object creators are allowed to have access permissions on the objects they create. This is enabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1988,7 +2009,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the object creator is allowed to have grant permissions on the object. This is allowed by default.</p>
+             * <p>Specifies whether object creators are allowed to have grant permissions on the objects they create. This is enabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1999,7 +2020,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/security-and-compliance/project-data-protection">data protection</a>
+             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/security-and-compliance/project-data-protection">data protection</a>
              * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection</a> properties.</p>
              */
             public Builder projectProtection(ProjectProtection projectProtection) {
@@ -2008,8 +2029,8 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature is enabled. It is enabled by default.</p>
+             * <p>Specifies whether the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature is enabled. This feature is enabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2020,8 +2041,8 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a> feature is enabled. It is enabled by default.</p>
+             * <p>Specifies whether the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/policy-based-access-control-1">Policy-based access control</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">Policy-based access control</a> feature is enabled. This feature is enabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2285,7 +2306,7 @@ public class GetProjectResponseBody extends TeaModel {
 
             /**
              * <p>The total storage size.
-             * Views the current storage size of the project. This storage size is consistent with the metering caliber, which is the logical storage size after compression at the Project level.</p>
+             * Views the current storage size of the project. This storage size is consistent with the metering standard, which is the logical storage size after data is collected and compressed at the project level.</p>
              * 
              * <strong>example:</strong>
              * <p>16489027</p>
@@ -2308,8 +2329,8 @@ public class GetProjectResponseBody extends TeaModel {
 
             /**
              * <p>The default computing quota.
-             * Used to allocate computing resources. If no computing quota is specified, jobs initiated by this project will consume resources from the default quota. For more information about computing resource usage, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/use-of-computing-resources">Computing Resources - Quota Usage</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Computing Resources - Quota Usage</a>.</p>
+             * Used for compute resource allocation. If no computing quota is specified, jobs initiated by this project consume resources from the default quota. For more information about compute resource usage, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/use-of-computing-resources">Compute resources - Quota usage</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Compute resources - Quota usage</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>os_PayAsYouGoQuota</p>
@@ -2350,7 +2371,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing mode of the default computing quota.</p>
+             * <p>The billing method of the default computing quota.</p>
              * 
              * <strong>example:</strong>
              * <p>PayAsYouGo</p>
@@ -2388,7 +2409,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission properties.</p>
+             * <p>The security properties.</p>
              */
             public Builder securityProperties(SecurityProperties securityProperties) {
                 this.securityProperties = securityProperties;
@@ -2398,10 +2419,10 @@ public class GetProjectResponseBody extends TeaModel {
             /**
              * <p>The project status. Valid values:</p>
              * <ul>
-             * <li><strong>AVAILABLE</strong>: normal.</li>
-             * <li><strong>READONLY</strong>: read-only.</li>
-             * <li><strong>FROZEN</strong>: frozen.</li>
-             * <li><strong>DELETING</strong>: being deleted.</li>
+             * <li><strong>AVAILABLE</strong>: Normal.</li>
+             * <li><strong>READONLY</strong>: Read-only.</li>
+             * <li><strong>FROZEN</strong>: Frozen.</li>
+             * <li><strong>DELETING</strong>: Being deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2421,9 +2442,9 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether schema-based storage is supported.
-             * MaxCompute supports Schema, which is an object between Project and Table/Resource/UDF for categorizing Tables, Resources, and UDFs. A Project can contain multiple Schemas. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/schema-related-operations">Schema Operations</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema Operations</a>.</p>
+             * <p>Indicates whether schema-based storage is supported.
+             * MaxCompute supports schemas, which are objects under a project and above tables, resources, and UDFs, used to categorize tables, resources, and UDFs. A project can contain multiple schemas. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/schema-related-operations">Schema operations</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema operations</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2436,8 +2457,8 @@ public class GetProjectResponseBody extends TeaModel {
             /**
              * <p>The project type. Valid values:</p>
              * <ul>
-             * <li><strong>managed</strong>: internal project.</li>
-             * <li><strong>external</strong>: external project.</li>
+             * <li><strong>managed</strong>: Internal project.</li>
+             * <li><strong>external</strong>: External project.</li>
              * </ul>
              * 
              * <strong>example:</strong>

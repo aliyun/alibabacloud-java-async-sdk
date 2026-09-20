@@ -1,3 +1,6 @@
+2026-09-20 Version: 5.0.5
+- Generated java-async 2022-01-04 for MaxCompute.
+
 2026-09-18 Version: 5.0.4
 - Generated java-async 2022-01-04 for MaxCompute.
 
