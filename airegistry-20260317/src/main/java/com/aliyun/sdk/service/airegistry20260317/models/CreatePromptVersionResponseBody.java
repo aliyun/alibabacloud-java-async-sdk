@@ -67,7 +67,10 @@ public class CreatePromptVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Version number of the created draft version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class CreatePromptVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

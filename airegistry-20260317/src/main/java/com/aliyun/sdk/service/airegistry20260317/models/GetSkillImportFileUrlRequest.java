@@ -74,7 +74,10 @@ public class GetSkillImportFileUrlRequest extends Request {
         } 
 
         /**
-         * ContentType.
+         * <p>The Content-Type of the upload file. Default value: application/zip.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/zip</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -83,6 +86,7 @@ public class GetSkillImportFileUrlRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -160,7 +160,10 @@ public class CreatePromptRequest extends Request {
         } 
 
         /**
-         * BizTags.
+         * <p>Business tags, comma-separated</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs,qa,support</p>
          */
         public Builder bizTags(String bizTags) {
             this.putQueryParameter("BizTags", bizTags);
@@ -169,7 +172,10 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
-         * CommitMsg.
+         * <p>Commit message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>初始版本</p>
          */
         public Builder commitMsg(String commitMsg) {
             this.putQueryParameter("CommitMsg", commitMsg);
@@ -178,7 +184,10 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Prompt description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客服问答 Prompt</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -187,6 +196,7 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +209,7 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
+         * <p>Prompt unique identifier</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +222,10 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
-         * TargetVersion.
+         * <p>Version number for the initial draft version of the prompt. Defaults to 0.0.1 if not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         public Builder targetVersion(String targetVersion) {
             this.putQueryParameter("TargetVersion", targetVersion);
@@ -220,6 +234,7 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
+         * <p>Template content for the initial draft version of the prompt</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +247,10 @@ public class CreatePromptRequest extends Request {
         }
 
         /**
-         * Variables.
+         * <p>Variable definitions, JSON array string, supporting name, description, and defaultValue parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;question&quot;,&quot;defaultValue&quot;:&quot;Hello&quot;}]</p>
          */
         public Builder variables(String variables) {
             this.putQueryParameter("Variables", variables);

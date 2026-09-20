@@ -67,7 +67,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The namespace information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -284,7 +287,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The time when the namespace was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-17T09:57:38+08:00</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -292,7 +298,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret for bbtadmin</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -308,7 +317,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The namespace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>magic:magic-cn-1us4sed5d01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -316,7 +328,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a2a9310a-9d91-4283-b4e2-844f6d45fe64</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -324,7 +339,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * PromptCount.
+             * <p>The number of prompts in the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder promptCount(Integer promptCount) {
                 this.promptCount = promptCount;
@@ -348,7 +366,20 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * ScanPolicy.
+             * <p>The scan policy.</p>
+             * <p>The policy contains two configuration items:</p>
+             * <ul>
+             * <li>minBlockRiskLevel: the risk level for blocking.<ul>
+             * <li>high: blocks high-risk items.</li>
+             * <li>medium: blocks medium- and high-risk items.</li>
+             * <li>low: blocks all risk levels including high, medium, and low.</li>
+             * </ul>
+             * </li>
+             * <li>maxSkipRatio: the maximum skip ratio. If the scan skip ratio exceeds this value, the scan is considered as failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;minBlockRiskLevel&quot;:&quot;medium&quot;,&quot;maxSkipRatio&quot;:0.2}</p>
              */
             public Builder scanPolicy(String scanPolicy) {
                 this.scanPolicy = scanPolicy;
@@ -356,7 +387,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * SkillCount.
+             * <p>The number of skills in the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder skillCount(Integer skillCount) {
                 this.skillCount = skillCount;
@@ -364,7 +398,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>magic:magic-cn-1us4sed5d01</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -372,7 +409,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIndex.
+             * <p>The source ordinal number of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sourceIndex(Integer sourceIndex) {
                 this.sourceIndex = sourceIndex;
@@ -380,7 +420,10 @@ public class GetNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;

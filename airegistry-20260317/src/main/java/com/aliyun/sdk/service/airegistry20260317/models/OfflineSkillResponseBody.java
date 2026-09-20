@@ -54,7 +54,10 @@ public class OfflineSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

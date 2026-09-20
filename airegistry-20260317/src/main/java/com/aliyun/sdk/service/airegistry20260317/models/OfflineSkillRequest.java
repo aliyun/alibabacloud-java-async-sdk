@@ -103,6 +103,7 @@ public class OfflineSkillRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,14 @@ public class OfflineSkillRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The operation scope. Valid values:</p>
+         * <ul>
+         * <li>skill: the entire Skill.</li>
+         * <li>version: a specified version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>version</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -124,6 +132,7 @@ public class OfflineSkillRequest extends Request {
         }
 
         /**
+         * <p>The Skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +145,10 @@ public class OfflineSkillRequest extends Request {
         }
 
         /**
-         * SkillVersion.
+         * <p>The version number. This parameter is required when scope is set to version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.2</p>
          */
         public Builder skillVersion(String skillVersion) {
             this.putQueryParameter("SkillVersion", skillVersion);

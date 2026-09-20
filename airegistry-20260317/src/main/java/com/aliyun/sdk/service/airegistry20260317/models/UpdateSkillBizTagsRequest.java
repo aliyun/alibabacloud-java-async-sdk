@@ -90,10 +90,11 @@ public class UpdateSkillBizTagsRequest extends Request {
         } 
 
         /**
+         * <p>The business tags as a JSON array string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;cs,qa,support&quot;</p>
+         * <p>[&quot;cs&quot;,&quot;qa&quot;,&quot;support&quot;]</p>
          */
         public Builder bizTags(String bizTags) {
             this.putQueryParameter("BizTags", bizTags);
@@ -102,6 +103,7 @@ public class UpdateSkillBizTagsRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class UpdateSkillBizTagsRequest extends Request {
         }
 
         /**
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

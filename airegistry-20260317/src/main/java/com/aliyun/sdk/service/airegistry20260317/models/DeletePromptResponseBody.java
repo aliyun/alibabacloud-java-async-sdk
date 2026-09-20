@@ -67,7 +67,10 @@ public class DeletePromptResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class DeletePromptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

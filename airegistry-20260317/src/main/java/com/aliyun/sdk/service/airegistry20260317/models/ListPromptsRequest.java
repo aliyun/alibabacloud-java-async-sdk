@@ -130,7 +130,10 @@ public class ListPromptsRequest extends Request {
         } 
 
         /**
-         * BizTags.
+         * <p>The business tags used to filter prompts. Separate multiple tags with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs,qa</p>
          */
         public Builder bizTags(String bizTags) {
             this.putQueryParameter("BizTags", bizTags);
@@ -139,6 +142,7 @@ public class ListPromptsRequest extends Request {
         }
 
         /**
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +155,10 @@ public class ListPromptsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -160,7 +167,10 @@ public class ListPromptsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +179,10 @@ public class ListPromptsRequest extends Request {
         }
 
         /**
-         * PromptKey.
+         * <p>The identifier of the prompt to search for. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         public Builder promptKey(String promptKey) {
             this.putQueryParameter("PromptKey", promptKey);
@@ -178,7 +191,14 @@ public class ListPromptsRequest extends Request {
         }
 
         /**
-         * Search.
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li>accurate: exact match.</li>
+         * <li>blur: fuzzy match.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>blur</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("Search", search);

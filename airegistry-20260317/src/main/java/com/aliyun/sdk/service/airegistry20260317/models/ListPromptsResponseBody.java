@@ -67,7 +67,7 @@ public class ListPromptsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,7 @@ public class ListPromptsResponseBody extends TeaModel {
             } 
 
             /**
-             * BizTags.
+             * <p>The list of business tags.</p>
              */
             public Builder bizTags(java.util.List<String> bizTags) {
                 this.bizTags = bizTags;
@@ -253,7 +256,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test prompt</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +267,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * EditingVersion.
+             * <p>The version number of the draft version of the prompt. This value is empty if no draft version exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder editingVersion(String editingVersion) {
                 this.editingVersion = editingVersion;
@@ -269,7 +278,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the prompt was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-22 11:51:03</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -277,7 +289,7 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The mapping between prompt versions and labels.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -285,7 +297,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersion.
+             * <p>The latest version number of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -293,7 +308,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineCnt.
+             * <p>The number of online versions of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineCnt(Integer onlineCnt) {
                 this.onlineCnt = onlineCnt;
@@ -301,7 +319,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * PromptKey.
+             * <p>The unique identifier of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder promptKey(String promptKey) {
                 this.promptKey = promptKey;
@@ -309,7 +330,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewingVersion.
+             * <p>The version number of the prompt version that is under review. This value is empty if no version is under review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder reviewingVersion(String reviewingVersion) {
                 this.reviewingVersion = reviewingVersion;
@@ -317,7 +341,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaVersion.
+             * <p>The schema version of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder schemaVersion(Integer schemaVersion) {
                 this.schemaVersion = schemaVersion;
@@ -410,7 +437,7 @@ public class ListPromptsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageItems.
+             * <p>The list of prompts.</p>
              */
             public Builder pageItems(java.util.List<PageItems> pageItems) {
                 this.pageItems = pageItems;
@@ -418,7 +445,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -426,7 +456,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * PagesAvailable.
+             * <p>The number of available pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pagesAvailable(Integer pagesAvailable) {
                 this.pagesAvailable = pagesAvailable;
@@ -434,7 +467,10 @@ public class ListPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of prompts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -93,7 +93,10 @@ public class DataResourceValue extends TeaModel {
         } 
 
         /**
-         * Name.
+         * <p>The resource name (including the file name extension).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample.md</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -101,7 +104,10 @@ public class DataResourceValue extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The resource type, such as template, data, or script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>script</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -109,7 +115,10 @@ public class DataResourceValue extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The resource content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a sample file</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -117,7 +126,7 @@ public class DataResourceValue extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The resource metadata.</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;

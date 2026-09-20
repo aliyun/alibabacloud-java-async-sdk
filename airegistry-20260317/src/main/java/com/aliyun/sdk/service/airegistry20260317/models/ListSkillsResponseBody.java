@@ -67,7 +67,10 @@ public class ListSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of rule information returned when the call succeeds. For more information, see <strong>RuleInfo</strong>.</p>
+         * <blockquote>
+         * <p>The returned rule information is sorted by rule creation time in descending order.</p>
+         * </blockquote>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>195BF118-9AEF-5F3F-9A58-D88A77EB07DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,6 +109,9 @@ public class ListSkillsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DownloadCount")
         private Long downloadCount;
+
+        @com.aliyun.core.annotation.NameInMap("DraftMode")
+        private String draftMode;
 
         @com.aliyun.core.annotation.NameInMap("EditingVersion")
         private String editingVersion;
@@ -144,6 +153,7 @@ public class ListSkillsResponseBody extends TeaModel {
             this.bizTags = builder.bizTags;
             this.description = builder.description;
             this.downloadCount = builder.downloadCount;
+            this.draftMode = builder.draftMode;
             this.editingVersion = builder.editingVersion;
             this.enable = builder.enable;
             this.from = builder.from;
@@ -185,6 +195,13 @@ public class ListSkillsResponseBody extends TeaModel {
          */
         public Long getDownloadCount() {
             return this.downloadCount;
+        }
+
+        /**
+         * @return draftMode
+         */
+        public String getDraftMode() {
+            return this.draftMode;
         }
 
         /**
@@ -275,6 +292,7 @@ public class ListSkillsResponseBody extends TeaModel {
             private String bizTags; 
             private String description; 
             private Long downloadCount; 
+            private String draftMode; 
             private String editingVersion; 
             private Boolean enable; 
             private String from; 
@@ -295,6 +313,7 @@ public class ListSkillsResponseBody extends TeaModel {
                 this.bizTags = model.bizTags;
                 this.description = model.description;
                 this.downloadCount = model.downloadCount;
+                this.draftMode = model.draftMode;
                 this.editingVersion = model.editingVersion;
                 this.enable = model.enable;
                 this.from = model.from;
@@ -310,7 +329,10 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * BizTags.
+             * <p>The business label JSON array string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder bizTags(String bizTags) {
                 this.bizTags = bizTags;
@@ -318,7 +340,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret for bbtadmin</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -326,7 +351,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadCount.
+             * <p>The total number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder downloadCount(Long downloadCount) {
                 this.downloadCount = downloadCount;
@@ -334,7 +362,25 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * EditingVersion.
+             * <p>The draft mode. Valid values:</p>
+             * <ul>
+             * <li>VERSIONED: numbered mode. Each draft corresponds to a specific version number.</li>
+             * <li>HEAD: workspace mode. A permanent draft workspace that overwrites in place and publishes version snapshots.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HEAD</p>
+             */
+            public Builder draftMode(String draftMode) {
+                this.draftMode = draftMode;
+                return this;
+            }
+
+            /**
+             * <p>The version that is being edited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.3</p>
              */
             public Builder editingVersion(String editingVersion) {
                 this.editingVersion = editingVersion;
@@ -342,7 +388,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the skill is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -350,7 +399,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>The source tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aqs</p>
              */
             public Builder from(String from) {
                 this.from = from;
@@ -358,7 +410,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The label mapping.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -366,7 +418,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OCR Brand</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -374,7 +429,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The ID of the group or workspace to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou:creatulize-test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -382,7 +440,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineCnt.
+             * <p>The number of online versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineCnt(Integer onlineCnt) {
                 this.onlineCnt = onlineCnt;
@@ -390,7 +451,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -398,7 +462,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewingVersion.
+             * <p>The version that is under review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.2</p>
              */
             public Builder reviewingVersion(String reviewingVersion) {
                 this.reviewingVersion = reviewingVersion;
@@ -406,7 +473,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The visibility scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-yORclL</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -414,7 +484,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-05T19:24:43.798</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -422,7 +495,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Writeable.
+             * <p>Indicates whether the skill can be edited.</p>
              */
             public Builder writeable(Boolean writeable) {
                 this.writeable = writeable;
@@ -515,7 +588,7 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageItems.
+             * <p>The MCP server information.</p>
              */
             public Builder pageItems(java.util.List<PageItems> pageItems) {
                 this.pageItems = pageItems;
@@ -523,7 +596,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -542,7 +618,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

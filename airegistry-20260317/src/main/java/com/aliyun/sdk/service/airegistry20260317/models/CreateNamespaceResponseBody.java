@@ -67,7 +67,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The namespace creation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
             } 
 
             /**
-             * NamespaceId.
+             * <p>The namespace ID. The default namespace cannot be queried, modified, or deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a2a9310a-9d91-4283-b4e2-844f6d45fe64</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;

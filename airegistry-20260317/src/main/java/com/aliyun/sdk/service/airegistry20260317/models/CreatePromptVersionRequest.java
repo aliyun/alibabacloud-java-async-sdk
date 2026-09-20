@@ -145,7 +145,10 @@ public class CreatePromptVersionRequest extends Request {
         } 
 
         /**
-         * BasedOnVersion.
+         * <p>Fork from this version. Either this parameter or Template must be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         public Builder basedOnVersion(String basedOnVersion) {
             this.putQueryParameter("BasedOnVersion", basedOnVersion);
@@ -154,7 +157,10 @@ public class CreatePromptVersionRequest extends Request {
         }
 
         /**
-         * CommitMsg.
+         * <p>Commit message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>初始版本</p>
          */
         public Builder commitMsg(String commitMsg) {
             this.putQueryParameter("CommitMsg", commitMsg);
@@ -163,6 +169,7 @@ public class CreatePromptVersionRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +182,7 @@ public class CreatePromptVersionRequest extends Request {
         }
 
         /**
+         * <p>Unique identifier of the prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +195,10 @@ public class CreatePromptVersionRequest extends Request {
         }
 
         /**
-         * TargetVersion.
+         * <p>Draft version number. If not specified, the version number is automatically incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.2</p>
          */
         public Builder targetVersion(String targetVersion) {
             this.putQueryParameter("TargetVersion", targetVersion);
@@ -196,7 +207,10 @@ public class CreatePromptVersionRequest extends Request {
         }
 
         /**
-         * Template.
+         * <p>Prompt template content. Either this parameter or BasedOnVersion must be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你是一个客服助手，请回答：{question}</p>
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);
@@ -205,7 +219,10 @@ public class CreatePromptVersionRequest extends Request {
         }
 
         /**
-         * Variables.
+         * <p>Variable definitions in a JSON array string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;question&quot;,&quot;defaultValue&quot;:&quot;Hello&quot;}]</p>
          */
         public Builder variables(String variables) {
             this.putQueryParameter("Variables", variables);

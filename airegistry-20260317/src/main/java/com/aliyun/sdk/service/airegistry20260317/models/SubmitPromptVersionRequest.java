@@ -89,6 +89,7 @@ public class SubmitPromptVersionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class SubmitPromptVersionRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class SubmitPromptVersionRequest extends Request {
         }
 
         /**
-         * PromptVersion.
+         * <p>The version number to publish. If not specified, the current draft version is published by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         public Builder promptVersion(String promptVersion) {
             this.putQueryParameter("PromptVersion", promptVersion);

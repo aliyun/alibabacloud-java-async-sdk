@@ -118,7 +118,10 @@ public class UpdatePromptVersionRequest extends Request {
         } 
 
         /**
-         * CommitMsg.
+         * <p>The commit message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Optimize response tone.</p>
          */
         public Builder commitMsg(String commitMsg) {
             this.putQueryParameter("CommitMsg", commitMsg);
@@ -127,6 +130,7 @@ public class UpdatePromptVersionRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class UpdatePromptVersionRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,10 +156,11 @@ public class UpdatePromptVersionRequest extends Request {
         }
 
         /**
+         * <p>The updated template content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>你是一个客服助手，请回答：{question}</p>
+         * <p>You are a customer service assistant. Please answer: {question}</p>
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);
@@ -163,7 +169,10 @@ public class UpdatePromptVersionRequest extends Request {
         }
 
         /**
-         * Variables.
+         * <p>The updated variable definition in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;question&quot;,&quot;defaultValue&quot;:&quot;Hello&quot;}]</p>
          */
         public Builder variables(String variables) {
             this.putQueryParameter("Variables", variables);

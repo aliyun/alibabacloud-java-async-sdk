@@ -158,6 +158,7 @@ public class ListSkillsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The field by which to sort the results. Set the value to download_count. Default value: gmt_modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>download_count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -179,7 +183,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The owner by which to filter the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -188,7 +195,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -197,7 +207,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +219,14 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The visibility by which to filter the results. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC</li>
+         * <li>PRIVATE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -215,7 +235,14 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * Search.
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li>accurate: exact match.</li>
+         * <li>blur: fuzzy match.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>blur</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("Search", search);
@@ -224,7 +251,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * SkillName.
+         * <p>The filter keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         public Builder skillName(String skillName) {
             this.putQueryParameter("SkillName", skillName);

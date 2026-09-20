@@ -67,7 +67,7 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The detailed information about the Skill version.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3EF4C9EC-0D5B-5AD6-8585-4D2AAA22B1E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the Skill for the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret for bbtadmin</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -188,7 +194,10 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The Skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BusinessModel</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -196,7 +205,10 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The namespace ID to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f52aea1c-774e-4cc1-9dd1-d91432484d44</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -204,7 +216,7 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The resource mapping (key is the resource name).</p>
              */
             public Builder resource(java.util.Map<String, DataResourceValue> resource) {
                 this.resource = resource;
@@ -212,7 +224,13 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SkillMd.
+             * <p>The Skill card content (SKILL.md).</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
+             * <h2>name: hello-world
+             * description: Say hello to users</h2>
+             * <p>Hello World Skill</p>
              */
             public Builder skillMd(String skillMd) {
                 this.skillMd = skillMd;

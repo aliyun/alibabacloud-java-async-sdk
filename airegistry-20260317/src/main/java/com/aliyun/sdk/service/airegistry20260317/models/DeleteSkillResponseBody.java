@@ -54,7 +54,10 @@ public class DeleteSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>195BF118-9AEF-5F3F-9A58-D88A77EB07DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

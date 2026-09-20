@@ -67,7 +67,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The namespace query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The time when the namespace was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-11T09:32:03+08:00</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -279,7 +285,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default project, auto-created by EMR.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -295,7 +304,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The namespace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>magic:magic-cn-1us4sed5d01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -303,7 +315,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76d4b6e4-31bf-475a-8710-6217ec049c1f</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -311,7 +326,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * PromptCount.
+             * <p>The number of prompts in the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder promptCount(Integer promptCount) {
                 this.promptCount = promptCount;
@@ -335,7 +353,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * SkillCount.
+             * <p>The number of skills in the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder skillCount(Integer skillCount) {
                 this.skillCount = skillCount;
@@ -343,7 +364,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>magic:magic-cn-fpi4secsq01</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -351,7 +375,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIndex.
+             * <p>The source index of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sourceIndex(Integer sourceIndex) {
                 this.sourceIndex = sourceIndex;
@@ -359,7 +386,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qa,test</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -452,7 +482,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Items.
+             * <p>The returned data entries.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -460,7 +490,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -468,7 +501,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -476,7 +512,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

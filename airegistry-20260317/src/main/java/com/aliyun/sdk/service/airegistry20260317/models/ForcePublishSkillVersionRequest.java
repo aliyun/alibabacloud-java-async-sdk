@@ -104,6 +104,7 @@ public class ForcePublishSkillVersionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ForcePublishSkillVersionRequest extends Request {
         }
 
         /**
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class ForcePublishSkillVersionRequest extends Request {
         }
 
         /**
+         * <p>The version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class ForcePublishSkillVersionRequest extends Request {
         }
 
         /**
-         * UpdateLatestLabel.
+         * <p>Specifies whether to update the latest label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder updateLatestLabel(Boolean updateLatestLabel) {
             this.putQueryParameter("UpdateLatestLabel", updateLatestLabel);

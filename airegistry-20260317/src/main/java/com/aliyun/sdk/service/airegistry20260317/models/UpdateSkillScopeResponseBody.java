@@ -54,7 +54,10 @@ public class UpdateSkillScopeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4BFD370-7466-5F56-ACE5-A2D11A26C6BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

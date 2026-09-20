@@ -67,7 +67,7 @@ public class GetPromptResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetPromptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class GetPromptResponseBody extends TeaModel {
             } 
 
             /**
-             * CommitMsg.
+             * <p>The commit message of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test Version</p>
              */
             public Builder commitMsg(String commitMsg) {
                 this.commitMsg = commitMsg;
@@ -201,7 +207,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the version was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1627545952000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -209,7 +218,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * PromptKey.
+             * <p>The unique identifier of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer-service-qa</p>
              */
             public Builder promptKey(String promptKey) {
                 this.promptKey = promptKey;
@@ -217,7 +229,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * SrcUser.
+             * <p>The creator of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder srcUser(String srcUser) {
                 this.srcUser = srcUser;
@@ -225,7 +240,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The version status. Valid values: draft and online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,7 +251,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -430,7 +451,7 @@ public class GetPromptResponseBody extends TeaModel {
             } 
 
             /**
-             * BizTags.
+             * <p>The list of business tags.</p>
              */
             public Builder bizTags(java.util.List<String> bizTags) {
                 this.bizTags = bizTags;
@@ -438,7 +459,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prompt for test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -446,7 +470,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * EditingVersion.
+             * <p>The version number of the draft version. This value is empty if no draft version exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder editingVersion(String editingVersion) {
                 this.editingVersion = editingVersion;
@@ -454,7 +481,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the prompt was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-13T02:11:53Z</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -462,7 +492,7 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The mapping between prompt labels and versions.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -470,7 +500,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersion.
+             * <p>The version number of the latest version of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -478,7 +511,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineCnt.
+             * <p>The number of online versions of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineCnt(Integer onlineCnt) {
                 this.onlineCnt = onlineCnt;
@@ -486,7 +522,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * PromptKey.
+             * <p>The unique identifier of the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer-service-qa</p>
              */
             public Builder promptKey(String promptKey) {
                 this.promptKey = promptKey;
@@ -494,7 +533,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewingVersion.
+             * <p>The version number of the prompt version that is under review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder reviewingVersion(String reviewingVersion) {
                 this.reviewingVersion = reviewingVersion;
@@ -502,7 +544,10 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaVersion.
+             * <p>The schema version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder schemaVersion(Integer schemaVersion) {
                 this.schemaVersion = schemaVersion;
@@ -510,7 +555,7 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * VersionDetails.
+             * <p>The list of version details.</p>
              */
             public Builder versionDetails(java.util.List<VersionDetails> versionDetails) {
                 this.versionDetails = versionDetails;
@@ -518,7 +563,7 @@ public class GetPromptResponseBody extends TeaModel {
             }
 
             /**
-             * Versions.
+             * <p>The list of version numbers.</p>
              */
             public Builder versions(java.util.List<String> versions) {
                 this.versions = versions;

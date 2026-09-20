@@ -67,7 +67,10 @@ public class SubmitSkillVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The skill version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ba9b5c2466dc408c9fcd9df72bcd762a</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class SubmitSkillVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE66410A-37F8-55C5-8471-589CA195760C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

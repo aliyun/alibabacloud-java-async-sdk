@@ -104,7 +104,10 @@ public class UpdateSkillDraftRequest extends Request {
         } 
 
         /**
-         * CommitMsg.
+         * <p>The commit message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Update description</p>
          */
         public Builder commitMsg(String commitMsg) {
             this.putQueryParameter("CommitMsg", commitMsg);
@@ -113,6 +116,7 @@ public class UpdateSkillDraftRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class UpdateSkillDraftRequest extends Request {
         }
 
         /**
+         * <p>The skill card JSON string that contains complete skill information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class UpdateSkillDraftRequest extends Request {
         }
 
         /**
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

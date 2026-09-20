@@ -131,7 +131,10 @@ public class CreateSkillDraftRequest extends Request {
         } 
 
         /**
-         * BasedOnVersion.
+         * <p>The version to fork from. If not specified, a new Skill is created based on the latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         public Builder basedOnVersion(String basedOnVersion) {
             this.putQueryParameter("BasedOnVersion", basedOnVersion);
@@ -140,7 +143,10 @@ public class CreateSkillDraftRequest extends Request {
         }
 
         /**
-         * CommitMsg.
+         * <p>The commit message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial version</p>
          */
         public Builder commitMsg(String commitMsg) {
             this.putQueryParameter("CommitMsg", commitMsg);
@@ -149,6 +155,7 @@ public class CreateSkillDraftRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +168,10 @@ public class CreateSkillDraftRequest extends Request {
         }
 
         /**
-         * SkillCard.
+         * <p>The Skill card JSON string that contains complete Skill information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;customer-service-skill&quot;,&quot;description&quot;:&quot;customer-skill-desc&quot;,&quot;skillMd&quot;:&quot;---\nname: customer-service-skill\ndescription: customer-skill-desc\n---\ncustomer-skill-content&quot;}</p>
          */
         public Builder skillCard(String skillCard) {
             this.putQueryParameter("SkillCard", skillCard);
@@ -170,6 +180,7 @@ public class CreateSkillDraftRequest extends Request {
         }
 
         /**
+         * <p>The Skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +193,10 @@ public class CreateSkillDraftRequest extends Request {
         }
 
         /**
-         * TargetVersion.
+         * <p>The specified draft version number. If not specified, the version number auto-increments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.2</p>
          */
         public Builder targetVersion(String targetVersion) {
             this.putQueryParameter("TargetVersion", targetVersion);

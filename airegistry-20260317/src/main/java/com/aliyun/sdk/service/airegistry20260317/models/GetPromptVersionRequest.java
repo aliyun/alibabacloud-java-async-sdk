@@ -90,6 +90,7 @@ public class GetPromptVersionRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetPromptVersionRequest extends Request {
         }
 
         /**
+         * <p>Unique identifier of the prompt</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetPromptVersionRequest extends Request {
         }
 
         /**
+         * <p>Version number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

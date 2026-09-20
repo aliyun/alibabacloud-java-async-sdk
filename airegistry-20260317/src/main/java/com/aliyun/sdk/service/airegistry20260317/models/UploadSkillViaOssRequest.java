@@ -117,7 +117,7 @@ public class UploadSkillViaOssRequest extends Request {
         } 
 
         /**
-         * CommitMsg.
+         * <p>The commit message. This parameter is optional.</p>
          */
         public Builder commitMsg(String commitMsg) {
             this.putQueryParameter("CommitMsg", commitMsg);
@@ -126,6 +126,7 @@ public class UploadSkillViaOssRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,10 +139,8 @@ public class UploadSkillViaOssRequest extends Request {
         }
 
         /**
+         * <p>The OSS object name (path).</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>upload/skill/022b20c3-fc6c-460e-9364-8e508d75a724.zip</p>
          */
         public Builder ossObjectName(String ossObjectName) {
             this.putQueryParameter("OssObjectName", ossObjectName);
@@ -150,7 +149,10 @@ public class UploadSkillViaOssRequest extends Request {
         }
 
         /**
-         * Overwrite.
+         * <p>Specifies whether to overwrite an existing skill. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -159,7 +161,10 @@ public class UploadSkillViaOssRequest extends Request {
         }
 
         /**
-         * TargetVersion.
+         * <p>The target upload version number. This parameter is optional and used as a fallback when the ZIP file contains no version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder targetVersion(String targetVersion) {
             this.putQueryParameter("TargetVersion", targetVersion);

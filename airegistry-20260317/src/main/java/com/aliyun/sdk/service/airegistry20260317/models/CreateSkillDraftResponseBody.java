@@ -67,7 +67,10 @@ public class CreateSkillDraftResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The Skill version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3aa3fb14dddd4bdb941cf4536e4e918b</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class CreateSkillDraftResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

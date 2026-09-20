@@ -117,7 +117,10 @@ public class UpdatePromptRequest extends Request {
         } 
 
         /**
-         * BizTags.
+         * <p>The list of business tags. The value is a string array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cs&quot;,&quot;qa&quot;,&quot;support&quot;]</p>
          */
         public Builder bizTags(java.util.List<String> bizTags) {
             String bizTagsShrink = shrink(bizTags, "BizTags", "json");
@@ -127,7 +130,10 @@ public class UpdatePromptRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客服问答 Prompt</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -136,7 +142,10 @@ public class UpdatePromptRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The mapping between prompt versions and labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;latest&quot;:&quot;0.0.1&quot;,&quot;stable&quot;:&quot;0.0.1&quot;}</p>
          */
         public Builder labels(java.util.Map<String, ?> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -146,6 +155,7 @@ public class UpdatePromptRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +168,7 @@ public class UpdatePromptRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
