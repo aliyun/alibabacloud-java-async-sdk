@@ -117,7 +117,7 @@ public class VideoTranslationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The asynchronous task submit result.</p>
+         * <p>The submit status of the asynchronous task.</p>
          */
         public Builder data(Data data) {
             this.data = data;

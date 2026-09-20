@@ -171,7 +171,7 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>The list of non-subject element types to detect. Valid values: 1 (background), 2 (border), 3 (watermark), and 4 (splice).</p>
+         * <p>The element types to detect on the non-subject area of the image (1: watermark, 2: logo, 3: text, 4: text-containing color block). You can select multiple element types. This parameter and ObjectDetectElements cannot both be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>[1,2,3,4]</p>
@@ -184,7 +184,7 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>The list of subject element types to detect. Valid values: 1 (product subject), 2 (model), 3 (text), and 4 (logo).</p>
+         * <p>The element types to detect on the image subject (1: watermark, 2: logo, 3: text, 4: text-containing color block). You can select multiple element types.</p>
          * 
          * <strong>example:</strong>
          * <p>[1,2,3,4]</p>
@@ -221,7 +221,7 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return text property information. Valid values: 1 (return) and 0 (do not return).</p>
+         * <p>Specifies whether to return text attribute information. Valid values: 1 (return) and 0 (do not return).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -245,7 +245,7 @@ public class ImageRecognitionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return product property information. Valid values: 1 (return) and 0 (do not return).</p>
+         * <p>Specifies whether to return product attribute information. Valid values: 1 (return) and 0 (do not return).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

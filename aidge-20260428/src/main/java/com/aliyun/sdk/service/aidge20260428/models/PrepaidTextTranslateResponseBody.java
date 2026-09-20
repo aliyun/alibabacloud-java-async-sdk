@@ -254,7 +254,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
              * <p>The translated text.</p>
              * 
              * <strong>example:</strong>
-             * <p>你好世界</p>
+             * <p>Hello World</p>
              */
             public Builder translatedText(String translatedText) {
                 this.translatedText = translatedText;
@@ -329,7 +329,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage information, including the number of input characters.</p>
+             * <p>The usage information, including the input character count.</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

@@ -136,7 +136,7 @@ public class VirtualTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Used to uniquely identify a single API call.</p>
+         * <p>The request ID, which uniquely identifies the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -147,7 +147,7 @@ public class VirtualTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -216,7 +216,7 @@ public class VirtualTryOnResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The asynchronous task ID. Used to query the task result later.</p>
+             * <p>The asynchronous task ID, which is used to query the task result later.</p>
              * 
              * <strong>example:</strong>
              * <p>task-xxxx-xxxx-xxxx</p>
