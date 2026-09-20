@@ -217,7 +217,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags used to filter instances.</p>
+         * <p>The tag information.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -286,7 +286,7 @@ public class ListInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -297,7 +297,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>

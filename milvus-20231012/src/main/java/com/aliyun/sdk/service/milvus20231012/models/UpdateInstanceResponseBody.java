@@ -115,7 +115,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * orderId.
+         * <p>The order ID.</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

@@ -145,7 +145,7 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details for an access denial error.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -156,7 +156,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of instance objects.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -219,7 +219,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances found.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -329,18 +329,12 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The component type. Valid values:</p>
              * <ul>
-             * <li><p><code>standalone</code></p>
-             * </li>
-             * <li><p><code>proxy</code></p>
-             * </li>
-             * <li><p><code>mix_coordinator</code></p>
-             * </li>
-             * <li><p><code>query</code></p>
-             * </li>
-             * <li><p><code>index</code></p>
-             * </li>
-             * <li><p><code>data</code></p>
-             * </li>
+             * <li>standalone</li>
+             * <li>proxy</li>
+             * <li>mix_coordinator</li>
+             * <li>query</li>
+             * <li>index</li>
+             * <li>data</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -363,7 +357,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size in GB.</p>
+             * <p>The disk size.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -424,6 +418,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyPort")
         private Integer proxyPort;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+        private String resourceOwnerId;
+
         @com.aliyun.core.annotation.NameInMap("TotalCuNum")
         private Integer totalCuNum;
 
@@ -436,6 +433,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.intranetUrl = builder.intranetUrl;
             this.milvusResourceInfoList = builder.milvusResourceInfoList;
             this.proxyPort = builder.proxyPort;
+            this.resourceOwnerId = builder.resourceOwnerId;
             this.totalCuNum = builder.totalCuNum;
             this.totalDiskSize = builder.totalDiskSize;
         }
@@ -484,6 +482,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceOwnerId
+         */
+        public String getResourceOwnerId() {
+            return this.resourceOwnerId;
+        }
+
+        /**
          * @return totalCuNum
          */
         public Integer getTotalCuNum() {
@@ -503,6 +508,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String intranetUrl; 
             private java.util.List<MilvusResourceInfoList> milvusResourceInfoList; 
             private Integer proxyPort; 
+            private String resourceOwnerId; 
             private Integer totalCuNum; 
             private Integer totalDiskSize; 
 
@@ -515,12 +521,13 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.intranetUrl = model.intranetUrl;
                 this.milvusResourceInfoList = model.milvusResourceInfoList;
                 this.proxyPort = model.proxyPort;
+                this.resourceOwnerId = model.resourceOwnerId;
                 this.totalCuNum = model.totalCuNum;
                 this.totalDiskSize = model.totalDiskSize;
             } 
 
             /**
-             * <p>The Attu port.</p>
+             * <p>The port of the Attu component.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -553,7 +560,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of resource details for the instance\&quot;s components.</p>
+             * <p>The resource details.</p>
              */
             public Builder milvusResourceInfoList(java.util.List<MilvusResourceInfoList> milvusResourceInfoList) {
                 this.milvusResourceInfoList = milvusResourceInfoList;
@@ -572,7 +579,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of CUs.</p>
+             * <p>The ID of the resource owner account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123456</p>
+             */
+            public Builder resourceOwnerId(String resourceOwnerId) {
+                this.resourceOwnerId = resourceOwnerId;
+                return this;
+            }
+
+            /**
+             * <p>The number of CUs.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -583,7 +601,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total disk size in GB.</p>
+             * <p>The total disk size.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -653,7 +671,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -664,7 +682,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -730,6 +748,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+        private String resourceOwnerId;
+
         @com.aliyun.core.annotation.NameInMap("RunningTime")
         private Integer runningTime;
 
@@ -769,6 +790,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.productCode = builder.productCode;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.resourceOwnerId = builder.resourceOwnerId;
             this.runningTime = builder.runningTime;
             this.sgId = builder.sgId;
             this.tags = builder.tags;
@@ -886,6 +908,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceOwnerId
+         */
+        public String getResourceOwnerId() {
+            return this.resourceOwnerId;
+        }
+
+        /**
          * @return runningTime
          */
         public Integer getRunningTime() {
@@ -956,6 +985,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String productCode; 
             private String regionId; 
             private String resourceGroupId; 
+            private String resourceOwnerId; 
             private Integer runningTime; 
             private String sgId; 
             private java.util.List<Tags> tags; 
@@ -983,6 +1013,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.productCode = model.productCode;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
+                this.resourceOwnerId = model.resourceOwnerId;
                 this.runningTime = model.runningTime;
                 this.sgId = model.sgId;
                 this.tags = model.tags;
@@ -1005,7 +1036,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the instance.</p>
+             * <p>The start time.</p>
              * 
              * <strong>example:</strong>
              * <p>1718608505000</p>
@@ -1035,7 +1066,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the instance.</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>1721232000000</p>
@@ -1059,18 +1090,12 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><p><code>creating</code>: The instance is being created.</p>
-             * </li>
-             * <li><p><code>running</code>: The instance is running.</p>
-             * </li>
-             * <li><p><code>updating</code>: The instance is being updated. This includes scaling the instance, changing configurations, or modifying public network access.</p>
-             * </li>
-             * <li><p><code>disable</code>: The instance is unavailable because it has expired and requires renewal.</p>
-             * </li>
-             * <li><p><code>deleting</code>: The instance is being deleted.</p>
-             * </li>
-             * <li><p><code>deleted</code>: The instance has been deleted.</p>
-             * </li>
+             * <li>creating: Being created.</li>
+             * <li>running: Running.</li>
+             * <li>updating: Being upgraded. This includes specification changes, configuration changes, and enabling or disabling public network access.</li>
+             * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
+             * <li>deleting: Being deleted.</li>
+             * <li>deleted: Deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1104,12 +1129,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance edition. Valid values:</p>
+             * <p>The edition. Valid values:</p>
              * <ul>
-             * <li><p><code>trial</code>: Trial Edition.</p>
-             * </li>
-             * <li><p><code>standard</code>: Standard Edition.</p>
-             * </li>
+             * <li>trial: Trial Edition.</li>
+             * <li>standard: Standard Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1121,12 +1144,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The billing type. Valid values:</p>
              * <ul>
-             * <li><p><code>0</code>: pay-as-you-go.</p>
-             * </li>
-             * <li><p><code>1</code>: subscription.</p>
-             * </li>
+             * <li>0: Pay-as-you-go.</li>
+             * <li>1: Subscription.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1138,7 +1159,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product code.</p>
+             * <p>The commodity code.</p>
              * 
              * <strong>example:</strong>
              * <p>milvus_milvuspre_public_cn</p>
@@ -1171,7 +1192,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration the instance has been running.</p>
+             * <p>The ID of the resource owner account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123456</p>
+             */
+            public Builder resourceOwnerId(String resourceOwnerId) {
+                this.resourceOwnerId = resourceOwnerId;
+                return this;
+            }
+
+            /**
+             * <p>The running time.</p>
              * 
              * <strong>example:</strong>
              * <p>536611</p>
@@ -1193,7 +1225,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags attached to the instance.</p>
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1201,7 +1233,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template version.</p>
+             * TemplateVersion.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -1209,7 +1241,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance version.</p>
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1239,7 +1271,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
+             * <p>The zone.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-g</p>
